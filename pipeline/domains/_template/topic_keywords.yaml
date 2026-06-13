@@ -1,0 +1,44 @@
+# Topic relevance uses tiers. The highest matched tier contributes most of the
+# score, with a small bonus for multiple keyword hits.
+tiers:
+  tier_1:
+    coefficient: 1.0
+    categories:
+      core_breakthrough:
+        - "__DISPLAY_NAME__"
+  tier_2:
+    coefficient: 0.7
+    categories:
+      important_method:
+        - "benchmark"
+        - "dataset"
+  tier_3:
+    coefficient: 0.45
+    categories:
+      adjacent_topic:
+        - "evaluation"
+
+# Generality estimates whether the paper is broadly reusable or narrow.
+generality:
+  broad:
+    score: 0.9
+    keywords:
+      - "general"
+      - "foundation model"
+  medium:
+    score: 0.6
+    keywords:
+      - "framework"
+      - "benchmark"
+  narrow:
+    score: 0.35
+    keywords:
+      - "case study"
+
+# Optional domain penalties reduce total score for adjacent-but-not-core papers.
+domain_penalties:
+  weakly_related:
+    multiplier: 0.75
+    keywords:
+      - "not related placeholder"
+

@@ -1,0 +1,18 @@
+# Positive keywords are the broad domain gate. A paper must hit at least one.
+positive:
+  - "__DISPLAY_NAME__"
+
+# Strong negatives remove papers unless a strong_signal also appears.
+negative_strong:
+  - "survey"
+
+# Weak positives are too broad by themselves. If every positive hit is weak,
+# the paper must also hit at least one strong_signal.
+weak_only_positive:
+  - "agent"
+  - "model"
+
+# Strong signals rescue papers from broad weak/negative matches.
+strong_signals:
+  - "__DISPLAY_NAME__"
+

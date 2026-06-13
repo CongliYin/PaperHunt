@@ -1,0 +1,305 @@
+# 3D Vision Topic Relevance - Tiered Keyword Configuration
+# 计分规则：base = 最高命中档系数 * 0.8，每多命中一个关键词 +0.04，上限 0.2
+# 最终 topic_relevance = min(base + bonus, 1.0)
+
+tiers:
+  tier_1:
+    coefficient: 1.0
+    categories:
+      world_model:
+        - "world model"
+        - "world models"
+        - "world action model"
+        - "world simulator"
+        - "world simulation"
+        - "video world model"
+        - "interactive world model"
+      3d_generation:
+        - "3D generation"
+        - "text-to-3D"
+        - "image-to-3D"
+        - "video-to-3D"
+        - "single image to 3D"
+        - "3D asset generation"
+        - "scene generation"
+        - "3D content creation"
+        - "3D native generation"
+      4d_generation:
+        - "4D generation"
+        - "dynamic 3D generation"
+        - "4D content"
+        - "text-driven mesh animation"
+        - "mesh animation"
+        - "4D foundation model"
+        - "articulation modeling"
+        - "3D animation generation"
+      interactive_video:
+        - "interactive video generation"
+        - "interactive video"
+        - "controllable video generation"
+        - "action-conditioned video"
+        - "video generation with control"
+      spatial_intelligence:
+        - "spatial intelligence"
+        - "spatial reasoning"
+        - "3D reasoning"
+        - "visual spatial intelligence"
+        - "3D-aware reasoning"
+        - "3D aware reasoning"
+        - "geometric reasoning"
+      3d_foundation_model:
+        - "3D foundation model"
+        - "large 3D model"
+        - "large reconstruction model"
+        - "unified 3D"
+        - "3D large model"
+      large_scale_scene:
+        - "large-scale 3D scene"
+        - "city-scale reconstruction"
+        - "urban reconstruction"
+        - "large-scale scene generation"
+
+  tier_2:
+    coefficient: 0.7
+    categories:
+      gaussian_splatting:
+        - "3D Gaussian Splatting"
+        - "Gaussian Splatting"
+        - "3DGS"
+        - "4DGS"
+        - "dynamic Gaussian Splatting"
+        - "sparse-view Gaussian Splatting"
+      generalizable_reconstruction:
+        - "generalizable reconstruction"
+        - "sparse-view reconstruction"
+        - "sparse-view 3D reconstruction"
+        - "feed-forward reconstruction"
+        - "feed-forward 3D"
+        - "generalizable 3D"
+        - "generalizable NeRF"
+        - "unconstrained images"
+        - "in-the-wild reconstruction"
+      embodied_3d:
+        - "embodied AI"
+        - "embodied intelligence"
+        - "robot learning"
+        - "robot manipulation"
+        - "robotic simulation"
+        - "robot learning from human videos"
+        - "embodied navigation"
+      cad_structured:
+        - "CAD"
+        - "CAD generation"
+        - "CAD programs"
+        - "procedural 3D"
+        - "shape program"
+        - "3D program"
+        - "interpretable CAD"
+        - "parametric 3D"
+      3d_editing:
+        - "3D editing"
+        - "3D-aware editing"
+        - "scene editing"
+        - "3D-aware image editing"
+        - "3D-aware video editing"
+        - "neural scene editing"
+      3d_language:
+        - "3D scene understanding"
+        - "3D VLM"
+        - "3D vision-language"
+        - "3D grounding"
+        - "3D question answering"
+        - "scene graph"
+      physics_simulation:
+        - "physics-aware"
+        - "physics informed"
+        - "physics-based simulation"
+        - "physical AI"
+        - "physics AI"
+        - "differentiable physics"
+      neural_rendering_novel:
+        - "neural rendering"
+        - "differentiable rendering"
+        - "inverse rendering"
+        - "novel view synthesis"
+        - "real-time rendering"
+        - "radiance field"
+
+  tier_3:
+    coefficient: 0.4
+    categories:
+      nerf:
+        - "NeRF"
+        - "neural radiance field"
+        - "neural radiance fields"
+      mvs_sfm_slam:
+        - "structure from motion"
+        - "SfM"
+        - "MVS"
+        - "multi-view stereo"
+        - "SLAM"
+        - "visual odometry"
+        - "visual SLAM"
+      point_cloud:
+        - "point cloud"
+        - "point clouds"
+        - "point cloud processing"
+        - "point cloud completion"
+      mesh_reconstruction:
+        - "mesh reconstruction"
+        - "surface reconstruction"
+        - "3D reconstruction"
+        - "scene reconstruction"
+        - "multi-view reconstruction"
+      depth_estimation:
+        - "depth estimation"
+        - "depth prediction"
+        - "depth completion"
+      implicit_representation:
+        - "SDF"
+        - "signed distance"
+        - "occupancy field"
+        - "occupancy network"
+        - "implicit representation"
+        - "implicit surface"
+        - "neural implicit"
+      human_body:
+        - "3D human"
+        - "human reconstruction"
+        - "human motion"
+        - "motion capture"
+        - "3D avatar"
+        - "human body"
+        - "human mesh recovery"
+        - "body pose"
+      view_synthesis:
+        - "view synthesis"
+        - "multi-view"
+        - "multiview"
+        - "volumetric rendering"
+        - "volume rendering"
+
+  tier_4:
+    coefficient: 0.2
+    categories:
+      monocular_depth:
+        - "single-view depth"
+        - "monocular depth estimation"
+        - "monocular depth"
+        - "metric depth"
+      pose_estimation:
+        - "pose estimation"
+        - "6DoF"
+        - "6-DoF"
+        - "object pose"
+        - "camera pose estimation"
+        - "camera localization"
+        - "visual localization"
+      3d_detection:
+        - "3D detection"
+        - "3D object detection"
+        - "LiDAR detection"
+      3d_segmentation:
+        - "3D segmentation"
+        - "3D semantic segmentation"
+        - "3D instance segmentation"
+        - "semantic scene completion"
+        - "scene completion"
+      indoor_scene:
+        - "indoor scene"
+        - "room layout"
+        - "floor plan"
+        - "indoor reconstruction"
+      stereo:
+        - "stereo matching"
+        - "stereo vision"
+        - "disparity estimation"
+      bev_autonomous:
+        - "BEV"
+        - "bird's-eye view"
+        - "3D occupancy prediction"
+        - "occupancy forecasting"
+
+# 通用性评分（独立维度）
+generality:
+  broad:
+    score: 0.9
+    keywords:
+      - "foundation model"
+      - "generalizable"
+      - "unified"
+      - "survey"
+      - "benchmark"
+      - "evaluation"
+      - "large-scale"
+      - "million-scale"
+  medium:
+    score: 0.65
+    keywords:
+      - "reconstruction"
+      - "Gaussian Splatting"
+      - "novel-view synthesis"
+      - "view synthesis"
+      - "mesh"
+      - "generation"
+  narrow:
+    score: 0.3
+    keywords:
+      - "estimation"
+      - "detection"
+      - "segmentation"
+      - "tracking"
+      - "classification"
+      - "registration"
+      - "localization"
+
+# 领域降权（取最低值而非连乘）
+domain_penalties:
+  niche_applications:
+    multiplier: 0.65
+    keywords:
+      - "underwater"
+      - "colonoscopy"
+      - "endoscopy"
+      - "medical image"
+      - "chest CT"
+      - "ultrasound"
+      - "remote sensing"
+      - "agriculture"
+      - "biomedical"
+      - "tomography"
+  traditional_perception:
+    multiplier: 0.75
+    keywords:
+      - "object detection"
+      - "anomaly segmentation"
+      - "semantic segmentation"
+      - "classification"
+      - "tracking"
+      - "registration"
+      - "point cloud registration"
+  single_task_estimation:
+    multiplier: 0.8
+    keywords:
+      - "illumination estimation"
+      - "pose estimation"
+      - "camera localization"
+      - "visual localization"
+      - "low-light"
+  autonomous_driving_perception:
+    multiplier: 0.75
+    keywords:
+      - "autonomous driving"
+      - "self-driving"
+      - "end-to-end driving"
+      - "lane detection"
+      - "trajectory prediction"
+      - "motion planning"
+      - "occupancy prediction"
+  weak_3d_or_pure_llm:
+    multiplier: 0.55
+    keywords:
+      - "GUI agents"
+      - "pure LLM"
+      - "LLM-only"
+      - "2D-to-3D lifting"

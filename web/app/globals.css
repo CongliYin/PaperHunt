@@ -1,0 +1,370 @@
+:root {
+  --bg: #f6f3ec;
+  --panel: #fffdf8;
+  --ink: #1f2a2e;
+  --muted: #687579;
+  --line: #d9d0c2;
+  --accent: #c64a2f;
+  --accent-2: #266c68;
+  --gold: #9a6a14;
+  --green: #2b7157;
+  --blue: #245f90;
+  --shadow: 0 18px 45px rgba(50, 42, 32, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    linear-gradient(90deg, rgba(31, 42, 46, 0.04) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(31, 42, 46, 0.035) 1px, transparent 1px),
+    var(--bg);
+  background-size: 42px 42px;
+  color: var(--ink);
+  font-family: "Avenir Next", "Helvetica Neue", "PingFang SC", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+select {
+  font: inherit;
+}
+
+.shell {
+  width: min(1220px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 28px 0 48px;
+}
+
+.topbar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  align-items: end;
+  padding: 0 0 22px;
+  border-bottom: 2px solid var(--ink);
+}
+
+.brand {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 52px);
+  line-height: 0.95;
+  letter-spacing: 0;
+  font-weight: 800;
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.select {
+  min-width: 170px;
+  border: 1px solid var(--ink);
+  background: var(--panel);
+  color: var(--ink);
+  padding: 10px 12px;
+  border-radius: 6px;
+  box-shadow: 4px 4px 0 rgba(31, 42, 46, 0.12);
+}
+
+.paper-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.paper-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 330px;
+  overflow: hidden;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  background: var(--panel);
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.paper-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 8px 13px 0 rgba(31, 42, 46, 0.15);
+}
+
+.thumb {
+  position: relative;
+  height: 150px;
+  border-bottom: 1px solid var(--ink);
+  background: #e5dfd3;
+  overflow: hidden;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumb-empty {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.paper-body {
+  padding: 14px;
+}
+
+.score-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.score {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: flex-end;
+}
+
+.tag {
+  padding: 3px 7px;
+  border: 1px solid rgba(31, 42, 46, 0.22);
+  border-radius: 999px;
+  color: var(--accent-2);
+  background: rgba(38, 108, 104, 0.08);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.paper-title-zh {
+  margin: 0 0 7px;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.paper-title-en {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.tldr {
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.authors {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.empty {
+  margin-top: 48px;
+  padding: 28px;
+  border: 1px dashed var(--muted);
+  background: rgba(255, 253, 248, 0.64);
+  color: var(--muted);
+  border-radius: 8px;
+}
+
+.detail-header {
+  display: grid;
+  gap: 16px;
+  padding-bottom: 22px;
+  border-bottom: 2px solid var(--ink);
+}
+
+.back {
+  color: var(--accent-2);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.detail-title {
+  margin: 0;
+  font-size: clamp(28px, 5vw, 56px);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.detail-title-en {
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.link-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pill-link {
+  padding: 8px 12px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: var(--panel);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(290px, 0.65fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.section {
+  padding: 0 0 24px;
+}
+
+.section h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.prose {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.points {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.75;
+}
+
+.score-panel {
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 130px 1fr 42px;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 13px;
+}
+
+.bar {
+  height: 9px;
+  background: #e2dacd;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+}
+
+.comment {
+  margin: 14px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.gallery {
+  display: grid;
+  gap: 14px;
+}
+
+.figure {
+  margin: 0;
+  border: 1px solid var(--ink);
+  background: var(--panel);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.figure img {
+  width: 100%;
+  display: block;
+  background: white;
+}
+
+.figure figcaption {
+  padding: 8px 10px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+details {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+summary {
+  cursor: pointer;
+  color: var(--accent-2);
+  font-weight: 700;
+}
+
+@media (max-width: 780px) {
+  .topbar,
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    justify-content: stretch;
+  }
+
+  .select {
+    width: 100%;
+  }
+}
+

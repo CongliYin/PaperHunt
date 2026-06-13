@@ -1,0 +1,18 @@
+display_name: "__DISPLAY_NAME__"
+description: "Scan recent arXiv papers for __DISPLAY_NAME__ research."
+
+# arXiv categories to fetch. Common examples:
+# - cs.CV for computer vision
+# - cs.AI for artificial intelligence
+# - cs.LG for machine learning
+# - cs.RO for robotics
+arxiv_categories:
+  - "cs.AI"
+
+# Used only by the optional legacy HTML report.
+output_suffix: "__OUTPUT_SUFFIX__"
+
+# Fraction of filtered candidates that should receive LLM scoring.
+# The pipeline always keeps at least 10 papers unless --top-n overrides it.
+default_top_pct: 0.4
+

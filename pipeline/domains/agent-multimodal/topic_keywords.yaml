@@ -1,0 +1,315 @@
+# Realtime Multimodal Agent Topic Relevance - Tiered Keyword Configuration
+# Tier 1 is reserved for realtime voice/video agents with tool use, low latency,
+# visual grounding, proactive perception, and reusable eval/data/training loops.
+# Generic VLM, ASR, TTS, or video understanding belongs in lower tiers unless it
+# is explicitly connected to agent interaction or tool workflows.
+
+tiers:
+  tier_1:
+    coefficient: 1.0
+    categories:
+      realtime_voice_agent:
+        - "realtime voice agent"
+        - "real-time voice agent"
+        - "real time voice agent"
+        - "voice agent"
+        - "voice agents"
+        - "speech agent"
+        - "speech agents"
+        - "spoken dialogue agent"
+        - "spoken dialog agent"
+        - "end-to-end speech agent"
+        - "end to end speech agent"
+        - "speech-to-speech agent"
+        - "speech to speech agent"
+        - "duplex speech"
+        - "full-duplex"
+        - "full duplex"
+      speech_tool_calling:
+        - "speech tool calling"
+        - "speech tool use"
+        - "voice tool calling"
+        - "voice tool use"
+        - "spoken tool use"
+        - "audio tool calling"
+        - "speech function calling"
+        - "voice function calling"
+        - "function calling from speech"
+        - "speech-to-text function calling"
+        - "S2T function calling"
+        - "tool call from speech"
+        - "tool invocation from speech"
+      low_latency_turn_taking:
+        - "low-latency speech"
+        - "low latency speech"
+        - "low-latency voice"
+        - "low latency voice"
+        - "low-latency multimodal"
+        - "turn-taking"
+        - "turn taking"
+        - "endpointing"
+        - "semantic endpointing"
+        - "semantic turn"
+        - "barge-in"
+        - "barge in"
+        - "interruption detection"
+        - "speech interruption"
+        - "echo cancellation"
+        - "acoustic echo cancellation"
+      realtime_video_agent:
+        - "realtime video agent"
+        - "real-time video agent"
+        - "real time video agent"
+        - "video agent"
+        - "video agents"
+        - "visual agent"
+        - "visual agents"
+        - "multimodal agent"
+        - "multimodal agents"
+        - "audio-visual agent"
+        - "audiovisual agent"
+        - "vision-language agent"
+        - "vision language agent"
+      streaming_video_grounding:
+        - "streaming video understanding"
+        - "streaming video comprehension"
+        - "online video understanding"
+        - "real-time video understanding"
+        - "low-frame-rate video"
+        - "frame budget"
+        - "adaptive frame selection"
+        - "video memory"
+        - "visual memory"
+        - "visual grounding"
+        - "grounded visual agent"
+      visual_tool_workflows:
+        - "visual tool use"
+        - "visual tool calling"
+        - "vision tool use"
+        - "vision tool calling"
+        - "visual function calling"
+        - "image-based tool"
+        - "video-based tool"
+        - "visual evidence for tool use"
+        - "vision evidence for tool use"
+        - "visual evidence for tool calling"
+        - "remote diagnosis"
+        - "visual diagnosis"
+        - "visual shopping"
+        - "visual commerce"
+        - "device recognition"
+        - "product recognition"
+        - "serial number recognition"
+      proactive_multimodal_perception:
+        - "proactive perception"
+        - "proactive agent"
+        - "screen change detection"
+        - "visual anomaly detection"
+        - "VLM routing"
+        - "vision-language routing"
+        - "perception routing"
+        - "multimodal routing"
+
+  tier_2:
+    coefficient: 0.75
+    categories:
+      personalized_tts_agent:
+        - "personalized TTS"
+        - "personalized text-to-speech"
+        - "customized TTS"
+        - "voice cloning"
+        - "zero-shot voice cloning"
+        - "few-shot voice cloning"
+        - "controllable TTS"
+        - "expressive TTS"
+        - "style-controlled TTS"
+        - "speech style control"
+        - "speaker adaptation"
+      multimodal_agent_framework:
+        - "multimodal agent framework"
+        - "audio-visual agent framework"
+        - "voice agent framework"
+        - "video agent framework"
+        - "multimodal agent system"
+        - "realtime multimodal system"
+        - "real-time multimodal system"
+      lightweight_perception_vlm_split:
+        - "lightweight detector"
+        - "lightweight vision model"
+        - "small vision model"
+        - "VLM routing"
+        - "vision-language routing"
+        - "perception routing"
+        - "lightweight detection model"
+      evaluation_benchmarks:
+        - "VoiceBench"
+        - "StreamingBench"
+        - "speech agent benchmark"
+        - "voice agent benchmark"
+        - "video agent benchmark"
+        - "multimodal agent benchmark"
+        - "streaming benchmark"
+        - "turn-taking benchmark"
+        - "tool calling benchmark"
+      data_simulator_training:
+        - "agent data simulator"
+        - "multimodal data simulator"
+        - "voice data simulator"
+        - "audio data simulator"
+        - "video data simulator"
+        - "speech trajectory"
+        - "voice trajectory"
+        - "video trajectory"
+        - "multimodal trajectory"
+        - "speech tool trajectory"
+        - "multimodal SFT"
+        - "multimodal RL"
+        - "voice agent training"
+        - "video agent training"
+
+  tier_3:
+    coefficient: 0.45
+    categories:
+      general_mllm_vlm:
+        - "multimodal LLM"
+        - "multimodal large language model"
+        - "MLLM"
+        - "vision-language model"
+        - "vision language model"
+        - "VLM"
+        - "large audio model"
+        - "audio language model"
+        - "speech language model"
+        - "video language model"
+        - "video-LLM"
+        - "video LLM"
+      general_speech_systems:
+        - "ASR"
+        - "automatic speech recognition"
+        - "TTS"
+        - "text-to-speech"
+        - "speech synthesis"
+        - "voice activity detection"
+        - "streaming ASR"
+        - "streaming TTS"
+      general_video_understanding:
+        - "video understanding"
+        - "video question answering"
+        - "visual question answering"
+        - "temporal grounding"
+        - "video grounding"
+        - "long video understanding"
+
+  tier_4:
+    coefficient: 0.2
+    categories:
+      adjacent_multimodal_tasks:
+        - "image captioning"
+        - "visual reasoning"
+        - "image-text retrieval"
+        - "cross-modal retrieval"
+        - "audio-visual learning"
+        - "speech translation"
+      adjacent_agent_terms:
+        - "LLM agent"
+        - "AI agent"
+        - "autonomous agent"
+        - "tool use"
+        - "function calling"
+
+generality:
+  broad:
+    score: 0.9
+    keywords:
+      - "agent"
+      - "framework"
+      - "system"
+      - "platform"
+      - "realtime"
+      - "real-time"
+      - "streaming"
+      - "end-to-end"
+      - "end to end"
+      - "tool calling"
+      - "function calling"
+      - "benchmark"
+      - "simulator"
+      - "training"
+      - "multi-task"
+      - "multi-domain"
+  medium:
+    score: 0.65
+    keywords:
+      - "voice"
+      - "speech"
+      - "video"
+      - "visual"
+      - "multimodal"
+      - "audio-visual"
+      - "grounding"
+      - "turn-taking"
+      - "latency"
+      - "memory"
+      - "routing"
+  narrow:
+    score: 0.3
+    keywords:
+      - "classification"
+      - "detection"
+      - "segmentation"
+      - "recognition"
+      - "speaker verification"
+      - "speech enhancement"
+      - "image"
+      - "single task"
+      - "domain-specific"
+
+domain_penalties:
+  pure_asr_tts_audio:
+    multiplier: 0.55
+    keywords:
+      - "speaker verification"
+      - "speaker identification"
+      - "speech enhancement"
+      - "speech separation"
+      - "audio classification"
+      - "keyword spotting"
+      - "music generation"
+  pure_cv_or_video_task:
+    multiplier: 0.55
+    keywords:
+      - "image classification"
+      - "object detection"
+      - "semantic segmentation"
+      - "instance segmentation"
+      - "action recognition"
+      - "video classification"
+      - "activity recognition"
+  pure_benchmark_or_dataset:
+    multiplier: 0.6
+    keywords:
+      - "benchmark only"
+      - "dataset only"
+      - "leaderboard"
+      - "we introduce a benchmark"
+      - "we present a benchmark"
+  unrelated_vertical_application:
+    multiplier: 0.5
+    keywords:
+      - "medical imaging"
+      - "radiology"
+      - "pathology"
+      - "remote sensing"
+      - "autonomous driving"
+      - "self-driving"
+      - "financial trading"
+      - "protein"
+      - "molecule"
+      - "wireless network"
+  pure_rag_or_prompting:
+    multiplier: 0.55
+    keywords:
+      - "retrieval-augmented generation"
+      - "RAG"
+      - "prompt engineering"
+      - "chain-of-thought prompting"
