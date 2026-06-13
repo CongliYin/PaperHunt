@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2606.13494",
+  "title": "NavWAM: A Navigation World Action Model for Goal-Conditioned Visual Navigation",
+  "title_zh": "NavWAM：面向目标条件视觉导航的导航世界动作模型",
+  "authors": [
+    "Daichi Azuma",
+    "Taiki Miyanishi",
+    "Koya Sakamoto",
+    "Shuhei Kurita",
+    "Yaonan Zhu",
+    "Petr Khrapchenkov",
+    "Motoaki Kawanabe",
+    "Yusuke Iwasawa",
+    "Yutaka Matsuo"
+  ],
+  "published_at": "2026-06-11T15:44:36Z",
+  "abs_url": "https://arxiv.org/abs/2606.13494v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13494",
+  "links": {
+    "github": null,
+    "project_page": "https://dachii-azm.github.io/navwam/"
+  },
+  "abstract_en": "Goal-conditioned visual navigation requires a robot to act under partial observability by anticipating how its motion will change the future egocentric view and whether that change brings it closer to the goal. Navigation world models provide such visual foresight, but they remain prediction modules that require an external planner to convert predicted futures into closed-loop control. We propose Navigation World Action Model (NavWAM), a diffusion-transformer policy that turns navigation world-model prediction into executable action by representing future observations, goal-progress values, and action chunks in a shared latent sequence. By learning future prediction jointly with the action and value targets that determine closed-loop behavior, NavWAM makes visual foresight directly usable for robot control. We build NavWAM through simulation pretraining and real-robot adaptation, and evaluate it on image-goal navigation against planning-based world models and a representative direct navigation policy. Across offline benchmarks and closed-loop real-robot deployment, NavWAM improves over planning-based world-model baselines in our evaluations while using the default policy mode without CEM-style action search. Project page: https://dachii-azm.github.io/navwam/",
+  "abstract_zh": "本文提出 Navigation World Action Model（NavWAM），用于目标条件视觉导航。该任务要求机器人在部分可观测环境中，根据当前第一视角图像预测自身运动将如何改变未来观测，并判断是否更接近目标。不同于传统 navigation world model 仅负责预测、仍需外部规划器将未来预测转化为控制动作，NavWAM 将未来观测、目标进展价值（goal-progress values）和动作片段（action chunks）统一表示为共享潜在序列，并用 diffusion-transformer policy 联合学习视觉预测、价值估计与动作生成。通过仿真预训练和真实机器人适配，NavWAM 在离线基准和真实机器人闭环部署中，相比基于规划的 world-model 方法表现更好，并且无需 CEM 风格的动作搜索即可使用默认策略模式执行导航。",
+  "key_points_zh": [
+    "NavWAM 将 navigation world model 从“预测模块”扩展为可直接输出闭环控制的 action model，减少对外部规划器的依赖。",
+    "方法采用 diffusion-transformer policy，把未来观测、goal-progress value 和 action chunk 放入同一潜在序列中联合建模。",
+    "通过联合学习未来视觉预测、价值目标和动作目标，使视觉前瞻（visual foresight）能够直接服务于机器人控制。",
+    "训练流程包含 simulation pretraining 与 real-robot adaptation，以提升从仿真到真实环境的泛化与部署能力。",
+    "实验显示，NavWAM 在离线评测和真实机器人闭环导航中优于规划式 world-model baselines，且不需要 CEM-style action search。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.78,
+    "potential_impact": 0.62,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.6,
+    "llm_avg": 0.5860000000000001,
+    "comment": "NavWAM addresses an important navigation-control gap by integrating prediction, value, and action in a shared latent sequence, though it builds on familiar world-model and diffusion-policy ideas.",
+    "comment_zh": "NavWAM通过在共享潜空间中整合预测、价值和动作来弥合导航控制差距，但总体仍建立在已有世界模型和扩散策略思想之上。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.5860000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://dachii-azm.github.io/navwam/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "last_author_h_index": null,
+    "last_author_found": false
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13494/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13494/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.953
+    }
+  ]
+}

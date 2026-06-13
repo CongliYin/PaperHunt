@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2606.13655",
+  "title": "Flex4DHuman: Flexible Multi-view Video Diffusion for 4D Human Reconstruction",
+  "title_zh": "Flex4DHuman：用于 4D 人体重建的灵活多视角视频扩散模型",
+  "authors": [
+    "Jen-Hao Cheng",
+    "Yipeng Wang",
+    "Hao Zhang",
+    "Gengshan Yang",
+    "Jenq-Neng Hwang"
+  ],
+  "published_at": "2026-06-11T17:54:05Z",
+  "abs_url": "https://arxiv.org/abs/2606.13655v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13655",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We present Flex4DHuman, a multi-view video diffusion model that transforms a monocular or sparse multi-view video of a dynamic subject into synchronized dense multi-view videos using only relative camera-pose conditioning. Unlike prior human-centric methods that rely on skeletons, depth maps, normals, or rendered target-view geometry, Flex4DHuman requires no explicit geometry priors and instead conditions generation through relative camera-pose positional encoding. The generated videos can be directly ingested by downstream reconstruction pipelines to create dynamic 4D Gaussian splats. Built on the Wan 2.1 1.3B text-to-video model, Flex4DHuman preserves the backbone architecture and encodes camera and view information through a five-axis positional encoding that extends spatio-temporal RoPE with view indices and continuous SE(3) relative camera geometry. A three-stage curriculum progressively trains the model for pose following, flexible reference-to-target view generation, and temporal rollout. To support temporal rollout, we train with clean historical target-view tokens. We also add multi-view captions to enable test-time text control. Combined with an off-the-shelf 4D Gaussian Splatting stage, our framework lifts monocular static-camera videos into dynamic 4D Gaussian splats. Experiments on DNA-Rendering and ActorsHQ show that Flex4DHuman surpasses prior state-of-the-art methods, while the same formulation generalizes to animal categories after mixed human-animal training. These capabilities make Flex4DHuman a practical step toward scalable 4D content creation from casual monocular videos for simulation, gaming, AR/VR, and video re-shooting.",
+  "abstract_zh": "本文提出 Flex4DHuman，一种多视角视频扩散模型，可将单目或稀疏多视角的动态主体视频转换为同步的稠密多视角视频，并且仅依赖相对相机位姿条件。不同于以往依赖骨架、深度图、法线或目标视角渲染几何的人体方法，Flex4DHuman 不需要显式几何先验，而是通过相对相机位姿位置编码来引导生成。生成的视频可直接输入下游重建流程，用于构建动态 4D Gaussian splats。该方法基于 Wan 2.1 1.3B text-to-video 模型，保持主干架构不变，并通过五轴位置编码表达相机与视角信息：在时空 RoPE 基础上扩展视角索引与连续 SE(3) 相对相机几何。训练采用三阶段课程学习，依次实现位姿跟随、灵活参考到目标视角生成以及时间滚动。为支持时间滚动，作者使用干净的历史目标视角 token 进行训练，并加入多视角 captions，使测试时可进行文本控制。结合现成的 4D Gaussian Splatting 阶段，该框架能将静态相机拍摄的单目视频提升为动态 4D Gaussian splats。在 DNA-Rendering 和 ActorsHQ 上，Flex4DHuman 超越已有 SOTA 方法；经过人类-动物混合训练后，同一框架也可泛化到动物类别，展示了其在仿真、游戏、AR/VR 和视频重拍等场景中从普通单目视频规模化生成 4D 内容的潜力。",
+  "key_points_zh": [
+    "提出 Flex4DHuman，用多视角视频扩散将单目或稀疏多视角动态视频生成同步稠密多视角视频。",
+    "方法不依赖骨架、深度、法线或目标视角几何渲染，仅使用相对相机位姿 conditioning，降低对显式几何先验的依赖。",
+    "基于 Wan 2.1 1.3B text-to-video 主干，引入五轴位置编码，将时空 RoPE 扩展到视角索引与连续 SE(3) 相对相机几何。",
+    "采用三阶段课程学习：位姿跟随、参考到目标视角生成、时间滚动；并用干净历史目标视角 tokens 支持长时序生成。",
+    "在 DNA-Rendering 和 ActorsHQ 上优于 prior SOTA，并可结合 4D Gaussian Splatting 将普通单目视频重建为动态 4D Gaussian splats。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.72,
+    "potential_impact": 0.65,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.62,
+    "llm_avg": 0.5780000000000001,
+    "comment": "Flex4DHuman is a practical advance for monocular 4D human reconstruction via pose-conditioned video diffusion, but it is more an effective system integration than a new paradigm.",
+    "comment_zh": "Flex4DHuman通过位姿条件视频扩散推进了单目4D人体重建，但更像是有效的系统集成而非新范式。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.5780000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "last_author_h_index": null,
+    "last_author_found": false
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13655/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.9
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13655/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13655/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

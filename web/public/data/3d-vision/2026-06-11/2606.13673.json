@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.13673",
+  "title": "SpatialClaw: Rethinking Action Interface for Agentic Spatial Reasoning",
+  "title_zh": "SpatialClaw：重新思考用于智能体空间推理的动作接口",
+  "authors": [
+    "Seokju Cho",
+    "Ryo Hachiuma",
+    "Abhishek Badki",
+    "Hang Su",
+    "Byung-Kwan Lee",
+    "Chan Hee Song",
+    "Sifei Liu",
+    "Subhashree Radhakrishnan",
+    "Seungryong Kim",
+    "Yu-Chiang Frank Wang",
+    "Min-Hung Chen"
+  ],
+  "published_at": "2026-06-11T17:59:36Z",
+  "abs_url": "https://arxiv.org/abs/2606.13673v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13673",
+  "links": {
+    "github": null,
+    "project_page": "https://spatialclaw.github.io/"
+  },
+  "abstract_en": "Spatial reasoning, the ability to determine where objects are, how they relate, and how they move in 3D, remains a fundamental challenge for vision-language models (VLMs). Tool-augmented agents attempt to address this by augmenting VLMs with specialist perception modules, yet their effectiveness is bounded by the action interface through which those tools are invoked. In this work, we study how the design of this interface shapes the agent's capacity for open-ended spatial reasoning. Existing spatial agents either employ single-pass code execution, which commits to a full analysis strategy before any intermediate result is observed, or rely on a structured tool-call interface that often offers less flexibility for freely composing operations or tailoring the analysis to each task. Both designs offer limited flexibility for open-ended, complex 3D/4D spatial reasoning. We therefore propose SpatialClaw, a training-free framework for spatial reasoning that adopts code as the action interface. SpatialClaw maintains a stateful Python kernel pre-loaded with input frames and a suite of perception and geometry primitives, letting a VLM-backed agent write one executable cell per step conditioned on all prior outputs, enabling the agent to flexibly compose and manipulate perception results and adapt its analysis to both intermediate text and visual observations and the demands of each problem. Evaluated across 20 spatial reasoning benchmarks spanning a broad range of static and dynamic 3D/4D spatial reasoning tasks, SpatialClaw achieves 59.9% average accuracy, outperforming the recent spatial agent by +11.2 points, with consistent gains across six VLM backbones from two model families without any benchmark- or model-specific adaptation.",
+  "abstract_zh": "空间推理，即判断物体在 3D 中的位置、关系及运动方式，仍是 vision-language models（VLMs）的核心挑战。现有工具增强型智能体通过调用专门感知模块来提升能力，但其效果受限于工具调用所依赖的动作接口。本文研究动作接口设计如何影响智能体的开放式空间推理能力。已有空间智能体通常采用单次代码执行，需在观察任何中间结果前就确定完整分析策略；或采用结构化 tool-call 接口，但在自由组合操作、按任务定制分析方面灵活性不足。为此，作者提出 SpatialClaw：一种无需训练的空间推理框架，以代码作为动作接口。SpatialClaw 维护一个有状态 Python kernel，预加载输入帧以及感知和几何基础算子，使 VLM-backed agent 能够每一步编写一个可执行代码单元，并基于所有历史输出进行迭代决策，从而灵活组合、操作感知结果，并根据中间文本、视觉观察和任务需求调整分析流程。在覆盖静态与动态 3D/4D 空间推理的 20 个 benchmark 上，SpatialClaw 平均准确率达到 59.9%，较近期空间智能体提升 11.2 个百分点，并在来自两个模型家族的六种 VLM backbone 上均获得稳定增益，且无需针对 benchmark 或模型进行特定适配。",
+  "key_points_zh": [
+    "核心观点：空间智能体的能力不仅取决于感知工具本身，也强烈受限于“动作接口”设计，即智能体如何调用、组合和迭代使用这些工具。",
+    "SpatialClaw 采用代码作为动作接口，并提供有状态 Python kernel，使智能体可逐步执行代码、观察中间结果，再动态调整后续空间分析策略。",
+    "相比单次代码执行和结构化 tool-call，SpatialClaw 更适合开放式复杂 3D/4D 空间推理，可自由组合感知、几何与可视化操作。",
+    "实验覆盖 20 个静态与动态空间推理 benchmark，SpatialClaw 平均准确率为 59.9%，比近期 spatial agent 高 11.2 个百分点。",
+    "方法无需训练，也无需 benchmark- 或 model-specific adaptation，并在两个模型家族的六种 VLM backbone 上表现出一致提升。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.45,
+    "problem_significance": 0.75,
+    "potential_impact": 0.6,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.55,
+    "llm_avg": 0.54,
+    "comment": "SpatialClaw offers a useful training-free agent interface for spatial reasoning, but the core idea is largely an adaptation of stateful code execution to VLM tool use.",
+    "comment_zh": "SpatialClaw为视觉语言模型空间推理提供了实用的免训练代理接口，但核心创新主要是将有状态代码执行用于工具调用。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.4,
+    "community_heat": 0.9314498585962493,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.54,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://spatialclaw.github.io/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 80,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "last_author_h_index": null,
+    "last_author_found": false
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13673/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13673/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13673/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.965
+    }
+  ]
+}

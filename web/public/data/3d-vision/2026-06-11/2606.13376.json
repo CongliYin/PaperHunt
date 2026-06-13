@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2606.13376",
+  "title": "MoVerse: Real-Time Video World Modeling with Panoramic Gaussian Scaffold",
+  "title_zh": "MoVerse：基于全景 Gaussian Scaffold 的实时视频世界建模",
+  "authors": [
+    "Yang Zhou",
+    "Ziheng Wang",
+    "Yuqin Lu",
+    "Haofeng Liu",
+    "Jun Liang",
+    "Shengfeng He",
+    "Jing Li"
+  ],
+  "published_at": "2026-06-11T14:01:02Z",
+  "abs_url": "https://arxiv.org/abs/2606.13376v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13376",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We present MoVerse, a real-time video world model that creates an interactively navigable scene from a single narrow-field-of-view image. This setting is challenging because the input observes only a small fraction of the environment, while interactive roaming requires a complete surrounding world, persistent geometry, controllable camera motion, and temporally coherent high-fidelity observations. MoVerse addresses this problem by separating world construction from observation rendering. It first expands the input into a gravity-aligned 360$^\\circ$ panorama with topology-aware diffusion, closing the missing field of view before 3D reasoning. It then lifts the panorama into a persistent 3D Gaussian scaffold using panoramic geometry-aware residual prediction, yielding a dense and directly renderable spatial memory. Finally, a Gaussian-conditioned video renderer translates scaffold renderings along user-specified camera trajectories into photorealistic video. To make this renderer practical for interaction, we train a bidirectional diffusion teacher for high-quality conditional rendering and distill it into a causal autoregressive student for bounded-latency streaming. This design combines the controllability and long-range consistency of explicit 3D representations with the perceptual quality of generative video models. MoVerse supports real-time scene roaming at 8~FPS on a single NVIDIA RTX~4090 GPU, demonstrating a practical path toward single-image world creation with interactive video output.",
+  "abstract_zh": "MoVerse 是一个实时视频世界模型，可从单张窄视场图像生成可交互漫游的场景。该任务的难点在于输入只覆盖环境的一小部分，而交互式漫游需要完整的周围世界、持久几何结构、可控相机运动以及时间一致的高保真观测。MoVerse 将世界构建与观测渲染解耦：首先利用 topology-aware diffusion 将输入扩展为重力对齐的 360° 全景图，在进行 3D 推理前补全缺失视野；随后通过 panoramic geometry-aware residual prediction 将全景图提升为持久的 3D Gaussian scaffold，形成密集且可直接渲染的空间记忆；最后，Gaussian-conditioned video renderer 沿用户指定相机轨迹，将 scaffold 渲染结果转换为逼真的视频。为实现可交互性，作者训练了一个双向 diffusion teacher 用于高质量条件渲染，并将其蒸馏为因果自回归 student，以支持有界延迟的流式生成。该方法结合了显式 3D 表示的可控性与长程一致性，以及生成式视频模型的感知质量，在单张 NVIDIA RTX 4090 GPU 上实现 8 FPS 的实时场景漫游。",
+  "key_points_zh": [
+    "提出 MoVerse，从单张窄视场图像构建可交互导航的完整视频世界，目标是同时满足场景补全、几何持久性、相机可控性与时间一致性。",
+    "采用“世界构建—观测渲染”解耦框架：先用 topology-aware diffusion 生成重力对齐的 360° panorama，再进行 3D 推理，减少窄视场输入带来的信息缺失。",
+    "通过 panoramic geometry-aware residual prediction 将全景图提升为 3D Gaussian scaffold，作为密集、持久且可直接渲染的空间记忆，增强长程一致性。",
+    "设计 Gaussian-conditioned video renderer，将 scaffold 渲染结果与用户相机轨迹结合，生成高保真视频；并通过 bidirectional diffusion teacher 到 causal autoregressive student 的蒸馏实现低延迟流式输出。",
+    "系统可在单张 NVIDIA RTX 4090 GPU 上以 8 FPS 运行，展示了单图世界生成与实时交互式视频输出的可行路径。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.68,
+    "problem_significance": 0.8,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.75,
+    "llm_avg": 0.718,
+    "comment": "MoVerse presents an ambitious and potentially influential pipeline combining panoramic completion, Gaussian spatial memory, and real-time generative rendering for single-image world creation.",
+    "comment_zh": "MoVerse将全景补全、高斯空间记忆与实时生成式渲染结合用于单图世界创建，方案雄心较大且具潜在影响力。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.7808604494268809,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.718,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 10,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "last_author_h_index": null,
+    "last_author_found": false
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13376/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13376/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13376/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.974
+    }
+  ]
+}

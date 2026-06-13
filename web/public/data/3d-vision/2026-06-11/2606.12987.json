@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2606.12987",
+  "title": "Diffusion Transformer World-Action Model for AV Scene Prediction",
+  "title_zh": "用于自动驾驶场景预测的 Diffusion Transformer 世界-动作模型",
+  "authors": [
+    "Ruslan Sharifullin",
+    "Benjamin Jiang",
+    "Kai Xi Chew"
+  ],
+  "published_at": "2026-06-11T07:24:12Z",
+  "abs_url": "https://arxiv.org/abs/2606.12987v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12987",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Action-conditioned world models let an autonomous vehicle predict future camera scenes from its own planned controls, enabling planning and simulation without real-world rollouts, but at compact, trainable scale the futures are ambiguous and the field's standard distortion metrics actively mislead: they reward a blurry regression mean over a realistic prediction. We confront this with a compact latent world model that, given the present front-camera latent and a sequence of ego-actions, predicts future scene latents a frozen decoder renders to $256 \\times 256$ frames up to 8 seconds ahead, evaluated on 150 held-out nuScenes scenes. We first benchmark where to predict: across six frozen encoders spanning four representation families, V-JEPA2 with temporal context reduces steering RMSE by 40% over the best single-frame encoder. We then train a latent Diffusion Transformer (DiT) and, through a controlled diagnosis, identify the four ingredients it needs: spatial tokens, the $x_0$ objective, residual anchoring, and sampling matched to target uncertainty. In a Stable-Diffusion-VAE encode-predict-decode pipeline we expose the central tension: distortion metrics (cosine similarity, SSIM) favor the blurry mean, masking that the diffusion model is far closer to the real frame distribution. Inception-based FID and KID reveal a clean perception-distortion frontier: diffusion attains KID 0.078 versus 0.375 for regression ($4.8\\times$ better), and a deployable train-derived calibration makes this practical without test-time ground truth. The model is genuinely action-controllable (steering drives scene displacement, Spearman $ρ= 0.81$, vs $-0.18$ for regression). We trace limited single-pass motion to a shared-present anchor and engineer a compact 1.7M-parameter \"jump\" model that recovers full ground-truth motion magnitude ($1.02\\times$ GT), where single-pass models capture less than half.",
+  "abstract_zh": "本文研究面向自动驾驶的动作条件世界模型：给定当前前视相机表示和未来 ego-actions，预测最长 8 秒后的未来相机场景。作者指出，在紧凑可训练规模下，未来场景具有多解性，而常用失真指标会偏向模糊的回归均值，反而低估真实感更强的生成式预测。论文在 150 个 nuScenes 保留场景上评估，先比较 6 种冻结编码器、覆盖 4 类表征族，发现带时间上下文的 V-JEPA2 相比最佳单帧编码器可将转向 RMSE 降低 40%。随后训练 latent Diffusion Transformer（DiT），并诊断出有效建模所需的 4 个关键因素：spatial tokens、$x_0$ objective、residual anchoring，以及与目标不确定性匹配的采样策略。在 Stable-Diffusion-VAE 的 encode-predict-decode 流水线中，作者揭示感知-失真权衡：cosine similarity、SSIM 等失真指标偏爱模糊均值，而 Inception-based FID/KID 更能反映 diffusion 预测接近真实帧分布的优势。实验中 diffusion 达到 KID 0.078，显著优于 regression 的 0.375，并表现出真实动作可控性：转向与场景位移 Spearman $ρ=0.81$，而 regression 为 -0.18。最后，作者分析 single-pass 运动幅度不足源于 shared-present anchor，并提出仅 1.7M 参数的 compact “jump” model，使运动幅度恢复到 ground-truth 的 1.02 倍。",
+  "key_points_zh": [
+    "提出紧凑 latent world model：输入当前前视相机 latent 与未来 ego-actions，预测未来 scene latents，并由冻结 decoder 渲染为 $256\\times256$ 图像，最长预测 8 秒。",
+    "系统比较 6 种冻结编码器后发现，带时间上下文的 V-JEPA2 表征最适合动作条件预测，相比最佳单帧 encoder 将 steering RMSE 降低 40%。",
+    "通过受控诊断确定 latent DiT 成功的关键组件：spatial tokens、$x_0$ objective、residual anchoring、以及与目标不确定性匹配的 sampling。",
+    "指出传统 distortion metrics（cosine similarity、SSIM）会奖励模糊回归均值；Inception-based FID/KID 显示 diffusion 更接近真实帧分布，KID 为 0.078，较 regression 的 0.375 提升约 4.8 倍。",
+    "模型具备明确 action controllability：steering 可驱动场景位移，Spearman $ρ=0.81$；另提出 1.7M 参数 “jump” model，恢复到 1.02 倍 ground-truth 运动幅度。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.42,
+    "problem_significance": 0.72,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.5,
+    "llm_avg": 0.4779999999999999,
+    "comment": "This paper provides a careful study of compact action-conditioned diffusion world models for autonomous driving, with useful diagnostics but limited representational novelty.",
+    "comment_zh": "该工作对自动驾驶中的紧凑动作条件扩散世界模型进行了细致研究并给出有用诊断，但表示层面的创新有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.4779999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12987/fig1.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.976
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12987/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12987/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12987/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

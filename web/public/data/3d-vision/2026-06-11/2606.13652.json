@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2606.13652",
+  "title": "World Tracing: Generative Pixel-Aligned Geometry Beyond the Visible",
+  "title_zh": "World Tracing：超越可见区域的生成式像素对齐几何",
+  "authors": [
+    "Hao Zhang",
+    "Mohamed El Banani",
+    "Jen-Hao Cheng",
+    "Paul Zhang",
+    "Yi Hua",
+    "Ben Mildenhall",
+    "Christoph Lassner",
+    "Narendra Ahuja",
+    "Gengshan Yang"
+  ],
+  "published_at": "2026-06-11T17:52:48Z",
+  "abs_url": "https://arxiv.org/abs/2606.13652v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13652",
+  "links": {
+    "github": null,
+    "project_page": "https://haoz19.github.io/world-tracing-page/"
+  },
+  "abstract_en": "Image-to-3D methods often trade off faithfulness and completeness: depth estimators are anchored to input pixels but stop at the visible surface, while image-to-3D models generate complete shapes that are often misaligned with the input. We introduce World Tracing, a generative pixel-aligned geometry representation that predicts 3D points aligned with observed pixels while completing geometry beyond the visible surface. For each input pixel, World Tracing predicts an ordered stack of camera-space 3D points, where the first layer represents the visible surface and subsequent layers represent front-to-back intersections with occluded surfaces. We instantiate this representation with a world-tracing diffusion transformer, WT-DiT, which treats multiple geometry layers as separate denoising tokens coupled through factorized and global attention. WT-DiT is trained with pixel-space flow matching and a mixed noise schedule that balances visible-surface reconstruction with occluded-geometry generation. World Tracing achieves strong performance on visible-surface reconstruction and complete geometry generation across object, scene, and dynamic benchmarks, outperforming both depth predictors and image-to-3D generators. It also preserves 2D-to-3D correspondence, enabling text-driven 3D scene editing, geometry-conditioned novel-view video synthesis, and training-free integration with textured-mesh generators.",
+  "abstract_zh": "本文提出 World Tracing，一种生成式像素对齐几何表示，旨在缓解 Image-to-3D 方法中“可见表面忠实但不完整”与“完整形状生成但与输入错位”的矛盾。该方法为每个输入像素预测一组有序的相机空间 3D 点栈：第一层对应可见表面，后续层表示从前到后与被遮挡表面的交点。作者进一步提出 world-tracing diffusion transformer（WT-DiT），将多层几何视为独立去噪 token，并通过因子化注意力与全局注意力建模层间关系。WT-DiT 采用像素空间 flow matching 和混合噪声调度，在可见表面重建与遮挡几何生成之间取得平衡。实验表明，World Tracing 在物体、场景和动态基准上同时提升可见表面重建与完整几何生成能力，优于深度估计器和 Image-to-3D 生成器，并保留 2D-to-3D 对应关系，可用于文本驱动 3D 场景编辑、几何条件新视角视频合成，以及与纹理网格生成器的免训练集成。",
+  "key_points_zh": [
+    "提出 World Tracing 表示：每个像素对应一个有序 3D 点栈，首层为可见表面，后续层补全被遮挡几何。",
+    "提出 WT-DiT，将多层几何作为去噪 token，通过因子化注意力和全局注意力建模跨层与全局结构。",
+    "训练采用像素空间 flow matching 与混合噪声调度，兼顾可见表面精确重建和不可见几何的生成能力。",
+    "在物体、场景和动态基准上优于传统 depth predictors 与 Image-to-3D generators，兼具对齐性与完整性。",
+    "保留 2D-to-3D correspondence，可支持文本驱动 3D 编辑、几何条件 novel-view video synthesis 和与 textured-mesh generators 的免训练结合。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.85,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8320000000000001,
+    "comment": "World Tracing introduces a compelling pixel-aligned multilayer geometry representation that could meaningfully influence image-to-3D reconstruction and completion.",
+    "comment_zh": "World Tracing提出了有吸引力的像素对齐多层几何表示，可能显著影响图像到三维的重建与补全研究。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.8320000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://haoz19.github.io/world-tracing-page/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "last_author_h_index": null,
+    "last_author_found": false
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13652/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13652/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13652/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.96
+    }
+  ]
+}
