@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2606.13385",
+  "title": "Who Pays the Price? Stakeholder-Centric Prompt Injection Benchmarking for Real-world Web Agents",
+  "title_zh": "谁来付出代价？面向真实 Web Agent 的利益相关者中心 Prompt Injection 基准",
+  "authors": [
+    "Zihao Wang",
+    "Yiming Li",
+    "Yutong Wu",
+    "Zheyu Liu",
+    "Kangjie Chen",
+    "Fok Kar Wai",
+    "Pin-Yu Chen",
+    "Vrizlynn L. L. Thing",
+    "Bo Li",
+    "Dacheng Tao",
+    "Tianwei Zhang"
+  ],
+  "published_at": "2026-06-11T14:12:43Z",
+  "abs_url": "https://arxiv.org/abs/2606.13385v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13385",
+  "links": {
+    "github": "https://github.com/StakeBench/SBC.",
+    "project_page": null
+  },
+  "abstract_en": "Web agents driven by large language models (LLMs) are increasingly deployed in real-world environments, where they operate over untrusted web content and execute actions with direct consequences. This makes them vulnerable to prompt-injection attacks, in which seemingly benign content embeds adversarial instructions that manipulate agent behaviour. Existing security benchmarks adopt an \\textit{attack-centric} perspective, focusing on the technical feasibility of injections while overlooking the nuanced distribution of resulting harms. In practice, however, prompt-injection risk is victim-dependent: a single exploit can produce asymmetric consequences for different stakeholders, and the same attack pattern may exhibit substantially different effectiveness depending on whom it targets. To capture these properties, we introduce \\textbf{\\sysname}, a \\textit{stakeholder-centric} benchmark to systematically categorize and attribute harm in real-world web agent systems. It distinguishes between affected entities (e.g., user, seller, platform), decomposes the attacks into concrete objectives, and evaluates each case with complementary outcome- and process-level metrics. Our results reveal substantial and heterogeneous vulnerabilities: not a single attack objective is reliably resisted by current agents, and failures distribute across qualitatively distinct modes ranging from \\emph{stealthy parasitism} (attack succeeds without disrupting the user's delegated task) to \\emph{misaligned disruption} (task disrupted without attack success) and \\emph{compounded failure} (both adversarial objective and task integrity simultaneously violated). These patterns are missed by conventional evaluation, highlighting the need for stakeholder-aware assessment of LLM-based agents in real-world deployments. Benchmark is available at https://github.com/StakeBench/SBC.",
+  "abstract_zh": "由大语言模型（LLM）驱动的 Web agents 正越来越多地部署到真实环境中，它们需要处理不可信网页内容，并执行会产生实际后果的操作，因此容易受到 prompt-injection 攻击：看似正常的网页内容中可能嵌入对抗性指令，从而操纵 agent 行为。现有安全基准多采用“攻击中心”（attack-centric）视角，关注注入在技术上是否可行，却忽略了攻击造成的伤害如何在不同利益相关者之间分布。现实中，prompt-injection 风险具有受害者依赖性：同一次利用可能对用户、卖家、平台等不同主体造成不对称影响，同一攻击模式在不同目标对象上也可能表现出显著不同的有效性。为刻画这些特性，论文提出 StakeBench/SBC，一个“利益相关者中心”（stakeholder-centric）的基准，用于系统化分类并归因真实 Web agent 系统中的伤害。该基准区分受影响实体，将攻击拆解为具体目标，并结合结果层面与过程层面的互补指标进行评估。实验显示，当前 agents 存在显著且异质的漏洞：没有任何攻击目标能被可靠防御，失败模式包括“隐蔽寄生”（攻击成功但不影响用户委托任务）、“错位破坏”（任务被破坏但攻击未成功）以及“复合失败”（攻击目标达成且任务完整性同时受损）。这些现象会被传统评估遗漏，说明真实部署中的 LLM-based agents 需要面向利益相关者的安全评测。",
+  "key_points_zh": [
+    "论文提出 StakeBench/SBC，用于从 user、seller、platform 等受影响实体角度评估 Web agents 的 prompt-injection 风险。",
+    "区别于传统 attack-centric 基准，该方法关注伤害归因与分布，强调同一攻击对不同利益相关者可能造成不对称后果。",
+    "基准将攻击拆解为具体 objectives，并同时使用 outcome-level 与 process-level metrics，衡量攻击是否成功以及 agent 执行过程是否偏离。",
+    "实验发现当前 Web agents 对所有攻击目标都缺乏可靠抵抗能力，漏洞呈现显著异质性。",
+    "论文总结出 stealthy parasitism、misaligned disruption、compounded failure 等失败模式，指出常规评测会低估真实部署风险。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.72,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.34,
+    "lasting_value": 0.52,
+    "llm_avg": 0.542,
+    "comment": "A meaningful stakeholder-aware security benchmark for web agents, but it is primarily diagnostic and lacks a clear trace-driven improvement mechanism.",
+    "comment_zh": "这是一个有意义的面向利益相关方的Web智能体安全基准，但主要是诊断性评测，缺少明确的轨迹驱动改进机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.542,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/StakeBench/SBC.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "last_author_h_index": null,
+    "last_author_found": false
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13385/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13385/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}

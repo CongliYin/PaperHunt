@@ -1,0 +1,287 @@
+{
+  "domain": "agent-evolution",
+  "display_name": "Agent Evolution",
+  "date": "2026-06-11",
+  "generated_at": "2026-06-13T07:34:35Z",
+  "papers": [
+    {
+      "arxiv_id": "2606.13368",
+      "title": "IterCAD: An Iterative Multimodal Agent for Visually-Grounded CAD Generation and Editing",
+      "title_zh": "IterCAD：用于视觉对齐 CAD 生成与编辑的迭代式多模态智能体",
+      "authors": [
+        "Tao Hu",
+        "Jiaxin Ai",
+        "Licheng Wen",
+        "Xueheng Li",
+        "Shu Zou",
+        "Siqi Li",
+        "Nianchen Deng",
+        "Xinyu Cai",
+        "Hongbin Zhou",
+        "Pinlong Cai",
+        "Daocheng Fu",
+        "Yu Yang",
+        "Hairong Zhang",
+        "Botian Shi",
+        "Xuemeng Yang"
+      ],
+      "total_score": 0.6551973632443965,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.79,
+        "other": 0.22065787748132143
+      },
+      "tags": [
+        "production trace learning"
+      ],
+      "tldr_zh": "闭环多模态智能体迭代生成与编辑CAD",
+      "detail_file": "agent-evolution/2026-06-11/2606.13368.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13368/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13174",
+      "title": "Getting Better at Working With You: Compiling User Corrections into Runtime Enforcement for Coding Agents",
+      "title_zh": "与你协作得更好：将用户纠正编译为编码 Agent 的运行时强制约束",
+      "authors": [
+        "Yujun Zhou",
+        "Kehan Guo",
+        "Haomin Zhuang",
+        "Xiangqi Wang",
+        "Yue Huang",
+        "Zhenwen Liang",
+        "Pin-Yu Chen",
+        "Tian Gao",
+        "Nuno Moniz",
+        "Nitesh V. Chawla",
+        "Xiangliang Zhang"
+      ],
+      "total_score": 0.6500232042643194,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.8220000000000001,
+        "other": 0.4914106808810642
+      },
+      "tags": [
+        "HF Daily ★2",
+        "GitHub",
+        "tool use agents"
+      ],
+      "tldr_zh": "TRACE 将用户纠正变成运行时强制规则",
+      "detail_file": "agent-evolution/2026-06-11/2606.13174.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13174/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13662",
+      "title": "EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery",
+      "title_zh": "EurekAgent：自主科学发现只需 Agent Environment Engineering",
+      "authors": [
+        "Amy Xin",
+        "Jiening Siow",
+        "Junjie Wang",
+        "Zijun Yao",
+        "Fanjin Zhang",
+        "Jian Song",
+        "Lei Hou",
+        "Juanzi Li"
+      ],
+      "total_score": 0.6326976052687509,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.798,
+        "other": 0.4043253508958358
+      },
+      "tags": [
+        "HF Daily ★19",
+        "Code soon",
+        "judge reward verifier"
+      ],
+      "tldr_zh": "把重点从流程设计转向环境工程",
+      "detail_file": "agent-evolution/2026-06-11/2606.13662.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13662/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13040",
+      "title": "RoboProcessBench: Benchmarking Process-Aware Understanding in Vision-Language Robotic Manipulation",
+      "title_zh": "RoboProcessBench：面向视觉-语言机器人操作的过程感知理解基准",
+      "authors": [
+        "Dayu Xia",
+        "Yue Shi",
+        "Yao Mu",
+        "Huiting Ji",
+        "Chaofan Ma",
+        "Yingjie Zhou",
+        "Hua Chen",
+        "Yang Liu",
+        "Jiezhang Cao",
+        "Guangtao Zhai"
+      ],
+      "total_score": 0.6200000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.56,
+        "other": 0.33333333333333337
+      },
+      "tags": [
+        "Project Page",
+        "production trace learning"
+      ],
+      "tldr_zh": "评测并提升VLM的机器人操作过程理解",
+      "detail_file": "agent-evolution/2026-06-11/2606.13040.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13040/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.12882",
+      "title": "HarnessBridge: Learnable Bidirectional Controller for LLM Agent Harness",
+      "title_zh": "HarnessBridge：用于 LLM Agent Harness 的可学习双向控制器",
+      "authors": [
+        "Xiaoxuan Wang",
+        "Haixin Wang",
+        "Alexander Taylor",
+        "Jason Cong",
+        "Yizhou Sun",
+        "Wei Wang"
+      ],
+      "total_score": 0.5960610716120159,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.7460000000000001,
+        "other": 0.3342035720400528
+      },
+      "tags": [
+        "HF Daily ★9",
+        "agent environment and rollout"
+      ],
+      "tldr_zh": "用可学习模块自动生成高效 Agent harness",
+      "detail_file": "agent-evolution/2026-06-11/2606.12882.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12882/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13262",
+      "title": "From Verdict to Process: Agentic Reinforcement Learning for Multi-Stage Fact Verification",
+      "title_zh": "从结论到过程：用于多阶段事实核查的智能体强化学习",
+      "authors": [
+        "Rongxin Yang",
+        "Shenghong He",
+        "Siyuan Zhu",
+        "Chao Yu"
+      ],
+      "total_score": 0.5960000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.72,
+        "other": 0.2
+      },
+      "tags": [
+        "agentic rl"
+      ],
+      "tldr_zh": "ProFact 用强化学习优化事实核查全流程",
+      "detail_file": "agent-evolution/2026-06-11/2606.13262.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13262/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.12995",
+      "title": "GenHOI: Contact-Aware Humanoid-Object Interaction by Imitating Generated Videos without Task-Specific Training",
+      "title_zh": "GenHOI：通过模仿生成视频实现接触感知的人形机器人-物体交互，无需任务特定训练",
+      "authors": [
+        "Zhihai Bi",
+        "Qiang Zhang",
+        "Guoyang Zhao",
+        "Jiahang Cao",
+        "Xueyin Luo",
+        "Yushan Zhang",
+        "Jinglan Xu",
+        "Ruoyu Geng",
+        "Yulin Li",
+        "Andrew F. Luo",
+        "Jun Ma"
+      ],
+      "total_score": 0.5540000000000002,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.5800000000000001,
+        "other": 0.2
+      },
+      "tags": [
+        "production trace learning"
+      ],
+      "tldr_zh": "用生成视频零样本教人形机器人交互",
+      "detail_file": "agent-evolution/2026-06-11/2606.12995.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12995/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13177",
+      "title": "MemRefine: LLM-Guided Compression for Long-Term Agent Memory",
+      "title_zh": "MemRefine：面向长期 Agent 记忆的 LLM 引导压缩方法",
+      "authors": [
+        "Minjae Kim",
+        "Jinheon Baek",
+        "Soyeong Jeong",
+        "Sung Ju Hwang"
+      ],
+      "total_score": 0.5460000000000002,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.5,
+        "other": 0.2
+      },
+      "tags": [
+        "nonparametric agent evolution"
+      ],
+      "tldr_zh": "用 LLM 判断事实价值压缩长期记忆",
+      "detail_file": "agent-evolution/2026-06-11/2606.13177.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13177/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.12852",
+      "title": "WISE: A Long-Horizon Agent in Minecraft with Why-Which Reasoning",
+      "title_zh": "WISE：具备 Why-Which 推理能力的 Minecraft 长时程智能体",
+      "authors": [
+        "Renmin Cheng",
+        "Changhao Chen"
+      ],
+      "total_score": 0.5336000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.512,
+        "other": 0.2
+      },
+      "tags": [
+        "nonparametric agent evolution"
+      ],
+      "tldr_zh": "用因果记忆提升 Minecraft 长程智能体",
+      "detail_file": "agent-evolution/2026-06-11/2606.12852.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12852/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13385",
+      "title": "Who Pays the Price? Stakeholder-Centric Prompt Injection Benchmarking for Real-world Web Agents",
+      "title_zh": "谁来付出代价？面向真实 Web Agent 的利益相关者中心 Prompt Injection 基准",
+      "authors": [
+        "Zihao Wang",
+        "Yiming Li",
+        "Yutong Wu",
+        "Zheyu Liu",
+        "Kangjie Chen",
+        "Fok Kar Wai",
+        "Pin-Yu Chen",
+        "Vrizlynn L. L. Thing",
+        "Bo Li",
+        "Dacheng Tao",
+        "Tianwei Zhang"
+      ],
+      "total_score": 0.5126000000000001,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.542,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "tool use agents"
+      ],
+      "tldr_zh": "提出利益相关者中心的Web Agent注入基准",
+      "detail_file": "agent-evolution/2026-06-11/2606.13385.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13385/thumb.webp"
+    }
+  ]
+}
