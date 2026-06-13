@@ -4,15 +4,16 @@ import { assetSrc } from "@/lib/assets";
 import { detailParams, readDetail } from "@/lib/data";
 
 type Params = {
-  params: { domain: string; date: string; arxivId: string };
+  params: Promise<{ domain: string; date: string; arxivId: string }>;
 };
 
 export function generateStaticParams() {
   return detailParams();
 }
 
-export default function DetailPage({ params }: Params) {
-  const paper = readDetail(params.domain, params.date, params.arxivId);
+export default async function DetailPage({ params }: Params) {
+  const { domain, date, arxivId } = await params;
+  const paper = readDetail(domain, date, arxivId);
   if (!paper) notFound();
 
   const dims = [
