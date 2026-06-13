@@ -7,6 +7,10 @@ type Params = {
   params: Promise<{ domain: string; date: string; arxivId: string }>;
 };
 
+function alphaXivUrl(arxivId: string) {
+  return `https://www.alphaxiv.org/abs/${encodeURIComponent(arxivId)}`;
+}
+
 export function generateStaticParams() {
   return detailParams();
 }
@@ -23,13 +27,20 @@ export default async function DetailPage({ params }: Params) {
     ["Paradigm", paper.llm_assessment.paradigm_shift],
     ["Lasting", paper.llm_assessment.lasting_value]
   ] as const;
+  const [leadFigure, ...otherFigures] = paper.figures;
 
   return (
     <main className="shell">
       <header className="detail-header">
         <Link className="back" href="/">
-          ← Paper Hunt
+          Back to Paper Hunt
         </Link>
+        <div className="detail-meta-row">
+          <span>{domain}</span>
+          <span>{date}</span>
+          <span>{paper.arxiv_id}</span>
+          <span>{Math.round((paper.scores.llm_assessment || 0) * 100)} LLM</span>
+        </div>
         <div>
           <h1 className="detail-title">{paper.title_zh || paper.title}</h1>
           <p className="detail-title-en">{paper.title}</p>
@@ -52,17 +63,42 @@ export default async function DetailPage({ params }: Params) {
               Project
             </a>
           ) : null}
+          <a className="pill-link primary" href={alphaXivUrl(paper.arxiv_id)} target="_blank" rel="noreferrer">
+            了解详情 <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </header>
+
+      {leadFigure ? (
+        <figure className="lead-figure">
+          <a href={assetSrc(leadFigure.src)} target="_blank" rel="noreferrer">
+            <img
+              src={assetSrc(leadFigure.src)}
+              alt={leadFigure.caption_zh || `Page ${leadFigure.page}`}
+              loading="eager"
+            />
+          </a>
+          <figcaption>
+            Page {leadFigure.page} · {leadFigure.kind} · {Math.round(leadFigure.confidence * 100)}%
+            {leadFigure.caption_zh ? ` · ${leadFigure.caption_zh}` : ""}
+          </figcaption>
+        </figure>
+      ) : null}
 
       <div className="detail-grid">
         <div>
           <section className="section">
-            <h2>中文摘要</h2>
+            <div className="section-heading">
+              <h2>中文摘要</h2>
+              <span>Briefing</span>
+            </div>
             <p className="prose">{paper.abstract_zh || "暂无中文摘要。"}</p>
           </section>
           <section className="section">
-            <h2>核心技术点</h2>
+            <div className="section-heading">
+              <h2>核心技术点</h2>
+              <span>Signals</span>
+            </div>
             {paper.key_points_zh.length ? (
               <ul className="points">
                 {paper.key_points_zh.map((point) => (
@@ -74,8 +110,11 @@ export default async function DetailPage({ params }: Params) {
             )}
           </section>
           <section className="section">
-            <details>
-              <summary>英文摘要</summary>
+            <details className="abstract-disclosure">
+              <summary>
+                <span>英文摘要</span>
+                <small>Expand original abstract</small>
+              </summary>
               <p className="prose">{paper.abstract_en}</p>
             </details>
           </section>
@@ -83,7 +122,13 @@ export default async function DetailPage({ params }: Params) {
 
         <aside>
           <section className="section score-panel">
-            <h2>LLM 评估</h2>
+            <div className="score-head">
+              <div>
+                <h2>LLM 评估</h2>
+                <p>Novelty, impact and topic fit</p>
+              </div>
+              <strong>{Math.round((paper.scores.llm_assessment || 0) * 100)}</strong>
+            </div>
             {dims.map(([label, raw]) => {
               const value = typeof raw === "number" ? raw : 0;
               return (
@@ -100,10 +145,13 @@ export default async function DetailPage({ params }: Params) {
           </section>
 
           <section className="section">
-            <h2>关键图片</h2>
+            <div className="section-heading">
+              <h2>关键图片</h2>
+              <span>{paper.figures.length} figures</span>
+            </div>
             <div className="gallery">
-              {paper.figures.length ? (
-                paper.figures.map((figure) => (
+              {otherFigures.length ? (
+                otherFigures.map((figure) => (
                   <figure className="figure" key={figure.src}>
                     <a href={assetSrc(figure.src)} target="_blank" rel="noreferrer">
                       <img src={assetSrc(figure.src)} alt={figure.caption_zh || `Page ${figure.page}`} loading="lazy" />
@@ -115,7 +163,7 @@ export default async function DetailPage({ params }: Params) {
                   </figure>
                 ))
               ) : (
-                <div className="empty">暂无可用图片。</div>
+                <div className="empty">{leadFigure ? "首图已在上方展示。" : "暂无可用图片。"}</div>
               )}
             </div>
           </section>
