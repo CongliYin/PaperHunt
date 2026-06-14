@@ -36,7 +36,6 @@ export function PaperBrowser({ index, initialList }: Props) {
   );
 
   const dateSummary = summarizeDates(selectedDates);
-  const selectedDateSet = useMemo(() => new Set(selectedDates), [selectedDates]);
 
   async function loadDates(nextDomain: string, nextDates: string[]) {
     const normalizedDates = normalizeDates(nextDates);
@@ -71,18 +70,8 @@ export function PaperBrowser({ index, initialList }: Props) {
     void loadDates(domain, normalizedDates);
   }
 
-  function applyPreset(kind: "latest" | "7d" | "30d" | "all") {
-    if (kind === "latest") applyDates(dates.slice(0, 1));
-    if (kind === "7d") applyDates(datesWithin(dates, 7));
-    if (kind === "30d") applyDates(datesWithin(dates, 30));
-    if (kind === "all") applyDates(dates);
-  }
-
-  function toggleDate(item: string) {
-    const nextDates = selectedDateSet.has(item)
-      ? selectedDates.filter((value) => value !== item)
-      : [...selectedDates, item];
-    applyDates(nextDates);
+  function applyDateRange(fromDate: string, toDate: string) {
+    applyDates(datesInRange(dates, fromDate, toDate));
   }
 
   const papers = [...visiblePapers].sort((a, b) => {
@@ -90,6 +79,10 @@ export function PaperBrowser({ index, initialList }: Props) {
     if (sortMode === "llm") return b.scores.llm_assessment - a.scores.llm_assessment;
     return b.total_score - a.total_score;
   });
+  const latestDate = dates[0] || "";
+  const oldestDate = dates[dates.length - 1] || "";
+  const selectedOldestDate = selectedDates[selectedDates.length - 1] || oldestDate;
+  const selectedLatestDate = selectedDates[0] || latestDate;
 
   return (
     <>
@@ -139,37 +132,33 @@ export function PaperBrowser({ index, initialList }: Props) {
                 aria-expanded={dateMenuOpen}
                 onClick={() => setDateMenuOpen((open) => !open)}
               >
-                <span>{dateSummary || "Select dates"}</span>
-                <small>{selectedDates.length || 0}</small>
+                <span>{dateSummary || "Select date range"}</span>
               </button>
               {dateMenuOpen ? (
                 <div className="date-menu">
-                  <div className="range-actions">
-                    <button type="button" onClick={() => applyPreset("latest")}>
-                      Latest
-                    </button>
-                    <button type="button" onClick={() => applyPreset("7d")}>
-                      7D
-                    </button>
-                    <button type="button" onClick={() => applyPreset("30d")}>
-                      30D
-                    </button>
-                    <button type="button" onClick={() => applyPreset("all")}>
-                      All
-                    </button>
+                  <div className="date-range-fields">
+                    <label>
+                      <span>From</span>
+                      <input
+                        type="date"
+                        min={oldestDate}
+                        max={latestDate}
+                        value={selectedOldestDate}
+                        onChange={(event) => applyDateRange(event.target.value, selectedLatestDate)}
+                      />
+                    </label>
+                    <label>
+                      <span>To</span>
+                      <input
+                        type="date"
+                        min={oldestDate}
+                        max={latestDate}
+                        value={selectedLatestDate}
+                        onChange={(event) => applyDateRange(selectedOldestDate, event.target.value)}
+                      />
+                    </label>
                   </div>
-                  <div className="date-options">
-                    {dates.map((item) => (
-                      <label className="check-row" key={item}>
-                        <input
-                          type="checkbox"
-                          checked={selectedDateSet.has(item)}
-                          onChange={() => toggleDate(item)}
-                        />
-                        <span>{item}</span>
-                      </label>
-                    ))}
-                  </div>
+                  <div className="date-range-note">{selectedDates.length} dates selected</div>
                 </div>
               ) : null}
             </div>
@@ -240,15 +229,17 @@ function normalizeDates(dates: string[]): string[] {
 function summarizeDates(dates: string[]): string {
   const normalizedDates = normalizeDates(dates);
   if (!normalizedDates.length) return "";
-  if (normalizedDates.length === 1) return normalizedDates[0];
+  if (normalizedDates.length === 1) return formatDateLabel(normalizedDates[0]);
   return `${normalizedDates[normalizedDates.length - 1]} ~ ${normalizedDates[0]}`;
 }
 
-function datesWithin(dates: string[], days: number): string[] {
+function datesInRange(dates: string[], fromDate: string, toDate: string): string[] {
   const normalizedDates = normalizeDates(dates);
-  const latest = normalizedDates[0];
-  if (!latest) return [];
-  const threshold = new Date(`${latest}T00:00:00Z`);
-  threshold.setUTCDate(threshold.getUTCDate() - days + 1);
-  return normalizedDates.filter((item) => new Date(`${item}T00:00:00Z`) >= threshold);
+  if (!fromDate || !toDate) return [];
+  const [start, end] = fromDate <= toDate ? [fromDate, toDate] : [toDate, fromDate];
+  return normalizedDates.filter((item) => item >= start && item <= end);
+}
+
+function formatDateLabel(date: string): string {
+  return date;
 }

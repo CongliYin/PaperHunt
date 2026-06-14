@@ -3,7 +3,11 @@ import { readIndex, readList } from "@/lib/data";
 
 export default function HomePage() {
   const index = readIndex();
-  const latest = [...index.entries].sort((a, b) => b.date.localeCompare(a.date))[0];
+  const preferredDomain = "agent-harness-evolution";
+  const preferredLatest = [...index.entries]
+    .filter((entry) => entry.domain === preferredDomain)
+    .sort((a, b) => b.date.localeCompare(a.date))[0];
+  const latest = preferredLatest || [...index.entries].sort((a, b) => b.date.localeCompare(a.date))[0];
   const initialList = latest ? readList(latest.file) : null;
 
   return (
@@ -12,4 +16,3 @@ export default function HomePage() {
     </main>
   );
 }
-

@@ -152,6 +152,20 @@ select {
   text-align: left;
 }
 
+.date-trigger::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid var(--ink);
+  border-bottom: 1.5px solid var(--ink);
+  transform: rotate(45deg) translateY(-2px);
+  flex: 0 0 auto;
+}
+
+.date-trigger[aria-expanded="true"]::after {
+  transform: rotate(225deg) translateY(-2px);
+}
+
 .date-trigger:hover,
 .date-trigger[aria-expanded="true"] {
   border-color: var(--accent);
@@ -168,83 +182,62 @@ select {
   white-space: nowrap;
 }
 
-.date-trigger small {
-  min-width: 24px;
-  height: 24px;
-  display: grid;
-  place-items: center;
-  border-radius: 999px;
-  background: #f0f7ff;
-  color: var(--accent);
-  font-size: 11px;
-  font-weight: 750;
-}
-
 .date-menu {
   position: absolute;
   z-index: 20;
   top: calc(100% + 8px);
   right: 0;
-  width: min(360px, calc(100vw - 40px));
+  width: min(420px, calc(100vw - 40px));
   border: 1px solid var(--line);
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
-  padding: 10px;
+  padding: 14px;
 }
 
-.range-actions {
+.date-range-fields {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.date-range-fields label {
+  display: grid;
   gap: 6px;
-  margin-bottom: 8px;
 }
 
-.range-actions button {
-  min-height: 32px;
-  border: 1px solid var(--line-soft);
-  border-radius: 7px;
-  background: #f8f8fa;
+.date-range-fields span {
+  color: var(--muted-2);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.date-range-fields input {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
   color: var(--ink);
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.range-actions button:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-.date-options {
-  max-height: 220px;
-  overflow: auto;
-  display: grid;
-  gap: 2px;
-  padding: 2px;
-}
-
-.check-row {
-  min-height: 34px;
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  border-radius: 7px;
-  color: var(--ink);
-  padding: 6px 8px;
-  cursor: pointer;
-  font-size: 13px;
+  padding: 8px 10px;
+  font: inherit;
+  font-size: 14px;
   font-variant-numeric: tabular-nums;
 }
 
-.check-row:hover {
-  background: #f5f5f7;
+.date-range-fields input:focus {
+  outline: 3px solid rgba(0, 113, 227, 0.18);
+  outline-offset: 2px;
+  border-color: var(--accent);
 }
 
-.check-row input {
-  width: 15px;
-  height: 15px;
-  accent-color: var(--accent);
+.date-range-note {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 650;
 }
 
 .paper-list {
@@ -775,5 +768,9 @@ select {
 
   .abstract-disclosure summary small {
     grid-column: 1 / -1;
+  }
+
+  .date-range-fields {
+    grid-template-columns: 1fr;
   }
 }
