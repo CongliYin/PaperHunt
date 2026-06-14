@@ -113,8 +113,6 @@ def _extract_with_pymupdf(
             candidates.append((area, xref, rect))
         candidates.sort(reverse=True, key=lambda item: item[0])
         for _, xref, rect in candidates[:2]:
-            if len(crops) >= max_figures:
-                break
             seen.add(xref)
             pix = page.get_pixmap(matrix=fitz.Matrix(FIGURE_RENDER_SCALE, FIGURE_RENDER_SCALE), clip=rect, alpha=False)
             png_path = work_dir / f"p{page_index + 1}_{len(crops) + 1}.png"
@@ -126,11 +124,12 @@ def _extract_with_pymupdf(
                     "page": page_index + 1,
                     "kind": "figure",
                     "confidence": 0.5,
+                    "area": float(area),
+                    "width": float(rect.width),
+                    "height": float(rect.height),
                 }
             )
-        if len(crops) >= max_figures:
-            break
-    return crops
+    return _rank_overview_candidates(crops)[:max_figures]
 
 
 def _extract_with_yolo(
@@ -175,7 +174,9 @@ def _extract_with_yolo(
                     continue
                 conf = float(box.conf[0])
                 x1, y1, x2, y2 = [int(v) for v in box.xyxy[0].tolist()]
-                area = max(0, x2 - x1) * max(0, y2 - y1)
+                width = max(0, x2 - x1)
+                height = max(0, y2 - y1)
+                area = width * height
                 crop_path = work_dir / f"p{page_index + 1}_{len(candidates) + 1}.webp"
                 _save_webp(image.crop((x1, y1, x2, y2)), crop_path, max_dim=FIGURE_MAX_DIM, quality=FIGURE_WEBP_QUALITY)
                 candidates.append(
@@ -185,10 +186,52 @@ def _extract_with_yolo(
                         "kind": kind,
                         "confidence": conf,
                         "area": area,
+                        "width": width,
+                        "height": height,
                     }
                 )
-    candidates.sort(key=lambda c: (c["page"] != 1, -c.get("confidence", 0), -c.get("area", 0)))
-    return candidates[:max_figures]
+    return _rank_overview_candidates(candidates)[:max_figures]
+
+
+def _rank_overview_candidates(candidates: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Prefer overview/pipeline-like figures over first-page or table crops."""
+    if not candidates:
+        return []
+    max_area = max(float(c.get("area", 0) or 0) for c in candidates) or 1.0
+
+    def score(candidate: dict[str, Any]) -> float:
+        page = int(candidate.get("page", 99) or 99)
+        kind = str(candidate.get("kind", "")).lower()
+        area = float(candidate.get("area", 0) or 0)
+        width = float(candidate.get("width", 0) or 0)
+        height = float(candidate.get("height", 0) or 0)
+        aspect = width / height if height > 0 else 1.0
+
+        value = 0.0
+        value += 2.0 if kind == "figure" else -1.6
+        value += min(area / max_area, 1.0) * 1.5
+        value += float(candidate.get("confidence", 0) or 0) * 0.5
+
+        if page == 1:
+            value += 0.2
+        elif 2 <= page <= 4:
+            value += 1.2
+        elif page <= 6:
+            value += 0.6
+
+        if 1.25 <= aspect <= 3.8:
+            value += 1.0
+        elif 0.9 <= aspect < 1.25:
+            value += 0.25
+        elif aspect > 4.5 or aspect < 0.55:
+            value -= 0.6
+
+        return value
+
+    return sorted(
+        candidates,
+        key=lambda c: (-score(c), int(c.get("page", 99) or 99), -float(c.get("area", 0) or 0)),
+    )
 
 
 def _publish_crops(
