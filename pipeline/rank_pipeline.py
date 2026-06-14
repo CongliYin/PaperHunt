@@ -219,6 +219,8 @@ def score_generality(paper: dict, topic_cfg: dict) -> float:
     abstract = paper.get("abstract", "") or ""
     text = f"{title}\n{abstract}"
     for level_cfg in topic_cfg.get("generality", {}).values():
+        if not isinstance(level_cfg, dict):
+            continue
         kw = level_cfg.get("keywords", [])
         if kw and _compile_kw_pattern(kw).search(text):
             return clamp(float(level_cfg.get("score", 0.4)))

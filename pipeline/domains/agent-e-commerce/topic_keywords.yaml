@@ -1,0 +1,238 @@
+# E-commerce Agent Topic Relevance - Tiered Keyword Configuration
+# Tier 1 focuses on commerce-native agent/search/recommendation workflows.
+# Generic multi-agent, generic recommendation, or generic RAG should only score
+# well when grounded in e-commerce/product/shopping contexts.
+
+tiers:
+  tier_1:
+    coefficient: 1.0
+    categories:
+      commerce_agent_workflows:
+        - "shopping agent"
+        - "shopping agents"
+        - "commerce agent"
+        - "commerce agents"
+        - "virtual shopping assistant"
+        - "guided shopping"
+        - "decision assistant"
+        - "personalized shopping"
+        - "agentic shopping"
+        - "agentic commerce"
+      ecommerce_multi_agent_collaboration:
+        - "multi-agent shopping"
+        - "multi agent shopping"
+        - "multi-agent e-commerce"
+        - "multi agent e-commerce"
+        - "multi-agent ecommerce"
+        - "multi agent ecommerce"
+        - "buyer agent"
+        - "seller agent"
+        - "merchant agent"
+        - "search agent"
+        - "ranking agent"
+        - "recommendation agent"
+        - "evaluation agent"
+        - "product agent"
+      product_search_retrieval:
+        - "product search"
+        - "conversational product search"
+        - "product retrieval"
+        - "query-product retrieval"
+        - "query product retrieval"
+        - "product ranking"
+        - "product reranking"
+        - "product re-ranking"
+        - "semantic product search"
+        - "catalog search"
+      product_recommendation:
+        - "product recommendation"
+        - "shopping recommendation"
+        - "e-commerce recommendation"
+        - "ecommerce recommendation"
+        - "commerce recommendation"
+        - "item recommendation"
+        - "item-to-item recommendation"
+        - "personalized recommendation"
+        - "conversational recommendation"
+        - "conversational recommender"
+      product_understanding_and_qa:
+        - "product understanding"
+        - "product attribute"
+        - "product attributes"
+        - "product matching"
+        - "product comparison"
+        - "product question answering"
+        - "product QA"
+        - "shopping QA"
+        - "commerce question answering"
+        - "review summarization"
+        - "customer review"
+
+  tier_2:
+    coefficient: 0.75
+    categories:
+      llm_for_commerce:
+        - "LLM for e-commerce"
+        - "LLM for ecommerce"
+        - "large language model for e-commerce"
+        - "large language model for ecommerce"
+        - "LLM shopping"
+        - "LLM recommender"
+        - "LLM recommendation"
+        - "LLM search"
+        - "generative recommendation"
+        - "agentic recommendation"
+        - "agentic recommender"
+      user_intent_and_preference:
+        - "purchase intent"
+        - "buying intent"
+        - "shopping intent"
+        - "user preference"
+        - "preference elicitation"
+        - "preference learning"
+        - "user modeling"
+        - "need understanding"
+        - "preference-aware"
+      commerce_rag_and_tools:
+        - "commerce RAG"
+        - "e-commerce RAG"
+        - "product knowledge base"
+        - "catalog grounding"
+        - "product grounding"
+        - "tool calling"
+        - "function calling"
+        - "search tool"
+        - "recommendation tool"
+        - "product database"
+      evaluation_simulation:
+        - "shopping benchmark"
+        - "e-commerce benchmark"
+        - "ecommerce benchmark"
+        - "recommendation benchmark"
+        - "user simulator"
+        - "shopping simulator"
+        - "buyer simulator"
+        - "conversion"
+        - "click-through rate"
+        - "CTR"
+
+  tier_3:
+    coefficient: 0.45
+    categories:
+      general_retrieval_ranking:
+        - "retrieval"
+        - "ranking"
+        - "reranking"
+        - "re-ranking"
+        - "semantic search"
+        - "query understanding"
+        - "dense retrieval"
+        - "hybrid retrieval"
+      general_recommendation:
+        - "recommendation"
+        - "recommender system"
+        - "recommender systems"
+        - "collaborative filtering"
+        - "sequential recommendation"
+        - "session-based recommendation"
+        - "cold start"
+      general_agent_terms:
+        - "LLM agent"
+        - "AI agent"
+        - "multi-agent"
+        - "multi agent"
+        - "conversational agent"
+        - "chatbot"
+
+  tier_4:
+    coefficient: 0.2
+    categories:
+      adjacent_generic_llm:
+        - "retrieval-augmented generation"
+        - "RAG"
+        - "prompt engineering"
+        - "question answering"
+        - "dialogue system"
+      adjacent_business_ml:
+        - "advertising"
+        - "ad recommendation"
+        - "marketing"
+        - "customer service"
+        - "demand forecasting"
+        - "sales forecasting"
+
+generality:
+  broad:
+    score: 0.9
+    keywords:
+      - "platform"
+      - "framework"
+      - "system"
+      - "agent"
+      - "multi-agent"
+      - "end-to-end"
+      - "large-scale"
+      - "benchmark"
+      - "simulator"
+      - "evaluation"
+  medium:
+    score: 0.65
+    keywords:
+      - "search"
+      - "recommendation"
+      - "retrieval"
+      - "ranking"
+      - "personalization"
+      - "product"
+      - "shopping"
+      - "catalog"
+      - "preference"
+  narrow:
+    score: 0.3
+    keywords:
+      - "single dataset"
+      - "case study"
+      - "classification"
+      - "sentiment analysis"
+      - "review analysis"
+
+domain_penalties:
+  generic_multi_agent:
+    multiplier: 0.55
+    keywords:
+      - "multi-agent reinforcement learning"
+      - "multi agent reinforcement learning"
+      - "multi-agent path finding"
+      - "swarm"
+      - "game theory"
+      - "social simulation"
+  non_commerce_recommendation:
+    multiplier: 0.55
+    keywords:
+      - "news recommendation"
+      - "music recommendation"
+      - "movie recommendation"
+      - "POI recommendation"
+      - "point-of-interest recommendation"
+      - "social recommendation"
+      - "citation recommendation"
+      - "job recommendation"
+  unrelated_vertical:
+    multiplier: 0.5
+    keywords:
+      - "medical"
+      - "clinical"
+      - "drug discovery"
+      - "protein"
+      - "molecule"
+      - "robotics"
+      - "autonomous driving"
+      - "wireless network"
+      - "financial trading"
+  generic_rag_or_chatbot:
+    multiplier: 0.7
+    keywords:
+      - "generic RAG"
+      - "open-domain question answering"
+      - "general chatbot"
+      - "customer service chatbot"
