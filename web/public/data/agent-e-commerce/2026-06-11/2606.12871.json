@@ -1,0 +1,95 @@
+{
+  "arxiv_id": "2606.12871",
+  "title": "DailyReport: An Open-ended Benchmark for Evaluating Search Agents on Daily Search Tasks",
+  "title_zh": "DailyReport：用于评估搜索代理日常搜索任务能力的开放式基准",
+  "authors": [
+    "Jingxuan Han",
+    "Wei Liu",
+    "Mingyang Zhu",
+    "Youpeng Wang",
+    "Ziwen Wang",
+    "Lin Qiu",
+    "Xuezhi Cao",
+    "Xunliang Cai",
+    "Zheren Fu",
+    "Licheng Zhang",
+    "Zhendong Mao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T03:59:07Z",
+  "abs_url": "https://arxiv.org/abs/2606.12871v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12871",
+  "links": {
+    "github": "https://github.com/AGI-Eval-Official/DailyReport.",
+    "project_page": null
+  },
+  "abstract_en": "Search Agents (SAs) typically leverage large language models (LLMs) to support complex information-seeking tasks by autonomously exploring web sources and synthesizing information into comprehensive responses. For SAs evaluation, prior benchmarks mainly focus on specialized tasks that are unlikely to arise in real-world user scenarios. Moreover, their reliance on coarse task-level rubrics often limits evaluation interpretability. To bridge this gap, we introduce DailyReport, an open-ended benchmark to evaluate SA capabilities on daily search tasks. It contains 150 open-ended tasks with 3,546 associated rubrics, capturing widely discussed and timely information demands of real-world users. Each task is decomposed into subtasks and evaluated with cascade rubrics across disentangled dimensions. Through cascade performance attribution and user-centric aggregation, we derive highly interpretable scores for each dimension, along with a user preference score. Our results on 17 agentic systems show that current systems still fall short of users' expectations. To facilitate future research, our dataset and code are made publicly available at https://github.com/AGI-Eval-Official/DailyReport.",
+  "abstract_zh": "Search Agents（SAs）通常利用 large language models（LLMs）自主探索网页来源，并将信息综合成完整回答，以支持复杂信息检索任务。以往 SA 评测基准多聚焦于现实用户场景中较少出现的专门任务，且依赖粗粒度任务级评分标准，限制了评测可解释性。为弥合这一差距，本文提出 DailyReport：一个面向日常搜索任务的开放式 SA 评测基准。DailyReport 包含 150 个开放式任务及 3,546 条关联 rubrics，覆盖现实用户广泛讨论且具时效性的信息需求。每个任务被拆解为子任务，并通过级联 rubrics 在解耦维度上进行评估。借助级联性能归因与以用户为中心的聚合方法，DailyReport 能为各评测维度生成高可解释性分数，并给出用户偏好分数。对 17 个 agentic systems 的实验显示，当前系统仍未达到用户期望。数据集与代码已开源于 https://github.com/AGI-Eval-Official/DailyReport。",
+  "key_points_zh": [
+    "提出 DailyReport，一个面向真实日常搜索需求的开放式 Search Agents 评测基准，而非传统偏专门化任务。",
+    "数据集包含 150 个开放式任务和 3,546 条 rubrics，覆盖广泛讨论、具时效性的现实用户信息需求。",
+    "将任务拆解为子任务，并使用 cascade rubrics 从多个解耦维度进行评估，提升结果可解释性。",
+    "通过 cascade performance attribution 与 user-centric aggregation，输出维度级分数和用户偏好分数。",
+    "在 17 个 agentic systems 上的评测表明，当前搜索代理在满足用户期望方面仍有明显差距。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.45,
+    "problem_significance": 0.4,
+    "potential_impact": 0.35,
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.35,
+    "llm_avg": 0.36000000000000004,
+    "comment": "An interpretable benchmark for daily search agents, but its value for e-commerce search or shopping assistance is indirect.",
+    "comment_zh": "这是一个可解释的日常搜索智能体基准，但对电商搜索或购物助手的价值较为间接。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.4810589956582027,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.36000000000000004,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/AGI-Eval-Official/DailyReport.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 7,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12871/fig1.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.976
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12871/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12871/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12871/fig4.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.955
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2606.12908",
+  "title": "SENTINEL: Failure-Driven Reinforcement Learning for Training Tool-Using Language Model Agents",
+  "title_zh": "SENTINEL：用于训练工具使用型语言模型智能体的失败驱动强化学习",
+  "authors": [
+    "Ziyi Wang",
+    "Yuxuan Lu",
+    "Yimeng Zhang",
+    "Qun Liu",
+    "Chen Luo",
+    "Jiri Gesi",
+    "Hanqing Lu",
+    "Yisi Sang",
+    "Manling Li",
+    "Jing Huang",
+    "Dakuo Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T05:06:50Z",
+  "abs_url": "https://arxiv.org/abs/2606.12908v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12908",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Language model agents are increasingly effective in solving realistic tasks through multi-turn tool use. However, training reliable tool-using agents remains challenging in practice. While reinforcement learning provides an on-policy paradigm for improving agents from their own environment interactions, its effectiveness depends heavily on the training task distribution. When tasks are fixed before training, the task distribution can become increasingly mismatched with the policy's evolving capabilities, causing many rollouts to be spent on uninformative tasks. We propose SENTINEL, a failure-driven reinforcement learning framework that turns the Solver's rollout failures into targeted training tasks. SENTINEL follows a Controller--Proposer--Solver loop: the Controller analyzes failed trajectories and summarizes recurring error patterns, the Proposer generates executable tasks that stress these weaknesses, and the Solver is trained on the targeted tasks. On Tau2-Bench Retail with Qwen3-4B-Thinking-2507, SENTINEL improves Pass\\^{}1 from 66.4 to 74.9 and outperforms RL on general synthetic tasks across Pass\\^{}k metrics. These results demonstrate that model failures provide an effective and scalable source of targeted training signal for improving tool-using language model agents.",
+  "abstract_zh": "语言模型智能体通过多轮工具使用在真实任务中表现日益增强，但可靠训练工具使用型智能体仍具挑战。强化学习能够让智能体从自身与环境的交互中进行 on-policy 改进，但效果高度依赖训练任务分布。当任务在训练前固定时，任务分布会逐渐与不断演化的策略能力不匹配，导致大量 rollout 浪费在信息量不足的任务上。本文提出 SENTINEL，一个失败驱动的强化学习框架，将 Solver 的 rollout 失败转化为有针对性的训练任务。SENTINEL 采用 Controller--Proposer--Solver 循环：Controller 分析失败轨迹并总结反复出现的错误模式，Proposer 生成可执行任务以重点刺激这些弱点，Solver 则在这些定向任务上继续训练。在 Tau2-Bench Retail 上，使用 Qwen3-4B-Thinking-2507 时，SENTINEL 将 Pass^1 从 66.4 提升到 74.9，并在 Pass^k 指标上优于基于通用合成任务的强化学习。结果表明，模型失败是提升工具使用型语言模型智能体的有效且可扩展的定向训练信号来源。",
+  "key_points_zh": [
+    "提出 SENTINEL：一种 failure-driven RL 框架，利用智能体 rollout 中的失败来构造更有训练价值的任务，而不是依赖固定任务分布。",
+    "核心流程为 Controller--Proposer--Solver：Controller 归纳失败轨迹中的共性错误，Proposer 生成针对弱点的可执行任务，Solver 在这些任务上强化学习。",
+    "该方法缓解了固定训练任务分布与策略能力演化之间的不匹配，减少无信息量 rollout，提高训练效率。",
+    "在 Tau2-Bench Retail 上，结合 Qwen3-4B-Thinking-2507，SENTINEL 将 Pass^1 从 66.4 提升至 74.9。",
+    "实验显示，相比在通用合成任务上进行 RL，SENTINEL 在 Pass^k 系列指标上表现更优，说明失败样本可作为可扩展的定向监督信号。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.7,
+    "problem_significance": 0.65,
+    "potential_impact": 0.6,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.6,
+    "llm_avg": 0.62,
+    "comment": "A promising tool-agent training method with some retail relevance through Tau2-Bench Retail, though the core contribution is mostly generic agent RL.",
+    "comment_zh": "该方法通过Tau2-Bench Retail体现一定零售相关性，但核心贡献仍主要是通用工具智能体强化学习。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.7608912529565995,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.62,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 6,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 39,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12908/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12908/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.962
+    }
+  ]
+}

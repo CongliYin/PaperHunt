@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2606.12924",
+  "title": "Iterating Toward Better Search: A Two-Agent Simulation Framework for Evaluating Agentic Search Architectures in E-Commerce",
+  "title_zh": "迈向更优搜索的迭代：用于评估电商 Agentic Search 架构的双智能体仿真框架",
+  "authors": [
+    "Jetlir Duraj",
+    "Jayanth Yetukuri",
+    "Shuang Zhou",
+    "Dhruv Varma",
+    "Rui Kong",
+    "Ishita Khan",
+    "Qunzhi Zhou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T05:27:42Z",
+  "abs_url": "https://arxiv.org/abs/2606.12924v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12924",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We present a modular two-agent simulation framework for evaluating conversational shopping assistant architectures. An independent buyer agent, configured with personas, missions, and patience levels, is paired with an interchangeable responder that integrates with a real e-commerce search API. Holding the buyer constant across experiments enables controlled comparison of responder designs on identical scenarios. Using 2011 conversations across 14 persona buckets, we establish four empirical findings. First, rolling-window memory outperforms intent-extraction memory on all quality metrics while being 35% faster per query. Second, illustrating rapid evidence-driven iteration, a systematic failure analysis of a responder version enables targeted fixes that reduce failure and near-failure rates by 62% across the full dataset. Third, swapping the responder LLM backbone from Gemini~2.5 to Llama~3.3~70B costs 0.16--0.45 points despite identical architecture. Finally, we document systematic philosophical disagreement between frontier LLM judges: Gemini rewards process correctness while Claude demands concrete outcomes, despite using the same evaluation prompt.",
+  "abstract_zh": "本文提出一个模块化双智能体仿真框架，用于评估会话式购物助手架构。框架将一个独立的 buyer agent 与可替换的 responder 配对：buyer agent 可配置用户画像、购物任务与耐心程度；responder 则接入真实电商搜索 API。通过在不同实验中固定 buyer agent，研究者可以在相同场景下对 responder 设计进行受控比较。基于覆盖 14 类 persona bucket 的 2011 段对话，论文得到四点实证发现：其一，rolling-window memory 在所有质量指标上优于 intent-extraction memory，且单次查询速度快 35%；其二，通过对某一 responder 版本进行系统性失败分析并定向修复，可在完整数据集上将失败与近失败率降低 62%；其三，在相同架构下，将 responder 的 LLM backbone 从 Gemini 2.5 替换为 Llama 3.3 70B 会带来 0.16–0.45 分的性能损失；其四，frontier LLM judges 之间存在系统性评价分歧：在相同评估提示下，Gemini 更奖励流程正确性，而 Claude 更强调具体结果达成。",
+  "key_points_zh": [
+    "提出固定 buyer agent、替换 responder 的双智能体仿真框架，用于在相同购物场景中受控评估会话式电商搜索架构。",
+    "实验覆盖 2011 段对话与 14 类 persona bucket，buyer agent 可控制用户画像、任务和耐心程度，responder 接入真实 e-commerce search API。",
+    "rolling-window memory 全面优于 intent-extraction memory，并在每次查询上快 35%，显示简单上下文窗口在该任务中更有效。",
+    "通过失败分析驱动的快速迭代，针对性修复 responder 后，整体失败与近失败率下降 62%。",
+    "LLM backbone 与 LLM judge 都显著影响结论：Gemini 2.5 优于 Llama 3.3 70B，而 Gemini 与 Claude 作为评审时分别偏好流程正确性与结果达成。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.75,
+    "problem_significance": 0.85,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.8,
+    "llm_avg": 0.78,
+    "comment": "A highly relevant e-commerce evaluation framework using buyer-agent simulation and real search APIs to improve conversational shopping assistants.",
+    "comment_zh": "该工作通过买家智能体仿真和真实搜索API评估并改进对话式购物助手，电商相关性很高。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.78,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12924/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12924/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12924/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12924/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.964
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.12837",
+  "title": "LoHoSearch: Benchmarking Long-Horizon Search Agents Beyond the Human Difficulty Ceiling",
+  "title_zh": "LoHoSearch：突破人类难度上限的长程搜索智能体基准",
+  "authors": [
+    "Jiarui Zhao",
+    "Rongzhi Zhang",
+    "Lingchuan Liu",
+    "Hao Yang",
+    "Xunliang Cai",
+    "Xi Su"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T03:04:32Z",
+  "abs_url": "https://arxiv.org/abs/2606.12837v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12837",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Search agent benchmarks exemplified by BrowseComp have rapidly saturated over the past year, with the strongest models surpassing 90% accuracy. Since these benchmarks are predominantly human-authored, annotators lack a global perspective on entity statistics and cannot systematically maximize search space size and structural complexity. This creates a difficulty ceiling that is hard to break. To address this, we introduce LoHoSearch (Long-Horizon Search Agents), a challenging benchmark comprising 544 human-verified questions across 11 domains. LoHoSearch is constructed via an automated pipeline built upon a knowledge graph covering over 7 million Wikipedia entities, which selects relations with large search spaces and assembles them into structurally complex questions with KG-verified unique answers. Our evaluation demonstrates that even the strongest model achieves only 34.74% accuracy, and existing context management strategies (best +6.8%) yield far smaller gains than on prior benchmarks. LoHoSearch provides a more demanding standard for evaluating long-horizon reasoning and context management in search agents.",
+  "abstract_zh": "以 BrowseComp 为代表的搜索智能体基准在过去一年迅速趋于饱和，最强模型准确率已超过 90%。由于这类基准主要由人工编写，标注者缺乏对实体统计的全局视角，难以系统性地最大化搜索空间规模与结构复杂度，从而形成难以突破的难度天花板。为此，论文提出 LoHoSearch（Long-Horizon Search Agents），一个包含 11 个领域、544 道人工验证问题的高难度基准。LoHoSearch 通过基于覆盖 700 多万个 Wikipedia 实体的知识图谱（knowledge graph, KG）的自动化流程构建：该流程选择具有大搜索空间的关系，并将其组合成结构复杂的问题，同时用 KG 验证答案唯一性。实验显示，即使最强模型也仅达到 34.74% 准确率；现有上下文管理策略的收益最高仅 +6.8%，显著低于其在既有基准上的提升。LoHoSearch 为评估搜索智能体的长程推理与上下文管理能力提供了更具挑战性的标准。",
+  "key_points_zh": [
+    "指出 BrowseComp 等人工编写搜索基准已快速饱和，强模型超过 90% 准确率，存在由人类标注能力导致的难度上限。",
+    "提出 LoHoSearch，包含 544 个经人工验证的问题，覆盖 11 个领域，面向长程搜索、复杂结构推理与上下文管理评测。",
+    "构建流程依托覆盖 700 多万个 Wikipedia 实体的知识图谱，自动选择大搜索空间关系并组合成结构复杂问题，同时验证唯一答案。",
+    "实验中最强模型准确率仅为 34.74%，表明该基准显著难于现有搜索智能体评测。",
+    "现有上下文管理策略在 LoHoSearch 上最高仅带来 +6.8% 提升，说明长程搜索中的信息筛选、状态维护与推理仍是关键瓶颈。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.45,
+    "problem_significance": 0.35,
+    "potential_impact": 0.3,
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.3,
+    "llm_avg": 0.33,
+    "comment": "A useful long-horizon search-agent benchmark, but it is generic web/Wikipedia search rather than commerce-grounded.",
+    "comment_zh": "这是一个有用的长程搜索智能体基准，但主要面向通用网页/Wikipedia搜索而非电商场景。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.6270557574011659,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.33,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 20,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 7,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12837/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12837/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.98
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12837/fig3.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12837/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.965
+    }
+  ]
+}
