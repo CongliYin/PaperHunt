@@ -13,6 +13,15 @@ import requests
 from .blob_uploader import FigureStorage
 
 ARXIV_UA = "paper-hunt/1.0 (offline figure extraction; contact: local-run)"
+FIGURE_RENDER_SCALE = float(os.getenv("FIGURE_RENDER_SCALE", "4"))
+FIGURE_DETECT_IMGSZ = int(os.getenv("FIGURE_DETECT_IMGSZ", "1280"))
+FIGURE_MAX_DIM = int(os.getenv("FIGURE_MAX_DIM", "2400"))
+FIGURE_WEBP_QUALITY = int(os.getenv("FIGURE_WEBP_QUALITY", "94"))
+THUMB_MAX_SIZE = (
+    int(os.getenv("FIGURE_THUMB_MAX_WIDTH", "720")),
+    int(os.getenv("FIGURE_THUMB_MAX_HEIGHT", "480")),
+)
+THUMB_WEBP_QUALITY = int(os.getenv("FIGURE_THUMB_WEBP_QUALITY", "88"))
 
 
 def configure_figure_runtime_cache(root: str | Path | None = None) -> None:
@@ -82,7 +91,6 @@ def _extract_with_pymupdf(
     max_pages: int,
 ) -> list[dict[str, Any]]:
     import fitz
-    from PIL import Image
 
     doc = fitz.open(pdf_path)
     crops: list[dict[str, Any]] = []
@@ -108,7 +116,7 @@ def _extract_with_pymupdf(
             if len(crops) >= max_figures:
                 break
             seen.add(xref)
-            pix = page.get_pixmap(matrix=fitz.Matrix(2, 2), clip=rect, alpha=False)
+            pix = page.get_pixmap(matrix=fitz.Matrix(FIGURE_RENDER_SCALE, FIGURE_RENDER_SCALE), clip=rect, alpha=False)
             png_path = work_dir / f"p{page_index + 1}_{len(crops) + 1}.png"
             pix.save(png_path)
             webp_path = _to_webp(png_path)
@@ -150,10 +158,10 @@ def _extract_with_yolo(
     candidates: list[dict[str, Any]] = []
     for page_index in range(min(max_pages, len(doc))):
         page = doc[page_index]
-        pix = page.get_pixmap(matrix=fitz.Matrix(2, 2), alpha=False)
+        pix = page.get_pixmap(matrix=fitz.Matrix(FIGURE_RENDER_SCALE, FIGURE_RENDER_SCALE), alpha=False)
         page_img = work_dir / f"page_{page_index + 1}.png"
         pix.save(page_img)
-        results = model.predict(str(page_img), imgsz=1024, conf=0.25, device="cpu")
+        results = model.predict(str(page_img), imgsz=FIGURE_DETECT_IMGSZ, conf=0.25, device="cpu")
         image = Image.open(page_img).convert("RGB")
         for result in results:
             names = getattr(result, "names", {})
@@ -169,7 +177,7 @@ def _extract_with_yolo(
                 x1, y1, x2, y2 = [int(v) for v in box.xyxy[0].tolist()]
                 area = max(0, x2 - x1) * max(0, y2 - y1)
                 crop_path = work_dir / f"p{page_index + 1}_{len(candidates) + 1}.webp"
-                image.crop((x1, y1, x2, y2)).save(crop_path, "WEBP", quality=82)
+                _save_webp(image.crop((x1, y1, x2, y2)), crop_path, max_dim=FIGURE_MAX_DIM, quality=FIGURE_WEBP_QUALITY)
                 candidates.append(
                     {
                         "path": crop_path,
@@ -199,8 +207,8 @@ def _publish_crops(
         if i == 1:
             thumb_path = path.parent / "thumb.webp"
             image = Image.open(path).convert("RGB")
-            image.thumbnail((520, 360))
-            image.save(thumb_path, "WEBP", quality=78)
+            image.thumbnail(THUMB_MAX_SIZE, Image.Resampling.LANCZOS)
+            image.save(thumb_path, "WEBP", quality=THUMB_WEBP_QUALITY, method=6)
             thumb = storage.upload_file(thumb_path, f"{clean_id}/thumb.webp")
         figures.append(
             {
@@ -217,10 +225,17 @@ def _to_webp(path: Path) -> Path:
     from PIL import Image
 
     image = Image.open(path).convert("RGB")
-    image.thumbnail((1200, 1200))
     target = path.with_suffix(".webp")
-    image.save(target, "WEBP", quality=82)
+    _save_webp(image, target, max_dim=FIGURE_MAX_DIM, quality=FIGURE_WEBP_QUALITY)
     return target
+
+
+def _save_webp(image: Any, target: Path, *, max_dim: int, quality: int) -> None:
+    from PIL import Image
+
+    image = image.convert("RGB")
+    image.thumbnail((max_dim, max_dim), Image.Resampling.LANCZOS)
+    image.save(target, "WEBP", quality=quality, method=6)
 
 
 def _clean_id(arxiv_id: str) -> str:

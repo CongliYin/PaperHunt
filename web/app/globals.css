@@ -241,7 +241,6 @@ select {
 .row-side {
   display: grid;
   justify-items: end;
-  gap: 12px;
   text-align: right;
 }
 
@@ -286,8 +285,8 @@ select {
 .detail-title {
   max-width: 980px;
   margin: 0;
-  font-size: clamp(38px, 6vw, 70px);
-  line-height: 1.05;
+  font-size: clamp(32px, 4.4vw, 54px);
+  line-height: 1.12;
   letter-spacing: 0;
   font-weight: 750;
 }
@@ -345,8 +344,10 @@ select {
 }
 
 .lead-figure img {
-  width: 100%;
-  max-height: 680px;
+  width: auto;
+  max-width: 100%;
+  max-height: 760px;
+  margin: 0 auto;
   display: block;
   object-fit: contain;
   background: #fff;
@@ -626,7 +627,7 @@ select {
   }
 
   .detail-title {
-    font-size: 36px;
+    font-size: 30px;
   }
 
   .lead-figure img {
