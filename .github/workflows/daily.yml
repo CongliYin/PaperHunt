@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       date:
-        description: "Date to process, YYYY-MM-DD. Empty means yesterday in RUN_TZ."
+        description: "Date to process, YYYY-MM-DD. Empty means RUN_DATE_OFFSET_DAYS before today in RUN_TZ, with weekend rollback enabled."
         required: false
         type: string
       domains:
@@ -22,7 +22,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
-      RUN_TZ: Asia/Tokyo
+      RUN_TZ: UTC
+      RUN_DATE_OFFSET_DAYS: "1"
+      RUN_ROLLBACK_WEEKENDS: "1"
       FIGURE_BACKEND: yolo
       STORAGE_BACKEND: blob
       LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
@@ -73,4 +75,3 @@ jobs:
           fi
           git commit -m "data: update paper hunt"
           git push
-

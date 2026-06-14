@@ -35,9 +35,13 @@ def discover_domains(domains_dir: Path) -> list[str]:
     )
 
 
-def local_yesterday(run_tz: str) -> str:
+def local_date_offset(run_tz: str, offset_days: int, *, rollback_weekends: bool = False) -> str:
     tz = ZoneInfo(run_tz)
-    return (datetime.now(tz).date() - timedelta(days=1)).isoformat()
+    date = datetime.now(tz).date() - timedelta(days=offset_days)
+    if rollback_weekends:
+        while date.weekday() >= 5:
+            date -= timedelta(days=1)
+    return date.isoformat()
 
 
 def run_domain(args: argparse.Namespace, domain: str, date: str) -> DomainResult:
@@ -124,6 +128,18 @@ def _run(cmd: list[str]) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run paper hunt for all domains")
     parser.add_argument("--date", default=None, help="Date to process, YYYY-MM-DD")
+    parser.add_argument(
+        "--date-offset-days",
+        type=int,
+        default=int(os.getenv("RUN_DATE_OFFSET_DAYS", "1")),
+        help="Days before today in RUN_TZ to process when --date is empty",
+    )
+    parser.add_argument(
+        "--rollback-weekends",
+        action="store_true",
+        default=os.getenv("RUN_ROLLBACK_WEEKENDS", "").lower() in {"1", "true", "yes"},
+        help="When --date is empty, roll Saturday/Sunday back to the previous Friday",
+    )
     parser.add_argument("--domains", default=None, help="Comma-separated domain ids")
     parser.add_argument("--domains-dir", default=str(PIPELINE_DIR / "domains"))
     parser.add_argument("--storage-backend", choices=["blob", "repo"], default=os.getenv("STORAGE_BACKEND", "blob"))
@@ -137,7 +153,7 @@ def main() -> None:
     args = parser.parse_args()
 
     run_tz = os.getenv("RUN_TZ", "Asia/Tokyo")
-    date = args.date or local_yesterday(run_tz)
+    date = args.date or local_date_offset(run_tz, args.date_offset_days, rollback_weekends=args.rollback_weekends)
     domains_dir = Path(args.domains_dir)
     domains = (
         [d.strip() for d in args.domains.split(",") if d.strip()]
@@ -163,4 +179,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
