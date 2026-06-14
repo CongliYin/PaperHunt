@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.13368",
+  "title": "IterCAD: An Iterative Multimodal Agent for Visually-Grounded CAD Generation and Editing",
+  "title_zh": "IterCAD：用于视觉 grounded CAD 生成与编辑的迭代式多模态智能体",
+  "authors": [
+    "Tao Hu",
+    "Jiaxin Ai",
+    "Licheng Wen",
+    "Xueheng Li",
+    "Shu Zou",
+    "Siqi Li",
+    "Nianchen Deng",
+    "Xinyu Cai",
+    "Hongbin Zhou",
+    "Pinlong Cai",
+    "Daocheng Fu",
+    "Yu Yang",
+    "Hairong Zhang",
+    "Botian Shi",
+    "Xuemeng Yang"
+  ],
+  "published_at": "2026-06-11T13:53:21Z",
+  "abs_url": "https://arxiv.org/abs/2606.13368v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13368",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Computer-Aided Design is pivotal in modern manufacturing, yet existing automated methods predominantly rely on open-loop, one-shot generation, creating a mismatch with iterative real-world practices. In this paper, we present IterCAD, a unified multimodal agent framework for closed-loop, interactive CAD generation and editing. We formulate the task as a multi-turn interaction between a multimodal agent and an executable CAD sandbox, covering three tasks: Drawing-to-Code, Text-to-Code, and Interactive Editing. To support this, we develop a data synthesis pipeline incorporating advanced industrial manufacturing features to generate standard-compliant multi-view engineering drawings, complex code-editing tasks, and high-fidelity interaction trajectories. We optimize the agent via progressive SFT followed by geometry-aware reinforcement learning with viable-prefix masking to enhance code executability and geometric fidelity. Finally, we introduce the IterCAD-Bench evaluation suite and propose the Chamfer Distance Tolerance-Recall (CD-TR) curve alongside its AUC-TR metric, establishing a survivor-bias-free standard that unifies code validity and geometric precision. Extensive experiments demonstrate that IterCAD achieves highly competitive performance across multiple benchmarks, significantly outperforming existing approaches in both code executability and geometric precision, while exhibiting superior capabilities in closed-loop iterative refinement.",
+  "abstract_zh": "本文提出 IterCAD，一个面向 CAD 生成与编辑的闭环交互式多模态智能体框架。不同于现有自动化方法多采用开环、一次性生成，IterCAD 将任务建模为多模态智能体与可执行 CAD 沙盒之间的多轮交互，覆盖 Drawing-to-Code、Text-to-Code 和 Interactive Editing 三类任务。为支撑训练与评测，作者构建了数据合成流水线，引入工业制造中的高级特征，生成符合标准的多视图工程图、复杂代码编辑任务以及高保真交互轨迹。训练方面，IterCAD 先进行 progressive SFT，再结合 geometry-aware reinforcement learning 与 viable-prefix masking，以提升代码可执行性和几何一致性。论文还提出 IterCAD-Bench 评测套件，并设计 Chamfer Distance Tolerance-Recall（CD-TR）曲线及 AUC-TR 指标，在避免 survivor bias 的同时统一衡量代码有效性与几何精度。实验表明，IterCAD 在多个基准上取得强竞争力表现，尤其在代码可执行性、几何精度和闭环迭代优化能力上显著优于既有方法。",
+  "key_points_zh": [
+    "提出 IterCAD，将 CAD 生成与编辑建模为多模态智能体和可执行 CAD sandbox 的多轮闭环交互，而非传统 one-shot 生成。",
+    "统一覆盖 Drawing-to-Code、Text-to-Code 与 Interactive Editing 三类任务，强调与真实工程设计中反复修改、验证的流程对齐。",
+    "构建面向工业制造特征的数据合成流水线，生成多视图工程图、复杂代码编辑任务和高保真交互轨迹，用于训练与评测。",
+    "采用 progressive SFT + geometry-aware reinforcement learning，并引入 viable-prefix masking，以提升 CAD 代码可执行性和几何还原精度。",
+    "提出 IterCAD-Bench 及 CD-TR/AUC-TR 指标，避免只在成功执行样本上评估造成的 survivor bias，统一评价代码有效性与几何质量。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.7,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.74,
+    "llm_avg": 0.7,
+    "comment": "A strong closed-loop multimodal tool-use agent for CAD with valuable trajectory generation and benchmarking, though not focused on realtime voice or video interaction.",
+    "comment_zh": "这是一篇较强的闭环多模态工具使用CAD智能体工作，轨迹生成和评测基准有价值，但并不聚焦实时语音或视频交互。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "last_author_h_index": null,
+    "last_author_found": false
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13368/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13368/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13368/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

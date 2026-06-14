@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.12830",
+  "title": "Perceive, Interact, Reason: Building Tool-Augmented Visual Agents for Spatial Reasoning",
+  "title_zh": "感知、交互、推理：构建用于空间推理的工具增强视觉智能体",
+  "authors": [
+    "Changye Li",
+    "Meng Lu",
+    "Yi Wu",
+    "Ligeng Zhu"
+  ],
+  "published_at": "2026-06-11T02:54:07Z",
+  "abs_url": "https://arxiv.org/abs/2606.12830v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12830",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "While recent vision-language models (VLMs) demonstrate strong multimodal understanding, they remain limited in spatial reasoning tasks that require active evidence acquisition and multi-step visual interaction. This limitation suggests that relying solely on implicit visual representations from vision encoders is insufficient for recovering fine-grained spatial evidence. We introduce PERception-Interaction-reason Agent (PERIA), a tool-augmented visual agent for spatial reasoning tasks across map reasoning, visual probing, and vision reconstruction. PERIA uses two lightweight tool families: vision perception tools for exposing textual, symbolic, and spatial evidence, and vision interaction tools for manipulating visual context, tracing paths, and verifying spatial relations. To train PERIA, we develop a unified recipe that combines supervised tool-use trajectory synthesis, composite rewards, and Observation-Relaxed Group-in-Group Policy Optimization (OR-GIGPO) for effective multi-tool behavior. Experiments on 13 benchmarks from 8 datasets show that PERIA-8B improves over the Qwen3-8B backbone by 10.0% on in-distribution benchmarks and 4.4% on out-of-distribution benchmarks, while outperforming previous state-of-the-art baselines of similar size by 7.0%-14.8%. It also achieves performance comparable to much larger models such as Qwen3-VL-235B-A22B-Thinking and GPT-5, demonstrating the effectiveness of PERIA in enhancing spatial reasoning capabilities.",
+  "abstract_zh": "近期 Vision-Language Models（VLMs）在多模态理解上表现强劲，但在需要主动获取证据和多步视觉交互的空间推理任务中仍存在局限，说明仅依赖 vision encoder 的隐式视觉表示不足以恢复细粒度空间证据。本文提出 PERception-Interaction-reason Agent（PERIA），一种面向地图推理、视觉探查和视觉重建等空间推理任务的工具增强视觉智能体。PERIA 使用两类轻量工具：vision perception tools 用于暴露文本、符号和空间证据；vision interaction tools 用于操作视觉上下文、追踪路径并验证空间关系。为训练 PERIA，作者提出统一训练方案，结合监督式工具使用轨迹合成、复合奖励，以及 Observation-Relaxed Group-in-Group Policy Optimization（OR-GIGPO），以学习有效的多工具行为。在来自 8 个数据集的 13 个 benchmark 上，PERIA-8B 相比 Qwen3-8B backbone 在分布内任务提升 10.0%，在分布外任务提升 4.4%，并较同等规模既有 SOTA baseline 高出 7.0%–14.8%。其性能还可接近 Qwen3-VL-235B-A22B-Thinking 和 GPT-5 等更大模型，表明 PERIA 能有效增强空间推理能力。",
+  "key_points_zh": [
+    "提出 PERIA，一个工具增强视觉智能体，将空间推理显式分解为感知、交互与推理过程，针对 VLMs 难以主动获取细粒度空间证据的问题。",
+    "设计两类轻量工具：vision perception tools 提取文本、符号和空间信息；vision interaction tools 支持视觉上下文操作、路径追踪和空间关系验证。",
+    "提出统一训练流程，结合监督式工具使用轨迹合成、复合奖励和 OR-GIGPO，提升模型的多工具调用与多步推理能力。",
+    "在 8 个数据集、13 个 benchmark 上，PERIA-8B 相比 Qwen3-8B 在分布内提升 10.0%、分布外提升 4.4%，并超过同规模 SOTA 7.0%–14.8%。",
+    "小规模 PERIA-8B 的表现接近 Qwen3-VL-235B-A22B-Thinking 和 GPT-5 等大模型，显示工具增强范式对空间推理具有较高效率。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.68,
+    "problem_significance": 0.62,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.55,
+    "llm_avg": 0.576,
+    "comment": "A solid tool-augmented visual reasoning agent with reusable training ideas, but it is mostly offline spatial reasoning rather than realtime visual-agent interaction.",
+    "comment_zh": "这是一篇扎实的工具增强视觉推理智能体工作，训练方法有复用价值，但主要偏离线空间推理而非实时视觉交互智能体。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36228269883744174,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.576,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12830/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12830/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12830/fig3.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.93
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12830/fig4.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.573
+    }
+  ]
+}
