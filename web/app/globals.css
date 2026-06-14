@@ -250,6 +250,26 @@ select {
   line-height: 1.45;
 }
 
+.affiliations {
+  display: grid;
+  gap: 6px;
+  max-width: 820px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.affiliation-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.affiliation-row strong {
+  color: var(--ink);
+  font-weight: 650;
+}
+
 .empty {
   margin-top: 48px;
   padding: 24px;

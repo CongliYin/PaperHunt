@@ -336,6 +336,48 @@ def _pdf_url_json(paper: dict) -> str:
     return f"https://arxiv.org/pdf/{aid}" if aid else _pdf_url(paper)
 
 
+def _author_affiliations_json(paper: dict) -> list[dict]:
+    authors = paper.get("authors") or []
+    raw_affiliations = paper.get("author_affiliations") or []
+    by_name: dict[str, list[str]] = {}
+
+    for item in raw_affiliations:
+        if not isinstance(item, dict):
+            continue
+        name = str(item.get("name") or "").strip()
+        affiliations = [
+            str(value).strip()
+            for value in item.get("affiliations") or []
+            if str(value).strip()
+        ]
+        if name and affiliations:
+            by_name[name] = affiliations
+
+    enriched = paper.get("enriched") or {}
+    if authors and not by_name.get(authors[0]):
+        affiliations = [
+            str(value).strip()
+            for value in enriched.get("first_author_affiliations") or []
+            if str(value).strip()
+        ]
+        if affiliations:
+            by_name[authors[0]] = affiliations
+    if len(authors) >= 2 and not by_name.get(authors[-1]):
+        affiliations = [
+            str(value).strip()
+            for value in enriched.get("last_author_affiliations") or []
+            if str(value).strip()
+        ]
+        if affiliations:
+            by_name[authors[-1]] = affiliations
+
+    return [
+        {"name": name, "affiliations": by_name[name]}
+        for name in authors
+        if by_name.get(name)
+    ]
+
+
 def _build_tags_json(paper: dict) -> list[str]:
     tags: list[str] = []
     e = paper.get("enriched", {})
@@ -456,6 +498,7 @@ def emit_json_outputs(
             "title": paper.get("title", ""),
             "title_zh": zh.get("title_zh") or paper.get("title", ""),
             "authors": paper.get("authors", []),
+            "author_affiliations": _author_affiliations_json(paper),
             "published_at": paper.get("published_at", ""),
             "abs_url": paper.get("abs_url", f"https://arxiv.org/abs/{arxiv_id}"),
             "pdf_url": _pdf_url_json(paper),

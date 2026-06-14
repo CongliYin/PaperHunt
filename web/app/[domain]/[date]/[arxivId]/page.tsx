@@ -28,6 +28,7 @@ export default async function DetailPage({ params }: Params) {
     ["Lasting", paper.llm_assessment.lasting_value]
   ] as const;
   const [leadFigure, ...otherFigures] = paper.figures;
+  const authorAffiliations = paper.author_affiliations || [];
 
   return (
     <main className="shell">
@@ -46,6 +47,16 @@ export default async function DetailPage({ params }: Params) {
           <p className="detail-title-en">{paper.title}</p>
         </div>
         <div className="authors">{paper.authors.join(", ")}</div>
+        {authorAffiliations.length ? (
+          <div className="affiliations">
+            {authorAffiliations.map((item) => (
+              <div className="affiliation-row" key={item.name}>
+                <strong>{item.name}</strong>
+                <span>{item.affiliations.join("; ")}</span>
+              </div>
+            ))}
+          </div>
+        ) : null}
         <div className="link-row">
           <a className="pill-link" href={paper.abs_url} target="_blank" rel="noreferrer">
             arXiv

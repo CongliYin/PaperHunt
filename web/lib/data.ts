@@ -33,6 +33,7 @@ export type PaperDetail = {
   title: string;
   title_zh: string;
   authors: string[];
+  author_affiliations?: Array<{ name: string; affiliations: string[] }>;
   published_at: string;
   abs_url: string;
   pdf_url: string;

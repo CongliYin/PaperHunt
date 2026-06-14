@@ -41,10 +41,18 @@ def _parse_entry(entry: ET.Element) -> dict:
 
     # 作者
     authors = []
+    author_affiliations = []
     for author_el in entry.findall("atom:author", NS):
         name_el = author_el.find("atom:name", NS)
         if name_el is not None and name_el.text:
-            authors.append(name_el.text.strip())
+            name = name_el.text.strip()
+            authors.append(name)
+            affiliations = [
+                (node.text or "").strip()
+                for node in author_el.findall("arxiv:affiliation", NS)
+                if node is not None and node.text and node.text.strip()
+            ]
+            author_affiliations.append({"name": name, "affiliations": affiliations})
 
     # comments（arxiv 命名空间）
     comments_el = entry.find("arxiv:comment", NS)
@@ -76,6 +84,7 @@ def _parse_entry(entry: ET.Element) -> dict:
         "title": title,
         "abstract": abstract,
         "authors": authors,
+        "author_affiliations": author_affiliations,
         "comments": comments,
         "primary_category": primary_category,
         "categories": categories,

@@ -189,6 +189,7 @@ def fetch_author_metrics(author_name: str, cache: AuthorMetricsCache) -> dict:
         "h_index": top.get("hIndex"),
         "citation_count": top.get("citationCount"),
         "paper_count": top.get("paperCount"),
+        "affiliations": top.get("affiliations") or [],
     }
     cache.set(author_name, result)
     return result
@@ -322,11 +323,17 @@ def enrich_papers(
         enriched["first_author_found"] = (
             first_author_metrics.get("found", False) if first_author_metrics else False
         )
+        enriched["first_author_affiliations"] = (
+            first_author_metrics.get("affiliations") or [] if first_author_metrics else []
+        )
         enriched["last_author_h_index"] = (
             last_author_metrics.get("h_index") if last_author_metrics else None
         )
         enriched["last_author_found"] = (
             last_author_metrics.get("found", False) if last_author_metrics else False
+        )
+        enriched["last_author_affiliations"] = (
+            last_author_metrics.get("affiliations") or [] if last_author_metrics else []
         )
 
         paper["enriched"] = enriched
