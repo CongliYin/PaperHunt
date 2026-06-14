@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.11583",
+  "title": "Beyond the Golden Teacher: Enhancing Graph Learning through LLM-GNN Co-teaching",
+  "title_zh": "超越“黄金教师”：通过 LLM-GNN 协同教学增强图学习",
+  "authors": [
+    "Zhuoyi Peng",
+    "Hanlin Gu",
+    "Lixin Fan",
+    "Yi Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T02:15:56Z",
+  "abs_url": "https://arxiv.org/abs/2606.11583v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11583",
+  "links": {
+    "github": "https://github.com/llmgnncoteaching/LLM-GNN-Coteaching",
+    "project_page": null
+  },
+  "abstract_en": "Text-attributed graphs (TAGs) underlie real-world applications such as citation networks, social media, and e-commerce. Few-shot graph learning on TAGs is hard: with only a handful of labels per class and the rest of the graph unannotated, neither GNNs nor LLMs can learn well on their own. GNNs read topology and fail on cold nodes; LLMs read text and fail on text-ambiguous nodes. Existing LLM-GNN methods all follow the same recipe: designate one model as the golden teacher and use its outputs (e.g., features or pseudo-labels) to supervise the other. We argue this golden-teacher assumption breaks under sparse supervision: neither model is golden, and treating either as such transfers its blind spots into the student. We therefore ask: can we avoid designating either model as the golden teacher, and still perform effective graph learning? We answer with LLM-GNN Co-Teaching, a bidirectional co-teaching framework in which neither model is fixed as teacher. The GNN and LLM exchange their most confident pseudo-labels under an architecture-specific small-loss criterion, and both update every round. Supervision is then mined from the trajectory: whenever a node moves from cross-model contradiction at round t to cross-model agreement at round t+1, the LLM's two answers on the same input form a preference pair (old contradicting self < new peer-endorsed self) for DPO training. We call this Round-based Pseudo-Label Preference Optimization (RPL-PO). On six benchmarks, LLM-GNN Co-Teaching consistently outperforms GNN-as-Judge and all prior methods, with absolute 3-shot gains of 7.86% on Cora and 7.73% on ogbn-arxiv; improvements carry over to 5-shot and to zero-shot cross-dataset transfer. Error-structure analysis further shows that abandoning the golden-teacher assumption substantially improves the LLM's graph learning capability on challenging samples.",
+  "abstract_zh": "文本属性图（Text-attributed Graphs, TAGs）广泛存在于 citation networks、social media 和 e-commerce 等真实场景。少样本 TAG 图学习非常困难：每类只有少量标注，其余节点未标注，GNN 难以处理冷启动节点，LLM 则容易在文本语义模糊节点上出错。既有 LLM-GNN 方法通常假设其中一个模型是“黄金教师”，用其特征或伪标签监督另一个模型，但在稀疏监督下二者都并非可靠教师，这会把教师模型的盲点传递给学生。本文提出 LLM-GNN Co-Teaching：一个双向协同教学框架，不固定任何一方为教师。GNN 与 LLM 基于各自架构特定的小损失准则交换高置信伪标签，并在每轮共同更新。此外，作者从训练轨迹中挖掘监督信号：当某节点从第 t 轮的跨模型矛盾转为第 t+1 轮的跨模型一致时，将 LLM 对同一输入的旧答案与新答案构成偏好对，用于 DPO 训练，称为 Round-based Pseudo-Label Preference Optimization（RPL-PO）。在六个 benchmark 上，该方法稳定优于 GNN-as-Judge 和已有方法，在 3-shot 设置下 Cora 提升 7.86%，ogbn-arxiv 提升 7.73%，并能泛化到 5-shot 与 zero-shot 跨数据集迁移。错误结构分析表明，放弃“黄金教师”假设显著提升了 LLM 在困难样本上的图学习能力。",
+  "key_points_zh": [
+    "指出现有 LLM-GNN 方法的“黄金教师”假设在少样本图学习中不可靠：GNN 与 LLM 各有盲点，单向蒸馏会传播错误。",
+    "提出 LLM-GNN Co-Teaching：LLM 和 GNN 双向交换高置信伪标签，并基于架构特定的小损失准则迭代更新。",
+    "设计 RPL-PO，将节点从跨模型矛盾到一致的训练轨迹转化为偏好对，用 Direct Preference Optimization（DPO）进一步优化 LLM。",
+    "在六个 benchmark 上优于 GNN-as-Judge 和 prior methods，3-shot 下 Cora 与 ogbn-arxiv 分别取得 7.86% 和 7.73% 的绝对提升。",
+    "方法在 5-shot 和 zero-shot 跨数据集迁移中同样有效，错误结构分析显示其能改善 LLM 对困难图样本的判断能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "A general LLM-GNN co-teaching approach that may transfer to commerce graphs but lacks explicit shopping or marketplace grounding.",
+    "comment_zh": "A general LLM-GNN co-teaching approach that may transfer to commerce graphs but lacks explicit shopping or marketplace grounding."
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/llmgnncoteaching/LLM-GNN-Coteaching",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11583/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11583/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.931
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11583/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.499
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11583/fig4.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.401
+    }
+  ]
+}

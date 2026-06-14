@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2606.10813",
+  "title": "RedAct: Redacting Agent Capability Traces for Procedural Skill Protection",
+  "title_zh": "RedAct：用于程序性技能保护的智能体能力轨迹脱敏",
+  "authors": [
+    "Shuwen Xu",
+    "Zhitao He",
+    "Yi R. Fung"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T12:57:50Z",
+  "abs_url": "https://arxiv.org/abs/2606.10813v2",
+  "pdf_url": "https://arxiv.org/pdf/2606.10813",
+  "links": {
+    "github": "https://github.com/XuShuwenn/RedAct",
+    "project_page": null
+  },
+  "abstract_en": "Users rely on execution traces to observe agent behavior, diagnose failures, and ensure accountability. These traces contain rich procedural detail, including tool invocations, intermediate decisions, and error-recovery logic. Yet this detail can expose private procedural skills, allowing downstream methods to recover key formulas, thresholds, and strategies without access to model weights or skill files. To quantify this risk and evaluate protection, we construct \\textsc{CapTraceBench}, a benchmark of 75 specialized long-horizon tasks and 154 curated skills across seven domains. We also introduce \\textsc{RedAct} https://github.com/XuShuwenn/RedAct, a protected trace release framework that localizes protected key information, rewrites traces while preserving verifier-critical evidence, and embeds behavioral watermarks for downstream provenance analysis. Across representative trace reuse methods, \\textsc{RedAct} reduces normalized skill transfer (NST) from 44.7--67.1\\% on raw traces to below the no-skill baseline, while preserving audit evidence. Its standalone behavioral watermarks reach 93.6--100.0\\% true detection with a false alarm rate of at most 1.9\\%. These results frame public agent traces as security interfaces and show that selective redaction can reduce procedural capability leakage without removing audit evidence.",
+  "abstract_zh": "用户依赖执行轨迹来观察智能体行为、诊断失败并确保可问责性。然而，这些轨迹包含丰富的程序性细节，如工具调用、中间决策和错误恢复逻辑，可能泄露私有程序性技能，使下游方法即使无法访问模型权重或技能文件，也能恢复关键公式、阈值和策略。为量化这一风险并评估防护效果，论文构建了 CapTraceBench：一个覆盖七个领域、包含 75 个专业长程任务和 154 个精心整理技能的基准。作者进一步提出 RedAct，一个受保护的轨迹发布框架，可定位受保护的关键信息，在保留验证器所需审计证据的同时重写轨迹，并嵌入行为水印以支持下游溯源分析。在代表性的轨迹复用方法上，RedAct 将原始轨迹中 44.7%–67.1% 的 normalized skill transfer（NST）降至低于无技能基线，同时保持审计证据完整。其独立行为水印达到 93.6%–100.0% 的真阳性检测率，误报率不超过 1.9%。论文将公开智能体轨迹视为安全接口，并表明选择性脱敏可在不移除审计证据的前提下降低程序性能力泄露。",
+  "key_points_zh": [
+    "指出执行轨迹不仅用于审计和调试，也可能泄露私有程序性技能，包括公式、阈值、工具使用策略和错误恢复逻辑。",
+    "构建 CapTraceBench，包含 75 个长程专业任务、154 个技能，覆盖七个领域，用于评估轨迹中的能力泄露与防护效果。",
+    "提出 RedAct 框架：定位关键受保护信息，重写轨迹以隐藏技能细节，同时保留验证器所需的审计证据。",
+    "在多种轨迹复用方法下，RedAct 将 normalized skill transfer 从原始轨迹的 44.7%–67.1% 降至低于 no-skill baseline，显示出显著防泄露能力。",
+    "引入行为水印用于下游溯源，独立水印检测真阳性率达 93.6%–100.0%，误报率不超过 1.9%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.84,
+    "llm_avg": 0.808,
+    "comment": "Highly relevant security-governance work that treats agent traces as protected interfaces and balances auditability with procedural skill leakage prevention.",
+    "comment_zh": "该工作将智能体轨迹视为需保护的安全接口，在可审计性与过程技能泄露防护之间取得了很强的相关性。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.808,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/XuShuwenn/RedAct",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10813/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10813/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10813/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10813/fig4.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

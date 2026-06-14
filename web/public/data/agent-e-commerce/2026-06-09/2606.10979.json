@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.10979",
+  "title": "Bellman-Taylor Score Decoding for Markov Decision Processes with State-Dependent Feasible Action Sets",
+  "title_zh": "面向状态依赖可行动作集 MDP 的 Bellman-Taylor 分数解码",
+  "authors": [
+    "Yi Chen",
+    "Rushuai Yang",
+    "Qiang Chen",
+    "Dongyan",
+    "Huo"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Yi Chen",
+      "affiliations": [
+        "Lucy"
+      ]
+    },
+    {
+      "name": "Rushuai Yang",
+      "affiliations": [
+        "Lucy"
+      ]
+    },
+    {
+      "name": "Qiang Chen",
+      "affiliations": [
+        "Lucy"
+      ]
+    },
+    {
+      "name": "Dongyan",
+      "affiliations": [
+        "Lucy"
+      ]
+    }
+  ],
+  "published_at": "2026-06-09T15:15:21Z",
+  "abs_url": "https://arxiv.org/abs/2606.10979v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10979",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Many Markov decision processes (MDPs) in operations research have feasible actions that are state dependent and defined implicitly by various operational constraints. These features make it difficult to use standard deep reinforcement learning (DRL) algorithms, whose action interfaces typically assume either a fixed finite action catalog or a simple Euclidean space. Motivated by a Taylor expansion of the optimal action-value function, we propose Bellman--Taylor score decoding, a framework that moves policy learning to a Euclidean score space while enforcing feasibility through an action decoder. The induced latent-score MDP then can be optimized by standard DRL algorithms without differentiating through the decoder. We provide a performance guarantee showing that the optimality gap of this approach decomposes into a structural approximation error and an algorithmic learning error. Lastly, we apply this framework to a queueing network control problem, where the policy essentially learns a state-dependent index-based dispatching rule. Numerical experiments show near-optimal performance in small instances and considerable improvements over benchmarks in larger systems.",
+  "abstract_zh": "许多运筹优化中的 Markov Decision Processes（MDPs）具有随状态变化的可行动作集合，并且这些动作往往由多种运营约束隐式定义。这使得标准 Deep Reinforcement Learning（DRL）算法难以直接应用，因为其动作接口通常假设固定有限动作目录或简单的欧氏空间。本文受最优动作价值函数 Taylor 展开的启发，提出 Bellman-Taylor score decoding 框架：将策略学习转移到欧氏分数空间中，同时通过 action decoder 强制满足可行性。由此诱导出的 latent-score MDP 可使用标准 DRL 算法优化，且无需对 decoder 求导。作者给出性能保证，证明该方法的最优性差距可分解为结构近似误差与算法学习误差。最后，论文将该框架应用于排队网络控制问题，其中策略本质上学习一种状态依赖的 index-based dispatching rule。数值实验显示，该方法在小规模实例中接近最优，在大规模系统中显著优于基线方法。",
+  "key_points_zh": [
+    "针对状态依赖且由约束隐式定义的可行动作集合，提出 Bellman-Taylor score decoding，使 DRL 能处理复杂 MDP 动作接口。",
+    "核心思想是将策略输出从原始动作空间转移到欧氏 score space，再由 action decoder 将分数映射为可行动作，从而显式保证约束满足。",
+    "该方法构造 latent-score MDP，可直接使用标准 DRL 算法训练，并且不需要对 decoder 进行可微化处理。",
+    "理论上给出最优性差距分解：由 structural approximation error 与 algorithmic learning error 两部分组成。",
+    "在 queueing network control 任务中，学习到状态依赖的 index-based dispatching rule；实验在小规模实例接近最优，在大规模系统中优于多种 benchmark。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.4,
+    "problem_significance": 0.18,
+    "potential_impact": 0.16,
+    "paradigm_shift": 0.18,
+    "lasting_value": 0.14,
+    "llm_avg": 0.21200000000000002,
+    "comment": "A generic reinforcement-learning framework for constrained MDPs with little direct relevance to e-commerce agents, search, or recommendation.",
+    "comment_zh": "该文是面向约束MDP的通用强化学习框架，与电商智能体、搜索或推荐的直接关系很弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3210331475111057,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.21200000000000002,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

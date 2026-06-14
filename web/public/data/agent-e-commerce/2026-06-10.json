@@ -1,0 +1,155 @@
+{
+  "domain": "agent-e-commerce",
+  "display_name": "E-commerce Agent",
+  "date": "2026-06-10",
+  "generated_at": "2026-06-14T05:31:35Z",
+  "papers": [
+    {
+      "arxiv_id": "2606.12245",
+      "title": "DiffCold: A Diffusion-based Generative Model for Cold-Start Item Recommendation",
+      "title_zh": "DiffCold：用于冷启动物品推荐的基于扩散的生成模型",
+      "authors": [
+        "Kangning Zhang",
+        "Yingjie Qin",
+        "Weinan Zhang",
+        "Yong Yu",
+        "Jianghao Lin"
+      ],
+      "total_score": 0.5712125493756883,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.5,
+        "other": 0.177375164585628
+      },
+      "tags": [
+        "product recommendation"
+      ],
+      "tldr_zh": "用扩散模型统一冷暖物品表征",
+      "detail_file": "agent-e-commerce/2026-06-10/2606.12245.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12245/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.11562",
+      "title": "GraphInfer-Bench: Benchmarking LLM's Inference Capability on Graphs",
+      "title_zh": "GraphInfer-Bench：评测 LLM 在图上的推理能力",
+      "authors": [
+        "Zhuoyi Peng",
+        "Jingzhou Jiang",
+        "Hanlin Gu",
+        "Lixin Fan",
+        "Yi Yang"
+      ],
+      "total_score": 0.5,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.5,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "user intent and preference"
+      ],
+      "tldr_zh": "LLM 图推理能力仍显著不足",
+      "detail_file": "agent-e-commerce/2026-06-10/2606.11562.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11562/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.11686",
+      "title": "Layer-Isolated Evaluation: Gating the Deterministic Scaffold of a Production LLM Agent with a No-LLM, Regression-Locked Test Harness",
+      "title_zh": "层隔离评估：用无 LLM、回归锁定测试框架门控生产级 LLM Agent 的确定性脚手架",
+      "authors": [
+        "Sawyer Zhang",
+        "Alexander Wang",
+        "Sophie Lei"
+      ],
+      "total_score": 0.3533824593811417,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.5,
+        "other": 0.19794153127047226
+      },
+      "tags": [
+        "general agent terms"
+      ],
+      "tldr_zh": "用分层确定性测试定位 Agent 回归",
+      "detail_file": "agent-e-commerce/2026-06-10/2606.11686.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11686/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.12608",
+      "title": "Shopping Reasoning Bench: An Expert-Authored Benchmark for Multi-Turn Conversational Shopping Assistants",
+      "title_zh": "Shopping Reasoning Bench：面向多轮对话购物助手的专家编写基准",
+      "authors": [
+        "Shuxian Fan",
+        "Seonwoo Min",
+        "Youna Hu",
+        "Botao Xia",
+        "Jayakrishnan Unnikrishnan",
+        "Rowan Musselmann",
+        "Yifan Gao",
+        "Qingyu Yin",
+        "Priyanka Nigam",
+        "Bing Yin"
+      ],
+      "total_score": 0.274,
+      "scores": {
+        "topic_relevance": 0.16000000000000003,
+        "llm_assessment": 0.5,
+        "other": 0.2
+      },
+      "tags": [
+        "adjacent generic llm"
+      ],
+      "tldr_zh": "专家构建多轮购物推理基准",
+      "detail_file": "agent-e-commerce/2026-06-10/2606.12608.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12608/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.11898",
+      "title": "GraspLLM: Towards Zero-Shot Generalization on Text-Attributed Graphs with LLMs",
+      "title_zh": "GraspLLM：利用 LLM 实现文本属性图的零样本泛化",
+      "authors": [
+        "Hengyi Feng",
+        "Zeang Sheng",
+        "Meiyi Qiang",
+        "Li Yang",
+        "Wentao Zhang"
+      ],
+      "total_score": 0.2631141349418721,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.5,
+        "other": 0.37704711647290695
+      },
+      "tags": [
+        "GitHub"
+      ],
+      "tldr_zh": "用结构对齐增强 LLM 的 TAG 零样本泛化",
+      "detail_file": "agent-e-commerce/2026-06-10/2606.11898.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11898/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.11583",
+      "title": "Beyond the Golden Teacher: Enhancing Graph Learning through LLM-GNN Co-teaching",
+      "title_zh": "超越“黄金教师”：通过 LLM-GNN 协同教学增强图学习",
+      "authors": [
+        "Zhuoyi Peng",
+        "Hanlin Gu",
+        "Lixin Fan",
+        "Yi Yang"
+      ],
+      "total_score": 0.26,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.5,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub"
+      ],
+      "tldr_zh": "LLM与GNN互教，摆脱单一黄金教师",
+      "detail_file": "agent-e-commerce/2026-06-10/2606.11583.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11583/thumb.webp"
+    }
+  ]
+}

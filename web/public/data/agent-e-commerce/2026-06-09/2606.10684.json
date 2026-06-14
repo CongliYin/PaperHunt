@@ -1,0 +1,69 @@
+{
+  "arxiv_id": "2606.10684",
+  "title": "Divide and Cooperate: Role-Decomposed Multi-Agent LLM Training with Cross-Agent Learning Signals",
+  "title_zh": "分而协作：基于跨智能体学习信号的角色分解式多智能体 LLM 训练",
+  "authors": [
+    "Jaewan Park",
+    "Solbee Cho",
+    "Jay-Yoon Lee"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T10:40:55Z",
+  "abs_url": "https://arxiv.org/abs/2606.10684v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10684",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Modern language agents which perform multi-step reasoning have shown strong performance in knowledge-intensive question answering. However, existing approaches typically couple evidence acquisition and answer generation within a single policy. This forces a single model to play multiple potentially conflicting roles, inducing a combinatorial explosion in the policy space and hindering efficient exploration. It also introduces a credit assignment problem during training: a search action that retrieves sufficient evidence may still be penalized when generation fails, and vice versa. We propose DAC (Divide and Cooperate), a role-decomposed multi-agent training framework that divides agentic search into two cooperative subtasks, each handled by a dedicated agent trained with role-specific learning signals. The generator serves a dual role as both an answer producer and an evidence sufficiency verifier, abstaining when retrieved evidence is insufficient. This abstention signal is incorporated into the search agent's reward, providing structured cross-agent learning signals that improve credit assignment. Conversely, the searcher exposes the generator to diverse and challenging evidence environments by hard-positive evidence augmentation, improving its robustness. Experiments on general and multi-hop QA benchmarks show that DAC, implemented via parameter-efficient LoRA modules over a shared backbone, achieves strong performance against prior baselines that rely on full fine-tuning of monolithic models.",
+  "abstract_zh": "本文提出 DAC（Divide and Cooperate），一种面向多步推理与知识密集型问答的角色分解式多智能体训练框架。现有语言智能体通常将证据检索与答案生成耦合在同一策略中，导致单个模型需要同时承担可能冲突的角色，扩大策略搜索空间，并带来训练中的信用分配问题：检索到充分证据的搜索动作可能因生成失败而被惩罚，反之亦然。DAC 将 agentic search 拆分为两个协作子任务，分别由 searcher 与 generator 承担，并使用角色特定学习信号训练。generator 同时负责答案生成和证据充分性验证，在证据不足时选择 abstain（拒答/放弃回答）；该 abstention 信号被纳入 search agent 的奖励中，为搜索策略提供结构化的跨智能体学习信号，从而改善信用分配。反过来，searcher 通过 hard-positive evidence augmentation 为 generator 暴露更具挑战性和多样性的证据环境，提升其鲁棒性。实验表明，在通用与多跳 QA 基准上，基于共享 backbone 和参数高效 LoRA modules 实现的 DAC，相比依赖单体模型全量微调的既有基线取得了更强表现。",
+  "key_points_zh": [
+    "核心问题：现有单体语言智能体将证据获取与答案生成耦合在同一 policy 中，造成策略空间膨胀，并使搜索与生成失败难以正确归因。",
+    "方法：DAC 将任务拆成 searcher 与 generator 两个协作智能体，分别接收角色特定学习信号，实现 role-decomposed multi-agent training。",
+    "跨智能体信号：generator 兼作证据充分性验证器，证据不足时 abstain；该拒答信号被用于调整 searcher 的 reward，改善搜索动作的信用分配。",
+    "反向增强：searcher 通过 hard-positive evidence augmentation 为 generator 构造更难、更丰富的证据场景，提升生成器在复杂证据条件下的鲁棒性。",
+    "实验结论：DAC 使用共享 backbone 上的参数高效 LoRA modules，即可在通用 QA 和 multi-hop QA 基准上超过依赖全量微调的单体模型基线。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.45,
+    "problem_significance": 0.25,
+    "potential_impact": 0.25,
+    "paradigm_shift": 0.2,
+    "lasting_value": 0.22,
+    "llm_avg": 0.27399999999999997,
+    "comment": "A technically interesting multi-agent LLM training method, but it is generic QA-oriented and weakly connected to e-commerce search or shopping workflows.",
+    "comment_zh": "该文在多智能体LLM训练上有一定技术新意，但主要面向通用问答，与电商搜索或购物流程关联较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.27399999999999997,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10684/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.947
+    }
+  ]
+}

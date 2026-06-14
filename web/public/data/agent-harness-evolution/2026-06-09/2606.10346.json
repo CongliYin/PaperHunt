@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.10346",
+  "title": "Reasoning or Memorization? Direction-Aware Diversity Exploration in LLM Reinforcement Learning",
+  "title_zh": "推理还是记忆？LLM 强化学习中的方向感知多样性探索",
+  "authors": [
+    "Jiangnan Xia",
+    "Yucheng Shi",
+    "Yu Yang",
+    "Kishan Panaganti",
+    "Zhenwen Liang",
+    "Ninghao Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T02:55:12Z",
+  "abs_url": "https://arxiv.org/abs/2606.10346v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10346",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement learning has become a key paradigm for eliciting reasoning abilities in large language models, where exploration is crucial for discovering effective solution trajectories. Existing exploration methods typically encourage diversity in semantic or gradient spaces, without distinguishing what drives this diversity. A trajectory may appear novel because it follows a new reasoning process, or because it varies memorized patterns and shortcuts. Rewarding both cases equally may steer exploration toward memorization rather than genuine reasoning improvement. In this paper, we propose DiRL, a Direction-Aware Reinforcement Learning framework that anchors exploration to an internal reasoning-memorization direction of the policy. Specifically, DiRL extracts this direction from model representations, constructs direction-weighted gradient features to characterize rollout updates, and shapes rewards to amplify reasoning-aligned exploration while suppressing memorization-aligned variations. DiRL integrates seamlessly into standard Group Relative Policy Optimization (GRPO). Extensive experiments on mathematical and general reasoning benchmarks demonstrate the effectiveness of DiRL, showing significant improvements over various existing exploration methods.",
+  "abstract_zh": "强化学习已成为激发大语言模型推理能力的重要范式，其中探索对于发现有效解题轨迹至关重要。现有探索方法通常在语义空间或梯度空间中鼓励多样性，但没有区分这种多样性的来源：一条轨迹看似新颖，可能源于新的推理过程，也可能只是对记忆模式与捷径的变体。如果对两者给予相同奖励，探索可能被引向记忆化，而非真正提升推理能力。本文提出 DiRL（Direction-Aware Reinforcement Learning），一种方向感知强化学习框架，将探索锚定到策略模型内部的“推理—记忆”方向。具体而言，DiRL 从模型表征中提取该方向，构造方向加权的梯度特征来刻画 rollout 更新，并通过奖励塑形放大与推理一致的探索、抑制与记忆一致的变化。DiRL 可无缝集成到标准 Group Relative Policy Optimization（GRPO）中。数学与通用推理基准上的大量实验表明，DiRL 相比多种现有探索方法取得显著提升。",
+  "key_points_zh": [
+    "指出现有 RL 探索方法只鼓励多样性，却未区分多样性来自真实推理还是记忆化模式变体，可能导致模型强化捷径。",
+    "提出 DiRL，通过模型内部表征提取“reasoning-memorization direction”，作为判断探索方向的锚点。",
+    "设计方向加权梯度特征来描述 rollout 对策略更新的影响，并据此进行奖励塑形：增强推理对齐探索，抑制记忆对齐变化。",
+    "DiRL 可直接集成到 GRPO 框架中，不需要重构主流 LLM 强化学习训练流程。",
+    "在数学推理和通用推理 benchmarks 上，DiRL 相比现有语义多样性、梯度多样性等探索方法表现更优。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.48,
+    "problem_significance": 0.42,
+    "potential_impact": 0.3,
+    "paradigm_shift": 0.22,
+    "lasting_value": 0.24,
+    "llm_avg": 0.33199999999999996,
+    "comment": "A generic reasoning-RL exploration method with little direct contribution to agent runtime, traces, or governance.",
+    "comment_zh": "该方法主要面向通用推理强化学习探索，对代理运行时、轨迹和治理贡献较少。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36228269883744174,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.33199999999999996,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10346/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10346/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.951
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10346/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.433
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10346/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.335
+    }
+  ]
+}

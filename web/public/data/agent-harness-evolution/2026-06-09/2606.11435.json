@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.11435",
+  "title": "Agent Skill Evaluation and Evolution: Frameworks and Benchmarks",
+  "title_zh": "Agent 技能评估与进化：框架与基准综述",
+  "authors": [
+    "Kexin Ding",
+    "Yang Zhou",
+    "Can Jin",
+    "Feng Tong",
+    "Mu Zhou",
+    "Dimitris N. Metaxas"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T20:43:23Z",
+  "abs_url": "https://arxiv.org/abs/2606.11435v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11435",
+  "links": {
+    "github": "https://github.com/Cassie07/AgentSkill_Survey",
+    "project_page": null
+  },
+  "abstract_en": "The growth of agent skills has transformed how agentic systems are built, evaluated, and deployed. As skill libraries continue to scale, rigorous evaluation becomes critical to ensuring their utility, quality, and safety in real-world applications. Consequently, the field is undergoing an emerging paradigm shift from isolated skill creation to automated, evaluation-driven skill evolution. In this survey, we systematically examine the landscape of skill evolution and evaluation beyond foundational skill creation. We categorize evolution into four distinct paradigms, spanning execution feedback, trajectory distillation, compression, and reinforcement learning, showing how each element contributes to improving skill utility and reliability. We also provide an analysis of six skill-centric benchmark categories, identifying structural gaps in benchmark coverage, trade-offs, and metric richness to advance skill research. Finally, we identify open directions for building skill ecosystems that are generalizable, efficient, and verifiably safe. The project URL is https://github.com/Cassie07/AgentSkill_Survey",
+  "abstract_zh": "随着 Agent 技能库规模持续扩大，Agentic systems 的构建、评估与部署方式正在发生变化。为确保这些技能在真实应用中的实用性、质量与安全性，严格的评估机制变得至关重要。本文综述了从孤立技能创建转向自动化、评估驱动的技能进化这一新兴范式，系统梳理了技能进化与评估的研究版图。作者将技能进化归纳为四类范式：基于执行反馈的改进、轨迹蒸馏、技能压缩以及强化学习，并分析它们如何提升技能的效用与可靠性。同时，论文总结了六类以技能为中心的 benchmark，指出当前评测覆盖、任务结构、指标丰富度与权衡关系中的不足。最后，文章提出了构建可泛化、高效且可验证安全的技能生态系统的开放研究方向。",
+  "key_points_zh": [
+    "论文关注 Agent skill 从“手工/孤立创建”向“自动化、评估驱动进化”的范式转变，强调规模化技能库需要系统性评估来保证可用性、质量与安全。",
+    "作者将技能进化划分为四类主要路径：execution feedback、trajectory distillation、compression 与 reinforcement learning，分别对应从运行结果修正、经验轨迹提炼、技能库精简到策略优化的不同机制。",
+    "论文分析了六类 skill-centric benchmarks，比较其任务覆盖、结构设计、评价指标和适用场景，指出现有 benchmark 在覆盖真实复杂应用、衡量长期可靠性和安全性方面仍有缺口。",
+    "核心研究挑战包括：如何构建可泛化的技能表示与复用机制，如何在效率与性能之间平衡，以及如何实现可验证的安全评估与技能演化控制。",
+    "该综述为研究 Agent skill library、skill evaluation、agent benchmark 与 self-improving agents 的研究者提供了系统分类与未来方向参考。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.78,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.72,
+    "llm_avg": 0.6459999999999999,
+    "comment": "Useful survey of skill evaluation and evolution that aligns with trace-driven improvement, but it contributes frameworks more than deployable harness mechanisms.",
+    "comment_zh": "该综述有助于理解技能评估与演化，契合轨迹驱动改进方向，但更多是框架总结而非可部署的智能体底座机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.6459999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Cassie07/AgentSkill_Survey",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11435/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.954
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11435/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.939
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11435/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.76
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11435/fig4.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.558
+    }
+  ]
+}

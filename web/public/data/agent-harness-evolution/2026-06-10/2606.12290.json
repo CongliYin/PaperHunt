@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.12290",
+  "title": "Selection Integrity for LLM Graph Memory: An Accumulability Criterion for Information-Flow-Blind Retrieval",
+  "title_zh": "LLM 图记忆的选择完整性：面向信息流盲检索的可累积性准则",
+  "authors": [
+    "Zeming Fei",
+    "Hongming Fei",
+    "Xiaoyang Wang",
+    "Yang yang",
+    "Prosanta Gope",
+    "Biplab Sikdar",
+    "Ying Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T16:26:46Z",
+  "abs_url": "https://arxiv.org/abs/2606.12290v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12290",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent memory is moving to graphs, and the provenance defenses now being built for it all check one thing: the provenance of the records an agent retrieves. We show that this entire class of defense is blind by construction. A long-term graph memory runs a global selection step over writable graph structure, so structure that an untrusted principal writes changes \\emph{which} authenticated facts are selected while the cited evidence stays fully authenticated; faithful information-flow control (IFC), checking the provenance of what the reader uses (all of it authenticated), makes the byte-identical decision to no defense at all, across document-QA substrates and real multi-session agent memory. In the most consequential instance, a no-source structural write silently misdirects $28$ irreversible ledger transfers over $499$ live actions: faithful IFC permits every one, and \\authselect\\ prevents every one. We then characterize exactly which memories are exposed: a selector admits the channel when its structural term can reallocate an $Ω(1)$ share of top-$k$ membership past a selected fact's margin. Personalized PageRank can, since a sourceless write reroutes conserved random-walk mass; a content-fixed reranker cannot, and Graphiti's node-distance, which leans on structure \\emph{more} than PageRank does, stays immune. Reallocatability, not reliance, is the predictor. We prove the immune case in general and the open case under a chokepoint condition we verify. Closing the channel forces any provenance defense to recompute selection on the authenticated subgraph, which is what \\authselect\\ does, at zero over-block and $2$--$3\\%$ latency.",
+  "abstract_zh": "论文指出，面向 LLM Agent 长期图记忆的现有 provenance 防御大多只检查被检索记录本身的来源，但这类防御在结构性攻击下“先天失明”。由于图记忆会在可写图结构上执行全局选择，未受信主体写入的结构可以改变哪些已认证事实进入 top-k 检索结果，而被引用证据本身仍保持完全认证。因此，忠实的信息流控制（IFC）会做出与无防御完全相同的决策。作者在文档问答与真实多会话 Agent 记忆中验证该问题，并展示一次无来源结构写入可在 499 次真实动作中误导 28 次不可逆账本转账；IFC 全部放行，而 \\authselect\\ 全部阻止。论文进一步刻画了哪些检索器暴露于该通道：当结构项能越过候选事实的边际重新分配 top-k 成员中 Ω(1) 的比例时，选择器存在风险。Personalized PageRank 因无来源写入可重路由守恒随机游走质量而易受攻击；内容固定 reranker 不受影响；Graphiti 的 node-distance 尽管更依赖结构，却保持免疫。关键预测因素不是“是否依赖结构”，而是“可重分配性（reallocatability）”。作者证明了免疫情形的一般性，并在经验证的 chokepoint 条件下证明开放情形。最终，防御必须在认证子图上重新执行选择，\\authselect\\ 以零过度阻断和 2–3% 延迟开销实现了这一点。",
+  "key_points_zh": [
+    "论文揭示现有 provenance/IFC 防御只验证检索到的事实来源，无法发现未受信结构写入对“选择过程”的操纵。",
+    "攻击者可通过修改图结构改变 top-k 检索成员，使系统引用完全认证但被错误选中的事实；在账本场景中导致 28 次不可逆转账误导，IFC 全部放行。",
+    "作者提出可累积性/可重分配性准则：若结构项能跨越候选事实的选择边际，重新分配 Ω(1) 的 top-k 份额，则该图记忆选择器存在通道。",
+    "Personalized PageRank 易受该通道影响；内容固定 reranker 免疫；Graphiti 的 node-distance 虽强依赖结构但因不可重分配而免疫，说明风险不由结构依赖程度决定。",
+    "\\authselect\\ 通过在认证子图上重新计算选择来关闭通道，实现零 over-block，且仅带来 2–3% 延迟开销。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.85,
+    "problem_significance": 0.9,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.9,
+    "llm_avg": 0.85,
+    "comment": "Strong agent-memory security work that exposes a structural provenance failure mode and proposes a practical authenticated-selection defense.",
+    "comment_zh": "这项工作揭示了图记忆溯源防御的结构性漏洞，并提出了实用的认证选择防护机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.85,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12290/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12290/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.949
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12290/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.948
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2606.10423",
+  "title": "WebChallenger: A Reliable and Efficient Generalist Web Agent",
+  "title_zh": "WebChallenger：可靠高效的通用 Web Agent",
+  "authors": [
+    "Jayoo Hwang",
+    "Xiaowen Zhang",
+    "Vedant Padwal"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T04:53:19Z",
+  "abs_url": "https://arxiv.org/abs/2606.10423v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10423",
+  "links": {
+    "github": "https://github.com/jayoohwang1/webchallenger",
+    "project_page": null
+  },
+  "abstract_en": "Autonomous web navigation remains challenging for LLM agents, and the strongest generalist systems rely on proprietary reasoning models whose inference cost is prohibitive for the repetitive tasks where such agents would be most useful. We argue this gap stems not from insufficient model capability but from agent architectures that fail to replicate three human cognitive advantages: selective attention to relevant page regions, persistent memory of website structure, and procedural fluency with common interaction patterns. We introduce WebChallenger, a web agent framework that addresses each gap through architecture design rather than model scale, built around PageMem: a structured page representation deterministically constructed from the DOM that exposes each page as a hierarchy of semantic sections with short summaries. On this shared substrate we build three mechanisms that mirror the three cognitive advantages: a divide-and-conquer observation pipeline that lets the agent skim section summaries and extract details only from task-relevant regions; a lightweight exploration and memory system that traverses each website once to build a reusable map of pages and element behaviors; and compound action workflows that collapse common multi-step interactions into single agent actions, handling partial state changes automatically. Because all three operate over PageMem, the framework generalizes across websites without site-specific adapters. Using off-the-shelf open-weight models without fine-tuning, our system achieves 56.3% on WebArena, 48.7% on VisualWebArena, 51.0% on Online-Mind2Web, and 70.9% on WorkArena, approaching frontier proprietary systems at a fraction of the cost. Our code is released at https://github.com/jayoohwang1/webchallenger",
+  "abstract_zh": "自主网页导航对 LLM Agent 仍然困难，而当前最强的通用系统通常依赖专有推理模型，推理成本高，不适合高频重复的网页任务。论文认为，瓶颈并非模型能力不足，而是现有 Agent 架构未能复现人类的三种认知优势：对相关页面区域的选择性注意、对网站结构的持久记忆，以及对常见交互模式的流程熟练度。为此，作者提出 WebChallenger，一个通过架构设计而非扩大模型规模来提升能力的 Web Agent 框架。其核心是 PageMem：一种从 DOM 确定性构建的结构化页面表示，将网页组织为带简短摘要的语义层级区块。在 PageMem 之上，WebChallenger 设计了三类机制：分治式观察流程，使 Agent 先浏览区块摘要，再仅从任务相关区域提取细节；轻量级探索与记忆系统，通过一次遍历构建可复用的网站页面与元素行为地图；复合动作工作流，将常见多步交互压缩为单个 Agent 动作，并自动处理部分状态变化。由于这些机制都基于 PageMem，框架无需站点特定适配器即可跨网站泛化。使用现成开源权重模型且无需微调，WebChallenger 在 WebArena、VisualWebArena、Online-Mind2Web 和 WorkArena 上分别达到 56.3%、48.7%、51.0% 和 70.9%，以较低成本接近前沿专有系统表现。",
+  "key_points_zh": [
+    "提出 WebChallenger，核心不是扩大模型规模，而是通过 Agent 架构补足选择性注意、网站记忆和交互流程熟练度三类能力。",
+    "设计 PageMem，从 DOM 确定性构建网页的语义层级表示，并为各页面区块生成短摘要，作为统一的观察、记忆与行动基础。",
+    "分治式观察机制让 Agent 先浏览页面区块摘要，再只深入任务相关区域，从而降低上下文冗余和推理成本。",
+    "轻量级探索与记忆系统可一次性遍历网站，构建可复用的页面结构与元素行为地图；复合动作工作流将常见多步网页操作合并为单个动作。",
+    "在不微调、仅使用开源权重模型的情况下，WebChallenger 在 WebArena、VisualWebArena、Online-Mind2Web、WorkArena 上取得接近专有前沿系统的性能，同时成本更低。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.75,
+    "problem_significance": 0.78,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.7,
+    "llm_avg": 0.7140000000000001,
+    "comment": "Strong web-agent harness work with reusable DOM memory, attention, and workflow abstractions, though it is focused on web navigation rather than general production agent infrastructure.",
+    "comment_zh": "该工作在网页智能体的DOM记忆、选择性注意和复合工作流方面较强，但重点仍偏向网页导航而非通用生产级智能体基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.6828624646490623,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7140000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/jayoohwang1/webchallenger",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 2,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10423/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10423/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

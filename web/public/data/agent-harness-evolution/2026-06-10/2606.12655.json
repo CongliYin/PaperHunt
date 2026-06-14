@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2606.12655",
+  "title": "Amnesia: A Stealthy Replay Attack on Continual Learning Dreams",
+  "title_zh": "Amnesia：针对持续学习“回放梦境”的隐蔽重放攻击",
+  "authors": [
+    "Ahmed Sharshar",
+    "Naveen Kumar Kummari",
+    "Mohsen Guizani"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T20:27:06Z",
+  "abs_url": "https://arxiv.org/abs/2606.12655v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12655",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Continual learning (CL) models often use experience replay to reduce catastrophic forgetting, but their robustness to replay sampling interference remains underexplored. Existing CL attacks alter inputs or training pipelines (poisoning/backdoors) and rarely include explicit auditable constraints, limiting realism. Here, auditability means a monitor can verify compliance from sampler-visible telemetry - e.g., logged replay index/label statistics - by checking that the realized replay class histogram stays close to a nominal baseline and that replay rate is unchanged per batch and/or over a rolling window. We study a limited-privilege insider who controls only replay index selection, not pixels, labels, or model parameters, while staying within auditable limits such as queue priorities. We introduce Amnesia, a replay composition attack that maximizes degradation under two budgets: a visibility budget delta bounding the TV/KL divergence from a nominal class histogram p0, and a mass budget f fixing the replay rate. Amnesia has two steps: (i) compute lightweight class utilities, such as EMA loss or confidence, to tilt p0 toward harmful classes; and (ii) project the tilt back into the delta-ball using efficient KL (exponential tilt) or TV (balanced mass redistribution) optimizers. A windowed scheduler enforces rolling audits. Across challenging CL benchmarks and strong replay baselines, Amnesia consistently lowers final accuracy (ACC) and worsens backward transfer (-BWT). The KL variant delivers high impact while remaining largely undetected under multiple audit schemes, including per-batch and rolling-window checks. The TV variant is more damaging but easier to detect, especially under tight per-class constraints. These results expose index-only replay control as a practical, auditable threat surface in CL systems and establish a principled impact-visibility trade-off.",
+  "abstract_zh": "本文研究持续学习（Continual Learning, CL）中经验回放机制的安全风险。现有攻击多依赖篡改输入、标签或训练流程，如投毒与后门，而较少考虑在可审计约束下的现实威胁。作者提出一种低权限内部攻击者设定：攻击者只能控制 replay index selection，即回放样本索引的选择，不能修改图像像素、标签或模型参数，并且必须满足审计系统可检查的约束，例如每批次或滑动窗口内的回放类别直方图接近标称分布、回放率不变等。基于此，论文提出 Amnesia，一种 replay composition attack。它在两个预算下最大化模型退化：visibility budget δ 限制与标称类别分布 p0 的 TV/KL divergence，mass budget f 固定回放比例。方法首先利用轻量级类别效用指标，如 EMA loss 或 confidence，估计哪些类别更“有害”；随后通过 KL exponential tilt 或 TV balanced mass redistribution 将偏移后的分布投影回 δ-ball，以保持隐蔽性；并通过 windowed scheduler 满足滚动审计约束。实验表明，在多个具有挑战性的 CL benchmarks 和强 replay baselines 上，Amnesia 能稳定降低最终准确率（ACC）并恶化 backward transfer（-BWT）。其中 KL 版本在多种审计方案下更隐蔽且仍具较高破坏力，TV 版本破坏更强但更容易被检测。该工作揭示了仅控制 replay index 的攻击面在 CL 系统中的现实威胁，并刻画了影响力与可见性之间的权衡。",
+  "key_points_zh": [
+    "提出 Amnesia，一种面向 Continual Learning 经验回放的 replay composition attack，只操控回放样本索引，不改像素、标签或模型参数。",
+    "攻击显式满足可审计约束：通过 visibility budget δ 限制回放类别分布相对标称分布 p0 的 TV/KL divergence，并通过 mass budget f 固定回放率。",
+    "方法利用 EMA loss、confidence 等轻量级 class utilities 选择更有害的类别，再用 KL exponential tilt 或 TV balanced mass redistribution 将分布投影回审计允许范围。",
+    "实验显示 Amnesia 在多种 CL benchmarks 和强 replay baselines 上显著降低 ACC，并恶化 backward transfer（-BWT）。",
+    "KL 变体更隐蔽、在 per-batch 与 rolling-window audits 下较难检测；TV 变体破坏更强但在严格 per-class 约束下更容易暴露。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.7,
+    "problem_significance": 0.62,
+    "potential_impact": 0.56,
+    "paradigm_shift": 0.48,
+    "lasting_value": 0.42,
+    "llm_avg": 0.5559999999999999,
+    "comment": "A rigorous continual-learning replay attack, but it is only indirectly relevant to self-improving agent harnesses unless applied to agent trajectory replay systems.",
+    "comment_zh": "这是一项严谨的持续学习回放攻击研究，但除非用于智能体轨迹回放系统，否则与自改进智能体框架仅间接相关。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.5559999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12655/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.986
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12655/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

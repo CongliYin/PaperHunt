@@ -1,0 +1,96 @@
+{
+  "arxiv_id": "2606.10484",
+  "title": "AgentCanary: A Security Evaluation Framework for Autonomous AI Agents in Real Executable Environments",
+  "title_zh": "AgentCanary：面向真实可执行环境中自主 AI Agent 的安全评估框架",
+  "authors": [
+    "Peiyang Li",
+    "Songping Wang",
+    "Yi Huang",
+    "Yanhua Shi",
+    "Chenhao Zhang",
+    "Qi Li",
+    "Yueming Lyu",
+    "Caifeng Shan",
+    "Fengting Li",
+    "Chao Feng",
+    "Chuanqun Zhu",
+    "Liang Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T06:55:37Z",
+  "abs_url": "https://arxiv.org/abs/2606.10484v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10484",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Autonomous AI agents have driven the transition from conversation to task execution, shifting security failures from textual deception to system compromise. Although security evaluation is crucial for proactive risk prevention, prior work is constrained by fundamental bottlenecks, including fragmented risk coverage, static or low-fidelity execution environments, and single-dimensional and coarse-grained assessment metrics. To address these challenges, we propose AgentCanary, a comprehensive security evaluation framework for autonomous AI agents. AgentCanary provides a systematic solution along three contributions. First, comprehensive risk coverage: we introduce an orthogonal Entry $\\times$ Impact risk taxonomy that decouples how adversarial influence enters the agent from what harm it ultimately causes, and instantiate it as a scenario-aligned task suite spanning realistic deployment workflows. Second, a high-fidelity real executable environment: rather than static Q&A or mocked tool responses, agents interact with real tools against dynamically provisioned task artifacts, with persistent state across multi-step interactions that naturally supports long-horizon attack evaluation. Third, trajectory-grounded multi-dimensional evaluation: evaluation consumes the full agent trajectory rather than the reply text or a single tool call, enabling decomposed scoring along three orthogonal dimensions, Outcome Safety, Security Awareness, and Task Utility. We evaluate a broad set of frontier models on AgentCanary against multiple established adversarial attack methods across three agent frameworks. The results reveal that current agents often fail to recognize the attacks they face, particularly under compromised skills, persistent state, and long-horizon execution attacks, and provide a systematic baseline for developing more reliable and secure agent systems.",
+  "abstract_zh": "自主 AI Agent 正在从对话走向任务执行，使安全失败的后果从文本层面的欺骗升级为对系统的实际破坏。现有安全评估往往受限于风险覆盖碎片化、执行环境静态或低保真、评估指标单一且粗粒度等问题。为此，论文提出 AgentCanary，一个面向自主 AI Agent 的综合安全评估框架。AgentCanary 的核心包括三方面：首先，提出正交的 Entry × Impact 风险分类法，将对抗影响“如何进入 Agent”与“最终造成何种危害”解耦，并构建贴近真实部署流程的任务套件；其次，提供高保真的真实可执行环境，使 Agent 与真实工具、动态生成的任务工件交互，并在多步交互中保持持久状态，从而支持长时程攻击评估；第三，基于完整 Agent 轨迹进行多维评估，而非仅依赖最终回复或单次工具调用，从 Outcome Safety、Security Awareness 和 Task Utility 三个正交维度进行细粒度评分。作者在三个 Agent 框架中，使用多种成熟对抗攻击方法评估了一系列前沿模型。结果显示，当前 Agent 常常难以识别所面临的攻击，尤其是在 compromised skills、持久状态和长时程执行攻击场景下表现脆弱。AgentCanary 为构建更可靠、更安全的 Agent 系统提供了系统性基线。",
+  "key_points_zh": [
+    "提出 AgentCanary，用于评估自主 AI Agent 在真实可执行环境中的安全风险，关注从文本欺骗到系统级破坏的安全转变。",
+    "设计 Entry × Impact 正交风险分类法，区分攻击入口与最终危害，覆盖更系统的真实部署风险场景。",
+    "构建高保真执行环境：Agent 使用真实工具、动态任务工件，并支持跨多步交互的持久状态，适合评估长时程攻击。",
+    "采用基于完整执行轨迹的多维评估，分别衡量 Outcome Safety、Security Awareness 和 Task Utility，而非只看最终回复或单次工具调用。",
+    "实验表明，当前前沿模型在 compromised skills、持久状态和长时程执行攻击下普遍安全意识不足，难以及时识别攻击。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.9,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8220000000000001,
+    "comment": "Excellent harness-level security evaluation framework with executable environments, persistent state, trajectory-grounded metrics, and deployment-relevant risk coverage.",
+    "comment_zh": "该工作提供了优秀的智能体安全评测框架，包含真实可执行环境、持久状态、轨迹级指标和面向部署的风险覆盖。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8220000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10484/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.984
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10484/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.981
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10484/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.979
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10484/fig4.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.11543",
+  "title": "SkillJuror: Measuring How Agent Skill Organization Changes Runtime Behavior",
+  "title_zh": "SkillJuror：衡量 Agent Skill 组织方式如何改变运行时行为",
+  "authors": [
+    "Zhiyu Chen",
+    "Zihan Guo",
+    "Bo Huang",
+    "Bingwei Lu",
+    "Jianghao Lin",
+    "Yuanjian Zhou",
+    "Weinan Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T01:11:50Z",
+  "abs_url": "https://arxiv.org/abs/2606.11543v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11543",
+  "links": {
+    "github": "https://github.com/zhiyuchen-ai/skill-juror.",
+    "project_page": null
+  },
+  "abstract_en": "Agent Skills augment large language model (LLM) agents with procedural knowledge at inference time, but current benchmarks rarely distinguish what a Skill says from how it is organized. We study this distinction through Progressive Disclosure, where a concise root file points agents to supporting resources on demand, and compare it with a normalized flat baseline. We present SkillJuror, a framework for evaluating Skill writing paradigms through semantically controlled variants, matched multi-trial evaluations, and trajectory evidence while holding task knowledge fixed. In an 82-task SkillsBench study, Progressive Disclosure changes runtime behavior before aggregate outcomes: distinct Skill resources touched per trajectory rise from 1.18 to 3.85, and effective uptake events rise from 1.33 to 3.92. It also yields 17 additional verifier-passing trials out of 410 matched trials (+4.1%) over the normalized flat baseline. The benefit is task-dependent. Progressive Disclosure helps when supporting resources guide implementation, checking, or repair, but is weaker when success hinges on exact output conventions, numerical thresholds, or long artifact-generation pipelines. These results show that Skill organization is not mere presentation: it can change how agents search and apply procedural knowledge, while outcome gains depend on whether the exposed resources are actionable for the task. Code is available at https://github.com/zhiyuchen-ai/skill-juror.",
+  "abstract_zh": "Agent Skills 在推理阶段为大语言模型（LLM）智能体提供程序性知识，但现有基准很少区分 Skill 的内容与其组织方式的影响。本文研究 Progressive Disclosure：用一个简洁的 root file 按需引导智能体访问支持资源，并将其与归一化的 flat baseline 对比。作者提出 SkillJuror 框架，通过语义受控变体、匹配的多轮评测和轨迹证据，在固定任务知识的前提下评估 Skill 写作范式。在包含 82 个任务的 SkillsBench 实验中，Progressive Disclosure 在总体结果变化之前已显著改变运行时行为：每条轨迹访问的不同 Skill 资源数从 1.18 升至 3.85，有效采纳事件从 1.33 升至 3.92；在 410 个匹配试验中，相比归一化 flat baseline 额外产生 17 次通过 verifier 的试验（+4.1%）。收益具有任务依赖性：当支持资源能指导实现、检查或修复时效果更好；当成功依赖精确输出格式、数值阈值或长流程产物生成时效果较弱。结果表明，Skill 组织不是单纯的呈现形式，而会改变智能体搜索和应用程序性知识的方式，但最终收益取决于暴露资源是否对任务可操作。",
+  "key_points_zh": [
+    "提出 SkillJuror，用于在任务知识固定的条件下，评估不同 Skill 写作与组织范式对 LLM agent 的影响。",
+    "核心比较 Progressive Disclosure 与 normalized flat baseline：前者通过简洁 root file 按需暴露支持资源，后者将信息扁平化呈现。",
+    "在 SkillsBench 的 82 个任务、410 个匹配试验中，Progressive Disclosure 使资源访问数和有效采纳事件显著增加，并带来 +4.1% 的 verifier-passing 提升。",
+    "性能收益高度依赖任务类型：对需要实现指导、检查和修复的任务更有帮助；对严格格式、数值阈值或长 artifact pipeline 任务帮助有限。",
+    "论文结论强调 Skill organization 并非表面排版，而会实质影响 agent 在运行时如何检索、选择和应用程序性知识。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.66,
+    "problem_significance": 0.64,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.42,
+    "lasting_value": 0.56,
+    "llm_avg": 0.572,
+    "comment": "Useful evidence that skill organization affects runtime behavior, but its contribution is mainly evaluation methodology rather than core harness infrastructure.",
+    "comment_zh": "该工作有力说明技能组织方式会影响运行时行为，但主要贡献在评估方法而非核心智能体框架基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.457151341903981,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.572,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/zhiyuchen-ai/skill-juror.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 7,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11543/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11543/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11543/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

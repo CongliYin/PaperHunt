@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2606.11729",
+  "title": "A VPN-as-a-Service Tailored Enabler for Computing-constrained Environments",
+  "title_zh": "面向计算受限环境定制的 VPN-as-a-Service 使能方案",
+  "authors": [
+    "Carolina Fernández-Martínez",
+    "César Cajas Parra",
+    "Shuaib Siddiqui"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T07:08:03Z",
+  "abs_url": "https://arxiv.org/abs/2606.11729v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11729",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Industry has embraced Zero Trust (ZT) architectural tenets and implementations for cloud-native environments, following stricter security requirements to both internal and external tenants. Among others, these approaches combine fine-grained identity management and monitoring for both inventorying and better analysing the devices' security posture for overall protection, along with strict separation of concerns and isolation to enforce minimal privilege. Networking-wise, ZT approaches rely as well on isolation and least privilege; enacted by separate, secure tunnels per tenant connecting to a given infrastructure. Such implementations can also be applied to the connectivity within and towards experimental infrastructures. In this sense, this work contributes the design and evaluation of a cloud-native VPN-as-a-Service (VPNaaS) that can be (i) easily orchestrated to deploy on-the-fly, separate tunnels per each tenant remotely connecting to the infrastructure; (ii) integrated with common Identity and Access Management (IAM) tools, key to ZT deployments; and (iii) adapt to computing- or entropy- constrained environments. This solution is customisable and allows, among others, to select from RSA or Elliptic Curves (EC) as key generation algorithm and their parameters to achieve more secure keys and adapt to resource-constrained environments.",
+  "abstract_zh": "本文面向 Zero Trust（ZT）架构在实验基础设施与云原生环境中的安全连接需求，设计并评估了一种云原生 VPN-as-a-Service（VPNaaS）。该方案支持按租户动态编排与部署独立安全隧道，以实现网络隔离和最小权限访问；同时可与常见 Identity and Access Management（IAM）工具集成，满足 ZT 部署中的细粒度身份管理需求。针对计算能力或熵资源受限的环境，系统允许定制密钥生成算法与参数，例如在 RSA 与 Elliptic Curves（EC）之间选择，从而在安全性、性能与资源消耗之间进行权衡。",
+  "key_points_zh": [
+    "提出一种云原生 VPNaaS，用于为不同 tenant 按需部署相互隔离的安全 VPN 隧道，支撑 Zero Trust 网络访问模式。",
+    "方案强调与 Identity and Access Management（IAM）系统集成，使 VPN 连接可纳入身份认证、授权与访问控制流程。",
+    "面向 computing-constrained 或 entropy-constrained 环境，支持灵活选择 RSA 或 Elliptic Curves（EC）及其参数，以适配不同资源条件。",
+    "通过租户级隔离、最小权限和独立隧道机制，增强实验基础设施或云原生基础设施的远程接入安全性。",
+    "工作发表于 Proc. 2025 IEEE NetSoft，定位于网络软化、云原生安全与 Zero Trust 连接服务的交叉方向。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.38,
+    "problem_significance": 0.42,
+    "potential_impact": 0.32,
+    "paradigm_shift": 0.2,
+    "lasting_value": 0.18,
+    "llm_avg": 0.3,
+    "comment": "A conventional VPN-as-a-service and zero-trust networking paper with little direct relevance to agent harness evolution.",
+    "comment_zh": "这是一篇常规的VPN即服务与零信任网络论文，与智能体框架演化几乎没有直接关系。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.3,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11729/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11729/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11729/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11729/fig4.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.943
+    }
+  ]
+}

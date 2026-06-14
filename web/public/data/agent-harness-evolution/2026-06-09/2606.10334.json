@@ -1,0 +1,73 @@
+{
+  "arxiv_id": "2606.10334",
+  "title": "Self-Distillation Policy Optimization via Visual Feedback: Bridging Code and Visual Artifacts",
+  "title_zh": "通过视觉反馈的自蒸馏策略优化：连接代码与视觉产物",
+  "authors": [
+    "Haoyu Dong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T02:28:39Z",
+  "abs_url": "https://arxiv.org/abs/2606.10334v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10334",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Code-generating large language models (LLMs) increasingly produce visual artifacts such as charts, web pages, and slides by writing programs that are executed by non-differentiable renderers, committing to code before observing the render. As a result, otherwise executable code often yields artifacts with visually salient defects, including overlapping elements, clipped text, broken alignment, low contrast, and overflow. We study visual-feedback self-distillation for code-generated visual artifacts. We propose Visual-SDPO, a self-distillation policy-optimization framework that treats rendered visual feedback as privileged context for a weight-sharing teacher and distills this feedback into a coding student. To make supervision spatially targeted rather than uniform, we introduce Visual-Grounded Code Credit Weighting, which traces each detected defect back to the code statements responsible for the affected elements and amplifies the distillation signal on those statements. A sequence-level GRPO (Group Relative Policy Optimization) term complements the dense token-level objective by rewarding executable, visually high-quality rollouts, while failed executions remain learnable through the self-distillation path by passing execution errors as privileged context to the teacher. We instantiate Visual-SDPO for chart, web/UI, and slide generation with a unified Qwen3-VL-8B-Instruct backbone. Across chart-to-code, UI-to-code, and slide-generation benchmarks (ChartMimic, Design2Code, and AeSlides), Visual-SDPO improves over the zero-shot base by more than 10 absolute points in the primary metric and over GRPO by at least 2.4 points, with fewer training steps and no added inference-time cost.",
+  "abstract_zh": "代码生成型大语言模型（LLMs）越来越多地通过编写程序来生成图表、网页和幻灯片等视觉产物，但这些程序通常由不可微渲染器执行，模型在看到渲染结果前就已完成代码决策。因此，即使代码可执行，生成结果也常出现视觉上显著的缺陷，如元素重叠、文本裁切、对齐错误、低对比度和内容溢出。本文研究面向代码生成视觉产物的视觉反馈自蒸馏方法，提出 Visual-SDPO：一个自蒸馏策略优化框架，将渲染后的视觉反馈作为共享权重教师模型的特权上下文，并将该反馈蒸馏到代码学生模型中。为使监督信号具备空间针对性，作者提出 Visual-Grounded Code Credit Weighting，将检测到的视觉缺陷追踪到负责相关元素的代码语句，并增强这些语句上的蒸馏信号。同时，引入序列级 GRPO（Group Relative Policy Optimization）项，以奖励可执行且视觉质量高的生成结果；对于执行失败的样本，则通过将执行错误作为教师特权上下文，仍可经由自蒸馏路径学习。论文在 chart、web/UI 和 slide 生成任务上，以统一的 Qwen3-VL-8B-Instruct 作为骨干模型实例化 Visual-SDPO。实验覆盖 ChartMimic、Design2Code 和 AeSlides 基准，Visual-SDPO 相比 zero-shot base 在主指标上提升超过 10 个绝对点，相比 GRPO 至少提升 2.4 点，并且训练步数更少、推理时无额外开销。",
+  "key_points_zh": [
+    "提出 Visual-SDPO，将渲染视觉反馈作为教师模型的特权上下文，再蒸馏给代码生成学生模型，从而在推理阶段无需额外视觉反馈或额外成本。",
+    "引入 Visual-Grounded Code Credit Weighting，把视觉缺陷定位到相关代码语句，对导致缺陷的代码位置施加更强蒸馏监督，避免均匀 token 级学习信号过于粗糙。",
+    "结合序列级 GRPO 奖励可执行且视觉质量高的 rollouts；即便代码执行失败，也可将 execution errors 输入教师模型，使失败样本仍能被利用。",
+    "在 ChartMimic、Design2Code、AeSlides 等 chart-to-code、UI-to-code 和 slide-generation 基准上，Visual-SDPO 相比 zero-shot base 主指标提升超过 10 个绝对点，相比 GRPO 至少提升 2.4 点。",
+    "方法使用统一的 Qwen3-VL-8B-Instruct backbone，覆盖图表、Web/UI 和幻灯片生成，显示出较好的跨视觉产物类型泛化能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.72,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.64,
+    "llm_avg": 0.652,
+    "comment": "A relevant execution-feedback training loop for code-generated artifacts, though narrower than a general agent harness.",
+    "comment_zh": "该工作利用执行与视觉反馈改进代码生成制品，相关性较强但范围窄于通用代理平台。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.652,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10334/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10334/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.948
+    }
+  ]
+}

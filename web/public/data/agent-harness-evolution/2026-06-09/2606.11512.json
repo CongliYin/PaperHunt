@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.11512",
+  "title": "SAGE: Answer-Conditioned Uncertainty Targets for Verbal Uncertainty Alignment",
+  "title_zh": "SAGE：用于语言不确定性对齐的答案条件不确定性目标",
+  "authors": [
+    "Kaiwen Shi",
+    "Zheyuan Zhang",
+    "Yanfang Ye"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T23:17:16Z",
+  "abs_url": "https://arxiv.org/abs/2606.11512v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11512",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models increasingly express uncertainty through natural-language statements, yet these expressions often fail to reflect the model's sampled behavior. We study verbal uncertainty alignment as a distributional calibration problem: the appropriate uncertainty target for a prompt should be estimated from repeated model outputs rather than from an isolated response. However, group rollouts alone are insufficient, since the resulting target must provide a useful training signal. Existing targets only partially satisfy this requirement. We propose SAGE, Semantic-Answer Guided Entropy, a group-level uncertainty target that constructs an answer-conditioned uncertainty geometry over sampled responses. SAGE preserves categorical, numeric, and symbolic answer distinctions while maintaining a smooth and scale-preserving calibration signal. We further apply this target through Group-Uncertainty Preference Optimization, or GUPO, an uncertainty-channel training framework that supervises verbal uncertainty expressions rather than the full response. Experiments across factual, mathematical, and multiple-choice reasoning tasks show improved uncertainty ranking, lower calibration error, and reduced overconfidence.",
+  "abstract_zh": "大语言模型越来越常用自然语言表达不确定性，但这些表述往往不能真实反映模型采样行为。本文将语言不确定性对齐视为分布式校准问题：一个 prompt 的合理不确定性目标应从多次模型输出中估计，而非依赖单次回答。然而，仅使用 group rollouts 并不足够，因为所得目标还必须能提供有效训练信号。为此，论文提出 SAGE（Semantic-Answer Guided Entropy），一种 group-level 不确定性目标，通过在采样响应上构建答案条件的不确定性几何结构，既保留类别、数值和符号答案差异，又提供平滑且尺度保持的校准信号。作者进一步提出 GUPO（Group-Uncertainty Preference Optimization），一种仅监督语言不确定性表达、而非完整回答内容的不确定性通道训练框架。实验覆盖事实问答、数学推理和多选推理任务，结果显示该方法提升了不确定性排序能力，降低校准误差，并减少过度自信。",
+  "key_points_zh": [
+    "将 verbal uncertainty alignment 建模为分布式校准问题，强调不确定性目标应来自同一 prompt 的多次采样输出，而非单个 response。",
+    "提出 SAGE，通过答案条件的不确定性几何建模采样回答间关系，能区分类别、数值和符号答案，同时保持连续、可训练的校准信号。",
+    "提出 GUPO 训练框架，只优化回答中的不确定性表达通道，避免直接监督完整回答带来的内容干扰。",
+    "在 factual、mathematical 和 multiple-choice reasoning 任务上，SAGE/GUPO 改善不确定性排序、降低 calibration error，并缓解模型 overconfidence。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.34,
+    "potential_impact": 0.26,
+    "paradigm_shift": 0.2,
+    "lasting_value": 0.22,
+    "llm_avg": 0.304,
+    "comment": "A useful uncertainty-calibration method, but it is model-level alignment rather than agent harness governance.",
+    "comment_zh": "该方法有助于不确定性校准，但属于模型层面对齐而非代理平台治理。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.304,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11512/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.981
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11512/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11512/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11512/fig4.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.949
+    }
+  ]
+}

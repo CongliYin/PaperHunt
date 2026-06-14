@@ -1,0 +1,71 @@
+{
+  "arxiv_id": "2606.10868",
+  "title": "When Do Autoregressive Sequence Models Forecast Physical Wavefields? A Controlled Study on Synthetic Seismograms",
+  "title_zh": "自回归序列模型何时能预测物理波场？基于合成地震图的受控研究",
+  "authors": [
+    "Waleed Esmail",
+    "Stuart Russell",
+    "Jana Klinge",
+    "Alexander Kappes",
+    "Christine Thomas"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T13:46:14Z",
+  "abs_url": "https://arxiv.org/abs/2606.10868v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10868",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-horizon autoregressive forecasting of oscillatory physical signals, such as seismograms, gravitational-wave strain, and similar wavefields is limited by error accumulation: as a causal model is fed its own outputs over hundreds of steps, small per-step errors compound into phase drift that pointwise metrics fail to detect. We ask when such rollout stays stable, using synthetic three-component seismograms as a physically structured testbed and the \\textsc{SeismoGPT} autoregressive forecaster as the model under study. Through controlled, intra-architecture ablations evaluated on free-running rollout with paired significance tests, we isolate the contribution of each design choice. Multi-token prediction is the dominant stabilizer, accounting for almost the entire improvement over a single-token baseline ($+0.040$ median NCC); a horizon-embedding hybrid prediction head and a cross-horizon STFT-magnitude coherence loss each add a small but consistent further gain. Performance depends sharply on a context-ratio threshold near one, roughly the full P-S interval of observed signal, below which rollout generalization collapses. The dominant residual failure is a polarity inversion that a magnitude-based spectral loss cannot, by construction, penalize, identifying phase-aware objectives as the natural next step. We frame this as a controlled study of rollout stability on oscillatory wavefields, not a benchmark of forecasting architectures.",
+  "abstract_zh": "本文研究振荡型物理信号（如 seismograms、gravitational-wave strain 等 wavefields）的长时域自回归预测稳定性问题。此类任务中，因模型在数百步 rollout 中不断接收自身输出，微小单步误差会累积为相位漂移，而常规逐点指标往往难以及时反映。作者以三分量合成 seismograms 作为具有物理结构的测试床，分析自回归预测模型 SeismoGPT 在何种条件下能够保持稳定自由 rollout。通过受控的架构内消融实验和配对显著性检验，论文隔离了各设计选择的贡献。结果显示，multi-token prediction 是最关键的稳定化因素，几乎贡献了相对 single-token baseline 的全部提升（median NCC +0.040）；horizon-embedding hybrid prediction head 与 cross-horizon STFT-magnitude coherence loss 进一步带来小但稳定的收益。模型性能对 context-ratio 存在接近 1 的阈值效应，约等于完整观测 P-S interval；低于该阈值时 rollout 泛化会显著崩塌。主要残余失败模式是 polarity inversion，而基于幅度的频谱损失无法惩罚该问题，因此 phase-aware objectives 被指出是下一步关键方向。论文强调其定位是关于振荡波场 rollout 稳定性的受控研究，而非预测架构排行榜。",
+  "key_points_zh": [
+    "论文聚焦长时域自回归预测中的 error accumulation 与 phase drift，指出逐点误差指标不足以评估振荡物理 wavefields 的 rollout 稳定性。",
+    "以 synthetic three-component seismograms 和 SeismoGPT 为受控实验平台，通过架构内消融与配对显著性检验分析各组件贡献。",
+    "multi-token prediction 是最主要稳定化设计，几乎解释了相对 single-token baseline 的全部性能提升，median NCC 增益为 +0.040。",
+    "horizon-embedding hybrid prediction head 与 cross-horizon STFT-magnitude coherence loss 均带来较小但一致的额外提升。",
+    "模型对 context-ratio 存在接近 1 的临界阈值；主要残余错误为 polarity inversion，提示未来需引入 phase-aware objectives。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.34,
+    "problem_significance": 0.12,
+    "potential_impact": 0.08,
+    "paradigm_shift": 0.1,
+    "lasting_value": 0.06,
+    "llm_avg": 0.13999999999999999,
+    "comment": "A controlled physical-forecasting study with negligible relevance to production LLM agent platforms.",
+    "comment_zh": "这是一项物理预测稳定性研究，与生产级LLM代理平台几乎无关。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.13999999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10868/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.905
+    }
+  ]
+}

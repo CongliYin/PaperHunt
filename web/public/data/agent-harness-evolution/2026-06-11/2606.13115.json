@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2606.13115",
+  "title": "G-Long: Graph-Enhanced Memory Management for Efficient Long-Term Dialogue Agents",
+  "title_zh": "G-Long：面向高效长期对话智能体的图增强记忆管理",
+  "authors": [
+    "Minjun Choi",
+    "Yoonjin Jang",
+    "Sangwon Youn",
+    "Youngjoong Ko"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T09:42:13Z",
+  "abs_url": "https://arxiv.org/abs/2606.13115v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13115",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "While Large Language Models (LLMs) have advanced open-domain dialogue systems, maintaining long-term consistency remains a challenge due to inherent limitations in long-context reasoning and the inefficiency of processing extensive raw text. Existing approaches typically rely on either unstructured memory storage, which is prone to information loss, or computationally expensive LLMs that incur high latency. To address these limitations, we propose G-Long, a graph-enhanced framework that utilizes a fine-tuned small Language Model (sLM) for structured triplet extraction and associative retrieval, significantly reducing operational costs. Furthermore, we introduce the novel attention-aware importance scoring mechanism that leverages the intrinsic cross-attention signals of a T5 summarizer to identify salient memories. Extensive experiments across diverse benchmarks demonstrate that G-Long achieves state-of-the-art performance in both response generation and memory retrieval, yielding performance gains of up to 9.8% in response quality on MSC and 40.8% in retrieval recall on LME, while significantly minimizing computational overhead.",
+  "abstract_zh": "本文针对长期开放域对话中一致性维护困难、长上下文推理成本高以及原始文本记忆处理低效的问题，提出 G-Long：一种图增强记忆管理框架。G-Long 使用微调的小语言模型（sLM）进行结构化三元组抽取与关联式检索，从而降低对昂贵 LLM 的依赖与推理延迟。同时，论文提出 attention-aware importance scoring 机制，利用 T5 summarizer 内部 cross-attention 信号识别关键记忆。多项基准实验表明，G-Long 在回复生成和记忆检索上达到 state-of-the-art：在 MSC 上回复质量最高提升 9.8%，在 LME 上检索召回率最高提升 40.8%，并显著降低计算开销。",
+  "key_points_zh": [
+    "提出 G-Long，将长期对话记忆组织为图结构，并通过三元组抽取支持更结构化、可关联的记忆管理。",
+    "使用微调的 sLM 替代高成本 LLM 执行记忆抽取与检索，降低长期对话智能体的计算开销和延迟。",
+    "设计 attention-aware importance scoring，利用 T5 summarizer 的 cross-attention 信号评估记忆重要性，筛选更有价值的信息。",
+    "在 MSC、LME 等基准上取得 state-of-the-art，MSC 回复质量最高提升 9.8%，LME 检索召回率最高提升 40.8%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.55,
+    "potential_impact": 0.45,
+    "paradigm_shift": 0.3,
+    "lasting_value": 0.42,
+    "llm_avg": 0.44400000000000006,
+    "comment": "G-Long offers useful structured memory management for dialogue agents but lacks strong runtime control or self-improvement mechanisms.",
+    "comment_zh": "G-Long为对话智能体提供了有用的结构化记忆管理，但缺少强运行时控制和自我改进机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.44400000000000006,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13115/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13115/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.982
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13115/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13115/fig4.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

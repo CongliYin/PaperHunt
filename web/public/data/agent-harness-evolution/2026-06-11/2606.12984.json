@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.12984",
+  "title": "SkillChain: Closing the Loop on Skill Evolution for Image-Based E-Commerce AI Assistants",
+  "title_zh": "SkillChain：为基于图像的电商 AI 助手闭环推进技能演化",
+  "authors": [
+    "Yimin Hu",
+    "Mengtao Xu",
+    "Hao Guo",
+    "Yuheng Song",
+    "Xiaoyong Zhu",
+    "Bo Zheng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T07:21:55Z",
+  "abs_url": "https://arxiv.org/abs/2606.12984v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12984",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Image-based AI assistants are now deployed at production scale on e-commerce platforms, where a single uploaded image can trigger fundamentally different user intents: product search, style recommendation, visual encyclopedia, or utility tool calls, each demanding its own response format, tool invocation, and domain knowledge. Without per-intent behavioral constraints, LLM-based systems conflate these heterogeneous modes and fall short of domain quality standards, while the breadth and dynamism of the intent space render manual engineering infeasible. To address this, we present SkillChain, which closes the production feedback loop on Skill evolution, automating the lifecycle of Skills through three stages: Skill Creator for bootstrapping from task specs and trajectories, Route Optimizer for routing alignment, and Body Refiner for iterative Skill Body refinement via dual-path LLM-Judge evaluation. Deployed on a production-scale e-commerce image assistant, SkillChain substantially improves aggregate response quality, with the strongest gains on structural compliance and content quality; a one-week online A/B experiment further confirms significant gains in user engagement, content consumption, and long-term retention.",
+  "abstract_zh": "本文面向生产级电商平台中的 image-based AI assistants：用户上传同一张图像，可能对应商品搜索、穿搭推荐、视觉百科或工具调用等不同意图，每类意图都需要不同的响应格式、工具调用方式和领域知识。缺乏按意图约束的 LLM 系统容易混淆这些模式，难以满足电商场景的质量要求；而意图空间广且动态变化，手工维护不可行。为此，论文提出 SkillChain，通过生产反馈闭环自动化 Skill 的生命周期，包括 Skill Creator 根据任务规格和轨迹进行冷启动，Route Optimizer 对齐路由决策，Body Refiner 借助双路径 LLM-Judge 评估迭代优化 Skill Body。在生产规模电商图像助手上的部署结果显示，SkillChain 显著提升整体回复质量，尤其改善结构合规性和内容质量；一周线上 A/B 实验进一步验证其在用户参与、内容消费和长期留存上的显著收益。",
+  "key_points_zh": [
+    "问题：电商图像助手需处理商品搜索、风格推荐、视觉百科、工具调用等多种意图，LLM 若无 per-intent 约束容易产生模式混淆。",
+    "方法：提出 SkillChain，将 Skill 的创建、路由对齐和内容体优化串成闭环，降低人工工程维护成本。",
+    "核心组件：Skill Creator 负责从任务规格与历史轨迹中生成初始 Skill；Route Optimizer 优化请求到 Skill 的匹配；Body Refiner 使用双路径 LLM-Judge 迭代改进 Skill Body。",
+    "效果：在生产级电商图像助手中显著提升整体响应质量，尤其是结构合规性与内容质量。",
+    "线上验证：一周 A/B 实验显示，SkillChain 能提升用户参与度、内容消费以及长期留存。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.85,
+    "problem_significance": 0.9,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8699999999999999,
+    "comment": "SkillChain is strong production-oriented harness work that closes the loop on skill creation, routing, evaluation, and refinement.",
+    "comment_zh": "SkillChain是很强的生产级框架工作，闭环覆盖技能创建、路由、评估与迭代优化。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8699999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12984/fig1.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.977
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12984/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12984/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12984/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.962
+    }
+  ]
+}

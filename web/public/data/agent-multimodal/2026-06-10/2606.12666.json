@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.12666",
+  "title": "CAPED: Context-Aware Privacy Exposure Defense for Mobile GUI Agents",
+  "title_zh": "CAPED：面向移动 GUI Agent 的上下文感知隐私暴露防御",
+  "authors": [
+    "Siyu Shen",
+    "Fenghao Xu",
+    "Wenrui Diao",
+    "Kehuan Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T20:48:39Z",
+  "abs_url": "https://arxiv.org/abs/2606.12666v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12666",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Screenshot-based mobile GUI agents can operate ordinary smartphone apps through the same visual interface as a human user, but this capability also turns every screen observation into a privacy boundary. During normal task execution, screenshots may expose contacts, messages, photos, files, recommendations, health cues, and other sensitive context that is unrelated to the user's request. We call this problem incidental visual privacy exposure. It is difficult to address with existing defenses: text anonymization misses many visual and inferential cues, while generic privacy masking can remove the evidence and controls that a GUI agent needs to complete the task. This paper presents CAPED, a context-aware pre-upload exposure control layer for mobile GUI agents. CAPED is designed as a phone-side protection layer: before screenshots are released to a remote multimodal agent, it extracts task requirements, uses screen context as a privacy prior, parses visible UI elements, and selectively exposes only content needed for the current task while masking incidental private content. We evaluate CAPED on AndroidWorld for broad task utility and with a controlled 28-task seeded privacy evaluation used as a measurement instrument for trajectory-level incidental leakage. In this seeded evaluation, Full CAPED reduces success-conditioned weighted seeded leakage from 0.766 under raw screenshots to 0.268 while preserving high task utility. A broader AndroidWorld run shows a remaining prototype-level utility cost, but the results support the central claim that screenshot upload should be treated as an explicit device--cloud boundary decision, governed by task-driven selective exposure rather than all-or-nothing screen sharing.",
+  "abstract_zh": "基于截图的移动 GUI agents 能像人类用户一样通过视觉界面操作普通智能手机应用，但这也使每一次屏幕观测都成为潜在的隐私边界。正常任务执行中，截图可能暴露联系人、消息、照片、文件、推荐内容、健康线索等与用户请求无关的敏感上下文。论文将其称为“偶发视觉隐私暴露”（incidental visual privacy exposure）。现有防御难以解决该问题：文本匿名化会遗漏大量视觉与推断性线索，而通用隐私遮罩又可能移除 GUI agent 完成任务所需的证据和控件。本文提出 CAPED，一个面向移动 GUI agents 的上下文感知、上传前暴露控制层。CAPED 在手机端运行：在截图发送给远程多模态 agent 之前，它提取任务需求，将屏幕上下文作为隐私先验，解析可见 UI 元素，并仅选择性暴露当前任务所需内容，同时遮蔽偶发私人内容。作者在 AndroidWorld 上评估任务效用，并构建包含 28 个受控任务的 seeded privacy evaluation，用于度量轨迹级偶发泄漏。在该评估中，Full CAPED 将成功任务条件下的加权 seeded leakage 从原始截图的 0.766 降至 0.268，同时保持较高任务效用。更大规模 AndroidWorld 实验显示原型系统仍存在一定效用损失，但结果支持核心主张：截图上传应被视为明确的设备—云边界决策，并由任务驱动的选择性暴露控制，而非全屏共享或完全禁止的二选一策略。",
+  "key_points_zh": [
+    "提出“偶发视觉隐私暴露”问题：移动 GUI agents 在执行正常任务时，截图会无意泄漏与任务无关的敏感视觉上下文。",
+    "CAPED 作为手机端上传前保护层，在截图发送至远程 multimodal agent 前解析任务需求、屏幕上下文和 UI 元素，实现任务驱动的选择性暴露。",
+    "相比文本匿名化和通用遮罩，CAPED 试图在隐私保护与 agent 可操作性之间取得平衡：保留完成任务所需控件和证据，遮蔽无关私人内容。",
+    "在 28-task seeded privacy evaluation 中，Full CAPED 将成功条件下的加权泄漏从 0.766 降至 0.268，同时保持较高任务成功能力。",
+    "AndroidWorld 大规模评估表明当前原型仍有一定效用成本，但验证了将截图上传视为设备—云隐私边界、并进行显式选择性控制的必要性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "Relevant system and evaluation contribution for screenshot-based mobile GUI agents, emphasizing privacy-preserving visual exposure control rather than realtime voice or video interaction.",
+    "comment_zh": "Relevant system and evaluation contribution for screenshot-based mobile GUI agents, emphasizing privacy-preserving visual exposure control rather than realtime voice or video interaction."
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12666/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.948
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12666/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.978
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12666/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12666/fig4.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.953
+    }
+  ]
+}

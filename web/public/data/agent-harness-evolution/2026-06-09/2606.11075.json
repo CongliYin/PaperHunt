@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2606.11075",
+  "title": "Exploring the Design Space of Reward Backpropagation for Flow Matching",
+  "title_zh": "探索 Flow Matching 中 Reward Backpropagation 的设计空间",
+  "authors": [
+    "Ruoyu Wang",
+    "Boye Niu",
+    "Xiangxin Zhou",
+    "Yushi Huang",
+    "Tongliang Liu",
+    "Chi Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T16:36:54Z",
+  "abs_url": "https://arxiv.org/abs/2606.11075v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11075",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Aligning text-to-image flow matching models with human preferences via direct reward backpropagation is sample-efficient but hampered by two well-known pathologies: activations cannot be stored across the full sampling trajectory at modern model scale, and chained Jacobian products across steps inflate the reward gradient as it travels back to early indices. Connector-based methods, such as LeapAlign, address these issues by replacing the full backward trajectory with a short pinned path, highlighting a useful decoupling between sampling and optimization. However, the quality of the resulting gradient depends on how accurately this short path approximates the full rollout, especially over long intervals. We propose FlowBP, a unified surrogate-trajectory framework that treats the backward trajectory itself as the design object. FlowBP keeps a no-gradient cached rollout for sampling, then builds a lightweight backward surrogate from cached and selectively re-forwarded velocities. This view separates four choices: the reward-model input, active set, integration weights, and bridge coupling, and recovers prior direct-gradient methods as particular settings. Within this framework, we instantiate three variants: FlowBP-Sparse uses sparse Euler reconstruction, FlowBP-Bridge adds controlled bridge coupling, and FlowBP-Lagrange raises the order of leap quadrature. All three bound memory by the active-set size and limit gradient chaining to at most one Jacobian factor. Across SD3.5-M, FLUX.1-dev, and FLUX.2-Klein-base on preference, quality, and compositional metrics, the three variants improve over direct-gradient baselines on most metrics.",
+  "abstract_zh": "本文研究如何通过直接 reward backpropagation 将 text-to-image flow matching models 与人类偏好对齐。该类方法样本效率高，但面临两类典型问题：一是现代大模型无法在完整采样轨迹上保存所有 activations；二是跨多步串联的 Jacobian products 会导致 reward gradient 在回传到早期时间步时被放大。已有 connector-based 方法如 LeapAlign 通过短的 pinned path 替代完整反向轨迹，揭示了采样与优化可解耦的思路，但其梯度质量依赖于短路径对完整 rollout 的近似精度，尤其在长区间上更明显。为此，作者提出 FlowBP，一个统一的 surrogate-trajectory 框架，将反向轨迹本身作为可设计对象。FlowBP 在采样时保留 no-gradient cached rollout，并利用缓存及选择性重新前向计算的 velocities 构建轻量级反向 surrogate。该框架将设计拆分为四个维度：reward-model input、active set、integration weights 和 bridge coupling，并可将既有 direct-gradient 方法视为其特例。基于该框架，作者提出 FlowBP-Sparse、FlowBP-Bridge 和 FlowBP-Lagrange 三个变体，分别对应 sparse Euler reconstruction、受控 bridge coupling 和更高阶 leap quadrature。三者都将显存开销限制在 active-set size 内，并将梯度链式传播限制到最多一个 Jacobian factor。在 SD3.5-M、FLUX.1-dev 和 FLUX.2-Klein-base 上的偏好、质量与组合性指标实验中，这些方法在多数指标上优于 direct-gradient baselines。",
+  "key_points_zh": [
+    "论文聚焦 text-to-image flow matching models 的 reward backpropagation 对齐问题，解决完整轨迹存储开销大和多步 Jacobian 链式相乘导致梯度膨胀的问题。",
+    "提出 FlowBP，将 backward trajectory 视为核心设计对象：采样阶段缓存 no-gradient rollout，优化阶段用缓存与选择性 re-forward 的 velocities 构造 surrogate trajectory。",
+    "框架明确拆分四个设计维度：reward-model input、active set、integration weights 与 bridge coupling，并统一解释 LeapAlign 等既有 direct-gradient 方法。",
+    "实例化三个变体：FlowBP-Sparse 使用 sparse Euler reconstruction，FlowBP-Bridge 引入受控 bridge coupling，FlowBP-Lagrange 提升 leap quadrature 阶数。",
+    "在 SD3.5-M、FLUX.1-dev、FLUX.2-Klein-base 上，FlowBP 系列在偏好、图像质量和组合性指标上多数优于 direct-gradient baselines，同时显存由 active-set size 控制，梯度链最多含一个 Jacobian factor。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.42,
+    "problem_significance": 0.2,
+    "potential_impact": 0.14,
+    "paradigm_shift": 0.16,
+    "lasting_value": 0.1,
+    "llm_avg": 0.20400000000000001,
+    "comment": "Technically plausible for image-model alignment but essentially unrelated to agent harness architecture or operations.",
+    "comment_zh": "该工作对图像模型对齐可能有技术价值，但基本不涉及代理运行时或平台运维。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.20400000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11075/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11075/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.949
+    }
+  ]
+}

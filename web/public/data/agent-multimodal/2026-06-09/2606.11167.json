@@ -1,0 +1,70 @@
+{
+  "arxiv_id": "2606.11167",
+  "title": "Multi-Faceted Interactivity Alignment in Full-Duplex Speech Models",
+  "title_zh": "全双工语音模型中的多维交互性对齐",
+  "authors": [
+    "Atsumoto Ohashi",
+    "Neil Zeghidour",
+    "Alexandre Défossez",
+    "Eugene Kharitonov"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T17:46:55Z",
+  "abs_url": "https://arxiv.org/abs/2606.11167v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11167",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Full-duplex spoken dialogue models can listen and speak simultaneously, making them a promising architecture for natural conversation. However, current models are trained solely with supervised learning through token-level likelihood maximization, which does not directly optimize interaction-level behaviors, causing interactivity issues such as excessive silence and ill-timed turn-taking. Recent work has applied reinforcement learning (RL) to improve interactivity, but existing methods address only a limited set of interactive behaviors in their rewards. In this work, we propose a post-training alignment method that comprehensively improves the interactivity of full-duplex spoken dialogue models through RL. We address the four canonical axes of interactivity: pause handling, turn-taking, backchanneling, and user interruption. For each axis, we extract short audio segments from human conversation corpora and optimize the model with axis-specific reward functions. An extra LLM-based reward for response quality prevents semantic degradation. We apply our method to two open-source models, Moshi and PersonaPlex, demonstrating consistent improvements in interactivity on both offline evaluation with pre-recorded audio and real-time multi-turn dialogue evaluation.",
+  "abstract_zh": "全双工语音对话模型能够同时听与说，是实现自然对话的有前景架构。然而，现有模型主要通过监督学习进行 token 级似然最大化训练，并未直接优化交互层面的行为，因此容易出现过度沉默、轮次切换时机不当等交互问题。近期研究尝试用强化学习（RL）改善交互性，但奖励设计通常只覆盖有限的交互行为。本文提出一种后训练对齐方法，通过 RL 系统性提升全双工语音对话模型的交互能力。方法围绕四个经典交互维度展开：停顿处理（pause handling）、轮次切换（turn-taking）、附和反馈（backchanneling）和用户打断（user interruption）。针对每个维度，作者从人类对话语料中抽取短音频片段，并设计轴向特定的奖励函数进行优化；同时引入基于 LLM 的响应质量奖励，以避免语义质量退化。该方法应用于两个开源模型 Moshi 和 PersonaPlex，在预录音频离线评测与实时多轮对话评测中均带来稳定的交互性提升。",
+  "key_points_zh": [
+    "提出面向全双工语音对话模型的后训练交互性对齐方法，直接优化交互层面行为，而非仅依赖 token 级监督学习。",
+    "覆盖四个核心交互维度：停顿处理、轮次切换、附和反馈和用户打断，比以往只优化少数行为的 RL 方法更全面。",
+    "从人类对话语料中抽取短音频片段，并为不同交互维度设计专门的 reward function，以提升对应场景下的响应策略。",
+    "加入基于 LLM 的响应质量奖励，约束强化学习过程中可能出现的语义退化问题。",
+    "在 Moshi 和 PersonaPlex 两个开源全双工语音模型上验证，离线评测和实时多轮对话评测均显示交互性一致提升。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8360000000000001,
+    "comment": "A strong realtime voice-agent paper that directly optimizes full-duplex interaction behaviors such as turn-taking, backchannels, pauses, and interruptions.",
+    "comment_zh": "这是一篇很强的实时语音智能体论文，直接优化全双工交互中的轮次切换、反馈语、停顿和打断等关键行为。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.6284972968955925,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8360000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 27,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11167/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.9
+    }
+  ]
+}

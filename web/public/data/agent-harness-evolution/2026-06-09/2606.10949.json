@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.10949",
+  "title": "Recalling Too Well: Sycophancy Evaluation and Mitigation in Memory-Augmented Models",
+  "title_zh": "记得太好：记忆增强模型中的谄媚性评估与缓解",
+  "authors": [
+    "Shelly Bensal",
+    "Axel Magnuson",
+    "Aparna Balagopalan",
+    "Daniel M. Bikel"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T14:53:32Z",
+  "abs_url": "https://arxiv.org/abs/2606.10949v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10949",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Persistent memory systems promise to make LLMs more helpful by storing user beliefs over time. We show they also make models less correct by systematically amplifying sycophancy, wherein models prioritize agreement with users over accuracy. We conduct the first systematic evaluation of this effect, introducing MIST: a benchmark of synthetically generated multi-turn conversations where users express plausible misconceptions in scientific, medical, and moral reasoning domains. Testing across three state-of-the-art memory systems and five model families reveals that memory amplifies sycophantic behavior across all conditions, with up to 25x higher sycophancy rates than in-context baselines. Error analyses suggest memory extraction as the primary culprit: lossy compression into discrete snippets encodes user misconceptions while discarding corrective context. Based on these results, we propose two lightweight mitigations that substantially reduce sycophancy while matching or exceeding memory systems at factual recall.",
+  "abstract_zh": "持久记忆系统旨在通过长期存储用户信念来提升 LLM 的有用性。本文发现，这类系统也会系统性放大谄媚性（sycophancy），即模型更倾向于迎合用户观点而非坚持事实正确性。作者首次系统评估了这一现象，并提出 MIST：一个由合成多轮对话构成的 benchmark，覆盖科学、医学与道德推理场景，其中用户会表达看似合理但错误的观念。作者在三种先进记忆系统和五个模型家族上测试发现，记忆在所有条件下都会放大谄媚行为，最高使谄媚率达到仅使用上下文 baseline 的 25 倍。错误分析表明，主要问题来自记忆抽取：将对话压缩为离散片段时会保留用户误解，却丢失纠正性上下文。基于这些发现，论文提出两种轻量级缓解方法，在显著降低谄媚性的同时，事实回忆能力达到或超过原有记忆系统。",
+  "key_points_zh": [
+    "提出 MIST benchmark，用合成多轮对话评估记忆增强模型在科学、医学和道德推理中的谄媚性。",
+    "实验覆盖三种 state-of-the-art memory systems 与五个 model families，发现记忆机制在所有设置下都会提高谄媚率。",
+    "最严重情况下，记忆增强模型的 sycophancy rate 比 in-context baseline 高出最多 25 倍。",
+    "错误分析指出，memory extraction 的有损压缩会记录用户误解，同时丢弃纠正性上下文，是主要成因。",
+    "作者提出两种轻量级 mitigation，在保持或提升 factual recall 的同时显著降低谄媚行为。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.82,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.52,
+    "lasting_value": 0.76,
+    "llm_avg": 0.7280000000000001,
+    "comment": "A relevant memory-system safety study showing how persistent user memory can degrade correctness and how to mitigate it.",
+    "comment_zh": "该研究揭示持久记忆系统会放大迎合性错误，并提出了具有平台意义的缓解方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.7280000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10949/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10949/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.984
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10949/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.982
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10949/fig4.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.979
+    }
+  ]
+}

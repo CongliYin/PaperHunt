@@ -1,0 +1,96 @@
+{
+  "arxiv_id": "2606.11119",
+  "title": "TRACE: A Unified Rollout Budget Allocation Framework for Efficient Agentic Reinforcement Learning",
+  "title_zh": "TRACE：用于高效智能体强化学习的统一 Rollout 预算分配框架",
+  "authors": [
+    "Heming Zou",
+    "Qi Wang",
+    "Yun Qu",
+    "Yuhang Jiang",
+    "Lizhou Cai",
+    "Yixiu Mao",
+    "Ru Peng",
+    "Xin Xu",
+    "Weijie Liu",
+    "Kai Yang",
+    "Saiyong Yang",
+    "Xiangyang Ji"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T17:16:03Z",
+  "abs_url": "https://arxiv.org/abs/2606.11119v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11119",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement learning with verifiable rewards (RLVR) is a promising approach for enhancing reasoning and agentic behavior in large language models. However, rollout-intensive policy optimization is often limited by insufficient reward contrast, arising when overly simple or complex prompts generate low-variance feedback and when outcome-only rewards assign the same terminal assessment to every decision in a multi-turn rollout. Past efforts have focused on allocating available rollout resources to promising prompts, yet they only leverage sample informativeness at the prompt level and neglect variation in prefix-level informativeness across turns within the same rollout. This work targets multi-turn agentic RL by modeling each ReAct-style thought-action-observation turn as a semantically distinct node, allowing budget allocation to extend from prompt roots to turn-level prefixes with further continuations, which naturally forms tree-structured rollouts. We introduce Tree Rollout Allocation for Contrastive Exploration (TRACE), a unified rollout allocation framework that enhances reward contrast within a fixed sampling budget. Technically, TRACE allocates rollout budget to both prompt roots and intermediate prefixes that are most likely to yield mixed terminal rewards. A shared generalizable predictor estimates conditional success probability at these anchors from prefix histories to guide this allocation. The resulting adaptive tree structure enriches outcome-only feedback and amplifies the policy-update signal. Empirically, TRACE achieves competitive performance and efficiency gains on typical agentic benchmarks, e.g., improving Qwen3-14B Multi-Hop QA average accuracy by 2.8 points over competitive baselines at equal sampling cost.",
+  "abstract_zh": "本文关注基于可验证奖励的强化学习（RLVR）在大语言模型推理与智能体行为训练中的采样效率问题。现有 rollout 密集型策略优化常受限于奖励对比不足：过易或过难的 prompt 会产生低方差反馈，而仅基于最终结果的奖励会将同一终局评价分配给多轮决策中的所有步骤。以往方法主要在 prompt 级别分配 rollout 资源，忽略了同一 rollout 内不同中间前缀在信息量上的差异。为此，论文提出 Tree Rollout Allocation for Contrastive Exploration（TRACE），将 ReAct 风格的 thought-action-observation 每一轮建模为语义上独立的节点，把预算分配从 prompt 根节点扩展到中间前缀节点，并继续生成后续分支，从而形成树状 rollout。TRACE 使用共享且可泛化的预测器，根据前缀历史估计条件成功概率，将更多预算分配给最可能产生混合终局奖励的位置，以在固定采样预算下增强奖励对比并放大策略更新信号。实验表明，TRACE 在典型 agentic benchmarks 上取得了有竞争力的性能与效率提升，例如在相同采样成本下，使 Qwen3-14B 在 Multi-Hop QA 上的平均准确率较强基线提升 2.8 个百分点。",
+  "key_points_zh": [
+    "提出 TRACE，一个统一的树状 rollout 预算分配框架，用于提升多轮 agentic RL 中 RLVR 的采样效率与奖励对比度。",
+    "不同于仅在 prompt 级别选择样本，TRACE 将 ReAct 式 thought-action-observation 轮次视为节点，在 prompt 根节点和中间前缀节点两级分配 rollout 预算。",
+    "方法核心是用共享预测器根据前缀历史估计条件成功概率，优先扩展最可能产生成功/失败混合终局奖励的节点。",
+    "通过构造自适应 tree-structured rollouts，TRACE 在只使用 outcome-only rewards 的情况下增强训练信号，缓解低方差反馈问题。",
+    "在典型 agentic benchmarks 上验证有效性；在相同采样成本下，Qwen3-14B 的 Multi-Hop QA 平均准确率较竞争基线提升 2.8 个百分点。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.78,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.78,
+    "llm_avg": 0.756,
+    "comment": "Relevant agentic RL infrastructure work that improves rollout budget allocation over multi-turn trajectories, though it is more training-loop optimization than full platform governance.",
+    "comment_zh": "该工作面向多轮轨迹优化智能体强化学习的rollout预算分配，相关性强，但更偏训练循环优化而非完整平台治理。"
+  },
+  "scores": {
+    "topic_relevance": 0.7600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.8180053236994811,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.756,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 17,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11119/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11119/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11119/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.902
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11119/fig4.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.769
+    }
+  ]
+}

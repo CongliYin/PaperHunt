@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2606.12372",
+  "title": "UniIntervene: Agentic Intervention for Efficient Real-World Reinforcement Learning",
+  "title_zh": "UniIntervene：面向高效真实世界强化学习的智能体式干预",
+  "authors": [
+    "Haoyuan Deng",
+    "Yitong Gao",
+    "Yudong Lin",
+    "Haichao Liu",
+    "Zhenyu Wu",
+    "Ziwei Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T17:38:24Z",
+  "abs_url": "https://arxiv.org/abs/2606.12372v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12372",
+  "links": {
+    "github": null,
+    "project_page": "https://denghaoyuan123.github.io/UniIntervene-project/"
+  },
+  "abstract_en": "Human-in-the-loop reinforcement learning (HiL-RL) has emerged as an effective paradigm for real-world robotic manipulation, enabling online policy improvement with human guidance. However, current HiL-RL frameworks remain intervention-intensive, relying on frequent human corrections to redirect the policy out of unproductive exploration, which incurs high labor cost and limits real-world scalability. To address this, we propose UniIntervene, an agentic intervention model that detects unproductive exploration and autonomously recovers the policy toward high-value states, taking over the bulk of interventions from human operators. Specifically, UniIntervene first performs future-conditioned action-value estimation, predicting the latent consequence of the current action and evaluating its induced value, which provides a more stable progress signal. Building on this, a temporal value-risk critic aggregates recent value dynamics and triggers intervention when the estimated value exhibits sustained stagnation or degradation. When intervention is required, UniIntervene retrieves a high-value recovery target from a memory of past intervention episodes and produces executable corrective actions through a goal-conditioned recovery policy. In this way, UniIntervene turns intervention from passive human correction into a value-aware recovery process for efficient real-world RL. Extensive experiments on diverse real-world manipulation tasks demonstrate that UniIntervene improves the average success rate by 8.6% while reducing human interventions by 57% relative to state-of-the-art HiL-RL baselines.",
+  "abstract_zh": "Human-in-the-loop reinforcement learning（HiL-RL）已成为真实世界机器人操作中进行在线策略改进的有效范式，但现有方法往往依赖频繁的人类纠正，将策略从低效探索中拉回，导致人工成本高、难以规模化。本文提出 UniIntervene，一种 agentic intervention model，可检测无效探索并自主将策略恢复到高价值状态，从而替代大量人工干预。UniIntervene 首先进行 future-conditioned action-value estimation，预测当前动作的潜在后果并评估其诱导价值，以获得更稳定的进展信号；随后使用 temporal value-risk critic 聚合近期价值动态，当价值持续停滞或下降时触发干预。触发后，系统从历史干预片段记忆中检索高价值恢复目标，并通过 goal-conditioned recovery policy 生成可执行纠正动作。实验表明，在多种真实机器人操作任务上，UniIntervene 相比最先进 HiL-RL baseline 平均成功率提升 8.6%，同时减少 57% 的人类干预。",
+  "key_points_zh": [
+    "针对 HiL-RL 中人工干预频繁、成本高的问题，UniIntervene 将被动人类纠正转化为价值感知的自动恢复过程。",
+    "提出 future-conditioned action-value estimation，通过预测当前动作的未来潜在后果来提供更稳定的策略进展评估信号。",
+    "设计 temporal value-risk critic，基于近期价值变化判断是否出现持续停滞或退化，并自动触发干预。",
+    "干预阶段从历史干预记忆中检索高价值恢复目标，并用 goal-conditioned recovery policy 生成可执行纠正动作。",
+    "真实世界机器人操作实验显示，UniIntervene 平均成功率提升 8.6%，人类干预次数减少 57%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.62,
+    "problem_significance": 0.58,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.42,
+    "lasting_value": 0.36,
+    "llm_avg": 0.496,
+    "comment": "Although technically meaningful for real-world reinforcement learning, its robotics intervention focus is mostly outside agent harness infrastructure.",
+    "comment_zh": "尽管该工作对现实强化学习有技术意义，但其机器人干预重点基本不属于智能体框架基础设施方向。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.496,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://denghaoyuan123.github.io/UniIntervene-project/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12372/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12372/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.952
+    }
+  ]
+}

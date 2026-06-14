@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.11562",
+  "title": "GraphInfer-Bench: Benchmarking LLM's Inference Capability on Graphs",
+  "title_zh": "GraphInfer-Bench：评测 LLM 在图上的推理能力",
+  "authors": [
+    "Zhuoyi Peng",
+    "Jingzhou Jiang",
+    "Hanlin Gu",
+    "Lixin Fan",
+    "Yi Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T01:41:53Z",
+  "abs_url": "https://arxiv.org/abs/2606.11562v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11562",
+  "links": {
+    "github": "https://github.com/graphinfer/GraphInfer-Bench",
+    "project_page": null
+  },
+  "abstract_en": "Graph analysis underlies many applications whose answers cannot be looked up in a single record or retrieved along a path: laundering rings, drug repurposing, user preference, and scientific theme are all inferred from a node together with its neighbourhood. We introduce GraphInfer-Bench, a benchmark for whether LLMs can perform this graph inference: producing an open-ended answer that no single node supports and no path retrieves. Existing graph-QA protocols cannot test this capability: algorithm simulation, node classification, single-node description, KG-QA, and GraphRAG all admit answers retrievable from one node or along a path. GraphInfer-Bench defines five tasks along Description (what a region is) and Comparison (how regions differ), each constructed so the ground truth lives in no single node. The release contains 42,000 samples across six real-world graphs, produced automatically and screened by a four-layer quality-control protocol. We evaluate four method families against the same tasks: graph-token alignment models, zero-shot frontier closed-source LLMs, Graph2Text supervised fine-tuning, and plain GNNs as a structural reference. No method family closes the gap. Graph-token alignment partially handles description tasks (relational, theme) but collapses on comparison tasks. Frontier LLMs lead on outlier detection and community partition among LLM-based methods but lag on masked-node prediction. Graph2Text SFT is the strongest LLM-based method on the description side yet falls behind frontier LLMs on comparison. Across every task, plain GNNs match or beat the strongest LLM-based row, with the largest margin on community detection. GraphInfer-Bench surfaces graph inference as an open capability gap rather than a property of any one architecture.",
+  "abstract_zh": "图分析支撑着许多无法通过单条记录查询或沿路径检索得到答案的应用，例如洗钱团伙识别、药物重定位、用户偏好理解和科学主题发现。这些任务通常需要从一个节点及其邻域整体中推断开放式答案。本文提出 GraphInfer-Bench，用于评测 LLM 是否具备这种图推理能力：生成不由单个节点支持、也不能沿单一路径检索得到的答案。作者指出，现有 graph-QA 协议，包括算法模拟、节点分类、单节点描述、KG-QA 和 GraphRAG，均无法充分测试这一能力，因为其答案往往可从单节点或路径中获得。GraphInfer-Bench 围绕 Description（区域是什么）与 Comparison（区域有何差异）定义了五类任务，并确保真实答案不存在于任何单个节点中。该基准包含来自六个真实世界图的 42,000 个样本，通过自动构建并经四层质量控制筛选。论文在同一任务上评测了四类方法：graph-token alignment 模型、zero-shot 前沿闭源 LLM、Graph2Text 监督微调，以及作为结构参考的普通 GNN。结果显示，没有任何方法族能弥合能力差距：graph-token alignment 在关系和主题等描述任务上有一定效果，但在比较任务上崩溃；前沿 LLM 在 outlier detection 和 community partition 上领先其他 LLM 方法，但在 masked-node prediction 上落后；Graph2Text SFT 是描述类任务中最强的 LLM 方法，却在比较任务上不如前沿 LLM。所有任务中，普通 GNN 均能匹配或超过最强 LLM 方法，尤其在 community detection 上优势最大。GraphInfer-Bench 表明，图推理仍是当前模型的开放能力缺口，而非某一架构天然解决的问题。",
+  "key_points_zh": [
+    "提出 GraphInfer-Bench，专门评测答案无法由单节点或单路径检索得到的开放式图推理能力。",
+    "基准覆盖 Description 与 Comparison 两大方向、五类任务，包含六个真实世界图上的 42,000 个样本，并经过四层质量控制。",
+    "现有 graph-QA、KG-QA、GraphRAG 等协议多测试可检索答案，难以衡量从节点邻域整体中归纳推断的能力。",
+    "实验比较 graph-token alignment、zero-shot 前沿闭源 LLM、Graph2Text SFT 和普通 GNN，发现没有 LLM 方法族能全面解决任务。",
+    "普通 GNN 在所有任务上匹配或超过最强 LLM 方法，说明当前 LLM 在结构化图推理上仍存在明显能力缺口。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "A useful graph-LLM benchmark, but its commerce relevance is only incidental and not grounded in shopping or product workflows.",
+    "comment_zh": "A useful graph-LLM benchmark, but its commerce relevance is only incidental and not grounded in shopping or product workflows."
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/graphinfer/GraphInfer-Bench",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11562/fig1.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.982
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11562/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.981
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11562/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11562/fig4.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.924
+    }
+  ]
+}

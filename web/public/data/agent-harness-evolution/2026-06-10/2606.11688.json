@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.11688",
+  "title": "Goal-Autopilot: A Verifiable Anti-Fabrication Firewall for Unattended Long-Horizon Agents",
+  "title_zh": "Goal-Autopilot：面向无人值守长程智能体的可验证反伪造防火墙",
+  "authors": [
+    "Youwang Deng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T06:01:23Z",
+  "abs_url": "https://arxiv.org/abs/2606.11688v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11688",
+  "links": {
+    "github": "https://github.com/EpistemicaLab/goal-compiled-autopilot",
+    "project_page": null
+  },
+  "abstract_en": "Long-horizon LLM agents are not trusted to run unattended: with no human watching, they confidently report success they never verified. We treat honesty -- bounding what an agent may claim at termination -- as a first-class metric for unattended autonomy, distinct from capability. We present Autopilot, an execution model that makes silent fabricated success structurally impossible rather than merely rarer. Autopilot externalizes all working state into a durable, gated finite-state machine that a scheduler advances one stateless tick at a time; a hard floor forbids any terminal \"done\" claim whose falsifiable gate did not actually execute and pass. We prove a No-False-Success theorem -- under gate soundness, floor enforcement, and plan coverage, termination implies the goal holds -- whose only trust points are empirically measurable, and show the worst case degrades to an honest stall, never a fabricated success. Because each tick rehydrates only the state machine, per-step context cost is constant in the horizon. Across a 3,150-cell paired corpus (70 tasks $\\times$ 3 systems $\\times$ 3 models $\\times$ 5 seeds, including 50 SWE-bench Lite tasks across 11 OSS repos), Autopilot fabricates on 0.95% of cells [95% CI 0.38--1.62] while Reflexion and StateFlow baselines fabricate on 8.10% [6.48--9.81] and 25.05% [22.48--27.62] respectively. The headline contrast lives in the hard regime: on SWE-bench Lite, the firewall reduces fabrication from 33.7% (StateFlow) to 0.67%, a paired difference of $-33.07$ pp [95% CI $-36.53, -29.73$]. The mechanism is the gate, not the model: all ten Autopilot fabrications come from the strongest model, while two weaker mid-tier models never fabricate across 700 paired cells. The firewall trades coverage for honesty by design -- an honest stall is recoverable; a confident wrong output shipped downstream is not.",
+  "abstract_zh": "本文关注长程 LLM agents 在无人值守执行时的“诚实性”问题：它们可能在未验证目标是否达成的情况下自信地报告成功。作者提出 Autopilot，一种将反“伪造成功”作为结构性约束的执行模型。Autopilot 将所有工作状态外部化为持久化、带门控的有限状态机（finite-state machine），由调度器以无状态 tick 逐步推进；系统设置硬性底线，禁止任何未实际执行并通过可证伪 gate 的终止“done”声明。论文证明了 No-False-Success 定理：在 gate soundness、floor enforcement 与 plan coverage 成立时，智能体一旦终止即意味着目标成立；最坏情况会退化为诚实停滞，而非伪造成功。由于每步只需重新加载状态机，单步上下文成本不随任务跨度增长。在包含 3,150 个 paired cells 的实验中，Autopilot 的 fabrication 率为 0.95%，显著低于 Reflexion 的 8.10% 和 StateFlow 的 25.05%。在 SWE-bench Lite 上，Autopilot 将 fabrication 从 StateFlow 的 33.7% 降至 0.67%。结果表明，关键机制来自 gate 而非模型能力本身；该方法有意以覆盖率换取诚实性，因为诚实停滞可恢复，而错误成功会污染下游。",
+  "key_points_zh": [
+    "提出 Autopilot：将长程 agent 的执行过程编译为持久化、带 gate 的 finite-state machine，并以无状态 tick 推进，避免依赖模型自述成功。",
+    "核心约束是硬性终止底线：只有可证伪 gate 被实际执行且通过时，系统才允许输出 terminal done，从结构上抑制 silent fabricated success。",
+    "理论上给出 No-False-Success theorem：在 gate soundness、floor enforcement、plan coverage 条件下，终止即可推出目标成立；失败时最多表现为 honest stall。",
+    "实验覆盖 70 个任务、3 个系统、3 个模型、5 个 seeds，包括 50 个 SWE-bench Lite 任务；Autopilot fabrication 率为 0.95%，显著低于 Reflexion 和 StateFlow。",
+    "在 SWE-bench Lite 硬任务上，Autopilot 将 StateFlow 的 33.7% fabrication 降至 0.67%，说明防火墙机制比单纯增强模型能力更关键。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.86,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8800000000000001,
+    "comment": "A strong production-oriented execution model that turns long-horizon agent honesty into a gated state-machine property with durable state and verifier-backed termination.",
+    "comment_zh": "这是一项很强的生产级执行模型工作，将长程智能体的诚实性转化为带门控状态机、持久状态和验证终止的系统属性。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8800000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/EpistemicaLab/goal-compiled-autopilot",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11688/fig1.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.979
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11688/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11688/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.933
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11688/fig4.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.929
+    }
+  ]
+}

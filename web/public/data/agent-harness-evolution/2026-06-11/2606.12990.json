@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2606.12990",
+  "title": "Exposure Bias as Epistemic Underidentification in Recursive Forecasting",
+  "title_zh": "将曝光偏差视为递归预测中的认知欠识别问题",
+  "authors": [
+    "Riku Green",
+    "Zahraa S. Abdallah",
+    "Telmo M Silva Filho"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T07:25:15Z",
+  "abs_url": "https://arxiv.org/abs/2606.12990v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12990",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recursive multi-step forecasting is usually framed as distribution shift: models are trained on observed histories but deployed on their own predictions. We show this framing is incomplete by proving that, under partial observability or state truncation, recursive rollout is also an epistemic underidentification problem. Even with deterministic latent dynamics, one-step Bayes supervision identifies behavior only on observed contexts and need not identify the deployed recursive predictor once rollout queries self-generated induced states whose correct local targets are not determined by numeric state alone. We formalize this with induced states $Z$ and provenance variables $P$, and derive a decomposition of induced-state error into teacher-forcing/rollout mismatch, representation--class approximation, and provenance information gaps. Empirically, we show that rollout enters a distinct induced-state regime, that fixed induced states define a distinct local corrective task, and that closed-loop gains arise not only from local adaptation but also from changing the induced states visited during rollout. Using a simple binary provenance encoding, provenance-aware correction can further improve performance, though gains are conditional rather than uniform. These results recast exposure bias as reasoning under self-induced epistemic uncertainty.",
+  "abstract_zh": "本文重新审视递归多步预测（recursive multi-step forecasting）中的曝光偏差（exposure bias）。传统观点通常将其解释为分布偏移：模型训练时使用真实历史序列，部署时却依赖自身预测进行滚动。作者指出这一解释并不完整：在部分可观测或状态截断条件下，递归滚动同时也是一个认知欠识别（epistemic underidentification）问题。即使潜在动力学是确定性的，一步 Bayes 监督也只能识别观测上下文中的行为；当滚动预测访问由模型自身生成的诱导状态（induced states）时，仅凭数值状态未必能确定正确的局部目标。论文引入诱导状态 Z 与来源变量（provenance variables）P，分解诱导状态误差为 teacher-forcing/rollout 不匹配、表示与函数类近似误差、以及来源信息缺口。实验表明，rollout 会进入不同的诱导状态区域，固定诱导状态对应不同的局部校正任务，闭环收益不仅来自局部适配，也来自改变滚动过程中访问的诱导状态。简单的二值 provenance 编码可进一步提升校正性能，但收益并非普遍稳定。整体上，论文将曝光偏差重构为自诱导认知不确定性下的推理问题。",
+  "key_points_zh": [
+    "提出曝光偏差不只是训练-部署分布偏移，还源于部分可观测或状态截断下的 epistemic underidentification。",
+    "形式化引入 induced states Z 与 provenance variables P，说明一步监督无法唯一确定自生成状态上的正确局部目标。",
+    "给出诱导状态误差分解：包括 teacher-forcing/rollout mismatch、representation-class approximation 与 provenance information gaps。",
+    "实验发现 rollout 会进入与训练不同的诱导状态 regime，闭环收益既来自局部校正，也来自改变后续访问状态。",
+    "使用简单二值 provenance encoding 的 provenance-aware correction 可带来额外改进，但效果具有条件性而非一致提升。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.25,
+    "potential_impact": 0.18,
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.15,
+    "llm_avg": 0.26599999999999996,
+    "comment": "This forecasting theory paper has limited applicability to agent harness infrastructure despite its closed-loop rollout framing.",
+    "comment_zh": "尽管该预测理论论文涉及闭环 rollout 表述，但对智能体框架基础设施的适用性有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3210331475111057,
+    "venue_signal": 1.0,
+    "generality": 0.9,
+    "llm_assessment": 0.26599999999999996,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12990/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.976
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12990/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12990/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12990/fig4.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.943
+    }
+  ]
+}

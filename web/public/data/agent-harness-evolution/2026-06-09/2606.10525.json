@@ -1,0 +1,69 @@
+{
+  "arxiv_id": "2606.10525",
+  "title": "Assessing Automated Prompt Injection Attacks in Agentic Environments",
+  "title_zh": "评估 Agentic 环境中的自动化 Prompt Injection 攻击",
+  "authors": [
+    "David Hofer",
+    "Edoardo Debenedetti",
+    "Florian Tramèr"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T07:54:58Z",
+  "abs_url": "https://arxiv.org/abs/2606.10525v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10525",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Indirect prompt injection poses a critical threat to LLM agents that interact with untrusted external data, yet automated attack methods--proven effective for jailbreaking--remain underexplored in realistic agentic settings. We present a comprehensive empirical evaluation of automated prompt injection attacks against LLM agents, adapting both white-box (GCG) and black-box (TAP) methods to the agentic setting within the AgentDojo framework. We evaluate across 80 task pairs spanning four domains and multiple models, and find that black-box optimization substantially outperforms gradient-based methods, a gap we attribute to GCG's optimization instability under reasonable compute budgets. We also find that TAP's effectiveness depends on the attacker model, as both general capability and safety tuning affect attack success--stronger models produce more effective injections, while safety-tuned attackers can refuse to generate adversarial prompts. Task-universal attacks transfer effectively to unseen tasks and out-of-distribution domains, but attacks optimized on smaller open-source models do not transfer to frontier models like GPT-5. These findings highlight automated prompt injection as a credible but model-dependent threat, with significant barriers remaining for model-agnostic exploitation.",
+  "abstract_zh": "本文系统评估了自动化 Prompt Injection 攻击在真实 LLM agent 场景中的有效性。作者在 AgentDojo 框架下，将白盒方法 GCG 和黑盒方法 TAP 适配到 agentic setting，并在四个领域、80 组任务对和多个模型上进行实验。结果显示，黑盒优化方法 TAP 明显优于基于梯度的 GCG，主要原因是 GCG 在合理计算预算下优化不稳定。研究还发现，TAP 的攻击效果依赖攻击者模型：更强模型能生成更有效的注入内容，而经过 safety tuning 的攻击者模型可能拒绝生成对抗性 prompt。任务通用攻击可迁移到未见任务和分布外领域，但在小型开源模型上优化的攻击难以迁移到 GPT-5 等 frontier models。整体而言，自动化 Prompt Injection 是现实威胁，但其跨模型、模型无关利用仍存在显著障碍。",
+  "key_points_zh": [
+    "在 AgentDojo 中评估 GCG 与 TAP，覆盖四个领域、80 组任务对和多个 LLM agent。",
+    "黑盒方法 TAP 显著优于白盒 GCG，后者在有限计算预算下存在优化不稳定问题。",
+    "攻击者模型能力和 safety tuning 会显著影响 TAP：强模型更会攻击，安全对齐模型可能拒绝生成恶意注入。",
+    "任务通用 Prompt Injection 可迁移到未见任务和分布外领域，显示其现实风险。",
+    "在小型 open-source models 上优化的攻击难以迁移到 GPT-5 等 frontier models，模型无关攻击仍具挑战。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.58,
+    "problem_significance": 0.84,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.68,
+    "llm_avg": 0.66,
+    "comment": "A valuable empirical security evaluation of automated prompt injection in agentic environments, but it is more benchmark-and-attack analysis than runtime defense infrastructure.",
+    "comment_zh": "该工作对智能体环境中的自动化提示注入攻击做了有价值的实证评估，但更偏攻击评测而非运行时防御基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.66,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10525/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.86
+    }
+  ]
+}

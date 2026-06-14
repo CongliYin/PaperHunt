@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.10907",
+  "title": "From Prompt to Purchase: How AI Brand Recommendations Move Consumers on the Open Web",
+  "title_zh": "从提示到购买：AI 品牌推荐如何影响开放网络上的消费者行为",
+  "authors": [
+    "Michael Iannelli",
+    "Alan Ai"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T14:16:48Z",
+  "abs_url": "https://arxiv.org/abs/2606.10907v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10907",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "When a conversational assistant recommends a brand to a user with no recent observed engagement, that user's same-name Google search rises +4.3 percentage points (pp) [3.1, 5.5], visits to the brand's own site +2.4 pp [1.4, 3.5], and brand-specific retailer-page visits +1.0 pp [0.3, 1.7] over matched backward placebos. Recovering that estimate is the work. The mention creates a brand exposure no web log attributes to the assistant, and the naive all-mention funnel that seems to measure it is confounded: many mentions are incidental references to brands the user already uses (\"your Netflix download\"), whose downstream visits are that existing customer's own behavior and surface as a brand-specific pre-trend. We measure off-platform response on a panel that joins opt-in clickstream to the same users' ChatGPT, Claude, and Gemini conversations, and isolate the effect with a pre-trend event study, a stance classifier, non-customer conditioning, and a within-response same-category control: incidental name-drops then move behavior far less (+1.8/+1.1/+0.3), and the named brand moves far more than unnamed same-category brands in the same response. The downstream path is mostly search-mediated and reaches both own sites and retailer pages, with a destination mix that tracks baseline brand-directed behavior rather than redirecting toward either. The design is observational and we do not observe transactions, so retail is purchase-adjacent. Standard referrer-based and last-click measurement miss this upstream exposure: assistants move observably-unengaged users into open-web brand navigation along a path attributed elsewhere.",
+  "abstract_zh": "本文研究 conversational assistant（ChatGPT、Claude、Gemini）在对近期无相关互动的用户推荐某品牌后，是否会带来开放网络上的后续行为变化。作者将用户自愿提供的 clickstream 与其 AI 对话记录连接起来，发现品牌被推荐后，同名 Google 搜索增加 4.3 个百分点，访问品牌官网增加 2.4 个百分点，访问零售商上的品牌专页增加 1.0 个百分点。论文强调，直接统计所有品牌提及会产生混淆，因为许多提及只是对用户既有品牌使用的附带引用，例如“your Netflix download”，这类用户本身就有品牌相关访问趋势。为隔离因果相关效应，作者使用 pre-trend event study、stance classifier、非既有客户条件筛选，以及同一回答中同品类未被点名品牌作为 within-response control。结果显示，真正的推荐性提及比附带 name-drop 更能推动用户行为，且被点名品牌的增长显著高于同回答中未点名的同类品牌。下游路径主要由搜索中介，流向品牌官网和零售商页面，其目的地结构接近用户基线品牌导向行为。研究为观察性设计且未观测真实交易，因此零售访问仅能视为接近购买的行为信号。",
+  "key_points_zh": [
+    "研究对象是 ChatGPT、Claude、Gemini 对话中的品牌推荐如何影响用户在开放网络上的后续搜索和访问行为。",
+    "在无近期相关互动的用户中，品牌被 assistant 推荐后，同名 Google 搜索增加 4.3pp，品牌官网访问增加 2.4pp，零售商品牌页访问增加 1.0pp。",
+    "作者指出 naive all-mention funnel 存在严重混淆：许多品牌提及只是用户既有消费行为的附带引用，会造成品牌访问的 pre-trend。",
+    "方法上结合 pre-trend event study、stance classifier、非客户条件筛选和 within-response same-category control，以区分真实推荐与偶然 name-drop。",
+    "结果表明 assistant 带来的上游品牌曝光会被传统 referrer-based 或 last-click attribution 忽略，其影响主要通过搜索路径体现。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.82,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.75,
+    "llm_avg": 0.7620000000000001,
+    "comment": "A valuable commerce-measurement study showing how AI assistant brand recommendations influence downstream search and retailer navigation behavior.",
+    "comment_zh": "这是一项有价值的电商测量研究，揭示了AI助手品牌推荐如何影响后续搜索与零售页面访问行为。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7620000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10907/fig1.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10907/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10907/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10907/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

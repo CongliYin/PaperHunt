@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2606.12341",
+  "title": "OCELOT: Inference-Leakage Budgets for Privacy-Preserving LLM Agents",
+  "title_zh": "OCELOT：面向隐私保护 LLM Agent 的推理泄露预算",
+  "authors": [
+    "Jin Xie",
+    "Songze Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T17:13:35Z",
+  "abs_url": "https://arxiv.org/abs/2606.12341v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12341",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM) agents increasingly act on a user's behalf -- reading personal files, calling tools, transacting with external services -- possibly leaking personally identifiable information (PII) across trust boundaries at every step. Privacy here is a property not of a single output but of an entire trajectory, and three properties make it hard: leakage is cumulative, as individually innocuous releases accumulate across honest-but-curious or colluding sinks into inferences about a protected secret; bidirectional, as a malicious observation can inject instructions that turn the agent's own reasoning model against the user; and task-dependent, as the same field is necessary for one recipient yet gratuitous for another. Per-release contextual-integrity filters, information-flow controls, and posterior-leakage monitors each address part of this but none controls cumulative, inference-based leakage at runtime. We recast agent privacy as \\emph{posterior-risk control} and present OCELOT, a runtime mediator that budgets how much an adversary's belief about a secret may improve across a trajectory, rather than filtering outputs. Its mechanism, \\emph{Witness-Verified Declassification}, separates judgment from trust: an untrusted, locally fine-tuned defender model inspects each candidate release and emits structured evidence -- labeled atoms and proposed declassification operators -- which a deterministic verifier audits, charging a certified min-entropy cost for the chosen variant and authorizing the least-disclosing useful release under a sink-trust-weighted budget recorded on a tamper-evident ledger. Across diverse agent benchmarks and recent defenses, OCELOT attains significantly lower leakage at higher task utility, resists adaptive injection, jailbreak, cumulative inference, and sink collusion, and adds only modest overhead.",
+  "abstract_zh": "随着 LLM Agent 越来越多地代表用户读取个人文件、调用工具并与外部服务交互，个人可识别信息（PII）可能在每一步跨越信任边界时泄露。论文指出，Agent 隐私不是单次输出的属性，而是整条执行轨迹的属性；其难点在于泄露具有累积性、双向性和任务依赖性。现有的上下文完整性过滤、信息流控制和后验泄露监控只能解决部分问题，难以在运行时控制累积的、基于推理的泄露。为此，作者提出 OCELOT，将 Agent 隐私重构为后验风险控制（posterior-risk control）：不是简单过滤输出，而是为对手关于受保护秘密的信念提升量设置预算。其核心机制 Witness-Verified Declassification 将判断与信任分离：一个不受信任的本地微调 defender model 检查候选释放内容，生成结构化证据，包括标注原子和拟议的解密/降密操作；随后确定性 verifier 审计这些证据，为所选释放版本计入认证的最小熵成本，并在基于接收方信任权重的预算内，授权“有用但披露最少”的输出，同时将预算消耗记录到防篡改账本。实验显示，OCELOT 在多类 Agent benchmark 和近期防御方法上，以更高任务效用实现更低泄露，并能抵抗自适应注入、jailbreak、累积推理和接收方串通，额外开销较小。",
+  "key_points_zh": [
+    "将 LLM Agent 隐私建模为整条轨迹上的 posterior-risk control，关注对手对秘密信念的累积提升，而非单次输出是否包含敏感字段。",
+    "提出 OCELOT 运行时中介，为不同 sink 按信任权重分配推理泄露预算，并在预算内选择最少披露但仍有任务效用的释放版本。",
+    "核心机制 Witness-Verified Declassification 使用本地 fine-tuned defender model 生成结构化证据，再由确定性 verifier 审计并计入认证的 min-entropy 成本。",
+    "通过防篡改 ledger 记录跨步骤预算消耗，从而处理累积泄露、sink collusion 以及多轮工具调用中的隐私风险。",
+    "实验表明 OCELOT 相比近期防御方法在泄露控制与任务效用之间取得更好权衡，并能抵抗 adaptive injection、jailbreak 和 cumulative inference。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.9,
+    "problem_significance": 0.95,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.9,
+    "llm_avg": 0.89,
+    "comment": "A highly relevant runtime privacy-governance framework for LLM agents with trajectory-level leakage budgets, verifiable declassification, and auditability.",
+    "comment_zh": "这是一项高度相关的智能体运行时隐私治理工作，涵盖轨迹级泄露预算、可验证解密与审计机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.7200000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.89,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12341/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12341/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

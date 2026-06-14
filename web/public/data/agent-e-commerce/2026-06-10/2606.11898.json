@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2606.11898",
+  "title": "GraspLLM: Towards Zero-Shot Generalization on Text-Attributed Graphs with LLMs",
+  "title_zh": "GraspLLM：利用 LLM 实现文本属性图的零样本泛化",
+  "authors": [
+    "Hengyi Feng",
+    "Zeang Sheng",
+    "Meiyi Qiang",
+    "Li Yang",
+    "Wentao Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T10:25:59Z",
+  "abs_url": "https://arxiv.org/abs/2606.11898v2",
+  "pdf_url": "https://arxiv.org/pdf/2606.11898",
+  "links": {
+    "github": "https://github.com/Heinz217/GraspLLM.",
+    "project_page": null
+  },
+  "abstract_en": "Research on Text-Attributed Graphs (TAGs) has gained significant attention recently due to its broad applications across various real-world data scenarios, such as citation networks, e-commerce platforms, social media, and web pages. Inspired by the remarkable semantic understanding ability of Large Language Models (LLMs), there have been numerous attempts to integrate LLMs into TAGs. However, existing methods still struggle to generalize across diverse graphs and tasks, and their ability to capture transferable graph structural patterns remains limited. To address this, we introduce the GraspLLM, a framework that combines Graph structural comprehension with semantic understanding prowess of LLMs to enhance the cross-dataset and cross-task generalizability. Specifically, we represent node texts from different graphs in a unified semantic space with a frozen general embedding model, on top of which we perform motif-aware contrastive learning across multiple motif-induced adjacency matrices to extract dataset-agnostic structural information. Then, with our proposed optimal contextual subgraph, we extract the most contextually relevant subgraph for each target node and align these subgraphs to the token space of LLM via an alignment projector. Extensive experiments on TAG benchmark datasets spanning diverse domains reveal that GraspLLM consistently outperforms previous LLM-based methods for TAGs, especially in zero-shot scenarios, highlighting its strong generalizability across different datasets and tasks. Our code is available at https://github.com/Heinz217/GraspLLM.",
+  "abstract_zh": "本文关注 Text-Attributed Graphs（TAGs）上的跨图、跨任务泛化问题。现有将 Large Language Models（LLMs）用于 TAGs 的方法虽然受益于语义理解能力，但仍难以在不同图数据集和任务间迁移，尤其对可迁移图结构模式的建模不足。为此，论文提出 GraspLLM，将图结构理解与 LLM 的语义理解能力结合，以提升 zero-shot 场景下的泛化能力。方法首先使用冻结的通用 embedding model 将不同图中的节点文本映射到统一语义空间；随后基于多种 motif-induced adjacency matrices 进行 motif-aware contrastive learning，学习与具体数据集无关的结构信息；最后提出 optimal contextual subgraph，为每个目标节点抽取最相关的上下文子图，并通过 alignment projector 将这些子图对齐到 LLM token space。大量 TAG benchmark 实验表明，GraspLLM 在多个领域、数据集和任务上稳定优于已有 LLM-based TAG 方法，尤其在 zero-shot 设置下表现突出。",
+  "key_points_zh": [
+    "提出 GraspLLM，面向 Text-Attributed Graphs 的跨数据集、跨任务 zero-shot 泛化，结合图结构模式与 LLM 语义理解能力。",
+    "使用冻结的通用 embedding model 将不同图的节点文本统一到同一语义空间，降低跨图语义分布差异。",
+    "设计 motif-aware contrastive learning，在多个 motif-induced adjacency matrices 上学习 dataset-agnostic 的可迁移结构信息。",
+    "提出 optimal contextual subgraph，为目标节点抽取上下文最相关子图，并通过 alignment projector 对齐到 LLM token space。",
+    "在多领域 TAG benchmark 上，GraspLLM 持续优于已有 LLM-based 方法，尤其在 zero-shot 场景中展现更强泛化能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "A general text-attributed graph and LLM method with only indirect applicability to e-commerce platforms.",
+    "comment_zh": "A general text-attributed graph and LLM method with only indirect applicability to e-commerce platforms."
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.36228269883744174,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Heinz217/GraspLLM.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11898/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11898/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.845
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11898/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.417
+    }
+  ]
+}

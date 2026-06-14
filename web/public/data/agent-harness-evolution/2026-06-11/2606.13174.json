@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.13174",
+  "title": "Getting Better at Working With You: Compiling User Corrections into Runtime Enforcement for Coding Agents",
+  "title_zh": "越用越懂你：将用户纠正编译为编码 Agent 的运行时强制约束",
+  "authors": [
+    "Yujun Zhou",
+    "Kehan Guo",
+    "Haomin Zhuang",
+    "Xiangqi Wang",
+    "Yue Huang",
+    "Zhenwen Liang",
+    "Pin-Yu Chen",
+    "Tian Gao",
+    "Nuno Moniz",
+    "Nitesh V. Chawla",
+    "Xiangliang Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T10:43:40Z",
+  "abs_url": "https://arxiv.org/abs/2606.13174v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13174",
+  "links": {
+    "github": "https://github.com/YujunZhou/TRACE_exp",
+    "project_page": null
+  },
+  "abstract_en": "Interactive LLM agents are becoming part of daily work, but they do not reliably become easier to work with over time: a correction remembered in one session may still be violated in the next. We study this gap between preference access and preference compliance. In tasks derived from anonymized real-user friction cases, Mem0 memory still leaves 57.5% of applicable preference checks violated. We introduce Test-time Rule Acquisition and Compiled Enforcement (TRACE), a drop-in skill-layer pipeline for coding-agent runtimes that mines user corrections, rewrites them as atomic rules, and compiles them into runtime checks that must pass before an agent completes future tasks. Unlike runtime checks written ahead of time by developers, TRACE skills come from the user's own chat corrections. We evaluate TRACE with simulated user-in-the-loop experiments on ClawArena coding-agent tasks and MemoryArena-derived memory-intensive tasks. On ClawArena, TRACE reduces held-out preference violation from 100.0% to 37.6% on in-distribution tasks and from 100.0% to 2.0% on out-of-distribution tasks. On MemoryArena-derived tasks, TRACE reduces in-distribution violation from 100.0% to 60.5% while matching or exceeding the strongest memory baseline on task pass. These results suggest that compiling corrections into runtime enforcement can address a repeated-friction failure mode that memory alone does not reliably solve, reducing the need for users to restate the same correction across future sessions. Experiment code is available at https://github.com/YujunZhou/TRACE_exp, and the deployable skill is available at https://github.com/YujunZhou/tellonce.",
+  "abstract_zh": "交互式 LLM agents 正逐渐进入日常工作，但它们并不总能随着使用而变得更好协作：用户在一次会话中纠正过的问题，下一次仍可能再次出现。本文研究“偏好可访问”与“偏好遵循”之间的差距。在源自匿名真实用户摩擦案例的任务中，即使使用 Mem0 memory，仍有 57.5% 的适用偏好检查被违反。作者提出 Test-time Rule Acquisition and Compiled Enforcement（TRACE），这是一个可直接接入 coding-agent runtime 的技能层流水线：它从用户纠正中挖掘偏好，将其改写为原子规则，并编译成运行时检查，要求 agent 在完成未来任务前必须通过这些检查。不同于开发者预先编写的 runtime checks，TRACE 的技能来自用户自己的聊天纠正。作者在 ClawArena coding-agent 任务和 MemoryArena 衍生的记忆密集型任务上，通过模拟 user-in-the-loop 实验评估 TRACE。结果显示，在 ClawArena 上，TRACE 将 held-out preference violation 从 100.0% 降至 37.6%（in-distribution），并在 out-of-distribution 任务上从 100.0% 降至 2.0%。在 MemoryArena 衍生任务上，TRACE 将 in-distribution violation 从 100.0% 降至 60.5%，同时在任务通过率上达到或超过最强 memory baseline。结果表明，将用户纠正编译为运行时强制约束，可以缓解 memory alone 难以可靠解决的重复摩擦问题，减少用户在未来会话中反复重申同一纠正的需要。",
+  "key_points_zh": [
+    "论文关注 coding agents 中“记得偏好”不等于“遵守偏好”的问题：Mem0 memory 在真实用户摩擦案例衍生任务中仍有 57.5% 的偏好检查违规。",
+    "提出 TRACE（Test-time Rule Acquisition and Compiled Enforcement），从用户聊天纠正中自动抽取规则、原子化改写，并编译为任务完成前必须通过的 runtime checks。",
+    "TRACE 不依赖开发者预先手写规则，而是把用户自己的纠正转化为可执行的 enforcement layer，作为 coding-agent runtime 的 drop-in skill-layer。",
+    "在 ClawArena 上，TRACE 将 held-out preference violation 从 100.0% 降至 37.6%（in-distribution），在 out-of-distribution 任务上进一步降至 2.0%。",
+    "在 MemoryArena 衍生任务上，TRACE 将违规率从 100.0% 降至 60.5%，并在任务通过率上匹配或超过最强 memory baseline，说明 runtime enforcement 可补足 memory 的不足。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.85,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.88,
+    "llm_avg": 0.852,
+    "comment": "Strong harness-evolution work that turns user corrections into durable runtime enforcement for coding agents.",
+    "comment_zh": "这是一项很强的智能体框架演化工作，将用户纠正转化为可持久执行的运行时约束。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.5,
+    "community_heat": 0.6828624646490623,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.852,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/YujunZhou/TRACE_exp",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 2,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13174/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13174/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13174/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.929
+    }
+  ]
+}

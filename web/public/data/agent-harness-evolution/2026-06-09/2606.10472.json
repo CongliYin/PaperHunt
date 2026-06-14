@@ -1,0 +1,70 @@
+{
+  "arxiv_id": "2606.10472",
+  "title": "Trading Utility for Dynamic Fairness in Multiple Resource Division with Sequential Demand",
+  "title_zh": "序列需求下多资源分配中以效用换取动态公平性",
+  "authors": [
+    "Kaiqi Jiang",
+    "Karim El Husseini",
+    "Wenzhe Fan",
+    "Xinhua Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T06:41:04Z",
+  "abs_url": "https://arxiv.org/abs/2606.10472v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10472",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Dynamic multi-resource allocation is a central problem in shared computing environments, where users' demands arrive sequentially and resources must be distributed fairly without knowledge of future demands. Existing methods emphasize fairness guarantees such as Sharing Incentive, Envy Freeness, and Dynamic Pareto Optimality, but often overlook system utility. Moreover, these fairness criteria are mutually incompatible, preventing strict enforcement of them at the same time. We propose a neural allocation mechanism that reconciles fairness with utility through multi-objective optimization during sequential rollout. We first formalize fairness in the dynamic setting via stepwise loss functions for Sharing Incentive, Envy Freeness, and Dynamic Pareto Optimality, enabling differentiable training. Leveraging non-wastefulness, we parameterized the solutions by constraining allocations to the subspace of demand while allowing elastic over-allocation when resources remain available. Empirical results demonstrate that our learned allocator achieves substantially higher utility at comparable levels of fairness, uncovering clear Pareto-frontier-like tradeoffs across metrics.",
+  "abstract_zh": "动态多资源分配是共享计算环境中的核心问题：用户需求按序到达，系统必须在不了解未来需求的情况下公平分配资源。现有方法通常强调 Sharing Incentive、Envy Freeness 和 Dynamic Pareto Optimality 等公平性保证，但往往忽视系统效用；同时，这些公平性准则彼此不兼容，难以严格同时满足。本文提出一种神经资源分配机制，在序列 rollout 过程中通过多目标优化协调公平性与效用。作者首先将动态场景中的 Sharing Incentive、Envy Freeness 和 Dynamic Pareto Optimality 形式化为逐步损失函数，使其可微并可用于训练。进一步利用 non-wastefulness，将分配参数化到需求子空间内，并在资源剩余时允许弹性超额分配。实验表明，学习得到的 allocator 能在相近公平性水平下显著提升效用，并揭示不同指标之间类似 Pareto frontier 的权衡关系。",
+  "key_points_zh": [
+    "研究序列需求下的动态多资源分配，目标是在未知未来需求时同时考虑公平性与系统效用。",
+    "将 Sharing Incentive、Envy Freeness、Dynamic Pareto Optimality 转化为逐步可微损失，支持端到端神经训练。",
+    "基于 non-wastefulness 进行分配参数化，将解约束在需求子空间，并允许资源剩余时的弹性 over-allocation。",
+    "通过多目标优化学习 allocation policy，在公平性相当的情况下获得更高 utility。",
+    "实验展示各公平性指标与效用之间存在清晰的 Pareto-frontier-like tradeoff。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.38,
+    "problem_significance": 0.28,
+    "potential_impact": 0.2,
+    "paradigm_shift": 0.14,
+    "lasting_value": 0.16,
+    "llm_avg": 0.23199999999999998,
+    "comment": "The resource-allocation framing has limited indirect relevance but does not address agent harness evolution.",
+    "comment_zh": "该资源分配研究只有间接相关性，并未解决代理平台演进的核心问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.23199999999999998,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10472/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.97
+    }
+  ]
+}
