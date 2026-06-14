@@ -1,7 +1,9 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { assetSrc } from "@/lib/assets";
 import { detailParams, readDetail } from "@/lib/data";
+import { DetailBackLink } from "./detail-back-link";
 
 type Params = {
   params: Promise<{ domain: string; date: string; arxivId: string }>;
@@ -33,9 +35,9 @@ export default async function DetailPage({ params }: Params) {
   return (
     <main className="shell">
       <header className="detail-header">
-        <Link className="back" href="/">
-          Back to Paper Hunt
-        </Link>
+        <Suspense fallback={<Link className="back" href="/">Back to Paper Hunt</Link>}>
+          <DetailBackLink />
+        </Suspense>
         <div className="detail-meta-row">
           <span>{domain}</span>
           <span>{date}</span>

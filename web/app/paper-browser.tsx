@@ -1,13 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import type { IndexData, PaperCard, PaperList } from "@/lib/data";
 import { assetSrc } from "@/lib/assets";
 
 type Props = {
   index: IndexData;
   initialList: PaperList | null;
+  initialDomain: string;
+  initialDates: string[];
+  initialSort: string;
 };
 
 type VisiblePaper = PaperCard & {
@@ -15,15 +19,17 @@ type VisiblePaper = PaperCard & {
   sourceDate: string;
 };
 
-export function PaperBrowser({ index, initialList }: Props) {
+export function PaperBrowser({ index, initialList, initialDomain, initialDates, initialSort }: Props) {
+  const router = useRouter();
+  const datePickerRef = useRef<HTMLDivElement>(null);
   const latest = [...index.entries].sort((a, b) => b.date.localeCompare(a.date))[0];
-  const [domain, setDomain] = useState(initialList?.domain || latest?.domain || "");
+  const [domain, setDomain] = useState(initialDomain || initialList?.domain || latest?.domain || "");
   const [selectedDates, setSelectedDates] = useState<string[]>(
-    initialList?.date ? [initialList.date] : latest?.date ? [latest.date] : []
+    initialDates.length ? normalizeDates(initialDates) : initialList?.date ? [initialList.date] : latest?.date ? [latest.date] : []
   );
   const [list, setList] = useState<PaperList | null>(initialList);
   const [visiblePapers, setVisiblePapers] = useState<VisiblePaper[]>(() => toVisiblePapers(initialList));
-  const [sortMode, setSortMode] = useState("score");
+  const [sortMode, setSortMode] = useState(initialSort || "score");
   const [dateMenuOpen, setDateMenuOpen] = useState(false);
 
   const dates = useMemo(
@@ -36,6 +42,28 @@ export function PaperBrowser({ index, initialList }: Props) {
   );
 
   const dateSummary = summarizeDates(selectedDates);
+
+  useEffect(() => {
+    if (!dateMenuOpen) return;
+
+    function onPointerDown(event: PointerEvent) {
+      const target = event.target;
+      if (target instanceof Node && datePickerRef.current && !datePickerRef.current.contains(target)) {
+        setDateMenuOpen(false);
+      }
+    }
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") setDateMenuOpen(false);
+    }
+
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [dateMenuOpen]);
 
   async function loadDates(nextDomain: string, nextDates: string[]) {
     const normalizedDates = normalizeDates(nextDates);
@@ -64,9 +92,14 @@ export function PaperBrowser({ index, initialList }: Props) {
     setVisiblePapers(lists.flatMap(toVisiblePapers));
   }
 
+  function updateBrowserUrl(nextDomain: string, nextDates: string[], nextSort: string) {
+    router.replace(homeHref(nextDomain, nextDates, nextSort), { scroll: false });
+  }
+
   function applyDates(nextDates: string[]) {
     const normalizedDates = normalizeDates(nextDates);
     setSelectedDates(normalizedDates);
+    updateBrowserUrl(domain, normalizedDates, sortMode);
     void loadDates(domain, normalizedDates);
   }
 
@@ -83,6 +116,7 @@ export function PaperBrowser({ index, initialList }: Props) {
   const oldestDate = dates[dates.length - 1] || "";
   const selectedOldestDate = selectedDates[selectedDates.length - 1] || oldestDate;
   const selectedLatestDate = selectedDates[0] || latestDate;
+  const returnHref = homeHref(domain, selectedDates, sortMode);
 
   return (
     <>
@@ -113,6 +147,7 @@ export function PaperBrowser({ index, initialList }: Props) {
                 setDomain(nextDomain);
                 setSelectedDates(nextDate ? [nextDate] : []);
                 setDateMenuOpen(false);
+                updateBrowserUrl(nextDomain, nextDate ? [nextDate] : [], sortMode);
                 void loadDates(nextDomain, nextDate ? [nextDate] : []);
               }}
             >
@@ -125,7 +160,7 @@ export function PaperBrowser({ index, initialList }: Props) {
           </label>
           <div className="filter-field">
             <span>Range</span>
-            <div className="date-picker">
+            <div className="date-picker" ref={datePickerRef}>
               <button
                 className="date-trigger"
                 type="button"
@@ -165,7 +200,15 @@ export function PaperBrowser({ index, initialList }: Props) {
           </div>
           <label className="filter-field">
             <span>Sort</span>
-            <select className="select" value={sortMode} onChange={(event) => setSortMode(event.target.value)}>
+            <select
+              className="select"
+              value={sortMode}
+              onChange={(event) => {
+                const nextSort = event.target.value;
+                setSortMode(nextSort);
+                updateBrowserUrl(domain, selectedDates, nextSort);
+              }}
+            >
               <option value="score">Score</option>
               <option value="llm">AI review</option>
               <option value="topic">Topic match</option>
@@ -180,7 +223,7 @@ export function PaperBrowser({ index, initialList }: Props) {
         <section className="paper-list">
           {papers.map((paper) => (
             <article className="paper-row" key={`${paper.sourceDomain}-${paper.sourceDate}-${paper.arxiv_id}`}>
-              <Link className="row-thumb" href={`/${paper.sourceDomain}/${paper.sourceDate}/${paper.arxiv_id}`}>
+              <Link className="row-thumb" href={detailHref(paper, returnHref)}>
                 {paper.thumb ? <img src={assetSrc(paper.thumb)} alt="" loading="lazy" /> : <span>No figure</span>}
               </Link>
               <div className="row-main">
@@ -189,7 +232,7 @@ export function PaperBrowser({ index, initialList }: Props) {
                   <span>{paper.sourceDate}</span>
                   <span>Score {Math.round(paper.total_score * 100)}</span>
                 </div>
-                <Link className="paper-title-link" href={`/${paper.sourceDomain}/${paper.sourceDate}/${paper.arxiv_id}`}>
+                <Link className="paper-title-link" href={detailHref(paper, returnHref)}>
                   <h2 className="paper-title-zh">{paper.title_zh || paper.title}</h2>
                 </Link>
                 <p className="paper-title-en">{paper.title}</p>
@@ -215,11 +258,14 @@ export function PaperBrowser({ index, initialList }: Props) {
 
 function toVisiblePapers(list: PaperList | null): VisiblePaper[] {
   if (!list) return [];
-  return list.papers.map((paper) => ({
-    ...paper,
-    sourceDomain: list.domain,
-    sourceDate: list.date
-  }));
+  return list.papers.map((paper) => {
+    const [sourceDomain, sourceDate] = paper.detail_file.split("/");
+    return {
+      ...paper,
+      sourceDomain: sourceDomain || list.domain,
+      sourceDate: sourceDate || list.date
+    };
+  });
 }
 
 function normalizeDates(dates: string[]): string[] {
@@ -242,4 +288,22 @@ function datesInRange(dates: string[], fromDate: string, toDate: string): string
 
 function formatDateLabel(date: string): string {
   return date;
+}
+
+function homeHref(domain: string, dates: string[], sortMode: string): string {
+  const normalizedDates = normalizeDates(dates);
+  const params = new URLSearchParams();
+  if (domain) params.set("domain", domain);
+  if (normalizedDates.length) {
+    params.set("from", normalizedDates[normalizedDates.length - 1]);
+    params.set("to", normalizedDates[0]);
+  }
+  if (sortMode && sortMode !== "score") params.set("sort", sortMode);
+  const query = params.toString();
+  return query ? `/?${query}` : "/";
+}
+
+function detailHref(paper: VisiblePaper, returnHref: string): string {
+  const params = new URLSearchParams({ returnTo: returnHref });
+  return `/${paper.sourceDomain}/${paper.sourceDate}/${paper.arxiv_id}?${params.toString()}`;
 }
