@@ -1,0 +1,93 @@
+{
+  "arxiv_id": "2606.10357",
+  "title": "Atomic Intent Reasoning: Bringing LLM Semantics to Industrial Cross-Domain Recommendations",
+  "title_zh": "Atomic Intent Reasoning：将 LLM 语义能力引入工业级跨域推荐",
+  "authors": [
+    "Zhuohang Jiang",
+    "Yuxin Chen",
+    "Shijie Wang",
+    "Haohao Qu",
+    "Zhou Jindong",
+    "Wenqi Fan",
+    "Li Qing",
+    "Dongxu Liang",
+    "Jun Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T03:13:52Z",
+  "abs_url": "https://arxiv.org/abs/2606.10357v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10357",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Cross-domain recommendation is a core problem in content-to-e-commerce platforms. Its objective is to leverage user interactions with content to infer potential purchasing intent on the e-commerce side, thereby enhancing conversion rates and commercial value. However, in real industrial scenarios, cross-domain recommendation faces multiple challenges: significant semantic gaps exist between different domains, and user cross-domain behavior sequences are often massive in scale and rich in noise. Although large language models (LLMs) possess powerful semantic understanding and reasoning capabilities, their millisecond-level inference latency makes direct application in online recommendation systems difficult. To address these issues, this paper introduces AIR (Atomic Intent Reasoning), an LLM-driven cross-domain recommendation framework designed for industrial-grade deployment. By migrating LLM inference to the offline phase and dynamically constructing user intent representations through efficient retrieval and composition during online operations, it achieves approximately 400* inference acceleration while maintaining semantic consistency. Experimental results across multiple public datasets demonstrate that our method achieves state-of-the-art performance in cross-domain recommendation tasks. Furthermore, large-scale online A/B testing conducted in Kuaishou E-commerce's real-world business scenarios shows that our approach delivers stable and significant improvements across multiple core business metrics, including a +3.446% increase in GMV, fully validating its effectiveness and practical value in industrial-scale recommendation systems.",
+  "abstract_zh": "本文面向内容到电商平台中的跨域推荐问题：利用用户在内容域的交互行为推断其在电商域的潜在购买意图，以提升转化率和商业价值。真实工业场景中，跨域推荐面临域间语义鸿沟、用户行为序列规模巨大且噪声丰富等挑战；而 LLM 虽具备强语义理解与推理能力，但毫秒级在线推荐对延迟要求极高，难以直接部署。为此，论文提出 AIR（Atomic Intent Reasoning），一种 LLM 驱动的工业级跨域推荐框架。AIR 将 LLM 推理迁移到离线阶段，在线阶段通过高效检索与组合动态构建用户意图表示，在保持语义一致性的同时实现约 400 倍推理加速。多项公开数据集实验表明，该方法在跨域推荐任务上达到 SOTA；在 Kuaishou E-commerce 真实业务场景的大规模在线 A/B 测试中，AIR 在多个核心业务指标上取得稳定显著提升，包括 GMV 提升 3.446%，验证了其工业应用价值。",
+  "key_points_zh": [
+    "提出 AIR（Atomic Intent Reasoning）框架，将 LLM 的语义理解与推理能力引入内容到电商的跨域推荐。",
+    "核心思路是将高成本 LLM 推理前移到离线阶段，在线阶段通过检索与组合生成用户意图表示，兼顾语义质量与低延迟。",
+    "针对工业场景中的域间语义鸿沟、长序列行为噪声和在线推理延迟瓶颈，AIR 提供了可部署的系统化方案。",
+    "实验显示 AIR 在多个公开跨域推荐数据集上达到 SOTA，并实现约 400 倍推理加速。",
+    "在 Kuaishou E-commerce 大规模线上 A/B 测试中，AIR 带来 GMV +3.446% 等核心指标提升，证明其真实业务有效性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.9,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8640000000000001,
+    "comment": "A strong industrial e-commerce recommendation paper that operationalizes LLM semantics for scalable cross-domain purchase intent modeling with real A/B gains.",
+    "comment_zh": "这是一篇很强的工业电商推荐论文，将LLM语义能力用于可规模化的跨域购买意图建模，并有真实A/B收益验证。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36228269883744174,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8640000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10357/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10357/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10357/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.953
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10357/fig4.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.946
+    }
+  ]
+}

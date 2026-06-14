@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2606.10322",
+  "title": "Game-Theoretic Multi-Agent Control for Robust Contextual Reasoning in LLMs",
+  "title_zh": "用于 LLM 鲁棒上下文推理的博弈论多智能体控制",
+  "authors": [
+    "Saeid Jamshidi",
+    "Amin Nikanjam",
+    "Arghavan Moradi Dakhel",
+    "Kawser Wazed Nafi",
+    "Foutse Khomh"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T02:18:44Z",
+  "abs_url": "https://arxiv.org/abs/2606.10322v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10322",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large Language Models (LLMs) in multi-turn interactions maintain evolving context rather than generating isolated responses, making them vulnerable to prompt-injection and context-poisoning attacks in which locally plausible adversarial fragments gradually distort reasoning trajectories. Existing defenses mainly filter individual outputs and often ignore context evolution across turns, leaving long-horizon reasoning exposed. Although the Model Context Protocol (MCP) standardizes context exchange and tool invocation, it functions as a passive routing layer and does not enforce contextual stability. To address these limitations, we introduce the Game-Theoretic Secure Model Context Protocol (GT-MCP), a controller-driven multi-agent method that treats context management as a closed-loop dynamical process. GT-MCP coordinates three heterogeneous LLM agents and selects outputs through a trust function that jointly evaluates causal consistency against a validated context graph, semantic agreement among agents, and distributional drift over time. When instability is detected, a rollback-based self-healing mechanism restores the validated context and prevents unsupported fragments from propagating. Empirical evaluation over 500 interaction turns under an adaptive adversarial threat model shows that contextual drift remains bounded in 99.6% of turns, with recovery required in only 0.4%. Per-turn utility remains tightly concentrated, with median = -0.19, P05 = -0.72, and P95 = 0.30; severe degradation below -1 occurs in only 0.4% of cases, and no injection attempt succeeds at the controller level. Selected outputs maintain stable win rates above 98%, and computational overhead remains predictable, with latency per token = 1.63e-3 s.",
+  "abstract_zh": "本文关注 Large Language Models (LLMs) 在多轮交互中的上下文安全问题。与单轮生成不同，多轮对话会持续维护并演化上下文，因此容易受到 prompt-injection 和 context-poisoning 攻击：攻击者可通过局部看似合理的片段逐步扭曲模型的推理轨迹。现有防御多聚焦于过滤单次输出，往往忽视跨轮上下文演化；而 Model Context Protocol (MCP) 虽标准化了上下文交换与工具调用，但本质上仍是被动路由层，缺乏对上下文稳定性的主动约束。为此，论文提出 Game-Theoretic Secure Model Context Protocol (GT-MCP)，一种控制器驱动的多智能体方法，将上下文管理建模为闭环动态过程。GT-MCP 协调三个异构 LLM agents，并通过 trust function 选择输出，该函数联合评估：相对于已验证 context graph 的因果一致性、智能体间语义一致性，以及随时间变化的分布漂移。当检测到不稳定时，系统触发基于 rollback 的 self-healing 机制，恢复已验证上下文并阻止不受支持的片段继续传播。在 500 轮交互、adaptive adversarial threat model 下的实验表明，GT-MCP 在 99.6% 的轮次中将上下文漂移保持在有界范围，仅 0.4% 需要恢复；单轮效用分布集中，median=-0.19，P05=-0.72，P95=0.30；低于 -1 的严重退化仅占 0.4%，且没有 injection attempt 在控制器层面成功。被选输出的 win rate 稳定高于 98%，同时计算开销可预测，latency per token 为 1.63e-3 秒。",
+  "key_points_zh": [
+    "提出 GT-MCP，将 LLM 多轮上下文管理从被动路由转化为闭环动态控制过程，以缓解 prompt-injection 与 context-poisoning 攻击。",
+    "系统协调三个异构 LLM agents，并用 trust function 综合评估因果一致性、智能体间语义一致性和时间维度上的分布漂移。",
+    "引入基于 rollback 的 self-healing 机制，在检测到上下文不稳定时恢复 validated context graph，防止恶意或无依据片段继续传播。",
+    "在 500 轮自适应攻击实验中，99.6% 轮次的 contextual drift 保持有界，controller 层面无注入攻击成功，输出 win rate 稳定高于 98%。",
+    "方法具有可控计算开销，报告的 latency per token 为 1.63e-3 秒，显示其在安全性与效率之间取得较好平衡。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.82,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.7,
+    "llm_avg": 0.716,
+    "comment": "Interesting controller-based context-security mechanism with rollback and validated context graphs, though claims may need stronger validation in realistic tool-rich deployments.",
+    "comment_zh": "该工作提出了带回滚和验证上下文图的控制器式上下文安全机制，但仍需在真实工具丰富部署中进一步验证。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.716,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10322/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.985
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10322/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10322/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.974
+    }
+  ]
+}

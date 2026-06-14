@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.11127",
+  "title": "Provenance-Grounded Gating and Adaptive Recovery in Synthetic Post-Training Data Curation",
+  "title_zh": "合成后训练数据筛选中的溯源锚定门控与自适应恢复",
+  "authors": [
+    "Soham Bhattacharjee",
+    "Karun Sharma",
+    "Vinay Kumar Sankarapu",
+    "Pratinav Seth"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T17:24:27Z",
+  "abs_url": "https://arxiv.org/abs/2606.11127v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11127",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Synthetic post-training pipelines commonly filter generated samples with reward models or holistic LLM judges, yet two practices remain rarely examined together: whether the filtering signal is grounded in the source evidence that induced each generation, and whether rejected samples can be systematically recovered rather than permanently discarded. We present a controlled study of both questions across gate configurations, recovery strategies, and generator scales, using adversarially injected corpora to provide ground-truth failure labels. We find that exact source provenance improves faithfulness gating for stronger judges, that hallucination and reward gates reject largely disjoint sample populations making both necessary, and that an adaptive recovery pipeline combining failure diagnosis with targeted regeneration achieves higher yield, recovery rate, and injection recall than naive resampling. Downstream fine-tuning quality is driven primarily by generator scale, with filtration and recovery conditions contributing meaningfully but secondarily.",
+  "abstract_zh": "合成后训练（post-training）流水线通常使用 reward models 或整体式 LLM judges 过滤生成样本，但两个问题很少被同时系统研究：过滤信号是否基于诱导生成的源证据（source evidence）进行溯源锚定，以及被拒绝的样本是否可以通过系统性方法恢复，而不是永久丢弃。本文在可控设置下研究不同 gate 配置、恢复策略与 generator 规模，并通过对语料进行对抗性注入来获得真实失败标签。实验发现：对于更强的 judges，精确的 source provenance 能提升 faithfulness gating；hallucination gate 与 reward gate 拒绝的样本群体大多不重叠，因此二者都有必要；结合失败诊断与定向再生成的 adaptive recovery pipeline，相比朴素重采样，在数据产出率、恢复率和注入召回率上更优。下游微调质量主要由 generator 规模驱动，过滤与恢复条件也有有意义但次要的贡献。",
+  "key_points_zh": [
+    "论文关注合成 post-training 数据清洗中的两个核心问题：过滤是否应基于 source provenance，以及被拒样本能否通过 recovery 策略有效挽回。",
+    "通过 adversarially injected corpora 构造带真实失败标签的可控评测，系统比较 gate 配置、recovery 策略和 generator scale 的影响。",
+    "实验表明，exact source provenance 可帮助更强的 LLM judges 更好进行 faithfulness gating，降低不忠实样本进入训练集的风险。",
+    "hallucination gate 与 reward gate 拒绝的样本集合高度互补，说明仅依赖单一质量信号不足，二者结合更稳健。",
+    "adaptive recovery pipeline 通过失败诊断和 targeted regeneration，比 naive resampling 获得更高 yield、recovery rate 和 injection recall；但下游微调效果仍主要受 generator 规模影响。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.66,
+    "problem_significance": 0.72,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.52,
+    "lasting_value": 0.64,
+    "llm_avg": 0.644,
+    "comment": "Useful for synthetic data curation with provenance-grounded gates and adaptive recovery, but its connection to live agent harness evolution is indirect.",
+    "comment_zh": "该工作对带来源依据的合成数据过滤与自适应恢复有用，但与在线智能体底座演化的联系较间接。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.644,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11127/fig1.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11127/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11127/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11127/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.967
+    }
+  ]
+}

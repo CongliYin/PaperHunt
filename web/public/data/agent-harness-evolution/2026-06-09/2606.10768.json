@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2606.10768",
+  "title": "N-GRPO: Embedding-Level Neighbor Mixing for Enhanced Policy Optimization",
+  "title_zh": "N-GRPO：用于增强策略优化的嵌入级邻居混合",
+  "authors": [
+    "Xukun Zhu",
+    "Hang Yu",
+    "Peng Di",
+    "Linchao Zhu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T12:21:27Z",
+  "abs_url": "https://arxiv.org/abs/2606.10768v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10768",
+  "links": {
+    "github": "https://github.com/ZJUSCL/N-GRPO",
+    "project_page": null
+  },
+  "abstract_en": "The success of Large Language Models in mathematical reasoning relies heavily on the generation of diverse and valid solution paths during the rollout phase. However, current rollout techniques face a fundamental trade-off: token-level sampling often yields redundant trajectories that differ only in rephrasing, while embedding-level methods utilizing random noise frequently disrupt semantic consistency. To resolve this, we introduce N-GRPO, a novel exploration strategy integrated into the Group Relative Policy Optimization (GRPO) framework. Rather than relying on token-level sampling or native embedding-level noise, our approach leverages Semantic Neighbor Mixing. This mechanism dynamically constructs input representations by mixing the embeddings of an anchor token and its nearest semantic neighbors, thereby injecting diversity while strictly adhering to the local semantic manifold. Experimental evaluations on the DeepSeek-R1-Distill-Qwen models across different sizes show that N-GRPO not only achieves consistent improvements over strong baselines on math reasoning benchmarks but also exhibits robust generalization capabilities on out-of-distribution tasks.",
+  "abstract_zh": "大型语言模型在数学推理中的成功，很大程度上依赖 rollout 阶段生成多样且有效的解题路径。然而，现有 rollout 技术存在核心权衡：token-level sampling 往往产生仅在表述上不同的冗余轨迹，而基于随机噪声的 embedding-level 方法又容易破坏语义一致性。为此，论文提出 N-GRPO，一种集成到 Group Relative Policy Optimization（GRPO）框架中的新型探索策略。该方法不依赖 token 级采样或原生嵌入级噪声，而是采用 Semantic Neighbor Mixing：动态混合锚定 token 及其最近语义邻居的 embeddings，在保持局部语义流形一致性的同时注入多样性。基于不同规模 DeepSeek-R1-Distill-Qwen 模型的实验表明，N-GRPO 在数学推理基准上相较强基线取得稳定提升，并在分布外任务上展现出较强泛化能力。",
+  "key_points_zh": [
+    "提出 N-GRPO，将 Semantic Neighbor Mixing 引入 GRPO 的 rollout 探索过程，目标是在保持语义一致性的同时增加解题路径多样性。",
+    "相比 token-level sampling，N-GRPO 减少了仅由改写造成的冗余轨迹；相比随机 embedding noise，又降低了语义漂移风险。",
+    "核心机制是在 embedding level 混合 anchor token 与其最近语义邻居的表示，使采样扰动受限于局部语义流形。",
+    "在多个规模的 DeepSeek-R1-Distill-Qwen 模型上，N-GRPO 在数学推理 benchmarks 中持续优于强基线。",
+    "实验显示该方法不仅提升域内数学推理性能，也在 out-of-distribution 任务上具备较好的泛化能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.64,
+    "problem_significance": 0.55,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.42,
+    "lasting_value": 0.42,
+    "llm_avg": 0.506,
+    "comment": "A model-level RL exploration method for math reasoning with little direct contribution to agent runtime, orchestration, observability, or governance.",
+    "comment_zh": "该工作主要是面向数学推理的模型级强化学习探索方法，对智能体运行时、编排、可观测性或治理贡献较少。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.8397036478531318,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.506,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/ZJUSCL/N-GRPO",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 23,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10768/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10768/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10768/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.957
+    }
+  ]
+}

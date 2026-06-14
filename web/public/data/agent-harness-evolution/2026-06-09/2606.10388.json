@@ -1,0 +1,67 @@
+{
+  "arxiv_id": "2606.10388",
+  "title": "SkillResolve-Bench: Measuring and Resolving Same-Capability Ambiguity in Agent Skill Retrieval",
+  "title_zh": "SkillResolve-Bench：衡量并解决 Agent 技能检索中的同能力歧义",
+  "authors": [
+    "Jiandong Ding"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T03:54:45Z",
+  "abs_url": "https://arxiv.org/abs/2606.10388v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10388",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent skill libraries are becoming routable software assets: a retrieved skill can contribute instructions, scripts, resource bindings, and execution assumptions to an agent. This makes skill retrieval more than broad relevance matching. A retriever can find the right capability family yet expose the wrong same-capability representative. We study this failure as same-capability execution-risk retrieval. Each query pairs a helpful skill with a query-specific risky sibling that shares the capability family but can lead execution toward a stale resource, missing precondition, or wrong procedure. We introduce SkillResolve-Bench 1.0, an auditable benchmark for this setting with 661 helpful/risky pairs, source-role and admission evidence, cue/leakage checks, query-disjoint splits, and a 7,982-candidate pool that includes 6,660 public SkillRet candidates. The benchmark reports helpful ranking together with harmful sibling rate (HSR@K), the top-K exposure of the risky sibling. We also provide SkillResolve, a reference method that resolves active candidate families, scores query-conditioned utility from confusable library negatives and contract-profile cues, and selects one representative from each family before the final top-K list. Under the released family relation, SkillResolve reaches Recall@3 0.766 and NDCG@3 0.699 while keeping HSR@3=0. It improves over SkillRouter by 0.112 Recall@3 and 0.165 NDCG@3 while reducing HSR@3 from 0.693 to 0. Without representative selection, HSR@3 rises to 0.236 under the same scorer, identifying within-family representative choice as the mechanism that turns capability retrieval into safer procedural exposure.",
+  "abstract_zh": "本文关注 Agent skill libraries 中一种比通用相关性匹配更细粒度的检索风险：检索器可能找到正确的能力类别，却暴露同能力家族中错误的技能代表，从而导致使用过时资源、缺失前置条件或执行错误流程。作者将其定义为 same-capability execution-risk retrieval，并提出 SkillResolve-Bench 1.0。该基准包含 661 组 helpful/risky 技能对、来源角色与准入证据、提示与泄漏检查、query-disjoint 划分，以及含 7,982 个候选项的检索池，其中包括 6,660 个公开 SkillRet 候选。评测同时报告 helpful ranking 与 harmful sibling rate（HSR@K），即 risky sibling 在 top-K 中的暴露率。作者还提出参考方法 SkillResolve：先解析活跃候选家族，结合易混淆负样本与 contract-profile cues 估计 query-conditioned utility，再在每个家族中选择一个代表进入最终 top-K。在公开 family relation 下，SkillResolve 达到 Recall@3 0.766、NDCG@3 0.699，并保持 HSR@3=0；相比 SkillRouter，Recall@3 提升 0.112，NDCG@3 提升 0.165，同时将 HSR@3 从 0.693 降至 0。",
+  "key_points_zh": [
+    "提出 same-capability execution-risk retrieval 问题：检索到同一能力家族内的错误技能代表，可能引发过时资源、缺失前置条件或错误流程等执行风险。",
+    "构建 SkillResolve-Bench 1.0，包含 661 组 helpful/risky 技能对、query-disjoint splits、泄漏检查和 7,982 候选池，用于可审计地评估该风险。",
+    "引入 harmful sibling rate（HSR@K）作为安全性指标，衡量 risky sibling 在 top-K 检索结果中的暴露率，补充传统 Recall/NDCG。",
+    "提出 SkillResolve 方法，通过候选家族解析、query-conditioned utility 打分、confusable negatives 与 contract-profile cues，在每个能力家族中选择安全代表。",
+    "在 released family relation 下，SkillResolve 实现 Recall@3 0.766、NDCG@3 0.699、HSR@3=0，显著优于 SkillRouter，并证明代表选择是降低过程性风险的关键机制。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.82,
+    "llm_avg": 0.784,
+    "comment": "A highly relevant skill-library retrieval benchmark and method focused on safer tool and procedure exposure.",
+    "comment_zh": "该工作围绕技能库检索中的安全过程暴露问题，具有很强的代理平台相关性。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.784,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10388/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.943
+    }
+  ]
+}

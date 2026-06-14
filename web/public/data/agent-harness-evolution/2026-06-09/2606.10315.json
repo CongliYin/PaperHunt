@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2606.10315",
+  "title": "Catching One in Five: LLM-as-Judge Blind Spots in Production Multi-Turn Transaction Agents",
+  "title_zh": "抓住五分之一：生产级多轮交易 Agent 中 LLM-as-Judge 的盲点",
+  "authors": [
+    "Sawyer Zhang",
+    "Alexander Wang",
+    "Sophie Lei"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T02:11:01Z",
+  "abs_url": "https://arxiv.org/abs/2606.10315v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10315",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM-as-judge is the default instrument for evaluating conversational agents, yet its reliability is almost always reported as agreement with human ratings, not recall of real defects. We study a deployed multi-turn food-and-beverage ordering agent and measure how many genuine quality problems its built-in LLM judge catches, using exhaustive human transcript review as ground truth. Across three batches the judge surfaces well under a quarter of human-confirmed systematic problems -- 2 of 9 patterns (22%) in one batch, and its operational gate flagged zero of 100 rounds in a batch where humans confirmed 23 distinct defects and 7 new cross-cutting patterns. Our blind-spot taxonomy shows the failure is structured, not random: the judge catches turn-local issues (a fabricated statistic, a wrong language) but misses cross-turn state issues (confirm-gate lockout, cart hallucination, escalation lockout, stale referents). The mechanism: the scoring rubric exposes only three coarse axes (intent, brand-voice, personalization) and has no category for the behavioural dimensions -- state-tracking, guardrails, recovery -- where most defects cluster. The failure is routing, not perception: 113 of 114 rounds whose raw judge note describes a confirm-gate or cart-state defect are scored \"brand voice\", and none reach an operational failure -- the gate is wired to hangs and hard assertions, not the rubric -- so the 0% is a routing-and-wiring failure, not blindness. The consequence for prevalence estimation is sharp: when the apparent defect rate is zero the Rogan-Gladen correction degenerates -- no signal can recover the true rate -- while where the gate reports a nonzero rate the same estimator implies a 3-6x undercount under our measured sensitivity. For production multi-turn agents, automated judging is a regression floor, not a substitute for human review.",
+  "abstract_zh": "LLM-as-Judge 已成为评估对话式 Agent 的默认工具，但其可靠性通常只以“与人类评分的一致性”衡量，而非对真实缺陷的召回率。本文研究了一个已部署的多轮餐饮点单 Agent，并以人工穷尽审查对话记录作为真值，测量其内置 LLM judge 能发现多少真实质量问题。结果显示，在三个批次中，该 judge 发现的人类确认系统性问题远低于四分之一：某一批次仅发现 9 类问题中的 2 类（22%）；另一批次中，尽管人工确认了 23 个不同缺陷和 7 类新的跨场景模式，其线上 gate 在 100 轮中标记为零。作者提出的盲点分类表明，这种失败并非随机：judge 能捕捉单轮局部问题，如编造统计数据、语言错误；却漏掉跨轮状态问题，如确认门控锁死、购物车幻觉、升级人工锁死、陈旧指代等。机制上，评分 rubric 只暴露 intent、brand-voice、personalization 三个粗粒度维度，没有覆盖 state-tracking、guardrails、recovery 等多数缺陷聚集的行为维度。进一步分析表明，问题主要是路由与接线失败，而非感知失败：114 轮中有 113 轮的原始 judge note 已描述 confirm-gate 或 cart-state 缺陷，却被归入 brand voice，且没有触发 operational failure；gate 连接的是 hangs 与 hard assertions，而非 rubric。因此，0% 检出率不是模型完全看不见，而是评分与告警机制未正确路由。对缺陷流行率估计而言，影响非常严重：当表观缺陷率为零时，Rogan-Gladen 校正退化，无法恢复真实缺陷率；而在 gate 报告非零率时，基于实测敏感度的估计表明缺陷被低估了 3 到 6 倍。结论是，对于生产级多轮 Agent，自动化 judge 只能作为回归测试下限，不能替代人工审查。",
+  "key_points_zh": [
+    "论文以已部署的多轮餐饮点单 Agent 为对象，用人工穷尽审查 transcript 作为 ground truth，评估内置 LLM-as-Judge 对真实缺陷的召回能力。",
+    "实验发现 judge 只能捕捉少量系统性问题：一个批次仅覆盖 9 类缺陷中的 2 类，另一批次中人工发现 23 个缺陷和 7 类跨场景模式，但 operational gate 零告警。",
+    "盲点具有结构性：LLM judge 更容易发现单轮局部错误，如 fabricated statistic 和 wrong language，却漏掉跨轮状态与流程问题，如 confirm-gate lockout、cart hallucination、escalation lockout 和 stale referents。",
+    "根因不是模型完全无法感知，而是 rubric 与 gate 设计不匹配：评分维度仅有 intent、brand-voice、personalization，缺少 state-tracking、guardrails、recovery 等关键行为维度，导致缺陷被错误路由。",
+    "作者指出自动化评审在生产多轮 Agent 中只能作为 regression floor；若用其直接估计缺陷率，会造成严重低估，甚至在表观缺陷率为零时无法通过统计校正恢复真实问题规模。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.9,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8,
+    "comment": "A strong production-evaluation study exposing concrete LLM-judge wiring failures in multi-turn transaction agents.",
+    "comment_zh": "这是一项有价值的生产评测研究，揭示了多轮交易代理中LLM裁判的结构性盲点与门控失效。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10315/fig1.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.979
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10315/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10315/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.936
+    }
+  ]
+}

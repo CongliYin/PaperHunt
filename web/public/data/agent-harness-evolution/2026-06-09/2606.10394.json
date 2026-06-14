@@ -1,0 +1,95 @@
+{
+  "arxiv_id": "2606.10394",
+  "title": "STAGE-Claw: Automated State-based Agent Benchmarking for Realistic Scenarios",
+  "title_zh": "STAGE-Claw：面向真实场景的自动化状态式 Agent 基准评测",
+  "authors": [
+    "Sirui Liang",
+    "Bohan Yu",
+    "Peiyu Wang",
+    "Shiguang Guo",
+    "Wenxing Hu",
+    "Pengfei Cao",
+    "Jian Zhao",
+    "Cao Liu",
+    "Ke Zeng",
+    "Xunliang Cai",
+    "Kang Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T04:16:35Z",
+  "abs_url": "https://arxiv.org/abs/2606.10394v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10394",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models are increasingly used to power personal agents for everyday applications, but evaluating these agents remains a challenge. Existing benchmarks still rely on sandboxed artifacts, static task design, and coarse scoring, which hinder scalability and limit progress toward reliable personal-agent evaluation. This paper introduces STAGE-Claw, an automated framework for building and evaluating realistic personal-agent scenarios in state-based personal-computing environments. Given a task hint, STAGE-Claw automatically creates and validates a realistic benchmark task with its environment, task prompts, ground truth, and related verification programs. Agents are then evaluated in realistic operating environments, where performance is measured by the correctness of the final system state rather than only the textual response. Using STAGE-Claw, this paper creates a benchmark with 40 challenging real scenario agent tasks, evaluates 11 frontier models, and analyzes their task scores, costs, tool-call reliability, and common failure patterns. Overall, STAGE-Claw offers a scalable, state-based way to evaluate agents in realistic user scenarios.",
+  "abstract_zh": "随着 Large language models 越来越多地驱动日常个人 Agent，如何可靠评估这些 Agent 仍是难题。现有基准通常依赖沙盒化构件、静态任务设计和粗粒度评分，限制了可扩展性，也难以推动可信个人 Agent 评估的发展。本文提出 STAGE-Claw：一个用于在状态式个人计算环境中构建和评估真实个人 Agent 场景的自动化框架。给定一个任务提示，STAGE-Claw 可自动生成并验证真实基准任务，包括环境、任务提示、标准答案以及相关验证程序。Agent 随后在真实操作环境中执行任务，其表现依据最终系统状态的正确性来衡量，而不仅是文本回复。基于 STAGE-Claw，论文构建了包含 40 个高难真实场景 Agent 任务的基准，评估了 11 个前沿模型，并分析了任务得分、成本、工具调用可靠性和常见失败模式。总体而言，STAGE-Claw 提供了一种可扩展、基于状态的方式，用于评估真实用户场景中的 Agent。",
+  "key_points_zh": [
+    "提出 STAGE-Claw，一个自动化框架，可从任务提示生成并验证真实个人计算场景中的 Agent 评测任务。",
+    "区别于仅评估文本输出的方法，STAGE-Claw 以最终系统状态是否正确作为核心评分标准，更贴近真实用户任务完成情况。",
+    "框架自动构建任务环境、任务提示、ground truth 和验证程序，提升个人 Agent 基准构建的可扩展性。",
+    "作者基于该框架创建了包含 40 个高难真实场景任务的 benchmark，并评估了 11 个 frontier models。",
+    "实验分析覆盖任务得分、成本、工具调用可靠性和常见失败模式，为改进个人 Agent 提供诊断依据。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.8,
+    "llm_avg": 0.768,
+    "comment": "A valuable state-based agent benchmarking framework with automated environment construction and verifier-style scoring.",
+    "comment_zh": "该工作提供基于状态的代理评测框架，包含自动环境构建和验证式评分，平台价值较高。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.768,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10394/fig1.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.983
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10394/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10394/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10394/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.962
+    }
+  ]
+}

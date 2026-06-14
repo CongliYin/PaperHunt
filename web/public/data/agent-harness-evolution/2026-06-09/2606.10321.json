@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2606.10321",
+  "title": "Baseline-Free Policy Optimization for Neural Combinatorial Optimization",
+  "title_zh": "面向神经组合优化的无基线策略优化",
+  "authors": [
+    "Carlos S. Sepúlveda",
+    "Gonzalo A. Ruz"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T02:18:30Z",
+  "abs_url": "https://arxiv.org/abs/2606.10321v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10321",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Neural combinatorial optimization (NCO) trains autoregressive policies to solve routing problems. The standard training algorithm, REINFORCE with a rollout baseline, requires maintaining and periodically updating a frozen copy of the policy for variance reduction. This baseline introduces a structural vulnerability: on harder instances, a poor baseline produces noisy gradient estimates that can destabilize training. We evaluate Group Relative Policy Optimization (GRPO), an algorithm from large language model alignment that eliminates the baseline entirely by normalizing advantages within groups of sampled trajectories. In a controlled comparison of five RL algorithms on TSP and CVRP benchmarks within the RL4CO framework, we find that: (i) GRPO avoids the training collapse observed with REINFORCE on TSP-100, where performance degrades from cost 9.8 to 52.1 immediately after the warmup phase and does not recover under extended training; (ii) at matched gradient updates, GRPO achieves solution quality within 2% of POMO, a strong AM-based multi-start baseline, while requiring no external baseline; and (iii) P3O, a pairwise preference algorithm also from the alignment literature, is competitive on TSP but shows higher variability on CVRP. These results identify GRPO as a promising baseline-free alternative for NCO, particularly in settings where baseline-dependent training becomes fragile.",
+  "abstract_zh": "神经组合优化（NCO）通常训练自回归策略来求解路径规划问题。标准训练方法 REINFORCE with rollout baseline 需要维护并周期性更新一个冻结策略副本，用于降低方差；但这种 baseline 会带来结构性脆弱性：在更难实例上，较差的 baseline 会产生高噪声梯度估计，从而破坏训练稳定性。本文在 RL4CO 框架内，对 TSP 与 CVRP 基准上的五种强化学习算法进行受控比较，重点评估来自大语言模型对齐领域的 Group Relative Policy Optimization（GRPO）。GRPO 通过在一组采样轨迹内部归一化 advantage，完全移除外部 baseline。实验发现：GRPO 避免了 REINFORCE 在 TSP-100 上出现的训练崩溃；在相同梯度更新次数下，GRPO 的解质量与强 AM-based multi-start baseline POMO 相差在 2% 以内；另一种来自对齐领域的 pairwise preference 算法 P3O 在 TSP 上具有竞争力，但在 CVRP 上波动更大。结果表明，GRPO 是一种有前景的无基线 NCO 训练替代方案，尤其适用于 baseline 依赖训练不稳定的场景。",
+  "key_points_zh": [
+    "问题背景：NCO 中常用的 REINFORCE with rollout baseline 依赖冻结策略副本做方差降低，但在困难实例上 baseline 质量不足会导致梯度噪声和训练不稳定。",
+    "核心方法：引入 Group Relative Policy Optimization（GRPO），通过组内多条采样轨迹的相对 advantage 归一化进行策略优化，无需外部 baseline。",
+    "主要结果：在 TSP-100 上，REINFORCE 在 warmup 后成本从 9.8 恶化到 52.1 且长期无法恢复，而 GRPO 避免了这种训练崩溃。",
+    "性能对比：在匹配梯度更新次数下，GRPO 的解质量与强基线 POMO 相差在 2% 以内，同时不需要维护 rollout baseline。",
+    "补充发现：P3O 在 TSP 上表现有竞争力，但在 CVRP 上方差更高，说明不同 alignment-derived 算法在 NCO 任务中的稳定性存在差异。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.3,
+    "problem_significance": 0.12,
+    "potential_impact": 0.08,
+    "paradigm_shift": 0.08,
+    "lasting_value": 0.06,
+    "llm_avg": 0.12799999999999997,
+    "comment": "An RL algorithm study for combinatorial optimization that is largely outside the target agent-platform domain.",
+    "comment_zh": "该论文是组合优化中的强化学习算法研究，基本不属于目标代理平台领域。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.12799999999999997,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10321/fig1.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10321/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10321/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

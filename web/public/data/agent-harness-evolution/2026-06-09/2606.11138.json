@@ -1,0 +1,71 @@
+{
+  "arxiv_id": "2606.11138",
+  "title": "First-Order Trajectory Matching: Fast Ensemble Predictions of Chaotic, Turbulent, Stochastic Systems",
+  "title_zh": "First-Order Trajectory Matching：面向混沌、湍流与随机系统的快速集成预测",
+  "authors": [
+    "Shreya Jha",
+    "Timo Schorlepp",
+    "Nicholas Geissler",
+    "Jules Berman",
+    "Benjamin Peherstorfer"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T17:29:05Z",
+  "abs_url": "https://arxiv.org/abs/2606.11138v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11138",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We introduce First-Order Trajectory Matching (FTM), a surrogate-modeling method that learns the first-order local transport of probability mass from trajectories of stochastic systems. By matching the symmetric first-order motion of trajectories, FTM learns the probability current velocity, whose flow preserves time marginals to match ensemble averages, while also capturing current-like trajectory quantities such as fluxes, circulations, and barrier-crossing currents. FTM learns the current velocity directly from trajectories, avoiding drift, diffusion, and score estimation. Our stability analysis separates discretization error from sampling variance and shows that the one-step simulation-free FTM loss is stable when temporal resolution and sample size are properly balanced. Across stochastic dynamical systems and PDE examples, we empirically demonstrate that FTM provides trajectory-aware ensemble predictions at low, deterministic-rollout cost.",
+  "abstract_zh": "本文提出 First-Order Trajectory Matching（FTM），一种从随机系统轨迹中学习概率质量一阶局部输运的代理建模方法。FTM 通过匹配轨迹的对称一阶运动来学习概率流速度（probability current velocity），其流能够保持时间边缘分布，从而匹配集成平均；同时还能捕捉通量、环流、越障电流等类似概率流的轨迹量。该方法直接从轨迹学习概率流速度，避免了对漂移项、扩散项和 score 的估计。作者的稳定性分析将离散化误差与采样方差分离，并表明：当时间分辨率与样本量适当平衡时，单步、无需仿真的 FTM 损失是稳定的。在多个随机动力系统与 PDE 示例中，FTM 以低成本的确定性 rollout 实现了具备轨迹感知能力的集成预测。",
+  "key_points_zh": [
+    "提出 First-Order Trajectory Matching（FTM），从轨迹中学习概率质量的一阶局部输运，用作随机、混沌、湍流系统的代理模型。",
+    "FTM 直接学习 probability current velocity，避免显式估计 drift、diffusion 或 score，降低建模复杂度。",
+    "方法不仅匹配时间边缘分布和集成平均，还能捕捉 fluxes、circulations、barrier-crossing currents 等轨迹相关物理量。",
+    "理论上给出稳定性分析，区分离散化误差与采样方差，说明在时间分辨率和样本量平衡时单步 FTM loss 稳定。",
+    "在随机动力系统和 PDE 实验中，FTM 以低成本确定性 rollout 实现快速、轨迹感知的 ensemble prediction。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.35,
+    "potential_impact": 0.25,
+    "paradigm_shift": 0.18,
+    "lasting_value": 0.18,
+    "llm_avg": 0.30199999999999994,
+    "comment": "Technically interesting for stochastic surrogate modeling, but largely outside agent harness evolution and production agent infrastructure.",
+    "comment_zh": "该工作在随机系统代理建模上有技术兴趣，但基本不属于智能体框架演进或生产级基础设施方向。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.30199999999999994,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11138/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

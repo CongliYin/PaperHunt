@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2606.10968",
+  "title": "Beyond Uniform Token-Level Trust Region in LLM Reinforcement Learning",
+  "title_zh": "超越 LLM 强化学习中的统一 Token 级信赖域",
+  "authors": [
+    "Renjie Mao",
+    "Xiangxin Zhou",
+    "Lvfang Tao",
+    "Yixin Ding",
+    "Yu Shi",
+    "Yongguang Lin",
+    "Yuheng Wu",
+    "Honglin Zhu",
+    "Qian Qiu",
+    "Wenxi Zhu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T15:09:29Z",
+  "abs_url": "https://arxiv.org/abs/2606.10968v2",
+  "pdf_url": "https://arxiv.org/pdf/2606.10968",
+  "links": {
+    "github": null,
+    "project_page": "https://hunyuan-cppo.github.io/"
+  },
+  "abstract_en": "Reinforcement learning with verifiable rewards (RLVR) has become standard for improving LLM reasoning. However, existing PPO-style trust-region mechanisms remain position-agnostic by enforcing uniform thresholds across all tokens independently. This pointwise treatment conflicts with autoregressive generation in two critical ways. First, uniform thresholds ignore autoregressive asymmetry. Early-stage deviations produce compounding sequence-level drift, causing static thresholds to under-regulate early divergence and excessively constrain late-stage exploration. Second, evaluating token-level divergence in isolation overlooks cumulative prefix drift, granting the same divergence allowance regardless of how far the conditioning history has already deviated from the rollout policy. To address this limitation, we propose CPPO (Cumulative Prefix-divergence Policy Optimization), a token-level masking rule that aligns updates with a finite-horizon policy-improvement bound via two coupled mechanisms. First, a position-weighted threshold imposes stricter limits at early positions whose effects persist longer, relaxing constraints for late-stage tokens. Second, a cumulative prefix budget tracks historical deviations, dynamically restricting further token-level deviation to prevent compounding errors along the prefix. Empirically, CPPO enhances training stability and significantly improves reasoning accuracy across various model scales.",
+  "abstract_zh": "基于可验证奖励的强化学习（RLVR）已成为提升 LLM 推理能力的常用方法，但现有 PPO 风格的信赖域机制通常对所有 token 施加位置无关的统一阈值。这种逐点处理方式与自回归生成存在冲突：一方面，早期 token 的偏移会在序列层面累积放大，统一阈值容易低估早期偏离风险、同时过度限制后期探索；另一方面，孤立评估 token 级分布差异会忽略前缀已产生的累计漂移，使模型在不同历史偏离程度下仍获得相同的偏离额度。为此，论文提出 CPPO（Cumulative Prefix-divergence Policy Optimization），一种 token 级 masking 规则，通过位置加权阈值和累计前缀预算与有限时域策略改进界对齐。前者对影响更持久的早期位置施加更严格约束，并放宽后期 token；后者跟踪历史偏差，动态限制后续 token 的额外偏离，从而抑制前缀漂移导致的复合误差。实验表明，CPPO 在不同模型规模上提升了训练稳定性，并显著改善推理准确率。",
+  "key_points_zh": [
+    "指出现有 PPO 式 token 级信赖域的核心缺陷：统一阈值忽略自回归生成中早期 token 偏移会长期影响后续序列的非对称性。",
+    "提出 CPPO，通过位置加权阈值对早期 token 施加更强约束、对后期 token 放宽限制，以平衡稳定性与探索。",
+    "引入累计前缀预算，跟踪 rollout policy 与当前策略在历史前缀上的累计偏离，并据此动态限制后续 token 更新。",
+    "方法以 token-level masking 形式实现，可与 RLVR/PPO 类训练流程结合，目标是减少序列级 compounding drift。",
+    "实验显示 CPPO 在多个模型规模上提升训练稳定性，并带来更好的推理准确率。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.58,
+    "problem_significance": 0.55,
+    "potential_impact": 0.42,
+    "paradigm_shift": 0.32,
+    "lasting_value": 0.34,
+    "llm_avg": 0.442,
+    "comment": "Useful for generic LLM RL stability but only weakly connected to agent harness infrastructure or production control.",
+    "comment_zh": "该工作有助于通用LLM强化学习稳定性，但与代理运行时基础设施和生产控制关联较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.4,
+    "community_heat": 0.8819124816001798,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.442,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://hunyuan-cppo.github.io/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 41,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10968/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.587
+    }
+  ]
+}

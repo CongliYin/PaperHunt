@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2606.10694",
+  "title": "REAL: A Reasoning-Enhanced Graph Framework for Long-Term Memory Management of LLMs",
+  "title_zh": "REAL：用于 LLM 长期记忆管理的推理增强图框架",
+  "authors": [
+    "Keer Lu",
+    "Liwei Chen",
+    "Guoqing Jiang",
+    "Zhiheng Qin",
+    "Yunhuai Liu",
+    "Wentao Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T10:53:10Z",
+  "abs_url": "https://arxiv.org/abs/2606.10694v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10694",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large Language Models (LLMs) are increasingly expected to interact with users over long time horizons. However, due to their finite context window, LLMs cannot retain all past interactions, making long-term memory management essential for storing, updating, and retrieving historical information beyond the context limit. Although recent memory systems attempt to address this issue by storing historical information externally, existing approaches suffer from three key limitations: flat text-based memory organizations fail to capture explicit relations among memories, structured memory systems often destructively overwrite evolving facts, and current retrieval mechanisms remain query-agnostic and passive when evidence is incomplete. REAL constructs long-term conversational memory as a temporal and confidence-aware directed property graph, where each atomic fact is represented with entities, relations, valid-time intervals, confidence scores, and exploration intent labels. During memory construction, REAL adopts a non-destructive temporal update strategy that preserves parallel fact versions and their validity intervals, enabling faithful tracking of fact evolution. During retrieval, REAL anchors query-relevant root entities, decouples their exploration intents, and performs semantic evaluator-guided hybrid beam search to extract compact memory subgraphs. It further incorporates counterfactual inference to repair unreliable retrieval states and recover missing memory evidence through implicit logical relations. Comprehensive experiments demonstrate that REAL substantially improves long-term memory performance over flat-text, graph-based, and existing memory baselines, achieving an average improvement of 22.72\\%.",
+  "abstract_zh": "随着 Large Language Models (LLMs) 越来越多地需要与用户进行长期交互，有限上下文窗口使其无法保留全部历史对话，因此必须通过长期记忆管理来存储、更新和检索超出上下文限制的信息。现有外部记忆系统仍存在三类问题：扁平文本记忆难以显式建模记忆之间的关系；结构化记忆系统常以破坏性方式覆盖持续变化的事实；现有检索机制在证据不完整时通常是 query-agnostic 且被动的。REAL 将长期会话记忆构建为带时间与置信度感知的有向属性图，每个原子事实包含实体、关系、有效时间区间、置信分数和探索意图标签。在记忆构建阶段，REAL 采用非破坏性时间更新策略，保留并行事实版本及其有效区间，以忠实追踪事实演化。在检索阶段，REAL 锚定与查询相关的根实体，解耦其探索意图，并通过 semantic evaluator 引导的 hybrid beam search 提取紧凑记忆子图；同时引入 counterfactual inference 修复不可靠检索状态，并通过隐式逻辑关系恢复缺失证据。综合实验表明，REAL 相比扁平文本、图结构以及现有记忆基线显著提升长期记忆性能，平均提升 22.72%。",
+  "key_points_zh": [
+    "提出 REAL，将长期对话记忆表示为 temporal and confidence-aware directed property graph，显式记录实体、关系、有效时间区间、置信度与探索意图。",
+    "采用非破坏性时间更新策略，避免直接覆盖演化事实，保留多个事实版本及其 valid-time intervals，从而支持更可靠的历史追踪。",
+    "检索阶段通过查询相关 root entities 锚定、探索意图解耦和 semantic evaluator-guided hybrid beam search，抽取紧凑且相关的记忆子图。",
+    "引入 counterfactual inference，在检索证据不完整或状态不可靠时，通过隐式逻辑关系补全缺失记忆证据。",
+    "实验显示 REAL 相比 flat-text、graph-based 和现有 memory baselines 在长期记忆任务上平均提升 22.72%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.78,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.6,
+    "lasting_value": 0.72,
+    "llm_avg": 0.708,
+    "comment": "Solid graph-based long-term memory management with temporal confidence and active retrieval, though mostly centered on conversational memory rather than full agent platform evolution.",
+    "comment_zh": "该工作在带时间与置信度的图式长期记忆和主动检索方面扎实，但主要面向对话记忆而非完整智能体平台演化。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.708,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10694/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10694/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10694/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.457
+    }
+  ]
+}

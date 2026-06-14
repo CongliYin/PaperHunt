@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.10709",
+  "title": "Effective Reinforcement Learning for Agentic Search by Recycling Zero-Variance Queries During Training",
+  "title_zh": "通过回收训练中的零方差查询实现高效的 Agentic Search 强化学习",
+  "authors": [
+    "João Coelho",
+    "João Magalhães",
+    "Bruno Martins",
+    "Chenyan Xiong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T11:12:58Z",
+  "abs_url": "https://arxiv.org/abs/2606.10709v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10709",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The use of GRPO-style algorithms has become the standard strategy for training LLM search agents under outcome-only rewards. With these algorithms, a query contributes to parameter updates only when its rollout group mixes successes and failures; all-correct (too-easy) and all-incorrect (too-hard) groups are zero-variance and waste rollout cost. Existing approaches treat zero-variance as a static property and either discard or pre-filter such groups. We hypothesize and empirically validate that queries flip between zero-variance and signal-bearing states as the policy evolves during training. Building on this intuition, we propose query recycling, which returns zero-variance groups to a mutable pool for future resampling, so that the effective training distribution co-evolves with the policy. With the proposed technique, a 1.7B parameter model trained on synthetic data can reach 66.0 average Pass@1 accross seven multi-hop QA benchmarks, matching or surpassing systems with up to 7B parameters trained on benchmark-derived supervision. Analysis of recycling patterns shows that recycled queries supply roughly three quarters of the effective batch by the end of training, with contributions split between recovery from policy improvement and policy drift.",
+  "abstract_zh": "在仅有结果奖励（outcome-only rewards）的设定下，GRPO-style algorithms 已成为训练 LLM search agents 的标准策略。此类算法中，只有当同一查询的 rollout group 同时包含成功与失败样本时，该查询才会对参数更新产生有效信号；全正确的“过易”组和全错误的“过难”组属于零方差（zero-variance），会浪费 rollout 成本。既有方法通常将零方差视为静态属性，并选择丢弃或预过滤这些组。本文提出并实证验证：随着策略在训练中演化，查询会在零方差状态与有训练信号状态之间切换。基于此，作者提出 query recycling：将零方差组放回可变查询池，在后续训练中重新采样，使有效训练分布与策略共同演化。实验表明，使用该技术，一个在合成数据上训练的 1.7B 参数模型，在七个 multi-hop QA benchmarks 上达到 66.0 平均 Pass@1，匹配或超过使用 benchmark-derived supervision 训练的最高 7B 参数系统。进一步分析显示，到训练后期，回收查询约贡献了有效 batch 的四分之三，其收益来自策略改进后的“恢复可学性”以及策略漂移带来的重新产生信号。",
+  "key_points_zh": [
+    "指出 GRPO-style training 中零方差 rollout group 并非永久无用，而会随着 policy evolution 在“无信号”和“有信号”状态间切换。",
+    "提出 query recycling：不丢弃全对或全错的查询组，而是放回 mutable pool，未来重新采样，以减少 rollout 浪费。",
+    "方法让有效训练分布与当前策略共同演化，尤其适合 outcome-only rewards 下的 LLM search agents 训练。",
+    "1.7B 模型仅用 synthetic data 训练，即在七个 multi-hop QA benchmarks 上达到 66.0 平均 Pass@1，媲美或超过部分 7B 监督训练系统。",
+    "训练后期，recycled queries 约占有效 batch 的四分之三，主要收益来自 policy improvement 后原难题变可学，以及 policy drift 使原稳定查询重新产生方差信号。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.65,
+    "problem_significance": 0.62,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.55,
+    "llm_avg": 0.556,
+    "comment": "A useful agentic-RL training efficiency method with some trace-driven evolution value, but limited harness architecture or production-control contribution.",
+    "comment_zh": "该工作对智能体搜索的强化学习训练效率有价值，但对生产级智能体框架与运行控制贡献有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3911814377866111,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.556,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 8,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10709/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10709/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10709/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.95
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10709/fig4.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.935
+    }
+  ]
+}

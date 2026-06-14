@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.10581",
+  "title": "ParaBridge: Bridging Paralinguistic Perception and Dialogue Behavior in Speech Language Models",
+  "title_zh": "ParaBridge：连接语音语言模型中的副语言感知与对话行为",
+  "authors": [
+    "Yuxiang Wang",
+    "Qinke Ni",
+    "Shengbo Cai",
+    "Wan Lin",
+    "Liqiang Zhang",
+    "Zhizheng Wu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T08:45:52Z",
+  "abs_url": "https://arxiv.org/abs/2606.10581v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10581",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Speech carries more information than just words: a child's voice, a fearful tone, or a noisy background should all lead a sufficiently competent spoken-dialogue assistant to different replies. Current Speech Language Models (SLMs) can recognize such paralinguistic cues but often ignore them in open-ended dialogue. We observe that a simple paralinguistic instruction scaffold at the inference stage narrows this perception-behavior gap, suggesting that the relevant cues are already latent in the model. Such scaffolds, however, remain brittle under multi-turn context and competing instructions. Therefore, we propose \\textbf{ParaBridge}, an on-policy self-distillation method that turns a brittle inference-time scaffold into stable model behavior. During training, the scaffold serves only as a temporary privileged view; the scaffold-free model rolls out its own response, while the scaffolded view supplies dense, full-vocabulary next-token targets along its trajectory. This supervision teaches when non-lexical cues should affect the reply without the need for curated dialogues, human labels, or external reward models. On Qwen3-Omni-thinking, ParaBridge raises scaffold-free VoxSafeBench SAR from $14.6\\%$ to $40.3\\%$ and improves EchoMind average rating from $3.27$ to $3.92$. It also preserves general ability, with MMAU-Pro, VoiceBench, and GPQA all within $0.4$ points of the original model. Beyond the training distribution, ParaBridge generalizes to unseen paralinguistic cues, transfers from safety-oriented training to empathy-oriented dialogue, and works on a different SLM backbone.",
+  "abstract_zh": "语音不仅包含文字信息，还包含儿童嗓音、恐惧语气、嘈杂背景等副语言线索（paralinguistic cues），这些线索应影响语音对话助手的回复。现有 Speech Language Models（SLMs）虽能识别这类线索，但在开放式对话中常常不会据此调整行为。论文发现，在推理阶段加入简单的副语言指令脚手架可以缩小“感知—行为”差距，说明相关线索已潜藏在模型内部。然而，这类脚手架在多轮上下文和竞争指令下较脆弱。为此，作者提出 ParaBridge，一种 on-policy self-distillation 方法，将脆弱的推理期脚手架转化为稳定的模型行为。训练时，脚手架仅作为临时的特权视角：无脚手架模型生成自身回复轨迹，而带脚手架视角沿该轨迹提供稠密的全词表 next-token 目标，从而教会模型何时应让非词汇语音线索影响回复，无需人工标注对话、人工标签或外部奖励模型。在 Qwen3-Omni-thinking 上，ParaBridge 将无脚手架 VoxSafeBench SAR 从 14.6% 提升至 40.3%，EchoMind 平均评分从 3.27 提升至 3.92，同时保持 MMAU-Pro、VoiceBench 和 GPQA 等通用能力指标在原模型 0.4 分以内。方法还能泛化到未见过的副语言线索，从安全导向训练迁移到共情对话，并适用于不同 SLM backbone。",
+  "key_points_zh": [
+    "指出现有 SLMs 存在副语言“能感知但不行动”的 perception-behavior gap：模型可识别语气、说话人特征、背景噪声等线索，却常在开放对话中忽略它们。",
+    "提出 ParaBridge：用推理期副语言指令脚手架作为训练中的临时特权视角，通过 on-policy self-distillation 将其知识蒸馏进无脚手架模型行为。",
+    "训练不依赖 curated dialogues、人工标签或外部 reward model；无脚手架模型自行 rollout，脚手架视角提供全词表 next-token 监督，强化何时应根据非词汇线索调整回复。",
+    "在 Qwen3-Omni-thinking 上显著提升副语言相关对话表现：VoxSafeBench SAR 从 14.6% 提至 40.3%，EchoMind 平均评分从 3.27 提至 3.92。",
+    "方法基本不损害通用能力，并展现跨线索、跨任务和跨 backbone 泛化：MMAU-Pro、VoiceBench、GPQA 与原模型差距均在 0.4 分以内。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.78,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.72,
+    "llm_avg": 0.716,
+    "comment": "A useful speech-agent alignment method that improves dialogue behavior from paralinguistic cues, though it is less centered on latency, tool use, or full realtime system design.",
+    "comment_zh": "这是一种有价值的语音智能体对齐方法，可增强副语言线索对对话行为的影响，但对延迟、工具调用和实时系统设计关注较少。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5114589040678263,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.716,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 25,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10581/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10581/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.981
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10581/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.98
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10581/fig4.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

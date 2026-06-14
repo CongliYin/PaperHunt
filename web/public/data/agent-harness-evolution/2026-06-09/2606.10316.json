@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.10316",
+  "title": "TabClaw: An Interactive and Self-Evolving Agent for Spreadsheet Manipulation and Table Reasoning",
+  "title_zh": "TabClaw：用于电子表格操作与表格推理的交互式自进化 Agent",
+  "authors": [
+    "Mingyue Cheng",
+    "Shuo Yu",
+    "Daoyu Wang",
+    "Qingchuan Li",
+    "Xiaoyu Tao",
+    "Qingyang Mao",
+    "Yitong Zhou",
+    "Qi Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T02:11:16Z",
+  "abs_url": "https://arxiv.org/abs/2606.10316v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10316",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Spreadsheets and tables are widely used representations for structured data analysis, but effective analysis still requires substantial manual effort and domain expertise. Recent large language model (LLM) agents can automate parts of this process, but they often provide limited transparency into intermediate decisions, rely on implicit assumptions, struggle with multi-table comparison, and repeat similar workflows without adapting to a user's preferences. This paper presents TabClaw, an open-source interactive AI agent for spreadsheet manipulation and table reasoning. Users upload CSV or Excel files and issue natural-language requests; TabClaw clarifies ambiguous intent, exposes an editable execution plan, streams a ReAct-style tool-using analysis loop, dispatches specialist agents for parallel multi-table reasoning, and synthesizes findings with explicit consensus and uncertainty markers. Beyond one-off analysis, TabClaw records completed workflows, extracts persistent user memory, distills reusable skills from repeated tool-use patterns, supports package-style skill import, and upgrades skills from negative feedback. Experiments on spreadsheet manipulation and table reasoning benchmarks show that TabClaw improves executable task completion and reasoning performance while preserving an inspectable user workflow. This paper shows how TabClaw turns spreadsheets and tables into inspectable analytical workflows while gradually personalizing itself to recurring data-analysis tasks. Our code is available.",
+  "abstract_zh": "电子表格与表格是结构化数据分析中最常见的表示形式，但高效分析仍依赖大量人工操作与领域经验。现有大型语言模型（LLM）Agent 虽能自动化部分流程，却常存在中间决策不透明、依赖隐含假设、难以处理多表对比，以及无法根据用户偏好持续适应等问题。本文提出 TabClaw，一个开源的交互式 AI Agent，面向电子表格操作与表格推理。用户可上传 CSV 或 Excel 文件，并用自然语言提出需求；TabClaw 会澄清模糊意图，展示可编辑的执行计划，以 ReAct 风格流式呈现工具调用分析过程，为多表推理并行调度专门 Agent，并在最终结果中显式标注共识与不确定性。除单次分析外，TabClaw 还会记录已完成工作流，抽取持久化用户记忆，从重复工具使用模式中蒸馏可复用技能，支持类似 package 的技能导入，并能基于负反馈升级技能。实验表明，TabClaw 在电子表格操作与表格推理基准上提升了可执行任务完成率与推理性能，同时保留了可检查的用户工作流。",
+  "key_points_zh": [
+    "TabClaw 面向 CSV/Excel 等表格数据，支持用户以自然语言发起电子表格操作与表格推理任务。",
+    "系统强调可检查性：会澄清模糊需求、生成可编辑执行计划，并流式展示 ReAct 风格的工具调用与推理过程。",
+    "针对多表任务，TabClaw 可并行调度 specialist agents 进行比较与推理，并在汇总时显式给出共识和不确定性标记。",
+    "具备自进化能力：记录历史工作流，抽取用户记忆，蒸馏可复用技能，支持技能导入，并可根据负反馈更新技能。",
+    "在电子表格操作与表格推理 benchmarks 上，TabClaw 提升了任务可执行完成率和推理表现，同时保留透明的分析流程。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.74,
+    "problem_significance": 0.76,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.8,
+    "llm_avg": 0.7520000000000001,
+    "comment": "Strong domain agent platform work combining inspectable tool workflows, persistent user memory, skill distillation, imports, and feedback-driven skill upgrades.",
+    "comment_zh": "该工作在表格领域结合了可检查工具流程、持久用户记忆、技能蒸馏、技能导入和反馈驱动升级，平台价值较强。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7520000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10316/fig1.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.983
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10316/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.947
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10316/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.941
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.11386",
+  "title": "Overcoming State Inertia in Full-Duplex Spoken Language Models via Activation Steering",
+  "title_zh": "通过 Activation Steering 克服全双工语音语言模型中的状态惯性",
+  "authors": [
+    "Cheng-Kuang Chang",
+    "Kai-Wei Chang",
+    "Alexander H. Liu",
+    "James Glass"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T19:08:07Z",
+  "abs_url": "https://arxiv.org/abs/2606.11386v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11386",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Full-duplex spoken language models (FD-SLMs) enable seamless speech interaction by allowing models to listen and speak simultaneously, yet the internal mechanism by which they coordinate listening and speaking remains underexplored. We analyze the predictive behavior encoded in FD-SLM hidden representations and find that they exhibit stream-specific predictive patterns: during listening, they preferentially predict the incoming user stream, whereas during speaking, they preferentially predict the model output stream. Building on this observation, we show that FD-SLMs dynamically modulate their internal predictive focus between two states: a generative state aligned with model output generation and a perceptive state aligned with incoming user input. However, this modulation can lag behind abrupt changes in conversational context. During user interruptions, the model remains transiently biased toward the generative state before transitioning into the perceptive state, causing it to miss the beginning of the incoming input. We term this delayed internal transition state inertia. To quantify its downstream impact, we introduce the Zero-Buffer Benchmark (ZBB), a diagnostic benchmark for evaluating immediate interruption comprehension when user speech begins abruptly. We evaluate this setting using response correctness and initial-word occurrence rate (IWOR). Finally, we mitigate state inertia through activation steering with a perception vector, a training-free intervention with little additional computational overhead. Across multiple state-of-the-art FD-SLMs, activation steering substantially improves interruption handling; for example, on PersonaPlex, it improves correctness from 28% to 45% and IWOR from 40% to 72% without any fine-tuning.",
+  "abstract_zh": "全双工语音语言模型（FD-SLMs）允许模型同时听与说，从而支持更自然的语音交互，但其内部如何协调“听”和“说”仍缺乏系统理解。本文分析 FD-SLM 隐表示中的预测行为，发现其存在流特异性预测模式：在聆听时更倾向预测用户输入流，在说话时更倾向预测模型输出流。基于此，作者指出 FD-SLM 会在两种内部状态间动态切换：面向模型生成的生成状态（generative state），以及面向用户输入感知的感知状态（perceptive state）。然而，当对话上下文突然变化，尤其是用户打断模型时，这种切换会滞后，模型会短暂保持生成状态偏置，导致漏听用户输入开头。作者将这一现象称为状态惯性（state inertia）。为评估其影响，论文提出 Zero-Buffer Benchmark（ZBB），用于诊断用户语音突然开始时模型的即时打断理解能力，并采用回答正确率与初始词出现率（IWOR）作为指标。最后，论文提出使用感知向量进行 activation steering，这是一种无需训练、额外计算开销很小的干预方法。实验显示，该方法在多个先进 FD-SLM 上显著改善打断处理能力；例如在 PersonaPlex 上，正确率从 28% 提升到 45%，IWOR 从 40% 提升到 72%，且无需微调。",
+  "key_points_zh": [
+    "发现 FD-SLM 的隐藏表示存在两类预测焦点：说话时偏向模型输出流，聆听时偏向用户输入流，对应生成状态与感知状态。",
+    "提出“状态惯性”概念：用户突然打断时，模型内部从生成状态切换到感知状态存在延迟，导致遗漏用户语音开头。",
+    "构建 Zero-Buffer Benchmark（ZBB），专门评估无缓冲、突发用户输入场景下的即时打断理解能力，并使用 correctness 与 IWOR 衡量表现。",
+    "提出基于 perception vector 的 activation steering 方法，无需训练或微调，计算开销低，可直接调节模型内部状态。",
+    "在多个 SOTA FD-SLM 上验证有效性；在 PersonaPlex 中，正确率由 28% 提升至 45%，IWOR 由 40% 提升至 72%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.58,
+    "problem_significance": 0.48,
+    "potential_impact": 0.42,
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.36,
+    "llm_avg": 0.418,
+    "comment": "A practical intervention for spoken-agent interruption handling, relevant to runtime reliability but narrow and not a general agent harness contribution.",
+    "comment_zh": "该工作对语音智能体的打断处理有实用意义，涉及运行可靠性但范围较窄，非通用智能体框架贡献。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.418,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11386/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11386/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11386/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.947
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11386/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.848
+    }
+  ]
+}

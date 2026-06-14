@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.10532",
+  "title": "ActiveMem: Distributed Active Memory for Long-Horizon LLM Reasoning",
+  "title_zh": "ActiveMem：面向长程 LLM 推理的分布式主动记忆",
+  "authors": [
+    "Yunhan Jiang",
+    "Wenbin Duan",
+    "Shasha Guo",
+    "Liang Pang",
+    "Xiaoqian Sun",
+    "Huawei Shen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T08:03:38Z",
+  "abs_url": "https://arxiv.org/abs/2606.10532v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10532",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Memory is essential for enabling large language model (LLM) agents to handle long-horizon reasoning tasks. Existing memory mechanisms are largely centralized, typically organizing retrieved information and interaction history within a single model context. This design imposes a fundamental trade-off: scaling reasoning trajectories risks context overload, whereas aggressive content pruning may result in irreversible information loss. Seeking a better trade-off, we draw inspiration from human cognitive systems, especially the functional complementarity between the prefrontal cortex (executive control) and the hippocampus (memory management), suggesting that such a trade-off need not be inherent, but may instead stem from centralized memory organization. To this end, we propose ActiveMem, a heterogeneous framework that decouples agent memory from the core reasoning process. Specifically, a high-level Planner utilizes distilled semantic gists to execute reasoning, while a lightweight, distributed memory system operates in parallel to actively accumulate and consolidate these gists throughout the task. Experiments on BrowseComp-Plus and GAIA show that ActiveMem achieves state-of-the-art accuracy with significantly reduced overhead, demonstrating the effectiveness of distributed active memory for long-horizon reasoning.",
+  "abstract_zh": "记忆机制对于让大型语言模型（LLM）智能体处理长程推理任务至关重要。现有方法大多采用集中式记忆，将检索信息与交互历史统一放入单一模型上下文中，导致推理轨迹扩展时容易上下文过载，而过度裁剪又可能造成不可逆的信息丢失。本文受人类认知系统启发，尤其是前额叶皮层（prefrontal cortex）的执行控制与海马体（hippocampus）的记忆管理之间的功能互补，提出这种权衡并非必然，而可能源于集中式记忆组织方式。为此，作者提出 ActiveMem，一种异构框架，将智能体记忆与核心推理过程解耦：高层 Planner 只使用蒸馏后的语义要点（semantic gists）进行推理，同时轻量级分布式记忆系统并行地主动积累、整合这些要点。在 BrowseComp-Plus 和 GAIA 上的实验表明，ActiveMem 以显著更低开销取得了 state-of-the-art 准确率，验证了分布式主动记忆对长程推理的有效性。",
+  "key_points_zh": [
+    "指出集中式记忆机制在长程 LLM agent 推理中存在上下文过载与信息丢失之间的根本权衡。",
+    "提出 ActiveMem，将记忆管理从核心推理流程中解耦，采用类似前额叶皮层与海马体分工的异构架构。",
+    "高层 Planner 基于蒸馏后的 semantic gists 进行决策，避免将完整历史与检索内容全部塞入上下文。",
+    "轻量级分布式记忆系统并行运行，主动积累、更新和整合任务过程中的关键信息。",
+    "在 BrowseComp-Plus 与 GAIA 上取得 state-of-the-art 准确率，同时显著降低推理与记忆管理开销。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.7,
+    "problem_significance": 0.76,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.6,
+    "lasting_value": 0.7,
+    "llm_avg": 0.696,
+    "comment": "Promising distributed memory architecture for long-horizon agents, but it appears focused on reasoning performance more than durable operational controls or evaluation governance.",
+    "comment_zh": "该工作提出了有前景的长程智能体分布式记忆架构，但重点更在推理性能而非持久运行控制或评测治理。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.696,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10532/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10532/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10532/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10532/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.881
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.10600",
+  "title": "Toward Proactive RF Charging Scheduling: Generative AI for Decision Support",
+  "title_zh": "迈向主动式 RF 充电调度：用于决策支持的生成式 AI",
+  "authors": [
+    "Amirhossein Azarbahram",
+    "Osmel M. Rosabal",
+    "David Ernesto Ruiz-Guirola",
+    "Melike Erol-Kantarci",
+    "Kaibin Huang",
+    "Onel L. A. López"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T09:04:19Z",
+  "abs_url": "https://arxiv.org/abs/2606.10600v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10600",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Radio frequency wireless power transfer (RF-WPT) is an enabling technology for supporting uninterrupted communications in future Internet of Things systems by reducing the need for battery replacement and mitigating battery-waste-related issues. For large-scale RF-WPT deployment, one of the main challenges is the scheduler-level resource allocation. Specifically, the transmitter must decide how much energy to deliver, when, and to whom, under limited charging resources, incomplete receiver-side information, and uncertain near-future charging conditions. This article positions generative artificial intelligence (GenAI) as a promising tool for this setting because it can foresee multiple plausible charging scenarios conditioned on coarse operational context and receiver-side information. We propose GenAI to act as an uncertainty-aware support layer for the RF-WPT scheduler rather than as a standalone forecasting or decision-making tool. To this end, we first revisit the main challenges of RF-WPT scheduling, and discuss how major GenAI families can support uncertainty-aware charging decisions by generating scenario-based inputs for downstream tasks. We then present a warehouse-style case study showing that preserving uncertainty through the sampling capability of generative models can improve robust charging decisions compared with deterministic prediction and simple non-learning baselines, especially under risk-sensitive objectives. Finally, we identify key open challenges and present some directions for future research.",
+  "abstract_zh": "射频无线电能传输（RF-WPT）有望通过减少电池更换需求并缓解电池废弃物问题，支撑未来 Internet of Things 系统中的持续通信。面向大规模 RF-WPT 部署，核心挑战之一是调度器层面的资源分配：在充电资源有限、接收端信息不完整、近未来充电条件不确定的情况下，发射端需要决定向谁、何时、输送多少能量。本文将生成式人工智能（GenAI）定位为该场景下的潜在工具，因为它能够基于粗粒度运行上下文和接收端信息，生成多个可能的充电情景。作者主张 GenAI 不应作为独立预测器或决策器，而应作为 RF-WPT 调度器的“不确定性感知”支持层，为下游任务提供基于情景的输入。文章首先回顾 RF-WPT 调度的主要挑战，并讨论不同 GenAI 家族如何通过生成情景输入来支持不确定性感知的充电决策；随后通过仓库式案例研究表明，相比确定性预测和简单非学习基线，生成模型的采样能力能更好保留不确定性，从而提升鲁棒充电决策，尤其适用于风险敏感目标；最后总结开放挑战并提出未来研究方向。",
+  "key_points_zh": [
+    "问题聚焦于大规模 RF-WPT 中的调度器级资源分配：在资源受限、接收端信息不完整和未来条件不确定下，决定充电对象、时机与能量数量。",
+    "论文提出将 GenAI 作为“不确定性感知支持层”，而非端到端预测或决策工具，用于生成多个可能的未来充电情景供调度器使用。",
+    "作者梳理了主要 GenAI 方法家族在 RF-WPT 调度中的潜在作用，包括基于上下文和接收端信息生成情景化输入，以支持下游优化与决策。",
+    "仓库式案例研究显示，生成模型通过采样保留不确定性，相比确定性预测和简单非学习基线，在鲁棒充电决策上更有优势。",
+    "该方法在风险敏感目标下尤其有效，同时仍面临模型可靠性、场景覆盖、与调度优化器集成及实际部署验证等开放挑战。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.32,
+    "problem_significance": 0.22,
+    "potential_impact": 0.16,
+    "paradigm_shift": 0.12,
+    "lasting_value": 0.12,
+    "llm_avg": 0.188,
+    "comment": "Mostly an RF scheduling decision-support paper with little relevance to LLM agent harness evolution.",
+    "comment_zh": "该论文主要面向射频充电调度决策支持，与LLM代理平台演进关系很弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.188,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10600/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10600/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10600/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10600/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.626
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "arxiv_id": "2606.11079",
+  "title": "VISTA: A Versatile Interactive User Simulation Toolkit for Agent Evaluation",
+  "title_zh": "VISTA：用于智能体评测的通用交互式用户模拟工具包",
+  "authors": [
+    "Yunan Lu",
+    "Ryan Shea",
+    "Yusen Zhang",
+    "Zhou Yu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T16:39:32Z",
+  "abs_url": "https://arxiv.org/abs/2606.11079v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11079",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Evaluation remains a critical bottleneck for interactive agent development. Existing evaluation methods often rely on static benchmarks, which fail to capture the dynamic, multi-step nature of agentic behavior and struggle to expose meaningful failure modes. While user-simulation-based evaluation offers a promising alternative, existing simulation frameworks suffer from two major limitations. First, they provide limited mechanisms for evaluating the quality and comprehensiveness of simulated interactions, making it difficult to assess whether a simulator sufficiently explores an agent's capabilities and failure modes. Second, most frameworks are restricted to either UI-only actions or API-only actions, limiting their ability to model the full range of realistic user behaviors. To address these limitations, we propose VISTA, a Versatile Interactive user Simulation Toolkit for Agent evaluation. Our toolkit includes a suite of six metrics for measuring the realism, capability coverage, and interaction effectiveness of simulated interactions. In addition, we develop a hybrid user simulator that integrates both UI-based interactions and API-based interactions, enabling more realistic and comprehensive evaluation across diverse interactive environments. We evaluate VISTA in e-commerce shopping and education customer service settings and demonstrate that it produces more realistic and comprehensive evaluations than existing methods.",
+  "abstract_zh": "交互式智能体的发展仍受限于评测瓶颈。现有评测方法多依赖静态基准，难以刻画智能体动态、多步交互行为，也不易暴露有意义的失败模式。基于用户模拟的评测虽有潜力，但现有模拟框架存在两点不足：一是缺少衡量模拟交互质量与覆盖度的机制，难以判断模拟器是否充分探索了智能体能力与失败模式；二是多数框架仅支持 UI-only 或 API-only 操作，无法建模真实用户更丰富的行为。为此，论文提出 VISTA，一个面向智能体评测的 Versatile Interactive user Simulation Toolkit。VISTA 提供六类指标，用于衡量模拟交互的真实性、能力覆盖度与交互有效性；同时构建混合用户模拟器，结合 UI-based interaction 与 API-based interaction，以支持跨多种交互环境的更真实、更全面评测。作者在电商购物与教育客服场景中验证了 VISTA，结果显示其相比现有方法能产生更真实、覆盖更全面的评测。",
+  "key_points_zh": [
+    "提出 VISTA，用于交互式智能体评测，目标是弥补静态 benchmark 难以评估多步动态行为和失败模式的不足。",
+    "设计六类评测指标，覆盖模拟交互的真实性、能力覆盖度与交互有效性，帮助判断用户模拟是否充分、可靠。",
+    "构建 hybrid user simulator，同时支持 UI-based interactions 与 API-based interactions，比单一 UI-only/API-only 框架更接近真实用户行为。",
+    "在 e-commerce shopping 和 education customer service 场景中进行实验，显示 VISTA 相比现有方法能提供更真实、更全面的评测。",
+    "论文贡献集中在评测工具与模拟机制，而非单一智能体模型改进，适合关注 agent evaluation、user simulation 和 interactive environment 的研究者。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.65,
+    "problem_significance": 0.68,
+    "potential_impact": 0.62,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.6,
+    "llm_avg": 0.6100000000000001,
+    "comment": "A useful agent-evaluation toolkit with partial e-commerce grounding through shopping simulations, though its main contribution remains broadly generic.",
+    "comment_zh": "该工具包对智能体评测有实用价值，并通过购物仿真与电商部分相关，但核心贡献仍偏通用。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6100000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11079/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2606.11425",
+  "title": "JailbreakOPT: Tool-Assisted Iterative Jailbreak Prompt Optimization",
+  "title_zh": "JailbreakOPT：工具辅助的迭代式越狱提示优化",
+  "authors": [
+    "Ge Shi",
+    "Jun Yin",
+    "Donglin Xie",
+    "Fangyi Liu",
+    "Yucan Li",
+    "Menglin Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-09T20:22:29Z",
+  "abs_url": "https://arxiv.org/abs/2606.11425v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11425",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Jailbreak attacks expose persistent safety weaknesses in large language models (LLMs), but existing stateless single-turn methods face a trade-off: hand-crafted prompts are expressive but static, while iterative prompt optimization can adapt but often relies on low-level mutations that require many target queries. We propose JailbreakOPT, a tool-assisted framework for improving iterative single-turn jailbreak prompt optimization. JailbreakOPT organizes diverse atomic jailbreak prompts into an attack tool library and composes them through a unified intra-episode optimization abstraction to generate stronger standalone attack prompts. To reuse experience across attack episodes, JailbreakOPT further frames tool selection as a contextual bandit problem and applies contextual Thompson sampling to guide exploration and exploitation based on past outcomes. Experiments across multiple target LLMs and attack goals show that JailbreakOPT improves attack success rate (ASR) while reducing the number of attacks until success (No.A) compared with atomic single-turn attacks and existing iterative optimization baselines. This paper may contain offensive or harmful content.",
+  "abstract_zh": "本文提出 JailbreakOPT，一个用于改进单轮越狱提示迭代优化的工具辅助框架。针对现有无状态单轮攻击中“人工提示表达力强但静态、迭代优化可自适应但依赖低层扰动且查询开销大”的矛盾，JailbreakOPT 将多样化的原子越狱提示组织为攻击工具库，并通过统一的 episode 内优化抽象组合这些工具，生成更强的独立攻击提示。为在不同攻击 episode 间复用经验，JailbreakOPT 将工具选择建模为 contextual bandit 问题，并使用 contextual Thompson sampling 根据历史结果平衡探索与利用。多目标 LLM 与多攻击目标实验表明，相比原子单轮攻击和现有迭代优化基线，JailbreakOPT 可提升攻击成功率（ASR），同时减少成功前攻击次数（No.A）。",
+  "key_points_zh": [
+    "提出 JailbreakOPT，将多种原子 jailbreak prompt 封装为 attack tool library，用组合式工具调用替代低层文本突变。",
+    "设计统一的 intra-episode optimization 抽象，在单个攻击 episode 内迭代组合工具，生成更强的单轮 standalone attack prompt。",
+    "将跨 episode 的工具选择建模为 contextual bandit，并采用 contextual Thompson sampling 利用历史攻击反馈提升搜索效率。",
+    "在多个目标 LLM 和攻击目标上，JailbreakOPT 相比原子单轮攻击与既有迭代优化方法提升 ASR，并降低 No.A。",
+    "论文聚焦 LLM 安全评估中的 jailbreak attack，内容可能包含有害或冒犯性示例，应在受控研究环境中使用。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.62,
+    "problem_significance": 0.55,
+    "potential_impact": 0.45,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.38,
+    "llm_avg": 0.48999999999999994,
+    "comment": "Technically interesting attack optimization with experience reuse, but it is primarily offensive jailbreak work with limited constructive value for agent harness infrastructure.",
+    "comment_zh": "该工作在越狱攻击优化和经验复用上有一定技术性，但主要是攻击方法，对智能体底座建设的正向长期价值有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.48999999999999994,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11425/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11425/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.946
+    }
+  ]
+}
