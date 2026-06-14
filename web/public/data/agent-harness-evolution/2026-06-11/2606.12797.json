@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.12797",
+  "title": "The Containment Gap: How Deployed Agentic AI Frameworks Fail Public-Facing Safety Requirements",
+  "title_zh": "遏制缺口：已部署 Agentic AI 框架如何未能满足公共场景安全要求",
+  "authors": [
+    "Md Jafrin Hossain",
+    "Mohammad Arif Hossain",
+    "Weiqi Liu",
+    "Nirwan Ansari"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T01:46:26Z",
+  "abs_url": "https://arxiv.org/abs/2606.12797v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12797",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic large language model systems that autonomously invoke tools, maintain persistent memory, and execute multi-step plans are increasingly deployed in public-facing domains, including government services, healthcare triage, and financial advising. We ask whether the frameworks used to build these systems provide architectural-level structural safety guarantees. Applying six containment principles derived from a compositional model of agentic architectures, we audit three dominant frameworks (LangChain, AutoGPT, and OpenAI Agents SDK) and find no native compliance in any of them. Memory integrity, a defense against one of the most prevalent vulnerability classes, is not observed in any of the three evaluated frameworks. We validate these findings empirically: in a simulated government benefits agent built on LangChain, a single memory-poisoning write induces persistent targeted corruption across all tested seeds and backends, increasing the wrongful denial rate for targeted applicants to 88.9%. Under a complex five-factor policy, the same attack preserves aggregate accuracy while increasing targeted wrongful denials by 3.5x, rendering the corruption difficult to detect through standard monitoring. We then introduce two lightweight containment mechanisms: a memory integrity validator and a policy gate, which eliminate both attack vectors with sub-millisecond overhead (<0.2ms per call). We conclude that the current agentic framework ecosystem may not yet meet secure-by-default expectations for public-facing deployments and outline priority architectural interventions to enable trustworthy deployment in high-stakes, socially impactful applications.",
+  "abstract_zh": "本文研究具备工具调用、持久记忆和多步规划能力的 agentic large language model systems 在公共服务、医疗分诊、金融咨询等高风险公共场景中的架构级安全性。作者基于 agentic 架构的组合模型提出六项 containment principles（遏制原则），审计 LangChain、AutoGPT 和 OpenAI Agents SDK 三个主流框架，发现三者均未原生满足这些原则，其中针对常见漏洞类别的 memory integrity（记忆完整性）在所有框架中均缺失。作者进一步在基于 LangChain 的政府福利模拟代理中进行实证验证：一次 memory-poisoning 写入即可在所有测试随机种子和后端中造成持久的定向污染，使目标申请人的错误拒绝率升至 88.9%。在更复杂的五因素政策下，该攻击仍能保持总体准确率不变，同时将目标群体错误拒绝率提高 3.5 倍，因此难以被常规监控发现。论文提出两个轻量级 containment 机制：memory integrity validator 和 policy gate，能以每次调用低于 0.2ms 的开销消除上述攻击向量。作者认为当前 agentic 框架生态尚未达到公共部署所需的 secure-by-default（默认安全）要求，并指出面向可信部署的优先架构改进方向。",
+  "key_points_zh": [
+    "审计 LangChain、AutoGPT、OpenAI Agents SDK 后发现，三者均不原生满足六项架构级 containment principles。",
+    "memory integrity 在所有被测框架中缺失，这使持久记忆成为高风险公共应用中的关键攻击面。",
+    "在 LangChain 政府福利代理模拟中，单次 memory-poisoning 写入可导致目标申请人错误拒绝率升至 88.9%。",
+    "在复杂五因素政策下，攻击可保持总体准确率基本不变，却将目标错误拒绝率提高 3.5 倍，常规监控难以察觉。",
+    "作者提出 memory integrity validator 与 policy gate，两者以低于 0.2ms/调用的开销阻断攻击，说明轻量级架构防护具备可行性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.95,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8560000000000001,
+    "comment": "A highly significant agent security and governance paper that exposes framework-level containment failures and proposes lightweight mitigations.",
+    "comment_zh": "这是一篇重要的智能体安全与治理论文，揭示框架级隔离缺陷并提出轻量缓解机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8560000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12797/fig1.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.979
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12797/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12797/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12797/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.967
+    }
+  ]
+}

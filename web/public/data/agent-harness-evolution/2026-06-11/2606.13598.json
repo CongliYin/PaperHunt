@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2606.13598",
+  "title": "Reward Modeling for Multi-Agent Orchestration",
+  "title_zh": "面向多智能体编排的奖励建模",
+  "authors": [
+    "King Yeung Tsang",
+    "Zihao Zhao",
+    "Vishal Venkataramani",
+    "Haizhou Shi",
+    "Zixuan Ke",
+    "Semih Yavuz",
+    "Shafiq Joty",
+    "Hao Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T17:16:24Z",
+  "abs_url": "https://arxiv.org/abs/2606.13598v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13598",
+  "links": {
+    "github": "https://github.com/Wang-ML-Lab/OrchRM.",
+    "project_page": null
+  },
+  "abstract_en": "Multi-Agent Systems (MAS) built on Large Language Models (LLMs) require effective orchestration to coordinate specialized agents, yet training such orchestrators is hindered by limited supervision and high computational cost. We propose Orchestration Reward Modeling (OrchRM), a self-supervised framework for evaluating orchestration quality without human annotations. OrchRM leverages intermediate artifacts from multi-agent executions to construct win-lose pairs for Bradley-Terry reward model training. Unlike existing MAS test-time scaling and orchestrator training frameworks that rely on costly sub-agent rollouts, OrchRM operates directly at the orchestration level, enabling efficient and high-performing reward-guided orchestrator training and MAS test-time scaling. OrchRM improves training efficiency by up to 10x in token usage while improving MAS test-time scaling performance by up to 8% in accuracy. These gains consistently transfer across multiple domains, including mathematical reasoning, web-based question answering, and multi-hop reasoning, demonstrating orchestration-level reward modeling as a scalable direction for robust multi-agent orchestration. Code will be available at https://github.com/Wang-ML-Lab/OrchRM.",
+  "abstract_zh": "基于 Large Language Models (LLMs) 的 Multi-Agent Systems (MAS) 需要有效的编排器来协调不同专长的智能体，但编排器训练面临监督信号稀缺与计算成本高的问题。本文提出 Orchestration Reward Modeling (OrchRM)，一种无需人工标注的自监督框架，用于评估多智能体编排质量。OrchRM 利用多智能体执行过程中的中间产物构造 win-lose 对，并基于 Bradley-Terry 模型训练奖励模型。不同于依赖昂贵子智能体 rollout 的 MAS 测试时扩展与编排器训练方法，OrchRM 直接在编排层面工作，从而支持更高效、性能更强的奖励引导编排器训练与 MAS 测试时扩展。实验显示，OrchRM 在 token 使用上最高提升 10 倍训练效率，同时使 MAS 测试时扩展准确率最高提升 8%。这些收益可迁移到数学推理、基于 Web 的问答和多跳推理等多个领域，表明编排层奖励建模是构建稳健、可扩展多智能体编排系统的有前景方向。",
+  "key_points_zh": [
+    "提出 OrchRM，在无需人工标注的情况下评估多智能体编排质量，缓解 MAS 编排器训练中的监督不足问题。",
+    "方法利用多智能体执行的中间产物自动构造 win-lose 偏好对，并采用 Bradley-Terry 奖励建模进行训练。",
+    "相比依赖子智能体 rollout 的方法，OrchRM 直接在 orchestration level 建模，显著降低测试时扩展和训练成本。",
+    "实验报告 token 使用效率最高提升 10 倍，MAS 测试时扩展准确率最高提升 8%。",
+    "效果覆盖数学推理、Web-based question answering、多跳推理等任务，显示出较好的跨领域迁移性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.8,
+    "problem_significance": 0.82,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.78,
+    "llm_avg": 0.784,
+    "comment": "OrchRM is a strong orchestration-level learning signal for improving multi-agent coordination from execution artifacts.",
+    "comment_zh": "OrchRM利用执行产物提供编排级学习信号，对改进多智能体协作具有较强价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.784,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Wang-ML-Lab/OrchRM.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13598/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.913
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13598/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.952
+    }
+  ]
+}
