@@ -14,5 +14,4 @@ output_suffix: "__OUTPUT_SUFFIX__"
 
 # Fraction of filtered candidates that should receive LLM scoring.
 # The pipeline always keeps at least 10 papers unless --top-n overrides it.
-default_top_pct: 0.4
-
+default_top_pct: 1.0
