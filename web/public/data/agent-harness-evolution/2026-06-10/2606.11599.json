@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.11599",
+  "title": "When is Your LLM Steerable?",
+  "title_zh": "你的 LLM 何时可被引导？",
+  "authors": [
+    "Chenrui Fan",
+    "Yize Cheng",
+    "Ming Li",
+    "Soheil Feizi",
+    "Tianyi Zhou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T02:55:34Z",
+  "abs_url": "https://arxiv.org/abs/2606.11599v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11599",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Activation steering offers a lightweight approach to control language models' behavior at inference time, but whether it succeeds or fails heavily depends on the prompt, concept, model, and steering configuration. Finding the regime and boundaries of successful steering typically requires expensive grid searches and post-hoc evaluation of full autoregressive rollouts. In this work, we investigate whether steerability can be predicted from the model's internal states at the beginning of the generation process, e.g., after generating the first few tokens, and how to leverage such a predictor to improve steering success rate. To this end, we first introduce ASTEER, a testbed including 1.4M steered generations, spanning 150 concepts with each steering success/failure labeled. Leveraging this testbed, we analyze the model's early decoding dynamics by extracting features that compare hidden states before and after steering across layers and initial decoding steps. These features help us understand how steering's effects propagate along layers and token positions, which provide key information for steerability prediction. We then train a Gradient Boosting Decision Trees (GBDT) classifier on these features to predict whether an intervention will under-steer, succeed, or over-steer without requiring full rollout. Our predictor achieves around 0.7 macro-F1 score on unseen concepts, demonstrating that early hidden states encode substantial, structured information about eventual steering efficacy. We further leverage this steerability predictor as guidance for steering strength searching, achieving near-optimal performance with a small fraction of decoding cost.",
+  "abstract_zh": "Activation steering 是一种在推理时轻量控制语言模型行为的方法，但其成败高度依赖 prompt、概念、模型与 steering 配置。以往寻找有效 steering 区间通常需要昂贵的网格搜索，并对完整自回归生成结果做事后评估。本文研究能否仅根据生成初期的模型内部状态（例如前几个 token 生成后）预测 steerability，并利用该预测器提升 steering 成功率。作者提出 ASTEER 测试床，包含 140 万条 steered generations，覆盖 150 个概念，并标注每次 steering 的成功或失败。基于该测试床，作者提取跨层与初始解码步中 steering 前后 hidden states 的差异特征，分析 steering 效果如何沿层与 token 位置传播。随后训练 Gradient Boosting Decision Trees（GBDT）分类器，在无需完整 rollout 的情况下预测干预会 under-steer、成功或 over-steer。该预测器在未见概念上取得约 0.7 macro-F1，表明早期 hidden states 编码了关于最终 steering 效果的结构化信息。进一步地，作者将该预测器用于指导 steering strength 搜索，以少量解码成本获得接近最优的性能。",
+  "key_points_zh": [
+    "提出 ASTEER 测试床：包含 1.4M 条 steered generations，覆盖 150 个 concepts，并标注 steering success/failure。",
+    "核心问题是预测 activation steering 何时有效，避免对不同 prompt、concept、model 与配置进行昂贵的完整 rollout 和网格搜索。",
+    "方法从生成初期提取 steering 前后 hidden states 的跨层、跨 token 位置差异特征，用于刻画 steering 效果的传播动态。",
+    "训练 GBDT 分类器预测 under-steer、success、over-steer，在 unseen concepts 上达到约 0.7 macro-F1，说明早期内部状态已包含可用的 steerability 信号。",
+    "将 steerability predictor 用于指导 steering strength 搜索，可用少量解码成本获得接近最优的 steering 表现。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.45,
+    "potential_impact": 0.45,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.4,
+    "llm_avg": 0.43999999999999995,
+    "comment": "A useful inference-control study for activation steering, but it remains mostly model-level steering rather than agent runtime governance.",
+    "comment_zh": "该研究对激活引导的推理控制有帮助，但主要仍是模型层面的控制而非智能体运行时治理。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.43999999999999995,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11599/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11599/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11599/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11599/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.961
+    }
+  ]
+}

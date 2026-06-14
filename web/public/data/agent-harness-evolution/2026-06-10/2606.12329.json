@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2606.12329",
+  "title": "PROJECTMEM: A Local-First, Event-Sourced Memory and Judgment Layer for AI Coding Agents",
+  "title_zh": "PROJECTMEM：面向 AI 编程代理的本地优先、事件溯源式记忆与判断层",
+  "authors": [
+    "Ripon Chandra Malo",
+    "Tong Qiu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T17:02:56Z",
+  "abs_url": "https://arxiv.org/abs/2606.12329v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12329",
+  "links": {
+    "github": "https://github.com/riponcm/projectmem",
+    "project_page": null
+  },
+  "abstract_en": "AI coding assistants now support a growing share of software work, from quick scripts to production applications. Yet these agents remain largely stateless: each new session re-reads project files, re-derives prior decisions, and - most costly - may repeat debugging attempts that already failed. Reconstructing this context can consume an estimated 5,000-20,000 tokens per session; the bottleneck is often not model capability but missing project memory. We present projectmem, an open-source, local-first memory and judgment layer for AI coding agents. projectmem records development as an append-only, plain-text event log of typed events - issues, attempts, fixes, decisions, and notes - and deterministically projects that log into compact, AI-readable summaries served through the Model Context Protocol (MCP). Beyond storage, projectmem adds a deterministic pre-action gate that warns an agent before it repeats a previously failed fix or edits a known-fragile file. We frame this as Memory-as-Governance: memory that does not merely answer the agent but acts on its next action. The system runs fully offline with no telemetry; its immutable log also serves as a provenance trail for reproducible, auditable AI-assisted development. projectmem ships as a three-dependency Python package (14 MCP tools, 19 CLI commands, 37 automated tests) and is evaluated through a two-month self-study across 10 projects comprising 207 logged events. Source code: https://github.com/riponcm/projectmem.",
+  "abstract_zh": "本文提出 projectmem，一个开源、本地优先的 AI coding agents 记忆与判断层。针对当前编程助手在新会话中反复读取项目文件、重新推导历史决策、甚至重复失败调试尝试的问题，projectmem 将开发过程记录为追加式纯文本事件日志，事件类型包括 issues、attempts、fixes、decisions 和 notes，并通过确定性投影生成紧凑、适合 AI 读取的摘要，经由 Model Context Protocol（MCP）提供给代理。除存储外，projectmem 还引入确定性的 pre-action gate，可在代理重复已失败修复或编辑已知脆弱文件前发出警告。作者将其概括为 Memory-as-Governance：记忆不仅回答代理问题，还约束其下一步行动。系统完全离线运行、无遥测，事件日志同时构成可复现、可审计的 AI 辅助开发溯源轨迹。projectmem 以仅含 3 个依赖的 Python 包发布，包含 14 个 MCP tools、19 个 CLI commands 和 37 个自动化测试，并在为期两个月、覆盖 10 个项目和 207 条事件的自研究中进行评估。",
+  "key_points_zh": [
+    "提出 projectmem：一个 local-first、event-sourced 的项目记忆层，用追加式纯文本事件日志记录开发过程。",
+    "通过确定性投影将历史事件压缩为 AI-readable summaries，并经由 Model Context Protocol（MCP）供 AI coding agents 使用。",
+    "引入 pre-action gate，在代理重复已失败方案或触碰 known-fragile file 前进行确定性预警。",
+    "强调 Memory-as-Governance：记忆不仅是上下文检索，还能对代理下一步行动施加治理约束。",
+    "系统完全离线、无 telemetry，并提供可审计 provenance trail；评估覆盖 10 个项目、207 条日志事件。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.84,
+    "llm_avg": 0.796,
+    "comment": "A practical local-first memory and governance layer for coding agents that combines event sourcing, MCP integration, provenance, and pre-action gates.",
+    "comment_zh": "这是一项实用的本地优先编码智能体记忆与治理层工作，结合事件溯源、MCP集成、来源记录和行动前门控。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.36560162063732243,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.796,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/riponcm/projectmem",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12329/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12329/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12329/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.942
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.11897",
+  "title": "Notes2Skills: From Lab Notebooks to Certainty-Aware Scientific Agent Skills",
+  "title_zh": "Notes2Skills：从实验室笔记到具备确定性感知的科学智能体技能",
+  "authors": [
+    "Shi Liu",
+    "Jiayao Chen",
+    "Chengwei Qin",
+    "Yanqing Hu",
+    "Jufan Zhang",
+    "Linyi Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T10:25:47Z",
+  "abs_url": "https://arxiv.org/abs/2606.11897v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11897",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Scientific discovery workflows usually contain and rely heavily on lab notes, where researchers record observations, interpret uncertain results, and plan follow-up experiments. Such informative lab notes preserve evolving scientific reasoning and author uncertainty, rather than polished final results exhibited in publications, providing a valuable opportunity for AI to engage in scientific exploration at a more comprehensive and deeper level. However, most prior work on scientific text focuses on papers, protocols, or structured databases, leaving informal laboratory notes underexplored as inputs to AI agents for science. This gap matters because lab notes often intermingle validated observations, tentative judgments, and possible experimental next steps within the same passage. If these signals are conflated, an AI agent may mistake uncertain scientific judgments for confirmed conclusions or executable actions. To this end, we present Notes2Skills, a two-stage framework for turning lab notebooks into verifiable skills for scientific AI agents while preserving the author's certainty. Across seven conditions and three wet-lab sessions, Notes2Skills is the only configuration that neither mistakes uncertain notes for firm instructions nor discards firm ones. We show that certainty preservation is the missing piece between lab notebooks and reliable agent skills, opening a path toward safer AI co-scientist systems.",
+  "abstract_zh": "该论文关注实验室笔记作为科学 AI agent 输入的价值与风险。实验室笔记记录了研究者的观察、对不确定结果的解释以及后续实验计划，保留了论文中常被弱化的动态科学推理与作者不确定性。然而，现有科学文本处理多聚焦论文、实验协议或结构化数据库，较少利用非正式实验室笔记。问题在于，笔记中常混杂已验证观察、暂定判断和潜在行动建议；若 AI agent 无法区分这些信号，可能把不确定推断当作已确认结论或可执行指令。为此，作者提出 Notes2Skills，一个两阶段框架，将实验室笔记转化为可验证的科学 agent 技能，同时保留作者表达的确定性。在涵盖 7 种条件、3 次湿实验会话的评估中，Notes2Skills 是唯一既不会将不确定笔记误判为明确指令，也不会丢弃确定内容的配置。论文指出，确定性保留是连接实验室笔记与可靠 agent 技能的关键环节，有助于构建更安全的 AI co-scientist 系统。",
+  "key_points_zh": [
+    "提出 Notes2Skills，两阶段地从 lab notebooks 中抽取并构建可验证的 scientific agent skills。",
+    "核心贡献是 certainty preservation：显式保留作者在笔记中的确定、不确定、暂定判断等信号，避免误执行。",
+    "论文指出实验室笔记不同于正式论文，常同时包含观察、解释和后续计划，是训练或驱动科学 AI agent 的高价值但高风险输入。",
+    "在 7 种条件和 3 次 wet-lab sessions 上，Notes2Skills 是唯一同时避免“把不确定内容当作确定指令”和“丢弃确定内容”的方法。",
+    "该工作为更安全的 AI co-scientist 系统提供了路径：让 agent 在利用科研过程知识时具备不确定性感知能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.68,
+    "problem_significance": 0.62,
+    "potential_impact": 0.56,
+    "paradigm_shift": 0.42,
+    "lasting_value": 0.5,
+    "llm_avg": 0.556,
+    "comment": "Interesting domain-specific skill construction for scientific agents, but its harness value is limited beyond certainty-aware conversion of lab notes into skills.",
+    "comment_zh": "该工作在科学智能体的技能构建上较有趣，但除将实验笔记按确定性转化为技能外，通用框架价值有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.556,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11897/fig1.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.983
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11897/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.98
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11897/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11897/fig4.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.97
+    }
+  ]
+}

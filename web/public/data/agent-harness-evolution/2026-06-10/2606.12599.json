@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.12599",
+  "title": "Constrained Semantic Decompression in LLMs through Persian Proverb-Conditioned Story Generation",
+  "title_zh": "通过波斯谚语条件故事生成实现 LLM 的受约束语义解压",
+  "authors": [
+    "Zahra Habibzadeh",
+    "Paria Khoshtab",
+    "Amir Mesbah",
+    "Yadollah Yaghoobzadeh"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T18:54:07Z",
+  "abs_url": "https://arxiv.org/abs/2606.12599v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12599",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Transforming a dense, abstract proverb into an engaging and morally faithful narrative requires deep cultural understanding and robust semantic grounding. We frame this problem as a \\emph{constrained semantic decompression} task and study proverb-conditioned story generation as a testbed for abstraction-to-realization in large language models (LLMs). Focusing on Persian, we introduce the Proverb Aligned Narrative Dataset (PAND), pairing proverbs with human-written stories and explicit meanings. By a hybrid evaluation framework that combines human-calibrated LLM-as-a-Judge with structural metrics, we analyze model behavior across multiple prompting regimes. Our findings reveal a persistent \\emph{decompression gap}: current LLMs often achieve strong surface-level fluency while failing to faithfully instantiate the underlying moral and causal structure encoded in proverbs. We further show that explicit reasoning and iterative refinement can partially mitigate these failures, suggesting that many decompression errors arise from difficulties in translating abstract meaning into narrative form rather than a complete lack of relevant knowledge. Our proposed task naturally extends to other forms of compressed cultural knowledge.",
+  "abstract_zh": "本文将“把高度浓缩、抽象的谚语转化为引人入胜且道德含义忠实的叙事”定义为受约束语义解压（constrained semantic decompression）任务，并以波斯谚语条件故事生成作为研究 LLM 从抽象语义到具体叙事实现能力的测试场。作者构建了 Proverb Aligned Narrative Dataset（PAND），将波斯谚语与人工撰写故事及显式含义配对。通过结合经人类校准的 LLM-as-a-Judge 与结构化指标的混合评估框架，论文分析了多种 prompting 设置下的模型行为。结果显示，当前 LLM 存在稳定的“解压缺口”：虽然生成文本通常表面流畅，但常无法忠实体现谚语中蕴含的道德、因果与叙事结构。进一步实验表明，显式推理与迭代修订可部分缓解这些问题，说明许多错误并非源于模型完全缺乏相关文化知识，而是源于将抽象意义可靠转化为叙事形式的困难。该任务也可扩展到其他压缩文化知识的生成场景。",
+  "key_points_zh": [
+    "提出受约束语义解压任务：要求 LLM 将浓缩的 Persian proverb 转化为语义忠实、叙事连贯的故事。",
+    "构建 Proverb Aligned Narrative Dataset（PAND），包含波斯谚语、人类故事和显式含义标注，为文化知识到叙事生成提供基准。",
+    "设计混合评估框架，结合人类校准的 LLM-as-a-Judge 与结构化指标，评估生成故事的流畅性、道德忠实度和因果结构对齐。",
+    "发现显著的 decompression gap：模型表面语言质量较高，但经常未能正确实例化谚语背后的道德教训和因果逻辑。",
+    "显式推理与迭代 refinement 可部分改善结果，表明瓶颈更多在抽象语义到具体叙事的映射，而非单纯知识缺失。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.25,
+    "problem_significance": 0.15,
+    "potential_impact": 0.1,
+    "paradigm_shift": 0.05,
+    "lasting_value": 0.08,
+    "llm_avg": 0.126,
+    "comment": "An interesting cultural generation benchmark, but it is essentially unrelated to production agent harnesses or self-improving runtime systems.",
+    "comment_zh": "这是一项有趣的文化叙事生成研究，但与生产级智能体框架或自改进运行系统基本无关。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.126,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12599/fig1.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12599/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12599/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12599/fig4.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.934
+    }
+  ]
+}

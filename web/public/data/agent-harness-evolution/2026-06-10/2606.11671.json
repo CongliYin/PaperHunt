@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.11671",
+  "title": "Runtime Skill Audit: Targeted Runtime Probing for Agent Skill Security",
+  "title_zh": "Runtime Skill Audit：面向 Agent 技能安全的定向运行时探测",
+  "authors": [
+    "Tu Lan",
+    "Chaowei Xiao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T05:29:34Z",
+  "abs_url": "https://arxiv.org/abs/2606.11671v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11671",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent skills let LLM agents reuse instructions, resources, tools, and workflows, but they also create a new place for malicious behavior to hide. A skill may look benign in its documentation or code while becoming harmful only when it is invoked with particular user requests, local assets, persistent state, or multi-step tool interactions. This makes purely static vetting brittle. We present Runtime Skill Audit (RSA), a dynamic analysis method that audits skills by asking what the skill-mediated agent actually does under targeted runtime conditions. Instead of testing every skill with the same generic tasks, RSA profiles risk-relevant interfaces, prepares the execution context needed to exercise them, and assigns security labels from the resulting trace evidence. We instantiate RSA on OpenClaw and evaluate it on 100 skills against representative static baselines. RSA achieves 90.0\\% accuracy with an 88.0\\% true positive rate and an 8.0\\% false positive rate, improving accuracy by 13.0 percentage points over the best static baseline. Under self-evolving attacks, static detectors collapse after one or two rounds, while RSA continues to detect 19--20 out of 20 malicious skills across rounds.",
+  "abstract_zh": "LLM Agent 的 skill 机制可复用指令、资源、工具与工作流，但也为恶意行为提供了新的隐藏位置：某个 skill 在文档或代码层面可能看似无害，却会在特定用户请求、本地资产、持久状态或多步工具交互下触发危害。因此，纯静态审计较为脆弱。本文提出 Runtime Skill Audit（RSA），一种动态分析方法，通过观察 skill 介导的 Agent 在定向运行时条件下的实际行为来进行安全审计。RSA 不对所有 skill 使用相同通用任务，而是分析与风险相关的接口，准备可触发这些接口的执行上下文，并基于运行轨迹证据分配安全标签。作者在 OpenClaw 上实现 RSA，并在 100 个 skills 上与代表性静态基线比较。RSA 达到 90.0% 准确率、88.0% 真阳性率和 8.0% 假阳性率，相比最佳静态基线准确率提升 13.0 个百分点。在自演化攻击场景中，静态检测器在一到两轮后基本失效，而 RSA 在多轮中仍能检测出 20 个恶意 skills 中的 19–20 个。",
+  "key_points_zh": [
+    "问题聚焦于 LLM Agent skills 的安全风险：恶意行为可能只在特定请求、状态、资产或工具调用链中显现，静态代码/文档审查难以覆盖。",
+    "提出 Runtime Skill Audit（RSA），通过构造风险相关运行时上下文并观察 Agent 实际执行轨迹，进行动态安全判定。",
+    "RSA 的核心区别是“定向探测”：先识别 skill 的风险接口，再准备能触发潜在危险行为的上下文，而非使用统一通用测试任务。",
+    "在 OpenClaw 上对 100 个 skills 评测，RSA 达到 90.0% accuracy、88.0% true positive rate、8.0% false positive rate，较最佳静态基线提升 13.0 个百分点。",
+    "面对 self-evolving attacks，静态检测器一到两轮后性能崩溃，而 RSA 仍能在每轮检测出 19–20/20 个恶意 skills，显示出更强鲁棒性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.88,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.84,
+    "llm_avg": 0.812,
+    "comment": "A valuable dynamic security-audit method for agent skills that uses runtime trace evidence and remains robust against self-evolving malicious skills.",
+    "comment_zh": "这是一项有价值的智能体技能动态安全审计方法，利用运行时轨迹证据，并能抵抗自演化恶意技能。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.812,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11671/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11671/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11671/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11671/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}

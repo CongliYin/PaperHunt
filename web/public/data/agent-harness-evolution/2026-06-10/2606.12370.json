@@ -1,0 +1,95 @@
+{
+  "arxiv_id": "2606.12370",
+  "title": "Breaking Entropy Bounds: Accelerating RL Training via MTP with Rejection Sampling",
+  "title_zh": "突破熵界限：通过带拒绝采样的 MTP 加速 RL 训练",
+  "authors": [
+    "Yucheng Li",
+    "Huiqiang Jiang",
+    "Yang Xu",
+    "Jianxin Yang",
+    "Yi Zhang",
+    "Yizhong Cao",
+    "Yuhao Shen",
+    "Fan Zhou",
+    "Rui Men",
+    "Jianwei Zhang",
+    "An Yang",
+    "Bowen Yu",
+    "Bo Zheng",
+    "Fei Huang",
+    "Junyang Lin",
+    "Dayiheng Liu",
+    "Jingren Zhou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T17:36:45Z",
+  "abs_url": "https://arxiv.org/abs/2606.12370v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12370",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement learning (RL) has become a key component in modern large language models, yet the rollout stage remains the key bottleneck in RL training pipelines. Although Multi-Token Prediction (MTP) offers a natural solution to accelerate rollouts through speculative decoding, many studies have observed that MTP acceptance rates degrade significantly during RL training, leading to limited speedup performance. To address this bottleneck, we present Bebop, a systematic study of MTP in LLM post-training, and offer practical recipes to integrate MTP into large-scale RL pipelines. First, we reveal that the MTP acceptance rate is fundamentally bounded by the fluctuation of model entropy, which demonstrates a clear negative linear relationship with the rise of entropy in the RL stage. Second, we show that probabilistic rejection sampling largely alleviates the disturbance introduced by entropy in RL compared to greedy draft sampling. We further identify that the conventional MTP training objectives (cross-entropy or KL) are suboptimal in such settings, and therefore we propose a novel end-to-end TV loss that directly optimizes multi-step rejection sampling acceptance rate, yielding ~10% acceptance rate improvements, achieving up to 95% acceptance rates and up to 25% extra inference throughput gains across mathematical reasoning, code generation, and agentic tasks. Third, we test various online MTP training strategies during RL and show that pre-RL MTP training with e2e TV loss and rejection sampling achieves a consistent acceptance rate and speedup throughout the entire RL, eliminating the need for costly online MTP updating. We provide extensive experiments and analysis that validate our findings. Experimental results show our method achieves up to 1.8x end-to-end acceleration in async RL training of Qwen3.5, Qwen3.6, and Qwen3.7 models.",
+  "abstract_zh": "强化学习（RL）已成为现代大语言模型后训练的关键环节，但 rollout 阶段仍是 RL 训练流水线的主要瓶颈。Multi-Token Prediction（MTP）可通过 speculative decoding 自然加速 rollout，然而既有研究发现，在 RL 训练过程中 MTP 的接受率会显著下降，限制了实际加速效果。本文提出 Bebop，对 LLM 后训练中的 MTP 进行系统研究，并给出将 MTP 集成到大规模 RL 流水线中的实用方案。作者首先揭示，MTP 接受率本质上受模型熵波动约束，并与 RL 阶段熵的上升呈明显负线性关系。其次，论文表明，相比 greedy draft sampling，概率式 rejection sampling 能显著缓解 RL 中熵扰动带来的影响。进一步地，作者指出传统 MTP 训练目标（cross-entropy 或 KL）在该场景下并非最优，因此提出端到端 TV loss，直接优化多步 rejection sampling 的接受率，使接受率提升约 10%，在数学推理、代码生成和 agentic 任务中最高达到 95% 接受率，并带来最高 25% 的额外推理吞吐提升。最后，论文比较多种 RL 期间在线 MTP 训练策略，发现使用 e2e TV loss 和 rejection sampling 的 pre-RL MTP 训练即可在整个 RL 过程中保持稳定接受率和加速效果，无需昂贵的在线 MTP 更新。实验显示，该方法在 Qwen3.5、Qwen3.6 和 Qwen3.7 的异步 RL 训练中实现最高 1.8 倍端到端加速。",
+  "key_points_zh": [
+    "论文系统研究了 RL 后训练中 MTP 接受率下降的问题，发现其受模型熵波动约束，并与 RL 阶段熵上升呈负线性关系。",
+    "相比 greedy draft sampling，概率式 rejection sampling 更能抵抗 RL 过程中熵变化对 MTP 接受率的干扰。",
+    "作者提出端到端 TV loss，直接优化多步 rejection sampling 接受率，相比传统 cross-entropy 或 KL 目标更适合该场景。",
+    "在数学推理、代码生成和 agentic 任务中，该方法带来约 10% 接受率提升，最高 95% 接受率和 25% 额外推理吞吐收益。",
+    "实验表明，pre-RL 阶段训练 MTP 已足够稳定，无需在线更新；在 Qwen3.5、Qwen3.6、Qwen3.7 异步 RL 训练中最高实现 1.8x 端到端加速。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.7,
+    "problem_significance": 0.65,
+    "potential_impact": 0.6,
+    "paradigm_shift": 0.4,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5700000000000001,
+    "comment": "Useful RL training-infrastructure acceleration work, though its main contribution is decoding throughput rather than agent harness reliability or governance.",
+    "comment_zh": "该工作对强化学习训练基础设施加速有用，但核心贡献偏向解码吞吐而非智能体框架可靠性或治理。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.8296320871988233,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.5700000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 20,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12370/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.566
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12370/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.5
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12370/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.95
+    }
+  ]
+}

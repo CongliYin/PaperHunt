@@ -1,0 +1,93 @@
+{
+  "arxiv_id": "2606.12507",
+  "title": "Rubric-Guided Self-Distillation: Post-Training Without Rubric Verifiers",
+  "title_zh": "Rubric-Guided Self-Distillation：无需 Rubric Verifier 的后训练方法",
+  "authors": [
+    "MohammadHossein Rezaei",
+    "Anas Mahmoud",
+    "Zihao Wang",
+    "Utkarsh Tyagi",
+    "Advait Gosai",
+    "Razvan-Gabriel Dumitru",
+    "Aakash Sabharwal",
+    "Bing Liu",
+    "Yunzhong He"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T17:53:19Z",
+  "abs_url": "https://arxiv.org/abs/2606.12507v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12507",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Rubrics have emerged as an alternative to RLVR in open-ended domains where a single ground-truth final answer is not available. Existing rubric-based training methods rely on an LLM verifier that scores each rollout against rubrics. This introduces substantial training-time overhead, exposes optimization to verifier-specific biases, and reduces rubric feedback to a sparse end-of-trajectory signal. We propose Rubric-Guided Self-Distillation (RGSD), a verifier-free training method in which the base policy, conditioned on the rubric, serves as the teacher for the unconditioned student. RGSD distills the rubric-conditioned teacher distribution into the student token-by-token, replacing sparse trajectory-level rewards with dense per-token learning signals and removing the LLM judge from the training loop entirely. Across Qwen-2.5 (3B, 7B) and Qwen3-Thinking (4B, 8B) models on medical and science domains, RGSD achieves rubric satisfaction comparable to judge-based GRPO while using one on-policy rollout per prompt and no training-time verifier calls. Ablations show that raw rubrics provide a stronger teacher enrichment signal than self-generated reference responses, while a stronger GRPO judge can outperform RGSD in some settings, positioning RGSD as a complementary verifier-free alternative when verifier cost or reliability is the bottleneck.",
+  "abstract_zh": "本文提出 Rubric-Guided Self-Distillation（RGSD），一种面向开放式任务的无验证器（verifier-free）后训练方法。现有 rubric-based training 通常依赖 LLM verifier 根据评分细则（rubrics）对每条 rollout 打分，带来高训练开销、verifier 偏置风险，并且只提供稀疏的轨迹级反馈。RGSD 让同一个 base policy 在给定 rubric 条件下充当 teacher，并将其 token-by-token 的分布蒸馏到不带 rubric 条件的 student 中，从而把稀疏终局奖励转化为密集的逐 token 学习信号，同时完全移除训练循环中的 LLM judge。实验覆盖 Qwen-2.5（3B、7B）与 Qwen3-Thinking（4B、8B）在医疗和科学领域的任务，结果显示 RGSD 在 rubric satisfaction 上可达到接近 judge-based GRPO 的表现，同时每个 prompt 只需一次 on-policy rollout，且训练时不调用 verifier。消融实验表明，原始 rubrics 比自生成参考答案能提供更强的 teacher enrichment 信号；但在某些设置下，更强的 GRPO judge 仍可超过 RGSD，说明 RGSD 更适合作为 verifier 成本或可靠性受限时的互补替代方案。",
+  "key_points_zh": [
+    "提出 Rubric-Guided Self-Distillation（RGSD）：让 rubric-conditioned base policy 作为 teacher，将其输出分布蒸馏给 unconditioned student，无需训练时 LLM verifier。",
+    "相比传统 rubric-based training 的轨迹级稀疏打分，RGSD 提供 token-by-token 的密集监督信号，降低优化对 verifier 偏置和打分噪声的依赖。",
+    "在 Qwen-2.5（3B、7B）和 Qwen3-Thinking（4B、8B）的医疗与科学任务上，RGSD 的 rubric satisfaction 接近 judge-based GRPO，但每个 prompt 仅需一次 on-policy rollout，且零训练时 verifier 调用。",
+    "消融结果显示，直接使用原始 rubrics 作为条件信息，比使用模型自生成参考回答更能增强 teacher 分布。",
+    "RGSD 并非在所有情况下都优于强 judge 的 GRPO；当 verifier 成本高、可靠性不足或易引入偏置时，它是更实用的 verifier-free 后训练替代方案。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.45,
+    "potential_impact": 0.4,
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.35,
+    "llm_avg": 0.4,
+    "comment": "A reasonable verifier-free post-training method, but it is mostly generic model training rather than trace-driven agent platform infrastructure.",
+    "comment_zh": "该方法是有一定价值的无验证器后训练方案，但更多属于通用模型训练而非轨迹驱动的智能体平台基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.7200000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.4,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12507/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.981
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12507/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.98
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12507/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.75
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12507/fig4.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.739
+    }
+  ]
+}

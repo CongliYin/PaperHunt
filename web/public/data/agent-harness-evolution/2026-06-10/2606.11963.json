@@ -1,0 +1,62 @@
+{
+  "arxiv_id": "2606.11963",
+  "title": "HAMNO: A Hierarchical Adaptive Multi-scale Neural Operator with Physics-Informed Learning for Dynamical Systems",
+  "title_zh": "HAMNO：用于动力系统的层次自适应多尺度神经算子与物理信息学习",
+  "authors": [
+    "Mostafa Bamdad",
+    "Mohammad Sadegh Eshaghi",
+    "Timon Rabczuk"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T11:42:34Z",
+  "abs_url": "https://arxiv.org/abs/2606.11963v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11963",
+  "links": {
+    "github": "https://github.com/MBamdad/HAMNO",
+    "project_page": null
+  },
+  "abstract_en": "Neural operators provide a powerful framework for learning solution mappings of partial differential equations directly in function space. However, many existing architectures still struggle to represent nonlinear time-dependent systems that involve multi-scale structures, long-range interactions, and stable long-time evolution. In this work, we introduce the Hierarchical Adaptive Multi-scale Neural Operator (HAMNO), a neural-operator architecture that combines local convolutional representations, global spectral operators, and hierarchical encoder-decoder processing. The central component of HAMNO is a data-dependent gating mechanism that adaptively balances local and global information at each spatial location, allowing the model to resolve fine-scale features while preserving long-range dependencies. We further develop a physics-informed extension, PI-HAMNO, based on a multi-objective loss strategy that combines data fitting with strong- and weak-form physics constraints. The strong-form term penalizes the domain-integrated squared PDE residual in physical coordinates, while the weak-form term is constructed by multiplying the governing residual by finite-element test functions and evaluating the resulting element integrals using centroid-based tetrahedral quadrature. The framework is evaluated on non-periodic Allen-Cahn (AC), Cahn-Hilliard (CH), and Swift-Hohenberg (SH) equations defined on cubic domains. Across long-horizon rollout, data-limited training, out-of-distribution initial-condition shifts, and random-seed variations, HAMNO improves predictive accuracy over standard neural-operator baselines, while PI-HAMNO further enhances stability, physical consistency, and data efficiency. The implementation is publicly available at https://github.com/MBamdad/HAMNO .",
+  "abstract_zh": "本文提出 Hierarchical Adaptive Multi-scale Neural Operator（HAMNO），用于学习偏微分方程（PDE）动力系统的解映射。针对现有神经算子在非线性时变系统中难以同时建模多尺度结构、长程相互作用和长时间稳定演化的问题，HAMNO 结合局部卷积表示、全局谱算子与层次化 encoder-decoder 处理。其核心是数据依赖的门控机制，可在每个空间位置自适应平衡局部与全局信息，从而兼顾细尺度特征解析和长程依赖保持。作者进一步提出物理信息扩展 PI-HAMNO，通过多目标损失联合数据拟合、强形式物理约束与弱形式物理约束：强形式项惩罚物理坐标中的区域积分 PDE 残差平方，弱形式项将控制方程残差与有限元测试函数相乘，并用基于质心的四面体求积计算单元积分。实验在立方域上的非周期 Allen-Cahn（AC）、Cahn-Hilliard（CH）和 Swift-Hohenberg（SH）方程上进行。结果显示，在长时域 rollout、低数据训练、分布外初始条件偏移和随机种子变化等设置下，HAMNO 相比标准神经算子基线具有更高预测精度；PI-HAMNO 进一步提升了稳定性、物理一致性和数据效率。",
+  "key_points_zh": [
+    "提出 HAMNO，将局部 convolutional representation、global spectral operator 与层次 encoder-decoder 结合，以提升多尺度动力系统建模能力。",
+    "核心数据依赖 gating mechanism 在每个空间位置自适应融合局部细节与全局长程信息，缓解长时间演化中的误差累积和稳定性问题。",
+    "提出 PI-HAMNO，通过同时加入 strong-form PDE residual 与 weak-form finite-element constraint，实现物理信息约束训练。",
+    "弱形式约束使用有限元 test functions，并通过 centroid-based tetrahedral quadrature 近似单元积分，适用于三维立方域 PDE。",
+    "在非周期 AC、CH、SH 方程上，HAMNO/PI-HAMNO 在长时预测、少数据、OOD 初始条件和随机种子鲁棒性方面优于常见 neural-operator baselines。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.3,
+    "problem_significance": 0.15,
+    "potential_impact": 0.1,
+    "paradigm_shift": 0.05,
+    "lasting_value": 0.08,
+    "llm_avg": 0.13599999999999998,
+    "comment": "A neural-operator modeling contribution for physical systems, but it is outside the agent harness and self-improving platform scope.",
+    "comment_zh": "该论文主要贡献在物理系统神经算子建模，基本不属于智能体运行框架或自改进平台范畴。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.13599999999999998,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/MBamdad/HAMNO",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

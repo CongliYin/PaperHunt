@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2606.12342",
+  "title": "ALIGNBEAM : Inference-Time Alignment Transfer via Cross-Vocabulary Logit Mixing",
+  "title_zh": "ALIGNBEAM：通过跨词表 Logit 混合实现推理时对齐迁移",
+  "authors": [
+    "Chirag Chawla",
+    "Pratinav Seth",
+    "Vinay Kumar Sankarapu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T17:15:28Z",
+  "abs_url": "https://arxiv.org/abs/2606.12342v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12342",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Domain fine-tuning degrades the safety of large language models: fine-tuned specialists readily comply with harmful prompts framed in domain language. Existing inference-time defenses that mix logits from a safe anchor model require both models to share a vocabulary, which rules them out for the cross-family specialists where safety is most degraded. We present ALIGNBEAM, a training-free method that lifts this restriction by translating anchor logits into the target model's vocabulary token-by-token at each decoding step; a small LLM judge then selects the safest among K candidate continuations. No weights are changed, and the safety-utility trade-off can be tuned at deployment without retraining. Across both cross-vocabulary and same-vocabulary evaluation pairs, ALIGNBEAM substantially raises refusal on adversarial benchmarks while keeping task accuracy and inference overhead within practical bounds. The results show that safety alignment can be transferred between model families at inference time, without touching either model's weights.",
+  "abstract_zh": "领域微调会削弱大语言模型的安全性：经过微调的专用模型更容易服从以领域语言包装的有害提示。现有推理时防御方法通常将目标模型与安全锚定模型（safe anchor model）的 logits 混合，但要求两者共享词表，因此难以用于安全退化最明显的跨模型家族专用模型。本文提出 ALIGNBEAM，一种无需训练的方法：在每个解码步逐 token 将锚定模型 logits 翻译到目标模型词表中，并由一个小型 LLM judge 从 K 个候选续写中选择最安全的输出。该方法不修改任何模型权重，且可在部署时调节安全性与实用性的权衡，无需重新训练。实验显示，在跨词表与同词表模型组合上，ALIGNBEAM 都能显著提升对抗安全基准上的拒答率，同时保持任务准确率与推理开销在实用范围内，证明安全对齐可以在推理时跨模型家族迁移。",
+  "key_points_zh": [
+    "提出 ALIGNBEAM，通过跨词表 logit mixing 将安全锚定模型的对齐能力迁移到目标模型，无需共享 vocabulary。",
+    "方法无需训练、不改动模型权重，在每个解码步将 anchor logits 映射到 target vocabulary，并生成 K 个候选续写。",
+    "使用小型 LLM judge 从候选中选择最安全的 continuation，使安全-效用权衡可在部署阶段动态调节。",
+    "在跨词表与同词表评测设置中，ALIGNBEAM 显著提高 adversarial benchmarks 上的拒答率，同时尽量保持任务准确率。",
+    "结果表明，LLM 安全对齐不必依赖重新训练或同一家族模型，可在推理时跨模型家族转移。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.6,
+    "problem_significance": 0.55,
+    "potential_impact": 0.55,
+    "paradigm_shift": 0.4,
+    "lasting_value": 0.5,
+    "llm_avg": 0.52,
+    "comment": "A practical inference-time safety transfer method with some deployment value, but it is not specifically an agent harness or trace-based improvement system.",
+    "comment_zh": "该方法提供了实用的推理时安全迁移能力，具备一定部署价值，但并非专门的智能体框架或轨迹改进系统。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.52,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12342/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.977
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12342/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12342/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12342/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.962
+    }
+  ]
+}

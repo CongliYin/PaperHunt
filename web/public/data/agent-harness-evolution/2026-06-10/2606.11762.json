@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2606.11762",
+  "title": "Automated Creativity Evaluation of Language Models Across Open-Ended Tasks",
+  "title_zh": "跨开放式任务的语言模型自动化创造力评估",
+  "authors": [
+    "Min Sen Tan",
+    "Zachary Kit Chun Choy",
+    "Syed Ali Redha Alsagoff",
+    "Nadya Yuki Wangsajaya",
+    "Mohor Banerjee",
+    "Swaagat Bikash Saikia",
+    "Alvin Chan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T07:37:06Z",
+  "abs_url": "https://arxiv.org/abs/2606.11762v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11762",
+  "links": {
+    "github": "https://github.com/tanminsen/creativity-eval",
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) have achieved remarkable progress in language understanding, reasoning, and generation, sparking growing interest in their creative potential. Realizing this potential requires systematic and scalable methods for evaluating creativity across diverse tasks. However, most existing creativity metrics are tightly coupled to specific tasks, embedding domain assumptions into the evaluation process, and limiting scalability and generality. To address this gap, we introduce an automated, domain-agnostic framework for quantifying LLM creativity across open-ended tasks. Our approach separates the measurement apparatus from the creative task itself, enabling scalable, task-agnostic assessment. Divergent creativity is measured using semantic entropy, a reference-free and robust metric for novelty and diversity, validated against human annotations, LLM-based novelty judgments and baseline diversity measures. Convergent creativity is assessed via a novel retrieval-based multi-agent judge framework that delivers context-sensitive evaluation of task fulfilment with over 60% improved efficiency. We validate our framework in three qualitatively distinct domains: problem-solving (MacGyver), research ideation (HypoGen), and creative writing (BookMIA), using a broad suite of LLMs. Empirical results show that our framework reliably captures key facets of creativity, including novelty, diversity, and task fulfilment, and reveal how model properties, such as size, temperature, recency, and reasoning, impact creative performance. Our work establishes a reproducible and generalizable standard for automated LLM creativity evaluation, paving the way for scalable benchmarking and accelerating progress in creative AI.",
+  "abstract_zh": "本文提出一个自动化、领域无关的框架，用于在多种开放式任务中量化评估 LLM 的创造力。针对现有创造力指标常与特定任务强绑定、难以扩展的问题，该方法将“评估装置”与“创造性任务”解耦，从而支持任务无关的可扩展评估。框架将创造力拆分为发散性创造力与收敛性创造力：前者使用 semantic entropy 衡量新颖性与多样性，该指标无需参考答案，并通过人工标注、LLM 新颖性判断和传统多样性基线验证；后者通过一种基于检索的 multi-agent judge 框架评估任务完成度，并在效率上提升超过 60%。作者在 problem-solving 的 MacGyver、research ideation 的 HypoGen、creative writing 的 BookMIA 三类任务上，使用多种 LLM 进行验证。结果表明，该框架能稳定捕捉新颖性、多样性与任务满足度等创造力维度，并揭示模型规模、temperature、发布时间新旧以及 reasoning 能力对创造性表现的影响。",
+  "key_points_zh": [
+    "提出领域无关的 LLM 创造力自动评估框架，将评估机制与具体开放式任务解耦，提升可扩展性与泛化性。",
+    "用 semantic entropy 衡量发散性创造力，覆盖新颖性与多样性，且无需参考答案，并与人工和 LLM 判断结果对齐。",
+    "设计基于检索的 multi-agent judge 框架评估收敛性创造力，即任务完成度和上下文相关性，效率提升超过 60%。",
+    "在 MacGyver、HypoGen、BookMIA 三个差异明显的领域中验证，覆盖问题解决、科研构想和创意写作任务。",
+    "实验分析了模型规模、temperature、模型新旧和 reasoning 能力等因素如何影响 LLM 的创造性表现。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.58,
+    "problem_significance": 0.46,
+    "potential_impact": 0.42,
+    "paradigm_shift": 0.34,
+    "lasting_value": 0.28,
+    "llm_avg": 0.41600000000000004,
+    "comment": "A general creativity-evaluation framework for LLMs, but it has limited relevance to production agent harness architecture or closed-loop agent improvement.",
+    "comment_zh": "这是一个通用LLM创造力评估框架，但与生产级智能体框架架构或闭环改进关系有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.41600000000000004,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/tanminsen/creativity-eval",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11762/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11762/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11762/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11762/fig4.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}

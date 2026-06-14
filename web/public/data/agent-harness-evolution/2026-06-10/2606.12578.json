@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2606.12578",
+  "title": "MARD: Mirror-Augmented Reasoning Distillation for Mechanism-Level Drug-Drug Interaction Prediction",
+  "title_zh": "MARD：用于机制级药物相互作用预测的镜像增强推理蒸馏",
+  "authors": [
+    "Mohammadreza Riyazat",
+    "Vian Lelo",
+    "Rameen Jafri",
+    "Yumna Khan",
+    "Abeer Badawi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T18:26:11Z",
+  "abs_url": "https://arxiv.org/abs/2606.12578v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12578",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Mechanism-level drug-drug interaction (DDI) prediction requires identifying which enzyme or pharmacodynamic axis is implicated, in which direction, and with which evidence -- not merely whether two drugs interact. We introduce a reproducible mechanism-level DDI labelling and evaluation protocol with a structured 7-family/147-subtype taxonomy, leakage-safe cold-split protocols, and auditable reasoning metrics for evaluating pharmacological prediction beyond flat interaction classification. We propose a pipeline that produces a 7B reasoning MARD (Mirror-Augmented Reasoning Distillation), combining three training innovations: a single-token KL divergence on direction tag that ties the model's prediction, per-loss PRM-weighted DPO with programmatic hard negatives, and a leakage-safe mechanism-aware retrieval channel. Process-reward step labels are automatically verifiable against DrugBank-structured fields, requiring no human or LLM judges. On the April-2026 DrugBank release, our MARD-7B is the only system in a 32-system comparison whose accuracy survives drug-pair novelty, beating the best baseline by +13.9 pp and GPT-4o by +6.7 pp at ~1% of frontier API cost. Further analysis reveals an anti-memorisation signature where accuracy improves on rarely seen drugs, suggesting that gain comes from structured pharmacological reasoning rather than drug-frequency memorisation. We release corpus, DDI-PRM, retrieval index, and training code.",
+  "abstract_zh": "本文聚焦机制级 drug-drug interaction（DDI）预测：不仅判断两种药物是否相互作用，还要识别涉及的 enzyme 或 pharmacodynamic axis、作用方向以及证据。作者提出一套可复现的机制级 DDI 标注与评测协议，包含结构化的 7-family/147-subtype 分类体系、避免泄漏的 cold-split 划分，以及可审计的推理评测指标。方法上，论文提出 MARD（Mirror-Augmented Reasoning Distillation）训练管线，构建 7B 推理模型，结合三项创新：用 direction tag 的 single-token KL divergence 绑定模型预测方向；采用 per-loss PRM-weighted DPO 并引入程序化 hard negatives；加入 leakage-safe 的机制感知检索通道。其 process-reward step labels 可根据 DrugBank 结构化字段自动验证，无需人工或 LLM 评审。在 April-2026 DrugBank release 上，MARD-7B 在 32 个系统比较中是唯一在 drug-pair novelty 场景下仍保持准确率的系统，相比最佳 baseline 提升 +13.9 pp，相比 GPT-4o 提升 +6.7 pp，且成本约为前沿 API 的 1%。进一步分析显示其在低频药物上准确率反而提升，呈现 anti-memorisation 特征，说明收益更可能来自结构化药理推理而非药物频次记忆。作者将发布 corpus、DDI-PRM、retrieval index 与训练代码。",
+  "key_points_zh": [
+    "提出机制级 DDI 标注与评测协议，覆盖 7-family/147-subtype taxonomy，并采用 leakage-safe cold-split 检验 drug-pair novelty 下的泛化能力。",
+    "MARD-7B 结合 direction tag 的 single-token KL、PRM-weighted DPO 与程序化 hard negatives，将预测方向、推理过程和负样本构造更紧密地绑定。",
+    "引入机制感知 retrieval channel，同时强调 leakage-safe，避免检索通道泄漏测试药物对信息。",
+    "Process-reward step labels 可由 DrugBank 结构化字段自动验证，不依赖人工标注者或 LLM judge，提升评测可审计性。",
+    "在 April-2026 DrugBank 上，MARD-7B 较最佳 baseline 提升 +13.9 pp，较 GPT-4o 提升 +6.7 pp，并呈现低频药物上更强的 anti-memorisation 泛化迹象。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.45,
+    "problem_significance": 0.35,
+    "potential_impact": 0.25,
+    "paradigm_shift": 0.15,
+    "lasting_value": 0.2,
+    "llm_avg": 0.27999999999999997,
+    "comment": "A domain-specific biomedical reasoning and evaluation pipeline with limited transfer to general agent harness evolution.",
+    "comment_zh": "这是一套面向生物医学领域的推理与评测流程，对通用智能体框架演化的迁移价值有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.43732458189998774,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.27999999999999997,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 7,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12578/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12578/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12578/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.953
+    }
+  ]
+}
