@@ -1,0 +1,71 @@
+{
+  "arxiv_id": "2606.12852",
+  "title": "WISE: A Long-Horizon Agent in Minecraft with Why-Which Reasoning",
+  "title_zh": "WISE：在 Minecraft 中具备 Which-Why 推理的长时程智能体",
+  "authors": [
+    "Renmin Cheng",
+    "Changhao Chen"
+  ],
+  "published_at": "2026-06-11T03:35:02Z",
+  "abs_url": "https://arxiv.org/abs/2606.12852v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12852",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Rapid advances have been made in developing general-purpose embodied agent in environments like Minecraft through the adoption of LLM-augmented hierarchical approaches. Despite their promise, low-level controllers often become performance bottlenecks due to repeated execution failures. We argue that a key limitation is not only the lack of episodic memory, but also the decoupling of \\textit{what-where-when} memory from \\textit{which-why} reasoning. To address this, we propose \\textbf{WISE} (Which-Why Informed Semantic Explorer), a long-horizon agent framework with an enhanced low-level controller equipped with a Causal Event Graph that augments episodic memory with explicit causal structure linking observations to task relevance. Unlike prior work such as MrSteve, which relies on feature similarity for retrieval, WISE enables robust recall under viewpoint changes and supports opportunistic task reordering through causal reasoning. Building on this memory, we propose an Opportunistic Task Scheduler that dynamically re-prioritizes subtasks when causally relevant opportunities are detected. We further equip WISE with a multi-scale progressive exploration strategy to provide spatially comprehensive observations for downstream reasoning. Experiments show that WISE largely improves task success and efficiency on long-horizon sparse tasks, particularly in settings requiring adaptive decision-making.",
+  "abstract_zh": "本文提出 WISE（Which-Why Informed Semantic Explorer），一个面向 Minecraft 长时程稀疏任务的具身智能体框架。作者指出，现有 LLM 增强的层级式智能体常受限于低层控制器的重复执行失败，其根源不仅是缺少情节记忆（episodic memory），还在于 what-where-when 记忆与 which-why 因果推理相互脱节。WISE 引入 Causal Event Graph，将观察与任务相关性之间的显式因果结构纳入记忆，使智能体在视角变化下仍能稳健回忆关键信息，并支持基于因果机会的任务重排。进一步地，WISE 设计了 Opportunistic Task Scheduler，在检测到与目标因果相关的环境机会时动态调整子任务优先级；同时采用多尺度渐进式探索策略，为后续推理提供更全面的空间观察。实验表明，WISE 在需要自适应决策的长时程稀疏任务上显著提升了成功率与效率。",
+  "key_points_zh": [
+    "提出 WISE，一个面向 Minecraft 长时程任务的具身智能体框架，重点增强低层控制器的记忆与推理能力。",
+    "核心组件 Causal Event Graph 将观察、事件与任务相关性显式连接，弥合 what-where-when 记忆和 which-why 推理之间的断裂。",
+    "相比 MrSteve 等依赖特征相似度检索的方法，WISE 在视角变化下具备更稳健的记忆召回能力。",
+    "设计 Opportunistic Task Scheduler，可在发现因果相关机会时动态重排子任务，实现机会主义决策。",
+    "通过多尺度渐进式探索获得更完整的空间观察，在长时程稀疏任务中提升任务成功率和执行效率。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.58,
+    "problem_significance": 0.55,
+    "potential_impact": 0.48,
+    "paradigm_shift": 0.42,
+    "lasting_value": 0.42,
+    "llm_avg": 0.48999999999999994,
+    "comment": "WISE contributes memory and scheduling ideas for embodied agents, but it remains domain-specific and less production-harness oriented.",
+    "comment_zh": "WISE为具身智能体提供了记忆和调度思路，但仍偏领域特定且生产级框架导向不足。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.48999999999999994,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "last_author_h_index": 1,
+    "last_author_found": true
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12852/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12852/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

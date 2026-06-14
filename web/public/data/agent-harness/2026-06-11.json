@@ -1,0 +1,264 @@
+{
+  "domain": "agent-harness",
+  "display_name": "Agent Harness",
+  "date": "2026-06-11",
+  "generated_at": "2026-06-14T01:51:33Z",
+  "papers": [
+    {
+      "arxiv_id": "2606.13174",
+      "title": "Getting Better at Working With You: Compiling User Corrections into Runtime Enforcement for Coding Agents",
+      "title_zh": "与你协作得更好：将用户纠正编译为编码 Agent 的运行时强制约束",
+      "authors": [
+        "Yujun Zhou",
+        "Kehan Guo",
+        "Haomin Zhuang",
+        "Xiangqi Wang",
+        "Yue Huang",
+        "Zhenwen Liang",
+        "Pin-Yu Chen",
+        "Tian Gao",
+        "Nuno Moniz",
+        "Nitesh V. Chawla",
+        "Xiangliang Zhang"
+      ],
+      "total_score": 0.7451431232324532,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8300000000000001,
+        "other": 0.4804770774415104
+      },
+      "tags": [
+        "HF Daily ★2",
+        "GitHub",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "把用户纠正编译成运行时规则约束",
+      "detail_file": "agent-harness/2026-06-11/2606.13174.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13174/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.12882",
+      "title": "HarnessBridge: Learnable Bidirectional Controller for LLM Agent Harness",
+      "title_zh": "HarnessBridge：面向 LLM Agent Harness 的可学习双向控制器",
+      "authors": [
+        "Xiaoxuan Wang",
+        "Haixin Wang",
+        "Alexander Taylor",
+        "Jason Cong",
+        "Yizhou Sun",
+        "Wei Wang"
+      ],
+      "total_score": 0.711083585548683,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.868,
+        "other": 0.32894528516227645
+      },
+      "tags": [
+        "HF Daily ★9",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "可学习 harness 提升长程 Agent 交互效率",
+      "detail_file": "agent-harness/2026-06-11/2606.12882.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12882/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13662",
+      "title": "EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery",
+      "title_zh": "EurekAgent：自主科学发现只需要 Agent Environment Engineering",
+      "authors": [
+        "Amy Xin",
+        "Jiening Siow",
+        "Junjie Wang",
+        "Zijun Yao",
+        "Fanjin Zhang",
+        "Jian Song",
+        "Lei Hou",
+        "Juanzi Li"
+      ],
+      "total_score": 0.709657042191412,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8400000000000001,
+        "other": 0.40552347397137295
+      },
+      "tags": [
+        "HF Daily ★21",
+        "Code soon",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "环境工程驱动自主科学发现",
+      "detail_file": "agent-harness/2026-06-11/2606.13662.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13662/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13392",
+      "title": "MiniMax Sparse Attention",
+      "title_zh": "MiniMax 稀疏注意力",
+      "authors": [
+        "Xunhao Lai",
+        "Weiqi Xu",
+        "Yufeng Yang",
+        "Qiaorui Chen",
+        "Yang Xu",
+        "Lunbin Zeng",
+        "Xiaolong Li",
+        "Haohai Sun",
+        "Haichao Zhu",
+        "Vito Zhang",
+        "Pengyu Zhao"
+      ],
+      "total_score": 0.6690857563297673,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.55,
+        "other": 0.5602858544325567
+      },
+      "tags": [
+        "HF Daily ★103",
+        "GitHub",
+        "context memory engineering"
+      ],
+      "tldr_zh": "MSA让百万上下文注意力显著降本加速",
+      "detail_file": "agent-harness/2026-06-11/2606.13392.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13392/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13643",
+      "title": "Recursive Agent Harnesses",
+      "title_zh": "递归智能体框架",
+      "authors": [
+        "Elias Lumer",
+        "Sahil Sen",
+        "Kevin Paul",
+        "Vamse Kumar Subbiah"
+      ],
+      "total_score": 0.6562,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8139999999999998,
+        "other": 0.2
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "RAH用智能体递归提升长上下文推理",
+      "detail_file": "agent-harness/2026-06-11/2606.13643.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13643/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13177",
+      "title": "MemRefine: LLM-Guided Compression for Long-Term Agent Memory",
+      "title_zh": "MemRefine：面向长期 Agent 记忆的 LLM 引导压缩",
+      "authors": [
+        "Minjae Kim",
+        "Jinheon Baek",
+        "Soyeong Jeong",
+        "Sung Ju Hwang"
+      ],
+      "total_score": 0.5870982525209646,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.624,
+        "other": 0.2129941750698816
+      },
+      "tags": [
+        "context memory engineering"
+      ],
+      "tldr_zh": "用 LLM 判断压缩长期 Agent 记忆",
+      "detail_file": "agent-harness/2026-06-11/2606.13177.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13177/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13003",
+      "title": "The Illusion of Multi-Agent Advantage",
+      "title_zh": "多智能体优势的幻觉",
+      "authors": [
+        "Prathyusha Jwalapuram",
+        "Hehai Lin",
+        "Chuyuan Li",
+        "Fangkai Jiao",
+        "Sudong Wang",
+        "Yifei Ming",
+        "Zixuan Ke",
+        "Chengwei Qin",
+        "Giuseppe Carenini",
+        "Shafiq Joty"
+      ],
+      "total_score": 0.5855,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.6200000000000001,
+        "other": 0.15833333333333335
+      },
+      "tags": [
+        "planning and policy"
+      ],
+      "tldr_zh": "自动生成MAS常贵且弱于强单智能体",
+      "detail_file": "agent-harness/2026-06-11/2606.13003.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13003/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.12852",
+      "title": "WISE: A Long-Horizon Agent in Minecraft with Why-Which Reasoning",
+      "title_zh": "WISE：在 Minecraft 中具备 Which-Why 推理的长时程智能体",
+      "authors": [
+        "Renmin Cheng",
+        "Changhao Chen"
+      ],
+      "total_score": 0.5528145717194441,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.48999999999999994,
+        "other": 0.17938190573148036
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "用因果记忆提升 Minecraft 长时程智能体",
+      "detail_file": "agent-harness/2026-06-11/2606.12852.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12852/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.12793",
+      "title": "Semantic Identification of IoT Devices from Behavioral Primitives",
+      "title_zh": "基于行为原语的 IoT 设备语义识别",
+      "authors": [
+        "Samuel Witt",
+        "Hassan Habibi Gharakheili"
+      ],
+      "total_score": 0.5054486884761411,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.31399999999999995,
+        "other": 0.25082896158713686
+      },
+      "tags": [
+        "observability governance"
+      ],
+      "tldr_zh": "用 MUD 行为语义增强 IoT 设备识别",
+      "detail_file": "agent-harness/2026-06-11/2606.12793.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12793/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.12783",
+      "title": "A Tutorial on World Models and Physical AI",
+      "title_zh": "World Models 与 Physical AI 教程",
+      "authors": [
+        "Il-Seok Oh"
+      ],
+      "total_score": 0.4812668017197769,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.266,
+        "other": 0.21822267239925625
+      },
+      "tags": [
+        "planning and policy"
+      ],
+      "tldr_zh": "综述 World Models 如何支撑 Physical AI",
+      "detail_file": "agent-harness/2026-06-11/2606.12783.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12783/thumb.webp"
+    }
+  ]
+}

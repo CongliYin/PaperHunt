@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.13003",
+  "title": "The Illusion of Multi-Agent Advantage",
+  "title_zh": "多智能体优势的幻觉",
+  "authors": [
+    "Prathyusha Jwalapuram",
+    "Hehai Lin",
+    "Chuyuan Li",
+    "Fangkai Jiao",
+    "Sudong Wang",
+    "Yifei Ming",
+    "Zixuan Ke",
+    "Chengwei Qin",
+    "Giuseppe Carenini",
+    "Shafiq Joty"
+  ],
+  "published_at": "2026-06-11T07:39:24Z",
+  "abs_url": "https://arxiv.org/abs/2606.13003v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13003",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Prevailing wisdom posits that Multi-Agent Systems (MAS) are superior to Single-Agent Systems (SAS), citing advantages like context protection, parallel processing and distributed decision-making. However, empirical support for this claim relies primarily on comparisons with SAS baselines using benchmarks that prioritize isolated reasoning tasks, which do not adequately assess these advantages. Focusing on automatically generated MAS that are designed for enhanced generalizability over manually-designed counterparts, we perform a rigorous, systematic evaluation against SAS, specifically Chain-of-Thought with Self-Consistency (CoT-SC). Across traditional reasoning datasets and tasks with interactive multi-step workflows (e.g., BrowseComp-Plus), we demonstrate that automatic MAS consistently underperform CoT-SC despite being up to 10x more expensive. To isolate these failures from limitations inherent to task structure, we introduce a diagnostic synthetic dataset tailored for MAS featuring explicit task decomposition, context separation and parallelization potential. We show that expert-architected MAS consistently outperforms automatically generated architectures in both raw performance and cost-efficiency on this dataset, demonstrating that existing evaluation frameworks mask critical architectural gaps and inefficiencies of complex MAS by failing to account for the marginal utility of increased computational cost. Critically, systematic deconstruction of the generated MAS architectures reveals that current automated design paradigms produce architectural bloat that prioritizes superficial complexity which does not translate into functional utility, exposing a fundamental misalignment with multi-agent principles.",
+  "abstract_zh": "本文质疑“Multi-Agent Systems（MAS）天然优于 Single-Agent Systems（SAS）”这一主流观点。作者指出，现有经验证据多依赖于在偏重孤立推理任务的 benchmark 上与较弱 SAS baseline 比较，无法真正检验 MAS 所宣称的上下文保护、并行处理和分布式决策等优势。论文聚焦于自动生成的 MAS，并将其与强 SAS 方法 Chain-of-Thought with Self-Consistency（CoT-SC）进行系统评估。结果显示，在传统推理数据集以及 BrowseComp-Plus 等交互式多步骤工作流任务上，自动 MAS 持续落后于 CoT-SC，同时成本最高可达其 10 倍。为排除任务结构本身不适合 MAS 的因素，作者进一步构造了一个诊断性合成数据集，显式包含任务分解、上下文隔离和并行化潜力。实验表明，在该数据集上，由专家设计的 MAS 在性能和成本效率上均稳定优于自动生成架构。进一步拆解发现，当前自动 MAS 设计范式往往产生架构膨胀，追求表面复杂度却缺乏实际功能收益，暴露出与多智能体核心原则之间的根本错位。",
+  "key_points_zh": [
+    "论文系统挑战 MAS 相比 SAS 的默认优势假设，指出既有评测多未真正覆盖 MAS 的关键优势场景。",
+    "在传统推理任务和 BrowseComp-Plus 等交互式多步任务中，自动生成 MAS 普遍不如 CoT-SC，且推理成本最高增加约 10 倍。",
+    "作者提出面向 MAS 的诊断性合成数据集，显式测试任务分解、上下文隔离与并行化能力。",
+    "实验显示 expert-architected MAS 明显优于自动生成 MAS，说明 MAS 的有效性高度依赖架构设计质量。",
+    "自动生成 MAS 常出现 architectural bloat（架构膨胀），增加复杂度却未带来相应功能收益和成本效率。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.6,
+    "problem_significance": 0.75,
+    "potential_impact": 0.62,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.58,
+    "llm_avg": 0.6200000000000001,
+    "comment": "This evaluation usefully challenges multi-agent architectural assumptions, but it contributes diagnostics more than production harness mechanisms.",
+    "comment_zh": "该评测有助于质疑多智能体架构假设，但贡献更偏诊断而非生产级框架机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.6200000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "last_author_h_index": null,
+    "last_author_found": false
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13003/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13003/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13003/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.943
+    }
+  ]
+}

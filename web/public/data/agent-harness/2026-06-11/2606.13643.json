@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.13643",
+  "title": "Recursive Agent Harnesses",
+  "title_zh": "递归智能体框架",
+  "authors": [
+    "Elias Lumer",
+    "Sahil Sen",
+    "Kevin Paul",
+    "Vamse Kumar Subbiah"
+  ],
+  "published_at": "2026-06-11T17:47:30Z",
+  "abs_url": "https://arxiv.org/abs/2606.13643v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13643",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recursive language models (RLMs) showed that recursion over model calls is an effective strategy for long-context reasoning, and production coding agents have begun to write code that spawns subagents at scale, most recently in Anthropic's dynamic workflows. We name and study the pattern between these two lines of work, where the recursive unit is a full agent harness with filesystem tools, code execution, and planning rather than a model call with no tools. We call this the Recursive Agent Harness (RAH) and frame it as harness recursion, the code-first extension to the model recursion of RLMs. A parent agent generates and runs an executable script that spawns subagent harnesses in parallel for fine-grained workloads and uses structured function calls for small subtasks. We provide a controlled evaluation on long-context reasoning. With the backbone held fixed at GPT-5 to match the published Codex and RLM baselines, RAH improves the Codex coding-agent baseline from 71.75% to 81.36% on Oolong-Synthetic (199 samples, 13 context-length buckets up to 4M tokens), a gain attributable to the harness rather than the model. With a stronger backbone, Claude Sonnet 4.5, the same design reaches 89.77%.",
+  "abstract_zh": "本文提出并研究 Recursive Agent Harness（RAH）这一模式：将递归从 Recursive Language Models（RLMs）中的“模型调用递归”扩展为“完整智能体框架递归”。在 RAH 中，父智能体会生成并执行脚本，脚本并行启动具备文件系统工具、代码执行与规划能力的子智能体框架，用于处理细粒度任务；同时，对较小子任务使用结构化函数调用。作者在长上下文推理任务上进行受控评测，在固定 backbone 为 GPT-5、对齐已发表 Codex 与 RLM 基线的条件下，RAH 在 Oolong-Synthetic（199 个样本，13 个上下文长度桶，最高 4M tokens）上将 Codex coding-agent 基线从 71.75% 提升到 81.36%，说明增益主要来自 harness 设计而非模型本身。使用更强的 Claude Sonnet 4.5 时，同一设计达到 89.77%。",
+  "key_points_zh": [
+    "提出 Recursive Agent Harness（RAH），将 RLMs 的模型调用递归扩展为具备工具、代码执行和规划能力的完整智能体框架递归。",
+    "RAH 采用父智能体生成并运行可执行脚本的方式，并行启动多个子智能体处理细粒度工作负载，同时用结构化函数调用处理小任务。",
+    "在 Oolong-Synthetic 长上下文推理基准上，固定 GPT-5 作为 backbone 时，RAH 将 Codex coding-agent 基线从 71.75% 提升到 81.36%。",
+    "由于 backbone 固定，实验表明性能提升主要来自 harness recursion 机制，而非底层模型能力变化。",
+    "当 backbone 换为 Claude Sonnet 4.5 时，同一 RAH 设计进一步达到 89.77%，显示其可随更强模型扩展。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.84,
+    "problem_significance": 0.82,
+    "potential_impact": 0.83,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.8,
+    "llm_avg": 0.8139999999999998,
+    "comment": "Recursive Agent Harnesses provides a concrete orchestration pattern for spawning tool-using subagents over long-context workloads.",
+    "comment_zh": "递归智能体框架为长上下文任务中生成和编排带工具子智能体提供了具体模式。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8139999999999998,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "last_author_h_index": null,
+    "last_author_found": false
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13643/fig1.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13643/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13643/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13643/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.95
+    }
+  ]
+}

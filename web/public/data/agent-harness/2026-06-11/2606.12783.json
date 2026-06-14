@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2606.12783",
+  "title": "A Tutorial on World Models and Physical AI",
+  "title_zh": "World Models 与 Physical AI 教程",
+  "authors": [
+    "Il-Seok Oh"
+  ],
+  "published_at": "2026-06-11T00:52:39Z",
+  "abs_url": "https://arxiv.org/abs/2606.12783v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12783",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "World modeling is emerging as a central principle for building intelligent systems capable of prediction, reasoning, and decision making. A central distinction can be drawn between explicit world models, which learn structured dynamics for rollout-based reasoning and planning, and implicit world models, which encode predictive structure within scalable learned representations. These complementary paradigms provide a foundation for physical AI in domains such as robotics and autonomous driving, enabling intelligence beyond reactive control under real-world constraints. Recent foundation models further suggest a pathway toward unified systems integrating perception, prediction, and action. Despite rapid progress, major challenges remain in hierarchical reasoning, long-horizon planning, and autonomous goal formation, which are critical for advancing toward artificial general intelligence. This tutorial presents a coherent framework in which diverse world modeling approaches are unified through shared predictive structure and differentiated by how such structure is represented and exploited.",
+  "abstract_zh": "世界建模（World Modeling）正成为构建具备预测、推理与决策能力的智能系统的核心原则。论文区分了两类范式：显式世界模型（explicit world models）学习结构化动力学，用于基于 rollout 的推理与规划；隐式世界模型（implicit world models）则将预测性结构编码进可扩展的学习表征中。二者互补，为机器人、自动驾驶等 Physical AI 场景提供基础，使智能系统能够在真实约束下超越反应式控制。近期 foundation models 进一步展示了将感知、预测与行动整合为统一系统的可能路径。然而，层级推理、长时域规划与自主目标形成仍是迈向 AGI 的关键挑战。本文以教程形式提出统一框架，将多样化 world modeling 方法归结为共享的预测结构，并根据其表示与利用方式进行区分。",
+  "key_points_zh": [
+    "提出一个统一视角：不同 world modeling 方法都依赖预测结构，只是在结构的表示方式与使用方式上不同。",
+    "区分显式世界模型与隐式世界模型：前者适合结构化动力学、rollout 推理和规划，后者适合大规模表征学习与可扩展预测。",
+    "强调 world models 对 Physical AI 的基础作用，尤其是在 robotics、autonomous driving 等需要真实世界约束下决策的任务中。",
+    "讨论 foundation models 可能推动感知、预测、推理与行动的一体化，为更通用的智能系统提供路径。",
+    "指出关键开放问题包括层级推理、长时域规划和自主目标形成，这些能力被视为通向 AGI 的重要瓶颈。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.25,
+    "problem_significance": 0.38,
+    "potential_impact": 0.28,
+    "paradigm_shift": 0.22,
+    "lasting_value": 0.2,
+    "llm_avg": 0.266,
+    "comment": "As a tutorial on world models and physical AI, it is broadly informative but not a contribution to agent harness infrastructure.",
+    "comment_zh": "作为世界模型和物理AI教程，它有综述价值，但不是智能体框架基础设施贡献。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4093360343955374,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.266,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "last_author_h_index": 4,
+    "last_author_found": true
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12783/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12783/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.777
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12783/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.605
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12783/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.346
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2606.12793",
+  "title": "Semantic Identification of IoT Devices from Behavioral Primitives",
+  "title_zh": "基于行为原语的 IoT 设备语义识别",
+  "authors": [
+    "Samuel Witt",
+    "Hassan Habibi Gharakheili"
+  ],
+  "published_at": "2026-06-11T01:41:23Z",
+  "abs_url": "https://arxiv.org/abs/2606.12793v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12793",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Accurate identification of IoT devices is important for security management and policy enforcement. Existing approaches typically learn device signatures from packets or flow records. These methods operate on low-level communication observations whose traffic patterns may vary across deployments, software versions, and user interactions. This paper studies device identification using Manufacturer Usage Description (MUD) profiles. MUD profiles describe device behavior using Access Control Entries (ACEs), where each ACE represents a behavioral primitive consisting of protocol, endpoint, direction, and port semantics derived from device communication policy. Our contributions are threefold. First, using 28 publicly available MUD profiles containing 1,023 ACE instances, we construct ACE-level semantic representations from compact behavioral text and analyze their geometric properties. ACE-level representations preserve device-level behavioral distinctions more effectively than whole-profile embeddings and remain effective after whitening calibration. Second, we evaluate semantic ACE matching under controlled runtime variations, including unseen ACEs, drifted hostnames, and partial runtime observation. Exact ACE matching performs well when the overlap with the canonical MUD profile remains high, but degrades sharply when the overlap becomes sparse or disappears. In contrast, semantic ACE matching preserves useful identification evidence across these conditions. Third, we evaluate the same approach on real IoT traffic traces comprising more than 800,000 observed flows. Exact overlap remains the strongest signal when stable overlap exists, while semantic ACE matching provides stronger identification evidence during the early stages of observation, frequently retains the correct device among the highest-ranked candidates, and remains effective under sparse-overlap runtime traffic.",
+  "abstract_zh": "本文研究利用 Manufacturer Usage Description (MUD) profiles 进行 IoT 设备识别。与传统基于 packet 或 flow record 学习低层通信特征的方法不同，MUD profiles 通过 Access Control Entries (ACEs) 描述设备通信策略，其中每个 ACE 可视为由 protocol、endpoint、direction 与 port semantics 构成的行为原语。论文基于 28 个公开 MUD profiles、共 1,023 个 ACE 实例，构建 ACE-level 语义表示并分析其几何性质。实验表明，ACE-level 表示相比 whole-profile embeddings 更能保持设备级行为差异，并且在 whitening calibration 后仍有效。作者进一步在受控运行时变化下评估 semantic ACE matching，包括 unseen ACEs、drifted hostnames 与 partial runtime observation。结果显示，当运行时观测与标准 MUD profile 高度重叠时，exact ACE matching 表现较好；但在重叠稀疏或消失时性能显著下降，而 semantic ACE matching 仍能保留有用的识别证据。最后，论文在包含超过 800,000 条 observed flows 的真实 IoT traffic traces 上验证方法，发现 exact overlap 在稳定重叠存在时仍是最强信号，但 semantic ACE matching 在早期观测、稀疏重叠流量场景下更有优势，并常能将正确设备保留在高排名候选中。",
+  "key_points_zh": [
+    "提出从 MUD profiles 中的 ACEs 构建设备行为原语语义表示，用于 IoT 设备识别，而非依赖低层 packet/flow 特征。",
+    "在 28 个公开 MUD profiles、1,023 个 ACE 实例上发现，ACE-level embeddings 比 whole-profile embeddings 更好地区分设备行为，并对 whitening calibration 保持鲁棒。",
+    "在 unseen ACEs、hostname drift、partial observation 等受控变化下，semantic ACE matching 在 exact overlap 稀疏或缺失时仍能提供有效识别证据。",
+    "在超过 800,000 条 observed flows 的真实 IoT traffic traces 上，exact overlap 在稳定重叠时最强，但 semantic matching 在早期观测和稀疏重叠场景下更有价值。",
+    "论文表明，将通信策略中的语义行为原语用于匹配，可提升 IoT 设备识别在部署差异、版本变化和用户交互变化下的稳健性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.42,
+    "problem_significance": 0.45,
+    "potential_impact": 0.32,
+    "paradigm_shift": 0.2,
+    "lasting_value": 0.18,
+    "llm_avg": 0.31399999999999995,
+    "comment": "This is a useful IoT security identification paper but has little direct relevance to LLM agent harness infrastructure.",
+    "comment_zh": "这是一篇有用的物联网安全识别论文，但与LLM智能体框架基础设施关系很弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.604973769522821,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.31399999999999995,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "last_author_h_index": 23,
+    "last_author_found": true
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12793/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12793/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12793/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.68
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12793/fig4.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.397
+    }
+  ]
+}

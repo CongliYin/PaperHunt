@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.13662",
+  "title": "EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery",
+  "title_zh": "EurekAgent：自主科学发现只需要 Agent Environment Engineering",
+  "authors": [
+    "Amy Xin",
+    "Jiening Siow",
+    "Junjie Wang",
+    "Zijun Yao",
+    "Fanjin Zhang",
+    "Jian Song",
+    "Lei Hou",
+    "Juanzi Li"
+  ],
+  "published_at": "2026-06-11T17:56:35Z",
+  "abs_url": "https://arxiv.org/abs/2606.13662v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13662",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM-based agents have shown increasing potential in automating scientific discovery. Given an optimizable metric and an execution environment, they can propose, validate, and iterate scientific solutions, and have produced results that outperform human-designed approaches. As model capabilities continue to improve, we argue that the bottleneck for autonomous scientific discovery is shifting from prescribing agent workflows to designing agent environments: the resources, constraints, and interfaces that shape agent behavior. We frame this as environment engineering: building environments that amplify productive behaviors, such as open-ended exploration, systematic artifact management, and inter-agent collaboration, while suppressing harmful behaviors, such as reward hacking and high-friction human oversight. We present EurekAgent, an environment-engineered agent system for metric-driven autonomous scientific discovery. EurekAgent engineers the environment along four dimensions: permissions engineering for bounded agent execution and isolated evaluation; artifact engineering for filesystem and Git-based collaboration; budget engineering for budget-aware exploration; and human-in-the-loop engineering for easy human supervision and intervention. EurekAgent sets new state-of-the-art results on multiple mathematics, kernel engineering, and machine learning tasks, including new state-of-the-art 26-circle packing results discovered with less than $11 in total API cost. We open-source our code and results, and call for environment engineering as a core research direction for developing reliable autonomous research agents.",
+  "abstract_zh": "本文关注基于 LLM 的 agents 在自动化科学发现中的新瓶颈：当模型能力持续增强后，关键不再只是手工规定 agent 工作流，而是如何设计能塑造 agent 行为的环境，包括资源、约束与接口。作者提出 environment engineering（环境工程）范式，目标是放大开放式探索、系统化 artifact 管理、agent 间协作等有益行为，同时抑制 reward hacking 与高摩擦人工监督等问题。基于此，论文提出 EurekAgent，一个面向指标驱动自主科学发现的环境工程化 agent 系统，从四个维度构建环境：permissions engineering 用于受限执行与隔离评估；artifact engineering 用于文件系统和 Git 协作；budget engineering 用于预算感知探索；human-in-the-loop engineering 用于便捷人工监督和干预。EurekAgent 在数学、kernel engineering 和机器学习任务上取得多个新的 state-of-the-art 结果，其中包括以低于 11 美元 API 总成本发现新的 26-circle packing 最优结果。作者开源代码和结果，并呼吁将 environment engineering 作为可靠自主研究 agents 的核心研究方向。",
+  "key_points_zh": [
+    "论文提出 environment engineering：通过设计 agent 所处的资源、约束和接口，而非仅设计工作流，来提升自主科学发现系统的可靠性与产出。",
+    "EurekAgent 从 permissions、artifact、budget、human-in-the-loop 四个维度工程化 agent 环境，分别解决安全执行、协作管理、成本控制和人工干预问题。",
+    "系统强调开放式探索、系统化 artifact 管理和多 agent 协作，同时抑制 reward hacking、越权执行和低效人工监督等风险。",
+    "EurekAgent 在数学、kernel engineering、机器学习等任务上刷新多个 state-of-the-art，并以低于 11 美元 API 成本发现新的 26-circle packing 结果。",
+    "论文将环境设计提升为自主研究 agents 的核心问题，为构建可控、低成本、可复现实验型科学发现系统提供了框架。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8400000000000001,
+    "comment": "EurekAgent offers a strong environment-engineering view with permissions, artifacts, budgets, and human oversight for autonomous agent runtimes.",
+    "comment_zh": "EurekAgent提出了包含权限、产物、预算和人工监督的环境工程视角，对自主智能体运行时很有价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.2,
+    "community_heat": 0.8331408438282375,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8400000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 21,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "last_author_h_index": null,
+    "last_author_found": false
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13662/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13662/fig2.webp",
+      "page": 2,
+      "kind": "table",
+      "confidence": 0.983
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13662/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13662/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.13174",
+  "title": "Getting Better at Working With You: Compiling User Corrections into Runtime Enforcement for Coding Agents",
+  "title_zh": "与你协作得更好：将用户纠正编译为编码 Agent 的运行时强制约束",
+  "authors": [
+    "Yujun Zhou",
+    "Kehan Guo",
+    "Haomin Zhuang",
+    "Xiangqi Wang",
+    "Yue Huang",
+    "Zhenwen Liang",
+    "Pin-Yu Chen",
+    "Tian Gao",
+    "Nuno Moniz",
+    "Nitesh V. Chawla",
+    "Xiangliang Zhang"
+  ],
+  "published_at": "2026-06-11T10:43:40Z",
+  "abs_url": "https://arxiv.org/abs/2606.13174v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13174",
+  "links": {
+    "github": "https://github.com/YujunZhou/TRACE_exp",
+    "project_page": null
+  },
+  "abstract_en": "Interactive LLM agents are becoming part of daily work, but they do not reliably become easier to work with over time: a correction remembered in one session may still be violated in the next. We study this gap between preference access and preference compliance. In tasks derived from anonymized real-user friction cases, Mem0 memory still leaves 57.5% of applicable preference checks violated. We introduce Test-time Rule Acquisition and Compiled Enforcement (TRACE), a drop-in skill-layer pipeline for coding-agent runtimes that mines user corrections, rewrites them as atomic rules, and compiles them into runtime checks that must pass before an agent completes future tasks. Unlike runtime checks written ahead of time by developers, TRACE skills come from the user's own chat corrections. We evaluate TRACE with simulated user-in-the-loop experiments on ClawArena coding-agent tasks and MemoryArena-derived memory-intensive tasks. On ClawArena, TRACE reduces held-out preference violation from 100.0% to 37.6% on in-distribution tasks and from 100.0% to 2.0% on out-of-distribution tasks. On MemoryArena-derived tasks, TRACE reduces in-distribution violation from 100.0% to 60.5% while matching or exceeding the strongest memory baseline on task pass. These results suggest that compiling corrections into runtime enforcement can address a repeated-friction failure mode that memory alone does not reliably solve, reducing the need for users to restate the same correction across future sessions. Experiment code is available at https://github.com/YujunZhou/TRACE_exp, and the deployable skill is available at https://github.com/YujunZhou/tellonce.",
+  "abstract_zh": "交互式 LLM Agent 正逐渐融入日常工作，但它们并不总能随着使用而变得更容易协作：某次会话中记住的用户纠正，在下一次仍可能被违反。本文研究“偏好可访问”与“偏好可遵守”之间的差距。在来自匿名真实用户摩擦案例的任务中，即使使用 Mem0 memory，仍有 57.5% 的适用偏好检查被违反。作者提出 Test-time Rule Acquisition and Compiled Enforcement（TRACE），这是一个可插拔的 coding-agent 运行时 skill-layer pipeline：它从用户纠正中挖掘规则，将其改写为原子规则，并编译为运行时检查，要求 Agent 在完成未来任务前必须通过。不同于开发者预先编写的运行时检查，TRACE skills 来源于用户自己的聊天纠正。作者在 ClawArena coding-agent 任务和 MemoryArena 衍生的记忆密集型任务上进行了模拟用户在环实验。结果显示，在 ClawArena 上，TRACE 将 held-out 偏好违反率从 100.0% 降至 37.6%（同分布任务），并从 100.0% 降至 2.0%（分布外任务）；在 MemoryArena 衍生任务上，TRACE 将同分布违反率从 100.0% 降至 60.5%，同时在任务通过率上达到或超过最强 memory baseline。结果表明，将纠正编译为运行时强制约束，可以缓解单靠记忆难以解决的重复摩擦问题，减少用户在未来会话中反复重述相同纠正的需求。",
+  "key_points_zh": [
+    "论文聚焦 coding agents 中“记住偏好但仍不遵守”的问题，指出 memory 机制并不能可靠避免跨会话重复违规。",
+    "提出 TRACE：从用户聊天纠正中自动抽取、原子化规则，并编译成任务完成前必须通过的运行时检查。",
+    "与开发者预设规则不同，TRACE 的 enforcement 规则来自真实用户纠正，更贴合个体化协作偏好。",
+    "在 ClawArena 上，TRACE 显著降低 held-out 偏好违反率，尤其在 OOD 任务中从 100.0% 降至 2.0%。",
+    "在 MemoryArena-derived 任务中，TRACE 在降低偏好违规的同时保持或超过最强 memory baseline 的任务通过率。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.87,
+    "llm_avg": 0.8300000000000001,
+    "comment": "TRACE is highly relevant because it converts user corrections into persistent runtime enforcement for coding-agent harnesses.",
+    "comment_zh": "TRACE高度相关，因为它将用户纠正转化为编码智能体框架中的持久运行时约束。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.5,
+    "community_heat": 0.6828624646490623,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8300000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/YujunZhou/TRACE_exp",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 2,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "last_author_h_index": null,
+    "last_author_found": false
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13174/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13174/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13174/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.929
+    }
+  ]
+}
