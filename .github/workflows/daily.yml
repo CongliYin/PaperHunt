@@ -17,6 +17,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: daily-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -68,10 +72,23 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+
           git add web/public/data
           if git diff --cached --quiet; then
             echo "No data changes to commit."
             exit 0
           fi
           git commit -m "data: update paper hunt"
-          git push
+
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push failed, rebasing onto latest origin/${GITHUB_REF_NAME} (attempt ${attempt})..."
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          done
+
+          echo "Failed to push generated data after retries."
+          exit 1
