@@ -15,32 +15,32 @@
     "project_page": null
   },
   "abstract_en": "Agentic infrastructure introduces a critical control-plane authorization problem: non-deterministic reasoning systems can propose high-stakes mutations to production resources, yet existing security mechanisms -- such as identity and access management (IAM), policy engines, consensus protocols, and audit logs -- either enforce static, context-unaware permissions or merely record actions post-execution. This paper introduces the Sovereign Assurance Boundary (SAB), a certificate-bound runtime admission layer for autonomous execution authority. SAB intercepts agent proposals at an assurance airlock, compiles them into typed execution contracts $C$, and binds these contracts to cryptographic evidence digests $H(E)$ and policy versions. The contracts are then routed through consequence-aware certification paths. Upon successful admission, the system emits a signed Sovereign Assurance Certificate ($Ω$) that is strictly scoped to a specific execution identity, revocation epoch, and validity window. Finally, a sovereign execution broker verifies $Ω$ and performs fresh pre-execution revocation and drift checks before invoking infrastructure APIs. We detail the airlock-broker architecture, formalize its admission and revocation invariants, and report preliminary feasibility measurements from a Go prototype evaluated over 2,500 admission attempts. Ultimately, this broker-enforced model prevents autonomous reasoning from directly mutating state, transforming delegated execution authority into a cryptographically verifiable, evidence-bound, revocable, and replayable runtime artifact.",
-  "abstract_zh": "本文针对 Agentic Infrastructure 中的控制平面授权难题提出 Sovereign Assurance Boundary（SAB）：非确定性的推理系统可能提出对生产资源的高风险变更，而现有 IAM、策略引擎、共识协议和审计日志要么依赖静态且缺乏上下文感知的权限，要么只能在事后记录行为。SAB 作为一种证书绑定的运行时准入层，在“assurance airlock”处拦截 agent 提案，将其编译为类型化执行合约 C，并绑定到密码学证据摘要 H(E) 与策略版本。随后，系统根据后果感知的认证路径对合约进行审核；准入成功后，生成签名的 Sovereign Assurance Certificate（Ω），其作用域严格限定于特定执行身份、吊销 epoch 和有效时间窗口。最终，sovereign execution broker 在调用基础设施 API 前验证 Ω，并执行最新的吊销与漂移检查。论文给出了 airlock-broker 架构、准入与吊销不变量的形式化定义，并基于 Go 原型在 2,500 次准入尝试上报告了初步可行性测量。该模型通过 broker 强制执行，阻止自主推理系统直接变更状态，将委托执行权限转化为可密码学验证、证据绑定、可吊销且可回放的运行时工件。",
+  "abstract_zh": "本文关注 Agentic infrastructure 中的控制平面授权问题：非确定性的推理系统可能提出对生产资源的高风险变更，而现有 IAM、策略引擎、共识协议和审计日志要么只能执行静态且缺乏上下文的权限控制，要么仅在执行后记录行为。论文提出 Sovereign Assurance Boundary（SAB），一种面向自主执行权限的证书绑定运行时准入层。SAB 在 assurance airlock 中拦截 agent 提案，将其编译为类型化执行合约 C，并绑定到加密证据摘要 H(E) 与策略版本；随后根据后果感知的认证路径进行审查。准入成功后，系统签发带签名的 Sovereign Assurance Certificate（Ω），其作用域严格限制在特定执行身份、撤销 epoch 和有效时间窗口内。最终，sovereign execution broker 在调用基础设施 API 前验证 Ω，并执行即时撤销与漂移检查。论文给出了 airlock-broker 架构，形式化定义了准入与撤销不变量，并基于 Go 原型在 2,500 次准入尝试上报告了初步可行性结果。该模型通过 broker 强制执行，阻止自主推理系统直接修改状态，将委托执行权限转化为可加密验证、证据绑定、可撤销且可回放的运行时工件。",
   "key_points_zh": [
-    "提出 Sovereign Assurance Boundary（SAB），在 agent 提案到达生产基础设施前设置运行时准入层，避免非确定性推理系统直接修改关键状态。",
-    "将 agent 的变更请求编译为类型化执行合约 C，并绑定证据摘要 H(E)、策略版本、执行身份、吊销 epoch 与有效期，形成可验证的授权上下文。",
-    "设计 assurance airlock 与 sovereign execution broker 架构：前者负责认证与签发 Sovereign Assurance Certificate（Ω），后者在执行前进行证书验证、吊销检查和漂移检测。",
-    "形式化定义准入与吊销不变量，强调授权不仅是静态权限判断，而是与后果、证据、策略版本和执行窗口绑定的运行时决策。",
-    "基于 Go 原型完成 2,500 次准入尝试的初步评估，展示该证书绑定准入模型在 Agentic Infrastructure 中的可行性。"
+    "提出 Sovereign Assurance Boundary（SAB），作为 Agentic infrastructure 的运行时准入层，专门拦截 agent 对生产资源的高风险变更提案。",
+    "将 agent 提案编译为类型化执行合约 C，并绑定加密证据摘要 H(E)、策略版本和上下文信息，使授权从静态权限转向证据驱动的可验证准入。",
+    "设计 Sovereign Assurance Certificate（Ω），将执行授权严格限制到特定身份、撤销 epoch 与有效窗口，降低重放、越权和权限漂移风险。",
+    "通过 sovereign execution broker 在真正调用基础设施 API 前执行证书验证、即时撤销检查和漂移检测，确保 agent 不能直接修改系统状态。",
+    "基于 Go 原型完成 2,500 次准入尝试的初步评估，展示该 airlock-broker 架构在工程实现上的可行性。"
   ],
   "llm_assessment": {
-    "novelty": 0.86,
-    "problem_significance": 0.92,
-    "potential_impact": 0.88,
-    "paradigm_shift": 0.82,
-    "lasting_value": 0.9,
-    "llm_avg": 0.876,
-    "comment": "A highly relevant runtime admission architecture that converts agent actions into certificate-bound, revocable, auditable execution contracts for production infrastructure.",
-    "comment_zh": "这是一项高度相关的运行时准入架构，将智能体动作转化为证书绑定、可撤销、可审计的生产执行契约。"
+    "novelty": 0.89,
+    "problem_significance": 0.94,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.85,
+    "lasting_value": 0.93,
+    "llm_avg": 0.906,
+    "comment": "A very strong agentic-infrastructure security paper that makes autonomous execution authority certificate-bound, revocable, and replayable.",
+    "comment_zh": "这是一篇很强的智能体基础设施安全论文，将自主执行权限变为证书绑定、可撤销、可回放的运行时工件。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.3791989088894918,
+    "author_reputation": 0.2876491876228333,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.876,
+    "llm_assessment": 0.906,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -50,37 +50,12 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": 7,
-    "first_author_found": true,
+    "first_author_h_index": null,
+    "first_author_found": false,
     "first_author_affiliations": [],
     "last_author_h_index": 2,
     "last_author_found": true,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11632/fig1.webp",
-      "page": 6,
-      "kind": "table",
-      "confidence": 0.98
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11632/fig2.webp",
-      "page": 5,
-      "kind": "table",
-      "confidence": 0.979
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11632/fig3.webp",
-      "page": 5,
-      "kind": "table",
-      "confidence": 0.964
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11632/fig4.webp",
-      "page": 4,
-      "kind": "figure",
-      "confidence": 0.959
-    }
-  ]
+  "figures": []
 }

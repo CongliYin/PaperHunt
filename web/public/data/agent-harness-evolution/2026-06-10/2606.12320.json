@@ -14,23 +14,23 @@
     "project_page": null
   },
   "abstract_en": "Enterprise security was built to govern data boundaries: the protected surface was data at rest and in transit, and the controls -- access control, data-loss prevention, perimeter inspection -- governed crossings of that boundary. Production AI agents dissolve this assumption. An agent reads context, calls tools, invokes connectors, and modifies systems of record on an enterprise's behalf, so risk moves inside the workflow, into sequences of individually-permitted actions that may transform a business process no one authorized. Existing policy engines do not extend to this regime: they evaluate request-time decisions against atomic principals, where agentic systems require stateful evaluation against composite principals whose authority attenuates through delegation chains. We present a reference architecture for the runtime governance of production agents, built from four composable primitives: a five-plane decomposition (a reasoning plane that adjudicates intent, and four enforcement planes -- network, identity, endpoint, data -- that realize the decision), stop-anywhere mediation, composite principals with capability attenuation, and audit as a structured evidence substrate. We define a taxonomy of six interruption primitives that generalize allow and deny, state and argue for four correctness invariants, and demonstrate the foreclosure of seven production-agent threats across five concrete workflows. A reference implementation of the policy-engine core supplies measured evidence: attenuation correctness and evidence reconstructability hold on every trial, adjudication runs in single-digit microseconds, and the audit substrate's tamper-evidence behaves exactly as designed. We are explicit about scope: the architecture governs delegated action, not model behavior, and a full-system evaluation against a live agent benchmark is the invited next step.",
-  "abstract_zh": "本文提出一种用于生产级 AI Agent 运行时治理的参考架构。传统企业安全主要围绕数据边界设计，关注静态数据与传输中数据，并通过访问控制、数据防泄漏和边界检查等机制治理跨边界行为。然而，AI Agent 会读取上下文、调用工具、连接外部系统并代表企业修改记录系统，使风险从边界转移到工作流内部：一系列单独被允许的操作可能组合成未经授权的业务流程。现有策略引擎通常基于原子主体在请求时做无状态决策，难以处理 Agent 系统中具有委托链、权限衰减和组合主体的有状态治理需求。论文提出四个可组合原语：五平面分解，包括负责意图裁决的 reasoning plane，以及执行决策的 network、identity、endpoint、data 四个 enforcement planes；stop-anywhere mediation；带能力衰减的 composite principals；以及作为结构化证据基底的 audit。作者定义了六类 interruption primitives，推广传统 allow/deny，提出四个正确性不变量，并在五个具体工作流中展示其可阻断七类生产 Agent 威胁。参考实现聚焦 policy-engine core，微基准结果显示权限衰减正确性与证据可重构性在所有试验中成立，裁决延迟为个位数微秒，审计基底的防篡改行为符合设计。论文明确其范围是治理被委托的行动，而非模型行为；基于真实 Agent benchmark 的全系统评估被列为未来工作。",
+  "abstract_zh": "本文指出，传统企业安全体系主要围绕数据边界展开，治理对象是静态数据与传输中数据，控制手段包括访问控制、数据防泄漏（DLP）和边界检查。然而，生产级 AI Agent 会读取上下文、调用工具、使用连接器并代表企业修改系统记录，使风险从边界访问转移到工作流内部：一系列单独被允许的动作可能组合成未经授权的业务流程变更。现有策略引擎通常在请求时刻针对原子主体做决策，难以处理 Agent 系统所需的有状态评估、复合主体（composite principals）以及委托链中的能力衰减（capability attenuation）。为此，论文提出一个运行时治理参考架构，包含四个可组合原语：五平面分解——负责判定意图的推理平面（reasoning plane）与负责执行决策的网络、身份、端点、数据四个执行平面；可在任意位置中断的调解机制（stop-anywhere mediation）；带能力衰减的复合主体；以及作为结构化证据底座的审计系统。论文定义了六类中断原语，将传统 allow/deny 扩展为更细粒度的运行时干预；提出并论证四个正确性不变式；并在五个具体工作流中展示该架构可封堵七类生产 Agent 威胁。其策略引擎核心参考实现的微基准结果显示：能力衰减正确性与证据可重建性在所有试验中成立，裁决延迟为个位数微秒，审计底座的防篡改证据机制符合设计预期。论文也明确限定范围：该架构治理的是委托动作，而非模型行为本身；面向真实 Agent benchmark 的全系统评估仍是未来工作。",
   "key_points_zh": [
-    "提出面向生产 AI Agent 的 runtime governance 参考架构，核心问题是治理工作流内部由多步合法动作组合出的越权风险，而非仅治理传统数据边界。",
-    "架构包含 reasoning plane 与 network、identity、endpoint、data 四个 enforcement planes，并通过 stop-anywhere mediation 在任意关键环节中断、审查或限制 Agent 行动。",
-    "引入 composite principals 与 capability attenuation，用于描述人、Agent、工具、连接器等组合主体在委托链中的权限传递与衰减。",
-    "将 audit 设计为结构化证据基底，支持事后重构决策过程，并提供防篡改证据；参考实现验证了 evidence reconstructability 与 attenuation correctness。",
-    "实验主要是 policy-engine core 的微基准：裁决延迟达到个位数微秒；论文尚未完成面向真实 Agent benchmark 的全系统评估。"
+    "核心问题：生产级 AI Agent 将风险带入工作流内部，多个单独合法的工具调用可能组合成未经授权的业务流程，传统基于边界和原子主体的策略引擎难以治理。",
+    "提出五平面参考架构：一个 reasoning plane 负责意图裁决，network、identity、endpoint、data 四个 enforcement planes 负责在不同控制点执行策略。",
+    "引入 stop-anywhere mediation、composite principals 与 capability attenuation，使策略可在 Agent 执行链任意环节介入，并处理委托链中权限逐级收缩的问题。",
+    "定义六类中断原语，扩展简单 allow/deny，并提出四个正确性不变式，用于约束运行时治理的安全与可审计性。",
+    "参考实现显示策略裁决为个位数微秒，能力衰减和审计证据重建在测试中均正确；但论文尚未完成真实 Agent benchmark 上的全系统评估。"
   ],
   "llm_assessment": {
-    "novelty": 0.88,
-    "problem_significance": 0.94,
-    "potential_impact": 0.9,
-    "paradigm_shift": 0.84,
-    "lasting_value": 0.92,
-    "llm_avg": 0.8959999999999999,
-    "comment": "A highly relevant reference architecture for production agent governance with stateful mediation, capability attenuation, audit evidence, and concrete enforcement planes.",
-    "comment_zh": "这是一项高度相关的生产智能体治理参考架构工作，涵盖状态化中介、能力衰减、审计证据和具体执行平面。"
+    "novelty": 0.9,
+    "problem_significance": 0.95,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.94,
+    "llm_avg": 0.916,
+    "comment": "An excellent reference architecture for production-agent governance with runtime mediation, capability attenuation, and structured auditability.",
+    "comment_zh": "这是一篇优秀的生产级智能体治理架构工作，涵盖运行时仲裁、能力衰减和结构化审计。"
   },
   "scores": {
     "topic_relevance": 1.0,
@@ -39,7 +39,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.8959999999999999,
+    "llm_assessment": 0.916,
     "domain_multiplier": 1.0
   },
   "enriched": {

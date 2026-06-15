@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.11686",
   "title": "Layer-Isolated Evaluation: Gating the Deterministic Scaffold of a Production LLM Agent with a No-LLM, Regression-Locked Test Harness",
-  "title_zh": "层隔离评测：用无 LLM、回归锁定测试框架门控生产级 LLM Agent 的确定性脚手架",
+  "title_zh": "层隔离评估：用无 LLM、回归锁定测试框架为生产级 LLM Agent 的确定性脚手架设门禁",
   "authors": [
     "Sawyer Zhang",
     "Alexander Wang",
@@ -16,32 +16,32 @@
     "project_page": null
   },
   "abstract_en": "End-to-end task-success is the dominant way to evaluate LLM agents, but one aggregate number tells you that an agent regressed, not where. We present layer-isolated evaluation: a deployed ordering agent is decomposed into a fixed taxonomy of layers (ontology, intent, routing, decomposition, escalation, safety, memory, and cross-cutting envelope/defense), each exercised by its own assertion slice in a deterministic, no-LLM \"pure\" mode. The pure suite (238 cases across 23 slices; 225 run in 2.39 s, ~10 ms/case) runs in CI on every change against a locked per-slice baseline. We validate by controlled regression injection, degrading one layer at a time across seven non-safety layers. The effect we did not design in is masking: the aggregate pass-rate barely moves (-1.7 to -5.9 pp for six local regressions), while the matching slice craters (-25 to -91 pp). A layer's slice reacting to its own fault is partly by construction; the measured results are (i) the aggregate masking and (ii) that damage stays off the other slices: the injected layer's slice is the single worst-hit in 5 of 7 cases and top-3 in 7 of 7 (mean rank 1.29 of 19). Localization replicates on a second, structurally different tenant (Starbucks SG): all seven matching slices crater, so it is not a single-catalog artifact. We position it as a concrete, deterministic instantiation of the component-level evaluation EDDOps prescribes but leaves unimplemented, with CheckList as ancestor and as the deterministic mirror image of whole-workflow stochastic mutation testing. Our contributions: (a) a fully decomposed, sub-second, no-LLM per-layer harness for a production agent, (b) a coverage-honesty test-adequacy criterion that refuses to score an unexercised layer, and (c) the regression-injection demonstration that per-slice baseline-locked gates localize regressions an aggregate metric masks.",
-  "abstract_zh": "本文提出 layer-isolated evaluation，用于解决 LLM agents 端到端任务成功率只能提示“发生退化”却难以定位“哪里退化”的问题。作者将一个已部署的点单 agent 拆解为固定层级 taxonomy，包括 ontology、intent、routing、decomposition、escalation、safety、memory，以及 envelope/defense 等横切层；每层由独立 assertion slice 在确定性、无 LLM 的“pure”模式下测试。该 pure suite 覆盖 23 个 slices、238 个用例，其中 225 个可在 2.39 秒内运行，约 10 ms/例，并在 CI 中针对锁定的逐 slice baseline 执行。通过对七个非 safety 层逐一注入受控回归，作者发现端到端 aggregate pass-rate 仅下降 1.7 到 5.9 个百分点，而对应 slice 可暴跌 25 到 91 个百分点，说明整体指标会严重掩盖局部退化。同时，损伤基本不会扩散到其他 slices：被注入故障的层在 5/7 情况下是受影响最严重的 slice，在 7/7 情况下进入 top-3，平均排名 1.29/19。该定位能力还在结构不同的第二个 tenant（Starbucks SG）上复现，说明并非单一 catalog artifact。论文将该方法定位为 EDDOps 所倡导但未具体实现的 component-level evaluation 的确定性实例，也可视为 CheckList 的后继，以及整流程随机 mutation testing 的确定性镜像。",
+  "abstract_zh": "本文提出 layer-isolated evaluation，用于解决 LLM Agent 端到端任务成功率只能显示“是否退化”、难以定位“哪里退化”的问题。作者将一个已部署的点餐 Agent 拆分为固定层级 taxonomy：ontology、intent、routing、decomposition、escalation、safety、memory，以及跨层 envelope/defense，并在无 LLM 的 deterministic “pure” 模式下，为每一层设计独立 assertion slice。测试套件包含 23 个 slice、238 个用例，其中 225 个在 2.39 秒内完成，约 10 ms/case，可在 CI 中针对锁定的 per-slice baseline 运行。通过对 7 个非 safety 层逐层注入受控回归，论文发现端到端 aggregate pass-rate 仅下降 1.7 到 5.9 个百分点，而对应 slice 会骤降 25 到 91 个百分点，说明整体指标严重掩盖局部退化。同时，损伤基本不扩散到其他 slice：注入故障所在层的 slice 在 5/7 个案例中是受影响最严重的 slice，在 7/7 个案例中位列前三，平均排名 1.29/19。该定位效果还在结构不同的第二租户 Starbucks SG 上复现。作者将其定位为 EDDOps 所倡导 component-level evaluation 的一个确定性实现，并与 CheckList 及随机 whole-workflow mutation testing 形成对照。",
   "key_points_zh": [
-    "提出 layer-isolated evaluation：将生产级 ordering LLM agent 拆分为 ontology、intent、routing、decomposition、escalation、safety、memory 等层，并为每层设计独立 assertion slice。",
-    "测试框架采用无 LLM 的 deterministic pure mode，238 个用例跨 23 个 slices，其中 225 个用例 2.39 秒完成，适合在 CI 中对每次变更做 per-slice baseline-locked gating。",
-    "受控回归注入显示 aggregate pass-rate 下降很小，常常掩盖问题；而匹配层的 slice 会显著崩塌，下降 25 到 91 个百分点，具备强定位信号。",
-    "回归影响具有较好隔离性：故障层对应 slice 在 5/7 个实验中受损最严重，在 7/7 中进入受损 top-3，平均排名 1.29/19。",
-    "在第二个结构不同的 tenant Starbucks SG 上复现实验，七个匹配 slices 均显著退化，支持该方法不是单一 catalog 或单一业务配置的偶然结果。"
+    "提出 layer-isolated evaluation：将生产级点餐 LLM Agent 分解为 ontology、intent、routing、decomposition、escalation、safety、memory 等层，并为每层建立独立测试 slice。",
+    "测试框架完全无 LLM、确定性运行，包含 238 个用例、23 个 slice；225 个用例可在 2.39 秒完成，适合在 CI 中作为回归门禁。",
+    "受控回归注入显示，端到端 aggregate pass-rate 下降很小，但对应层 slice 会大幅崩塌，证明整体成功率会掩盖局部退化。",
+    "故障定位效果较强：注入层对应 slice 在 7/7 个实验中进入受损前三，在 5/7 个实验中受损最严重，平均排名 1.29/19。",
+    "方法在第二个结构不同租户 Starbucks SG 上复现，表明结果并非单一 catalog 的偶然现象。"
   ],
   "llm_assessment": {
-    "novelty": 0.75,
-    "problem_significance": 0.9,
-    "potential_impact": 0.85,
-    "paradigm_shift": 0.65,
+    "novelty": 0.76,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.62,
     "lasting_value": 0.88,
-    "llm_avg": 0.806,
-    "comment": "A valuable production-agent evaluation harness that turns opaque aggregate regressions into deterministic, layer-localized CI gates.",
-    "comment_zh": "该工作提供了有价值的生产级智能体评测框架，可将模糊的整体回归定位到确定性的分层 CI 门禁。"
+    "llm_avg": 0.8,
+    "comment": "A highly practical production-agent evaluation harness that localizes regressions through deterministic layer-isolated CI gates.",
+    "comment_zh": "这是一项高度实用的生产级智能体评测工作，通过确定性的分层隔离 CI 门禁定位回归问题。"
   },
   "scores": {
     "topic_relevance": 0.7200000000000001,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.2876491876228333,
+    "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.806,
+    "llm_assessment": 0.8,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -54,28 +54,9 @@
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": 2,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11686/fig1.webp",
-      "page": 6,
-      "kind": "table",
-      "confidence": 0.982
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11686/fig2.webp",
-      "page": 3,
-      "kind": "table",
-      "confidence": 0.98
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11686/fig3.webp",
-      "page": 5,
-      "kind": "table",
-      "confidence": 0.949
-    }
-  ]
+  "figures": []
 }

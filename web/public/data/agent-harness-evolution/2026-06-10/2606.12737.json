@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.12737",
   "title": "PI-Hunter: Automated Red-Teaming for Exposing and Localizing Prompt Injections",
-  "title_zh": "PI-Hunter：用于暴露与定位 Prompt Injection 的自动化红队测试",
+  "title_zh": "PI-Hunter：用于暴露与定位 Prompt Injection 的自动化 Red-Teaming 框架",
   "authors": [
     "Pengfei He",
     "Lesly Miculicich",
@@ -21,32 +21,32 @@
     "project_page": null
   },
   "abstract_en": "Large Language Models (LLMs) are rapidly evolving into agentic systems that interact with external tools and environments, introducing new security risks such as indirect prompt injection attacks through untrusted external sources. Existing defenses mainly focus on blocking malicious content at inference time, and current red-teaming methods primarily optimize attack success. As a result, developers have limited visibility into how latent prompt injections emerge and propagate through agents. We propose PI-Hunter, an automated agentic auditing framework for proactive vulnerability exposure in LLM agents. PI-Hunter constructs realistic source-aware test cases and iteratively evolves them through feedback-driven exploration to induce agents to retrieve and reveal latent malicious instructions embedded within external environments. Extensive experiments across multiple benchmarks, agent architectures, attacks, and defenses demonstrate that PI-Hunter substantially improves vulnerability exposure and attack-surface coverage over strong automated red-teaming baselines, while remaining effective under existing prompt injection defenses.",
-  "abstract_zh": "大型语言模型（LLMs）正快速演进为可与外部工具和环境交互的智能体系统，这引入了新的安全风险，例如来自不可信外部源的间接 Prompt Injection 攻击。现有防御主要关注在推理阶段拦截恶意内容，而当前红队方法多以提升攻击成功率为目标，导致开发者难以观察潜在 Prompt Injection 如何在智能体中出现、传播并被触发。本文提出 PI-Hunter，一个面向 LLM agents 的自动化智能体审计框架，用于主动暴露漏洞。PI-Hunter 构建具备真实来源感知（source-aware）的测试用例，并通过反馈驱动的探索机制迭代演化这些用例，诱导智能体检索并泄露嵌入外部环境中的潜在恶意指令。多项实验覆盖不同 benchmark、agent 架构、攻击方式与防御机制，结果表明 PI-Hunter 相比强自动化红队基线显著提升了漏洞暴露能力和攻击面覆盖率，并且在现有 Prompt Injection 防御下仍保持有效。",
+  "abstract_zh": "随着 Large Language Models (LLMs) 快速演化为可与外部工具和环境交互的 agentic systems，来自不可信外部来源的 indirect prompt injection 等安全风险日益突出。现有防御多聚焦于推理阶段拦截恶意内容，而当前 red-teaming 方法主要优化攻击成功率，导致开发者难以观察潜在 prompt injections 如何在 agents 中出现并传播。本文提出 PI-Hunter，一个用于主动暴露 LLM agents 漏洞的自动化 agentic auditing 框架。PI-Hunter 构造具有真实来源感知（source-aware）的测试用例，并通过反馈驱动的探索迭代演化这些用例，诱导 agents 检索并泄露嵌入外部环境中的潜在恶意指令。跨多个 benchmarks、agent architectures、attacks 与 defenses 的实验表明，相比强自动化 red-teaming baselines，PI-Hunter 显著提升了漏洞暴露能力与攻击面覆盖率，并且在现有 prompt injection defenses 下仍保持有效。",
   "key_points_zh": [
-    "提出 PI-Hunter：一个面向 LLM agents 的自动化红队审计框架，重点从攻击成功转向漏洞暴露与定位。",
-    "通过构建 source-aware 测试用例，模拟来自外部环境的不可信内容，更贴近真实间接 Prompt Injection 场景。",
-    "采用反馈驱动探索迭代演化测试用例，诱导 agent 检索、传播并暴露隐藏的恶意指令。",
-    "在多种 benchmark、agent 架构、攻击与防御设置下，PI-Hunter 相比强基线提升了漏洞发现率和攻击面覆盖。",
-    "实验显示 PI-Hunter 即使面对现有 Prompt Injection 防御机制，仍能有效发现潜在风险，为开发者提供更好的安全可观测性。"
+    "提出 PI-Hunter，用于对 LLM agents 进行主动式、自动化 red-teaming 与安全审计。",
+    "通过构造 source-aware 测试用例，模拟外部环境中潜伏的 indirect prompt injection 风险。",
+    "采用反馈驱动探索机制迭代优化测试样本，诱导 agent 检索、传播并暴露隐藏恶意指令。",
+    "实验覆盖多个 benchmarks、agent architectures、attacks 和 defenses，显示其漏洞暴露与攻击面覆盖优于强基线。",
+    "即使面对现有 prompt injection defenses，PI-Hunter 仍能有效发现潜在安全问题。"
   ],
   "llm_assessment": {
-    "novelty": 0.78,
-    "problem_significance": 0.86,
-    "potential_impact": 0.82,
-    "paradigm_shift": 0.65,
-    "lasting_value": 0.8,
-    "llm_avg": 0.782,
-    "comment": "A strong agent-security auditing framework that uses feedback-driven red teaming to expose and localize prompt-injection vulnerabilities across agent architectures.",
-    "comment_zh": "这是一项较强的智能体安全审计框架，通过反馈驱动红队测试来暴露和定位跨架构的提示注入漏洞。"
+    "novelty": 0.82,
+    "problem_significance": 0.9,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.85,
+    "llm_avg": 0.8299999999999998,
+    "comment": "A strong agent-security auditing framework that uses feedback-driven red-teaming to expose and localize prompt-injection vulnerabilities.",
+    "comment_zh": "这是一项很强的智能体安全审计工作，通过反馈驱动的红队测试暴露并定位提示注入漏洞。"
   },
   "scores": {
     "topic_relevance": 0.9600000000000001,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.3,
+    "author_reputation": 0.36560162063732243,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.782,
+    "llm_assessment": 0.8299999999999998,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -59,16 +59,9 @@
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": null,
-    "last_author_found": false,
+    "last_author_h_index": 4,
+    "last_author_found": true,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12737/fig1.webp",
-      "page": 4,
-      "kind": "figure",
-      "confidence": 0.968
-    }
-  ]
+  "figures": []
 }

@@ -1,0 +1,64 @@
+{
+  "arxiv_id": "2606.12040",
+  "title": "A Lightweight Multi-Agent Framework for Automated Concrete Barrier Design",
+  "title_zh": "用于自动化混凝土护栏设计的轻量级多智能体框架",
+  "authors": [
+    "Wanting Wang",
+    "Xiye Ma",
+    "Yuyang He",
+    "Minghui Cheng",
+    "Ran Cao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T13:06:11Z",
+  "abs_url": "https://arxiv.org/abs/2606.12040v2",
+  "pdf_url": "https://arxiv.org/pdf/2606.12040",
+  "links": {
+    "github": "https://github.com/MXY820/barrier-design.",
+    "project_page": null
+  },
+  "abstract_en": "The design of reinforced concrete highway barriers is a safety-critical process that requires strict compliance with regulatory provisions such as the AASHTO-LRFD bridge design guidelines. Current engineering practice relies heavily on manual, iterative, and heuristic calculations to satisfy complex nonlinear material and mechanics constraints. Although Large Language Models (LLMs) demonstrate strong generative capabilities, their direct application to structural engineering remains limited by hallucination risks and insufficient physical grounding. To address these challenges, this study proposes a novel \"generation-evaluation-optimization\" closed-loop framework for automated concrete barrier design using the multi-agent orchestration capabilities of AutoGen. Experimental results demonstrate that the proposed agentic framework achieves over 98% design accuracy, significantly outperforming standalone general-purpose LLMs. More importantly, the study reveals that design performance is not necessarily correlated with model scale, where an 8B-parameter lightweight model could outperform unconstrained 631B-parameter flagship models. This finding highlights the potential to substantially reduce computational costs while improving the accessibility of AI-assisted engineering tools for industry applications. The source code for the proposed multi-agent design framework is available at the project GitHub repository: https://github.com/MXY820/barrier-design. Keywords: Structural Engineering; Multi-Agent Systems; Large Language Models; Concrete Barrier Design; AutoGen; Design Automation.",
+  "abstract_zh": "本文面向钢筋混凝土公路护栏这一安全关键设计任务，提出基于 AutoGen 的“生成-评估-优化”（generation-evaluation-optimization）闭环多智能体框架，以自动满足 AASHTO-LRFD 等桥梁设计规范中的复杂非线性材料与力学约束。针对通用 Large Language Models 直接用于结构工程时容易产生幻觉、缺乏物理约束支撑的问题，该框架通过多智能体协作将方案生成、规范校核与迭代优化解耦并闭环执行。实验显示，该 agentic framework 的设计准确率超过 98%，显著优于单独使用通用 LLM。论文还发现，设计性能并不必然随模型规模增大而提升：一个 8B 参数轻量模型可优于未受约束的 631B 旗舰模型，说明在工程设计自动化场景中，合理的任务编排与物理/规范约束比单纯扩大模型规模更关键。",
+  "key_points_zh": [
+    "提出基于 AutoGen 的多智能体闭环框架，将混凝土护栏设计拆分为生成、评估和优化三个阶段，以提升 LLM 在结构工程中的可靠性。",
+    "框架面向 AASHTO-LRFD 等规范约束，缓解通用 LLM 在工程计算中常见的幻觉和物理不一致问题。",
+    "实验结果显示，该方法实现超过 98% 的设计准确率，明显优于 standalone general-purpose LLMs。",
+    "论文指出模型规模与设计性能不必然正相关，8B 轻量模型在该框架下可优于 631B 旗舰模型。",
+    "结果表明，通过多智能体任务编排与约束校核，可在降低计算成本的同时提升 AI-assisted engineering tools 的工业可用性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.42,
+    "problem_significance": 0.45,
+    "potential_impact": 0.38,
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.32,
+    "llm_avg": 0.364,
+    "comment": "A domain-specific AutoGen application with a closed-loop design pattern, but limited reusable value for general agent harness evolution.",
+    "comment_zh": "这是一项基于 AutoGen 的领域应用，虽有闭环设计流程，但对通用智能体框架演进的可复用价值有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.364,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/MXY820/barrier-design.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

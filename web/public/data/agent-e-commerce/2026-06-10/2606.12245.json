@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.12245",
   "title": "DiffCold: A Diffusion-based Generative Model for Cold-Start Item Recommendation",
-  "title_zh": "DiffCold：用于冷启动物品推荐的基于扩散的生成模型",
+  "title_zh": "DiffCold：用于冷启动物品推荐的扩散式生成模型",
   "authors": [
     "Kangning Zhang",
     "Yingjie Qin",
@@ -18,32 +18,32 @@
     "project_page": null
   },
   "abstract_en": "Cold-start item recommendation remains a persistent challenge in real-world systems due to the absence of interaction histories. While prior models attempt to bridge this gap using item content features, they universally suffer from the \\textbf{seesaw dilemma}: enhancing performance for cold items inevitably degrades performance for warm items, and vice versa. We identify that this dilemma stems from a fundamental \\textbf{distributional disparity}: warm item embeddings occupy a complex ``behavioral manifold\" shaped by rich interaction signals, whereas cold item embeddings are constrained to a ``semantic manifold\" derived solely from auxiliary content. Existing methods often force a rigid mapping between these inconsistent spaces, causing the model to sacrifice the precision of warm representations to accommodate cold ones. To address this, we propose \\textbf{DiffCold}, a diffusion-based generative model that unifies warm and cold representations. Unlike GANs or VAEs, DiffCold leverages conditional diffusion to reconstruct warm item embeddings from content, preserving the underlying manifold structure without degradation. We further tailor this paradigm with two specific designs: a \\textbf{Retrieval-enhanced Aggregator} that initializes generation using semantically similar warm items to bypass inefficient noise, and a \\textbf{Simulation-based Representation Alignment} module that enforces distribution consistency between generated and real embeddings via contrastive learning. Experiments on three benchmarks confirm that DiffCold resolves the seesaw dilemma, consistently outperforming state-of-the-art methods across all metrics.",
-  "abstract_zh": "冷启动物品推荐因缺乏交互历史而长期困扰真实推荐系统。已有方法通常借助物品内容特征弥补交互缺失，但普遍面临“跷跷板困境”（seesaw dilemma）：提升冷物品推荐效果往往会损害暖物品表现，反之亦然。本文指出，该困境源于根本性的分布差异：暖物品嵌入位于由丰富交互信号塑造的复杂“行为流形”（behavioral manifold），而冷物品嵌入只能依赖辅助内容形成“语义流形”（semantic manifold）。现有方法常强行在两种不一致空间之间学习刚性映射，导致模型为适配冷物品而牺牲暖物品表征精度。为此，论文提出 DiffCold，一种基于条件扩散（conditional diffusion）的生成模型，用于统一暖物品与冷物品表征。不同于 GAN 或 VAE，DiffCold 从内容条件出发重构暖物品嵌入，在不破坏原有流形结构的情况下生成更一致的表示。方法进一步设计了 Retrieval-enhanced Aggregator，通过检索语义相似的暖物品初始化生成过程，避免低效的纯噪声采样；同时引入 Simulation-based Representation Alignment，利用对比学习约束生成嵌入与真实嵌入的分布一致性。三个基准数据集上的实验表明，DiffCold 能缓解跷跷板困境，并在各项指标上稳定优于现有最优方法。",
+  "abstract_zh": "冷启动物品推荐因缺乏交互历史，在真实推荐系统中长期存在挑战。已有方法通常利用物品内容特征弥补交互缺失，但普遍面临“跷跷板困境”（seesaw dilemma）：提升冷物品效果往往会损害暖物品效果，反之亦然。本文指出，该困境源于根本性的分布差异：暖物品 embedding 位于由丰富交互信号塑造的复杂“行为流形”（behavioral manifold）上，而冷物品 embedding 只能依赖辅助内容形成“语义流形”（semantic manifold）。现有方法强行在两类不一致空间之间建立刚性映射，导致模型为适配冷物品而牺牲暖物品表征精度。为此，论文提出 DiffCold，一种基于条件扩散（conditional diffusion）的生成模型，用于统一暖、冷物品表征。不同于 GAN 或 VAE，DiffCold 从内容特征重建暖物品 embedding，在不破坏原有流形结构的情况下生成更一致的表征。方法进一步设计了 Retrieval-enhanced Aggregator，利用语义相似的暖物品初始化生成过程，以避免低效的纯噪声起点；同时引入 Simulation-based Representation Alignment，通过对比学习约束生成 embedding 与真实 embedding 的分布一致性。三个基准数据集上的实验表明，DiffCold 能缓解“跷跷板困境”，并在各项指标上稳定优于现有 SOTA 方法。",
   "key_points_zh": [
-    "论文将冷启动推荐中的性能权衡归因于“行为流形”与“语义流形”之间的分布差异，而非简单的特征不足。",
-    "DiffCold 使用 conditional diffusion 从内容特征生成接近暖物品行为嵌入的表示，避免强行学习刚性跨空间映射。",
-    "Retrieval-enhanced Aggregator 利用语义相似的暖物品作为生成初始化，减少从随机噪声生成带来的低效与不稳定。",
-    "Simulation-based Representation Alignment 通过对比学习对齐生成嵌入与真实嵌入的分布，提高冷暖物品表征一致性。",
-    "在三个推荐基准上，DiffCold 同时提升冷物品与暖物品表现，缓解了以往方法常见的 seesaw dilemma。"
+    "论文将冷启动推荐中的冷、暖物品性能权衡归因于分布差异：暖物品位于交互驱动的 behavioral manifold，冷物品位于内容驱动的 semantic manifold。",
+    "提出 DiffCold，使用 conditional diffusion 从内容特征生成/重建暖物品 embedding，相比 GAN、VAE 更好保留表征流形结构。",
+    "设计 Retrieval-enhanced Aggregator，检索语义相似的暖物品作为生成初始化，减少从随机噪声生成带来的低效与不稳定。",
+    "引入 Simulation-based Representation Alignment，通过对比学习对齐生成表征与真实暖物品表征的分布。",
+    "在三个推荐基准上验证 DiffCold 能同时提升冷物品与暖物品推荐效果，缓解 seesaw dilemma，并超过现有 SOTA。"
   ],
   "llm_assessment": {
-    "novelty": 0.5,
-    "problem_significance": 0.5,
-    "potential_impact": 0.5,
-    "paradigm_shift": 0.5,
-    "lasting_value": 0.5,
-    "llm_avg": 0.5,
-    "comment": "Strong cold-start item recommendation work with clear value for product ranking, though it is not LLM- or agent-oriented.",
-    "comment_zh": "Strong cold-start item recommendation work with clear value for product ranking, though it is not LLM- or agent-oriented."
+    "novelty": 0.75,
+    "problem_significance": 0.8,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.68,
+    "llm_avg": 0.7000000000000001,
+    "comment": "A technically solid cold-start recommendation paper with plausible e-commerce utility, though its framing is more generic item recommendation than commerce-agent focused.",
+    "comment_zh": "这是一篇技术扎实的冷启动推荐论文，具有一定电商应用价值，但整体更偏通用物品推荐而非电商智能体。"
   },
   "scores": {
     "topic_relevance": 0.92,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.4142509875137679,
+    "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.65,
-    "llm_assessment": 0.5,
+    "llm_assessment": 0.7000000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -53,31 +53,12 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": 9,
-    "first_author_found": true,
+    "first_author_h_index": null,
+    "first_author_found": false,
     "first_author_affiliations": [],
     "last_author_h_index": null,
     "last_author_found": false,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12245/fig1.webp",
-      "page": 2,
-      "kind": "figure",
-      "confidence": 0.973
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12245/fig2.webp",
-      "page": 5,
-      "kind": "figure",
-      "confidence": 0.971
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12245/fig3.webp",
-      "page": 3,
-      "kind": "table",
-      "confidence": 0.969
-    }
-  ]
+  "figures": []
 }

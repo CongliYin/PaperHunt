@@ -29,32 +29,32 @@
     "project_page": null
   },
   "abstract_en": "General-purpose agents such as OpenClaw are increasingly used as autonomous tool users, but their coding ability is difficult to measure under SWE-bench: a generic agent does not by itself satisfy the clean Docker workspace, patch, and prediction contract required for scoring. We introduce Claw-SWE-Bench, a multilingual SWE-bench-style benchmark and adapter protocol that makes heterogeneous agent harnesses, or claws, comparable under fair settings including a fixed prompt, runtime budget, workspace contract, patch extraction procedure, and evaluator. The full benchmark contains 350 GitHub issue-resolution instances across 8 languages and 43 repositories, drawn from SWE-bench-Multilingual and SWE-bench-Verified-Mini after future-commit cleanup. We also release Claw-SWE-Bench Lite for faster validation, which is an 80-instance subset selected by a cost-aware, rank-aware procedure over 17 calibration columns. On the full benchmark, OpenClaw with a minimal direct-diff adapter scores only $19.1\\%$ Pass@1, whereas the full adapter reaches $73.4\\%$ with the same GLM 5.1 backbone, showing that adapter design is essential for enabling OpenClaw-style harnesses to perform coding tasks effectively. Across an OpenClaw $\\times$ nine-model sweep and a five-claw $\\times$ two-model sweep, model choice changes Pass@1 by $29.4$ pp and harness choice by $27.4$ pp under fixed models; systems with similar accuracy can differ substantially in total API cost. Claw-SWE-Bench therefore treats harness and cost accounting as first-class axes of SWE-style coding-agent evaluation, providing both a full benchmark and a low-cost reference set for reproducible comparison. The data is available at https://github.com/opensquilla/claw-swe-bench and https://huggingface.co/datasets/TokenRhythm/Claw-SWE-Bench.",
-  "abstract_zh": "通用智能体（general-purpose agents）如 OpenClaw 正越来越多地作为自主工具使用者，但其编码能力在 SWE-bench 下并不容易衡量：通用智能体本身并不天然满足评分所需的干净 Docker 工作区、补丁（patch）和预测格式契约。本文提出 Claw-SWE-Bench，一个多语言、SWE-bench 风格的基准与适配器协议，用于在公平设置下比较异构 agent harness（本文称为 claws），包括固定提示词、运行时预算、工作区契约、补丁抽取流程和评测器。完整基准包含 350 个 GitHub issue 修复实例，覆盖 8 种语言和 43 个代码仓库，来源于 SWE-bench-Multilingual 与 SWE-bench-Verified-Mini，并经过 future-commit 清理。作者还发布了 Claw-SWE-Bench Lite，这是一个 80 实例子集，通过在 17 个校准列上进行成本感知、排名感知选择得到，便于快速验证。在完整基准上，使用相同 GLM 5.1 backbone 时，OpenClaw 的最小 direct-diff adapter 仅达到 19.1% Pass@1，而完整 adapter 达到 73.4%，表明 adapter 设计对 OpenClaw 风格 harness 有效执行编码任务至关重要。在 OpenClaw × 9 模型扫描和 5 claws × 2 模型扫描中，模型选择带来 29.4 个百分点的 Pass@1 差异，固定模型下 harness 选择带来 27.4 个百分点差异；同时，准确率相近的系统在总 API 成本上可能差异显著。因此，Claw-SWE-Bench 将 harness 与成本核算作为 SWE 风格编码智能体评测的一等维度，并提供完整基准与低成本参考集以支持可复现比较。",
+  "abstract_zh": "通用智能体（general-purpose agents）如 OpenClaw 正越来越多地作为自主工具使用者，但其编码能力难以直接用 SWE-bench 衡量，因为通用 agent 本身并不天然满足干净 Docker 工作区、补丁生成与预测提交等评分契约。本文提出 Claw-SWE-Bench，一个多语言、SWE-bench 风格的基准与适配器协议，用于在固定 prompt、运行预算、工作区契约、补丁抽取流程和评测器等公平设置下，比较异构 agent harness（作者称为 claws）。完整基准包含 350 个 GitHub issue 修复实例，覆盖 8 种编程语言和 43 个代码仓库，来源于 SWE-bench-Multilingual 与 SWE-bench-Verified-Mini，并经过 future-commit 清理。作者还发布了 Claw-SWE-Bench Lite，这是一个 80 实例子集，通过基于成本感知与排名感知的方法从 17 个校准列中选择，用于快速验证。在完整基准上，使用相同 GLM 5.1 backbone 时，OpenClaw 搭配最小 direct-diff adapter 仅达到 19.1% Pass@1，而完整 adapter 达到 73.4%，表明 adapter 设计对 OpenClaw 风格 harness 有效完成编码任务至关重要。进一步的 OpenClaw × 九模型实验和五种 claw × 两模型实验显示，模型选择可带来 29.4 个百分点的 Pass@1 差异，固定模型下 harness 选择可带来 27.4 个百分点差异；同时，准确率相近的系统在总 API 成本上可能显著不同。因此，Claw-SWE-Bench 将 harness 与成本核算作为 SWE 风格编码 agent 评测的一等维度，并提供完整基准与低成本参考集以支持可复现实验比较。",
   "key_points_zh": [
-    "提出 Claw-SWE-Bench，将通用 agent harness（claws）适配到 SWE-bench 风格评测中，统一固定 prompt、运行预算、工作区契约、patch 抽取和 evaluator，提升不同 harness 间的可比性。",
-    "完整基准包含 350 个 GitHub issue-resolution 实例，覆盖 8 种编程语言和 43 个仓库；另提供 80 实例的 Claw-SWE-Bench Lite，用于低成本、快速验证。",
-    "实验显示 adapter 设计影响巨大：同为 GLM 5.1 backbone，OpenClaw 的 minimal direct-diff adapter 仅 19.1% Pass@1，而 full adapter 达到 73.4%。",
-    "模型与 harness 都是关键变量：OpenClaw × 9 模型实验中模型选择带来 29.4 个百分点差异；5 claws × 2 模型实验中固定模型下 harness 选择带来 27.4 个百分点差异。",
-    "论文强调除准确率外还应系统记录 API 成本；一些准确率相近的系统可能成本差异很大，因此成本核算应成为编码智能体评测的一等指标。"
+    "提出 Claw-SWE-Bench，将通用 agent harness 转换为可在 SWE-bench 风格协议下公平评测的对象，统一 prompt、运行预算、工作区、补丁抽取和 evaluator。",
+    "完整基准包含 350 个 GitHub issue-resolution 实例，覆盖 8 种语言、43 个仓库；另有 80 实例的 Claw-SWE-Bench Lite，用于低成本快速验证。",
+    "实验证明 adapter 设计影响巨大：同为 GLM 5.1 backbone，OpenClaw 的 minimal direct-diff adapter 仅 19.1% Pass@1，完整 adapter 达 73.4%。",
+    "模型与 harness 都是关键变量：九模型 sweep 中模型选择带来 29.4 个百分点 Pass@1 差异；固定模型时，不同 claw 带来 27.4 个百分点差异。",
+    "论文强调除准确率外还应报告 API 成本，因为性能相近的系统可能成本差异很大；数据已在 GitHub 与 Hugging Face 发布。"
   ],
   "llm_assessment": {
-    "novelty": 0.7,
-    "problem_significance": 0.76,
-    "potential_impact": 0.74,
-    "paradigm_shift": 0.52,
-    "lasting_value": 0.72,
-    "llm_avg": 0.6880000000000001,
-    "comment": "A useful benchmark and adapter protocol that makes coding-agent harnesses comparable, with strong emphasis on runtime contracts, costs, and reproducibility.",
-    "comment_zh": "这是一个有用的编码智能体框架基准与适配协议，强调运行时契约、成本和可复现比较。"
+    "novelty": 0.68,
+    "problem_significance": 0.78,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.7,
+    "llm_avg": 0.666,
+    "comment": "A useful harness-level coding-agent benchmark that makes adapters, runtime contracts, and cost accounting first-class evaluation concerns.",
+    "comment_zh": "该工作提供了有用的编码智能体评测框架，将适配器、运行时契约和成本核算纳入核心评估维度。"
   },
   "scores": {
     "topic_relevance": 0.6400000000000001,
     "open_source": 0.5,
-    "community_heat": 0.9124945518478856,
+    "community_heat": 0.0,
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.6880000000000001,
+    "llm_assessment": 0.666,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -62,8 +62,8 @@
     "project_page_url": null,
     "code_promised": false,
     "has_video_demo": false,
-    "hf_listed": true,
-    "hf_upvotes": 62,
+    "hf_listed": false,
+    "hf_upvotes": 0,
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
@@ -71,18 +71,5 @@
     "last_author_found": false,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12344/fig1.webp",
-      "page": 2,
-      "kind": "figure",
-      "confidence": 0.973
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12344/fig2.webp",
-      "page": 5,
-      "kind": "figure",
-      "confidence": 0.945
-    }
-  ]
+  "figures": []
 }

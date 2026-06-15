@@ -1,0 +1,66 @@
+{
+  "arxiv_id": "2606.12474",
+  "title": "SAIGuard: Communication-State Simulation for Proactive Defense of LLM Multi-Agent Systems",
+  "title_zh": "SAIGuard：面向 LLM 多智能体系统主动防御的通信状态仿真",
+  "authors": [
+    "Ruxue Shi",
+    "Yili Wang",
+    "Mengnan Du",
+    "Qinggang Zhang",
+    "Rui Miao",
+    "Yixin Liu",
+    "Xin Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T05:37:58Z",
+  "abs_url": "https://arxiv.org/abs/2606.12474v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12474",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM-based multi-agent systems (MAS) solve complex tasks through inter-agent collaboration, but their communication-driven nature also allows security risks to spread across agents and trigger system-wide failures. Existing MAS defenses mainly follow a reactive paradigm after execution by detecting and isolating harmful agents, which may cause irreversible damage and degrade collaborative utility. To address this, we propose a proactive defense framework for MAS security, namely a Simulation-aware Interception Guard (SAIGuard). SAIGuard performs communication-state simulation over the MAS interaction graph, estimates the impact of incoming messages on local agent states and the global MAS state, and detects risky messages via reconstruction deviations from benign communication patterns. Instead of isolating agents, SAIGuard sanitizes or regenerates suspicious messages before it propagation into system. Experiments across diverse topologies and attack scenarios show that SAIGuard reduces attack success rates while maintaining MAS utility, outperforming reactive defenses.",
+  "abstract_zh": "基于 LLM 的多智能体系统（MAS）通过智能体间协作解决复杂任务，但其依赖通信的特性也使安全风险可能沿交互链路扩散，最终引发系统级失效。现有 MAS 防御多采用执行后的被动范式，即检测并隔离有害智能体，但这可能造成不可逆损害并削弱协作效用。为此，论文提出一种面向 MAS 安全的主动防御框架 SAIGuard（Simulation-aware Interception Guard）。SAIGuard 在 MAS 交互图上进行通信状态仿真，估计输入消息对局部智能体状态和全局 MAS 状态的影响，并通过与良性通信模式的重构偏差来识别高风险消息。与隔离智能体不同，SAIGuard 会在可疑消息传播前对其进行清洗或重新生成。多种拓扑结构和攻击场景下的实验表明，SAIGuard 在保持 MAS 任务效用的同时降低了攻击成功率，并优于被动防御方法。",
+  "key_points_zh": [
+    "提出 SAIGuard，一种面向 LLM-based MAS 的主动防御框架，在消息传播前进行风险拦截，而非事后隔离智能体。",
+    "核心机制是在 MAS interaction graph 上进行 communication-state simulation，预测消息对局部 agent state 与全局 MAS state 的潜在影响。",
+    "通过检测可疑消息相对良性通信模式的 reconstruction deviation，识别可能导致攻击扩散或系统失效的通信内容。",
+    "对风险消息采用 sanitization 或 regeneration，尽量保留协作流程和系统效用，避免直接隔离智能体带来的性能下降。",
+    "实验覆盖多种拓扑和攻击场景，结果显示 SAIGuard 能降低 attack success rate，同时维持 MAS utility，并优于 reactive defenses。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.8,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.8,
+    "llm_avg": 0.7959999999999999,
+    "comment": "A relevant proactive MAS defense framework that simulates communication-state impact before risky messages propagate.",
+    "comment_zh": "这是一项相关性很高的主动式多智能体防御框架，可在风险消息传播前模拟其通信状态影响。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7959999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

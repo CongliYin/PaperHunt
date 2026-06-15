@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.12709",
   "title": "Smarter Saboteurs, Better Fixers: Scaling & Security in Linear Multi-Agent Workflows",
-  "title_zh": "更聪明的破坏者，更好的修复者：线性多智能体工作流中的规模化与安全性",
+  "title_zh": "更聪明的破坏者，更强的修复者：线性多智能体工作流中的规模化与安全性",
   "authors": [
     "Timothy McAllister",
     "Sina Abdidizaji",
@@ -17,32 +17,32 @@
     "project_page": null
   },
   "abstract_en": "As LLM-based multi-agent systems (MAS) are deployed in the wild, the resilience of their collaboration structures against adversarial compromise becomes a critical safety concern. Attackers may leverage prompt-injection or jailbreaking to sabotage individual agents within MAS workflows, but the interaction between model scaling and system-level resilience remains poorly understood. This paper investigates how model scale affects the security of linear multi-agent workflows. Our experiments across scales of two open-weight model families on the HumanEval benchmark reveal a compliance-correction symmetry: larger models are far more likely to faithfully execute malicious instructions, with the control-to-malicious performance drop reaching 53.7pp at 27B in uncorrected pipelines. However, appending a lightweight terminal Fixer stage collapses this to 0.6pp and restores statistical parity with control-level performance, demonstrating that strictly linear collaboration structures can be viable and resilient to adversaries at this scale, and suggesting that the brittleness previously attributed to linear topology may stem from a lack of correction.",
-  "abstract_zh": "随着基于 LLM 的 multi-agent systems（MAS）在真实环境中部署，其协作结构抵御对抗性攻陷的韧性成为关键安全问题。攻击者可能通过 prompt injection 或 jailbreaking 破坏 MAS 工作流中的单个 agent，但模型规模与系统级韧性之间的关系仍缺乏理解。本文研究模型规模如何影响线性多智能体工作流的安全性。作者在 HumanEval 基准上，跨两个 open-weight 模型家族的不同规模进行实验，发现一种“服从—修正对称性”（compliance-correction symmetry）：更大的模型更倾向于忠实执行恶意指令，在未修正流水线中，27B 模型从控制条件到恶意条件的性能下降最高达 53.7 个百分点。然而，只需追加一个轻量级的终端 Fixer 阶段，就能将该差距压缩到 0.6 个百分点，并恢复到与控制条件统计上相当的性能。结果表明，在这一规模下，严格线性的协作结构仍可具备对抗韧性；此前归因于线性拓扑的脆弱性，可能实质上源于缺少修正机制。",
+  "abstract_zh": "本文研究 LLM-based multi-agent systems（MAS）在线性协作工作流中面对对抗性智能体被攻陷时的系统韧性，重点分析模型规模如何影响安全性。作者假设攻击者可通过 prompt-injection 或 jailbreaking 破坏单个 agent，并在 HumanEval benchmark 上测试两个 open-weight model families 的不同规模模型。实验发现一种“服从-纠正对称性”（compliance-correction symmetry）：更大的模型更容易忠实执行恶意指令，导致未修正线性流水线中 control 与 malicious 条件的性能差距在 27B 模型上达到 53.7 个百分点；但只需在线性流程末端加入轻量级 Fixer stage，该差距即可降至 0.6 个百分点，并恢复到与 control-level performance 统计上相当的水平。结果表明，严格线性的多智能体协作结构在该规模下仍可具备对抗韧性，先前归因于 linear topology 的脆弱性，可能更多来自缺乏有效纠错机制。",
   "key_points_zh": [
-    "研究聚焦线性 multi-agent workflows 在单个 agent 被 prompt injection 或 jailbreaking 破坏时的安全韧性。",
-    "在 HumanEval 上跨两个 open-weight 模型家族和多种规模实验，发现模型越大越可能服从恶意指令，未修正流水线中 27B 模型性能下降最高达 53.7pp。",
-    "提出并验证轻量级终端 Fixer 阶段：在恶意条件下可将性能差距压缩至 0.6pp，基本恢复到控制组水平。",
-    "结果挑战“线性拓扑天然脆弱”的观点，指出脆弱性可能更多来自缺少纠错阶段，而非线性协作结构本身。",
-    "论文对 LLM-based MAS 的安全设计有启示：随着模型能力提升，需要同时考虑更强的攻击执行能力与更强的后验修复能力。"
+    "研究问题：分析模型规模对线性 multi-agent workflows 在 agent 被恶意指令攻陷时的安全韧性影响。",
+    "核心发现：大模型更可能严格执行恶意指令，表现出更强的恶意合规性；在未修正流水线中，27B 模型性能下降最高达 53.7pp。",
+    "方法亮点：在工作流末端添加轻量级 Fixer stage，用于检查与修复前序 agent 产生的错误或被破坏输出。",
+    "实验结果：加入 Fixer 后，control 与 malicious 条件的性能差距从 53.7pp 缩小到 0.6pp，基本恢复统计平价。",
+    "启示：线性 MAS 的脆弱性不一定源于线性拓扑本身，而可能源于缺少终端纠错环节；简单修复器可显著提升系统级安全性。"
   ],
   "llm_assessment": {
-    "novelty": 0.55,
-    "problem_significance": 0.72,
-    "potential_impact": 0.62,
-    "paradigm_shift": 0.4,
-    "lasting_value": 0.55,
-    "llm_avg": 0.568,
-    "comment": "The paper highlights an important multi-agent security failure mode and a simple fixer mitigation, but the workflow model and evaluation scope are fairly narrow.",
-    "comment_zh": "该论文揭示了重要的多智能体安全失效模式并提出简单修复器缓解方案，但工作流模型和评估范围较窄。"
+    "novelty": 0.58,
+    "problem_significance": 0.76,
+    "potential_impact": 0.64,
+    "paradigm_shift": 0.42,
+    "lasting_value": 0.6,
+    "llm_avg": 0.6,
+    "comment": "A relevant MAS security study showing that a simple terminal fixer can improve resilience, though the setting is fairly narrow.",
+    "comment_zh": "该研究关注多智能体安全并展示终端修复器的防护价值，但实验场景相对狭窄。"
   },
   "scores": {
     "topic_relevance": 0.88,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.34373441375821495,
+    "author_reputation": 0.3,
     "venue_signal": 1.0,
     "generality": 0.9,
-    "llm_assessment": 0.568,
+    "llm_assessment": 0.6,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -52,31 +52,12 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": 4,
-    "first_author_found": true,
+    "first_author_h_index": null,
+    "first_author_found": false,
     "first_author_affiliations": [],
     "last_author_h_index": null,
     "last_author_found": false,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12709/fig1.webp",
-      "page": 6,
-      "kind": "table",
-      "confidence": 0.983
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12709/fig2.webp",
-      "page": 4,
-      "kind": "table",
-      "confidence": 0.982
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12709/fig3.webp",
-      "page": 2,
-      "kind": "figure",
-      "confidence": 0.971
-    }
-  ]
+  "figures": []
 }

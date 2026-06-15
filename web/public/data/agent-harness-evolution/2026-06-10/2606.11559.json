@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.11559",
   "title": "HERO: Hindsight-Enhanced Reflection from Environment Observations for Agentic Self-Distillation",
-  "title_zh": "HERO：基于环境观察的后见增强反思用于智能体自蒸馏",
+  "title_zh": "HERO：利用环境观测的事后增强反思实现智能体自蒸馏",
   "authors": [
     "Haoran Liu",
     "Yuwei Zhang",
@@ -18,32 +18,32 @@
     "project_page": null
   },
   "abstract_en": "Reinforcement learning typically improves multi-turn agent capabilities through the terminal outcome of the trajectories, which makes it difficult to determine credit assignments for each intermediate turns. Recent on-policy self-distillation methods offer a promising alternative by converting privileged feedback into dense token-level supervision through a self-teacher. Our study is motivated by the unexpected performance degradation observed when naively extending this paradigm to multi-turn settings, which we attribute to a lack of alignment between privileged feedback, such as successful trajectories or terminal outcomes, and the student's current decision context. We introduce HERO, a hindsight-enhanced self-distillation framework that uses next environment observations as locally aligned feedback. After each rollout, HERO reflects on the completed interaction to convert each observation into a compact turn-level diagnosis, that captures actionable feedback about the original action such as its necessity, validity or failure cause. On TauBench and WebShop, HERO improves task success and reduces unnecessary turns over environment-feedback-only self-distillation and GRPO. It is especially effective under limited training turn budgets, where successful rollouts are rare and GRPO provides weak reward-contrast signals.",
-  "abstract_zh": "强化学习通常依赖轨迹的最终结果来提升多轮智能体能力，但这使得中间每一轮的信用分配较为困难。近期的 on-policy self-distillation 方法通过自教师将特权反馈转化为密集的 token 级监督，提供了有前景的替代方案。本文发现，将该范式朴素扩展到多轮场景时会出现意外性能下降，原因在于成功轨迹或终局结果等特权反馈与学生模型当前决策上下文之间缺乏对齐。为此，作者提出 HERO，一种后见增强的自蒸馏框架，使用下一步环境观察作为局部对齐反馈。每次 rollout 后，HERO 会回顾完整交互，将每个 observation 转化为紧凑的轮次级诊断，提取关于原始动作的可执行反馈，例如动作是否必要、是否有效以及失败原因。在 TauBench 和 WebShop 上，HERO 相比仅使用环境反馈的自蒸馏和 GRPO 提高了任务成功率，并减少了不必要轮次；尤其在训练轮次预算有限、成功 rollout 稀少、GRPO 奖励对比信号较弱时效果更明显。",
+  "abstract_zh": "强化学习通常依赖轨迹的最终结果来提升多轮智能体能力，但这使得每个中间轮次的信用分配变得困难。近期的 on-policy self-distillation 方法通过自教师（self-teacher）将特权反馈转化为密集的 token-level 监督，提供了有前景的替代方案。本文发现，将该范式直接扩展到多轮场景会导致性能下降，原因在于成功轨迹或终局结果等特权反馈与学生模型当前决策上下文之间缺乏对齐。为此，作者提出 HERO，一种 hindsight-enhanced self-distillation 框架，使用下一步环境观测作为局部对齐反馈。每次 rollout 后，HERO 会对完整交互进行反思，将每个观测转换为紧凑的 turn-level diagnosis，描述原始动作的必要性、有效性或失败原因等可执行反馈。在 TauBench 和 WebShop 上，HERO 相比仅使用环境反馈的自蒸馏方法和 GRPO 提高了任务成功率，并减少了不必要轮次；尤其在训练轮次预算有限、成功 rollout 稀少且 GRPO 奖励对比信号较弱时效果更明显。",
   "key_points_zh": [
-    "指出多轮场景中，直接使用成功轨迹或终局奖励进行 self-distillation 会因反馈与当前决策上下文不对齐而导致性能下降。",
-    "提出 HERO，将下一步 environment observation 转化为局部对齐的 turn-level diagnosis，用于评价上一动作的必要性、有效性或失败原因。",
-    "HERO 在 rollout 后进行 hindsight reflection，将完整交互中的观察压缩为可执行监督信号，缓解中间步骤信用分配问题。",
-    "在 TauBench 和 WebShop 上，HERO 相比 environment-feedback-only self-distillation 和 GRPO 提升任务成功率，并减少冗余交互轮次。",
-    "在训练 turn budget 受限、成功轨迹稀缺的情况下，HERO 尤其有效，因为其不强依赖稀疏终局奖励或强 reward contrast。"
+    "指出 naive 扩展 token-level self-distillation 到多轮智能体时会退化，核心问题是终局反馈与当前决策上下文不对齐。",
+    "提出 HERO，将下一步 environment observation 作为局部对齐反馈，并在 rollout 后进行 hindsight reflection。",
+    "HERO 为每个轮次生成 turn-level diagnosis，解释动作是否必要、是否有效以及失败原因，从而提供更可执行的监督信号。",
+    "在 TauBench 和 WebShop 上，HERO 相比 environment-feedback-only self-distillation 和 GRPO 提升任务成功率并减少无效交互轮次。",
+    "在训练 turn budget 受限、成功轨迹稀少的场景中，HERO 尤其有效，可缓解 GRPO 奖励对比信号不足的问题。"
   ],
   "llm_assessment": {
-    "novelty": 0.7,
-    "problem_significance": 0.75,
-    "potential_impact": 0.7,
-    "paradigm_shift": 0.55,
-    "lasting_value": 0.68,
-    "llm_avg": 0.676,
-    "comment": "A relevant agentic self-distillation method that uses environment observations to create denser turn-level feedback for improving multi-turn behavior.",
-    "comment_zh": "该方法利用环境观测生成更密集的回合级反馈，对多轮智能体自蒸馏具有较强相关性。"
+    "novelty": 0.76,
+    "problem_significance": 0.78,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.64,
+    "lasting_value": 0.73,
+    "llm_avg": 0.7300000000000001,
+    "comment": "A meaningful closed-loop training method that converts agent environment observations into localized diagnostic supervision for self-improvement.",
+    "comment_zh": "该工作提出了有意义的闭环训练方法，将环境观测转化为局部诊断监督以改进智能体。"
   },
   "scores": {
-    "topic_relevance": 0.68,
+    "topic_relevance": 0.92,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.37796505041928935,
+    "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.676,
+    "llm_assessment": 0.7300000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -53,37 +53,12 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": 6,
-    "first_author_found": true,
+    "first_author_h_index": null,
+    "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": 0,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11559/fig1.webp",
-      "page": 1,
-      "kind": "figure",
-      "confidence": 0.962
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11559/fig2.webp",
-      "page": 5,
-      "kind": "table",
-      "confidence": 0.981
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11559/fig3.webp",
-      "page": 6,
-      "kind": "table",
-      "confidence": 0.974
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11559/fig4.webp",
-      "page": 6,
-      "kind": "table",
-      "confidence": 0.971
-    }
-  ]
+  "figures": []
 }

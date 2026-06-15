@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.12195",
   "title": "InternVideo3: Agentify Foundation Models with Multimodal Contextual Reasoning",
-  "title_zh": "InternVideo3：用多模态上下文推理将基础模型智能体化",
+  "title_zh": "InternVideo3：通过多模态上下文推理将基础模型智能体化",
   "authors": [
     "Ziang Yan",
     "Sheng Xia",
@@ -26,32 +26,32 @@
     "project_page": null
   },
   "abstract_en": "Recent progress in foundation models has shifted toward agentic behavior involving multi-step reasoning and tool use. However, open-source efforts largely focus on text-dominant settings, leaving long-horizon multimodal tasks underexplored. This gap is evident in video tasks requiring sustained temporal understanding and iterative interaction. We present InternVideo3, a framework enhancing these capabilities via Multimodal Contextual Reasoning (MCR). MCR treats understanding as a closed-loop process over a shared, evolving context containing observations, instructions, reasoning, tool actions, and memory. This frames long-video understanding as evidence accumulation and verification. To ensure efficiency, we introduce Multimodal Multi-head Latent Attention (M^2LA), a token-preserving reparameterization compressing KV-cache states while retaining the full token stream. Our staged training includes continued pretraining, short-to-long supervised fine-tuning, rule-based reinforcement learning, and on-policy distillation. Experiments show InternVideo3 achieves strong performance on benchmarks like Video-MME, MLVU, and EgoSchema. We further instantiate the model as a video agent with retrieval tools, demonstrating robust evidence-grounded behavior. Our results suggest that efficient context handling and closed-loop reasoning are vital for adapting open multimodal models toward long-horizon visually grounded agency.",
-  "abstract_zh": "InternVideo3 面向长时程视频理解与多步交互任务，提出 Multimodal Contextual Reasoning（MCR）框架，将观察、指令、推理、工具调用与记忆整合到持续演化的共享上下文中，把长视频理解建模为证据积累与验证的闭环过程。为提升效率，论文引入 Multimodal Multi-head Latent Attention（M^2LA），在保留完整 token 流的同时压缩 KV-cache 状态。训练流程包括持续预训练、短到长监督微调、基于规则的强化学习和 on-policy distillation。实验表明，InternVideo3 在 Video-MME、MLVU、EgoSchema 等基准上取得强表现，并可结合检索工具形成具备证据支撑的视频智能体。",
+  "abstract_zh": "基础模型近期正从单纯感知与生成走向具备多步推理和工具使用能力的智能体行为。然而，开源工作多集中于文本主导场景，对长时程多模态任务探索不足，尤其是需要持续时间理解与迭代交互的视频任务。本文提出 InternVideo3，通过 Multimodal Contextual Reasoning（MCR，多模态上下文推理）增强长视频理解能力。MCR 将理解建模为围绕共享且持续演化上下文的闭环过程，该上下文包含观察、指令、推理、工具动作与记忆，从而把长视频理解转化为证据积累与验证。为提升效率，作者提出 Multimodal Multi-head Latent Attention（M^2LA），通过 token 保留式重参数化压缩 KV-cache 状态，同时保留完整 token 流。训练流程包括持续预训练、短到长监督微调、基于规则的强化学习和 on-policy distillation。实验表明，InternVideo3 在 Video-MME、MLVU、EgoSchema 等基准上取得强性能，并可结合检索工具实例化为视频智能体，展现出稳健的证据驱动行为。",
   "key_points_zh": [
-    "提出 Multimodal Contextual Reasoning（MCR），将长视频理解转化为围绕共享上下文的闭环证据积累、推理与验证过程。",
-    "设计 Multimodal Multi-head Latent Attention（M^2LA），通过压缩 KV-cache 降低长上下文推理成本，同时保留完整 token 序列信息。",
-    "采用分阶段训练策略：continued pretraining、短到长 supervised fine-tuning、rule-based reinforcement learning 与 on-policy distillation。",
-    "在 Video-MME、MLVU、EgoSchema 等长视频与多模态理解基准上取得强性能，验证其长时程时序理解能力。",
-    "进一步将 InternVideo3 实例化为带检索工具的视频 agent，展示了更稳健的证据定位、工具使用和可追溯回答能力。"
+    "提出 InternVideo3，将开放多模态模型扩展到长时程视频理解与智能体式交互任务。",
+    "核心方法 Multimodal Contextual Reasoning（MCR）把视频理解建模为闭环上下文推理过程，强调证据积累、验证与记忆更新。",
+    "设计 Multimodal Multi-head Latent Attention（M^2LA），在保留完整 token 流的同时压缩 KV-cache，提高长上下文处理效率。",
+    "采用分阶段训练：持续预训练、短到长监督微调、规则强化学习以及 on-policy distillation。",
+    "在 Video-MME、MLVU、EgoSchema 等视频理解基准上表现强劲，并可结合检索工具实现证据 grounded 的视频智能体。"
   ],
   "llm_assessment": {
-    "novelty": 0.5,
-    "problem_significance": 0.5,
-    "potential_impact": 0.5,
-    "paradigm_shift": 0.5,
-    "lasting_value": 0.5,
-    "llm_avg": 0.5,
-    "comment": "Strong long-video agentic reasoning and retrieval-tool framing, but it appears more offline long-horizon video understanding than truly realtime interactive multimodal agency.",
-    "comment_zh": "Strong long-video agentic reasoning and retrieval-tool framing, but it appears more offline long-horizon video understanding than truly realtime interactive multimodal agency."
+    "novelty": 0.78,
+    "problem_significance": 0.76,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.72,
+    "llm_avg": 0.732,
+    "comment": "A strong agentic long-video foundation-model paper with useful closed-loop reasoning and tool grounding, though less focused on realtime streaming interaction.",
+    "comment_zh": "这是一篇较强的智能体化长视频基础模型论文，强调闭环推理和工具 grounding，但对实时流式交互关注不足。"
   },
   "scores": {
     "topic_relevance": 0.88,
     "open_source": 0.2,
-    "community_heat": 0.8296320871988233,
-    "author_reputation": 0.29176612508188887,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.5,
+    "llm_assessment": 0.732,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -59,21 +59,14 @@
     "project_page_url": null,
     "code_promised": true,
     "has_video_demo": false,
-    "hf_listed": true,
-    "hf_upvotes": 20,
-    "first_author_h_index": 2,
-    "first_author_found": true,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
     "first_author_affiliations": [],
     "last_author_h_index": null,
     "last_author_found": false,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12195/fig1.webp",
-      "page": 5,
-      "kind": "figure",
-      "confidence": 0.968
-    }
-  ]
+  "figures": []
 }

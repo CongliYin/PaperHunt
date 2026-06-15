@@ -1,0 +1,67 @@
+{
+  "arxiv_id": "2606.12563",
+  "title": "Arbor: Tree Search as a Cognition Layer for Autonomous Agents",
+  "title_zh": "Arbor：将树搜索作为自主智能体的认知层",
+  "authors": [
+    "Neha Prakriya",
+    "Chaojun Hou",
+    "Zheng Gong",
+    "Huasha Zhao",
+    "Xi Zhao",
+    "Mou Li",
+    "Zhenyu Gu",
+    "Emad Barsoum"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T18:14:56Z",
+  "abs_url": "https://arxiv.org/abs/2606.12563v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12563",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Arbor is a multi-agent framework that introduces structured tree search as a cognition layer for autonomous agents operating in large, stateful action spaces. Prior autonomous optimization systems operate on isolated targets with stateless evaluation. Arbor instead maintains an explicit search tree of scored hypotheses that serves as the shared working memory across agents, evolving with every measurement, treating failures as diagnostic signal that reshapes subsequent exploration, and expanding as prior successes shift the bottleneck distribution. We validate Arbor on full-stack LLM inference optimization, a domain where achieving peak performance has historically required coordinated effort from engineering teams across the application, framework, compiler, kernel, and hardware stack. Arbor pairs an Orchestrator agent, which drives optimization by delegating to Domain Specialists across the inference stack, with a Critic agent that safeguards stability through root-cause analysis, introspection, and measurement validation -- a checks-and-balances architecture where neither agent can unilaterally drive the system. Agent capabilities are decomposed into hard skills (domain expertise) and soft skills (coordination protocols that determine how contributions compose), enabling fully autonomous multi-day campaigns. Arbor achieves up to 193% inference throughput-latency Pareto improvement over vendor-optimized baselines, while a single agent without the harness plateaus at +33% throughput improvement and crashes irrecoverably within hours. Arbor generalizes to multiple generations of hardware platform, and run-to-run variance is within 2 percentage points demonstrating that the method is hardware-agnostic and reproducible.",
+  "abstract_zh": "Arbor 是一个多智能体框架，将结构化树搜索引入为自主智能体在大规模、有状态动作空间中运行的认知层。不同于以往面向孤立目标、依赖无状态评估的自主优化系统，Arbor 维护一棵显式的、带评分假设搜索树，作为多个智能体共享的工作记忆；每次测量都会更新该树，失败被视为诊断信号以重塑后续探索，成功则会推动瓶颈分布迁移并扩展搜索方向。论文在全栈 LLM 推理优化上验证 Arbor，该任务通常需要应用、框架、编译器、kernel 与硬件栈工程团队协同完成。Arbor 由 Orchestrator agent 负责驱动优化并委派给推理栈各层的 Domain Specialists，同时由 Critic agent 通过根因分析、自省和测量验证来保障稳定性，形成任何单一智能体都不能独立控制系统的制衡架构。其能力被拆分为 hard skills（领域专长）与 soft skills（决定贡献如何组合的协作协议），从而支持完全自主的多日优化活动。实验显示，Arbor 相比厂商优化基线最高取得 193% 的推理吞吐-延迟 Pareto 改进；而没有该框架约束的单智能体仅达到 +33% 吞吐提升，并在数小时内不可恢复崩溃。Arbor 可泛化到多代硬件平台，运行间方差在 2 个百分点内，表明其具有硬件无关性和可复现性。",
+  "key_points_zh": [
+    "提出 Arbor，将显式搜索树作为多智能体共享工作记忆，用于记录、评分和演化优化假设。",
+    "把失败视为诊断信号，而非简单无效结果，使系统能根据测量反馈持续调整探索方向。",
+    "采用 Orchestrator agent 与 Critic agent 的制衡架构，结合 Domain Specialists 实现跨 LLM 推理全栈的协同优化。",
+    "在 LLM 推理优化中，相比厂商优化基线最高实现 193% 吞吐-延迟 Pareto 改进，显著优于无框架单智能体。",
+    "方法可跨多代硬件平台泛化，运行间方差低于 2 个百分点，体现较好的稳定性与可复现性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.88,
+    "problem_significance": 0.9,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8859999999999999,
+    "comment": "A compelling autonomous-agent harness that combines shared search memory, diagnostic failure use, specialist orchestration, and stability controls.",
+    "comment_zh": "这是一项很有说服力的自主智能体框架工作，结合共享搜索记忆、失败诊断、专家编排和稳定性控制。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8859999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.12634",
   "title": "Keep Policy Gradient in Charge: Sibling-Guided Credit Distillation for Long-Horizon Tool-Use Agents",
-  "title_zh": "让 Policy Gradient 主导：面向长程工具使用智能体的 Sibling-Guided Credit Distillation",
+  "title_zh": "让 Policy Gradient 掌舵：面向长程工具使用智能体的 Sibling-Guided Credit Distillation",
   "authors": [
     "Tianyu Ding",
     "Jianhong Xin",
@@ -16,32 +16,32 @@
     "project_page": null
   },
   "abstract_en": "Long-horizon tool-use reinforcement learning can learn from outcome verification, but its trajectory-level advantage is broadcast across many reasoning, API, and answer tokens. Self-distillation promises a denser signal by reusing a policy's own rollouts or a privileged teacher. We show, however, that direct token-level self-distillation can silently destroy tool use: it rehearses teacher behavior without knowing which actions the verifier rewards, so useful skills and harmful shortcuts are amplified together. We introduce Sibling-Guided Credit Distillation (SGCD), which uses distillation for credit assignment rather than as a competing actor loss. Dynamic sampling produces mixed successful and failed sibling rollouts; an external LLM summarizes their contrast into a training-only stepwise credit reference; dense teacher/student divergence drives credit reassignment; and bounded detached credit weights reshape GRPO token advantages. The deployed student sees no external LLM, sibling evidence, or oracle. Across AppWorld and $τ^3$-airline, SGCD improves over matched GRPO comparators: AppWorld TGC $42.9 \\to 45.6$ on test_normal and $24.7 \\to 27.0$ on test_challenge, and $τ^3$-airline pass@1 $0.583 \\to 0.602$.",
-  "abstract_zh": "本文关注长程工具使用强化学习中的信用分配问题：虽然智能体可以通过最终结果验证获得奖励，但轨迹级 advantage 会被广播到大量推理、API 调用和答案 token 上，导致训练信号稀疏且噪声大。作者指出，直接进行 token 级 self-distillation 可能破坏工具使用能力，因为它只模仿 teacher 行为，却不知道哪些动作真正被 verifier 奖励，从而同时放大有用技能与有害捷径。为此，论文提出 Sibling-Guided Credit Distillation（SGCD）：不把蒸馏作为与 policy gradient 竞争的 actor loss，而是用于辅助信用分配。SGCD 通过动态采样生成成功与失败混合的 sibling rollouts，利用外部 LLM 在训练阶段总结它们的差异并形成逐步信用参考，再用 teacher/student 的稠密 divergence 进行信用重分配，最后以有界且 detached 的 credit weights 重塑 GRPO 的 token advantages。部署时，student 不需要外部 LLM、sibling evidence 或 oracle。实验显示，在 AppWorld 与 τ^3-airline 上，SGCD 相比匹配的 GRPO baseline 稳定提升：AppWorld TGC 在 test_normal 上从 42.9 提升到 45.6，在 test_challenge 上从 24.7 提升到 27.0；τ^3-airline pass@1 从 0.583 提升到 0.602。",
+  "abstract_zh": "长程工具使用强化学习可以依赖结果验证器进行学习，但轨迹级 advantage 会被广播到大量推理、API 调用和最终回答 token 上，导致信用分配稀疏且噪声较大。自蒸馏看似能通过复用策略自身 rollout 或特权教师提供更密集的训练信号，但作者发现，直接进行 token 级自蒸馏可能会悄悄破坏工具使用能力：它只是复现教师行为，却不知道哪些动作真正受到验证器奖励，因此有用技能和有害捷径会被同时放大。为此，论文提出 Sibling-Guided Credit Distillation（SGCD），将蒸馏用于信用分配，而不是作为与 policy gradient 竞争的 actor loss。SGCD 通过动态采样生成成功与失败混合的 sibling rollouts，利用外部 LLM 在训练阶段总结它们的差异，形成逐步信用参考；再用教师/学生的稠密分歧信号进行信用重分配，并以有界、detach 的信用权重重塑 GRPO token advantages。部署时，学生模型不需要外部 LLM、sibling evidence 或 oracle。在 AppWorld 和 τ³-airline 上，SGCD 相比匹配的 GRPO 基线取得稳定提升：AppWorld TGC 在 test_normal 上从 42.9 提升到 45.6，在 test_challenge 上从 24.7 提升到 27.0；τ³-airline pass@1 从 0.583 提升到 0.602。",
   "key_points_zh": [
-    "论文指出，长程工具使用 RL 中直接 token-level self-distillation 存在风险：模型会盲目复现 teacher 轨迹，无法区分被 verifier 奖励的关键动作与有害捷径。",
-    "提出 Sibling-Guided Credit Distillation（SGCD），核心思想是让蒸馏服务于 credit assignment，而不是作为额外 actor loss 与 policy gradient 竞争。",
-    "SGCD 使用动态采样生成成功/失败 sibling rollouts，并借助训练阶段的外部 LLM 总结对比信息，构造 stepwise credit reference。",
-    "方法通过 teacher/student divergence 产生稠密信用重分配信号，再用有界 detached credit weights 调整 GRPO 的 token-level advantages，保持 policy gradient 的主导地位。",
-    "在 AppWorld 和 τ^3-airline 上，SGCD 均优于匹配 GRPO 对照组，且推理部署阶段不依赖外部 LLM、sibling evidence 或 oracle。"
+    "指出直接 token-level self-distillation 在工具使用 RL 中存在风险：它无法区分验证器真正奖励的关键动作，可能同时强化有效工具使用和错误捷径。",
+    "提出 Sibling-Guided Credit Distillation（SGCD），将蒸馏信号用于 credit assignment，而非直接替代或竞争 policy gradient 的 actor loss。",
+    "SGCD 通过成功/失败 sibling rollouts 的对比，由外部 LLM 生成训练时的 stepwise credit reference，并基于 teacher/student divergence 进行稠密信用重分配。",
+    "方法使用有界且 detach 的信用权重来重塑 GRPO token advantages，避免蒸馏损失直接主导策略更新；推理部署阶段不依赖外部 LLM 或额外 oracle。",
+    "在 AppWorld 与 τ³-airline 两个长程工具使用基准上，SGCD 相比匹配 GRPO 基线带来一致性能提升。"
   ],
   "llm_assessment": {
-    "novelty": 0.8,
+    "novelty": 0.78,
     "problem_significance": 0.8,
-    "potential_impact": 0.78,
-    "paradigm_shift": 0.6,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.66,
     "lasting_value": 0.75,
-    "llm_avg": 0.746,
-    "comment": "A strong long-horizon tool-use training contribution that converts sibling rollout contrast into denser credit signals while preserving policy-gradient control.",
-    "comment_zh": "该工作面向长程工具使用训练，将兄弟轨迹对比转化为更密集的信用信号，具有较高价值。"
+    "llm_avg": 0.75,
+    "comment": "A solid trajectory-based training method for long-horizon tool-use agents, especially valuable for verifier-backed credit assignment.",
+    "comment_zh": "这是一项扎实的长程工具使用智能体训练方法，尤其有助于基于验证器的信用分配。"
   },
   "scores": {
-    "topic_relevance": 0.6400000000000001,
+    "topic_relevance": 0.88,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.3,
+    "author_reputation": 0.22577486063332924,
     "venue_signal": 0.0,
     "generality": 0.4,
-    "llm_assessment": 0.746,
+    "llm_assessment": 0.75,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -54,28 +54,9 @@
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": null,
-    "last_author_found": false,
+    "last_author_h_index": 1,
+    "last_author_found": true,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12634/fig1.webp",
-      "page": 4,
-      "kind": "figure",
-      "confidence": 0.974
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12634/fig2.webp",
-      "page": 5,
-      "kind": "table",
-      "confidence": 0.974
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12634/fig3.webp",
-      "page": 6,
-      "kind": "table",
-      "confidence": 0.969
-    }
-  ]
+  "figures": []
 }

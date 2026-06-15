@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.12191",
   "title": "Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application",
-  "title_zh": "面向大语言模型的智能体环境工程：环境建模、合成、评估与应用综述",
+  "title_zh": "面向大语言模型的 Agentic Environment Engineering：环境建模、合成、评估与应用综述",
   "authors": [
     "Jiachun Li",
     "Zhuoran Jin",
@@ -28,32 +28,32 @@
     "project_page": null
   },
   "abstract_en": "Environments serve as interactive systems for large language model (LLM) based agents across diverse scenarios and play a crucial role in driving the continual evolution of model capabilities. Despite this importance, existing work lacks a systematic categorization and deep analysis. This paper systematically studies current researches on agentic environments from the perspective of the environment engineering lifecycle, covering their modeling, synthesis, evaluation and application. Specifically, the paper first introduces representative environments from the perspectives of eight attributes and eight domains, providing detailed analyses of their development paths and highlighting their core capabilities. Second, for automated environment synthesis, two paradigms are introduced, such as symbolic synthesis and neural synthesis. This paper also shows different environment evaluation methods in each paradigm. Thirdly, the corresponding environment applications from the perspective of agent-environment co-evolution are discussed. In specific, the paper characterizes the primary pathways for agent evolution in dynamic environments from four complementary perspectives: memory-centric experience evolution, orchestration-centric workflow evolution, trajectory-centric offline evolution, and exploration-centric online evolution. And three paradigms of environment evolution are identified, namely neural-driven, difficulty-driven, and scaling-driven approaches. At last, several promising future directions are discussed, including Environment-as-a-Service, Multi-agent Environments, and Neural-Symbolic Environments.",
-  "abstract_zh": "环境作为基于 Large Language Model（LLM）的智能体在多样场景中的交互系统，对持续推动模型能力演化具有关键作用。然而，现有研究仍缺乏系统化分类与深入分析。本文从环境工程生命周期视角系统梳理 agentic environments 相关研究，覆盖环境建模、环境合成、环境评估与环境应用。首先，论文从八类属性与八个领域出发介绍代表性环境，分析其发展路径并总结核心能力。其次，针对自动化环境合成，论文归纳了 symbolic synthesis 与 neural synthesis 两种范式，并讨论了各范式下的环境评估方法。再次，论文从智能体—环境协同演化视角讨论环境应用，将动态环境中智能体演化路径概括为四类：以记忆为中心的经验演化、以编排为中心的工作流演化、以轨迹为中心的离线演化、以探索为中心的在线演化。同时，论文识别出三类环境演化范式：neural-driven、difficulty-driven 与 scaling-driven。最后，论文展望了 Environment-as-a-Service、Multi-agent Environments 与 Neural-Symbolic Environments 等未来方向。",
+  "abstract_zh": "环境（Environment）是基于大语言模型（LLM）的智能体在多种场景中进行交互的系统，也是推动模型能力持续演化的重要基础。针对现有研究缺乏系统分类与深入分析的问题，本文从环境工程生命周期视角系统梳理 Agentic Environment 研究，覆盖环境建模、环境合成、环境评估与环境应用。论文首先从八类属性与八个领域介绍代表性环境，分析其发展路径并总结核心能力；随后针对自动化环境合成，总结符号合成（symbolic synthesis）与神经合成（neural synthesis）两种范式，并讨论各自对应的环境评估方法；进一步从智能体—环境协同演化角度分析环境应用，概括动态环境中智能体演化的四条主要路径：以记忆为中心的经验演化、以编排为中心的工作流演化、以轨迹为中心的离线演化、以探索为中心的在线演化；同时归纳环境演化的三种范式：神经驱动、难度驱动与规模驱动。最后，论文展望了 Environment-as-a-Service、多智能体环境（Multi-agent Environments）以及神经符号环境（Neural-Symbolic Environments）等未来方向。",
   "key_points_zh": [
-    "提出以环境工程生命周期为主线的综述框架，系统覆盖 agentic environments 的建模、合成、评估与应用。",
-    "从八类环境属性和八个应用领域梳理代表性环境，分析不同环境的发展路径、交互特征与核心能力需求。",
-    "总结自动化环境合成的两大范式：symbolic synthesis 强调规则、程序与结构化生成，neural synthesis 依赖模型生成与学习能力。",
-    "从 agent-environment co-evolution 视角归纳智能体演化路径，包括 memory-centric、orchestration-centric、trajectory-centric 与 exploration-centric 四类机制。",
-    "展望 Environment-as-a-Service、Multi-agent Environments、Neural-Symbolic Environments 等方向，强调环境将成为 LLM 智能体能力持续进化的基础设施。"
+    "从环境工程生命周期出发，系统梳理 Agentic Environment 的建模、合成、评估与应用，弥补该方向缺乏统一框架的问题。",
+    "论文从八类属性和八个应用领域分析代表性环境，强调环境在支撑 LLM Agent 交互、任务执行和能力演化中的核心作用。",
+    "在自动化环境合成方面，总结 symbolic synthesis 与 neural synthesis 两大范式，并讨论不同范式下的环境评估方法。",
+    "从智能体—环境协同演化角度，归纳智能体能力提升的四条路径：记忆演化、工作流演化、离线轨迹演化与在线探索演化。",
+    "提出未来研究方向，包括 Environment-as-a-Service、多智能体环境以及 Neural-Symbolic Environments，为构建更可扩展、更动态的智能体训练与评测基础设施提供路线图。"
   ],
   "llm_assessment": {
-    "novelty": 0.48,
+    "novelty": 0.55,
     "problem_significance": 0.78,
-    "potential_impact": 0.64,
-    "paradigm_shift": 0.52,
-    "lasting_value": 0.6,
-    "llm_avg": 0.604,
-    "comment": "A broad and relevant survey of agentic environments and co-evolution loops, useful for framing the field but not itself a production harness contribution.",
-    "comment_zh": "这是一篇覆盖智能体环境与协同演化循环的相关综述，有助于领域梳理，但本身不是生产级框架贡献。"
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.72,
+    "llm_avg": 0.666,
+    "comment": "A valuable survey that frames environments as infrastructure for agent evolution, though it contributes synthesis rather than deployable mechanisms.",
+    "comment_zh": "这是一篇有价值的综述，将环境视为智能体演化基础设施，但主要贡献是归纳而非可部署机制。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
     "open_source": 0.0,
-    "community_heat": 0.9075468987430355,
+    "community_heat": 0.0,
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.604,
+    "llm_assessment": 0.666,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -61,8 +61,8 @@
     "project_page_url": null,
     "code_promised": false,
     "has_video_demo": false,
-    "hf_listed": true,
-    "hf_upvotes": 58,
+    "hf_listed": false,
+    "hf_upvotes": 0,
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
@@ -70,30 +70,5 @@
     "last_author_found": false,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12191/fig1.webp",
-      "page": 6,
-      "kind": "figure",
-      "confidence": 0.969
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12191/fig2.webp",
-      "page": 2,
-      "kind": "figure",
-      "confidence": 0.967
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12191/fig3.webp",
-      "page": 5,
-      "kind": "figure",
-      "confidence": 0.916
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12191/fig4.webp",
-      "page": 4,
-      "kind": "figure",
-      "confidence": 0.895
-    }
-  ]
+  "figures": []
 }

@@ -21,23 +21,23 @@
     "project_page": null
   },
   "abstract_en": "Recent advances in agentic Reinforcement Learning (RL) have substantially improved the multi-turn tool-use capabilities of large language model agents. However, most existing methods assign credit over coarse heuristic units, such as tool-call boundaries or fixed workflows, making it difficult to identify which intermediate decisions influence downstream outcomes. In this work, we study agentic RL from two perspectives: \\textit{where to branch and how to assign credit after branching}. Our pilot analysis shows that influential decision points are broadly distributed throughout the generated sequence rather than concentrated at tool calls, while token entropy alone does not reliably reflect their impact on final outcomes. Motivated by these observations, we propose \\textbf{Agentic Procedural Policy Optimization (APPO)}, which shifts branching and credit assignment from coarse interaction units to fine-grained decision points in the sequence. APPO selects branching locations using a Branching Score that combines token uncertainty with policy-induced likelihood gains of subsequent continuations, enabling more targeted exploration while filtering out spurious high-entropy positions. It further introduces procedure-level advantage scaling to better distribute credit across branched rollouts. Experiments on 13 benchmarks show that APPO consistently improves strong agentic RL baselines by nearly 4 points, while keeping efficient tool-calls and maintaining behavior interpretability.",
-  "abstract_zh": "近期 agentic Reinforcement Learning（RL）的进展显著提升了大语言模型智能体的多轮工具使用能力。然而，现有方法大多在工具调用边界或固定工作流等粗粒度启发式单元上进行信用分配，难以识别哪些中间决策真正影响最终结果。本文从“在哪里分支”以及“分支后如何分配信用”两个角度研究 agentic RL。初步分析发现，有影响力的决策点广泛分布在生成序列中，并不集中于工具调用位置；同时，仅依赖 token entropy 也无法可靠反映其对最终结果的影响。基于此，作者提出 Agentic Procedural Policy Optimization（APPO），将分支与信用分配从粗粒度交互单元推进到序列中的细粒度决策点。APPO 使用 Branching Score 选择分支位置，该分数结合 token 不确定性与策略导致的后续续写似然增益，从而实现更有针对性的探索，并过滤掉虚假的高熵位置。此外，APPO 引入 procedure-level advantage scaling，以更合理地在分支 rollout 之间分配信用。在 13 个 benchmark 上，APPO 相比强 agentic RL baseline 稳定提升近 4 分，同时保持高效的工具调用与行为可解释性。",
+  "abstract_zh": "近期 agentic Reinforcement Learning（RL）显著提升了大语言模型智能体的多轮工具使用能力。然而，现有方法多在工具调用边界或固定工作流等粗粒度启发式单元上分配信用，难以识别哪些中间决策真正影响最终结果。本文从“在哪里分支”与“分支后如何分配信用”两个角度研究 agentic RL。初步分析发现，关键决策点广泛分布在生成序列中，并不集中于工具调用位置；同时，单纯的 token entropy 也无法可靠反映其对最终结果的影响。基于此，作者提出 Agentic Procedural Policy Optimization（APPO），将分支探索与信用分配从粗粒度交互单元推进到序列中的细粒度决策点。APPO 通过 Branching Score 选择分支位置，该分数结合 token 不确定性与后续 continuation 的策略诱导似然增益，从而更有针对性地探索，并过滤掉虚假的高熵位置。此外，APPO 引入 procedure-level advantage scaling，以更合理地在分支 rollout 间分配信用。在 13 个 benchmark 上，APPO 相比强 agentic RL baseline 稳定提升近 4 分，同时保持较高工具调用效率与行为可解释性。",
   "key_points_zh": [
-    "论文指出，agentic RL 中关键决策点并不只出现在 tool-call 边界，而是广泛分布于生成序列各处，挑战了现有粗粒度信用分配范式。",
-    "APPO 提出基于 Branching Score 的分支位置选择机制，综合 token uncertainty 与后续 continuation 的 policy-induced likelihood gain，以识别更有影响力的决策点。",
-    "相比仅使用 token entropy，Branching Score 能过滤掉对最终结果影响有限的高熵位置，使探索更集中、更有效。",
-    "方法引入 procedure-level advantage scaling，在分支 rollout 之间进行更细致的信用分配，改善长程多步决策中的学习信号传播。",
-    "在 13 个 benchmarks 上，APPO 相比强 agentic RL baselines 平均提升近 4 分，同时保持工具调用效率和较好的行为可解释性。"
+    "问题定位：现有 agentic RL 往往按工具调用边界或固定流程进行粗粒度信用分配，难以精确判断哪些中间 token 级决策影响最终任务成败。",
+    "核心发现：有影响力的决策点并不只出现在 tool-call 附近，而是广泛分布于生成序列；仅依赖 token entropy 选择探索位置会引入大量伪高熵点。",
+    "方法贡献：APPO 使用 Branching Score 结合 token uncertainty 与后续 continuation 的 policy-induced likelihood gains，选择更有价值的细粒度分支点。",
+    "信用分配：提出 procedure-level advantage scaling，在分支 rollout 之间更合理地传播和缩放优势信号，改善长程、多步智能体行为的优化。",
+    "实验结果：在 13 个 benchmarks 上，APPO 相比强 agentic RL baselines 平均提升接近 4 分，同时保持高效 tool-call 使用与较好的行为可解释性。"
   ],
   "llm_assessment": {
-    "novelty": 0.75,
+    "novelty": 0.72,
     "problem_significance": 0.75,
-    "potential_impact": 0.75,
-    "paradigm_shift": 0.55,
-    "lasting_value": 0.7,
-    "llm_avg": 0.7,
-    "comment": "A relevant agentic RL method that improves fine-grained branching and credit assignment for tool-use trajectories, though it is more training-loop than harness architecture.",
-    "comment_zh": "该工作针对工具使用轨迹改进细粒度分支与信用分配，相关性较强但更偏训练循环而非框架架构。"
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.62,
+    "llm_avg": 0.658,
+    "comment": "A solid agentic RL method for finer-grained branching and credit assignment, though less directly tied to production harness governance.",
+    "comment_zh": "该工作提出了较扎实的智能体强化学习方法，用于更细粒度的分支探索和信用分配，但与生产级治理基础设施关联较弱。"
   },
   "scores": {
     "topic_relevance": 0.68,
@@ -46,7 +46,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.4,
-    "llm_assessment": 0.7,
+    "llm_assessment": 0.658,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -63,24 +63,5 @@
     "last_author_found": false,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12384/fig1.webp",
-      "page": 6,
-      "kind": "table",
-      "confidence": 0.977
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12384/fig2.webp",
-      "page": 2,
-      "kind": "figure",
-      "confidence": 0.971
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12384/fig3.webp",
-      "page": 4,
-      "kind": "figure",
-      "confidence": 0.964
-    }
-  ]
+  "figures": []
 }

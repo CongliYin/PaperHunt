@@ -1,0 +1,70 @@
+{
+  "arxiv_id": "2606.13707",
+  "title": "Orchestra-o1: Omnimodal Agent Orchestration",
+  "title_zh": "Orchestra-o1：全模态 Agent 编排框架",
+  "authors": [
+    "Fan Zhang",
+    "Vireo Zhang",
+    "Shengju Qian",
+    "Haoxuan Li",
+    "Hao Wu",
+    "Jinyang Wu",
+    "Donghao Zhou",
+    "Zhihong Zhu",
+    "Zheng Lian",
+    "Xin Wang",
+    "Pheng-Ann Heng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-10T04:50:35Z",
+  "abs_url": "https://arxiv.org/abs/2606.13707v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13707",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The recent success of agent swarms has shifted the paradigm of large language model (LLM)-based agents from single-agent workflows to multi-agent systems, highlighting the importance of agent orchestration for task decomposition and collaboration. However, existing orchestration frameworks are limited to a narrow set of modalities and struggle to generalize to more complex settings where heterogeneous modalities coexist and interact. This limitation becomes particularly pronounced in omnimodal scenarios, where tasks require the unified understanding and coordination of diverse inputs such as text, image, audio, and video. In this work, we propose Orchestra-o1, an omnimodal agent orchestration framework designed to support efficient agent collaboration across multiple modalities. Orchestra-o1 introduces a unified orchestration mechanism that enables modality-aware task decomposition, online sub-agent specialization, and parallel sub-task execution. This scalable design allows agent systems to effectively tackle complex real-world tasks involving heterogeneous information sources, surpassing the second-best approach by 10.3% accuracy on the OmniGAIA benchmark. Furthermore, we introduce decision-aligned group relative policy optimization (DA-GRPO), an efficient agentic reinforcement learning approach for training Orchestra-o1-8B, which also achieves state-of-the-art performance against all existing open-source omnimodal agents.",
+  "abstract_zh": "近期 Agent Swarm 的成功推动了基于大语言模型（LLM）的 Agent 从单智能体流程转向多智能体系统，也凸显了 Agent 编排在任务分解与协作中的重要性。然而，现有编排框架通常局限于少数模态，难以泛化到文本、图像、音频、视频等异构模态共存并交互的复杂场景。本文提出 Orchestra-o1，一个面向全模态（omnimodal）任务的 Agent 编排框架，旨在支持跨多模态的高效 Agent 协作。Orchestra-o1 引入统一编排机制，可进行模态感知的任务分解、在线子 Agent 专业化以及并行子任务执行。该可扩展设计使 Agent 系统能够处理涉及异构信息源的复杂现实任务，并在 OmniGAIA benchmark 上比次优方法高出 10.3% accuracy。此外，作者提出 decision-aligned group relative policy optimization（DA-GRPO），一种高效的 Agent 强化学习方法，用于训练 Orchestra-o1-8B；该模型在所有现有开源全模态 Agent 中达到 state-of-the-art 性能。",
+  "key_points_zh": [
+    "提出 Orchestra-o1，一个面向文本、图像、音频、视频等异构输入的 omnimodal Agent orchestration 框架。",
+    "核心机制包括 modality-aware task decomposition、online sub-agent specialization 与 parallel sub-task execution，提升复杂多模态任务协作效率。",
+    "在 OmniGAIA benchmark 上，Orchestra-o1 相比第二优方法取得 10.3% accuracy 提升。",
+    "提出 DA-GRPO（decision-aligned group relative policy optimization），用于高效训练 Orchestra-o1-8B。",
+    "Orchestra-o1-8B 在现有开源 omnimodal agents 中达到 state-of-the-art 性能。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.66,
+    "problem_significance": 0.62,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.52,
+    "lasting_value": 0.5,
+    "llm_avg": 0.576,
+    "comment": "A broad omnimodal orchestration framework with training components, but it is more capability-oriented than production harness-oriented.",
+    "comment_zh": "该工作提出了多模态智能体编排框架和训练方法，但更偏能力提升而非生产级智能体基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.576,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}
