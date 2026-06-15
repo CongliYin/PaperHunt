@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2606.09961",
+  "title": "3SPO: State-Score-Supervised Policy Optimization for LLM Agents",
+  "title_zh": "3SPO：面向 LLM Agent 的状态分数监督策略优化",
+  "authors": [
+    "Yu Han",
+    "Kailing Li",
+    "Yang Jiao",
+    "Yulin Dai",
+    "Yuqian Fu",
+    "Linhai Zhuo",
+    "Tianwen Qian"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T14:26:05Z",
+  "abs_url": "https://arxiv.org/abs/2606.09961v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09961",
+  "links": {
+    "github": "https://github.com/genalyu/3SPO.",
+    "project_page": null
+  },
+  "abstract_en": "Training large language models (LLMs) as autonomous agents via reinforcement learning (RL) has enabled frontier models to achieve superhuman performance in long-horizon tasks. However, existing RL algorithms operate at the trajectory level, performing policy optimization only after collecting complete episode rollouts. This coarse-grained approach faces fundamental challenges in multi-turn agent settings where rewards are sparse, delayed, and credit assignment across individual steps is critical. In this work, we propose \\textbf{State-Score-Supervised Policy Optimization (3SPO)}, a novel RL algorithm that performs post-step policy optimization with dynamic state score supervision. At each step, 3SPO computes the state score based on historical success rates, supervising step-wise credit assignment, adaptive rollout and post-step policy optimization without requiring value function estimation or additional auxiliary models. Theoretically, under a per-state bandit abstraction, we show that the proposed score-supervised allocation mechanism achieves logarithmic allocation regret and provide sample-complexity guarantees for action identification, score distinguishability, and filtering stability. Experiments on ALFWorld and WebShop with Qwen2.5-1.5B/7B-Instruct show that 3SPO consistently outperforms GRPO by $+22.6\\%$ on ALFWorld and $+15.6$ points on WebShop, while using comparable resources to achieve $2.4\\times$ more state exploration and $1.8\\times$ faster convergence. Code is available at https://github.com/genalyu/3SPO.",
+  "abstract_zh": "本文提出 State-Score-Supervised Policy Optimization（3SPO），用于改进大语言模型（LLM）作为自主 Agent 时的强化学习训练。现有 RL 方法通常在完整 episode rollout 后进行轨迹级策略优化，难以应对多轮 Agent 任务中的稀疏奖励、延迟反馈和细粒度信用分配问题。3SPO 在每一步之后进行策略优化，并基于历史成功率动态计算 state score，用于监督逐步信用分配、自适应 rollout 与 post-step policy optimization；该方法无需 value function 估计或额外辅助模型。理论上，作者在 per-state bandit 抽象下证明其 score-supervised allocation 机制具有对数 allocation regret，并给出动作识别、分数可区分性与过滤稳定性的样本复杂度保证。实验在 ALFWorld 和 WebShop 上使用 Qwen2.5-1.5B/7B-Instruct，结果显示 3SPO 相比 GRPO 在 ALFWorld 提升 22.6%，在 WebShop 提升 15.6 分，同时以相近资源实现 2.4 倍更多状态探索和 1.8 倍更快收敛。",
+  "key_points_zh": [
+    "针对多轮 LLM Agent 中轨迹级 RL 信用分配粗糙的问题，3SPO 将策略优化推进到每一步之后执行。",
+    "3SPO 使用基于历史成功率的动态 state score 来监督 step-wise credit assignment，无需训练 value function 或引入额外辅助模型。",
+    "方法同时支持自适应 rollout、状态过滤与 post-step policy optimization，从而提升状态探索效率和训练收敛速度。",
+    "理论上，在 per-state bandit 抽象下证明 score-supervised allocation 具备对数 regret，并给出多项样本复杂度保证。",
+    "在 ALFWorld 与 WebShop 上，3SPO 使用 Qwen2.5-1.5B/7B-Instruct 显著优于 GRPO：ALFWorld 提升 22.6%，WebShop 提升 15.6 分。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.76,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.68,
+    "llm_avg": 0.686,
+    "comment": "3SPO offers a meaningful trajectory-level training improvement for agents, though it is more an RL algorithm than a full harness platform contribution.",
+    "comment_zh": "3SPO 为智能体轨迹训练提供了有意义的改进，但更偏向强化学习算法而非完整 Harness 平台贡献。"
+  },
+  "scores": {
+    "topic_relevance": 0.7200000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.686,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/genalyu/3SPO.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09961/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.949
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09961/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

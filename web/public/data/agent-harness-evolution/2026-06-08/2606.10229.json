@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.10229",
+  "title": "What Demonstration Curation Metrics Do to Your Policy",
+  "title_zh": "示范数据筛选指标会如何影响你的策略",
+  "authors": [
+    "Aarav Bedi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T22:40:49Z",
+  "abs_url": "https://arxiv.org/abs/2606.10229v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10229",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We study whether demonstration-curation metrics that detect defective training episodes also improve the downstream behavior-cloning policy that trains on the curated data. On a contact-rich LIBERO pick-and-place benchmark with a controlled structural defect (early gripper release during the carry phase), we find that the two quantities are sharply decoupled. The metric with the highest defect-detection AUROC (0.804) produces the worst curated policy (13.3% task success), while a metric with a substantially lower AUROC (0.638) produces a policy that nearly matches the oracle trained on ground-truth clean data (90.0% vs. 93.3%). We further show that five of the seven metrics we evaluate exploit episode length as a trivial proxy for the defect label, a confound that inflates reported AUROCs to near-perfect values and disappears once episode length is controlled. Across all conditions, the contaminated baseline succeeds on only 3.3% of rollouts, and the two best curation methods close this to within 3 percentage points of the 93.3% oracle ceiling. Our results argue that curation methods should be evaluated by the policy they produce, not the defects they flag, and that any curation benchmark must control for episode length before reporting detection accuracy. We release the testbed, all metric implementations, and the evaluation pipeline.",
+  "abstract_zh": "本文研究用于检测缺陷训练轨迹的 demonstration-curation metrics，是否真正能提升基于筛选数据训练出的下游 behavior-cloning policy。在接触丰富的 LIBERO pick-and-place benchmark 中，作者构造了一个受控结构性缺陷：机械爪在搬运阶段过早释放物体。实验发现，缺陷检测能力与最终策略性能显著解耦：AUROC 最高的指标达到 0.804，却训练出最差的筛选策略，任务成功率仅 13.3%；而另一个 AUROC 仅 0.638 的指标，却得到几乎匹配 oracle clean-data 策略的性能，成功率为 90.0% vs. 93.3%。作者进一步发现，7 个评估指标中有 5 个利用 episode length 作为缺陷标签的简单代理变量，导致 AUROC 被虚高到近乎完美；一旦控制 episode length，这种优势就消失。污染数据基线成功率仅 3.3%，而最佳两种筛选方法将性能提升到距离 93.3% oracle 上限不到 3 个百分点。论文强调，数据筛选方法应以其训练出的策略表现来评估，而不是仅看其检测到的缺陷；同时，任何 curation benchmark 在报告检测准确率前都必须控制 episode length。作者发布了测试平台、所有指标实现和评估流程。",
+  "key_points_zh": [
+    "核心发现：demonstration-curation metric 的缺陷检测 AUROC 与最终 behavior-cloning policy 的任务成功率可以严重脱钩。",
+    "在 LIBERO pick-and-place 受控缺陷实验中，最高 AUROC 指标反而得到最差策略，成功率仅 13.3%；较低 AUROC 指标却达到 90.0%，接近 oracle 的 93.3%。",
+    "作者指出 episode length 是强混杂因素：7 个指标中有 5 个可利用轨迹长度作为缺陷代理，导致检测 AUROC 被显著虚高。",
+    "污染数据训练的 baseline 成功率只有 3.3%，而最佳两种筛选方法几乎补足到 oracle 上限，说明数据筛选确实可能关键，但需用策略效果评估。",
+    "论文建议：curation benchmark 不应只报告缺陷检测准确率，必须控制 episode length，并以筛选后训练出的 policy performance 作为主要评估标准。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.56,
+    "problem_significance": 0.55,
+    "potential_impact": 0.45,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.25,
+    "llm_avg": 0.43200000000000005,
+    "comment": "The paper gives a useful warning about data curation metrics, but its robotics imitation-learning setting is outside the target agent harness scope.",
+    "comment_zh": "该论文对数据筛选指标提出了有用警示，但其机器人模仿学习场景不在目标智能体 Harness 范围内。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.43200000000000005,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10229/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10229/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10229/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.829
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10229/fig4.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.697
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "arxiv_id": "2606.10062",
+  "title": "Deployment-Time Memorization in Foundation-Model Agents",
+  "title_zh": "Foundation-Model Agents 中的部署时记忆化",
+  "authors": [
+    "Lei",
+    "Chen",
+    "Guilin Zhang",
+    "Kai Zhao",
+    "Dalmo Cirne",
+    "Andy Olsen",
+    "Xu Chu",
+    "Zeke Miller",
+    "Alet Blanken",
+    "Amine Anoun",
+    "Jerry Ting"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Lei",
+      "affiliations": [
+        "Rachel"
+      ]
+    }
+  ],
+  "published_at": "2026-06-08T18:38:41Z",
+  "abs_url": "https://arxiv.org/abs/2606.10062v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10062",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Foundation-model agents are increasingly long-lived systems that remember users across interactions, making memorization an explicit deployment-time function rather than solely a property of model weights. Existing work addresses parametric memorization or audits fixed memory configurations, but does not characterize how memory-design choices jointly shape personalization utility, extraction risk, and deletion fidelity. We study this surface as deployment-time memorization, formulating agent memory as a privacy-utility frontier measured by Personalization Recall (PR) and Adversarial Extraction Rate (AER), and sweeping three memory-design knobs: summarization aggressiveness, retrieval breadth (k), and deletion mode. We further introduce the Forgetting Residue Score (FRS) to quantify whether deleted information remains recoverable from derived memory tiers. On LongMemEval, key-fact summarization reduces canary extraction by 76% on Gemma 3 12B and 64% on GPT-4o-mini while preserving nearly all personalization recall; critically, once content is compressed away, increasing k no longer restores leakage. The same compression, however, induces a deletion-fidelity failure: raw-only deletion leaves derived summary copies recoverable in approximately 20% of instances, and only full-pipeline purge or tombstone redaction drives worst-tier residue to zero. Together, these results establish that persistent agent memory must be evaluated as a first-class memorization mechanism -- assessed by what it helps agents recall, what it makes extractable, and what it can truly erase.",
+  "abstract_zh": "本文研究 Foundation-model agents 在部署阶段通过持久化记忆跨交互记住用户所带来的“部署时记忆化”（deployment-time memorization）问题。不同于仅关注模型权重中的参数化记忆，作者将 agent memory 视为隐私-效用前沿，并用 Personalization Recall（PR）衡量个性化效用、用 Adversarial Extraction Rate（AER）衡量可被攻击者抽取的风险，同时考察三类记忆设计旋钮：摘要压缩强度、检索宽度 k、删除模式。论文还提出 Forgetting Residue Score（FRS），用于量化删除信息是否仍可从派生记忆层中恢复。在 LongMemEval 上，key-fact summarization 在几乎保持个性化召回的同时，将 Gemma 3 12B 的 canary extraction 降低 76%，将 GPT-4o-mini 降低 64%；并且一旦敏感内容被压缩掉，增大 k 不会恢复泄漏。然而，同样的压缩也会导致删除保真度问题：仅删除 raw memory 时，派生 summary 中仍有约 20% 实例可恢复被删信息；只有 full-pipeline purge 或 tombstone redaction 能将最坏层级残留降为零。",
+  "key_points_zh": [
+    "提出“deployment-time memorization”视角，将持久化 agent memory 视为独立于模型参数的记忆化机制。",
+    "构建隐私-效用评估框架：用 Personalization Recall（PR）衡量个性化收益，用 Adversarial Extraction Rate（AER）衡量抽取风险。",
+    "系统扫描三类 memory-design knobs：summarization aggressiveness、retrieval breadth（k）和 deletion mode。",
+    "在 LongMemEval 上，key-fact summarization 显著降低 canary extraction，同时几乎不损害 personalization recall；压缩后增大 k 也难以恢复泄漏。",
+    "提出 Forgetting Residue Score（FRS）揭示删除失败：raw-only deletion 会在派生 summary 中留下残留，需 full-pipeline purge 或 tombstone redaction 才能彻底清除。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.82,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.75,
+    "llm_avg": 0.724,
+    "comment": "A timely study of persistent agent memory that provides practical privacy, utility, and deletion-fidelity evaluation concepts.",
+    "comment_zh": "这项工作及时研究了持久化智能体记忆，并提出了实用的隐私、效用和删除保真度评估概念。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.724,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10062/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10062/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.982
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10062/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.975
+    }
+  ]
+}

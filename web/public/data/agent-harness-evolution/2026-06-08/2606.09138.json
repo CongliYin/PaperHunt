@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.09138",
+  "title": "Claw-R1: A Step-Level Data Middleware System for Agentic Reinforcement Learning",
+  "title_zh": "Claw-R1：面向 Agentic Reinforcement Learning 的步骤级数据中间件系统",
+  "authors": [
+    "Daoyu Wang",
+    "Mingyue Cheng",
+    "Qingchuan Li",
+    "Shuo Yu",
+    "Jie Ouyang",
+    "Qi Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T07:35:18Z",
+  "abs_url": "https://arxiv.org/abs/2606.09138v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09138",
+  "links": {
+    "github": "https://github.com/AgentR1/Claw-R1",
+    "project_page": null
+  },
+  "abstract_en": "Agentic reinforcement learning (RL) has become an important post-training paradigm for turning LLMs from static chatbots into interactive agents, giving rise to representative applications such as OpenClaw. Existing work mainly focuses on policy optimization algorithms and training frameworks, but pays less attention to the full data lifecycle of agent-environment interactions, from data production to training consumption. To bridge this gap, we present Claw-R1, an interactive step-level data middleware system for agentic RL. Claw-R1 connects heterogeneous agent runtimes with RL training backends through two core components: a Gateway Server and a Data Pool. The Gateway Server captures multi-turn interaction steps through a unified LLM API entry point, while the Data Pool organizes them into step-level records consisting of prompt IDs, response IDs, rewards and other metadata. In our demo, users can interactively inspect live trajectories, examine the state, action, and reward of each step, curate data by quality and readiness, and configure training-ready batches for different downstream RL algorithms. Overall, Claw-R1 treats agent interaction traces as managed data assets rather than temporary runtime logs. Through this demonstration, we hope to encourage the community to recognize the importance of data management in agentic RL. Our code is available at https://github.com/AgentR1/Claw-R1 and the demonstration video can be found at link https://youtu.be/Pw47dAOw6B0.",
+  "abstract_zh": "Agentic reinforcement learning（RL）已成为将 LLM 从静态聊天机器人转变为交互式智能体的重要后训练范式，并催生了 OpenClaw 等代表性应用。现有研究主要关注策略优化算法和训练框架，但较少覆盖智能体-环境交互数据从生产到训练消费的完整生命周期。为弥补这一缺口，论文提出 Claw-R1：一个面向 agentic RL 的交互式步骤级数据中间件系统。Claw-R1 通过 Gateway Server 和 Data Pool 两个核心组件，将异构 agent runtime 与 RL training backend 连接起来。Gateway Server 通过统一的 LLM API 入口捕获多轮交互步骤；Data Pool 则将其组织为包含 prompt ID、response ID、reward 及其他元数据的步骤级记录。在演示中，用户可以实时查看交互轨迹，检查每一步的 state、action 和 reward，按质量与可用性筛选数据，并为不同下游 RL 算法配置可训练批次。总体而言，Claw-R1 将 agent interaction traces 视为可管理的数据资产，而非临时运行日志，强调了数据管理在 agentic RL 中的重要性。",
+  "key_points_zh": [
+    "提出 Claw-R1，用于管理 agentic RL 中智能体-环境交互数据的完整生命周期。",
+    "系统包含 Gateway Server 和 Data Pool：前者统一捕获多轮交互，后者以步骤级记录组织数据。",
+    "每条步骤级数据包含 prompt ID、response ID、reward、state/action 等关键信息与元数据。",
+    "支持实时查看轨迹、逐步检查 reward、按质量筛选数据，并构建适配不同 RL 算法的训练批次。",
+    "核心贡献在于将交互轨迹从临时日志提升为可管理、可筛选、可复用的数据资产。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.87,
+    "llm_avg": 0.834,
+    "comment": "A highly relevant middleware system that treats agent RL traces as managed step-level data assets for inspection, curation, and training consumption.",
+    "comment_zh": "该系统将代理强化学习轨迹作为可管理的逐步数据资产，支持检查、筛选与训练消费，和代理平台演进高度相关。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.834,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/AgentR1/Claw-R1",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09138/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09138/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.9
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09138/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.892
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09138/fig4.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.939
+    }
+  ]
+}

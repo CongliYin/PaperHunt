@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.08998",
+  "title": "The Token Not Taken: Sampling, State, and the Variability of AI Agent Outputs",
+  "title_zh": "未被选中的 Token：采样、状态与 AI Agent 输出的可变性",
+  "authors": [
+    "Muhammad Zia Hydari",
+    "Raja Iqbal"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T03:53:55Z",
+  "abs_url": "https://arxiv.org/abs/2606.08998v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.08998",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic AI systems can behave differently across runs: the same request may produce a different plan, a different tool call, a different code edit, or a different final answer. Such variability arises from several layers that are often conflated. A foundation model is a large pretrained model, usually adaptable to many downstream tasks, that maps an input context to predictions over outputs. In many current agents, that model is embedded in an orchestration loop that plans, calls tools, observes results, and updates state. One explicit intrinsic source of variability in such systems is token generation: the model computes scores over possible next tokens, the scores are converted into probabilities, and a decoder may sample tokens using a pseudo-random number generator. A small sampled token difference can then propagate upward into a different tool call, code path, search query, or agent state. Other sources of variability are extrinsic to token sampling, including changing environments, live data, serving infrastructure, batch effects, and numerical details. By separating these layers, the manuscript clarifies what it means to call agentic AI systems stochastic, when such variability can be reproduced under matched conditions, and why deterministic execution need not imply identical behavior in deployed settings.",
+  "abstract_zh": "Agentic AI 系统在多次运行中可能表现不同：同一个请求可能产生不同计划、不同工具调用、不同代码修改或不同最终答案。论文指出，这种可变性来自多个常被混淆的层次。Foundation model 将输入上下文映射为输出预测；而在当前许多 Agent 中，模型被嵌入到包含规划、工具调用、结果观察与状态更新的 orchestration loop 中。一个明确的内在可变性来源是 token generation：模型为下一个 token 计算分数，将其转为概率，decoder 可能借助伪随机数生成器进行采样。一次很小的 token 采样差异，可能向上传播为不同的工具调用、代码路径、搜索查询或 Agent 状态。除此之外，还有外在可变性来源，例如环境变化、实时数据、服务基础设施、批处理效应和数值计算细节。通过区分这些层次，论文澄清了何谓 Agentic AI 系统的随机性、在何种匹配条件下可复现，以及为什么确定性执行并不意味着部署环境中的行为必然一致。",
+  "key_points_zh": [
+    "论文将 Agent 输出可变性拆分为内在 token 采样与外在运行环境因素，避免把所有差异都简单归因于“模型随机”。",
+    "在 token generation 中，模型分数经概率化后由 decoder 采样；微小 token 差异可能放大为不同计划、工具调用或状态演化。",
+    "Agentic AI 不只是 foundation model 本身，还包括规划、工具调用、观察反馈和状态更新等 orchestration loop。",
+    "外在可变性包括实时数据变化、工具环境变化、服务基础设施、batch effects 与数值细节，这些即使在确定性设置下也可能导致输出不同。",
+    "论文强调：随机性在匹配条件下可能可复现，但部署系统的确定性执行并不保证多次行为完全一致。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.45,
+    "problem_significance": 0.62,
+    "potential_impact": 0.42,
+    "paradigm_shift": 0.3,
+    "lasting_value": 0.4,
+    "llm_avg": 0.438,
+    "comment": "A useful explanatory discussion of stochasticity in agents, but it offers little concrete harness architecture or operational mechanism.",
+    "comment_zh": "该文有助于解释代理系统随机性来源，但缺少具体 harness 架构或可操作机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.438,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.08998/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.08998/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.952
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.08998/fig3.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.08998/fig4.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.973
+    }
+  ]
+}

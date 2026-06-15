@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.09643",
+  "title": "FMplex: Model Virtualization for Serving Extensible Foundation Models",
+  "title_zh": "FMplex：面向可扩展 Foundation Models 服务的模型虚拟化",
+  "authors": [
+    "Hetvi Shastri",
+    "Pragya Sharma",
+    "Walid A. Hanafy",
+    "David Irwin",
+    "Mani Srivastava",
+    "Prashant Shenoy"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T15:38:16Z",
+  "abs_url": "https://arxiv.org/abs/2606.09643v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09643",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Foundation models (FMs) are increasingly used as backbones for downstream tasks across language, vision, time-series, and multimodal applications. Yet existing model-serving systems deploy each customized task as an independent model instance, thereby replicating heavyweight backbones, wasting accelerator memory, and losing opportunities to amortize batching and loading costs. This paper presents FMplex, a serving system that treats FM backbones as a virtualization substrate for deployment sharing. FMplex presents each task with a virtual foundation model (vFM), a logically private FM instance backed by a shared physical FM. This abstraction lets independently customized tasks share a backbone while preserving task-specific extensions, independent lifecycles, and task-level isolation. In addition, we propose a batch-aware fair-queueing scheduler that combines weighted task-level sharing with inter- and intra-task batching across colocated tasks. We implement a FMplex-based serving stack spanning task construction, sharing-aware deployment, and runtime execution. Across 7 FM backbones (16 variants) and 92 downstream tasks, FMplex reduces latency by up to 80% over spatial partitioning and 33.3% over best-effort co-location, while hosting up to 6x more tasks at cluster scale.",
+  "abstract_zh": "Foundation Models（FMs）正越来越多地作为语言、视觉、时间序列和多模态等下游任务的骨干网络。然而，现有模型服务系统通常将每个定制任务部署为独立模型实例，导致重量级 backbone 被重复加载，浪费加速器显存，并错失批处理与加载成本摊销的机会。本文提出 FMplex：一种将 FM backbone 视为虚拟化底座的服务系统。FMplex 为每个任务提供 virtual foundation model（vFM），即逻辑上私有、物理上由共享 FM 支撑的模型实例。该抽象允许独立定制的任务共享同一 backbone，同时保留任务特定扩展、独立生命周期与任务级隔离。此外，论文提出 batch-aware fair-queueing scheduler，将带权任务级资源共享与跨任务、任务内 batching 结合起来。作者实现了覆盖任务构建、共享感知部署和运行时执行的 FMplex 服务栈。在 7 个 FM backbones、16 个变体和 92 个下游任务上的实验表明，FMplex 相比空间切分最多降低 80% 延迟，相比 best-effort co-location 降低 33.3% 延迟，并在集群规模下最多可承载 6 倍任务数量。",
+  "key_points_zh": [
+    "提出 FMplex，将 Foundation Model backbone 抽象为可共享的虚拟化底座，为每个任务暴露逻辑私有的 virtual foundation model（vFM）。",
+    "通过共享物理 FM，避免为每个下游任务重复部署重量级 backbone，同时支持任务特定扩展、独立生命周期和任务级隔离。",
+    "设计 batch-aware fair-queueing scheduler，结合带权公平调度与跨任务、任务内 batching，以提升吞吐和降低延迟。",
+    "实现端到端 FMplex 服务栈，覆盖任务构建、共享感知部署和运行时执行。",
+    "在 7 个 FM backbones、16 个变体和 92 个任务上验证，延迟最多降低 80%，集群可承载任务数最多提升 6 倍。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.66,
+    "problem_significance": 0.72,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.55,
+    "llm_avg": 0.6120000000000001,
+    "comment": "FMplex is useful production model-serving infrastructure, but it is only indirectly relevant to agent harness evolution.",
+    "comment_zh": "FMplex 是有用的生产级模型服务基础设施，但与智能体 Harness 演化的相关性较间接。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6120000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09643/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09643/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09643/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.933
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09643/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.95
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "arxiv_id": "2606.09707",
+  "title": "BrainSurgery: Reproducible and Reliable Declarative Weight Manipulations for Model Editing and Upcycling",
+  "title_zh": "BrainSurgery：用于模型编辑与升级的可复现、可靠声明式权重操作工具",
+  "authors": [
+    "Gianluca Barmina",
+    "Annemette Broch Pirchert",
+    "Andrea Blasi Núñez",
+    "Lukas Galke Poech",
+    "Peter Schneider-Kamp"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T16:26:09Z",
+  "abs_url": "https://arxiv.org/abs/2606.09707v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09707",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As deep learning models scale, managing, inspecting, and modifying large checkpoints has become increasingly challenging. Researchers often need to alter model weights for layer restructuring, precision casting, low-rank factorization, and architectural debugging, yet these workflows often rely on fragile ad-hoc Python scripts. Here, we introduce BrainSurgery, a tool for robust and reproducible \"tensor surgery\" on neural network checkpoints, and provide a system demonstration covering four examples and three case studies from model upcycling to LoRA extraction. By abstracting storage formats and memory management, BrainSurgery executes complex transformations through declarative YAML plans. It supports structural modifications, mathematical transformations, and tensor reshaping through expressive regex and structural targeting, while built-in assertions validate tensor shapes, data types, and values to prevent silent errors. We envision that BrainSurgery will provide a strong foundation for future research through its reproducible and validated operations.",
+  "abstract_zh": "随着深度学习模型规模扩大，管理、检查和修改大型 checkpoint 变得愈发困难。研究者常需要进行层结构重组、精度转换、低秩分解和架构调试等权重修改，但现有流程多依赖脆弱的临时 Python 脚本。本文提出 BrainSurgery，一个面向神经网络 checkpoint 的稳健、可复现“张量手术”（tensor surgery）工具，并通过四个示例和三个案例研究展示其在模型升级（model upcycling）到 LoRA 提取等任务中的应用。BrainSurgery 抽象了存储格式与内存管理，使复杂变换可通过声明式 YAML plans 执行；它支持结构修改、数学变换和张量 reshape，并通过 expressive regex 与结构化定位精确选择目标张量。同时，内置断言可验证张量形状、数据类型和值，避免静默错误。作者认为 BrainSurgery 可为未来模型编辑研究提供可复现且经过验证的操作基础。",
+  "key_points_zh": [
+    "提出 BrainSurgery，用于对大型神经网络 checkpoint 进行可靠、可复现的声明式权重操作。",
+    "通过 YAML plans 描述复杂 tensor surgery，减少依赖脆弱的 ad-hoc Python 脚本。",
+    "支持结构修改、数学变换、精度转换、低秩分解、张量 reshape 等常见模型编辑需求。",
+    "提供 regex 与结构化 targeting，用于灵活选择层、模块或特定张量。",
+    "内置形状、dtype 和数值断言，帮助在模型编辑和 upcycling 流程中避免静默错误。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.58,
+    "problem_significance": 0.62,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.48,
+    "llm_avg": 0.522,
+    "comment": "A useful reproducible checkpoint-editing tool, but it is mostly model-operations infrastructure rather than agent-harness infrastructure.",
+    "comment_zh": "这是有用的可复现模型权重编辑工具，但主要属于模型运维基础设施而非 agent harness 基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.7568411832040695,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.522,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 7,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09707/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.97
+    }
+  ]
+}

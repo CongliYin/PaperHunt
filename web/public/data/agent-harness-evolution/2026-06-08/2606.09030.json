@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.09030",
+  "title": "TRIAGE: Dialectical Reasoning for Explainable Risk Prediction on Irregularly Sampled Medical Time Series with LLMs",
+  "title_zh": "TRIAGE：面向不规则采样医疗时间序列可解释风险预测的 LLM 辩证推理框架",
+  "authors": [
+    "Hyeongwon Jang",
+    "Gyouk Chu",
+    "Changhun Kim",
+    "Joonhyung Park",
+    "Hangyul Yoon",
+    "Eunho Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T04:53:44Z",
+  "abs_url": "https://arxiv.org/abs/2606.09030v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09030",
+  "links": {
+    "github": "https://github.com/HyeongWon-Jang/TRIAGE",
+    "project_page": null
+  },
+  "abstract_en": "Clinical early warning systems built on electronic health records, in which clinical observations are recorded as irregularly sampled medical time series (ISMTS), must deliver both calibrated risk scores for patient triage and interpretable rationales that clinicians can verify. Large Language Models (LLMs) have been explored for this task, yet they collapse graded clinical risk into overconfident binary predictions. This risk polarization undermines both calibration and cross-patient comparability. To address this, we propose TRIAGE, a framework that trains an LLM to generate dialectical reasoning over competing clinical outcomes by eliciting outcome-specific rationales. This dialectical formulation mitigates risk polarization, enabling a single LLM to yield continuous risk scores grounded in explicit clinical reasoning. Evaluated on three ISMTS benchmarks, TRIAGE achieves an average AUPRC improvement of 3.3% and reduces calibration error by 81% compared to the competitive baselines. An LLM-as-a-judge assessment further shows that our rationales surpass post-hoc explanations from the baseline by 20% in clinical reasoning quality. The source code is available at https://github.com/HyeongWon-Jang/TRIAGE .",
+  "abstract_zh": "本文关注基于电子健康记录（EHR）的临床早期预警系统，其中临床观测通常表现为不规则采样医疗时间序列（ISMTS）。这类系统既需要为患者分诊提供校准良好的风险评分，也需要生成临床医生可核验的可解释依据。现有 Large Language Models（LLMs）用于该任务时，往往会将连续、分级的临床风险压缩为过度自信的二分类判断，导致风险极化，损害概率校准与跨患者可比性。为此，作者提出 TRIAGE，通过引导 LLM 针对相互竞争的临床结局生成 outcome-specific rationales，训练模型进行辩证推理（dialectical reasoning）。该设计缓解了风险极化，使单个 LLM 能在显式临床推理支撑下输出连续风险评分。在三个 ISMTS 基准上，TRIAGE 相比强基线平均提升 AUPRC 3.3%，并将校准误差降低 81%。此外，LLM-as-a-judge 评估显示，其生成的临床推理质量较基线的 post-hoc explanations 高 20%。",
+  "key_points_zh": [
+    "问题：现有 LLM 在医疗时间序列风险预测中易产生风险极化，将连续风险过度简化为高置信二分类结果。",
+    "方法：TRIAGE 引导 LLM 围绕竞争性临床结局生成 outcome-specific rationales，形成辩证推理过程。",
+    "优势：框架可由单个 LLM 同时输出连续风险评分与显式临床解释，提升可校准性和可验证性。",
+    "效果：在三个 ISMTS benchmark 上，TRIAGE 平均 AUPRC 提升 3.3%，校准误差降低 81%。",
+    "解释质量：基于 LLM-as-a-judge 的评估显示，TRIAGE rationale 的临床推理质量比基线 post-hoc explanation 高 20%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.66,
+    "potential_impact": 0.48,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.25,
+    "llm_avg": 0.458,
+    "comment": "TRIAGE may be useful for clinical prediction, but it is largely outside agent harness infrastructure and self-improving runtime systems.",
+    "comment_zh": "TRIAGE 可能对临床预测有用，但基本不属于智能体 Harness 基础设施或自改进运行时系统。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.458,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/HyeongWon-Jang/TRIAGE",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09030/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09030/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.979
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09030/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.977
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09030/fig4.webp",
+      "page": 1,
+      "kind": "table",
+      "confidence": 0.965
+    }
+  ]
+}

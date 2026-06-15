@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2606.09686",
+  "title": "An 84-Format Numeric Catalog with Bit-Exact Conformance Vectors: A Vendor-Neutral Reference for FP8, BF16, MXFP4, and Microscaling Formats",
+  "title_zh": "包含位精确一致性向量的 84 种数值格式目录：面向 FP8、BF16、MXFP4 与 Microscaling 格式的厂商中立参考",
+  "authors": [
+    "Dmitrii Vasilev"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T16:04:15Z",
+  "abs_url": "https://arxiv.org/abs/2606.09686v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09686",
+  "links": {
+    "github": "https://github.com/gHashTag/paper3-methodology",
+    "project_page": null
+  },
+  "abstract_en": "Numeric format proliferation in machine learning hardware -- FP8 (E4M3 and E5M2), BF16, MXFP4, microscaling block formats, and dozens of research variants -- has outpaced the availability of vendor-neutral, bit-exact reference material. Engineers porting models across accelerators encounter silent divergences that are difficult to diagnose without a shared ruler. This paper describes a catalog of 84 numeric formats spanning 13 families, a suite of six bit-exact conformance packs covering GF16, MXFP4 element, BF16, FP8 E4M3, FP8 E5M2, and E8M0 block scale, and an IEEE P3109 v3.2.0 cross-walk that maps each pack to its corresponding standards-track configured format. Each pack is a self-contained JSON document with a SHA-256 fingerprint, a shared row schema, and an anchor vector that encodes 3.0 -- the identity phi^2 + 1/phi^2 = 3 -- as a cross-pack sanity check. Packs are cross-validated against ml_dtypes 0.5.4 (Google/JAX); any divergence is documented explicitly and interpreted as a spec-permitted interpretation gap rather than hidden. The work is framed as registry filling: it does not propose new formats, make model-accuracy claims, or assert superiority over any vendor's implementation. All artifacts are publicly available at https://github.com/gHashTag/t27 under an open license.",
+  "abstract_zh": "机器学习硬件中的数值格式快速增多，包括 FP8（E4M3/E5M2）、BF16、MXFP4、microscaling block formats 以及大量研究变体，但厂商中立、位精确（bit-exact）的参考资料相对不足，导致模型在不同加速器间迁移时容易出现难以诊断的静默差异。本文提出一个覆盖 13 个家族、共 84 种数值格式的目录，并提供 6 组位精确一致性测试包，涵盖 GF16、MXFP4 element、BF16、FP8 E4M3、FP8 E5M2 与 E8M0 block scale。每个测试包都是自包含 JSON 文档，包含 SHA-256 指纹、统一行模式，以及一个锚定向量：用恒等式 phi^2 + 1/phi^2 = 3 编码数值 3.0，作为跨测试包一致性检查。论文还给出 IEEE P3109 v3.2.0 cross-walk，将各测试包映射到对应的标准化配置格式。作者使用 ml_dtypes 0.5.4（Google/JAX）进行交叉验证，并将所有差异显式记录，解释为规范允许的实现解释差异，而非隐藏问题。该工作定位为“注册表补全”，不提出新格式、不声明模型精度收益，也不主张优于任何厂商实现；所有产物以开放许可发布在 GitHub。",
+  "key_points_zh": [
+    "构建了覆盖 13 个格式家族、84 种 numeric formats 的厂商中立目录，面向 FP8、BF16、MXFP4 与 microscaling 等机器学习硬件常用/新兴格式。",
+    "发布 6 组 bit-exact conformance packs，覆盖 GF16、MXFP4 element、BF16、FP8 E4M3、FP8 E5M2 与 E8M0 block scale，便于实现间逐位一致性检查。",
+    "每个 conformance pack 采用自包含 JSON，包含 SHA-256 fingerprint、共享 row schema，并通过编码 3.0 的 anchor vector 进行跨包 sanity check。",
+    "提供 IEEE P3109 v3.2.0 cross-walk，将测试包与标准化 configured format 对齐，增强其作为标准参考材料的可用性。",
+    "与 ml_dtypes 0.5.4（Google/JAX）交叉验证，显式记录差异并归因于规范允许的解释空间；论文不提出新格式或模型精度主张。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.2,
+    "problem_significance": 0.08,
+    "potential_impact": 0.06,
+    "paradigm_shift": 0.04,
+    "lasting_value": 0.05,
+    "llm_avg": 0.086,
+    "comment": "A hardware numeric-format reference with essentially no direct relevance to e-commerce agents or recommender systems.",
+    "comment_zh": "这是一篇数值格式与硬件兼容性参考论文，几乎不直接服务于电商智能体或推荐系统。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.086,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/gHashTag/paper3-methodology",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09686/fig1.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09686/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.982
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09686/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.982
+    }
+  ]
+}

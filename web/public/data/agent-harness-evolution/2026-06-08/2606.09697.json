@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2606.09697",
+  "title": "PsychoSafe: Eliciting Psychologically-Informed Refusals in Large Language Models",
+  "title_zh": "PsychoSafe：在大语言模型中引出具备心理学依据的拒绝回应",
+  "authors": [
+    "Gianluca Barmina",
+    "Federico Torrielli",
+    "Sven Harms",
+    "Jacob Nielsen",
+    "Felix Mächtle",
+    "Stine Lyngsø Beltoft",
+    "Peter Schneider-Kamp",
+    "Thomas Eisenbarth",
+    "Lukas Galke Poech",
+    "Anne Lauscher"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T16:19:18Z",
+  "abs_url": "https://arxiv.org/abs/2606.09697v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09697",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) routinely face requests that should be refused, creating a trade-off between helpfulness and harm prevention. However, refusals themselves can be helpful. In high-risk interactions involving crisis, coercion, or escalating intent, blunt non-compliance may prevent direct harm while still failing to support the needs of the person behind the request. We present PsychoSafe, a psychologically-informed refusal framework that reframes refusal as structured supportive communication grounded in evidence-based intervention strategies. To develop PsychoSafe, we construct a corpus of 8019 prompt-response pairs spanning five psychologically salient risk domains and apply prompting and parameter-efficient fine-tuning to Qwen 3.5 27B. On a balanced validation set of 500 prompts, evaluated with an LLM judge and validated through human ratings, PsychoSafe prompting improves overall refusal quality by 28.1% over a generic baseline, with particularly strong gains in external resource referral (+46.8%) and psychological grounding (+34.8%), while preserving downstream performance on non-refusal tasks. Fine-tuning achieves near-perfect refusal and resource-referral rates but reduces response relevance. Additional evaluations on SORRY-Bench and XSTest show strong in-domain robustness but limited out-of-domain generalization, suggesting that future work should diversify fine-tuning data to help models apply interventions selectively rather than schematically.",
+  "abstract_zh": "大语言模型（LLMs）经常需要拒绝某些高风险请求，这带来了有用性与伤害预防之间的权衡。然而，拒绝本身也可以是有帮助的：在涉及危机、胁迫或意图升级的交互中，生硬的不服从虽然可能阻止直接伤害，却未必能支持提出请求者的真实需求。本文提出 PsychoSafe，一个具备心理学依据的拒绝框架，将拒绝重构为基于循证干预策略的结构化支持性沟通。作者构建了包含 8019 个 prompt-response 对的语料，覆盖五类心理显著风险领域，并在 Qwen 3.5 27B 上采用 prompting 与参数高效微调。基于 500 条均衡验证集，结合 LLM judge 与人工评分验证，PsychoSafe prompting 相比通用基线将整体拒绝质量提升 28.1%，其中外部资源转介提升 46.8%，心理学依据提升 34.8%，同时保持非拒绝任务的下游性能。微调方法实现了近乎完美的拒绝率和资源转介率，但降低了回应相关性。SORRY-Bench 与 XSTest 上的额外评估显示，其在域内鲁棒性较强，但域外泛化有限，说明未来需扩展微调数据多样性，使模型能选择性而非模板化地应用干预策略。",
+  "key_points_zh": [
+    "提出 PsychoSafe，将 LLM 的拒绝从简单不服从转化为结构化、支持性的心理学沟通，面向危机、胁迫、意图升级等高风险场景。",
+    "构建 8019 条 prompt-response 语料，覆盖五类心理显著风险领域，并在 Qwen 3.5 27B 上探索 prompting 与参数高效微调。",
+    "在 500 条均衡验证集上，PsychoSafe prompting 相比通用基线将整体拒绝质量提升 28.1%，尤其增强外部资源转介和心理学依据表达。",
+    "微调可获得近乎完美的拒绝率与资源转介率，但会牺牲回应相关性，显示安全对齐与交互质量之间仍存在权衡。",
+    "SORRY-Bench 与 XSTest 结果表明方法域内鲁棒性较强，但域外泛化不足，未来需提升数据多样性以避免模板化干预。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.62,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.32,
+    "lasting_value": 0.28,
+    "llm_avg": 0.44400000000000006,
+    "comment": "PsychoSafe improves refusal behavior but is mostly generic model-safety tuning rather than agent runtime governance.",
+    "comment_zh": "PsychoSafe 改进了拒答行为，但主要是通用模型安全微调，而非智能体运行时治理。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.746769622549761,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.44400000000000006,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 6,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09697/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.977
+    }
+  ]
+}

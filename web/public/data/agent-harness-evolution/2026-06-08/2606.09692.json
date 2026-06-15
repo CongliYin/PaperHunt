@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2606.09692",
+  "title": "Observability for Delegated Execution in Agentic AI Systems",
+  "title_zh": "Agentic AI 系统中委托执行的可观测性",
+  "authors": [
+    "Abhinav Mishra",
+    "Kumar Sharad"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T16:10:05Z",
+  "abs_url": "https://arxiv.org/abs/2606.09692v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09692",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Delegation-scoped execution is not identifiable from standard observables: audit logs and execution traces can be identical under multiple incompatible delegation assignments. This gap is especially acute in LLM-based agentic systems, where agents dynamically select tools, vary execution sequences across runs for the same instruction, and spawn cooperating sub-agents. These dynamics fragment and interleave traces, making delegation-scoped reconstruction from causal structure alone structurally underdetermined. Although individual actions are authorized and logged, existing audit, tracing, and security schemas lack the semantics to reconstruct what actions occurred under a given delegation across heterogeneous systems. We focus on delegation-scoped attribution and access/share footprint reconstruction, not intent inference or reasoning reconstruction. We present an agent-aware observability substrate consisting of a lightweight gateway and a common information model that binds delegation context at execution time. This enables reliable cross-tool delegation-scoped reconstruction and direct forensic queries without heuristic time-window correlation.",
+  "abstract_zh": "本文指出，在现有标准可观测数据（如 audit logs 和 execution traces）中，无法可靠识别“委托范围内的执行”：同一组日志或轨迹可能对应多种互不兼容的 delegation assignments。该问题在基于 LLM 的 agentic systems 中尤为突出，因为 agent 会动态选择 tools、针对同一 instruction 在不同运行中产生不同执行序列，并可能生成协作 sub-agents，导致 traces 被切分、交错，仅靠因果结构无法还原 delegation-scoped execution。尽管单个动作可能已被授权并记录，现有审计、追踪与安全 schema 缺乏跨异构系统重建某一 delegation 下动作集合的语义。论文聚焦于 delegation-scoped attribution 以及 access/share footprint reconstruction，而非意图推断或推理过程重建。作者提出一种 agent-aware observability substrate，由轻量级 gateway 和 common information model 组成，在执行时绑定 delegation context，从而支持可靠的跨工具 delegation-scoped reconstruction，并可直接进行 forensic queries，避免依赖启发式时间窗口关联。",
+  "key_points_zh": [
+    "指出标准 audit logs 与 execution traces 无法唯一确定 delegation-scoped execution，存在结构性不可辨识问题。",
+    "分析 LLM-based agentic systems 中动态 tool selection、执行序列变化和 sub-agents 协作会使轨迹碎片化与交错，进一步加剧归因困难。",
+    "论文关注 delegation-scoped attribution 与 access/share footprint reconstruction，而不试图恢复 agent 的 intent 或 reasoning。",
+    "提出 agent-aware observability substrate：通过 lightweight gateway 与 common information model 在执行时绑定 delegation context。",
+    "该方案支持跨异构工具的委托范围重建和直接 forensic queries，减少对启发式时间窗口相关分析的依赖。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.82,
+    "llm_avg": 0.796,
+    "comment": "This is valuable harness-level observability work that adds delegation semantics to traces and audit logs for real agent systems.",
+    "comment_zh": "这是一项有价值的智能体观测性工作，为真实系统的轨迹和审计日志补充了委托语义。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.796,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09692/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.984
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09692/fig2.webp",
+      "page": 2,
+      "kind": "table",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09692/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.979
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.08969",
+  "title": "CARE: A Conformal Safety Layer for Medical Summarization",
+  "title_zh": "CARE：用于医疗摘要的保形安全层",
+  "authors": [
+    "Suhana Bedi",
+    "Bridget Lin",
+    "Anson Y. Zhou",
+    "Chloe O. Stanwyck",
+    "Jenelle A. Jindal",
+    "Sanmi Koyejo",
+    "David Stutz",
+    "Nigam H. Shah"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T03:10:45Z",
+  "abs_url": "https://arxiv.org/abs/2606.08969v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.08969",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) are increasingly used for medical summarization, but their outputs can omit medically important information and introduce unsupported claims. Existing error-detection methods produce heuristic or uncalibrated scores, providing no formal control over missed errors and no principled way to trade off safety against clinician review burden. We introduce Conformal Assessment for Risk Evaluation (CARE), a post-hoc, model-agnostic safety layer that uses conformal risk control to overlay calibrated omission and hallucination flags onto summaries from any LLM without retraining. CARE provides finite-sample, distribution-free guarantees through two controllers: a hallucination controller that bounds the probability of a document containing any unflagged hallucinated sentence, and an omission controller that bounds the expected fraction of important omissions not surfaced for review. Unlike hallucination detection, omissions depend jointly on whether a source sentence is important and whether it is covered by the summary. We show that calibrating only one dimension can violate the target risk bound, while marginal decompositions remain valid but overly conservative. By jointly calibrating over the full $(τ,γ)$ threshold space, CARE preserves formal guarantees while surfacing up to 5$\\times$ fewer sentences than alternative calibrated baselines. Across five medical summarization tasks, CARE satisfies the target risk bound at $α= 0.15$ with 95% confidence across 100 calibration/test resplits, using only ~100 labeled documents per domain. In a preliminary clinician study (75 document reviews), calibrated flags improved omission detection by 28.6 percentage points on average. These results show that sentence-level safety guarantees are feasible for LLM-assisted medical summarization and offer a tunable mechanism for balancing residual risk and review effort.",
+  "abstract_zh": "大型语言模型（LLMs）正越来越多地用于医疗摘要，但其输出可能遗漏医学关键信息，或生成缺乏来源支持的幻觉内容。现有错误检测方法多给出启发式或未校准分数，无法形式化控制漏检错误，也缺乏在安全性与临床医生审阅负担之间权衡的原则性机制。本文提出 Conformal Assessment for Risk Evaluation（CARE），一种后处理、模型无关的安全层，利用 conformal risk control 为任意 LLM 生成的摘要叠加经过校准的遗漏与幻觉标记，无需重新训练模型。CARE 包含两个控制器：幻觉控制器约束“文档中存在任何未标记幻觉句”的概率；遗漏控制器约束“重要遗漏未被提示审阅”的期望比例。作者指出，遗漏检测同时依赖源句是否重要以及摘要是否覆盖该句，仅校准其中一个维度可能违反目标风险界限；边际分解虽有效但过于保守。通过在完整的 $(τ,γ)$ 阈值空间进行联合校准，CARE 在保持形式化保证的同时，相比其他校准基线最多减少 5 倍需审阅句子。跨 5 个医疗摘要任务，CARE 在每个领域仅约 100 篇标注文档的条件下，在 100 次校准/测试重划分中以 95% 置信度满足 $α=0.15$ 的目标风险界限。初步临床医生研究（75 次文档审阅）显示，校准标记平均提升遗漏检测 28.6 个百分点。结果表明，面向 LLM 辅助医疗摘要的句级安全保证是可行的，并可调节残余风险与审阅成本。",
+  "key_points_zh": [
+    "提出 CARE，一个后处理、模型无关的 conformal safety layer，可为任意 LLM 医疗摘要添加遗漏与幻觉风险标记，无需重训。",
+    "通过 conformal risk control 提供有限样本、分布无关保证：控制未标记幻觉文档概率，并控制未提示重要遗漏的期望比例。",
+    "针对遗漏检测，论文强调需联合考虑源句重要性与摘要覆盖性；仅校准单一维度会破坏风险保证，边际校准则过于保守。",
+    "CARE 在完整 $(τ,γ)$ 阈值空间联合校准，在保持风险保证的同时，相比替代校准基线最多减少 5 倍审阅句子量。",
+    "在 5 个医疗摘要任务上，仅用约 100 篇标注文档即可在 $α=0.15$ 下稳定满足目标风险；临床医生小规模研究中遗漏检测平均提升 28.6 个百分点。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "CARE is a credible calibrated safety layer for LLM summarization workflows, useful for governance gates but not specifically an agent harness or closed-loop improvement system.",
+    "comment_zh": "CARE is a credible calibrated safety layer for LLM summarization workflows, useful for governance gates but not specifically an agent harness or closed-loop improvement system."
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.08969/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.08969/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.08969/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.979
+    }
+  ]
+}

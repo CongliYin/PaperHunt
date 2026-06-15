@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2606.09483",
+  "title": "Memory Beyond Recall: A Dual-Process Cognitive Memory System for Self-Evolving LLM Agents",
+  "title_zh": "超越检索的记忆：面向自进化 LLM Agent 的双过程认知记忆系统",
+  "authors": [
+    "Tianxiang Fei",
+    "Mingyang Song",
+    "Mao Zheng",
+    "Xiang Yu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T13:39:24Z",
+  "abs_url": "https://arxiv.org/abs/2606.09483v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09483",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-term memory for an LLM agent is more than retrieving the right passage at the right time. Current memory systems collapse belief revision, causal coupling, and cross-domain abstraction into a single retrieval surface tuned for surface recall, and consequently struggle on implicit personalisation that requires reasoning over how a user has evolved. We propose DCPM, which reorganises agent memory along a cognitive capability hierarchy ascending from raw inputs and atomic facts, through diachronic belief trajectories and identity, to domain schemas, latent intentions and cross-domain patterns. The hierarchy is driven by two processes inheriting the architectural split of dual-process theory: a synchronous daytime writer (System1) that records belief revisions as doubly linked supersedes chains, and an asynchronous nighttime engine (System2) that induces schemas and intentions and sweeps for cross-domain collisions abstracted into higher-level core schemas. On LongMemEval, PersonaMem and PersonaMem-v2, enabling System2 contributes most where the benchmark rewards implicit cross-session inference (up to +5.20 on PersonaMem-v2) and least on span recall, matching the architectural prediction.",
+  "abstract_zh": "本文指出，LLM Agent 的长期记忆不应仅被视为“在正确时间检索正确片段”。现有记忆系统通常把信念修订、因果耦合与跨域抽象压缩到同一个面向表层召回的检索界面中，因此难以处理需要理解用户随时间演化的隐式个性化任务。作者提出 DCPM，将 Agent 记忆重组为一个认知能力层级：从原始输入与原子事实，到历时性信念轨迹与身份，再到领域图式、潜在意图和跨域模式。该层级由继承双过程理论（dual-process theory）架构划分的两个过程驱动：同步的“白天写入器”System1 通过双向链接的 supersedes chains 记录信念修订；异步的“夜间引擎”System2 归纳图式与意图，并扫描跨域冲突，将其抽象为更高层核心图式。在 LongMemEval、PersonaMem 和 PersonaMem-v2 上，System2 在奖励跨会话隐式推理的任务中贡献最大，在 PersonaMem-v2 上最高带来 +5.20 提升；而在简单片段召回中贡献最小，这与其架构预期一致。",
+  "key_points_zh": [
+    "提出 DCPM，将 LLM Agent 长期记忆从单一检索面扩展为认知层级，覆盖事实、信念轨迹、身份、领域图式、潜在意图与跨域模式。",
+    "System1 作为同步写入机制，记录用户信念变化，并用双向 supersedes chains 显式建模信念修订和时间演化。",
+    "System2 作为异步抽象机制，在后台归纳 schemas 与 intentions，并检测跨域碰撞以形成更高层 core schemas。",
+    "实验覆盖 LongMemEval、PersonaMem 和 PersonaMem-v2；System2 在需要跨会话隐式推理的 PersonaMem-v2 上最高提升 +5.20。",
+    "结果表明，长期记忆系统的关键不只是检索准确片段，还包括对用户变化、隐含偏好和跨域抽象的持续建模。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.76,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.7,
+    "llm_avg": 0.708,
+    "comment": "A promising long-term memory architecture for self-evolving personalization, though governance and production execution concerns are limited.",
+    "comment_zh": "该文提出面向自演化个性化的长期记忆架构，较有潜力，但治理和生产执行控制不足。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.708,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09483/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09483/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.94
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09483/fig3.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.934
+    }
+  ]
+}

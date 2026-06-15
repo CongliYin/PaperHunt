@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.09471",
+  "title": "Escaping the KL Agreement Trap in On-Policy Distillation",
+  "title_zh": "摆脱 On-Policy Distillation 中的 KL 一致性陷阱",
+  "authors": [
+    "Haoran Xin",
+    "Anhao Zhao",
+    "Ying Sun",
+    "Jin Li",
+    "Xiaoyu Shen",
+    "Hui Xiong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T13:28:54Z",
+  "abs_url": "https://arxiv.org/abs/2606.09471v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09471",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "On-policy distillation (OPD) provides dense token-level supervision by asking a teacher to score student-generated rollouts. However, when the student drifts into an unrecoverable prefix, the teacher may locally agree with the degraded state, producing low reverse KL but little corrective training signal. We identify this persistent regime as a low-KL agreement trap. Further analyses show that tokens during and after such traps produce less useful supervision signals. We propose KAT (KL Agreement Trap Termination), an online OPD termination rule that detects persistent low-KL agreement with a dynamic training-adaptive threshold. By filtering weak supervision from degenerate agreement, KAT improves avg@k accuracy by 2.66% and pass@k by 3.43% across four mathematical benchmarks, while reducing average rollout length by 59.73%.",
+  "abstract_zh": "On-policy distillation（OPD）通过让 teacher 对 student 生成的 rollout 进行评分，提供密集的 token 级监督。然而，当 student 偏移到不可恢复的前缀时，teacher 可能会在局部上与这种退化状态达成一致，导致 reverse KL 很低，但几乎不给出有效的纠正训练信号。本文将这种持续存在的状态定义为 low-KL agreement trap。进一步分析表明，处于此类陷阱期间及之后的 token 往往产生较弱的监督信号。为此，作者提出 KAT（KL Agreement Trap Termination），一种在线 OPD 终止规则，利用随训练动态自适应的阈值检测持续的低 KL 一致性。通过过滤退化一致性带来的弱监督，KAT 在四个数学推理 benchmark 上将 avg@k accuracy 提升 2.66%，pass@k 提升 3.43%，同时将平均 rollout 长度减少 59.73%。",
+  "key_points_zh": [
+    "指出 OPD 中存在 low-KL agreement trap：student 进入不可恢复前缀后，teacher 可能局部同意错误轨迹，导致 reverse KL 低但监督无效。",
+    "实验证明，陷阱期间及之后的 token 提供的训练信号更弱，继续 rollout 会浪费计算并可能引入低质量监督。",
+    "提出 KAT，一种在线终止机制，用动态训练自适应阈值检测持续低 KL 一致性，并提前截断退化 rollout。",
+    "在四个数学 benchmark 上，KAT 平均提升 avg@k accuracy 2.66%、pass@k 3.43%，同时平均 rollout 长度减少 59.73%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "KAT contributes a meaningful rollout-filtering mechanism for on-policy distillation, but its value is mostly in training-loop efficiency rather than production agent runtime architecture.",
+    "comment_zh": "KAT contributes a meaningful rollout-filtering mechanism for on-policy distillation, but its value is mostly in training-loop efficiency rather than production agent runtime architecture."
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09471/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09471/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09471/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.456
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09471/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.444
+    }
+  ]
+}

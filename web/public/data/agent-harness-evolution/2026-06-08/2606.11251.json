@@ -1,0 +1,67 @@
+{
+  "arxiv_id": "2606.11251",
+  "title": "Mechanical Field Networks: Structured Neural Dynamics for Multivariate Systems",
+  "title_zh": "Mechanical Field Networks：面向多变量系统的结构化神经动力学",
+  "authors": [
+    "Xingji Cui"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T15:23:16Z",
+  "abs_url": "https://arxiv.org/abs/2606.11251v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11251",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Many multivariate dynamical systems are observed only through trajectories, leaving the mechanisms governing their joint dynamics hidden. Existing approaches can impose interpretable dynamics or learn flexible state transitions, yet the resulting interaction structure is typically either specified in advance or left implicit within the learned dynamics. We introduce MF-Net, a recurrent dynamical model that represents all variables in a shared field state and updates this state through a learned relation law. Each variable carries a field component, and these components evolve jointly through a learnable mechanical transition. Here, mechanical refers to the relation-to-motion organization of the transition, where learned relations shape state-dependent flows, field responses, and motion tendencies that move the field state forward. The resulting structure is part of the rollout itself: learned relations influence how the field moves, and the same internal quantities support both forecasting and structural readout. Across known-law interaction systems, chaotic benchmarks, real neural recordings, and ecological time series, MF-Net achieves competitive short- and medium-horizon forecasting while retaining inspectable structural readout. On the 40-dimensional Lorenz--96 testbed, MF-Net achieves an eight-step $R^2$ of $0.798\\pm0.018$; across five seeds, its learned relation matrix recovers the local coupling support with a local/nonlocal strength ratio of $19.80\\pm1.00$ and Precision@$K$ of $1.000\\pm0.000$. MF-Net provides a structure-readable dynamical modeling framework in which learned relations are trained through forward evolution and, on real data, interpreted as functional predictive couplings under appropriate observational limits.",
+  "abstract_zh": "许多多变量动力系统只能通过轨迹观测，其联合动力学机制往往不可见。现有方法要么施加可解释动力学结构，要么学习灵活的状态转移，但交互结构通常需要预先指定，或隐含在 learned dynamics 中。本文提出 MF-Net，一种 recurrent dynamical model，将所有变量表示在共享的 field state 中，并通过学习到的 relation law 更新该状态。每个变量携带一个 field component，这些组件通过可学习的 mechanical transition 联合演化。这里的 mechanical 指“关系到运动”（relation-to-motion）的转移组织方式：学习到的关系塑造状态相关流、场响应与运动趋势，从而推动 field state 前进。该结构直接嵌入 rollout 过程：学习关系影响场如何运动，同时相同的内部量支持预测与结构读出。在已知规律交互系统、混沌基准、真实神经记录和生态时间序列上，MF-Net 在短期与中期预测中表现有竞争力，并保留可检查的结构读出能力。在 40 维 Lorenz--96 测试平台上，MF-Net 达到八步预测 R² 为 0.798±0.018；五个随机种子下，其 learned relation matrix 能恢复局部耦合支撑，local/nonlocal strength ratio 为 19.80±1.00，Precision@K 为 1.000±0.000。MF-Net 提供了一个结构可读的动力学建模框架，其中学习关系通过前向演化训练；在真实数据中，在适当观测限制下可解释为功能性预测耦合。",
+  "key_points_zh": [
+    "提出 MF-Net，将多变量系统嵌入共享 field state，每个变量对应一个 field component，并通过学习到的 relation law 共同演化。",
+    "核心 mechanical transition 采用“关系到运动”的组织方式，使 learned relations 直接影响状态相关流、场响应和运动趋势，而非仅作为事后解释。",
+    "同一组内部结构量同时服务于 forecasting 和 structural readout，使模型在预测过程中自然产生可检查的交互结构。",
+    "在 known-law interaction systems、chaotic benchmarks、real neural recordings 和 ecological time series 上，MF-Net 实现有竞争力的短中期预测性能。",
+    "在 40 维 Lorenz--96 上，MF-Net 八步 R² 达 0.798±0.018，并以 Precision@K=1.000±0.000 恢复局部耦合结构。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "This is a structured dynamical-systems modeling paper with essentially no connection to agent harness architecture, governance, or production agent evolution.",
+    "comment_zh": "This is a structured dynamical-systems modeling paper with essentially no connection to agent harness architecture, governance, or production agent evolution."
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11251/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

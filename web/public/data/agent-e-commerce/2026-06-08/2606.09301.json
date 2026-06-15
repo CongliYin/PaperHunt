@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2606.09301",
+  "title": "PRISM: Topology-Aware Cross-Modal Imputation for Modality-Deficient Federated Graph Learning",
+  "title_zh": "PRISM：面向模态缺失联邦图学习的拓扑感知跨模态补全",
+  "authors": [
+    "Zekai Chen",
+    "Miao Zhang",
+    "Jiayang Xing",
+    "Xunkai Li",
+    "Xun Wu",
+    "Rong-Hua Li",
+    "Guoren Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T10:08:52Z",
+  "abs_url": "https://arxiv.org/abs/2606.09301v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09301",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multimodal federated graph learning (MM-FGL) aims to collaboratively learn from decentralized graphs with text and images. However, real-world clients may not share a common modality basis: a visual-search client may contain image--interaction graphs but no seller descriptions, while a catalog client may provide text but no product images. We refer to this practical setting as client-level modality deficiency. Unlike random instance-wise missingness, a deficient client lacks the local semantic basis needed to reconstruct the absent modality. More importantly, in graph learning, incomplete representations initialize message passing, so imputation errors can be filtered, mixed, and amplified by the receiving topology. To address this gap, we propose \\textbf{PRISM} (\\textbf{P}roactive \\textbf{R}etrieval and \\textbf{I}mputation via \\textbf{S}tructural \\textbf{M}eta-prompting), a topology-aware federated cross-modal imputation framework. Rather than reconstructing the missing modality solely from local observations, PRISM recovers missing-modality semantics from the federation and introduces them into local graph propagation under topology-aware control. Experiments on six multimodal graph datasets across graph-centric and modality-centric tasks show that PRISM consistently improves modality-deficient clients, outperforming state-of-the-art baselines by \\textbf{4.48}\\% on average.",
+  "abstract_zh": "多模态联邦图学习（MM-FGL）旨在从分散的文本-图像图数据中协同学习。然而，现实中的客户端可能并不具备相同的模态基础：例如视觉搜索客户端只有图像-交互图而缺少卖家文本描述，目录客户端则可能只有文本而缺少商品图像。论文将这种设置称为客户端级模态缺失（client-level modality deficiency）。不同于随机的实例级缺失，模态缺失客户端缺乏本地语义基础，难以独立重建缺失模态；同时在图学习中，不完整表示会作为消息传递的初始化，补全误差可能被图拓扑过滤、混合并放大。为此，论文提出 PRISM（Proactive Retrieval and Imputation via Structural Meta-prompting），一种拓扑感知的联邦跨模态补全框架。PRISM 不仅依赖本地观测重建缺失模态，而是从整个联邦中检索缺失模态语义，并通过拓扑感知控制将其注入本地图传播。六个多模态图数据集上的实验表明，PRISM 在图中心任务和模态中心任务中均稳定提升模态缺失客户端表现，平均比现有最优基线高 4.48%。",
+  "key_points_zh": [
+    "提出客户端级模态缺失问题：不同客户端可能整体缺少文本或图像模态，无法依赖本地语义完成可靠补全。",
+    "指出图学习中的补全误差会受消息传递和图拓扑影响，被邻域聚合过滤、混合甚至放大，因此需要拓扑感知的补全机制。",
+    "提出 PRISM，通过联邦范围内的主动检索获取缺失模态语义，而非仅依赖单个客户端的局部观测重建。",
+    "引入结构元提示（Structural Meta-prompting），在本地图传播中以拓扑感知方式控制外部语义注入，降低错误补全对图表示的负面影响。",
+    "在六个多模态图数据集、图中心与模态中心任务上，PRISM 平均较最强基线提升 4.48%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.7,
+    "problem_significance": 0.56,
+    "potential_impact": 0.52,
+    "paradigm_shift": 0.36,
+    "lasting_value": 0.46,
+    "llm_avg": 0.52,
+    "comment": "A technically interesting federated multimodal graph method with some catalog-search relevance but mostly generic scope.",
+    "comment_zh": "该论文在联邦多模态图学习上有技术新意，并与商品目录搜索有一定关联，但整体仍偏通用。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.52,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09301/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09301/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09301/fig3.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.946
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09301/fig4.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.474
+    }
+  ]
+}

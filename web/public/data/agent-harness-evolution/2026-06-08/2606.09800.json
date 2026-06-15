@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2606.09800",
+  "title": "FASE: Fast Adaptive Semantic Entropy for Code Quality",
+  "title_zh": "FASE：面向代码质量的快速自适应语义熵",
+  "authors": [
+    "Shizhe Lin",
+    "Ladan Tahvildari"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T17:53:05Z",
+  "abs_url": "https://arxiv.org/abs/2606.09800v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09800",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-agent code generation offers a promising paradigm for autonomous software development by simulating the human software engineering lifecycle. However, system reliability remains hindered by LLM hallucinations and error propagation across interacting agents. While semantic entropy provides a principled way to quantify uncertainty without ground-truth answers, current methods often rely on costly LLM-driven equivalence checks. In this work, we introduce Fast Adaptive Semantic Entropy (FASE), a novel metric that approximates functional correctness based on the minimum spanning tree of structural and semantic dissimilarity graphs. Evaluations on HumanEval and BigCodeBench demonstrate that FASE outperforms state-of-the-art semantic entropy by LLM entailment, achieving a 25% average improvement in Spearman correlation and a 19% increase in ROCAUC score against Pass@1 from ground-truth test cases when using the Qwen3-Embedding-8B model. Furthermore, by eliminating costly LLM-driven equivalence evaluation, FASE incurs negligible computational overhead, requiring only approximately 0.3% of the runtime cost of traditional semantic entropy approaches. These results position FASE as a practical, cost-effective solution for optimizing uncertainty quantification in real-world multi-agent workflows.",
+  "abstract_zh": "多智能体代码生成通过模拟人类软件工程生命周期，为自主软件开发提供了有前景的范式。然而，LLM 幻觉以及多智能体交互中的错误传播仍限制系统可靠性。语义熵（semantic entropy）可在没有标准答案的情况下量化不确定性，但现有方法通常依赖昂贵的 LLM 等价性判断。本文提出 Fast Adaptive Semantic Entropy（FASE），一种基于结构与语义差异图的最小生成树来近似函数正确性的新指标。在 HumanEval 和 BigCodeBench 上的评估表明，使用 Qwen3-Embedding-8B 时，FASE 相比基于 LLM entailment 的语义熵方法表现更优：与基于真实测试用例的 Pass@1 相比，Spearman 相关性平均提升 25%，ROCAUC 提升 19%。同时，FASE 避免了昂贵的 LLM 等价性评估，计算开销极低，运行时间成本仅约为传统语义熵方法的 0.3%。这些结果表明，FASE 是一种适用于真实多智能体工作流的不确定性量化方案，兼具实用性与成本效率。",
+  "key_points_zh": [
+    "提出 FASE，用结构与语义差异图的最小生成树近似代码功能正确性，从而估计代码生成的不确定性。",
+    "FASE 不依赖昂贵的 LLM-driven equivalence checks，显著降低语义熵计算成本。",
+    "在 HumanEval 和 BigCodeBench 上，FASE 相比基于 LLM entailment 的 semantic entropy 与 Pass@1 更相关。",
+    "使用 Qwen3-Embedding-8B 时，FASE 的 Spearman 相关性平均提升 25%，ROCAUC 提升 19%。",
+    "运行时间成本仅约为传统 semantic entropy 方法的 0.3%，适合真实多智能体代码生成工作流。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "FASE offers a useful lightweight uncertainty and quality signal for multi-agent code workflows, but it is primarily an evaluation metric rather than a full harness or closed-loop platform contribution.",
+    "comment_zh": "FASE offers a useful lightweight uncertainty and quality signal for multi-agent code workflows, but it is primarily an evaluation metric rather than a full harness or closed-loop platform contribution."
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09800/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09800/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09800/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.98
+    }
+  ]
+}

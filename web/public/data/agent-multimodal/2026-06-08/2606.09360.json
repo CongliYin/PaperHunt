@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.09360",
+  "title": "ExDet: Open-Domain Open-Vocabulary Detection with Cross-modal Extrapolation and Rectification",
+  "title_zh": "ExDet：通过跨模态外推与校正实现开放域开放词汇检测",
+  "authors": [
+    "Yupeng Zhang",
+    "Yuzhong Feng",
+    "Ruize Han",
+    "Zhiwei Chen",
+    "Wei Feng",
+    "Liang Wan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T11:34:32Z",
+  "abs_url": "https://arxiv.org/abs/2606.09360v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09360",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Open-domain open-vocabulary detection (ODOVD) requires detectors to generalize to both novel categories and unseen domains, making it more challenging than open-vocabulary detection. Existing methods typically train open-vocabulary detectors together with domain generalization modules from scratch, leading to high training cost. we propose ExDet, a lightweight category-domain collaborative generalization framework for ODOVD that enhances the cross-category and cross-domain generalization of existing detectors. ExDet consists of Text-Guided Extrapolation (TGE), a lightweight Detector-Compatible Rectification (DCR) module, and ExRPN. Specifically, TGE exploits the DeltaSpace property of vision-language models (VLMs) to infer category- and domain-aware proxy visual prototypes from text. DCR is learned from the TGE-generated prototypes in a detector training-free and real-data-free manner, and is inserted after the classification head at inference to rectify representations toward a detector-compatible source-domain visual distribution, thereby enhancing classification for targets from novel categories and unseen domains. ExRPN recalibrates proposal scores by combining semantic similarity with RPN confidence, improving recall for novel and domain-shifted objects while providing better support for subsequent classification and DCR. ExDet achieves SOTA performance on OD-LVIS, OV-LVIS, Objects365, and MSOSB.",
+  "abstract_zh": "开放域开放词汇检测（Open-Domain Open-Vocabulary Detection, ODOVD）要求检测器同时泛化到新类别与未见域，比传统开放词汇检测更具挑战。现有方法通常从零开始联合训练开放词汇检测器与域泛化模块，训练成本较高。本文提出 ExDet，一个轻量级的类别-域协同泛化框架，可增强现有检测器的跨类别与跨域泛化能力。ExDet 包含 Text-Guided Extrapolation（TGE）、轻量级 Detector-Compatible Rectification（DCR）模块和 ExRPN。TGE 利用视觉语言模型（VLM）的 DeltaSpace 特性，从文本推断具有类别与域感知能力的代理视觉原型；DCR 基于 TGE 生成的原型进行学习，无需检测器训练与真实数据，并在推理时插入分类头之后，将表示校正到检测器兼容的源域视觉分布，从而提升新类别和未见域目标的分类能力；ExRPN 通过结合语义相似度与 RPN 置信度重新校准 proposal 分数，提高新类别和域偏移目标的召回率，并为后续分类与 DCR 提供更好支持。ExDet 在 OD-LVIS、OV-LVIS、Objects365 和 MSOSB 上取得 SOTA 性能。",
+  "key_points_zh": [
+    "提出 ExDet，用于 ODOVD 任务，在不从零训练检测器的情况下增强现有开放词汇检测器的跨类别与跨域泛化能力。",
+    "Text-Guided Extrapolation（TGE）利用 VLM 的 DeltaSpace 属性，仅通过文本生成类别-域感知的代理视觉原型，降低对真实数据的依赖。",
+    "Detector-Compatible Rectification（DCR）在无真实数据、无需检测器再训练的条件下学习，并在推理阶段校正分类头后的特征分布，提升新类别与未见域识别。",
+    "ExRPN 将语义相似度与 RPN confidence 结合来重校准 proposal 分数，提高域偏移和新类别目标的召回率。",
+    "在 OD-LVIS、OV-LVIS、Objects365、MSOSB 等基准上达到 SOTA，表明其对开放域与开放词汇场景均有效。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "Useful open-vocabulary detection work with possible visual-agent utility, but it is mainly an offline detection method rather than a realtime agent system.",
+    "comment_zh": "Useful open-vocabulary detection work with possible visual-agent utility, but it is mainly an offline detection method rather than a realtime agent system."
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09360/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.951
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09360/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.915
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09360/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09360/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.969
+    }
+  ]
+}

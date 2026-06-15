@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.09122",
+  "title": "Autonomous Incident Resolution at Hyperscale: An Agentic AI Architecture for Network Operations",
+  "title_zh": "超大规模环境下的自治故障处置：面向网络运维的 Agentic AI 架构",
+  "authors": [
+    "Arun Malik"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T07:15:53Z",
+  "abs_url": "https://arxiv.org/abs/2606.09122v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09122",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Cloud network infrastructure at hyperscale presents unique operational challenges where traditional human-driven incident response cannot keep pace with the volume, velocity, and complexity of failures. This paper presents an agentic AI architecture for autonomous incident resolution in large-scale network operations. Our system employs a multi-agent orchestration framework where specialized AI agents collaborate to detect, diagnose, and remediate network incidents without human intervention. We describe the architectural principles, including hierarchical agent decomposition, skills-based tool invocation via standardized protocols, structured knowledge encoding from operational runbooks, progressive autonomy with safety boundaries, and closed-loop verification. The architecture has been deployed in production at a major cloud provider, demonstrating that agentic AI systems can achieve autonomous resolution rates exceeding 90% for common incident categories while maintaining safety guarantees through layered authorization and rollback mechanisms. We discuss design tradeoffs, failure modes, and lessons learned from operating autonomous AI agents at scale.",
+  "abstract_zh": "本文面向超大规模云网络基础设施中的故障响应难题，提出一种用于大规模网络运维自治故障处置的 Agentic AI 架构。该系统采用多智能体编排框架，由多个专门化 AI agents 协同完成网络事件的检测、诊断与修复，并尽量减少人工介入。论文重点介绍了其架构原则，包括层级化智能体分解、基于技能的工具调用与标准化协议、从运维 runbooks 中进行结构化知识编码、带安全边界的渐进式自治，以及闭环验证机制。该架构已在某大型云服务提供商的生产环境部署，在常见故障类别上实现超过 90% 的自治解决率，同时通过分层授权与回滚机制维持安全保障。论文还讨论了系统设计取舍、失效模式，以及大规模运行自治 AI agents 的实践经验。",
+  "key_points_zh": [
+    "提出面向 hyperscale 云网络运维的 Agentic AI 架构，用于自治检测、诊断和修复网络 incident。",
+    "采用 multi-agent orchestration，将复杂故障处置拆解为层级化、专门化 agents 协作流程。",
+    "通过 runbooks 结构化编码、skills-based tool invocation 和标准化协议，使 agents 能可靠调用运维工具。",
+    "引入 progressive autonomy、安全边界、分层授权、回滚机制和 closed-loop verification，降低自治操作风险。",
+    "生产部署结果显示，系统在常见 incident 类别上自治解决率超过 90%，并总结了规模化运行中的设计取舍与失效模式。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.86,
+    "problem_significance": 0.94,
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.92,
+    "llm_avg": 0.9,
+    "comment": "A highly valuable production agent architecture with orchestration, skill invocation, safety boundaries, rollback, and closed-loop verification at hyperscale.",
+    "comment_zh": "该文展示了超大规模生产级代理架构，涵盖编排、技能调用、安全边界、回滚和闭环验证，价值很高。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09122/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09122/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09122/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09122/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.949
+    }
+  ]
+}

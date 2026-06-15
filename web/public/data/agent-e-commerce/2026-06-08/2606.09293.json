@@ -1,0 +1,92 @@
+{
+  "arxiv_id": "2606.09293",
+  "title": "One Model, Multiple Goals: Adaptive Multi-Objective Learning for E-commerce Dialogue Systems",
+  "title_zh": "一个模型，多重目标：面向电商对话系统的自适应多目标学习",
+  "authors": [
+    "Mingzhe Li",
+    "Jing Xiang",
+    "Enguo Zhou",
+    "Lang Gao",
+    "Tai Li",
+    "Qishen Zhang",
+    "Xiangliang Zhang",
+    "Xiuying Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T10:01:07Z",
+  "abs_url": "https://arxiv.org/abs/2606.09293v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09293",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Dialogue systems in e-commerce scenarios often need to satisfy multiple objectives: accurately reasoning over user profiles (e.g., eligibility, credit limit) to ensure correct decision-making and user state interpretation, while also generating natural and faithful responses. These goals are complementary but not identical. In this work, we propose MORE, an adaptive Multi-Objective REinforcement learning framework that jointly optimizes reasoning accuracy and linguistic naturalness. Our preliminary experiments show that directly mixing rewards with diverging optimization dynamics can cause oscillations and unstable learning. Thus, instead of optimizing a single mixed reward, we treat reasoning functions as constraints that guide policy optimization. At inference time, the system directly generates responses without explicit reasoning steps, while still benefiting from reasoning-enhanced scaffold and avoiding additional inference overhead. To better balance linguistic objectives during response generation, we introduce an adaptive multi-reward mechanism that aggregates signals such as fluency and naturalness and dynamically reweighs them via gradient feedback. We evaluate MORE on two real-world dialogue systems at ByteDance and the MultiWOZ 2.2 benchmark, where it consistently outperforms strong baselines. In 14-day online experiments on ByteDance production traffic, MORE improves overall and reached conversion by 16.53% and 30.09%, while increasing user satisfaction and reducing handoff rates. Notably, in a human-machine comparison, MORE recovers about 60% of the incremental conversion lift achieved by human agents.",
+  "abstract_zh": "电商场景中的 Dialogue Systems 通常需要同时满足多类目标：一方面要准确推理用户画像与状态，例如资格判断、信用额度等，以保证决策正确；另一方面还要生成自然、忠实的回复。论文提出 MORE，一个自适应多目标强化学习（Multi-Objective Reinforcement Learning）框架，用于联合优化推理准确性与语言自然度。作者发现，直接混合具有不同优化动态的奖励会导致训练震荡与不稳定，因此 MORE 不再优化单一混合奖励，而是将推理函数作为约束来指导策略优化。推理增强的 scaffold 只用于训练阶段，推理时系统可直接生成回复，无需显式推理步骤，也不会引入额外推理开销。为更好平衡生成质量，MORE 还引入自适应多奖励机制，聚合流畅性、自然度等信号，并通过梯度反馈动态调整权重。实验在 ByteDance 两个真实业务对话系统与 MultiWOZ 2.2 上进行，结果显示 MORE 稳定优于强基线；在 ByteDance 生产流量的 14 天在线实验中，MORE 将整体转化率和达成转化率分别提升 16.53% 和 30.09%，同时提升用户满意度并降低转人工率。在人机对比中，MORE 恢复了人工客服增量转化收益的约 60%。",
+  "key_points_zh": [
+    "提出 MORE，自适应 Multi-Objective Reinforcement Learning 框架，联合优化电商对话中的推理准确性与语言自然度。",
+    "不同于直接混合奖励，MORE 将 reasoning functions 作为约束来指导策略优化，缓解多目标奖励动态不一致导致的震荡和不稳定。",
+    "训练阶段利用 reasoning-enhanced scaffold，推理阶段直接生成回复，无需显式推理步骤，因此避免额外 inference overhead。",
+    "引入自适应多奖励机制，聚合 fluency、naturalness 等语言信号，并通过梯度反馈动态重加权。",
+    "在 ByteDance 真实业务系统与 MultiWOZ 2.2 上优于强基线；14 天线上实验中整体转化率提升 16.53%，达成转化率提升 30.09%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.66,
+    "problem_significance": 0.88,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.56,
+    "lasting_value": 0.82,
+    "llm_avg": 0.764,
+    "comment": "A highly practical e-commerce dialogue-system paper with strong production evidence on conversion and satisfaction.",
+    "comment_zh": "这是一篇实践价值很强的电商对话系统论文，并通过线上实验验证了转化率和满意度提升。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3233158463485474,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.764,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09293/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09293/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09293/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09293/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.983
+    }
+  ]
+}

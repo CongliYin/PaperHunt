@@ -1,0 +1,73 @@
+{
+  "arxiv_id": "2606.10184",
+  "title": "Dropout-GRPO: Variational Stochasticity for Continuous Latent Reasoning",
+  "title_zh": "Dropout-GRPO：用于连续潜在推理的变分随机性",
+  "authors": [
+    "Wooil Jung"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T21:21:42Z",
+  "abs_url": "https://arxiv.org/abs/2606.10184v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10184",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Group Relative Policy Optimization (GRPO) relies on the diversity of $K$ rollouts within each group; otherwise, the group-mean advantage $A^{(k)} = r^{(k)} - μ_r$ collapses to zero. This presents a structural challenge for latent-reasoning models like Coconut, which feed continuous hidden states recurrently in place of discrete chain-of-thought tokens. Because the latent phase is inherently deterministic given the parameters and prompt, multiple rollouts produce identical trajectories, stalling GRPO's progress. Consequently, applying group-relative reinforcement learning to continuous latent reasoning has proven difficult. To address this, we propose sourcing the necessary stochasticity through structured dropout. By applying a single Bernoulli mask held constant across all latent recurrence steps for a given rollout, we generate essential trajectory variance. This shared mask effectively treats each rollout as a posterior sample from a variational distribution over parameters, allowing GRPO to optimize the expected reward of a Bayesian model-average policy. We provide both theoretical justification for this method -- including unbiasedness, variance reduction, and the well-definedness of the latent gradient -- and empirical validation. On GSM8K, dropout-GRPO improves a Coconut baseline from $27.29\\%$ to $29.01\\%$ pass@1, demonstrating the viability of GRPO learning for latent-reasoning models. Our work positions this as a practical, theoretically grounded approach for post-training latent-reasoning LLMs.",
+  "abstract_zh": "本文关注将 Group Relative Policy Optimization（GRPO）应用于 Coconut 等连续潜在推理模型时的关键困难：GRPO 依赖同一组内 K 次 rollout 的多样性来计算相对优势，但连续 latent phase 在给定参数和 prompt 时通常是确定性的，导致多次 rollout 轨迹相同、优势坍缩为零，训练停滞。作者提出 Dropout-GRPO，通过在每次 rollout 中采样一个 Bernoulli dropout mask，并在所有 latent recurrence steps 中保持该 mask 不变，为潜在推理过程注入结构化随机性。该共享 mask 可被解释为从参数变分后验中采样，使 GRPO 优化 Bayesian model-average policy 的期望奖励。论文从理论上证明了该方法的无偏性、方差降低性质以及 latent gradient 的良定义性，并在 GSM8K 上验证其有效性：Dropout-GRPO 将 Coconut baseline 的 pass@1 从 27.29% 提升到 29.01%。",
+  "key_points_zh": [
+    "指出连续潜在推理模型在 latent phase 中缺乏 rollout 随机性，导致 GRPO 的组内相对优势退化，难以有效学习。",
+    "提出 Dropout-GRPO：每次 rollout 采样一个 Bernoulli mask，并在所有 latent recurrence steps 中共享，以产生稳定的轨迹多样性。",
+    "将共享 dropout mask 解释为变分参数后验采样，从而把训练目标视为优化 Bayesian model-average policy 的期望奖励。",
+    "提供理论分析，涵盖估计无偏性、方差降低以及连续 latent gradient 的良定义性。",
+    "在 GSM8K 上将 Coconut 的 pass@1 从 27.29% 提升到 29.01%，表明 GRPO 可用于后训练 latent-reasoning LLMs。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.45,
+    "potential_impact": 0.4,
+    "paradigm_shift": 0.3,
+    "lasting_value": 0.25,
+    "llm_avg": 0.38,
+    "comment": "Dropout-GRPO is a narrow post-training technique for latent reasoning and has little direct relevance to agent platform reliability or evolution.",
+    "comment_zh": "Dropout-GRPO 是面向潜在推理的较窄后训练技术，与智能体平台可靠性或演化的直接关系较小。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.38,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10184/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.902
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10184/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.921
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.09682",
+  "title": "AutoMegaKernel: A Statically-Checked Agent Harness for Self-Retargeting Megakernel Synthesis",
+  "title_zh": "AutoMegaKernel：用于自重定向 Megakernel 合成的静态检查 Agent Harness",
+  "authors": [
+    "Jaber Jaber",
+    "Osama Jaber"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T16:02:03Z",
+  "abs_url": "https://arxiv.org/abs/2606.09682v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09682",
+  "links": {
+    "github": "https://github.com/RightNow-AI/AutoMegaKernel",
+    "project_page": null
+  },
+  "abstract_en": "AutoMegaKernel (AMK) compiles a HuggingFace Llama-family model into a single persistent cooperative CUDA kernel that runs the whole forward pass in one launch, with no per-model hand-written CUDA. The contribution is the system, not raw speed. A frozen schedule-IR validator statically certifies deadlock-freedom and race-freedom via static graph checks (not a mechanized proof), so an unsafe agent-proposed schedule is rejected before launch: across 7,160 adversarial schedules (6,091 unsafe) it had zero false-accepts and accepted all 360 real lowerings. The same source retargets sm_80/sm_90/sm_120 from one codebase, auto-generates correct megakernels for 10 of 10 supported models, and on a real SmolLM2-135M checkpoint reproduces HuggingFace greedy decode token-for-token (perplexity match 2.5e-7). An unattended, agent-drivable autoresearch loop self-improves the megakernel over its own baseline (1.25-1.72x). A search-found int8 (W8A16) megakernel beats CUDA-graphed cuBLAS bf16 at batch-1 decode across NVIDIA's datacenter inference fleet: L4 up to 1.33x, the current-gen L40S 1.25-1.27x, A10G up to 1.08x at scale, and the consumer RTX 5090 1.19-1.23x. The ordering is not a clean function of bandwidth (the 864 GB/s L40S beats the 600 GB/s A10G); the divide is inference-class vs training-class. AMK trails cuBLAS on the high-bandwidth training-class A100/H100, where the harness localizes the cross-SM-sync bottleneck; we report the gap plainly. This is a precision-asymmetric (W8A16 vs bf16) comparison at decode position 0; the largest real checkpoint is TinyLlama-1.1B. Code and the harness: https://github.com/RightNow-AI/AutoMegaKernel",
+  "abstract_zh": "AutoMegaKernel（AMK）将 HuggingFace Llama-family 模型编译为单个持久协作式 CUDA kernel，使整个 forward pass 在一次 launch 中完成，且无需为每个模型手写 CUDA。论文的核心贡献是系统能力而非单纯速度：其冻结的 schedule-IR validator 通过静态图检查，在 launch 前验证无死锁与无数据竞争，从而拒绝不安全的 agent 生成调度。在 7,160 个对抗调度中，AMK 对 6,091 个不安全调度实现零误接受，并接受全部 360 个真实 lowering。系统可从同一代码库重定向到 sm_80、sm_90、sm_120，自动为 10/10 个支持模型生成正确 megakernel，并在真实 SmolLM2-135M checkpoint 上与 HuggingFace greedy decode 逐 token 一致。其无人值守、agent 可驱动的 autoresearch loop 可相对基线自改进 1.25–1.72x。搜索得到的 int8（W8A16）megakernel 在 batch-1 decode 上，在多款 NVIDIA 推理级 GPU 上超过 CUDA-graphed cuBLAS bf16，但在 A100/H100 等高带宽训练级 GPU 上落后，瓶颈被定位为跨 SM 同步。论文也明确指出比较存在精度不对称（W8A16 vs bf16）、测试位于 decode position 0，最大真实 checkpoint 为 TinyLlama-1.1B。",
+  "key_points_zh": [
+    "提出 AutoMegaKernel，将 Llama-family 模型编译成单次 launch 的 persistent cooperative CUDA megakernel，目标是自动化系统生成而非依赖手写 CUDA。",
+    "设计冻结的 schedule-IR validator，通过静态图检查验证 deadlock-freedom 与 race-freedom；在 7,160 个对抗调度上零 false-accept，并接受全部真实 lowering。",
+    "同一代码库可重定向到 sm_80、sm_90、sm_120，并为 10/10 个支持模型自动生成正确 megakernel；在 SmolLM2-135M 上与 HuggingFace greedy decode 逐 token 匹配。",
+    "构建 agent-drivable autoresearch loop，可无人值守地优化自身 megakernel，相比内部基线提升 1.25–1.72x。",
+    "搜索得到的 W8A16 int8 megakernel 在 L4、L40S、A10G、RTX 5090 等推理/消费级 GPU 的 batch-1 decode 上超过 CUDA-graphed cuBLAS bf16，但在 A100/H100 上受跨 SM 同步瓶颈影响仍落后。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.74,
+    "problem_significance": 0.58,
+    "potential_impact": 0.62,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.55,
+    "llm_avg": 0.6140000000000001,
+    "comment": "Technically interesting statically checked agent-driven compiler optimization work, but its relevance to general agent harness evolution is indirect.",
+    "comment_zh": "该工作在代理驱动编译优化和静态校验方面有技术亮点，但与通用 agent harness 演进的关系较间接。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6140000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/RightNow-AI/AutoMegaKernel",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09682/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.9
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09682/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09682/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.981
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09682/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.907
+    }
+  ]
+}

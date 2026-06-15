@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.09644",
+  "title": "Where Does the Answer Come From? Benchmarking View-Level Visual Evidence Identification in Multi-View MLLMs for Autonomous Driving",
+  "title_zh": "答案从何而来？面向自动驾驶多视角 MLLM 的视图级视觉证据识别基准",
+  "authors": [
+    "Yimu Wang",
+    "Yee Man Choi",
+    "Barry Zhang",
+    "Mozhgan Nasr Azadani",
+    "Sean Sedwards",
+    "Krzysztof Czarnecki"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T15:39:06Z",
+  "abs_url": "https://arxiv.org/abs/2606.09644v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09644",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multimodal large language models (MLLMs) achieve strong results on visual reasoning benchmarks, but answer accuracy alone does not indicate whether a model relied on the correct visual evidence. This gap is particularly important in multi-view driving scenes used for autonomous driving, where a model can produce a plausible answer while grounding it in the wrong camera view. We introduce a multi-view visual question answering benchmark for evaluating evidence-source identification: given six synchronized NuScenes views and a question, the model must identify the supporting camera view and answer the question. The benchmark contains 122 conflict-centric question-answer pairs from 73 scenes, spanning causality, counterfactual reasoning, and intent prediction. View labels are proposed by an automatic conflict-mining pipeline and manually verified by annotators. We evaluate three settings: camera-view selection, oracle QA given the golden view, and joint prediction in which the model selects a view and answers in one pass. Answers are evaluated in both multiple-choice and free-form formats, using exact match for structured predictions and an LLM judge for free-form responses. By explicitly separating visual-source identification from answer correctness, the benchmark exposes grounding failures that answer-only evaluation misses.",
+  "abstract_zh": "本文关注多模态大语言模型（MLLMs）在自动驾驶多视角场景中的视觉证据来源识别问题。作者指出，仅用答案准确率评估模型并不能判断其是否依据了正确的视觉证据；在包含多个同步摄像头视角的驾驶场景中，模型可能给出看似合理的答案，却依赖了错误的 camera view。为此，论文基于 NuScenes 的六个同步视角构建了一个多视角视觉问答基准，要求模型在回答问题的同时识别支撑答案的摄像头视角。该基准包含来自 73 个场景的 122 个冲突中心问题-答案对，覆盖因果推理、反事实推理和意图预测。视角标签由自动 conflict-mining 流程提出，并经人工标注者验证。实验评估三种设置：camera-view selection、给定黄金视角的 oracle QA，以及在一次推理中同时选择视角并回答的 joint prediction。答案评估同时支持多选题和自由形式回答，分别采用 exact match 与 LLM judge。该基准通过显式区分视觉来源识别与答案正确性，揭示了仅看答案准确率会掩盖的 grounding failures。",
+  "key_points_zh": [
+    "提出面向自动驾驶多视角 MLLMs 的视觉证据来源识别基准，强调答案正确不等于模型使用了正确的 camera view。",
+    "基准基于 NuScenes 六个同步视角，包含 73 个场景中的 122 个 conflict-centric QA 对，覆盖因果、反事实和意图预测任务。",
+    "视图级证据标签由自动 conflict-mining pipeline 生成候选，并通过人工验证，提升标注可靠性。",
+    "评估包含三种设置：单独选择支持视角、给定黄金视角进行 oracle QA、以及联合预测视角和答案。",
+    "通过多选与自由回答两类评测方式，揭示传统 answer-only evaluation 容易遗漏的视觉 grounding 错误。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "A narrowly scoped multi-view driving evidence benchmark with limited relevance to reusable agent harness infrastructure or self-improving runtime systems.",
+    "comment_zh": "A narrowly scoped multi-view driving evidence benchmark with limited relevance to reusable agent harness infrastructure or self-improving runtime systems."
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36560162063732243,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09644/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09644/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09644/fig3.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09644/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.966
+    }
+  ]
+}

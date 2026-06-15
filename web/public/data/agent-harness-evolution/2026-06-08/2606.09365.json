@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2606.09365",
+  "title": "Experience Makes Skillful: Enabling Generalizable Medical Agent Reasoning via Self-Evolving Skill Memory",
+  "title_zh": "经验造就技能：通过自演化技能记忆实现可泛化的医疗 Agent 推理",
+  "authors": [
+    "Haoran Sun",
+    "Wenjie Li",
+    "Yujie Zhang",
+    "Zekai Lin",
+    "Fanrui Zhang",
+    "Kaitao Chen",
+    "Xingqi He",
+    "Yichen Li",
+    "Mianxin Liu",
+    "Lei Liu",
+    "Yankai Jiang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T11:37:01Z",
+  "abs_url": "https://arxiv.org/abs/2606.09365v2",
+  "pdf_url": "https://arxiv.org/pdf/2606.09365",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Medical agent systems are increasingly expected to support interactive clinical decision making rather than only static question answering. In such settings, effective agents must reuse prior experience across evolving cases, yet existing memory mechanisms often retain raw historical traces that are redundant, noisy, and difficult to govern. More importantly, they rarely distinguish which memories are truly useful for future reasoning. This limits their ability to accumulate compact and reliable experience for long-horizon clinical reasoning. To close this gap, we propose SkeMex, a post-deployment self-evolution framework that improves medical agents through a skill-based memory without updating model weights. SkeMex distills informative interaction trajectories into structured skills that encode reusable procedural knowledge, and organizes them into a multi-branch repository spanning general, task-specific, and action-level experience. To determine which memories should be reused and retained, SkeMex estimates context-dependent utility from environment feedback and uses it to guide value-aware retrieval and repository governance. A closed-loop ``Read--Write--Assess--Govern\" lifecycle further supports continual evolution by writing new skills, updating utilities, promoting useful memories, and removing harmful entries. Experiments across diverse clinical tasks show that SkeMex consistently outperforms representative memory-based agents in both offline and online settings. It also generalizes across model backbones and supports transferable skill memory. All data and code will be released publicly.",
+  "abstract_zh": "本文提出 SkeMex，一个无需更新模型权重的部署后自演化框架，用于提升医疗 Agent 在交互式临床决策中的长期推理能力。不同于保留冗余、噪声较多的原始历史轨迹，SkeMex 将有价值的交互轨迹蒸馏为结构化技能，编码可复用的过程性知识，并按通用经验、任务特定经验和动作级经验组织为多分支记忆库。框架进一步基于环境反馈估计记忆在当前上下文中的效用，用于价值感知检索和记忆库治理。通过“Read--Write--Assess--Govern”闭环生命周期，SkeMex 能持续写入新技能、更新效用、提升有用记忆并移除有害条目。多类临床任务实验表明，SkeMex 在离线和在线场景中均优于代表性记忆型 Agent，并可跨模型骨干泛化，支持技能记忆迁移。",
+  "key_points_zh": [
+    "问题：现有医疗 Agent 记忆机制多保存原始历史轨迹，存在冗余、噪声和难治理问题，且难以判断哪些记忆真正有助于未来临床推理。",
+    "方法：SkeMex 将交互轨迹蒸馏为结构化技能记忆，捕获可复用的过程性知识，而非简单存储完整对话或执行记录。",
+    "架构：其多分支记忆库覆盖 general、task-specific 和 action-level 三类经验，支持不同粒度的技能复用。",
+    "机制：通过环境反馈估计上下文相关效用，指导价值感知检索、记忆晋升、更新和有害条目删除，形成 Read--Write--Assess--Govern 闭环。",
+    "结果：在多种临床任务、离线与在线设置下，SkeMex 稳定优于代表性 memory-based agents，并展现跨 backbone 泛化和技能记忆迁移能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.84,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.84,
+    "llm_avg": 0.808,
+    "comment": "A strong self-evolving memory framework with explicit read-write-assess-govern loops and utility-based memory governance for medical agents.",
+    "comment_zh": "该工作提出具备读写评估治理闭环和效用驱动记忆管理的自演化医疗代理记忆框架，长期价值较高。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.2,
+    "community_heat": 0.704560788802713,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.808,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 3,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09365/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09365/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.952
+    }
+  ]
+}

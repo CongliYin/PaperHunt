@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.09182",
+  "title": "Understanding How Enterprises Adopt the Model Context Protocol for LLM-Driven Software Engineering",
+  "title_zh": "理解企业如何在 LLM 驱动的软件工程中采用 Model Context Protocol",
+  "authors": [
+    "Kehui Chen",
+    "Yicheng Sun",
+    "Jacky Keung",
+    "Zhenyu Mao",
+    "Xiaoxue Ma"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T08:20:50Z",
+  "abs_url": "https://arxiv.org/abs/2606.09182v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09182",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large Language Models (LLMs) are increasingly used in AI-based software engineering, but their limitations in complex task execution and multi-tool coordination have driven growing interest in the Model Context Protocol (MCP). Existing research has mainly focused on MCP's technical design, with limited empirical evidence on how it is adopted and used in enterprise practice, particularly with regard to deployment challenges, operational risks, and practitioner expectations. To address this gap, we conducted semi-structured interviews with 20 practitioners from eight companies in the Internet and financial sectors. The findings show that MCP is valued for supporting cross-system collaboration, task decoupling, and knowledge reuse in LLM-based workflows, but its adoption remains constrained by ecosystem fragmentation, cross-component coordination difficulties, and unresolved problems in distributed state management and fault diagnosis. Participants also expressed strong demand for better standardization, lower adoption barriers through low-code or plugin-based approaches, and more systematic operational support. These results provide early empirical evidence on enterprise MCP practice and offer practical implications for improving MCP's standardization, usability, and deployment readiness in real-world software engineering environments.",
+  "abstract_zh": "随着 Large Language Models (LLMs) 越来越多地用于 AI-based software engineering，其在复杂任务执行与多工具协同方面的局限性推动了业界对 Model Context Protocol (MCP) 的关注。现有研究多聚焦于 MCP 的技术设计，而对其在企业实践中的采用与使用方式，尤其是部署挑战、运维风险和从业者期望，缺乏经验性证据。为弥补这一空白，论文对来自互联网与金融行业 8 家公司的 20 名从业者进行了半结构化访谈。研究发现，MCP 因支持 LLM 工作流中的跨系统协作、任务解耦和知识复用而受到重视，但其落地仍受生态碎片化、跨组件协同困难，以及分布式状态管理和故障诊断问题未解决等因素制约。受访者也强烈期待更好的标准化、更低门槛的低代码或插件化接入方式，以及更系统的运维支持。该研究为企业 MCP 实践提供了早期经验性证据，并对提升 MCP 的标准化、可用性和真实软件工程环境中的部署就绪度提出了实践启示。",
+  "key_points_zh": [
+    "论文基于对 8 家互联网与金融企业中 20 名从业者的半结构化访谈，研究 MCP 在 LLM-driven software engineering 中的真实采用情况。",
+    "企业认可 MCP 在跨系统协作、任务解耦、工具编排和知识复用方面的价值，认为其有助于提升 LLM 工作流的工程化能力。",
+    "当前 MCP 采用面临生态碎片化、标准不统一、跨组件协调困难等障碍，影响其在企业复杂环境中的规模化部署。",
+    "分布式状态管理、故障诊断、运行监控和风险控制仍是企业实践中的关键未解问题。",
+    "从业者期待 MCP 生态进一步标准化，并通过低代码、插件化方案降低接入门槛，同时提供更成熟的运维与部署支持。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.56,
+    "problem_significance": 0.76,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.58,
+    "llm_avg": 0.572,
+    "comment": "A useful empirical adoption study of MCP in enterprises, but it diagnoses platform needs more than it contributes new harness mechanisms.",
+    "comment_zh": "该文提供了企业采用 MCP 的有用实证观察，但更多是在诊断平台需求而非提出新的 harness 机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.572,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09182/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09182/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09182/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.954
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09182/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.985
+    }
+  ]
+}

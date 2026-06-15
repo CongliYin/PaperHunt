@@ -1,0 +1,66 @@
+{
+  "arxiv_id": "2606.10078",
+  "title": "Mult-DPO: Multinomial Direct Preference Optimization for Recommender Systems",
+  "title_zh": "Mult-DPO：面向推荐系统的多项式直接偏好优化",
+  "authors": [
+    "Yaochen Zhu",
+    "Harald Steck",
+    "James McInerney",
+    "Aditya Sinha",
+    "Yinhan He",
+    "Nathan Kallus",
+    "Jundong Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T18:53:45Z",
+  "abs_url": "https://arxiv.org/abs/2606.10078v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10078",
+  "links": {
+    "github": "https://github.com/yaochenzhu/Mult_DPO",
+    "project_page": null
+  },
+  "abstract_en": "Direct preference optimization (DPO) is a simple and effective alignment strategy for large language models (LLMs) based on pairwise preferences. In recommender systems, however, user feedback is rarely pairwise. For a given context, e.g., a user, a session, or a conversation, we typically observe set-wise preferences with multiple positive items, where every positive item should outrank every unobserved or explicitly negative item, with no prescribed order among the positives or the negatives themselves. A natural generalization is to use the Plackett-Luce (PL) reward model, which extends the Bradley-Terry reward model underlying vanilla DPO from pairwise preferences to full rankings of candidates. However, we show that adapting the PL model to set-wise preferences requires marginalizing over all positive orderings, where the resulting expression is combinatorial in complexity. To address this fundamental challenge, we propose Mult-DPO, a novel DPO objective with a tractable multinomial surrogate likelihood over set-wise preference events for the user-preference alignment of LLM-based recommender systems. The multinomial construction is not itself a ranking distribution, but it is defined on the same reward-induced weight space and admits a closed-form DPO-style objective, enabling direct alignment of LLMs with multiple candidates through a classification-style objective. In addition, we prove that the multinomial DPO loss is a tractable upper bound on the marginalized PL DPO loss when optimizing against the set-wise preference data. We further characterize the tightness of this bound in terms of the relative total weight of positives versus negatives, which provides insights into tightening the bound with richer or harder negatives. Finally, we extend Mult-DPO to the alignment of LLMs with multiple preference levels. Code is available at https://github.com/yaochenzhu/Mult_DPO",
+  "abstract_zh": "Direct Preference Optimization（DPO）是基于成对偏好的大语言模型（LLM）对齐方法，但推荐系统中的用户反馈通常不是成对形式，而是集合式偏好：在给定用户、会话或对话上下文中，多个正样本都应排在未观察或显式负样本之前，但正样本之间、负样本之间没有固定顺序。论文指出，若用 Plackett-Luce（PL）reward model 将 vanilla DPO 背后的 Bradley-Terry model 从成对偏好推广到候选项全排序，则在集合式偏好下需要对所有正样本排列进行边缘化，带来组合复杂度。为此，作者提出 Mult-DPO：一种针对 LLM-based recommender systems 的可 tractable 多项式代理似然 DPO 目标。该构造不是严格的 ranking distribution，但定义在同一 reward-induced weight space 上，并具有闭式 DPO 风格目标，可通过类似分类的目标直接利用多候选项进行对齐。作者进一步证明，Mult-DPO loss 是集合式偏好数据下 marginalized PL DPO loss 的可 tractable 上界，并分析了该上界紧致性与正负样本总权重比例的关系，说明更丰富或更难的负样本有助于收紧界限。最后，论文还将 Mult-DPO 扩展到多级偏好对齐场景。",
+  "key_points_zh": [
+    "指出推荐系统中的用户反馈多为 set-wise preferences，而非 DPO 默认的 pairwise preferences，因此 vanilla DPO 难以直接适配多个正样本对多个负样本的偏好结构。",
+    "分析了基于 Plackett-Luce reward model 的自然推广方案，发现其需要对所有正样本排列进行边缘化，复杂度呈组合爆炸。",
+    "提出 Mult-DPO，使用 multinomial surrogate likelihood 构造闭式 DPO-style objective，使 LLM-based recommender systems 能以分类式目标直接处理多候选项偏好对齐。",
+    "理论上证明 Mult-DPO loss 是 marginalized PL DPO loss 的 tractable upper bound，并刻画了该界与正负样本 reward-induced weight 总量比例之间的紧致性关系。",
+    "方法进一步扩展到 multiple preference levels，可支持更细粒度的用户偏好信号；代码已开源于 GitHub。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.72,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.48,
+    "lasting_value": 0.66,
+    "llm_avg": 0.6639999999999999,
+    "comment": "A technically solid LLM-based recommender alignment method for set-wise preferences, though only moderately commerce-specific.",
+    "comment_zh": "该论文提出了面向集合偏好的 LLM 推荐对齐方法，技术扎实但电商场景针对性中等。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.6639999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/yaochenzhu/Mult_DPO",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2606.09730",
+  "title": "SearchSwarm: Towards Delegation Intelligence in Agentic LLMs for Long-Horizon Deep Research",
+  "title_zh": "SearchSwarm：面向长程深度研究的 Agentic LLM 委派智能",
+  "authors": [
+    "Pu Ning",
+    "Quan Chen",
+    "Kun Tao",
+    "Xinyu Tang",
+    "Tianshu Wang",
+    "Qianggang Cao",
+    "Xinyu Kong",
+    "Zujie Wen",
+    "Zhiqiang Zhang",
+    "Jun Zhou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T16:52:26Z",
+  "abs_url": "https://arxiv.org/abs/2606.09730v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09730",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models are increasingly expected to handle complex, long-horizon real-world tasks whose context demands can grow without bound, yet model context windows remain inherently finite. Recent work explores a paradigm where a main agent decomposes tasks and dispatches subtasks to subagents, which execute and return only summarized results, conserving the main agent's context budget. However, performing this well requires delegation intelligence: the ability to decompose complex tasks, determine when and what to delegate, and integrate returned results into the ongoing workflow. Training data for this capability is scarce in naturally occurring text, and to our knowledge, how to synthesize such data and train models to acquire this capability remains largely unexplored in the open-source community. To bridge this gap, we present a preliminary exploration targeting deep research, a representative long-horizon agent task. Specifically, we design a harness that guides the model toward high-quality task decomposition and delegation, while constraining subagents to return results properly to support the main agent's workflow. The harness-guided trajectories naturally encode correct delegation decisions, which we use as supervised fine-tuning data to internalize delegation intelligence into model weights. Our resulting model, SearchSwarm-30B-A3B, achieves 68.1 on BrowseComp and 73.3 on BrowseComp-ZH, the best results among all models of comparable scale. We will release our harness, model weights, and training data to facilitate future research.",
+  "abstract_zh": "大语言模型正被期望处理复杂、长程的现实任务，但这类任务的上下文需求可能无限增长，而模型上下文窗口始终有限。近期研究探索了一种主 agent 分解任务并将子任务派发给 subagents 的范式：subagents 执行后仅返回摘要结果，从而节省主 agent 的上下文预算。然而，要有效完成这一过程，需要“委派智能”（delegation intelligence），即分解复杂任务、判断何时与委派什么内容，并将返回结果整合进持续工作流的能力。由于自然文本中缺乏相关训练数据，开源社区对如何合成这类数据并训练模型获得该能力仍探索不足。本文以深度研究（deep research）这一典型长程 agent 任务为目标，提出一个 harness，用于引导模型进行高质量任务分解与委派，同时约束 subagents 以有利于主 agent 工作流的方式返回结果。由 harness 引导生成的轨迹自然编码了正确的委派决策，并被用于监督微调，使委派智能内化到模型权重中。最终模型 SearchSwarm-30B-A3B 在 BrowseComp 上达到 68.1，在 BrowseComp-ZH 上达到 73.3，在同等规模模型中取得最佳结果。作者将发布 harness、模型权重与训练数据，以促进后续研究。",
+  "key_points_zh": [
+    "提出面向长程深度研究任务的 delegation intelligence 概念，强调任务分解、委派时机选择、委派内容确定与结果整合能力。",
+    "设计 harness 引导主 agent 生成高质量分解与委派轨迹，并约束 subagents 返回适合主流程使用的摘要结果。",
+    "将 harness-guided trajectories 作为监督微调数据，使模型在参数中内化正确的委派决策与协作流程。",
+    "训练得到的 SearchSwarm-30B-A3B 在 BrowseComp 和 BrowseComp-ZH 上分别达到 68.1 与 73.3，优于同等规模模型。",
+    "计划开源 harness、模型权重和训练数据，为开源社区研究 agentic LLM 的长程任务委派能力提供基础。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.82,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.78,
+    "llm_avg": 0.7760000000000001,
+    "comment": "Strong delegation-harness work with trajectory-driven SFT for long-horizon research agents, though its production controls are only partially specified.",
+    "comment_zh": "该工作通过委派执行轨迹进行监督微调，较好推进了长程研究代理的 harness 能力，但生产级控制细节仍不充分。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.2,
+    "community_heat": 0.8965566340905193,
+    "author_reputation": 0.44848162417484216,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7760000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 50,
+    "first_author_h_index": 13,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09730/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.935
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09730/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

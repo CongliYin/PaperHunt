@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.09304",
+  "title": "SG-OPD: Sign-Gated On-Policy Distillation via Sign-Consistency Gating and Phased Teacher Sampling",
+  "title_zh": "SG-OPD：通过符号一致性门控与分阶段教师采样实现符号门控的 On-Policy Distillation",
+  "authors": [
+    "Haoran Xu",
+    "Hongyu Wang",
+    "Yifei Gao",
+    "Jiaze Li",
+    "Xiaofeng Zhang",
+    "Xiaosong Yuan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T10:11:58Z",
+  "abs_url": "https://arxiv.org/abs/2606.09304v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09304",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "On-policy distillation (OPD) trains a student on its own trajectories with dense per-token supervision from a stronger teacher, and often outperforms off-policy distillation and standard reinforcement learning. However, we find that its effectiveness implicitly relies on two assumptions that frequently break in practice: trajectory-level alignment between the student and the teacher, and uniform token-level reliability of the teacher's preferences. We therefore propose Sign-Gated On-Policy Distillation (SG-OPD), which uses a binary verifier as a trust signal for the teacher at two complementary granularities: phased teacher sampling mixes in verifier-endorsed teacher rollouts at cold-start, and a sign-consistency gate extrapolates the distillation update on tokens where the teacher agrees with the verifier-correct direction and interpolates it where it disagrees. Experiments on competition-level mathematical reasoning benchmarks show that SG-OPD consistently outperforms standard OPD, with average gains of 1.98 and 7.50 at the per-sample and per-question levels, respectively.",
+  "abstract_zh": "On-policy distillation（OPD）在学生模型自身生成的轨迹上训练，并从更强的教师模型获得逐 token 的密集监督，通常优于 off-policy distillation 和标准强化学习。然而，作者发现 OPD 的有效性隐含依赖两个实践中常被破坏的假设：学生与教师在轨迹层面的对齐，以及教师偏好在所有 token 上都同等可靠。为此，论文提出 Sign-Gated On-Policy Distillation（SG-OPD），利用二元 verifier 作为教师可信度信号，并在两个互补粒度上发挥作用：首先，在冷启动阶段通过 phased teacher sampling 混入 verifier 认可的教师 rollout；其次，通过 sign-consistency gate，在教师与 verifier 判定的正确方向一致的 token 上外推蒸馏更新，在不一致的 token 上插值更新。实验表明，在竞赛级数学推理基准上，SG-OPD 稳定优于标准 OPD，按样本和按题目统计的平均增益分别为 1.98 和 7.50。",
+  "key_points_zh": [
+    "指出标准 OPD 依赖两个脆弱假设：学生-教师轨迹级对齐，以及教师逐 token 偏好的均匀可靠性。",
+    "提出 SG-OPD，引入 binary verifier 作为教师监督是否可信的外部信号。",
+    "phased teacher sampling 在冷启动阶段采样 verifier 认可的教师轨迹，缓解学生早期轨迹质量低、与教师不对齐的问题。",
+    "sign-consistency gate 根据教师方向与 verifier-correct direction 是否一致，对 token 级蒸馏更新进行外推或插值。",
+    "在竞赛级数学推理 benchmarks 上，SG-OPD 相比标准 OPD 获得稳定提升，per-sample 与 per-question 平均增益分别为 1.98 和 7.50。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.62,
+    "problem_significance": 0.58,
+    "potential_impact": 0.55,
+    "paradigm_shift": 0.42,
+    "lasting_value": 0.38,
+    "llm_avg": 0.51,
+    "comment": "SG-OPD is a useful verifier-aided distillation method, but its focus on math reasoning makes it only weakly relevant to agent harness evolution.",
+    "comment_zh": "SG-OPD 是有用的验证器辅助蒸馏方法，但其数学推理定位使其与智能体 Harness 演化的相关性较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.746769622549761,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.51,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 6,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09304/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09304/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.931
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09304/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09304/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.956
+    }
+  ]
+}

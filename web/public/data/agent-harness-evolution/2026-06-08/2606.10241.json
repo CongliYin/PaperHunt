@@ -1,0 +1,67 @@
+{
+  "arxiv_id": "2606.10241",
+  "title": "Regimes: An Auditable, Held-Out-Gated Improvement Loop Demonstrated on LongMemEval with ActiveGraph",
+  "title_zh": "Regimes：一种可审计、由留出集门控的改进循环，并在 LongMemEval 上用 ActiveGraph 验证",
+  "authors": [
+    "Yohei Nakajima"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T23:04:35Z",
+  "abs_url": "https://arxiv.org/abs/2606.10241v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10241",
+  "links": {
+    "github": "https://github.com/yoheinakajima/regimes",
+    "project_page": null
+  },
+  "abstract_en": "Autonomous improvement loops are hard to trust because the improvement process is usually external scaffolding bolted onto the agent: failures go unlogged, diagnoses cannot be replayed, and promote-or-discard decisions land in a side database rather than the agent's own history. We show that an event-sourced agent runtime removes that friction and turns controlled improvement into a first-class workflow. When the agent's state is a deterministic projection of an append-only event log, failures are recorded, a run replays exactly from its log, candidate patches scope to typed pipeline seams, gates are auditable, and every promotion or discard is itself an event. We demonstrate this with Regimes, a loop on the ActiveGraph runtime that diagnoses failed evaluations, proposes a repair at a pipeline point, and promotes it only after static checks, sandbox execution, in-sample evaluation, and held-out validation. The loop is target-agnostic: the same control flow runs against different tasks through a common interface. On LongMemEval-S the dominant failure is not retrieval but reconciliation: the evidence is already in the assembled context, yet the reader answers incorrectly. Across five seeded held-out splits, Regimes discovers reader-prompt repairs that improve final held-out accuracy by +0.05 to +0.10 in four splits and +0.01 in one over-promotion split; two splits are individually significant (seed 5 unadjusted for its sequential promotion structure), and the pooled count is descriptive only, since the splits share one 500-question pool. The durable contributions are ActiveGraph as an auditable substrate that makes controlled improvement loops tractable, the held-out-gated loop it supports, the failure-regime taxonomy routing each failure to a pipeline location (whose marginal value over an unrouted baseline is the primary open question), and the prompt-as-discovery-probe hypothesis.",
+  "abstract_zh": "本文关注 autonomous improvement loops（自主改进循环）难以被信任的问题：改进过程通常作为外部脚手架附加在 agent 之外，失败未被完整记录，诊断无法复现，promote-or-discard（提升或丢弃）决策也存放在旁路数据库中，而非 agent 自身历史。作者提出基于 event-sourced agent runtime 的解决方案：当 agent 状态是 append-only event log 的确定性投影时，失败、诊断、候选补丁、门控检查以及最终提升/丢弃都可被记录和重放。论文在 ActiveGraph runtime 上实现 Regimes：它会诊断失败评测，在特定 pipeline seam 提出修复，并仅在通过静态检查、沙箱执行、in-sample evaluation 与 held-out validation 后才提升。该循环与任务无关，可通过统一接口作用于不同任务。在 LongMemEval-S 上，作者发现主要错误并非 retrieval，而是 reconciliation：证据已经在上下文中，但 reader 仍回答错误。跨 5 个 seeded held-out splits，Regimes 发现的 reader-prompt 修复在 4 个 split 上带来 +0.05 到 +0.10 的最终留出准确率提升，在 1 个 over-promotion split 上提升 +0.01；其中 2 个 split 单独显著，但 pooled count 仅作描述性结果。论文的核心贡献包括：将 ActiveGraph 作为可审计底座，使受控改进循环可操作；提出 held-out-gated 改进流程；给出 failure-regime taxonomy，将失败路由到 pipeline 位置；并提出 prompt-as-discovery-probe 假设。",
+  "key_points_zh": [
+    "提出 Regimes：在 ActiveGraph 上运行的 held-out-gated improvement loop，可自动诊断失败、生成修复，并通过多级门控决定是否提升。",
+    "ActiveGraph 采用 event-sourcing，使 agent 状态可由 append-only event log 确定性重放，从而让失败、补丁、验证与决策过程可审计。",
+    "在 LongMemEval-S 上，主要瓶颈被诊断为 reader 的 reconciliation 错误，而非 retrieval 召回不足：证据已在上下文中但答案生成失败。",
+    "跨 5 个 seeded held-out splits，reader-prompt 修复带来 +0.01 到 +0.10 的 held-out accuracy 提升，其中 4 个 split 提升较明显。",
+    "论文强调 failure-regime taxonomy 与 pipeline 路由机制的潜力，但其相对未路由 baseline 的边际价值仍是主要开放问题。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.9,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.93,
+    "llm_avg": 0.9019999999999999,
+    "comment": "Excellent agent-harness infrastructure work centered on event sourcing, deterministic replay, auditable gates, and held-out-controlled improvement loops.",
+    "comment_zh": "这是优秀的 agent harness 基础设施工作，核心贡献在事件溯源、确定性回放、可审计门控和留出集约束的改进闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9019999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/yoheinakajima/regimes",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10241/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.804
+    }
+  ]
+}

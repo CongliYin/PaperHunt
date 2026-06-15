@@ -1,0 +1,112 @@
+{
+  "arxiv_id": "2606.08982",
+  "title": "Baichuan-M4: A Clinical-Grade Medical Agent System for Continuous Care",
+  "title_zh": "Baichuan-M4：面向连续照护的临床级医疗 Agent 系统",
+  "authors": [
+    "Aiyuan Yang",
+    "Canbin Piao",
+    "Chengfeng Dou",
+    "Da Pan",
+    "Dian Wang",
+    "Fan Yang",
+    "Fei Deng",
+    "Fei Li",
+    "Guangwei Ai",
+    "Hui Liu",
+    "Hongda Zhang",
+    "Jinyang Tai",
+    "Kai Lu",
+    "Lijun Liu",
+    "Linwei Chen",
+    "Linyu Li",
+    "Meiqing Guo",
+    "Peidong Guo",
+    "Qiang Ju",
+    "Rihui Xin",
+    "Shuai Wang",
+    "XinKai Ma",
+    "Xudong Chen",
+    "Yichuan Mo",
+    "Yijie Zhou",
+    "Leyi Pan",
+    "Yihe Luo",
+    "Zian Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T03:27:05Z",
+  "abs_url": "https://arxiv.org/abs/2606.08982v2",
+  "pdf_url": "https://arxiv.org/pdf/2606.08982",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Baichuan-M4 is Baichuan Intelligence's clinical-grade medical large model, designed for continuous care rather than single-turn medical question answering. It is built as a coordinated medical agent system around three pillars: Baichuan-Harness, a unified runtime that keeps reinforcement-learning training and real-world deployment consistent while enforcing action constraints, tool use, long-term patient memory, and multi-agent coordination; a core reasoning model trained with a continuous-care reinforcement-learning framework that integrates span-level reward modeling (SPAR++), reasoning-path compression, curriculum learning, and stabilized policy optimization; and a clinical tool layer for patient-memory management, authoritative evidence-based retrieval, and multimodal medical perception across documents, X-rays, and dermatology. On a cross-dimensional medical evaluation suite, Baichuan-M4 attains leading results in static medical knowledge and safety, dynamic OSCE-style consultation, long-context clinical memory, evidence-based retrieval, medical document OCR, and multimodal image understanding, while lowering the hallucination rate to 3.3%.",
+  "abstract_zh": "Baichuan-M4 是 Baichuan Intelligence 提出的临床级医疗大模型，目标从单轮医疗问答扩展到连续照护（continuous care）。系统围绕三大支柱构建：其一是 Baichuan-Harness，作为统一运行时，使强化学习训练与真实部署保持一致，并支持动作约束、工具调用、长期患者记忆和多 Agent 协同；其二是核心推理模型，采用连续照护强化学习框架，结合 span-level reward modeling（SPAR++）、推理路径压缩、课程学习和稳定化策略优化；其三是临床工具层，覆盖患者记忆管理、权威循证检索，以及面向文档、X-ray 和皮肤科图像的多模态医学感知。在跨维度医疗评测套件上，Baichuan-M4 在静态医学知识与安全性、动态 OSCE 式问诊、长上下文临床记忆、循证检索、医学文档 OCR 和多模态图像理解等任务中取得领先表现，并将幻觉率降至 3.3%。",
+  "key_points_zh": [
+    "论文将医疗大模型定位从单轮问答推进到连续照护，强调长期患者记忆、动态问诊和多轮临床决策能力。",
+    "Baichuan-Harness 统一训练与部署运行时，约束模型动作并整合工具使用、患者记忆和多 Agent 协同，降低现实部署中的行为偏差。",
+    "核心模型通过连续照护强化学习训练，结合 SPAR++、推理路径压缩、课程学习和稳定化策略优化，以提升临床推理质量与可靠性。",
+    "临床工具层支持循证医学检索、患者记忆管理，以及文档 OCR、X-ray、皮肤科图像等多模态医学感知。",
+    "在综合医疗评测中，Baichuan-M4 覆盖知识、安全、OSCE 问诊、长上下文记忆、检索和多模态理解等维度，并报告 3.3% 的低幻觉率。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.86,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.88,
+    "llm_avg": 0.876,
+    "comment": "A comprehensive clinical agent platform combining unified runtime, constrained tool use, long-term memory, multi-agent coordination, and RL training consistency.",
+    "comment_zh": "这是综合性的临床代理平台，结合统一运行时、受约束工具使用、长期记忆、多代理协同和训练部署一致性。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.876,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.08982/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.915
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.08982/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.08982/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.514
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.08982/fig4.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.378
+    }
+  ]
+}

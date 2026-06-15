@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2606.09071",
+  "title": "REFLECT: Intervention-Supported Error Attribution for Silent Failures in LLM Agent Traces",
+  "title_zh": "REFLECT：面向 LLM Agent 轨迹静默失败的干预支持错误归因",
+  "authors": [
+    "Xiaofeng Lin",
+    "Yingxu Wang",
+    "Tung Sum Thomas Kwok",
+    "Daniel Guo",
+    "Sahil Arun Nale",
+    "Charles Fleming",
+    "Guang Cheng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T06:11:57Z",
+  "abs_url": "https://arxiv.org/abs/2606.09071v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09071",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM) agents now solve complex tasks through long plan-and-execution traces, yet the ability to locate errors in a completed traces still lags far behind, especially in the \\emph{silent failure} regime. Existing approaches predict suspect steps via classifiers or LLM judges, or recover correct answers via retry, but none feed the intervention outcome back to \\emph{refine the attribution itself}. We propose \\methodname, a method that closes this gap by diagnosing a candidate error step, testing it through controlled replay with a diagnosis-specific patch, and using the verified outcome flip as contrastive evidence to refine the final attribution. Across four localization benchmarks spanning multi-hop reasoning across domains, \\methodname achieves the highest localization accuracy among same-auditor methods across all four benchmarks, with the largest gains on structured tool-use traces, while providing actionable localization even when ground-truth answers are unavailable.",
+  "abstract_zh": "LLM Agent 通过较长的规划与执行轨迹完成复杂任务，但在任务失败且错误不明显的“静默失败”（silent failure）场景中，定位出错步骤仍然困难。现有方法通常依赖分类器、LLM judge 预测可疑步骤，或通过重试恢复正确答案，但没有将干预结果反向用于改进错误归因。本文提出 REFLECT：先诊断候选错误步骤，再通过带有诊断特定补丁的受控回放进行测试，并利用输出是否被成功翻转作为对比证据来细化最终归因。在涵盖跨领域多跳推理的四个定位基准上，REFLECT 在相同 auditor 设置下均取得最高定位准确率，尤其在结构化工具使用轨迹上提升最大；同时，即使缺少 ground-truth answer，也能提供可操作的错误定位。",
+  "key_points_zh": [
+    "聚焦 LLM Agent 长轨迹中的 silent failure，即最终失败但中间错误步骤难以直接发现的场景。",
+    "REFLECT 将“诊断—补丁干预—受控回放—结果翻转验证”闭环引入错误归因，而非仅静态预测可疑步骤。",
+    "方法利用干预后结果是否改善作为 contrastive evidence，进一步精炼最终的错误步骤定位。",
+    "在四个跨领域多跳推理定位基准上，REFLECT 相比同类 auditor 方法取得最高 localization accuracy。",
+    "在结构化 tool-use traces 上收益最大，并且在没有 ground-truth answers 时仍可给出可操作的定位结果。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.8,
+    "problem_significance": 0.84,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.83,
+    "llm_avg": 0.798,
+    "comment": "REFLECT is highly relevant because it uses replay and intervention outcomes to improve error attribution in agent execution traces.",
+    "comment_zh": "REFLECT 高度相关，因为它利用回放和干预结果来改进智能体执行轨迹中的错误归因。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36560162063732243,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.798,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09071/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09071/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09071/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09071/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.957
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "arxiv_id": "2606.09570",
+  "title": "UXBench: Benchmarking User Experience in AI Assistants",
+  "title_zh": "UXBench：面向 AI 助手用户体验的基准评测",
+  "authors": [
+    "Mengze Hong",
+    "Xia Zeng",
+    "Zeyang Lei",
+    "Sheng Wang",
+    "Chen Jason Zhang",
+    "Di Jiang",
+    "Taiming Fu",
+    "Jinfeng Huang",
+    "Mengqiao Liu",
+    "Qinghe Chang",
+    "Haosheng Zou",
+    "Qiongyi Zhou",
+    "Sijun He",
+    "Simonjmdeng",
+    "Haojing Huang",
+    "Zijian Li",
+    "Lucas Mu Li",
+    "Fubao Zhang",
+    "Mona Zhou",
+    "Wei Ma",
+    "Chenxuan Ma",
+    "Yuanmeng Zhang",
+    "Jian Song",
+    "Minlong Peng",
+    "Di Liang",
+    "Davey Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T14:44:01Z",
+  "abs_url": "https://arxiv.org/abs/2606.09570v2",
+  "pdf_url": "https://arxiv.org/pdf/2606.09570",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As AI assistants serve millions of users daily, evaluating user experience (UX) beyond general model capability has become increasingly important. We present UXBench, the first user-centric benchmark grounded in real user feedback signals for evaluating preference alignment and dialogue generation. The benchmark consists of three interconnected tasks, UX Judge, UX Eval, and UX Recovery, with 7,400 test instances extracted from over 70K interaction logs of a mainstream Chinese AI assistant. The dataset closely reflects real user distributions, covering 8 scenarios, 83 domains, and diverse failure patterns that pose severe challenges. Extensive experiments on 26 frontier language models provide novel insights into how well models perceive user experience and how improvements in model capability contribute to better dialogue engagement. Through comprehensive analysis of model behavior and performance gaps, we show that user feedback prediction is a learnable capability, where a reward model trained from in-the-wild feedback signals can achieve well-calibrated accuracy. We further document the systematic biases of LLM-as-a-judge evaluation protocols and compare typical response strategies that directly affect user experience. UXBench establishes a new evaluation landscape and calls for greater attention to tailored UX optimization, contributing to a user-centric scaling law that shapes the success of AI assistants.",
+  "abstract_zh": "随着 AI assistants 每天服务数百万用户，超越通用模型能力、面向用户体验（User Experience, UX）的评估变得越来越重要。本文提出 UXBench，这是首个基于真实用户反馈信号、以用户为中心的 benchmark，用于评估偏好对齐与对话生成能力。UXBench 包含三个相互关联的任务：UX Judge、UX Eval 和 UX Recovery，共有 7,400 个测试样本，来自某主流中文 AI assistant 的 70K+ 真实交互日志。该数据集贴近真实用户分布，覆盖 8 类场景、83 个领域以及多样化失败模式，具有较高挑战性。作者在 26 个前沿 language models 上进行了系统实验，分析模型理解用户体验的能力，以及模型能力提升如何影响对话参与度。结果表明，用户反馈预测是一种可学习能力：基于真实线上反馈训练的 reward model 能获得校准良好的准确率。论文还揭示了 LLM-as-a-judge 评测协议中的系统性偏差，并比较了会直接影响用户体验的典型回复策略。UXBench 为 AI assistants 的 UX 优化建立了新的评估框架，并呼吁关注以用户为中心的 scaling law。",
+  "key_points_zh": [
+    "提出 UXBench，面向 AI assistants 的用户体验评估，而不仅是通用能力评测，重点衡量偏好对齐与对话生成质量。",
+    "数据来自主流中文 AI assistant 的 70K+ 真实交互日志，构建 7,400 个测试样本，覆盖 8 类场景、83 个领域和多种失败模式。",
+    "包含 UX Judge、UX Eval、UX Recovery 三个任务，分别考察模型判断用户体验、评估回复质量以及从失败对话中恢复体验的能力。",
+    "在 26 个 frontier language models 上实验，发现用户反馈预测是可学习的；基于真实反馈训练的 reward model 能达到较好校准效果。",
+    "分析表明 LLM-as-a-judge 存在系统性偏差，不同回复策略会显著影响用户体验，强调需要专门的 UX 优化与用户中心 scaling law。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "UXBench provides realistic feedback-based evaluation signals for assistants, but remains closer to benchmarking and reward modeling than deployable agent harness infrastructure.",
+    "comment_zh": "UXBench provides realistic feedback-based evaluation signals for assistants, but remains closer to benchmarking and reward modeling than deployable agent harness infrastructure."
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09570/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09570/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.877
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09570/fig3.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09570/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.961
+    }
+  ]
+}

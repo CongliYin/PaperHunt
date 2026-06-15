@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2606.10106",
+  "title": "What makes a harness a harness: necessary and sufficient conditions for an agent harness",
+  "title_zh": "何以为 Harness：Agent Harness 的必要与充分条件",
+  "authors": [
+    "Sanderson Oliveira de Macedo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T19:35:37Z",
+  "abs_url": "https://arxiv.org/abs/2606.10106v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.10106",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The term agent harness now circulates widely in software engineering with generative artificial intelligence. It names the layer that wraps a language model and turns it into a coding agent able to act on a repository. The usage is loose and polysemous. Sometimes the term denotes the whole product (Claude Code, Codex CLI); sometimes it denotes the evaluation scaffold that runs an agent against tasks (the SWE-bench harness); sometimes it gets conflated with an agent framework, an SDK, an IDE plugin, or an orchestrator. What is missing is a reference definition that works as an instrument, one that includes and excludes cases consistently. We build that definition through a conceptual analysis that combines works with persistent identifiers and primary grey-literature sources, such as official documentation, glossaries, and engineering reports. We reconstruct the genealogy of the term, from the horse's tack to the classic test harness, to the machine-learning evaluation harness, and finally to the agent harness. We then propose a constitutive definition that states the necessary and sufficient conditions for a system to be an agent harness, we operationalize it as an inclusion and exclusion test, and we draw the boundary of the concept against an agent framework, an agent SDK, an IDE plugin, an eval harness, and an orchestrator. We apply the definition to six real harnesses (Claude Code, Codex CLI, Aider, Cline, OpenHands, and SWE-agent) and to deliberate edge cases; the test includes and excludes consistently. We close with a research agenda organized by design tension axes. The contribution is an operational definition of agent harness, with a shared vocabulary, able to guide engineering practice and the scientific comparison of agentic systems.",
+  "abstract_zh": "本文围绕生成式 AI 软件工程中日益流行但含义混杂的术语“agent harness”展开概念分析。作者指出，该术语有时指完整产品，如 Claude Code、Codex CLI；有时指运行评测任务的脚手架，如 SWE-bench harness；也常与 agent framework、SDK、IDE plugin 或 orchestrator 混用。为建立可操作的参考定义，论文结合带持久标识符的学术工作与官方文档、术语表、工程报告等一手灰色文献，追溯 harness 一词从马具、经典 test harness、机器学习 evaluation harness 到 agent harness 的演化脉络。论文提出 agent harness 的构成性定义，给出判定其必要与充分条件的包含/排除测试，并明确其与 agent framework、agent SDK、IDE plugin、eval harness、orchestrator 的边界。作者将该定义应用于 Claude Code、Codex CLI、Aider、Cline、OpenHands、SWE-agent 六个真实系统及若干边界案例，验证该测试能够一致地区分应包含与应排除对象。最后，论文以设计张力轴组织未来研究议程，旨在为 agentic systems 的工程实践与科学比较提供共享词汇和操作性定义。",
+  "key_points_zh": [
+    "论文针对 agent harness 概念使用松散、含义多重的问题，提出一个可用于一致包含与排除案例的参考定义。",
+    "作者通过概念史梳理，将 harness 的语义从马具、test harness、ML evaluation harness 追溯到当前的软件工程 agent harness。",
+    "核心贡献是给出 agent harness 的必要与充分条件，并将其操作化为包含/排除测试。",
+    "论文明确区分 agent harness 与 agent framework、agent SDK、IDE plugin、eval harness、orchestrator 等相邻概念。",
+    "定义被应用于 Claude Code、Codex CLI、Aider、Cline、OpenHands、SWE-agent 及边界案例，结果显示判定具有一致性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.62,
+    "problem_significance": 0.72,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.62,
+    "llm_avg": 0.5980000000000001,
+    "comment": "Useful conceptual clarification for the agent-harness field, but it is mainly definitional rather than an executable platform contribution.",
+    "comment_zh": "该文有助于澄清 agent harness 的概念边界，但主要是定义性贡献而非可执行平台技术。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5980000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10106/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10106/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.949
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10106/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.972
+    }
+  ]
+}

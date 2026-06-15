@@ -1,0 +1,94 @@
+{
+  "arxiv_id": "2606.09447",
+  "title": "AliyunConsoleAgent: Training Web Agents in Real-World Cloud Environments via Distillation and Reinforcement Learning",
+  "title_zh": "AliyunConsoleAgent：通过蒸馏与强化学习在真实云环境中训练 Web Agent",
+  "authors": [
+    "Bojie Rong",
+    "Zheyu Shen",
+    "Qiaoping Wang",
+    "Pengfei Kang",
+    "Yang Xu",
+    "Yawen Wei",
+    "Hanyu Wu",
+    "Zhi Zhao",
+    "Leihao Pei",
+    "Linquan Jiang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T12:55:42Z",
+  "abs_url": "https://arxiv.org/abs/2606.09447v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09447",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We present AliyunConsoleAgent, a web agent framework for automated documentation verification in real-world cloud consoles. Major cloud platforms encompass hundreds of products with rapid feature iteration, causing console UIs to frequently diverge from their corresponding documentation. Verifying that documented procedures accurately reflect the current console and can be executed end-to-end demands an estimated 4 million recurring inspections annually, yet manual coverage remains below 1%. While agent systems built on frontier proprietary models achieve high success rates, their prohibitive cost and data privacy constraints preclude large-scale deployment. We propose a two-stage training paradigm: supervised fine-tuning (SFT) on distilled frontier-model trajectories, followed by reinforcement learning using Group Relative Policy Optimization (GRPO) and a dual-channel outcome reward model in real cloud environments. To support large-scale RL training, we construct a high-determinism rollout system featuring Terraform-based resource pre-provisioning and LLM-driven on-demand provisioning, which effectively isolates environment noise from the training signal. We further introduce a rule-based reward evaluation protocol grounded in backend audit logs, providing objective, reward-hacking-resistant outcome judgment. Our model evolves from mechanical instruction following to autonomous decision-making with cloud console and product-specific understanding. Experiments on a challenging 278-task benchmark where the best frontier model achieves only 65.34% demonstrate that AliyunConsoleAgent-32B achieves a 63.52% mean success rate -- a 20.24 percentage-point improvement over the base model, narrowing the gap to the best frontier proprietary model to 1.82 pp (bootstrap 95% CI [-1.27, 7.39]) -- at 92% lower inference cost.",
+  "abstract_zh": "本文提出 AliyunConsoleAgent，一个面向真实云控制台中自动化文档验证的 Web Agent 框架。云平台产品众多且功能快速迭代，导致控制台 UI 经常与文档步骤不一致；大规模人工验证成本极高且覆盖率不足 1%。为替代依赖昂贵闭源前沿模型的方案，作者采用两阶段训练：先用前沿模型轨迹蒸馏进行监督微调（SFT），再在真实云环境中使用 Group Relative Policy Optimization（GRPO）和双通道结果奖励模型进行强化学习。为支撑大规模 RL，系统通过基于 Terraform 的资源预配置与 LLM 驱动的按需配置，构建高确定性 rollout 环境，降低环境噪声对训练信号的干扰；同时基于后端审计日志设计规则化奖励评估协议，提供客观且抗 reward hacking 的结果判断。在 278 个高难任务 benchmark 上，AliyunConsoleAgent-32B 达到 63.52% 平均成功率，相比基座模型提升 20.24 个百分点，与最佳闭源前沿模型仅差 1.82 个百分点，同时推理成本降低 92%。",
+  "key_points_zh": [
+    "提出 AliyunConsoleAgent，用于在真实 Aliyun 云控制台中自动验证文档步骤是否可端到端执行。",
+    "采用 SFT 蒸馏前沿模型轨迹 + GRPO 强化学习的两阶段训练，使模型从机械执行指令转向具备产品与控制台理解的自主决策。",
+    "构建高确定性 rollout 系统，结合 Terraform 资源预配置和 LLM 按需配置，减少真实云环境中的随机性与噪声。",
+    "使用基于后端 audit logs 的规则化奖励评估，提供客观、抗 reward hacking 的任务成功判定。",
+    "在 278-task benchmark 上达到 63.52% 成功率，接近最佳闭源前沿模型且推理成本降低 92%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.72,
+    "llm_avg": 0.76,
+    "comment": "This is a strong real-world agent training and rollout system with audit-log rewards, though its web-console focus limits general harness relevance.",
+    "comment_zh": "这是一项很强的真实环境智能体训练与 rollout 系统工作，并使用审计日志奖励，但其网页控制台定位限制了通用 Harness 相关性。"
+  },
+  "scores": {
+    "topic_relevance": 0.7600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.76,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09447/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09447/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.935
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09447/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.951
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09447/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.941
+    }
+  ]
+}
