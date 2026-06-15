@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.09039",
   "title": "Agent Economics: An Entropy-Controlled Pluralistic Alignment Framework for Preventing Artificial Hivemind in Autonomous Agents",
-  "title_zh": "Agent Economics：一种用于防止自主智能体中 Artificial Hivemind 的熵控制多元对齐框架",
+  "title_zh": "Agent Economics：一种熵控制的多元对齐框架，用于防止自主 Agent 中的人工蜂群化",
   "authors": [
     "Cheonsu Jeong"
   ],
@@ -14,32 +14,32 @@
     "project_page": null
   },
   "abstract_en": "This study proposes the Behavioral Protocol Framework (BPF), an entropy-controlled pluralistic alignment framework designed to address two critical challenges in autonomous agent economies: the hivemind effect arising from excessive strategic convergence among agents and the lack of transparency in autonomous decision-making processes. The proposed BPF consists of three core modules: Mentalizing-based Social Intelligence (MbSI) grounded in Theory of Mind (ToM), Pluralistic Alignment (PA), and a Verifiable Execution Kernel (VEK). These modules are organically integrated within a closed-loop architecture that governs the entire lifecycle of agent behavior, from decision-making and execution to verification and feedback. To evaluate the proposed framework, a simulation environment implemented in Python and a Streamlit-based user interface will be developed. Through empirical experimentation, the study aims to examine whether the entropy-control mechanism of the PA module can effectively preserve strategic diversity among agents and mitigate collective convergence, while the VEK module provides a comprehensive and transparent audit trail of the decision-making process. The anticipated results are expected to demonstrate that the proposed framework can simultaneously enhance the stability, efficiency, and trustworthiness of autonomous agent economies. Consequently, this research offers a practical approach for developing robust, transparent, and accountable agent-native economic systems.",
-  "abstract_zh": "本文提出 Behavioral Protocol Framework（BPF），一种面向自主智能体经济的熵控制多元对齐框架，旨在解决两个核心问题：智能体之间策略过度收敛导致的 hivemind effect（蜂群思维效应），以及自主决策过程缺乏透明性。BPF 由三个模块组成：基于 Theory of Mind（ToM）的 Mentalizing-based Social Intelligence（MbSI）、Pluralistic Alignment（PA）和 Verifiable Execution Kernel（VEK）。三者被整合进一个闭环架构，覆盖智能体从决策、执行到验证与反馈的完整行为生命周期。论文计划通过 Python 仿真环境和基于 Streamlit 的用户界面进行评估，重点检验 PA 模块的熵控制机制能否保持智能体策略多样性、缓解集体收敛，同时验证 VEK 是否能提供完整且透明的决策审计轨迹。预期结果表明，该框架可同时提升自主智能体经济系统的稳定性、效率与可信度，为构建鲁棒、透明、可问责的 agent-native economic systems 提供实践路径。",
+  "abstract_zh": "本文提出 Behavioral Protocol Framework（BPF），一种面向自主 Agent 经济系统的熵控制多元对齐框架，旨在解决两类核心问题：Agent 间策略过度趋同导致的 hivemind effect（蜂群化效应），以及自主决策过程缺乏透明性。BPF 包含三个核心模块：基于 Theory of Mind（ToM）的 Mentalizing-based Social Intelligence（MbSI）、Pluralistic Alignment（PA）以及 Verifiable Execution Kernel（VEK）。这些模块被整合进一个闭环架构，覆盖 Agent 行为从决策、执行到验证与反馈的完整生命周期。作者计划基于 Python 构建仿真环境，并开发 Streamlit 用户界面，通过实验检验 PA 模块的熵控制机制是否能保持 Agent 策略多样性、缓解集体趋同，同时验证 VEK 是否能提供完整透明的决策审计轨迹。预期结果表明，该框架可同时提升自主 Agent 经济系统的稳定性、效率与可信度，为构建鲁棒、透明、可问责的 agent-native 经济系统提供实践路径。",
   "key_points_zh": [
-    "提出 Behavioral Protocol Framework（BPF），面向自主智能体经济中的策略同质化与决策不透明问题。",
-    "核心思想是通过 Pluralistic Alignment（PA）的熵控制机制维持策略多样性，避免多个智能体形成过度一致的 Artificial Hivemind。",
-    "引入 Mentalizing-based Social Intelligence（MbSI），利用 Theory of Mind（ToM）增强智能体对其他主体意图和行为的建模能力。",
-    "设计 Verifiable Execution Kernel（VEK）记录并验证决策与执行过程，为自主行为提供可审计、可追踪的透明机制。",
-    "计划基于 Python 仿真与 Streamlit UI 进行实验评估，验证框架对稳定性、效率和可信度的综合提升。"
+    "提出 Behavioral Protocol Framework（BPF），针对自主 Agent 经济中的策略趋同与决策不透明问题。",
+    "框架由 MbSI、Pluralistic Alignment（PA）和 Verifiable Execution Kernel（VEK）三部分组成，形成决策—执行—验证—反馈的闭环。",
+    "PA 模块通过熵控制机制维持策略多样性，降低多 Agent 系统形成 hivemind effect 的风险。",
+    "VEK 模块强调可验证执行与审计轨迹，提升 Agent 决策过程的透明性与可问责性。",
+    "论文计划通过 Python 仿真和 Streamlit 界面进行实证评估，目前更偏框架设计与实验方案，而非已完成的大规模实验结果。"
   ],
   "llm_assessment": {
-    "novelty": 0.5,
-    "problem_significance": 0.55,
+    "novelty": 0.48,
+    "problem_significance": 0.52,
     "potential_impact": 0.42,
     "paradigm_shift": 0.38,
     "lasting_value": 0.35,
-    "llm_avg": 0.44000000000000006,
-    "comment": "The proposed pluralistic alignment framework gestures toward governance and auditability but appears speculative and weakly validated.",
-    "comment_zh": "该多元对齐框架涉及治理和审计，但整体较为设想性，验证力度不足。"
+    "llm_avg": 0.43,
+    "comment": "The framework gestures toward verification and auditability, but appears speculative and simulation-oriented with weak evidence for real agent-harness infrastructure.",
+    "comment_zh": "该框架涉及验证与审计性，但整体较为设想化和仿真导向，对真实智能体 harness 基础设施的证据较弱。"
   },
   "scores": {
     "topic_relevance": 0.88,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.49491262604822334,
+    "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.44000000000000006,
+    "llm_assessment": 0.43,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -49,11 +49,11 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": 6,
-    "first_author_found": true,
+    "first_author_h_index": null,
+    "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": 6,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": [

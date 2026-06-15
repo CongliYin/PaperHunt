@@ -2,111 +2,57 @@
   "domain": "agent-e-commerce",
   "display_name": "E-commerce Agent",
   "date": "2026-06-08",
-  "generated_at": "2026-06-15T01:41:36Z",
+  "generated_at": "2026-06-15T03:26:31Z",
   "papers": [
     {
       "arxiv_id": "2606.10156",
       "title": "$τ$-Rec: A Verifiable Benchmark for Agentic Recommender Systems",
-      "title_zh": "τ-Rec：面向 Agentic Recommender Systems 的可验证基准",
+      "title_zh": "τ-Rec：面向智能体推荐系统的可验证基准",
       "authors": [
         "Bharath Sivaram Narasimhan",
         "Karthik R Narasimhan"
       ],
-      "total_score": 0.6706852221328762,
+      "total_score": 0.5646140197200679,
       "scores": {
         "topic_relevance": 0.68,
-        "llm_assessment": 0.8380000000000001,
-        "other": 0.49095074044291986
+        "llm_assessment": 0.5,
+        "other": 0.4753800657335594
       },
       "tags": [
         "HF Daily ★1",
         "GitHub",
         "llm for commerce"
       ],
-      "tldr_zh": "τ-Rec可验证评测对话式推荐智能体",
+      "tldr_zh": "τ-Rec用可验证奖励评测对话推荐智能体",
       "detail_file": "agent-e-commerce/2026-06-08/2606.10156.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10156/thumb.webp"
     },
     {
       "arxiv_id": "2606.10064",
       "title": "Bittensor Agent Arenas as a Trajectory Primitive: Distilling a Shopping Agent from ShoppingBench Subnet Traces",
-      "title_zh": "将 Bittensor Agent Arenas 作为轨迹原语：从 ShoppingBench Subnet 轨迹中蒸馏购物 Agent",
+      "title_zh": "将 Bittensor Agent Arenas 作为轨迹基元：从 ShoppingBench Subnet 轨迹中蒸馏购物 Agent",
       "authors": [
         "Shardul Bansal",
         "Seth Schilbe",
         "Jarrod Barnes"
       ],
-      "total_score": 0.6473649187622835,
+      "total_score": 0.5460000000000002,
       "scores": {
         "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.8119999999999999,
-        "other": 0.22588306254094448
+        "llm_assessment": 0.5,
+        "other": 0.2
       },
       "tags": [
         "commerce agent workflows"
       ],
-      "tldr_zh": "用激励对齐竞技场蒸馏购物Agent",
+      "tldr_zh": "用激励竞技场轨迹后训练购物Agent",
       "detail_file": "agent-e-commerce/2026-06-08/2606.10064.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.10064/thumb.webp"
     },
     {
-      "arxiv_id": "2606.10078",
-      "title": "Mult-DPO: Multinomial Direct Preference Optimization for Recommender Systems",
-      "title_zh": "Mult-DPO：面向推荐系统的多项式直接偏好优化",
-      "authors": [
-        "Yaochen Zhu",
-        "Harald Steck",
-        "James McInerney",
-        "Aditya Sinha",
-        "Yinhan He",
-        "Nathan Kallus",
-        "Jundong Li"
-      ],
-      "total_score": 0.5687,
-      "scores": {
-        "topic_relevance": 0.68,
-        "llm_assessment": 0.6639999999999999,
-        "other": 0.325
-      },
-      "tags": [
-        "GitHub",
-        "user intent and preference"
-      ],
-      "tldr_zh": "用多项式代理高效对齐集合式推荐偏好",
-      "detail_file": "agent-e-commerce/2026-06-08/2606.10078.json",
-      "thumb": ""
-    },
-    {
-      "arxiv_id": "2606.09293",
-      "title": "One Model, Multiple Goals: Adaptive Multi-Objective Learning for E-commerce Dialogue Systems",
-      "title_zh": "一个模型，多重目标：面向电商对话系统的自适应多目标学习",
-      "authors": [
-        "Mingzhe Li",
-        "Jing Xiang",
-        "Enguo Zhou",
-        "Lang Gao",
-        "Tai Li",
-        "Qishen Zhang",
-        "Xiangliang Zhang",
-        "Xiuying Chen"
-      ],
-      "total_score": 0.5303657923174274,
-      "scores": {
-        "topic_relevance": 0.6000000000000001,
-        "llm_assessment": 0.764,
-        "other": 0.20388597439142458
-      },
-      "tags": [
-        "evaluation simulation"
-      ],
-      "tldr_zh": "MORE 用约束式多目标强化学习优化电商对话",
-      "detail_file": "agent-e-commerce/2026-06-08/2606.09293.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09293/thumb.webp"
-    },
-    {
       "arxiv_id": "2606.08896",
       "title": "FAME: Forecastability-Aware Mixture of Experts for Heterogeneous Time Series Forecasting",
-      "title_zh": "FAME：面向异质时间序列预测的可预测性感知专家混合模型",
+      "title_zh": "FAME：面向异构时间序列预测的可预测性感知专家混合模型",
       "authors": [
         "Qianyang Li",
         "Xingjun Zhang",
@@ -114,24 +60,24 @@
         "Tao Peng",
         "Jia Wei"
       ],
-      "total_score": 0.3373540985715218,
+      "total_score": 0.3255774860633329,
       "scores": {
         "topic_relevance": 0.16000000000000003,
-        "llm_assessment": 0.522,
-        "other": 0.38918032857173945
+        "llm_assessment": 0.5,
+        "other": 0.3719249535444431
       },
       "tags": [
         "GitHub",
         "adjacent business ml"
       ],
-      "tldr_zh": "用可预测性指纹路由少量预测专家",
+      "tldr_zh": "用可预测性特征稀疏路由时间序列专家",
       "detail_file": "agent-e-commerce/2026-06-08/2606.08896.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.08896/thumb.webp"
     },
     {
       "arxiv_id": "2606.09623",
       "title": "Constrained user-item allocation for e-commerce marketing campaigns",
-      "title_zh": "面向电商营销活动的约束用户-商品分配",
+      "title_zh": "面向电商营销活动的受约束用户-商品分配",
       "authors": [
         "Maja Lindström",
         "Natalija Glisovic",
@@ -139,62 +85,18 @@
         "Tommy Löfstedt",
         "Martin Rosvall"
       ],
-      "total_score": 0.3127774860633329,
+      "total_score": 0.274,
       "scores": {
         "topic_relevance": 0.16000000000000003,
-        "llm_assessment": 0.6239999999999999,
-        "other": 0.20525828687777645
+        "llm_assessment": 0.5,
+        "other": 0.2
       },
       "tags": [
         "adjacent business ml"
       ],
-      "tldr_zh": "联合优化电商营销中的用户与商品分组",
+      "tldr_zh": "联合优化电商营销的用户与商品分组",
       "detail_file": "agent-e-commerce/2026-06-08/2606.09623.json",
       "thumb": ""
-    },
-    {
-      "arxiv_id": "2606.09301",
-      "title": "PRISM: Topology-Aware Cross-Modal Imputation for Modality-Deficient Federated Graph Learning",
-      "title_zh": "PRISM：面向模态缺失联邦图学习的拓扑感知跨模态补全",
-      "authors": [
-        "Zekai Chen",
-        "Miao Zhang",
-        "Jiayang Xing",
-        "Xunkai Li",
-        "Xun Wu",
-        "Rong-Hua Li",
-        "Guoren Wang"
-      ],
-      "total_score": 0.216,
-      "scores": {
-        "topic_relevance": 0.0,
-        "llm_assessment": 0.52,
-        "other": 0.2
-      },
-      "tags": [],
-      "tldr_zh": "联邦图中拓扑感知补全缺失模态",
-      "detail_file": "agent-e-commerce/2026-06-08/2606.09301.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09301/thumb.webp"
-    },
-    {
-      "arxiv_id": "2606.09686",
-      "title": "An 84-Format Numeric Catalog with Bit-Exact Conformance Vectors: A Vendor-Neutral Reference for FP8, BF16, MXFP4, and Microscaling Formats",
-      "title_zh": "包含位精确一致性向量的 84 种数值格式目录：面向 FP8、BF16、MXFP4 与 Microscaling 格式的厂商中立参考",
-      "authors": [
-        "Dmitrii Vasilev"
-      ],
-      "total_score": 0.11711457171944412,
-      "scores": {
-        "topic_relevance": 0.0,
-        "llm_assessment": 0.086,
-        "other": 0.3043819057314804
-      },
-      "tags": [
-        "GitHub"
-      ],
-      "tldr_zh": "84种数值格式的位精确开放参考",
-      "detail_file": "agent-e-commerce/2026-06-08/2606.09686.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09686/thumb.webp"
     }
   ]
 }

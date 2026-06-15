@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2606.09037",
+  "title": "A Multi-Agent System for IPMSM Design Optimization via an FEA-AI Hybrid Approach",
+  "title_zh": "基于 FEA-AI 混合方法的 IPMSM 设计优化多智能体系统",
+  "authors": [
+    "Jinseong Han",
+    "Sunwoong Yang",
+    "Namwoo Kang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T05:07:46Z",
+  "abs_url": "https://arxiv.org/abs/2606.09037v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09037",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Interior permanent magnet synchronous motor (IPMSM) design requires balancing conflicting objectives and multi-physics constraints, while modern optimization workflows face three bottlenecks: manual problem setup, high finite element analysis (FEA) cost, and unreliable surrogate-based search in sparse or out-of-distribution regions. To address these limitations, we propose an end-to-end automated IPMSM design optimization framework that integrates retrieval-augmented generation (RAG) for structured problem definition with an uncertainty-aware FEA-AI hybrid optimization pipeline. A Design agent, connected to a motor textbook through RAG, provides domain-knowledge-based options and engineering tips, and compiles an optimization card and a design-of-experiments plan for AI-model training. A Training agent automates electromagnetic FEA, records geometry-validation and solver-failure logs, analyzes failed geometries using ANOVA-based data analysis and LLM reasoning, and invokes a Design Sampling agent to redefine the design space and generate additional samples. An Optimization agent performs GA-based search with uncertainty-driven switching: low-uncertainty candidates are evaluated by AI-surrogate inference, whereas high-uncertainty and reliability-critical Pareto-front or top-K candidates are corrected by high-fidelity FEA and reused for iterative retraining. The framework converts manual, experience-dependent configuration into a reproducible workflow that balances computational cost and prediction reliability. Experimental results under a matched high-fidelity FEA budget show that the proposed hybrid approach achieves better objective performance while maintaining low and further reducible predictive uncertainty, outperforming FEA-only search, which is limited by early budget exhaustion, and AI-only search, which converges to a low-confidence optimum.",
+  "abstract_zh": "针对 Interior Permanent Magnet Synchronous Motor（IPMSM）设计中多目标冲突、多物理约束、人工建模成本高、Finite Element Analysis（FEA）计算昂贵以及稀疏或分布外区域中 surrogate model 搜索不可靠等问题，本文提出一个端到端自动化 IPMSM 设计优化框架。该框架结合 Retrieval-Augmented Generation（RAG）进行结构化问题定义，并引入不确定性感知的 FEA-AI 混合优化流程。Design agent 通过 RAG 连接电机教材，提供领域知识选项和工程建议，生成 optimization card 与 Design of Experiments（DoE）计划；Training agent 自动执行电磁 FEA，记录几何校验与求解失败日志，并利用 ANOVA 数据分析和 LLM 推理诊断失败几何，再调用 Design Sampling agent 重定义设计空间并补充样本；Optimization agent 采用 Genetic Algorithm（GA）搜索，并根据预测不确定性切换评估方式：低不确定性候选由 AI surrogate 推理，高不确定性及 Pareto-front 或 top-K 等可靠性关键候选由高保真 FEA 修正，并回流用于迭代重训练。实验表明，在相同高保真 FEA 预算下，该混合方法相比 FEA-only 搜索和 AI-only 搜索获得更好的目标性能，并保持较低且可进一步降低的预测不确定性。",
+  "key_points_zh": [
+    "提出一个面向 IPMSM 设计的端到端多智能体优化框架，将 RAG、LLM 推理、FEA 与 AI surrogate 集成到可复现工作流中。",
+    "Design agent 借助电机教材 RAG 自动完成问题结构化、设计选项推荐、工程提示、optimization card 和 DoE 采样计划生成。",
+    "Training agent 自动运行电磁 FEA，并通过失败日志、ANOVA 分析和 LLM 推理识别无效几何原因，驱动 Design Sampling agent 动态调整设计空间。",
+    "Optimization agent 使用 GA 搜索，并采用不确定性感知策略：低风险样本走 AI surrogate，高不确定性或 Pareto/top-K 关键样本走高保真 FEA 校正。",
+    "在匹配的 FEA 预算下，FEA-AI 混合方法优于 FEA-only 与 AI-only：前者预算过早耗尽，后者易收敛到低置信度最优解。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.56,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.42,
+    "llm_avg": 0.48200000000000004,
+    "comment": "A domain-specific engineering optimization workflow with some agent orchestration and retraining loops, but its lasting value is mostly outside general agent harness evolution.",
+    "comment_zh": "这是一项领域特定的工程优化工作，包含一定智能体编排和再训练循环，但其长期价值主要不在通用智能体 harness 演进上。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.48200000000000004,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09037/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09037/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09037/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.865
+    }
+  ]
+}

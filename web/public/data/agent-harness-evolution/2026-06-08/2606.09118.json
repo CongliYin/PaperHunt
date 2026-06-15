@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.09118",
   "title": "ComplexConstraints and Beyond: Expert Rubrics for RLVR",
-  "title_zh": "ComplexConstraints 及其扩展：面向 RLVR 的专家评分 Rubric",
+  "title_zh": "ComplexConstraints 及其扩展：用于 RLVR 的专家级评分 Rubric",
   "authors": [
     "Sushant Mehta",
     "Liudas Panavas",
@@ -16,32 +16,32 @@
     "project_page": null
   },
   "abstract_en": "As LLM capabilities advance rapidly, the evaluation methods used to assess them increasingly lag behind. Traditional benchmarks relied on programmatic verification of narrow, surface-level constraints, but real-world instruction following and agentic tasks demand assessment of nuanced, context-dependent behaviors that resist simple scripted checks. We present a systematic analysis of expert-curated rubric-based evaluation as an alternative paradigm, drawing on empirical evidence from two domains: complex instruction following and enterprise agentic tasks. We first articulate five design principles for constructing high-quality rubrics, including Maximum Viable Atomicity, intent-aware criterion design, and iterative LLM-judge calibration. To validate these principles, we introduce ComplexConstraints, a new expert-curated instruction-following dataset in which each prompt is paired with 10-40 atomic rubric criteria. We demonstrate that these expert rubrics are not only better evaluation instruments but also highly effective training signals: training on approximately 1,000 ComplexConstraints examples yields +15.5% improvement for a 4B-parameter model and +12.2% for a 235B-parameter model on instruction following, while single-epoch RL training on a rubric-graded enterprise environment produces gains that transfer to out-of-distribution benchmarks the model was never trained on (+4.5% BFCL, +7.4% Tau2-Bench, +6.8% Tool-Decathlon). Our findings establish that expert-authored rubrics improve both the measurement and the development of frontier LLM capabilities, serving as effective evaluation and RL training signals.",
-  "abstract_zh": "随着 LLM 能力快速提升，现有评测方法逐渐滞后。传统基准多依赖程序化验证，只能检查狭窄、表层的约束；而真实世界的指令遵循与智能体任务需要评估更细腻、上下文相关且难以脚本化的行为。本文系统分析了专家构建的 rubric-based evaluation 作为替代范式的价值，并在复杂指令遵循和企业级智能体任务两个领域给出实证证据。作者提出了构建高质量 rubric 的五项设计原则，包括 Maximum Viable Atomicity、意图感知的标准设计以及迭代式 LLM-judge 校准。为验证这些原则，论文发布 ComplexConstraints：一个专家策划的指令遵循数据集，每个 prompt 配有 10–40 条原子化评分标准。实验表明，专家 rubric 不仅是更好的评测工具，也能作为高效训练信号：在约 1,000 个 ComplexConstraints 样本上训练，可使 4B 模型指令遵循能力提升 15.5%，235B 模型提升 12.2%；在企业环境中进行单轮基于 rubric 评分的 RL 训练，还能迁移到未训练过的分布外基准，包括 BFCL +4.5%、Tau2-Bench +7.4%、Tool-Decathlon +6.8%。结果说明，专家编写的 rubric 能同时改进前沿 LLM 能力的测量与开发，并可作为有效的评测和 RL 训练信号。",
+  "abstract_zh": "随着 LLM 能力快速提升，传统评测方法逐渐滞后：以程序化规则检查为主的 benchmark 往往只能验证狭窄、表层的约束，而真实世界的指令遵循与 agentic 任务需要评估更细腻、依赖上下文且难以脚本化判断的行为。本文系统分析了专家构建的 rubric-based evaluation 作为替代范式的价值，并基于复杂指令遵循与企业级 agentic 任务两个领域的实证结果展开验证。作者提出了构建高质量 rubric 的五项设计原则，包括 Maximum Viable Atomicity、意图感知的 criterion 设计，以及迭代式 LLM-judge 校准。为验证这些原则，论文引入 ComplexConstraints：一个新的专家构建指令遵循数据集，每个 prompt 配有 10–40 条原子化评分标准。实验表明，专家 rubric 不仅是更好的评测工具，也能作为高效训练信号：仅用约 1,000 条 ComplexConstraints 样本训练，可使 4B 模型指令遵循能力提升 15.5%，235B 模型提升 12.2%；在 rubric 评分的企业环境中进行单轮 RL 训练，还能迁移到未训练过的 OOD benchmark，上涨包括 BFCL +4.5%、Tau2-Bench +7.4%、Tool-Decathlon +6.8%。研究表明，专家撰写的 rubric 能同时改进前沿 LLM 能力的测量与训练，并可作为有效的 evaluation 与 RL training signal。",
   "key_points_zh": [
-    "提出以专家策划的 rubric-based evaluation 替代传统程序化约束检查，用于评估复杂、上下文相关的指令遵循与 agentic tasks。",
-    "总结五项高质量 rubric 设计原则，包括 Maximum Viable Atomicity、意图感知 criterion 设计和迭代式 LLM-judge 校准。",
-    "发布 ComplexConstraints 数据集：每个复杂指令 prompt 配备 10–40 条原子化专家评分标准，支持更细粒度评估。",
-    "将 ComplexConstraints 作为训练信号，仅约 1,000 个样本即可带来显著收益：4B 模型提升 15.5%，235B 模型提升 12.2%。",
-    "在企业级 rubric 评分环境中进行单轮 RL 训练后，收益可迁移到分布外工具/智能体基准：BFCL、Tau2-Bench 和 Tool-Decathlon 均有提升。"
+    "论文主张用专家构建的 rubric-based evaluation 替代传统脚本化检查，以评估复杂指令遵循和 agentic 任务中更细粒度、上下文相关的行为。",
+    "提出五项 rubric 设计原则，包括 Maximum Viable Atomicity、意图感知 criterion 设计、迭代式 LLM-judge calibration 等，用于提升评分标准的可靠性和可操作性。",
+    "发布 ComplexConstraints 数据集：每个指令 prompt 配备 10–40 条专家撰写的原子化 rubric criteria，面向复杂约束下的指令遵循评测与训练。",
+    "实验证明 rubric 可作为强训练信号：约 1,000 条 ComplexConstraints 样本即可让 4B 模型提升 15.5%、235B 模型提升 12.2%。",
+    "在企业级 agentic 环境中进行 rubric-graded RL 后，模型在未见过的 OOD benchmark 上也有迁移收益，包括 BFCL、Tau2-Bench 和 Tool-Decathlon。"
   ],
   "llm_assessment": {
-    "novelty": 0.5,
-    "problem_significance": 0.5,
-    "potential_impact": 0.5,
-    "paradigm_shift": 0.5,
-    "lasting_value": 0.5,
-    "llm_avg": 0.5,
-    "comment": "Expert rubrics for RLVR are highly relevant as evaluation and training signals for enterprise agentic systems, though the paper does not appear to define a full production harness.",
-    "comment_zh": "Expert rubrics for RLVR are highly relevant as evaluation and training signals for enterprise agentic systems, though the paper does not appear to define a full production harness."
+    "novelty": 0.65,
+    "problem_significance": 0.7,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.65,
+    "llm_avg": 0.646,
+    "comment": "Expert rubrics for RLVR are relevant to agent evaluation and training gates, especially with enterprise agentic tasks, but they do not define a full harness runtime.",
+    "comment_zh": "面向 RLVR 的专家 rubric 对智能体评估和训练门控较有价值，尤其涉及企业智能体任务，但并未提出完整运行时框架。"
   },
   "scores": {
     "topic_relevance": 0.6000000000000001,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.28206629502221137,
+    "author_reputation": 0.2505165737555528,
     "venue_signal": 0.0,
     "generality": 0.35,
-    "llm_assessment": 0.5,
+    "llm_assessment": 0.646,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -54,8 +54,8 @@
     "first_author_h_index": 1,
     "first_author_found": true,
     "first_author_affiliations": [],
-    "last_author_h_index": 3,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": [

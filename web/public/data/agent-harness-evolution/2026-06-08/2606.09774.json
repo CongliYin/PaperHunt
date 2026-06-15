@@ -18,32 +18,32 @@
     "project_page": null
   },
   "abstract_en": "Advanced scientific simulators expose specialized input languages that turn simulation goals into executable configurations, but learning them can cost domain scientists hours to days. We study simulator setup as a problem of agent-tool interface grounding: what minimal simulator-specific adaptations are needed for an off-the-shelf coding agent to operate real scientific software? Our intuition is that coding agents already know how to navigate files, edit code, run commands, and repair outputs, but they lack the simulator's executable contract: its vocabulary, structural constraints, validation rules, and termination conditions. We introduce SIGA, a Simulator-Interface Grounding Adapter that supplies this contract through retrieval, procedural memory, in-trajectory validation, and validation-enforced termination. We primarily evaluate SIGA on GEOS, an open-source multiphysics simulator used in subsurface science. SIGA produces a complete GEOS deck in about five minutes with TreeSim above 0.90, matching an extended-budget human expert who took about three hours, a roughly 36x wall-clock speedup. On a harder held-out set, grounding raises TreeSim from 0.720 to 0.789, a roughly 10% relative gain over the bare agent, and can reduce the across-seed standard deviation by 16x. Self-evolution further improves SIGA by rewriting adapter contents from prior trajectories, yielding the highest held-out GEOS mean and matching or outperforming the strongest hand-designed configuration. Transfers to OpenFOAM and LAMMPS show that the dominant mechanism shifts by interface: validation matters most when structural completeness is the bottleneck, while memory and retrieval matter most when domain correctness is the bottleneck. These results suggest that lightweight, self-improvable grounding layers can turn general coding agents into practical operators of scientific software.",
-  "abstract_zh": "先进科学仿真器通常提供专用输入语言，可将仿真目标转化为可执行配置，但领域科学家学习这些语言往往需要数小时到数天。本文将仿真器设置视为 agent-tool interface grounding（智能体-工具接口对齐）问题：一个现成的 coding agent 要操作真实科学软件，最少需要哪些仿真器特定适配？作者认为，coding agent 已具备文件导航、代码编辑、命令运行和输出修复能力，但缺少仿真器的“可执行契约”，包括术语词汇、结构约束、验证规则和终止条件。为此，论文提出 SIGA（Simulator-Interface Grounding Adapter），通过检索、过程记忆、轨迹内验证和验证强制终止来提供该契约。主要实验在 GEOS 这一用于地下科学的开源多物理场仿真器上进行。SIGA 可在约 5 分钟内生成完整 GEOS deck，TreeSim 超过 0.90，接近扩展预算下耗时约 3 小时的人类专家，实现约 36 倍墙钟加速。在更难的 held-out 集合上，grounding 将 TreeSim 从 0.720 提升到 0.789，相比裸 agent 约有 10% 相对增益，并可将不同随机种子的标准差降低 16 倍。自进化机制通过从既往轨迹中重写适配器内容进一步提升 SIGA，在 held-out GEOS 上取得最高均值，并达到或超过最强手工设计配置。迁移到 OpenFOAM 和 LAMMPS 的结果表明，不同接口下主导机制不同：当结构完整性是瓶颈时，验证最关键；当领域正确性是瓶颈时，记忆和检索更关键。这些结果说明，轻量且可自我改进的 grounding 层可以将通用 coding agent 转化为实用的科学软件操作员。",
+  "abstract_zh": "先进科学仿真器通常提供专门的输入语言，用于将仿真目标转化为可执行配置，但领域科学家学习这些语言可能需要数小时到数天。本文将仿真器配置视为 agent-tool interface grounding（智能体-工具接口对齐）问题：要让现成 coding agent 操作真实科学软件，最小的仿真器特定适配是什么？作者认为，coding agent 已具备文件导航、代码编辑、命令运行和输出修复能力，但缺少仿真器的“可执行契约”，包括词汇、结构约束、验证规则和终止条件。为此，论文提出 SIGA（Simulator-Interface Grounding Adapter），通过检索、过程记忆、轨迹内验证和验证强制终止来提供该契约。主要实验在地下科学中使用的开源多物理仿真器 GEOS 上进行。SIGA 可在约 5 分钟内生成完整 GEOS deck，TreeSim 超过 0.90，达到扩展时间预算下人类专家约 3 小时完成的水平，实现约 36 倍墙钟加速。在更难的 held-out 集合上，grounding 将 TreeSim 从 0.720 提升到 0.789，相比裸 agent 约 10% 相对增益，并可将跨随机种子的标准差降低 16 倍。进一步地，SIGA 通过从历史轨迹中重写 adapter 内容实现自进化，在 held-out GEOS 上取得最高均值，并匹配或超越最强手工设计配置。迁移到 OpenFOAM 和 LAMMPS 的结果表明，主导机制会随接口变化：当结构完整性是瓶颈时，验证最关键；当领域正确性是瓶颈时，记忆与检索更重要。结果表明，轻量、可自我改进的 grounding 层能将通用 coding agent 转化为实用的科学软件操作员。",
   "key_points_zh": [
-    "论文将科学仿真器配置生成建模为 agent-tool interface grounding 问题，核心是为通用 coding agent 补足仿真器的可执行契约，而非重新训练模型。",
-    "SIGA 由检索、过程记忆、轨迹内验证和验证强制终止组成，帮助 agent 理解 GEOS 等仿真器的词汇、结构约束、验证规则与完成条件。",
-    "在 GEOS 上，SIGA 约 5 分钟生成完整 deck，TreeSim 超过 0.90，接近耗时约 3 小时的人类专家，实现约 36 倍墙钟加速。",
-    "在更难 held-out 集上，SIGA 将 TreeSim 从裸 agent 的 0.720 提升到 0.789，并显著降低跨随机种子的性能波动；自进化版本进一步达到最佳均值。",
-    "跨 OpenFOAM 和 LAMMPS 的迁移实验显示，不同仿真器接口的关键瓶颈不同：结构完整性依赖验证，领域正确性更依赖记忆与检索。"
+    "将仿真器配置建模为 agent-tool interface grounding 问题，强调 coding agent 缺失的是仿真器输入语言的可执行契约，而非通用编程能力。",
+    "提出 SIGA，通过 retrieval、procedural memory、in-trajectory validation 和 validation-enforced termination，为通用 coding agent 注入仿真器特定约束。",
+    "在 GEOS 上，SIGA 约 5 分钟生成高质量完整 deck，TreeSim 超过 0.90，接近人类专家约 3 小时成果，实现约 36 倍墙钟加速。",
+    "在更难 held-out 集合上，grounding 将 TreeSim 从 0.720 提升至 0.789，并显著降低跨 seed 方差；自进化机制进一步提升并可匹配或超过手工设计配置。",
+    "跨 OpenFOAM 和 LAMMPS 的迁移实验显示，不同仿真器接口瓶颈不同：结构完整性依赖验证，领域正确性更依赖记忆与检索。"
   ],
   "llm_assessment": {
-    "novelty": 0.8,
-    "problem_significance": 0.78,
+    "novelty": 0.78,
+    "problem_significance": 0.76,
     "potential_impact": 0.78,
     "paradigm_shift": 0.68,
-    "lasting_value": 0.8,
-    "llm_avg": 0.7680000000000001,
-    "comment": "A strong adapter-based harness contribution with validation, procedural memory, and trajectory-based self-evolution for scientific software agents.",
-    "comment_zh": "该工作通过验证、程序性记忆和轨迹驱动自演化构建科学软件代理适配层，是较强的 harness 贡献。"
+    "lasting_value": 0.76,
+    "llm_avg": 0.7520000000000001,
+    "comment": "Strong adapter-layer work showing how validation, procedural memory, retrieval, and trajectory-based self-evolution can ground coding agents for real scientific tools.",
+    "comment_zh": "该文展示了通过验证、程序化记忆、检索和基于轨迹的自进化适配层来让编码智能体可靠操作科学工具，价值较高。"
   },
   "scores": {
     "topic_relevance": 0.88,
     "open_source": 0.2,
     "community_heat": 0.0,
-    "author_reputation": 0.3,
+    "author_reputation": 0.22577486063332924,
     "venue_signal": 0.0,
     "generality": 0.4,
-    "llm_assessment": 0.7680000000000001,
+    "llm_assessment": 0.7520000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -56,8 +56,8 @@
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": null,
-    "last_author_found": false,
+    "last_author_h_index": 1,
+    "last_author_found": true,
     "last_author_affiliations": []
   },
   "figures": [

@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.09198",
+  "title": "MASS: Deep Research for Social Sciences with Memory-Augmented Social Simulation",
+  "title_zh": "MASS：基于记忆增强社会模拟的社会科学 Deep Research",
+  "authors": [
+    "Yongrui Liu",
+    "Deyi Xiong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T08:32:21Z",
+  "abs_url": "https://arxiv.org/abs/2606.09198v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.09198",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Deep Research agents powered by Large Language Models (LLMs) have exhibited extraordinary potential in automated paper writing tasks. However, existing systems rely heavily on literature retrieval and synthesis through internet and local knowledge bases, often resulting research in lacking insight and creativity in social science. To address this issue, we propose \"Memory-Augmented Social Simulation (MASS)\", an innovative paradigm that leverages highly realistic and research-oriented social simulations to enhance the creativity and empirical founding of LLMs-generated research. Specifically, MASS integrates three core components: dynamic goal-path planning with multi-level social norm restraint to guide the simulation, a multi-disciplinary behavior dataset for agent memory cold-start, and a structured forgetting mechanism inspired by the Ebbinghaus curve. Together, these ensure simulation authenticity and provide a robust empirical foundation for generating innovative scholarly papers. Experimental results demonstrate the effectiveness of our method, showing a 6.81\\% improvement in generation overall quality over foundation LLMs and 17.19\\% gain in Insight over strong baselines.",
+  "abstract_zh": "由 Large Language Models (LLMs) 驱动的 Deep Research agents 在自动论文写作中展现出很强潜力，但现有系统主要依赖互联网与本地知识库的文献检索和综合，导致社会科学研究生成结果往往缺乏洞察力与创造性。为此，论文提出 Memory-Augmented Social Simulation (MASS)，通过高度真实且面向研究的社会模拟，为 LLM 生成研究提供更具创造性和经验基础的支撑。MASS 包含三项核心设计：带多层社会规范约束的动态 goal-path planning，用于引导模拟过程；多学科行为数据集，用于 agent memory cold-start；以及受 Ebbinghaus curve 启发的结构化遗忘机制。实验表明，MASS 相比基础 LLMs 在生成整体质量上提升 6.81%，并较强基线在 Insight 指标上提升 17.19%。",
+  "key_points_zh": [
+    "提出 MASS 范式，将社会模拟引入 Deep Research agents，以弥补仅依赖文献检索带来的洞察力不足问题。",
+    "设计动态 goal-path planning，并加入多层社会规范约束，使模拟过程更贴近真实社会行为。",
+    "构建多学科行为数据集，为 agent memory cold-start 提供初始经验基础。",
+    "引入基于 Ebbinghaus curve 的结构化遗忘机制，提升 agent 记忆演化的真实性。",
+    "实验显示，MASS 在生成整体质量上较基础 LLMs 提升 6.81%，在 Insight 指标上较强基线提升 17.19%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.35,
+    "problem_significance": 0.25,
+    "potential_impact": 0.22,
+    "paradigm_shift": 0.2,
+    "lasting_value": 0.18,
+    "llm_avg": 0.24,
+    "comment": "The paper is mainly a social-simulation method for research generation and has limited relevance to production agent harnesses.",
+    "comment_zh": "该论文主要是面向研究生成的社会模拟方法，与生产级智能体运行框架的关联较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.24,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09198/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09198/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09198/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09198/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.966
+    }
+  ]
+}

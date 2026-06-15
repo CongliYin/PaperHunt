@@ -16,23 +16,23 @@
     "project_page": null
   },
   "abstract_en": "Pre-training on raw code teaches syntax but provides sparse signal for diverse real-world task formats. While synthetic data has proven transformative for language models, code remains largely unexplored beyond limited quality improvements. We present CodeAlchemy, a synthetic data generation framework that transforms publicly sourced code into semantically-rich training data through 5 strategies: CodeEnhance (quality-aware rewriting), CodeQA (template-based problems), CodeDev (developer tasks), CodeDialogue (multi-turn conversations), and CodeTrace (execution traces). We process 3 corpora across 15 languages to generate 500B+ tokens of synthetic data plus 350B reasoning tokens, orders of magnitude more than prior efforts. CodeTrace instruments and executes 1.3M+ files across 14 languages and 5K libraries, capturing control flow, state tracking, and library knowledge. We introduce DevEval (developer tasks) and TraceEval (execution prediction) benchmarks; frontier models like Claude Sonnet 4.5 achieve only 5.6% exact match on TraceEval, revealing critical gaps in semantic understanding. Our 3B models achieve 83.5% on HumanEval, 63.2% on MBPP, 8.09% win rate on DevEval, and 15.36 ROUGE-2 on TraceEval, outperforming frontier models 10x the size including 27B Gemma-3 and 32B Granite-4.0.",
-  "abstract_zh": "本文提出 CodeAlchemy，一个面向代码预训练的合成数据生成框架。不同于仅使用原始代码学习语法，CodeAlchemy 将公开代码转化为语义更丰富、任务形式更多样的训练数据，包含 5 种策略：CodeEnhance（质量感知重写）、CodeQA（基于模板的问题生成）、CodeDev（开发者任务）、CodeDialogue（多轮对话）和 CodeTrace（执行轨迹）。作者处理了覆盖 15 种语言的 3 个代码语料，生成超过 500B 合成 token 与 350B 推理 token。特别地，CodeTrace 对 14 种语言、5K 个库中的 1.3M+ 文件进行插桩与执行，捕获控制流、状态变化和库知识。论文还提出 DevEval 与 TraceEval 两个新基准，发现 Claude Sonnet 4.5 等前沿模型在 TraceEval 上 exact match 仅 5.6%，暴露出现有模型在代码语义理解上的不足。训练得到的 3B 模型在 HumanEval、MBPP、DevEval 和 TraceEval 上分别达到 83.5%、63.2%、8.09% win rate 与 15.36 ROUGE-2，超过包括 27B Gemma-3 和 32B Granite-4.0 在内的更大模型。",
+  "abstract_zh": "本文提出 CodeAlchemy，一个面向代码预训练的合成数据生成框架，旨在弥补原始代码预训练仅能提供语法学习、缺乏真实任务格式监督信号的问题。CodeAlchemy 将公开来源代码转换为语义更丰富的训练数据，包含 5 种策略：CodeEnhance（质量感知重写）、CodeQA（基于模板的问题生成）、CodeDev（开发者任务）、CodeDialogue（多轮对话）和 CodeTrace（执行轨迹）。作者在 3 个代码语料、15 种编程语言上生成超过 500B 合成数据 tokens，并额外生成 350B 推理 tokens。其中 CodeTrace 对 14 种语言、5K 个库中的 1.3M+ 文件进行插桩与执行，捕获控制流、状态变化和库知识。论文还引入 DevEval（开发者任务）和 TraceEval（执行预测）两个基准；Claude Sonnet 4.5 等前沿模型在 TraceEval 上仅达到 5.6% exact match，暴露出代码语义理解的明显短板。基于 CodeAlchemy 训练的 3B 模型在 HumanEval 上达到 83.5%、MBPP 上达到 63.2%、DevEval win rate 为 8.09%、TraceEval ROUGE-2 为 15.36，超过包括 27B Gemma-3 和 32B Granite-4.0 在内的更大模型。",
   "key_points_zh": [
-    "CodeAlchemy 将公开代码重写为多种高语义密度训练格式，覆盖代码增强、问答、开发任务、对话和执行轨迹。",
-    "规模显著扩大：基于 3 个语料、15 种编程语言生成 500B+ 合成 token，并额外产生 350B 推理 token。",
-    "CodeTrace 通过插桩和真实执行 1.3M+ 文件，捕获控制流、变量状态和库调用知识，为代码语义学习提供更强监督。",
-    "新提出 DevEval 和 TraceEval，显示即使 Claude Sonnet 4.5 等前沿模型在执行预测上也表现很弱，TraceEval exact match 仅 5.6%。",
-    "仅 3B 参数模型就在 HumanEval、MBPP、DevEval 和 TraceEval 上超过多个十倍规模的强基线模型，说明合成代码数据质量和任务多样性至关重要。"
+    "CodeAlchemy 提出 5 类合成代码数据策略：CodeEnhance、CodeQA、CodeDev、CodeDialogue 和 CodeTrace，覆盖代码重写、问答、开发任务、对话与执行轨迹。",
+    "规模显著大于以往工作：在 3 个语料、15 种语言上生成 500B+ 合成 tokens 和 350B 推理 tokens。",
+    "CodeTrace 是核心创新之一，通过插桩执行 1.3M+ 文件，捕获控制流、变量状态和库调用知识，以增强模型的代码语义理解。",
+    "新提出 DevEval 和 TraceEval 两个评测集，显示 Claude Sonnet 4.5 等前沿模型在执行预测上仍表现较弱，TraceEval exact match 仅 5.6%。",
+    "训练出的 3B 模型在 HumanEval、MBPP、DevEval 和 TraceEval 上表现强劲，超过多种 10 倍参数规模的开源大模型。"
   ],
   "llm_assessment": {
-    "novelty": 0.7,
-    "problem_significance": 0.62,
-    "potential_impact": 0.65,
-    "paradigm_shift": 0.4,
-    "lasting_value": 0.45,
-    "llm_avg": 0.564,
-    "comment": "Large-scale synthetic code rewriting is useful for model training, but contributes little to reusable agent runtime or governance infrastructure.",
-    "comment_zh": "大规模合成代码改写对模型训练有用，但对可复用智能体运行时或治理基础设施贡献有限。"
+    "novelty": 0.68,
+    "problem_significance": 0.7,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.55,
+    "llm_avg": 0.6299999999999999,
+    "comment": "Large-scale synthetic code-data work with useful execution traces, but it is primarily model pretraining rather than agent harness infrastructure.",
+    "comment_zh": "该文的大规模合成代码数据和执行轨迹有价值，但主要面向模型预训练，而非智能体 harness 基础设施。"
   },
   "scores": {
     "topic_relevance": 0.8,
@@ -41,7 +41,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.564,
+    "llm_assessment": 0.6299999999999999,
     "domain_multiplier": 1.0
   },
   "enriched": {

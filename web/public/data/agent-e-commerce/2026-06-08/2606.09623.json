@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.09623",
   "title": "Constrained user-item allocation for e-commerce marketing campaigns",
-  "title_zh": "面向电商营销活动的约束用户-商品分配",
+  "title_zh": "面向电商营销活动的受约束用户-商品分配",
   "authors": [
     "Maja Lindström",
     "Natalija Glisovic",
@@ -18,32 +18,32 @@
     "project_page": null
   },
   "abstract_en": "When running marketing campaigns, retailers must decide which products to promote and which users to target. These decisions are inherently coupled: effective campaigns match users and items with strong mutual affinity into non-overlapping groups of predefined sizes. However, existing approaches assume predefined campaign structure or decouple item selection from user assignment, and cannot discover campaign groupings directly from joint interaction patterns. We therefore formalize this campaign problem as auto-targeting: jointly selecting users and items to construct multiple disjoint campaigns. To solve this combinatorial problem, we propose three complementary strategies: (i) constrained spectral biclustering to find dense regions in the user-item affinity matrix, (ii) greedy local search with pairwise swaps for combinatorial refinement, and (iii) a multi-armed bandit framework to escape local optima through exploration. We evaluate these methods on a synthetic dataset, the Amazon Reviews benchmarks, and large-scale proprietary commercial data, and compare the results to simulated annealing as a baseline. The results show that biclustering consistently achieves the highest campaign quality, lift, and fairness scores. While biclustering runs efficiently on smaller datasets, its runtime increases substantially on very large ones, where bandit-based methods instead offer a scalable alternative.",
-  "abstract_zh": "本文研究电商营销活动中的 auto-targeting 问题：在预设活动规模约束下，联合选择用户与商品，构造多个互不重叠的营销分组，使组内用户-商品亲和度尽可能高。不同于既有方法依赖预定义活动结构，或将商品选择与用户分配解耦，本文直接从用户-商品交互模式中发现活动分组。作者提出三类互补方法：constrained spectral biclustering 用于在用户-商品亲和矩阵中寻找高密度区域；带 pairwise swaps 的 greedy local search 用于组合优化细化；multi-armed bandit 框架通过探索跳出局部最优。实验覆盖 synthetic dataset、Amazon Reviews benchmarks 以及大规模私有商业数据，并以 simulated annealing 为基线。结果显示，biclustering 在活动质量、lift 与公平性指标上整体最佳；但在超大规模数据上运行时间增长明显，此时 bandit-based 方法提供了更可扩展的替代方案。",
+  "abstract_zh": "本文研究电商营销活动中的 auto-targeting 问题：在预设活动规模约束下，联合选择商品与目标用户，构建多个互不重叠的营销活动组。不同于以往预先固定活动结构或将商品选择与用户分配解耦的方法，本文直接从用户-商品亲和矩阵的联合交互模式中发现高质量分组。作者提出三类互补策略：constrained spectral biclustering 用于发现亲和矩阵中的稠密区域；带成对交换的 greedy local search 用于组合优化细化；multi-armed bandit 框架通过探索跳出局部最优。实验覆盖合成数据、Amazon Reviews 基准以及大规模商业私有数据，并以 simulated annealing 为基线。结果显示，biclustering 在活动质量、lift 和公平性指标上整体表现最佳；但在超大规模数据上运行时间显著上升，此时 bandit-based 方法提供了更具可扩展性的替代方案。",
   "key_points_zh": [
-    "将电商营销活动形式化为 auto-targeting：联合选择用户和商品，构造多个满足规模约束且互不重叠的 campaign groups。",
-    "提出 constrained spectral biclustering，从用户-商品 affinity matrix 中直接发现高亲和度的双聚类区域。",
-    "引入 greedy local search 与 pairwise swaps，对离散分配结果进行局部组合优化。",
-    "使用 multi-armed bandit 框架增加探索能力，以缓解局部最优问题，并提升大规模场景下的可扩展性。",
-    "在 synthetic dataset、Amazon Reviews benchmarks 和私有商业数据上的实验表明，biclustering 综合质量、lift 与公平性最佳，但超大规模下 bandit-based 方法更高效。"
+    "将营销活动建模为 auto-targeting：在组大小和互斥约束下，同时选择用户与商品，形成多个高亲和度活动组。",
+    "提出 constrained spectral biclustering，从 user-item affinity matrix 中直接挖掘稠密双聚类区域，避免预设活动结构。",
+    "结合 greedy local search 与 pairwise swaps，对离散分配结果进行局部组合优化。",
+    "引入 multi-armed bandit 框架，通过探索机制缓解局部最优，并在大规模场景中提升可扩展性。",
+    "在 synthetic dataset、Amazon Reviews 和商业私有数据上，biclustering 的质量、lift 与公平性最好；bandit 方法在超大规模数据上更实用。"
   ],
   "llm_assessment": {
-    "novelty": 0.62,
-    "problem_significance": 0.76,
-    "potential_impact": 0.72,
-    "paradigm_shift": 0.36,
-    "lasting_value": 0.66,
-    "llm_avg": 0.6239999999999999,
-    "comment": "A relevant e-commerce marketing-allocation paper with practical value for user-item campaign targeting.",
-    "comment_zh": "这是一篇与电商营销投放高度相关的论文，对用户与商品的活动匹配具有实际价值。"
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "Strong e-commerce marketing allocation paper for user-item campaign targeting with practical relevance, but it lacks LLM or agentic shopping components.",
+    "comment_zh": "Strong e-commerce marketing allocation paper for user-item campaign targeting with practical relevance, but it lacks LLM or agentic shopping components."
   },
   "scores": {
     "topic_relevance": 0.16000000000000003,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.3315497212666585,
+    "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.6239999999999999,
+    "llm_assessment": 0.5,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -56,8 +56,8 @@
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": 3,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": []

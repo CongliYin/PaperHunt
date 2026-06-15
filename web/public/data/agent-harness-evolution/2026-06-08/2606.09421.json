@@ -1,0 +1,93 @@
+{
+  "arxiv_id": "2606.09421",
+  "title": "What Should a Skill Remember? Quality--Cost Trade-offs in Cost-Aware Skill Rewriting for Language Model Agents",
+  "title_zh": "技能应该记住什么？面向语言模型 Agent 的成本感知技能重写中的质量—成本权衡",
+  "authors": [
+    "Qinghua Xing",
+    "Yinda Chen",
+    "Yaping Jin",
+    "Zhenhe Wu",
+    "Bohan Lin",
+    "Hang Zhou",
+    "Xinghao Chen",
+    "Hanting Chen",
+    "Zhiwei Xiong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T12:36:51Z",
+  "abs_url": "https://arxiv.org/abs/2606.09421v2",
+  "pdf_url": "https://arxiv.org/pdf/2606.09421",
+  "links": {
+    "github": "https://github.com/1Reminding/Skill_EE.",
+    "project_page": null
+  },
+  "abstract_en": "Large language model agents increasingly rely on skills: reusable procedural documents encoding workflows, tool use, implementation patterns, validation checks, and domain rules. Skill rewriting is often treated as prompt compression, but shorter skills can make agents more expensive by removing sparse operational anchors that prevent exploration, debugging, and recovery. We study skill rewriting through this economic lens. Our controlled framework profiles skill structure, rewrites skills using information-preservation strategies, and evaluates the rewrites under fixed task instructions, environments, and verifiers. Experiments on SkillsBench reveal distinct quality--cost trade-offs across strategies: API/code anchoring, workflow guarding, and rule/formula anchoring benefit different task families, with no universally dominant template. In the main held-out evaluation, the learned policy reduces total cost by 7.0% and downstream agent-token cost by 6.0%; in frozen cross-model transfer, the corresponding reductions average 14.7% and 13.7%, while verifier quality is preserved. These results position skill design as cost-aware operational knowledge engineering rather than prompt compression. Resources: https://github.com/1Reminding/Skill_EE.",
+  "abstract_zh": "大型语言模型 Agent 越来越依赖技能（skills）：这类可复用的过程性文档编码了工作流、工具使用、实现模式、验证检查和领域规则。以往技能重写常被视为提示压缩，但更短的技能可能因移除稀疏但关键的操作锚点，导致 Agent 在探索、调试和恢复时花费更高。本文从经济性视角研究技能重写，提出受控框架来分析技能结构，并通过信息保留策略重写技能，在固定任务指令、环境和验证器下评估重写效果。基于 SkillsBench 的实验显示，不同策略存在明确的质量—成本权衡：API/code anchoring、workflow guarding 和 rule/formula anchoring 分别适合不同任务族，没有通用最优模板。在主要 held-out 评估中，学习到的策略将总成本降低 7.0%，下游 Agent token 成本降低 6.0%；在 frozen cross-model transfer 设置下，平均分别降低 14.7% 和 13.7%，同时保持验证器质量。研究表明，技能设计应被视为成本感知的操作知识工程，而不仅是 prompt compression。",
+  "key_points_zh": [
+    "论文将 skill rewriting 从单纯的 prompt compression 重新定义为成本感知的操作知识工程，强调过度压缩可能增加 Agent 的探索、调试和恢复成本。",
+    "提出受控评估框架：分析技能结构，采用信息保留式重写策略，并在固定任务指令、环境与 verifier 下比较质量和成本。",
+    "SkillsBench 实验发现不同任务族偏好不同锚定策略：API/code anchoring、workflow guarding、rule/formula anchoring 各有优势，没有统一最优模板。",
+    "在 held-out 评估中，学习策略降低总成本 7.0%、下游 Agent token 成本 6.0%，且保持 verifier 质量。",
+    "在 frozen cross-model transfer 中，成本下降更明显：总成本平均降低 14.7%，Agent token 成本降低 13.7%，显示策略具备跨模型迁移潜力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.7,
+    "problem_significance": 0.76,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.7,
+    "llm_avg": 0.692,
+    "comment": "Solid operational-knowledge engineering work for agent skills, valuable for cost-aware skill repositories though less central to runtime control or governance.",
+    "comment_zh": "该文对智能体技能的成本感知运维知识工程有扎实贡献，适合技能库建设，但对运行时控制和治理贡献较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.692,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/1Reminding/Skill_EE.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09421/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09421/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09421/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.977
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.09421/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.958
+    }
+  ]
+}

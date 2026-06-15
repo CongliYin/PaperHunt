@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2606.11256",
+  "title": "My Chemical Harness: Evolutionary Molecular Design over Synthetic Pathways with Large Language Model Agents",
+  "title_zh": "My Chemical Harness：基于大语言模型智能体、沿合成路径演化的分子设计",
+  "authors": [
+    "César Ojeda",
+    "Darius A. Faroughy",
+    "Maryam Karimi",
+    "Payam Zarrintaj",
+    "Mir Mehdi Seyedebrahimi",
+    "Martín Carballo-Pacheco"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-08T23:52:52Z",
+  "abs_url": "https://arxiv.org/abs/2606.11256v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.11256",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Designing molecules with target properties is most useful when candidate structures are accompanied by feasible synthetic routes. We introduce My Chemical Harness, a route-native evolutionary framework for goal-directed molecular design in which the search population consists of executable synthetic pathways rather than isolated molecular graphs. Each route is built from purchasable building blocks and reaction templates, executed by deterministic chemistry tools, and scored through task-specific molecular oracles. Large language models (LLMs) are used only as strategy controllers that select high-level preferences over route length, move type, reaction families, motifs, and exploration pressure, while local code performs route construction, validation, deduplication, scoring, selection, and memory updates. This separation lets the LLM guide exploration without allowing it to introduce hallucinated products or unsupported reaction steps. On a soluble epoxide hydrolase proxy task, our LLM agent improves over single pass LLM and deterministic controllers, reaching state-of-the-art performance across the sEH score, synthetic accessibility score, and AiZynthFinder success rate metrics. These results suggest that constrained LLM agents can play a significant role in molecular discovery without requiring training, fine-tuning, or dedicated generative models.",
+  "abstract_zh": "该论文提出 My Chemical Harness，一种以“可执行合成路径”而非孤立分子图为搜索个体的目标导向分子设计框架。每条路径由可购买 building blocks 和 reaction templates 构建，并由确定性化学工具执行与验证，再通过任务特定 molecular oracles 评分。LLM 仅作为策略控制器，负责选择路线长度、操作类型、反应家族、结构 motif 和探索强度等高层偏好；具体的路径构建、合法性检查、去重、评分、选择与记忆更新均由本地代码完成。这种分工使 LLM 能引导搜索，同时避免生成幻觉产物或不受支持的反应步骤。在 soluble epoxide hydrolase 代理任务上，该 LLM agent 优于单次 LLM 和确定性控制器，并在 sEH score、synthetic accessibility score 与 AiZynthFinder success rate 等指标上达到 state-of-the-art 表现。结果表明，无需训练、微调或专用生成模型，受约束的 LLM agents 也能有效参与分子发现。",
+  "key_points_zh": [
+    "核心创新是将进化搜索的种群表示为可执行 synthetic pathways，而不是直接搜索分子图，从源头强化候选分子的可合成性。",
+    "LLM 不直接生成化学产物或反应步骤，只选择高层搜索策略；底层化学执行、验证和评分由确定性工具完成，以降低 hallucination 风险。",
+    "路线由 purchasable building blocks 与 reaction templates 组成，并通过 task-specific molecular oracles 进行目标性质评估。",
+    "在 soluble epoxide hydrolase proxy task 上，My Chemical Harness 超过 single-pass LLM 与 deterministic controllers，在 sEH score、synthetic accessibility score 和 AiZynthFinder success rate 上表现领先。",
+    "该方法无需训练、fine-tuning 或专门的 generative models，展示了受约束 LLM agents 在分子发现中的实用潜力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.55,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.55,
+    "llm_avg": 0.5900000000000001,
+    "comment": "The route-native evolutionary design loop has meaningful harness elements through deterministic tools, validation, scoring, selection, and memory updates, though in a narrow chemistry domain.",
+    "comment_zh": "该工作通过确定性工具、验证、评分、选择和记忆更新形成了有价值的 harness 思路，但应用范围主要局限于化学设计。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5900000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11256/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11256/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.11256/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.976
+    }
+  ]
+}

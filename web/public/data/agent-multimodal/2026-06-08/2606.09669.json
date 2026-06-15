@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.09669",
   "title": "SpatialWorld: Benchmarking Interactive Spatial Reasoning of Multimodal Agents in Real-World Tasks",
-  "title_zh": "SpatialWorld：面向真实任务的多模态智能体交互式空间推理基准",
+  "title_zh": "SpatialWorld：面向真实世界任务的多模态智能体交互式空间推理基准",
   "authors": [
     "Hongcheng Gao",
     "Hailong Qu",
@@ -34,32 +34,32 @@
     "project_page": null
   },
   "abstract_en": "Spatial reasoning is a foundational capability for multimodal large language models (MLLMs) to perceive and operate within the physical world. However, existing benchmarks predominantly rely on passive evaluation (e.g., static VQA) or simulator-specific pipelines, failing to assess general interactive spatial understanding. We introduce SpatialWorld, a unified benchmark designed specifically for evaluating the interactive spatial understanding of multimodal agents in complex real-world tasks. Integrating eight heterogeneous simulation backends under a shared, simulator-agnostic protocol, SpatialWorld features 760 human-annotated tasks across diverse domains (e.g., household routines, travel, social collaboration). Agents must solve tasks under vision-only partial observability, actively gathering egocentric visual evidence and expressing decisions via a unified, text-based action interface native to MLLMs. For reliable evaluation, each task includes a human-validated initial state, a reference trajectory, and a terminal-state verifier. Evaluating 15 advanced agents reveals that robust spatial task solving remains challenging: the strongest model, GPT-5, achieves an average task success rate (TSR) of only 17.4%, while the leading open-source model, Qwen-3.5, reaches 14.1%. Further analysis exposes a clear mismatch between task success and execution efficiency, alongside substantial domain-specific performance variations. These bottlenecks in active exploration and long-horizon planning position SpatialWorld as a rigorous testbed for future spatial agents.",
-  "abstract_zh": "SpatialWorld 是一个用于评测 multimodal large language models（MLLMs）在复杂真实任务中交互式空间理解能力的统一基准。不同于以静态 VQA 为主的被动评测或依赖特定模拟器的流程，SpatialWorld 整合了 8 个异构 simulation backends，并采用与模拟器无关的统一协议。该基准包含 760 个经人工标注的任务，覆盖家庭日常、旅行、社会协作等多样场景。智能体需要在仅依赖视觉、且部分可观测的条件下，主动收集第一视角视觉证据，并通过适配 MLLMs 的统一文本动作接口进行决策。每个任务都配有人类验证的初始状态、参考轨迹和终止状态验证器，以保证评测可靠性。对 15 个先进智能体的实验表明，稳健的空间任务求解仍非常困难：最强模型 GPT-5 的平均 task success rate（TSR）仅为 17.4%，领先开源模型 Qwen-3.5 为 14.1%。进一步分析显示，任务成功率与执行效率之间存在明显不匹配，不同领域间性能差异也很大，说明主动探索和长程规划仍是空间智能体的关键瓶颈。",
+  "abstract_zh": "空间推理是多模态大语言模型（MLLMs）感知并操作物理世界的基础能力。现有基准多依赖静态 VQA 等被动评测，或绑定特定模拟器流程，难以衡量通用的交互式空间理解能力。本文提出 SpatialWorld，一个统一基准，用于评估多模态智能体在复杂真实世界任务中的交互式空间理解。SpatialWorld 在共享的、与模拟器无关的协议下整合了 8 个异构仿真后端，包含 760 个由人工标注的任务，覆盖家庭日常、旅行、社交协作等多种场景。智能体需要在仅视觉、部分可观测条件下主动收集第一视角视觉证据，并通过 MLLM 原生的统一文本动作接口做出决策。为保证评测可靠性，每个任务都提供人工验证的初始状态、参考轨迹和终止状态验证器。对 15 个先进智能体的评测显示，鲁棒空间任务求解仍十分困难：最强模型 GPT-5 的平均任务成功率（TSR）仅为 17.4%，领先开源模型 Qwen-3.5 达到 14.1%。进一步分析发现，任务成功率与执行效率存在明显不匹配，不同领域之间性能差异也很大。SpatialWorld 揭示了主动探索与长程规划的瓶颈，可作为未来空间智能体研究的严格测试平台。",
   "key_points_zh": [
-    "提出 SpatialWorld，用于评测多模态智能体在真实复杂任务中的交互式空间推理能力，而非仅进行静态 VQA 式被动评测。",
-    "基准统一整合 8 个异构 simulation backends，采用 simulator-agnostic protocol，支持跨场景、跨任务的可比评测。",
-    "包含 760 个人人工标注任务，覆盖 household routines、travel、social collaboration 等领域，要求智能体在视觉部分可观测条件下主动探索。",
-    "评测 15 个先进智能体后发现性能普遍较低：GPT-5 平均 TSR 为 17.4%，Qwen-3.5 为 14.1%，显示当前模型空间任务执行能力有限。",
-    "分析揭示任务成功率与执行效率不一致，并存在显著领域差异，表明 active exploration 和 long-horizon planning 是未来改进重点。"
+    "提出 SpatialWorld，用于评估多模态智能体在复杂真实世界任务中的交互式空间推理，而非仅依赖静态 VQA 或特定模拟器。",
+    "基准整合 8 个异构 simulation backends，采用统一且 simulator-agnostic 的协议，包含 760 个跨家庭、旅行、社交协作等领域的人工标注任务。",
+    "智能体在 vision-only partial observability 下行动，需要主动探索第一视角视觉信息，并通过统一的文本动作接口完成决策。",
+    "每个任务配备人工验证初始状态、reference trajectory 和 terminal-state verifier，以提升评测可靠性与可复现性。",
+    "15 个先进智能体表现普遍较低：GPT-5 平均 TSR 仅 17.4%，Qwen-3.5 为 14.1%，暴露出主动探索、执行效率与长程规划的关键瓶颈。"
   ],
   "llm_assessment": {
-    "novelty": 0.5,
-    "problem_significance": 0.5,
-    "potential_impact": 0.5,
-    "paradigm_shift": 0.5,
-    "lasting_value": 0.5,
-    "llm_avg": 0.5,
-    "comment": "Strong reusable benchmark for interactive embodied visual-spatial agents, but it is not primarily about realtime low-latency voice/video interaction.",
-    "comment_zh": "Strong reusable benchmark for interactive embodied visual-spatial agents, but it is not primarily about realtime low-latency voice/video interaction."
+    "novelty": 0.78,
+    "problem_significance": 0.82,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.8,
+    "llm_avg": 0.756,
+    "comment": "A strong reusable benchmark for interactive embodied spatial agents, though it is less focused on realtime latency or speech/video tool workflows.",
+    "comment_zh": "这是一个面向交互式具身空间智能体的高价值可复用基准，但对实时延迟和语音/视频工具流程关注较少。"
   },
   "scores": {
     "topic_relevance": 0.8,
     "open_source": 0.2,
     "community_heat": 0.8819124816001798,
-    "author_reputation": 0.2876491876228333,
+    "author_reputation": 0.40353225016377775,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.5,
+    "llm_assessment": 0.756,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -69,11 +69,11 @@
     "has_video_demo": false,
     "hf_listed": true,
     "hf_upvotes": 41,
-    "first_author_h_index": null,
-    "first_author_found": false,
+    "first_author_h_index": 8,
+    "first_author_found": true,
     "first_author_affiliations": [],
-    "last_author_h_index": 2,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": [

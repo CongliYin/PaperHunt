@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.09169",
   "title": "IMUG-Bench: Benchmarking Unified Multimodal Models on Interleaved Understanding and Generation",
-  "title_zh": "IMUG-Bench：面向交错理解与生成的统一多模态模型基准评测",
+  "title_zh": "IMUG-Bench：面向交错式理解与生成的统一多模态模型基准测试",
   "authors": [
     "Lingyi Meng",
     "Zecong Tang",
@@ -28,32 +28,32 @@
     "project_page": null
   },
   "abstract_en": "In recent years, unified multimodal models (UMMs) have emerged to support both understanding and generation within a single framework. Mastering dynamic, multi-turn interleaved image-text dialogues is a crucial task for UMMs in real-world applications. However, existing benchmarks fail to evaluate this important task, as they are often limited to single-turn or static settings, and typically overlook exposure bias in multi-turn interactions. To bridge this gap, we propose IMUG-Bench, a comprehensive benchmark for multi-turn interleaved image-text dialogue of UMMs that jointly evaluates their understanding and generation capabilities. Our IMUG-Bench comprises three classes: Static Spatial, Temporal Causal, and Hybrid, covering 3,113 samples and 12,034 interaction turns. It also includes dynamic understanding questions, thereby supporting evaluation that better reflects real-world multi-turn interaction scenarios. Large-scale experiments on IMUG-Bench systematically evaluate mainstream open-source and closed-source UMMs, revealing their capability boundaries and failure modes, and uncovering pronounced exposure bias on the generation side in multi-turn interactions. We further explore several test-time scaling strategies, including Chain-of-Thought, Self-Verification, and Best-of-N Sampling, which effectively improve generation accuracy and mitigate exposure bias in generation tasks. These findings provide insights into enhancing the robustness and multi-turn interaction capability of future UMMs.",
-  "abstract_zh": "近年来，统一多模态模型（Unified Multimodal Models, UMMs）开始在单一框架中同时支持理解与生成能力。对于真实应用而言，模型能否处理动态、多轮、图文交错的对话至关重要。然而，现有基准多局限于单轮或静态设置，且通常忽视多轮交互中的曝光偏差（exposure bias）。为弥补这一空缺，论文提出 IMUG-Bench，一个面向 UMMs 多轮交错图文对话的综合基准，用于联合评估理解与生成能力。IMUG-Bench 包含 Static Spatial、Temporal Causal 和 Hybrid 三类任务，共 3,113 个样本、12,034 个交互轮次，并引入动态理解问题，使评测更贴近真实多轮交互场景。作者在该基准上系统评估主流开源与闭源 UMMs，揭示了它们的能力边界与失败模式，并发现生成侧在多轮交互中存在显著曝光偏差。进一步地，论文探索了 Chain-of-Thought、Self-Verification 和 Best-of-N Sampling 等测试时扩展策略，结果显示这些方法能有效提升生成准确率并缓解生成任务中的曝光偏差。",
+  "abstract_zh": "近年来，统一多模态模型（Unified Multimodal Models, UMMs）开始在单一框架内同时支持多模态理解与生成。面向真实应用，模型需要掌握动态、多轮、图文交错对话能力，但现有基准多局限于单轮或静态场景，且通常忽视多轮交互中的曝光偏差（exposure bias）。为弥补这一空白，论文提出 IMUG-Bench，一个面向 UMMs 多轮交错图文对话的综合评测基准，可联合评估理解与生成能力。IMUG-Bench 包含 Static Spatial、Temporal Causal 和 Hybrid 三类任务，共 3,113 个样本、12,034 个交互轮次，并引入动态理解问题，使评测更贴近真实多轮交互场景。作者在主流开源与闭源 UMMs 上进行大规模实验，系统揭示其能力边界、失败模式，以及生成侧在多轮交互中显著的曝光偏差。进一步地，论文探索 Chain-of-Thought、Self-Verification 和 Best-of-N Sampling 等测试时扩展策略，发现它们能有效提升生成准确率并缓解生成任务中的曝光偏差。",
   "key_points_zh": [
-    "提出 IMUG-Bench，专门评测统一多模态模型（UMMs）在多轮图文交错对话中的理解与生成能力，弥补现有单轮、静态评测的不足。",
-    "基准覆盖 Static Spatial、Temporal Causal、Hybrid 三类任务，包含 3,113 个样本和 12,034 个交互轮次，并支持动态理解问题。",
-    "大规模实验系统比较了主流开源与闭源 UMMs，揭示其在多轮交互中的能力边界、典型失败模式和鲁棒性问题。",
-    "论文发现 UMMs 在生成侧存在明显曝光偏差：前序生成错误会在后续轮次中累积并放大，影响整体交互质量。",
-    "测试时扩展策略如 Chain-of-Thought、Self-Verification 和 Best-of-N Sampling 可提升生成准确率，并在一定程度上缓解多轮生成中的曝光偏差。"
+    "提出 IMUG-Bench，专门评估统一多模态模型（UMMs）在多轮图文交错对话中的理解与生成能力。",
+    "基准覆盖 Static Spatial、Temporal Causal、Hybrid 三类场景，包含 3,113 个样本和 12,034 个交互轮次。",
+    "相比传统单轮或静态评测，IMUG-Bench 引入动态理解问题，更贴近真实世界多轮交互。",
+    "大规模实验发现，当前开源和闭源 UMMs 仍存在明显能力边界与失败模式，尤其在生成侧存在显著 exposure bias。",
+    "Chain-of-Thought、Self-Verification、Best-of-N Sampling 等测试时扩展策略可提升生成准确率并缓解多轮生成中的曝光偏差。"
   ],
   "llm_assessment": {
-    "novelty": 0.52,
-    "problem_significance": 0.5,
-    "potential_impact": 0.42,
-    "paradigm_shift": 0.28,
-    "lasting_value": 0.22,
-    "llm_avg": 0.388,
-    "comment": "IMUG-Bench is a multimodal interaction benchmark with limited connection to production agent harnesses or closed-loop improvement.",
-    "comment_zh": "IMUG-Bench 是多模态交互基准，与生产级智能体 Harness 或闭环改进的联系较弱。"
+    "novelty": 0.25,
+    "problem_significance": 0.2,
+    "potential_impact": 0.18,
+    "paradigm_shift": 0.15,
+    "lasting_value": 0.15,
+    "llm_avg": 0.186,
+    "comment": "This is primarily a multimodal benchmark and offers little reusable infrastructure for agent runtime, governance, or self-improvement.",
+    "comment_zh": "这主要是一个多模态基准，对智能体运行时、治理或自我改进基础设施的贡献很有限。"
   },
   "scores": {
     "topic_relevance": 0.6400000000000001,
     "open_source": 0.2,
     "community_heat": 0.0,
-    "author_reputation": 0.2505165737555528,
+    "author_reputation": 0.34373441375821495,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.388,
+    "llm_assessment": 0.186,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -63,7 +63,7 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": 1,
+    "first_author_h_index": 4,
     "first_author_found": true,
     "first_author_affiliations": [],
     "last_author_h_index": null,

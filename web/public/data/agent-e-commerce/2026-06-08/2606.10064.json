@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.10064",
   "title": "Bittensor Agent Arenas as a Trajectory Primitive: Distilling a Shopping Agent from ShoppingBench Subnet Traces",
-  "title_zh": "将 Bittensor Agent Arenas 作为轨迹原语：从 ShoppingBench Subnet 轨迹中蒸馏购物 Agent",
+  "title_zh": "将 Bittensor Agent Arenas 作为轨迹基元：从 ShoppingBench Subnet 轨迹中蒸馏购物 Agent",
   "authors": [
     "Shardul Bansal",
     "Seth Schilbe",
@@ -16,32 +16,32 @@
     "project_page": null
   },
   "abstract_en": "Small-model agentic post-training is bottlenecked less by the algorithm than by the trajectory substrate it consumes. Leading recipes (RLVR, group-relative RL, rejection-sampled re-SFT) all need multi-turn traces carrying per-trajectory supervision, and the two existing sources fall short: frontier-synthesised data inherits the synthesizer's biases and collapses the long tail, while unfiltered production logs are unjudged and contaminated by shortcut behaviour. We argue that an incentive-aligned agent arena can be engineered to manufacture such trajectories, and demonstrate this on ORO Subnet 15 (SN15), a Bittensor deployment of the ShoppingBench agentic-commerce benchmark. SN15's race mechanism, LLM reasoning judge, and rotating leak-cluster-guarded problem suite yield a corpus with three properties: incentive-aligned diversity, per-trajectory judging, and anti-memorised held-out evaluation. We introduce a structural-quality filter that converts the raw firehose into a trainable corpus by keeping agentic trajectories (the model itself emits the tool calls) and rejecting sub-task trajectories (the model only classifies or narrates over a deterministic search loop), then post-train Qwen3-4B with a recipe matched to the published ShoppingBench SFT-then-GRPO pipeline. On a leak-cluster-guarded held-out partition scored production-strict, the model lifts from the published Qwen3-4B base of 18.0% ASR to 42.7%, within single-problem noise of the synthetic-data SFT-only baseline (43.6%), while training on a fraction of a single day of subnet output. The supervised stack leaves a large pass@8 to pass@1 gap (53.3% vs 34.8%); a per-step teacher-grounded Dr. GRPO reward converts that headroom into process improvement, and we identify the sub-task firehose as the primary lever for closing the gap to the 48.7% SFT+GRPO bar. We release the filter, the corpus splits, and the arena mechanics.",
-  "abstract_zh": "本文指出，小模型 Agent 后训练的主要瓶颈不在算法，而在可用于训练的多轮轨迹数据。现有方法如 RLVR、group-relative RL、rejection-sampled re-SFT 都依赖带有逐轨迹监督的交互轨迹，但 frontier 模型合成数据容易继承偏差并丢失长尾，无过滤的生产日志又缺乏评判且含有捷径行为。作者提出，激励对齐的 Agent arena 可被设计为制造高质量轨迹的基础设施，并在 ORO Subnet 15（SN15）上验证这一思路。SN15 是基于 Bittensor 的 ShoppingBench agentic-commerce benchmark 部署，通过竞赛机制、LLM reasoning judge，以及带 leak-cluster 防护的轮换题集，产生具备激励对齐多样性、逐轨迹评判和防记忆化 held-out 评估的数据。论文提出 structural-quality filter，从原始数据流中保留真正由模型发出工具调用的 agentic trajectories，过滤掉仅在确定性搜索循环上分类或叙述的 sub-task trajectories。随后使用与 ShoppingBench 已发布 SFT-then-GRPO pipeline 匹配的配方对 Qwen3-4B 进行后训练。在 leak-cluster-guarded held-out 分区、production-strict 评分下，模型 ASR 从 Qwen3-4B base 的 18.0% 提升到 42.7%，接近 synthetic-data SFT-only baseline 的 43.6%，且仅使用不到一天的 subnet 输出。进一步分析显示，监督训练仍存在显著 pass@8 到 pass@1 差距；使用逐步 teacher-grounded Dr. GRPO reward 可将该潜力转化为过程改进，而 sub-task firehose 是缩小到 48.7% SFT+GRPO 水平差距的关键。作者发布了过滤器、语料划分和 arena 机制。",
+  "abstract_zh": "本文认为，小模型 Agent 后训练的主要瓶颈不在算法，而在可用于训练的多轮轨迹数据基底。RLVR、group-relative RL、rejection-sampled re-SFT 等方法都依赖带有逐轨迹监督信号的交互轨迹，但现有数据来源存在不足：前沿模型合成数据会继承合成器偏差并削弱长尾覆盖，未过滤的生产日志则缺乏评判且混入捷径行为。作者提出可通过激励对齐的 Agent Arena 系统化生产此类轨迹，并在 ORO Subnet 15（SN15）上验证。SN15 是基于 Bittensor 的 ShoppingBench agentic-commerce benchmark 部署，其竞赛机制、LLM 推理裁判以及带 leak-cluster 防护的轮换题集共同产生具备激励对齐多样性、逐轨迹评判和防记忆化 held-out 评测的数据。论文进一步提出结构质量过滤器，将原始数据流转换为可训练语料：保留模型自主发出工具调用的 agentic trajectories，剔除仅在确定性搜索循环上分类或叙述的 sub-task trajectories。基于与已发布 ShoppingBench SFT-then-GRPO 流程匹配的训练配方，作者对 Qwen3-4B 进行后训练；在 leak-cluster-guarded held-out 划分、production-strict 评分下，ASR 从已发布 Qwen3-4B base 的 18.0% 提升到 42.7%，接近 synthetic-data SFT-only baseline 的 43.6%，且仅使用不到一天的 subnet 输出。监督训练后仍存在显著 pass@8 到 pass@1 差距，Dr. GRPO 的逐步 teacher-grounded reward 可将该潜力转化为过程改进；作者指出 sub-task firehose 是进一步逼近 48.7% SFT+GRPO 水平的关键杠杆，并发布过滤器、语料划分与 Arena 机制。",
   "key_points_zh": [
-    "提出将 Bittensor Agent arena 作为小模型 Agent 后训练的轨迹数据来源，缓解合成数据偏差和生产日志无监督、含捷径的问题。",
-    "基于 ORO Subnet 15 / ShoppingBench 构建轨迹语料，利用竞赛机制、LLM reasoning judge 和 leak-cluster-guarded 题集实现多样性、逐轨迹评判与防泄漏评估。",
-    "设计 structural-quality filter，保留模型自主发出 tool calls 的 agentic trajectories，剔除只执行分类或叙述的 sub-task trajectories。",
-    "用少于一天的 subnet 输出后训练 Qwen3-4B，使 production-strict ASR 从 18.0% 提升到 42.7%，接近 synthetic-data SFT-only baseline 的 43.6%。",
-    "发现监督训练存在 pass@8 到 pass@1 的显著落差，Dr. GRPO 可改善过程质量；sub-task firehose 被认为是进一步接近 SFT+GRPO 上限的关键杠杆。"
+    "提出将 Bittensor 上的 Agent Arena 作为小模型 Agent 后训练的轨迹数据来源，缓解合成数据偏差和生产日志无监督、含捷径行为的问题。",
+    "在 ORO Subnet 15（SN15）中，ShoppingBench 的竞赛机制、LLM reasoning judge 与 leak-cluster-guarded 题集共同生成具备多样性、逐轨迹评判和防泄漏评测特性的轨迹语料。",
+    "设计结构质量过滤器，区分真正由模型自主发出工具调用的 agentic trajectories 与仅执行分类/叙述的 sub-task trajectories，从原始 firehose 中提炼可训练数据。",
+    "使用少于一天的 subnet 输出后训练 Qwen3-4B，在 production-strict held-out 评测上 ASR 从 18.0% 提升到 42.7%，接近 synthetic-data SFT-only baseline 的 43.6%。",
+    "发现监督训练仍有较大 pass@8/pass@1 差距，Dr. GRPO 的逐步 teacher-grounded reward 能改善过程表现，而充分利用 sub-task firehose 是逼近 SFT+GRPO 上限的关键。"
   ],
   "llm_assessment": {
-    "novelty": 0.82,
-    "problem_significance": 0.86,
-    "potential_impact": 0.84,
-    "paradigm_shift": 0.74,
-    "lasting_value": 0.8,
-    "llm_avg": 0.8119999999999999,
-    "comment": "A compelling shopping-agent training-data paper grounded in real agent-arena traces and measurable ShoppingBench gains.",
-    "comment_zh": "这是一篇扎根购物智能体轨迹数据的训练方法论文，并在 ShoppingBench 上展示了明确提升。"
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "Highly relevant agentic-commerce training paper using ShoppingBench arena traces to improve shopping-agent performance, though multi-agent value is mostly through arena competition rather than marketplace role collaboration.",
+    "comment_zh": "Highly relevant agentic-commerce training paper using ShoppingBench arena traces to improve shopping-agent performance, though multi-agent value is mostly through arena competition rather than marketplace role collaboration."
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.45529837524566663,
+    "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.8119999999999999,
+    "llm_assessment": 0.5,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -54,8 +54,8 @@
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": 8,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": [

@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.10156",
   "title": "$τ$-Rec: A Verifiable Benchmark for Agentic Recommender Systems",
-  "title_zh": "τ-Rec：面向 Agentic Recommender Systems 的可验证基准",
+  "title_zh": "τ-Rec：面向智能体推荐系统的可验证基准",
   "authors": [
     "Bharath Sivaram Narasimhan",
     "Karthik R Narasimhan"
@@ -15,32 +15,32 @@
     "project_page": null
   },
   "abstract_en": "As recommender systems transition toward agentic, multi-turn conversational interfaces, evaluation paradigms have struggled to keep pace. Current benchmarks often rely on \"LLM-as-a-judge\" evaluations, which introduce subjectivity, high costs and inconsistency. We present $τ$-Rec, a benchmark for agentic recommender systems that replaces subjective evaluation with verifiable rewards and a reveal-tagged elicitation (RTE) mechanism that controls how task constraints surface during dialogue. By testing agents against structured catalog predicates and employing a pass^k reliability metric, $τ$-Rec provides a systematic test for consistent reasoning. Our evaluation of nine configurations across five model families -- GPT-5.4, Claude Sonnet 4.6, Gemini 2.5 Flash, DeepSeek V4 Flash, Qwen3-32B and GPT-5 mini -- reveals a steep reliability cliff, where even the best model achieves only ~57% at pass^1 and ~38% at pass^4, highlighting a critical gap in current conversational agent deployment. All code and data are publicly available at https://github.com/nbharaths/tau-rec.",
-  "abstract_zh": "随着推荐系统逐渐转向具备智能体能力的多轮对话界面，现有评测范式已难以跟上发展。许多当前基准依赖 “LLM-as-a-judge” 评估，带来主观性、高成本与不一致性。本文提出 τ-Rec，一个面向 agentic recommender systems 的基准，用可验证奖励替代主观评判，并引入 reveal-tagged elicitation（RTE）机制，用于控制任务约束在对话过程中如何显露。τ-Rec 通过结构化 catalog predicates 测试智能体，并采用 pass^k 可靠性指标，系统评估其一致推理能力。作者评测了横跨五个模型家族的九种配置，包括 GPT-5.4、Claude Sonnet 4.6、Gemini 2.5 Flash、DeepSeek V4 Flash、Qwen3-32B 和 GPT-5 mini。结果显示明显的可靠性断崖：即便最佳模型也仅达到约 57% 的 pass^1 和约 38% 的 pass^4，说明当前对话式推荐智能体在部署可靠性上仍存在关键缺口。代码与数据已开源于 https://github.com/nbharaths/tau-rec。",
+  "abstract_zh": "随着推荐系统向智能体化、多轮对话界面演进，现有评测范式已难以匹配其复杂性。许多基准依赖“LLM-as-a-judge”，带来主观性、高成本与不一致问题。本文提出 τ-Rec，一个面向 agentic recommender systems 的基准，用可验证奖励替代主观评审，并引入 reveal-tagged elicitation（RTE）机制，以控制任务约束在对话中逐步显现的方式。τ-Rec 通过结构化目录谓词测试智能体，并采用 pass^k 可靠性指标，系统衡量模型在多轮推荐推理中的一致性。作者评测了来自五个模型家族的九种配置，包括 GPT-5.4、Claude Sonnet 4.6、Gemini 2.5 Flash、DeepSeek V4 Flash、Qwen3-32B 和 GPT-5 mini。结果显示存在显著的可靠性断崖：最佳模型在 pass^1 上仅约 57%，在 pass^4 上约 38%，表明当前对话式推荐智能体距离可靠部署仍有明显差距。代码与数据已开源。",
   "key_points_zh": [
-    "提出 τ-Rec，用可验证奖励替代 LLM-as-a-judge，降低主观性、成本和评估不一致问题。",
-    "设计 reveal-tagged elicitation（RTE）机制，控制用户约束在多轮对话中逐步显露的方式，更贴近真实推荐场景。",
-    "通过结构化 catalog predicates 检查推荐结果是否满足任务约束，并用 pass^k 衡量多次交互下的可靠性。",
-    "在 GPT-5.4、Claude Sonnet 4.6、Gemini 2.5 Flash、DeepSeek V4 Flash、Qwen3-32B、GPT-5 mini 等模型上评测，发现可靠性显著不足。",
-    "最佳模型仅约 57% pass^1、约 38% pass^4，表明当前 agentic conversational recommender 距离稳定部署仍有明显差距。"
+    "提出 τ-Rec，针对多轮、智能体式推荐系统构建可验证基准，避免依赖主观且昂贵的 LLM-as-a-judge 评测。",
+    "引入 reveal-tagged elicitation（RTE）机制，控制用户约束在对话中如何逐步暴露，从而更真实地测试需求澄清与约束满足能力。",
+    "使用结构化 catalog predicates 作为可验证奖励基础，并采用 pass^k 指标评估模型在多次交互中的一致可靠性。",
+    "在 GPT-5.4、Claude Sonnet 4.6、Gemini 2.5 Flash、DeepSeek V4 Flash、Qwen3-32B、GPT-5 mini 等模型上评测后发现，即使最佳模型 pass^1 约 57%、pass^4 约 38%，可靠性仍明显不足。",
+    "结果揭示当前 conversational recommender agents 存在关键部署缺口，尤其是在稳定推理、约束跟踪和多轮一致性方面。"
   ],
   "llm_assessment": {
-    "novelty": 0.85,
-    "problem_significance": 0.9,
-    "potential_impact": 0.88,
-    "paradigm_shift": 0.7,
-    "lasting_value": 0.86,
-    "llm_avg": 0.8380000000000001,
-    "comment": "A strong e-commerce-agent benchmark that addresses verifiable evaluation for conversational recommender reliability.",
-    "comment_zh": "这是一篇有价值的电商智能体推荐评测论文，重点解决对话式推荐可靠性的可验证评估问题。"
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "Strong e-commerce agent evaluation benchmark for conversational recommender systems with verifiable catalog-grounded rewards and clear production relevance.",
+    "comment_zh": "Strong e-commerce agent evaluation benchmark for conversational recommender systems with verifiable catalog-grounded rewards and clear production relevance."
   },
   "scores": {
     "topic_relevance": 0.68,
     "open_source": 0.5,
     "community_heat": 0.6522803944013564,
-    "author_reputation": 0.39342404825616256,
+    "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.8380000000000001,
+    "llm_assessment": 0.5,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -50,11 +50,11 @@
     "has_video_demo": false,
     "hf_listed": true,
     "hf_upvotes": 1,
-    "first_author_h_index": null,
-    "first_author_found": false,
+    "first_author_h_index": 0,
+    "first_author_found": true,
     "first_author_affiliations": [],
-    "last_author_h_index": 5,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": [

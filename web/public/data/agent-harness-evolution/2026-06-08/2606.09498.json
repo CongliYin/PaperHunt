@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.09498",
   "title": "Self-Harness: Harnesses That Improve Themselves",
-  "title_zh": "Self-Harness：能够自我改进的 Agent Harness",
+  "title_zh": "Self-Harness：能够自我改进的智能体 Harness",
   "authors": [
     "Hangfan Zhang",
     "Shao Zhang",
@@ -21,23 +21,23 @@
     "project_page": null
   },
   "abstract_en": "The performance of LLM-based agents is jointly shaped by their base models and the harnesses that mediate their interaction with the environment. Because different models exhibit distinct behaviors, effective harness design is inherently model-specific. Yet agent harnesses are still largely engineered by human experts, a paradigm that scales poorly as modern LLMs become increasingly diverse and rapidly evolving. In this paper, we introduce Self-Harness, a new paradigm in which an LLM-based agent improves its own operating harness, without relying on human engineers or stronger external agents. We operationalize Self-Harness as an iterative loop with three stages: Weakness Mining, which identifies model-specific failure patterns from execution traces; Harness Proposal, which generates diverse yet minimal harness modifications tied to these failures; and Proposal Validation, which accepts candidate edits only after regression testing. We instantiate Self-Harness on Terminal-Bench-2.0 using a minimal initial harness and three base models from diverse families: MiniMax M2.5, Qwen3.5-35B-A3B, and GLM-5. Across all three models, Self-Harness consistently improves performance, with held-out pass rates increasing from 40.5% to 61.9%, 23.8% to 38.1%, and 42.9% to 57.1%, respectively. Qualitative analyses further show that Self-Harness does not simply add generic instructions, but effectively turns model-specific weaknesses into concrete, executable harness changes. These results suggest a path toward LLM-based agents that are not merely shaped by their harnesses, but can also participate in reshaping them.",
-  "abstract_zh": "LLM-based agents 的性能不仅取决于 base model，也受到负责连接模型与环境的 harness 影响。由于不同模型具有不同的行为模式，有效的 harness 设计天然具有模型特异性，但当前大多仍依赖人工专家维护，难以适应 LLM 快速多样化的发展。本文提出 Self-Harness：让 LLM-based agent 在不依赖人工工程师或更强外部 agent 的情况下，改进自身运行 harness。该方法包含三阶段迭代流程：Weakness Mining 从执行轨迹中挖掘模型特定失败模式；Harness Proposal 生成与这些失败相关、尽量最小化且多样的 harness 修改；Proposal Validation 通过回归测试筛选可接受的候选编辑。作者在 Terminal-Bench-2.0 上以最小初始 harness 进行实验，覆盖 MiniMax M2.5、Qwen3.5-35B-A3B 和 GLM-5 三个不同模型家族。结果显示 Self-Harness 在三种模型上均稳定提升 held-out pass rate，分别从 40.5% 提升至 61.9%、23.8% 提升至 38.1%、42.9% 提升至 57.1%。定性分析表明，它并非简单添加通用提示，而是能将模型特定弱点转化为具体可执行的 harness 改动。",
+  "abstract_zh": "LLM-based agent 的性能不仅取决于基础模型，也受到其与环境交互的 harness（运行支架/执行框架）显著影响。由于不同模型具有不同的行为模式，有效的 harness 设计往往具有模型特异性，但当前仍主要依赖人工专家编写，难以适应 LLM 快速演进与多样化的趋势。本文提出 Self-Harness：一种让 LLM-based agent 在不依赖人类工程师或更强外部 agent 的情况下，自主改进自身运行 harness 的新范式。该方法包含三阶段迭代循环：Weakness Mining 从执行轨迹中挖掘模型特定失败模式；Harness Proposal 针对这些失败生成多样但最小化的 harness 修改；Proposal Validation 通过回归测试筛选可接受修改。作者在 Terminal-Bench-2.0 上，以最小初始 harness 和三个不同模型家族的基础模型 MiniMax M2.5、Qwen3.5-35B-A3B、GLM-5 进行验证。结果显示，Self-Harness 在三种模型上均稳定提升 held-out pass rate，分别从 40.5% 提升至 61.9%、23.8% 提升至 38.1%、42.9% 提升至 57.1%。定性分析表明，该方法并非简单添加通用提示，而是能将模型特定弱点转化为具体、可执行的 harness 改动。",
   "key_points_zh": [
-    "提出 Self-Harness 范式：LLM-based agent 无需人工专家或更强外部 agent，即可基于自身失败经验迭代改进 harness。",
-    "方法由三阶段组成：Weakness Mining 挖掘模型特定失败模式，Harness Proposal 生成最小化修改，Proposal Validation 用回归测试防止性能退化。",
-    "在 Terminal-Bench-2.0 上验证了 MiniMax M2.5、Qwen3.5-35B-A3B、GLM-5 三个模型，held-out pass rate 均显著提升。",
-    "实验结果显示提升幅度分别为 40.5%→61.9%、23.8%→38.1%、42.9%→57.1%，说明该方法具有跨模型家族的有效性。",
-    "定性分析表明 Self-Harness 能把模型专属弱点转化为可执行 harness 改动，而不是依赖泛化的提示词堆叠。"
+    "提出 Self-Harness，让 LLM-based agent 无需人类工程师或更强外部 agent，即可基于自身执行经验迭代改进运行 harness。",
+    "方法包含 Weakness Mining、Harness Proposal、Proposal Validation 三步：先挖掘失败模式，再生成最小化修改，最后通过回归测试防止性能退化。",
+    "在 Terminal-Bench-2.0 上，MiniMax M2.5、Qwen3.5-35B-A3B、GLM-5 三个模型的 held-out pass rate 均显著提升。",
+    "实验表明 harness 优化具有明显模型特异性，Self-Harness 能针对不同模型的失败行为生成具体可执行的修改，而非仅添加泛化提示。",
+    "该工作展示了 LLM-based agent 从被 harness 塑造，走向参与重塑自身运行框架的可能路径。"
   ],
   "llm_assessment": {
-    "novelty": 0.9,
+    "novelty": 0.92,
     "problem_significance": 0.92,
-    "potential_impact": 0.9,
-    "paradigm_shift": 0.88,
-    "lasting_value": 0.92,
-    "llm_avg": 0.9040000000000001,
-    "comment": "Self-Harness is an excellent fit for the field because it closes the loop from traces to validated harness modifications.",
-    "comment_zh": "Self-Harness 非常契合该领域，因为它实现了从执行轨迹到经验证 Harness 修改的闭环。"
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.9,
+    "lasting_value": 0.94,
+    "llm_avg": 0.924,
+    "comment": "Outstanding agent-harness evolution paper that closes the loop from trace-mined weaknesses to validated executable harness modifications.",
+    "comment_zh": "这是一篇出色的智能体 harness 演进论文，将轨迹挖掘出的弱点闭环转化为经过验证的可执行 harness 修改。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
@@ -46,7 +46,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.4,
-    "llm_assessment": 0.9040000000000001,
+    "llm_assessment": 0.924,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -59,8 +59,8 @@
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": 0,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": [

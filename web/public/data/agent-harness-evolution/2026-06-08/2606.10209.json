@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.10209",
   "title": "Less Context, Better Agents: Efficient Context Engineering for Long-Horizon Tool-Using LLM Agents",
-  "title_zh": "更少上下文，更强 Agent：面向长程工具调用 LLM Agent 的高效上下文工程",
+  "title_zh": "更少上下文，更好 Agent：面向长程工具调用 LLM Agent 的高效上下文工程",
   "authors": [
     "Abhilasha Lodha",
     "Mahsa Pahlavikhah Varnosfaderani",
@@ -17,23 +17,23 @@
     "project_page": null
   },
   "abstract_en": "Large language models deployed as autonomous agents for enterprise workflows face a key challenge: verbose tool responses from enterprise systems can cause context overflow, stale-state errors, and high inference cost. We study this problem in automated expense itemization in Microsoft Dynamics 365 Finance and Operations using Model Context Protocol tools. We evaluate four GPT-5 configurations on a 50-task hotel expense benchmark: no user model, full conversation history, context pruned to the last 5 tool call/response pairs, and pruning with automated summarization. Results are averaged across 5 independent runs, with the user model held constant for the context-engineering comparison. The no-user-model baseline achieves only 8.0% complete itemization. Full-context retention improves completion to 71.0%, but consumes 1,480,996 tokens and 14.56 hours per benchmark. Pruning to the last 5 tool calls improves completion to 79.0% while reducing token use to 535,274 and runtime to 5.39 hours. Adding summarization achieves the best result: 91.6% complete itemization and 99.64% average amount itemized, with 553,374 tokens and 5.79 hours. We further report confidence intervals, effect-size analysis, sensitivity over pruning and summary windows, failure analysis, results across five expense types grouped into three categories, and cross-model evidence with Claude Sonnet 4.5. These results show that, for this class of enterprise tool-use workflow, selective retention of recent tool interactions plus compact summarization can improve both reliability and efficiency compared with full-history retention.",
-  "abstract_zh": "本文研究企业工作流中自主 LLM Agent 面临的上下文管理问题：企业系统返回的冗长工具响应容易导致上下文溢出、状态陈旧错误和高推理成本。作者以 Microsoft Dynamics 365 Finance and Operations 中的自动费用明细化任务为场景，使用 Model Context Protocol 工具，在 50 个酒店费用任务基准上评估四种 GPT-5 配置：无用户模型、保留完整对话历史、仅保留最近 5 组工具调用/响应、以及在剪枝基础上加入自动摘要。结果在 5 次独立运行上取平均，并在上下文工程对比中保持用户模型不变。无用户模型基线仅达到 8.0% 完整明细化；完整上下文提升至 71.0%，但消耗 1,480,996 tokens 和 14.56 小时。仅保留最近 5 组工具交互将完成率提升至 79.0%，同时将 token 降至 535,274、运行时间降至 5.39 小时。加入摘要后效果最佳：完整明细化率达 91.6%，平均金额明细化比例达 99.64%，仅消耗 553,374 tokens 和 5.79 小时。论文还报告了置信区间、效应量分析、剪枝窗口与摘要窗口敏感性、失败案例分析、五类费用类型分组结果，以及 Claude Sonnet 4.5 的跨模型证据。结果表明，在此类企业工具调用工作流中，选择性保留近期工具交互并结合紧凑摘要，相比完整历史保留能同时提升可靠性与效率。",
+  "abstract_zh": "本文研究企业工作流中自主 LLM Agent 面临的上下文管理问题：企业系统返回的工具响应往往冗长，容易导致上下文溢出、状态过期错误和高推理成本。作者以 Microsoft Dynamics 365 Finance and Operations 中基于 Model Context Protocol tools 的自动差旅费用明细拆分任务为场景，在包含 50 个酒店费用任务的 benchmark 上评估四种 GPT-5 配置：无用户模型、保留完整对话历史、仅保留最近 5 组工具调用/响应、以及在剪枝基础上加入自动摘要。结果显示，无用户模型仅达到 8.0% 完整拆分率；完整上下文提升至 71.0%，但消耗 1,480,996 tokens、耗时 14.56 小时；仅保留最近 5 次工具交互进一步提升至 79.0%，同时将 token 降至 535,274、耗时降至 5.39 小时；剪枝加摘要取得最佳效果，完整拆分率达 91.6%，平均金额拆分率达 99.64%，token 为 553,374、耗时 5.79 小时。论文还报告了置信区间、效应量、剪枝与摘要窗口敏感性、失败案例分析、不同费用类型结果，以及 Claude Sonnet 4.5 的跨模型证据。研究表明，在企业工具调用型长程任务中，选择性保留近期工具交互并结合紧凑摘要，能同时提升可靠性与效率，优于完整历史保留。",
   "key_points_zh": [
-    "核心问题：企业工具响应冗长会让长程 LLM Agent 出现上下文溢出、状态陈旧和高推理成本，尤其影响自动化企业流程。",
-    "实验场景：在 Microsoft Dynamics 365 Finance and Operations 的酒店费用明细化任务中，基于 Model Context Protocol 工具构建 50-task benchmark。",
-    "主要发现：完整上下文并非最优；仅保留最近 5 组工具调用/响应将完成率从 full-context 的 71.0% 提升到 79.0%，同时显著降低 token 和运行时间。",
-    "最佳策略：上下文剪枝加自动摘要达到 91.6% 完整明细化率和 99.64% 平均金额明细化比例，兼顾准确性与效率。",
-    "泛化证据：论文进一步提供置信区间、效应量、窗口敏感性、失败分析、费用类型分组结果，并在 Claude Sonnet 4.5 上验证跨模型趋势。"
+    "问题聚焦于企业级长程工具调用 Agent：冗长工具响应会造成上下文膨胀、状态陈旧和推理成本上升。",
+    "在 Microsoft Dynamics 365 Finance and Operations 的酒店费用明细拆分任务中，完整上下文虽提升成功率，但 token 和运行时间开销极高。",
+    "仅保留最近 5 组工具调用/响应比完整历史更高效且更可靠，完整拆分率从 71.0% 提升到 79.0%。",
+    "剪枝结合自动摘要效果最佳，达到 91.6% 完整拆分率和 99.64% 平均金额拆分率，同时保持较低 token 与时间成本。",
+    "跨 GPT-5 配置与 Claude Sonnet 4.5 的实验支持结论：对企业工具使用工作流而言，少量近期上下文加压缩摘要优于全量历史。"
   ],
   "llm_assessment": {
-    "novelty": 0.6,
-    "problem_significance": 0.8,
+    "novelty": 0.58,
+    "problem_significance": 0.82,
     "potential_impact": 0.72,
-    "paradigm_shift": 0.48,
-    "lasting_value": 0.68,
-    "llm_avg": 0.656,
-    "comment": "A practical enterprise context-engineering study showing measurable reliability and cost benefits, but it remains a narrow workflow-level technique.",
-    "comment_zh": "该研究在企业工具使用场景中展示了上下文裁剪与摘要的可靠性和成本收益，但仍偏向特定工作流技巧。"
+    "paradigm_shift": 0.42,
+    "lasting_value": 0.66,
+    "llm_avg": 0.64,
+    "comment": "Practical enterprise context-engineering work with strong operational relevance, though its contribution is mainly an empirical pruning-and-summary strategy rather than a general harness architecture.",
+    "comment_zh": "这项工作对企业级上下文工程很实用，但主要贡献是剪枝与摘要策略的实证验证，而不是通用 harness 架构。"
   },
   "scores": {
     "topic_relevance": 0.9600000000000001,
@@ -42,7 +42,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.656,
+    "llm_assessment": 0.64,
     "domain_multiplier": 1.0
   },
   "enriched": {

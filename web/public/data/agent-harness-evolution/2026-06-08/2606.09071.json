@@ -20,23 +20,23 @@
     "project_page": null
   },
   "abstract_en": "Large language model (LLM) agents now solve complex tasks through long plan-and-execution traces, yet the ability to locate errors in a completed traces still lags far behind, especially in the \\emph{silent failure} regime. Existing approaches predict suspect steps via classifiers or LLM judges, or recover correct answers via retry, but none feed the intervention outcome back to \\emph{refine the attribution itself}. We propose \\methodname, a method that closes this gap by diagnosing a candidate error step, testing it through controlled replay with a diagnosis-specific patch, and using the verified outcome flip as contrastive evidence to refine the final attribution. Across four localization benchmarks spanning multi-hop reasoning across domains, \\methodname achieves the highest localization accuracy among same-auditor methods across all four benchmarks, with the largest gains on structured tool-use traces, while providing actionable localization even when ground-truth answers are unavailable.",
-  "abstract_zh": "LLM Agent 通过较长的规划与执行轨迹完成复杂任务，但在任务失败且错误不明显的“静默失败”（silent failure）场景中，定位出错步骤仍然困难。现有方法通常依赖分类器、LLM judge 预测可疑步骤，或通过重试恢复正确答案，但没有将干预结果反向用于改进错误归因。本文提出 REFLECT：先诊断候选错误步骤，再通过带有诊断特定补丁的受控回放进行测试，并利用输出是否被成功翻转作为对比证据来细化最终归因。在涵盖跨领域多跳推理的四个定位基准上，REFLECT 在相同 auditor 设置下均取得最高定位准确率，尤其在结构化工具使用轨迹上提升最大；同时，即使缺少 ground-truth answer，也能提供可操作的错误定位。",
+  "abstract_zh": "随着大型语言模型（LLM）Agent 通过较长的规划与执行轨迹解决复杂任务，如何在已完成轨迹中定位错误仍然明显滞后，尤其是在静默失败（silent failure）场景下。现有方法通常依赖分类器或 LLM judge 预测可疑步骤，或通过重试恢复正确答案，但都没有将干预结果反馈给错误归因过程本身。本文提出 REFLECT：先诊断候选错误步骤，再通过带有诊断特定补丁的受控重放进行测试，并利用已验证的结果翻转作为对比证据来修正最终归因。实验覆盖四个跨领域多跳推理定位基准，REFLECT 在相同审计器设置下于全部四个基准上取得最高定位准确率，尤其在结构化工具使用轨迹上提升最明显；即使缺乏真实答案，也能提供可操作的错误定位。",
   "key_points_zh": [
-    "聚焦 LLM Agent 长轨迹中的 silent failure，即最终失败但中间错误步骤难以直接发现的场景。",
-    "REFLECT 将“诊断—补丁干预—受控回放—结果翻转验证”闭环引入错误归因，而非仅静态预测可疑步骤。",
-    "方法利用干预后结果是否改善作为 contrastive evidence，进一步精炼最终的错误步骤定位。",
-    "在四个跨领域多跳推理定位基准上，REFLECT 相比同类 auditor 方法取得最高 localization accuracy。",
-    "在结构化 tool-use traces 上收益最大，并且在没有 ground-truth answers 时仍可给出可操作的定位结果。"
+    "聚焦 LLM Agent 长轨迹中的静默失败问题：最终结果错误但中间步骤缺乏显式报错，导致错误定位困难。",
+    "REFLECT 将“诊断候选错误步骤—打补丁受控重放—利用结果翻转修正归因”串联起来，把干预结果纳入错误归因闭环。",
+    "不同于仅预测可疑步骤的 classifier 或 LLM judge，也不同于只为得到正确答案而 retry 的方法，REFLECT 关注验证并改进错误 attribution 本身。",
+    "在四个跨领域多跳推理 localization benchmark 上，REFLECT 在 same-auditor 设置下均取得最高定位准确率。",
+    "方法在结构化 tool-use traces 上收益最大，并且在没有 ground-truth answer 的情况下仍能输出可操作的错误定位信息。"
   ],
   "llm_assessment": {
-    "novelty": 0.8,
-    "problem_significance": 0.84,
+    "novelty": 0.82,
+    "problem_significance": 0.86,
     "potential_impact": 0.82,
-    "paradigm_shift": 0.7,
-    "lasting_value": 0.83,
-    "llm_avg": 0.798,
-    "comment": "REFLECT is highly relevant because it uses replay and intervention outcomes to improve error attribution in agent execution traces.",
-    "comment_zh": "REFLECT 高度相关，因为它利用回放和干预结果来改进智能体执行轨迹中的错误归因。"
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8119999999999999,
+    "comment": "Strong trace-diagnosis work that uses controlled replay and intervention outcomes to improve error attribution in long agent executions.",
+    "comment_zh": "该文通过受控回放和干预结果来改进长程智能体执行中的错误归因，是很强的轨迹诊断工作。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
@@ -45,7 +45,7 @@
     "author_reputation": 0.36560162063732243,
     "venue_signal": 0.0,
     "generality": 0.4,
-    "llm_assessment": 0.798,
+    "llm_assessment": 0.8119999999999999,
     "domain_multiplier": 1.0
   },
   "enriched": {

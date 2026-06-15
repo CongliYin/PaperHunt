@@ -14,32 +14,32 @@
     "project_page": null
   },
   "abstract_en": "BCI-to-agent pipelines turn decoded neural activity into an authorization channel for tool-use agents, exposing a new attack surface we call \\emph{brain-prompt injection}: signal-side perturbations, context-only injections, and adaptive dual-decoder attacks can all change the routed action while EEG-side or text-side monitors remain blind. Route safety in this stack depends on what the audit log can observe, not on decoder accuracy or agreement alone. We define a Route-Safety Audit Contract: a minimal log schema, denominator hierarchy, and endpoint specification, and prove an audit-schema separation theorem together with a C3 attacked-dependence decomposition; clean agreement and marginal robustness do not identify the joint term that controls C3 routing. As a calibration layer on top of the contract, we apply split-conformal calibration to a non-oracle EEG confirmation channel and report the resulting false-accept frontier under an explicit threat-archetype matrix. We instantiate the contract on EEGMMI native left/right command-control over 5{,}400 events, harmless tool stubs, and seed/case denominators. Provenance blocks C2 routes ($0.000$); agreement-plus-provenance routes C3 flips ($1.000$); confirmation-plus-provenance routes them ($0.000$). The conformal frontier reaches FAR $0.000$ at clean utility $0.150$ for $α=.005$ and FAR $0.119$ at clean utility $0.452$ for $α=.10$ under acquisition isolation; an attacker-controllable confirmation channel breaks the bound to $\\approx\\!1$. Subject-cluster bootstrap confirms these intervals on $60$ subjects; cross-architecture (TinyEEGNet, EEGNetV4) and capacity-sweep results show within-regime saturation. Mediation and confirmation reduce risk; they are not intent certificates.",
-  "abstract_zh": "本文研究 BCI-to-agent 管线中的新攻击面：brain-prompt injection，即攻击者通过神经信号侧扰动、仅上下文注入或自适应双解码器攻击，改变工具调用 Agent 的路由动作，同时绕过 EEG 侧或文本侧监控。作者指出，该栈的路由安全不应只依赖解码器准确率或一致性，而取决于审计日志实际可观测的内容。论文提出 Route-Safety Audit Contract，包括最小日志模式、分母层级与端点规范，并证明审计模式分离定理及 C3 攻击依赖分解，说明干净一致性与边际鲁棒性无法识别控制 C3 路由的联合项。在此基础上，作者将 split-conformal calibration 用于非 oracle 的 EEG 确认通道，并在显式威胁原型矩阵下报告 false-accept frontier。实验在 EEGMMI 原生左右命令控制任务上进行，包含 5,400 个事件、无害工具桩以及 seed/case 分母。结果显示，provenance 可完全阻断 C2 路由，agreement-plus-provenance 会完全路由 C3 翻转，而 confirmation-plus-provenance 可阻断这些翻转。保形前沿在 acquisition isolation 下，α=.005 时达到 FAR 0.000、clean utility 0.150；α=.10 时 FAR 0.119、clean utility 0.452；若确认通道可被攻击者控制，则边界失效至约 1。60 名受试者的 subject-cluster bootstrap、跨架构 TinyEEGNet/EEGNetV4 与容量扫描均支持结论：mediation 与 confirmation 可降低风险，但不能作为意图证书。",
+  "abstract_zh": "本文研究 BCI-to-agent 管线中的新型安全风险：当解码后的神经活动被用作工具调用 Agent 的授权通道时，攻击者可通过信号侧扰动、仅上下文注入、以及自适应双解码器攻击改变最终路由动作，而 EEG 侧或文本侧监控器可能无法察觉。作者提出 Route-Safety Audit Contract，定义最小审计日志模式、分母层级与端点规范，并证明审计模式分离定理及 C3 attacked-dependence decomposition，指出仅依赖干净样本一致性或边际鲁棒性无法识别控制 C3 路由风险的联合项。在此基础上，论文用 split-conformal calibration 校准非 oracle EEG 确认通道，并在显式威胁类型矩阵下报告 false-accept frontier。实验基于 EEGMMI 原生左右指令控制任务、5,400 个事件、无害工具桩以及 seed/case 分母。结果显示，provenance 可阻断 C2 路由，agreement-plus-provenance 无法阻断 C3 翻转，而 confirmation-plus-provenance 可有效阻断；但若确认通道可被攻击者控制，保形校准界限会失效。",
   "key_points_zh": [
-    "提出 brain-prompt injection 概念，覆盖信号侧扰动、上下文注入与自适应双解码器攻击，可在监控不可见时改变 BCI-LLM Agent 的工具路由。",
-    "定义 Route-Safety Audit Contract，包含最小日志 schema、分母层级和 endpoint 规范，强调安全性取决于审计可观测性，而非解码器准确率或一致性。",
-    "理论上证明 audit-schema separation theorem 与 C3 attacked-dependence decomposition，指出 clean agreement 和 marginal robustness 无法刻画控制 C3 路由风险的联合依赖项。",
-    "在 EEGMMI 5,400 个事件上验证：provenance 阻断 C2，agreement-plus-provenance 无法阻断 C3，而 confirmation-plus-provenance 可将 C3 翻转路由率降至 0。",
-    "split-conformal calibration 可给出 false-accept frontier，但仅在 acquisition isolation 等假设下有效；若确认通道受攻击者控制，FAR 边界会接近失效。"
+    "提出 brain-prompt injection 概念，涵盖信号侧扰动、上下文注入和自适应双解码器攻击，揭示 BCI-LLM Agent 授权链路的新攻击面。",
+    "定义 Route-Safety Audit Contract，包括最小日志 schema、分母层级和 endpoint specification，强调路由安全取决于审计日志可观测内容。",
+    "理论上证明 audit-schema separation theorem 与 C3 attacked-dependence decomposition，说明干净一致性和边际鲁棒性不足以刻画 C3 路由翻转风险。",
+    "在 EEGMMI 的 5,400 个事件上验证：provenance 阻断 C2，agreement-plus-provenance 对 C3 翻转失效，而 confirmation-plus-provenance 可将 C3 路由降为 0。",
+    "split-conformal calibration 可给出 false-accept frontier，但前提是确认通道具备 acquisition isolation；若确认通道被攻击者控制，误接受风险可接近 1。"
   ],
   "llm_assessment": {
-    "novelty": 0.78,
-    "problem_significance": 0.72,
-    "potential_impact": 0.64,
+    "novelty": 0.76,
+    "problem_significance": 0.68,
+    "potential_impact": 0.55,
     "paradigm_shift": 0.6,
-    "lasting_value": 0.66,
-    "llm_avg": 0.68,
-    "comment": "A rigorous route-safety audit proposal for BCI-linked tool agents, valuable for security but specialized to a narrow agent interface.",
-    "comment_zh": "该文针对 BCI 工具代理提出严谨的路由安全审计方案，安全价值较高但应用界面较窄。"
+    "lasting_value": 0.58,
+    "llm_avg": 0.634,
+    "comment": "Technically interesting route-safety audit work for a niche BCI-agent setting, with strong governance ideas but limited general production applicability.",
+    "comment_zh": "该文针对小众 BCI 智能体场景提出了有技术价值的路由安全审计方法，治理思想较强但通用生产适用性有限。"
   },
   "scores": {
-    "topic_relevance": 0.88,
+    "topic_relevance": 0.92,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.3,
+    "author_reputation": 0.1762914343888821,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.68,
+    "llm_assessment": 0.634,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -49,11 +49,11 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": null,
-    "first_author_found": false,
+    "first_author_h_index": 1,
+    "first_author_found": true,
     "first_author_affiliations": [],
-    "last_author_h_index": null,
-    "last_author_found": false,
+    "last_author_h_index": 1,
+    "last_author_found": true,
     "last_author_affiliations": []
   },
   "figures": [
