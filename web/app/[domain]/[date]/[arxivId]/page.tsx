@@ -35,7 +35,14 @@ export default async function DetailPage({ params }: Params) {
   return (
     <main className="shell">
       <header className="detail-header">
-        <Suspense fallback={<Link className="back" href="/">Back to Paper Hunt</Link>}>
+        <Suspense
+          fallback={
+            <Link className="back" href="/">
+              <span aria-hidden="true">←</span>
+              <span>Back to Paper Hunt</span>
+            </Link>
+          }
+        >
           <DetailBackLink />
         </Suspense>
         <div className="detail-meta-row">

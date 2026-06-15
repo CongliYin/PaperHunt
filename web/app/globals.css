@@ -214,7 +214,32 @@ select {
   text-transform: uppercase;
 }
 
-.date-range-fields input {
+.date-shortcuts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.date-shortcuts button {
+  min-height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8f8fa;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.date-shortcuts button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: #fff;
+}
+
+.date-range-fields input,
+.date-range-fields select {
   width: 100%;
   min-height: 40px;
   border: 1px solid var(--line);
@@ -227,7 +252,8 @@ select {
   font-variant-numeric: tabular-nums;
 }
 
-.date-range-fields input:focus {
+.date-range-fields input:focus,
+.date-range-fields select:focus {
   outline: 3px solid rgba(0, 113, 227, 0.18);
   outline-offset: 2px;
   border-color: var(--accent);
@@ -388,22 +414,49 @@ select {
 }
 
 .detail-header {
+  position: relative;
   display: grid;
   gap: 18px;
-  padding: 10px 0 32px;
+  padding: 56px 0 32px;
   border-bottom: 1px solid var(--line);
 }
 
 .back {
-  width: fit-content;
-  color: var(--accent);
+  position: absolute;
+  top: 4px;
+  left: clamp(-96px, -7vw, -44px);
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--ink);
+  padding: 8px 14px 8px 10px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
   text-decoration: none;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.back span:first-child {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
 }
 
 .back:hover {
+  border-color: var(--accent);
   color: var(--accent-hover);
+  background: #fff;
+  transform: translateX(-2px);
 }
 
 .detail-meta-row {
@@ -725,6 +778,14 @@ select {
   .topbar {
     gap: 28px;
     padding-bottom: 28px;
+  }
+
+  .detail-header {
+    padding-top: 58px;
+  }
+
+  .back {
+    left: 0;
   }
 
   .brand {

@@ -114,6 +114,7 @@ export function PaperBrowser({ index, initialList, initialDomain, initialDates, 
   });
   const latestDate = dates[0] || "";
   const oldestDate = dates[dates.length - 1] || "";
+  const dateOptions = useMemo(() => normalizeDates([...dates, ...selectedDates]).sort((a, b) => a.localeCompare(b)), [dates, selectedDates]);
   const selectedOldestDate = selectedDates[selectedDates.length - 1] || oldestDate;
   const selectedLatestDate = selectedDates[0] || latestDate;
   const returnHref = homeHref(domain, selectedDates, sortMode);
@@ -139,16 +140,10 @@ export function PaperBrowser({ index, initialList, initialDomain, initialDates, 
               value={domain}
               onChange={(event) => {
                 const nextDomain = event.target.value;
-                const nextDate =
-                  index.entries
-                    .filter((entry) => entry.domain === nextDomain)
-                    .map((entry) => entry.date)
-                    .sort((a, b) => b.localeCompare(a))[0] || "";
                 setDomain(nextDomain);
-                setSelectedDates(nextDate ? [nextDate] : []);
                 setDateMenuOpen(false);
-                updateBrowserUrl(nextDomain, nextDate ? [nextDate] : [], sortMode);
-                void loadDates(nextDomain, nextDate ? [nextDate] : []);
+                updateBrowserUrl(nextDomain, selectedDates, sortMode);
+                void loadDates(nextDomain, selectedDates);
               }}
             >
               {index.domains.map((item) => (
@@ -171,26 +166,43 @@ export function PaperBrowser({ index, initialList, initialDomain, initialDates, 
               </button>
               {dateMenuOpen ? (
                 <div className="date-menu">
-                  <div className="date-range-fields">
+                  <div className="date-shortcuts" aria-label="Quick date ranges">
+                    <button type="button" onClick={() => applyDates(latestDate ? [latestDate] : [])}>
+                      Latest
+                    </button>
+                    <button type="button" onClick={() => applyDates(dates.slice(0, 3))}>
+                      Last 3
+                    </button>
+                    <button type="button" onClick={() => applyDates(dates)}>
+                      All
+                    </button>
+                  </div>
+                  <div className="date-range-fields date-range-selects">
                     <label>
                       <span>From</span>
-                      <input
-                        type="date"
-                        min={oldestDate}
-                        max={latestDate}
+                      <select
                         value={selectedOldestDate}
                         onChange={(event) => applyDateRange(event.target.value, selectedLatestDate)}
-                      />
+                      >
+                        {dateOptions.map((date) => (
+                          <option key={date} value={date}>
+                            {date}
+                          </option>
+                        ))}
+                      </select>
                     </label>
                     <label>
                       <span>To</span>
-                      <input
-                        type="date"
-                        min={oldestDate}
-                        max={latestDate}
+                      <select
                         value={selectedLatestDate}
                         onChange={(event) => applyDateRange(selectedOldestDate, event.target.value)}
-                      />
+                      >
+                        {dateOptions.map((date) => (
+                          <option key={date} value={date}>
+                            {date}
+                          </option>
+                        ))}
+                      </select>
                     </label>
                   </div>
                   <div className="date-range-note">{selectedDates.length} dates selected</div>

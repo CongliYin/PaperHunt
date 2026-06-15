@@ -10,7 +10,8 @@ export function DetailBackLink() {
 
   return (
     <Link className="back" href={href}>
-      Back to Paper Hunt
+      <span aria-hidden="true">←</span>
+      <span>Back to Paper Hunt</span>
     </Link>
   );
 }
