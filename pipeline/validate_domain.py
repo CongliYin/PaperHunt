@@ -51,6 +51,8 @@ def main() -> None:
     for key in ("positive", "negative_strong", "weak_only_positive", "strong_signals"):
         if key not in filters:
             errors.append(f"filter_keywords.yaml missing {key}")
+    if "hard_negative" in filters and not isinstance(filters["hard_negative"], list):
+        errors.append("filter_keywords.yaml hard_negative must be a list when present")
 
     tiers = topics.get("tiers")
     if not isinstance(tiers, dict) or not tiers:
@@ -88,4 +90,3 @@ def _exit(errors: list[str]) -> None:
 
 if __name__ == "__main__":
     main()
-

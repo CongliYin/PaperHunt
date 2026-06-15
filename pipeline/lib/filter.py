@@ -2,8 +2,9 @@
 
 判定规则：
 1. 标题或摘要中命中至少一个 positive 关键词 → 进入候选；
-2. 命中 negative_strong 中任一词 → 剔除（即使命中正向词）；
-3. 弱信号守门：如果 positive 命中的全部都是 weak_only_positive 中的词，
+2. 命中 hard_negative 中任一词 → 剔除（即使命中强正向词）；
+3. 命中 negative_strong 中任一词，且没有 strong_signals → 剔除；
+4. 弱信号守门：如果 positive 命中的全部都是 weak_only_positive 中的词，
    且摘要里没有任何 strong_signals，则剔除。
 """
 import re
@@ -80,20 +81,28 @@ def filter_papers_by_keywords(papers: List[dict], filter_config: dict, *, verbos
         通过筛选的论文列表（顺序保留）
     """
     positive = filter_config.get("positive", [])
+    hard_negative = filter_config.get("hard_negative", [])
     negative_strong = filter_config.get("negative_strong", [])
     weak_only = filter_config.get("weak_only_positive", [])
     strong_signals = filter_config.get("strong_signals", [])
 
     pos_pat = _build_pattern(positive)
+    hard_neg_pat = _build_pattern(hard_negative) if hard_negative else None
     neg_pat = _build_pattern(negative_strong) if negative_strong else None
     weak_pat = _build_pattern(weak_only)
     strong_pat = _build_pattern(strong_signals)
 
     kept = []
-    rejected_count = {"no_positive": 0, "negative": 0, "weak_only": 0}
+    rejected_count = {"no_positive": 0, "hard_negative": 0, "negative": 0, "weak_only": 0}
 
     for paper in papers:
         text = f"{paper.get('title', '')} \n {paper.get('abstract', '')}"
+
+        if hard_neg_pat:
+            hard_neg_hits = _find_matches(text, hard_neg_pat)
+            if hard_neg_hits:
+                rejected_count["hard_negative"] += 1
+                continue
 
         pos_hits = _find_matches(text, pos_pat)
         if not pos_hits:
@@ -125,6 +134,7 @@ def filter_papers_by_keywords(papers: List[dict], filter_config: dict, *, verbos
         print(
             f"  [filter] kept={len(kept)} / total={len(papers)} "
             f"(rejected: no_positive={rejected_count['no_positive']}, "
+            f"hard_negative={rejected_count['hard_negative']}, "
             f"negative={rejected_count['negative']}, "
             f"weak_only={rejected_count['weak_only']})"
         )

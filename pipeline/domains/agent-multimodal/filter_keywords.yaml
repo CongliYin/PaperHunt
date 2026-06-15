@@ -206,6 +206,28 @@ positive:
   - "video question answering"
   - "visual question answering"
 
+hard_negative:
+  # CAD/manufacturing agents are excluded from this feed; the product focus is
+  # realtime voice/video interaction, visual grounding, commerce, and diagnosis.
+  - "CAD"
+  - "computer-aided design"
+  - "engineering drawings"
+  - "manufacturing"
+  - "drawing-to-code"
+  - "text-to-code"
+  - "CAD generation"
+  - "CAD sandbox"
+
+  # HCI/education studies about voice persona perception are not realtime voice
+  # agent systems work.
+  - "K-12"
+  - "teachers"
+  - "education"
+  - "group learning"
+  - "persona design"
+  - "between-subjects"
+  - "mixed-methods study"
+
 negative_strong:
   # Pure visual tasks and vertical CV applications.
   - "image classification"
