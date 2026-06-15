@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.14249",
+  "title": "HarnessX: A Composable, Adaptive, and Evolvable Agent Harness Foundry",
+  "title_zh": "HarnessX：可组合、自适应、可演化的 Agent Harness 工厂",
+  "authors": [
+    "Tingyang Chen",
+    "Shuo Lu",
+    "Kang Zhao",
+    "Weicheng Meng",
+    "Hanlin Teng",
+    "Tianhao Li",
+    "Chao Li",
+    "Xule Liu",
+    "Jian Liang",
+    "Zhizhong Zhang",
+    "Yuan Xie",
+    "Heng Qu",
+    "Kun Shao",
+    "Jian Luan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-12T08:27:11Z",
+  "abs_url": "https://arxiv.org/abs/2606.14249v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.14249",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "AI agent performance depends critically on the runtime harness, comprising the prompts, tools, memory, and control flow that mediate how a model observes, reasons, and acts. Yet today's harnesses remain largely hand-crafted and static: each new model or task still demands bespoke scaffolding, and the rich traces produced during execution are rarely distilled back into systematic improvement. We introduce HarnessX, a foundry for composable, adaptive, and evolvable agent harnesses. HarnessX assembles typed harness primitives via a substitution algebra, adapts them through AEGIS, a trace-driven multi-agent evolution engine grounded in an operational mirror between symbolic adaptation and reinforcement learning, and closes the harness-model loop by turning trajectories into both harness updates and model training signal. Across five benchmarks (ALFWorld, GAIA, WebShop, tau^3-Bench, and SWE-bench Verified), HarnessX yields an average gain of +14.5% (up to +44.0%), with gains largest where baselines are lowest. These results suggest that agent progress need not come from model scaling alone: composing and evolving runtime interfaces from execution feedback is an actionable and complementary lever. The complete codebase will be open-sourced in a future release.",
+  "abstract_zh": "AI agent 的性能高度依赖运行时 harness，即由 prompts、tools、memory 与 control flow 构成的执行支架，用于调节模型如何观察、推理与行动。然而，现有 harness 多为人工设计且静态固定：每个新模型或任务往往需要定制化搭建，执行过程中产生的丰富 traces 也很少被系统性地反哺改进。本文提出 HarnessX，一个面向可组合、自适应、可演化 agent harness 的 foundry。HarnessX 通过 substitution algebra 组合类型化 harness primitives，并借助 AEGIS——一种 trace-driven multi-agent evolution engine——对其进行自适应优化；AEGIS 基于 symbolic adaptation 与 reinforcement learning 之间的 operational mirror。HarnessX 还通过将 trajectories 同时转化为 harness updates 与 model training signal，闭合 harness-model loop。在 ALFWorld、GAIA、WebShop、tau^3-Bench 和 SWE-bench Verified 五个基准上，HarnessX 平均带来 +14.5% 性能提升，最高达 +44.0%，且在 baseline 较低的任务上收益最大。结果表明，agent 能力提升不必仅依赖模型规模扩展；利用执行反馈来组合并演化运行时接口，是一条可行且互补的路径。",
+  "key_points_zh": [
+    "提出 HarnessX，将 prompts、tools、memory、control flow 等 harness 组件抽象为类型化 primitives，并通过 substitution algebra 进行可组合装配。",
+    "引入 AEGIS，一种基于执行 traces 的 multi-agent evolution engine，用于自动适配和优化 harness，减少人工手写静态支架的依赖。",
+    "方法强调 harness-model loop：将 agent trajectories 同时用于更新 harness，并转化为 model training signal，从而让运行时接口与模型共同改进。",
+    "在 ALFWorld、GAIA、WebShop、tau^3-Bench、SWE-bench Verified 五个 benchmark 上平均提升 +14.5%，最高提升 +44.0%。",
+    "实验显示，性能较弱的 baseline 往往获得更大收益，说明 harness 演化是模型 scaling 之外提升 agent 能力的重要杠杆。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.92,
+    "problem_significance": 0.95,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.88,
+    "lasting_value": 0.94,
+    "llm_avg": 0.924,
+    "comment": "A highly relevant agent-harness paper proposing composable runtime primitives and trace-driven self-improvement loops.",
+    "comment_zh": "这是一篇高度契合智能体基础设施方向的工作，提出了可组合运行时原语和基于轨迹的自进化闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.2,
+    "community_heat": 0.8659745638428135,
+    "author_reputation": 0.543099442533317,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.924,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 33,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 15,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14249/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14249/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.97
+    }
+  ]
+}

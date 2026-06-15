@@ -1,0 +1,363 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-06-12",
+  "generated_at": "2026-06-15T22:25:52Z",
+  "papers": [
+    {
+      "arxiv_id": "2606.14249",
+      "title": "HarnessX: A Composable, Adaptive, and Evolvable Agent Harness Foundry",
+      "title_zh": "HarnessX：可组合、自适应、可演化的 Agent Harness 工厂",
+      "authors": [
+        "Tingyang Chen",
+        "Shuo Lu",
+        "Kang Zhao",
+        "Weicheng Meng",
+        "Hanlin Teng",
+        "Tianhao Li",
+        "Chao Li",
+        "Xule Liu",
+        "Jian Liang",
+        "Zhizhong Zhang",
+        "Yuan Xie",
+        "Heng Qu",
+        "Kun Shao",
+        "Jian Luan"
+      ],
+      "total_score": 0.7646537003188065,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.924,
+        "other": 0.45151233439602184
+      },
+      "tags": [
+        "HF Daily ★33",
+        "Code soon",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "用执行轨迹自动演化Agent运行支架",
+      "detail_file": "agent-harness-evolution/2026-06-12/2606.14249.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14249/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.14154",
+      "title": "SkillMutator: Benchmarking and Defending Language-and-Code Cross-modal Attacks on LLM Agent Skills",
+      "title_zh": "SkillMutator：面向 LLM Agent Skills 的语言-代码跨模态攻击基准与防御",
+      "authors": [
+        "Youngduk Kim",
+        "Minkyoo Song",
+        "Seungwon Shin"
+      ],
+      "total_score": 0.6804000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8280000000000001,
+        "other": 0.2666666666666667
+      },
+      "tags": [
+        "Code soon",
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "首个 Agent Skills 跨模态攻击基准",
+      "detail_file": "agent-harness-evolution/2026-06-12/2606.14154.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14154/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.14239",
+      "title": "SkillAudit: Ground-Truth-Free Skill Evolution via Paired Trajectory Auditing",
+      "title_zh": "SkillAudit：通过成对轨迹审计实现无真实标签的技能演化",
+      "authors": [
+        "Haowen Gao",
+        "Haoran Chen",
+        "Can Wang",
+        "Shasha Guo",
+        "Liang Pang",
+        "Zhaoyang Liu",
+        "Huawei Shen",
+        "Xueqi Cheng"
+      ],
+      "total_score": 0.6778000000000002,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8860000000000001,
+        "other": 0.2
+      },
+      "tags": [
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "无需标签，通过轨迹对比自动改进Agent技能",
+      "detail_file": "agent-harness-evolution/2026-06-12/2606.14239.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14239/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.14470",
+      "title": "GitOfThoughts: Version-Controlled Reasoning and Agent Memory You Can Replay, Diff, and Merge",
+      "title_zh": "GitOfThoughts：可回放、可 Diff、可合并的版本控制式推理与 Agent 记忆",
+      "authors": [
+        "Pavan C Shekar",
+        "Abhishek H S",
+        "Aswanth Krishnan"
+      ],
+      "total_score": 0.5978000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.726,
+        "other": 0.2
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "用 Git 管理推理，提升审计而非准确率",
+      "detail_file": "agent-harness-evolution/2026-06-12/2606.14470.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14470/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.14571",
+      "title": "StreamMemBench: Streaming Evaluation of Agent Memory for Future-Oriented Assistance",
+      "title_zh": "StreamMemBench：面向未来辅助的智能体记忆流式评测",
+      "authors": [
+        "Guanming Liu",
+        "Yuqi Ren",
+        "Hansu Gu",
+        "Peng Zhang",
+        "Weihang Wang",
+        "Jiahao Liu",
+        "Ning Gu",
+        "Tun Lu"
+      ],
+      "total_score": 0.5967000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.5940000000000001,
+        "other": 0.275
+      },
+      "tags": [
+        "GitHub",
+        "session context memory"
+      ],
+      "tldr_zh": "评测智能体记忆能否服务未来任务",
+      "detail_file": "agent-harness-evolution/2026-06-12/2606.14571.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14571/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.14302",
+      "title": "Retrospective Progress-Aware Self-Refinement for LLM Agent Training",
+      "title_zh": "面向 LLM Agent 训练的回顾式进展感知自我优化",
+      "authors": [
+        "Xinbei Ma",
+        "Congmin Zheng",
+        "Jiyang Qiu",
+        "Jiale Hong",
+        "Yao Yao",
+        "Xiangmou Qu",
+        "Jiaxin Yin",
+        "Xingyu Lou",
+        "Jun Wang",
+        "Weiwen Liu",
+        "Weinan Zhang",
+        "Zhuosheng Zhang",
+        "Hai Zhao"
+      ],
+      "total_score": 0.5902000000000001,
+      "scores": {
+        "topic_relevance": 0.7600000000000001,
+        "llm_assessment": 0.7540000000000001,
+        "other": 0.2
+      },
+      "tags": [
+        "training and rollout loops"
+      ],
+      "tldr_zh": "让Agent回顾轨迹学习任务进展感知",
+      "detail_file": "agent-harness-evolution/2026-06-12/2606.14302.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14302/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.14581",
+      "title": "CARE: Controlling LLM-Generated Policies through Auditable Review of Evidence in Scientific Experimentation",
+      "title_zh": "CARE：通过科学实验中可审计的证据审查控制 LLM 生成策略",
+      "authors": [
+        "Guanyu Liu",
+        "Weiyi Kong",
+        "Zeyu Wang",
+        "Boer Zhang",
+        "Baiqing Li",
+        "Peiyu Zhang",
+        "Tianyu Shi"
+      ],
+      "total_score": 0.5841082880689193,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.774,
+        "other": 0.10636096022973106
+      },
+      "tags": [
+        "observability governance security"
+      ],
+      "tldr_zh": "用可审计证据门控安全利用 LLM 优化实验",
+      "detail_file": "agent-harness-evolution/2026-06-12/2606.14581.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14581/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.14672",
+      "title": "Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows",
+      "title_zh": "面向 LLM-Agent 工作流中并行分支的直接潜空间合成",
+      "authors": [
+        "Shikun Liu",
+        "Mufei Li",
+        "Dongqi Fu",
+        "Haoyu Wang",
+        "Yinglong Xia",
+        "Hong Li",
+        "Hong Yan",
+        "Pan Li"
+      ],
+      "total_score": 0.5744,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.808,
+        "other": 0.2
+      },
+      "tags": [
+        "planning and policy"
+      ],
+      "tldr_zh": "直接用并行分支KV缓存高效合成",
+      "detail_file": "agent-harness-evolution/2026-06-12/2606.14672.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14672/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13994",
+      "title": "Hidden in Plain Sight: Benchmarking Agent Safety Against Decomposition Attacks with DECOMPBENCH",
+      "title_zh": "Hidden in Plain Sight：用 DECOMPBENCH 基准评测 Agent 面对分解攻击的安全性",
+      "authors": [
+        "Vikhyath Kothamasu",
+        "Virginia Smith",
+        "Chhavi Yadav"
+      ],
+      "total_score": 0.5178000000000001,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.7260000000000001,
+        "other": 0.2
+      },
+      "tags": [
+        "planning and policy"
+      ],
+      "tldr_zh": "DeCompBench揭示Agent易被分解攻击绕过",
+      "detail_file": "agent-harness-evolution/2026-06-12/2606.13994.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13994/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.14695",
+      "title": "Persona-Pruner: Sculpting Lightweight Models for Role-Playing",
+      "title_zh": "Persona-Pruner：为角色扮演雕刻轻量级模型",
+      "authors": [
+        "Jinsu Kim",
+        "Jihoon Tack",
+        "Noah Lee",
+        "Jongheon Jeong"
+      ],
+      "total_score": 0.46340000000000003,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.378,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "judge reward verifier"
+      ],
+      "tldr_zh": "为单一角色剪出专属轻量子网络",
+      "detail_file": "agent-harness-evolution/2026-06-12/2606.14695.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14695/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13995",
+      "title": "Dialogue SWE-Bench: A Benchmark for Dialogue-Driven Coding Agents",
+      "title_zh": "Dialogue SWE-Bench：面向对话驱动编程智能体的基准",
+      "authors": [
+        "Brendan King",
+        "Jeffrey Flanigan"
+      ],
+      "total_score": 0.4547000000000001,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.554,
+        "other": 0.10833333333333334
+      },
+      "tags": [
+        "agent environment data services"
+      ],
+      "tldr_zh": "用对话评测编程智能体解题能力",
+      "detail_file": "agent-harness-evolution/2026-06-12/2606.13995.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13995/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.14607",
+      "title": "Empowering Student Debugging in Parallel Programming with Execution Traces and Large Language Models",
+      "title_zh": "用执行轨迹与大语言模型增强学生并行编程调试能力",
+      "authors": [
+        "God'salvation F. Oguibe",
+        "Vinodh Kumaran Jayakumar",
+        "Tongping Liu",
+        "Andrew Lan",
+        "Wei Wang"
+      ],
+      "total_score": 0.44710331475111065,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.31,
+        "other": 0.11367771583703525
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "ParaView结合LLM辅助并发程序调试教学",
+      "detail_file": "agent-harness-evolution/2026-06-12/2606.14607.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14607/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.14278",
+      "title": "Does the Judge Prefer English? Evaluating Language-Switching Invariance in LLM-as-a-Judge",
+      "title_zh": "评审偏爱 English 吗？评估 LLM-as-a-Judge 的语言切换不变性",
+      "authors": [
+        "Shaojie Yin"
+      ],
+      "total_score": 0.4139000000000001,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.418,
+        "other": 0.10833333333333334
+      },
+      "tags": [
+        "judge reward verifier"
+      ],
+      "tldr_zh": "LLM评审在语言切换下偏好不稳定",
+      "detail_file": "agent-harness-evolution/2026-06-12/2606.14278.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14278/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.14616",
+      "title": "GitHub Template Repositories: Served Domains, Maintenance, and Practitioner Guidelines",
+      "title_zh": "GitHub Template Repositories：服务领域、维护特征与实践者指南",
+      "authors": [
+        "Leuson Da Silva",
+        "Altaf Allah Abbassi",
+        "Imen Trabelsi",
+        "Paulo Borba",
+        "Foutse Khomh"
+      ],
+      "total_score": 0.3805141349418721,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.25799999999999995,
+        "other": 0.21038044980624032
+      },
+      "tags": [
+        "judge reward verifier"
+      ],
+      "tldr_zh": "实证分析 GitHub 模板仓库质量与实践",
+      "detail_file": "agent-harness-evolution/2026-06-12/2606.14616.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14616/thumb.webp"
+    }
+  ]
+}

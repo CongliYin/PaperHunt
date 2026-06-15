@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.14616",
+  "title": "GitHub Template Repositories: Served Domains, Maintenance, and Practitioner Guidelines",
+  "title_zh": "GitHub Template Repositories：服务领域、维护特征与实践者指南",
+  "authors": [
+    "Leuson Da Silva",
+    "Altaf Allah Abbassi",
+    "Imen Trabelsi",
+    "Paulo Borba",
+    "Foutse Khomh"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-12T16:41:04Z",
+  "abs_url": "https://arxiv.org/abs/2606.14616v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.14616",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Over time, GitHub has introduced different strategies for sharing reusable code artifacts. In addition to fork-based reuse, template repositories provide a distinct feature for generating new projects from scaffolding. Although this feature has been available since 2019, little is known about the domains it supports, its maintenance characteristics, or the practices that guide practitioners for effective template design. To address this gap, we conduct a large-scale empirical study of GitHub template repositories across the five most used programming languages. First, we mine and categorize templates to analyze the domains they serve, exploring the LLM-as-a-judge strategy. Next, we explore the reliability of templates by evaluating the associations between repository characteristics and activity, and quality-related issues (e.g., code smells, vulnerabilities, and security hotspots) through statistical analysis. Finally, we qualitatively analyze a representative subset of templates to derive practical guidelines and recurring pitfalls for template design and management. Our results show that Web Development is the predominant domain across ecosystems, while maintenance and quality issues vary by programming language. We further find that high-quality templates tend to adopt established software engineering practices, while providing comprehensive documentation and clear guidance for use. Overall, our findings offer empirical insights and actionable guidance to support practitioners in designing and adopting high-quality template repositories.",
+  "abstract_zh": "本文针对 GitHub 自 2019 年推出的 template repositories（模板仓库）开展大规模实证研究，关注其支持的应用领域、维护与质量特征，以及高质量模板设计实践。作者选取五种最常用编程语言中的 GitHub template repositories，首先挖掘并分类模板所服务的领域，并探索使用 LLM-as-a-judge 进行领域判定；随后通过统计分析研究仓库特征与活跃度、代码异味（code smells）、漏洞（vulnerabilities）、安全热点（security hotspots）等质量相关问题之间的关联；最后对代表性模板子集进行定性分析，总结模板设计与管理中的实践指南和常见陷阱。结果表明，Web Development 是各语言生态中最主要的模板应用领域，但维护状况和质量问题会随编程语言而变化。高质量模板通常采用成熟的软件工程实践，并提供完整文档与清晰使用指导。该研究为开发者设计和采用高质量 GitHub 模板仓库提供了经验性证据和可操作建议。",
+  "key_points_zh": [
+    "研究对象是五种主流编程语言生态中的 GitHub template repositories，旨在理解其服务领域、维护活跃度与质量问题。",
+    "作者结合仓库挖掘、领域分类和 LLM-as-a-judge 策略，发现 Web Development 是最主要的模板应用领域。",
+    "统计分析显示，模板仓库的活跃度、代码异味、漏洞和安全热点等质量特征与具体编程语言生态有关。",
+    "定性分析表明，高质量模板通常具备完善文档、清晰使用说明、良好项目结构和成熟软件工程实践。",
+    "论文总结了模板设计与管理中的可操作指南和常见陷阱，可帮助实践者构建和选择更可靠的 GitHub 模板仓库。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.32,
+    "problem_significance": 0.35,
+    "potential_impact": 0.26,
+    "paradigm_shift": 0.12,
+    "lasting_value": 0.24,
+    "llm_avg": 0.25799999999999995,
+    "comment": "This empirical software-engineering study on GitHub templates is mostly unrelated to agent harness evolution.",
+    "comment_zh": "这项关于 GitHub 模板仓库的软件工程实证研究与智能体运行时演化关联很弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36228269883744174,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.25799999999999995,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14616/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14616/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14616/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14616/fig4.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.972
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2606.13994",
+  "title": "Hidden in Plain Sight: Benchmarking Agent Safety Against Decomposition Attacks with DECOMPBENCH",
+  "title_zh": "Hidden in Plain Sight：用 DECOMPBENCH 基准评测 Agent 面对分解攻击的安全性",
+  "authors": [
+    "Vikhyath Kothamasu",
+    "Virginia Smith",
+    "Chhavi Yadav"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-12T00:30:29Z",
+  "abs_url": "https://arxiv.org/abs/2606.13994v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13994",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM-based Agents are becoming increasingly capable and widely deployed, creating growing incentives for adversarial misuse in the real-world. A key emerging threat is Decomposition Attacks \\cite{glukhov2024breach, jones2024adversaries} in which a harmful task is broken into simpler, benign subtasks that evade safety mechanisms when executed separately but cumulatively fulfill the malicious intent. Although recent benchmarks assess agent safety in multi-turn and multi-tool-use settings, they do not explicitly capture this form of decompositional misuse and may not represent realistic adversarial execution flows. To this end, we introduce DeCompBench, a benchmark designed specifically to evaluate agentic safety under decomposition attacks. DeCompBench is created with a decomposition-by-design principle using a graphical framework and enables harmful task decomposition into individually benign and executable subtasks with realistic workflows. Our experiments using a custom decomposer show that state-of-the-art agents exhibit high refusal rates on monolithic harmful tasks, but significantly lower refusal rates on their decomposed variants, while often inadvertently fulfilling the adversarial objectives. These findings underscore the need for safety evaluations against decomposition attacks and corresponding defenses. Our dataset is publicly available and can be found at https://huggingface.co/datasets/decompositionbench/DeCompBench.",
+  "abstract_zh": "基于 LLM 的 Agents 能力快速提升并被广泛部署，也带来了现实场景中被对抗性滥用的风险。本文关注一种新兴威胁：Decomposition Attacks，即将有害任务拆解为多个看似无害、可单独执行的子任务，从而绕过安全机制，但整体上仍完成恶意目标。现有多轮、多工具调用安全基准尚未显式覆盖这种分解式滥用，也难以反映真实攻击执行流程。为此，作者提出 DeCompBench，一个专门评估 Agent 在 Decomposition Attacks 下安全性的基准。DeCompBench 采用 decomposition-by-design 原则，通过图结构框架将有害任务拆解为单独无害且可执行的子任务，并构造更真实的工作流。实验显示，当前 state-of-the-art Agents 对整体有害任务的拒绝率较高，但面对其分解版本时拒绝率显著下降，并经常在无意中完成攻击目标。这表明 Agent 安全评测亟需纳入分解攻击场景，并发展相应防御方法。",
+  "key_points_zh": [
+    "提出 DeCompBench，专门用于评测 LLM-based Agents 在 Decomposition Attacks 下的安全鲁棒性。",
+    "核心威胁是将有害任务拆成多个表面无害、可执行的子任务，单步绕过安全机制，整体达成恶意目的。",
+    "基准采用图结构 decomposition-by-design 框架，构造更贴近现实的分解工作流，而非简单多轮或多工具调用测试。",
+    "实验发现 state-of-the-art Agents 对原始有害任务拒绝率高，但对分解后的任务拒绝率显著降低。",
+    "结果强调现有 Agent 安全评测存在盲区，需要针对分解攻击设计新的检测与防御机制。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.88,
+    "potential_impact": 0.75,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.73,
+    "llm_avg": 0.7260000000000001,
+    "comment": "DeCompBench addresses an important agent safety failure mode, though it is primarily a benchmark rather than a runtime defense system.",
+    "comment_zh": "DeCompBench 针对重要的智能体分解攻击安全问题，但主要是评测基准而非运行时防御系统。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7260000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13994/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.95
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13994/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13994/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.945
+    }
+  ]
+}

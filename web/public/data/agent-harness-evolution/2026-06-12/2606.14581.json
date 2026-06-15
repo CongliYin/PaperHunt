@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.14581",
+  "title": "CARE: Controlling LLM-Generated Policies through Auditable Review of Evidence in Scientific Experimentation",
+  "title_zh": "CARE：通过科学实验中可审计的证据审查控制 LLM 生成策略",
+  "authors": [
+    "Guanyu Liu",
+    "Weiyi Kong",
+    "Zeyu Wang",
+    "Boer Zhang",
+    "Baiqing Li",
+    "Peiyu Zhang",
+    "Tianyu Shi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-12T15:58:32Z",
+  "abs_url": "https://arxiv.org/abs/2606.14581v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.14581",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Granting LLMs direct control over costly, irreversible scientific experiments leads to unsafe exploration and unstable performance, but discarding LLM creativity entirely sacrifices significant optimization potential. We introduce CARE (Controlling LLM-Generated Policies through Auditable Review of Evidence in Scientific Experimentation), an auditable controller for high-throughput experimentation (HTE) optimization that keeps a non-LLM incumbent optimizer as the default action path while using LLMs to revise challenger ranking policies. Before each outcome is revealed, a public-evidence intervention gate compares the challenger with the incumbent. It authorizes the challenger's selection only when the evidence available before selection supports the change, with the decision recorded in the audit log. CARE outperforms all other evaluated methods on Minerva/Olympus and ChemLex benchmarks, with final-best improving from 80.0 to 88.5 on Minerva/Olympus and from 83.9 to 92.1 on ChemLex, relative to the public incumbent. Our experiments indicate that LLM self-evolution is more reliable when it expands the proposal space under an auditable controller, rather than directly choosing experiments.",
+  "abstract_zh": "将 LLM 直接用于控制成本高、不可逆的科学实验，可能导致不安全探索和性能不稳定；但完全放弃 LLM 的创造性又会损失显著的优化潜力。本文提出 CARE（Controlling LLM-Generated Policies through Auditable Review of Evidence in Scientific Experimentation），一种面向高通量实验（HTE）优化的可审计控制器。CARE 以非 LLM 的 incumbent optimizer 作为默认决策路径，同时允许 LLM 修订 challenger ranking policies。在每次实验结果揭示之前，CARE 通过基于公开证据的 intervention gate 比较 challenger 与 incumbent：只有当选择前可获得的证据支持策略变更时，才授权 challenger 的选择，并将决策记录到 audit log。实验显示，CARE 在 Minerva/Olympus 与 ChemLex benchmarks 上优于所有对比方法；相对于 public incumbent，final-best 在 Minerva/Olympus 上从 80.0 提升到 88.5，在 ChemLex 上从 83.9 提升到 92.1。结果表明，LLM self-evolution 在可审计控制器下用于扩展 proposal space，比直接选择实验更可靠。",
+  "key_points_zh": [
+    "问题背景：LLM 直接控制科学实验存在高风险，尤其在高成本、不可逆的 HTE 场景中可能产生不安全探索和不稳定表现。",
+    "核心方法：CARE 保留非 LLM incumbent optimizer 作为默认路径，让 LLM 只负责修订 challenger ranking policies，从而利用 LLM 创造性但避免其直接决策。",
+    "关键机制：在实验结果揭示前，public-evidence intervention gate 基于选择前可见证据比较 challenger 与 incumbent，仅在证据支持时放行 challenger，并写入 audit log。",
+    "实验效果：CARE 在 Minerva/Olympus 和 ChemLex benchmarks 上取得最佳表现，final-best 分别从 80.0 提升到 88.5、从 83.9 提升到 92.1。",
+    "主要结论：LLM self-evolution 更适合作为 proposal space 扩展器，并由可审计控制器约束，而不是直接承担实验选择权。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.84,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.79,
+    "llm_avg": 0.774,
+    "comment": "A credible auditable-control approach for LLM-driven scientific experimentation with strong relevance to governed rollout and intervention gates.",
+    "comment_zh": "该工作提出面向 LLM 科学实验策略的可审计控制机制，与受治理的上线和干预门控高度相关。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.23816576137838616,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.774,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14581/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14581/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14581/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.566
+    }
+  ]
+}

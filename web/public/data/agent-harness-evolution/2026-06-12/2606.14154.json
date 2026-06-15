@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2606.14154",
+  "title": "SkillMutator: Benchmarking and Defending Language-and-Code Cross-modal Attacks on LLM Agent Skills",
+  "title_zh": "SkillMutator：面向 LLM Agent Skills 的语言-代码跨模态攻击基准与防御",
+  "authors": [
+    "Youngduk Kim",
+    "Minkyoo Song",
+    "Seungwon Shin"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-12T06:27:12Z",
+  "abs_url": "https://arxiv.org/abs/2606.14154v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.14154",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM) agents increasingly extend their capabilities at runtime by loading Agent Skills, which pair natural-language specifications (SKILL.md) with executable scripts and resources. Because a skill's behavior relies on both natural-language instructions and executable code, assessing its safety requires cross-modal reasoning, creating a new language-and-code attack surface. Attackers can present a benign workflow in SKILL.md while embedding implicit directives that steer the agent to exfiltrate sensitive files, even if the scripts appear harmless. This attack surface remains understudied; prior work treats skills merely as prompt-injection vectors or static code artifacts, leaving attacks emerging from cross-modal interactions largely unmeasured. In our evaluation, open-source and commercial skill scanners detect only 2%-8% and 9%-17% of such attacks, respectively. To address this gap, we introduce SkillMutator, the first benchmark for install-time detection of language-and-code cross-modal attacks on Agent Skills. It emulates an adversarial mutation process across 13 attack categories, iteratively refining malicious skills using scanner feedback to make injected behaviors indistinguishable from legitimate workflows. We further propose a four-phase reasoning-trajectory distillation framework to distill frontier-teacher traces into smaller open-weight models. This produces a locally deployable scanner avoiding third-party data exposure and excessive API costs. On the strongest SkillMutator subset (n=76), our distilled model (Qwen2.5-Coder-7B-Instruct) improves detection from 17.1% to 88.2%, surpassing GPT-4o-mini (23.7%) and GPT-5.4-mini (79.0%), and reaching frontier-level GPT-5.4 (86.8%). These results show practical defense against cross-modal attacks is feasible without relying on costly frontier models.",
+  "abstract_zh": "LLM agents 越来越多地通过运行时加载 Agent Skills 来扩展能力；这些 Skills 通常由自然语言规格说明（SKILL.md）、可执行脚本和相关资源组成。由于 Skill 的行为同时依赖自然语言指令与代码执行逻辑，其安全评估需要跨模态推理，也由此形成新的语言-代码攻击面。攻击者可以在 SKILL.md 中呈现看似良性的工作流，同时嵌入隐式指令，引导 agent 泄露敏感文件，即使相关脚本本身看起来无害。现有研究多将 Skills 视为 prompt injection 向量或静态代码对象，较少衡量由语言与代码交互产生的攻击。论文评估显示，开源和商业 skill scanner 对此类攻击的检测率分别仅为 2%-8% 和 9%-17%。为弥补这一空白，作者提出 SkillMutator，这是首个面向 Agent Skills 安装时检测的语言-代码跨模态攻击基准。它在 13 类攻击类别上模拟对抗性变异过程，并利用 scanner 反馈迭代优化恶意 Skills，使注入行为更难与合法工作流区分。论文还提出四阶段 reasoning-trajectory distillation 框架，将 frontier teacher 的推理轨迹蒸馏到较小的 open-weight models 中，从而构建可本地部署的 scanner，避免第三方数据暴露和高 API 成本。在最强 SkillMutator 子集（n=76）上，蒸馏后的 Qwen2.5-Coder-7B-Instruct 将检测率从 17.1% 提升至 88.2%，超过 GPT-4o-mini（23.7%）和 GPT-5.4-mini（79.0%），并达到接近 frontier-level GPT-5.4（86.8%）的性能。结果表明，无需依赖昂贵的 frontier models，也可以实现对跨模态攻击的实用防御。",
+  "key_points_zh": [
+    "提出 SkillMutator，首个针对 LLM Agent Skills 安装时语言-代码跨模态攻击检测的 benchmark。",
+    "攻击者可在 SKILL.md 中伪装良性流程，同时通过自然语言与代码交互诱导 agent 泄露敏感文件，现有 scanner 检测率很低。",
+    "SkillMutator 覆盖 13 类攻击，并通过基于 scanner 反馈的对抗性变异，使恶意行为逐步接近合法工作流。",
+    "提出四阶段 reasoning-trajectory distillation，将 frontier teacher 的推理轨迹蒸馏到 Qwen2.5-Coder-7B-Instruct 等较小 open-weight models。",
+    "在最强子集上，蒸馏模型检测率达 88.2%，超过 GPT-4o-mini 与 GPT-5.4-mini，并接近 GPT-5.4 水平。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8280000000000001,
+    "comment": "Strong production-relevant work on securing agent skill repositories against cross-modal language-code attacks.",
+    "comment_zh": "该工作聚焦智能体技能仓库中的语言与代码跨模态攻击防御，具有很强的生产安全价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8280000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14154/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14154/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14154/fig3.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14154/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.972
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2606.14528",
+  "title": "BayLing-Duplex: Native Full-Duplex Speech Dialogue with a Single Autoregressive LLM",
+  "title_zh": "BayLing-Duplex：使用单一自回归 LLM 实现原生全双工语音对话",
+  "authors": [
+    "Qingkai Fang",
+    "Shoutao Guo",
+    "Yang Feng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-12T15:01:51Z",
+  "abs_url": "https://arxiv.org/abs/2606.14528v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.14528",
+  "links": {
+    "github": "https://github.com/BayLing-Models/BayLing-Duplex",
+    "project_page": null
+  },
+  "abstract_en": "Real-time, full-duplex speech interaction is a key feature of next-generation spoken chatbots, allowing the model to listen and speak at the same time and to handle natural phenomena such as overlap, hesitation, and barge-in. Existing speech language models (SpeechLMs) such as LLaMA-Omni and GLM-4-Voice are still turn-based and rely on an external Voice Activity Detection (VAD) module to mark the end of the user's turn, which fundamentally limits their interactive ability. In this paper, we introduce BayLing-Duplex, a native full-duplex SpeechLM where a single autoregressive LLM decides when to listen, when to speak, and when to stop, with no auxiliary turn-taking module. The design adds only a few special tokens to the standard vocabulary, so it transfers across LLMs and reuses existing training and serving stacks with no architectural adaptation. Starting from the public GLM-4-Voice checkpoint and using only 400K full-duplex samples for fine-tuning followed by a lightweight DPO stage, BayLing-Duplex reaches 92% turn-taking success and 100% interruption success on InstructS2S-Eval, while improving the speech-response score from 2.17 to 3.39 over Moshi. BayLing-Duplex also matches or surpasses its turn-based counterpart on Llama Questions, Web Questions, and Alpaca-Eval, showing that simultaneous listen-and-speak modeling does not sacrifice response quality.",
+  "abstract_zh": "实时全双工语音交互是下一代语音聊天机器人的关键能力，使模型能够同时听和说，并处理重叠说话、犹豫、插话（barge-in）等自然对话现象。现有 SpeechLMs 如 LLaMA-Omni 和 GLM-4-Voice 仍以轮次为中心，依赖外部 Voice Activity Detection（VAD）模块判断用户话轮结束，从根本上限制了交互能力。本文提出 BayLing-Duplex，一种原生全双工 SpeechLM：单一自回归 LLM 无需辅助轮次管理模块，即可自主决定何时听、何时说、何时停止。该设计仅向标准词表添加少量特殊 token，因此可迁移到不同 LLM，并复用现有训练与推理服务栈，无需架构改造。基于公开 GLM-4-Voice checkpoint，作者仅用 400K 全双工样本微调，并接入轻量级 DPO 阶段；在 InstructS2S-Eval 上，BayLing-Duplex 达到 92% 的话轮切换成功率和 100% 的打断成功率，同时相较 Moshi 将语音回复评分从 2.17 提升到 3.39。该模型在 Llama Questions、Web Questions 和 Alpaca-Eval 上也达到或超过对应的轮次式模型，表明同时听说建模不会牺牲回复质量。",
+  "key_points_zh": [
+    "提出 BayLing-Duplex：无需外部 VAD 或轮次管理模块，由单一自回归 LLM 统一决定听、说与停止。",
+    "方法仅添加少量特殊 token，不改动模型架构，可复用现有 LLM 训练与 serving 流水线，具备较强可迁移性。",
+    "从 GLM-4-Voice checkpoint 出发，使用 400K 全双工样本微调，并通过轻量 DPO 进一步优化交互行为。",
+    "在 InstructS2S-Eval 上取得 92% turn-taking success 和 100% interruption success，显著优于传统轮次式交互。",
+    "在 Llama Questions、Web Questions、Alpaca-Eval 等任务上匹配或超过轮次式 counterpart，说明全双工能力未明显损害回答质量。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.9,
+    "problem_significance": 0.95,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.85,
+    "lasting_value": 0.9,
+    "llm_avg": 0.9,
+    "comment": "A highly relevant realtime voice-agent paper that directly tackles full-duplex speech interaction, barge-in, and turn-taking within a reusable single-LLM framework.",
+    "comment_zh": "这是一篇高度相关的实时语音智能体论文，直接解决全双工对话、打断和轮次控制，并具备较强的可复用性。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/BayLing-Models/BayLing-Duplex",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14528/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14528/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.952
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14528/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.839
+    }
+  ]
+}

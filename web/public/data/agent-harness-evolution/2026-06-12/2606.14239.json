@@ -1,0 +1,92 @@
+{
+  "arxiv_id": "2606.14239",
+  "title": "SkillAudit: Ground-Truth-Free Skill Evolution via Paired Trajectory Auditing",
+  "title_zh": "SkillAudit：通过成对轨迹审计实现无真实标签的技能演化",
+  "authors": [
+    "Haowen Gao",
+    "Haoran Chen",
+    "Can Wang",
+    "Shasha Guo",
+    "Liang Pang",
+    "Zhaoyang Liu",
+    "Huawei Shen",
+    "Xueqi Cheng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-12T08:20:09Z",
+  "abs_url": "https://arxiv.org/abs/2606.14239v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.14239",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent skills are structured procedural packages that guide frozen LLM agents in specialized workflows. Skills rarely remain sufficient after deployment: edge cases, API changes, and deployment constraints become visible only through use, making skill evolution a practical necessity. Existing methods depend on privileged feedback such as held-out validation scores, hidden test outcomes, or environment rewards -- signals often unavailable when a practitioner has only a task description and workspace data. We introduce SkillAudit, a framework for evolving agent skills without ground-truth feedback. The key idea is paired trajectory auditing: at each iteration, the same task is executed with and without the candidate skill, isolating how the skill changes agent behavior without external labels. To turn behavioral differences into edit guidance, SkillAudit uses Process-Aligned Contrastive Evaluation (PACE), a cluster of evaluators that maps trajectory divergences to diagnostic signals linked to specific passages in the skill document. A structural verifier, compiled once from the task specification and then fixed, checks task constraints and rolls back harmful updates. SkillAudit routes edits through two pipelines: Refine removes noisy or irrelevant guidance from broadly useful skills, while Repair replaces passages that conflict with the task. Across 89 containerized tasks spanning 8 professional domains, SkillAudit achieves 73.9% average task reward, outperforming an agent without skills (40.9%) and the static expert skill (56.7%). These gains are obtained without accessing hidden tests, reference solutions, or external scoring functions during evolution.",
+  "abstract_zh": "本文提出 SkillAudit，一个无需 ground-truth 反馈即可演化 LLM Agent 技能的框架。Agent skill 是指导冻结 LLM Agent 执行专门工作流的结构化过程包，但部署后常会因边界案例、API 变化和环境约束而失效。SkillAudit 的核心是 paired trajectory auditing：在每次迭代中，对同一任务分别运行“使用候选 skill”和“不使用 skill”的 Agent，通过对比两条轨迹来隔离 skill 对行为的影响。随后，Process-Aligned Contrastive Evaluation（PACE）将轨迹差异映射为诊断信号，并关联到 skill 文档中的具体段落，以指导编辑。框架还使用从任务规格一次性编译并固定的 structural verifier 检查约束，对有害更新进行回滚。SkillAudit 将编辑分为 Refine 和 Repair 两条流水线：前者删除通用 skill 中噪声或无关指导，后者替换与任务冲突的段落。在覆盖 8 个专业领域的 89 个容器化任务上，SkillAudit 平均任务奖励达到 73.9%，显著优于无 skill Agent 的 40.9% 和静态专家 skill 的 56.7%，且演化过程中不访问隐藏测试、参考解或外部评分函数。",
+  "key_points_zh": [
+    "提出 SkillAudit，用于在缺乏隐藏测试、参考答案、环境奖励等 privileged feedback 的情况下演化 Agent skills。",
+    "核心机制 paired trajectory auditing 对比同一任务中有无候选 skill 的执行轨迹，从行为差异中定位 skill 的实际影响。",
+    "PACE 将轨迹分歧转化为可操作的诊断信号，并绑定到 skill 文档具体段落，帮助生成精确编辑。",
+    "引入固定的 structural verifier 检查任务约束，并在更新有害时回滚，降低无标签自我改写带来的风险。",
+    "在 89 个容器化任务、8 个专业领域上，SkillAudit 达到 73.9% 平均奖励，优于无技能 Agent 和静态专家技能。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.9,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.91,
+    "llm_avg": 0.8860000000000001,
+    "comment": "A strong skill-evolution framework that closes a practical feedback loop using paired trajectory auditing and verifier-backed rollback.",
+    "comment_zh": "该工作通过成对轨迹审计和验证器回滚实现技能演化闭环，具有很强的实践价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8860000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14239/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14239/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14239/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14239/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.975
+    }
+  ]
+}

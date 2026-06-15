@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.14607",
+  "title": "Empowering Student Debugging in Parallel Programming with Execution Traces and Large Language Models",
+  "title_zh": "用执行轨迹与大语言模型增强学生并行编程调试能力",
+  "authors": [
+    "God'salvation F. Oguibe",
+    "Vinodh Kumaran Jayakumar",
+    "Tongping Liu",
+    "Andrew Lan",
+    "Wei Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-12T16:30:41Z",
+  "abs_url": "https://arxiv.org/abs/2606.14607v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.14607",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Concurrent programming is a core component of Computer Science curricula, yet remains notoriously difficult for students to master due to its inherent complexity and the nondeterministic nature of concurrency bugs such as deadlocks and race conditions. In this work, we present ParaView, an educational tool designed to help students understand, debug, and correct concurrency issues in parallel programs written in C/C++. ParaView provides transparent execution recording and visualization to make parallel execution observable and comprehensible. We evaluated ParaView through a series of debugging and implementation tasks, with 17 students participating. Results showed a significant improvement in debugging and implementation successes compared to previous course iterations. A student survey confirmed that most participants found ParaView helpful. To further support learning outside the classroom, we explored using Large Language Models (LLMs) to analyze concurrency bugs and suggest fixes. While LLMs were highly effective in identifying bugs and explaining execution traces, the correctness of their bug fixes varied, especially for more complex synchronization patterns. Our findings suggest that recording-visualization tools like ParaView, complemented by artificial intelligence (AI), can improve teaching and learning of concurrent programming.",
+  "abstract_zh": "并发编程是计算机科学课程的核心内容，但由于其复杂性以及死锁、竞态条件等并发错误的非确定性，学生往往难以掌握。本文提出 ParaView，一种面向教学的工具，用于帮助学生理解、调试并修复 C/C++ 并行程序中的并发问题。ParaView 通过透明的执行记录与可视化，使并行执行过程可观察、可理解。作者通过一系列调试与实现任务评估 ParaView，共有 17 名学生参与。结果显示，相比以往课程轮次，学生在调试与实现任务中的成功率显著提升；问卷也表明多数学生认为 ParaView 有帮助。为进一步支持课外学习，作者还探索了使用 Large Language Models（LLMs）分析并发错误并给出修复建议。实验发现，LLMs 在识别错误和解释执行轨迹方面效果较好，但其修复代码的正确性不稳定，尤其面对更复杂的同步模式时表现下降。研究表明，ParaView 这类执行记录-可视化工具结合 AI，有望改进并发编程的教学与学习。",
+  "key_points_zh": [
+    "提出 ParaView，一款面向并发编程教学的工具，可记录并可视化 C/C++ 并行程序执行轨迹，帮助学生理解线程交互、死锁和竞态等问题。",
+    "在 17 名学生参与的调试与实现任务中，ParaView 相比以往课程迭代显著提升了调试成功率和实现成功率。",
+    "学生问卷显示，多数参与者认为 ParaView 有助于理解并行执行过程和定位并发错误。",
+    "作者进一步评估 Large Language Models（LLMs）对并发 bug 的分析能力，发现其擅长识别问题和解释执行轨迹。",
+    "LLMs 生成修复方案的正确性不稳定，尤其在复杂同步模式下容易出错，因此更适合作为 ParaView 等可视化工具的辅助组件。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.35,
+    "problem_significance": 0.42,
+    "potential_impact": 0.32,
+    "paradigm_shift": 0.18,
+    "lasting_value": 0.28,
+    "llm_avg": 0.31,
+    "comment": "ParaView is useful for education and trace visualization but is largely outside agent-harness evolution.",
+    "comment_zh": "ParaView 对教学和执行轨迹可视化有帮助，但总体上偏离智能体运行时演化方向。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.28206629502221137,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.31,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14607/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.812
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14607/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.388
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14607/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.352
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14607/fig4.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.96
+    }
+  ]
+}

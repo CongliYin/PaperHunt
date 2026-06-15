@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.13995",
+  "title": "Dialogue SWE-Bench: A Benchmark for Dialogue-Driven Coding Agents",
+  "title_zh": "Dialogue SWE-Bench：面向对话驱动编程智能体的基准",
+  "authors": [
+    "Brendan King",
+    "Jeffrey Flanigan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-12T00:30:33Z",
+  "abs_url": "https://arxiv.org/abs/2606.13995v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13995",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "AI coding agents have rapidly transformed software engineering, powering widely used interactive coding assistants. Despite their interactive real-world use, existing benchmarks evaluate them as fully-autonomous systems. In this work, we introduce Dialogue SWE-Bench, an automatic benchmark dataset for evaluating the ability of coding agents to resolve real-world software engineering problems through dialogue with a user. We design a novel, persona-grounded user simulator to support our task evaluation, and augment our task evaluation with automatic evaluations of dialogue quality. We also propose a new schema-guided agent, aimed at improving the dialogue capabilities of off-the-shelf coding agents, which improves over strong baselines by 3-14%. Our results indicate that better coding models do not always correspond to better dialogue models, suggesting that dialogue capability is a distinct and currently understudied dimension of coding agent performance.",
+  "abstract_zh": "AI coding agents 正在快速改变软件工程实践，并支撑广泛使用的交互式编程助手。然而，现有基准大多将其评估为完全自主系统，未能反映真实使用中的人机对话过程。本文提出 Dialogue SWE-Bench，一个自动化基准数据集，用于评估 coding agents 通过与用户对话解决真实软件工程问题的能力。作者设计了一个基于 persona 的用户模拟器来支持任务评测，并加入对话质量的自动评估。此外，论文提出一种 schema-guided agent，用于增强现成 coding agents 的对话能力，相比强基线提升 3–14%。实验表明，更强的代码模型并不总是更强的对话模型，说明对话能力是 coding agent 性能中独立且尚未被充分研究的重要维度。",
+  "key_points_zh": [
+    "提出 Dialogue SWE-Bench，面向真实软件工程问题，评估 coding agents 在与用户交互中完成修复或开发任务的能力。",
+    "设计 persona-grounded user simulator，通过带有人设与行为约束的用户模拟器自动生成交互过程，降低人工评测成本。",
+    "除任务是否解决外，还引入 dialogue quality 的自动评估，用于衡量智能体提问、澄清、协作和沟通质量。",
+    "提出 schema-guided agent，以结构化 schema 引导现成 coding agents 的对话行为，在强基线基础上带来 3–14% 提升。",
+    "实验发现代码能力与对话能力并不完全一致，提示未来 coding agent 评测需要单独关注交互式沟通能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.63,
+    "problem_significance": 0.65,
+    "potential_impact": 0.56,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.55,
+    "llm_avg": 0.554,
+    "comment": "A useful benchmark for dialogue-driven coding agents, but its harness contribution is limited beyond user simulation and evaluation schema.",
+    "comment_zh": "这是一个有用的对话式编码智能体评测，但除用户模拟和评估框架外，对运行时基础设施贡献有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.554,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13995/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13995/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13995/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13995/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.957
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.14278",
+  "title": "Does the Judge Prefer English? Evaluating Language-Switching Invariance in LLM-as-a-Judge",
+  "title_zh": "评审偏爱 English 吗？评估 LLM-as-a-Judge 的语言切换不变性",
+  "authors": [
+    "Shaojie Yin"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-12T08:59:26Z",
+  "abs_url": "https://arxiv.org/abs/2606.14278v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.14278",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) are now widely used as automatic judges for open-ended instruction-following evaluation. This practice is convenient, scalable, and often more semantically aware than reference-based metrics, but it also introduces a new reliability question: does a judge evaluate the quality of an answer, or does it also react to the language in which the comparison is presented? We propose Judge-LS, a lightweight meta-evaluation protocol that transforms LLMBar response-pair items into English, Chinese, and Chinese-English language-switched variants. A reliable judge should preserve its preference under label-preserving language transformations and should not prefer a language when two answers are translation-equivalent. We evaluate four API-accessible judges on the full 419-item LLMBar benchmark, producing 13,408 successful pairwise judgments. Across models, Chinese and language-switched presentations induce 10.7--14.4% preference flips relative to English, and all judges achieve their highest accuracy in English. However, translation-equivalent tie probes do not reveal a systematic English preference: most probes are judged as ties, and non-tie decisions more often favor Chinese. We add confidence intervals, paired significance tests, and an automatic transformation audit with a sensitivity analysis that excludes mechanically flagged high-risk variants. The experiment requires no model training, uses only API calls, and is feasible on modest local hardware.",
+  "abstract_zh": "本文关注 LLM-as-a-Judge 在开放式指令跟随评测中的可靠性：模型评审究竟是在判断回答质量，还是会受到比较文本所用语言的影响？作者提出 Judge-LS，一种轻量级元评测协议，将 LLMBar 中的回答对转换为 English、Chinese 以及 Chinese-English 语言切换版本。可靠的评审应在保持标签含义不变的语言转换下维持偏好一致，并且在两个回答语义等价、仅语言不同的情况下不应偏向某种语言。论文在完整 419 条 LLMBar benchmark 上评估 4 个可通过 API 访问的 judge models，共获得 13,408 次有效成对判断。结果显示，相比 English 呈现，Chinese 与语言切换版本会导致 10.7%–14.4% 的偏好翻转，且所有评审模型在 English 上准确率最高。不过，翻译等价的平局探针并未显示系统性的 English 偏好：多数样本被判为平局，非平局结果反而更多偏向 Chinese。作者还加入置信区间、配对显著性检验、自动转换审计，并通过排除高风险变体进行敏感性分析。该实验无需训练模型，仅依赖 API 调用，可在普通本地硬件上完成。",
+  "key_points_zh": [
+    "提出 Judge-LS，用于测试 LLM-as-a-Judge 在 English、Chinese 和 Chinese-English 语言切换条件下的偏好一致性。",
+    "在 419 条 LLMBar 样本上评估 4 个 API judge models，获得 13,408 次有效成对判断。",
+    "Chinese 与语言切换呈现相对 English 会引发 10.7%–14.4% 的偏好翻转，说明评审存在明显语言敏感性。",
+    "所有评审模型在 English 条件下准确率最高，但翻译等价平局探针未发现系统性 English 偏好。",
+    "实验包含置信区间、配对显著性检验和自动转换审计，且无需模型训练，复现成本较低。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.52,
+    "potential_impact": 0.42,
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.4,
+    "llm_avg": 0.418,
+    "comment": "Judge-LS usefully probes multilingual judge reliability but remains a generic evaluation study with limited harness-level applicability.",
+    "comment_zh": "Judge-LS 有助于分析多语言评审器可靠性，但总体属于通用评估研究，运行时平台价值有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.418,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14278/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14278/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.89
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14278/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.981
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14278/fig4.webp",
+      "page": 2,
+      "kind": "table",
+      "confidence": 0.973
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2606.14106",
+  "title": "Naive Visual Memory is Not Enough: A Failure-Mode Study of GUI Agents",
+  "title_zh": "朴素视觉记忆并不够：GUI Agents 的失效模式研究",
+  "authors": [
+    "Seoyoung Choi",
+    "Minseok Ko",
+    "Hyunseok Lee",
+    "Kunwoong Kim",
+    "Woomin Song",
+    "Chanseok Jeon",
+    "Jinwoo Shin"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-12T04:39:01Z",
+  "abs_url": "https://arxiv.org/abs/2606.14106v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.14106",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Graphical User Interface (GUI) agents are increasingly used to automate complex computer tasks across applications, websites, and operating systems. To improve their reliability, recent work has introduced experiential memory, where agents retrieve prior trajectories to guide decision-making in similar states. More recent approaches further extend this idea to visual memory by storing and retrieving screenshots from past interactions, providing agents with richer contextual information than text-only memories. However, the effect of visual memory in GUI agents remains insufficiently understood: it is unclear which failures visual memory mitigates, or which failures it exacerbates. To systematically analyze the effect of visual memory, we introduce a taxonomy of four GUI agent failures (i.e., cognitive failure, visual state misunderstanding, hidden operation blindness, and grounding error) that map to distinct stages of the perception-reasoning-action pipeline. We find that prepending full-image memory has a divergent effect on the failure distribution: it reduces state-level failures but worsens action-level ones, and increases hidden operation blindness and grounding error. Motivated by this finding, we propose Action-Grounded Visual Memory (AGMem), an action-grounded memory framework for GUI agents. The core idea of AGMem is to store image crops that capture the local GUI region closely related to a successful action or a recovery, rather than storing full screenshots. Experiments on OSWorld show that AGMem improves task success rates by 33.3 % over full-image memory. These results demonstrate that AGMem is an effective representation for visual memory in GUI agents.",
+  "abstract_zh": "GUI agents 越来越多地用于自动化跨应用、网站和操作系统的复杂计算机任务。为提升可靠性，近期工作引入了经验记忆（experiential memory），通过检索相似状态下的历史轨迹来辅助决策；更进一步的方法开始使用视觉记忆（visual memory），存储并检索过去交互中的截图，为 agents 提供比纯文本记忆更丰富的上下文。然而，视觉记忆对 GUI agents 的具体影响仍缺乏系统理解：它究竟缓解了哪些失效，又可能加剧哪些失效并不清楚。本文提出一个包含四类 GUI agent 失效的分类体系：认知失败（cognitive failure）、视觉状态误解（visual state misunderstanding）、隐藏操作盲区（hidden operation blindness）和定位错误（grounding error），分别对应感知-推理-行动流水线中的不同阶段。研究发现，直接前置完整截图记忆会改变失效分布：它减少了状态层面的失效，但会恶化动作层面的失效，并增加隐藏操作盲区与定位错误。基于这一发现，作者提出 Action-Grounded Visual Memory（AGMem），一种面向 GUI agents 的动作锚定视觉记忆框架。AGMem 不再存储完整截图，而是保存与成功动作或恢复操作密切相关的局部 GUI 图像裁剪区域。OSWorld 实验表明，相比完整图像记忆，AGMem 将任务成功率提升了 33.3%。结果说明，动作锚定的局部视觉表示是 GUI agents 中更有效的视觉记忆形式。",
+  "key_points_zh": [
+    "本文系统研究 visual memory 在 GUI agents 中的作用，指出简单存储并检索完整截图并不总是有益。",
+    "作者提出四类 GUI agent 失效模式：cognitive failure、visual state misunderstanding、hidden operation blindness 和 grounding error，对应感知-推理-行动不同阶段。",
+    "实验发现 full-image memory 能减少状态理解相关错误，但会加剧动作执行层面的错误，尤其是 hidden operation blindness 和 grounding error。",
+    "提出 Action-Grounded Visual Memory（AGMem），仅存储与成功动作或恢复操作相关的局部 GUI crop，而不是完整截图。",
+    "在 OSWorld 上，AGMem 相比 full-image memory 将任务成功率提升 33.3%，表明动作锚定的局部视觉记忆更适合 GUI agents。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.75,
+    "problem_significance": 0.75,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.7,
+    "llm_avg": 0.6900000000000001,
+    "comment": "A useful GUI-agent visual-memory study with practical grounding insights, though it is less focused on realtime multimodal interaction or low-latency agent loops.",
+    "comment_zh": "这是一篇有价值的GUI智能体视觉记忆研究，提供了实用的视觉 grounding 启发，但与实时多模态交互和低延迟智能体循环的关联较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6900000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14106/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.919
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14106/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14106/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14106/fig4.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.957
+    }
+  ]
+}

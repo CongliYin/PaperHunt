@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.14302",
+  "title": "Retrospective Progress-Aware Self-Refinement for LLM Agent Training",
+  "title_zh": "面向 LLM Agent 训练的回顾式进展感知自我优化",
+  "authors": [
+    "Xinbei Ma",
+    "Congmin Zheng",
+    "Jiyang Qiu",
+    "Jiale Hong",
+    "Yao Yao",
+    "Xiangmou Qu",
+    "Jiaxin Yin",
+    "Xingyu Lou",
+    "Jun Wang",
+    "Weiwen Liu",
+    "Weinan Zhang",
+    "Zhuosheng Zhang",
+    "Hai Zhao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-12T09:38:47Z",
+  "abs_url": "https://arxiv.org/abs/2606.14302v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.14302",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM-based agents trained with reinforcement learning optimize step-wise action prediction but lack metacognitive awareness of task progress, inducing a gap that hinders long-horizon scaling. A pilot study reveals that online progress prompting hurts performance while retrospective demonstrations help, yet this capability cannot emerge from outcome-reward training alone. We present RePro, Retrospective Progress-Aware Training, a framework that trains agents to self-generate progress signals via a forward-then-reflect rollout paradigm: the agent executes actions online, then retrospectively reassesses its step-wise progress given the completed trajectory and known outcome. RePro initializes with a Retrospection Warmup that teaches reflection format from minimal external demonstrations, then further trains through RePro-PO with a composite reward that produces self-generated signals without continuous external supervision. Experiments on WebShop, ALFWorld, and Sokoban show that RePro enhances the Qwen family's performance, with up to $12\\%$ absolute success rate gains.",
+  "abstract_zh": "现有基于强化学习训练的 LLM Agent 通常优化逐步动作预测，但缺乏对任务进展的元认知感知，限制了其在长程任务中的扩展能力。论文通过先导实验发现，在线进展提示反而会损害性能，而基于完整轨迹的回顾式示范更有帮助；同时，仅依赖结果奖励训练难以自然涌现这种能力。为此，作者提出 RePro（Retrospective Progress-Aware Training），通过“先前向执行、再回顾反思”的 rollout 范式，让 Agent 在线执行动作后，基于已完成轨迹和已知结果重新评估每一步的任务进展。RePro 首先使用 Retrospection Warmup，通过少量外部示范学习反思格式；随后采用 RePro-PO，利用复合奖励训练模型在无持续外部监督下生成自我进展信号。在 WebShop、ALFWorld 和 Sokoban 上的实验表明，RePro 能提升 Qwen 系列模型表现，成功率最高带来 12% 的绝对增益。",
+  "key_points_zh": [
+    "指出长程 Agent 训练中的关键缺口：强化学习只优化动作预测，缺乏对任务进展的显式元认知建模。",
+    "发现在线 progress prompting 会干扰决策，而基于完整轨迹的 retrospective demonstrations 能更有效地提供进展监督。",
+    "提出 RePro 框架：Agent 先正常执行任务，再基于完整轨迹和最终结果回顾性评估每一步进展。",
+    "设计 Retrospection Warmup 与 RePro-PO：前者用少量示范学习反思格式，后者通过复合奖励实现自生成进展信号训练。",
+    "在 WebShop、ALFWorld、Sokoban 上验证 RePro 对 Qwen 系列模型有效，最高提升 12% 绝对成功率。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.82,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.76,
+    "llm_avg": 0.7540000000000001,
+    "comment": "A relevant agent-training loop that uses completed trajectories to teach retrospective progress signals for long-horizon agents.",
+    "comment_zh": "该工作利用完整轨迹训练智能体生成回顾性进度信号，对长程任务智能体训练具有相关价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.7600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7540000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14302/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14302/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

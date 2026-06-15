@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2606.14695",
+  "title": "Persona-Pruner: Sculpting Lightweight Models for Role-Playing",
+  "title_zh": "Persona-Pruner：为角色扮演雕刻轻量级模型",
+  "authors": [
+    "Jinsu Kim",
+    "Jihoon Tack",
+    "Noah Lee",
+    "Jongheon Jeong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-12T17:58:08Z",
+  "abs_url": "https://arxiv.org/abs/2606.14695v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.14695",
+  "links": {
+    "github": "https://github.com/jsu-kim/Persona-Pruner",
+    "project_page": null
+  },
+  "abstract_en": "Language Models (LMs) have shown remarkable potential as role-playing chatbots, delivering consistent, stylized interactions when given a specification of a character or user persona. However, applying these capabilities to real-world applications (e.g., ecosystems with numerous NPCs interacting simultaneously) exposes a critical inefficiency due to the excessive computational cost. In this paper, we question the necessity of dedicating a full, generalist model to a single persona, hypothesizing that a specific character identity relies on only a fraction of the model's total capacity. We observe that naively pruning LMs often severely degrades the role-playing performance for a specific persona; it does not distinguish between redundant knowledge and essential character traits. We propose Persona-Pruner, a framework that sculpts a lightweight role-playing model by isolating persona-specific sub-networks from a single description. Our experiments consistently show that Persona-Pruner preserves role-playing performance substantially more effectively than existing state-of-the-art LLM pruning techniques, reducing the performance drop from the dense model by up to 93.8% over the strongest baseline on RoleBench in LLM-as-a-judge score, while still maintaining general LLM capabilities. Code is available at https://github.com/jsu-kim/Persona-Pruner.",
+  "abstract_zh": "Language Models（LMs）在角色扮演聊天机器人中展现出很强潜力：给定角色或用户 persona 描述后，模型能够进行一致且风格化的交互。然而，在真实应用场景中，例如大量 NPC 同时交互的生态系统，为每个 persona 使用完整通用模型会带来显著计算成本。本文质疑是否有必要为单一角色身份分配完整模型容量，并提出假设：特定角色身份只依赖模型总容量中的一小部分。作者观察到，朴素剪枝通常会严重损害特定 persona 的角色扮演表现，因为它无法区分冗余知识与关键角色特征。为此，论文提出 Persona-Pruner，一个仅基于单条 persona 描述来分离 persona-specific sub-networks 的框架，从而构建轻量级角色扮演模型。实验表明，相比现有先进 LLM pruning 方法，Persona-Pruner 能更有效保持角色扮演性能；在 RoleBench 的 LLM-as-a-judge 分数上，相比最强 baseline，最高可将相对 dense model 的性能下降减少 93.8%，同时仍保持通用 LLM 能力。",
+  "key_points_zh": [
+    "问题动机：为每个角色或 NPC 部署完整通用 LM 计算成本过高，而特定 persona 可能只需要模型容量中的一小部分。",
+    "核心观察：直接对 LLM 进行朴素剪枝会显著破坏角色扮演能力，因为它无法识别哪些参数承载关键角色特征。",
+    "方法贡献：提出 Persona-Pruner，通过单个 persona 描述定位并保留 persona-specific sub-networks，构建轻量级角色扮演模型。",
+    "实验结果：在 RoleBench 上，Persona-Pruner 相比现有 SOTA LLM pruning 方法更好地保留角色扮演表现；LLM-as-a-judge 分数中，相对 dense model 的性能下降最高减少 93.8%。",
+    "额外优势：在压缩并适配特定 persona 的同时，模型仍能维持一定通用 LLM 能力，适合多角色并发应用场景。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.38,
+    "potential_impact": 0.36,
+    "paradigm_shift": 0.28,
+    "lasting_value": 0.32,
+    "llm_avg": 0.378,
+    "comment": "Persona-specific pruning may reduce role-playing deployment cost but has little direct value for agent harness infrastructure.",
+    "comment_zh": "面向角色扮演的模型剪枝可降低部署成本，但对智能体运行时基础设施的直接价值较低。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.378,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/jsu-kim/Persona-Pruner",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14695/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.863
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14695/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.982
+    }
+  ]
+}

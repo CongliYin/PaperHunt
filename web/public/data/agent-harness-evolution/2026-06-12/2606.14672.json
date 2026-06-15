@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2606.14672",
+  "title": "Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows",
+  "title_zh": "面向 LLM-Agent 工作流中并行分支的直接潜空间合成",
+  "authors": [
+    "Shikun Liu",
+    "Mufei Li",
+    "Dongqi Fu",
+    "Haoyu Wang",
+    "Yinglong Xia",
+    "Hong Li",
+    "Hong Yan",
+    "Pan Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-12T17:39:29Z",
+  "abs_url": "https://arxiv.org/abs/2606.14672v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.14672",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models increasingly serve as execution engines for agentic systems, yet they still consume context through a sequential text interface. This creates a mismatch with modern structured agent workflows, in which independent branches explore subtasks, retrieve evidence, or generate candidate solutions before a final synthesis step. Existing systems typically merge these branches by concatenating their textual outputs, which discards the parallel structure and incurs redundant prefill computation. In this work, we introduce Parallel-Synthesis, a plug-and-play framework that enables a synthesizer to directly consume the KV caches produced by parallel worker agents. Parallel-Synthesis combines a cache mapper that calibrates independently generated branch caches with a fine-tuned synthesizer adapter that enables generation from this non-sequential cache interface. We train Parallel-Synthesis using data that exposes the synthesizer to parallel cache contexts, teaches aggregation across cached branches, and distills reasoning behavior from standard text-concatenation-based synthesis. Across nine downstream datasets spanning math, science QA, code generation, GAIA, and multi-agent database diagnosis, Parallel-Synthesis matches or outperforms text-based synthesis on seven datasets and remains close on the other two. It also reduces time-to-first-token by 2.5x-11x, suggesting that direct cache-based synthesis is a promising interface for more native and efficient synthesis over parallel agent branches.",
+  "abstract_zh": "随着大语言模型（LLM）越来越多地作为智能体系统的执行引擎，其上下文输入仍主要依赖顺序文本接口。这与现代结构化智能体工作流存在不匹配：多个独立分支往往会并行探索子任务、检索证据或生成候选解，随后再进行最终合成。现有系统通常通过拼接各分支文本输出来合并信息，这既丢失了并行结构，也带来了重复的 prefill 计算开销。本文提出 Parallel-Synthesis，一个即插即用框架，使合成器能够直接消费并行 worker agents 产生的 KV caches。该框架结合了用于校准独立分支缓存的 cache mapper，以及经过微调的 synthesizer adapter，使模型能够从非顺序缓存接口中生成结果。作者通过训练数据让合成器接触并行缓存上下文、学习跨缓存分支聚合，并从基于文本拼接的标准合成方式中蒸馏推理行为。在涵盖数学、科学问答、代码生成、GAIA 和多智能体数据库诊断的九个下游数据集上，Parallel-Synthesis 在七个数据集上达到或超过文本合成方法，在另外两个数据集上也保持接近表现。同时，它将首 token 延迟降低 2.5x 到 11x，表明直接基于 cache 的合成可能成为更原生、更高效的并行智能体分支合成接口。",
+  "key_points_zh": [
+    "提出 Parallel-Synthesis，使最终 synthesizer 可直接读取多个并行 worker agents 生成的 KV caches，而非拼接文本输出。",
+    "方法包含 cache mapper 与 fine-tuned synthesizer adapter，分别用于校准独立分支缓存和支持非顺序缓存接口下的生成。",
+    "训练过程结合并行缓存上下文聚合学习，并从传统 text-concatenation synthesis 中蒸馏推理行为。",
+    "在九个涵盖 math、science QA、code generation、GAIA 与 database diagnosis 的数据集上，七个达到或超过文本合成基线。",
+    "显著降低 time-to-first-token，带来 2.5x-11x 加速，展示了 latent-space/cache-based synthesis 在并行 Agent 工作流中的效率潜力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.86,
+    "problem_significance": 0.8,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.8,
+    "llm_avg": 0.808,
+    "comment": "Parallel-Synthesis proposes a novel cache-level interface for parallel agent branches with meaningful runtime efficiency implications.",
+    "comment_zh": "Parallel-Synthesis 为并行智能体分支提出了新颖的缓存级综合接口，对运行时效率具有重要意义。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.808,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14672/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.922
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14672/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.959
+    }
+  ]
+}
