@@ -1,0 +1,61 @@
+{
+  "arxiv_id": "2606.13733",
+  "title": "How Task Structure Limits Multi-Agent Success: An Information-Theoretic Analysis",
+  "title_zh": "任务结构如何限制多智能体成功：一种信息论分析",
+  "authors": [
+    "Shi Pan",
+    "Ming Luo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T11:56:06Z",
+  "abs_url": "https://arxiv.org/abs/2606.13733v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13733",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-agent systems (MAS) were expected to overcome the limitation of single-agent systems (SAS) through collaboration. However, under typicality conditions on the task's constraint graph and bounded inter-agent communication, we prove that the success probability of a MAS is closely tied to the connectivity of task constraints, where each agent has limited information-processing capacity. Specifically, the success probability decays exponentially with an information bottleneck that emerges from partitioning the task's constraint graph among agents. We define this quantity as the \\emph{minimum cut cost} $C_{\\min}$ of the potential constraint graph of each task. This information-theoretic bound applies to both open systems with external feedback and closed systems without. We validate our theory on both synthetic experiments and real-world empirical data from SWE-bench submissions. From our framework, effective MAS design should incorporate task-inherent constraints alongside engineering optimization, and when $\\Cmin$ is high, practitioners should restructure tasks rather than simply scaling agents or communication.",
+  "abstract_zh": "本文从信息论角度分析 Multi-agent systems（MAS）为何并不总能通过协作超越 Single-agent systems（SAS）。作者在任务约束图满足典型性条件、且智能体间通信受限的设定下证明：MAS 的成功概率与任务约束的连通性紧密相关，而每个智能体都具有有限的信息处理能力。具体而言，当任务的约束图被划分给多个智能体后，会产生一个信息瓶颈，使成功概率随该瓶颈呈指数衰减。作者将这一量定义为任务潜在约束图的 minimum cut cost（C_min）。该信息论上界同时适用于带外部反馈的开放系统和无外部反馈的封闭系统。论文通过合成实验以及 SWE-bench 提交结果中的真实经验数据验证了理论。结论表明，有效的 MAS 设计不仅要依赖工程优化，还必须考虑任务内在约束；当 C_min 较高时，更有效的策略是重构任务，而非简单增加智能体数量或通信量。",
+  "key_points_zh": [
+    "提出用任务潜在约束图的 minimum cut cost（C_min）刻画 MAS 中因任务划分产生的信息瓶颈。",
+    "证明在通信受限且智能体信息处理能力有限时，MAS 成功概率会随该信息瓶颈指数级下降。",
+    "理论同时覆盖开放系统（有外部反馈）和封闭系统（无外部反馈），具有较一般的适用性。",
+    "通过合成实验和 SWE-bench 真实提交数据验证：任务约束连通性越强，MAS 越难成功。",
+    "设计启示是：当 C_min 很高时，应优先重构任务结构，而不是单纯扩展智能体数量或通信机制。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.72,
+    "potential_impact": 0.62,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.6,
+    "llm_avg": 0.664,
+    "comment": "This provides useful theoretical insight into MAS task decomposition limits, but it is less directly actionable as production harness infrastructure.",
+    "comment_zh": "该工作为多智能体任务分解限制提供了有用理论洞见，但作为生产级框架基础设施的直接可用性较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.664,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

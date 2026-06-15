@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2606.13079",
+  "title": "The Emergence of Autonomous Penetration Capabilities in Large Language Model-Powered AI Systems",
+  "title_zh": "LLM 驱动 AI 系统中自主渗透能力的涌现",
+  "authors": [
+    "Jiaqi Luo",
+    "Jiarun Dai",
+    "Zhile Chen",
+    "Jia Xu",
+    "Weibing Wang",
+    "Yawen Duan",
+    "Brian Tse",
+    "Geng Hong",
+    "Xudong Pan",
+    "Yuan Zhang",
+    "Min Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T09:02:14Z",
+  "abs_url": "https://arxiv.org/abs/2606.13079v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13079",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Nowadays, the autonomous execution of cyberattacks capable of causing substantial real-world harm is widely regarded as one of the critical red lines that frontier AI systems must not cross. Within this broader red-line scenario, autonomous penetration represents a core enabling capability and subtask: the ability of LLM-powered AI systems to independently conduct adversarial operations against a target server without human intervention, identify and exploit vulnerabilities, and obtain unauthorized access or control. A growing body of work has sought to assess the autonomous penetration capabilities of AI systems. However, existing evaluations often employ opaque methodologies, rely on unrealistic or overly simplified penetration-testing scenarios, or provide LLMs with excessive prior knowledge and task-specific guidance, and cannot accurately capture the extent to which modern AI systems can autonomously perform this core capability within broader high-impact cyberattack scenarios. To address these limitations, we construct a new autonomous penetration evaluation framework consisting of two components: target servers and agent scaffolding. Specifically, on the target-server side, we design two levels of target environments based on the number of secure services without known vulnerabilities deployed alongside a vulnerable service: Tier~1 (one secure service) and Tier~2 (three secure services), resulting in a total of 300 target servers. Meanwhile, the agent scaffolding adopts a general-purpose agent architecture equipped with a set of general-purpose cybersecurity tools, without any target-specific prior knowledge. We evaluate 19 open-weight and proprietary LLMs, and find that current models achieve penetration success rates ranging from 10.7% to 69.3%. Moreover, we observe that autonomous penetration capability continues to improve alongside advances in overall model capability.",
+  "abstract_zh": "本文关注前沿 AI 系统的一条关键安全红线：能否在无人干预下自主执行可能造成现实危害的网络攻击。其中，自主渗透（autonomous penetration）是核心使能能力，即 LLM 驱动的 AI 系统能否独立针对目标服务器开展对抗操作、发现并利用漏洞，进而获得未授权访问或控制。作者指出，现有评测往往方法不透明、场景过于简化或不现实，或向 LLM 提供过多先验知识和任务指导，难以准确衡量现代 AI 系统在高影响网络攻击场景中的真实自主渗透能力。为此，论文构建了新的自主渗透评测框架，包括目标服务器与 agent scaffolding 两部分。在目标服务器侧，作者基于易受攻击服务与无已知漏洞的安全服务共存数量设计 Tier 1 与 Tier 2 两级环境，共 300 台目标服务器；在 agent scaffolding 侧，采用通用 agent 架构，配备通用网络安全工具，且不提供目标特定先验知识。论文评测了 19 个 open-weight 与 proprietary LLM，发现当前模型的渗透成功率介于 10.7% 到 69.3% 之间，并观察到自主渗透能力会随模型整体能力提升而持续增强。",
+  "key_points_zh": [
+    "论文将自主渗透定义为 LLM-powered AI systems 在无人工干预下发现、利用目标服务器漏洞并获取未授权访问或控制的能力，是高危网络攻击能力的重要子任务。",
+    "作者批评现有 autonomous penetration 评测存在场景不真实、方法不透明、过度提示或提供目标先验知识等问题，可能高估或低估模型真实能力。",
+    "新评测框架包含 300 个目标服务器，分为 Tier 1 与 Tier 2：分别在一个易受攻击服务旁部署 1 个或 3 个无已知漏洞的安全服务，以提高干扰性和真实性。",
+    "agent scaffolding 采用通用 agent 架构和通用 cybersecurity tools，不向模型提供目标特定先验知识，更接近真实自主攻击条件。",
+    "对 19 个 open-weight 与 proprietary LLM 的评测显示，渗透成功率为 10.7% 至 69.3%，且模型整体能力越强，自主渗透能力通常也越强。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.7,
+    "problem_significance": 0.9,
+    "potential_impact": 0.75,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.68,
+    "llm_avg": 0.7160000000000001,
+    "comment": "Important cyber-agent evaluation work with realistic scaffolding, though its main contribution is risk measurement rather than secure harness construction.",
+    "comment_zh": "这是一项重要的网络安全智能体评测研究，具有较真实的脚手架设计，但主要贡献是风险测量而非安全框架构建。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7160000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13079/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.944
+    }
+  ]
+}

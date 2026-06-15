@@ -1,0 +1,68 @@
+{
+  "arxiv_id": "2606.13916",
+  "title": "A Multi-Agent AI System for Automated High School Transcript Processing: Collaborative Document Analysis at Scale",
+  "title_zh": "面向高中成绩单自动处理的 Multi-Agent AI System：大规模协同文档分析",
+  "authors": [
+    "Ben Torkian",
+    "Jun Zhou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T21:12:12Z",
+  "abs_url": "https://arxiv.org/abs/2606.13916v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13916",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Each year, college admissions offices face an overwhelming challenge: processing millions of high school transcripts, each with unique formats, grading systems, and layouts. This manual process creates operational bottlenecks that delay admissions decisions and consume valuable resources. We present a transformative solution through a multi-agent AI system where specialized agents collaborate to automatically process diverse transcript formats through intelligent coordination and communication. Our multi-agent architecture consists of three specialized agents-a Pattern Recognition Agent for format-specific parsing, a Semantic Analysis Agent for natural language understanding, and a Vision Intelligence Agent for multimodal document analysis-coordinated by an Orchestration Agent that manages agent communication and result reconciliation. Our key innovation lies in agent-based quality control using GPA extraction as a coordination signal, ensuring reliable agent collaboration and preventing critical information loss. When evaluated on 40 real world transcripts from high schools across 13 U.S. states, our agent system successfully processed every document, achieving 96.7% accuracy compared to expert manual review while maintaining practical processing speeds of 45 seconds per transcript. This work demonstrates how multi-agent coordination can solve complex document processing challenges, offering institutions a scalable, collaborative AI solution that preserves accuracy while dramatically reducing processing time.",
+  "abstract_zh": "本文针对大学招生办公室每年需处理海量高中成绩单的问题，提出一种多智能体 AI 系统，用于自动解析不同格式、评分体系和版式的成绩单。系统由 Pattern Recognition Agent、Semantic Analysis Agent、Vision Intelligence Agent 三类专门智能体组成，分别负责格式化解析、自然语言理解与多模态文档分析，并由 Orchestration Agent 统一协调通信、结果融合与冲突消解。论文的关键创新是以 GPA 提取作为协同质量控制信号，降低关键信息遗漏风险并提升多智能体协作可靠性。在来自美国 13 个州的 40 份真实高中成绩单上，该系统成功处理全部文档，相比专家人工审核达到 96.7% 准确率，平均每份成绩单处理时间约 45 秒，展示了多智能体协同在复杂文档处理中的可扩展应用潜力。",
+  "key_points_zh": [
+    "提出面向高中成绩单处理的 Multi-Agent AI System，通过多智能体协作应对格式、版式和评分体系高度多样的问题。",
+    "系统包含 Pattern Recognition Agent、Semantic Analysis Agent、Vision Intelligence Agent，并由 Orchestration Agent 负责调度、通信和结果协调。",
+    "以 GPA extraction 作为质量控制和协同信号，用于检测解析一致性、防止关键信息丢失，是论文的核心机制。",
+    "在 40 份来自美国 13 个州的真实成绩单上，系统全部成功处理，并达到相对专家人工审核 96.7% 的准确率。",
+    "平均处理速度为每份成绩单 45 秒，显示其在招生办大规模文档处理场景中的实用性和可扩展性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.42,
+    "problem_significance": 0.46,
+    "potential_impact": 0.38,
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.32,
+    "llm_avg": 0.366,
+    "comment": "This is a useful applied multi-agent document-processing system, but it offers limited reusable harness architecture or closed-loop evolution.",
+    "comment_zh": "该工作是有用的多智能体文档处理应用，但对通用框架架构或闭环演进贡献有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.366,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13916/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

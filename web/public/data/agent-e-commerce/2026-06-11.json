@@ -2,12 +2,12 @@
   "domain": "agent-e-commerce",
   "display_name": "E-commerce Agent",
   "date": "2026-06-11",
-  "generated_at": "2026-06-14T03:00:05Z",
+  "generated_at": "2026-06-15T08:33:58Z",
   "papers": [
     {
       "arxiv_id": "2606.12984",
       "title": "SkillChain: Closing the Loop on Skill Evolution for Image-Based E-Commerce AI Assistants",
-      "title_zh": "SkillChain：为基于图像的电商 AI 助手闭环优化技能演化",
+      "title_zh": "SkillChain：为图像电商 AI 助手闭环优化技能演化",
       "authors": [
         "Yimin Hu",
         "Mengtao Xu",
@@ -16,23 +16,24 @@
         "Xiaoyong Zhu",
         "Bo Zheng"
       ],
-      "total_score": 0.6600000000000001,
+      "total_score": 0.6740785042477364,
       "scores": {
         "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.8800000000000001,
-        "other": 0.2
+        "llm_assessment": 0.868,
+        "other": 0.2589283474924544
       },
       "tags": [
+        "h=32",
         "product search retrieval"
       ],
-      "tldr_zh": "用闭环反馈自动进化电商图像助手技能",
+      "tldr_zh": "用生产反馈闭环自动进化电商图像助手技能",
       "detail_file": "agent-e-commerce/2026-06-11/2606.12984.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12984/thumb.webp"
     },
     {
       "arxiv_id": "2606.13533",
       "title": "OneRetrieval: Unifying Multi-Branch E-commerce Retrieval with an Editable Generative Model",
-      "title_zh": "OneRetrieval：用可编辑生成式模型统一多分支电商召回",
+      "title_zh": "OneRetrieval：用可编辑生成式模型统一多分支电商检索",
       "authors": [
         "Xuxin Zhang",
         "Ben Chen",
@@ -51,16 +52,16 @@
         "Wenwu Ou",
         "Kun Gai"
       ],
-      "total_score": 0.6291549721266658,
+      "total_score": 0.6273549721266658,
       "scores": {
         "topic_relevance": 0.68,
-        "llm_assessment": 0.95,
+        "llm_assessment": 0.944,
         "other": 0.24051657375555285
       },
       "tags": [
         "evaluation simulation"
       ],
-      "tldr_zh": "可编辑生成式召回统一电商多分支",
+      "tldr_zh": "可编辑生成式召回统一电商多分支检索",
       "detail_file": "agent-e-commerce/2026-06-11/2606.13533.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13533/thumb.webp"
     },
@@ -77,11 +78,11 @@
         "Ishita Khan",
         "Qunzhi Zhou"
       ],
-      "total_score": 0.6140000000000001,
+      "total_score": 0.607777486063333,
       "scores": {
         "topic_relevance": 0.8,
-        "llm_assessment": 0.78,
-        "other": 0.2
+        "llm_assessment": 0.744,
+        "other": 0.21525828687777648
       },
       "tags": [
         "ecommerce multi agent collaboration"
@@ -91,65 +92,9 @@
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12924/thumb.webp"
     },
     {
-      "arxiv_id": "2606.12837",
-      "title": "LoHoSearch: Benchmarking Long-Horizon Search Agents Beyond the Human Difficulty Ceiling",
-      "title_zh": "LoHoSearch：突破人类难度上限的长程搜索智能体基准",
-      "authors": [
-        "Jiarui Zhao",
-        "Rongzhi Zhang",
-        "Lingchuan Liu",
-        "Hao Yang",
-        "Xunliang Cai",
-        "Xi Su"
-      ],
-      "total_score": 0.4953527878700583,
-      "scores": {
-        "topic_relevance": 0.8,
-        "llm_assessment": 0.33,
-        "other": 0.25450929290019436
-      },
-      "tags": [
-        "ecommerce multi agent collaboration"
-      ],
-      "tldr_zh": "更难的长程搜索智能体基准",
-      "detail_file": "agent-e-commerce/2026-06-11/2606.12837.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12837/thumb.webp"
-    },
-    {
-      "arxiv_id": "2606.12871",
-      "title": "DailyReport: An Open-ended Benchmark for Evaluating Search Agents on Daily Search Tasks",
-      "title_zh": "DailyReport：用于评估搜索代理日常搜索任务能力的开放式基准",
-      "authors": [
-        "Jingxuan Han",
-        "Wei Liu",
-        "Mingyang Zhu",
-        "Youpeng Wang",
-        "Ziwen Wang",
-        "Lin Qiu",
-        "Xuezhi Cao",
-        "Xunliang Cai",
-        "Zheren Fu",
-        "Licheng Zhang",
-        "Zhendong Mao"
-      ],
-      "total_score": 0.4670529497829102,
-      "scores": {
-        "topic_relevance": 0.6000000000000001,
-        "llm_assessment": 0.36000000000000004,
-        "other": 0.3968431659430338
-      },
-      "tags": [
-        "GitHub",
-        "user intent and preference"
-      ],
-      "tldr_zh": "面向日常搜索代理的可解释开放基准",
-      "detail_file": "agent-e-commerce/2026-06-11/2606.12871.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12871/thumb.webp"
-    },
-    {
       "arxiv_id": "2606.13001",
       "title": "CFALR: Collaborative Filtering-Augmented Large Language Model for Personalized Fashion Outfit Recommendation",
-      "title_zh": "CFALR：用于个性化时尚穿搭推荐的协同过滤增强大语言模型",
+      "title_zh": "CFALR：协同过滤增强的大语言模型用于个性化时尚穿搭推荐",
       "authors": [
         "Yujuan Ding",
         "Junrong Liao",
@@ -159,10 +104,10 @@
         "Tat-Seng Chua",
         "Qing Li"
       ],
-      "total_score": 0.439,
+      "total_score": 0.4312000000000001,
       "scores": {
         "topic_relevance": 0.4,
-        "llm_assessment": 0.73,
+        "llm_assessment": 0.7040000000000001,
         "other": 0.2
       },
       "tags": [
@@ -173,34 +118,33 @@
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13001/thumb.webp"
     },
     {
-      "arxiv_id": "2606.12908",
-      "title": "SENTINEL: Failure-Driven Reinforcement Learning for Training Tool-Using Language Model Agents",
-      "title_zh": "SENTINEL：用于训练工具使用型语言模型智能体的失败驱动强化学习",
+      "arxiv_id": "2606.13741",
+      "title": "High-Frequency Pricing at Scale for E-Commerce",
+      "title_zh": "面向大规模电商的高频定价",
       "authors": [
-        "Ziyi Wang",
-        "Yuxuan Lu",
-        "Yimeng Zhang",
-        "Qun Liu",
-        "Chen Luo",
-        "Jiri Gesi",
-        "Hanqing Lu",
-        "Yisi Sang",
-        "Manling Li",
-        "Jing Huang",
-        "Dakuo Wang"
+        "Stefan Birr",
+        "Tobias Huelden",
+        "Mones Raslan",
+        "Adele Gouttes",
+        "Andreas Schmitt",
+        "Mateusz Koren",
+        "Johannes Stephan",
+        "Robert Streek",
+        "Manuel Kunz",
+        "Tim Januschowski"
       ],
-      "total_score": 0.26904456264783,
+      "total_score": 0.36454737814342497,
       "scores": {
-        "topic_relevance": 0.0,
-        "llm_assessment": 0.62,
-        "other": 0.27681520882609995
+        "topic_relevance": 0.16000000000000003,
+        "llm_assessment": 0.748,
+        "other": 0.2538245938114167
       },
       "tags": [
-        "h=39"
+        "adjacent business ml"
       ],
-      "tldr_zh": "用失败轨迹生成任务，定向强化工具智能体。",
-      "detail_file": "agent-e-commerce/2026-06-11/2606.12908.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12908/thumb.webp"
+      "tldr_zh": "Zalando 高频定价系统使利润提升约6%",
+      "detail_file": "agent-e-commerce/2026-06-11/2606.13741.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13741/thumb.webp"
     }
   ]
 }

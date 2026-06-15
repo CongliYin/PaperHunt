@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.12764",
+  "title": "Detecting Functional Memorization in Code Language Models",
+  "title_zh": "检测代码语言模型中的功能性记忆",
+  "authors": [
+    "Matthieu Meeus",
+    "Anil Ramakrishna",
+    "Matthew Grange",
+    "Zheng Xu",
+    "Luca Melis"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T00:03:25Z",
+  "abs_url": "https://arxiv.org/abs/2606.12764v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12764",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) are increasingly used to generate code at scale. Meanwhile, prior work has investigated whether training data may be recoverable from model outputs, by auditing the textual overlap between training examples and model generations. Code, however, can be functionally equivalent while textually dissimilar. In this work, we study functional memorization: extraction of functional logic beyond what verbatim metrics detect. We construct a counterfactual setup for Olmo-3-32B, comparing a midtrained model (exposed to target code) against a pretrained reference (not exposed). We prompt both models with Python function signatures and measure both textual and functional similarity (i.e., LLM-as-a-judge, execution-based). Our results show clear evidence of functional memorization, highlighting the need for auditing metrics that go beyond textual overlap.",
+  "abstract_zh": "随着 LLM 被越来越多地用于大规模代码生成，训练数据是否会从模型输出中被恢复成为重要风险。以往研究通常通过训练样本与模型生成之间的文本重叠来审计记忆现象，但代码即使文本形式不同，也可能在功能上等价。本文研究“功能性记忆”（functional memorization）：即模型输出了超出逐字匹配指标可检测范围的功能逻辑。作者为 Olmo-3-32B 构建反事实实验设置，比较已接触目标代码的 midtrained model 与未接触目标代码的 pretrained reference。实验使用 Python 函数签名作为提示，并同时评估文本相似度与功能相似度，包括 LLM-as-a-judge 和基于执行的评估。结果显示出明确的功能性记忆证据，说明代码模型审计需要超越文本重叠的指标。",
+  "key_points_zh": [
+    "提出并研究代码 LLM 中的 functional memorization，即模型生成与训练代码功能等价但文本不相似的记忆现象。",
+    "构建 Olmo-3-32B 的反事实对照：midtrained model 接触过目标代码，pretrained reference 未接触，用于隔离训练暴露带来的影响。",
+    "以 Python function signatures 作为提示，分别衡量文本相似度与功能相似度，功能评估包括 LLM-as-a-judge 与 execution-based 方法。",
+    "实验发现文本重叠指标会漏检部分代码记忆，模型可能恢复训练样本中的功能逻辑。",
+    "结论强调代码生成模型的隐私与安全审计应纳入功能层面的相似性检测，而不应仅依赖逐字或文本重叠指标。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.55,
+    "potential_impact": 0.42,
+    "paradigm_shift": 0.3,
+    "lasting_value": 0.35,
+    "llm_avg": 0.434,
+    "comment": "Functional memorization auditing for code models is useful for governance, but it is not specifically an agent harness contribution.",
+    "comment_zh": "代码模型功能性记忆审计对治理有一定价值，但并不是针对智能体框架的核心贡献。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.434,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12764/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12764/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12764/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12764/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.981
+    }
+  ]
+}

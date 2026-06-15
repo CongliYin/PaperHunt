@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.13392",
   "title": "MiniMax Sparse Attention",
-  "title_zh": "MiniMax Sparse Attention：面向超长上下文的稀疏注意力",
+  "title_zh": "MiniMax 稀疏注意力",
   "authors": [
     "Xunhao Lai",
     "Weiqi Xu",
@@ -13,43 +13,49 @@
     "Haohai Sun",
     "Haichao Zhu",
     "Vito Zhang",
+    "Jinkai Hu",
+    "Jiayao Li",
+    "Rui Gao",
+    "Zekun Li",
+    "Songquan Zhu",
+    "Jingkai Zhou",
     "Pengyu Zhao"
   ],
   "author_affiliations": [],
   "published_at": "2026-06-11T14:23:41Z",
-  "abs_url": "https://arxiv.org/abs/2606.13392v1",
+  "abs_url": "https://arxiv.org/abs/2606.13392v2",
   "pdf_url": "https://arxiv.org/pdf/2606.13392",
   "links": {
     "github": "https://github.com/MiniMax-AI/MSA.",
     "project_page": null
   },
   "abstract_en": "Ultra-long-context capability is becoming indispensable for frontier LLMs: agentic workflows, repository-scale code reasoning, and persistent memory all require the model to jointly attend over hundreds of thousands to millions of tokens, yet the quadratic cost of softmax attention makes this untenable at deployment scale. We introduce MiniMax Sparse Attention (MSA), a blockwise sparse attention built upon Grouped Query Attention (GQA). A lightweight Index Branch scores key-value blocks and independently selects a Top-k subset for each GQA group, enabling group-specific sparse retrieval while maintaining efficient block-level execution; the Main Branch then performs exact block-sparse attention over only the selected blocks. Designed around a principle of simplicity and scalability, MSA is deliberately streamlined, making it straightforward to deploy efficiently across a broad range of GPUs. To translate sparsity into practical speedups, we co-design MSA with a GPU execution path that uses exp-free Top-k selection and KV-outer sparse attention to improve tensor-core utilization under block-granular access. On a 109B-parameter model with native multimodal training, MSA performs on par with GQA while reducing per-token attention compute by 28.4x at 1M context. Paired with our co-designed kernel, MSA achieves 14.2x prefill and 7.6x decoding wall-clock speedups on H800. Our inference kernel is available at: https://github.com/MiniMax-AI/MSA. A production-grade natively multimodal model powered by MSA has been publicly released at: https://huggingface.co/MiniMaxAI/MiniMax-M3.",
-  "abstract_zh": "本文提出 MiniMax Sparse Attention (MSA)，一种基于 Grouped Query Attention (GQA) 的块级稀疏注意力机制，旨在降低大模型处理数十万到百万级 token 上下文时的二次注意力开销。MSA 使用轻量级 Index Branch 对 key-value blocks 评分，并为每个 GQA group 独立选择 Top-k blocks，实现组特定的稀疏检索；随后 Main Branch 仅在被选中的 blocks 上执行精确的 block-sparse attention。为将理论稀疏性转化为实际加速，作者联合设计了 GPU 执行路径，包括 exp-free Top-k selection 与 KV-outer sparse attention，以提升块粒度访问下的 tensor-core 利用率。在一个 109B 参数、原生多模态训练的模型上，MSA 在性能接近 GQA 的同时，在 1M 上下文下将每 token 注意力计算量降低 28.4 倍；结合定制 kernel，在 H800 上实现 14.2 倍 prefill 加速和 7.6 倍 decoding 加速。",
+  "abstract_zh": "超长上下文能力正成为前沿 LLM 的关键需求：智能体工作流、代码仓库级推理和持久记忆都要求模型在数十万到数百万 token 范围内进行联合注意力计算，但 softmax attention 的二次复杂度使其难以在部署规模上承受。本文提出 MiniMax Sparse Attention（MSA），一种基于 Grouped Query Attention（GQA）的分块稀疏注意力机制。MSA 使用轻量级 Index Branch 对 key-value block 进行打分，并为每个 GQA group 独立选择 Top-k block，从而实现 group-specific sparse retrieval；随后 Main Branch 仅在被选中的 block 上执行精确的 block-sparse attention。MSA 以简单性和可扩展性为设计原则，便于在多种 GPU 上高效部署。为将稀疏性转化为实际加速，作者还联合设计了 GPU 执行路径，采用 exp-free Top-k selection 和 KV-outer sparse attention，以提升 block 粒度访问下的 tensor-core 利用率。在一个 109B 参数、原生多模态训练的模型上，MSA 在性能上与 GQA 相当，同时在 1M 上下文下将每 token 注意力计算量降低 28.4 倍。结合协同设计的 kernel，MSA 在 H800 上实现 14.2 倍 prefill 和 7.6 倍 decoding 墙钟时间加速。相关 inference kernel 与基于 MSA 的生产级原生多模态模型 MiniMax-M3 已公开发布。",
   "key_points_zh": [
-    "提出 MiniMax Sparse Attention (MSA)，在 GQA 框架上进行块级稀疏化，面向百万级超长上下文推理。",
-    "Index Branch 为每个 GQA group 独立选择 Top-k KV blocks，支持组特定稀疏检索；Main Branch 对选中 blocks 执行精确 block-sparse attention。",
-    "方法强调简单性与可扩展性，便于在多种 GPU 上部署，并与 GPU kernel 共同设计以获得实际 wall-clock 加速。",
-    "通过 exp-free Top-k selection 和 KV-outer sparse attention 改善 tensor-core 利用率，缓解块粒度稀疏访问的效率问题。",
-    "在 109B 原生多模态模型上，MSA 达到接近 GQA 的效果，并在 1M context 下将注意力计算降低 28.4 倍，H800 上 prefill/decoding 分别加速 14.2 倍和 7.6 倍。"
+    "提出 MiniMax Sparse Attention（MSA）：基于 GQA 的 blockwise sparse attention，通过稀疏选择 KV blocks 降低超长上下文注意力成本。",
+    "设计轻量级 Index Branch，为每个 GQA group 独立选择 Top-k key-value blocks，实现 group-specific sparse retrieval；Main Branch 对选中 blocks 做精确 block-sparse attention。",
+    "与 GPU kernel 协同优化，使用 exp-free Top-k selection 和 KV-outer sparse attention，提高 block 粒度稀疏访问下的 tensor-core 利用率。",
+    "在 109B 参数原生多模态模型上，MSA 效果与 GQA 持平，并在 1M context 下将每 token attention compute 降低 28.4 倍。",
+    "在 H800 上实现显著实际加速：prefill 加速 14.2 倍，decoding 加速 7.6 倍；kernel 和 MiniMax-M3 模型均已开源或公开发布。"
   ],
   "llm_assessment": {
-    "novelty": 0.75,
-    "problem_significance": 0.65,
-    "potential_impact": 0.55,
-    "paradigm_shift": 0.45,
-    "lasting_value": 0.45,
-    "llm_avg": 0.5700000000000001,
-    "comment": "Technically strong long-context infrastructure, but its contribution is mostly model inference efficiency rather than agent harness evolution.",
-    "comment_zh": "该工作在长上下文推理效率上技术性较强，但主要贡献不在智能体运行框架演化。"
+    "novelty": 0.76,
+    "problem_significance": 0.74,
+    "potential_impact": 0.77,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.62,
+    "llm_avg": 0.6880000000000001,
+    "comment": "MiniMax Sparse Attention may benefit long-context agents operationally, but it is primarily a model-inference efficiency paper rather than agent harness infrastructure.",
+    "comment_zh": "MiniMax Sparse Attention 可能提升长上下文智能体效率，但本质上更偏向模型推理优化而非智能体框架基础设施。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
     "open_source": 0.5,
-    "community_heat": 0.9524465528927761,
+    "community_heat": 0.9653711917711694,
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.4,
-    "llm_assessment": 0.5700000000000001,
+    "llm_assessment": 0.6880000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -58,7 +64,7 @@
     "code_promised": false,
     "has_video_demo": false,
     "hf_listed": true,
-    "hf_upvotes": 106,
+    "hf_upvotes": 126,
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
@@ -71,7 +77,7 @@
       "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13392/fig1.webp",
       "page": 1,
       "kind": "figure",
-      "confidence": 0.967
+      "confidence": 0.963
     },
     {
       "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13392/fig2.webp",

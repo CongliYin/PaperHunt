@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2606.13221",
+  "title": "From Uncertain Judgments to Calibrated Rankings: Conformal Elo Estimation for LLM Evaluation",
+  "title_zh": "从不确定判断到校准排名：用于 LLM 评估的 Conformal Elo Estimation",
+  "authors": [
+    "Bora Kargi",
+    "David Salinas"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T11:38:05Z",
+  "abs_url": "https://arxiv.org/abs/2606.13221v2",
+  "pdf_url": "https://arxiv.org/pdf/2606.13221",
+  "links": {
+    "github": "https://github.com/kargibora/SoftElo",
+    "project_page": null
+  },
+  "abstract_en": "Evaluating new large language models typically requires costly human annotation campaigns at scale. LLM-as-a-judge offers a cheaper alternative, but judge scores carry systematic errors - such as position bias, self-preference, or intransitivity - that can strongly miscalibrate the resulting rankings. We quantify the resulting judge-human disagreement at two complementary levels. At the local level, we estimate per-battle uncertainty from the judge's own score differences by propagating calibrated win probabilities rather than hard labels into the Bradley-Terry procedure. This alone provides a drastic improvement to Elo estimation accuracy, bringing LLM-derived ratings within 17.9 Elo MAE of human-derived ones when averaged over 55 held-out models on LMArena. At the global level, we apply split conformal prediction to the residual gap between LLM-derived and human-derived Elo ratings across held-out models, producing prediction intervals with distribution-free marginal coverage guarantees that account for irreducible LLM-human disagreement. Together, these two layers yield a low-cost evaluation tool that provides developers with calibrated Elo estimates and honest uncertainty bounds, without access to large-scale human annotations. To facilitate reproducibility, we release our code at https://github.com/kargibora/SoftElo .",
+  "abstract_zh": "评估新的大语言模型通常需要大规模且昂贵的人类标注。LLM-as-a-judge 提供了更低成本的替代方案，但裁判模型的评分存在系统性误差，例如位置偏差（position bias）、自我偏好（self-preference）和非传递性（intransitivity），这些误差会显著影响最终排名的校准性。本文从两个互补层面量化 LLM 裁判与人类偏好之间的不一致：在局部层面，作者利用裁判模型自身的分数差估计每场对战的不确定性，并将校准后的胜率而非硬标签输入 Bradley-Terry 流程，从而显著提升 Elo 估计精度；在 LMArena 上对 55 个留出模型平均评估时，LLM 推导的评分与人类推导评分之间的误差降至 17.9 Elo MAE。在全局层面，作者对 LLM-derived Elo 与 human-derived Elo 之间的残差差距应用 split conformal prediction，生成具有分布无关边际覆盖保证的预测区间，以刻画不可消除的 LLM-human disagreement。两层方法结合后，形成了一种低成本评估工具，可在无需大规模人类标注的情况下，为开发者提供校准后的 Elo 估计和可信的不确定性边界。代码已开源于 https://github.com/kargibora/SoftElo。",
+  "key_points_zh": [
+    "提出 Conformal Elo Estimation，将局部对战不确定性建模与全局残差校准结合，用于更可靠的 LLM 排名评估。",
+    "局部层面不再将 LLM 裁判结果视为硬胜负标签，而是根据分数差传播校准胜率，并输入 Bradley-Terry 模型估计 Elo。",
+    "在 LMArena 的 55 个留出模型上，SoftElo 将 LLM-derived Elo 与 human-derived Elo 的平均绝对误差降至 17.9 Elo。",
+    "全局层面使用 split conformal prediction 对 LLM 与人类 Elo 残差建模，给出具有分布无关覆盖保证的预测区间。",
+    "该方法面向低成本模型评估场景，能在缺乏大规模人类标注时提供更诚实的排名与不确定性估计。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.62,
+    "problem_significance": 0.65,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.4,
+    "lasting_value": 0.5,
+    "llm_avg": 0.55,
+    "comment": "Calibrated Elo uncertainty is useful for evaluation governance, but the work targets model ranking more than agent runtime assessment.",
+    "comment_zh": "校准Elo不确定性对评测治理有用，但该工作更偏向模型排名而非智能体运行时评估。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.55,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/kargibora/SoftElo",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13221/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13221/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.98
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2606.13884",
+  "title": "Capability Minimization as a Safety Primitive: Risk-Aware Causal Gating for Least-Privilege LLM Agents",
+  "title_zh": "能力最小化作为安全原语：面向最小权限 LLM Agent 的风险感知因果门控",
+  "authors": [
+    "Laxmipriya Ganesh Iyer",
+    "Rahul Suresh Babu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T20:19:35Z",
+  "abs_url": "https://arxiv.org/abs/2606.13884v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13884",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Modern decision systems increasingly rely on learned components whose outputs may be confident yet wrong, exposing downstream actions to costly errors. We introduce Risk-Aware Causal Gating (RACG), a framework that decides whether to act on, defer, or abstain from a model's prediction by combining causal effect estimation with calibrated risk control. RACG models the causal pathway from candidate actions to outcomes and gates each decision according to an estimated counterfactual risk rather than raw predictive confidence. To make gating reliable, we derive distribution-free bounds on the probability of acting under high-risk conditions and show how these bounds translate into operating thresholds that satisfy user-specified safety constraints. We further propose an adaptive gating policy that adjusts to distribution shift by monitoring discrepancies between predicted and realized outcomes, tightening the gate when causal assumptions appear violated. Across simulated interventions and real-world decision benchmarks, RACG reduces high-cost errors substantially while preserving most of the utility of an ungated policy, and it outperforms confidence-based and selective-prediction baselines at matched abstention rates. Our results indicate that explicitly separating causal risk from predictive uncertainty yields decision systems that are both safer and more transparent, offering a principled mechanism for trustworthy automation in high-stakes settings.",
+  "abstract_zh": "现代决策系统越来越依赖学习型组件，但模型即使给出高置信度预测也可能出错，从而导致下游行动产生高成本失误。本文提出 Risk-Aware Causal Gating（RACG），一个通过结合因果效应估计与校准风险控制，决定系统应执行、延迟还是拒绝采纳模型预测的框架。RACG 显式建模候选行动到结果的因果路径，并依据估计的反事实风险而非原始预测置信度对每个决策进行门控。为提升门控可靠性，作者推导了在高风险条件下采取行动概率的分布无关界，并将其转化为满足用户指定安全约束的运行阈值。此外，论文提出一种自适应门控策略，通过监测预测结果与真实结果之间的偏差来应对分布偏移；当因果假设可能被破坏时，系统会收紧门控。实验显示，在模拟干预和真实决策基准上，RACG 能显著减少高成本错误，同时保留未门控策略的大部分效用，并在相同拒绝率下优于基于置信度和选择性预测的基线方法。",
+  "key_points_zh": [
+    "提出 Risk-Aware Causal Gating（RACG），将因果效应估计与风险校准结合，用于决定模型预测是否应被执行、延迟或拒绝。",
+    "核心思想是用估计的反事实风险进行门控，而不是依赖模型预测置信度，从而区分“预测不确定性”和“行动因果风险”。",
+    "给出分布无关的高风险行动概率界，并将其转化为可满足用户安全约束的操作阈值。",
+    "设计自适应门控策略，在检测到预测与真实结果偏差、因果假设可能失效时自动收紧门控，以应对分布偏移。",
+    "在模拟干预和真实决策基准中，RACG 在保持多数效用的同时显著降低高成本错误，并优于 confidence-based 与 selective-prediction 基线。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.68,
+    "problem_significance": 0.78,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.7,
+    "llm_avg": 0.7,
+    "comment": "RACG is relevant as a least-privilege gating primitive for safer agent actions, though the abstract appears broader than LLM-agent runtime governance.",
+    "comment_zh": "RACG 可作为更安全智能体动作的最小权限门控原语，但摘要范围比 LLM 智能体运行时治理更宽泛。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13884/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.944
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13884/fig2.webp",
+      "page": 2,
+      "kind": "table",
+      "confidence": 0.973
+    }
+  ]
+}

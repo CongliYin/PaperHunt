@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.13317",
+  "title": "SkillCAT: Contrastive Assessment and Topology-Aware Skill Self-Evolution for LLM Agents",
+  "title_zh": "SkillCAT：用于 LLM Agent 的对比式评估与拓扑感知技能自进化",
+  "authors": [
+    "Kunfeng Chen",
+    "Qihuang Zhong",
+    "Juhua Liu",
+    "Bo Du"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T13:12:10Z",
+  "abs_url": "https://arxiv.org/abs/2606.13317v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13317",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Skill self-evolution methods for LLM agents aim to turn execution trajectories into reusable skill documents, but current pipelines typically learn from one trajectory per task, merge candidate skill patches before checking them, and load the full skill corpus before inference. We propose SkillCAT, a training-free framework that separates this process into three stages. Contrastive Causal Extraction (CCE) samples multiple trajectories for each task and compares same-task success/failure pairs to identify evidence that explains outcome differences. Assessment-Augmented Evolution (AAE) replays each candidate patch on source-task clones and keeps only patches that improve or preserve task outcomes before hierarchical skill patch merging. Topology-Aware Task Execution (TTE) compiles the evolved skills into a routable sub-skill topology, so inference loads only the capability nodes relevant to the task. We evaluate SkillCAT on common agent benchmarks, including SpreadsheetBench, WikiTableQuestions, and DocVQA, and further test cross-model and out-of-distribution generalization. Across these settings, SkillCAT raises the average score over baselines by up to 40.40%, demonstrating reliable skill evolution without model training.",
+  "abstract_zh": "LLM Agent 的技能自进化方法旨在将执行轨迹转化为可复用的技能文档，但现有流程通常每个任务只学习一条轨迹、在验证前合并候选技能补丁，并在推理前加载完整技能库。论文提出 SkillCAT，一个无需训练的框架，将技能进化拆分为三个阶段：Contrastive Causal Extraction（CCE）为每个任务采样多条轨迹，并对比同任务的成功/失败轨迹，以识别导致结果差异的关键证据；Assessment-Augmented Evolution（AAE）在源任务克隆上回放每个候选补丁，仅保留能提升或保持任务结果的补丁，再进行层级化技能补丁合并；Topology-Aware Task Execution（TTE）将进化后的技能编译为可路由的子技能拓扑，使推理时只加载与当前任务相关的能力节点。作者在 SpreadsheetBench、WikiTableQuestions、DocVQA 等常见 Agent 基准上评估，并测试跨模型与分布外泛化。实验显示，SkillCAT 相比基线平均分最高提升 40.40%，证明无需模型训练也能实现可靠的技能进化。",
+  "key_points_zh": [
+    "提出 SkillCAT，将 LLM Agent 技能自进化拆分为 CCE、AAE、TTE 三阶段，避免传统方法中单轨迹学习、未验证合并和全量技能加载的问题。",
+    "CCE 通过同一任务的成功/失败轨迹对比，提取真正影响任务结果的因果证据，从而生成更可靠的候选技能补丁。",
+    "AAE 在源任务克隆上评估每个候选补丁，只保留能改善或不损害表现的补丁，再进行层级合并，降低错误技能污染技能库的风险。",
+    "TTE 将技能组织为可路由的子技能拓扑，推理时按任务需求加载相关能力节点，提升技能检索与使用效率。",
+    "在 SpreadsheetBench、WikiTableQuestions、DocVQA 及跨模型、分布外设置中，SkillCAT 相比基线平均分最高提升 40.40%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.88,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8680000000000001,
+    "comment": "Strong closed-loop skill evolution work using trajectory contrast, replay validation, and routable skill topology for reusable agent improvement.",
+    "comment_zh": "这是一项很强的闭环技能演进研究，利用轨迹对比、回放验证和可路由技能拓扑实现可复用智能体改进。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8680000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13317/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.925
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13317/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.908
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13317/fig3.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13317/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.982
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "arxiv_id": "2606.13076",
+  "title": "$α$-fair heterogeneous agent reinforcement learning",
+  "title_zh": "α-fair 异构智能体强化学习",
+  "authors": [
+    "Yao-hua Franck Xu",
+    "Tayeb Lemlouma",
+    "Jean-Marie Bonnin",
+    "Arnaud Braud"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T08:59:41Z",
+  "abs_url": "https://arxiv.org/abs/2606.13076v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13076",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Cooperation in multi-agent systems is typically optimized through utilitarian objectives that maximize overall efficiency but fail to account for reward distribution, often resulting in inequitable \"leader-follower\" dynamics. While fairness-based approaches encourage pro-social behaviors where every agent benefits from cooperation, many current algorithms - including those utilizing reward shaping - break the stationarity of Markov Games or lack rigorous theoretical guarantees. This creates a critical gap between fair objective methods and theoretically safe learning frameworks. We propose a novel framework that bridges $α$-fairness with Heterogeneous-Agent Trust Region Learning (HATRL), ensuring monotonic improvement and convergence toward Nash Equilibria. Our approach leverages a fair advantage function that dynamically weights agent utilities based on their expected returns, allowing the global objective to transition from purely utilitarian efficiency to $α$-fairness welfare based on the parameter $α$. We introduce two practical algorithms, $α$-fair HATRPO and $α$-fair HAPPO, and demonstrate through experiments in sequential social dilemmas like CleanUp and CommonHarvest that they perform better than HATRL's algorithms from a utilitarian point of view while achieving socially higher outcomes.",
+  "abstract_zh": "多智能体系统中的合作通常采用功利主义目标，即最大化整体效率，但这类目标往往忽视奖励分配，容易产生不公平的“leader-follower”动态。尽管基于公平性的算法能够鼓励每个智能体都从合作中受益的亲社会行为，许多现有方法（包括 reward shaping）会破坏 Markov Games 的平稳性，或缺乏严格理论保证。本文提出一种将 α-fairness 与 Heterogeneous-Agent Trust Region Learning（HATRL）结合的新框架，在追求公平福利的同时保证单调改进并收敛到 Nash Equilibria。该方法设计了 fair advantage function，根据智能体的期望回报动态调整其效用权重，使全局目标可通过参数 α 在纯功利效率与 α-fairness welfare 之间切换。作者进一步提出 α-fair HATRPO 和 α-fair HAPPO 两个实用算法，并在 CleanUp、CommonHarvest 等 sequential social dilemmas 中验证其相比 HATRL 算法在功利指标上更优，同时实现更高的社会性结果。",
+  "key_points_zh": [
+    "指出多智能体合作中功利主义目标虽提升整体效率，但可能导致奖励分配不均和“leader-follower”不公平动态。",
+    "提出结合 α-fairness 与 HATRL 的理论框架，在不破坏 Markov Games 平稳性的前提下保证单调改进与向 Nash Equilibria 收敛。",
+    "设计 fair advantage function，根据各智能体期望回报动态加权效用，并通过 α 控制目标从 utilitarian welfare 到 α-fairness welfare 的转变。",
+    "提出两个具体算法 α-fair HATRPO 与 α-fair HAPPO，适配异构智能体信任域学习框架。",
+    "在 CleanUp 和 CommonHarvest 等 sequential social dilemmas 上实验表明，该方法相较 HATRL 基线兼具更高功利性能与更公平的社会结果。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.45,
+    "potential_impact": 0.35,
+    "paradigm_shift": 0.3,
+    "lasting_value": 0.3,
+    "llm_avg": 0.39,
+    "comment": "A theoretically motivated multi-agent RL fairness paper, but it is largely outside production LLM agent harness infrastructure.",
+    "comment_zh": "这是一篇具有理论动机的多智能体强化学习公平性论文，但基本不属于生产级LLM智能体框架基础设施范畴。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.39342404825616256,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.39,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

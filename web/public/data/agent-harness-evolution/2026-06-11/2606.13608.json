@@ -1,0 +1,113 @@
+{
+  "arxiv_id": "2606.13608",
+  "title": "AgentBeats: Agentifying Agent Assessment for Openness, Standardization, and Reproducibility",
+  "title_zh": "AgentBeats：将智能体评测智能体化，以实现开放性、标准化与可复现性",
+  "authors": [
+    "Xiaoyuan Liu",
+    "Jianhong Tu",
+    "Yuqi Chen",
+    "Siyuan Xie",
+    "Sihan Ren",
+    "Tianneng Shi",
+    "Gal Gantar",
+    "Evan Sandoval",
+    "Donghyun Lee",
+    "Daniel Miao",
+    "Peter J. Gilbert",
+    "Nick Hynes",
+    "Mauro Staver",
+    "Warren He",
+    "David Marn",
+    "Andrew Low",
+    "Xi Zhang",
+    "Elron Bandel",
+    "Michal Shmueli-Scheuer",
+    "Siva Reddy",
+    "Alexandre Drouin",
+    "Alexandre Lacoste",
+    "Ramayya Krishnan",
+    "Elham Tabassi",
+    "Yu Su",
+    "Victor Barres",
+    "Chenguang Wang",
+    "Wenbo Guo",
+    "Dawn Song"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T17:23:54Z",
+  "abs_url": "https://arxiv.org/abs/2606.13608v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13608",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent systems are advancing quickly across domains, but their evaluation remains fragmented. Most benchmarks rely on fixed, LLM-centric harnesses that require heavy integration, create test-production mismatch, and limit fair comparison across diverse agent designs. The root problem is the lack of an open, agent-agnostic assessment interface. We advocate Agentified Agent Assessment (AAA), where evaluation is performed by judge agents and all participants interact through standardized protocols: A2A for task management and MCP for tool access. Conventional benchmarking defines two separate interfaces, one for the benchmark and one for the agent, while AAA only needs one; this yields a generic, unified framework that separates assessment logic from agent implementation and enables reproducible, interoperable, and multi-agent evaluation. We further introduce AgentBeats as a concrete realization of AAA: we identify five practical operation modes that make standardized assessment compatible with real-world constraints on openness, privacy, and reproducibility. To evaluate our design at scale, we conduct two studies: a five-month open competition that drew 298 judge agents across 12 categories together with 467 subject agents from independent participants, showing that AAA applies across a heterogeneous range of benchmarks; and a case study on coding agents that confirms agentified evaluation preserves fidelity with the public record while surfacing previously missing head-to-head results, yielding research insights about agent design. Combining a community-scale field study and a controlled coding case study, we verify that AAA delivers coverage, practicality, and fidelity across heterogeneous scenarios at scale. Together, AAA and AgentBeats offer a clear path toward open, standardized, and reproducible agent assessment.",
+  "abstract_zh": "本文关注当前 Agent systems 评测碎片化的问题：多数 benchmark 依赖固定且以 LLM 为中心的评测框架，集成成本高，容易造成测试环境与生产环境不一致，并限制不同 agent 设计之间的公平比较。作者提出 Agentified Agent Assessment（AAA），即由 judge agents 执行评测，所有参与方通过标准协议交互：A2A 负责任务管理，MCP 负责工具访问。相比传统 benchmark 需要分别定义 benchmark 接口与 agent 接口，AAA 只需一个统一接口，从而将评测逻辑与 agent 实现解耦，支持可复现、可互操作、多智能体的评测。论文进一步提出 AgentBeats 作为 AAA 的具体实现，并总结了五种实际运行模式，以适配开放性、隐私与可复现性等现实约束。实验包括一项持续五个月的开放竞赛，覆盖 12 个类别、298 个 judge agents 与 467 个 subject agents，以及一个 coding agents 案例研究。结果表明，AAA 能覆盖异构 benchmark，并在保持与公开记录一致性的同时补充缺失的 head-to-head 结果，为 agent 设计研究提供新洞察。",
+  "key_points_zh": [
+    "提出 Agentified Agent Assessment（AAA）：用 judge agents 执行评测，并通过 A2A 与 MCP 统一任务管理和工具访问接口。",
+    "AAA 将评测逻辑与 agent 实现解耦，减少传统 benchmark 的重集成、接口割裂和测试-生产不一致问题。",
+    "AgentBeats 是 AAA 的具体实现，设计了五种运行模式，以平衡开放评测、隐私保护、标准化和可复现性。",
+    "五个月开放竞赛验证了方法的规模化可行性：涵盖 12 类任务、298 个 judge agents 和 467 个 subject agents。",
+    "coding agents 案例表明，agentified evaluation 能保持与公开记录的 fidelity，并补充缺失的 head-to-head 对比结果。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.9,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8880000000000001,
+    "comment": "Very strong agent evaluation infrastructure work that standardizes interoperable assessment protocols and supports reproducible large-scale agent comparison.",
+    "comment_zh": "这是一项很强的智能体评测基础设施研究，标准化了可互操作评估协议并支持大规模可复现比较。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8880000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13608/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13608/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13608/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.916
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13608/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

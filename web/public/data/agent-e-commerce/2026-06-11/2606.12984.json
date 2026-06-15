@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.12984",
   "title": "SkillChain: Closing the Loop on Skill Evolution for Image-Based E-Commerce AI Assistants",
-  "title_zh": "SkillChain：为基于图像的电商 AI 助手闭环优化技能演化",
+  "title_zh": "SkillChain：为图像电商 AI 助手闭环优化技能演化",
   "authors": [
     "Yimin Hu",
     "Mengtao Xu",
@@ -19,32 +19,32 @@
     "project_page": null
   },
   "abstract_en": "Image-based AI assistants are now deployed at production scale on e-commerce platforms, where a single uploaded image can trigger fundamentally different user intents: product search, style recommendation, visual encyclopedia, or utility tool calls, each demanding its own response format, tool invocation, and domain knowledge. Without per-intent behavioral constraints, LLM-based systems conflate these heterogeneous modes and fall short of domain quality standards, while the breadth and dynamism of the intent space render manual engineering infeasible. To address this, we present SkillChain, which closes the production feedback loop on Skill evolution, automating the lifecycle of Skills through three stages: Skill Creator for bootstrapping from task specs and trajectories, Route Optimizer for routing alignment, and Body Refiner for iterative Skill Body refinement via dual-path LLM-Judge evaluation. Deployed on a production-scale e-commerce image assistant, SkillChain substantially improves aggregate response quality, with the strongest gains on structural compliance and content quality; a one-week online A/B experiment further confirms significant gains in user engagement, content consumption, and long-term retention.",
-  "abstract_zh": "本文面向生产级电商平台中的 image-based AI assistant 场景：用户上传同一张图像后，可能触发商品搜索、穿搭/风格推荐、视觉百科或工具调用等不同意图，每类任务都需要特定的响应格式、工具调用方式和领域知识。现有 LLM-based 系统若缺乏按意图约束的行为规范，容易混淆不同模式，难以达到电商领域的质量要求；而意图空间又广泛且动态变化，人工维护成本过高。为此，论文提出 SkillChain，通过生产反馈闭环自动化 Skill 的全生命周期演化，包括：Skill Creator 从任务规格和轨迹中初始化 Skill，Route Optimizer 优化意图到 Skill 的路由对齐，Body Refiner 结合双路径 LLM-Judge 评估迭代改进 Skill Body。该方法已部署在生产级电商图像助手中，显著提升整体响应质量，尤其在结构合规性和内容质量上收益明显；一周在线 A/B 实验进一步验证其能提升用户参与度、内容消费和长期留存。",
+  "abstract_zh": "本文面向生产级电商平台中的图像 AI 助手问题：同一张用户上传图片可能对应商品搜索、风格推荐、视觉百科或工具调用等不同意图，每类意图都需要特定的回复格式、工具调用方式和领域知识。若缺少按意图划分的行为约束，基于 LLM 的系统容易混淆不同任务模式，难以满足电商场景的质量要求；而意图空间庞大且持续变化，纯人工规则工程不可扩展。为此，论文提出 SkillChain，通过生产反馈闭环自动化 Skill 的生命周期，包括三个阶段：Skill Creator 根据任务规范和轨迹初始化 Skill，Route Optimizer 优化意图到 Skill 的路由对齐，Body Refiner 借助双路径 LLM-Judge 评估迭代改进 Skill Body。该方法已部署在生产级电商图像助手中，显著提升整体响应质量，尤其在结构合规性和内容质量上收益明显；一周线上 A/B 实验进一步验证了其在用户参与、内容消费和长期留存方面的提升。",
   "key_points_zh": [
-    "针对电商 image-based AI assistant 中多意图、多格式、多工具调用的复杂场景，SkillChain 将不同用户意图封装为可演化的 Skill，以减少 LLM 行为混淆。",
-    "系统包含三个核心阶段：Skill Creator 负责从任务规范和历史轨迹启动 Skill，Route Optimizer 对齐路由决策，Body Refiner 持续优化 Skill Body。",
-    "Body Refiner 使用双路径 LLM-Judge 评估机制，从生产反馈中发现问题并迭代改进技能内容，形成自动化闭环。",
-    "生产部署结果显示，SkillChain 显著提升聚合响应质量，尤其改善结构合规性、回答格式稳定性和内容质量。",
-    "一周在线 A/B 实验表明，该方法不仅提升离线质量指标，也带来用户参与度、内容消费和长期留存的显著增长。"
+    "提出 SkillChain，将电商图像 AI 助手的不同用户意图抽象为可演化的 Skill，解决 LLM 在商品搜索、风格推荐、视觉百科、工具调用等模式间混淆的问题。",
+    "系统包含三阶段闭环：Skill Creator 负责从任务规范和交互轨迹启动技能，Route Optimizer 负责路由对齐，Body Refiner 通过双路径 LLM-Judge 评估持续优化 Skill Body。",
+    "核心价值在于将原本依赖人工维护的意图约束、回复格式和领域知识沉淀为可自动迭代的技能体系，适应电商场景中动态扩展的意图空间。",
+    "在生产级电商图像助手部署后，SkillChain 显著提升聚合响应质量，结构合规性和内容质量提升最为突出。",
+    "一周线上 A/B 实验显示，该方法不仅改善离线质量指标，也带来用户参与度、内容消费和长期留存的显著增长。"
   ],
   "llm_assessment": {
-    "novelty": 0.85,
+    "novelty": 0.86,
     "problem_significance": 0.9,
-    "potential_impact": 0.95,
-    "paradigm_shift": 0.8,
-    "lasting_value": 0.9,
-    "llm_avg": 0.8800000000000001,
-    "comment": "Strong production-oriented e-commerce agent work that closes the feedback loop for image-based shopping assistants with online engagement gains.",
-    "comment_zh": "这是一项很强的生产级电商智能体工作，通过闭环优化图像购物助手并带来线上用户参与提升。"
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.88,
+    "llm_avg": 0.868,
+    "comment": "A strong production-grounded e-commerce agent paper that closes the loop between visual shopping intent routing, skill refinement, and measurable user engagement.",
+    "comment_zh": "这是一篇很强的电商智能体论文，将视觉购物意图路由、技能迭代和线上用户增长紧密结合。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.3,
+    "author_reputation": 0.6535700849547261,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.8800000000000001,
+    "llm_assessment": 0.868,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -57,34 +57,34 @@
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": null,
-    "last_author_found": false,
+    "last_author_h_index": 32,
+    "last_author_found": true,
     "last_author_affiliations": []
   },
   "figures": [
     {
       "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12984/fig1.webp",
-      "page": 5,
-      "kind": "table",
-      "confidence": 0.977
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12984/fig2.webp",
-      "page": 6,
-      "kind": "table",
-      "confidence": 0.975
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12984/fig3.webp",
       "page": 3,
       "kind": "figure",
       "confidence": 0.97
     },
     {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12984/fig4.webp",
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12984/fig2.webp",
       "page": 6,
       "kind": "figure",
       "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12984/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.775
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12984/fig4.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.946
     }
   ]
 }

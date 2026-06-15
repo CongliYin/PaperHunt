@@ -1,0 +1,70 @@
+{
+  "arxiv_id": "2606.13111",
+  "title": "MÖVE: A Holistic LLM Benchmark for the German Public Sector",
+  "title_zh": "MÖVE：面向德国公共部门的整体性 LLM 基准",
+  "authors": [
+    "Camilla Dalerci",
+    "Thilo Michael",
+    "Robin Schaefer",
+    "Daniel Weinland"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T09:37:45Z",
+  "abs_url": "https://arxiv.org/abs/2606.13111v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13111",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We present MÖVE (Modelle für die Öffentliche Verwaltung Evaluieren), a holistic benchmark for evaluating large language models (LLMs) in the context of the German public sector. While LLMs are increasingly adopted in public administration, model selection remains largely ad hoc, and existing benchmarks offer limited guidance: they are predominantly English-centric, US-centric in content, and focus exclusively on task performance. MÖVE addresses these gaps by evaluating 39 models across two complementary dimensions. Performance criteria cover summarization, question answering, and topic extraction. Governance criteria assess hallucination tendencies, energy consumption, provider transparency, and alignment with German constitutional values and knowledge about positions by German political parties. In total, we utilize ten German-language datasets, including gold- and silverstandard datasets that we constructed to reflect public-administration domains. We employ a multi-metric evaluation strategy combining classical NLP metrics, embedding-based methods, and LLM-as-a-judge approaches. Our results show that no single model dominates across all criteria: top performers differ between tasks, and model size alone is a poor predictor of quality. We further evaluate the benchmark itself, analyzing its statistical precision, LLM judge reliability, the impact of our private datasets on model rankings, the sensitivity of our results to prompt formulation, and the validity of our energy consumption estimates. MÖVE is designed as a living benchmark under active development; results are publicly available at https://moeve.bundesdruckerei.de/.",
+  "abstract_zh": "本文提出 MÖVE（Modelle für die Öffentliche Verwaltung Evaluieren），一个用于评估德国公共部门场景下大语言模型（LLMs）的整体性基准。针对现有基准偏英语、偏美国语境且主要关注任务性能的问题，MÖVE 从性能与治理两大维度评估 39 个模型。性能维度覆盖摘要、问答与主题抽取；治理维度评估幻觉倾向、能耗、提供方透明度，以及与德国宪法价值和德国政党立场知识的对齐情况。基准使用 10 个德语数据集，包括作者构建的面向公共行政领域的 gold-standard 与 silver-standard 数据集，并结合传统 NLP 指标、embedding-based 方法和 LLM-as-a-judge 进行多指标评估。结果显示，没有单一模型在所有标准上占优；不同任务的最佳模型不同，模型规模也不能可靠预测质量。作者还分析了基准自身的统计精度、LLM judge 可靠性、私有数据集对排名的影响、prompt 敏感性以及能耗估计有效性。MÖVE 被设计为持续更新的 living benchmark，结果已公开发布。",
+  "key_points_zh": [
+    "提出 MÖVE，一个面向德国公共行政场景的德语 LLM benchmark，旨在弥补现有评测英语中心、美国语境中心和只看任务性能的不足。",
+    "评估 39 个模型，覆盖性能指标（摘要、问答、主题抽取）与治理指标（幻觉、能耗、提供方透明度、德国宪法价值对齐、德国政党立场知识）。",
+    "使用 10 个德语数据集，其中包含作者构建的公共行政领域 gold-standard 与 silver-standard 数据集，并采用传统 NLP 指标、embedding-based 评估和 LLM-as-a-judge。",
+    "实验发现没有模型在所有维度全面领先；任务最优模型各不相同，模型大小并不是质量的可靠预测因素。",
+    "论文还对 benchmark 本身进行元评估，包括统计精度、LLM judge 可靠性、私有数据对排名影响、prompt 敏感性和能耗估计有效性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.45,
+    "problem_significance": 0.5,
+    "potential_impact": 0.38,
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.32,
+    "llm_avg": 0.38,
+    "comment": "A solid public-sector LLM benchmark, but it is mostly model evaluation rather than agent harness evolution.",
+    "comment_zh": "这是一项扎实的公共部门LLM基准研究，但主要是模型评测而非智能体框架演进。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.38,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13111/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.907
+    }
+  ]
+}

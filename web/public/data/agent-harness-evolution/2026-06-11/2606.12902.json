@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.12902",
+  "title": "PRISM: Prosody-Integrated Multi-Agent Reasoning Framework for Empathetic Spoken Dialogue",
+  "title_zh": "PRISM：面向共情语音对话的韵律集成多智能体推理框架",
+  "authors": [
+    "Wen Zhang",
+    "Xiaocui Yang",
+    "Zhuoyue Gao",
+    "Shi Feng",
+    "Daling Wang",
+    "Yifei Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T04:59:33Z",
+  "abs_url": "https://arxiv.org/abs/2606.12902v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12902",
+  "links": {
+    "github": "https://github.com/Bxzfrm/PRISM.",
+    "project_page": null
+  },
+  "abstract_en": "Empathetic spoken dialogue systems require not only semantically appropriate responses but also emotionally aligned prosodic expression. However, cascade pipelines often discard acoustic cues during speech-to-text conversion, while end-to-end speech models lack interpretable control over emotion and knowledge integration. To address these challenges, we propose PRISM, a multi-agent framework for empathetic spoken dialogue that decouples speech perception, response generation, and speech synthesis into coordinated components. PRISM introduces a prosody-to-language translation mechanism to stabilize large language model reasoning and enables on-demand invocation of external knowledge tools for empathetic dialogue generation. Experimental results demonstrate that PRISM achieves consistent improvements in empathy, prosodic appropriateness, and text response generation quality across objective and subjective metrics. Our code is available at: https://github.com/Bxzfrm/PRISM.",
+  "abstract_zh": "共情语音对话系统不仅需要生成语义合适的回复，还需要具备情感一致的韵律表达。现有级联系统在 speech-to-text 转换中往往丢失声学线索，而端到端语音模型又缺乏对情感与知识整合的可解释控制。为解决这些问题，论文提出 PRISM，一个面向共情语音对话的多智能体框架，将语音感知、回复生成与语音合成解耦为相互协作的组件。PRISM 引入 prosody-to-language translation 机制，把韵律信息转化为语言化表征，以稳定大语言模型推理；同时支持按需调用外部知识工具来生成更具共情性的对话回复。实验结果表明，PRISM 在客观和主观指标上均提升了共情能力、韵律适配性以及文本回复质量。",
+  "key_points_zh": [
+    "PRISM 采用多智能体架构，将 speech perception、response generation 和 speech synthesis 解耦，提升系统可解释性与可控性。",
+    "提出 prosody-to-language translation，将语音中的韵律和情绪线索转化为语言描述，避免传统 ASR 级联流程丢失声学信息。",
+    "框架允许大语言模型按需调用外部知识工具，使共情回复不仅情绪贴合，也能结合相关背景知识。",
+    "实验显示 PRISM 在共情性、韵律恰当性和文本生成质量上均优于对比方法，且获得客观指标和主观评测的一致支持。",
+    "论文已被 Interspeech 2026 接收，代码开源于 GitHub。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.48,
+    "problem_significance": 0.45,
+    "potential_impact": 0.42,
+    "paradigm_shift": 0.3,
+    "lasting_value": 0.34,
+    "llm_avg": 0.398,
+    "comment": "PRISM is mainly a domain-specific spoken-dialogue multi-agent pipeline with limited relevance to reusable production agent harness evolution.",
+    "comment_zh": "PRISM 主要是面向语音对话的领域多智能体流程，对通用生产级智能体框架演进的相关性较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.398,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Bxzfrm/PRISM.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12902/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12902/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12902/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.945
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12902/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.983
+    }
+  ]
+}

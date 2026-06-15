@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2606.13262",
+  "title": "From Verdict to Process: Agentic Reinforcement Learning for Multi-Stage Fact Verification",
+  "title_zh": "从结论到过程：用于多阶段事实验证的智能体强化学习",
+  "authors": [
+    "Rongxin Yang",
+    "Shenghong He",
+    "Siyuan Zhu",
+    "Chao Yu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T12:17:18Z",
+  "abs_url": "https://arxiv.org/abs/2606.13262v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13262",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent approaches combining Large Language Models (LLMs) with retrieval-augmented reasoning have shown promise for automated fact verification. To process complex claims, these verification pipelines typically execute multi-stage workflows that coordinate tightly coupled modules, including claim decomposition, evidence gathering, and verdict prediction. However, existing methods optimize individual stages in isolation or rely on fixed heuristics, which limits adaptive coordination among stages and can lead to suboptimal outcomes. In this work, we propose ProFact, an agentic reinforcement learning framework for end-to-end optimization of multi-stage fact verification trajectories. ProFact trains a unified policy to coordinate claim decomposition, evidence seeking, answer generation, and verdict prediction. To address the sparse and delayed supervision provided by final veracity labels, ProFact introduces process-aware rewards that provide stage-level learning signals throughout the verification process. Empirical evaluation shows that ProFact consistently outperforms strong baselines in both verification performance and inference efficiency. These results highlight the effectiveness of process-aware trajectory optimization for multi-stage fact verification.",
+  "abstract_zh": "本文提出 ProFact，一个面向多阶段事实验证的 agentic reinforcement learning 框架，用于端到端优化从声明分解、证据检索、答案生成到最终判定的完整验证轨迹。现有结合 Large Language Models (LLMs) 与 retrieval-augmented reasoning 的事实验证方法通常依赖固定流程或分别优化各阶段，难以在复杂声明处理中实现自适应协同。ProFact 通过训练统一策略来协调各模块，并引入 process-aware rewards，在最终真伪标签稀疏且延迟的情况下，为不同阶段提供更细粒度的学习信号。实验结果表明，ProFact 在验证性能和推理效率上均稳定优于强基线，说明面向过程的轨迹优化对多阶段事实验证具有显著价值。",
+  "key_points_zh": [
+    "提出 ProFact：一个用于多阶段事实验证的 agentic reinforcement learning 框架，端到端优化完整验证轨迹。",
+    "统一协调 claim decomposition、evidence seeking、answer generation 和 verdict prediction，避免各阶段孤立优化。",
+    "设计 process-aware rewards，为中间阶段提供学习信号，缓解仅依赖最终 veracity labels 带来的稀疏与延迟监督问题。",
+    "实验显示 ProFact 在事实验证准确性和推理效率上均超过强基线方法。",
+    "核心贡献在于将事实验证从单纯预测最终结论扩展为对验证过程本身进行可学习的轨迹优化。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.68,
+    "problem_significance": 0.65,
+    "potential_impact": 0.62,
+    "paradigm_shift": 0.52,
+    "lasting_value": 0.58,
+    "llm_avg": 0.6100000000000001,
+    "comment": "Process-aware RL over verification trajectories is relevant to closed-loop agent optimization, but remains domain-specific to fact verification.",
+    "comment_zh": "面向验证轨迹的过程感知强化学习与闭环智能体优化相关，但仍主要局限于事实核查领域。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6100000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13262/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.976
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13262/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.974
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "arxiv_id": "2606.13741",
+  "title": "High-Frequency Pricing at Scale for E-Commerce",
+  "title_zh": "面向大规模电商的高频定价",
+  "authors": [
+    "Stefan Birr",
+    "Tobias Huelden",
+    "Mones Raslan",
+    "Adele Gouttes",
+    "Andreas Schmitt",
+    "Mateusz Koren",
+    "Johannes Stephan",
+    "Robert Streek",
+    "Manuel Kunz",
+    "Tim Januschowski"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T13:01:44Z",
+  "abs_url": "https://arxiv.org/abs/2606.13741v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13741",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "This paper presents the design, development, and implementation of a specialized forecast-then-optimize algorithmic pricing tool for sales campaigns in fashion e-commerce. Sales events present unique challenges for pricing including volatile demand patterns, rapid pricing decisions, and the need to balance short-term revenue with long-term profitability. We describe our approach combining daily-resolution demand forecasting using gradient-boosted trees with a multi-objective optimization framework that maximizes both long-term profit and net merchandise value for more than 5 million articles. Our solution addresses key limitations of existing weekly-granularity systems by implementing a forecast-then-optimize architecture that reduces pricing decision time from hours to minutes. We validate our approach through 23 A/B tests across 12 markets during 2023-2024 sales campaigns at Zalando, one of Europe's leading online fashion retailers. Experimental results demonstrate that the new pricing system achieves approximately 6% higher profit while maintaining equivalent performance on sales and revenue compared to the previous manual-algorithmic hybrid approach. Based on these results, the algorithm was successfully deployed to production and now handles the majority of algorithmic pricing decisions for sales campaigns at the company.",
+  "abstract_zh": "本文介绍了一个面向时尚电商促销活动的专用“先预测、后优化”（forecast-then-optimize）算法定价工具的设计、开发与落地。促销场景中的定价面临需求波动大、决策频率高，以及需要在短期收入和长期盈利之间权衡等挑战。作者的方法结合了基于 gradient-boosted trees 的日粒度需求预测，以及同时最大化长期利润和净商品价值（net merchandise value）的多目标优化框架，可覆盖超过 500 万件商品。该方案克服了现有周粒度系统的局限，将定价决策时间从数小时缩短到数分钟。作者在 2023–2024 年 Zalando 促销活动期间，跨 12 个市场进行了 23 次 A/B 测试验证。实验显示，相比此前的人工-算法混合方案，新系统在销售额和收入表现基本持平的同时，实现了约 6% 的利润提升。基于这些结果，该算法已成功部署到生产环境，并承担 Zalando 促销活动中大部分算法定价决策。",
+  "key_points_zh": [
+    "提出面向时尚电商促销活动的大规模 forecast-then-optimize 定价系统，覆盖超过 500 万件商品。",
+    "使用 gradient-boosted trees 进行日粒度需求预测，相比传统周粒度系统更适合高频促销定价。",
+    "构建多目标优化框架，同时优化长期利润与 net merchandise value，平衡短期销售和长期盈利。",
+    "系统将定价决策时间从数小时降低到数分钟，显著提升大规模促销场景下的运营效率。",
+    "在 Zalando 2023–2024 年跨 12 个市场的 23 次 A/B 测试中，利润提升约 6%，且销售和收入表现保持相当。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.68,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.54,
+    "lasting_value": 0.78,
+    "llm_avg": 0.748,
+    "comment": "A strong production e-commerce pricing system with clear business impact, though it is less central to search, recommendation, or agentic shopping workflows.",
+    "comment_zh": "这是一套具有明确业务收益的生产级电商定价系统，但与搜索、推荐或智能体购物流程的核心关联较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.16000000000000003,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.6229475628685,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.748,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 26,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13741/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13741/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13741/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.976
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13741/fig4.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.337
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.13001",
   "title": "CFALR: Collaborative Filtering-Augmented Large Language Model for Personalized Fashion Outfit Recommendation",
-  "title_zh": "CFALR：用于个性化时尚穿搭推荐的协同过滤增强大语言模型",
+  "title_zh": "CFALR：协同过滤增强的大语言模型用于个性化时尚穿搭推荐",
   "authors": [
     "Yujuan Ding",
     "Junrong Liao",
@@ -20,23 +20,23 @@
     "project_page": null
   },
   "abstract_en": "Personalized outfit recommendation poses a significant challenge in e-commerce and social media platforms, requiring systems that balance user preferences with aesthetic compatibility. Collaborative filtering (CF) provides a traditional solution for this, but it struggles with data-sparse scenarios and complex user-item-outfit relationships. Meanwhile, existing template-based approaches are constrained by rigid pre-designed structures. To bridge these research gaps, we introduce CFALR (Collaborative Filtering-Augmented Large Language Model for Recommendation), a novel framework that synergizes collaborative filtering with large language models for personalized outfit recommendation. Specifically, CFALR describes user-outfit interactions in natural language and leverages LLMs to capture fashion semantics while employing CF-enhanced embeddings to bridge the semantic space and the collaborative interaction spaces. Our technical contributions include: (1) the first LLM-based architecture specifically designed for personalized outfit recommendation, (2) a CF-augmented generative mechanism that efficiently navigates the extensive combination space of outfit items, and (3) trainable projection layers that optimally integrate relational and content features. Experiments on Polyvore and IQON benchmarks demonstrate CFALR's superior performance over both traditional CF-based and LLM-based methods in personalized fill-in-the-blank and personalized outfit generation tasks.",
-  "abstract_zh": "本文面向电商与社交媒体中的个性化穿搭推荐问题，提出 CFALR（Collaborative Filtering-Augmented Large Language Model for Recommendation），将传统协同过滤（CF）与大语言模型（LLM）结合，以同时建模用户偏好与穿搭美学兼容性。传统 CF 在数据稀疏和复杂的 user-item-outfit 关系建模上存在不足，而模板式方法又受限于预设结构。CFALR 将用户-穿搭交互转化为自然语言描述，利用 LLM 捕获时尚语义，并通过 CF 增强嵌入连接语义空间与协同交互空间。方法包括面向个性化穿搭推荐的 LLM 架构、用于高效搜索大规模单品组合空间的 CF 增强生成机制，以及可训练投影层来融合关系特征与内容特征。在 Polyvore 和 IQON 基准上的实验表明，CFALR 在个性化填空式推荐和个性化穿搭生成任务中均优于传统 CF 方法和现有 LLM 方法。",
+  "abstract_zh": "个性化穿搭推荐是电商与社交媒体平台中的重要挑战，需要同时建模用户偏好与服饰之间的美学兼容性。传统协同过滤（Collaborative Filtering, CF）方法能够利用用户-物品交互信号，但在数据稀疏场景以及复杂的用户-单品-套装关系建模上存在局限；现有基于模板的方法又受限于预先设计的固定结构。为此，论文提出 CFALR（Collaborative Filtering-Augmented Large Language Model for Recommendation），将协同过滤与大语言模型（Large Language Model, LLM）结合，用于个性化穿搭推荐。CFALR 将用户-套装交互转化为自然语言描述，利用 LLM 捕捉时尚语义，同时引入 CF 增强嵌入，将语义空间与协同交互空间对齐。其核心技术包括：面向个性化穿搭推荐的 LLM 架构、用于高效搜索海量穿搭组合空间的 CF 增强生成机制，以及可训练投影层以融合关系特征与内容特征。在 Polyvore 和 IQON 数据集上的实验表明，CFALR 在个性化填空式穿搭推荐和个性化穿搭生成任务上均优于传统 CF 方法与现有 LLM 方法。",
   "key_points_zh": [
-    "提出 CFALR，将协同过滤与 LLM 结合，用于个性化 fashion outfit recommendation。",
-    "通过自然语言描述 user-outfit interactions，使 LLM 能捕获穿搭语义与审美兼容性。",
-    "引入 CF-enhanced embeddings 和可训练 projection layers，连接语义空间与协同交互空间。",
-    "设计 CF-augmented generative mechanism，以更高效地探索庞大的单品组合空间。",
-    "在 Polyvore 和 IQON 上，CFALR 在 personalized fill-in-the-blank 与 personalized outfit generation 任务中优于 CF-based 和 LLM-based 基线。"
+    "提出 CFALR，将 Collaborative Filtering 与 Large Language Model 结合，专门面向个性化 fashion outfit recommendation。",
+    "通过自然语言描述用户-套装交互，让 LLM 捕捉服饰语义与搭配逻辑，缓解传统 CF 难以建模复杂穿搭关系的问题。",
+    "设计 CF-augmented generative mechanism，在庞大的单品组合空间中更高效地生成个性化穿搭。",
+    "引入可训练 projection layers，将协同交互嵌入与内容语义特征对齐并融合。",
+    "在 Polyvore 和 IQON benchmark 上，CFALR 在 personalized fill-in-the-blank 与 personalized outfit generation 任务中超过传统 CF 和 LLM-based baselines。"
   ],
   "llm_assessment": {
-    "novelty": 0.75,
-    "problem_significance": 0.8,
-    "potential_impact": 0.75,
-    "paradigm_shift": 0.6,
-    "lasting_value": 0.75,
-    "llm_avg": 0.73,
-    "comment": "A solid commerce recommendation paper combining collaborative filtering and LLMs for personalized fashion outfit generation.",
-    "comment_zh": "这是一篇扎实的电商推荐论文，将协同过滤与LLM结合用于个性化时尚穿搭生成。"
+    "novelty": 0.74,
+    "problem_significance": 0.78,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.7,
+    "llm_avg": 0.7040000000000001,
+    "comment": "A solid fashion recommendation paper combining collaborative filtering and LLMs, though its broader production and paradigm-changing implications are moderate.",
+    "comment_zh": "这是一篇扎实的时尚推荐论文，结合了协同过滤和大模型，但其生产影响和范式变革程度相对中等。"
   },
   "scores": {
     "topic_relevance": 0.4,
@@ -45,7 +45,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.73,
+    "llm_assessment": 0.7040000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {

@@ -2,12 +2,12 @@
   "domain": "agent-multimodal",
   "display_name": "Realtime Multimodal Agent",
   "date": "2026-06-11",
-  "generated_at": "2026-06-14T02:04:11Z",
+  "generated_at": "2026-06-15T08:53:56Z",
   "papers": [
     {
       "arxiv_id": "2606.13544",
       "title": "Adaptive Turn-Taking for Real-time Multi-Party Voice Agents",
-      "title_zh": "面向实时多方语音智能体的自适应轮次接管",
+      "title_zh": "面向实时多方语音 Agent 的自适应轮次接管",
       "authors": [
         "Soumyajit Mitra",
         "Prabhat Pandey",
@@ -15,68 +15,34 @@
         "Shanmukha Sahith",
         "K V Vijay Girish"
       ],
-      "total_score": 0.6628000000000001,
+      "total_score": 0.6634000000000001,
       "scores": {
         "topic_relevance": 0.88,
-        "llm_assessment": 0.8360000000000001,
+        "llm_assessment": 0.8380000000000001,
         "other": 0.2
       },
       "tags": [
         "realtime voice agent"
       ],
-      "tldr_zh": "按角色自适应多方语音轮次接管",
+      "tldr_zh": "用角色条件提升多方语音轮次接管",
       "detail_file": "agent-multimodal/2026-06-11/2606.13544.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13544/thumb.webp"
     },
     {
-      "arxiv_id": "2606.13368",
-      "title": "IterCAD: An Iterative Multimodal Agent for Visually-Grounded CAD Generation and Editing",
-      "title_zh": "IterCAD：用于视觉 grounded CAD 生成与编辑的迭代式多模态智能体",
-      "authors": [
-        "Tao Hu",
-        "Jiaxin Ai",
-        "Licheng Wen",
-        "Xueheng Li",
-        "Shu Zou",
-        "Siqi Li",
-        "Nianchen Deng",
-        "Xinyu Cai",
-        "Hongbin Zhou",
-        "Pinlong Cai",
-        "Daocheng Fu",
-        "Yu Yang",
-        "Hairong Zhang",
-        "Botian Shi",
-        "Xuemeng Yang"
-      ],
-      "total_score": 0.6060000000000001,
-      "scores": {
-        "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.7,
-        "other": 0.2
-      },
-      "tags": [
-        "realtime video agent"
-      ],
-      "tldr_zh": "闭环多模态智能体生成与编辑CAD",
-      "detail_file": "agent-multimodal/2026-06-11/2606.13368.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13368/thumb.webp"
-    },
-    {
       "arxiv_id": "2606.12830",
       "title": "Perceive, Interact, Reason: Building Tool-Augmented Visual Agents for Spatial Reasoning",
-      "title_zh": "感知、交互、推理：构建用于空间推理的工具增强视觉智能体",
+      "title_zh": "Perceive, Interact, Reason：构建工具增强的空间推理视觉智能体",
       "authors": [
         "Changye Li",
         "Meng Lu",
         "Yi Wu",
         "Ligeng Zhu"
       ],
-      "total_score": 0.5879141349418722,
+      "total_score": 0.5830000000000001,
       "scores": {
         "topic_relevance": 0.88,
-        "llm_assessment": 0.576,
-        "other": 0.21038044980624032
+        "llm_assessment": 0.57,
+        "other": 0.2
       },
       "tags": [
         "realtime video agent"
@@ -84,31 +50,6 @@
       "tldr_zh": "PERIA用工具交互显著增强空间推理",
       "detail_file": "agent-multimodal/2026-06-11/2606.12830.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12830/thumb.webp"
-    },
-    {
-      "arxiv_id": "2606.12805",
-      "title": "Exploring How Agent Voice Accents Shape Human-AI Collaboration in K-12 Group Learning",
-      "title_zh": "探索 Agent 语音口音如何影响 K-12 小组学习中的人机协作",
-      "authors": [
-        "Prerna Ravi",
-        "Carúmey Stevens",
-        "Ben Hurt",
-        "Brandon Hanks",
-        "Grace Lin",
-        "Emma Anderson"
-      ],
-      "total_score": 0.515792057782777,
-      "scores": {
-        "topic_relevance": 0.8,
-        "llm_assessment": 0.438,
-        "other": 0.21464019260925682
-      },
-      "tags": [
-        "realtime voice agent"
-      ],
-      "tldr_zh": "语音口音会重塑小组中 AI 的角色与信任",
-      "detail_file": "agent-multimodal/2026-06-11/2606.12805.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12805/thumb.webp"
     }
   ]
 }

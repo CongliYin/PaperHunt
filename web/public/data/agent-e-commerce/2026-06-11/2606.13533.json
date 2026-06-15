@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.13533",
   "title": "OneRetrieval: Unifying Multi-Branch E-commerce Retrieval with an Editable Generative Model",
-  "title_zh": "OneRetrieval：用可编辑生成式模型统一多分支电商召回",
+  "title_zh": "OneRetrieval：用可编辑生成式模型统一多分支电商检索",
   "authors": [
     "Xuxin Zhang",
     "Ben Chen",
@@ -29,23 +29,23 @@
     "project_page": null
   },
   "abstract_en": "Industrial e-commerce search serves hundreds of millions of items through a multi-branch retrieval stage fused by hand-tuned merging without joint optimization. Generative retrieval (GR) raises the prospect of collapsing this stage into a single model, yet unification is gated by more than retrieval quality: the inverted-index branch converts below the platform average yet persists because it is almost the only branch where operations can inject a new term within hours without any model update; a one-model substitute must preserve this real-time editability. Existing GR methods structurally lack it: closed-codebook methods fix each slot to a quantized embedding at training, while open-vocabulary methods leave new-term routing to model generalization. We present OneRetrieval, a one-model GR framework built on Keyword-Aligned Encoding (KAE), which ties each identifier position to an interpretable attribute word, pairing competitive recall quality with the editability of the inverted index -- to our knowledge the first editable generative retrieval method. An information-theoretic merging organizes 18 attribute categories into six codebook groups with non-uniform capacity; reserved slots in each codebook can be bound to new words after deployment without retraining; and a four-stage fine-tuning pipeline secures quality and editability jointly. On five million real-traffic requests, OneRetrieval matches the deep recall of the strongest generative baseline, with an intervention hit rate over an order of magnitude above closed-codebook encodings. Online, replacing the inverted-index branch significantly lifts order volume; extending to nearly the entire stage holds conversion while improving CTR. The system is deployed at Kuaishou, serving hundreds of millions of PVs daily.",
-  "abstract_zh": "工业电商搜索通常依赖多分支召回，并通过人工调参的融合策略服务海量商品，但缺乏端到端联合优化。Generative Retrieval（GR）有望用单一模型替代这一阶段，不过真正落地不仅要求召回质量，还必须保留倒排索引分支的实时可编辑性：运营可在数小时内注入新词而无需更新模型。现有 GR 方法难以满足这一点，闭合码本方法在训练时固定每个槽位的量化嵌入，开放词表方法则依赖模型对新词的泛化。本文提出 OneRetrieval，一个基于 Keyword-Aligned Encoding（KAE）的单模型 GR 框架，将标识符的每个位置与可解释属性词绑定，在保持竞争性召回质量的同时具备类似倒排索引的可编辑能力。方法通过信息论合并将 18 类属性组织为 6 个非均匀容量的 codebook group，并在每个 codebook 中预留槽位，使新词可在部署后绑定而无需重训；同时设计四阶段微调流程联合保障召回质量与可编辑性。在 500 万真实流量请求上，OneRetrieval 达到最强生成式基线的深度召回效果，干预命中率比闭合码本编码高一个数量级以上。线上实验中，替换倒排索引分支显著提升订单量；进一步扩展到几乎整个召回阶段时，在保持转化率的同时提升 CTR。该系统已部署于 Kuaishou，每日服务数亿 PV。",
+  "abstract_zh": "工业级电商搜索通常依赖多分支召回，并通过人工调参进行结果融合，缺乏端到端联合优化。Generative Retrieval（GR）有望用单一模型替代这一阶段，但在真实业务中，仅有召回质量还不够：倒排索引分支虽然转化低于平台平均，却能让运营在数小时内注入新词且无需更新模型，因此替代方案必须保留这种实时可编辑性。现有 GR 方法难以做到这一点：closed-codebook 方法在训练时将每个位置固定为量化 embedding，open-vocabulary 方法则依赖模型泛化来处理新词路由。本文提出 OneRetrieval，一个基于 Keyword-Aligned Encoding（KAE）的统一生成式召回框架，将每个标识符位置绑定到可解释的属性词，在保持强召回质量的同时具备倒排索引式可编辑性。方法通过信息论式合并将 18 类属性组织为 6 个 codebook group，并采用非均匀容量设计；每个 codebook 中预留 slot，可在部署后绑定新词而无需重新训练；同时设计四阶段微调流程以同时保障召回效果和可编辑性。在 500 万真实流量请求上，OneRetrieval 的深度召回效果匹配最强生成式基线，干预命中率比 closed-codebook 编码高一个数量级以上。线上实验显示，替换倒排索引分支显著提升订单量；扩展到近乎整个召回阶段后，在维持转化率的同时提升 CTR。该系统已部署于 Kuaishou，每日服务数亿 PV。",
   "key_points_zh": [
-    "提出 OneRetrieval，用单一 Generative Retrieval 模型统一工业电商多分支召回，目标是在保持召回质量的同时减少人工融合与分支维护成本。",
-    "核心是 Keyword-Aligned Encoding（KAE）：将生成式标识符位置与可解释属性词对齐，使模型具备类似倒排索引的运营可编辑性。",
-    "通过信息论合并将 18 个属性类别组织为 6 个非均匀容量的 codebook group，并预留可绑定新词的槽位，实现部署后无需重训的实时词项注入。",
-    "设计四阶段 fine-tuning pipeline，同时优化深度召回质量与新词干预命中能力，弥补现有 closed-codebook 与 open-vocabulary GR 的不足。",
-    "在 Kuaishou 真实大规模流量中验证：离线匹配最强生成式基线，线上替换倒排索引分支显著提升订单量，扩展到近全召回阶段后保持 CVR 并提升 CTR。"
+    "提出 OneRetrieval，用单一 Generative Retrieval 模型统一工业电商多分支召回，目标不仅是提升召回质量，还要保留倒排索引的实时运营可编辑性。",
+    "核心设计 Keyword-Aligned Encoding（KAE）将 identifier 的各个位置与可解释属性词对齐，使新词可通过绑定预留 slot 注入，无需重新训练模型。",
+    "通过信息论式合并将 18 个属性类别组织为 6 个 codebook group，并采用非均匀容量分配，以兼顾表达能力、可解释性和可编辑性。",
+    "设计四阶段 fine-tuning pipeline，同时优化召回效果与编辑干预能力；在 500 万真实请求上达到强生成式基线的深度召回水平，干预命中率高出 closed-codebook 方法一个数量级以上。",
+    "已在 Kuaishou 线上部署：替换倒排索引分支显著提升订单量，扩展到近乎完整召回阶段后保持 conversion 并提升 CTR。"
   ],
   "llm_assessment": {
-    "novelty": 0.95,
-    "problem_significance": 0.95,
-    "potential_impact": 1.0,
+    "novelty": 0.94,
+    "problem_significance": 0.96,
+    "potential_impact": 0.97,
     "paradigm_shift": 0.9,
     "lasting_value": 0.95,
-    "llm_avg": 0.95,
-    "comment": "A major industrial e-commerce retrieval contribution that unifies multi-branch retrieval with editable generative retrieval and demonstrates large-scale online gains.",
-    "comment_zh": "这是一项重要的工业级电商检索贡献，用可编辑生成式检索统一多路召回并展示了大规模线上收益。"
+    "llm_avg": 0.944,
+    "comment": "A highly impactful industrial e-commerce retrieval paper that unifies multi-branch retrieval while preserving real-time operational editability.",
+    "comment_zh": "这是一篇影响力很高的工业级电商检索论文，在统一多路召回的同时保留了实时可编辑能力。"
   },
   "scores": {
     "topic_relevance": 0.68,
@@ -54,7 +54,7 @@
     "author_reputation": 0.543099442533317,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.95,
+    "llm_assessment": 0.944,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -74,9 +74,9 @@
   "figures": [
     {
       "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13533/fig1.webp",
-      "page": 2,
-      "kind": "table",
-      "confidence": 0.972
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.938
     },
     {
       "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13533/fig2.webp",
@@ -92,9 +92,9 @@
     },
     {
       "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13533/fig4.webp",
-      "page": 5,
-      "kind": "figure",
-      "confidence": 0.938
+      "page": 2,
+      "kind": "table",
+      "confidence": 0.972
     }
   ]
 }

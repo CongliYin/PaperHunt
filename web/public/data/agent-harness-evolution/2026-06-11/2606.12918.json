@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.12918",
+  "title": "MAStrike: Shapley-Guided Collusive Red-Teaming on Multi-Agent Systems",
+  "title_zh": "MAStrike：Shapley 引导的多智能体系统合谋式红队测试",
+  "authors": [
+    "Chejian Xu",
+    "Zhaorun Chen",
+    "Jingyang Zhang",
+    "Freddy Lecue",
+    "Avni Kothari",
+    "Sarah Tan",
+    "Wenbo Guo",
+    "Bo Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T05:21:39Z",
+  "abs_url": "https://arxiv.org/abs/2606.12918v2",
+  "pdf_url": "https://arxiv.org/pdf/2606.12918",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Hierarchical multi-agent systems (MAS) are rapidly being deployed in high-stakes workflows across domains such as finance and software engineering. In these systems, safety and security are inherently distributed across role-specialized agents, significantly expanding the attack surface, particularly under coordinated adversarial behaviors such as privilege escalation and cross-agent collusion. Existing red-teaming approaches for MAS remain limited: they rely on heuristic selection of target agents and perturb isolated message streams, leaving critical questions unanswered as which agents are most responsible for system safety, and how compromised agents can coordinate to bypass defenses. We propose MAStrike, a closed-loop framework for collusive red-teaming in hierarchical MAS. We propose the first agent-level Shapley value analysis for MAS, quantifying each agent's marginal contribution to system robustness under task-specific distributions. GGuided by this attribution, MAStrike identifies vulnerable agent coalitions and generates coordinated, role-aware adversarial manipulations. These attacks are iteratively refined through structured causal diagnosis, attributing failure cases to uncompromised agents that block adversarial attempts. We further build a comprehensive MAS red-teaming benchmark and controllable environments spanning diverse hierarchical topologies and domains, including finance, software engineering, and CRM. Extensive experiments across MAS built on multiple frontier models show that MAStrike substantially outperforms heuristic baselines. Our analysis further uncovers non-trivial Shapley value distributions and higher-order interaction structures among agents, revealing critical vulnerabilities and coordination patterns that are overlooked by prior single-agent or template-based methods.",
+  "abstract_zh": "层级式多智能体系统（MAS）正快速部署于金融、软件工程等高风险工作流中。由于安全性分散在不同角色专长的 agents 之间，攻击面显著扩大，尤其容易受到权限提升与跨 agent 合谋等协同攻击。现有 MAS 红队方法多依赖启发式目标选择，并仅扰动孤立消息流，难以回答哪些 agents 对系统鲁棒性最关键、受控 agents 如何协同绕过防御等问题。本文提出 MAStrike，一个面向层级 MAS 的闭环合谋式红队框架。它首次引入 agent 级 Shapley value 分析，在任务分布下量化每个 agent 对系统鲁棒性的边际贡献；据此识别脆弱 agent 联盟，并生成协同、角色感知的对抗操控。随后，MAStrike 通过结构化因果诊断迭代优化攻击，将失败案例归因于阻止攻击的未受控 agents。作者还构建了覆盖金融、软件工程和 CRM 等领域、包含多种层级拓扑的 MAS 红队基准与可控环境。实验表明，在多个 frontier models 构建的 MAS 上，MAStrike 显著优于启发式基线，并揭示了非平凡的 Shapley 分布和高阶 agent 交互结构，发现了以往单 agent 或模板式方法忽略的关键漏洞与协作模式。",
+  "key_points_zh": [
+    "提出 MAStrike：一个针对层级 multi-agent systems 的闭环合谋式 red-teaming 框架，关注跨 agent 协同攻击与权限提升等现实威胁。",
+    "首次进行 agent-level Shapley value analysis，用于量化各 agent 对系统鲁棒性的边际贡献，并指导选择高风险 agent coalition。",
+    "攻击生成具备 role-aware 与 coordinated 特性，并通过 structured causal diagnosis 诊断攻击失败原因，迭代绕过未受控 agents 的阻断。",
+    "构建了覆盖 finance、software engineering、CRM 等场景的 MAS red-teaming benchmark 与可控环境，支持不同层级拓扑评测。",
+    "实验显示 MAStrike 明显优于启发式基线，并揭示 MAS 中复杂的高阶交互与脆弱协作模式，补足单 agent 或模板攻击方法的盲区。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.84,
+    "problem_significance": 0.88,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8320000000000001,
+    "comment": "MAStrike is a strong MAS security and governance contribution with closed-loop red-teaming, attribution, and adversarial coordination analysis.",
+    "comment_zh": "MAStrike 是较强的多智能体安全治理工作，包含闭环红队、归因和协同攻击分析。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8320000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12918/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12918/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12918/fig3.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.518
+    }
+  ]
+}

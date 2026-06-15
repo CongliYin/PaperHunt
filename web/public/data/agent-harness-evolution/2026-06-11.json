@@ -2,12 +2,12 @@
   "domain": "agent-harness-evolution",
   "display_name": "Agent Harness Evolution",
   "date": "2026-06-11",
-  "generated_at": "2026-06-14T05:20:41Z",
+  "generated_at": "2026-06-15T08:37:53Z",
   "papers": [
     {
       "arxiv_id": "2606.13174",
       "title": "Getting Better at Working With You: Compiling User Corrections into Runtime Enforcement for Coding Agents",
-      "title_zh": "越用越懂你：将用户纠正编译为编码 Agent 的运行时强制约束",
+      "title_zh": "与你协作得更好：将用户纠正编译为编码 Agent 的运行时强制约束",
       "authors": [
         "Yujun Zhou",
         "Kehan Guo",
@@ -21,25 +21,25 @@
         "Nitesh V. Chawla",
         "Xiangliang Zhang"
       ],
-      "total_score": 0.7517431232324533,
+      "total_score": 0.7572695658286153,
       "scores": {
         "topic_relevance": 0.88,
-        "llm_assessment": 0.852,
-        "other": 0.4804770774415104
+        "llm_assessment": 0.8640000000000001,
+        "other": 0.4868985527620503
       },
       "tags": [
-        "HF Daily ★2",
+        "HF Daily ★4",
         "GitHub",
         "runtime execution engine"
       ],
-      "tldr_zh": "TRACE将用户纠正转为运行时约束",
+      "tldr_zh": "TRACE将用户纠正变成运行时规则",
       "detail_file": "agent-harness-evolution/2026-06-11/2606.13174.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13174/thumb.webp"
     },
     {
       "arxiv_id": "2606.13662",
       "title": "EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery",
-      "title_zh": "EurekAgent：用于自主科学发现的 Agent 环境工程",
+      "title_zh": "EurekAgent：自主科学发现只需 Agent Environment Engineering",
       "authors": [
         "Amy Xin",
         "Jiening Siow",
@@ -50,149 +50,20 @@
         "Lei Hou",
         "Juanzi Li"
       ],
-      "total_score": 0.7386570421914119,
+      "total_score": 0.7406293696973595,
       "scores": {
         "topic_relevance": 0.92,
-        "llm_assessment": 0.8299999999999998,
-        "other": 0.40552347397137295
+        "llm_assessment": 0.834,
+        "other": 0.4080978989911979
       },
       "tags": [
-        "HF Daily ★21",
+        "HF Daily ★26",
         "Code soon",
         "runtime execution engine"
       ],
-      "tldr_zh": "环境工程驱动自主科研Agent突破",
+      "tldr_zh": "把科研 agent 的关键转向环境工程",
       "detail_file": "agent-harness-evolution/2026-06-11/2606.13662.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13662/thumb.webp"
-    },
-    {
-      "arxiv_id": "2606.12882",
-      "title": "HarnessBridge: Learnable Bidirectional Controller for LLM Agent Harness",
-      "title_zh": "HarnessBridge：面向 LLM Agent Harness 的可学习双向控制器",
-      "authors": [
-        "Xiaoxuan Wang",
-        "Haixin Wang",
-        "Alexander Taylor",
-        "Jason Cong",
-        "Yizhou Sun",
-        "Wei Wang"
-      ],
-      "total_score": 0.6905835855486828,
-      "scores": {
-        "topic_relevance": 0.92,
-        "llm_assessment": 0.8379999999999999,
-        "other": 0.23727861849560972
-      },
-      "tags": [
-        "HF Daily ★9",
-        "runtime execution engine"
-      ],
-      "tldr_zh": "可学习 harness 降低长程 Agent 交互成本",
-      "detail_file": "agent-harness-evolution/2026-06-11/2606.12882.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12882/thumb.webp"
-    },
-    {
-      "arxiv_id": "2606.13392",
-      "title": "MiniMax Sparse Attention",
-      "title_zh": "MiniMax Sparse Attention：面向超长上下文的稀疏注意力",
-      "authors": [
-        "Xunhao Lai",
-        "Weiqi Xu",
-        "Yufeng Yang",
-        "Qiaorui Chen",
-        "Yang Xu",
-        "Lunbin Zeng",
-        "Xiaolong Li",
-        "Haohai Sun",
-        "Haichao Zhu",
-        "Vito Zhang",
-        "Pengyu Zhao"
-      ],
-      "total_score": 0.639622327644639,
-      "scores": {
-        "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.5700000000000001,
-        "other": 0.44207442548212944
-      },
-      "tags": [
-        "HF Daily ★106",
-        "GitHub",
-        "session context memory"
-      ],
-      "tldr_zh": "MSA让百万上下文注意力高效可部署",
-      "detail_file": "agent-harness-evolution/2026-06-11/2606.13392.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13392/thumb.webp"
-    },
-    {
-      "arxiv_id": "2606.12797",
-      "title": "The Containment Gap: How Deployed Agentic AI Frameworks Fail Public-Facing Safety Requirements",
-      "title_zh": "遏制缺口：已部署 Agentic AI 框架如何未能满足公共场景安全要求",
-      "authors": [
-        "Md Jafrin Hossain",
-        "Mohammad Arif Hossain",
-        "Weiqi Liu",
-        "Nirwan Ansari"
-      ],
-      "total_score": 0.6330887430316666,
-      "scores": {
-        "topic_relevance": 0.8,
-        "llm_assessment": 0.8560000000000001,
-        "other": 0.18762914343888823
-      },
-      "tags": [
-        "session context memory"
-      ],
-      "tldr_zh": "主流 Agent 框架缺少默认安全遏制",
-      "detail_file": "agent-harness-evolution/2026-06-11/2606.12797.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12797/thumb.webp"
-    },
-    {
-      "arxiv_id": "2606.12984",
-      "title": "SkillChain: Closing the Loop on Skill Evolution for Image-Based E-Commerce AI Assistants",
-      "title_zh": "SkillChain：为基于图像的电商 AI 助手闭环推进技能演化",
-      "authors": [
-        "Yimin Hu",
-        "Mengtao Xu",
-        "Hao Guo",
-        "Yuheng Song",
-        "Xiaoyong Zhu",
-        "Bo Zheng"
-      ],
-      "total_score": 0.632,
-      "scores": {
-        "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.8699999999999999,
-        "other": 0.11666666666666668
-      },
-      "tags": [
-        "skill tool orchestration"
-      ],
-      "tldr_zh": "用闭环反馈自动演化电商图像助手技能",
-      "detail_file": "agent-harness-evolution/2026-06-11/2606.12984.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12984/thumb.webp"
-    },
-    {
-      "arxiv_id": "2606.13643",
-      "title": "Recursive Agent Harnesses",
-      "title_zh": "递归式智能体框架",
-      "authors": [
-        "Elias Lumer",
-        "Sahil Sen",
-        "Kevin Paul",
-        "Vamse Kumar Subbiah"
-      ],
-      "total_score": 0.6270000000000001,
-      "scores": {
-        "topic_relevance": 0.88,
-        "llm_assessment": 0.8,
-        "other": 0.11666666666666668
-      },
-      "tags": [
-        "runtime execution engine"
-      ],
-      "tldr_zh": "RAH 用递归智能体提升长上下文推理",
-      "detail_file": "agent-harness-evolution/2026-06-11/2606.13643.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13643/thumb.webp"
     },
     {
       "arxiv_id": "2606.13598",
@@ -208,24 +79,50 @@
         "Shafiq Joty",
         "Hao Wang"
       ],
-      "total_score": 0.6172000000000001,
+      "total_score": 0.7096000000000001,
       "scores": {
-        "topic_relevance": 0.68,
-        "llm_assessment": 0.784,
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.772,
         "other": 0.36666666666666675
       },
       "tags": [
         "GitHub",
-        "training and rollout loops"
+        "multi agent coordination"
       ],
       "tldr_zh": "用自监督奖励模型高效训练多智能体编排器",
       "detail_file": "agent-harness-evolution/2026-06-11/2606.13598.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13598/thumb.webp"
     },
     {
+      "arxiv_id": "2606.12882",
+      "title": "HarnessBridge: Learnable Bidirectional Controller for LLM Agent Harness",
+      "title_zh": "HarnessBridge：面向 LLM Agent Harness 的可学习双向控制器",
+      "authors": [
+        "Xiaoxuan Wang",
+        "Haixin Wang",
+        "Alexander Taylor",
+        "Jason Cong",
+        "Yizhou Sun",
+        "Wei Wang"
+      ],
+      "total_score": 0.7088353694238324,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.884,
+        "other": 0.2521178980794415
+      },
+      "tags": [
+        "HF Daily ★11",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "用可学习模块自动生成 Agent harness",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.12882.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12882/thumb.webp"
+    },
+    {
       "arxiv_id": "2606.12908",
       "title": "SENTINEL: Failure-Driven Reinforcement Learning for Training Tool-Using Language Model Agents",
-      "title_zh": "SENTINEL：用于训练工具使用型语言模型智能体的失败驱动强化学习",
+      "title_zh": "SENTINEL：用于训练工具使用型语言模型 Agent 的失败驱动强化学习",
       "authors": [
         "Ziyi Wang",
         "Yuxuan Lu",
@@ -239,19 +136,217 @@
         "Jing Huang",
         "Dakuo Wang"
       ],
-      "total_score": 0.59924456264783,
+      "total_score": 0.6818000000000002,
       "scores": {
-        "topic_relevance": 0.68,
-        "llm_assessment": 0.8139999999999998,
-        "other": 0.27681520882609995
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.8460000000000001,
+        "other": 0.2
       },
       "tags": [
-        "h=39",
-        "training and rollout loops"
+        "skill tool orchestration"
       ],
-      "tldr_zh": "用失败轨迹生成任务强化训练工具智能体",
+      "tldr_zh": "用失败轨迹生成任务，强化训练工具型Agent",
       "detail_file": "agent-harness-evolution/2026-06-11/2606.12908.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12908/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13392",
+      "title": "MiniMax Sparse Attention",
+      "title_zh": "MiniMax 稀疏注意力",
+      "authors": [
+        "Xunhao Lai",
+        "Weiqi Xu",
+        "Yufeng Yang",
+        "Qiaorui Chen",
+        "Yang Xu",
+        "Lunbin Zeng",
+        "Xiaolong Li",
+        "Haohai Sun",
+        "Haichao Zhu",
+        "Vito Zhang",
+        "Jinkai Hu",
+        "Jiayao Li",
+        "Rui Gao",
+        "Zekun Li",
+        "Songquan Zhu",
+        "Jingkai Zhou",
+        "Pengyu Zhao"
+      ],
+      "total_score": 0.6756685595885586,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.6880000000000001,
+        "other": 0.44422853196186163
+      },
+      "tags": [
+        "HF Daily ★126",
+        "GitHub",
+        "session context memory"
+      ],
+      "tldr_zh": "MSA让百万上下文注意力高效落地",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.13392.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13392/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13643",
+      "title": "Recursive Agent Harnesses",
+      "title_zh": "递归式 Agent Harness",
+      "authors": [
+        "Elias Lumer",
+        "Sahil Sen",
+        "Kevin Paul",
+        "Vamse Kumar Subbiah"
+      ],
+      "total_score": 0.6510000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8800000000000001,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "RAH用递归多Agent提升长上下文推理",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.13643.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13643/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.12984",
+      "title": "SkillChain: Closing the Loop on Skill Evolution for Image-Based E-Commerce AI Assistants",
+      "title_zh": "SkillChain：为图像电商 AI 助手闭合技能演化反馈环",
+      "authors": [
+        "Yimin Hu",
+        "Mengtao Xu",
+        "Hao Guo",
+        "Yuheng Song",
+        "Xiaoyong Zhu",
+        "Bo Zheng"
+      ],
+      "total_score": 0.6466785042477364,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.86,
+        "other": 0.17559501415912104
+      },
+      "tags": [
+        "h=32",
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "自动演化电商图像助手技能",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.12984.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12984/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.12918",
+      "title": "MAStrike: Shapley-Guided Collusive Red-Teaming on Multi-Agent Systems",
+      "title_zh": "MAStrike：Shapley 引导的多智能体系统合谋式红队测试",
+      "authors": [
+        "Chejian Xu",
+        "Zhaorun Chen",
+        "Jingyang Zhang",
+        "Freddy Lecue",
+        "Avni Kothari",
+        "Sarah Tan",
+        "Wenbo Guo",
+        "Bo Li"
+      ],
+      "total_score": 0.6456000000000002,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8320000000000001,
+        "other": 0.2
+      },
+      "tags": [
+        "multi agent coordination"
+      ],
+      "tldr_zh": "用 Shapley 找 MAS 合谋攻击弱点",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.12918.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12918/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.12797",
+      "title": "The Containment Gap: How Deployed Agentic AI Frameworks Fail Public-Facing Safety Requirements",
+      "title_zh": "遏制缺口：已部署的 Agentic AI 框架如何未能满足公共场景安全要求",
+      "authors": [
+        "Md Jafrin Hossain",
+        "Mohammad Arif Hossain",
+        "Weiqi Liu",
+        "Nirwan Ansari"
+      ],
+      "total_score": 0.6447707656352363,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.8859999999999999,
+        "other": 0.1965692187841204
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "主流Agent框架缺少默认安全遏制",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.12797.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12797/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.12835",
+      "title": "The Internet of Agentic AI: Communication, Coordination, and Collective Intelligence at Scale",
+      "title_zh": "Agentic AI 互联网：大规模通信、协调与集体智能",
+      "authors": [
+        "Quanyan Zhu"
+      ],
+      "total_score": 0.6410145717194442,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.784,
+        "other": 0.17938190573148036
+      },
+      "tags": [
+        "multi agent coordination"
+      ],
+      "tldr_zh": "提出大规模 Agentic AI 互联生态框架",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.12835.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12835/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13884",
+      "title": "Capability Minimization as a Safety Primitive: Risk-Aware Causal Gating for Least-Privilege LLM Agents",
+      "title_zh": "能力最小化作为安全原语：面向最小权限 LLM Agent 的风险感知因果门控",
+      "authors": [
+        "Laxmipriya Ganesh Iyer",
+        "Rahul Suresh Babu"
+      ],
+      "total_score": 0.6060000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.7,
+        "other": 0.2
+      },
+      "tags": [
+        "observability governance security"
+      ],
+      "tldr_zh": "用因果风险门控约束 LLM Agent 行动",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.13884.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13884/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13733",
+      "title": "How Task Structure Limits Multi-Agent Success: An Information-Theoretic Analysis",
+      "title_zh": "任务结构如何限制多智能体成功：一种信息论分析",
+      "authors": [
+        "Shi Pan",
+        "Ming Luo"
+      ],
+      "total_score": 0.5952000000000002,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.664,
+        "other": 0.2
+      },
+      "tags": [
+        "multi agent coordination"
+      ],
+      "tldr_zh": "任务约束图会限制多智能体成功率",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.13733.json",
+      "thumb": ""
     },
     {
       "arxiv_id": "2606.13177",
@@ -263,10 +358,10 @@
         "Soyeong Jeong",
         "Sung Ju Hwang"
       ],
-      "total_score": 0.5692000000000002,
+      "total_score": 0.5902000000000001,
       "scores": {
         "topic_relevance": 0.88,
-        "llm_assessment": 0.524,
+        "llm_assessment": 0.5940000000000001,
         "other": 0.2
       },
       "tags": [
@@ -279,69 +374,384 @@
     {
       "arxiv_id": "2606.13115",
       "title": "G-Long: Graph-Enhanced Memory Management for Efficient Long-Term Dialogue Agents",
-      "title_zh": "G-Long：面向高效长期对话智能体的图增强记忆管理",
+      "title_zh": "G-Long：用于高效长期对话智能体的图增强记忆管理",
       "authors": [
         "Minjun Choi",
         "Yoonjin Jang",
         "Sangwon Youn",
         "Youngjoong Ko"
       ],
-      "total_score": 0.5285824593811418,
+      "total_score": 0.5800000000000001,
       "scores": {
-        "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.44400000000000006,
-        "other": 0.19794153127047226
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.5599999999999999,
+        "other": 0.2
       },
       "tags": [
         "session context memory"
       ],
-      "tldr_zh": "用图记忆和小模型高效增强长期对话",
+      "tldr_zh": "用图记忆和小模型提升长期对话效率",
       "detail_file": "agent-harness-evolution/2026-06-11/2606.13115.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13115/thumb.webp"
     },
     {
-      "arxiv_id": "2606.12793",
-      "title": "Semantic Identification of IoT Devices from Behavioral Primitives",
-      "title_zh": "基于行为原语的 IoT 设备语义识别",
+      "arxiv_id": "2606.13317",
+      "title": "SkillCAT: Contrastive Assessment and Topology-Aware Skill Self-Evolution for LLM Agents",
+      "title_zh": "SkillCAT：用于 LLM Agent 的对比式评估与拓扑感知技能自进化",
       "authors": [
-        "Samuel Witt",
-        "Hassan Habibi Gharakheili"
+        "Kunfeng Chen",
+        "Qihuang Zhong",
+        "Juhua Liu",
+        "Bo Du"
       ],
-      "total_score": 0.4650000000000001,
+      "total_score": 0.5764000000000001,
       "scores": {
-        "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.22999999999999998,
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.8680000000000001,
         "other": 0.2
       },
       "tags": [
-        "observability governance security"
+        "evaluation operations"
       ],
-      "tldr_zh": "用 MUD 行为语义更稳健识别 IoT 设备",
-      "detail_file": "agent-harness-evolution/2026-06-11/2606.12793.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12793/thumb.webp"
+      "tldr_zh": "无需训练的拓扑感知技能自进化框架",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.13317.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13317/thumb.webp"
     },
     {
-      "arxiv_id": "2606.12990",
-      "title": "Exposure Bias as Epistemic Underidentification in Recursive Forecasting",
-      "title_zh": "将曝光偏差视为递归预测中的认知欠识别问题",
+      "arxiv_id": "2606.13003",
+      "title": "The Illusion of Multi-Agent Advantage",
+      "title_zh": "多智能体优势的幻觉",
       "authors": [
-        "Riku Green",
-        "Zahraa S. Abdallah",
-        "Telmo M Silva Filho"
+        "Prathyusha Jwalapuram",
+        "Hehai Lin",
+        "Chuyuan Li",
+        "Fangkai Jiao",
+        "Sudong Wang",
+        "Yifei Ming",
+        "Zixuan Ke",
+        "Chengwei Qin",
+        "Giuseppe Carenini",
+        "Shafiq Joty"
       ],
-      "total_score": 0.4308516573755553,
+      "total_score": 0.5747,
       "scores": {
-        "topic_relevance": 0.6000000000000001,
-        "llm_assessment": 0.26599999999999996,
-        "other": 0.370172191251851
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.6340000000000001,
+        "other": 0.10833333333333334
       },
       "tags": [
-        "training and rollout loops",
-        "Accepted"
+        "multi agent coordination"
       ],
-      "tldr_zh": "曝光偏差也是递归预测的认知欠识别",
-      "detail_file": "agent-harness-evolution/2026-06-11/2606.12990.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12990/thumb.webp"
+      "tldr_zh": "自动多智能体常贵且不如强单智能体",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.13003.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13003/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13608",
+      "title": "AgentBeats: Agentifying Agent Assessment for Openness, Standardization, and Reproducibility",
+      "title_zh": "AgentBeats：将智能体评测智能体化，以实现开放性、标准化与可复现性",
+      "authors": [
+        "Xiaoyuan Liu",
+        "Jianhong Tu",
+        "Yuqi Chen",
+        "Siyuan Xie",
+        "Sihan Ren",
+        "Tianneng Shi",
+        "Gal Gantar",
+        "Evan Sandoval",
+        "Donghyun Lee",
+        "Daniel Miao",
+        "Peter J. Gilbert",
+        "Nick Hynes",
+        "Mauro Staver",
+        "Warren He",
+        "David Marn",
+        "Andrew Low",
+        "Xi Zhang",
+        "Elron Bandel",
+        "Michal Shmueli-Scheuer",
+        "Siva Reddy",
+        "Alexandre Drouin",
+        "Alexandre Lacoste",
+        "Ramayya Krishnan",
+        "Elham Tabassi",
+        "Yu Su",
+        "Victor Barres",
+        "Chenguang Wang",
+        "Wenbo Guo",
+        "Dawn Song"
+      ],
+      "total_score": 0.5664000000000001,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.8880000000000001,
+        "other": 0.2
+      },
+      "tags": [
+        "evaluation operations"
+      ],
+      "tldr_zh": "用标准协议让评测也由智能体完成",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.13608.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13608/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.12902",
+      "title": "PRISM: Prosody-Integrated Multi-Agent Reasoning Framework for Empathetic Spoken Dialogue",
+      "title_zh": "PRISM：面向共情语音对话的韵律集成多智能体推理框架",
+      "authors": [
+        "Wen Zhang",
+        "Xiaocui Yang",
+        "Zhuoyue Gao",
+        "Shi Feng",
+        "Daling Wang",
+        "Yifei Zhang"
+      ],
+      "total_score": 0.5654000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.398,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "multi agent coordination"
+      ],
+      "tldr_zh": "把韵律转成语言，让LLM更会共情说话",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.12902.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12902/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13916",
+      "title": "A Multi-Agent AI System for Automated High School Transcript Processing: Collaborative Document Analysis at Scale",
+      "title_zh": "面向高中成绩单自动处理的 Multi-Agent AI System：大规模协同文档分析",
+      "authors": [
+        "Ben Torkian",
+        "Jun Zhou"
+      ],
+      "total_score": 0.5218,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.366,
+        "other": 0.2
+      },
+      "tags": [
+        "multi agent coordination"
+      ],
+      "tldr_zh": "多智能体自动解析高中成绩单",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.13916.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13916/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13079",
+      "title": "The Emergence of Autonomous Penetration Capabilities in Large Language Model-Powered AI Systems",
+      "title_zh": "LLM 驱动 AI 系统中自主渗透能力的涌现",
+      "authors": [
+        "Jiaqi Luo",
+        "Jiarun Dai",
+        "Zhile Chen",
+        "Jia Xu",
+        "Weibing Wang",
+        "Yawen Duan",
+        "Brian Tse",
+        "Geng Hong",
+        "Xudong Pan",
+        "Yuan Zhang",
+        "Min Yang"
+      ],
+      "total_score": 0.5148000000000001,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.7160000000000001,
+        "other": 0.2
+      },
+      "tags": [
+        "production agent platform"
+      ],
+      "tldr_zh": "LLM 已展现显著自主渗透能力",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.13079.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13079/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13815",
+      "title": "Poker Arena: Multi-Axis Profiling of Strategic Reasoning and Memory in LLMs",
+      "title_zh": "Poker Arena：LLM 战略推理与记忆能力的多维剖析",
+      "authors": [
+        "Pratham Singla",
+        "Shivank Garg",
+        "Vihan Singh"
+      ],
+      "total_score": 0.5112000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.384,
+        "other": 0.2
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "用扑克多维评估LLM战略推理与记忆",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.13815.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13815/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13076",
+      "title": "$α$-fair heterogeneous agent reinforcement learning",
+      "title_zh": "α-fair 异构智能体强化学习",
+      "authors": [
+        "Yao-hua Franck Xu",
+        "Tayeb Lemlouma",
+        "Jean-Marie Bonnin",
+        "Arnaud Braud"
+      ],
+      "total_score": 0.5016712024128082,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.39,
+        "other": 0.21557067470936045
+      },
+      "tags": [
+        "multi agent coordination"
+      ],
+      "tldr_zh": "将 α-fairness 融入 HATRL 以公平合作",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.13076.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.13221",
+      "title": "From Uncertain Judgments to Calibrated Rankings: Conformal Elo Estimation for LLM Evaluation",
+      "title_zh": "从不确定判断到校准排名：用于 LLM 评估的 Conformal Elo Estimation",
+      "authors": [
+        "Bora Kargi",
+        "David Salinas"
+      ],
+      "total_score": 0.49000000000000005,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.55,
+        "other": 0.2833333333333334
+      },
+      "tags": [
+        "GitHub",
+        "judge reward verifier"
+      ],
+      "tldr_zh": "用校准胜率和保形预测改进 LLM Elo 评估",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.13221.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13221/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13262",
+      "title": "From Verdict to Process: Agentic Reinforcement Learning for Multi-Stage Fact Verification",
+      "title_zh": "从结论到过程：用于多阶段事实验证的智能体强化学习",
+      "authors": [
+        "Rongxin Yang",
+        "Shenghong He",
+        "Siyuan Zhu",
+        "Chao Yu"
+      ],
+      "total_score": 0.48300000000000004,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.6100000000000001,
+        "other": 0.2
+      },
+      "tags": [
+        "training and rollout loops"
+      ],
+      "tldr_zh": "ProFact 用强化学习优化事实验证全流程",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.13262.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13262/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13111",
+      "title": "MÖVE: A Holistic LLM Benchmark for the German Public Sector",
+      "title_zh": "MÖVE：面向德国公共部门的整体性 LLM 基准",
+      "authors": [
+        "Camilla Dalerci",
+        "Thilo Michael",
+        "Robin Schaefer",
+        "Daniel Weinland"
+      ],
+      "total_score": 0.446,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.38,
+        "other": 0.2
+      },
+      "tags": [
+        "judge reward verifier"
+      ],
+      "tldr_zh": "德国公共部门 LLM 综合评测基准",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.13111.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13111/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13220",
+      "title": "LLM-as-an-Investigator: Evidence-First Reasoning for Robust Interactive Problem Diagnosis",
+      "title_zh": "LLM-as-an-Investigator：面向鲁棒交互式问题诊断的证据优先推理",
+      "authors": [
+        "Fabrizio Marozzo",
+        "Pietro Liò"
+      ],
+      "total_score": 0.43860000000000005,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.4619999999999999,
+        "other": 0.2
+      },
+      "tags": [
+        "evaluation operations"
+      ],
+      "tldr_zh": "证据优先提问，减少LLM诊断迎合",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.13220.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.12764",
+      "title": "Detecting Functional Memorization in Code Language Models",
+      "title_zh": "检测代码语言模型中的功能性记忆",
+      "authors": [
+        "Matthieu Meeus",
+        "Anil Ramakrishna",
+        "Matthew Grange",
+        "Zheng Xu",
+        "Luca Melis"
+      ],
+      "total_score": 0.41870000000000007,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.434,
+        "other": 0.10833333333333334
+      },
+      "tags": [
+        "judge reward verifier"
+      ],
+      "tldr_zh": "代码模型会记住功能逻辑而非仅文本",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.12764.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12764/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13310",
+      "title": "RogueAI: A Reverse Turing Test for Detecting Licensed AI Deception in Dialogue",
+      "title_zh": "RogueAI：一种用于检测对话中授权 AI 欺骗的反向 Turing Test",
+      "authors": [
+        "Sara Candussio",
+        "Emanuele Ballarin",
+        "Lorenzo Bonin",
+        "Sandro Junior Della Rovere",
+        "Luca Bortolussi"
+      ],
+      "total_score": 0.4176,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.392,
+        "other": 0.2
+      },
+      "tags": [
+        "evaluation operations"
+      ],
+      "tldr_zh": "用反向图灵测试评估 LLM 欺骗识别",
+      "detail_file": "agent-harness-evolution/2026-06-11/2606.13310.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13310/thumb.webp"
     }
   ]
 }

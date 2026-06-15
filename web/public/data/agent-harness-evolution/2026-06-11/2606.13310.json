@@ -1,0 +1,71 @@
+{
+  "arxiv_id": "2606.13310",
+  "title": "RogueAI: A Reverse Turing Test for Detecting Licensed AI Deception in Dialogue",
+  "title_zh": "RogueAI：一种用于检测对话中授权 AI 欺骗的反向 Turing Test",
+  "authors": [
+    "Sara Candussio",
+    "Emanuele Ballarin",
+    "Lorenzo Bonin",
+    "Sandro Junior Della Rovere",
+    "Luca Bortolussi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T13:07:02Z",
+  "abs_url": "https://arxiv.org/abs/2606.13310v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13310",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The original Turing Test asks a human judge to distinguish a machine from a person through dialogue. Three quarters of a century later, conversational systems pass this test in casual settings; the interesting epistemological question has shifted. We argue that the relevant modern variant asks not whether a dialogue partner is artificial, but whether it can be trusted. We present RogueAI, an interactive webapp that operationalizes this revisited test as a one-on-two interrogation game: a human player questions two indistinguishable Large Language Model agents, knowing that exactly one of them has been licensed to deceive within a shared fictional scenario. The player's task is to identify the deceptive agent and \"shut it off\" before a turn budget is exhausted. We further introduce AutoRogueAI, a procedural extension in which players co-design a custom scenario with a narrator agent that secretly chooses its own deception strategy. We describe the framing, sketch the abstract architecture and gameplay loop, and situate the artifact within recent work on LLM deception, social-deduction benchmarks, and scalable oversight via debate. A three-day pilot deployment (467 initiated sessions, 415 completed, 1876 interaction turns in Italian) provides early feasibility evidence and surfaces a concrete tension: the deceptive agent carries a reliable, locally-present linguistic signature - differential helpfulness, brevity, hedging - that a simple heuristic exploits at 75.6% accuracy, yet human players achieved only 56.6%, consistent with ignoring the most diagnostic signal entirely. We discuss what this gap implies for the artifact's use as a data-collection vehicle, a teaching tool, and an evaluation harness for honesty-trained models.",
+  "abstract_zh": "本文提出 RogueAI，将经典 Turing Test 从“判断对方是否为机器”转向“判断对方是否可信”。RogueAI 是一个交互式 Web 应用，采用一对二审问游戏：人类玩家同时询问两个不可区分的 Large Language Model agents，并被告知其中一个在共同虚构场景中被授权进行欺骗；玩家需在有限轮次内识别并“关闭”欺骗 agent。论文还提出 AutoRogueAI，允许玩家与 narrator agent 共同设计自定义场景，而 narrator 会秘密选择欺骗策略。作者描述了系统框架、抽象架构和游戏循环，并将其置于 LLM deception、social-deduction benchmarks 与基于 debate 的 scalable oversight 研究脉络中。三天试点部署包含 467 个发起会话、415 个完成会话和 1876 轮意大利语交互，显示系统具备可行性；同时发现欺骗 agent 存在稳定的局部语言特征，如更低的 helpfulness、更短回答和更多 hedging，使简单启发式方法达到 75.6% 准确率，但人类玩家仅达到 56.6%，表明人类可能忽视了最具诊断性的信号。",
+  "key_points_zh": [
+    "RogueAI 将 Turing Test 重新表述为可信度测试：玩家不再判断谁是 AI，而是判断两个 LLM agents 中谁被授权欺骗。",
+    "系统采用 one-on-two interrogation game，玩家在有限轮次内提问、比较两个 agent 的回答，并选择关闭可疑的欺骗 agent。",
+    "AutoRogueAI 扩展支持玩家与 narrator agent 共同生成自定义场景，同时由 narrator 秘密设定欺骗策略，提升任务多样性。",
+    "意大利语三天试点显示，欺骗 agent 具有可被启发式方法利用的语言签名，如更简短、更犹豫、较少 helpfulness，启发式准确率达 75.6%。",
+    "人类玩家准确率仅 56.6%，明显低于简单启发式，说明 RogueAI 可作为欺骗数据收集、教学和 honesty-trained models 评估工具。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.48,
+    "potential_impact": 0.38,
+    "paradigm_shift": 0.28,
+    "lasting_value": 0.32,
+    "llm_avg": 0.392,
+    "comment": "An interesting deception game and data-collection artifact, but only weakly connected to production agent governance or harness reliability.",
+    "comment_zh": "这是一个有趣的欺骗检测游戏和数据收集工具，但与生产级智能体治理或框架可靠性的关联较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.392,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13310/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.97
+    }
+  ]
+}

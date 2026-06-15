@@ -1,0 +1,73 @@
+{
+  "arxiv_id": "2606.12835",
+  "title": "The Internet of Agentic AI: Communication, Coordination, and Collective Intelligence at Scale",
+  "title_zh": "Agentic AI 互联网：大规模通信、协调与集体智能",
+  "authors": [
+    "Quanyan Zhu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T03:02:59Z",
+  "abs_url": "https://arxiv.org/abs/2606.12835v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.12835",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The rapid emergence of autonomous AI agents is transforming artificial intelligence from isolated model inference into distributed systems of reasoning, communication, and action. This paper develops the vision of the Internet of Agentic AI (IoAI): an open ecosystem in which heterogeneous agents discover one another, negotiate responsibilities, exchange context, invoke tools, and execute workflows across cloud, edge, device, organizational, and cyber-physical environments. We synthesize foundations from single-agent agentic AI, multi-agent systems, distributed computing, communication networks, game theory, and security engineering to characterize the architectures and mechanisms required for scalable agent ecosystems. The paper examines agent deployment models, workflow lifecycles, communication protocols, interoperability layers, resource-management challenges, and trust architectures, with case studies in adaptive manufacturing and distributed operational coordination. The resulting framework highlights the central research challenges of controlled emergence, semantic interoperability, secure identity, incentive-compatible coordination, resource-aware orchestration, and governance for large-scale networks of autonomous agents.",
+  "abstract_zh": "本文提出 Internet of Agentic AI（IoAI）愿景：一个开放生态系统，使异构 autonomous AI agents 能够相互发现、协商职责、交换上下文、调用工具，并在云、边缘、设备、组织及 cyber-physical 环境中执行跨域工作流。论文综合 single-agent agentic AI、multi-agent systems、distributed computing、communication networks、game theory 与 security engineering 的基础，系统刻画可扩展智能体生态所需的架构与机制。文章讨论了智能体部署模式、工作流生命周期、通信协议、互操作层、资源管理挑战与信任架构，并以 adaptive manufacturing 和 distributed operational coordination 为案例。最终框架强调了 controlled emergence、semantic interoperability、secure identity、incentive-compatible coordination、resource-aware orchestration 与 governance 等关键研究问题。",
+  "key_points_zh": [
+    "提出 Internet of Agentic AI（IoAI）概念，将 AI 从孤立模型推理扩展为可通信、可协调、可行动的分布式智能体网络。",
+    "系统梳理 IoAI 的核心组成：智能体发现、职责协商、上下文交换、工具调用、跨云边端与组织环境的工作流执行。",
+    "从 multi-agent systems、distributed computing、networking、game theory 与 security engineering 等领域提炼可扩展架构设计原则。",
+    "重点分析通信协议、语义互操作、资源管理、身份与信任、安全治理等支撑大规模 agent ecosystems 的关键机制。",
+    "通过 adaptive manufacturing 与 distributed operational coordination 案例展示 IoAI 在复杂工业和运营场景中的潜在应用。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.7,
+    "problem_significance": 0.86,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.76,
+    "llm_avg": 0.784,
+    "comment": "The IoAI vision is highly relevant conceptually for large-scale agent ecosystems, though its lasting value depends on concrete mechanisms beyond synthesis.",
+    "comment_zh": "IoAI 愿景在概念上高度相关于大规模智能体生态，但其长期价值取决于是否超越综述提出具体机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.784,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12835/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.12835/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

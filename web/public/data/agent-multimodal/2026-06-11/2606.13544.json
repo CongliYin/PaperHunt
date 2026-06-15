@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.13544",
   "title": "Adaptive Turn-Taking for Real-time Multi-Party Voice Agents",
-  "title_zh": "面向实时多方语音智能体的自适应轮次接管",
+  "title_zh": "面向实时多方语音 Agent 的自适应轮次接管",
   "authors": [
     "Soumyajit Mitra",
     "Prabhat Pandey",
@@ -9,6 +9,7 @@
     "Shanmukha Sahith",
     "K V Vijay Girish"
   ],
+  "author_affiliations": [],
   "published_at": "2026-06-11T16:27:45Z",
   "abs_url": "https://arxiv.org/abs/2606.13544v1",
   "pdf_url": "https://arxiv.org/pdf/2606.13544",
@@ -17,23 +18,23 @@
     "project_page": null
   },
   "abstract_en": "Turn-taking in multi-party spoken conversations remains a fundamental challenge for voice-based agents, particularly under dynamic floor competition and varying user expectations. We propose ModeratorLM, a role-playing voice agent that conditions turn-taking behavior on an explicitly assigned role in multi-party settings. The system is built on a speech large language model operating in chunk-wise streaming manner. We further introduce a reasoning-augmented variant that incorporates chain-of-thought reasoning over conversational context and the assigned role. We construct RolePlayConv, a large-scale synthetic dataset of spoken multi-party conversations with diverse assistant roles. Experiments on real-world meeting data and RolePlayConv show improved turn-taking precision by over 40% and recall by more than 70%, while substantially reducing false-positive interruptions compared to non-role-conditioned baselines.",
-  "abstract_zh": "多方语音对话中的轮次接管（turn-taking）仍是语音智能体的核心挑战，尤其在发言权动态竞争和用户期望变化的场景下。本文提出 ModeratorLM：一种角色扮演式语音智能体，可根据显式分配的角色，在多方对话中调整其轮次接管行为。该系统基于语音大语言模型，以分块流式方式运行。作者进一步提出增强推理版本，在对话上下文和指定角色之上引入 chain-of-thought reasoning。为支持研究，论文构建了 RolePlayConv：一个大规模合成多方语音对话数据集，覆盖多样化助手角色。在真实会议数据和 RolePlayConv 上的实验表明，相比不使用角色条件的基线方法，该方法将轮次接管 precision 提升超过 40%、recall 提升超过 70%，同时显著减少误打断。",
+  "abstract_zh": "本文聚焦多方语音对话中的轮次接管（turn-taking）难题，尤其是在多人抢占话语权、用户期望动态变化的场景下。作者提出 ModeratorLM：一种基于角色扮演的语音 Agent，通过显式分配的角色来调节多方对话中的发言时机。系统建立在按语音块流式处理的 speech large language model 之上，并进一步提出结合 chain-of-thought reasoning 的增强版本，使模型能够基于对话上下文与指定角色进行推理。论文还构建了 RolePlayConv，一个包含多样助手角色的大规模合成多方语音对话数据集。在真实会议数据与 RolePlayConv 上，ModeratorLM 相比非角色条件基线将轮次接管 precision 提升超过 40%、recall 提升超过 70%，同时显著减少误打断。",
   "key_points_zh": [
-    "提出 ModeratorLM，将显式角色信息作为条件，用于控制多方语音智能体在实时对话中的发言时机。",
-    "系统基于 speech large language model，并采用 chunk-wise streaming 机制，面向低延迟实时语音交互。",
-    "引入 reasoning-augmented 版本，通过对话上下文与角色约束上的 chain-of-thought reasoning 改善轮次接管判断。",
-    "构建 RolePlayConv，大规模合成多方语音对话数据集，包含多种 assistant roles，用于训练与评测。",
-    "在真实会议数据和 RolePlayConv 上，相比非角色条件基线，turn-taking precision 提升超过 40%，recall 提升超过 70%，且误打断显著减少。"
+    "提出 ModeratorLM，将显式角色分配引入多方语音 Agent 的 turn-taking 决策，使系统能根据“主持人、参与者、旁听者”等角色调整发言策略。",
+    "系统基于 chunk-wise streaming 的 speech large language model，适配实时语音输入，面向动态多方对话中的即时响应需求。",
+    "引入 reasoning-augmented 版本，通过 chain-of-thought reasoning 综合对话上下文与角色约束，提升何时插话、何时等待的判断能力。",
+    "构建 RolePlayConv 大规模合成多方语音对话数据集，覆盖多种助手角色，为角色条件化轮次接管训练与评测提供数据基础。",
+    "在真实会议数据和 RolePlayConv 上，相比非角色条件基线，turn-taking precision 提升超过 40%、recall 提升超过 70%，并显著降低误打断。"
   ],
   "llm_assessment": {
     "novelty": 0.82,
     "problem_significance": 0.9,
     "potential_impact": 0.88,
     "paradigm_shift": 0.72,
-    "lasting_value": 0.86,
-    "llm_avg": 0.8360000000000001,
-    "comment": "A highly relevant realtime voice-agent paper addressing multi-party turn-taking with streaming design, role conditioning, and reusable spoken-conversation data.",
-    "comment_zh": "这是一篇高度相关的实时语音智能体论文，针对多人轮转发言提出流式设计、角色条件化和可复用语音对话数据。"
+    "lasting_value": 0.87,
+    "llm_avg": 0.8380000000000001,
+    "comment": "A highly relevant realtime voice-agent paper that tackles multi-party turn-taking, streaming speech interaction, interruption reduction, and reusable spoken-conversation data.",
+    "comment_zh": "这是一篇高度契合实时语音智能体方向的论文，聚焦多人轮次管理、流式语音交互、减少误打断以及可复用的口语对话数据。"
   },
   "scores": {
     "topic_relevance": 0.88,
@@ -42,7 +43,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.8360000000000001,
+    "llm_assessment": 0.8380000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -54,15 +55,17 @@
     "hf_upvotes": 0,
     "first_author_h_index": null,
     "first_author_found": false,
+    "first_author_affiliations": [],
     "last_author_h_index": null,
-    "last_author_found": false
+    "last_author_found": false,
+    "last_author_affiliations": []
   },
   "figures": [
     {
       "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13544/fig1.webp",
-      "page": 3,
-      "kind": "table",
-      "confidence": 0.982
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.954
     },
     {
       "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13544/fig2.webp",
@@ -78,9 +81,9 @@
     },
     {
       "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13544/fig4.webp",
-      "page": 2,
-      "kind": "figure",
-      "confidence": 0.954
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.982
     }
   ]
 }

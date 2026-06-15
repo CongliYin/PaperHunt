@@ -1,0 +1,61 @@
+{
+  "arxiv_id": "2606.13220",
+  "title": "LLM-as-an-Investigator: Evidence-First Reasoning for Robust Interactive Problem Diagnosis",
+  "title_zh": "LLM-as-an-Investigator：面向鲁棒交互式问题诊断的证据优先推理",
+  "authors": [
+    "Fabrizio Marozzo",
+    "Pietro Liò"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-11T11:37:07Z",
+  "abs_url": "https://arxiv.org/abs/2606.13220v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.13220",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) are increasingly used as interactive assistants for technical problem solving. However, when users provide incomplete descriptions or plausible but unverified explanations, LLMs may prematurely align with these assumptions and propose solutions before collecting sufficient evidence. We refer to this behavior as user-driven sycophancy: the tendency of an LLM to reinforce a user-provided hypothesis instead of testing alternative explanations. This paper introduces LLM-as-an-Investigator, an evidence-first agentic AI methodology for robust problem diagnosis. The approach is implemented through a Solution Investigator Agent, which estimates the ambiguity of an initial problem description, generates candidate hypotheses, asks targeted clarification questions, and updates hypothesis probabilities after each answer. Rather than producing an immediate response, the agent continues the investigation until the evidence makes one candidate explanation stronger than the alternatives. To evaluate the approach, we build a benchmark from solved technical forum threads in mechanical, electrical, and hydraulic domains. We use a three-agent evaluation pipeline in which a Problem-Solution Extractor Agent converts solved threads into structured cases, a Ground-Truth Evaluator Agent simulates the user while hiding the known solution, and the tested assistant attempts to recover the solution through dialogue. The experiments compare standard assistants, reasoning-oriented LLMs, and the proposed investigator-based model across LLM backbones. In addition to diagnostic accuracy, we analyze how standard assistants follow misleading user hypotheses in diagnostic cases. The results show that the proposed approach identifies the problem more accurately than direct prompting and reasoning-only baselines, while its evidence-first protocol helps reduce user-induced conversational bias.",
+  "abstract_zh": "大型语言模型（LLMs）正越来越多地作为交互式助手用于技术问题求解。然而，当用户提供的信息不完整，或提出看似合理但未经验证的解释时，LLM 可能过早迎合这些假设，在收集充分证据前就给出解决方案。论文将这种行为称为用户驱动的谄媚（user-driven sycophancy），即 LLM 倾向于强化用户提出的假设，而非检验其他可能解释。为此，论文提出 LLM-as-an-Investigator，一种证据优先的 agentic AI 方法，用于更鲁棒的问题诊断。该方法通过 Solution Investigator Agent 实现：先估计初始问题描述的歧义度，生成候选假设，提出有针对性的澄清问题，并在每次用户回答后更新各假设概率。与直接输出答案不同，该 agent 会持续调查，直到证据显示某个候选解释明显强于其他解释。为评估该方法，作者基于机械、电气和液压领域已解决的技术论坛帖子构建基准，并设计三 agent 评测流程：Problem-Solution Extractor Agent 将已解决帖子转换为结构化案例，Ground-Truth Evaluator Agent 在隐藏真实解法的同时模拟用户，被测助手则通过对话尝试恢复解决方案。实验比较了标准助手、推理型 LLM 以及基于 investigator 的模型在不同 LLM backbone 上的表现。除诊断准确率外，论文还分析了标准助手在诊断场景中如何跟随误导性用户假设。结果表明，该方法相比直接提示和仅推理基线能更准确识别问题，其证据优先协议也有助于降低用户诱导的对话偏差。",
+  "key_points_zh": [
+    "提出 user-driven sycophancy 概念，描述 LLM 在技术诊断中容易过早附和用户未经验证假设的问题。",
+    "提出 LLM-as-an-Investigator 方法，通过 Solution Investigator Agent 进行歧义评估、候选假设生成、定向提问和概率更新。",
+    "方法强调证据优先（evidence-first）：不立即给出方案，而是在证据足以区分候选解释后再收敛到诊断结果。",
+    "构建来自机械、电气、液压领域已解决技术论坛帖子的诊断基准，并采用三 agent 流程进行自动化评测。",
+    "实验显示，该方法在诊断准确率上优于直接 prompting 和 reasoning-only baseline，同时减少由用户误导性假设引发的对话偏差。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.58,
+    "potential_impact": 0.45,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.38,
+    "llm_avg": 0.4619999999999999,
+    "comment": "A reasonable agentic diagnostic protocol and evaluation setup, but it is closer to task methodology than reusable harness infrastructure.",
+    "comment_zh": "该论文提出了合理的智能体诊断流程和评测设置，但更接近任务方法而非可复用框架基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.4619999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}
