@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2606.16545",
+  "title": "Can LLM Coding Agents Reason About Time Series?",
+  "title_zh": "LLM 编码智能体能推理时间序列吗？",
+  "authors": [
+    "Filip Rechtorík",
+    "Ondřej Dušek",
+    "Zdeněk Kasner"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T10:49:28Z",
+  "abs_url": "https://arxiv.org/abs/2606.16545v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16545",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) are increasingly being used for automated decision-making systems in finance, healthcare, or environmental monitoring. Time series data are ubiquitous in these fields, yet hard to process automatically. Can time series be analyzed by LLM agents? We examine three approaches: providing the agent with raw numerical data, using the LLM as a coding agent, or a combination of both. In the coding agent setup, the model iteratively queries the data using Python code. Using two time series understanding benchmarks, we show that agents with code access can outperform models processing raw data by up to 10%. However, even the best performing agent still answers about 22-34% of the questions incorrectly. To get insights into models' strategies and reasoning gaps, we analyze the model outputs with a strong LLM judge. Our analysis reveals that coding agents can select appropriate statistical tests, but often miss important nuances. Meanwhile, models with access to raw data can reach the right conclusions using back-of-the-envelope calculations.",
+  "abstract_zh": "大型语言模型（LLMs）正越来越多地用于金融、医疗和环境监测等领域的自动化决策系统，而时间序列数据在这些场景中非常普遍，却难以自动处理。本文研究 LLM 智能体是否能够分析时间序列，并比较三种方式：直接向模型提供原始数值数据、将 LLM 作为编码智能体（coding agent）使用、以及二者结合。在编码智能体设定中，模型通过迭代编写和执行 Python 代码来查询数据。作者在两个时间序列理解基准上实验发现，具备代码访问能力的智能体相比直接处理原始数据的模型最高可提升约 10% 表现。然而，即便最佳智能体仍有约 22%–34% 的问题回答错误。为理解模型策略与推理缺口，论文使用强 LLM judge 分析模型输出，发现编码智能体能够选择合适的统计检验，但经常忽略关键细节；而直接访问原始数据的模型有时也能通过粗略估算（back-of-the-envelope calculations）得到正确结论。",
+  "key_points_zh": [
+    "论文聚焦 LLM agents 在时间序列理解任务中的能力，比较原始数据输入、Python 编码查询、以及混合输入三种范式。",
+    "在两个 time series understanding benchmarks 上，具备代码执行能力的 coding agents 相比直接读取原始数值的模型最高提升约 10%。",
+    "尽管代码访问带来收益，最佳智能体仍有约 22%–34% 的错误率，说明当前 LLM 在时间序列推理上仍存在明显可靠性问题。",
+    "基于强 LLM judge 的输出分析显示，coding agents 往往能选择合适的统计检验，但容易遗漏假设、边界条件或数据细节等关键 nuance。",
+    "直接访问 raw data 的模型并非完全无效，有时可通过粗略手算式估计得出正确结论，提示数值直觉与工具使用能力各有优势。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.25,
+    "problem_significance": 0.35,
+    "potential_impact": 0.28,
+    "paradigm_shift": 0.15,
+    "lasting_value": 0.25,
+    "llm_avg": 0.256,
+    "comment": "This is mainly an empirical study of coding agents on time-series tasks, with limited contribution to reusable agent harness infrastructure.",
+    "comment_zh": "这主要是关于编码智能体处理时间序列任务的实证研究，对可复用智能体运行框架的贡献有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.256,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16545/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16545/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16545/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16545/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.977
+    }
+  ]
+}

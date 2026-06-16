@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2606.16935",
+  "title": "CrossMaps: Confidence-Aware Open-Vocabulary Semantic Mapping for Rover Navigation",
+  "title_zh": "CrossMaps：面向 Rover 导航的置信度感知开放词汇语义建图",
+  "authors": [
+    "Jan-Niklas Klein",
+    "Sona Ghahremani",
+    "Christian Medeiros Adriano",
+    "Holger Giese"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T16:35:01Z",
+  "abs_url": "https://arxiv.org/abs/2606.16935v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16935",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Rovers rely on perception to maintain spatial maps that encode both objects and sensor quality (e.g., range reliability, lighting artifacts, data density), guiding data fusion, embedding updates, and navigation under partial observability. To study these coupled perception-navigation processes, we present CrossMaps, a real-time confidence-aware open-vocabulary semantic mapping pipeline that constructs language-queryable maps from RGB-D data. Building on VLMaps-style approaches, CrossMaps integrates multi-scale CLIP embeddings with confidence-aware fusion and a dual-memory architecture consisting of Short-Term Memory (STM) and Long-Term Memory (LTM). The STM aggregates noisy visual observations using geometric, semantic, and temporal confidence cues, while confident and coherent cells are promoted to the LTM as persistent semantic landmarks. Designed for deployment with a Jetson Orin-powered UGV alongside SLAM, CrossMaps runs in real time and produces semantic heatmaps that can be queried with natural language to guide rover navigation.",
+  "abstract_zh": "本文提出 CrossMaps，一个实时、置信度感知的开放词汇语义建图管线，用于从 RGB-D 数据构建可用自然语言查询的语义地图。该方法面向 Rover/UGV 在部分可观测环境中的导航需求，不仅编码物体语义，还显式建模传感器质量因素，如测距可靠性、光照伪影和数据密度。CrossMaps 基于 VLMaps 风格框架，融合多尺度 CLIP embeddings，并引入置信度感知融合机制与双记忆架构：Short-Term Memory（STM）负责结合几何、语义和时间置信度线索聚合噪声视觉观测；Long-Term Memory（LTM）则保存从 STM 中筛选出的高置信、时空一致语义单元，作为持久语义地标。系统设计目标是在搭载 Jetson Orin 的 UGV 上与 SLAM 并行实时运行，并生成可由自然语言查询的语义热力图，以辅助 Rover 导航决策。",
+  "key_points_zh": [
+    "提出 CrossMaps：一个面向 Rover 导航的实时开放词汇语义建图系统，可从 RGB-D 数据生成 language-queryable semantic maps。",
+    "在 VLMaps 类方法基础上，引入多尺度 CLIP embeddings，以支持更细粒度、更鲁棒的开放词汇语义表示。",
+    "设计置信度感知融合机制，同时考虑几何、语义和时间线索，用于处理传感器噪声、光照伪影、稀疏数据等不确定性。",
+    "采用 Short-Term Memory（STM）与 Long-Term Memory（LTM）双记忆架构：STM 聚合短期观测，LTM 保留高置信且一致的持久语义地标。",
+    "系统面向 Jetson Orin-powered UGV 与 SLAM 并行部署，可实时输出语义热力图，并通过自然语言查询辅助导航。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.35,
+    "problem_significance": 0.25,
+    "potential_impact": 0.2,
+    "paradigm_shift": 0.2,
+    "lasting_value": 0.15,
+    "llm_avg": 0.22999999999999998,
+    "comment": "This is primarily an embodied rover semantic-mapping system and is largely outside the target scope of production agent harness evolution.",
+    "comment_zh": "这主要是一个面向具身漫游车的语义建图系统，基本不属于生产级智能体运行框架演化的目标范围。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.22999999999999998,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16935/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.954
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16935/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.922
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16935/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.96
+    }
+  ]
+}

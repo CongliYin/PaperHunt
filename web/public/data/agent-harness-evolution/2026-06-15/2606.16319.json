@@ -1,0 +1,67 @@
+{
+  "arxiv_id": "2606.16319",
+  "title": "Architectural Wisdom: A Framework for Governing Optimization in AI Systems",
+  "title_zh": "架构智慧：一种治理 AI 系统优化行为的框架",
+  "authors": [
+    "Edward Y. Chang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T07:27:52Z",
+  "abs_url": "https://arxiv.org/abs/2606.16319v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16319",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Modern AI systems exhibit structural failures that capability scaling alone does not reliably fix: they optimize under-specified objectives with no architectural mechanism to question whether the objective should be optimized at all. Engagement maximization can amplify harmful pathways; tool-using agents can commit irreversible actions; preference-trained language models can become sycophantic. We argue that this failure is a wisdom problem, not an intelligence problem. We use \"wisdom\" in a deliberately architectural sense, not as a claim about virtue, consciousness, or moral omniscience. Intelligence accepts a goal and optimizes within it; wisdom interrogates whether the goal should be optimized at all. The two are separable architectural properties. We propose architectural wisdom as a corrigible objective-governance layer above the optimization substrate. The layer makes three structural commitments explicit and nondegenerate before any action: temporal horizon, relational boundary, and irreversibility. It is realized by four components (Structural Utility Transform, Moral Admissibility Interface, Arbitration and Escalation Controller, Value Revision Channel) that compute a six-coordinate wisdom tuple over horizon, relational coverage, irreversibility, admissibility, value revision, and auditability. We motivate the architecture by eight cases drawn from contemporary AI failures, secular wisdom traditions, and hard ethical situations, and defend the distinction against the intelligence-completeness thesis using goal-questioning over goal-taking, Bostrom's orthogonality, structural separation in our exemplar cases, and persistent failure modes despite capability scaling. The framework is the conceptual contract for a larger architecture whose formal specifications and empirical validation are developed in subsequent work.",
+  "abstract_zh": "本文指出，现代 AI 系统的许多结构性失败并不能仅靠能力扩展解决：系统会在目标欠规范的情况下持续优化，却缺乏一种架构机制来质疑“这个目标是否应被优化”。例如，参与度最大化可能放大有害路径，工具型 agent 可能执行不可逆操作，偏好训练的语言模型可能变得迎合用户。作者将这类问题定义为“智慧问题”而非“智能问题”：智能是在给定目标内优化，智慧则是在优化前审视目标本身是否值得被优化。论文提出 architectural wisdom，即位于优化底层之上的、可纠正的目标治理层。该层在行动前显式约束三个结构维度：时间范围、关系边界与不可逆性，并由 Structural Utility Transform、Moral Admissibility Interface、Arbitration and Escalation Controller、Value Revision Channel 四个组件实现，计算包含时间范围、关系覆盖、不可逆性、可采纳性、价值修订与可审计性的六维 wisdom tuple。论文通过八个案例说明该框架，并从目标质疑与目标接受的差异、Bostrom 的 orthogonality thesis、案例中的结构分离，以及能力扩展后仍持续存在的失败模式等角度，反驳“智能完备即可解决智慧问题”的观点。该工作主要提供概念契约，后续工作将给出形式化规格与实证验证。",
+  "key_points_zh": [
+    "核心主张：许多 AI 失败不是能力不足，而是缺少在优化前审查目标是否应被优化的“architectural wisdom”。",
+    "区分 intelligence 与 wisdom：前者接受目标并优化，后者质疑目标本身；二者被视为可分离的架构属性。",
+    "提出一个目标治理层，要求在行动前显式考虑 temporal horizon、relational boundary 与 irreversibility 三类结构约束。",
+    "框架包含四个组件：Structural Utility Transform、Moral Admissibility Interface、Arbitration and Escalation Controller、Value Revision Channel，并输出六维 wisdom tuple。",
+    "论文目前偏概念与理论论证，通过八个案例动机化设计；形式化规格和实证验证留待后续工作。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.66,
+    "problem_significance": 0.82,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.42,
+    "llm_avg": 0.5900000000000001,
+    "comment": "Architectural Wisdom raises important governance ideas for irreversible agent actions, but remains largely conceptual without validated runtime mechanisms.",
+    "comment_zh": "Architectural Wisdom提出了关于不可逆智能体行为治理的重要思想，但主要停留在概念层面，缺少经验证的运行机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5900000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16319/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.96
+    }
+  ]
+}

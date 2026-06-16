@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.16740",
+  "title": "Robust and Automated Reconfiguration of Byzantine Wide-Area Replication",
+  "title_zh": "拜占庭广域复制的鲁棒自动重配置",
+  "authors": [
+    "Rowdy Chotkan",
+    "Bulat Nasrulin",
+    "Johan Pouwelse",
+    "Jérémie Decouchant"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T14:01:57Z",
+  "abs_url": "https://arxiv.org/abs/2606.16740v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16740",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Distributed systems handle adversarial nodes through redundancy, which imposes a significant performance overhead. In blockchain systems, Byzantine fault-tolerant state-machine replication (BFT-SMR) is the replicated service that totally orders client transactions before execution. While prior research has primarily focused on designing novel consensus algorithms with improved performance, recent studies have shown that further gains can be achieved through configuration optimization. More precisely, replicas can monitor network latency to dynamically assign the leader role and tune voting weights, thereby improving consensus performance. However, we identify three vulnerabilities in this process that Byzantine nodes can exploit. To address these weaknesses, we propose Beware, a reconfiguration framework that filters out falsified latency reports, computes robust weight distributions, and applies machine learning to converge towards Byzantine-resilient configurations. Our evaluation shows that Beware reduces consensus latency by up to 45% compared to existing solutions.",
+  "abstract_zh": "分布式系统通常通过冗余来应对对抗性节点，但这会带来显著性能开销。在区块链系统中，Byzantine fault-tolerant state-machine replication（BFT-SMR）负责在执行前对客户端交易进行全序排序。以往研究主要关注设计更高性能的共识算法，而近期工作表明，通过配置优化也能进一步提升性能：副本可监测网络延迟，动态分配 leader 角色并调整投票权重，从而改善共识效率。本文指出这一重配置过程中存在三类可被 Byzantine 节点利用的漏洞。为此，作者提出 Beware，一个面向重配置的框架，可过滤伪造的延迟报告、计算鲁棒的权重分布，并利用机器学习逐步收敛到具备 Byzantine 韧性的配置。实验结果显示，相比现有方案，Beware 最多可将共识延迟降低 45%。",
+  "key_points_zh": [
+    "研究问题聚焦于 BFT-SMR 在广域网络中的自动重配置，包括 leader 选择与投票权重调优。",
+    "论文识别出动态配置优化中的三类安全漏洞，Byzantine 节点可通过操纵延迟信息等方式误导系统配置。",
+    "提出 Beware 框架，通过过滤虚假 latency reports、计算鲁棒 weight distributions、结合机器学习搜索更安全高效的配置。",
+    "Beware 的目标不是替代共识协议，而是在现有 BFT 共识之上提升配置优化过程的抗攻击能力。",
+    "实验表明，Beware 相比已有重配置方案最多降低 45% 的 consensus latency。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.58,
+    "potential_impact": 0.36,
+    "paradigm_shift": 0.24,
+    "lasting_value": 0.14,
+    "llm_avg": 0.37399999999999994,
+    "comment": "Beware is solid distributed-systems work on Byzantine reconfiguration but is largely outside agent harness evolution.",
+    "comment_zh": "Beware是关于拜占庭重配置的扎实分布式系统工作，但基本不属于智能体运行平台演进范畴。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.37399999999999994,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16740/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.82
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16740/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.885
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16740/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16740/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.506
+    }
+  ]
+}

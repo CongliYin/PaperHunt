@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.16368",
+  "title": "Evaluating LLM Personalization via Semantic Constraint Verification",
+  "title_zh": "通过语义约束验证评估 LLM 个性化",
+  "authors": [
+    "Xuran Li",
+    "Guanqin Zhang",
+    "Imran Razzak",
+    "Hakim Hacid",
+    "Eleanna Kafeza",
+    "Hao Xue",
+    "Flora D. Salim"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T08:04:56Z",
+  "abs_url": "https://arxiv.org/abs/2606.16368v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16368",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Current evaluation paradigms for Large Language Model (LLM) personalization rely heavily on brittle surface-matching metrics or computationally expensive LLM-as-a-judge protocols, both of which lack interpretability. To address these limitations, we introduce Natural Language Inference Constraint Verification (NLICV), a scalable, semantically invariant framework that maps sentence meanings to truth-condition sets to verify personalization constraints via a Natural Language Inference (NLI) model. Moving beyond binary scoring, NLICV categorizes LLM behaviors into four distinct modes: personalization, generalization, sycophancy, and failure. Extensive experiments demonstrate that NLICV aligns closely with human annotations while drastically reducing the latency and token costs associated with LLM judges (up to 2100 inference speedup). Finally, through an ablation-based procedure, NLICV pinpoints the exact sentences driving the constraint verification, yielding faithful, understandable evidence for its evaluations.",
+  "abstract_zh": "当前 Large Language Model (LLM) 个性化评估主要依赖脆弱的表面匹配指标，或计算成本高昂的 LLM-as-a-judge 方案，且二者可解释性不足。本文提出 Natural Language Inference Constraint Verification (NLICV)，一种可扩展、语义不变的评估框架：它将句子含义映射为真值条件集合，并利用 Natural Language Inference (NLI) 模型验证个性化约束。不同于二元打分，NLICV 将 LLM 行为划分为四类：personalization、generalization、sycophancy 和 failure。大量实验表明，NLICV 与人类标注高度一致，同时显著降低相较 LLM judges 的延迟与 token 成本，推理速度最高提升 2100 倍。此外，NLICV 通过基于消融的过程定位驱动约束验证的具体句子，为评估结果提供忠实且可理解的证据。",
+  "key_points_zh": [
+    "提出 NLICV，将个性化评估转化为基于 NLI 的语义约束验证，避免依赖脆弱的字符串匹配。",
+    "框架不仅给出二元结果，还将 LLM 输出行为细分为 personalization、generalization、sycophancy 和 failure 四种模式。",
+    "实验显示 NLICV 与人类标注高度一致，同时相较 LLM-as-a-judge 大幅降低延迟和 token 成本，最高实现 2100 倍推理加速。",
+    "通过消融式证据定位，NLICV 能找出影响约束验证的关键句子，提升评估过程的可解释性与可信度。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.6,
+    "problem_significance": 0.56,
+    "potential_impact": 0.42,
+    "paradigm_shift": 0.32,
+    "lasting_value": 0.3,
+    "llm_avg": 0.44000000000000006,
+    "comment": "NLICV offers efficient semantic evaluation for personalization, but it is not specifically a harness-level observability or governance framework.",
+    "comment_zh": "NLICV为个性化提供了高效语义评测，但并非专门的运行框架级可观测性或治理体系。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.44000000000000006,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16368/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16368/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.947
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16368/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.87
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16368/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.946
+    }
+  ]
+}

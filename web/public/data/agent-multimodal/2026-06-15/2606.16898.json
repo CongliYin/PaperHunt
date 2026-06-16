@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2606.16898",
+  "title": "Semantic Flip: Synthetic OOD Generation for Robust Refusal in Embodied Question Answering and Spatial Localization",
+  "title_zh": "Semantic Flip：用于具身问答与空间定位鲁棒拒答的合成 OOD 生成",
+  "authors": [
+    "Dongbin Na",
+    "Chanwoo Kim",
+    "Giyun Choi",
+    "Dooyoung Hong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T16:07:24Z",
+  "abs_url": "https://arxiv.org/abs/2606.16898v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16898",
+  "links": {
+    "github": "https://github.com/ndb796/SemanticFlip",
+    "project_page": "https://ndb796.github.io/SemanticFlip"
+  },
+  "abstract_en": "Detecting unanswerable user queries remains essential for the reliable deployment of real-world embodied agents. However, modern vision-language models (VLMs) often generate overly confident answers even when the available visual memory cannot support the query. Such overconfidence poses various task-dependent risks. The agent may provide misleading information to the user in Embodied Question Answering and select an arbitrary coordinate and physically guide the user there in spatial reasoning for navigation. Despite these high stakes, only a few prior studies directly address when and how an embodied VLM should respond with \"I do not know.\" This work proposes Semantic Flip, a simple yet effective framework that synthesizes auxiliary out-of-distribution (OOD) samples for embodied refusal without requiring external OOD annotations. The key idea is to independently transform the query and video memory to construct auxiliary OOD pairs that lack sufficient visual grounding. These synthesized pairs enable training a lightweight rejection module on top of a frozen pretrained VLM. The module attaches to any existing VLM-based pipeline without retraining the underlying model. Across two complementary benchmarks, Semantic Flip consistently outperforms strong prompting baselines. This work also introduces SpaceReject, a new refusal benchmark for spatial localization with deliberately unanswerable queries over long video memory, where Semantic Flip achieves an $F_1$ score of 0.9559. The source codes and datasets are publicly available at https://github.com/ndb796/SemanticFlip.",
+  "abstract_zh": "本文关注真实具身智能体部署中的不可回答查询检测问题。现有 vision-language models（VLMs）即使在视觉记忆不足以支撑用户问题时，也常生成过度自信的答案，在 Embodied Question Answering 中可能误导用户，在导航空间推理中甚至可能选择任意坐标并引导用户前往。为此，论文提出 Semantic Flip，一个无需外部 OOD 标注的合成框架，通过独立变换 query 与 video memory 构造缺乏充分视觉 grounding 的辅助 OOD 样本，并在冻结的预训练 VLM 之上训练轻量级 rejection module。该模块可接入任意现有 VLM-based pipeline，而无需重训底层模型。实验表明，Semantic Flip 在两个互补基准上稳定优于强 prompting baseline。论文还提出 SpaceReject，这是一个面向长视频记忆空间定位拒答的新 benchmark，包含刻意设计的不可回答查询；Semantic Flip 在该基准上取得 0.9559 的 F1 分数。",
+  "key_points_zh": [
+    "提出 Semantic Flip，通过分别变换 query 与 video memory，自动生成语义不匹配、视觉证据不足的 OOD 样本，用于训练拒答能力。",
+    "方法在冻结 pretrained VLM 顶部添加轻量级 rejection module，不需要重训底层 VLM，便于集成到现有 VLM-based pipeline。",
+    "针对具身场景中过度自信回答的风险，覆盖 Embodied Question Answering 与 spatial localization 两类任务。",
+    "引入新的 SpaceReject benchmark，专门评估长视频记忆下空间定位问题中的不可回答查询拒答能力。",
+    "实验显示 Semantic Flip 持续优于强 prompting baselines，并在 SpaceReject 上达到 0.9559 F1。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.65,
+    "problem_significance": 0.7,
+    "potential_impact": 0.65,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.6,
+    "llm_avg": 0.5900000000000001,
+    "comment": "A useful embodied-agent refusal method and benchmark, but only moderately aligned with realtime multimodal agent interaction.",
+    "comment_zh": "该工作提出了有用的具身智能体拒答方法和基准，但与实时多模态智能体交互的契合度中等。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.9,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5900000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/ndb796/SemanticFlip",
+    "project_page_url": "https://ndb796.github.io/SemanticFlip",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16898/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16898/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.946
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16898/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.98
+    }
+  ]
+}

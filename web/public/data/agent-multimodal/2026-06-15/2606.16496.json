@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.16496",
+  "title": "REFLEX: Reflective Evolution from LLM Experience",
+  "title_zh": "REFLEX：从 LLM 经验中进行反思式进化",
+  "authors": [
+    "Pan Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T09:58:13Z",
+  "abs_url": "https://arxiv.org/abs/2606.16496v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16496",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large multimodal language models (LLMs) have emerged as powerful tools for guiding evolutionary search toward interpretable programmatic policies. However, existing frameworks rely on a monolithic model call to simultaneously interpret visual behavioral evidence and synthesize corrective code. This diagnosis-repair entanglement creates an opaque feedback loop, obscuring the rationale behind mutations and preventing the retention of algorithmic insights across independent runs. To achieve auditable and efficient policy search, we argue that visual diagnosis must be structurally decoupled from code generation. We present REFLEX, a train-free evolutionary framework that operationalizes this decoupling. In REFLEX, a vision-enabled Critic first distills task-specific behavioral evidence into structured, auditable diagnoses. Subsequently, a text-optimized Actor synthesizes child policies using these diagnoses alongside a persistent, self-evolving Skill Memory of reusable code snippets. This architecture not only provides transparent mutation traces but also enables cross-run programmatic knowledge transfer. Extensive evaluations across control benchmarks (Lunar Lander, Acrobot, Pendulum) and a 36-dimensional antenna array synthesis task demonstrate exceptional sample efficiency. Notably, REFLEX solves Acrobot and Pendulum in under 10 LLM calls and reaches a best Normalized Weighted Score of 1.092 on Lunar Lander, achieving highly competitive final performance while significantly accelerating the early-stage discovery of transparent policies.",
+  "abstract_zh": "大型多模态语言模型（LLMs）已成为引导进化搜索、发现可解释程序化策略的有力工具。然而，现有框架通常依赖一次整体模型调用，同时完成视觉行为证据解读与纠错代码生成，导致“诊断—修复”过程纠缠在一起，反馈循环不透明，也难以在独立运行之间保留算法洞见。为实现可审计且高效的策略搜索，本文主张将视觉诊断与代码生成在结构上解耦。为此，作者提出 REFLEX，一个无需训练的进化框架：首先由具备视觉能力的 Critic 将任务相关的行为证据提炼为结构化、可审计的诊断；随后由面向文本优化的 Actor 基于这些诊断，并结合持续自演化的 Skill Memory（可复用代码片段记忆库）生成子代策略。该架构不仅提供透明的变异轨迹，还支持跨运行的程序化知识迁移。在 Lunar Lander、Acrobot、Pendulum 等控制基准以及 36 维天线阵列合成任务上的评估表明，REFLEX 具有很高的样本效率：其中 Acrobot 和 Pendulum 可在少于 10 次 LLM 调用内解决，Lunar Lander 上达到 1.092 的最佳 Normalized Weighted Score，在保持强竞争最终性能的同时显著加速早期透明策略发现。",
+  "key_points_zh": [
+    "提出 REFLEX，一个无需训练的 LLM 驱动进化框架，用于搜索可解释的程序化策略。",
+    "核心思想是将视觉行为诊断与代码生成解耦：Critic 负责生成结构化诊断，Actor 负责基于诊断合成新策略代码。",
+    "引入持久化、自演化的 Skill Memory，保存可复用代码片段，实现跨独立运行的程序化知识迁移。",
+    "相比单次模型调用同时诊断和修复的方式，REFLEX 提供更透明、可审计的变异轨迹，便于理解策略改进原因。",
+    "在 Lunar Lander、Acrobot、Pendulum 和 36 维天线阵列合成任务上展现高样本效率，部分任务少于 10 次 LLM 调用即可解决。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.65,
+    "problem_significance": 0.45,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.4,
+    "llm_avg": 0.49000000000000005,
+    "comment": "An interesting visual-diagnosis and code-evolution framework, but its connection to realtime multimodal agents is indirect.",
+    "comment_zh": "这是一个有趣的视觉诊断与代码演化框架，但与实时多模态智能体的关联较为间接。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.49000000000000005,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16496/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16496/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16496/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16496/fig4.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

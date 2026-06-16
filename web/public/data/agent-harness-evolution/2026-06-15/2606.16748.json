@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2606.16748",
+  "title": "MyPCBench: A Benchmark for Personally Intelligent Computer-Use Agents",
+  "title_zh": "MyPCBench：面向个性化智能计算机使用代理的基准",
+  "authors": [
+    "Lawrence Keunho Jang",
+    "Andrew Keunwoo Jang",
+    "Jing Yu Koh",
+    "Ruslan Salakhutdinov"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T14:08:09Z",
+  "abs_url": "https://arxiv.org/abs/2606.16748v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16748",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Current benchmarks for computer-use agents evaluate models in impersonal environments. This leaves a gap between evaluation and deployment where personal assistants are expected to work across a user's whole digital life, including their context, historical data, and logged-in accounts. This gap is widest on web tasks, where live web evaluations cannot exercise sites that require logging in or personal information, the kind of site a real personal assistant has to drive. We introduce MyPCBench, which tests computer-use agents as personal assistants on a Linux desktop populated with 17 simulated real-world web applications and a full desktop stack, all seeded for one canonical persona, Michael Scott from The Office. We define 184 tasks in this environment, each inspired by a real request drawn from the OpenClaw community, and benchmark six closed and open-weight models with a uniform computer+bash tool surface. We find that the best model, Claude Opus 4.6, fully solves 55.4\\% of the tasks, the only model above 50\\%. Model failures cluster on tasks that span many applications and on long trajectories, where personalization stresses an assistant the most. We release the environment, task set, and agent harness at https://mypcbench.com.",
+  "abstract_zh": "现有计算机使用代理（computer-use agents）基准多在非个性化环境中评测模型，导致评测与真实部署之间存在差距：真实个人助手需要处理用户完整数字生活中的上下文、历史数据和已登录账户。该差距在 Web 任务上尤其明显，因为实时 Web 评测通常无法覆盖需要登录或个人信息的网站，而这正是个人助手必须操作的场景。本文提出 MyPCBench：一个在 Linux 桌面上评测计算机使用代理作为个人助手能力的基准。该环境包含 17 个模拟真实世界 Web 应用和完整桌面软件栈，并以《The Office》中的 Michael Scott 作为统一人物设定进行数据填充。作者构建了 184 个任务，灵感来自 OpenClaw 社区的真实请求，并使用统一的 computer+bash 工具接口评测 6 个闭源与开放权重模型。结果显示，最佳模型 Claude Opus 4.6 完全解决了 55.4% 的任务，也是唯一超过 50% 的模型。失败主要集中在跨多个应用的任务和长轨迹任务上，表明个性化场景会显著放大代理的规划、记忆与跨应用操作难度。作者已开源环境、任务集和 agent harness。",
+  "key_points_zh": [
+    "MyPCBench 将评测从通用、非个性化环境推进到“个人数字生活”场景，覆盖用户上下文、历史数据和登录态应用。",
+    "基准运行在 Linux 桌面环境中，包含 17 个模拟真实 Web 应用与完整桌面栈，并以 Michael Scott 作为 canonical persona 填充数据。",
+    "任务集包含 184 个来自 OpenClaw 社区真实请求启发的任务，更贴近个人助手在邮件、日程、文档、Web 服务等多应用间协作的实际需求。",
+    "作者用统一的 computer+bash 工具接口评测 6 个闭源和开放权重模型；Claude Opus 4.6 表现最好，完整解决率为 55.4%。",
+    "模型主要失败于跨应用、多步骤、长轨迹任务，说明当前 computer-use agents 在个性化推理、长期执行和复杂环境导航上仍有明显瓶颈。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.56,
+    "problem_significance": 0.62,
+    "potential_impact": 0.44,
+    "paradigm_shift": 0.3,
+    "lasting_value": 0.32,
+    "llm_avg": 0.44800000000000006,
+    "comment": "MyPCBench provides a richer computer-use evaluation environment, but computer-use benchmarking is only weakly aligned with durable agent harness infrastructure.",
+    "comment_zh": "MyPCBench提供了更丰富的电脑使用评测环境，但电脑使用基准与持久化智能体运行基础设施的关联较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.34373441375821495,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.44800000000000006,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16748/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.938
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16748/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.936
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16748/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.978
+    }
+  ]
+}

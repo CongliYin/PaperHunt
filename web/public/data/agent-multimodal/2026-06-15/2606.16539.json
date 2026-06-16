@@ -1,0 +1,94 @@
+{
+  "arxiv_id": "2606.16539",
+  "title": "Decoding while Adapting: Zero-Shot Online Speaker Adaptation via Audio-Textual Prompts for Elderly Speech Recognition",
+  "title_zh": "边解码边适应：基于音频-文本提示的老年语音识别零样本在线说话人自适应",
+  "authors": [
+    "Chengxi Deng",
+    "Xurong Xie",
+    "Shujie Hu",
+    "Mengzhe Geng",
+    "Tianzi Wang",
+    "Youjun Chen",
+    "Huimeng Wang",
+    "Haoning Xu",
+    "Jiajun Deng",
+    "Xunying Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T10:40:48Z",
+  "abs_url": "https://arxiv.org/abs/2606.16539v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16539",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "This paper proposes a novel cross-utterance audio-textual prompts based speaker adaptation approach for elderly speech recognition. It enables zero-shot, real-time adaptation to unseen speakers. Speech and text embeddings are extracted from the current and a few preceding utterances, before being fused in a cross-modal manner to produce compact speaker prompts that are more consistent than i/x-vectors and ECAPA-TDNN features. Experiments on the English DementiaBank Pitt and Cantonese JCCOCC MoCA elderly speech datasets suggest that the proposed online adaptation outperforms the speaker-independent (SI) model by statistically significant word error rate (WER) or character error rate (CER) reductions of 0.61% and 1.22% absolute (2.99% and 4.48% relative). Real-time factor (RTF) speed-up ratios of up to 9.83 times are obtained over offline batch-mode adaptation.",
+  "abstract_zh": "本文提出一种基于跨话语音频-文本提示（audio-textual prompts）的说话人自适应方法，用于老年语音识别。该方法可对未见过的说话人进行零样本、实时自适应：从当前话语及少量前序话语中提取语音与文本嵌入，并通过跨模态融合生成紧凑的说话人提示。相比 i/x-vectors 和 ECAPA-TDNN 特征，这些提示具有更高的一致性。在 English DementiaBank Pitt 和 Cantonese JCCOCC MoCA 两个老年语音数据集上的实验表明，所提出的在线自适应方法相较说话人无关（SI）模型取得了统计显著的错误率下降：WER/CER 分别绝对降低 0.61% 和 1.22%，相对降低 2.99% 和 4.48%。此外，相比离线批处理自适应，该方法的实时因子（RTF）最高获得 9.83 倍加速。",
+  "key_points_zh": [
+    "提出跨话语 audio-textual prompts 说话人自适应框架，支持未见说话人的零样本在线适应。",
+    "方法利用当前及前序话语的语音和文本嵌入，并进行跨模态融合，生成紧凑且稳定的 speaker prompts。",
+    "相比传统 i/x-vectors 与 ECAPA-TDNN 特征，所生成提示在说话人表征一致性上更优。",
+    "在 DementiaBank Pitt 与 JCCOCC MoCA 老年语音数据集上，相比 SI 模型取得显著 WER/CER 降低。",
+    "在线方案相较离线批处理自适应显著提升效率，RTF 最高加速 9.83 倍。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.55,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.35,
+    "llm_avg": 0.44000000000000006,
+    "comment": "A practical online elderly-speech adaptation method, but it remains mainly an ASR paper rather than an agent interaction contribution.",
+    "comment_zh": "该工作是实用的老年语音在线自适应方法，但主要仍属于ASR研究而非智能体交互贡献。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.44000000000000006,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16539/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16539/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.935
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16539/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.944
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16539/fig4.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

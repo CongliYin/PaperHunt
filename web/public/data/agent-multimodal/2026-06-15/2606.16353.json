@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2606.16353",
+  "title": "What Should a Streaming Video Model Remember?",
+  "title_zh": "流式视频模型应该记住什么？",
+  "authors": [
+    "Haonan Ge",
+    "Yiwei Wang",
+    "Hang Wu",
+    "Yujun Cai"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T07:50:19Z",
+  "abs_url": "https://arxiv.org/abs/2606.16353v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16353",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Streaming video understanding models must answer queries at any moment during an ongoing stream, using only what they have observed so far and under fixed memory and computation budgets. Existing methods address this by adding memory banks, retrieval modules, or visual token compression to preserve long-range history. However, strong recent-window baselines show that indiscriminate history injection can dilute current-scene perception, suggesting that the key challenge is not whether to use memory, but how to allocate it selectively. We formulate this as budgeted online latent evidence allocation and propose \\textbf{SelectStream}, a selective latent-memory framework that keeps the current observation directly visible to a frozen VLM while exposing historical information only through a compact, query-conditioned evidence budget. Three coordinated mechanisms govern when to write, what to preserve, and how to retrieve: surprise-driven adaptive windowing, priority-preserving consolidation, and query-conditioned graph reasoning over a fixed-capacity latent memory graph. Retrieved evidence is calibrated and injected as latent tokens for answer generation, without replaying frames or growing the context with stream length. Experimental results show that SelectStream achieves strong online streaming performance and preserves general video understanding, reaching 82.67\\% on StreamingBench, 67.03\\% on OVO-Bench, and 74.4\\% average accuracy on offline video benchmarks, while outperforming strong recent-window baselines and prior streaming memory methods.",
+  "abstract_zh": "流式视频理解模型需要在视频流进行过程中随时回答查询，并且只能使用已观察到的内容，同时受到固定内存与计算预算约束。现有方法通常通过 memory bank、retrieval module 或视觉 token 压缩来保留长程历史信息。然而，强 recent-window baseline 表明，不加选择地注入历史信息可能削弱模型对当前场景的感知。因此，关键问题并非是否使用记忆，而是如何有选择地分配记忆。本文将该问题形式化为有预算的在线潜在证据分配（budgeted online latent evidence allocation），并提出 SelectStream：一种选择性 latent-memory 框架，使当前观测对冻结 VLM 保持直接可见，同时仅通过紧凑、查询条件化的证据预算暴露历史信息。SelectStream 通过三种协同机制决定何时写入、保留什么以及如何检索：surprise-driven adaptive windowing、priority-preserving consolidation，以及在固定容量 latent memory graph 上进行 query-conditioned graph reasoning。检索到的证据经过校准后作为 latent tokens 注入用于答案生成，无需重放帧，也不会随着视频流长度增长而扩大上下文。实验显示，SelectStream 在在线流式视频任务中表现强劲，并保留了通用视频理解能力：在 StreamingBench 上达到 82.67%，在 OVO-Bench 上达到 67.03%，在离线视频基准上取得 74.4% 平均准确率，优于强 recent-window baselines 和既有流式记忆方法。",
+  "key_points_zh": [
+    "提出 SelectStream，将流式视频记忆建模为有预算的在线潜在证据分配问题，强调选择性历史信息使用，而非简单堆叠长期上下文。",
+    "框架保持当前观测直接输入冻结 VLM，避免历史信息稀释当前场景感知；历史内容仅以紧凑、查询条件化的 latent evidence 形式注入。",
+    "包含三项核心机制：基于 surprise 的自适应窗口划分、保留高优先级信息的 memory consolidation，以及固定容量 latent memory graph 上的 query-conditioned graph reasoning。",
+    "检索证据以校准后的 latent tokens 参与答案生成，不需要重放历史帧，也不会让上下文长度随视频流增长。",
+    "在 StreamingBench、OVO-Bench 和离线视频基准上均取得强结果，超过 recent-window baselines 与既有 streaming memory 方法。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.75,
+    "problem_significance": 0.8,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.8,
+    "llm_avg": 0.74,
+    "comment": "A strong streaming-video memory paper that directly addresses online evidence allocation under fixed compute and memory budgets.",
+    "comment_zh": "这是一篇较强的流式视频记忆工作，直接解决了固定计算与记忆预算下的在线证据分配问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.74,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16353/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.952
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16353/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2606.16769",
+  "title": "Skill-to-LoRA: From Using Skills to Learning Behaviors for Token-Efficient LLM Agents",
+  "title_zh": "Skill-to-LoRA：从使用技能到学习行为的高 Token 效率 LLM Agent",
+  "authors": [
+    "Tianyi Zhang",
+    "Zhonghao Qi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T14:17:39Z",
+  "abs_url": "https://arxiv.org/abs/2606.16769v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16769",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent skills are commonly distributed as SKILL.md files: human-readable procedural documents that describe workflows, tools, resources, and domain conventions. While convenient for inspection and reuse, this design requires the same reusable procedure to be repeatedly injected into the runtime context. We propose Skill-to-LoRA(S2L), a behavior-centric skill representation that replaces runtime skill text with skill-specific LoRA adapters. Rather than compressing the skill document itself, S2L models the behavioral change induced by the skill text: offline, the complete SKILL.md is used to synthesize skill-guided demonstrations; online, the full document is omitted and the corresponding LoRA adapter is dynamically loaded to activate the learned skill behavior. We evaluate S2L with Qwen3.6-27B on a 21-skill subset of SWE-Skills-Bench. Compared with the no-skill and Full Skill Text baselines, S2L improves pass rate by 2.9 and 5.2 percentage points, respectively, while reducing per-step token cost by 6.6% relative to Full Skill Text prompting. S2L matches or improves Full Skill Text on 18/21 skills and the no-skill baseline on 15/21 skills. Control experiments further show that the gains depend on skill-specific adapter alignment: Wrong-LoRA and Shared-LoRA both reduce performance. These results suggest that many procedural agent skills can be converted from runtime instructions into trainable, dynamically loadable behavioral modules. Code will be released upon acceptance.",
+  "abstract_zh": "本文提出 Skill-to-LoRA（S2L），将常见的 SKILL.md 技能文档从运行时上下文提示，转换为可动态加载的技能专属 LoRA adapter。传统 Agent 技能以可读的流程文档形式描述工作流、工具、资源和领域约定，但每次调用都需要重复注入上下文，带来 Token 开销。S2L 不直接压缩文档文本，而是学习该技能文本所诱导的行为变化：离线阶段利用完整 SKILL.md 合成技能引导示例并训练 LoRA；在线阶段省略完整文档，仅加载对应 LoRA 来激活技能行为。在 SWE-Skills-Bench 的 21 个技能子集上，基于 Qwen3.6-27B 的实验显示，S2L 相比 no-skill 和 Full Skill Text baseline 分别提升 2.9 和 5.2 个百分点的通过率，同时相对 Full Skill Text 降低 6.6% 的每步 Token 成本。S2L 在 18/21 个技能上达到或超过 Full Skill Text，在 15/21 个技能上超过 no-skill。控制实验表明，性能提升依赖技能与 adapter 的正确对齐，Wrong-LoRA 和 Shared-LoRA 都会降低表现。",
+  "key_points_zh": [
+    "S2L 将 SKILL.md 中的过程性技能从运行时文本提示转化为技能专属 LoRA adapter，减少反复注入长文档的上下文成本。",
+    "方法核心不是压缩技能文档本身，而是学习技能文本引发的行为变化：离线合成技能指导 demonstrations，在线动态加载对应 LoRA。",
+    "在 Qwen3.6-27B 与 SWE-Skills-Bench 21 个技能子集上，S2L 相比 no-skill 提升 2.9 个百分点，相比 Full Skill Text 提升 5.2 个百分点。",
+    "S2L 相比 Full Skill Text prompting 每步 Token 成本降低 6.6%，并在 18/21 个技能上达到或超过 Full Skill Text。",
+    "控制实验显示技能专属对齐很关键：加载错误技能的 Wrong-LoRA 或共享的 Shared-LoRA 都会带来性能下降。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.78,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.68,
+    "llm_avg": 0.712,
+    "comment": "Skill-to-LoRA is a promising approach for converting runtime skill text into dynamically loadable behavior modules, though its operational governance story is limited.",
+    "comment_zh": "Skill-to-LoRA将运行时技能文本转化为可动态加载的行为模块，方向有潜力但运行治理部分较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.712,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16769/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16769/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.982
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16769/fig3.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.296
+    }
+  ]
+}

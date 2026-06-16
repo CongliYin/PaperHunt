@@ -1,0 +1,95 @@
+{
+  "arxiv_id": "2606.16523",
+  "title": "SkillWiki: A Living Knowledge Infrastructure for Agent Skills",
+  "title_zh": "SkillWiki：面向智能体技能的动态知识基础设施",
+  "authors": [
+    "Dingcheng Huang",
+    "Yuda Ding",
+    "Bingshuo Liu",
+    "Qingbin Liu",
+    "Xi Chen",
+    "Jiang Bian",
+    "Hongliang Sun",
+    "Zhiying Tu",
+    "Dianhui Chu",
+    "Xiaoyan Yu",
+    "Dianbo Sui"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T10:24:40Z",
+  "abs_url": "https://arxiv.org/abs/2606.16523v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16523",
+  "links": {
+    "github": "https://github.com/Huangdingcheng/SkillWiki.",
+    "project_page": null
+  },
+  "abstract_en": "While knowledge is managed through Wikipedia and software through GitHub, agent skills still lack an infrastructure for large-scale production, governance, and evolution. SkillWiki is a living knowledge infrastructure that supports the organization, grounding, and continuous evolution of agent skills by transforming heterogeneous knowledge into reusable skill assets linked to their originating evidence. Our demonstration presents the complete skill lifecycle, from knowledge ingestion and skill production to provenance-aware exploration, governance, and execution-driven evolution. SkillWiki highlights a future in which knowledge, skills, and execution experience co-evolve within a shared infrastructure. The live demonstration and source code are publicly available at https://github.com/Huangdingcheng/SkillWiki.",
+  "abstract_zh": "SkillWiki 提出一种用于智能体技能大规模生产、治理与演化的动态知识基础设施。与 Wikipedia 管理知识、GitHub 管理软件类似，SkillWiki 旨在弥补当前智能体技能缺乏统一组织与持续维护机制的问题。它将异构知识转化为可复用的技能资产，并将技能与其来源证据进行关联，从而支持技能的组织、落地、溯源探索、治理以及基于执行反馈的持续演化。该系统展示了从知识摄取、技能生产，到溯源感知浏览、治理和执行驱动更新的完整技能生命周期，强调未来知识、技能与执行经验可在共享基础设施中协同演进。",
+  "key_points_zh": [
+    "提出 SkillWiki，将智能体技能作为可组织、可治理、可复用、可演化的知识资产进行管理。",
+    "支持从异构知识摄取到技能生产的完整流程，并将生成的技能链接到原始证据以增强可追溯性。",
+    "提供 provenance-aware exploration（溯源感知探索）能力，帮助用户理解技能来源、依据与关联知识。",
+    "强调 governance（治理）机制，使技能资产能够在共享基础设施中被审查、维护和更新。",
+    "通过 execution-driven evolution（执行驱动演化）利用实际执行经验持续改进技能，促进知识、技能与实践反馈共同演进。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8440000000000001,
+    "comment": "SkillWiki directly targets governed, provenance-aware, execution-evolving skill infrastructure and is highly aligned with agent harness evolution.",
+    "comment_zh": "SkillWiki直接面向带治理、溯源和执行反馈演化的技能基础设施，与智能体运行平台演进高度契合。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.416947575628934,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8440000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Huangdingcheng/SkillWiki.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 6,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16523/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16523/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.895
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16523/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16523/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.888
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.16707",
+  "title": "User as Code: Executable Memory for Personalized Agents",
+  "title_zh": "User as Code：面向个性化智能体的可执行记忆",
+  "authors": [
+    "Bojie Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T13:39:41Z",
+  "abs_url": "https://arxiv.org/abs/2606.16707v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16707",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "A personalized AI agent needs a user memory: a persistent model of who the user is, built across many conversations and consulted on each new one. Today this memory is almost always stored as unstructured text, a knowledge graph, or a flat store of facts, and consulted by retrieval -- fetching the entries most similar to the current request. Such \"bag-of-facts\" memory recalls individual facts well, but because storing a fact and acting on it are separate steps, it struggles to resolve contradictions, aggregate over many records, or enforce rules. We argue that user memory should instead be executable. We introduce User as Code (UaC), a paradigm in which an agent's model of a user is a living software project: typed Python objects hold the user's state and ordinary Python functions encode the rules that govern it, so representing and reasoning about the user happen in one medium an interpreter can run. The enabling mechanism is a two-phase pipeline: an append-only log that never discards a fact, periodically checkpointed into typed code. This changes what memory can do. On standard long-term conversation benchmarks, UaC matches both a full-context upper bound and the strongest prior memory systems on recall (78.8% on LOCOMO). Its advantage emerges where representation matters most. On aggregate questions over a user's history -- \"how many international trips did I take last year?\" -- retrieval-based memory collapses (6-43%) while UaC stays near-perfect (99%), because the answer is a one-line computation over typed state rather than a search over text. And because its rules execute deterministically whenever the state changes, UaC can surface unsolicited, safety-critical alerts -- such as a newly prescribed drug that conflicts with an allergy recorded months earlier -- a capability query-driven memory cannot provide.",
+  "abstract_zh": "本文提出 User as Code（UaC），一种将用户长期记忆表示为“可执行软件项目”的个性化智能体记忆范式。不同于当前常见的非结构化文本、知识图谱或事实列表加检索机制，UaC 使用带类型的 Python 对象保存用户状态，并用普通 Python 函数编码用户相关规则，使用户表示与推理在同一可执行介质中完成。其核心机制是两阶段流水线：先维护一个只追加、不丢弃事实的日志，再周期性地将其 checkpoint 为带类型的代码。在 LOCOMO 等长期对话基准上，UaC 的召回表现达到 78.8%，可匹配 full-context 上界和最强既有记忆系统；在需要跨历史聚合的问题上，检索式记忆仅有 6–43% 表现，而 UaC 接近 99%。此外，由于规则会在状态变化时确定性执行，UaC 能主动触发安全关键提醒，例如发现新处方药与数月前记录的过敏史冲突。",
+  "key_points_zh": [
+    "提出 User as Code（UaC）：用 typed Python objects 表示用户状态，用 Python functions 表达规则，将记忆存储与推理统一为可执行代码。",
+    "采用两阶段机制：append-only log 保留所有事实，再周期性 checkpoint 成 typed code，避免传统“bag-of-facts”记忆难以处理矛盾、聚合和规则的问题。",
+    "在 LOCOMO 等长期对话基准上，UaC 召回率达到 78.8%，与 full-context upper bound 和最强既有 memory systems 相当。",
+    "在用户历史聚合问题上优势显著：retrieval-based memory 仅 6–43%，UaC 接近 99%，因为聚合可转化为对结构化状态的一行计算。",
+    "UaC 的规则可在状态更新时确定性执行，因此支持主动安全提醒，如药物与过敏史冲突检测，这是 query-driven memory 难以实现的能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.85,
+    "problem_significance": 0.85,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8560000000000001,
+    "comment": "Executable user memory is a compelling agent harness primitive with strong implications for persistent state, deterministic reasoning, and personalized runtime behavior.",
+    "comment_zh": "可执行用户记忆是很有潜力的智能体运行框架基础组件，对持久状态、确定性推理和个性化运行行为意义重大。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8560000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16707/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.275
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16707/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.847
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16707/fig3.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.495
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16707/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.82
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "arxiv_id": "2606.16933",
+  "title": "A Unified Causal-Origin Taxonomy of Distributional Shifts in Reinforcement Learning",
+  "title_zh": "强化学习中分布偏移的统一因果起源分类法",
+  "authors": [
+    "Ardianto Wibowo",
+    "Paulo E Santos",
+    "Amer Baghdadi",
+    "Matthew Stephenson",
+    "Karl Sammut",
+    "Jean-Philippe Diguet"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T16:32:40Z",
+  "abs_url": "https://arxiv.org/abs/2606.16933v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16933",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement learning (RL) systems often degrade when operating conditions differ from those previously encountered, reflecting distributional shifts in the underlying data-generating process. Such shifts may occur between training and evaluation, as in In-Distribution (ID) and Out-of-Distribution (OOD) generalization, or within non-stationary settings where environment dynamics evolve over time. However, the formal relationship between these views remains unclear, and existing work mainly focuses on mitigation rather than the causal origin of shift within the agent-environment interaction. This work develops a unified causal-origin taxonomy that characterizes sources of distributional shift in RL and relates ID/OOD generalization to non-stationary settings. We transfer the classical dataset-shift principle from supervised learning to RL by reformulating distributional shift in terms of the generative interaction process. Using a Partially Observable Markov Decision Process (POMDP), we decompose the interaction into structural components, including the state distribution, observation process, policy, reward, and transition dynamics, together with the shifted-time boundary. The proposed taxonomy distinguishes internal, agent-driven, and external, environment-driven, distributional shifts. The shifted-time boundary perspective further characterizes explicit, implicit, and hybrid shifts. This formulation unifies ID/OOD generalization and non-stationarity as structured changes in the underlying process. We also introduce an evaluation framework for measuring shift impact and adaptation through performance degradation and recovery metrics. By grounding distributional shift in the causal-origin structure of RL, this work supports systematic analysis of robustness under distributional shift.",
+  "abstract_zh": "本文针对强化学习（RL）系统在训练与评估条件不一致、或环境随时间变化时性能下降的问题，提出一种统一的“因果起源”分布偏移分类框架。作者将监督学习中的经典 dataset shift 原则迁移到 RL，通过生成式交互过程重新定义分布偏移，并基于 Partially Observable Markov Decision Process（POMDP）将智能体—环境交互分解为状态分布、观测过程、策略、奖励、转移动态以及偏移时间边界等结构组件。该分类法区分了由智能体内部行为引发的 internal/agent-driven shift，以及由环境外部变化引发的 external/environment-driven shift；同时利用 shifted-time boundary 视角刻画 explicit、implicit 和 hybrid shift。该框架将 ID/OOD 泛化与非平稳性统一为底层生成过程中的结构化变化，并提出基于性能退化与恢复指标的评估框架，用于衡量偏移影响与适应能力。",
+  "key_points_zh": [
+    "提出统一的 causal-origin taxonomy，用于刻画强化学习中分布偏移的来源，而不仅关注偏移后的鲁棒性缓解。",
+    "将监督学习中的 dataset-shift 原则扩展到 RL，基于智能体—环境生成式交互过程重新定义 distributional shift。",
+    "使用 POMDP 分解 RL 交互结构，包括 state distribution、observation process、policy、reward、transition dynamics 与 shifted-time boundary。",
+    "区分 internal/agent-driven shift 与 external/environment-driven shift，并进一步用 shifted-time boundary 描述 explicit、implicit、hybrid shifts。",
+    "将 ID/OOD generalization 与 non-stationarity 统一为底层过程的结构化变化，并提出性能退化与恢复指标来评估偏移影响和适应能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.48,
+    "problem_significance": 0.52,
+    "potential_impact": 0.3,
+    "paradigm_shift": 0.24,
+    "lasting_value": 0.18,
+    "llm_avg": 0.344,
+    "comment": "The RL shift taxonomy is conceptually useful but too general and distant from production agent harnesses or trace-driven agent improvement.",
+    "comment_zh": "该强化学习分布偏移分类在概念上有用，但过于通用，距离生产级智能体运行框架或轨迹驱动改进较远。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.344,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

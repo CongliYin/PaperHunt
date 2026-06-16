@@ -1,0 +1,92 @@
+{
+  "arxiv_id": "2606.16328",
+  "title": "AdaSTORM: Scaling LLM Reasoning on Dynamic Graphs via Adaptive Spatio-Temporal Multi-Agent Collaboration",
+  "title_zh": "AdaSTORM：通过自适应时空多智能体协作扩展 LLM 在动态图上的推理能力",
+  "authors": [
+    "Bing Hao",
+    "Ruijie Wang",
+    "Haodong Qian",
+    "Yunlong Chu",
+    "Yuhang Liu",
+    "Yumeng Lin",
+    "Minglai Shao",
+    "Jianxin Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T07:32:44Z",
+  "abs_url": "https://arxiv.org/abs/2606.16328v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16328",
+  "links": {
+    "github": "https://github.com/irisorchid107/AdaSTORM",
+    "project_page": null
+  },
+  "abstract_en": "Large Language Models (LLMs) demonstrate remarkable potential in dynamic graph reasoning, but suffer from a scaling bottleneck: current models can only handle graphs with tens of nodes, constrained by exponential reasoning overhead and finite context windows. While multi-agent systems (MAS) offer collective reasoning and topology-aware orchestration, capabilities naturally suited for graph-structured tasks, their application to dynamic graphs remains unexplored. This paper presents Scaling LLM Reasoning on Dynamic Graphs via Adaptive Spatio-Temporal Multi-Agent Collaboration (AdaSTORM), a framework that reformulates large-scale dynamic graph reasoning into two stages: (i) Adaptive Partitioning, partitioning large-scale dynamic graphs into subregions that match the model's reasoning capacity while minimizing inference cost; and (ii) Collaborative Reasoning, aligning graph partition topologies with a spatio-temporal decoupled multi-agent architecture. AdaSTORM is the first multi-agent framework tailored for dynamic graph reasoning. Extensive experiments show that AdaSTORM successfully breaks through the scaling bottleneck, scaling reasoning to thousand-node graphs with over 90% accuracy across several large-scale dynamic graph settings without external tools, significantly outperforms seven competitive baselines. Furthermore, it achieves state-of-the-art accuracy on existing benchmarks and generalizes robustly to real-world datasets. The source code is available at: https://github.com/irisorchid107/AdaSTORM/.",
+  "abstract_zh": "本文提出 AdaSTORM，一个面向大规模动态图推理的多智能体框架，旨在突破 Large Language Models 在动态图任务中的规模瓶颈。现有 LLM 通常只能处理几十个节点的图，主要受限于指数级推理开销和有限上下文窗口。AdaSTORM 将动态图推理重构为两个阶段：首先进行 Adaptive Partitioning，将大规模动态图划分为符合模型推理能力、同时尽量降低推理成本的子区域；随后进行 Collaborative Reasoning，将图划分拓扑与时空解耦的多智能体架构对齐，实现协同推理。实验表明，AdaSTORM 能在无需外部工具的情况下将推理扩展到千节点动态图，并在多个大规模动态图设置中取得超过 90% 的准确率，显著优于七个强基线；同时在已有 benchmark 上达到 state-of-the-art，并能稳健泛化到真实世界数据集。",
+  "key_points_zh": [
+    "首次提出面向动态图推理的多智能体框架 AdaSTORM，利用 MAS 的集体推理与拓扑感知组织能力解决 LLM 图推理扩展难题。",
+    "设计 Adaptive Partitioning，将大规模动态图切分为适配 LLM 推理容量的子区域，同时控制推理成本。",
+    "设计 Collaborative Reasoning，以时空解耦的多智能体架构对齐图划分拓扑，实现跨子图、跨时间的协同推理。",
+    "在多个大规模动态图设置中，AdaSTORM 可扩展到千节点图并保持超过 90% accuracy，无需外部工具。",
+    "实验显示其显著优于七个竞争基线，在现有 benchmark 上达到 state-of-the-art，并能泛化到真实世界数据集。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.62,
+    "problem_significance": 0.55,
+    "potential_impact": 0.42,
+    "paradigm_shift": 0.36,
+    "lasting_value": 0.28,
+    "llm_avg": 0.4459999999999999,
+    "comment": "AdaSTORM is novel for dynamic graph reasoning but has limited relevance to reusable production agent harness infrastructure.",
+    "comment_zh": "AdaSTORM在动态图推理方面有一定新意，但与可复用的生产级智能体运行基础设施关系较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.4459999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/irisorchid107/AdaSTORM",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16328/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16328/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16328/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.938
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16328/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.962
+    }
+  ]
+}

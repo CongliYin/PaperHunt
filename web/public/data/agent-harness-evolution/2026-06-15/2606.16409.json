@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2606.16409",
+  "title": "PathRouter: Aligning Rewards with Retrieval Quality in Agentic Graph Retrieval-Augmented Generation",
+  "title_zh": "PathRouter：在智能体式图检索增强生成中对齐奖励与检索质量",
+  "authors": [
+    "Bo Wang",
+    "Heyan Huang",
+    "Yaolin Li",
+    "Wei Tang",
+    "Yuan Zhang",
+    "Wenbo Li",
+    "Mingze Gao",
+    "Ge Shi",
+    "Chong Feng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T08:48:04Z",
+  "abs_url": "https://arxiv.org/abs/2606.16409v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16409",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic GraphRAG trains language-model agents to iteratively retrieve and reason over graph-structured evidence, enabling more accurate and context-aware decision-making by efficiently navigating complex information networks. However, outcome-only reinforcement learning suffers from \\textit{\\textbf{answer-path reward aliasing}}, where correct answers may come from shortcuts rather than useful evidence paths. It also exhibits \\textit{\\textbf{search-update ambiguity}}, as scalar trajectory-level feedback does not indicate which retrieval actions to adjust. To mitigate these shortcomings, we present PathRouter, a path-aware training framework for agentic GraphRAG. PathRouter jointly evaluates each trajectory along answer correctness and evidence-path overlap, yielding four trajectory categories with differentiated GRPO advantage scaling that suppresses shortcut reinforcement while preserving evidence-seeking behavior. For evidence-poor trajectories, a frozen gold-evidence teacher provides token-level KL guidance on reasoning and search-query tokens, excluding answer tokens to avoid direct response imitation. Experiments on six QA benchmarks across three model sizes show that PathRouter consistently improves answer F1 and evidence-path overlap, achieving average F1 gains of 3.1 on 3B and 4.9 on 7B models compared to a strong baseline.",
+  "abstract_zh": "Agentic GraphRAG 通过训练语言模型智能体在图结构证据上迭代检索与推理，使模型能够更高效地浏览复杂信息网络，并做出更准确、上下文感知更强的决策。然而，仅基于最终答案的强化学习存在“答案-路径奖励混淆”（answer-path reward aliasing）：模型可能通过捷径得到正确答案，而非依赖真正有用的证据路径。同时，它还面临“搜索-更新歧义”（search-update ambiguity）：轨迹级标量反馈无法指出哪些检索动作应被调整。为解决这些问题，论文提出 PathRouter，一个面向路径感知的 Agentic GraphRAG 训练框架。PathRouter 同时评估每条轨迹的答案正确性与证据路径重叠度，将轨迹划分为四类，并采用差异化的 GRPO 优势缩放，以抑制对捷径行为的强化，同时保留证据搜索能力。对于证据不足的轨迹，PathRouter 引入冻结的 gold-evidence teacher，对推理与搜索查询 token 提供 token-level KL 指导，并排除答案 token，以避免直接模仿答案。六个问答基准、三种模型规模上的实验表明，PathRouter 持续提升答案 F1 与证据路径重叠度；相较强基线，3B 模型平均 F1 提升 3.1，7B 模型平均提升 4.9。",
+  "key_points_zh": [
+    "指出 outcome-only RL 在 Agentic GraphRAG 中的两类核心问题：answer-path reward aliasing 与 search-update ambiguity。",
+    "提出 PathRouter，将答案正确性与 evidence-path overlap 联合用于轨迹评估，显式区分“答对但路径差”等不同训练信号。",
+    "通过四类轨迹的差异化 GRPO advantage scaling，减少对捷径检索行为的奖励，同时鼓励真实证据路径探索。",
+    "对证据不足轨迹引入冻结 gold-evidence teacher，在推理与搜索查询 token 上提供 KL guidance，并排除答案 token 以避免答案蒸馏。",
+    "在六个 QA benchmarks 和三种模型规模上验证有效性，稳定提升 answer F1 与 evidence-path overlap，7B 模型平均 F1 提升 4.9。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.55,
+    "potential_impact": 0.55,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.45,
+    "llm_avg": 0.49000000000000005,
+    "comment": "PathRouter provides a meaningful trajectory-level training signal for agentic GraphRAG, but remains closer to task-specific RAG optimization than general harness evolution.",
+    "comment_zh": "PathRouter 为智能体式 GraphRAG 提供了有意义的轨迹级训练信号，但更接近特定 RAG 优化而非通用运行框架演化。"
+  },
+  "scores": {
+    "topic_relevance": 0.16000000000000003,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.49000000000000005,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16409/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16409/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16409/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.965
+    }
+  ]
+}

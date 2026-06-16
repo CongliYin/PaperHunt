@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.16541",
+  "title": "The Faithfulness Gap: Certifying Semantic Equivalence Between Natural-Language and Formal Mathematical Statements",
+  "title_zh": "Faithfulness Gap：认证自然语言与形式化数学陈述之间的语义等价性",
+  "authors": [
+    "Noor Islam S. Mohammad",
+    "Tamim Sheikh"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T10:45:59Z",
+  "abs_url": "https://arxiv.org/abs/2606.16541v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16541",
+  "links": {
+    "github": null,
+    "project_page": "https://pmlrbd.github.io/BPF/"
+  },
+  "abstract_en": "Autoformalization, translating natural-language mathematics into formal proof assistants, is bottlenecked not by translation fluency but by \\emph{faithfulness}: a formal statement can typecheck and be provable, yet still encode a different theorem than the source intended. We introduce \\emph{Bidirectional Provability Fingerprinting} (\\bpf{}), a framework that certifies faithfulness by characterizing each candidate through its forward and backward consequence neighborhoods in the ambient theory and matching these against probes derived from the natural-language statement. We further introduce four novel components: (i) \\emph{Counterfactual Probe Generation} (\\cpg{}), a contrastive procedure that synthesizes probes targeting specific drift directions; (ii) the \\emph{Equivalence Spectrum}, a continuous faithfulness score that replaces brittle binary verdicts; (iii) \\emph{Adaptive Probe Budget Allocation} (\\apba{}), an information-theoretic budget router; and (iv) \\emph{Faithfulness-Guided Decoding} (\\fgd{}), which uses \\bpf{} signals as a reward during autoformalization. We prove a \\emph{drift detection theorem} and a \\emph{PAC-faithfulness} result establishing that the equivalence class of a natural language statement is learnable from $\\mathcal{O}(\\log(1/δ)/\\varepsilon)$ probes under mild assumptions. We release \\driftbench{}, a benchmark of $2{,}183$ NL/Lean~4 pairs with controlled drift labels across six subfields of mathlib4. \\bpf{}\\,+\\,\\cpg{} detects $89.6\\%$ of drifted formalizations at a $3.0\\%$ false-positive rate-against $41.2\\%$ for typecheck and $63.3\\%$ for LLM-judge baselines, and \\fgd{} reduces the rate at which a state-of-the-art autoformalizer emits drifted statements by $47\\%$. https://pmlrbd.github.io/BPF/",
+  "abstract_zh": "本文关注 autoformalization（将自然语言数学翻译为形式化证明助手语句）中的核心瓶颈：faithfulness（忠实性）。形式化语句即使能通过类型检查并可被证明，也可能表达了与原始自然语言不同的定理。作者提出 Bidirectional Provability Fingerprinting（BPF），通过刻画候选形式化语句在背景理论中的前向与后向推论邻域，并与从自然语言陈述派生的 probes 进行匹配，从而认证语义忠实性。论文进一步提出 Counterfactual Probe Generation（CPG）用于生成针对特定语义漂移方向的对比 probes；Equivalence Spectrum 用连续分数替代脆弱的二分类判断；Adaptive Probe Budget Allocation（APBA）以信息论方式分配 probe 预算；Faithfulness-Guided Decoding（FGD）在 autoformalization 解码过程中将 BPF 信号作为奖励。理论上，论文证明了 drift detection theorem 与 PAC-faithfulness 结果，说明在温和假设下，自然语言陈述的等价类可由 O(log(1/δ)/ε) 个 probes 学得。实验发布 DriftBench，包含 2,183 个带受控漂移标签的 NL/Lean 4 对，覆盖 mathlib4 六个数学子领域。BPF+CPG 在 3.0% 假阳性率下检测出 89.6% 的漂移形式化，显著优于 typecheck 的 41.2% 与 LLM-judge 的 63.3%；FGD 使先进 autoformalizer 生成漂移语句的比例降低 47%。",
+  "key_points_zh": [
+    "指出 autoformalization 的关键问题不是语法或可证明性，而是 formal statement 是否忠实表达 natural-language theorem。",
+    "提出 Bidirectional Provability Fingerprinting（BPF），利用候选语句的前向/后向推论邻域与自然语言 probes 的匹配来认证语义等价。",
+    "引入 CPG、Equivalence Spectrum、APBA 与 FGD，分别用于对比 probe 生成、连续忠实性评分、预算自适应分配和忠实性引导解码。",
+    "给出 drift detection theorem 与 PAC-faithfulness 理论保证，表明等价类可用 O(log(1/δ)/ε) 个 probes 学习。",
+    "发布 DriftBench：2,183 个 NL/Lean 4 对；BPF+CPG 在 3.0% 假阳性率下达到 89.6% 漂移检测率，并使 autoformalizer 漂移输出减少 47%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.72,
+    "potential_impact": 0.54,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.38,
+    "llm_avg": 0.5900000000000001,
+    "comment": "The faithfulness verifier is technically interesting and may inform verifier-backed agent workflows, but its core contribution is autoformalization rather than harness design.",
+    "comment_zh": "该忠实性验证器技术上有趣，并可能启发带验证器的智能体流程，但核心贡献仍是自动形式化而非运行架构。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.34373441375821495,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5900000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://pmlrbd.github.io/BPF/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16541/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16541/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.929
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16541/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16541/fig4.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.377
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "arxiv_id": "2606.16307",
+  "title": "State-Grounded Multi-Agent Synthetic Data Generation for Tool-Augmented LLMs",
+  "title_zh": "面向工具增强 LLM 的状态扎根多智能体合成数据生成",
+  "authors": [
+    "Rahul Khedar",
+    "Eshita",
+    "Sneha Teja Sree Reddy Thondapu",
+    "Mayank Malhotra",
+    "Arup Das",
+    "Jitesh Chandra",
+    "Yun-Shiuan Chuang",
+    "Chaitanya Kulkarni",
+    "Arun Menon",
+    "Linsey Pang",
+    "Avinash Karn",
+    "Mouli V",
+    "Prakhar Mehrotra"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T07:13:02Z",
+  "abs_url": "https://arxiv.org/abs/2606.16307v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16307",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Training tool-augmented LLM agents requires large corpora of multi-turn, tool-grounded conversational data that is expensive to annotate, privacy-constrained in production settings, and largely absent from public datasets. We present StateGen, a synthetic data generation platform that produces scored, reasoning-trace-rich training conversations by orchestrating a four-role LLM loop: a persona-conditioned user simulator, an agent under test, a state-grounded tool simulator, and a multi-axis LLM judge. The key architectural contribution is an authoritative state manager that maintains a structured world-state object across turns, enforcing a backend-is-truth invariant that eliminates the dominant class of tool-call hallucinations by construction. StateGen extends naturally to hierarchical multi-agent settings by declaring sub-agents as tools, all sharing a single state object. We report results on 64,698 evaluated conversations across three production corpora: tool-call hallucination scores reach 9.66/10, the system supports persona-driven variation via a 23-dimensional trait vector, and a cleanly separated train and golden evaluation set split confirms the data is not memorization bait (per-criterion gap analysis). Comparison with eight external systems shows that no single publicly available platform combines multi-turn generation, state-grounded tool simulation, hierarchical multi-agent support, and built-in judge scoring.",
+  "abstract_zh": "训练工具增强型 LLM Agent 需要大量多轮、与工具调用紧密绑定的对话数据，但这类数据标注成本高，在生产环境中受隐私限制，且公开数据集相对稀缺。本文提出 StateGen，一个用于生成带评分、含推理轨迹训练对话的合成数据平台。它通过四类 LLM 角色循环协作：基于 persona 条件的用户模拟器、待测 Agent、状态扎根的工具模拟器，以及多维度 LLM Judge。其核心架构贡献是引入权威状态管理器，在多轮交互中维护结构化 world-state 对象，并强制执行“后端即真相”（backend-is-truth）不变量，从机制上消除主要的工具调用幻觉。StateGen 还能自然扩展到层级式多智能体场景：将子 Agent 声明为工具，并共享同一个状态对象。作者在三个生产语料上评估了 64,698 段对话，工具调用幻觉得分达到 9.66/10；系统通过 23 维 trait vector 支持 persona 驱动的多样化；训练集与 golden evaluation set 的干净划分及逐准则差距分析表明生成数据并非简单记忆诱饵。与八个外部系统对比显示，目前没有单一公开平台同时具备多轮生成、状态扎根工具模拟、层级多智能体支持和内置 Judge 评分能力。",
+  "key_points_zh": [
+    "提出 StateGen，通过用户模拟器、待测 Agent、工具模拟器和 LLM Judge 四角色循环，自动生成多轮工具增强对话数据。",
+    "核心机制是 authoritative state manager，维护结构化 world-state，并以“backend-is-truth”约束减少工具调用幻觉。",
+    "支持层级式 multi-agent：将 sub-agents 声明为 tools，并共享统一状态对象，便于复杂任务编排。",
+    "在三个生产语料的 64,698 段对话上评估，工具调用幻觉得分达到 9.66/10，并支持 23 维 persona trait vector 带来的用户多样性。",
+    "与八个外部系统相比，StateGen 同时覆盖多轮生成、状态扎根工具模拟、层级多智能体和内置 Judge 评分，功能组合更完整。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.84,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8280000000000001,
+    "comment": "StateGen is highly relevant because it combines state-grounded tool simulation, multi-agent orchestration, judge scoring, and trace-rich data generation.",
+    "comment_zh": "StateGen高度相关，因为它结合了状态约束工具模拟、多智能体编排、评审打分和富轨迹数据生成。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8280000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16307/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16307/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.942
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16307/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16307/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.775
+    }
+  ]
+}

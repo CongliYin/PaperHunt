@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.16420",
+  "title": "Transferable Self-Evolving Playbooks for Agentic Security Auditing",
+  "title_zh": "面向智能体安全审计的可迁移自进化 Playbook",
+  "authors": [
+    "Ziyue Wang",
+    "Cheuk Wang Maurice Ng",
+    "Chenchen Yu",
+    "Strick Sheng",
+    "Kaihua Qin",
+    "Liyi Zhou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T08:57:45Z",
+  "abs_url": "https://arxiv.org/abs/2606.16420v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16420",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "An LLM agent for vulnerability discovery and validation is more than a model. It combines three components: an LLM for code analysis, an agent harness such as Codex or OpenCode for navigation, tool use, and execution, and an audit playbook, domain-specific procedural knowledge that guides the LLM and harness toward vulnerability discovery. Prior work relies on human-supplied playbooks, including prompt engineering, manual workflows, knowledge bases, and heuristics. This raises two research questions: Acquisition - is human curation necessary, and can playbook creation be automated? Transfer - can an evolved playbook transfer the audit procedure to weaker agents, improving their capability? We present EvoHunt, a playbook evolution environment over open-source repositories for security auditing. Three agents drive the evolution loop: an audit agent rolls out the current playbook and produces findings; an evaluator scores outcomes against ground truth; and a reviser commits updates to the playbook based on failure analysis. The playbook format is unconstrained: starting empty, EvoHunt adds or removes workflows, heuristics, vulnerability knowledge, or domain-specific content. The evolved playbook requires only minor adaptation to run under a different LLM or harness. We evaluate EvoHunt on open-source security advisories. For acquisition, playbook evolution raises end-to-end exploits for Codex/GPT5.4-xhigh 6x, from 1.1% to 6.2%, and the evolved OpenCode/GLM5.1 playbook surpasses OpenAI Codex Security on every metric, with 11.3% vs. 9.2% target-match rate, showing open-source evolution can outperform a dedicated commercial product. For transfer, the GLM-evolved playbook gives the strongest student lift: Qwen3.6-27B improves from 2.4% to 6.5%, Qwen3.6-35B-A3B from 1.1% to 4.6%, and A3B obtains 2.4x more matches than GPT transfer.",
+  "abstract_zh": "本文提出 EvoHunt，一个用于安全审计的 playbook 自进化环境，目标是自动生成和改进指导 LLM agent 发现与验证漏洞的过程性知识。作者指出，漏洞发现 agent 不只是 LLM，还包括用于代码导航、工具调用和执行的 agent harness（如 Codex、OpenCode），以及指导审计流程的 audit playbook。不同于以往依赖人工 prompt、工作流、知识库和启发式规则的方法，EvoHunt 从空 playbook 开始，通过审计 agent、评估器和修订器三类 agent 形成闭环：审计 agent 执行当前 playbook 并输出发现，评估器基于 ground truth 打分，修订器根据失败分析更新 playbook。该 playbook 格式不受约束，可自动加入或删除工作流、漏洞知识、启发式规则和领域内容，并可经少量适配迁移到不同 LLM 或 harness。实验基于开源安全公告，结果显示 EvoHunt 显著提升 Codex/GPT5.4-xhigh 的端到端 exploit 成功率，从 1.1% 提升到 6.2%；OpenCode/GLM5.1 进化得到的 playbook 在所有指标上超过 OpenAI Codex Security，target-match rate 达 11.3% 对 9.2%。在迁移方面，GLM 进化的 playbook 对较弱模型提升最大，使 Qwen3.6-27B 从 2.4% 提升到 6.5%，Qwen3.6-35B-A3B 从 1.1% 提升到 4.6%。",
+  "key_points_zh": [
+    "论文将漏洞审计 agent 分解为 LLM、agent harness 和 audit playbook 三部分，强调 playbook 是可被自动获取和迁移的关键程序性知识。",
+    "提出 EvoHunt：由 audit agent、evaluator、reviser 构成闭环，从空 playbook 出发，基于真实开源漏洞审计结果不断修订流程、启发式规则和漏洞知识。",
+    "在 acquisition 设置下，EvoHunt 将 Codex/GPT5.4-xhigh 的端到端 exploit 率从 1.1% 提升到 6.2%，约 6 倍提升。",
+    "OpenCode/GLM5.1 进化出的 playbook 在所有指标上超过 OpenAI Codex Security，target-match rate 为 11.3% vs. 9.2%，显示开源自进化流程可超过商业专用系统。",
+    "在 transfer 设置下，GLM 进化的 playbook 可迁移增强较弱模型，如 Qwen3.6-27B 从 2.4% 提升到 6.5%，Qwen3.6-35B-A3B 从 1.1% 提升到 4.6%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.86,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.87,
+    "llm_avg": 0.858,
+    "comment": "EvoHunt is a strong closed-loop agent improvement system that evolves transferable operational playbooks from rollouts, evaluation, and revision.",
+    "comment_zh": "EvoHunt通过执行、评估和修订形成强闭环，能够演化可迁移的安全审计操作手册。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.36228269883744174,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.858,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16420/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.619
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16420/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.501
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16420/fig3.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16420/fig4.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.266
+    }
+  ]
+}

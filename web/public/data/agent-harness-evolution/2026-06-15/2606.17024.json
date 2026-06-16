@@ -1,0 +1,71 @@
+{
+  "arxiv_id": "2606.17024",
+  "title": "ExpRL: Exploratory RL for LLM Mid-Training",
+  "title_zh": "ExpRL：用于 LLM 中期训练的探索式强化学习",
+  "authors": [
+    "Violet Xiang",
+    "Amrith Setlur",
+    "Chase Blagden",
+    "Nick Haber",
+    "Aviral Kumar"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T17:50:44Z",
+  "abs_url": "https://arxiv.org/abs/2606.17024v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17024",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Sparse reward reinforcement learning (RL) has become a standard tool for improving LLM reasoning, but its success depends critically on the coverage present in the base model. In practice, models are often primed for RL through \\emph{mid-training} on curated reasoning traces that teach useful primitive skills such as decomposition, verification, or self-correction. Although effective, this strategy requires manually specifying what the model should learn, and it remains unclear whether such primitive coverage is enough for much harder problems, which require combining these skills into broader solution strategies. We study a more automated approach: \\emph{RL-based mid-training} using large corpora of human-written question-answer data. Rather than treating reference solutions as targets to imitate, our method, ExpRL, uses them as \\emph{reward scaffolds}: references are hidden from the policy and used only to construct problem-specific grading rubrics for judging on-policy reasoning traces. The policy samples from the original problem prompt, while an LLM judge compares the sampled reasoning trace against the reference solution and assigns outcome-level or process-level dense rewards. This lets ExpRL reinforce partial progress, useful intermediate reductions, and productive reasoning behaviors that sparse final-answer rewards often fail to upweight. On challenging math reasoning tasks, ExpRL yields stronger RL priming than SFT, sparse-reward GRPO, and self-distillation, and provides a better initialization for subsequent sparse-reward RL. Additional mixed-domain experiments further suggest that ExpRL can extend beyond the original math-only setting.",
+  "abstract_zh": "稀疏奖励强化学习（RL）已成为提升 LLM 推理能力的常用工具，但其效果高度依赖基础模型已有能力覆盖度。实践中，研究者通常通过在人工整理的推理轨迹上进行中期训练（mid-training），让模型学习分解、验证、自我纠错等基础技能。然而，这种方式需要人工指定学习内容，而且这些基础技能是否足以支撑更困难问题中的复杂策略组合仍不明确。本文研究一种更自动化的方法：基于 RL 的中期训练。方法 ExpRL 使用大规模人工撰写的问答数据，但不将参考解作为模仿目标，而是作为奖励脚手架（reward scaffolds）：参考答案对策略模型隐藏，仅用于构造针对具体题目的评分标准，以评价模型在线采样得到的推理轨迹。策略模型只从原始问题提示出发生成解题过程，LLM judge 则将生成轨迹与参考解对比，并给出结果级或过程级稠密奖励。这样，ExpRL 能强化部分进展、有用的中间化简以及有效推理行为，而这些往往难以被最终答案稀疏奖励捕捉。在高难数学推理任务上，ExpRL 相比 SFT、稀疏奖励 GRPO 和自蒸馏提供了更强的 RL 预热效果，并能为后续稀疏奖励 RL 提供更好的初始化。混合领域实验还表明，ExpRL 可能扩展到数学以外的任务场景。",
+  "key_points_zh": [
+    "提出 ExpRL，将人工参考解从“模仿目标”转化为“奖励脚手架”，用于构造题目级评分规则，而不直接暴露给策略模型。",
+    "通过 LLM judge 对在线采样的推理轨迹进行评估，提供结果级或过程级稠密奖励，强化部分进展、中间推导和有效推理行为。",
+    "相比 SFT、稀疏奖励 GRPO 和 self-distillation，ExpRL 在困难数学推理任务上带来更强的 RL mid-training 效果。",
+    "ExpRL 可作为后续稀疏奖励 RL 的更优初始化，缓解纯稀疏奖励训练对基础模型能力覆盖的依赖。",
+    "混合领域实验显示，该方法不局限于数学推理，有潜力扩展到更广泛的问答与推理任务。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.78,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.52,
+    "lasting_value": 0.56,
+    "llm_avg": 0.656,
+    "comment": "ExpRL provides a useful reward-scaffolded reasoning-training loop, but it is mostly model training rather than execution-harness evolution.",
+    "comment_zh": "ExpRL提供了有用的奖励脚手架推理训练闭环，但主要属于模型训练而非执行运行框架演进。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.6522803944013564,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.656,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 1,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17024/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.95
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2606.16878",
+  "title": "Integrated Marketing Attribution: A Bayesian Framework for Privacy-Safe Granular Measurement Anchored in MMM",
+  "title_zh": "Integrated Marketing Attribution：一种以 MMM 为锚点的隐私安全细粒度贝叶斯营销归因框架",
+  "authors": [
+    "Meghana R. Bhat",
+    "Ankit Umare",
+    "Utsav Aggarwal",
+    "Richard Vecsler",
+    "Arunkumar Mani",
+    "Karthik Nair",
+    "Chandhu Nair"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T15:52:48Z",
+  "abs_url": "https://arxiv.org/abs/2606.16878v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16878",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Retail marketing measurement increasingly requires granular campaign-level insights without relying on user-level tracking. However, the two dominant approaches, Marketing Mix Modeling (MMM) and Multi-Touch Attribution (MTA), often produce fragmented insights. MMM is privacy-safe and robust for channel-level planning but is too coarse for campaign optimization, while MTA provides granular attribution but has become less reliable under increasing privacy restrictions. We propose Integrated Marketing Attribution (IMA), a unified framework that combines MMM with channel specific Bayesian attribution models to derive campaign-level effects from aggregated data. By leveraging MMM-informed priors, IMA delivers granular, privacy-safe attribution while preserving consistency with MMM.",
+  "abstract_zh": "零售营销度量越来越需要在不依赖用户级追踪的前提下获得 campaign 级别的细粒度洞察。现有两类主流方法 Marketing Mix Modeling（MMM）与 Multi-Touch Attribution（MTA）往往各有局限：MMM 具备隐私安全性，且适合 channel 级规划，但粒度过粗，难以支持 campaign 优化；MTA 能提供更细粒度归因，但在隐私限制增强的环境下可靠性下降。本文提出 Integrated Marketing Attribution（IMA），一个统一框架，将 MMM 与 channel-specific Bayesian attribution models 结合，从聚合数据中估计 campaign 级效果。通过使用 MMM-informed priors，IMA 在保持与 MMM 一致性的同时，实现隐私安全的细粒度营销归因。",
+  "key_points_zh": [
+    "提出 Integrated Marketing Attribution（IMA），将 MMM 的宏观稳健性与 Bayesian attribution 的细粒度能力结合。",
+    "IMA 不依赖用户级追踪，而是基于 aggregated data 估计 campaign-level effects，更适应隐私受限环境。",
+    "通过 MMM-informed priors 约束 channel-specific Bayesian attribution models，使 campaign 归因结果与 MMM 的 channel 级估计保持一致。",
+    "相比传统 MMM，IMA 能支持更细粒度的 campaign 优化；相比 MTA，IMA 更具 privacy-safe 特性和鲁棒性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.45,
+    "problem_significance": 0.55,
+    "potential_impact": 0.4,
+    "paradigm_shift": 0.2,
+    "lasting_value": 0.3,
+    "llm_avg": 0.38,
+    "comment": "The paper addresses retail marketing measurement, but it is only weakly connected to e-commerce agents, search, recommendation, or shopping assistance.",
+    "comment_zh": "该论文关注零售营销归因测量，但与电商智能体、搜索、推荐或购物辅助的关联较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.16000000000000003,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.38,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16878/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.954
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16878/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.968
+    }
+  ]
+}

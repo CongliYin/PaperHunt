@@ -1,0 +1,582 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-06-15",
+  "generated_at": "2026-06-16T22:22:57Z",
+  "papers": [
+    {
+      "arxiv_id": "2606.16215",
+      "title": "PACT: Privileged Trace Co-Training for Multi-Turn Tool-Use Agents",
+      "title_zh": "PACT：面向多轮工具调用智能体的特权轨迹协同训练",
+      "authors": [
+        "Zhenbang Du",
+        "Jun Luo",
+        "Zhiwei Zheng",
+        "Xiangchi Yuan",
+        "Kejing Xia",
+        "Dachuan Shi",
+        "Qirui Jin",
+        "Qijia He",
+        "Shaofeng Zou",
+        "Yingbin Liang",
+        "Wenke Lee"
+      ],
+      "total_score": 0.7160000000000001,
+      "scores": {
+        "topic_relevance": 1.0,
+        "llm_assessment": 0.72,
+        "other": 0.33333333333333337
+      },
+      "tags": [
+        "Project Page",
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "用专家轨迹训练，但推理仍只看提示",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16215.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16215/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16420",
+      "title": "Transferable Self-Evolving Playbooks for Agentic Security Auditing",
+      "title_zh": "面向智能体安全审计的可迁移自进化 Playbook",
+      "authors": [
+        "Ziyue Wang",
+        "Cheuk Wang Maurice Ng",
+        "Chenchen Yu",
+        "Strick Sheng",
+        "Kaihua Qin",
+        "Liyi Zhou"
+      ],
+      "total_score": 0.6925141349418721,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.858,
+        "other": 0.277047116472907
+      },
+      "tags": [
+        "Code soon",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "EvoHunt自动进化安全审计Playbook并可迁移",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16420.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16420/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16523",
+      "title": "SkillWiki: A Living Knowledge Infrastructure for Agent Skills",
+      "title_zh": "SkillWiki：面向智能体技能的动态知识基础设施",
+      "authors": [
+        "Dingcheng Huang",
+        "Yuda Ding",
+        "Bingshuo Liu",
+        "Qingbin Liu",
+        "Xi Chen",
+        "Jiang Bian",
+        "Hongliang Sun",
+        "Zhiying Tu",
+        "Dianhui Chu",
+        "Xiaoyan Yu",
+        "Dianbo Sui"
+      ],
+      "total_score": 0.689047378781447,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.8440000000000001,
+        "other": 0.38615792927148906
+      },
+      "tags": [
+        "GitHub",
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "面向智能体技能的可演化知识基础设施",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16523.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16523/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16769",
+      "title": "Skill-to-LoRA: From Using Skills to Learning Behaviors for Token-Efficient LLM Agents",
+      "title_zh": "Skill-to-LoRA：从使用技能到学习行为的高 Token 效率 LLM Agent",
+      "authors": [
+        "Tianyi Zhang",
+        "Zhonghao Qi"
+      ],
+      "total_score": 0.6296000000000002,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.712,
+        "other": 0.2666666666666667
+      },
+      "tags": [
+        "Code soon",
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "用 LoRA 替代技能文档提示，省 Token 且提效",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16769.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16769/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16988",
+      "title": "Agent trajectories as programs: fingerprinting and programming coding-agent behavior",
+      "title_zh": "将 Agent 轨迹视为程序：编码 Agent 行为的指纹识别与编程",
+      "authors": [
+        "Hamidah Oderinwale"
+      ],
+      "total_score": 0.6121707656352362,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.724,
+        "other": 0.1965692187841204
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "用行为轨迹指纹识别与分析 coding agents",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16988.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16988/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16328",
+      "title": "AdaSTORM: Scaling LLM Reasoning on Dynamic Graphs via Adaptive Spatio-Temporal Multi-Agent Collaboration",
+      "title_zh": "AdaSTORM：通过自适应时空多智能体协作扩展 LLM 在动态图上的推理能力",
+      "authors": [
+        "Bing Hao",
+        "Ruijie Wang",
+        "Haodong Qian",
+        "Yunlong Chu",
+        "Yuhang Liu",
+        "Yumeng Lin",
+        "Minglai Shao",
+        "Jianxin Li"
+      ],
+      "total_score": 0.6093258286877777,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.4459999999999999,
+        "other": 0.3584194289592589
+      },
+      "tags": [
+        "GitHub",
+        "multi agent coordination"
+      ],
+      "tldr_zh": "多智能体协作让 LLM 推理千节点动态图",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16328.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16328/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16307",
+      "title": "State-Grounded Multi-Agent Synthetic Data Generation for Tool-Augmented LLMs",
+      "title_zh": "面向工具增强 LLM 的状态扎根多智能体合成数据生成",
+      "authors": [
+        "Rahul Khedar",
+        "Eshita",
+        "Sneha Teja Sree Reddy Thondapu",
+        "Mayank Malhotra",
+        "Arup Das",
+        "Jitesh Chandra",
+        "Yun-Shiuan Chuang",
+        "Chaitanya Kulkarni",
+        "Arun Menon",
+        "Linsey Pang",
+        "Avinash Karn",
+        "Mouli V",
+        "Prakhar Mehrotra"
+      ],
+      "total_score": 0.5804,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.8280000000000001,
+        "other": 0.2
+      },
+      "tags": [
+        "judge reward verifier"
+      ],
+      "tldr_zh": "StateGen 用状态管理生成高质量工具调用数据",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16307.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16307/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16465",
+      "title": "When Agent Automation Becomes Profitable: Quantifying and Insuring Autonomous AI Risk through Trace-Economic Underwriting",
+      "title_zh": "Agent 自动化何时变得有利可图：通过 Trace-Economic Underwriting 量化并承保自主 AI 风险",
+      "authors": [
+        "Binyan Xu",
+        "Xilin Dai",
+        "Fan Yang",
+        "Kehuan Zhang"
+      ],
+      "total_score": 0.5636000000000001,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.842,
+        "other": 0.18333333333333338
+      },
+      "tags": [
+        "Code soon",
+        "judge reward verifier"
+      ],
+      "tldr_zh": "用工具调用轨迹为 AI agent 风险定价承保",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16465.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16465/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16319",
+      "title": "Architectural Wisdom: A Framework for Governing Optimization in AI Systems",
+      "title_zh": "架构智慧：一种治理 AI 系统优化行为的框架",
+      "authors": [
+        "Edward Y. Chang"
+      ],
+      "total_score": 0.5570000000000002,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.5900000000000001,
+        "other": 0.2
+      },
+      "tags": [
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "为 AI 优化加入可纠正目标治理层",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16319.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16319/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.17024",
+      "title": "ExpRL: Exploratory RL for LLM Mid-Training",
+      "title_zh": "ExpRL：用于 LLM 中期训练的探索式强化学习",
+      "authors": [
+        "Violet Xiang",
+        "Amrith Setlur",
+        "Chase Blagden",
+        "Nick Haber",
+        "Aviral Kumar"
+      ],
+      "total_score": 0.5339140197200678,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.656,
+        "other": 0.21704673240022607
+      },
+      "tags": [
+        "HF Daily ★1",
+        "judge reward verifier"
+      ],
+      "tldr_zh": "用参考解构造稠密奖励来预热LLM推理RL",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.17024.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17024/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16613",
+      "title": "CoffeeBench: Benchmarking Long-Horizon LLM Agents in Heterogeneous Multi-Agent Economies",
+      "title_zh": "CoffeeBench：在异构多智能体经济中评测长周期 LLM Agents",
+      "authors": [
+        "Issa Sugiura",
+        "Daichi Hattori",
+        "Kazuo Araragi",
+        "Keita Ogawa",
+        "Shota Onose",
+        "Taro Makino",
+        "Teppei Usuki",
+        "Takashi Ishida"
+      ],
+      "total_score": 0.5201,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.45199999999999996,
+        "other": 0.10833333333333334
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "评测 LLM 在多智能体经济中的长期经营能力",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16613.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16613/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16541",
+      "title": "The Faithfulness Gap: Certifying Semantic Equivalence Between Natural-Language and Formal Mathematical Statements",
+      "title_zh": "Faithfulness Gap：认证自然语言与形式化数学陈述之间的语义等价性",
+      "authors": [
+        "Noor Islam S. Mohammad",
+        "Tamim Sheikh"
+      ],
+      "total_score": 0.5191867206879108,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.5900000000000001,
+        "other": 0.3406224022930359
+      },
+      "tags": [
+        "Project Page",
+        "judge reward verifier"
+      ],
+      "tldr_zh": "用双向可证性指纹检测形式化语义漂移",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16541.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16541/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16740",
+      "title": "Robust and Automated Reconfiguration of Byzantine Wide-Area Replication",
+      "title_zh": "拜占庭广域复制的鲁棒自动重配置",
+      "authors": [
+        "Rowdy Chotkan",
+        "Bulat Nasrulin",
+        "Johan Pouwelse",
+        "Jérémie Decouchant"
+      ],
+      "total_score": 0.4922,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.37399999999999994,
+        "other": 0.2
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "Beware 提升拜占庭复制重配置鲁棒性",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16740.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16740/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16748",
+      "title": "MyPCBench: A Benchmark for Personally Intelligent Computer-Use Agents",
+      "title_zh": "MyPCBench：面向个性化智能计算机使用代理的基准",
+      "authors": [
+        "Lawrence Keunho Jang",
+        "Andrew Keunwoo Jang",
+        "Jing Yu Koh",
+        "Ruslan Salakhutdinov"
+      ],
+      "total_score": 0.48908672068791087,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.44800000000000006,
+        "other": 0.11562240229303583
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "首个个性化桌面代理基准",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16748.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16748/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16914",
+      "title": "Greed Is Learned: Visible Incentives as Reward-Hacking Triggers",
+      "title_zh": "贪婪是学会的：可见激励作为奖励黑客触发器",
+      "authors": [
+        "Tong Che",
+        "Rui Wu"
+      ],
+      "total_score": 0.4740000000000001,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.61,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "production agent platform"
+      ],
+      "tldr_zh": "可见奖励通道会诱发模型奖励黑客",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16914.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16914/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16707",
+      "title": "User as Code: Executable Memory for Personalized Agents",
+      "title_zh": "User as Code：面向个性化智能体的可执行记忆",
+      "authors": [
+        "Bojie Li"
+      ],
+      "total_score": 0.46080000000000004,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.8560000000000001,
+        "other": 0.2
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "把用户记忆写成可执行代码",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16707.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16707/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16981",
+      "title": "Decoupling Inference from State Updates in Low-Latency Feature Engines via Probabilistic Thinning",
+      "title_zh": "通过概率稀疏化在低延迟特征引擎中解耦推理与状态更新",
+      "authors": [
+        "Augusto Peres",
+        "Iker Perez",
+        "Pedro Valdeira",
+        "Guilherme Jardim",
+        "Ana Sofia Gomes",
+        "Hugo Ferreira",
+        "Pedro Bizarro"
+      ],
+      "total_score": 0.4570000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.34,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "用概率稀疏化降低流式特征持久化成本",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16981.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16981/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16368",
+      "title": "Evaluating LLM Personalization via Semantic Constraint Verification",
+      "title_zh": "通过语义约束验证评估 LLM 个性化",
+      "authors": [
+        "Xuran Li",
+        "Guanqin Zhang",
+        "Imran Razzak",
+        "Hakim Hacid",
+        "Eleanna Kafeza",
+        "Hao Xue",
+        "Flora D. Salim"
+      ],
+      "total_score": 0.44800000000000006,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.44000000000000006,
+        "other": 0.2
+      },
+      "tags": [
+        "judge reward verifier"
+      ],
+      "tldr_zh": "用 NLI 低成本可解释评估 LLM 个性化",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16368.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16368/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16933",
+      "title": "A Unified Causal-Origin Taxonomy of Distributional Shifts in Reinforcement Learning",
+      "title_zh": "强化学习中分布偏移的统一因果起源分类法",
+      "authors": [
+        "Ardianto Wibowo",
+        "Paulo E Santos",
+        "Amer Baghdadi",
+        "Matthew Stephenson",
+        "Karl Sammut",
+        "Jean-Philippe Diguet"
+      ],
+      "total_score": 0.4192000000000001,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.344,
+        "other": 0.2
+      },
+      "tags": [
+        "agent environment data services"
+      ],
+      "tldr_zh": "用因果起源统一RL分布偏移分类",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16933.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.16733",
+      "title": "A First-Principles Derivation of LLM Policy Optimization: From Expected Reward to GRPO and Its Structural Extensions",
+      "title_zh": "LLM 策略优化的一阶原理推导：从期望奖励到 GRPO 及其结构扩展",
+      "authors": [
+        "Jianghan Shen",
+        "Siqi Luo",
+        "Yue Li",
+        "Jiyao Liu",
+        "Wanying Qu",
+        "Yi Zhang",
+        "Ziyan Huang",
+        "Tianbin Li",
+        "Ming Hu",
+        "Xiaohong Liu",
+        "Yirong Chen",
+        "Junjun He"
+      ],
+      "total_score": 0.405,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.35,
+        "other": 0.2
+      },
+      "tags": [
+        "training and rollout loops"
+      ],
+      "tldr_zh": "用轨迹-奖励双轴统一解析LLM策略优化",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16733.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16733/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16545",
+      "title": "Can LLM Coding Agents Reason About Time Series?",
+      "title_zh": "LLM 编码智能体能推理时间序列吗？",
+      "authors": [
+        "Filip Rechtorík",
+        "Ondřej Dušek",
+        "Zdeněk Kasner"
+      ],
+      "total_score": 0.38380000000000003,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.256,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "judge reward verifier"
+      ],
+      "tldr_zh": "代码智能体更强，但时间序列推理仍不可靠",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16545.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16545/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16409",
+      "title": "PathRouter: Aligning Rewards with Retrieval Quality in Agentic Graph Retrieval-Augmented Generation",
+      "title_zh": "PathRouter：在智能体式图检索增强生成中对齐奖励与检索质量",
+      "authors": [
+        "Bo Wang",
+        "Heyan Huang",
+        "Yaolin Li",
+        "Wei Tang",
+        "Yuan Zhang",
+        "Wenbo Li",
+        "Mingze Gao",
+        "Ge Shi",
+        "Chong Feng"
+      ],
+      "total_score": 0.271,
+      "scores": {
+        "topic_relevance": 0.16000000000000003,
+        "llm_assessment": 0.49000000000000005,
+        "other": 0.2
+      },
+      "tags": [
+        "adjacent rag and prompting"
+      ],
+      "tldr_zh": "用路径感知奖励提升 Agentic GraphRAG",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16409.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16409/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.16935",
+      "title": "CrossMaps: Confidence-Aware Open-Vocabulary Semantic Mapping for Rover Navigation",
+      "title_zh": "CrossMaps：面向 Rover 导航的置信度感知开放词汇语义建图",
+      "authors": [
+        "Jan-Niklas Klein",
+        "Sona Ghahremani",
+        "Christian Medeiros Adriano",
+        "Holger Giese"
+      ],
+      "total_score": 0.12528874303166646,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.22999999999999998,
+        "other": 0.18762914343888823
+      },
+      "tags": [],
+      "tldr_zh": "可语言查询的置信度语义地图",
+      "detail_file": "agent-harness-evolution/2026-06-15/2606.16935.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16935/thumb.webp"
+    }
+  ]
+}

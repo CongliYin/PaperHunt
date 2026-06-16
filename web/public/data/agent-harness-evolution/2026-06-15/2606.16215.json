@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.16215",
+  "title": "PACT: Privileged Trace Co-Training for Multi-Turn Tool-Use Agents",
+  "title_zh": "PACT：面向多轮工具调用智能体的特权轨迹协同训练",
+  "authors": [
+    "Zhenbang Du",
+    "Jun Luo",
+    "Zhiwei Zheng",
+    "Xiangchi Yuan",
+    "Kejing Xia",
+    "Dachuan Shi",
+    "Qirui Jin",
+    "Qijia He",
+    "Shaofeng Zou",
+    "Yingbin Liang",
+    "Wenke Lee"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T04:46:23Z",
+  "abs_url": "https://arxiv.org/abs/2606.16215v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16215",
+  "links": {
+    "github": null,
+    "project_page": "https://zhenbangdu.github.io/pact-project-page/"
+  },
+  "abstract_en": "Multi-turn tool-use agents must reason, call tools, and adapt to observations across several interaction turns. Post-training such agents is challenging, as reinforcement learning often suffers from sparse rewards and weak credit assignment despite matching the prompt-only inference setting, while supervised fine-tuning on expert traces provides dense process supervision but can over-constrain the model to fixed trajectories. To tackle this, we propose PACT, a Privileged trAce Co-Training framework for multi-turn tool-use agents. The key idea is to use expert traces only as training-time optimization signals rather than rollout-time hints. PACT keeps rollout generation prompt-only, then uses expert traces to guide optimization through two complementary signals: a trace-conditioned RL surrogate that evaluates prompt-only rollouts under expert-trace context, and a component-aware SFT loss that supervises reasoning prefixes and tool-calls with annealed strength. To reduce over-reliance on the training-only trace context, PACT further introduces a prompt-only anchoring. We also provide a latent-trace view that connects the two trace-based objectives and explains how expert traces can guide optimization without being used during rollout generation. Experiments on FTRL, BFCL, and ToolHop show that PACT consistently improves over strong SFT- and RL-based baselines, highlighting the value of privileged trace co-training for multi-turn tool-use learning.",
+  "abstract_zh": "多轮工具调用智能体需要在多轮交互中进行推理、调用工具，并根据观测结果动态调整。对此类智能体进行后训练并不容易：强化学习虽然与仅基于提示词的推理设置一致，但常受稀疏奖励和弱信用分配影响；基于专家轨迹的监督微调能提供密集过程监督，却可能使模型过度受限于固定轨迹。为解决这一问题，论文提出 PACT（Privileged trAce Co-Training），一种用于多轮工具调用智能体的特权轨迹协同训练框架。其核心思想是：专家轨迹只作为训练阶段的优化信号，而不作为 rollout 生成时的提示。PACT 保持 rollout 生成仅依赖 prompt，同时通过两类互补信号利用专家轨迹进行优化：一是 trace-conditioned RL surrogate，在专家轨迹上下文下评估 prompt-only rollout；二是 component-aware SFT loss，以逐步退火的强度监督推理前缀和工具调用。为降低模型对训练时轨迹上下文的依赖，PACT 进一步引入 prompt-only anchoring。论文还给出 latent-trace 视角，将两类基于轨迹的目标统一起来，解释专家轨迹如何在不参与 rollout 生成的情况下指导优化。实验在 FTRL、BFCL 和 ToolHop 上表明，PACT 相比强 SFT 与 RL 基线均有稳定提升，体现了特权轨迹协同训练在多轮工具使用学习中的价值。",
+  "key_points_zh": [
+    "PACT 将专家轨迹作为训练时的特权优化信号，而非 rollout 或推理阶段的额外上下文，从而避免模型依赖不可用信息。",
+    "方法结合 trace-conditioned RL surrogate 与 component-aware SFT loss：前者在专家轨迹上下文下评估 prompt-only rollout，后者对推理前缀和工具调用提供退火式监督。",
+    "prompt-only anchoring 用于约束模型保持仅依赖原始提示的能力，缓解对训练阶段 trace context 的过拟合。",
+    "论文提出 latent-trace 解释视角，将基于轨迹的 RL 与 SFT 目标联系起来，说明专家轨迹可在不干预 rollout 生成的情况下改善优化。",
+    "在 FTRL、BFCL、ToolHop 三个多轮工具使用基准上，PACT 持续优于强 SFT 和 RL 基线。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.82,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.68,
+    "llm_avg": 0.72,
+    "comment": "PACT offers a useful trace-driven training loop for multi-turn tool-use agents, though it is more a post-training method than a full agent harness architecture.",
+    "comment_zh": "PACT为多轮工具调用智能体提供了有价值的轨迹驱动训练闭环，但更偏向后训练方法而非完整智能体运行架构。"
+  },
+  "scores": {
+    "topic_relevance": 1.0,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.72,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://zhenbangdu.github.io/pact-project-page/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16215/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16215/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16215/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.952
+    }
+  ]
+}

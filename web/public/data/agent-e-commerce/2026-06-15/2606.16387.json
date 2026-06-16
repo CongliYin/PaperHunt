@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2606.16387",
+  "title": "Leveraging Code-Mixed Product Metadata and User Feedback for Personalized Recommendation on Daraz Bangladesh",
+  "title_zh": "利用代码混合商品元数据与用户反馈改进 Daraz Bangladesh 个性化推荐",
+  "authors": [
+    "KM Fahim A Bari",
+    "Muhammad Abdullah Adnan",
+    "Nafis Sadeq"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T08:17:36Z",
+  "abs_url": "https://arxiv.org/abs/2606.16387v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16387",
+  "links": {
+    "github": "https://github.com/os-car-war-thy/daraz-recsys.",
+    "project_page": null
+  },
+  "abstract_en": "Bangladeshi e-commerce platforms host millions of product reviews written in Bengali Unicode, English, and Banglish, where Bengali is phonetically transcribed in Latin script. However, the impact of code-mixed reviews on recommendation performance remains largely unexplored. We present the first such benchmarking on product reviews from Daraz Bangladesh, evaluating six model families under a per-user chronological leave-last-out protocol. To address the severe long-tail sparsity of the dataset, where 59.3% of users have exactly one interaction, we conduct a systematic k-core threshold ablation across five density configurations. The results reveal that Item-based Collaborative Filtering remains stable across settings, Implicit Matrix Factorization degrades sharply with decreasing density, and Explicit Matrix Factorization uniquely improves at higher thresholds. To characterize the impact of code-mixing on recommendation quality, we perform a language-stratified evaluation of content-based filtering using character n-gram TF-IDF profiles. The results provide empirical evidence that fragmentation of the Banglish vocabulary reduces NDCG@10 by 46.8% relative to Bengali-script users, a degradation traceable to transliteration inconsistency across surface forms. This work establishes a reproducible evaluation foundation for recommendation research in code-mixed, low-resource e-commerce settings. The code is publicly available at https://github.com/os-car-war-thy/daraz-recsys.",
+  "abstract_zh": "孟加拉电商平台包含大量由 Bengali Unicode、English 和 Banglish 写成的商品评论，其中 Banglish 指用拉丁字母音译 Bengali。本文首次在 Daraz Bangladesh 商品评论上系统评测代码混合评论对推荐性能的影响，采用按用户时间顺序的 leave-last-out 协议，比较六类推荐模型。针对数据集中严重的长尾稀疏性——59.3% 用户仅有一次交互，作者进一步在五种数据密度配置下进行 k-core 阈值消融。实验显示，Item-based Collaborative Filtering 在不同稀疏程度下较稳定，Implicit Matrix Factorization 随数据变稀疏性能显著下降，而 Explicit Matrix Factorization 在更高阈值下表现独特提升。为刻画代码混合对推荐质量的影响，作者基于字符 n-gram TF-IDF 用户画像，对 content-based filtering 进行语言分层评估。结果表明，相比 Bengali-script 用户，Banglish 词表碎片化使 NDCG@10 下降 46.8%，主要源于同一词的音译形式不一致。该工作为低资源、代码混合电商场景中的推荐系统研究提供了可复现的基准。",
+  "key_points_zh": [
+    "首次在 Daraz Bangladesh 商品评论数据上基准评测代码混合评论对推荐系统的影响，覆盖 Bengali Unicode、English 与 Banglish。",
+    "采用 per-user chronological leave-last-out 协议，并评估六类推荐模型，为低资源电商推荐研究提供可复现实验设置。",
+    "针对 59.3% 用户仅有一次交互的长尾稀疏问题，进行五种 k-core 阈值的数据密度消融分析。",
+    "实验发现 Item-based Collaborative Filtering 最稳定，Implicit Matrix Factorization 对稀疏性敏感，而 Explicit Matrix Factorization 在高密度设置下受益明显。",
+    "语言分层的 content-based filtering 分析显示，Banglish 音译不一致导致词表碎片化，使 NDCG@10 相比 Bengali-script 用户下降 46.8%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.65,
+    "problem_significance": 0.75,
+    "potential_impact": 0.65,
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.6,
+    "llm_avg": 0.58,
+    "comment": "A solid e-commerce recommendation benchmark for code-mixed, low-resource product reviews, though it does not involve LLM or agentic shopping workflows.",
+    "comment_zh": "这是一篇扎实的低资源混合语言电商推荐基准研究，但不涉及LLM或购物智能体流程。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.58,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/os-car-war-thy/daraz-recsys.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16387/fig1.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.898
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16387/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16387/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16387/fig4.webp",
+      "page": 2,
+      "kind": "table",
+      "confidence": 0.973
+    }
+  ]
+}

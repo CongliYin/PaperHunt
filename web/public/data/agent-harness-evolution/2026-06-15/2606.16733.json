@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2606.16733",
+  "title": "A First-Principles Derivation of LLM Policy Optimization: From Expected Reward to GRPO and Its Structural Extensions",
+  "title_zh": "LLM 策略优化的一阶原理推导：从期望奖励到 GRPO 及其结构扩展",
+  "authors": [
+    "Jianghan Shen",
+    "Siqi Luo",
+    "Yue Li",
+    "Jiyao Liu",
+    "Wanying Qu",
+    "Yi Zhang",
+    "Ziyan Huang",
+    "Tianbin Li",
+    "Ming Hu",
+    "Xiaohong Liu",
+    "Yirong Chen",
+    "Junjun He"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T13:55:23Z",
+  "abs_url": "https://arxiv.org/abs/2606.16733v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16733",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Policy gradient algorithms for language models optimize the same objective $J(θ) = \\mathbb{E}*{τ\\sim p*θ(τ)}[R(τ)]$, which has exactly two factors: the trajectory probability $p_θ(τ)$ and the reward $R(τ)$. Every method from REINFORCE to PPO to GRPO and their descendants modifies one or both factors to address a specific failure in the preceding formulation. Existing surveys organize these methods by domain or chronology, which obscures the rationale behind each design choice and the precise location of its intervention within the gradient estimator. This survey revisits the landscape of LLM policy optimization from $J(θ)$ on first principles and uses the trajectory side, induced by $p_θ(τ)$, and the reward side, induced by $R(τ)$, as the two axes along which methods are located. It covers the path from REINFORCE and PPO to GRPO, as well as post-GRPO variants, Agentic RL, and GRPO-OPD. The resulting framework is unified, diagnostic, and extensible: it analyzes methods from a shared objective, identifies which side each method modifies and why, and applies the same trajectory and reward axes across these settings. Across these settings, the framework also exposes compound failures that no single-side fix resolves and that therefore require joint design of the trajectory side and the reward side. The boundary cases and coupled failures identified by this map mark where existing solutions run out and provide a principled starting point for designing the next generation of LLM policy optimization algorithms.",
+  "abstract_zh": "本文从统一目标函数 J(θ)=E_{τ∼pθ(τ)}[R(τ)] 出发，重新梳理 LLM policy optimization 的方法谱系。作者指出，策略梯度方法本质上只涉及两个核心因素：由 pθ(τ) 决定的轨迹概率侧，以及由 R(τ) 决定的奖励侧；从 REINFORCE、PPO 到 GRPO 及其后续变体，各方法都是为修正前一形式中的具体失败模式而改动其中一侧或两侧。不同于按领域或时间线组织的既有综述，本文以“轨迹侧—奖励侧”为双轴，将 REINFORCE、PPO、GRPO、post-GRPO variants、Agentic RL 与 GRPO-OPD 纳入同一分析框架。该框架不仅能说明每种方法修改了什么、为何修改，还揭示了单侧修正无法解决的复合失败模式，从而为下一代 LLM 策略优化算法的联合设计提供原则性起点。",
+  "key_points_zh": [
+    "本文将 LLM policy optimization 统一回到期望奖励目标 J(θ)，强调所有策略梯度方法都围绕轨迹概率 pθ(τ) 与奖励 R(τ) 两个因素展开。",
+    "提出“trajectory side / reward side”双轴分析框架，用于定位 REINFORCE、PPO、GRPO 及其衍生方法各自的干预位置与设计动机。",
+    "相比按时间或应用领域划分的综述，该框架更强调方法演化背后的失败模式诊断，例如方差、分布偏移、奖励稀疏或奖励误导等问题。",
+    "覆盖范围包括 post-GRPO variants、Agentic RL 和 GRPO-OPD，展示同一分析视角可扩展到更复杂的 LLM 强化学习设置。",
+    "论文指出许多边界情形存在轨迹侧与奖励侧的耦合失败，单独改动任一侧不足以解决，需要面向二者的联合算法设计。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.3,
+    "problem_significance": 0.45,
+    "potential_impact": 0.4,
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.35,
+    "llm_avg": 0.35,
+    "comment": "A useful conceptual survey of LLM policy optimization, but it offers little direct runtime, governance, or platform infrastructure value.",
+    "comment_zh": "这是一篇有用的大模型策略优化概念综述，但对运行时、治理或平台基础设施的直接贡献较少。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.35,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16733/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16733/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.982
+    }
+  ]
+}

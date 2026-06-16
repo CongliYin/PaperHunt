@@ -1,0 +1,101 @@
+{
+  "arxiv_id": "2606.16295",
+  "title": "VisualClaw: A Real-Time, Personalized Agent for the Physical World",
+  "title_zh": "VisualClaw：面向物理世界的实时个性化智能体",
+  "authors": [
+    "Haoqin Tu",
+    "Jianwen Chen",
+    "Zijun Wang",
+    "Siwei Han",
+    "Juncheng Wu",
+    "Hardy Chen",
+    "Haonian Ji",
+    "Kaiwen Xiong",
+    "Jiaqi Liu",
+    "Peng Xia",
+    "Jieru Mei",
+    "Hongliang Fei",
+    "Jason Eshraghian",
+    "Zeyu Zheng",
+    "Yuyin Zhou",
+    "Huaxiu Yao",
+    "Cihang Xie"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T06:58:22Z",
+  "abs_url": "https://arxiv.org/abs/2606.16295v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16295",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Vision language models are serving as general-purpose interfaces for complex multimodal tasks. However, deployment still faces three gaps: VLMs typically incur high latency and cost when processing dense video frames and long prompts, the agent scaffold remains static after deployment, and standard video-QA benchmarks do not test whether agents can use visual evidence inside tool-using workspaces. We present VisualClaw, a self-evolving multimodal agent built around two principles. First, hybrid encoding reduces deployment cost by filtering less informative streaming frames with a cascaded gate and compressing the text skill bank through hot/cold top-k injection. Second, skill evolution lets the agent learn from failures: retrieved memories condition an evolver as direct concatenated context or as guided evidence, producing skill-bank updates that help future questions. Across 4 video-QA benchmarks with 2 VLMs, VisualClaw cuts per-question API cost by an average -98% versus full-frame upload and by -25.9% over the offline uniform 8 frame baseline, while boosting accuracy in most settings, e.g., an average +3.85% and a peak +15.80% on EgoSchema with Gemini 3 Flash. To address the gap, we curate VisualClawArena, a 200-scenario multimodal agentic benchmark built through a strict five-stage pipeline; models must use video evidence, documents, dynamic updates, and executable checks inside a workspace. On VisualClawArena, the same framework with computer-use agent backends improves macro accuracy by +2.9% for Codex (GPT-5.5) and +3.2% for Claude Code (Sonnet 4.6) over no-evolution baselines, with a -9.5% cost reduction compared to the uniform-sampled baseline. These properties make VisualClaw a natural fit for edge applications, where the cascade reduces a 1-hour streaming session from ~3,600 API uploads down to only 5-20 calls and the self-evolution makes it a perfect personalized assistant.",
+  "abstract_zh": "本文提出 VisualClaw，一个可自我进化的多模态智能体，旨在解决 Vision Language Models（VLMs）在真实部署中的三类问题：处理密集视频帧和长提示时延迟与成本高、部署后的 agent scaffold 难以自适应更新，以及现有 video-QA benchmark 难以评估智能体在工具使用工作区中基于视觉证据完成任务的能力。VisualClaw 采用两项核心设计：其一是 hybrid encoding，通过级联门控过滤信息量较低的流式视频帧，并用 hot/cold top-k injection 压缩文本 skill bank，从而降低部署成本；其二是 skill evolution，让智能体从失败中学习，利用检索到的记忆作为直接拼接上下文或引导证据，驱动 evolver 更新 skill bank，以改进未来问题表现。在 4 个 video-QA benchmarks 和 2 个 VLMs 上，VisualClaw 相比上传全帧平均降低 98% 的单题 API 成本，相比离线均匀采样 8 帧 baseline 也降低 25.9%，同时在多数设置中提升准确率，例如在 EgoSchema + Gemini 3 Flash 上平均提升 3.85%，最高提升 15.80%。此外，作者构建了 VisualClawArena，一个包含 200 个场景的多模态 agentic benchmark，要求模型在工作区内结合视频证据、文档、动态更新与可执行检查完成任务。在 VisualClawArena 上，结合 computer-use agent 后端的 VisualClaw 相比无进化 baseline，使 Codex（GPT-5.5）macro accuracy 提升 2.9%，Claude Code（Sonnet 4.6）提升 3.2%，并相比均匀采样 baseline 降低 9.5% 成本。整体来看，VisualClaw 特别适合边缘端与个性化助手场景，可将 1 小时流式会话从约 3600 次 API 上传压缩到仅 5–20 次调用。",
+  "key_points_zh": [
+    "提出 VisualClaw，通过 hybrid encoding 与 skill evolution 结合，面向实时视频理解和物理世界中的个性化智能体部署。",
+    "级联门控过滤低信息量流式帧，hot/cold top-k injection 压缩 skill bank，使单题 API 成本相对全帧上传平均降低 98%。",
+    "skill evolution 机制从失败案例和检索记忆中更新技能库，使模型在多个 video-QA benchmarks 上多数设置获得准确率提升。",
+    "构建 VisualClawArena，包含 200 个多模态 agentic 场景，评估模型在工作区中使用视频证据、文档、动态更新和可执行检查的能力。",
+    "在 VisualClawArena 上，VisualClaw 提升 Codex（GPT-5.5）与 Claude Code（Sonnet 4.6）的 macro accuracy，同时相较均匀采样 baseline 降低成本。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.8,
+    "problem_significance": 0.85,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.85,
+    "llm_avg": 0.8,
+    "comment": "A highly relevant realtime visual-agent system combining streaming frame filtering, cost-aware deployment, personalization, and an agentic benchmark.",
+    "comment_zh": "该工作高度契合实时视觉智能体方向，结合了流式帧过滤、成本感知部署、个性化和智能体基准。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.8331408438282375,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 21,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16295/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16295/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16295/fig3.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16295/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.921
+    }
+  ]
+}

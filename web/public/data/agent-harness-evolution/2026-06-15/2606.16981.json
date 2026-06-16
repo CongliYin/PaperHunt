@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2606.16981",
+  "title": "Decoupling Inference from State Updates in Low-Latency Feature Engines via Probabilistic Thinning",
+  "title_zh": "通过概率稀疏化在低延迟特征引擎中解耦推理与状态更新",
+  "authors": [
+    "Augusto Peres",
+    "Iker Perez",
+    "Pedro Valdeira",
+    "Guilherme Jardim",
+    "Ana Sofia Gomes",
+    "Hugo Ferreira",
+    "Pedro Bizarro"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-15T17:18:05Z",
+  "abs_url": "https://arxiv.org/abs/2606.16981v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.16981",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Streaming data systems increasingly underpin Machine Learning workflows that maintain large numbers of continuously updated aggregations. In production settings, each incoming event typically triggers read-modify-write operations to persistent storage, making high-frequency state updates a dominant source of latency, contention, and operational cost. In this work, we decouple inference from state persistence in streaming Machine Learning pipelines via probabilistic thinning: every event is scored, but durable state updates are selectively triggered by informative events. Unlike approaches that shed input or state, we show that persistence-path control is achievable without a high-frequency in-memory control plane or cross-worker coordination, relying exclusively on approximate statistics retrieved from disk-backed key-value stores. We model the resulting stochastic processes, derive bounds on filtering rates, and prove that common time-based aggregations remain unbiased under variance-aware formulations, preventing systemic error accumulation. We evaluate the approach in a controlled setting that isolates per-event costs, demonstrating substantial reductions in storage Input/Output and serialization overhead. Across experiments, up to 90% of events are excluded from the persistence path while preserving and in some cases improving downstream utility.",
+  "abstract_zh": "本文面向流式 Machine Learning 特征管线中高频持久化状态更新带来的延迟、竞争与成本问题，提出通过概率稀疏化（probabilistic thinning）将推理与状态持久化解耦：每个事件仍会参与打分，但只有信息量较高的事件才触发持久化状态更新。与丢弃输入或状态的方法不同，该方法不依赖高频内存控制平面或跨 worker 协调，仅使用从磁盘型 key-value store 中读取的近似统计量进行持久化路径控制。论文对由此产生的随机过程建模，推导过滤率边界，并证明在方差感知（variance-aware）形式下，常见基于时间的聚合仍保持无偏，从而避免系统性误差累积。实验在隔离单事件成本的受控环境中验证，该方法显著减少存储 I/O 与序列化开销，最多可将 90% 事件排除在持久化路径之外，同时保持甚至提升下游任务效用。",
+  "key_points_zh": [
+    "提出将每事件推理与持久化状态更新解耦：事件全部被 scored，但仅部分“有信息量”的事件触发 durable state update。",
+    "方法不需要高频 in-memory control plane 或跨 worker coordination，仅依赖 disk-backed key-value stores 中的近似统计量，便于生产系统落地。",
+    "从随机过程角度建模 probabilistic thinning，给出过滤率边界，并证明方差感知的时间聚合在常见场景下保持无偏。",
+    "实验显示该方法可显著降低 storage I/O 与 serialization overhead，最多过滤掉 90% 的持久化更新事件。",
+    "在减少状态更新成本的同时，下游 utility 基本保持，部分实验中甚至有所提升。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.52,
+    "potential_impact": 0.34,
+    "paradigm_shift": 0.22,
+    "lasting_value": 0.12,
+    "llm_avg": 0.34,
+    "comment": "The feature-engine optimization is useful ML infrastructure but has minimal direct relevance to agent runtime, orchestration, or self-improvement.",
+    "comment_zh": "该特征引擎优化对机器学习基础设施有用，但与智能体运行、编排或自我改进几乎没有直接关系。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.34,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16981/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.778
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16981/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.942
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16981/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.945
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.16981/fig4.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.949
+    }
+  ]
+}
