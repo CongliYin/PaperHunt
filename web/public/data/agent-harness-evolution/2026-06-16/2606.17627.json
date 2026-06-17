@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2606.17627",
+  "title": "Divide, Deliberate, Decide: A Multi-Agent Framework for Fine-Grained Egocentric Action Recognition",
+  "title_zh": "Divide, Deliberate, Decide：用于细粒度第一视角动作识别的多智能体框架",
+  "authors": [
+    "Alessandro Sottovia",
+    "Alessandro Torcinovich",
+    "Oswald Lanz"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T07:31:27Z",
+  "abs_url": "https://arxiv.org/abs/2606.17627v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17627",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Fine-grained action recognition in egocentric video is challenging for Vision-Language Models (VLMs): actions often differ only in small visual cues, and a single model tends to be biased toward a subset of these cues. We propose Divide, Deliberate, Decide, a fully-local, zero-shot multi-agent framework in which (i) a VLM orchestrator chunks the video and proposes a top-k candidate label list per segment, (ii) an ensemble of heterogeneous VLM specialists, drawn from different open model families, engages in a structured deliberation that includes a peer-consultation round of questions, and (iii) agent rankings are aggregated with a Borda count and the orchestrator re-ranks its own prediction in light of the specialists' evidence. The entire pipeline runs locally with no fine-tuning. Experiments show that our method positively improves zero-shot action recognition performance over the baseline, highlighting the influence of a heterogeneous deliberation step, showing that the gain stems from decorrelated model priors rather than from additional compute.",
+  "abstract_zh": "本文关注 egocentric video 中的细粒度动作识别问题。此类任务对 Vision-Language Models (VLMs) 尤其困难，因为不同动作往往只由微小视觉线索区分，而单个模型容易偏向某一类线索。作者提出 Divide, Deliberate, Decide，一个完全本地运行、零样本的多智能体框架：首先由一个 VLM orchestrator 将视频切分为片段，并为每个片段提出 top-k 候选标签；随后，来自不同开源模型家族的异构 VLM specialists 进行结构化讨论，包括一轮同伴咨询式提问；最后，通过 Borda count 聚合各智能体排序，并由 orchestrator 结合 specialists 的证据重新排序自身预测。整个流程无需微调、无需云端调用。实验表明，该方法相较基线提升了零样本动作识别性能，说明异构模型间的 deliberation 能带来增益，且收益主要来自模型先验的去相关性，而非简单增加计算量。",
+  "key_points_zh": [
+    "提出 Divide, Deliberate, Decide：一个本地、零样本、多智能体的 egocentric fine-grained action recognition 框架。",
+    "方法将流程分为视频切分与候选标签生成、异构 VLM specialists 结构化讨论、Borda count 排序聚合与最终重排序。",
+    "核心设计是引入来自不同 open model families 的 heterogeneous VLM specialists，以减少单一模型对特定视觉线索的偏置。",
+    "实验显示该框架优于单模型零样本基线，证明 deliberation step 对细粒度动作识别有积极作用。",
+    "分析指出性能提升主要来自 decorrelated model priors，而不是单纯依赖更多计算资源。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.3,
+    "problem_significance": 0.28,
+    "potential_impact": 0.24,
+    "paradigm_shift": 0.18,
+    "lasting_value": 0.2,
+    "llm_avg": 0.24,
+    "comment": "This is mostly a zero-shot multi-agent video recognition pipeline and has little lasting value for agent harness evolution.",
+    "comment_zh": "该工作主要是零样本多智能体视频识别流程，对智能体运行框架演化的长期价值较低。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.24,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17627/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.949
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17627/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.981
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17627/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.982
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17627/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.966
+    }
+  ]
+}

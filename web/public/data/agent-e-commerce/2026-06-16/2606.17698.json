@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2606.17698",
+  "title": "EComAgentBench: Benchmarking Shopping Agents on Long-Horizon Tasks with Distributed Hidden Intent",
+  "title_zh": "EComAgentBench：面向分布式隐藏意图长程任务的购物 Agent 基准",
+  "authors": [
+    "Zeyao Du",
+    "Tong Li",
+    "Haibo Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T09:10:48Z",
+  "abs_url": "https://arxiv.org/abs/2606.17698v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17698",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As LLM-based shopping agents enter production, existing benchmarks fail to capture how a shopper's requirements arrive: stated implicitly in the query, recorded in a profile, or revealed only when the right question is asked. Benchmarks that expose full intent upfront and grade only the final choice can neither pose this long-horizon challenge nor explain which requirement an agent missed. To address this gap, we introduce EComAgentBench, a benchmark of 662 tasks grounded in real Amazon products and reviews. Each task scatters these requirements across a visible query, a tool-gated profile, and scripted clarification; an agent must uncover hidden intent, verify candidates against attributes and review evidence, and commit to a single product within 100 tool calls. Moreover, typed, source-tagged rubrics grade every task, attributing each failure to a requirement and its source. Construction is automated yet reliable, with every answer fixed in code before any text is generated and every sample validated. Our evaluation of seven models reveals that even the strongest attains only 57.1% overall accuracy, and rubric satisfaction degrades from visible to hidden sources. Overall, we believe EComAgentBench will serve as a reproducible foundation for moving shopping agents from single-query search toward dependable assistance over long horizons.",
+  "abstract_zh": "随着基于 LLM 的购物 Agent 进入实际生产环境，现有基准难以刻画真实购物需求的出现方式：有些需求隐含在查询中，有些记录在用户 profile 中，还有些只有在 Agent 主动提出正确澄清问题时才会显现。那些一开始暴露完整意图、且只评估最终选择的基准，既无法构造这种长程挑战，也无法解释 Agent 漏掉了哪一项需求。为弥补这一缺口，论文提出 EComAgentBench：一个包含 662 个任务的基准，任务基于真实 Amazon 商品与评论构建。每个任务将用户需求分散在可见查询、需要工具访问的 profile，以及脚本化澄清交互中；Agent 必须发现隐藏意图，依据商品属性与评论证据验证候选商品，并在 100 次工具调用内最终选择一个商品。此外，基准采用带类型与来源标签的 rubrics 对每个任务评分，可将失败归因到具体需求及其来源。该基准构建过程自动化但强调可靠性：每个答案在文本生成前已由代码固定，并且每个样本都经过验证。对 7 个模型的评测显示，即便最强模型总体准确率也仅为 57.1%，且 rubric 满足率从可见需求到隐藏需求逐步下降。整体来看，EComAgentBench 为购物 Agent 从单轮搜索走向可靠的长程辅助提供了可复现的评测基础。",
+  "key_points_zh": [
+    "提出 EComAgentBench，包含 662 个基于真实 Amazon 商品与评论的长程购物任务。",
+    "任务将用户需求分布在显式 query、工具门控的 profile，以及需主动询问才能获得的 clarification 中，更贴近真实购物场景。",
+    "Agent 需要在 100 次工具调用内发现隐藏意图、验证商品属性与评论证据，并最终选择单一商品。",
+    "引入带类型和来源标签的 rubrics，可细粒度定位模型失败对应的具体需求及其来源。",
+    "7 个模型评测中最强者仅达 57.1% 总体准确率，且隐藏需求上的表现明显弱于可见需求。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.86,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8720000000000001,
+    "comment": "A strong e-commerce agent benchmark that directly targets long-horizon shopping assistance with hidden intent, catalog grounding, and diagnostic evaluation.",
+    "comment_zh": "这是一项很强的电商智能体基准工作，直接面向隐藏意图、商品证据 grounding 和长程购物决策评测。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8720000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17698/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.896
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17698/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.921
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17698/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.926
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17698/fig4.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.465
+    }
+  ]
+}

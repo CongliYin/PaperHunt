@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.17798",
+  "title": "LiveStarPro: Proactive Streaming Video Understanding with Hierarchical Memory for Long-Horizon Streams",
+  "title_zh": "LiveStarPro：面向长时程视频流的层次化记忆主动式流媒体视频理解",
+  "authors": [
+    "Zhenyu Yang",
+    "Kairui Zhang",
+    "Bing Wang",
+    "Shengsheng Qian",
+    "Changsheng Xu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T11:18:05Z",
+  "abs_url": "https://arxiv.org/abs/2606.17798v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17798",
+  "links": {
+    "github": "https://github.com/sotayang/LiveStarPro.",
+    "project_page": null
+  },
+  "abstract_en": "Despite the remarkable progress of Video Large Language Models (Video-LLMs), current online architectures still struggle to simultaneously process continuous video streams, decide autonomously when to respond, and preserve long-horizon contextual memory. These obstacles undermine real-time responsiveness and cause severe forgetting throughout prolonged interactions. In this work, we introduce LiveStarPro, a live streaming assistant that is designed for proactive video understanding over long-horizon streams. The design of LiveStarPro rests on three complementary components. The first component is Streaming Verification Decoding (SVeD), an inference framework that identifies the appropriate response timing through single-pass perplexity verification, thereby eliminating the dependency on explicit silence tokens. The second component is Streaming Causal Attention Masks (SCAM), a training strategy that enforces incremental video-language alignment over variable-length streams. The third component is Tree-Structured Hierarchical Memory (TSHM), a recursive memory architecture that organizes evicted historical information into event chains and consequently enables efficient retrieval from effectively unbounded video streams. To facilitate a comprehensive evaluation under realistic online conditions, we further present OmniStarPro, a large-scale benchmark that spans 15 diverse real-world scenarios and that extends to hour-scale streams for the assessment of long-term recall. Extensive experiments demonstrate that LiveStarPro consistently surpasses existing methods, attaining a 28.9% improvement in semantic correctness and an 18.2% reduction in timing error, while its streaming key-value cache further yields a 1.58x inference speedup over the same model without caching. The model and the code are publicly available at https://github.com/sotayang/LiveStarPro.",
+  "abstract_zh": "尽管 Video Large Language Models（Video-LLMs）取得了显著进展，现有在线架构仍难以同时处理连续视频流、自主判断何时响应，并保持长时程上下文记忆。这会削弱实时交互能力，并在长时间交互中导致严重遗忘。本文提出 LiveStarPro，一个面向长时程视频流主动理解的实时流媒体助手。其核心由三部分组成：Streaming Verification Decoding（SVeD）通过单次 perplexity 验证判断合适响应时机，避免依赖显式 silence token；Streaming Causal Attention Masks（SCAM）作为训练策略，在可变长度视频流中强制进行增量式视频-语言对齐；Tree-Structured Hierarchical Memory（TSHM）将被移出上下文窗口的历史信息递归组织为事件链，从而支持对近乎无限长度视频流的高效检索。为在真实在线条件下进行全面评估，作者还提出 OmniStarPro，一个覆盖 15 类真实场景、扩展到小时级视频流的大规模 benchmark，用于评测长期记忆与回忆能力。实验表明，LiveStarPro 稳定优于现有方法，语义正确性提升 28.9%，响应时机误差降低 18.2%，并且其 streaming key-value cache 相比无缓存版本带来 1.58 倍推理加速。",
+  "key_points_zh": [
+    "提出 LiveStarPro，面向连续、长时程视频流的主动式 Video-LLM 助手，重点解决实时响应、自主发话时机与长期上下文保持问题。",
+    "设计 Streaming Verification Decoding（SVeD），用单次 perplexity 验证判断是否应响应，避免传统在线模型对 silence token 或显式静默标记的依赖。",
+    "提出 Streaming Causal Attention Masks（SCAM），在训练阶段约束模型进行增量式视频-语言对齐，使其更适配可变长度在线视频流。",
+    "引入 Tree-Structured Hierarchical Memory（TSHM），将历史信息组织为树状事件链，实现对超长视频流中被驱逐上下文的高效检索与长期回忆。",
+    "构建 OmniStarPro benchmark，覆盖 15 个真实场景和小时级流媒体评测；实验显示 LiveStarPro 在语义正确性、响应时机与推理速度上均优于现有方法。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.88,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.9,
+    "llm_avg": 0.884,
+    "comment": "A highly relevant streaming video-agent paper with proactive response timing, long-horizon memory, latency-aware design, and reusable online evaluation.",
+    "comment_zh": "这是一篇高度契合实时视频智能体方向的工作，结合了主动响应时机、长时记忆、低延迟设计和可复用在线评测。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.884,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/sotayang/LiveStarPro.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17798/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17798/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17798/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17798/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.897
+    }
+  ]
+}

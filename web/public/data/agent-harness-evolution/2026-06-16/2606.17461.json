@@ -1,0 +1,93 @@
+{
+  "arxiv_id": "2606.17461",
+  "title": "AUTOGATE: Automated Clock Gating via Toggling-Aware LLM-based RTL Rewriting",
+  "title_zh": "AUTOGATE：基于切换感知 LLM 的 RTL 自动重写实现自动时钟门控",
+  "authors": [
+    "Yiting Wang",
+    "Chenhui Deng",
+    "Chia-Tung Ho",
+    "Yanqing Zhang",
+    "Zhuo Feng",
+    "Cunxi Yu",
+    "Ang Li",
+    "Gang Qu",
+    "Brucek Khailany"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T03:22:54Z",
+  "abs_url": "https://arxiv.org/abs/2606.17461v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17461",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Fine-grain clock gating (FGCG) is among the most effective techniques for reducing dynamic power, yet current FGCG optimization flows remain largely manual. Recent LLM-based RTL optimization approaches remain limited by two key drawbacks: (1) the inability to process long waveform traces spanning millions of cycles, and (2) the difficulty of scaling optimization to large hierarchical codebases while preserving correctness. In this work, we present AUTOGATE, the first agentic framework for industry-grade RTL power optimization, enabling workload-aware clock-gating optimization across large hierarchical codebases. AUTOGATE introduces a Machine Learning (ML)-LLM co-design that bridges waveform-level analysis and RTL rewriting. Specifically, we design an ML-based clustering algorithm that distills raw toggling traces into compact, structured representations that guide LLM-based RTL rewriting. This enables accurate identification and application of clock-gating opportunities without requiring LLMs to directly process raw waveform data. To enhance scalability, AUTOGATE employs a hierarchical multi-agent architecture that decomposes large designs into independently optimizable modules, enabling coordinated optimization across deep design hierarchies. We evaluate AUTOGATE on a diverse set of designs ranging from small RTL designs to large industrial-grade codebases. Experimental results show that AUTOGATE consistently reduces dynamic power relative to baselines. Across the small-design suite, AUTOGATE reduces dynamic power by 49.31% on average. On industry-scale designs, it achieves 19.34% and 7.96% dynamic power reductions on NVDLA and BlackParrot, respectively, and up to 6.86% on highly optimized proprietary production designs.",
+  "abstract_zh": "细粒度时钟门控（Fine-Grain Clock Gating, FGCG）是降低动态功耗最有效的技术之一，但现有 FGCG 优化流程仍高度依赖人工。已有基于 LLM 的 RTL 优化方法主要受限于两点：难以处理跨越数百万周期的长波形轨迹，以及在保持正确性的同时难以扩展到大型层次化代码库。本文提出 AUTOGATE，这是首个面向工业级 RTL 功耗优化的 agentic 框架，可在大型层次化代码库中进行 workload-aware 的时钟门控优化。AUTOGATE 采用 ML-LLM 协同设计，将波形级分析与 RTL 重写连接起来：通过基于机器学习的聚类算法，把原始切换轨迹压缩为紧凑、结构化的表示，用于指导 LLM 执行 RTL 重写，从而无需让 LLM 直接处理原始波形数据即可识别并应用时钟门控机会。为提升可扩展性，AUTOGATE 使用层次化多智能体架构，将大型设计分解为可独立优化的模块，并在深层设计层次中协调优化。实验覆盖从小型 RTL 设计到大型工业级代码库的多类设计，结果显示 AUTOGATE 相比基线可稳定降低动态功耗：在小型设计套件上平均降低 49.31%，在工业规模设计 NVDLA 和 BlackParrot 上分别降低 19.34% 和 7.96%，在高度优化的专有量产设计上最高降低 6.86%。",
+  "key_points_zh": [
+    "提出 AUTOGATE，首个面向工业级 RTL 功耗优化的 agentic 框架，聚焦 workload-aware 的细粒度时钟门控自动化。",
+    "通过 ML 聚类将长周期波形中的切换信息压缩为结构化表示，避免 LLM 直接处理海量 raw waveform trace。",
+    "利用 LLM-based RTL rewriting 根据切换感知信息自动识别并插入时钟门控逻辑，同时强调保持 RTL 正确性。",
+    "采用层次化 multi-agent 架构，将大型层次化设计拆分为模块级优化任务，以提升在复杂代码库上的可扩展性。",
+    "实验显示功耗收益显著：小型设计平均动态功耗降低 49.31%，NVDLA 降低 19.34%，BlackParrot 降低 7.96%，专有生产设计最高降低 6.86%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "A credible domain-specific agentic optimization framework with trace-driven rewriting and hierarchical coordination, but its applicability is mostly RTL/EDA-specific.",
+    "comment_zh": "A credible domain-specific agentic optimization framework with trace-driven rewriting and hierarchical coordination, but its applicability is mostly RTL/EDA-specific."
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36228269883744174,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17461/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17461/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17461/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.401
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17461/fig4.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.972
+    }
+  ]
+}

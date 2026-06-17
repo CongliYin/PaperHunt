@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.17931",
+  "title": "Predictive Analytics in E-Commerce for CustomerBehavior Forecasting using hybrid Ret-DNN withXGBoost Model",
+  "title_zh": "面向电商客户行为预测的混合 Ret-DNN 与 XGBoost 预测分析模型",
+  "authors": [
+    "Degala Pushpa Sri",
+    "Mayank Atreya",
+    "Lakshmi. H",
+    "Navin Chhibber",
+    "Mukesh Soni"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T13:41:14Z",
+  "abs_url": "https://arxiv.org/abs/2606.17931v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17931",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "In recent years, electronic (E) commerce services have rapidly increased in the daily lives of people, which helpsthem to purchase products online. However, retail platforms have struggled to understand customer behavior and make it difficult to predict their future purchases. To overcome these challenges, this study proposes a hybrid Retail Deep NeuralNetwork (Ret-DNN) with an Extreme Gradient Boosting(XGBoost) model for capturing temporal features and tabular dynamics of retail data. First, data were sourced from a UnitedKingdom (UK)-based online retailer that contains transactions with almost 500,000 records. Then, the collected data were pre-processed using a series of techniques, such as data cleaning, outlier handling, temporal feature extraction, feature encoding, and z-score normalization, to ensure that the data were ready for model training and testing. Subsequently, the preprocessed data were fed into the Ret-DNN model, which acts as a feature extractor to understand the complete context of customer transactions. Further, the extracted data were fed as input into the XGBoost model, which predicted the final output as the purchase probability of customers. Finally, the proposed Ret-DNN XGBoost model achieved better results by attaining aMean Absolute Error (MAE) 0.2193 when compared to the existing Ret-DNN model. Keywords: Customer behavior forecasting, extreme gradientboosting, electronic commerce, predictive analytic, retail deepneural networks.",
+  "abstract_zh": "本文面向电子商务场景中的客户行为预测问题，提出一种混合 Retail Deep Neural Network（Ret-DNN）与 Extreme Gradient Boosting（XGBoost）的模型，用于同时捕捉零售交易数据中的时间特征与表格数据动态。研究使用来自英国某在线零售商的近 50 万条交易记录，首先进行数据清洗、异常值处理、时间特征提取、特征编码与 z-score 标准化等预处理。随后，Ret-DNN 被用作特征提取器，以学习客户交易上下文信息；提取后的特征再输入 XGBoost，用于预测客户未来购买概率。实验结果显示，所提出的 Ret-DNN XGBoost 模型相比单独的 Ret-DNN 表现更优，取得了 0.2193 的 Mean Absolute Error（MAE）。",
+  "key_points_zh": [
+    "提出混合 Ret-DNN 与 XGBoost 的客户行为预测框架，结合深度特征提取与梯度提升树建模能力。",
+    "使用英国在线零售商近 50 万条交易记录，覆盖真实电商交易场景。",
+    "预处理流程包括数据清洗、异常值处理、时间特征提取、特征编码和 z-score normalization。",
+    "Ret-DNN 负责学习客户交易上下文特征，XGBoost 进一步基于这些特征预测购买概率。",
+    "实验中模型达到 MAE 0.2193，优于已有 Ret-DNN 基线。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.32,
+    "problem_significance": 0.55,
+    "potential_impact": 0.42,
+    "paradigm_shift": 0.18,
+    "lasting_value": 0.35,
+    "llm_avg": 0.364,
+    "comment": "This is an e-commerce customer-behavior prediction model with some practical retail relevance, but it is fairly conventional and lacks agentic or shopping-assistant depth.",
+    "comment_zh": "这是一篇具有一定零售实践价值的电商客户行为预测论文，但方法较常规，缺乏智能体或购物助手层面的深度。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.364,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17931/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17931/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17931/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17931/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.968
+    }
+  ]
+}

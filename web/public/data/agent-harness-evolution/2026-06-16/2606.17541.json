@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.17541",
+  "title": "Offline Preference-Based Trajectory Evaluation",
+  "title_zh": "离线偏好式轨迹评估",
+  "authors": [
+    "Fernando Diaz"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T05:42:19Z",
+  "abs_url": "https://arxiv.org/abs/2606.17541v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17541",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Offline evaluation of agentic systems often collapses trajectories to terminal success, discarding information about partial progress and inducing widespread ties, creating substantial statistical inefficiency by reducing effective sample size and weakening the ability to distinguish systems. We propose preference-based trajectory evaluation, which compares trajectories directly through temporal preferences over progress and time-to-return profiles. We find that, across diverse agentic and interactive benchmarks, standard success-based metrics produce tied comparisons on roughly 75% of instances, whereas trajectory-aware preferences reduce ties to roughly 35%, improving discriminative power, ranking stability, and data efficiency. Our results suggest that benchmark saturation, often attributed to poor data collection or problem difficulty, may also be explained by the choice of evaluation measure.",
+  "abstract_zh": "本文关注 agentic systems 的离线评估问题。传统评估常将完整轨迹压缩为最终是否成功，忽略部分进展与过程信息，导致大量样本并列，从而降低有效样本量、削弱系统区分能力。作者提出 preference-based trajectory evaluation：直接比较轨迹，并基于随时间变化的进展与 time-to-return profiles 建立时序偏好。实验显示，在多种 agentic 与交互式 benchmark 上，标准 success-based metrics 约有 75% 的实例产生并列，而轨迹感知偏好将并列比例降至约 35%，提升了判别力、排名稳定性与数据效率。结果表明，benchmark 饱和不一定只源于数据收集不足或任务过难，也可能来自评估指标本身的信息损失。",
+  "key_points_zh": [
+    "指出 success-based evaluation 会丢弃轨迹中的部分进展信息，造成大量 tied comparisons 与统计效率下降。",
+    "提出 preference-based trajectory evaluation，基于轨迹过程中的进展和 time-to-return profiles 进行直接比较。",
+    "在多类 agentic/interactive benchmarks 上，将并列比较比例从约 75% 降至约 35%。",
+    "相比传统成功率指标，该方法提升 discriminative power、ranking stability 与 data efficiency。",
+    "论文提示 benchmark saturation 可能部分源于评估度量选择，而非仅由数据或任务难度导致。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "A useful trajectory-level evaluation method for agent systems, but it is mainly an offline metric contribution rather than harness infrastructure.",
+    "comment_zh": "A useful trajectory-level evaluation method for agent systems, but it is mainly an offline metric contribution rather than harness infrastructure."
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17541/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17541/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.932
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17541/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.727
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17541/fig4.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.968
+    }
+  ]
+}

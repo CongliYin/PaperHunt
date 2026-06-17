@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2606.17449",
+  "title": "MODE-RAG: Manifold Outlier Diagnosis and Energy-based Retrieval-Augmented Generation Evaluation",
+  "title_zh": "MODE-RAG：基于流形离群诊断与能量的检索增强生成评估",
+  "authors": [
+    "Zehang Wei",
+    "Jiaxin Dai",
+    "Jiamin Yan",
+    "Xiang Xiang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T03:06:35Z",
+  "abs_url": "https://arxiv.org/abs/2606.17449v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17449",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "While Multimodal Retrieval-Augmented Generation (M-RAG) enhances Large Vision-Language Models, it remains highly susceptible to cross-modal hallucinations, causal fabrications, and sycophancy. Furthermore, existing mitigation pipelines often face an intervention paradox: static rules tend to unnecessarily disrupt accurate generations, whereas leaving the multi-modal reasoning completely unguided allows existing mismatches to cascade into severe logical fabrications. To quantify and mitigate these hallucinations, we propose a Multi-Agent system, MODE-RAG, driven by Variational Free Energy (VFE) and internal attention states to dynamically gate interventions. High-risk queries are routed to five stage-specific agents, integrating Monte Carlo Tree Search (MCTS) for rigorous causal derivation and logit perturbations to penalize sycophancy. Dedicated Correction and Overseer agents ensure formatting stability and perform post-hoc factual verification. To objectively evaluate our approach, we introduce ModeVent, a challenging subset derived from the MultiVent dataset. Extensive experiments indicate that our system effectively reduces hallucination rates and logical fabrication, significantly improving the robustness of M-RAG systems.",
+  "abstract_zh": "本文针对 Multimodal Retrieval-Augmented Generation（M-RAG）在 Large Vision-Language Models 中容易产生跨模态幻觉、因果捏造与迎合性回答的问题，提出 Multi-Agent 系统 MODE-RAG。该方法利用 Variational Free Energy（VFE）与模型内部 attention states 动态判断是否需要干预：高风险查询会被路由到五个阶段化 agent，并结合 Monte Carlo Tree Search（MCTS）进行更严格的因果推导，同时通过 logit perturbation 抑制 sycophancy。系统还引入 Correction agent 与 Overseer agent，分别用于保证输出格式稳定性和进行事后事实核查。为评估方法效果，作者基于 MultiVent 构建了更具挑战性的 ModeVent 子集。实验表明，MODE-RAG 能显著降低幻觉率与逻辑捏造，提升 M-RAG 系统鲁棒性。",
+  "key_points_zh": [
+    "提出 MODE-RAG，一个由 Variational Free Energy 和内部 attention states 驱动的 Multi-Agent M-RAG 干预框架。",
+    "通过动态 gating 解决“干预悖论”：避免静态规则过度打断正确生成，同时防止无约束推理导致错误级联。",
+    "对高风险查询启用五阶段 agent，并结合 MCTS 做因果推导，使用 logit perturbation 惩罚迎合性回答。",
+    "引入 Correction 与 Overseer agents，分别负责格式稳定和事后事实验证，提高生成可靠性。",
+    "构建 ModeVent 评测子集；实验显示该方法可降低跨模态幻觉和逻辑捏造，增强 M-RAG 鲁棒性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.45,
+    "problem_significance": 0.5,
+    "potential_impact": 0.42,
+    "paradigm_shift": 0.28,
+    "lasting_value": 0.35,
+    "llm_avg": 0.4,
+    "comment": "MODE-RAG adds multi-agent gating and verification for multimodal RAG hallucinations, but remains closer to a task pipeline than durable agent harness infrastructure.",
+    "comment_zh": "MODE-RAG为多模态RAG幻觉加入多智能体门控与验证，但更像任务管线而非持久化智能体运行框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.4,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17449/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17449/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17449/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.854
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.17819",
+  "title": "A Framework for Evaluating Agentic Skills at Scale",
+  "title_zh": "面向大规模评估 Agentic Skills 的框架",
+  "authors": [
+    "Maksim Shaposhnikov",
+    "Nicolas Fortuin",
+    "Simon Stipcich",
+    "Maria I. Gorinova",
+    "Amy Heineike",
+    "Rob Willoughby"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T11:46:56Z",
+  "abs_url": "https://arxiv.org/abs/2606.17819v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17819",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent skills -- structured, reusable knowledge artifacts that augment LLM agent capabilities -- have been rapidly adopted in industry, yet their cross-domain impact and use across commercial and open-source models remain under-studied, and no reusable methodology exists for evaluating an individual skill. In this work, we present an evaluation framework that lets a skill author construct realistic tasks to rigorously assess the aspects of a skill that matter most to them, and that estimates skill utility by solving those tasks. Further, we apply our evaluation approach at scale to 500 real-world skills, generating 1,000 tasks derived from the skills' content, along with instruction-following and goal-completion scoring rubrics. Using these metrics, we evaluate how 19 agent-model configurations, both proprietary and open-source, perform on the tasks. Our results show that models vary widely in how closely they adhere to the instructions encoded in skills, leading to substantial differences in their performance gains. Furthermore, we show that access to a skill significantly changes model behavior compared to the no-skill setup, providing an essential mechanism for encoding opinionated workflows into LLM agents. We release our evaluation dataset to support future work on agent skills.",
+  "abstract_zh": "本文研究 LLM agent 中的 skills（结构化、可复用的知识工件）如何被系统评估。尽管 agent skills 已在工业界快速采用，但其跨领域影响、在商业与开源模型中的使用效果，以及单个 skill 的可复用评估方法仍缺乏研究。作者提出一个评估框架，使 skill 作者能够构造贴近真实场景的任务，严格评估其最关心的 skill 能力维度，并通过任务求解来估计 skill utility。进一步地，作者将该方法扩展到 500 个真实世界 skills，基于 skill 内容生成 1,000 个任务，并配套 instruction-following 与 goal-completion 评分准则。实验评估了 19 种 agent-model 配置，覆盖 proprietary 与 open-source 模型。结果表明，不同模型对 skill 中指令的遵循程度差异显著，从而导致性能增益存在明显差距；同时，相比无 skill 设置，接入 skill 会显著改变模型行为，说明 skills 是将特定工作流编码进 LLM agents 的关键机制。作者还发布了评估数据集以支持后续研究。",
+  "key_points_zh": [
+    "提出一个可复用的 agent skill 评估框架，允许 skill 作者构造真实任务并评估特定能力维度。",
+    "基于 500 个真实世界 skills 生成 1,000 个评估任务，并设计 instruction-following 与 goal-completion 两类评分 rubrics。",
+    "评估 19 种 proprietary 与 open-source agent-model 配置，发现模型对 skill 指令的遵循能力差异很大。",
+    "实验显示，接入 skill 会显著改变模型行为，相比 no-skill setup 能更好地注入特定、带偏好的工作流。",
+    "发布评估数据集，为后续研究 agent skills 的泛化能力、效用与模型适配性提供基准。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.65,
+    "problem_significance": 0.72,
+    "potential_impact": 0.66,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.62,
+    "llm_avg": 0.6060000000000001,
+    "comment": "A useful large-scale methodology for evaluating reusable agent skills, though it is more evaluation infrastructure than a full self-improving harness.",
+    "comment_zh": "该工作为可复用智能体技能提供了有价值的大规模评测方法，但更偏评测基础设施而非完整自进化框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6060000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17819/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17819/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.916
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17819/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.943
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17819/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.983
+    }
+  ]
+}

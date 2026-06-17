@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2606.17453",
+  "title": "MapSatisfyBench: Benchmarking Satisfaction-Aware Map Agents through Behavior-Grounded Implicit Decision Factors",
+  "title_zh": "MapSatisfyBench：通过行为扎根的隐式决策因素评测满意度感知地图智能体",
+  "authors": [
+    "Lubin Bai",
+    "Mengyu Cao",
+    "Sixue Wang",
+    "Zhongwei Wan",
+    "Yue Pan",
+    "Jiale Hou",
+    "Xiang Li",
+    "Xiuyuan Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T03:14:39Z",
+  "abs_url": "https://arxiv.org/abs/2606.17453v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17453",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model agents are increasingly integrated into map services. Since map services are embedded in everyday-life scenarios rather than professional task settings, users often express their needs informally, resulting in underspecified queries with many unspoken needs, namely, implicit decision factors that are critical for user satisfaction. Although clarification is an effective way to mitigate this issue, it increases user burden in daily interaction, and a capable agent should first proactively recover such factors from available information sources. However, evaluating this ability is challenging. The first challenge is to determine which implicit decision factors are suitable for evaluation. A factor is evaluable only if it affects user acceptance and can be recovered from information available to the agent before it responds. Second, user satisfaction cannot be reliably represented by a single reference answer, requiring a benchmark that converts satisfaction-relevant factors into objective and quantifiable evaluation targets. To address these challenges, we propose a restore-identify-filter framework that reconstructs complete user needs from behavior-chain evidence, identifies implicit decision factors, and retains only those supported by pre-query evidence. Building on this methodology, we construct MapSatisfyBench from large-scale, real-world anonymized user data and annotate ground truth from five dimensions and enables full-chain evaluation of satisfaction-aware map agents. Experiments show that current agents generally perform well on explicit task completion, but remain limited in satisfying implicit decision factors and proactively acquiring the evidence needed for satisfaction-aware decisions. These findings establish MapSatisfyBench as a benchmark for shifting map-agent evaluation from task completion toward satisfaction-aware spatial decision making.",
+  "abstract_zh": "随着大型语言模型智能体逐渐接入地图服务，用户在日常场景中往往以非正式、欠明确的方式表达需求，留下许多影响满意度的未明说需求，即隐式决策因素（implicit decision factors）。直接澄清虽然有效，但会增加交互负担，因此优秀的地图智能体应能先从已有信息中主动恢复这些因素。本文提出 restore-identify-filter 框架：先基于行为链证据重构完整用户需求，再识别隐式决策因素，并仅保留那些可由查询前证据支持的因素。在此基础上，作者利用大规模真实匿名用户数据构建 MapSatisfyBench，从五个维度标注真值，支持对满意度感知地图智能体的全链路评测。实验表明，当前智能体在显式任务完成方面表现较好，但在满足隐式决策因素、主动获取满意度相关证据方面仍有明显不足。MapSatisfyBench 旨在推动地图智能体评测从任务完成转向满意度感知的空间决策。",
+  "key_points_zh": [
+    "提出 MapSatisfyBench，用于评测地图智能体是否能理解并满足用户未明确表达但影响满意度的隐式决策因素。",
+    "设计 restore-identify-filter 框架，从真实行为链中恢复完整需求、识别隐式因素，并过滤出查询前可由智能体获得证据支持的可评测因素。",
+    "基准基于大规模真实匿名地图用户数据构建，并从五个维度标注 ground truth，支持满意度感知决策的全链路评估。",
+    "实验发现，现有 agents 通常能完成显式任务，但在推断隐式偏好、利用行为证据和主动获取满意度相关信息方面仍表现有限。",
+    "该工作将地图智能体评测重点从传统任务完成率推进到更贴近日常使用体验的 satisfaction-aware spatial decision making。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "Primarily a domain benchmark for map-agent satisfaction evaluation, with limited contribution to reusable agent harness architecture or self-improving runtimes.",
+    "comment_zh": "Primarily a domain benchmark for map-agent satisfaction evaluation, with limited contribution to reusable agent harness architecture or self-improving runtimes."
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17453/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17453/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.93
+    }
+  ]
+}

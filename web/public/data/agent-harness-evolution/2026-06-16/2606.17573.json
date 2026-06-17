@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2606.17573",
+  "title": "Cordon: Semantic Transactions for Tool-Using LLM Agents",
+  "title_zh": "Cordon：面向工具使用型 LLM Agent 的语义事务",
+  "authors": [
+    "Zheng Chen",
+    "Hanqing Liu",
+    "Duling Xu",
+    "Dong Dong",
+    "Jialin Li",
+    "Bangzheng Pu",
+    "Jidong Zhai"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T06:21:14Z",
+  "abs_url": "https://arxiv.org/abs/2606.17573v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17573",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Tool-using LLM agents are shifting the unit of computation from explicit human-issued commands to model-driven tasks with stateful consequences. Yet today's agent runtimes still expose tools as isolated RPCs. This interface gives runtimes a convenient integration point, but it lacks a task-scoped execution boundary for commit, rollback, recovery, and audit across multi-step agent workflows. We argue that this mismatch calls for a runtime containment boundary rather than another per-call guardrail. This paper introduces Cordon, a transactional runtime system for staging and validating irreversible agent effects before commit. A semantic transaction is a task-level execution boundary that binds tool intents and runtime-tracked result lineage to reversible local state, staged external effects, delegated authority, and audit metadata. Cordon implements this abstraction with a transaction manager that tracks derived result objects, executes reversible mutations in shadow state, stages outward-facing actions in an effect outbox, and records recovery metadata. The runtime then validates the composed execution flow before it commits state or releases external effects. Our evaluation across adversarial and benign workflows shows that Cordon exposes cross-step violations missed by existing defenses. It also reduces irreversible-effect failures while preserving benign task completion with modest approval and latency overhead.",
+  "abstract_zh": "工具使用型 LLM Agent 正在把计算单元从人类显式发出的单条命令，转向由模型驱动、具有状态后果的任务。然而，当前 Agent runtime 仍主要把工具暴露为彼此隔离的 RPC 调用。虽然这种接口便于系统集成，但缺少面向任务范围的执行边界，难以在多步骤 Agent 工作流中统一支持提交、回滚、恢复与审计。本文提出 Cordon，一个用于在提交前暂存并验证不可逆 Agent 效果的事务化运行时系统。其核心抽象是 semantic transaction，即任务级执行边界，将工具意图、运行时跟踪的结果谱系、可逆本地状态、暂存外部效果、委托权限与审计元数据绑定在一起。Cordon 通过 transaction manager 跟踪派生结果对象，在 shadow state 中执行可逆变更，在 effect outbox 中暂存面向外部的动作，并记录恢复元数据；随后运行时会在提交状态或释放外部效果前验证组合后的执行流程。实验表明，在对抗性与良性工作流中，Cordon 能发现现有防御遗漏的跨步骤违规，并在保持良性任务完成率的同时，以适度审批与延迟开销降低不可逆效果失败。",
+  "key_points_zh": [
+    "指出当前工具调用式 Agent runtime 将工具视为孤立 RPC，缺少跨多步骤任务的提交、回滚、恢复和审计边界。",
+    "提出 semantic transaction，将工具意图、结果谱系、可逆状态、暂存外部效果、委托权限和审计元数据统一纳入任务级事务。",
+    "Cordon 使用 transaction manager、shadow state 和 effect outbox，在真正提交或释放外部效果前暂存并验证 Agent 行为。",
+    "实验显示 Cordon 能捕获现有 per-call guardrail 难以发现的跨步骤违规，降低不可逆外部效果导致的失败。",
+    "在良性工作流上，Cordon 基本保持任务完成能力，仅带来适度的审批与延迟开销。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.9,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8880000000000001,
+    "comment": "Cordon is highly relevant production agent infrastructure, introducing task-scoped semantic transactions for rollback, validation, audit, and safe tool effects.",
+    "comment_zh": "Cordon高度契合生产级智能体基础设施，通过任务级语义事务支持回滚、验证、审计和安全工具执行。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8880000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17573/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.944
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17573/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17573/fig3.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.897
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17573/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.976
+    }
+  ]
+}

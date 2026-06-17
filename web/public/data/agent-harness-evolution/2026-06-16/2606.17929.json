@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.17929",
+  "title": "PreAct: Computer-Using Agents that Get Faster on Repeated Tasks",
+  "title_zh": "PreAct：在重复任务中变得更快的计算机使用 Agent",
+  "authors": [
+    "Bojie Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T13:40:21Z",
+  "abs_url": "https://arxiv.org/abs/2606.17929v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17929",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Computer-using agents drive real software through the screen -- clicking and typing -- but they solve every task from scratch: asked to repeat a task, an agent re-reads the screen, re-reasons every tap, and pays the full cost again. We present PreAct, which lets such an agent get faster on tasks it has done before. The first time it succeeds, PreAct compiles the run into a small state-machine program-states that check the screen, transitions that act-and on later runs replays it directly instead of invoking the agent 8.5-13x faster, with no per-step language-model calls. Replay is not blind: at each step PreAct checks that the screen matches what the program expects before acting, and hands control back to the agent the moment something is off. PreAct applies the same discipline when deciding what to keep: a freshly compiled program enters the store only if, re-run from a clean state, an independent evaluator confirms it solved the task-catching programs that replay to their last step yet leave the task undone. Across a mobile, a desktop, and a web benchmark, this store-time check separates repeated runs that improve from ones that degrade as faulty programs accumulate, worth 1.75-2.6 tasks per benchmark, the same direction on all three; a fallback that explores afresh when no program fits brings PreAct level with a strong record-and-replay baseline. We also report what did not matter: prompt wording, runtime guardrails, and whether a language model or a plain embedding retriever selects which program to reuse.",
+  "abstract_zh": "PreAct 面向通过屏幕点击和输入来操作真实软件的 computer-using agents。传统 agent 即使重复同一任务，也会重新读取屏幕、重新推理每一步并支付完整推理成本。PreAct 在首次成功完成任务后，将执行轨迹编译成一个小型状态机程序：状态负责检查屏幕，转移负责执行动作；后续运行时可直接重放该程序，而无需每步调用语言模型，从而实现 8.5–13 倍加速。其重放并非盲目执行：每一步都会验证屏幕是否符合程序预期，一旦不匹配就立即交还给 agent。PreAct 还在存储程序前进行严格验证：新编译程序必须从干净状态重新运行，并由独立评估器确认任务确实完成，以过滤那些能重放到最后但未完成任务的错误程序。在 mobile、desktop 和 web 三类 benchmark 上，这种存储时检查能避免错误程序累积导致性能下降，并带来每个 benchmark 1.75–2.6 个任务的收益；当无合适程序时，PreAct 通过 fallback 重新探索，使性能达到强 record-and-replay baseline 水平。作者还发现，prompt wording、运行时 guardrails，以及使用语言模型还是普通 embedding retriever 来选择复用程序，对结果影响不大。",
+  "key_points_zh": [
+    "PreAct 将 agent 首次成功完成任务的操作轨迹编译为状态机程序，后续重复任务可直接执行程序，避免每步语言模型调用。",
+    "重放过程带有屏幕状态检查：每一步先确认当前界面符合预期，若不匹配则立即回退给原始 agent 处理，降低盲目重放风险。",
+    "系统在程序入库前加入独立验证：从干净状态重跑并确认任务完成，过滤“看似执行完但实际未完成”的错误程序。",
+    "在 mobile、desktop、web benchmark 上，PreAct 实现 8.5–13 倍加速；存储时验证带来每个 benchmark 1.75–2.6 个任务的稳定收益。",
+    "实验显示 prompt wording、runtime guardrails，以及使用 LLM 或 embedding retriever 选择复用程序，对整体效果影响不大。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.68,
+    "problem_significance": 0.62,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.48,
+    "llm_avg": 0.572,
+    "comment": "PreAct has valuable verified replay and fallback ideas for repeated agent tasks, but its GUI/computer-use focus limits fit to the target area.",
+    "comment_zh": "PreAct在可验证回放和失败回退方面有价值，但其GUI/计算机使用智能体方向与目标领域契合度有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.572,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17929/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17929/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17929/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17929/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.982
+    }
+  ]
+}

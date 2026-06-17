@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2606.17546",
+  "title": "SEAGym: An Evaluation Environment for Self-Evolving LLM Agents",
+  "title_zh": "SEAGym：用于自进化 LLM Agent 的评估环境",
+  "authors": [
+    "Congjie Zheng",
+    "Chuanyi Xue",
+    "Bin Liang",
+    "Jun Yang",
+    "Changshui Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T05:50:55Z",
+  "abs_url": "https://arxiv.org/abs/2606.17546v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17546",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Self-evolving LLM-based agents improve mainly by changing their agent harness: the structured execution layer around a base model, including prompts, memory, tools, middleware, runtime state, and the model-tool interaction loop. Existing evaluations often reduce this process to isolated task scores or a single sequential curve, obscuring whether an update produces reusable improvement, overfits recent tasks, increases cost, or harms older behavior. We introduce SEAGym, an evaluation environment for measuring agent harness updates across training, validation, test, replay, and cost records. SEAGym turns Harbor-compatible benchmarks into dynamic self-evolution task sources with train batches, frozen update-validation, held-out ID and OOD transfer views, replay diagnostics, and saved snapshot and metric records. Instantiating SEAGym on Terminal-Bench 2.0 and HLE, we compare ACE, TF-GRPO, and AHE under a shared epoch/batch protocol. The results show that these evaluation views provide complementary signals about the evolution process: frequent updates may fail to improve held-out performance, useful intermediate snapshots may collapse later, and source diversity and model backend can affect harness reliability.",
+  "abstract_zh": "本文提出 SEAGym，一个用于评估自进化 LLM-based agents 的环境。自进化 Agent 的改进通常来自对 agent harness 的修改，即围绕基础模型的结构化执行层，包括 prompts、memory、tools、middleware、runtime state 以及 model-tool 交互循环。现有评估往往只关注孤立任务分数或单条顺序曲线，难以判断一次更新是否带来可复用提升、是否过拟合近期任务、是否增加成本，或是否损害旧行为。SEAGym 将 Harbor-compatible benchmarks 转化为动态自进化任务源，提供 train batches、冻结的 update-validation、held-out ID/OOD transfer 视图、replay diagnostics，以及保存的 snapshot 和 metric records。作者在 Terminal-Bench 2.0 与 HLE 上实例化 SEAGym，并在统一 epoch/batch 协议下比较 ACE、TF-GRPO 和 AHE。实验表明，不同评估视图能揭示自进化过程中的互补信号：频繁更新未必提升 held-out performance，有用的中间快照可能在后续崩塌，任务源多样性和模型后端也会影响 harness 的可靠性。",
+  "key_points_zh": [
+    "SEAGym 聚焦评估 LLM Agent 的 agent harness 更新，而不仅是最终任务得分，覆盖 prompts、tools、memory、runtime state 等结构化执行组件。",
+    "该环境提供 train、validation、test、replay 和 cost records 等多视图评估，用于识别泛化提升、近期任务过拟合、成本上升和旧能力退化等问题。",
+    "SEAGym 可将 Harbor-compatible benchmarks 转化为动态自进化任务源，并支持 frozen update-validation、held-out ID/OOD transfer、replay diagnostics 与 snapshot 记录。",
+    "在 Terminal-Bench 2.0 和 HLE 上，作者比较 ACE、TF-GRPO、AHE，发现频繁更新不一定带来 held-out 性能提升，中间有效快照也可能在后期失效。",
+    "实验提示任务源多样性和模型 backend 会显著影响 harness reliability，因此自进化 Agent 需要更细粒度、更长期的评估协议。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8160000000000001,
+    "comment": "SEAGym is a strong evaluation environment for self-evolving harnesses, emphasizing snapshots, replay, cost, transfer, and regression diagnostics.",
+    "comment_zh": "SEAGym是面向自进化智能体框架的强评测环境，突出快照、回放、成本、迁移和回归诊断。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36560162063732243,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8160000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17546/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17546/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.953
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17546/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.976
+    }
+  ]
+}

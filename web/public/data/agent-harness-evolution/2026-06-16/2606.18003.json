@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2606.18003",
+  "title": "C2FL: Clustered Continual Federated Learning under Spatial and Temporal Drift",
+  "title_zh": "C2FL：面向空间与时间漂移的聚类式持续联邦学习",
+  "authors": [
+    "Davide Domini",
+    "Gianluca Aguzzi",
+    "Lorenzo Pellegrini",
+    "Mirko Viroli",
+    "Lukas Esterle"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T14:50:20Z",
+  "abs_url": "https://arxiv.org/abs/2606.18003v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.18003",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Collective Adaptive Systems (CAS) increasingly rely on machine learning to let each node learn from locally sensed data, aligning its behavior with the surrounding environment. Scaling this intelligence, however, raises fundamental challenges: sensed data is often privacy-sensitive, preventing centralized collection; nodes are mobile, traversing regions where nearby nodes perceive similar phenomena while distant ones observe radically different conditions, creating natural spatial clusters; and these distributions evolve over time due to mobility, introducing temporal drift that makes local models progressively stale. These dynamics arise across domains - vehicular sensing, drone-based monitoring, smartphone crowdsensing - yet the interplay of privacy, spatial heterogeneity, and temporal drift severely undermines conventional learning strategies. Therefore, we propose C2FL, a fully distributed Federated Learning (FL) approach where nodes self-organize into learning groups through spatial clustering, reflecting the geographic structure of the environment. To counteract temporal drift, each node combines experience replay with a dwell-time-aware adaptive averaging step, progressively incorporating the regional consensus as it remains longer within the same area, while preserving previously acquired knowledge under evolving distributions. We evaluate our approach on synthetic experiments that systematically reproduce spatial and temporal shifts, showing that standard federated strategies degrade significantly under these conditions and that our method restores robust collective adaptation.",
+  "abstract_zh": "本文关注 Collective Adaptive Systems（CAS）中的分布式机器学习问题：节点依赖本地感知数据学习，但数据通常涉及隐私，难以集中收集；节点具有移动性，导致地理邻近节点观测到相似现象、远距离节点则面临显著不同的数据分布，形成自然的空间簇；同时，节点移动又会带来时间漂移，使本地模型逐渐过时。为应对隐私、空间异质性和时间漂移的耦合挑战，论文提出 C2FL，一种完全分布式的 Federated Learning（FL）方法。C2FL 让节点依据空间聚类自组织为学习组，以反映环境的地理结构；同时结合 experience replay 与 dwell-time-aware adaptive averaging，使节点在同一区域停留越久，就越逐步吸收该区域的共识模型，并在分布演化下保留既有知识。作者在系统模拟空间与时间变化的合成实验上验证了该方法，结果表明传统联邦学习策略在这些条件下明显退化，而 C2FL 能恢复更稳健的集体适应能力。",
+  "key_points_zh": [
+    "提出 C2FL，一种完全分布式的 Federated Learning 方法，面向 CAS 中隐私受限、节点移动和环境分布变化的场景。",
+    "通过 spatial clustering 让地理邻近、观测分布相似的节点自组织为学习组，以缓解空间异质性带来的全局聚合失效问题。",
+    "引入 experience replay 以保留历史知识，减少节点在新区域或新分布下学习时的遗忘。",
+    "设计 dwell-time-aware adaptive averaging：节点在某一区域停留时间越长，越多吸收该区域模型共识，从而适应时间漂移。",
+    "合成实验显示，标准联邦学习策略在空间与时间漂移下性能显著下降，而 C2FL 能提升鲁棒的集体适应能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.35,
+    "problem_significance": 0.3,
+    "potential_impact": 0.25,
+    "paradigm_shift": 0.2,
+    "lasting_value": 0.18,
+    "llm_avg": 0.25599999999999995,
+    "comment": "C2FL may be useful for distributed learning under drift, but it is largely outside agent harness infrastructure and self-improving LLM agents.",
+    "comment_zh": "C2FL对漂移场景下的分布式学习有一定价值，但基本不属于LLM智能体运行框架与自进化平台方向。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.25599999999999995,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18003/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18003/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.922
+    }
+  ]
+}

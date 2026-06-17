@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2606.17612",
+  "title": "PracRepair: LLM-Empowered Automated Program Repair Inspired by Human-Like Debugging Practices",
+  "title_zh": "PracRepair：受类人调试实践启发的 LLM 驱动自动程序修复",
+  "authors": [
+    "Yu Cheng",
+    "Zhongxin Liu",
+    "Zhenchang Xing",
+    "Chao Ni",
+    "Qing Huang",
+    "Xiaoxue Ren"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T07:18:37Z",
+  "abs_url": "https://arxiv.org/abs/2606.17612v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17612",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As software systems grow in scale and complexity, debugging and repair remain costly and time-consuming. Large language models (LLMs) have advanced automated program repair (APR), but existing LLM-based APR approaches still largely rely on static or retrieved context, error messages, and coarse-grained validation outcomes. As a result, they underutilize dynamic information for failure understanding and repair, including failure-execution dynamics and patch-validation dynamics. Effectively leveraging such information, however, is challenging: failure-execution traces are large and noisy, raw static-dynamic context is not self-explanatory, and patch-validation dynamics are often reduced to coarse feedback. To address these challenges, we propose \\textsc{PracRepair}, a fully automated LLM-based APR framework inspired by human-like debugging practices. \\textsc{PracRepair} constructs an on-demand static-dynamic context from buggy programs and failure executions, performs question-driven failure diagnosis to formulate explicit repair hypotheses, and iteratively refines candidate patches using validation diagnostics and trace-level behavioral changes. Experimental results on Defects4J V1.2 and V2.0 show that \\textsc{PracRepair} consistently outperforms state-of-the-art baselines. Specifically, under GPT-3.5, \\textsc{PracRepair} correctly fixes 139/136 bugs on Defects4J V1.2/V2.0, while under GPT-4o it further improves to 162/171. Moreover, \\textsc{PracRepair} generalizes effectively to RWB (Real-World Bugs), achieving the best performance across multiple foundation models.",
+  "abstract_zh": "随着软件系统规模和复杂度持续增长，调试与修复仍然成本高、耗时长。尽管 Large Language Models (LLMs) 推动了 Automated Program Repair (APR) 的发展，现有 LLM-based APR 方法仍主要依赖静态上下文、检索上下文、错误信息以及粗粒度验证结果，未能充分利用失败执行过程和补丁验证过程中的动态信息。针对失败执行轨迹庞大且噪声多、静态-动态上下文缺乏自解释性、补丁验证动态常被简化为粗反馈等挑战，论文提出 PracRepair：一个受类人调试实践启发的全自动 LLM-based APR 框架。PracRepair 从缺陷程序与失败执行中按需构建静态-动态上下文，通过问题驱动的失败诊断形成显式修复假设，并结合验证诊断与轨迹级行为变化迭代优化候选补丁。在 Defects4J V1.2 和 V2.0 上，PracRepair 持续优于现有 SOTA 基线：使用 GPT-3.5 时分别正确修复 139/136 个 bug，使用 GPT-4o 时进一步提升到 162/171 个 bug。此外，PracRepair 在 RWB (Real-World Bugs) 上也表现出良好泛化能力，并在多个 foundation models 下取得最佳性能。",
+  "key_points_zh": [
+    "提出 PracRepair，一个受人类调试流程启发的全自动 LLM-based APR 框架，强调利用失败执行与补丁验证中的动态信息。",
+    "通过 on-demand static-dynamic context 构建机制，从缺陷代码和失败执行中提取更有针对性的上下文，缓解轨迹过大、噪声过多的问题。",
+    "采用 question-driven failure diagnosis，将失败原因分析显式化为 repair hypotheses，使 LLM 不仅生成补丁，还能围绕诊断假设进行修复推理。",
+    "在补丁迭代阶段结合 validation diagnostics 与 trace-level behavioral changes，利用细粒度行为变化反馈改进候选补丁，而非只依赖通过/失败结果。",
+    "在 Defects4J V1.2/V2.0 与 RWB 上均超过现有 SOTA；GPT-4o 设置下分别修复 162/171 个 Defects4J bug，显示出较强效果与跨模型泛化能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.64,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.5,
+    "llm_avg": 0.524,
+    "comment": "PracRepair has a strong trace-driven debugging loop for program repair, but its value is mostly task-specific rather than agent-platform-level.",
+    "comment_zh": "PracRepair在程序修复中引入了较强的轨迹驱动调试闭环，但价值主要局限于特定任务场景。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.524,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17612/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17612/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17612/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.956
+    }
+  ]
+}

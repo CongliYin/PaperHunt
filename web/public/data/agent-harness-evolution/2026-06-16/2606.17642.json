@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2606.17642",
+  "title": "FinAcumen: Financial Multimodal Reasoning via Self-Evolving Experience Memory Harness",
+  "title_zh": "FinAcumen：通过自演化经验记忆实现金融多模态推理",
+  "authors": [
+    "Pianran Guo",
+    "Pengcheng Zhou",
+    "Yucheng Jian",
+    "Shuhua Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T08:00:30Z",
+  "abs_url": "https://arxiv.org/abs/2606.17642v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17642",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Financial multimodal reasoning requires agents to coordinate numerical computation, retrieval, visual interpretation, and temporal grounding across heterogeneous evidence sources. Existing tool-augmented agents improve execution fidelity, yet remain largely stateless across episodes, repeatedly rediscovering reasoning strategies and failure patterns. In high-stakes financial settings, this leads to unreliable tool routing, noisy retrieval, and hallucination-prone reasoning. We present FinAcumen, a financial reasoning agent framework centered on selective experience memory for tool-augmented multimodal reasoning. FinAcumen accumulates financially grounded reasoning experience from prior trajectories, distilling successful strategies and failure-derived cautionary rules into a persistent memory bank. During inference, retrieved experiences condition reasoning only when semantic relevance exceeds a calibrated threshold, while irrelevant memory is explicitly suppressed through a fallback mechanism. A deterministic financial tool environment further grounds numerical computation, retrieval, visual decoding, and answer verification.Across four financial multimodal reasoning benchmarks, FinAcumen consistently improves a frozen 8B vision-language model over finance-specialized models and approaches leading proprietary general-purpose models. Further analysis shows that selective experience activation improves reasoning reliability under retrieval uncertainty. Our code is anonymously available at https://anonymous.4open.science/r/FinAcumen",
+  "abstract_zh": "金融多模态推理要求智能体在异构证据源之间协调数值计算、信息检索、视觉理解与时间定位。现有工具增强型智能体虽然提升了执行可靠性，但通常在不同任务轮次之间缺乏状态记忆，导致反复摸索推理策略与错误模式，在高风险金融场景中容易出现工具路由不稳定、检索噪声和幻觉推理。本文提出 FinAcumen，一个面向工具增强多模态金融推理的智能体框架，其核心是选择性经验记忆。FinAcumen 从历史推理轨迹中积累金融领域经验，将成功策略与由失败总结出的谨慎规则提炼到持久记忆库中。推理时，系统仅在语义相关性超过校准阈值时激活检索到的经验，并通过回退机制显式抑制无关记忆。同时，确定性的金融工具环境为数值计算、检索、视觉解码和答案验证提供 grounding。在四个金融多模态推理基准上，FinAcumen 使冻结的 8B vision-language model 稳定超过金融专用模型，并接近领先的通用闭源模型；进一步分析表明，选择性经验激活能在检索不确定条件下提升推理可靠性。",
+  "key_points_zh": [
+    "提出 FinAcumen，将历史推理轨迹中的成功策略和失败警示规则沉淀为持久经验记忆，用于金融多模态推理。",
+    "采用选择性经验激活机制：只有当检索经验与当前问题语义相关性超过校准阈值时才参与推理，否则通过 fallback 抑制无关记忆干扰。",
+    "构建确定性的金融工具环境，覆盖数值计算、信息检索、视觉解码与答案验证，以降低幻觉并提升工具调用可靠性。",
+    "在四个金融多模态推理 benchmark 上，FinAcumen 增强的冻结 8B vision-language model 超越 finance-specialized models，并接近领先 proprietary general-purpose models。",
+    "实验分析显示，在检索存在不确定性时，选择性经验记忆能显著提升推理稳定性和可靠性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.63,
+    "problem_significance": 0.68,
+    "potential_impact": 0.62,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.58,
+    "llm_avg": 0.5920000000000001,
+    "comment": "FinAcumen provides a domain-specific experience-memory harness with selective retrieval and deterministic tools, but its general platform value is moderate.",
+    "comment_zh": "FinAcumen提供了带选择性经验记忆和确定性工具的金融专用框架，但通用平台价值中等。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3315497212666585,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5920000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17642/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17642/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

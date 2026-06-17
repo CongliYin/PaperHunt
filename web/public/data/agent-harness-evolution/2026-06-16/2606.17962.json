@@ -1,0 +1,71 @@
+{
+  "arxiv_id": "2606.17962",
+  "title": "A Neuro-Symbolic Approach to Strategy Synthesis for Strategic Logics",
+  "title_zh": "面向策略逻辑的神经符号策略合成方法",
+  "authors": [
+    "Marco Aruta",
+    "Vadim Malvone",
+    "Aniello Murano",
+    "Domenico Parente",
+    "Luca Rizzuti"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T14:13:48Z",
+  "abs_url": "https://arxiv.org/abs/2606.17962v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17962",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Reasoning about what agents can achieve through strategic interaction is a core challenge in Multi-Agent Systems (MAS). Logics for strategic ability, such as ATL, provide rigorous methods, but their adoption is often hindered by the computational cost of strategy synthesis. We introduce a neuro-symbolic framework that integrates large language models (LLMs) into the model-checking pipeline for MAS. The LLM acts as a strategy-generation oracle, proposing candidate strategies that are then formally validated by a standard MAS model checker. This generate-and-certify architecture uses LLM guidance to navigate large combinatorial strategy spaces while preserving formal soundness: generated strategies are accepted only when certified by the verifier. We instantiate the framework for bounded strategic reasoning in NatATL and introduce the first NatATL strategy-synthesis dataset, consisting of 4211 instances. Experiments with an open-weight Qwen3-32B model show that our certified pipeline achieves 92\\% accuracy on strategy-synthesis outcomes.",
+  "abstract_zh": "本文关注 Multi-Agent Systems（MAS）中智能体通过策略交互能够实现什么这一核心问题。ATL 等战略能力逻辑提供了严谨的形式化推理工具，但策略合成的高计算成本限制了其实际应用。论文提出一种神经符号框架，将 large language models（LLMs）接入 MAS model-checking 流水线：LLM 作为策略生成 oracle，提出候选策略，再由标准 MAS model checker 进行形式化验证。该“生成—认证”（generate-and-certify）架构利用 LLM 在大规模组合策略空间中进行引导搜索，同时保持形式化可靠性：只有通过验证器认证的策略才会被接受。作者将该框架实例化到 NatATL 的有界战略推理任务，并构建首个 NatATL 策略合成数据集，包含 4211 个实例。基于开源权重 Qwen3-32B 的实验显示，该认证式流水线在策略合成结果上达到 92% 准确率。",
+  "key_points_zh": [
+    "提出面向 Strategic Logics 的神经符号策略合成框架，将 LLM 与 MAS model checker 结合。",
+    "采用 generate-and-certify 架构：LLM 负责生成候选策略，形式化验证器只接受可证明正确的策略，从而保持 soundness。",
+    "将方法落地到 NatATL 的有界战略推理任务，缓解策略空间组合爆炸带来的搜索困难。",
+    "发布首个 NatATL strategy-synthesis dataset，包含 4211 个合成实例。",
+    "使用 open-weight Qwen3-32B 进行实验，认证式流水线在策略合成结果上达到 92% 准确率。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.48,
+    "problem_significance": 0.44,
+    "potential_impact": 0.38,
+    "paradigm_shift": 0.34,
+    "lasting_value": 0.32,
+    "llm_avg": 0.392,
+    "comment": "The generate-and-certify verifier pattern is relevant, but the work is mainly formal strategy synthesis rather than agent harness evolution.",
+    "comment_zh": "生成并验证的模式具有一定相关性，但该工作主要面向形式化策略合成而非智能体框架演化。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.392,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17962/fig1.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.975
+    }
+  ]
+}

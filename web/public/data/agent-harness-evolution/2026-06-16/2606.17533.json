@@ -1,0 +1,98 @@
+{
+  "arxiv_id": "2606.17533",
+  "title": "SNAS: A Multi-Layer Defense-in-Depth Architecture for Secure Egress in Sandboxed Workloads",
+  "title_zh": "SNAS：面向沙箱工作负载安全出口的多层纵深防御架构",
+  "authors": [
+    "Niranjan Kumar Sharma",
+    "S Muralidhar",
+    "Samy Boshra-Riad",
+    "Mike Halcrow",
+    "Yuxiong He",
+    "Nitya Kumar Sharma",
+    "Shawn Xia",
+    "Haowei Yu",
+    "Elliott Brossard",
+    "Derek Denny-Brown",
+    "Choden Konigsmark",
+    "Bhanu Prakash",
+    "Brandon Baker",
+    "Andong Zhan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T05:19:59Z",
+  "abs_url": "https://arxiv.org/abs/2606.17533v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17533",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Snowpark enables data engineering and AI/ML workloads in Snowflake by executing user-defined functions in secure sandboxes. Many of these workloads require external connectivity to access cloud APIs, external databases, or feature stores, creating a dependability challenge: how to provide transparent network access while preserving strict multi-tenant isolation and resource fairness. This paper presents Secure Network Access in Snowpark (SNAS), a production architecture for secure external communication from sandboxed workloads. SNAS combines Extended Berkeley Packet Filter (eBPF) packet filtering, Generic Network Virtualization Encapsulation (GENEVE) overlay networks, and distributed egress proxies for policy-driven egress control with low overhead. We describe the design, deployment, and measured production behavior of SNAS, including an eBPF-based bandwidth limiter using the Earliest Departure Time (EDT) algorithm, dual-tier policy enforcement, and safeguards for connection limiting and port exhaustion. SNAS is deployed across all Snowflake regions and supports large-scale production workloads including petabyte-scale data transfer and latency-sensitive external integrations.",
+  "abstract_zh": "本文介绍 Secure Network Access in Snowpark（SNAS），一种已在 Snowflake 生产环境部署的安全外部通信架构。Snowpark 通过安全沙箱执行用户自定义函数以支持数据工程与 AI/ML 工作负载，但这些任务常需访问云 API、外部数据库或特征存储，从而带来多租户隔离、资源公平性与透明网络访问之间的权衡。SNAS 结合 eBPF 包过滤、GENEVE 覆盖网络与分布式 egress proxies，实现低开销、策略驱动的出站流量控制。论文描述了其系统设计、部署经验和生产测量结果，包括基于 Earliest Departure Time（EDT）的 eBPF 带宽限制器、双层策略执行，以及连接数限制和端口耗尽防护机制。SNAS 已部署于所有 Snowflake regions，支撑 PB 级数据传输和低延迟外部集成等大规模生产负载。",
+  "key_points_zh": [
+    "提出 SNAS，用于在 Snowpark 沙箱工作负载中提供透明但受控的外部网络访问，同时保持多租户隔离与资源公平。",
+    "系统采用多层纵深防御：eBPF packet filtering、GENEVE overlay networks 与 distributed egress proxies 协同完成策略化出站控制。",
+    "设计了基于 Earliest Departure Time（EDT）的 eBPF bandwidth limiter，以低开销实现租户级或工作负载级带宽整形。",
+    "通过双层策略 enforcement、连接数量限制和端口耗尽防护，降低外部访问带来的安全与可用性风险。",
+    "SNAS 已在所有 Snowflake regions 生产部署，支持 PB 级数据传输及对延迟敏感的外部系统集成。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.62,
+    "problem_significance": 0.82,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.42,
+    "lasting_value": 0.74,
+    "llm_avg": 0.6759999999999999,
+    "comment": "SNAS is strong production sandbox and egress-control infrastructure, broadly useful for secure agent workloads despite not being LLM-agent-specific.",
+    "comment_zh": "SNAS是强生产级沙箱与出口控制基础设施，虽非LLM智能体专用但对安全智能体工作负载很有参考价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.49919890888949187,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6759999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 11,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17533/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17533/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17533/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17533/fig4.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

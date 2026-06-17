@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.17519",
+  "title": "Scaling Enterprise Agent Routing: Degradation, Diagnosis, and Recovery",
+  "title_zh": "扩展企业级 Agent 路由：性能退化、诊断与恢复",
+  "authors": [
+    "Kellen Gillespie",
+    "Robyn Perry"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T04:55:06Z",
+  "abs_url": "https://arxiv.org/abs/2606.17519v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17519",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Production LLM assistants route user requests to growing libraries of specialized tools, but how does routing accuracy degrade as the catalog scales? We study single-step routing on a 110-agent, 584-tool catalog from a deployed enterprise productivity assistant, evaluating three frontier models from 10 to 110 agents. Routing F1 on under-specified requests drops 16--23 percentage points across models. An oracle analysis decomposes the degradation into a \\emph{retrieval} gap (the model cannot surface the right tool) and a \\emph{confusion} gap (even with perfect retrieval, the oracle ceiling drops 10pp). Embedding-based shortlisting recovers +10--11pp F1 at full scale across all three models and two providers. A production annotation study (1,435 human-labeled utterances, three annotators) confirms the recovery on real traffic at +10--17pp despite 10--15pp lower absolute performance.",
+  "abstract_zh": "该论文研究了生产环境中 LLM 助手在面对不断增长的专用工具库时，单步路由准确率如何随规模扩大而下降。作者基于一个已部署的企业生产力助手，构建了包含 110 个 agent、584 个 tool 的目录，并评估了三个前沿模型在 10 到 110 个 agent 规模下的路由表现。实验发现，对于信息不足的用户请求，Routing F1 随规模扩大下降了 16 到 23 个百分点。通过 oracle 分析，作者将退化拆解为 retrieval gap（模型无法召回正确工具）和 confusion gap（即使完美召回，模型仍会混淆选择），其中 oracle 上限本身也下降约 10 个百分点。进一步地，论文发现基于 embedding 的候选短列表方法可在全规模下为三个模型、两个提供商稳定恢复 10 到 11 个百分点 F1。最后，基于 1,435 条真实生产流量、三名标注员的人类标注研究表明，该方法在真实场景中也能带来 10 到 17 个百分点提升，尽管绝对性能比离线评测低 10 到 15 个百分点。",
+  "key_points_zh": [
+    "研究对象是企业级生产力助手中的单步 agent/tool routing，目录规模达到 110 个 agent 和 584 个 tool，覆盖真实部署场景。",
+    "随着 agent 数量从 10 扩展到 110，三个 frontier models 在欠明确请求上的 Routing F1 下降 16 到 23 个百分点，说明规模化会显著放大路由难度。",
+    "oracle 分析将性能退化分为 retrieval gap 与 confusion gap：前者表示模型无法找出正确工具，后者表示即使正确工具在候选集中，模型仍会因相似功能而混淆。",
+    "基于 embedding 的 shortlisting 能在全规模设置下稳定恢复 10 到 11 个百分点 F1，且跨三个模型和两个提供商均有效。",
+    "在 1,435 条真实生产流量、三名人工标注员的验证中，该方法仍带来 10 到 17 个百分点提升，但真实流量下绝对性能比离线评测低 10 到 15 个百分点。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.78,
+    "llm_avg": 0.7460000000000001,
+    "comment": "This is a practically important study of enterprise-scale agent routing degradation, diagnosis, and recovery in real tool catalogs.",
+    "comment_zh": "该研究面向真实企业工具目录中的智能体路由退化、诊断与恢复，具有很强实践意义。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.40353225016377775,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.7460000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 8,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17519/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17519/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17519/fig3.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17519/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.975
+    }
+  ]
+}

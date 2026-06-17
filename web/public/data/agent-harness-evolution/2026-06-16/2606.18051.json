@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.18051",
+  "title": "Compositional Skill Routing for LLM Agents: Decompose, Retrieve, and Compose",
+  "title_zh": "面向 LLM Agent 的组合式技能路由：分解、检索与组合",
+  "authors": [
+    "Xueping Gao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T15:27:55Z",
+  "abs_url": "https://arxiv.org/abs/2606.18051v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.18051",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM agents increasingly rely on external skills -- reusable tool specifications -- but real-world tasks often require composing multiple skills, not just selecting one. We formalize this as the Compositional Skill Routing problem: given a complex user query and a large skill library, decompose the query into atomic sub-tasks, retrieve the appropriate skill for each sub-task, and compose an executable plan. We present SkillWeaver, a decompose-retrieve-compose framework combining an LLM task decomposer, a bi-encoder skill retriever with FAISS indexing, and a dependency-aware DAG planner. To support evaluation, we introduce CompSkillBench, a benchmark of 300 compositional queries over 2,209 real MCP server skills spanning 24 functional categories, sourced from the public MCP ecosystem. Our experiments reveal that task decomposition quality is the primary bottleneck: standard LLM decomposition reaches only 34.2% category recall at the step level. To address this, we propose Iterative Skill-Aware Decomposition (SAD), a retrieval-augmented feedback loop that iteratively aligns decomposition with available skills. SAD improves decomposition accuracy from 51.0% to 67.7% (+32.7%, Wilcoxon p < 10^-6) in a single iteration; DA-conditioned analysis confirms that correct granularity is the prerequisite for effective retrieval (CatR@1 rises from 34% to 41% when DA=1). SkillWeaver reduces context window consumption by over 99%, and transfer experiments confirm generalization (+35.6% relative DA gain even when target categories are absent from the retrieval pool).",
+  "abstract_zh": "本文研究 LLM Agent 在真实任务中如何从大规模外部技能库中组合多个可复用工具规格，而不是仅选择单一技能。作者将该问题形式化为 Compositional Skill Routing：给定复杂用户查询和技能库，系统需要将查询分解为原子子任务，为每个子任务检索合适技能，并组合成可执行计划。论文提出 SkillWeaver，一个“分解-检索-组合”框架，包含 LLM 任务分解器、基于 bi-encoder 与 FAISS 索引的技能检索器，以及依赖感知的 DAG 规划器。为支持评测，作者构建 CompSkillBench，包含 300 个组合式查询，覆盖来自公开 MCP 生态的 2,209 个真实 MCP server skills 和 24 个功能类别。实验表明，任务分解质量是主要瓶颈：标准 LLM 分解在步骤级别仅达到 34.2% 的类别召回。为此，作者提出 Iterative Skill-Aware Decomposition（SAD），通过检索增强反馈循环，使分解过程与可用技能迭代对齐。SAD 单轮迭代将分解准确率从 51.0% 提升到 67.7%，相对提升 32.7%，且 Wilcoxon 检验 p < 10^-6。DA 条件分析进一步说明，正确粒度是有效检索的前提；当 DA=1 时，CatR@1 从 34% 提升到 41%。SkillWeaver 还将上下文窗口消耗降低超过 99%，迁移实验表明即使目标类别不在检索池中，该方法仍有泛化能力，DA 相对增益达 35.6%。",
+  "key_points_zh": [
+    "论文提出 Compositional Skill Routing，将复杂查询处理拆解为子任务分解、技能检索和可执行计划组合三个阶段，更贴近真实 LLM Agent 的多工具协作场景。",
+    "SkillWeaver 采用 LLM decomposer、bi-encoder + FAISS skill retriever，以及 dependency-aware DAG planner，在大规模技能库上生成依赖感知的组合式执行计划。",
+    "作者构建 CompSkillBench，包含 300 个组合式查询、2,209 个真实 MCP server skills 和 24 个功能类别，为 MCP 生态下的技能路由提供系统评测基准。",
+    "实验发现任务分解是核心瓶颈，标准 LLM 在步骤级类别召回上仅有 34.2%；错误的任务粒度会显著限制后续检索效果。",
+    "提出 Iterative Skill-Aware Decomposition（SAD），通过检索增强反馈迭代修正分解，使分解准确率从 51.0% 提升至 67.7%，并显著减少上下文消耗超过 99%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "Strong tool-skill routing and planning work with practical MCP relevance, though its improvement loop and runtime controls remain relatively limited.",
+    "comment_zh": "Strong tool-skill routing and planning work with practical MCP relevance, though its improvement loop and runtime controls remain relatively limited."
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18051/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18051/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.77
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18051/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.98
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18051/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.332
+    }
+  ]
+}

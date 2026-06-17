@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.17555",
+  "title": "An AI Security Agent for Banking: Multi-Vector Fraud and AML Detection Across Retail and Corporate Accounts",
+  "title_zh": "面向银行的 AI 安全代理：跨零售与企业账户的多向量欺诈与 AML 检测",
+  "authors": [
+    "Joseph Walusimbi",
+    "Joshua Benjamin Ssentongo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T05:58:40Z",
+  "abs_url": "https://arxiv.org/abs/2606.17555v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17555",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Banks simultaneously face signature-based fraud (card-not-present attacks, account takeover, ATM cloning) and behavioural financial crime (structuring, layering, mule networks, business email compromise) -- two threat families with fundamentally different detection requirements. Static rule engines that reliably catch brute-force and high-velocity events are structurally blind to business-email-compromise (BEC) payment redirection, session hijacking, and money-laundering layering, which are engineered to appear indistinguishable from legitimate activity at the individual transaction or session level. This paper presents an AI security agent for retail and corporate banking that addresses this gap through a three-component fusion architecture operating on two parallel event streams: a transaction stream (card fraud, ACH/wire fraud, AML categories) and a session stream (account takeover, session hijacking, SIM-swap, insider abuse). Each stream combines an LSTM sequence model capturing per-account behavioural history, a statistical velocity/threshold monitor, and a graph/network module capturing account-counterparty relationship patterns (fan-in, fan-out, pass-through ratio) for money-laundering detection. Experiments on a synthetic event log of 237,669 transactions and 113,508 sessions across 13 threat categories and 3,470 simulated accounts demonstrate overall F1 of 0.787 (transaction stream) and 0.867 (session stream) for the proposed model, versus 0.562/0.733 for a rule-based baseline and 0.655/0.713 for an LSTM-only baseline. The agent includes a customer-facing transaction-verification chatbot (96.6% identity verification accuracy, 86.8% mass-reset attack detection) and an analyst case-summary assistant (99.3% action-recommendation F1), with Critical-tier automated response latency under 0.43 ms at the 95th percentile.",
+  "abstract_zh": "本文针对银行同时面临的两类威胁——基于特征签名的欺诈（如 card-not-present 攻击、account takeover、ATM cloning）与行为型金融犯罪（如 structuring、layering、mule networks、business email compromise）——提出一个面向零售与企业银行场景的 AI security agent。传统静态规则引擎虽能有效捕捉暴力尝试和高频交易等事件，但难以识别在单笔交易或单次会话层面伪装成正常行为的 BEC 付款重定向、session hijacking 和洗钱 layering。该方法采用三组件融合架构，并行处理 transaction stream 与 session stream：每条流均结合 LSTM 序列模型以建模账户历史行为、统计型 velocity/threshold 监控以捕捉高频异常，以及 graph/network 模块以刻画账户—交易对手关系模式，如 fan-in、fan-out 与 pass-through ratio，用于 AML 检测。在包含 237,669 笔交易、113,508 次会话、13 类威胁和 3,470 个模拟账户的合成事件日志上，所提模型在 transaction stream 与 session stream 上分别达到 0.787 与 0.867 的总体 F1，优于 rule-based baseline 的 0.562/0.733 和 LSTM-only baseline 的 0.655/0.713。系统还包含面向客户的交易验证 chatbot，以及面向分析师的 case-summary assistant，并实现 Critical-tier 自动响应 95 分位延迟低于 0.43 ms。",
+  "key_points_zh": [
+    "提出面向银行的 AI security agent，同时覆盖 retail accounts 与 corporate accounts 中的 fraud detection 和 AML detection。",
+    "采用双流架构：transaction stream 处理 card fraud、ACH/wire fraud 与 AML；session stream 处理 account takeover、session hijacking、SIM-swap 和 insider abuse。",
+    "每条流融合 LSTM 行为序列建模、velocity/threshold 统计监控与 graph/network 关系分析，弥补静态规则与单纯 LSTM 对隐蔽行为犯罪识别不足的问题。",
+    "在合成数据集上，模型 F1 达到 0.787（transaction）和 0.867（session），显著优于 rule-based baseline 与 LSTM-only baseline。",
+    "系统扩展了 customer-facing transaction-verification chatbot 和 analyst case-summary assistant，并报告了高准确率与亚毫秒级 Critical-tier 响应延迟。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.28,
+    "problem_significance": 0.25,
+    "potential_impact": 0.18,
+    "paradigm_shift": 0.12,
+    "lasting_value": 0.15,
+    "llm_avg": 0.196,
+    "comment": "The paper may be relevant to banking security, but it has almost no grounding in e-commerce search, recommendation, shopping agents, or marketplace workflows.",
+    "comment_zh": "该论文可能对银行安全有意义，但几乎不涉及电商搜索、推荐、购物智能体或平台交易流程。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.196,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17555/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17555/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.98
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17555/fig3.webp",
+      "page": 2,
+      "kind": "table",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17555/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.971
+    }
+  ]
+}

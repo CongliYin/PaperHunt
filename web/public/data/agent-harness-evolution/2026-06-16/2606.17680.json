@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2606.17680",
+  "title": "EnvRL: Learn from Environment Dynamics in Agentic Reinforcement Learning",
+  "title_zh": "EnvRL：在智能体强化学习中从环境动态中学习",
+  "authors": [
+    "Zhitong Wang",
+    "Songze Li",
+    "Hao Peng",
+    "Shuzheng Si",
+    "Yi Wang",
+    "Maosong Sun",
+    "Juanzi Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-16T08:48:09Z",
+  "abs_url": "https://arxiv.org/abs/2606.17680v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.17680",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement learning (RL) has emerged as a powerful paradigm for training Large Language Models (LLMs) as agents. However, conventional RL methods for long-horizon agentic tasks often struggle with sparse outcome rewards. Intuitively, this overlooks the rich environment dynamics information contained in rollout interaction trajectories. We argue that the interaction experience inherently serves as an implicit supervision signal, reveals the underlying transition mechanisms of the environment, and enables the agent to construct a more accurate internal model of the environment.. Therefore, in this work, we investigate how to leverage this additional signal to improve policy learning. Specifically, we propose EnvRL, a framework that incorporates environment dynamics learning into agentic RL via two auxiliary objectives: state prediction and inverse dynamics. By jointly optimizing with the primary RL objective, we encourage the agent to internalize environment dynamics from its own interaction experience. Extensive experiments on two long-horizon agentic benchmarks demonstrate that EnvRL achieves significant improvements on success-rates over RL-only baselines, e.g., when trained with GRPO, lifting Qwen-2.5-1.5B-Instruct from 72.8% to 77.4% on ALFWorld, and from 56.8% to 67.0% on WebShop.",
+  "abstract_zh": "强化学习（RL）已成为将 Large Language Models（LLMs）训练为智能体的重要范式。然而，在长程智能体任务中，传统 RL 方法常受限于稀疏的结果奖励，忽视了 rollout 交互轨迹中蕴含的丰富环境动态信息。本文认为，智能体与环境的交互经验本身可作为一种隐式监督信号，揭示环境底层状态转移机制，并帮助智能体构建更准确的内部环境模型。为此，作者提出 EnvRL，将环境动态学习融入智能体 RL，通过两个辅助目标——状态预测（state prediction）和逆向动态建模（inverse dynamics）——与主 RL 目标联合优化，使智能体能够从自身交互经验中内化环境规律。实验表明，在 ALFWorld 和 WebShop 两个长程智能体基准上，EnvRL 相比仅使用 RL 的基线显著提升成功率；例如结合 GRPO 训练时，Qwen-2.5-1.5B-Instruct 在 ALFWorld 上从 72.8% 提升到 77.4%，在 WebShop 上从 56.8% 提升到 67.0%。",
+  "key_points_zh": [
+    "提出 EnvRL，将环境动态学习作为辅助监督信号引入 agentic reinforcement learning，以缓解长程任务中的稀疏奖励问题。",
+    "方法包含两个辅助目标：state prediction 用于预测后续状态，inverse dynamics 用于根据状态转移推断动作，从而增强智能体对环境转移机制的建模能力。",
+    "EnvRL 与主 RL 目标联合优化，使 LLM agent 能从自身 rollout 交互经验中学习隐式环境模型，而不只依赖最终成功/失败奖励。",
+    "在 ALFWorld 和 WebShop 两个长程智能体基准上，EnvRL 相比 RL-only baselines 显著提升成功率。",
+    "结合 GRPO 时，Qwen-2.5-1.5B-Instruct 在 ALFWorld 上由 72.8% 提升至 77.4%，在 WebShop 上由 56.8% 提升至 67.0%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.62,
+    "problem_significance": 0.7,
+    "potential_impact": 0.64,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.58,
+    "llm_avg": 0.5980000000000001,
+    "comment": "EnvRL offers a plausible trajectory-based training improvement for agentic RL, but contributes more to policy learning than reusable harness infrastructure.",
+    "comment_zh": "EnvRL利用交互轨迹改进智能体强化学习较有意义，但主要贡献在策略训练而非可复用运行框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5980000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17680/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.9
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17680/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.944
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17680/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.978
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.17680/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.966
+    }
+  ]
+}
