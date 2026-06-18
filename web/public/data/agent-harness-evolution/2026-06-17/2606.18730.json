@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.18730",
+  "title": "Two-Phase Bilevel Search for the Moving-Target Traveling Salesman Problem with Moving Obstacles",
+  "title_zh": "面向含移动障碍的移动目标旅行商问题的两阶段双层搜索",
+  "authors": [
+    "Allen George Philip",
+    "Anoop Bhat",
+    "Sivakumar Rathinam",
+    "Howie Choset"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T06:17:12Z",
+  "abs_url": "https://arxiv.org/abs/2606.18730v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.18730",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The Moving-Target Traveling Salesman Problem (MT-TSP) seeks a minimum cost trajectory for an agent that departs from a static depot, visits a set of moving targets, each within one of their assigned time windows, and returns to the depot. In this article, we study the Moving-Target Traveling Salesman Problem with Moving Obstacles (MT-TSP-MO), a generalization of the MT-TSP where the agent trajectory must avoid moving obstacles. We present a Mixed-Integer Conic Programming (MICP) formulation that can be solved using off-the-shelf solvers, as well as a fast and scalable Two-Phase Bilevel Search (TPBS) algorithm that computes high-quality feasible solutions for the problem. We evaluate our approaches against an existing baseline algorithm on a broad range of problem instances with up to 40 targets and 40 obstacles. The results demonstrate that both the proposed methods significantly outperform the baseline with respect to success rates, solution costs, and computation time.",
+  "abstract_zh": "Moving-Target Traveling Salesman Problem（MT-TSP）要求智能体从静态 depot 出发，在各目标指定时间窗内访问一组移动目标，并最终返回 depot，同时最小化轨迹成本。本文研究其扩展问题 Moving-Target Traveling Salesman Problem with Moving Obstacles（MT-TSP-MO），进一步要求智能体轨迹避开移动障碍。作者提出了一个可由通用求解器求解的 Mixed-Integer Conic Programming（MICP）建模，并设计了快速且可扩展的 Two-Phase Bilevel Search（TPBS）算法，用于计算高质量可行解。在最多包含 40 个目标和 40 个障碍的大规模实例上，实验表明所提方法在成功率、解成本和计算时间上均显著优于现有基线算法。",
+  "key_points_zh": [
+    "研究 MT-TSP-MO：在 MT-TSP 的移动目标、时间窗和回 depot 约束基础上，加入移动障碍避碰约束。",
+    "提出 Mixed-Integer Conic Programming（MICP）形式化建模，可直接调用现成优化求解器获得解。",
+    "设计 Two-Phase Bilevel Search（TPBS）算法，在可扩展性和求解速度上更适合较大实例。",
+    "在最多 40 个移动目标与 40 个移动障碍的实例上评测，覆盖较广问题规模与场景。",
+    "实验显示 MICP 与 TPBS 相比现有 baseline 在成功率、轨迹成本和计算时间方面均有显著优势。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.35,
+    "problem_significance": 0.28,
+    "potential_impact": 0.22,
+    "paradigm_shift": 0.18,
+    "lasting_value": 0.12,
+    "llm_avg": 0.22999999999999998,
+    "comment": "A classical optimization paper for moving-target routing that is largely outside the scope of LLM agent harness evolution.",
+    "comment_zh": "这是一篇移动目标路径规划的传统优化论文，基本不属于大模型智能体框架演化范畴。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.34373441375821495,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.22999999999999998,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18730/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18730/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18730/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.373
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18730/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.428
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "arxiv_id": "2606.19144",
+  "title": "Human-AI Coevolution Dynamics: A Formal Theory of Social Intelligence Emergence Through Long-Term Interaction",
+  "title_zh": "Human-AI Coevolution Dynamics：长期交互中社会智能涌现的形式化理论",
+  "authors": [
+    "Jingyi Zhou",
+    "Senlin Luo",
+    "Haofan Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T14:47:59Z",
+  "abs_url": "https://arxiv.org/abs/2606.19144v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19144",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Current conversational AI systems have made significant progress in language generation, personalization, and long-context interaction. However, most existing methods model social behavior through isolated components such as emotion modeling, memory retrieval, or persona conditioning, lacking a unified framework to explain the emergence of stable social relationships and social intelligence in long-term human-AI interaction.To address this, we propose the Human-AI Coevolution Dynamics Framework (HACD-H), a formal model of human-AI interaction as a self-organizing social cognitive system. HACD-H integrates emotional adaptation, relational organization, social memory, and personality consistency into a unified dynamical framework and introduces principles including multi-timescale social cognition, relational attractors, trust basins, developmental phase transitions, and social cognitive energy dynamics.We construct a conversational dataset with approximately 14,700 interaction turns and develop a theory-driven empirical evaluation framework. Results reveal a hierarchy of temporal persistence in social cognition, stable relational attractors, phase-transition-like developmental patterns, and a structured social cognitive energy landscape. Social intelligence shows a significant negative correlation with social cognitive energy (r = -0.391, p < 0.001), and interaction trajectories exhibit progressive energy reduction over time.These findings suggest that social intelligence emerges from long-term social cognitive coevolution rather than isolated conversational capabilities. HACD-H provides a unified theoretical foundation for modeling adaptive human-AI social interaction and developing socially intelligent AI systems.",
+  "abstract_zh": "本文提出 Human-AI Coevolution Dynamics Framework（HACD-H），将长期人机对话建模为一个自组织的社会认知动态系统。不同于以往将情感建模、记忆检索或人格设定等社会行为模块孤立处理的方法，HACD-H 在统一框架中整合情感适应、关系组织、社会记忆与人格一致性，并引入多时间尺度社会认知、关系吸引子（relational attractors）、信任盆地（trust basins）、发展阶段跃迁以及社会认知能量动力学等概念。作者构建了约 14,700 轮对话的数据集，并设计了理论驱动的实证评估框架。实验发现，社会认知存在时间持久性的层级结构，长期交互中会形成稳定的关系吸引子，并呈现类似阶段转变的发展模式与结构化的社会认知能量景观。社会智能与社会认知能量显著负相关（r = -0.391, p < 0.001），且交互轨迹随时间表现出能量逐步降低。研究表明，社会智能并非来自孤立的对话能力，而是在长期人机社会认知共演化中涌现。",
+  "key_points_zh": [
+    "提出 HACD-H，将长期 human-AI interaction 建模为自组织社会认知系统，统一刻画情感、关系、记忆与人格一致性。",
+    "引入 relational attractors、trust basins、多时间尺度社会认知、发展阶段跃迁和社会认知能量等核心机制。",
+    "构建约 14,700 轮对话数据集，并设计理论驱动的实证评估框架来验证长期交互动态。",
+    "实验显示社会认知具有时间持久性层级，交互中会形成稳定关系结构，并出现类似相变的发展轨迹。",
+    "发现 social intelligence 与 social cognitive energy 显著负相关，支持社会智能源于长期共演化而非单点对话能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.6,
+    "problem_significance": 0.45,
+    "potential_impact": 0.38,
+    "paradigm_shift": 0.42,
+    "lasting_value": 0.3,
+    "llm_avg": 0.43,
+    "comment": "A theoretical social-interaction model with limited direct relevance to production agent runtimes, governance, or self-improving harnesses.",
+    "comment_zh": "这是一项社会交互理论模型研究，但与生产级智能体运行时、治理或自改进框架的直接关系有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.43,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

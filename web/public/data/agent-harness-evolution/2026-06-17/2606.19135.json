@@ -1,0 +1,70 @@
+{
+  "arxiv_id": "2606.19135",
+  "title": "A Technical Taxonomy of LLM Agent Communication Protocols",
+  "title_zh": "LLM Agent 通信协议的技术分类法",
+  "authors": [
+    "Linus Sander",
+    "Habtom Kahsay Gidey",
+    "Alexander Lenz",
+    "Alois Knoll"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T14:45:20Z",
+  "abs_url": "https://arxiv.org/abs/2606.19135v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19135",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As large language models (LLMs) advance and multi-agent systems aim to overcome the limits of standalone agents, robust communication protocols are becoming essential infrastructure for distributed agent networks. Nonetheless, the fragmented protocol landscape presents a significant interoperability challenge. This study develops a technical taxonomy to classify and analyze LLM agent communication protocols. Following an established iterative method, we defined the taxonomy's purpose, meta-characteristic, and ending conditions, then performed five iterations, three empirical-to-conceptual and two conceptual-to-empirical, on nine actively maintained open-source protocols with demonstrable adoption. The taxonomy comprises five dimensions: counterparty, payload, interaction state, discovery mechanism, and schema flexibility. Classification reveals recurring architectural patterns: all sampled agent-to-agent protocols combine hybrid payloads with session-state persistence; most protocols support multiple predefined schemas, and two negotiate schemas at runtime, indicating a trend toward schema flexibility; decentralized discovery remains rare. Analysis suggests short-term convergence pressure toward protocols unifying agent-to-agent and agent-to-context (tool and data) communication. Long-term, however, no single protocol is likely to maximize versatility, efficiency, and portability simultaneously. The field will more likely evolve toward a federated, layered protocol stack. The framework guides protocol selection and highlights open research gaps such as privacy and policy enforcement.}",
+  "abstract_zh": "随着大语言模型（LLM）的发展，以及多智能体系统试图突破单体 Agent 的能力边界，稳健的通信协议正成为分布式 Agent 网络的关键基础设施。然而，当前协议生态碎片化严重，带来了显著的互操作性挑战。本文提出一种技术分类法，用于分类与分析 LLM Agent 通信协议。研究遵循既有的迭代式分类法构建方法，定义了分类目的、元特征与终止条件，并围绕九个仍在积极维护且具有实际采用证据的开源协议进行了五轮迭代，其中三轮由经验到概念、两轮由概念到经验。最终分类法包含五个维度：通信对象（counterparty）、载荷（payload）、交互状态（interaction state）、发现机制（discovery mechanism）与模式灵活性（schema flexibility）。分类结果显示出若干反复出现的架构模式：所有采样的 Agent-to-Agent 协议都结合了混合载荷与会话状态持久化；多数协议支持多个预定义 schema，另有两个协议可在运行时协商 schema，表明协议正朝更高 schema 灵活性发展；去中心化发现机制仍较少见。分析认为，短期内协议可能面临收敛压力，趋向统一 Agent-to-Agent 与 Agent-to-Context（工具和数据）通信；但长期来看，单一协议不太可能同时最大化通用性、效率与可移植性，该领域更可能演化为联邦式、分层的协议栈。该框架可指导协议选择，并指出隐私与策略执行等开放研究问题。",
+  "key_points_zh": [
+    "论文面向 LLM 多 Agent 系统中的协议碎片化问题，提出用于比较和分析 Agent 通信协议的技术分类法。",
+    "分类法基于九个活跃维护且已有采用的开源协议构建，包含通信对象、载荷、交互状态、发现机制、schema 灵活性五个维度。",
+    "研究发现 Agent-to-Agent 协议普遍采用混合载荷与会话状态持久化，多数支持多个预定义 schema，部分已支持运行时 schema 协商。",
+    "去中心化发现机制目前仍不常见，说明分布式 Agent 网络在服务发现和互操作方面仍存在基础设施缺口。",
+    "作者认为短期协议会趋向统一 Agent-to-Agent 与 Agent-to-Context 通信，长期更可能形成联邦式、分层协议栈，而非单一通用协议。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.82,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.52,
+    "lasting_value": 0.8,
+    "llm_avg": 0.7280000000000001,
+    "comment": "A useful infrastructure-oriented taxonomy that clarifies agent communication protocol design and interoperability gaps.",
+    "comment_zh": "这是一项有价值的基础设施型分类研究，清晰梳理了智能体通信协议设计与互操作性缺口。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7280000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19135/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

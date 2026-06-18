@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2606.19308",
+  "title": "Enhancing Decision-Making with Large Language Models through Multi-Agent Fictitious Play",
+  "title_zh": "通过 Multi-Agent Fictitious Play 增强大型语言模型的决策能力",
+  "authors": [
+    "Leyang Shen",
+    "Yang Zhang",
+    "Xiaoyan Zhao",
+    "Chun Kai Ling",
+    "Tat-Seng Chua"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T17:31:06Z",
+  "abs_url": "https://arxiv.org/abs/2606.19308v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19308",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM)-based multi-agent systems (MAS) have demonstrated great potential in solving tasks with execution complexity, by distributing subtasks across cooperative agents. However, this divide-and-conquer paradigm falls short on decision-making tasks that are also prevalent in the real world. These tasks require simultaneous reasoning from the stances of all involved stakeholders whose decisions are mutually dependent and thus cannot be solved in isolation. We characterize this challenge as stance entanglement, a form of decision complexity distinct from execution complexity. To address it, we propose Multi-Agent Fictitious Play (MAFP), a novel MAS paradigm that represents stakeholder stances as agents and formulates decision-making as an equilibrium-seeking process. Built on the game-theoretic principle of fictitious play, MAFP iteratively updates each agent's decision by best responding to the empirical mixture of other agents' past decisions. This enables agents to expose and address one another's weaknesses, progressively improving decision quality and robustness. We evaluate MAFP on challenging decision-making tasks that test the capability of deciding strategies for competitive scenarios prior to acting. MAFP outperforms both single-round and multi-round baselines on two complementary metrics, tournament strength and robustness, demonstrating its effectiveness in addressing stance entanglement.",
+  "abstract_zh": "本文关注 LLM-based Multi-Agent Systems（MAS）在真实决策任务中的局限。现有 MAS 常通过分解子任务解决执行复杂性（execution complexity），但面对多方利益相关者立场相互依赖的决策场景时，简单分工难以奏效。作者将这一问题定义为立场纠缠（stance entanglement），并提出 Multi-Agent Fictitious Play（MAFP）：将不同利益相关者立场建模为 agents，把决策过程转化为寻找均衡的博弈过程。MAFP 基于 fictitious play 原理，让每个 agent 迭代地针对其他 agents 过去决策的经验混合分布作出最佳回应，从而暴露并修正彼此弱点，逐步提升决策质量与鲁棒性。实验表明，MAFP 在需要预先制定竞争策略的复杂决策任务上，相比单轮和多轮基线方法，在 tournament strength 与 robustness 两项指标上均取得更优表现。",
+  "key_points_zh": [
+    "提出立场纠缠（stance entanglement）概念，指出决策复杂性不同于传统 MAS 处理的执行复杂性。",
+    "提出 Multi-Agent Fictitious Play（MAFP），将利益相关者立场表示为 agents，并将决策建模为均衡搜索过程。",
+    "MAFP 让每个 agent 基于其他 agents 历史决策的经验混合分布进行最佳回应，实现迭代式策略改进。",
+    "该方法能够让 agents 互相暴露弱点并修正决策，从而提升策略质量和鲁棒性。",
+    "在竞争性决策任务中，MAFP 在 tournament strength 和 robustness 上优于单轮与多轮基线。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.62,
+    "problem_significance": 0.5,
+    "potential_impact": 0.44,
+    "paradigm_shift": 0.46,
+    "lasting_value": 0.36,
+    "llm_avg": 0.476,
+    "comment": "An interesting multi-agent decision-making method, but it contributes little to runtime infrastructure, observability, or production control.",
+    "comment_zh": "这是一个有趣的多智能体决策方法，但对运行时基础设施、可观测性或生产控制贡献较少。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.476,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19308/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.951
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19308/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

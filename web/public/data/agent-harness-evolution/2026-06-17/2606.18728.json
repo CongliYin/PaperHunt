@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2606.18728",
+  "title": "LegalWorld: A Life-Cycle Interactive Environment for Legal Agents",
+  "title_zh": "LegalWorld：面向法律智能体的全生命周期交互环境",
+  "authors": [
+    "Songhan Zuo",
+    "Shengbin Yue",
+    "Tao Chiang",
+    "Guanying Li",
+    "Yun Song",
+    "Xuanjing Huang",
+    "Zhongyu Wei"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T06:11:21Z",
+  "abs_url": "https://arxiv.org/abs/2606.18728v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.18728",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Civil litigation is inherently a life-cycle process: what a lawyer drafts on day one constrains what unfolds at trial months later. Yet existing legal benchmarks evaluate isolated subtasks, and prior legal-agent simulators reinitialize each scenario from shared ground truth, leaving cross-stage causal dependencies unmodeled. We present LegalWorld, a life-cycle interactive environment that models Chinese civil litigation as a causally connected state chain of five stages (seven sub-scenarios), grounded in 75,309 paired Chinese civil judgments. We pair it with reusable infrastructure (local memory, global case memory, a Skill/Tool library) that keeps each dispute consistent across its full life cycle. Building on this environment, we construct LongJud-Bench to evaluate agent capability across all five connected stages. 18,992 ratings from 217 legal-background evaluators confirm that LegalWorld trajectories are procedurally faithful and role-consistent; and a capability-level cross-model evaluation reveals sharp divergences that aggregate scores cannot expose, with no single backbone leading across consultation, drafting, and courtroom advocacy. Detailed resources will be released publicly.",
+  "abstract_zh": "民事诉讼天然是一个全生命周期过程：律师在第一天起草的材料，会约束数月后庭审中的发展。然而，现有法律基准多评测孤立子任务，既有法律智能体模拟器也常从共享真值重新初始化每个场景，无法建模跨阶段因果依赖。本文提出 LegalWorld，一个面向中国民事诉讼的全生命周期交互环境，将诉讼过程建模为包含五个阶段、七个子场景的因果连接状态链，并基于 75,309 对中国民事判决书构建。LegalWorld 配套提供可复用基础设施，包括 local memory、global case memory 以及 Skill/Tool library，以保证同一纠纷在完整生命周期中的一致性。在此基础上，作者构建 LongJud-Bench，用于评估智能体在五个相互连接阶段中的能力。来自 217 名具备法律背景评估者的 18,992 条评分表明，LegalWorld 生成轨迹在程序上可信且角色一致；跨模型能力层级评估进一步揭示了总分难以呈现的显著差异，没有任何单一 backbone 能在咨询、文书起草和法庭辩论等能力上全面领先。相关资源将公开发布。",
+  "key_points_zh": [
+    "提出 LegalWorld，将中国民事诉讼建模为五阶段、七子场景的因果连接状态链，强调跨阶段决策对后续程序的影响。",
+    "基于 75,309 对中国民事判决书构建环境，并通过 local memory、global case memory、Skill/Tool library 维持案件全流程一致性。",
+    "构建 LongJud-Bench，评估法律智能体在咨询、文书起草、庭审等相互依赖阶段中的综合能力。",
+    "217 名法律背景评估者给出 18,992 条评分，验证 LegalWorld 轨迹具备较好的程序真实性与角色一致性。",
+    "跨模型评测显示，不同 backbone 在不同法律能力上差异明显，单一总分会掩盖咨询、起草和庭辩能力的细粒度差别。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.74,
+    "problem_significance": 0.66,
+    "potential_impact": 0.64,
+    "paradigm_shift": 0.56,
+    "lasting_value": 0.58,
+    "llm_avg": 0.636,
+    "comment": "A strong domain simulator with memory and tool infrastructure, but its main contribution is a legal-agent environment rather than general harness architecture.",
+    "comment_zh": "这是一个带记忆和工具基础设施的强领域模拟环境，但主要贡献仍是法律智能体环境而非通用框架架构。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.636,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18728/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18728/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18728/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.949
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18728/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}

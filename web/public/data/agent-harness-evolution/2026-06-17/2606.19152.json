@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2606.19152",
+  "title": "AdsMind: A Physics-Grounded Multi-Agent System for Self-Correcting Discovery of Adsorption Configurations on Heterogeneous Catalyst Surfaces",
+  "title_zh": "AdsMind：面向异质催化剂表面吸附构型自校正发现的物理约束多智能体系统",
+  "authors": [
+    "Zongmin Zhang",
+    "Yuyang Lou",
+    "Bowen Zhang",
+    "Junwu Chen",
+    "Ryo Kuroki",
+    "Xuan Vu Nguyen",
+    "Edvin Fako",
+    "Lixue Cheng",
+    "Philippe Schwaller"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T14:57:16Z",
+  "abs_url": "https://arxiv.org/abs/2606.19152v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19152",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Identifying the lowest-energy surface-adsorbate configuration is critical for modeling heterogeneous catalysis, yet exhaustive exploration with ab initio calculations is computationally prohibitive. Machine-learning force fields (MLFFs) accelerate structural relaxation but leave the search over the vast configurational space a major bottleneck, and open-loop large language model (LLM) agents lack a physics-grounded feedback mechanism to correct erroneous initial guesses. We propose AdsMind (Adsorption configuration discovery with Machine intelligence and relaxation feedback), a closed-loop multi-agent framework that enables autonomous error correction through MLFF relaxation feedback. Across four LLM backends, AdsMind achieves consistently high search reliability, with success rates of 100% and 98.8% on the benchmarks AA20 and OCD-GMAE62. Relative to its single-pass (1-Shot) ablation it reduces cross-backend energy dispersion, and it uses only 4.11 and 4.67 MLFF relaxations per case, respectively -- an approximately 14-fold reduction over heuristic enumeration baselines. Density functional theory (DFT) validation using VASP/PBE on six representative AA20 systems shows that the reported open-loop Adsorb-Agent outputs exhibit qualitative adsorption-energy sign errors for molecular adsorbates, whereas AdsMind preserves the correct sign in all tested cases with closer quantitative agreement. AdsMind thus delivers reliability, self-reflection, and interpretability simultaneously, supporting more DFT-informed autonomous chemistry workflows.",
+  "abstract_zh": "寻找最低能量的表面-吸附物构型是异质催化建模的关键，但用从头算方法进行穷举搜索计算成本极高。机器学习力场（MLFFs）可加速结构弛豫，却无法根本解决巨大构型空间的搜索瓶颈；同时，开环的大语言模型（LLM）智能体缺乏基于物理反馈纠正错误初始猜测的机制。本文提出 AdsMind（Adsorption configuration discovery with Machine intelligence and relaxation feedback），一个闭环多智能体框架，通过 MLFF 弛豫反馈实现自主错误修正。在四种 LLM 后端上，AdsMind 在 AA20 与 OCD-GMAE62 基准中分别达到 100% 和 98.8% 的成功率，表现出稳定的搜索可靠性。相比单次生成的 1-Shot 消融版本，AdsMind 降低了不同后端间的能量离散度；同时每个案例仅需 4.11 和 4.67 次 MLFF 弛豫，相比启发式枚举基线约减少 14 倍。基于 VASP/PBE 的密度泛函理论（DFT）验证显示，在六个代表性 AA20 体系中，开环 Adsorb-Agent 对分子吸附物会产生定性吸附能符号错误，而 AdsMind 在所有测试中均保持正确符号，并取得更接近 DFT 的定量结果。AdsMind 同时提供可靠性、自反思能力与可解释性，为更具 DFT 信息约束的自主化学工作流提供支持。",
+  "key_points_zh": [
+    "提出 AdsMind，一种结合 LLM 多智能体与 MLFF 弛豫反馈的闭环框架，用于自动发现异质催化剂表面的低能吸附构型。",
+    "通过物理反馈实现自校正，弥补开环 LLM 智能体缺乏错误纠正机制的问题，提升构型搜索的可靠性与可解释性。",
+    "在 AA20 和 OCD-GMAE62 基准上分别取得 100% 与 98.8% 成功率，并在四种 LLM 后端上保持稳定表现。",
+    "平均每个案例仅需约 4–5 次 MLFF 弛豫，相比启发式枚举基线约减少 14 倍，显著降低搜索成本。",
+    "DFT/VASP/PBE 验证表明，AdsMind 能避免开环方法在分子吸附能符号上的定性错误，并获得更接近 DFT 的结果。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.7,
+    "problem_significance": 0.58,
+    "potential_impact": 0.55,
+    "paradigm_shift": 0.48,
+    "lasting_value": 0.42,
+    "llm_avg": 0.5459999999999999,
+    "comment": "A solid domain-specific closed-loop multi-agent workflow, but its lasting value is mostly confined to autonomous chemistry rather than general agent infrastructure.",
+    "comment_zh": "这是一个扎实的领域闭环多智能体流程，但其长期价值主要局限于自主化学而非通用智能体基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5459999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19152/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

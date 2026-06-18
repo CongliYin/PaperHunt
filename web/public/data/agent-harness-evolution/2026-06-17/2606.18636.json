@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2606.18636",
+  "title": "PEC-Home: Interpretation of Progressively Elliptical Commands in Smart Homes",
+  "title_zh": "PEC-Home：智能家居中渐进式省略命令的理解",
+  "authors": [
+    "Yingyu Shan",
+    "Zeming Liu",
+    "Silin Li",
+    "Boao Qian",
+    "Jiashu Yao",
+    "Yuhang Guo",
+    "Haifeng Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T03:17:34Z",
+  "abs_url": "https://arxiv.org/abs/2606.18636v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.18636",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent advancements in Large Language Models (LLMs) have empowered home assistants with natural language interaction capabilities. However, current assistants overlook the progressive omission that occurs in human dialogue as shared context accumulates, leading to more elliptical expressions for efficient communication. Thus, current assistants still struggle to interpret such elliptical expressions accurately, which limits their effectiveness in real-world applications. In practical smart home scenarios, assistants face two major challenges caused by elliptical commands: (1) referential ambiguity caused by different environmental expectations among multiple users; and (2) intention ambiguity resulting from user preferences that evolve over time or change with the environment. To address these challenges, we introduce PEC-Home, the first simulated home dataset specifically designed for interpreting progressively elliptical commands in smart homes. Extensive experiments on various LLMs, including GPT-4o, show that existing home assistants struggle to execute user-intended operations based solely on elliptical commands. Even when equipped with tools for storing and retrieving user dialogue history, execution accuracy remains below that achieved with complete commands.}.",
+  "abstract_zh": "随着 Large Language Models (LLMs) 的进展，家庭助手已具备自然语言交互能力。然而，现有助手往往忽视人类对话中随共享上下文累积而出现的“渐进式省略”现象：用户会为了高效沟通逐步省略表达。论文指出，在真实智能家居场景中，省略命令会带来两类关键挑战：一是多用户因环境预期不同产生的指代歧义；二是用户偏好随时间或环境变化而导致的意图歧义。为此，作者提出 PEC-Home，这是首个面向智能家居渐进式省略命令解释的模拟家庭数据集。基于包括 GPT-4o 在内的多种 LLM 的实验显示，现有家庭助手仅依赖省略命令时难以准确执行用户意图；即使配备对话历史存储与检索工具，其执行准确率仍低于使用完整命令的情况。",
+  "key_points_zh": [
+    "提出 PEC-Home，首个专门用于研究智能家居中 progressively elliptical commands 的模拟家庭数据集。",
+    "聚焦真实对话中随上下文积累而逐步省略表达的现象，指出现有 home assistants 对此处理不足。",
+    "总结两类核心难点：多用户环境预期差异导致的 referential ambiguity，以及偏好随时间或环境变化导致的 intention ambiguity。",
+    "在 GPT-4o 等多种 LLM 上的实验表明，模型仅凭省略命令难以可靠执行用户真实意图。",
+    "即使引入对话历史存储与检索工具，LLM 助手在省略命令上的执行准确率仍明显低于完整命令场景。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.45,
+    "problem_significance": 0.42,
+    "potential_impact": 0.34,
+    "paradigm_shift": 0.26,
+    "lasting_value": 0.28,
+    "llm_avg": 0.35,
+    "comment": "A smart-home dialogue dataset on elliptical commands with limited contribution to reusable agent runtime or self-improvement infrastructure.",
+    "comment_zh": "这是一个面向智能家居省略命令的数据集，对可复用智能体运行时或自改进基础设施贡献有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.35,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18636/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18636/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.863
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18636/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18636/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.976
+    }
+  ]
+}

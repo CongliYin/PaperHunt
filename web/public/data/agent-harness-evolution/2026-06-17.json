@@ -1,0 +1,492 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-06-17",
+  "generated_at": "2026-06-18T22:23:54Z",
+  "papers": [
+    {
+      "arxiv_id": "2606.19047",
+      "title": "RODS: Reward-Driven Online Data Synthesis for Multi-Turn Tool-Use Agents",
+      "title_zh": "RODS：面向多轮工具使用智能体的奖励驱动在线数据合成",
+      "authors": [
+        "Ruishan Fang",
+        "Siyuan Lu",
+        "Chenyi Zhuang",
+        "Tao Lin"
+      ],
+      "total_score": 0.6926280394401357,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.818,
+        "other": 0.31742679813378555
+      },
+      "tags": [
+        "HF Daily ★3",
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "用奖励方差在线合成边界训练样本",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.19047.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19047/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.18550",
+      "title": "The Gate Is Only as Honest as Its Contracts: ContractGuard for the Contract Layer of Risk-Aware Causal Gating",
+      "title_zh": "门控的诚实取决于合约：面向 Risk-Aware Causal Gating 合约层的 ContractGuard",
+      "authors": [
+        "Laxmipriya Ganesh Iyer",
+        "Rahul Suresh Babu"
+      ],
+      "total_score": 0.6711258286877777,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8720000000000001,
+        "other": 0.19175276229259217
+      },
+      "tags": [
+        "observability governance security"
+      ],
+      "tldr_zh": "RACG安全关键在工具合约完整性",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.18550.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18550/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.19135",
+      "title": "A Technical Taxonomy of LLM Agent Communication Protocols",
+      "title_zh": "LLM Agent 通信协议的技术分类法",
+      "authors": [
+        "Linus Sander",
+        "Habtom Kahsay Gidey",
+        "Alexander Lenz",
+        "Alois Knoll"
+      ],
+      "total_score": 0.6664000000000001,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.7280000000000001,
+        "other": 0.2666666666666667
+      },
+      "tags": [
+        "Code soon",
+        "multi agent coordination"
+      ],
+      "tldr_zh": "提出LLM Agent通信协议分类框架",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.19135.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19135/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.18668",
+      "title": "EARS: Explanatory Abstention for Reliable Sub-Agent Modeling in Large-scale Multi-Agent Systems",
+      "title_zh": "EARS：面向大规模多智能体系统中可靠子智能体建模的解释性拒答",
+      "authors": [
+        "Shuang Xie",
+        "Yunan Lu",
+        "Han Li",
+        "Lingyun Wang"
+      ],
+      "total_score": 0.6573824593811418,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8200000000000001,
+        "other": 0.19794153127047226
+      },
+      "tags": [
+        "multi agent coordination"
+      ],
+      "tldr_zh": "让子智能体会解释性拒答以提升可靠性",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.18668.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18668/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.18837",
+      "title": "Skill-MAS: Evolving Meta-Skill for Automatic Multi-Agent Systems",
+      "title_zh": "Skill-MAS：为自动 Multi-Agent Systems 演化 Meta-Skill",
+      "authors": [
+        "Hehai Lin",
+        "Qi Yang",
+        "Chengwei Qin"
+      ],
+      "total_score": 0.6471258286877777,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.792,
+        "other": 0.19175276229259217
+      },
+      "tags": [
+        "multi agent coordination"
+      ],
+      "tldr_zh": "用可演化 Meta-Skill 提升自动 MAS",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.18837.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18837/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.19191",
+      "title": "PhantomSkill: Malicious Code Injection in Agent Skill Ecosystems",
+      "title_zh": "PhantomSkill：Agent Skill 生态中的恶意代码注入",
+      "authors": [
+        "Yu-Ting Lin",
+        "Chia-Mu Yu"
+      ],
+      "total_score": 0.6420000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8200000000000001,
+        "other": 0.2
+      },
+      "tags": [
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "将恶意载荷伪装成 Skill 漏洞",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.19191.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19191/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.19341",
+      "title": "Native Active Perception as Reasoning for Omni-Modal Understanding",
+      "title_zh": "原生活跃感知即推理：面向全模态理解的方法",
+      "authors": [
+        "Zhenghao Xing",
+        "Ruiyang Xu",
+        "Yuxuan Wang",
+        "Jinzheng He",
+        "Ziyang Ma",
+        "Qize Yang",
+        "Yunfei Chu",
+        "Jin Xu",
+        "Junyang Lin",
+        "Chi-Wing Fu",
+        "Pheng-Ann Heng"
+      ],
+      "total_score": 0.6097711626725889,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.5980000000000001,
+        "other": 0.5812372089086293
+      },
+      "tags": [
+        "HF Daily ★11",
+        "GitHub",
+        "training and rollout loops",
+        "Accepted"
+      ],
+      "tldr_zh": "OmniAgent用主动感知高效理解长视频",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.19341.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19341/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.19235",
+      "title": "CodeSentinel: A Three-Layer Defense Against Indirect Prompt Injection in Code Contexts",
+      "title_zh": "CodeSentinel：面向代码上下文中间接提示注入的三层防御",
+      "authors": [
+        "Po-Han Cheng",
+        "Chia-Mu Yu",
+        "Ying-Dar Lin",
+        "Yu-Sung Wu",
+        "Wei-Bin Lee"
+      ],
+      "total_score": 0.5919516573755552,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.6880000000000001,
+        "other": 0.11183885791851761
+      },
+      "tags": [
+        "observability governance security"
+      ],
+      "tldr_zh": "用CST三层净化防御代码提示注入",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.19235.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19235/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.18902",
+      "title": "SAGE: Stochastic Prompt Optimization via Agent-Guided Exploration",
+      "title_zh": "SAGE：通过 Agent 引导探索进行随机提示优化",
+      "authors": [
+        "Ziyi Zhu",
+        "Luka Smyth",
+        "Saki Shinoda",
+        "Jinghong Chen"
+      ],
+      "total_score": 0.5832000000000002,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.624,
+        "other": 0.2
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "将提示优化建模为黑盒随机搜索",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.18902.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18902/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.19152",
+      "title": "AdsMind: A Physics-Grounded Multi-Agent System for Self-Correcting Discovery of Adsorption Configurations on Heterogeneous Catalyst Surfaces",
+      "title_zh": "AdsMind：面向异质催化剂表面吸附构型自校正发现的物理约束多智能体系统",
+      "authors": [
+        "Zongmin Zhang",
+        "Yuyang Lou",
+        "Bowen Zhang",
+        "Junwu Chen",
+        "Ryo Kuroki",
+        "Xuan Vu Nguyen",
+        "Edvin Fako",
+        "Lixue Cheng",
+        "Philippe Schwaller"
+      ],
+      "total_score": 0.5758000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.5459999999999999,
+        "other": 0.2
+      },
+      "tags": [
+        "multi agent coordination"
+      ],
+      "tldr_zh": "闭环多智能体高效发现吸附构型",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.19152.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19152/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.18728",
+      "title": "LegalWorld: A Life-Cycle Interactive Environment for Legal Agents",
+      "title_zh": "LegalWorld：面向法律智能体的全生命周期交互环境",
+      "authors": [
+        "Songhan Zuo",
+        "Shengbin Yue",
+        "Tao Chiang",
+        "Guanying Li",
+        "Yun Song",
+        "Xuanjing Huang",
+        "Zhongyu Wei"
+      ],
+      "total_score": 0.5708000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.636,
+        "other": 0.2
+      },
+      "tags": [
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "全生命周期中国民事诉讼智能体环境",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.18728.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18728/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.19063",
+      "title": "PYPILINE: Malicious PyPI Package Detection via Suspicious API Knowledge and Agent Workflow",
+      "title_zh": "PYPILINE：基于可疑 API 知识与 Agent 工作流的恶意 PyPI 包检测",
+      "authors": [
+        "Siyuan Pang",
+        "Zhengwei Jiang",
+        "Yepeng Yao",
+        "Zijing Fan",
+        "Haozhe Li",
+        "Baoxu Liu"
+      ],
+      "total_score": 0.5476000000000001,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.6519999999999999,
+        "other": 0.2666666666666667
+      },
+      "tags": [
+        "Code soon",
+        "planning and policy"
+      ],
+      "tldr_zh": "用可疑API知识和Agent检测恶意PyPI包",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.19063.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19063/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.19144",
+      "title": "Human-AI Coevolution Dynamics: A Formal Theory of Social Intelligence Emergence Through Long-Term Interaction",
+      "title_zh": "Human-AI Coevolution Dynamics：长期交互中社会智能涌现的形式化理论",
+      "authors": [
+        "Jingyi Zhou",
+        "Senlin Luo",
+        "Haofan Chen"
+      ],
+      "total_score": 0.5250000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.43,
+        "other": 0.2
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "用动力系统解释人机社会智能涌现",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.19144.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.19308",
+      "title": "Enhancing Decision-Making with Large Language Models through Multi-Agent Fictitious Play",
+      "title_zh": "通过 Multi-Agent Fictitious Play 增强大型语言模型的决策能力",
+      "authors": [
+        "Leyang Shen",
+        "Yang Zhang",
+        "Xiaoyan Zhao",
+        "Chun Kai Ling",
+        "Tat-Seng Chua"
+      ],
+      "total_score": 0.5138,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.476,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "multi agent coordination"
+      ],
+      "tldr_zh": "用博弈迭代缓解决策立场纠缠",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.19308.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19308/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.19057",
+      "title": "Quantifying and Auditing LLM Evaluation via Positive--Unlabeled Learning",
+      "title_zh": "通过 Positive–Unlabeled Learning 量化与审计 LLM 评测",
+      "authors": [
+        "Zilong Zhang",
+        "Yi-Ting Hung",
+        "Lei Ding",
+        "Chi-Kuang Yeh"
+      ],
+      "total_score": 0.49228008103186616,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.63,
+        "other": 0.21093360343955375
+      },
+      "tags": [
+        "judge reward verifier"
+      ],
+      "tldr_zh": "用 PU 学习审计并校正 LLM 评测偏差",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.19057.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19057/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.19336",
+      "title": "Learning User Simulators with Turing Rewards",
+      "title_zh": "使用 Turing Rewards 学习用户模拟器",
+      "authors": [
+        "Yingshan Susan Wang",
+        "Cedegao E. Zhang",
+        "Linlu Qiu",
+        "Zexue He",
+        "Pengyuan Li",
+        "Alex Pentland",
+        "Roger P. Levy",
+        "Yoon Kim"
+      ],
+      "total_score": 0.4881431232324532,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.49000000000000005,
+        "other": 0.2304770774415104
+      },
+      "tags": [
+        "HF Daily ★2",
+        "judge reward verifier"
+      ],
+      "tldr_zh": "用图灵奖励训练更像真人的用户模拟器",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.19336.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19336/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.18636",
+      "title": "PEC-Home: Interpretation of Progressively Elliptical Commands in Smart Homes",
+      "title_zh": "PEC-Home：智能家居中渐进式省略命令的理解",
+      "authors": [
+        "Yingyu Shan",
+        "Zeming Liu",
+        "Silin Li",
+        "Boao Qian",
+        "Jiashu Yao",
+        "Yuhang Guo",
+        "Haifeng Wang"
+      ],
+      "total_score": 0.4575000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.35,
+        "other": 0.10833333333333334
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "首个智能家居渐进省略命令数据集",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.18636.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18636/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.18730",
+      "title": "Two-Phase Bilevel Search for the Moving-Target Traveling Salesman Problem with Moving Obstacles",
+      "title_zh": "面向含移动障碍的移动目标旅行商问题的两阶段双层搜索",
+      "authors": [
+        "Allen George Philip",
+        "Anoop Bhat",
+        "Sivakumar Rathinam",
+        "Howie Choset"
+      ],
+      "total_score": 0.42618672068791086,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.22999999999999998,
+        "other": 0.12395573562636916
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "TPBS高效求解含移动障碍的MT-TSP",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.18730.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18730/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.19167",
+      "title": "Teaching Software Engineering with LLM and MCP Integration: From Classroom to Industry Practice",
+      "title_zh": "融合 LLM 与 MCP 的软件工程教学：从课堂到产业实践",
+      "authors": [
+        "Kehui Chen",
+        "Jacky Keung",
+        "Weining Li",
+        "Xiangbing Shao",
+        "Yishu Li",
+        "Xiaoxue Ma"
+      ],
+      "total_score": 0.36300000000000004,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.21000000000000002,
+        "other": 0.2
+      },
+      "tags": [
+        "production agent platform"
+      ],
+      "tldr_zh": "将 LLM 与 MCP 融入软件工程教学实践",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.19167.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19167/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.19172",
+      "title": "User as Engram: Internalizing Per-User Memory as Local Parametric Edits",
+      "title_zh": "User as Engram：将每用户记忆内化为局部参数编辑",
+      "authors": [
+        "Bojie Li"
+      ],
+      "total_score": 0.26099999999999995,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.6699999999999999,
+        "other": 0.2
+      },
+      "tags": [],
+      "tldr_zh": "用局部Engram编辑替代每用户LoRA记忆",
+      "detail_file": "agent-harness-evolution/2026-06-17/2606.19172.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19172/thumb.webp"
+    }
+  ]
+}

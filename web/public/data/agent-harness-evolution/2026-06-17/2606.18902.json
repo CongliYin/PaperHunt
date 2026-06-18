@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.18902",
+  "title": "SAGE: Stochastic Prompt Optimization via Agent-Guided Exploration",
+  "title_zh": "SAGE：通过 Agent 引导探索进行随机提示优化",
+  "authors": [
+    "Ziyi Zhu",
+    "Luka Smyth",
+    "Saki Shinoda",
+    "Jinghong Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T10:25:25Z",
+  "abs_url": "https://arxiv.org/abs/2606.18902v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.18902",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Context engineering has emerged as a primary lever for improving AI systems without parameter updates. Recent work showing that textual gradients do not function as real gradients motivates treating automatic prompt optimization (APO) as black-box search. We introduce SPO (Stochastic Prompt Optimization), a framework for stochastic search over prompt space, and compare three strategies of increasing sophistication: error-informed random search, a genetic algorithm with evolutionary operators, and SAGE (SPO via Agent-Guided Exploration), a multi-agent pipeline with diagnostic code execution. Across three benchmarks, no single strategy dominates; effectiveness depends on the interaction of landscape structure with error type. We further deploy SAGE on a mental-health chatbot under a continuous optimization paradigm, where it compounds eight cycles of individually-noisy A/B tests into a statistically robust gain in next-day retention. We argue that coupling qualitative diagnosis with quantitative validation is what makes agentic optimization effective for open-ended task-oriented dialogue.",
+  "abstract_zh": "本文关注无需更新模型参数即可提升 AI 系统的 context engineering，并指出近期研究表明“文本梯度”并不是真正意义上的梯度，因此自动提示优化（APO）更适合被视为黑盒搜索问题。作者提出 SPO（Stochastic Prompt Optimization）框架，在提示空间中进行随机搜索，并比较三种复杂度递增的策略：基于错误信息的随机搜索、带进化算子的遗传算法，以及 SAGE（SPO via Agent-Guided Exploration），一种结合多 Agent 流程与诊断性代码执行的提示优化方法。实验覆盖三个 benchmark，结果显示没有单一策略始终最优，效果取决于任务景观结构与错误类型之间的交互。作者还将 SAGE 部署到心理健康聊天机器人中，在连续优化范式下，将 8 轮单次噪声较大的 A/B 测试累积为次日留存率上的统计显著提升。论文认为，将定性诊断与定量验证结合，是 agentic optimization 在开放式任务型对话中有效的关键。",
+  "key_points_zh": [
+    "提出 SPO 框架，将自动提示优化（APO）从“文本梯度”视角转向提示空间中的黑盒随机搜索。",
+    "比较三类搜索策略：错误引导随机搜索、遗传算法，以及多 Agent 加诊断代码执行的 SAGE。",
+    "三个 benchmark 结果表明，不同优化策略各有适用场景，性能受搜索景观结构和错误类型共同影响。",
+    "在心理健康聊天机器人中，SAGE 通过 8 轮连续 A/B 优化获得次日留存率的统计显著提升。",
+    "论文强调 agentic optimization 的核心价值在于结合定性错误诊断与定量实验验证，尤其适合开放式任务型对话。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.68,
+    "problem_significance": 0.7,
+    "potential_impact": 0.66,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.58,
+    "llm_avg": 0.624,
+    "comment": "Useful for continuous prompt optimization with validation loops, though it remains closer to context engineering than full agent harness evolution.",
+    "comment_zh": "该工作对带验证闭环的持续提示优化有用，但更接近上下文工程而非完整智能体框架演化。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.624,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18902/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18902/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18902/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.928
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18902/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.937
+    }
+  ]
+}

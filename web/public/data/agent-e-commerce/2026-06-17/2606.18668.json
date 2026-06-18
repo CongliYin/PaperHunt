@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.18668",
+  "title": "EARS: Explanatory Abstention for Reliable Sub-Agent Modeling in Large-scale Multi-Agent Systems",
+  "title_zh": "EARS：面向大规模多智能体系统中可靠子智能体建模的可解释拒答",
+  "authors": [
+    "Shuang Xie",
+    "Yunan Lu",
+    "Han Li",
+    "Lingyun Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T04:07:41Z",
+  "abs_url": "https://arxiv.org/abs/2606.18668v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.18668",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "In large-scale enterprise settings, centralized multi-agent systems (MAS) are increasingly adopted, in which a coordinator delegates user requests to lightweight, domain-specialized sub-agents. While this architecture improves modularity, scalability, and cost efficiency, its reliability depends not only on accurate routing but also on sub-agents' ability to calibrate their responses to capability constraints. In particular, sub-agents built on smaller fine-tuned models often struggle with such calibration, leading them to over-answer ambiguous, underspecified, misrouted, or unsupported requests and produce hallucinated outputs instead of actionable feedback. To address this challenge, we present EARS (Explanatory Abstention for Reliable Sub-Agent Modeling), a production-oriented framework that reframes sub-agent abstention as an inter-agent communication protocol: a sub-agent does not merely abstain, but exposes an actionable failure state to the coordinator. EARS curates human-agent interaction data using an ensemble of calibrated LLM-as-a-Judge models, producing structured abstention labels and rationales under a taxonomy of sub-agent failure modes. These data are used to fine-tune sub-agents to detect failure conditions and return rationales for coordinator-level clarification, rerouting, or fallback. We evaluate EARS in a large-scale production e-commerce assistant supporting enterprise business intelligence workflows. EARS improves the overall response pass rate from 68.5% to 78.9%, demonstrating that sub-agent-side explanatory abstention improves MAS reliability.",
+  "abstract_zh": "在大规模企业场景中，集中式 Multi-Agent Systems (MAS) 正被广泛采用：由一个 coordinator 将用户请求分发给轻量、面向特定领域的 sub-agents。该架构提升了模块化、可扩展性与成本效率，但其可靠性不仅依赖准确路由，也依赖 sub-agents 能否根据自身能力边界校准回答。尤其是基于较小 fine-tuned models 的 sub-agents，常在面对模糊、信息不足、误路由或不支持的请求时过度作答，产生幻觉而非提供可操作反馈。为此，论文提出 EARS (Explanatory Abstention for Reliable Sub-Agent Modeling)，将 sub-agent 的 abstention 重新定义为一种 inter-agent communication protocol：sub-agent 不只是拒答，而是向 coordinator 暴露可操作的失败状态。EARS 使用一组 calibrated LLM-as-a-Judge models 构建 human-agent interaction data，在子智能体失败模式分类体系下生成结构化 abstention labels 与 rationales，并用这些数据微调 sub-agents，使其能够检测失败条件并返回理由，供 coordinator 进行澄清、重路由或 fallback。作者在支持企业商业智能工作流的大规模生产级 e-commerce assistant 中评估 EARS，使整体 response pass rate 从 68.5% 提升到 78.9%，表明子智能体侧的可解释拒答能提升 MAS 可靠性。",
+  "key_points_zh": [
+    "提出 EARS，将 sub-agent abstention 从简单拒答升级为面向 coordinator 的可操作失败状态报告，用于澄清、重路由或 fallback。",
+    "针对企业级集中式 MAS 中常见的子智能体过度回答问题，重点处理模糊、信息不足、误路由和能力不支持等失败模式。",
+    "使用 calibrated LLM-as-a-Judge ensemble 自动标注 human-agent interaction data，生成结构化拒答标签与解释理由。",
+    "通过 fine-tuning 训练轻量 sub-agents 识别自身能力边界，并返回 rationale，从而改善跨智能体协作与系统级决策。",
+    "在生产级 e-commerce assistant 的企业商业智能场景中，EARS 将整体 response pass rate 从 68.5% 提升至 78.9%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.7,
+    "problem_significance": 0.76,
+    "potential_impact": 0.73,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.67,
+    "llm_avg": 0.688,
+    "comment": "A useful production-oriented multi-agent reliability framework for an e-commerce assistant, but it is more about enterprise agent robustness than commerce-specific search or recommendation.",
+    "comment_zh": "该论文面向电商助手中的多智能体可靠性问题，具备实用价值，但更偏企业级智能体稳健性而非电商搜索推荐核心问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.688,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18668/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18668/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.937
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18668/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18668/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.971
+    }
+  ]
+}

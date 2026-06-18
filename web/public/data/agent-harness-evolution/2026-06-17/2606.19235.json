@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.19235",
+  "title": "CodeSentinel: A Three-Layer Defense Against Indirect Prompt Injection in Code Contexts",
+  "title_zh": "CodeSentinel：面向代码上下文中间接提示注入的三层防御",
+  "authors": [
+    "Po-Han Cheng",
+    "Chia-Mu Yu",
+    "Ying-Dar Lin",
+    "Yu-Sung Wu",
+    "Wei-Bin Lee"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T16:12:50Z",
+  "abs_url": "https://arxiv.org/abs/2606.19235v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19235",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Code large language models increasingly retrieve external code context from repositories, documentation, issue threads, and coding-agent environments, creating an indirect prompt-injection surface where attackers hide instructions in comments, strings, identifiers, or decoy code. We propose CodeSentinel, a three-layer inference-time sanitizer. It uses Tree-sitter to extract high-risk model-facing CST nodes, then combines syntax-guided pre-filtering, CST-guided Dynamic Min-K\\% scoring, and node perturbation analysis to detect adversarial and natural-looking semantic triggers. Detected nodes are removed or neutralized before reaching the downstream Code LLM. Across six recent attack families, \\CodeSentinel achieves 0.80 average node-level F1, outperforming CodeGarrison, DePA, and KillBadCode.",
+  "abstract_zh": "随着 Code LLM 越来越多地从代码仓库、文档、issue 讨论和 coding-agent 环境中检索外部代码上下文，攻击者可将恶意指令隐藏在注释、字符串、标识符或诱饵代码中，形成间接提示注入攻击面。论文提出 CodeSentinel，一种推理时三层净化器。它利用 Tree-sitter 提取面向模型的高风险 CST 节点，并结合语法引导预过滤、CST 引导的 Dynamic Min-K% 打分以及节点扰动分析，以检测对抗性和自然伪装的语义触发器。被检测出的节点会在进入下游 Code LLM 前被删除或中和。在六类近期攻击家族上的实验中，CodeSentinel 达到平均节点级 F1 0.80，优于 CodeGarrison、DePA 和 KillBadCode。",
+  "key_points_zh": [
+    "聚焦 Code LLM 检索外部代码上下文时产生的间接 prompt injection 风险，攻击载荷可隐藏在注释、字符串、标识符或伪装代码中。",
+    "CodeSentinel 在推理阶段工作，无需改动下游 Code LLM；通过 Tree-sitter 抽取高风险的 Concrete Syntax Tree（CST）节点进行检测。",
+    "方法包含三层：语法引导预过滤、CST-guided Dynamic Min-K% scoring，以及 node perturbation analysis，用于识别显式对抗触发与自然语言式伪装触发。",
+    "检测到的可疑节点会在送入下游模型前被移除或中和，从而降低恶意指令影响模型行为的概率。",
+    "在六类近期攻击家族上，CodeSentinel 获得 0.80 平均节点级 F1，超过 CodeGarrison、DePA 和 KillBadCode 等基线。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.7,
+    "problem_significance": 0.82,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.52,
+    "lasting_value": 0.68,
+    "llm_avg": 0.6880000000000001,
+    "comment": "A practical inference-time defense for code-context prompt injection, useful for coding-agent pipelines but narrower than full runtime governance.",
+    "comment_zh": "该工作提供了实用的代码上下文提示注入推理时防御，对编码智能体流程有用但范围窄于完整运行时治理。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3210331475111057,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.6880000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19235/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.883
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19235/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19235/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19235/fig4.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.947
+    }
+  ]
+}

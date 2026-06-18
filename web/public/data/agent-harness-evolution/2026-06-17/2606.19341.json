@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.19341",
+  "title": "Native Active Perception as Reasoning for Omni-Modal Understanding",
+  "title_zh": "原生活跃感知即推理：面向全模态理解的方法",
+  "authors": [
+    "Zhenghao Xing",
+    "Ruiyang Xu",
+    "Yuxuan Wang",
+    "Jinzheng He",
+    "Ziyang Ma",
+    "Qize Yang",
+    "Yunfei Chu",
+    "Jin Xu",
+    "Junyang Lin",
+    "Chi-Wing Fu",
+    "Pheng-Ann Heng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T17:59:56Z",
+  "abs_url": "https://arxiv.org/abs/2606.19341v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19341",
+  "links": {
+    "github": "https://github.com/harryhsing/omniagent",
+    "project_page": null
+  },
+  "abstract_en": "Passive models for long video understanding typically rely on a \"watch-it-all\" paradigm, processing frames uniformly regardless of query difficulty, causing computational cost to grow with video duration. Although interactive frameworks have emerged, they often rely on global pre-scanning, and their context cost still scales with video length. We propose OmniAgent, the first native omni-modal agent that formulates video understanding as a POMDP-based iterative Observation-Thought-Action cycle. OmniAgent executes on-demand actions to selectively distill audio-visual cues into a persistent textual memory, effectively decoupling reasoning complexity from raw video duration. To operationalize this, we introduce (1) Agentic Supervised Fine-Tuning to bootstrap native active perception via best-of-N trajectory synthesis with dual-stage quality control, and (2) Agentic Reinforcement Learning with TAURA (Turn-aware Adaptive Uncertainty Rescaled Advantage), which leverages turn-level entropy to steer credit assignment toward pivotal discovery turns. Crucially, OmniAgent exhibits positive test-time scaling, where performance improves as the number of reasoning turns increases, validating the efficacy of active perception. Empirical results across ten benchmarks (e.g., VideoMME, LVBench) demonstrate that OmniAgent achieves state-of-the-art performance among open-source models. Notably, on LVBench, our 7B agent outperforms the 10$\\times$ larger Qwen2.5-VL-72B (50.5% vs. 47.3%).",
+  "abstract_zh": "本文提出 OmniAgent，一个用于长视频理解的原生 omni-modal agent。不同于传统被动模型采用“全量观看”范式、计算成本随视频时长增长，OmniAgent 将视频理解建模为基于 POMDP 的迭代 Observation-Thought-Action 循环，通过按需执行动作选择性提取音视频线索，并写入持久文本记忆，从而将推理复杂度与原始视频长度解耦。为实现这一能力，作者提出 Agentic Supervised Fine-Tuning，通过 best-of-N 轨迹合成和双阶段质量控制引导模型学习原生活跃感知；同时提出 Agentic Reinforcement Learning with TAURA，即 Turn-aware Adaptive Uncertainty Rescaled Advantage，利用轮次级熵将信用分配聚焦到关键发现轮次。实验显示，OmniAgent 具备正向测试时扩展能力：推理轮次越多，性能越好。其在 VideoMME、LVBench 等十个基准上达到开源模型 SOTA；尤其在 LVBench 上，7B OmniAgent 超过大 10 倍的 Qwen2.5-VL-72B，准确率为 50.5% vs. 47.3%。",
+  "key_points_zh": [
+    "核心思想：将长视频理解从被动“watch-it-all”转为主动感知推理，基于 POMDP 进行 Observation-Thought-Action 迭代，只在需要时观察音视频片段。",
+    "方法设计：OmniAgent 将选择性提取的 audio-visual cues 写入持久文本记忆，使后续推理主要依赖压缩后的记忆，而非完整视频上下文。",
+    "训练策略：提出 Agentic Supervised Fine-Tuning，用 best-of-N 轨迹合成与双阶段质量控制构造高质量 agent 轨迹，初始化主动感知能力。",
+    "强化学习：提出 TAURA，通过 turn-level entropy 衡量关键轮次的不确定性并重标定 advantage，使奖励信用更集中于关键发现步骤。",
+    "实验结果：在 VideoMME、LVBench 等十个视频理解基准上达到开源 SOTA，并展示正向 test-time scaling；7B 模型在 LVBench 上超过 Qwen2.5-VL-72B。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.74,
+    "problem_significance": 0.62,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.6,
+    "lasting_value": 0.45,
+    "llm_avg": 0.5980000000000001,
+    "comment": "Technically interesting active-perception training for video understanding, but only weakly aligned with reusable production agent harnesses.",
+    "comment_zh": "该工作在视频理解的主动感知训练上有技术亮点，但与可复用生产级智能体框架的关联较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.7874232534517753,
+    "author_reputation": 0.3,
+    "venue_signal": 1.0,
+    "generality": 0.4,
+    "llm_assessment": 0.5980000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/harryhsing/omniagent",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 11,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19341/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19341/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.984
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19341/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.635
+    }
+  ]
+}

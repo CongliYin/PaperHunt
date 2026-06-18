@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.19172",
+  "title": "User as Engram: Internalizing Per-User Memory as Local Parametric Edits",
+  "title_zh": "User as Engram：将每用户记忆内化为局部参数编辑",
+  "authors": [
+    "Bojie Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T15:15:19Z",
+  "abs_url": "https://arxiv.org/abs/2606.19172v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19172",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Personal memory in a language model is two problems: content and reasoning skill. The brain keeps the two apart (a sparse, local engram in the hippocampus for each episode, a slow neocortex for the shared skills that interpret it), so a new fact need not overwrite everything else. Most personalization today keeps a user's facts outside the weights, in a natural-language memory file or a retrieval index. When facts are written into the model instead, the standard recipe is the per-user LoRA adapter, which does the opposite of the brain, folding content and skill into one global weight delta. Writing a user's facts as a LoRA contaminates text unrelated to them; writing the same facts as local Engram rows leaves it mathematically untouched, resulting in a roughly 33,000x smaller memory footprint. We therefore propose User as Engram: store a user's content as surgical edits to the hash-keyed memory table of an Engram model, and carry the reasoning skill in one shared adapter. This layered design matches per-user LoRA's direct recall while delivering 5.6x higher indirect-reasoning accuracy on average, and never makes a single user worse at reasoning than the untouched base. The edit is a glass box: writing a fact switches on its lookup at exactly the trigger, adds the value the answer needs, leaves every other position unchanged to the last bit, and fails if written into the wrong layer. Because different users' facts land in disjoint hash slots, their edits compose: many users live in one shared table at once, stacking additively and losslessly, where a per-user LoRA, a single global weight delta, admits only one. Upon retrieval, a per-user Engram table does not grow with the population the retriever must search, so past ~100 facts it overtakes a retrieval pipeline on a 2.5x larger model.",
+  "abstract_zh": "本文将语言模型中的个人记忆拆解为“内容”和“推理技能”两部分，并借鉴大脑中海马体以稀疏局部 engram 存储情节、而新皮层承载共享解释能力的机制。现有个性化方法多将用户事实保存在权重外的自然语言记忆文件或检索索引中；若写入模型权重，常用 per-user LoRA adapter 会把内容与技能混入同一个全局权重增量，导致与该用户无关的文本也被污染。作者提出 User as Engram：把用户内容作为对 Engram model 中 hash-keyed memory table 的精确局部编辑，同时用一个共享 adapter 承载推理技能。与 per-user LoRA 相比，该方法在保持直接召回能力的同时，平均间接推理准确率提升 5.6 倍，且不会使任何用户的推理能力低于未编辑 base model。其编辑过程具有可解释性：事实只在精确触发位置开启 lookup，加入回答所需 value，其他位置逐 bit 不变；若写入错误层则失败。由于不同用户事实落在不相交 hash slots 中，多用户编辑可在同一共享表中无损、可加地组合，存储足迹约小 33,000 倍；当事实数量超过约 100 条后，其检索开销还优于基于 2.5 倍更大模型的 retrieval pipeline。",
+  "key_points_zh": [
+    "提出 User as Engram，将用户事实写入 Engram model 的 hash-keyed memory table，而将通用推理技能放入一个共享 adapter，实现内容与技能解耦。",
+    "相比 per-user LoRA，Engram 行级局部编辑不会污染无关文本，除触发位置外其他 token 表示保持逐 bit 不变，存储开销约降低 33,000 倍。",
+    "实验显示，该方法保持与 per-user LoRA 相当的直接事实召回能力，同时平均间接推理准确率提升 5.6 倍，且不降低任何用户相对 base model 的推理表现。",
+    "多用户事实因映射到不相交 hash slots，可在同一共享 memory table 中加性、无损组合；而单个全局 LoRA 权重增量通常只能服务一个用户。",
+    "当每用户事实数超过约 100 条时，per-user Engram table 的查询规模不随总体用户数量增长，推理检索效率超过使用 2.5 倍更大模型的 retrieval pipeline。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.75,
+    "problem_significance": 0.65,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.6,
+    "lasting_value": 0.65,
+    "llm_avg": 0.6699999999999999,
+    "comment": "A technically interesting approach to scalable per-user memory with potential platform relevance, but it focuses more on model personalization than harness-level operations.",
+    "comment_zh": "该工作提出了有潜力的可扩展个性化记忆机制，但重点仍偏向模型个性化而非智能体运行平台。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6699999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19172/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19172/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.953
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19172/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19172/fig4.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

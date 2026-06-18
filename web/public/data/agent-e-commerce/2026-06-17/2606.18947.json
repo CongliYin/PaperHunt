@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.18947",
+  "title": "Decoupling Search from Reasoning: A Vendor-Agnostic Grounding Architecture for LLM Agents",
+  "title_zh": "将搜索与推理解耦：面向 LLM Agents 的厂商无关式 Grounding 架构",
+  "authors": [
+    "Emmanuel Aboah Boateng",
+    "Kyle MacDonald",
+    "Amardeep Kumar",
+    "Siddharth Kodwani",
+    "Sudeep Das"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T11:30:39Z",
+  "abs_url": "https://arxiv.org/abs/2606.18947v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.18947",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Production LLM agents increasingly depend on real-time search, yet native search grounding bundles retrieval policy, provider choice, evidence injection, cost, latency, and generation behavior behind a single model-provider boundary. This coupling makes grounding hard to inspect, tune, reuse, or port, and can trigger Search-Induced Verbosity that breaks strict output contracts. We present Decoupled Search Grounding (DSG), a vendor-agnostic boundary that moves grounding outside the reasoning model through an MCP-compatible gateway, exposing provider routing, source-aware context rendering, configured fallback, retrieval-depth control, and exact plus semantic caching as first-class controls. Across five frontier models on SimpleQA, FreshQA, and HotpotQA, native search leads on recency-sensitive FreshQA, but DSG exposes a stronger frontier when control matters: on SimpleQA it nearly matches native accuracy (86.1% vs. 87.7%) at 91% lower search cost, preserves concise answer contracts, and reaches a 99.4% warm-cache hit rate with 68% lower latency. Deployed as a shared production grounding layer for large-scale agentic workloads with interchangeable models, DSG matches or slightly exceeds native-search accuracy on an e-commerce query-understanding (QIU) workload while cutting search cost by over 98%. Real-time grounding is best treated as an optimizable interface boundary, not a fixed model feature.",
+  "abstract_zh": "生产环境中的 LLM agents 越来越依赖实时搜索，但原生搜索 grounding 往往把检索策略、服务商选择、证据注入、成本、延迟和生成行为绑定在单一模型厂商边界内，导致 grounding 难以检查、调优、复用或迁移，并可能引发 Search-Induced Verbosity，破坏严格的输出格式约束。本文提出 Decoupled Search Grounding（DSG），一种厂商无关的架构边界，通过 MCP-compatible gateway 将 grounding 从推理模型中移出，把 provider routing、source-aware context rendering、configured fallback、retrieval-depth control，以及精确与语义缓存作为一等可控能力。实验覆盖五个 frontier models 和 SimpleQA、FreshQA、HotpotQA：原生搜索在强调时效性的 FreshQA 上更强，但当可控性重要时，DSG 展现出更优的综合前沿；在 SimpleQA 上，DSG 几乎追平原生搜索准确率（86.1% vs. 87.7%），同时降低 91% 搜索成本，保持简洁回答契约，并在 warm-cache 下达到 99.4% 命中率与 68% 延迟下降。作为大规模 agentic workloads 的共享生产 grounding 层部署时，DSG 在电商查询理解（QIU）任务上达到或略超原生搜索准确率，同时搜索成本降低超过 98%。论文主张，实时 grounding 应被视为可优化的接口边界，而非固定的模型内置特性。",
+  "key_points_zh": [
+    "提出 Decoupled Search Grounding（DSG），通过 MCP-compatible gateway 将实时搜索 grounding 外置于推理模型之外，降低对特定模型厂商原生搜索能力的绑定。",
+    "DSG 将 provider routing、证据上下文渲染、fallback、检索深度控制、精确缓存与语义缓存显式化，使 grounding 更易检查、调优、复用和迁移。",
+    "在 SimpleQA 上，DSG 准确率接近原生搜索（86.1% vs. 87.7%），但搜索成本降低 91%，并能更好维持简洁输出契约，缓解 Search-Induced Verbosity。",
+    "缓存场景下，DSG 达到 99.4% warm-cache hit rate，并将延迟降低 68%，显示其在生产环境中的性能与成本优势。",
+    "在电商查询理解（QIU）生产负载中，DSG 匹配或略超原生搜索准确率，同时搜索成本降低超过 98%，证明其实用价值。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.78,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.74,
+    "llm_avg": 0.732,
+    "comment": "A practical LLM grounding architecture with strong production relevance and some e-commerce query-understanding evidence, though its core contribution is mostly domain-general.",
+    "comment_zh": "该论文提出了具有生产价值的LLM检索 grounding 架构，并在电商查询理解中有验证，但核心贡献仍偏通用。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.732,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18947/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18947/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.951
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18947/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18947/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.959
+    }
+  ]
+}

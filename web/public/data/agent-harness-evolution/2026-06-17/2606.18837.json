@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2606.18837",
+  "title": "Skill-MAS: Evolving Meta-Skill for Automatic Multi-Agent Systems",
+  "title_zh": "Skill-MAS：为自动 Multi-Agent Systems 演化 Meta-Skill",
+  "authors": [
+    "Hehai Lin",
+    "Qi Yang",
+    "Chengwei Qin"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T09:12:50Z",
+  "abs_url": "https://arxiv.org/abs/2606.18837v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.18837",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large Language Model (LLM)-based automatic Multi-Agent Systems (MAS) generation has become a crucial frontier for tackling complex tasks. However, existing methods face a dilemma between model capability and experience retention. Inference-time MAS leverages frozen frontier LLMs but repeats identical searches without learning from past experience. Conversely, Training-time MAS internalizes experience via gradient updates but is constrained by the low capability ceiling of smaller models, and is hard to scale to large frontier LLMs. To bridge this gap, we propose Skill-MAS, a novel third path that decouples experience retention from parametric updates by conceptualizing the high-level orchestration capability as an evolvable Meta-Skill. Skill-MAS refines this architectural knowledge through a closed optimization loop: (1) Multi-Trajectory Rollout samples a behavioral distribution for each task under the current Meta-Skill; and (2) Selective Reflection adaptively selects priority tasks and applies hierarchical contrastive analysis to distill systemic experience into generalizable, strategy-level principles. Extensive experiments across four complex benchmarks and four distinct LLMs demonstrate that Skill-MAS not only achieves remarkable performance gains but also maintains a favorable cost-performance trade-off. Further analysis reveals that the evolved Meta-Skills are highly robust and exhibit strong transferability across unseen tasks and different LLMs.",
+  "abstract_zh": "本文关注基于 Large Language Model（LLM）的自动 Multi-Agent Systems（MAS）生成问题。现有方法通常在模型能力与经验保留之间存在矛盾：Inference-time MAS 可利用冻结的 frontier LLM，但每次推理都重复搜索，难以从历史经验中学习；Training-time MAS 虽能通过梯度更新内化经验，却受限于较小模型的能力上限，且难以扩展到大型 frontier LLM。为此，论文提出 Skill-MAS，将高层编排能力抽象为可演化的 Meta-Skill，从而把经验保留与参数更新解耦。Skill-MAS 通过闭环优化迭代改进架构知识：首先用 Multi-Trajectory Rollout 在当前 Meta-Skill 下为每个任务采样行为分布；随后通过 Selective Reflection 自适应选择优先任务，并进行层次化对比分析，将系统经验蒸馏为可泛化的策略级原则。实验覆盖四个复杂 benchmark 和四类 LLM，结果表明 Skill-MAS 能显著提升性能，同时保持较好的成本-效果权衡；进一步分析显示，演化得到的 Meta-Skills 对未见任务和不同 LLM 具有较强鲁棒性与迁移能力。",
+  "key_points_zh": [
+    "提出 Skill-MAS，将 MAS 的高层智能体编排能力建模为可演化的 Meta-Skill，避免依赖大模型参数更新来保留经验。",
+    "通过 Multi-Trajectory Rollout 为任务采样多条行为轨迹，捕捉当前 Meta-Skill 下的策略分布与失败/成功模式。",
+    "设计 Selective Reflection，自适应挑选高价值任务，并用层次化对比分析提炼可泛化的策略级经验。",
+    "在四个复杂 benchmark 和四种 LLM 上验证，Skill-MAS 相比现有 automatic MAS 方法取得显著性能提升，并保持较优成本-性能比。",
+    "演化得到的 Meta-Skills 在未见任务与不同 LLM 间表现出良好鲁棒性和迁移性，说明其学习到的是较通用的系统编排知识。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.8,
+    "problem_significance": 0.82,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.8,
+    "llm_avg": 0.792,
+    "comment": "A compelling experience-retention approach that evolves reusable orchestration meta-skills from multi-agent rollouts without model fine-tuning.",
+    "comment_zh": "该工作提出了有吸引力的经验保留方法，可从多智能体轨迹中演化可复用的编排元技能而无需微调模型。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.792,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18837/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18837/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18837/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.984
+    }
+  ]
+}

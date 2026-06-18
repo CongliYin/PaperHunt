@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.19063",
+  "title": "PYPILINE: Malicious PyPI Package Detection via Suspicious API Knowledge and Agent Workflow",
+  "title_zh": "PYPILINE：基于可疑 API 知识与 Agent 工作流的恶意 PyPI 包检测",
+  "authors": [
+    "Siyuan Pang",
+    "Zhengwei Jiang",
+    "Yepeng Yao",
+    "Zijing Fan",
+    "Haozhe Li",
+    "Baoxu Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T13:37:17Z",
+  "abs_url": "https://arxiv.org/abs/2606.19063v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19063",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The detection of malicious PyPI packages is crucial for maintaining the security of the open source software supply chain. Existing methods, which primarily rely on rules or traditional machine learning, suffer from poor interpretability and difficulty in adapting to novel attacks. To address this, we propose PYPILINE, a novel detection method that combines a suspicious API knowledge base with an Agent workflow. PYPILINE first conducts static analysis on known malicious packages, extracting abstract syntax trees and generating API call graphs, from which it automatically extracts and constructs a structured suspicious API knowledge base. During the detection phase, this knowledge base is used to enhance reasoning capabilities. Through an Agent workflow, PYPILINE performs in depth semantic analysis of unknown packages and outputs a structured, interpretable maliciousness assessment report. The experimental results show that PYPILINE significantly outperforms existing state-of-the-art tools in precision of 96.7\\%, recall of 99.6\\%, and F1-score of 98.1\\%, with its precision surpassing baseline tools by 5.7 to 24.2 percentage points. Additionally, we conducted an empirical study on malicious packages, systematically revealing prevalent attack strategies, as well as the most commonly abused APIs. Equipped with tool-calling AI agent workflows for automated vector database retrieval of suspicious API knowledge and mail server delivery of analysis reports, PYPILINE delivers a practical, efficient, and convenient malicious package detection solution to strengthen open-source ecosystem security.",
+  "abstract_zh": "恶意 PyPI 包检测对于保障开源软件供应链安全至关重要。现有方法主要依赖规则或传统机器学习，存在可解释性不足、难以适应新型攻击等问题。本文提出 PYPILINE，一种结合可疑 API 知识库与 Agent 工作流的检测方法。PYPILINE 首先对已知恶意包进行静态分析，提取抽象语法树（AST）并生成 API 调用图，从中自动抽取并构建结构化的可疑 API 知识库。在检测阶段，该知识库用于增强推理能力；随后通过 Agent 工作流对未知包进行深入语义分析，并输出结构化、可解释的恶意性评估报告。实验结果表明，PYPILINE 显著优于现有 state-of-the-art 工具，达到 96.7% precision、99.6% recall 和 98.1% F1-score，其 precision 相比基线工具提升 5.7 到 24.2 个百分点。此外，论文还对恶意包进行了实证研究，系统揭示了常见攻击策略与最常被滥用的 API。PYPILINE 结合工具调用式 AI Agent 工作流，可自动检索向量数据库中的可疑 API 知识，并通过邮件服务器发送分析报告，为开源生态安全提供了实用、高效、便捷的恶意包检测方案。",
+  "key_points_zh": [
+    "提出 PYPILINE，将可疑 API 知识库与 Agent workflow 结合，用于检测恶意 PyPI package，并强调检测结果的结构化与可解释性。",
+    "方法通过静态分析已知恶意包，提取 AST 和 API call graph，自动构建结构化 suspicious API knowledge base，为后续未知包分析提供知识增强。",
+    "检测阶段利用 Agent workflow 对未知包进行深度语义推理，并生成恶意性评估报告；系统还支持向量数据库检索与邮件投递分析报告。",
+    "实验表现优于现有 state-of-the-art 工具，达到 96.7% precision、99.6% recall、98.1% F1-score，precision 相比基线提升 5.7 至 24.2 个百分点。",
+    "论文附带恶意 PyPI 包实证研究，总结了主流攻击策略和高频被滥用 API，为开源供应链安全防护提供经验参考。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.66,
+    "problem_significance": 0.76,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.48,
+    "lasting_value": 0.64,
+    "llm_avg": 0.6519999999999999,
+    "comment": "A practical agent-assisted supply-chain security system, relevant to platform operations though more focused on package detection than agent harnesses.",
+    "comment_zh": "这是一个实用的智能体辅助供应链安全系统，与平台运维相关，但重点更偏向软件包检测而非智能体框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6519999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19063/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19063/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.874
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19063/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.606
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19063/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.966
+    }
+  ]
+}

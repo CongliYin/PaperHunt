@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.19191",
+  "title": "PhantomSkill: Malicious Code Injection in Agent Skill Ecosystems",
+  "title_zh": "PhantomSkill：Agent Skill 生态中的恶意代码注入",
+  "authors": [
+    "Yu-Ting Lin",
+    "Chia-Mu Yu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T15:33:41Z",
+  "abs_url": "https://arxiv.org/abs/2606.19191v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19191",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent skills allow LLM-based coding agents to acquire domain-specific capabilities from third-party packages, but they also introduce a new supply-chain attack surface. We present PhantomSkill, an attack framework that hides malicious behavior in a skill's auxiliary resources rather than in its textual description. Its core technique, VulMask, rewrites overt malicious scripts into vulnerability-shaped implementations whose malicious behavior is activated only under attacker-controlled trigger conditions. This design shifts the visible signal from explicit malicious intent to ordinary-looking insecure code. Across representative host skills, attack goals, coding agents, generation models, and automated reviewers, VulMask preserves benign utility while reducing warning and malware-level detection compared with overt malicious scripts. Our results show that skill ecosystems require resource-level vetting, execution-time containment, and security policies that treat exploitable vulnerabilities in agent skills as potential malicious payloads.",
+  "abstract_zh": "本文研究 LLM-based coding agents 通过第三方 Agent skills 获取领域能力时引入的新型供应链攻击面。作者提出 PhantomSkill 攻击框架，将恶意行为隐藏在 skill 的辅助资源中，而不是显式写在文本描述里。其核心技术 VulMask 会把明显的恶意脚本改写成“看似漏洞”的实现，只有在攻击者控制的触发条件下才激活恶意行为，从而把可见信号从明确恶意意图转移为普通的不安全代码。实验覆盖多种 host skills、攻击目标、coding agents、generation models 与自动化 reviewers，结果显示 VulMask 在保持正常功能的同时，显著降低了告警率和恶意软件级检测率。论文指出，Agent skill 生态需要资源级审查、运行时隔离，以及将可利用漏洞视作潜在恶意载荷的安全策略。",
+  "key_points_zh": [
+    "提出 PhantomSkill，针对 Agent skill 生态的供应链攻击，将恶意逻辑隐藏在辅助资源而非 skill 文本描述中。",
+    "核心技术 VulMask 将显式恶意脚本改写为漏洞形态代码，仅在攻击者控制的 trigger 条件下触发恶意行为。",
+    "该方法降低了自动化 reviewer、coding agent 与恶意检测工具对恶意意图的识别概率，同时保留 skill 的正常功能。",
+    "实验覆盖不同 host skills、攻击目标、coding agents 和 generation models，显示此类伪装在多种环境中具有泛化风险。",
+    "论文强调应对 Agent skill 进行资源级安全审计、执行时沙箱隔离，并将可利用漏洞纳入恶意载荷威胁模型。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8200000000000001,
+    "comment": "Important agent skill supply-chain security work that highlights resource-level vetting and runtime containment needs for skill ecosystems.",
+    "comment_zh": "这是一项重要的智能体技能供应链安全研究，强调了技能生态中资源级审查与运行时隔离的必要性。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8200000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19191/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19191/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19191/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19191/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.975
+    }
+  ]
+}

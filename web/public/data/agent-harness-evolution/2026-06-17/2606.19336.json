@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.19336",
+  "title": "Learning User Simulators with Turing Rewards",
+  "title_zh": "使用 Turing Rewards 学习用户模拟器",
+  "authors": [
+    "Yingshan Susan Wang",
+    "Cedegao E. Zhang",
+    "Linlu Qiu",
+    "Zexue He",
+    "Pengyuan Li",
+    "Alex Pentland",
+    "Roger P. Levy",
+    "Yoon Kim"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T17:58:48Z",
+  "abs_url": "https://arxiv.org/abs/2606.19336v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19336",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Learning to simulate human users in interactive settings could advance the training of agent assistants, evaluation of personalization systems, research in the social sciences, and more. Existing approaches generally do so by training a large language model (LLM) to match a single ground truth response, either by maximizing the log probability or by using a similarity reward. We instead propose {Turing-RL}: a Turing-Test-based reinforcement learning approach for training user simulator models. {Turing-RL} uses a discriminative Turing reward with an LLM judge to score how indistinguishable a generated response is from the real user's given the user's history, and the user simulator LLM learns to produce responses indistinguishable from what the user could have said with such rewards. Across two different domains--conversational chat and Reddit forum discussion--we find that {Turing-RL} consistently outperforms baseline methods on both LLM and human evaluation metrics. Our study suggests that optimizing for indistinguishability, rather than response matching, is effective for learning user simulators.",
+  "abstract_zh": "本文研究如何在交互场景中学习模拟人类用户，以支持智能助手训练、个性化系统评估和社会科学研究等应用。现有方法通常将用户模拟器训练为匹配单一真实回复，即通过最大化真实回复的对数概率或使用相似度奖励。作者提出 Turing-RL，一种基于图灵测试的强化学习方法：利用 LLM judge 构建判别式 Turing reward，根据用户历史判断生成回复与真实用户回复的不可区分程度，并据此训练用户模拟器 LLM 生成“像该用户可能会说的话”。在 conversational chat 和 Reddit forum discussion 两个领域中，Turing-RL 在 LLM 评估和人类评估指标上均稳定优于基线方法。结果表明，相比直接匹配单一答案，优化“不可区分性”更适合学习用户模拟器。",
+  "key_points_zh": [
+    "提出 Turing-RL：一种基于图灵测试思想的强化学习框架，用于训练 LLM 用户模拟器。",
+    "不同于传统的单一真实回复匹配，Turing-RL 优化生成回复与真实用户在给定历史下的“不可区分性”。",
+    "方法使用 LLM judge 作为判别器，给出 discriminative Turing reward，引导模拟器生成更符合用户行为分布的回复。",
+    "在 conversational chat 与 Reddit forum discussion 两类交互数据上，Turing-RL 在 LLM 评估和人工评估中均超过基线。",
+    "研究表明，对于用户模拟任务，优化真实感和可混淆性可能比最大化标准答案相似度更有效。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.6,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.45,
+    "llm_avg": 0.49000000000000005,
+    "comment": "A useful simulator-training method for interactive agents, but only indirectly contributes to production agent harnesses or closed-loop platform evolution.",
+    "comment_zh": "该工作有助于训练交互式用户模拟器，但对生产级智能体框架和闭环演化平台的贡献较间接。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.6828624646490623,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.49000000000000005,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 2,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19336/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19336/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19336/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.956
+    }
+  ]
+}

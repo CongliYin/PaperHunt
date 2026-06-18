@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2606.19047",
+  "title": "RODS: Reward-Driven Online Data Synthesis for Multi-Turn Tool-Use Agents",
+  "title_zh": "RODS：面向多轮工具使用智能体的奖励驱动在线数据合成",
+  "authors": [
+    "Ruishan Fang",
+    "Siyuan Lu",
+    "Chenyi Zhuang",
+    "Tao Lin"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T13:13:32Z",
+  "abs_url": "https://arxiv.org/abs/2606.19047v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19047",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-turn tool-use RL is bottlenecked by the rapid depletion of informative samples in static datasets. We observe that the gradient signal in GRPO concentrates on tasks with the highest rollout reward variance, a consequence of the Popoviciu upper bound. Consequently, samples near the agent's capability boundary -- where successes and failures are roughly balanced -- contribute disproportionately large policy gradients. As training progresses, this boundary continuously shifts, which gradually depletes the pool of informative samples in a static dataset. We propose RODS (Reward-driven Online Data Synthesis) to resolve this depletion. RODS closes the loop between RL training and data generation by repurposing the progress reward variance as a practical, zero-cost boundary detector that requires no extra inference beyond the rollouts already computed for training. It continuously identifies such boundary samples, synthesizes new multi-turn variants matching their structural complexity (e.g., API topology and dependency depth) via a skill-aligned resampling pipeline, and manages a dynamic replay buffer that co-evolves with the policy. Starting from 400 human seeds and maintaining an active training pool of ~800 samples, RODS achieves comparable performance to a 17K-sample offline pipeline while requiring roughly 20x fewer trajectories, and improves over fixed-data RL and environment augmentation in our controlled setting.",
+  "abstract_zh": "本文关注多轮工具使用智能体在强化学习训练中的数据瓶颈：静态数据集中的高信息量样本会随训练快速耗尽。作者观察到，在 GRPO 中，梯度信号主要集中于 rollout 奖励方差最高的任务，这可由 Popoviciu 上界解释。因此，位于智能体能力边界附近、成功与失败大致均衡的样本，会贡献更大的策略梯度；但随着策略能力提升，这一边界持续移动，静态数据中的有效样本逐渐枯竭。为此，论文提出 RODS（Reward-driven Online Data Synthesis），将 RL 训练与数据生成闭环连接起来：利用训练 rollout 中已有的 progress reward variance 作为零额外推理成本的能力边界检测器，持续发现边界样本，并通过 skill-aligned resampling pipeline 合成结构复杂度相匹配的多轮变体，例如 API 拓扑和依赖深度，同时维护一个随策略共同演化的动态 replay buffer。实验显示，RODS 仅从 400 个 human seeds 出发，并维持约 800 个活跃训练样本，就能达到接近 17K 样本离线流水线的性能，所需轨迹数量约减少 20 倍，并优于固定数据 RL 和环境增强方法。",
+  "key_points_zh": [
+    "指出多轮工具使用 RL 中静态数据会快速失效：最有训练价值的是智能体能力边界附近、成功失败混合的样本。",
+    "利用 GRPO rollout 的奖励方差作为零额外成本的边界检测信号，无需额外推理即可定位高梯度贡献任务。",
+    "提出 RODS，将 RL 训练与在线数据合成闭环结合，围绕边界样本生成结构复杂度相近的多轮工具使用任务变体。",
+    "通过动态 replay buffer 维护随策略能力变化而更新的训练池，使数据分布与模型能力边界共同演化。",
+    "在仅 400 个 human seeds 和约 800 个活跃样本下，性能接近 17K 样本离线流程，并显著减少训练轨迹需求。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.86,
+    "llm_avg": 0.818,
+    "comment": "Strong closed-loop training work for tool-use agents, with practical value for trajectory-efficient self-improving agent systems.",
+    "comment_zh": "这是一项很强的工具调用智能体闭环训练工作，对高效利用轨迹数据构建自改进系统具有实际价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.704560788802713,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.818,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 3,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19047/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19047/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19047/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.98
+    }
+  ]
+}

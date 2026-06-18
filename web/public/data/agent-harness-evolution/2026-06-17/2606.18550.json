@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2606.18550",
+  "title": "The Gate Is Only as Honest as Its Contracts: ContractGuard for the Contract Layer of Risk-Aware Causal Gating",
+  "title_zh": "门控的诚实取决于合约：面向 Risk-Aware Causal Gating 合约层的 ContractGuard",
+  "authors": [
+    "Laxmipriya Ganesh Iyer",
+    "Rahul Suresh Babu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-17T00:00:11Z",
+  "abs_url": "https://arxiv.org/abs/2606.18550v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.18550",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Risk-Aware Causal Gating (RACG) defends tool-augmented LLM agents against indirect prompt injection by removing dangerous tools from the agent's visible action space, so that even a fully injection-compliant agent cannot call a tool it cannot see. We make three points. First, this structural guarantee does not eliminate the trust assumption behind safe tool use; it relocates it into the integrity of the tool contracts -- declared preconditions, effects, risk, and authorization -- that the gate reads, so an attacker who corrupts a contract can make the gate mis-decide without ever persuading the agent. Second, forging a tool's effects is strictly more dangerous than tampering with its risk label, because RACG applies a causal gate before its admissibility gate: an off-path tool is never exposed, so risk-relabeling alone fails, whereas effect forgery routes the dangerous tool onto the causal path and succeeds. Effect integrity, not the risk label, is the load-bearing assumption. Third, we introduce ContractGuard, a verifier between the registry and the gate that layers signed provenance, typed contract attestation, and runtime effect verification; on a controlled benchmark it restores injection success to zero against every modeled attack -- including an exhaustive white-box adaptive attacker -- without over-rejecting honest contracts, and the structural prediction is confirmed on six current-generation hosted models (Claude Opus 4.8, Sonnet 4.6, Haiku 4.5; Amazon Nova Premier and Nova 2 Lite; GPT-OSS-120B).",
+  "abstract_zh": "Risk-Aware Causal Gating（RACG）通过从工具增强型 LLM agent 的可见动作空间中移除危险工具，防御间接提示注入：即使 agent 完全服从注入指令，也无法调用不可见工具。本文指出三点：第一，这种结构性保证并未消除安全工具使用背后的信任假设，而是将其转移到工具合约的完整性上，包括声明的前置条件、效果、风险和授权；攻击者若篡改合约，就能让门控误判，而无需说服 agent。第二，伪造工具效果比篡改风险标签更危险，因为 RACG 先执行因果门控、再执行可准入性门控；不在因果路径上的工具不会暴露，因此单纯风险重标记会失败，而效果伪造可将危险工具路由到因果路径上并成功攻击。换言之，效果完整性才是关键承重假设，而非风险标签。第三，论文提出 ContractGuard，在 registry 与 gate 之间加入验证器，结合签名溯源、类型化合约证明和运行时效果验证；在受控基准上，它将所有建模攻击的注入成功率恢复为零，包括穷尽式白盒自适应攻击，同时不会过度拒绝诚实合约；该结构性预测也在六个当前托管模型上得到验证，包括 Claude Opus 4.8、Sonnet 4.6、Haiku 4.5、Amazon Nova Premier、Nova 2 Lite 和 GPT-OSS-120B。",
+  "key_points_zh": [
+    "论文重新审视 RACG 的安全边界：其核心防护来自隐藏危险工具，但真正的信任假设被转移到工具合约层。",
+    "作者证明效果伪造比风险标签篡改更具破坏性；因 RACG 先做 causal gate，只有伪造 effects 才能把危险工具放上可见因果路径。",
+    "提出 ContractGuard，在工具 registry 与 gate 之间验证合约，包含 signed provenance、typed contract attestation 和 runtime effect verification。",
+    "在受控 benchmark 中，ContractGuard 对所有建模攻击均将 injection success 降为零，包括 exhaustive white-box adaptive attacker，且不误拒诚实合约。",
+    "实验覆盖六个当前 generation hosted models，验证了关于合约完整性与效果伪造风险的结构性预测。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.86,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.92,
+    "llm_avg": 0.8720000000000001,
+    "comment": "Excellent agent-runtime security work that identifies a key contract-layer trust boundary and proposes verifier-backed protection for tool gating.",
+    "comment_zh": "这是一项优秀的智能体运行时安全研究，识别了工具门控中的契约层信任边界并提出了验证器保护机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8720000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18550/fig1.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.976
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18550/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.18550/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.961
+    }
+  ]
+}

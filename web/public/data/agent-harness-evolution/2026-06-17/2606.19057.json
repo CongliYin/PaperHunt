@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2606.19057",
+  "title": "Quantifying and Auditing LLM Evaluation via Positive--Unlabeled Learning",
+  "title_zh": "通过 Positive–Unlabeled Learning 量化与审计 LLM 评测",
+  "authors": [
+    "Zilong Zhang",
+    "Yi-Ting Hung",
+    "Lei Ding",
+    "Chi-Kuang Yeh"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Chi-Kuang Yeh",
+      "affiliations": [
+        "University of Waterloo"
+      ]
+    }
+  ],
+  "published_at": "2026-06-17T13:26:04Z",
+  "abs_url": "https://arxiv.org/abs/2606.19057v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19057",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large Language Models (LLMs) are increasingly used as judges for scalable evaluation, yet such LLM--as--a--Judge systems exhibit systematic biases that are decoupled from semantic quality, most notably verbosity bias. Meanwhile, human supervision is costly and typically selective, yielding reliable positive judgments but leaving most outputs unlabelled and potentially mixed in quality. We formulate LLM evaluation under selective human supervision as a positive--unlabelled learning problem and propose a geometric auditing framework based on Partial Optimal Transport. By aligning a small set of human--verified positives with a reliable subset of unlabelled outputs in a fixed embedding space, our method identifies human--consistent preferences and corrects biased judges without retraining. Experiments demonstrate improved alignment with human preferences, increased robustness to presentation biases, and interpretable confidence estimates, offering a scalable and statistically grounded alternative to existing LLM--as--a--judge pipelines.",
+  "abstract_zh": "本文关注 LLM-as-a-Judge 在规模化评测中的系统性偏差问题，尤其是与语义质量脱钩的 verbosity bias。作者将选择性人工监督下的 LLM 评测建模为 Positive–Unlabeled Learning：人工标注通常只提供可靠的正例判断，而大量输出保持未标注且质量混杂。论文提出一种基于 Partial Optimal Transport 的几何审计框架，在固定 embedding 空间中，将少量人类验证的正例与未标注输出中的可靠子集对齐，从而识别人类一致的偏好，并在无需重新训练 judge 模型的情况下校正偏置。实验显示，该方法能提升与人类偏好的对齐，增强对呈现偏差的鲁棒性，并提供可解释的置信度估计。",
+  "key_points_zh": [
+    "将选择性人工监督下的 LLM 评测形式化为 Positive–Unlabeled Learning 问题，适配“少量可靠正例 + 大量未标注样本”的现实场景。",
+    "提出基于 Partial Optimal Transport 的几何审计方法，在 embedding 空间中对齐人工正例与未标注输出的可靠子集。",
+    "无需重新训练 LLM judge，即可识别人类一致偏好并校正 verbosity bias 等与语义质量无关的系统性偏差。",
+    "实验表明，该框架提升了与人类偏好的对齐程度，并增强了对 presentation biases 的鲁棒性。",
+    "方法还能输出可解释的置信度估计，为 LLM-as-a-Judge 管线提供更可扩展、统计上更稳健的替代方案。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.65,
+    "problem_significance": 0.75,
+    "potential_impact": 0.65,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.65,
+    "llm_avg": 0.63,
+    "comment": "A credible auditing approach for LLM-as-judge pipelines with clear relevance to evaluation governance, though it is not a full agent runtime framework.",
+    "comment_zh": "该方法能增强LLM评审流程的审计与治理能力，但并不是完整的智能体运行时框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36560162063732243,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.63,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": [
+      "University of Waterloo"
+    ]
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19057/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.97
+    }
+  ]
+}
