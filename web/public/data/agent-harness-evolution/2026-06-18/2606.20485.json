@@ -1,0 +1,73 @@
+{
+  "arxiv_id": "2606.20485",
+  "title": "Optimal Order of Multi-Agent and General Many-Body Systems",
+  "title_zh": "多智能体与一般多体系统的最优有序度",
+  "authors": [
+    "Jake J. Xia"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T17:03:03Z",
+  "abs_url": "https://arxiv.org/abs/2606.20485v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.20485",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "This paper develops a general framework for analyzing multi-agent systems with feedback loops between agents actions and collective observations. The framework is built on two fundamental agent-level variables: power, which measures agent influence on collective outcomes, and response functions, which determine how agents react to observations. We derive how macroscopic properties, including total power, useful power, entropy, order, fragility, and mobility, emerge from these two variables of heterogeneous agents. To study the trade off between growth and resilience, we introduce a system-level utility function parameterized by a risk-appetite coefficient and derive an optimal degree of order that balances productivity, stability, and adaptability. The analysis suggests that stronger synchronization can increase collective output but may also increase systemic fragility and reduce mobility. We further argue that order, entropy, information, and useful energy are task-dependent and system-relative concepts whose meanings depend on the objectives of the system. By measuring and designing agent power distributions and response functions, it may be possible to better understand, predict, and optimize collective behavior and identify the conditions under which collective intelligence and optimal order emerge.",
+  "abstract_zh": "本文提出一个用于分析多智能体系统（multi-agent systems）的通用框架，重点刻画智能体行为与群体观测之间的反馈回路。框架基于两个智能体层面的核心变量：power（衡量个体对集体结果的影响力）与 response functions（描述个体如何响应观测）。作者推导了总 power、有用 power、熵、秩序、脆弱性与流动性等宏观性质如何从异质智能体的这两个变量中涌现。为研究增长与韧性之间的权衡，论文引入带有风险偏好系数（risk-appetite coefficient）的系统级效用函数，并推导出在生产力、稳定性与适应性之间取得平衡的最优有序度。分析表明，更强的同步性可能提升集体产出，但也会增加系统性脆弱性并降低流动性。论文进一步强调，order、entropy、information 与 useful energy 都是任务相关、系统相对的概念，其含义取决于系统目标。通过测量和设计智能体 power 分布与 response functions，有望更好地理解、预测和优化集体行为，并识别集体智能与最优秩序涌现的条件。",
+  "key_points_zh": [
+    "提出一个统一框架，用 agent power 与 response functions 描述多智能体/多体系统中个体行为、集体观测和反馈回路的耦合关系。",
+    "从异质智能体的微观变量推导宏观性质，包括 total power、useful power、entropy、order、fragility 与 mobility。",
+    "引入带 risk-appetite coefficient 的系统效用函数，刻画增长、稳定性与适应性的权衡，并定义系统的 optimal order。",
+    "指出更高同步性可提升集体输出，但可能带来更强系统性脆弱性和更低流动性，体现秩序与韧性的张力。",
+    "强调 order、entropy、information、useful energy 等概念具有任务依赖性和系统相对性，可用于分析 collective intelligence 与 AI model scaling law 等问题。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.42,
+    "problem_significance": 0.32,
+    "potential_impact": 0.22,
+    "paradigm_shift": 0.28,
+    "lasting_value": 0.18,
+    "llm_avg": 0.284,
+    "comment": "The paper is a broad theoretical treatment of many-body multi-agent order and has little direct applicability to LLM-agent harness infrastructure.",
+    "comment_zh": "该论文是关于多体多智能体秩序的宽泛理论分析，对LLM智能体运行框架基础设施的直接适用性很低。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.284,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20485/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20485/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.953
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2606.19823",
+  "title": "Low-Burden Data Augmentation for Dysarthric ASR via Zero-Shot Voice Cloning",
+  "title_zh": "面向构音障碍 ASR 的低负担数据增强：基于零样本语音克隆",
+  "authors": [
+    "Satwinder Singh",
+    "Qianli Wang",
+    "Zihan Zhong",
+    "Clarion Mendes",
+    "Hasegawa-Johnson",
+    "Waleed Abdulla",
+    "Seyed Reza Shahamiri"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T05:55:58Z",
+  "abs_url": "https://arxiv.org/abs/2606.19823v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19823",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Automatic speech recognition remains unreliable for dysarthric speech due to data scarcity and high inter-speaker variability. While synthetic data can address these gaps, traditional methods often require extensive speaker-specific data, reintroducing the collection bottleneck. We investigate zero-shot voice cloning as a low-burden augmentation strategy, using Higgs Audio V2 to clone speakers in the TORGO dataset. We fine-tune (FT) Whisper-medium on cloned, real, and hybrid data and evaluate on held-out real speech. Compared to the zero-shot (31.62%), Clone FT achieved a competitive 26.00% WER, nearly matching the 24.44% and 25.12% seen with Real and Hybrid FT, respectively. Notably, Clone and Hybrid FT outperform Real FT for moderate-severe speakers. Clone FT achieves the best results (11.45% relative) in cross-corpus evaluation on the SAP-1102. These results suggest that zero-shot cloning provides scalable training data that circumvents the costly data collection bottleneck.",
+  "abstract_zh": "构音障碍语音的自动语音识别（ASR）仍受限于数据稀缺和说话人差异大。传统合成数据方法通常需要大量说话人特定数据，仍然存在采集成本高的问题。本文研究将零样本语音克隆作为低负担数据增强策略，使用 Higgs Audio V2 克隆 TORGO 数据集中的说话人语音，并在克隆数据、真实数据和混合数据上微调 Whisper-medium，最后在保留的真实语音上评估。相比零样本 Whisper 的 31.62% WER，Clone FT 达到 26.00% WER，接近 Real FT 的 24.44% 和 Hybrid FT 的 25.12%。值得注意的是，在中重度构音障碍说话人上，Clone FT 和 Hybrid FT 优于 Real FT。在 SAP-1102 跨语料评估中，Clone FT 获得最佳结果，相对提升 11.45%。结果表明，零样本语音克隆可提供可扩展训练数据，并缓解高成本数据采集瓶颈。",
+  "key_points_zh": [
+    "提出用零样本语音克隆（zero-shot voice cloning）作为构音障碍 ASR 的低负担数据增强方案，避免大量说话人特定数据采集。",
+    "方法使用 Higgs Audio V2 克隆 TORGO 数据集说话人，并分别用克隆数据、真实数据和混合数据微调 Whisper-medium。",
+    "Clone FT 的 WER 为 26.00%，明显优于零样本基线 31.62%，并接近 Real FT 的 24.44% 与 Hybrid FT 的 25.12%。",
+    "在中重度构音障碍说话人上，Clone FT 和 Hybrid FT 反而优于仅使用真实数据的 Real FT，显示合成数据对低资源困难子群体尤其有价值。",
+    "在 SAP-1102 跨语料评估中，Clone FT 取得最佳结果，带来 11.45% 相对提升，表明其具备一定跨数据集泛化能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.3,
+    "problem_significance": 0.45,
+    "potential_impact": 0.35,
+    "paradigm_shift": 0.1,
+    "lasting_value": 0.3,
+    "llm_avg": 0.30000000000000004,
+    "comment": "This addresses an important ASR data-scarcity problem for dysarthric speech, but it is a pure ASR augmentation study with limited direct relevance to realtime agent workflows.",
+    "comment_zh": "该论文针对构音障碍语音识别的数据稀缺问题具有实际意义，但本质上是纯ASR数据增强研究，与实时智能体工作流关联较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5198405144705329,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.30000000000000004,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 18,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19823/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.946
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19823/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19823/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.908
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19823/fig4.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}

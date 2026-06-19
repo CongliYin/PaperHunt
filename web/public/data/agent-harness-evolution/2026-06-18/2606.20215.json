@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2606.20215",
+  "title": "GNSS Spoofing Threat for V2X communications",
+  "title_zh": "面向 V2X 通信的 GNSS 欺骗威胁",
+  "authors": [
+    "Adolfo P. Jimenez",
+    "Juan Arquero-Gallego",
+    "Mario P. Luna",
+    "Jose E. Naranjo",
+    "Felipe Jimenez Alonso"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T13:30:04Z",
+  "abs_url": "https://arxiv.org/abs/2606.20215v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.20215",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Global Navigation Satellite Systems (GNSS) constitute a core technology for delivering crucial positioning, navigation, and timing (PNT) services in the Vehicle-to-Everything (V2X) domain, where they are indispensable for generating Cooperative Awareness Messages (CAM) that uphold network reliability and vehicular safety. Yet, GNSS signals are acutely exposed to spoofing, an advanced attack in which an adversary transmits crafted signals that replicate legitimate satellite characteristics, misleading the receiver into computing a false position. This work presents a methodology for conducting physical spoofing with inexpensive Software Defined Radio (SDR), describing a coordinate generation pipeline that employs Haversine-based distance calculations, temporal discretization to emulate constant velocity, and linear interpolation to produce high-fidelity GPS baseband signals. The proposed attack is experimentally validated on real Commsignia OnBoard Unit (OBU) and RoadSide Unit (RSU) devices using a HackRF One across three scenarios that emulate synthetic trajectories at steady speeds of 90 km/h, 145 km/h, and 200 km/h. The most significant contribution of this paper is the demonstration that V2X communications are not secured, as they are susceptible to GNSS spoofing attacks, which cause service degradation without being detected.",
+  "abstract_zh": "本文研究 Global Navigation Satellite Systems (GNSS) 在 Vehicle-to-Everything (V2X) 通信中的安全风险。GNSS 是车辆定位、导航与授时（PNT）的核心技术，并支撑 Cooperative Awareness Messages (CAM) 的生成，对网络可靠性和行车安全至关重要。然而，GNSS 信号容易遭受 spoofing 攻击：攻击者通过伪造类似合法卫星的信号，使接收机计算出错误位置。论文提出一种使用低成本 Software Defined Radio (SDR) 实施物理层 GNSS spoofing 的方法，包括基于 Haversine 公式的距离计算、用于模拟恒定速度的时间离散化，以及通过线性插值生成高保真 GPS 基带信号。作者使用 HackRF One，在真实 Commsignia OnBoard Unit (OBU) 与 RoadSide Unit (RSU) 设备上进行实验验证，设计了三种合成轨迹场景，速度分别为 90 km/h、145 km/h 和 200 km/h。实验表明，V2X 通信可被 GNSS spoofing 攻击影响并出现服务退化，且攻击未被系统检测到。",
+  "key_points_zh": [
+    "指出 GNSS 是 V2X 中 CAM 生成和车辆安全服务的关键依赖，但其开放信号特性使其易受 spoofing 攻击。",
+    "提出一条物理 GNSS spoofing 生成流程：使用 Haversine 距离计算、时间离散化模拟恒速运动，并通过线性插值生成 GPS 基带信号。",
+    "攻击实现基于低成本 SDR 设备 HackRF One，降低了实际威胁门槛，说明该类攻击并不依赖昂贵专用设备。",
+    "在真实 Commsignia OBU 和 RSU 上进行实验，覆盖 90 km/h、145 km/h、200 km/h 三种合成轨迹速度场景。",
+    "实验显示 GNSS spoofing 可导致 V2X 服务退化且未被检测，暴露出现有 V2X 通信系统对定位欺骗缺乏有效防护。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.35,
+    "problem_significance": 0.42,
+    "potential_impact": 0.28,
+    "paradigm_shift": 0.12,
+    "lasting_value": 0.15,
+    "llm_avg": 0.26399999999999996,
+    "comment": "The GNSS spoofing study is security-relevant for V2X systems but largely outside agent harness evolution and offers little reusable agent-platform infrastructure.",
+    "comment_zh": "该GNSS欺骗研究对车联网安全有意义，但基本不属于智能体基础设施演进方向，也缺少可复用的平台贡献。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.26399999999999996,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20215/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20215/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.978
+    }
+  ]
+}

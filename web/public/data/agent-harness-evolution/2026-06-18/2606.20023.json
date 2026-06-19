@@ -1,0 +1,92 @@
+{
+  "arxiv_id": "2606.20023",
+  "title": "When Lower Privileges Suffice: Investigating Over-Privileged Tool Selection in LLM Agents",
+  "title_zh": "低权限足矣时：研究 LLM Agent 中的过度权限工具选择",
+  "authors": [
+    "Kaiyue Yang",
+    "Yuyan Bu",
+    "Jingwei Yi",
+    "Yuchi Wang",
+    "Biyu Zhou",
+    "Juntao Dai",
+    "Songlin Hu",
+    "Yaodong Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T09:54:48Z",
+  "abs_url": "https://arxiv.org/abs/2606.20023v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.20023",
+  "links": {
+    "github": "https://github.com/AISafetyHub/agent-tool-selection-bias",
+    "project_page": null
+  },
+  "abstract_en": "As LLM agents increasingly select tools autonomously, their choices among tools with different privileges become safety-relevant. However, prior tool-selection studies focus on safety-agnostic metadata preferences, leaving privilege-sensitive choices underexplored. To address this gap, we study over-privileged tool selection, in which an agent selects or escalates to a higher-privilege tool despite a sufficient lower-privilege alternative. We introduce ToolPrivBench to evaluate whether agents choose higher-privilege tools despite sufficient lower-privilege alternatives, measuring both initial selection and escalation after transient tool failures. Across eight domains and five recurring risk patterns, we find that over-privileged tool selection is common among mainstream LLM agents and is further amplified by transient failures. We further find that general safety alignment does not reliably transfer to least-privilege tool choice, while prompt-level controls provide only limited mitigation under transient failures. We therefore introduce a privilege-aware post-training defense that teaches agents to prefer sufficient lower-privilege tools and escalate only when necessary. Our mitigation experiments show that this defense substantially reduces unnecessary high-privilege tool use while preserving general capabilities.",
+  "abstract_zh": "随着 LLM agents 越来越多地自主选择工具，它们在不同权限工具之间的选择开始具有安全影响。以往工具选择研究多关注与安全无关的元数据偏好，较少考察权限敏感场景。本文研究“过度权限工具选择”（over-privileged tool selection）：即在低权限工具已经足够完成任务时，agent 仍选择或升级到更高权限工具。作者提出 ToolPrivBench，用于评估 agents 是否会在存在充分低权限替代方案时选择高权限工具，并同时衡量初始选择与短暂工具故障后的权限升级行为。实验覆盖 8 个领域和 5 类反复出现的风险模式，结果显示主流 LLM agents 普遍存在过度权限工具选择，且短暂故障会进一步放大这一问题。研究还发现，通用安全对齐并不能可靠迁移到最小权限工具选择；prompt 级控制在短暂故障下缓解效果有限。为此，作者提出一种权限感知的后训练防御方法，训练 agents 优先选择足够的低权限工具，并仅在必要时升级。缓解实验表明，该方法能显著减少不必要的高权限工具使用，同时保持通用能力。",
+  "key_points_zh": [
+    "提出 over-privileged tool selection 概念：当低权限工具已足够时，LLM agent 仍选择或升级到高权限工具，带来最小权限原则失效的安全风险。",
+    "构建 ToolPrivBench，覆盖 8 个应用领域与 5 类风险模式，评估初始工具选择以及短暂工具失败后的权限升级行为。",
+    "实验发现主流 LLM agents 普遍存在过度权限选择问题，且 transient failures（短暂故障）会显著增加不必要的高权限工具使用。",
+    "通用 safety alignment 不能稳定迁移到 least-privilege tool choice；仅靠 prompt-level controls 在故障场景下缓解有限。",
+    "提出 privilege-aware post-training defense，使 agent 学会优先使用足够的低权限工具、仅在必要时升级，并在保持能力的同时显著降低高权限工具滥用。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.88,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.82,
+    "llm_avg": 0.772,
+    "comment": "This is highly relevant security work on least-privilege tool selection, with benchmark evidence and a mitigation direction for safer production agent runtimes.",
+    "comment_zh": "这是一项高度相关的安全研究，聚焦最小权限工具选择，并提供了基准证据和面向生产智能体运行时的缓解方案。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.772,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/AISafetyHub/agent-tool-selection-bias",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20023/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20023/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.865
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20023/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.954
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20023/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.962
+    }
+  ]
+}

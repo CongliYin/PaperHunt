@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2606.20333",
+  "title": "SoftSkill: Behavioral Compression for Contextual Adaptation",
+  "title_zh": "SoftSkill：用于上下文适应的行为压缩",
+  "authors": [
+    "Xijia Tao",
+    "Yihua Teng",
+    "Xinyu Fu",
+    "Ziru Liu",
+    "Kecheng Chen",
+    "Yuzhi Zhao",
+    "Suiyun Zhang",
+    "Rui Liu",
+    "Lingpeng Kong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T15:04:47Z",
+  "abs_url": "https://arxiv.org/abs/2606.20333v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.20333",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent skills are commonly deployed as natural-language Markdown files that encode answer policies, evidence-use habits, and task procedures. These files are readable and portable, but they are consumed indirectly: for each task instance, a frozen language model must translate a long textual artifact into generation-time behavior. This paper asks whether a natural-language skill can instead initialize a compact continuous context object, refined by a trainable soft delta while the base model remains frozen. We propose SoftSkill, a frozen-backbone method that tunes such soft skills with next-token prediction and deploys them as latent behavioral priors at inference time. In our main single-round setting, a length-32 SoftSkill prefix on Qwen3.5-4B improves over no-skill prompting by 8.3 points on SearchQA, 42.1 points on LiveMath, and 1.3 points on DocVQA. Relative to SkillOpt, SoftSkill improves accuracy by 5.2 points on SearchQA and 12.5 points on LiveMath, while replacing hundreds to thousands of Markdown skill tokens with a few virtual tokens. We further study agentic execution as a harder boundary case, where sparse trajectory imitation provides useful signal but does not yet robustly compress long-horizon procedural behavior. More broadly, the results suggest that some task skills are better treated not as additional Markdown to be reinterpreted at inference time, but as compact latent controls over how a frozen model enters the task.",
+  "abstract_zh": "本文研究如何将以 Markdown 自然语言文件形式存在的 agent skill，压缩为更紧凑的连续上下文对象。传统 skill 虽然可读、可移植，但在每次任务推理时都需要冻结语言模型重新解释冗长文本。作者提出 SoftSkill：在冻结 backbone 的前提下，通过 next-token prediction 训练一个长度很短的 soft prefix，并在推理时作为潜在行为先验注入模型。实验显示，在单轮设置中，Qwen3.5-4B 上长度为 32 的 SoftSkill prefix 相比无 skill prompting，在 SearchQA、LiveMath、DocVQA 上分别提升 8.3、42.1、1.3 个百分点；相比 SkillOpt，在 SearchQA 和 LiveMath 上分别提升 5.2、12.5 个百分点，同时用少量 virtual tokens 替代数百到数千个 Markdown skill tokens。作者还探索了 agentic execution 场景，发现稀疏轨迹模仿虽有帮助，但尚不能稳定压缩长程程序化行为。总体而言，论文表明部分任务技能更适合表示为冻结模型的紧凑潜在控制，而非推理时反复解释的额外文本。",
+  "key_points_zh": [
+    "提出 SoftSkill，将自然语言 Markdown skill 压缩为可训练的连续 soft prefix，在冻结语言模型 backbone 的情况下实现上下文行为适应。",
+    "训练目标采用 next-token prediction，推理时 SoftSkill 作为 latent behavioral prior，引导模型进入特定任务行为模式。",
+    "在 Qwen3.5-4B 单轮任务中，长度 32 的 SoftSkill prefix 相比无 skill prompting，在 SearchQA、LiveMath、DocVQA 上分别提升 8.3、42.1、1.3 个百分点。",
+    "相比 SkillOpt，SoftSkill 在 SearchQA 和 LiveMath 上分别提升 5.2、12.5 个百分点，并显著减少 skill 表示所需 token 数。",
+    "在 agentic execution 长程任务中，稀疏轨迹模仿能提供信号，但目前仍难以稳健压缩复杂程序化行为。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.68,
+    "problem_significance": 0.6,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.54,
+    "llm_avg": 0.5900000000000001,
+    "comment": "SoftSkill offers a promising way to compress reusable agent skills into latent controls, though its current evidence is stronger for short-context adaptation than robust long-horizon agent execution.",
+    "comment_zh": "SoftSkill为将可复用智能体技能压缩为潜在控制提供了有前景的方法，但当前证据更支持短上下文适配而非稳健的长程智能体执行。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.5900000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20333/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.932
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20333/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.982
+    }
+  ]
+}

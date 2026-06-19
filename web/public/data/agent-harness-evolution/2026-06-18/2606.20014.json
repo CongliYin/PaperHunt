@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.20014",
+  "title": "Hierarchical Control in Multi-Agent Games: LLM-based Planning and RL Execution",
+  "title_zh": "多智能体游戏中的分层控制：基于 LLM 的规划与 RL 执行",
+  "authors": [
+    "Jannik Hösch",
+    "Alessandro Sestini",
+    "Florian Fuchs",
+    "Amir Baghi",
+    "Joakim Bergdahl",
+    "Konrad Tollmar",
+    "Jean-Philippe Barrette-LaPierre",
+    "Linus Gisslén"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T09:47:06Z",
+  "abs_url": "https://arxiv.org/abs/2606.20014v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.20014",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement learning (RL) has achieved strong performance in sequential decision-making, yet scaling to complex multi-agent environments remains challenging due to sparse rewards, large state-action spaces, and the difficulty of learning coordinated strategies. We propose a hierarchical architecture where a pretrained large language model (LLM) acts as a centralized strategic controller that selects among specialized RL skill policies for a team of agents, while RL policies handle reactive low-level execution. We evaluate this hybrid system in a competitive 2v2 King of the Hill environment against behavior tree (BT) and \\emph{``Flat''} RL (end-to-end training without skill decomposition) baselines. The LLM+RL system achieves task performance statistically equivalent to hand-crafted BT (46.4\\% vs 51.5\\% win rate, $p=0.103$) while both significantly outperform Flat RL trained without skill decomposition. A user study ($n=15$) reveals that 60\\% of participants perceive LLM+RL agents as the most human-like ($p=0.027$), citing behavioral adaptability and tactical variability. These results demonstrate that pretrained LLM reasoning can effectively orchestrate pretrained RL skills, achieving competitive multi-agent coordination and superior perceived believability without manual rule engineering.",
+  "abstract_zh": "本文提出一种面向复杂多智能体环境的分层控制架构：预训练大语言模型（LLM）作为集中式战略控制器，为团队智能体选择专门的强化学习（RL）技能策略；底层 RL 策略则负责快速、反应式的执行。该方法旨在缓解多智能体 RL 中稀疏奖励、巨大状态-动作空间以及协同策略难学习等问题。作者在竞争性 2v2 King of the Hill 环境中评估该 LLM+RL 混合系统，并与行为树（BT）和未进行技能分解的端到端 Flat RL 基线比较。结果显示，LLM+RL 的胜率为 46.4%，与手工设计 BT 的 51.5% 在统计上相当（p=0.103），且二者均显著优于 Flat RL。用户研究（n=15）进一步表明，60% 参与者认为 LLM+RL 智能体最像人类（p=0.027），主要原因是其行为适应性和战术多样性更强。研究表明，预训练 LLM 的推理能力可以有效调度预训练 RL 技能，在无需人工规则工程的情况下实现有竞争力的多智能体协同与更高的行为可信度。",
+  "key_points_zh": [
+    "提出 LLM+RL 分层架构：LLM 作为集中式高层策略规划器，RL 技能策略负责低层执行。",
+    "在 2v2 King of the Hill 竞争环境中，LLM+RL 达到与手工 BT 统计等价的胜率表现。",
+    "相比未做技能分解的 Flat RL，LLM+RL 和 BT 均显著更强，说明技能分解与高层调度有助于多智能体协同。",
+    "用户研究显示，LLM+RL 被认为最具人类感，得益于更强的行为适应性和战术变化。",
+    "该方法减少了手工规则工程需求，展示了预训练 LLM 调度 RL 技能在游戏 AI 与多智能体控制中的潜力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.46,
+    "problem_significance": 0.42,
+    "potential_impact": 0.34,
+    "paradigm_shift": 0.3,
+    "lasting_value": 0.28,
+    "llm_avg": 0.36,
+    "comment": "The LLM-plus-RL hierarchy shows skill orchestration in a game setting, but it lacks production runtime controls, governance, or reusable platform abstractions.",
+    "comment_zh": "该LLM加RL层级架构在游戏环境中展示了技能编排，但缺少生产运行控制、治理或可复用平台抽象。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.36,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20014/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20014/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20014/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.974
+    }
+  ]
+}

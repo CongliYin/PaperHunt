@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2606.19795",
+  "title": "Agentic Electronic Design Automation: A Handoff Perspective",
+  "title_zh": "Agentic EDA：一种交接视角",
+  "authors": [
+    "Jiawei Liu",
+    "Peiyi Han",
+    "Yuntao Lu",
+    "Su Zheng",
+    "Fengyu Yan",
+    "Bei Yu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T04:58:55Z",
+  "abs_url": "https://arxiv.org/abs/2606.19795v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19795",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Electronic design automation (EDA) is inherently multi-stage and handoff-heavy. Design artifacts, flow scripts, and engineering decisions cross tool, session, and organizational boundaries before final implementation, signoff, or release. Each transfer carries explicit and implicit requirements that may not be fully captured by stage-local checks. LLM-based agents now invoke EDA tools directly, embed retrieved knowledge in executable scripts, and hand off state across sessions and stages. Once their outputs condition downstream engineering decisions, the transferred object must satisfy a handoff contract and meet the assumptions of its next consumer. This survey introduces handoff validity as its organizing principle. A handoff is valid when the transferred object satisfies the consumer's acceptance conditions and carries sufficient context, evidence, and provenance for downstream use. We review 82 systems and classify them into three boundary classes. Stage-Bound systems establish validity within a single EDA stage or bounded verification task. Flow-Bound systems preserve coherent workflow state across tools, invocations, and sessions. Organization-Bound systems maintain source grounding, provenance, scope, and admissibility across knowledge and authority boundaries. For each class, we analyze handoff contracts, handoff objects, coordination mechanisms, and open questions. These analyses motivate a five-layer EDA agent communication protocol (EACP), covering the agent discovery, agent message, tool invocation, workflow orchestration, and security and IP protocols. We aim to provide a common vocabulary and research agenda for trustworthy agentic EDA.",
+  "abstract_zh": "本文是一篇关于 LLM-based agents 在 Electronic Design Automation（EDA）中应用的综述，核心观点是：EDA 天然由多阶段、多工具、多组织边界构成，设计产物、脚本和工程决策在不同阶段间频繁交接，因此仅靠单阶段局部检查不足以保证下游可用性。作者提出“handoff validity（交接有效性）”作为统一分析框架：当被交接对象满足下游消费者的验收条件，并携带足够的上下文、证据与来源信息时，交接才是有效的。论文回顾了 82 个相关系统，并将其分为三类：Stage-Bound systems 关注单一 EDA 阶段或有限验证任务内的有效性；Flow-Bound systems 关注跨工具、跨调用、跨会话的工作流状态一致性；Organization-Bound systems 关注跨知识与权限边界时的来源 grounding、provenance、作用域和可采纳性。基于这些分析，论文提出五层 EDA Agent Communication Protocol（EACP）研究框架，覆盖 agent discovery、agent message、tool invocation、workflow orchestration 以及 security and IP protocols，旨在为可信 agentic EDA 建立共同术语和研究议程。",
+  "key_points_zh": [
+    "论文将 EDA 中的 agentic workflow 重新定义为一系列“交接”问题，强调每次工具、阶段、会话或组织边界上的状态传递都需要满足下游消费者的显式与隐式假设。",
+    "提出 handoff validity（交接有效性）概念：交接对象不仅要通过局部检查，还必须具备可验证的上下文、证据、provenance 和可追溯决策依据，才能支撑后续工程决策。",
+    "综述 82 个系统，并按边界类型划分为 Stage-Bound、Flow-Bound 和 Organization-Bound 三类，分别对应单阶段任务有效性、跨工具/会话工作流一致性，以及跨知识/权限边界的可信传递。",
+    "从 handoff contracts、handoff objects、coordination mechanisms 和 open questions 四个维度分析不同类别系统，为评估 LLM agents 在 EDA 中的可靠性提供结构化框架。",
+    "提出五层 EDA Agent Communication Protocol（EACP）愿景，涵盖 agent 发现、消息格式、工具调用、工作流编排、安全与 IP 协议，为未来可信 agentic EDA 标准化提供方向。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.86,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.8,
+    "llm_avg": 0.756,
+    "comment": "A strong domain-specific survey that reframes agentic EDA around handoff validity, provenance, workflow state, and protocol layers relevant to trustworthy agent infrastructure.",
+    "comment_zh": "这是一篇较强的领域综述，以交接有效性、来源追踪、工作流状态和协议分层来重构可信EDA智能体基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.308682335133939,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.756,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19795/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19795/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.937
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19795/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.982
+    }
+  ]
+}

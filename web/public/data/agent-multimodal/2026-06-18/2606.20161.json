@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2606.20161",
+  "title": "ARTEMIS: Agent-guided Reliability-aware Temporal Mask Evolution for Imperfectly Supervised Video Polyp Segmentation",
+  "title_zh": "ARTEMIS：面向不完美监督视频息肉分割的智能体引导、可靠性感知时序掩码演化",
+  "authors": [
+    "Tong Wang",
+    "Siwen Wang",
+    "Yaolei Qi",
+    "Jinxing Zhou",
+    "Yuting He",
+    "Guanyu Yang",
+    "Yutong Xie"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T12:27:39Z",
+  "abs_url": "https://arxiv.org/abs/2606.20161v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.20161",
+  "links": {
+    "github": "https://github.com/wangtong627/ARTEMIS.",
+    "project_page": null
+  },
+  "abstract_en": "Imperfectly supervised video polyp segmentation (VPS) aims to learn dense, temporally consistent masks from inexpensive supervision, including weak annotations (points, scribbles) and semi-supervision with few densely labeled frames. This setting is clinically valuable but challenging due to weak contrast, ambiguous boundaries, motion blur, and specular highlights, compounded by sparse pixel-level guidance. While SAM2 can generate dense masks from sparse inputs, direct pseudo-labeling often yields geometry-degraded masks with boundary leakage, underutilizes temporal consistency, and ignores reliability. To address these issues, we propose ARTEMIS, a unified framework for imperfectly supervised VPS driven by agent-guided reliability-aware temporal mask evolution. ARTEMIS initializes coarse masks from available supervision: SAM2 converts points/scribbles, while dense labels serve as reliable anchors. A debate-and-judge vision-language agent selects reliable temporal anchors under weak supervision, which are propagated bidirectionally with SAM2 to refine unreliable or unlabeled frames. Finally, ARTEMIS trains the segmenter using temporal reliability-aware robust learning, incorporating reliability-guided reference selection, a Reference Prototype Transport Module, and reliability-aware robust loss. These components assess mask reliability, evolve anchors over time, transport target identity across frames, and down-weight noisy supervision instead of discarding difficult samples. Experiments on SUN-SEG and CVC-ClinicDB-612 under scribble, point, and limited-label settings demonstrate that ARTEMIS achieves state-of-the-art performance. Code will be released at https://github.com/wangtong627/ARTEMIS.",
+  "abstract_zh": "不完美监督视频息肉分割（VPS）旨在利用低成本监督信号（如点、涂鸦）或少量密集标注帧，学习密集且时序一致的分割掩码。该任务具有临床价值，但面临弱对比度、边界模糊、运动模糊、镜面反光以及像素级监督稀疏等挑战。尽管 SAM2 可从稀疏输入生成密集掩码，直接用于伪标签生成时仍容易出现几何退化、边界泄漏，且未充分利用时序一致性和掩码可靠性。为此，论文提出 ARTEMIS，一个统一的不完美监督 VPS 框架，通过智能体引导的可靠性感知时序掩码演化提升训练质量。ARTEMIS 首先从已有监督初始化粗掩码：用 SAM2 将点/涂鸦转为掩码，并将密集标注视为可靠锚点；随后引入 debate-and-judge 视觉语言智能体，在弱监督场景下选择可靠时序锚点，并利用 SAM2 进行双向传播以细化不可靠或未标注帧；最后采用时序可靠性感知鲁棒学习训练分割器，包括可靠性引导的参考选择、Reference Prototype Transport Module 以及可靠性感知鲁棒损失，以评估掩码可靠性、跨帧传递目标身份，并降低噪声监督权重而非直接丢弃困难样本。在 SUN-SEG 和 CVC-ClinicDB-612 上的涂鸦、点标注和少量标注设置中，ARTEMIS 达到 state-of-the-art 性能。",
+  "key_points_zh": [
+    "提出 ARTEMIS，面向点、涂鸦和少量密集标注等不完美监督的视频息肉分割场景，统一利用 SAM2 生成并演化伪掩码。",
+    "引入 debate-and-judge 视觉语言智能体，在弱监督下筛选可靠时序锚点，并通过 SAM2 双向传播细化不可靠或未标注帧。",
+    "设计时序可靠性感知鲁棒学习流程，包括可靠性引导参考选择、Reference Prototype Transport Module 和可靠性感知鲁棒损失。",
+    "方法不简单丢弃噪声或困难样本，而是根据可靠性动态降权，从而缓解边界泄漏、几何退化和时序不一致问题。",
+    "在 SUN-SEG 与 CVC-ClinicDB-612 的 scribble、point 和 limited-label 设置下取得 state-of-the-art 结果，代码计划开源。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.35,
+    "problem_significance": 0.35,
+    "potential_impact": 0.25,
+    "paradigm_shift": 0.15,
+    "lasting_value": 0.25,
+    "llm_avg": 0.26999999999999996,
+    "comment": "Clinically useful video segmentation work with an agent-like VLM reliability module, but it is mainly offline medical segmentation rather than realtime multimodal agent interaction.",
+    "comment_zh": "该工作在临床视频分割中有一定价值并引入了类智能体的可靠性判断模块，但主要仍是离线医学分割而非实时多模态智能体交互。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.2794153127047222,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.26999999999999996,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/wangtong627/ARTEMIS.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20161/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.949
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20161/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.696
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20161/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20161/fig4.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.808
+    }
+  ]
+}

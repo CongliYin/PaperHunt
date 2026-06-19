@@ -1,0 +1,60 @@
+{
+  "arxiv_id": "2606.19924",
+  "title": "The Tao of Agency: Autotelic AI, Embedded Agency and Dissolution of the Self",
+  "title_zh": "能动性的道：Autotelic AI、嵌入式能动性与自我的消解",
+  "authors": [
+    "Aritra Sarkar"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T08:20:33Z",
+  "abs_url": "https://arxiv.org/abs/2606.19924v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19924",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Most artificial intelligence systems are built on the assumption that goals are exogenous and specified by the designer. Exploring what happens when an agent begins generating its own goals opens the field of autotelic AI. Agents are expected not merely to pursue objectives but to discover them. In this article, we trace its consequences through intrinsic motivation, resource-driven priors, causal-interventional learning, homeostasis, and embeddedness; the last of which is found to be a necessary but not sufficient condition for autotelic agency. Embeddedness individuates the agent at the cost of revealing that the individuation is non-unique, such that the same dynamics admit many valid partitions, each defining a different candidate self. The deepest problem with autotelic AI is therefore not how the agent generates goals, but how it generates and relativizes the self to which the goals are assigned. The agent must believe in its own boundary in order to act, and see through that boundary in order to understand. We consolidate these developments into a single framework and extend it along three directions: a quantum formulation in which the agent-environment cut becomes physical, a philosophical reading against non-dual contemplative traditions, and a concrete LLM-based agentic instantiation.",
+  "abstract_zh": "本文讨论一种不同于传统外部目标设定范式的 AI 方向：Autotelic AI，即智能体不仅执行目标，还能自主发现和生成目标。作者从内在动机、资源驱动先验、因果-干预式学习、稳态调节与嵌入性等角度梳理自生目标智能体的理论后果。文章指出，嵌入性是 Autotelic agency 的必要但非充分条件：智能体被嵌入环境后，虽然能够被划分为一个“自我”，但这种划分并不唯一，同一动力系统可支持多种有效的 agent-environment 分割，每一种都定义了不同的候选自我。因此，Autotelic AI 的核心难题并非单纯是目标如何生成，而是目标所归属的“自我”如何生成、维持并被相对化。智能体需要相信自身边界以便行动，也需要看穿该边界以便理解。文章进一步将这些思想整合为统一框架，并扩展到三个方向：将 agent-environment cut 物理化的量子表述、与非二元观修传统相关的哲学解读，以及一个基于 LLM 的具体 agentic 实例。",
+  "key_points_zh": [
+    "论文将 Autotelic AI 定义为能够自主发现和生成目标的智能体，挑战传统 AI 中目标由设计者外部指定的假设。",
+    "作者认为嵌入性（embeddedness）是自生能动性的必要条件，但不足以唯一确定智能体边界；同一系统动力学可被划分出多个有效的“自我”。",
+    "文章的核心论点是：Autotelic AI 的深层问题不是目标生成机制，而是目标归属的 self 如何被构造、维持与相对化。",
+    "框架整合了 intrinsic motivation、resource-driven priors、causal-interventional learning、homeostasis 等机制，用于解释自生目标智能体的形成。",
+    "论文进一步探索三条延伸路径：量子化的 agent-environment cut、与非二元哲学/观修传统的联系，以及基于 LLM 的 agentic 实现方案。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.45,
+    "problem_significance": 0.32,
+    "potential_impact": 0.22,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.18,
+    "llm_avg": 0.33399999999999996,
+    "comment": "This is a speculative conceptual essay on autotelic agency and selfhood with little concrete value for production agent runtimes, governance, or self-improving harnesses.",
+    "comment_zh": "该文主要是关于自生目标与自我边界的概念性讨论，对生产级智能体运行时、治理或自改进框架的直接价值较低。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.33399999999999996,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

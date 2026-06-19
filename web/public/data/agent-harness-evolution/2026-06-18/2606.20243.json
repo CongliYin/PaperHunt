@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.20243",
+  "title": "Phoenix: Safe GitHub Issue Resolution via Multi-Agent LLMs",
+  "title_zh": "Phoenix：基于多智能体 LLM 的安全 GitHub Issue 修复",
+  "authors": [
+    "Kipngeno Koech",
+    "Muhammad Adam",
+    "Baimam Boukar Jean Jacques",
+    "Joao Barros"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T13:56:12Z",
+  "abs_url": "https://arxiv.org/abs/2606.20243v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.20243",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We present Phoenix, a multi-agent LLM system that resolves GitHub issues from triage through pull-request creation, combining seven layered safety controls with a baseline-aware test evaluation strategy. Phoenix decomposes the work across six specialized agents. Planner, reproducer, coder, tester, failure analyst and Pull Request (PR) agent, all coordinated by a label-based GitHub webhook state machine. Every change is checked against a baseline test run before a pull request is opened. On a 24-instance slice of SWE-bench Lite. run on the production webhook path, Phoenix oracle-resolves 75% of instances with no pass-to-pass regressions on successful runs; this curated slice is not directly comparable to full-split leaderboard results, and we discuss the limits of the comparison. A complementary pilot on 42 real issues across 14 repositories yields 100% correctness preservation (CP; mean 122s on the hard tier). Manual inspection shows that about half of the resulting pull requests are well-targeted fixes. The other half place code at incorrect paths, a planner localization limitation we are addressing with retrieval. We also report the deployment failure modes (WAF filtering, token expiry, permission boundaries, flaky CI) that motivated each safety mechanism.",
+  "abstract_zh": "本文提出 Phoenix，一个多智能体 LLM 系统，可从 issue 分诊到创建 pull request 自动完成 GitHub issue 修复。Phoenix 由六类专用 agent 组成：Planner、Reproducer、Coder、Tester、Failure Analyst 和 PR Agent，并通过基于标签的 GitHub webhook 状态机协同。系统引入七层安全控制，并采用感知基线的测试评估策略：在创建 pull request 前，每次代码变更都要与基线测试运行结果对比，以避免引入 pass-to-pass 回归。在 SWE-bench Lite 的 24 个实例子集上，Phoenix 通过生产 webhook 路径运行，oracle-resolve 达到 75%，且成功运行中没有 pass-to-pass 回归；作者强调该精选子集不能直接与完整排行榜结果比较。另一个在 14 个仓库、42 个真实 issue 上的试点显示，系统达到 100% correctness preservation（CP），hard tier 平均耗时 122 秒。人工检查表明，约一半生成的 PR 是定位良好的修复，另一半则把代码放在错误路径，暴露出 Planner 的定位局限，作者计划通过 retrieval 改进。同时，论文总结了部署中的失败模式，如 WAF 过滤、token 过期、权限边界和 flaky CI，并说明这些问题如何驱动安全机制设计。",
+  "key_points_zh": [
+    "Phoenix 将 GitHub issue 修复流程拆分给六个专用 agent，并用基于标签的 GitHub webhook 状态机协调，从分诊、复现、编码、测试到 PR 创建形成闭环。",
+    "系统核心强调安全性：结合七层安全控制与 baseline-aware test evaluation，在开 PR 前对比基线测试，降低引入回归的风险。",
+    "在 24 个 SWE-bench Lite 精选实例上，Phoenix oracle-resolve 达到 75%，成功运行中无 pass-to-pass regression，但该子集不可直接与完整排行榜比较。",
+    "在 42 个真实 issue、14 个仓库的试点中，Phoenix 保持 100% correctness preservation，hard tier 平均耗时 122 秒，显示出一定工程可用性。",
+    "主要瓶颈是 Planner 的代码定位能力：约一半 PR 修复目标明确，另一半把代码放在错误路径；作者计划通过 retrieval 增强定位。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8320000000000001,
+    "comment": "Phoenix is a strong production-oriented agent system with multi-agent workflow state, webhook orchestration, baseline-aware testing, safety controls, permission boundaries, and reported deployment failures.",
+    "comment_zh": "Phoenix是较强的生产导向智能体系统，包含多智能体工作流状态、Webhook编排、基线感知测试、安全控制、权限边界和部署失败分析。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8320000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20243/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.556
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20243/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.918
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20243/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20243/fig4.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.84
+    }
+  ]
+}

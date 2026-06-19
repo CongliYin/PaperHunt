@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2606.20094",
+  "title": "MakeupMirror: Improving Facial Attribute Preservation in Diffusion Models for Makeup Transfer",
+  "title_zh": "MakeupMirror：提升扩散模型在妆容迁移中的面部属性保持能力",
+  "authors": [
+    "Nefeli Andreou",
+    "Angel Martínez-González",
+    "Sabine Sternig",
+    "Matthieu Guillaumin",
+    "Epameinondas Antonakos",
+    "Michael Opitz"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T11:13:50Z",
+  "abs_url": "https://arxiv.org/abs/2606.20094v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.20094",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Makeup transfer models enable fun augmented reality (AR) experiences as well as virtual try-on (VTO) for online makeup shopping. While recent state-of-the-art diffusion based solutions such as Stable-Makeup dramatically improve the accuracy and realism of makeup transfer, they still face limitations in identity and skin color preservation, making production-level VTO for makeup shopping unrealistic. In this work, we propose MakeupMirror, a diffusion-based approach to makeup transfer that makes significant progress towards preserving facial features and skin tone. We introduce several technical innovations over Stable-Makeup: (1) integration of facial geometry conditioning with ControlNets to maintain facial fidelity; (2) region-specific makeup transfer control to enable precise makeup application across facial regions such as skin, eyes and lips; (3) skin tone-based makeup transfer modulation that prevent skin tone alteration in cross-subject transfer scenarios; and (4) integration of a Levenberg-Marquardt Langevin sampler to speed up inference while maintaining generation quality. Our experiments on CPM-Real, Makeup Wild, and (herein newly collected, more diverse) MakeupSelfies datasets show that MakeupMirror improves relative facial recognition similarity by +60%, reduces relative skin tone difference by -50% over Stable-Makeup, with a latency of 0.7s, while achieving expert acceptance rate of 94% across core facial identity preservation criteria.",
+  "abstract_zh": "MakeupMirror 是一种面向妆容迁移（makeup transfer）的 diffusion-based 方法，旨在解决现有 Stable-Makeup 等方法在身份特征与肤色保持上的不足，使其更适合 AR 与线上美妆虚拟试妆（VTO）场景。论文在 Stable-Makeup 基础上引入多项改进：使用 ControlNets 融合面部几何条件以保持面部保真度；设计分区域妆容迁移控制，实现皮肤、眼部、唇部等区域的精确上妆；提出基于肤色的妆容迁移调制，避免跨主体迁移时改变原始肤色；并集成 Levenberg-Marquardt Langevin sampler，在维持生成质量的同时加速推理。实验在 CPM-Real、Makeup Wild 以及新收集、更具多样性的 MakeupSelfies 数据集上进行。结果显示，相比 Stable-Makeup，MakeupMirror 的相对人脸识别相似度提升 60%，相对肤色差异降低 50%，推理延迟为 0.7 秒，并在核心身份保持标准上达到 94% 的专家接受率。",
+  "key_points_zh": [
+    "提出 MakeupMirror，在 diffusion-based 妆容迁移中重点提升面部身份特征与肤色保持，面向生产级 AR/VTO 美妆试妆应用。",
+    "通过 ControlNets 引入面部几何条件，增强生成结果对原始脸型、五官结构和身份特征的保真度。",
+    "设计 region-specific makeup transfer control，可分别控制皮肤、眼部、唇部等区域的妆容迁移，提升局部上妆精度。",
+    "提出 skin tone-based makeup transfer modulation，减少跨主体妆容迁移时对用户原始肤色的错误改变。",
+    "在 CPM-Real、Makeup Wild 和 MakeupSelfies 上，相比 Stable-Makeup，人脸相似度相对提升 60%，肤色差异相对降低 50%，延迟约 0.7 秒。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.65,
+    "problem_significance": 0.55,
+    "potential_impact": 0.6,
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.45,
+    "llm_avg": 0.5000000000000001,
+    "comment": "A technically useful virtual try-on paper for makeup shopping, but it is peripheral to e-commerce agents, search, recommendation, or shopping workflows.",
+    "comment_zh": "这是一篇对美妆购物虚拟试妆有实用价值的技术论文，但与电商智能体、搜索、推荐或购物流程的关联较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.47137648127065174,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.5000000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 9,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20094/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20094/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20094/fig3.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

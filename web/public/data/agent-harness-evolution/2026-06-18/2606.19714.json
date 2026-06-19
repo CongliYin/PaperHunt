@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2606.19714",
+  "title": "AURA: Adaptive Uncertainty-aware Refinement for LLM-as-a-Judge Auditing",
+  "title_zh": "AURA：用于 LLM-as-a-Judge 审计的自适应不确定性感知精炼框架",
+  "authors": [
+    "Zilong Zhang",
+    "Yi-Ting Hung",
+    "Weiyi He",
+    "Junxi Zhang",
+    "Lei Ding",
+    "Chi-Kuang Yeh"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Chi-Kuang Yeh",
+      "affiliations": [
+        "University of Waterloo"
+      ]
+    }
+  ],
+  "published_at": "2026-06-18T02:26:05Z",
+  "abs_url": "https://arxiv.org/abs/2606.19714v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19714",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) are increasingly used as judges for open-ended generation, as large-scale human evaluation is often expensive and difficult to scale, yet their preferences remain imperfect proxies for human judgment. Existing auditing pipelines often assume that a reliable subset of examples or clean supervision signals are available beforehand, for example from human annotation, heuristic filtering, or the outputs of strong judges. In LLM evaluation, this assumption is fragile: the initial split may inherit judge bias, while human verification is typically too scarce to define stable groups at scale. We propose AURA, an adaptive uncertainty--aware refinement framework for auditing pairwise LLM--as--a--judge decisions under selected human verification. AURA iteratively learns a human-consistency signal, propagates reliable evidence, and prioritizes uncertain comparisons for human review. The key idea is to treat trust in a judge as a latent quantity that is progressively refined as evidence accumulates. We provide a compact formulation, a stable refinement procedure, and a comprehensive evaluation on both synthetic and real pairwise LLM-answer data.",
+  "abstract_zh": "随着 LLM 越来越多地被用作开放式生成任务的评判者，LLM-as-a-Judge 成为替代大规模人工评测的常见方案，但其偏好仍不能完全代表人类判断。现有审计流程通常假设预先存在可靠样本子集或干净监督信号，例如人工标注、启发式过滤或强评判模型输出；然而在 LLM 评测中，这一假设很脆弱，因为初始划分可能继承评判模型偏差，而人工验证数量又通常不足以在大规模场景中形成稳定分组。论文提出 AURA，一个面向成对 LLM-as-a-Judge 决策审计的自适应不确定性感知精炼框架，在有限人工验证条件下，迭代学习与人类一致性的信号、传播可靠证据，并优先选择不确定比较交由人工复核。其核心思想是将对评判模型的信任视为潜变量，并随着证据积累逐步精炼。论文给出了紧凑建模形式、稳定的精炼流程，并在合成数据和真实成对 LLM 回答数据上进行了系统评估。",
+  "key_points_zh": [
+    "提出 AURA，用于审计成对 LLM-as-a-Judge 决策，目标是在有限人工验证预算下提升与人类判断的一致性。",
+    "不再假设预先存在可靠样本子集或干净监督信号，而是将对 judge 的信任建模为随证据逐步更新的潜变量。",
+    "框架迭代执行三步：学习 human-consistency signal、传播可靠证据、优先挑选高不确定性比较进行人工复核。",
+    "方法针对初始划分继承 judge bias、人工标注稀缺导致分组不稳定等实际 LLM 评测痛点。",
+    "在 synthetic 与 real pairwise LLM-answer data 上进行综合评估，验证其作为 LLM 评判审计流程的有效性与稳定性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.62,
+    "problem_significance": 0.72,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.64,
+    "llm_avg": 0.608,
+    "comment": "AURA is relevant to evaluation governance through uncertainty-aware judge auditing with selective human verification, but it is more an evaluation method than a full agent harness contribution.",
+    "comment_zh": "AURA通过不确定性感知的人审优先机制提升LLM裁判审计，具有治理价值，但更偏评测方法而非完整智能体基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4278843194747642,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.608,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": [
+      "University of Waterloo"
+    ]
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19714/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.97
+    }
+  ]
+}

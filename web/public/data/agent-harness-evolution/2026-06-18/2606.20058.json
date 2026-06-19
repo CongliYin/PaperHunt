@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2606.20058",
+  "title": "Autonomous Event-Driven Multi-Agent Orchestration for Enterprise AI at Scale",
+  "title_zh": "面向规模化企业 AI 的自主事件驱动多智能体编排",
+  "authors": [
+    "Harsh Rao Dhanyamraju",
+    "Leonidas Raghav",
+    "Aaron Lee"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T10:32:38Z",
+  "abs_url": "https://arxiv.org/abs/2606.20058v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.20058",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Enterprise AI aims to move toward continuous event monitoring, detection, and action across specialist agents, yet existing multi-agent systems largely assume discrete request-response workflows and remain underexplored at enterprise scale. We evaluate DAG Plan and Execute and ReAct across 208 production-derived enterprise scenarios spanning Persona (<10 agents), Department (20-80), and Enterprise (200) scales, and introduce a Task Manager for continuous operation via priority inference, related-event merging, and preemption. Results show that scale, not task complexity, dominates orchestration performance: both architectures perform well at small scale but degrade at enterprise scale as agent discovery noise becomes the primary bottleneck, with simple tasks degrading more sharply than complex ones. DAG Plan and Execute offers higher precision and structured parallelization at smaller scales, but its higher overhead worsens at enterprise scale; ReAct is more robust by handling failures incrementally. The Task Manager reduces high-priority queue latency by 14-75% and improves related-event correctness by over 20 percentage points at enterprise scale.",
+  "abstract_zh": "本文研究企业 AI 在连续事件监控、检测与响应场景下的多智能体编排问题。现有多智能体系统多假设离散的请求-响应式工作流，较少在企业级规模下验证。作者在 208 个源自生产环境的企业场景中评估了 DAG Plan and Execute 与 ReAct，覆盖 Persona（少于 10 个智能体）、Department（20–80 个智能体）和 Enterprise（200 个智能体）三个规模，并提出 Task Manager，通过优先级推断、相关事件合并与抢占机制支持连续运行。实验表明，影响编排性能的主导因素是规模而非任务复杂度：两类架构在小规模下表现良好，但在企业级规模下因智能体发现噪声成为主要瓶颈而显著退化，且简单任务退化幅度反而更大。DAG Plan and Execute 在小规模下具有更高精度和更结构化的并行能力，但其额外开销在企业级场景中加剧性能下降；ReAct 则因能够增量处理失败而更稳健。Task Manager 可将高优先级队列延迟降低 14%–75%，并在企业级规模下将相关事件处理正确率提升超过 20 个百分点。",
+  "key_points_zh": [
+    "论文系统评估 DAG Plan and Execute 与 ReAct 在 208 个生产衍生企业场景中的表现，覆盖 Persona、Department、Enterprise 三种智能体规模。",
+    "核心发现是规模比任务复杂度更决定编排性能；当智能体数量扩展到 200 时，agent discovery noise 成为主要瓶颈。",
+    "DAG Plan and Execute 在小规模场景中精度更高、并行结构更清晰，但在企业级规模下因规划和执行开销更大而退化更明显。",
+    "ReAct 虽然结构化程度较低，但能逐步处理失败，因此在大规模场景下相对更鲁棒。",
+    "提出的 Task Manager 通过优先级推断、相关事件合并和抢占机制支持连续事件驱动运行，可显著降低高优先级任务延迟并提升相关事件处理正确性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.86,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.8,
+    "llm_avg": 0.752,
+    "comment": "This paper is directly relevant to enterprise agent orchestration, especially continuous event-driven operation, preemption, priority management, and scale-induced discovery failures.",
+    "comment_zh": "该论文直接关联企业级智能体编排，尤其关注连续事件驱动运行、抢占、优先级管理以及规模导致的发现失败。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.752,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20058/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20058/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.965
+    }
+  ]
+}

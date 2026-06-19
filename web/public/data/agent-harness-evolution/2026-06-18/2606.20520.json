@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.20520",
+  "title": "Sovereign Execution Brokers: Enforcing Certificate-Bound Authority in Agentic Control Planes",
+  "title_zh": "Sovereign Execution Brokers：在智能体控制平面中强制执行证书绑定权限",
+  "authors": [
+    "Jun He",
+    "Deying Yu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T17:36:46Z",
+  "abs_url": "https://arxiv.org/abs/2606.20520v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.20520",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Autonomous agents are increasingly connected to cloud, deployment, and data-control workflows, but production mutation authority should not reside inside non-deterministic reasoning processes. Existing access-control mechanisms authorize identities, while assurance layers certify proposed actions; neither alone provides a mandatory enforcement point for certified authority at the moment of mutation. This paper introduces the Sovereign Execution Broker (SEB), a runtime enforcement boundary for certificate-bound agentic infrastructure. SEB consumes certificates issued by the Sovereign Assurance Boundary (SAB), verifies that the requested mutation matches the certified execution contract, checks validity windows, policy epochs, revocation epochs, and live-state drift, mints scoped execution identity, invokes infrastructure APIs, and records signed decision and outcome records. By separating proposal, admission, and execution, SEB turns certified authority into a short-lived, revocable, auditable runtime capability, provided that production mutation APIs reject non-broker identities. We present the SEB execution model, certificate and replay-verification predicates, scoped identity semantics, bypass-prevention deployment patterns, failure behavior, and a concrete prototype implementation. We evaluate the prototype on AWS and Kubernetes clusters, measuring latency overheads, revocation propagation, drift detection, and security under fault injection.",
+  "abstract_zh": "随着自主智能体越来越多地接入云、部署与数据控制工作流，生产环境的变更权限不应直接交给非确定性的推理过程。现有访问控制机制主要授权身份，而保证层则认证拟议动作；二者都无法在实际变更发生的瞬间，提供一个强制执行“已认证权限”的必经控制点。本文提出 Sovereign Execution Broker（SEB），一种面向证书绑定智能体基础设施的运行时强制执行边界。SEB 消费由 Sovereign Assurance Boundary（SAB）签发的证书，验证请求变更是否匹配已认证的执行契约，检查有效期、策略 epoch、吊销 epoch 与实时状态漂移，铸造作用域受限的执行身份，调用基础设施 API，并记录带签名的决策与结果日志。通过分离提案、准入与执行，SEB 将认证权限转化为短生命周期、可吊销、可审计的运行时能力，前提是生产变更 API 必须拒绝非 broker 身份。论文给出了 SEB 执行模型、证书与重放验证谓词、作用域身份语义、绕过防护部署模式、失败行为以及具体原型实现，并在 AWS 与 Kubernetes 集群上评估延迟开销、吊销传播、漂移检测和故障注入下的安全性。",
+  "key_points_zh": [
+    "提出 Sovereign Execution Broker（SEB），作为智能体基础设施中的运行时强制执行点，避免非确定性推理过程直接持有生产变更权限。",
+    "SEB 将 SAB 签发的证书转化为短期、可吊销、可审计的执行能力，并在变更前验证执行契约、有效期、策略版本、吊销状态与实时状态漂移。",
+    "方法强调提案、准入、执行三阶段解耦：智能体提出动作，SAB 认证动作，SEB 才负责真正调用云或集群 API。",
+    "论文讨论了 scoped execution identity、重放验证、绕过防护部署模式和失败行为，要求生产 API 拒绝所有非 broker 身份以保证强制性。",
+    "原型在 AWS 与 Kubernetes 上评估，覆盖延迟开销、吊销传播速度、漂移检测能力以及故障注入场景下的安全性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.9,
+    "problem_significance": 0.95,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.94,
+    "llm_avg": 0.908,
+    "comment": "A very strong production-agent control-plane paper that defines a concrete enforcement broker for certificate-bound authority, scoped execution, auditability, revocation, replay checks, and infrastructure mutation safety.",
+    "comment_zh": "这是一篇很强的生产级智能体控制平面论文，提出了用于证书绑定授权、作用域执行、审计、撤销、回放校验和基础设施变更安全的具体执行代理。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.908,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20520/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20520/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20520/fig3.webp",
+      "page": 2,
+      "kind": "table",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20520/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.975
+    }
+  ]
+}

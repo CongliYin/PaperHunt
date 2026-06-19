@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.20400",
+  "title": "The Significance of Style Diversity in Annotation-Free Synthetic Data Generation",
+  "title_zh": "标注自由合成数据生成中风格多样性的意义",
+  "authors": [
+    "Zahra Abbasiantaeb",
+    "Zeno Belligoli",
+    "Omar Essam",
+    "Mohammad Aliannejadi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T15:53:22Z",
+  "abs_url": "https://arxiv.org/abs/2606.20400v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.20400",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Generating high-utility synthetic data for intent classification typically requires human-annotated seed data, which is often unavailable in fast-paced industrial settings. In this paper, we propose a framework for synthetic dialogue generation that works entirely without human-annotated data, relying solely on intent definitions. Our proposed dialogue generation framework utilizes two different types of topic and style attributes to improve data diversity. Also, we propose two novel post-hoc stylization models called Univ and Exam to transform synthetic LLM-generated utterances into more varied, human-like linguistic styles. To enhance data quality, we utilize an LLM-as-a-judge filtering process. Experimental results on both industrial and public datasets demonstrate that the proposed approach achieves up to 93.3% of the performance obtained using human-annotated training data. Crucially, the findings reveal that style diversity is more critical than topic diversity for synthetic data utility, as it prevents models from learning spurious stylistic correlations. Furthermore, the study shows that incorporating style attributes during the generation process is more effective than post-hoc style adaptation.",
+  "abstract_zh": "为意图分类生成高效用合成数据通常需要人工标注的种子数据，但这在快速迭代的工业场景中往往难以获得。本文提出一种完全无需人工标注数据的合成对话生成框架，仅依赖意图定义（intent definitions）。该框架利用两类 topic 与 style 属性提升数据多样性，并提出两种新的事后风格化模型 Univ 与 Exam，将 LLM 生成的合成话语转换为更丰富、更接近人类的语言风格。为提升数据质量，作者使用 LLM-as-a-judge 过滤流程。工业数据集与公开数据集上的实验表明，该方法最高可达到使用人工标注训练数据时 93.3% 的性能。关键发现是：相比 topic diversity，style diversity 对合成数据效用更重要，因为它能避免模型学习虚假的风格相关性；此外，在生成过程中直接引入 style 属性，比生成后再做风格适配更有效。",
+  "key_points_zh": [
+    "提出一种 annotation-free 的合成对话生成框架，仅依赖 intent definitions，无需人工标注种子数据。",
+    "框架同时利用 topic 与 style 属性增强合成数据多样性，并通过 LLM-as-a-judge 进行质量过滤。",
+    "提出 Univ 与 Exam 两种 post-hoc stylization 模型，将 LLM 生成话语改写为更接近人类的多样化语言风格。",
+    "在工业与公开数据集上，该方法最高达到人工标注训练数据性能的 93.3%。",
+    "实验表明 style diversity 比 topic diversity 更能提升合成数据效用，并且生成时引入 style 属性优于事后风格化。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.48,
+    "problem_significance": 0.45,
+    "potential_impact": 0.42,
+    "paradigm_shift": 0.22,
+    "lasting_value": 0.34,
+    "llm_avg": 0.382,
+    "comment": "The paper provides useful synthetic-data insights and LLM-judge filtering for intent classification, but it is mostly a data-generation method rather than agent runtime or closed-loop platform work.",
+    "comment_zh": "该文对意图分类的合成数据和LLM裁判过滤有实用启发，但主要是数据生成方法，而非智能体运行时或闭环平台工作。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.382,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20400/fig1.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20400/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.977
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20400/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20400/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.973
+    }
+  ]
+}

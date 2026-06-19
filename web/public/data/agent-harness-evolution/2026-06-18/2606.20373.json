@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.20373",
+  "title": "AutoPass: Evidence-Guided LLM Agents for Compiler Performance Tuning",
+  "title_zh": "AutoPass：面向编译器性能调优的证据引导 LLM Agents",
+  "authors": [
+    "Zepeng Li",
+    "Jie Ren",
+    "Zhanyong Tang",
+    "Jie Zheng",
+    "Zheng Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T15:35:40Z",
+  "abs_url": "https://arxiv.org/abs/2606.20373v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.20373",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large Language Models (LLMs) show promise for code compilation tasks, but applying them to runtime performance tuning is difficult due to complex microarchitectural effects and noisy runtime measurements. We present AutoPass, a multi-agent framework for compiler performance tuning that uses compiler and runtime evidence to guide LLM-generated optimization decisions. Rather than treating the compiler as a black box like prior auto-tuning schemes, AutoPass opens up the compiler to the LLM, enabling it to query compiler-internal optimization states and analyze the intermediate representation to orchestrate compiler options. The search process iteratively refines optimization configurations using measured runtime feedback to diagnose regressions and guide latency-improving edits. AutoPass operates in an inference-only, training-free setting and requires no offline training or task-specific fine-tuning, making it readily applicable to new benchmarks and platforms. We implement AutoPass on the LLVM compiler and evaluate it on server-grade x86-64 and embedded ARM64 systems. AutoPass outperforms expert-tuned heuristics and classical autotuning methods, achieving geometric-mean speedups of 1.043x and 1.117x over LLVM -O3 on x86-64 and ARM64, respectively.",
+  "abstract_zh": "本文提出 AutoPass，一个用于编译器运行时性能调优的多智能体框架。针对 LLM 在性能优化中面临的微架构效应复杂、运行时测量噪声大等问题，AutoPass 不再将编译器视为黑盒，而是让 LLM 查询编译器内部优化状态、分析中间表示（IR），并结合编译器证据与运行时反馈来生成和修正优化配置。其搜索过程会根据实测延迟变化诊断性能回退，并迭代调整编译选项以提升性能。AutoPass 基于 LLVM 实现，采用仅推理、无需训练的方式，不需要离线训练或任务特定微调，因此易于迁移到新基准和新平台。实验表明，AutoPass 在服务器级 x86-64 和嵌入式 ARM64 系统上均优于专家调优启发式方法和经典 autotuning 方法，相比 LLVM -O3 分别取得 1.043x 和 1.117x 的几何平均加速。",
+  "key_points_zh": [
+    "AutoPass 将 LLM agents 引入编译器性能调优，通过编译器内部状态、IR 分析和运行时测量共同指导优化决策。",
+    "不同于传统黑盒 autotuning，AutoPass 允许 LLM 查询 LLVM 内部优化信息，从而更有依据地编排编译选项。",
+    "框架采用迭代式搜索：根据实测运行时间反馈识别性能回退，并生成进一步降低延迟的配置修改。",
+    "AutoPass 是 inference-only、training-free 方法，无需离线训练或任务特定 fine-tuning，便于迁移到新平台和新 benchmark。",
+    "在 x86-64 与 ARM64 上，相比 LLVM -O3 分别实现 1.043x 和 1.117x 几何平均加速，超过专家启发式和经典 autotuning 方法。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.6,
+    "problem_significance": 0.58,
+    "potential_impact": 0.52,
+    "paradigm_shift": 0.4,
+    "lasting_value": 0.48,
+    "llm_avg": 0.516,
+    "comment": "AutoPass has a meaningful closed-loop tool-use pattern with runtime feedback, but its contribution is mainly a domain-specific compiler-tuning agent rather than reusable agent infrastructure.",
+    "comment_zh": "AutoPass具有有意义的运行时反馈闭环工具使用模式，但其贡献主要是领域特定的编译器调优智能体而非通用智能体基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.516,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20373/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20373/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.953
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20373/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.948
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20373/fig4.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.916
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.19857",
+  "title": "Large Language Models Do Not Always Need Readable Language",
+  "title_zh": "大语言模型并不总是需要可读语言",
+  "authors": [
+    "Jiayi Zhu",
+    "Haoxuan Peng",
+    "Junxi Wang",
+    "Liang Ke",
+    "Chen Zhang",
+    "Linfeng Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T07:05:19Z",
+  "abs_url": "https://arxiv.org/abs/2606.19857v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19857",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) are commonly prompted and interfaced with human-readable natural language, even when the intended reader is another model. This paper investigates whether semantic information can be encoded in compact, non-standard textual forms that sacrifice human readability while remaining recoverable by LLMs. We refer to this class of model-centric textual representations as BabelTele, approached here not as a fixed protocol but as an empirical probe into LLMs' capacity to generate and interpret such representations. Through readability diagnostics, model likelihood measures, human questionnaires, and downstream task evaluations, we find that BabelTele can substantially depart from ordinary natural language while preserving core semantics for instruction-tuned LLMs. As a task-agnostic representational paradigm, BabelTele demonstrates high information density, maintaining 99.5% semantic fidelity even when the text volume is condensed to 27.9% of its original length. We further evaluate its semantic robustness in cross-model transfer, agent memory, and multi-agent communication. Results suggest that BabelTele can reduce context overhead while generally maintaining reliable downstream performance, although its effectiveness depends on the compressor-reader pair and task setting. These findings indicate that human readability, natural-language typicality, and model-side semantic recoverability can be partially decoupled, opening a path toward model-native representations in future exploration of LLM systems.",
+  "abstract_zh": "大语言模型（LLMs）通常以人类可读的自然语言进行提示和交互，即使信息的实际接收方是另一个模型。本文研究语义信息是否可以编码为紧凑、非标准、牺牲人类可读性但仍能被 LLM 恢复的文本形式。作者将这类面向模型的文本表示称为 BabelTele，并将其作为一种经验性探针，而非固定协议，用于考察 LLM 生成和理解此类表示的能力。通过可读性诊断、模型似然度量、人类问卷和下游任务评估，论文发现 BabelTele 可以显著偏离普通自然语言，同时仍为指令微调 LLM 保留核心语义。作为一种任务无关的表示范式，BabelTele 具有较高信息密度：在文本体积压缩到原始长度 27.9% 时，仍能保持 99.5% 的语义保真度。论文还评估了其在跨模型迁移、Agent 记忆和多 Agent 通信中的语义鲁棒性。结果表明，BabelTele 能降低上下文开销，并通常维持可靠的下游性能，但效果依赖于压缩器-读取器组合和具体任务设置。这些发现说明，人类可读性、自然语言典型性与模型侧语义可恢复性可以部分解耦，为未来 LLM 系统中的模型原生表示探索提供了方向。",
+  "key_points_zh": [
+    "提出 BabelTele：一种面向模型的非标准文本表示，牺牲人类可读性以换取更高信息密度，并检验 LLM 是否仍能恢复语义。",
+    "实验覆盖可读性诊断、模型似然、人类问卷和下游任务评估，显示 BabelTele 可明显偏离普通自然语言但保留核心语义。",
+    "在压缩到原文本 27.9% 长度时，BabelTele 仍报告保持 99.5% 的语义保真度，说明自然语言可读性并非模型间通信的必要条件。",
+    "论文进一步考察跨模型迁移、Agent 记忆和多 Agent 通信，发现其可减少上下文开销并大体保持任务性能。",
+    "方法效果依赖具体 compressor-reader pair 和任务场景，提示模型原生表示具有潜力，但仍需系统化协议设计与鲁棒性验证。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.7,
+    "problem_significance": 0.56,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.52,
+    "llm_avg": 0.588,
+    "comment": "BabelTele is an intriguing direction for compact model-native communication and memory, but it remains exploratory and lacks strong governance or runtime-control mechanisms.",
+    "comment_zh": "BabelTele为紧凑的模型原生通信和记忆提供了有趣方向，但仍较探索性，缺少强治理或运行时控制机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3210331475111057,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.588,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19857/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19857/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19857/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.939
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19857/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

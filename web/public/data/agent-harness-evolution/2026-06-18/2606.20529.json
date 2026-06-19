@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.20529",
+  "title": "LedgerAgent: Structured State for Policy-Adherent Tool-Calling Agents",
+  "title_zh": "LedgerAgent：用于策略遵循型工具调用智能体的结构化状态",
+  "authors": [
+    "Md Nayem Uddin",
+    "Amir Saeidi",
+    "Eduardo Blanco",
+    "Chitta Baral"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T17:41:56Z",
+  "abs_url": "https://arxiv.org/abs/2606.20529v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.20529",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Policy-adherent tool-calling agents in customer-service domains must maintain task states across turns while calling tools and obeying domain policies. Task states consist of relevant facts, identifiers, constraints, and conditions observed through user interaction and tool calls. In standard agents, task states are not represented separately. Observations, tool returns, and policy instructions are placed in the prompt, leaving agents to reconstruct the relevant states from the prompt each time they decide what to do next. This design makes state management implicit, creating two common failure modes. An agent may retrieve the right facts but later ground its decision in stale, missing, or incorrect information; and a syntactically valid tool call may still violate a domain policy that depends on the current task state. We introduce \\textsc{LedgerAgent}, an inference-time method for tool-calling agents that maintains observed task states in a separate ledger and renders the states into the prompt. The ledger is also used to check state-dependent policy constraints before environment-changing tool calls are executed, blocking policy violations. Across four customer-service domains and a mixed panel of open- and closed-weight models, \\textsc{LedgerAgent} improves average pass\\textasciicircum{}k over a standard prompt-based tool-calling approach, with the largest gains under stricter multi-trial consistency metrics.",
+  "abstract_zh": "面向客服场景的策略遵循型工具调用智能体，需要在多轮对话中维护任务状态、调用工具，并遵守领域策略。传统智能体通常将用户观测、工具返回结果和策略指令一并放入 prompt，由模型在每次决策时自行重建相关状态，导致状态管理隐式且脆弱。本文提出 LedgerAgent：一种推理时方法，将已观测到的任务事实、标识符、约束和条件维护在独立的 ledger（账本式状态表）中，并将其渲染回 prompt。同时，ledger 还用于在执行会改变环境的工具调用前检查依赖当前状态的策略约束，从而阻止策略违规。在四个客服领域以及开放权重和闭源模型组成的混合评测中，LedgerAgent 相比标准 prompt-based 工具调用方法提升了平均 pass@k，尤其在更严格的多次试验一致性指标下增益更明显。",
+  "key_points_zh": [
+    "指出标准工具调用智能体将状态隐含在 prompt 中，容易出现使用过期、缺失或错误信息进行决策的问题。",
+    "提出 LedgerAgent，在推理时维护独立的 ledger 来显式记录任务相关事实、ID、约束和条件。",
+    "在执行会改变环境的工具调用前，利用 ledger 检查状态依赖型领域策略，提前阻断违规调用。",
+    "在四个客服领域和多种开放/闭源模型上，LedgerAgent 相比标准 prompt-based 方法提升平均 pass@k。",
+    "在更严格的多轮一致性评测中效果提升最大，说明结构化状态有助于稳定遵循策略。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.9,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.64,
+    "lasting_value": 0.86,
+    "llm_avg": 0.808,
+    "comment": "LedgerAgent is a strong harness-level contribution because it externalizes task state, renders it into context, and enforces state-dependent policy gates before tool execution.",
+    "comment_zh": "LedgerAgent是较强的运行框架层贡献，因为它将任务状态外显化、注入上下文，并在工具执行前执行依赖状态的策略门控。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.704560788802713,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.808,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 3,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20529/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.904
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20529/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.952
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20529/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.687
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20529/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.546
+    }
+  ]
+}

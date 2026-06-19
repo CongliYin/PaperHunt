@@ -1,0 +1,69 @@
+{
+  "arxiv_id": "2606.19819",
+  "title": "CREDENCE: Claim Reduction for Decomposition & Enhanced Credibility -- Semantic Metrics and Convergence Analysis",
+  "title_zh": "CREDENCE：用于分解与可信度增强的声明归约——语义指标与收敛性分析",
+  "authors": [
+    "Phuong Huu Vu Tran",
+    "Thuan Duc Mai",
+    "Bach Xuan Le"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T05:48:37Z",
+  "abs_url": "https://arxiv.org/abs/2606.19819v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19819",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Decomposing compound sentences into atomic, verifiable claims is a prerequisite for reliable automated fact-checking. Prior work has relied on token-overlap (Jaccard) metrics that systematically underestimate decomposition quality for paraphrastic claims, and has lacked formal termination analysis for the repair loop. We present Credence, a revised claim decomposition and evaluation framework addressing both shortcomings. Our contributions are: (1) Semantic-F1: we use BGE-large cosine similarity fidelity metric that resolves Jaccard's penalisation and improves downstream fact-checking accuracy; (2) Convergence theorems: we formally characterise four properties of the repair pipeline, establishing that rule-based repair is monotone and finitely terminating under an oracle parser assumption; LLM-based self-repair is provably non-monotone and requires an early-exit guard; (3) Three evaluation benchmarks spanning social-media, encyclopaedic, and news domains for cross-domain generalisation measurement; (4) Multi-model benchmarking across four decomposer models (3.8B-12B) and a closed API model. Experiments on SocialClaimSplit, WikiSplitBench, and ClaimDecompBench show that Semantic-F1 outperforms Jaccard-F1 by +15-32pp. EPR ranges from 0.94 to 1.00 on SocialClaimSplit and WikiSplitBench, while ClaimDecompBench includes lower base EPR cases (down to 0.824) due to harder news-domain constructions, and rule-repair reduces the Atomicity Violation Rate (AVR) by 47-100% relative to the base model without degrading fidelity.",
+  "abstract_zh": "将复合句分解为原子化、可验证的声明，是可靠自动事实核查的前提。以往方法常依赖基于 token 重叠的 Jaccard 指标，这会系统性低估改写式声明的分解质量，同时缺少对修复循环是否终止的形式化分析。本文提出 Credence，一个修订后的声明分解与评估框架，以解决上述两类问题。其主要贡献包括：提出 Semantic-F1，使用 BGE-large 的余弦相似度作为语义保真度指标，缓解 Jaccard 对改写表达的惩罚，并提升下游事实核查准确率；给出收敛性定理，形式化刻画修复流水线的四类性质，证明在 oracle parser 假设下，基于规则的修复是单调且有限终止的，而基于 LLM 的自修复并非单调，因此需要 early-exit guard；构建覆盖社交媒体、百科和新闻领域的三个评测基准，用于衡量跨领域泛化；并在四个 decomposer models（3.8B–12B）及一个闭源 API 模型上进行多模型基准测试。实验表明，在 SocialClaimSplit、WikiSplitBench 和 ClaimDecompBench 上，Semantic-F1 相比 Jaccard-F1 提升 15–32 个百分点；SocialClaimSplit 与 WikiSplitBench 上的 EPR 达到 0.94–1.00，而新闻领域更难的 ClaimDecompBench 中基础 EPR 最低为 0.824；规则修复在不降低保真度的情况下，使 Atomicity Violation Rate（AVR）相对基础模型下降 47–100%。",
+  "key_points_zh": [
+    "提出 Credence 框架，面向自动事实核查中的复合句声明分解，强调原子性、可验证性与语义保真度。",
+    "用 Semantic-F1 替代纯 token 重叠的 Jaccard-F1，基于 BGE-large cosine similarity 更好评估改写式声明，实验提升 15–32 个百分点。",
+    "给出修复循环的形式化收敛分析：规则修复在 oracle parser 假设下单调且有限终止；LLM self-repair 非单调，需要 early-exit guard 防止退化。",
+    "构建并评测 SocialClaimSplit、WikiSplitBench、ClaimDecompBench 三个跨领域基准，覆盖社交媒体、百科与新闻文本。",
+    "多模型实验显示，rule-repair 可在不损害 fidelity 的前提下将 Atomicity Violation Rate（AVR）降低 47–100%，但新闻领域复杂结构仍更具挑战。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.45,
+    "potential_impact": 0.38,
+    "paradigm_shift": 0.26,
+    "lasting_value": 0.34,
+    "llm_avg": 0.386,
+    "comment": "Credence offers useful fact-checking decomposition metrics and repair-loop analysis, but it is mostly an evaluation pipeline rather than agent harness infrastructure.",
+    "comment_zh": "Credence提供了有用的事实核查分解指标和修复循环分析，但主要是评测流程而非智能体运行框架基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.39154972126665855,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.386,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 7,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19819/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

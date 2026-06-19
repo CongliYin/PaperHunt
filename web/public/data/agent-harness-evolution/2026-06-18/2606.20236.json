@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.20236",
+  "title": "A Multi-Agent system for Multi-Objective constrained optimization",
+  "title_zh": "用于多目标约束优化的多智能体系统",
+  "authors": [
+    "Federica Filippini"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T13:47:28Z",
+  "abs_url": "https://arxiv.org/abs/2606.20236v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.20236",
+  "links": {
+    "github": null,
+    "project_page": "https://optlearnmas.github.io"
+  },
+  "abstract_en": "Many decision-making problems in computing and networking systems can be naturally formulated as cost-minimization problems under performance constraints. In dynamic environments, reinforcement learning (RL) is often used to solve such problems at runtime by embedding both costs and constraint violations into a single scalar reward through weighted penalty terms, following a Lagrangian-inspired formulation. However, in this context the behavior of the learned policy critically depends on the choice of these weights, which are typically selected manually. This makes it difficult to identify an appropriate trade-off between optimizing the primary objective and effectively avoiding constraint violations, particularly in non-stationary environments where their relative importance may change. This paper presents MAMO (Multi-Agent system for Multi-Objective constrained optimization), an approach to tackle this balancing problem through multi-agent RL. MAMO decouples task execution from objective design by formulating the selection of reward weights as a learning problem, providing a !rst step towards more autonomous and robust RL-based solutions for constrained optimization problems in dynamic environments.",
+  "abstract_zh": "许多计算与网络系统中的决策问题都可以自然建模为带性能约束的成本最小化问题。在动态环境中，强化学习（RL）常被用于运行时求解此类问题：通过类似 Lagrangian 的形式，将成本与约束违反惩罚按权重合成为单一标量奖励。然而，学习到的策略高度依赖这些惩罚权重，而权重通常需要人工设定；这使得在主目标优化与约束违反规避之间找到合适权衡变得困难，尤其是在非平稳环境中二者相对重要性会随时间变化。本文提出 MAMO（Multi-Agent system for Multi-Objective constrained optimization），利用多智能体强化学习来处理这一权衡问题。MAMO 将任务执行与目标设计解耦，把奖励权重选择本身建模为一个学习问题，为动态环境中更自主、更鲁棒的基于 RL 的约束优化方法迈出一步。",
+  "key_points_zh": [
+    "针对动态环境中的多目标约束优化问题，指出传统 RL 依赖人工设定惩罚权重，策略表现对权重选择高度敏感。",
+    "提出 MAMO，将奖励权重选择从人工调参转化为可学习问题，用多智能体 RL 自动平衡成本最小化与约束满足。",
+    "核心思想是解耦任务执行与目标设计：一个层面负责执行策略，另一个层面学习如何调整目标/惩罚权重。",
+    "该方法面向非平稳场景，旨在提升 RL 约束优化系统的自主性与鲁棒性。",
+    "论文发表于 OptLearnMAS workshop，并与 AAMAS 2026 联合举办。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.45,
+    "problem_significance": 0.48,
+    "potential_impact": 0.38,
+    "paradigm_shift": 0.28,
+    "lasting_value": 0.32,
+    "llm_avg": 0.382,
+    "comment": "The work addresses adaptive reward weighting in constrained RL but has limited direct contribution to reusable LLM-agent harnesses, governance, or production orchestration.",
+    "comment_zh": "该工作关注约束强化学习中的自适应奖励权重，但对可复用LLM智能体运行框架、治理或生产编排的直接贡献有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.4557067470936043,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.382,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://optlearnmas.github.io",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20236/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20236/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20236/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.583
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.20236/fig4.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.912
+    }
+  ]
+}
