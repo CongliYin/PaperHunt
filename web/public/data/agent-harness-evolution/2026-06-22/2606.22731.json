@@ -1,0 +1,71 @@
+{
+  "arxiv_id": "2606.22731",
+  "title": "Closed-loop Auto Research for Molecular Property Prediction: Discovering and Certifying Generalizable Improvements",
+  "title_zh": "面向分子性质预测的闭环 Auto Research：发现并认证可泛化改进",
+  "authors": [
+    "Jingjie Ning",
+    "Xiaochuan Li",
+    "Ji Zeng",
+    "Chenyan Xiong",
+    "Guolin Ke"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T00:18:27Z",
+  "abs_url": "https://arxiv.org/abs/2606.22731v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.22731",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Closed-loop Auto Research extends automated machine learning from fixed-dataset fitting to changing the research workflow, with language-model agents editing representations and model code and acquiring external evidence. Molecular property prediction spans many small endpoints. We ask whether this action space yields improvements generalizing beyond the validation signal selecting them. We isolate three Auto Research axes, features, models, and external evidence, under a file-level ablation lock attributing each gain to one axis over a strong baseline. Across 36 endpoints in three benchmark suites we score each selected configuration once on a held-out test whose labels the search never read. A routed pipeline taking each endpoint's best validation axis reaches positive held-out gains of 0.013, 0.011, and 0.042, the transferable axis differing by suite, data on TDC, model on Polaris, feature and model on MoleculeNet. The largest model-search gain falls from 0.041 on validation to 0.003 on test, while curated data reaches 0.022 but negative 0.019 on test, two non-transfer signatures. Curated external data raises held-out CYP2C9-substrate performance by 0.17 and half-life by 0.08, admitted through a contamination filter rejecting same-source files overlapping 64 to 89 percent of test structures, necessary but not sufficient for transfer. A matched-trial automated machine learning control did not reproduce the agent's code-level model intervention, reaching 0.006 against 0.042, and the pipeline stays competitive with an 84M-parameter pretrained 3D model on the shared training split. The experiments stay within molecular property prediction, but separating discovery from held-out certification is a domain-agnostic lesson for any closed-loop system optimising a proxy for a held-out quantity.",
+  "abstract_zh": "本文研究 Closed-loop Auto Research 在分子性质预测中的有效性：语言模型 agent 不仅进行固定数据集上的 AutoML，还能编辑特征表示、模型代码，并引入外部证据。作者将搜索空间拆分为 features、models、external evidence 三个轴，并通过文件级消融锁定每项收益来源；在 TDC、Polaris、MoleculeNet 三个基准套件共 36 个 endpoint 上，所有被验证集选中的配置仅在从未参与搜索的 held-out test 上评估一次。结果显示，按 endpoint 路由选择最佳验证轴的 pipeline 在测试集上获得正收益：TDC 为 0.013，Polaris 为 0.011，MoleculeNet 为 0.042；不同套件的可迁移改进来源不同。部分验证收益无法迁移，例如模型搜索最大验证增益从 0.041 降至测试 0.003，curated data 验证增益 0.022 但测试为 -0.019。外部数据在 CYP2C9-substrate 和 half-life 上分别带来 0.17 与 0.08 的 held-out 提升，但需通过污染过滤以排除与测试结构高度重叠的同源文件。与匹配试验的 AutoML 对照相比，agent 的代码级模型干预带来更大收益，并且该 pipeline 在共享训练划分上可与 84M 参数 pretrained 3D model 竞争。论文强调，将“发现”和“held-out 认证”分离，是闭环系统优化代理目标时的通用方法论。",
+  "key_points_zh": [
+    "提出面向分子性质预测的 Closed-loop Auto Research 框架，让语言模型 agent 修改 features、models 与 external evidence，而非仅做固定数据集拟合。",
+    "采用文件级 ablation lock，将每个性能提升归因到 features、models 或 external evidence，并在 36 个 endpoints 上用未参与搜索的 held-out test 做一次性认证。",
+    "路由式 pipeline 在 TDC、Polaris、MoleculeNet 上均取得正向 held-out gains，但可迁移轴随套件变化：TDC 偏 data，Polaris 偏 model，MoleculeNet 偏 feature/model。",
+    "验证集提升并不等于泛化提升：部分 model search 与 curated data 的验证收益在测试集显著衰减甚至转负，暴露非迁移信号。",
+    "外部证据可在特定任务上显著提升性能，但必须配合污染过滤；同时，agent 的代码级模型干预优于匹配 AutoML 对照，并接近大型 pretrained 3D model 表现。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.78,
+    "potential_impact": 0.75,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.76,
+    "llm_avg": 0.734,
+    "comment": "This is a relevant closed-loop agent-improvement study with attribution, held-out certification, and lessons for verifier-backed rollout systems.",
+    "comment_zh": "这是一项相关的闭环智能体改进研究，包含归因、留出集认证，并对验证器支持的发布系统有启发。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.734,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22731/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.926
+    }
+  ]
+}

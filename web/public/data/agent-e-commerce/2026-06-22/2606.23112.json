@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.23112",
+  "title": "Self-Evolution for Multi-Turn Tool-Calling Agents via Divergence-Point Preference Learning",
+  "title_zh": "通过分歧点偏好学习实现多轮工具调用 Agent 的自进化",
+  "authors": [
+    "Jiaqiang Tang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T09:56:44Z",
+  "abs_url": "https://arxiv.org/abs/2606.23112v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.23112",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-turn tool-using agents must coordinate long-horizon tool sequences while tracking dialogue state and policy constraints. Existing approaches often separate inference-time orchestration from parameter-level learning, leaving tool selection weakly structured and preference updates vulnerable to train--deployment prompt mismatch. For within-benchmark self-improvement, ToolGraph combines schema-derived topology, transition weights estimated from successful rollouts, and history-aware controls for write prerequisites and repeated-search loops. We then construct 161 preference pairs by locating divergence points via state-based matching and prefix-based alignment, filtered through action-correctness annotations, and train DPO under the same ToolGraph context used at inference. Across 375 tau2-bench tasks, ToolGraph raises the weighted average reward from 0.304 to 0.338 (+11.2% relative), while ToolGraph+DPO reaches 0.355 (+16.8% over the baseline), with the DPO gain concentrated in airline and retail. Fine-grained diagnostics further show that roughly half of telecom trajectories exhaust the step budget before action execution and that chosen reward positivity is the most useful checkpoint signal across our 16 evaluated DPO configurations.",
+  "abstract_zh": "本文研究多轮工具调用 Agent 的基准内自我改进问题。针对长程工具序列规划、对话状态跟踪与策略约束协同困难，作者提出 ToolGraph：利用工具 schema 构建拓扑结构，从成功轨迹中估计工具转移权重，并加入历史感知控制以处理写操作前置条件与重复搜索循环。在此基础上，论文通过状态匹配与前缀对齐定位成功/失败轨迹的分歧点，结合动作正确性标注构造 161 对偏好数据，并在与推理时一致的 ToolGraph 上下文中训练 DPO，以减少训练-部署 prompt mismatch。实验基于 375 个 tau2-bench 任务，ToolGraph 将加权平均奖励从 0.304 提升至 0.338，相对提升 11.2%；ToolGraph+DPO 达到 0.355，相对 baseline 提升 16.8%，其中 DPO 增益主要集中在 airline 与 retail 领域。细粒度诊断显示，约一半 telecom 轨迹在执行动作前耗尽步数预算，而 chosen reward positivity 是 16 种 DPO 配置中最有效的 checkpoint 选择信号。",
+  "key_points_zh": [
+    "提出 ToolGraph，将工具 schema 拓扑、成功 rollout 估计的转移权重，以及历史感知控制结合起来，用于改进多轮工具选择与约束遵循。",
+    "通过状态匹配和前缀对齐定位轨迹分歧点，并用动作正确性标注过滤，构造 161 对高质量偏好样本。",
+    "DPO 训练与推理使用相同的 ToolGraph 上下文，缓解偏好学习中的 train-deployment prompt mismatch。",
+    "在 375 个 tau2-bench 任务上，ToolGraph 相比 baseline 奖励提升 11.2%，ToolGraph+DPO 总体提升 16.8%。",
+    "诊断发现 DPO 收益主要来自 airline 和 retail；telecom 中大量轨迹因步数预算耗尽而失败，chosen reward positivity 是较可靠的 checkpoint 指标。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "A solid generic tool-calling agent improvement method with some retail benchmark relevance, but little direct contribution to e-commerce search, recommendation, or shopping assistance.",
+    "comment_zh": "A solid generic tool-calling agent improvement method with some retail benchmark relevance, but little direct contribution to e-commerce search, recommendation, or shopping assistance."
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4093360343955374,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23112/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23112/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23112/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.976
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23112/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.964
+    }
+  ]
+}

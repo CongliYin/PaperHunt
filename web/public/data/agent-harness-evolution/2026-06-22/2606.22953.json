@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2606.22953",
+  "title": "Plans Don't Persist: Why Context Management Is Load Bearing for LLM Agents",
+  "title_zh": "计划不会持久存在：为什么上下文管理是 LLM Agent 的承重结构",
+  "authors": [
+    "Aman Mehta",
+    "Anupam Datta"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T07:30:47Z",
+  "abs_url": "https://arxiv.org/abs/2606.22953v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.22953",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-horizon agents depend on context management: systems compress, summarize, and evict old tokens so tasks can continue beyond finite windows. That is safe only when dropped information is no longer needed or has been internalized. Plans are the stress case: they are written early, used for many steps, and first to be evicted. We introduce replay pairing, a diagnostic that runs the same trajectory with and without the plan in history and measures hidden-state cosine distance. On Llama-3.1-70B, plan signal spikes to 0.453 one step after the plan, then falls 4.1x in a single action-observation step; HotpotQA falls 12.4x. This is evidence that standard LLM agents do not carry plans forward as persistent state, and instead depend on the plan remaining in context. A layer-L32 probe detects this decay as a diagnostic, not as proof that it reads plan content itself. Reasoning models add a measurement confound: their `<think>` traces re-derive plan content, so standard stripping leaves plan evidence in the stripped condition. We name this the reasoning-trace confound and fix it with strict stripping, which removes prior `<think>` blocks from the stripped run only. It recovers +163% of the step+1 signal in-sample and +153% held out, while not meaningfully changing non-reasoning Llama (+4.8%). On DeepSeek-R1-Distill-Llama-70B, a Llama-trained probe transfers at AUROC 0.748 (p=6e-4), while R1-specific probes reach 1.000, suggesting R1 encodes plan signal in a different hidden-state direction. Finally, a compression stress test shows the practical cost: naive plan eviction cuts ALFWorld success by 34.7pp, while probe-gated re-surfacing does not recover it. The contribution is a measurement and stress-test framework showing that agent-critical information can be context-resident rather than persistent. Context management is load bearing, but plan protection alone is not enough.",
+  "abstract_zh": "长程 LLM Agent 依赖上下文管理：系统会压缩、总结或丢弃旧 token，使任务能够超出有限上下文窗口继续执行。只有当被丢弃的信息不再需要，或已被模型内化为持久状态时，这才是安全的。本文指出，计划（plan）正是压力测试场景：它们通常在早期生成、后续多步使用，却也最先被上下文淘汰。作者提出 replay pairing 诊断方法：在同一轨迹中分别保留和移除计划，比较隐藏状态的余弦距离。在 Llama-3.1-70B 上，计划信号在计划生成后一步达到 0.453，但经过一个 action-observation 步骤后下降 4.1 倍；在 HotpotQA 上下降 12.4 倍。这表明标准 LLM Agent 并不会将计划作为持久状态携带，而是依赖计划继续存在于上下文中。作者还发现 reasoning models 的 `<think>` 轨迹会重新推导计划内容，造成 reasoning-trace confound；通过 strict stripping 仅在 stripped run 中移除先前 `<think>` 块，可恢复显著的计划信号。跨模型实验显示，Llama 训练的 probe 可迁移到 DeepSeek-R1-Distill-Llama-70B，但 R1 可能以不同隐藏状态方向编码计划信号。最后，压缩压力测试表明，朴素移除计划会使 ALFWorld 成功率下降 34.7 个百分点，而 probe-gated re-surfacing 也无法恢复性能。论文贡献是提出一个测量与压力测试框架，揭示 Agent 关键信息可能只是驻留在上下文中，而非真正持久化。",
+  "key_points_zh": [
+    "提出 replay pairing：对同一执行轨迹分别保留/移除 plan，并用 hidden-state cosine distance 衡量计划信号是否仍存在。",
+    "实验显示计划信号衰减极快：Llama-3.1-70B 中一步后达峰值 0.453，但经过一个 action-observation 步骤下降 4.1 倍；HotpotQA 下降 12.4 倍。",
+    "指出 reasoning-trace confound：reasoning models 的 `<think>` 会重新生成计划证据，使常规 stripping 低估计划依赖；strict stripping 可显著恢复测量信号。",
+    "跨模型 probe 结果表明，DeepSeek-R1-Distill-Llama-70B 也存在可检测的计划信号，但其编码方向可能不同于 Llama。",
+    "ALFWorld 压缩压力测试显示，朴素驱逐 plan 会使成功率下降 34.7pp，说明上下文管理对长程 Agent 是关键承重机制，且仅保护计划并不足够。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.75,
+    "problem_significance": 0.8,
+    "potential_impact": 0.75,
+    "paradigm_shift": 0.6,
+    "lasting_value": 0.75,
+    "llm_avg": 0.73,
+    "comment": "Valuable context-management diagnostic showing that plans are context-resident rather than persistent, though it is more measurement framework than full harness solution.",
+    "comment_zh": "该工作提供了有价值的上下文管理诊断，表明计划依赖上下文而非持久状态，但更偏测量框架而非完整框架方案。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.73,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22953/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.85
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22953/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22953/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.939
+    }
+  ]
+}

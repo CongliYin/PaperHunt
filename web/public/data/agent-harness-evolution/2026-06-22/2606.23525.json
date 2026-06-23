@@ -1,0 +1,92 @@
+{
+  "arxiv_id": "2606.23525",
+  "title": "Self-Compacting Language Model Agents",
+  "title_zh": "自压缩语言模型智能体",
+  "authors": [
+    "Tianjian Li",
+    "Jingyu Zhang",
+    "William Jurayj",
+    "Xi Wang",
+    "Chuanyang Jin",
+    "Mehrdad Farajtabar",
+    "Eric Nalisnick",
+    "Daniel Khashabi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T16:08:34Z",
+  "abs_url": "https://arxiv.org/abs/2606.23525v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.23525",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long agent traces composed of chains of thought and tool calls accumulate stale content that anchor subsequent generations, and eventually outgrow the context window. Existing scaffolds mitigate it with fixed-interval compaction triggered at a token threshold. Such triggers pay no heed to trajectory structure, risking discard of partial results mid-derivation or mid-search. We propose SelfCompact, a scaffold that allows the model itself to decide when and how to compact. Specifically, it pairs two inference-time elements: (i) a compaction tool the model invokes to summarize the accumulated context, and (ii) a lightweight rubric specifying when to fire (a sub-task has resolved, or the trajectory is converging) and when to suppress (mid-derivation, or when stuck). Both are needed. The tool alone is unevenly used across open-weight models, often invoked at unhelpful moments or not at all; the rubric alone cannot act. Together, they elicit effective adaptive compaction without any fine-tuning or external supervision. We present empirical results on six benchmarks (competitive math and agentic search) and seven models. Our results show that SelfCompact matches or exceeds fixed-interval summarization at a fraction of the token cost, improving over a no-summarization baseline by up to 18.1 points on math and 5-9 points on agentic search at 30-70% lower per-question cost. Our results expose a meta-cognitive gap: although unprompted models cannot reliably tell when their own context is rotting, a lightweight rubric closes this gap, reframing when to compact as a capability that scaffolds can supply without training.",
+  "abstract_zh": "长程智能体轨迹通常由 chain-of-thought 与工具调用组成，会不断积累过时内容，进而锚定后续生成并最终超出上下文窗口。现有 scaffold 多采用基于 token 阈值的固定间隔压缩，但这类触发机制忽略轨迹结构，可能在推导或搜索尚未完成时丢弃关键中间结果。本文提出 SelfCompact：一种让模型自行决定何时以及如何压缩上下文的 scaffold。它包含两个推理时组件：（1）模型可调用的 compaction tool，用于总结已累积上下文；（2）轻量级 rubric，规定何时触发压缩（子任务已解决、轨迹趋于收敛）以及何时抑制压缩（推导中途、陷入停滞）。实验覆盖 6 个 benchmark（竞赛数学与 agentic search）和 7 个模型。结果表明，SelfCompact 以显著更低的 token 成本达到或超过固定间隔总结方法；相比无总结 baseline，在数学任务上最高提升 18.1 分，在 agentic search 上提升 5–9 分，同时每题成本降低 30–70%。论文揭示了一个元认知缺口：未经提示的模型无法可靠判断自身上下文何时“腐化”，但轻量 rubric 可弥补这一缺口，使压缩时机成为无需训练即可由 scaffold 提供的能力。",
+  "key_points_zh": [
+    "提出 SelfCompact，将 compaction tool 与轻量级 rubric 结合，让语言模型智能体在推理时自主决定何时总结上下文。",
+    "相比固定 token 阈值压缩，SelfCompact 更关注轨迹结构，避免在推导中途或搜索未完成时破坏关键中间状态。",
+    "仅有工具或仅有 rubric 都不足：工具可能被模型误用或不用，rubric 无法直接执行；二者结合才能稳定触发有效压缩。",
+    "在 6 个 benchmark、7 个模型上验证，SelfCompact 以更低 token 成本匹配或超过固定间隔总结方法。",
+    "实验显示其相对无总结 baseline 在数学任务最高提升 18.1 分，在 agentic search 提升 5–9 分，并降低 30–70% 每题成本。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.68,
+    "problem_significance": 0.74,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.7,
+    "llm_avg": 0.664,
+    "comment": "SelfCompact provides a practical context-management scaffold for long agent traces, with clear runtime cost and reliability benefits.",
+    "comment_zh": "SelfCompact 为长轨迹智能体提供了实用的上下文管理脚手架，并带来明确的运行成本与可靠性收益。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.7808604494268809,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.664,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 10,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23525/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.859
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23525/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.399
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23525/fig3.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.868
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23525/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.979
+    }
+  ]
+}

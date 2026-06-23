@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.23464",
+  "title": "An Automated Framework for Input Alphabet Construction in Stateful Protocol Implementation Learning",
+  "title_zh": "面向有状态协议实现学习的输入字母表自动构建框架",
+  "authors": [
+    "JiongHan Wang",
+    "WenChao Huang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T15:14:12Z",
+  "abs_url": "https://arxiv.org/abs/2606.23464v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.23464",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As a prevalent analytical technique for stateful protocol implementations, state machine learning suffers from a core bottleneck stemming from handcrafted input alphabets. Manual alphabet definition inherently limits the completeness of input exploration, making it difficult to capture anomalous non-conformant messages and consequently missing latent semantic defects. In this paper, we target automatic input alphabet generation to break the above limitation for state machine learning. We adopt large language models to parse protocol message layouts and produce candidate input symbols following structured mutation rules, which automatically covers valid and invalid message spaces and eliminates reliance on manual protocol expertise. Considering the rising overhead brought by continuously growing alphabets, we introduce a mini-batch incremental learning strategy to reuse existing learned automata when incorporating new alphabet entries. Comprehensive experiments on practical protocol stacks indicate our approach can reproduce existing security vulnerabilities and identify novel semantic bugs. A subset of these newly discovered issues has been confirmed and patched by developers, proving the practicability and effectiveness of our proposed method.",
+  "abstract_zh": "本文关注有状态协议实现中状态机学习的关键瓶颈：依赖人工构造输入字母表。手工定义输入符号会限制输入空间探索的完整性，难以覆盖异常或不符合规范的消息，从而遗漏潜在语义缺陷。论文提出一种自动化输入字母表生成框架，利用 Large Language Models 解析协议消息布局，并依据结构化变异规则生成候选输入符号，自动覆盖合法与非法消息空间，减少对人工协议知识的依赖。为应对字母表持续扩张带来的学习开销，作者进一步引入 mini-batch incremental learning 策略，在加入新字母表项时复用已有学习到的自动机。实验在实际协议栈上验证了该方法能够复现已有安全漏洞，并发现新的语义 bug；其中部分新问题已被开发者确认并修复，说明该方法具有实际可用性与有效性。",
+  "key_points_zh": [
+    "针对 state machine learning 中输入字母表依赖人工设计的问题，提出自动化构建框架，提升协议输入空间探索完整性。",
+    "利用 Large Language Models 解析协议消息格式，并结合结构化 mutation rules 生成合法与非法候选输入符号。",
+    "通过覆盖异常、非规范消息，方法有助于发现传统手工字母表可能遗漏的语义缺陷与安全漏洞。",
+    "提出 mini-batch incremental learning，在扩展字母表时复用已有 learned automata，降低持续增长输入空间带来的学习成本。",
+    "在实际 protocol stacks 上实验表明，该框架可复现已有漏洞并发现新 semantic bugs，部分问题已被开发者确认和修复。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.45,
+    "problem_significance": 0.4,
+    "potential_impact": 0.35,
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.3,
+    "llm_avg": 0.35000000000000003,
+    "comment": "Useful LLM-assisted protocol testing work with security relevance, but its primary contribution is not agent runtime, orchestration, or self-improving harness infrastructure.",
+    "comment_zh": "这是一项有用的LLM辅助协议测试研究，具有安全相关性，但主要贡献不在智能体运行时、编排或自改进框架基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.35000000000000003,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23464/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23464/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.948
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23464/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.944
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23464/fig4.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.956
+    }
+  ]
+}

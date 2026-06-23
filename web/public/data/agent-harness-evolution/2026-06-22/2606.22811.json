@@ -1,0 +1,93 @@
+{
+  "arxiv_id": "2606.22811",
+  "title": "Bagpiper-TTS: Natural Language Guided Universal Speech Synthesis",
+  "title_zh": "Bagpiper-TTS：自然语言引导的通用语音合成",
+  "authors": [
+    "Jinchuan Tian",
+    "Haoran Wang",
+    "Siddhant Arora",
+    "Takashi Maekaku",
+    "Keita Goto",
+    "Jin Sakuma",
+    "Yusuke Shinohara",
+    "Chao-Han Huck Yang",
+    "Shinji Watanabe"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T03:40:28Z",
+  "abs_url": "https://arxiv.org/abs/2606.22811v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.22811",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Classical TTS systems typically rely on rigid input formats and predefined metadata slots, limiting their ability to fulfill flexible user requirements. This paper introduces Bagpiper-TTS, a universal speech synthesis system that deals with diverse natural language user requests. Given a natural language prompt, Bagpiper-TTS first reasons over the users' intent to derive a rich caption, i.e., a comprehensive textual blueprint encompassing both transcription and nuanced metadata. Subsequently, this caption guides the synthesis of the target speech. Our model inherently supports a broad spectrum of tasks besides classical TTS applications, including multi-talker, intent-to-speech, role-play synthesis, singing voice synthesis, and more. Experimental results demonstrate that Bagpiper-TTS achieves an 1.7% Word Error Rate (WER) on the Seed-TTS-Eval benchmark and match the performance of dedicated models in both LLM-as-a-judge and human subjective evaluations across multiple applications.",
+  "abstract_zh": "传统 TTS 系统通常依赖固定输入格式和预定义元数据槽位，难以满足灵活多样的用户需求。本文提出 Bagpiper-TTS，一个面向自然语言用户请求的通用语音合成系统。给定自然语言 prompt，Bagpiper-TTS 首先推理用户意图，生成包含转写文本与细粒度元数据的丰富 caption，作为语音合成的完整文本蓝图；随后模型依据该 caption 合成目标语音。该系统天然支持除经典 TTS 外的多种任务，包括 multi-talker、intent-to-speech、role-play synthesis、singing voice synthesis 等。实验表明，Bagpiper-TTS 在 Seed-TTS-Eval benchmark 上达到 1.7% WER，并在 LLM-as-a-judge 与人工主观评测中，在多类应用上匹配专用模型性能。",
+  "key_points_zh": [
+    "提出 Bagpiper-TTS，将用户自然语言请求转化为包含文本转写和细粒度语音属性的 caption，再以此指导语音生成。",
+    "突破传统 TTS 对固定格式输入和预设 metadata slots 的依赖，更适合开放式、复杂、个性化的语音合成需求。",
+    "统一支持 classical TTS、multi-talker、intent-to-speech、role-play synthesis、singing voice synthesis 等多种任务。",
+    "在 Seed-TTS-Eval benchmark 上取得 1.7% WER，显示出较强的可懂度和文本一致性。",
+    "在 LLM-as-a-judge 与人工主观评测中，Bagpiper-TTS 在多种应用场景下达到与专用模型相当的表现。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.28,
+    "problem_significance": 0.22,
+    "potential_impact": 0.2,
+    "paradigm_shift": 0.15,
+    "lasting_value": 0.18,
+    "llm_avg": 0.20600000000000002,
+    "comment": "A capable universal TTS system, but it is largely outside agent harness infrastructure, closed-loop improvement, or production agent governance.",
+    "comment_zh": "这是一个有能力的通用语音合成系统，但基本不涉及智能体运行框架、闭环改进或生产级治理。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.20600000000000002,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22811/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.258
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22811/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.937
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22811/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22811/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.798
+    }
+  ]
+}

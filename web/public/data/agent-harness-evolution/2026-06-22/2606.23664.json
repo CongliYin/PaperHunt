@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2606.23664",
+  "title": "MAS-PromptBench: When Does Prompt Optimization Improve Multi-Agent LLM Systems?",
+  "title_zh": "MAS-PromptBench：Prompt 优化何时能提升 Multi-Agent LLM Systems？",
+  "authors": [
+    "Juyang Bai",
+    "Laixi Shi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T17:48:40Z",
+  "abs_url": "https://arxiv.org/abs/2606.23664v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.23664",
+  "links": {
+    "github": "https://github.com/juyangbai/MAS-PromptBench",
+    "project_page": "https://juyangbai.github.io/MAS-PromptBench/"
+  },
+  "abstract_en": "Multi-agent systems (MAS) offer a scalable path forward for agentic AI, comprising multiple LLM-based agents, each assigned a system prompt and a position within a workflow that governs inter-agent coordination and output aggregation. System prompts thus form a critical and accessible optimization surface: they specify agents' roles and behaviors, enabling system-level improvements without model finetuning. Although prompt optimization has shown substantial potential for single LLMs, extending it to MAS poses distinct challenges, notably an exponentially growing search space. It remains unclear whether, when, and by how much prompt optimization improves MAS performance, and how sensitive such gains are to system configuration. In this work, we systematically study system-prompt optimization across a broad range of MAS setups varying in task, workflow, communication protocol, and team size, benchmarking two prompt optimizers that naturally extend state-of-the-art single-agent methods. The results reveal its potential to unlock significant gains while exposing open challenges, characterizing when and how much prompt optimization helps across diverse MAS settings.",
+  "abstract_zh": "Multi-agent systems（MAS）由多个基于 LLM 的 agent 组成，每个 agent 拥有各自的 system prompt，并在工作流中承担特定位置，用于协调通信与聚合输出。System prompt 因而成为一种关键且易于操作的优化界面：它定义 agent 的角色与行为，使系统级性能提升无需模型微调。尽管 prompt optimization 在单个 LLM 上已展现出显著潜力，将其扩展到 MAS 仍面临独特挑战，尤其是搜索空间随 agent 数量和配置呈指数增长。本文系统研究了不同任务、工作流、通信协议与团队规模下的 MAS system-prompt optimization，并评测了两种从单 agent 先进方法自然扩展而来的 prompt optimizer。实验表明，prompt optimization 在多种 MAS 设置中可能带来显著收益，同时也揭示了其对系统配置的敏感性与仍待解决的开放问题。",
+  "key_points_zh": [
+    "提出 MAS-PromptBench，用于系统评估 system-prompt optimization 在 Multi-agent LLM Systems 中的效果。",
+    "研究覆盖多维 MAS 配置，包括任务类型、workflow、communication protocol 与 team size，关注优化收益的适用条件。",
+    "评测两种由 single-agent prompt optimization 方法自然扩展而来的 prompt optimizer，分析其在 MAS 中的表现。",
+    "结果显示，prompt optimization 可在部分 MAS 设置中带来显著性能提升，但收益高度依赖系统配置。",
+    "论文强调 MAS prompt 优化面临指数级搜索空间等挑战，为后续研究提供 benchmark、代码与项目页面。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.45,
+    "problem_significance": 0.55,
+    "potential_impact": 0.45,
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.35,
+    "llm_avg": 0.41,
+    "comment": "Useful empirical prompt-optimization study for multi-agent systems, but it remains closer to benchmarking and prompt tuning than durable agent harness infrastructure.",
+    "comment_zh": "这是一项有用的多智能体提示优化实证研究，但更接近基准与提示调优，而非持久的智能体运行框架基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.9,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.41,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/juyangbai/MAS-PromptBench",
+    "project_page_url": "https://juyangbai.github.io/MAS-PromptBench/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23664/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.794
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23664/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23664/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.964
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "arxiv_id": "2606.23654",
+  "title": "EnterpriseClawBench: Benchmarking Agents from Real Workplace Sessions",
+  "title_zh": "EnterpriseClawBench：基于真实工作场景会话的企业 Agent 基准",
+  "authors": [
+    "Jincheng Zhong",
+    "Weizhi Wang",
+    "Che Jiang",
+    "Kai Tian",
+    "Zhenzhao Yuan",
+    "Junlin Yang",
+    "Dianqiao Lei",
+    "Kaiyan Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T17:39:43Z",
+  "abs_url": "https://arxiv.org/abs/2606.23654v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.23654",
+  "links": {
+    "github": "https://github.com/FrontisAI/EnterpriseClawBench",
+    "project_page": null
+  },
+  "abstract_en": "Enterprise agents increasingly operate inside workspaces: they read heterogeneous files, invoke tools, and deliver business artifacts. We introduce EnterpriseClawBench, an enterprise agent benchmark constructed from proprietary, real-world agent sessions. Starting from a large archive of workplace sessions, the EnterpriseClawBench produces 852 reproducible tasks, each paired with recovered fixtures, rewritten prompts, role classes, skill subclasses, hard rules, and semantic rubrics. Because the sessions contain internal enterprise content, we do not release the benchmark data; instead, our reusable contribution is the construction and evaluation protocol. On EnterpriseClawBench, the best configuration reaches only 0.663 (Codex with GPT-5.5). These results show that enterprise agent evaluation must report harness--model combinations, artifact delivery, visual quality, cost, runtime, and skill-transfer behavior, rather than collapsing performance into a single score. Code: https://github.com/FrontisAI/EnterpriseClawBench",
+  "abstract_zh": "本文提出 EnterpriseClawBench，一个从企业内部真实 agent 会话构建的企业级 agent 评测基准。该基准从大规模工作场景会话档案出发，生成 852 个可复现实验任务，并为每个任务恢复测试夹具（fixtures）、重写提示词、标注角色类别、技能子类、硬性规则与语义评分标准。由于原始会话包含企业内部内容，作者不公开具体 benchmark 数据，而是发布可复用的构建与评估协议。在 EnterpriseClawBench 上，最佳配置 Codex with GPT-5.5 仅达到 0.663，表明企业 agent 评测不能只压缩为单一分数，而应同时报告 harness--model 组合、交付产物质量、视觉质量、成本、运行时间与技能迁移表现。",
+  "key_points_zh": [
+    "EnterpriseClawBench 基于真实企业工作区中的 agent 会话构建，覆盖读取异构文件、调用工具、交付业务产物等实际任务。",
+    "基准包含 852 个可复现任务，每个任务配套 fixtures、重写 prompts、role classes、skill subclasses、hard rules 与 semantic rubrics。",
+    "由于涉及内部企业内容，作者不发布具体数据集，而将主要贡献定位为可复用的 benchmark 构建流程与评估协议。",
+    "实验显示最佳配置 Codex with GPT-5.5 仅得 0.663，说明当前企业 agent 在真实工作流中的可靠性仍有限。",
+    "论文强调企业 agent 评测应报告 harness--model 组合、artifact delivery、visual quality、cost、runtime 与 skill-transfer behavior，而非只给单一总分。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.7,
+    "problem_significance": 0.85,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.8,
+    "llm_avg": 0.7399999999999999,
+    "comment": "Strong enterprise-agent evaluation work emphasizing reproducible workplace sessions, harness-model reporting, costs, runtime, artifacts, and skill transfer.",
+    "comment_zh": "这是一项很强的企业智能体评测工作，强调可复现工作会话、框架-模型组合、成本、运行时间、产物和技能迁移。"
+  },
+  "scores": {
+    "topic_relevance": 0.7200000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.9049457904402666,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7399999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/FrontisAI/EnterpriseClawBench",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 56,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23654/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23654/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23654/fig3.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23654/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.86
+    }
+  ]
+}

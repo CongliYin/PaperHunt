@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2606.22948",
+  "title": "ENVS: Environment-Native Verified Search for Long-Horizon GUI Agents",
+  "title_zh": "ENVS：面向长程 GUI Agent 的环境原生验证搜索",
+  "authors": [
+    "Yincheng Zhou",
+    "Athena Zhuoming Zhong",
+    "Shijie Zhang",
+    "Kevin Zhang",
+    "Teresa Xiaotao Shang",
+    "Shanghang Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T07:28:55Z",
+  "abs_url": "https://arxiv.org/abs/2606.22948v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.22948",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As multimodal agents move from interface understanding to real software control, successful trajectory discovery in live desktop environments becomes a key challenge. GUI tasks require long-horizon sequences of precise mouse and keyboard actions, while feedback is sparse, delayed, and costly to obtain through VM rollouts. We propose Environment-Native Verified Search (ENVS), a training-time search-and-filter pipeline that uses the environment to construct verified supervision before policy optimization: it branches over behaviorally distinct GUI actions in live OSWorld VMs, verifies successful leaves, and trains from globally balanced step-level supervision. To evaluate robustness under realistic desktop interruptions, we also introduce OSWorld-Noisy, a dynamic benchmark for recoverable desktop interruptions that preserves the original tasks while testing whether agents can refocus, dismiss, wait, or recover under live perturbations. On the 300-task OSWorld pool, ENVS reaches 30.3 pass@8 on original evaluations and 29.0 on OSWorld-Noisy, outperforming matched ARPO-style online RL while reducing compute from 184-192 to 138-153 GPU-hours; even with only 30% of its search data, ENVS reaches 27.0 pass@8, exceeding ARPO from the base model. Training from noisy environments also better preserves visual-reasoning abilities on auxiliary benchmarks, including OSWorld-G Refusal (16.7 vs. 1.9) and BLINK Functional Correspondence (26.2 vs. 23.1).",
+  "abstract_zh": "随着多模态 Agent 从界面理解走向真实软件控制，如何在实时桌面环境中发现成功轨迹成为关键挑战。GUI 任务通常需要长程、精确的鼠标与键盘操作序列，而反馈稀疏、延迟且依赖昂贵的 VM rollout。本文提出 Environment-Native Verified Search（ENVS），一种训练期搜索与过滤流程：在真实 OSWorld VM 中对行为差异显著的 GUI 动作进行分支搜索，验证成功叶节点，并将其转化为全局均衡的逐步监督信号，再用于策略优化。作者还提出 OSWorld-Noisy，用于评估真实桌面中可恢复干扰下的鲁棒性，测试 Agent 是否能重新聚焦、关闭弹窗、等待或恢复任务。在 300 个 OSWorld 任务上，ENVS 在原始评测中达到 30.3 pass@8，在 OSWorld-Noisy 上达到 29.0，优于匹配的 ARPO 风格在线 RL，同时将训练计算量从 184–192 GPU-hours 降至 138–153 GPU-hours。即使仅使用 30% 搜索数据，ENVS 也达到 27.0 pass@8，超过从基础模型出发的 ARPO。此外，在带噪环境中训练还能更好保留视觉推理能力，例如 OSWorld-G Refusal（16.7 vs. 1.9）和 BLINK Functional Correspondence（26.2 vs. 23.1）。",
+  "key_points_zh": [
+    "提出 ENVS：在真实 OSWorld VM 中分支探索 GUI 动作，并仅保留经环境验证成功的轨迹作为训练监督。",
+    "相比 ARPO 风格在线 RL，ENVS 在 OSWorld 300 任务上取得更高 pass@8，同时显著降低 GPU-hours 开销。",
+    "提出 OSWorld-Noisy，用动态桌面干扰评估 Agent 的恢复能力，包括重新聚焦、关闭干扰、等待和任务恢复。",
+    "ENVS 即使用 30% 搜索数据也能达到 27.0 pass@8，显示环境验证监督具有较高数据效率。",
+    "带噪环境训练不仅提升鲁棒性，还更好保留视觉推理能力，在 OSWorld-G Refusal 与 BLINK Functional Correspondence 上表现更优。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "Strong reusable GUI-agent training and evaluation work for live desktop control, but it is not primarily about realtime voice/video interaction or speech-tool workflows.",
+    "comment_zh": "Strong reusable GUI-agent training and evaluation work for live desktop control, but it is not primarily about realtime voice/video interaction or speech-tool workflows."
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22948/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.883
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22948/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

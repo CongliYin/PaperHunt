@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2606.23416",
+  "title": "Detecting Malicious Agent Skills in the Wild using Attention",
+  "title_zh": "利用 Attention 在真实环境中检测恶意 Agent Skills",
+  "authors": [
+    "Bacem Etteib",
+    "Daniele Lunghi",
+    "Tégawendé F. Bissyandé"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T14:41:06Z",
+  "abs_url": "https://arxiv.org/abs/2606.23416v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.23416",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM agents increasingly load skills, file-based packages of natural-language instructions written by third parties and distributed through marketplaces, that execute with the user's privileges. A single malicious skill can exfiltrate data, hijack the agent, or persist as a supply-chain foothold, which turns the skill marketplace into a new attack surface for agentic systems. Prompt-injection defenses do not carry over to this setting. They rely on a boundary between trusted instructions and untrusted data, whereas a skill is itself a body of instructions, so an injected command sits among many legitimate ones and inherits their authority. We present Locate-and-Judge, a two-stage detector designed for this regime. A lightweight locator scores the structural spans of a skill by the instruction-following attention each span draws and retains only the top-K. A judge then examines the retained spans in detail. Concentrating the costly judgment on a few high-attention spans lets the detector audit an entire marketplace instead of a sample. Compared to direct LLM-based scanning, this approach offers an order-of-magnitude cost reduction, dramatically increasing its scalability at a small cost to recall, and it dominates keyword and regex baselines at comparable expense. Deployed at marketplace scale and at negligible cost, Locate-and-Judge flags skills with high precision, the majority of which we manually confirmed as malicious, surfacing dozens of live malicious skills, including several disguised as benign functionality and many that SkillSpector and Cisco Skill Scanner fail to detect. We release the resulting labeled dataset.",
+  "abstract_zh": "随着 LLM agents 越来越多地加载由第三方编写并通过 marketplaces 分发的 skills（基于文件的自然语言指令包），这些 skills 会以用户权限执行，因而带来新的供应链攻击面。单个恶意 skill 可能窃取数据、劫持 agent，或作为持久化后门存在。传统 prompt-injection 防御依赖“可信指令”和“不可信数据”的边界，但 skill 本身就是指令集合，恶意命令会混入合法指令并继承其权限，因此难以直接迁移。论文提出 Locate-and-Judge：一个两阶段检测器。第一阶段使用轻量级 locator，根据 skill 各结构化片段吸引的 instruction-following attention 打分，仅保留 Top-K 高风险片段；第二阶段由 judge 对这些片段进行细粒度审查。该方法将昂贵的 LLM 判断集中在少量高 attention 片段上，使其能够以极低成本审计整个 marketplace。相比直接 LLM 扫描，Locate-and-Judge 将成本降低一个数量级，同时仅牺牲少量召回率；在相近成本下优于 keyword 和 regex 基线。作者在 marketplace 规模部署后，以高精度发现大量真实恶意 skills，其中多数经人工确认，包括伪装成良性功能的恶意 skills，以及许多 SkillSpector 和 Cisco Skill Scanner 未能检测到的样本。论文同时发布了标注数据集。",
+  "key_points_zh": [
+    "指出 agent skill marketplace 是新的供应链攻击面：skills 作为受信任自然语言指令包执行，恶意指令可获得与合法指令相同的权限。",
+    "提出 Locate-and-Judge 两阶段框架：先用 attention-based locator 定位高风险结构片段，再由 judge 对 Top-K 片段进行精查。",
+    "相比直接 LLM-based scanning，该方法将检测成本降低约一个数量级，使 marketplace 级别全量审计成为可能，但仅带来小幅召回损失。",
+    "在同等开销下，Locate-and-Judge 明显优于 keyword 和 regex baselines，并能发现 SkillSpector、Cisco Skill Scanner 漏检的恶意 skills。",
+    "作者在真实 marketplace 部署后发现数十个仍在线的恶意 skills，并发布相应 labeled dataset，便于后续研究复现与评测。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "An important agent-safety paper for skill marketplaces, but it is largely outside e-commerce search, recommendation, and shopping-agent workflows.",
+    "comment_zh": "An important agent-safety paper for skill marketplaces, but it is largely outside e-commerce search, recommendation, and shopping-agent workflows."
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23416/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23416/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.435
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23416/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.914
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23416/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.965
+    }
+  ]
+}

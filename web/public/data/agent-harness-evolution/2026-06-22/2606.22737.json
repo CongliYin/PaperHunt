@@ -1,0 +1,73 @@
+{
+  "arxiv_id": "2606.22737",
+  "title": "GroundEval: A Deterministic Replacement for LLM-as-Judge in Stateful Agent Evaluation",
+  "title_zh": "GroundEval：用于有状态 Agent 评估的确定性 LLM-as-Judge 替代方案",
+  "authors": [
+    "Jeffrey Flynt"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T00:41:16Z",
+  "abs_url": "https://arxiv.org/abs/2606.22737v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.22737",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Before letting an agent operate over real context, can you prove it used the right evidence? GroundEval turns that question into a deterministic test of what the agent searched, fetched, cited, and was permitted to access. In one case study, two frontier LLM judges scored a plausible agent response above 0.85. But the trace told a different story: the agent had never retrieved the artifact its answer depended on, yielding a GroundEval score of 0.000. We introduce GroundEval, a judge-free framework for evaluating agents against grounded, time-bounded, and access-controlled evidence. GroundEval uses a domain configuration to generate questions, lets the agent choose how to answer, and then scores both the final answer and the recorded trajectory that produced it. The benchmark targets three failures that LLM-as-judge evaluation struggles to detect: whether an agent checked before claiming absence, reasoned only from evidence available to the actor at the relevant time, and used the correct causal mechanism rather than a plausible one. These correspond to three tracks: Silence, Perspective, and Counterfactual. GroundEval exposes when plausible answers rest on invalid evidence paths, and produces structured per-question diagnostics that pair tool activity with the agent's turn-level narration, making each score inspectable rather than merely reported. What our case studies turned up is that this gap isn't some rare corner case. It's exactly the blind spot that final-answer and judge-based scoring were never built to catch.",
+  "abstract_zh": "本文提出 GroundEval，一个无需 LLM judge 的确定性评估框架，用于检验 Agent 在真实上下文中是否使用了正确、可访问且时间一致的证据。GroundEval 通过 domain configuration 自动生成问题，让 Agent 自主选择回答方式，并同时评估最终答案与产生该答案的完整轨迹，包括搜索、获取、引用和访问权限。论文指出，传统 final-answer 或 LLM-as-judge 评估难以发现三类关键失败：Agent 是否在声称信息缺失前进行了检查；是否仅基于相关时间点执行者可访问的证据推理；是否使用了正确的因果机制而非看似合理的解释。对应地，GroundEval 设计了 Silence、Perspective 和 Counterfactual 三个评测轨道。案例研究显示，即使 frontier LLM judges 给出高于 0.85 的评分，GroundEval 仍能发现 Agent 实际从未检索到其答案依赖的关键 artifact，并给出 0.000 分，揭示了 judge-based scoring 的结构性盲区。",
+  "key_points_zh": [
+    "GroundEval 评估的不只是最终答案，还检查 Agent 的搜索、获取、引用、访问权限和时间约束等完整证据路径。",
+    "框架针对 LLM-as-judge 难以识别的三类失败设计：Silence、Perspective 和 Counterfactual。",
+    "GroundEval 可发现“答案看似合理但证据路径无效”的情况，例如 Agent 未检索关键 artifact 却给出依赖该 artifact 的回答。",
+    "相比 final-answer scoring 和 judge-based scoring，GroundEval 输出结构化逐题诊断，使评分过程可检查、可复现、可审计。",
+    "论文强调这类证据错配并非罕见边界案例，而是现有 Agent 评估范式的核心盲点。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.85,
+    "problem_significance": 0.9,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.9,
+    "llm_avg": 0.86,
+    "comment": "Excellent deterministic, trace-aware evaluation framework for stateful agents that directly targets grounding, permissions, evidence paths, and inspectable diagnostics.",
+    "comment_zh": "这是一项优秀的确定性、轨迹感知的有状态智能体评测框架，直接面向事实依据、权限、证据路径和可检查诊断。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.86,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22737/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22737/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.985
+    }
+  ]
+}

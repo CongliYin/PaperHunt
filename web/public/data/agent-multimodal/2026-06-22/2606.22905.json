@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2606.22905",
+  "title": "InteractiveAvatar: Real-Time Streaming Video Generation for Consistent and Intent-Aware Avatars",
+  "title_zh": "InteractiveAvatar：面向一致且意图感知 Avatar 的实时流式视频生成",
+  "authors": [
+    "Quanyue Song",
+    "Yishan He",
+    "Yanfei Zhang",
+    "Shihao Cheng",
+    "Zhixiang He",
+    "Zhizhi Guo",
+    "Chi Zhang",
+    "Xuelong Li",
+    "Caigui Jiang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T06:41:17Z",
+  "abs_url": "https://arxiv.org/abs/2606.22905v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.22905",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent diffusion-based models have enabled realistic audio-driven avatar generation in real-time streaming. However, existing approaches struggle to maintain visual temporal consistency and fail to explicitly perceive user intent in complex interactive streaming scenarios. To address these challenges, we propose InteractiveAvatar, a real-time infinite-streaming video generation framework that supports visually consistent avatar video generation and intent-aware interactions. With autoregressive distillation, InteractiveAvatar achieves real-time str-eaming generation of human avatars over arbitrarily long durations. For visual consistency, we introduce a Long-Short Visual Memory (LSVM) mechanism that flexibly compresses historical visual information into compact tokens, preserving both short-range coherence and long-term consistency. To generate avatars with speeches and actions aligned with user intent, we propose a Reasoning-Reaction Module (RRM), which incorporates a State-Cycling strategy and a Cache-Switching mechanism. Extensive experimental results over diverse scenarios demonstrate that our method achieves state-of-the-art visual consistency in long-duration generation, while enabling complex user-avatar interaction in real time.",
+  "abstract_zh": "本文提出 InteractiveAvatar，一个用于实时无限流式视频生成的框架，旨在解决现有 diffusion-based 音频驱动 Avatar 方法在复杂交互场景中视觉时序一致性不足、且难以显式感知用户意图的问题。该方法通过 autoregressive distillation 实现任意长时长的人体 Avatar 实时流式生成；通过 Long-Short Visual Memory（LSVM）将历史视觉信息灵活压缩为紧凑 tokens，同时保持短期连贯性与长期一致性；并设计 Reasoning-Reaction Module（RRM），结合 State-Cycling 策略与 Cache-Switching 机制，使 Avatar 的语音和动作能够与用户意图对齐。实验表明，InteractiveAvatar 在长时长生成的视觉一致性上达到 state-of-the-art，并支持实时复杂用户-Avatar 交互。",
+  "key_points_zh": [
+    "提出 InteractiveAvatar，面向实时无限流式 Avatar 视频生成，支持任意长时长的连续生成与交互。",
+    "采用 autoregressive distillation，在保持生成质量的同时实现实时 streaming avatar generation。",
+    "设计 Long-Short Visual Memory（LSVM），将历史视觉信息压缩为紧凑 tokens，兼顾短程时序连贯与长期身份/外观一致性。",
+    "提出 Reasoning-Reaction Module（RRM），通过 State-Cycling 与 Cache-Switching 显式建模用户意图，使 Avatar 的 speech 与 action 更符合交互上下文。",
+    "在多种场景实验中取得长时长视觉一致性的 state-of-the-art 表现，并展示复杂实时用户-Avatar 交互能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "A relevant realtime interactive avatar generation system with streaming constraints and intent-aware reactions, though its contribution is more generative avatar infrastructure than tool-using multimodal agents.",
+    "comment_zh": "A relevant realtime interactive avatar generation system with streaming constraints and intent-aware reactions, though its contribution is more generative avatar infrastructure than tool-using multimodal agents."
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5028673861327195,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 16,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22905/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22905/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.974
+    }
+  ]
+}

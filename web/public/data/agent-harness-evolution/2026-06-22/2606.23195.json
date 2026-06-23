@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2606.23195",
+  "title": "Memory Contagion: Cross-Temporal Propagation of Evaluator Bias via Agent Memory",
+  "title_zh": "Memory Contagion：通过 Agent Memory 跨时间传播评估器偏见",
+  "authors": [
+    "Zewen Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T11:43:37Z",
+  "abs_url": "https://arxiv.org/abs/2606.23195v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.23195",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large Language Model (LLM) agents increasingly rely on memory systems to maintain long-term coherence. Recent work shows that agent memories degrade during continuous consolidation. However, existing research assumes memories are derived from unbiased experiences. In this work, we identify and formalize a novel phenomenon: Memory Contagion -- the cross-temporal propagation of evaluator bias through agent memory. We show that when agents are trained or guided by biased evaluators, their experiences become biased; when these trajectories are stored and consolidated into memory, the bias propagates to future agents retrieving from the same memory store, even when consolidation is perfect (oracle). Across two bias types (length preference, authority bias) and four experimental phases, we demonstrate: (1) Memory Contagion occurs even with perfect consolidation (oracle condition), proving that biased input is a sufficient cause of contagion; (2) Consolidation has opposite effects depending on bias type -- robustly attenuating length bias while preliminarily amplifying authority bias (single-run estimate), suggesting a bias-type-dependent interaction; (3) No observed safe threshold: bias propagation is detected at contamination rates as low as p=0.2. Our findings expose a critical vulnerability in current agent memory designs and provide formal tools for measuring cross-temporal bias propagation.",
+  "abstract_zh": "本文提出并形式化了一种新的 LLM agent 风险：Memory Contagion，即评估器偏见会通过 agent memory 在不同时间、不同 agent 之间传播。作者指出，当 agent 受到带偏见的 evaluator 训练或引导时，其交互轨迹会被污染；这些轨迹一旦被写入并整合进 memory store，后续 agent 即使面对“完美整合”（oracle consolidation）的记忆，也会在检索和使用这些记忆时继承偏见。实验覆盖两类偏见：length preference 与 authority bias，并分为四个阶段验证。结果显示：偏见输入本身足以导致 Memory Contagion；memory consolidation 对不同偏见类型的影响不同，对 length bias 有稳定削弱作用，但可能放大 authority bias；即使污染比例低至 p=0.2，也能观测到偏见传播，未发现安全阈值。该工作揭示了当前 agent memory 设计中的关键脆弱性，并提供了度量跨时间偏见传播的形式化工具。",
+  "key_points_zh": [
+    "提出 Memory Contagion：biased evaluator 产生的偏置轨迹被存入 agent memory 后，会影响未来从同一 memory store 检索信息的 agent。",
+    "即使在 oracle consolidation 条件下，即记忆整合过程本身没有噪声或退化，偏见仍会传播，说明 biased input 是充分原因。",
+    "研究两类偏见：length preference 与 authority bias，发现 consolidation 的作用依赖偏见类型：削弱 length bias，但可能放大 authority bias。",
+    "实验未发现安全污染阈值；当 contamination rate 低至 p=0.2 时，仍可检测到偏见传播。",
+    "论文强调长期记忆机制不仅有记忆退化问题，还可能成为跨时间 bias amplification 与 bias persistence 的载体。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.75,
+    "problem_significance": 0.8,
+    "potential_impact": 0.75,
+    "paradigm_shift": 0.6,
+    "lasting_value": 0.75,
+    "llm_avg": 0.73,
+    "comment": "Important memory-governance work identifying cross-temporal evaluator-bias propagation in shared agent memories, with clear implications for production memory design.",
+    "comment_zh": "这是一项重要的记忆治理研究，揭示共享智能体记忆中的跨时间评估者偏见传播，对生产级记忆设计有明确启示。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.73,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23195/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23195/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.977
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23195/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.968
+    }
+  ]
+}

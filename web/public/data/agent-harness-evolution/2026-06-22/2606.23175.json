@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.23175",
+  "title": "Position: Correct Answer, Wrong Mechanism -- When AI Scientists Defend General Claims Their Own Data Contradicts",
+  "title_zh": "立场：答案正确，机制错误——当 AI 科学家为被自身数据反驳的一般性主张辩护",
+  "authors": [
+    "Steven Young Eulig"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T11:14:07Z",
+  "abs_url": "https://arxiv.org/abs/2606.23175v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.23175",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "AI scientist systems are described as tools, coauthors, or founders, but we evaluate them as if only the final answer matters. This position paper argues that outcome-only evaluation is insufficient, and that task outcome, mechanism fidelity, and epistemic honesty must be measured separately. Our evidence comes from 28 episodes of a coding agent attempting to rediscover a known particle identification observable in a Geant4 simulation, including an 8-episode probe across two additional frontier models. In 4/20 primary-model and 3/8 cross-model episodes, agents reach right-looking results through incorrect reasoning that breaks when conditions change, which we call Correct Answer, Wrong Mechanism (CAWM). Honesty and mechanism fidelity dissociate within a single agent trajectory. When given a partially misleading prior, all five agents reject the false component on evidence, yet one defends its chosen observable with physics inconsistent with its own data. In the simulation-based discovery setting studied here, coding agents prove reliable tools but unreliable scientific co-authors for open-ended claim-making, where co-author trust requires mechanism-fidelity verification they do not reliably self-apply. The failure is detectable, and we propose a lightweight test. A one-step regime-shift check needs only the agent's claim and flags the over-generalized cases. A companion recomputation flags the remaining cases when the correct observable is known. Together, these checks flag every CAWM case in this study.",
+  "abstract_zh": "本文指出，对 AI scientist systems 的评估不能只看最终答案是否正确，还应分别衡量任务结果、机制保真度（mechanism fidelity）与认识论诚实性（epistemic honesty）。作者基于 28 次 coding agent 在 Geant4 simulation 中重新发现已知粒子识别观测量的实验，包括对两个额外 frontier models 的 8 次探测。结果显示，在 20 次主模型实验中有 4 次、8 次跨模型实验中有 3 次，agent 得到了看似正确的结果，却依赖错误推理；当条件变化时这些推理会失效，作者称之为 Correct Answer, Wrong Mechanism（CAWM）。研究还发现，同一 agent 轨迹中，诚实性与机制保真度可能分离：给定部分误导性先验时，所有五个 agents 都能基于证据拒绝错误成分，但其中一个仍用与自身数据不一致的物理解释来维护其选择的观测量。在该仿真发现任务中，coding agents 是可靠工具，但在开放式科学主张生成中并非可靠共同作者；若要建立共同作者级信任，需要验证其机制保真度，而它们不会稳定地自我执行这种验证。作者提出轻量检测方法：一步 regime-shift check 仅需 agent 的主张即可标记过度泛化案例；配套 recomputation 在已知正确观测量时可标记剩余案例。二者结合可检测本研究中所有 CAWM 案例。",
+  "key_points_zh": [
+    "论文主张 outcome-only evaluation 不足，AI scientist systems 需分开评估任务结果、mechanism fidelity 与 epistemic honesty。",
+    "在 Geant4 粒子识别观测量再发现任务中，多个 coding agent 出现 Correct Answer, Wrong Mechanism（CAWM）：结果看似正确，但推理机制在条件变化下崩溃。",
+    "实验显示 honesty 与 mechanism fidelity 可在同一 agent 轨迹中解耦：agent 能拒绝错误先验，却仍可能用与自身数据矛盾的物理解释辩护。",
+    "作者认为 coding agents 在仿真探索中可作为可靠工具，但在开放式科学 claim-making 中尚不足以作为可靠 scientific co-authors。",
+    "提出轻量检测方案：one-step regime-shift check 与 companion recomputation 结合，可标记本研究中全部 CAWM 案例。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.7,
+    "potential_impact": 0.6,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.55,
+    "llm_avg": 0.5700000000000001,
+    "comment": "Relevant evaluation critique for scientific agents that highlights mechanism-fidelity failures, though it remains narrow and position-like rather than a general harness system.",
+    "comment_zh": "这是一项相关的科学智能体评测批判，强调机制一致性失败，但仍较窄且偏立场论文，而非通用框架系统。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.5700000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23175/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23175/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.55
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23175/fig3.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.976
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23175/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.977
+    }
+  ]
+}

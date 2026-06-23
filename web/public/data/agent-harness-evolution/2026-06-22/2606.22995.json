@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2606.22995",
+  "title": "Group-Graph Policy Optimization for Long-Horizon Agentic Reinforcement Learning",
+  "title_zh": "面向长时程 Agentic 强化学习的 Group-Graph Policy Optimization",
+  "authors": [
+    "Yunan Wang",
+    "Minghui Song",
+    "Zihan Zhang",
+    "Shaohan Huang",
+    "Haizhen Huang",
+    "Furu Wei",
+    "Weiwei Deng",
+    "Feng Sun",
+    "Qi Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T08:12:47Z",
+  "abs_url": "https://arxiv.org/abs/2606.22995v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.22995",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Group-based Reinforcement Learning (RL) has significantly enhanced Large Language Models (LLMs) in agentic scenarios. To achieve finer-grained policy updates, recent agentic RL frameworks have shifted from trajectory-level to step-level training. However, long-horizon agentic RL suffers from severe reward sparsity and delay, as feedback is often deferred for dozens of interaction steps. While existing step-level frameworks refine training granularity, their credit assignment remains coarse-grained and still treats agent exploration as isolated, linear trajectories. This oversimplified perspective ignores the inherent graph structure of state transitions, leading to high-variance state-value estimation and myopic, localized credit assignment. To overcome these critical bottlenecks, we propose Group-Graph Policy Optimization (G2PO), a novel group-based RL algorithm tailored for multi-turn agentic tasks. G2PO explicitly transforms linear interaction trajectories into a global state-transition graph. By aggregating identical observations across different trajectories, we introduce group-aggregation state-value estimation that reduces sampling variance and trajectory-dependent bias. Furthermore, we redefine agent actions as transitions between state nodes and propose an edge-centric advantage estimation strategy. By globally standardizing Temporal Difference (TD) errors across the entire graph, G2PO explicitly identifies and prioritizes critical transitions that drive absolute task progress. Extensive experiments on representative long-horizon benchmarks-WebShop, ALFWorld, and AppWorld-demonstrate that G2PO substantially outperforms state-of-the-art prompt-based and RL baselines, achieving remarkable success rate improvements of up to 22.2% over GRPO.",
+  "abstract_zh": "本文针对长时程 agentic 强化学习中的奖励稀疏与延迟反馈问题，提出 Group-Graph Policy Optimization（G2PO）。现有 step-level 训练虽提升了策略更新粒度，但仍将探索过程视为彼此孤立的线性轨迹，导致状态价值估计方差高、信用分配局部且短视。G2PO 将多条交互轨迹显式转化为全局状态转移图，通过聚合不同轨迹中的相同 observation，进行 group-aggregation state-value estimation，以降低采样方差和轨迹依赖偏差。同时，G2PO 将 agent action 重新定义为状态节点之间的 transition，并提出 edge-centric advantage estimation，通过在全图范围内标准化 Temporal Difference（TD）error，识别并优先优化真正推动任务进展的关键转移。在 WebShop、ALFWorld 和 AppWorld 等长时程 benchmark 上，G2PO 显著优于 prompt-based 与 RL baselines，相比 GRPO 最高带来 22.2% 的成功率提升。",
+  "key_points_zh": [
+    "指出现有 step-level agentic RL 仍以线性轨迹做信用分配，忽略多轨迹间共享状态形成的图结构，容易造成高方差价值估计与局部信用分配。",
+    "提出 G2PO，将多条交互轨迹构建为全局 state-transition graph，并聚合相同 observation 进行 group-aggregation state-value estimation，降低采样方差和轨迹偏差。",
+    "将 action 视为状态节点之间的 edge transition，设计 edge-centric advantage estimation，更直接评估每次转移对任务进展的贡献。",
+    "通过在全局图上标准化 TD errors，G2PO 能突出关键转移，而非仅依赖单条轨迹内的局部奖励信号。",
+    "在 WebShop、ALFWorld、AppWorld 上取得优于 SOTA prompt-based 与 RL 方法的表现，相比 GRPO 成功率最高提升 22.2%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.75,
+    "problem_significance": 0.75,
+    "potential_impact": 0.75,
+    "paradigm_shift": 0.6,
+    "lasting_value": 0.7,
+    "llm_avg": 0.71,
+    "comment": "Relevant agentic RL method using trajectory-derived state-transition graphs for long-horizon credit assignment, but less focused on deployable harness operations.",
+    "comment_zh": "这是一种相关的智能体强化学习方法，利用轨迹状态转移图解决长程信用分配，但对可部署框架运维关注较少。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4142509875137679,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.71,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 9,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22995/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.94
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22995/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.95
+    }
+  ]
+}

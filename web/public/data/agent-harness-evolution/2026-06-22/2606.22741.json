@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2606.22741",
+  "title": "GRADE: Graph Representation of LLM Agent Dependency and Execution",
+  "title_zh": "GRADE：LLM Agent 依赖与执行的图表示",
+  "authors": [
+    "Yue Zhao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T01:03:21Z",
+  "abs_url": "https://arxiv.org/abs/2606.22741v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.22741",
+  "links": {
+    "github": "https://github.com/yzhao062/grade",
+    "project_page": null
+  },
+  "abstract_en": "Can one graph represent every kind of LLM agent's run? A trace records what each step did, never what it relied on, the state it read, and the results it reused. GRADE recovers that missing layer: it models any run as one graph over its step nodes with two edge layers, execution edges (what ran in what order) read from the trace for free, and dependency edges (what each step relied on) rarely logged, so each is graded by how it is known, observed, declared, or inferred. One representation, and each layer earns its place. Across six corpora of LLM agents spanning tool use, coding, and the web, the dependency layer can predict failure where run size is weak and, under leave-one-corpus-out transfer, stays above chance on every held-out class while run size fails. Meanwhile, the execution layer localizes the faulting step in a failed multi-agent run. This work also provides a more in-depth analysis of why generic graph neural networks may misread the dependency layer, unlike our feature-based alternative. The same graph representation opens further uses, carrying from failure diagnosis in a single run to efficiency and robustness optimization at scale.",
+  "abstract_zh": "本文提出 GRADE，用统一图结构表示任意 LLM agent 的一次运行。传统 trace 只记录每一步做了什么，却缺少其依赖的状态、读取的信息和复用的结果。GRADE 将运行建模为以步骤为节点的图，并包含两类边：execution edges 表示执行顺序，可直接从 trace 获得；dependency edges 表示每一步依赖了什么，通常不会被显式记录，因此根据其来源被标注为已知、观测、声明或推断。作者在涵盖工具使用、代码生成和网页任务的六个 LLM agent 语料上验证，发现 dependency layer 相比简单的运行规模特征更能预测失败；在 leave-one-corpus-out 迁移设置下，其在所有留出类别上都保持高于随机水平，而运行规模特征失效。同时，execution layer 可用于定位失败的多 agent 运行中的故障步骤。论文还分析了通用 GNN 为什么可能误读 dependency layer，并展示基于特征的方法更合适。GRADE 为单次运行的失败诊断，以及大规模效率与鲁棒性优化提供了统一表示基础。",
+  "key_points_zh": [
+    "GRADE 将 LLM agent 的一次运行表示为步骤节点图，包含 execution edges 和 dependency edges 两个层次。",
+    "execution edges 记录步骤执行顺序，可由 trace 直接获得；dependency edges 刻画步骤间依赖，并按已知、观测、声明或推断进行分级。",
+    "在六个涵盖工具使用、编码和网页任务的 LLM agent 语料上，dependency layer 对失败预测优于简单运行规模特征。",
+    "leave-one-corpus-out 迁移实验显示，GRADE 的依赖特征在所有留出类别上均高于随机水平，而运行规模特征泛化较差。",
+    "论文指出通用 GNN 可能误解 dependency layer 的结构信号，并提出基于特征的替代方案用于更可靠的故障诊断。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.8,
+    "problem_significance": 0.85,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.85,
+    "llm_avg": 0.8,
+    "comment": "Highly relevant trace-graph representation that can support failure diagnosis, dependency analysis, observability, and future harness-level optimization.",
+    "comment_zh": "该工作提出高度相关的轨迹图表示，可支持故障诊断、依赖分析、可观测性和未来框架级优化。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/yzhao062/grade",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22741/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.645
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22741/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22741/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.947
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22741/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.952
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "arxiv_id": "2606.22877",
+  "title": "DynamicMem: A Long-Horizon Memory Benchmark in Real-World Settings",
+  "title_zh": "DynamicMem：真实场景下的长周期记忆基准",
+  "authors": [
+    "Wenya Xie",
+    "Shengming Zhou",
+    "Zelin Li",
+    "Pouya Parsa",
+    "Shuang Zhou",
+    "Xinheng Ding",
+    "Chinmay Arvind",
+    "Guanchu Wang",
+    "Vladimir Braverman",
+    "Ali Payani",
+    "Yantao Zheng",
+    "Zirui Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T05:41:20Z",
+  "abs_url": "https://arxiv.org/abs/2606.22877v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.22877",
+  "links": {
+    "github": null,
+    "project_page": "https://wenyaxie023.github.io/DynamicMem/"
+  },
+  "abstract_en": "LLM agents increasingly act as personal assistants that must remember a user's profile over months: who they are (attributes), what they routinely do (habits), and what they prefer (preferences), and keep it updated as jobs, routines, and tastes drift. Existing benchmarks evaluate this \"memory\" ability through short, simplified interactions, missing three core properties of real behavior: the profile is heterogeneous, with attributes, habits, and preferences evolving on different timelines; changes are driven by external context such as seasons and life events; and evidence is rarely stated explicitly, instead scattered across many small actions in different apps that a memory system must infer from. We introduce DynamicMem, a synthetic benchmark that constructs 15 months of activity per user, providing long-term multi-app data that real users' privacy keeps out of reach. It provides user-consistent trajectories averaging 2.2M tokens and 1,772 grounded events per user across 16 applications such as e-commerce, fitness, and social platforms. The profile evolves over this period and is never given explicitly: each attribute, habit, or preference must be inferred from small signals scattered across apps. We evaluate at five quarterly checkpoints to track how systems scale as history grows. Benchmarking five representative systems exposes problems a single accuracy score hides: (i) profile reconstruction degrades with history length while service-task accuracy stays flat, despite both drawing on the same memory; (ii) no system both keeps facts that stay true and replaces facts that change, with errors clustering on preferences and on naming the exact referent; and (iii) over 93% of failures trace to what the memory retrieves, not to the model writing the answer, so the largest room for improvement lies in memory itself. Code: https://wenyaxie023.github.io/DynamicMem/",
+  "abstract_zh": "DynamicMem 是一个面向 LLM agents 长期用户记忆能力的合成基准，模拟每位用户 15 个月的多应用活动数据。它关注个人助手需要长期维护的用户画像：属性（attributes）、习惯（habits）和偏好（preferences），并要求系统在用户工作、日常行为和兴趣随时间变化时持续更新记忆。相比现有短交互、简化设定的记忆评测，DynamicMem 强调三点真实行为特征：用户画像是异质的，不同信息类型以不同时间尺度演化；变化受季节、生活事件等外部上下文驱动；证据通常并非显式陈述，而是分散在电商、健身、社交等 16 个应用中的细微信号里。该基准为每位用户构造平均 2.2M tokens、1,772 个有依据事件的长期轨迹，并在 5 个季度检查点评估系统随历史增长的表现。对 5 类代表性系统的实验显示：画像重建会随历史长度增加而退化，而服务任务准确率基本持平；没有系统能同时稳定保留长期事实并及时替换已变化事实；超过 93% 的失败来自记忆检索而非答案生成，说明改进重点应放在记忆机制本身。",
+  "key_points_zh": [
+    "提出 DynamicMem，用合成方式构造真实隐私难以获取的长期多应用用户活动数据，覆盖每位用户 15 个月、16 个应用、平均 2.2M tokens 和 1,772 个 grounded events。",
+    "基准要求系统从分散在应用行为中的弱信号推断用户属性、习惯和偏好，而不是从显式画像中读取信息，更贴近个人助手的真实记忆需求。",
+    "DynamicMem 建模用户画像的动态变化：不同类型信息具有不同演化节奏，并受季节、生活事件等外部上下文影响。",
+    "评测在 5 个季度 checkpoint 上进行，可观察记忆系统在历史不断增长时的可扩展性与长期稳定性。",
+    "实验发现主要瓶颈在 memory retrieval：超过 93% 失败由检索错误导致，而非 LLM 最终回答能力不足。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "A relevant long-horizon memory benchmark for personal agents that may support personalization, but e-commerce is only one incidental application among many.",
+    "comment_zh": "A relevant long-horizon memory benchmark for personal agents that may support personalization, but e-commerce is only one incidental application among many."
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.39342404825616256,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://wenyaxie023.github.io/DynamicMem/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22877/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22877/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.435
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22877/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.861
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22877/fig4.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.629
+    }
+  ]
+}

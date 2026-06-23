@@ -1,0 +1,69 @@
+{
+  "arxiv_id": "2606.23405",
+  "title": "OptChain: Achieving Optimal Throughput of Permissionless Blockchains",
+  "title_zh": "OptChain：实现无许可区块链的最优吞吐量",
+  "authors": [
+    "Chunjiang Che",
+    "Songze Li",
+    "Xuechao Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T14:30:10Z",
+  "abs_url": "https://arxiv.org/abs/2606.23405v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.23405",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We introduce \\textit{OptChain}, a permissionless blockchain state machine replication (SMR) protocol that achieves optimal throughput. We first establish a theoretical upper bound on the throughput of any SMR protocol under a fixed error probability, and OptChain is the first protocol to approach this limit. Conceptually, OptChain is a sharding protocol that optimizes both vertical and horizontal scalability. Vertically, we introduce \\textit{Shardis}, a novel permissionless verifiable information dispersal mechanism that maximizes intra-shard throughput to its physical limit, determined by the fastest node's bandwidth within each shard. Horizontally, we propose \\textit{diffusion mining}, which ensures security as long as each shard includes at least one honest node, thereby allowing for the maximum number of shards. We provide a formal security and efficiency analysis, demonstrating that OptChain approaches the established upper bound while maintaining robust security. Finally, we implement a full prototype of OptChain and deploy it on AWS EC2 nodes across various regions. Experimental results indicate that OptChain outperforms state-of-the-art permissionless protocols and closely approaches the theoretical optimal throughput.",
+  "abstract_zh": "本文提出 OptChain，一种无许可区块链状态机复制（SMR）协议，目标是在固定错误概率下实现最优吞吐量。作者首先给出任意 SMR 协议吞吐量的理论上界，并证明 OptChain 是首个接近该极限的协议。OptChain 可理解为一种同时优化纵向与横向扩展性的分片协议：在纵向扩展上，提出 Shardis，一种新的无许可可验证信息分散机制（verifiable information dispersal），将分片内吞吐量提升到由该分片最快节点带宽决定的物理极限；在横向扩展上，提出 diffusion mining，使系统只要每个分片至少包含一个诚实节点即可保持安全，从而允许使用最大数量的分片。论文给出形式化安全性与效率分析，并实现完整原型，在 AWS EC2 跨区域节点上部署测试。实验表明，OptChain 优于现有先进无许可协议，并接近理论最优吞吐量。",
+  "key_points_zh": [
+    "建立固定错误概率下任意状态机复制（SMR）协议吞吐量的理论上界，并以此作为评估无许可区块链吞吐能力的基准。",
+    "提出 OptChain 分片架构，同时优化纵向扩展和横向扩展，是首个声称接近该吞吐上界的无许可区块链协议。",
+    "提出 Shardis，可验证信息分散机制，将分片内吞吐量推至由分片内最快节点带宽决定的物理极限。",
+    "提出 diffusion mining，使安全条件放宽为每个分片至少有一个诚实节点，从而支持最大化分片数量。",
+    "在 AWS EC2 多区域环境实现并测试完整原型，实验结果显示 OptChain 超越现有无许可协议并接近理论最优吞吐量。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.25,
+    "problem_significance": 0.2,
+    "potential_impact": 0.15,
+    "paradigm_shift": 0.15,
+    "lasting_value": 0.1,
+    "llm_avg": 0.16999999999999998,
+    "comment": "Strong blockchain systems work, but it is largely outside the agent harness evolution scope.",
+    "comment_zh": "这是一项很强的区块链系统研究，但基本不属于智能体框架演化范围。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.16999999999999998,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23405/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.955
+    }
+  ]
+}

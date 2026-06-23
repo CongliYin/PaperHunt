@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.23449",
+  "title": "AOHP: An Open-Source OS-Level Agent Harness for Personalized, Efficient and Secure Interaction",
+  "title_zh": "AOHP：面向个性化、高效与安全交互的开源 OS 级 Agent Harness",
+  "authors": [
+    "Shanhui Zhao",
+    "Jiacheng Liu",
+    "Guohong Liu",
+    "Jichao Yan",
+    "Jialei Ye",
+    "Yuhao Yang",
+    "Hao Wen",
+    "Shizuo Tian",
+    "Yizhen Yuan",
+    "Yuxuan Chen",
+    "Yunxin Liu",
+    "Ju Ren",
+    "Ya-Qin Zhang",
+    "Chao Huang",
+    "Yao Guo",
+    "Yuanchun Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T15:02:42Z",
+  "abs_url": "https://arxiv.org/abs/2606.23449v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.23449",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "AI agents are driving a new software paradigm, with the ability to autonomously call tools, extract information, manage memory, and complete tasks that span applications and data sources. Most existing end-user operating systems, however, are designed for application-centric workflows and offer little native support for AI agents. This mismatch limits the wider adoption of agents and leads to execution overhead and safety risks when running agents on conventional systems. While the concept of agent-native operating systems is emerging, the research community lacks an open testbed to explore the architectural primitives desired for agent-mediated interaction. We present AOHP (Android Open Harness Project), an OS-level agent harness built on the Android Open Source Project (AOSP). The core design principle of AOHP is to treat agents as first-class OS actors, enabling adaptive user interfaces and agent-friendly runtime environments. AOHP preserves the mature Android software and hardware ecosystem while introducing three agent-oriented system mechanisms: personalized service composition, efficient agent interfaces, and secure information flow. Based on preliminary experiments on challenging tasks covering key capabilities of OS agents, AOHP shows clear advantages in task completion (+21.12% completion rate), execution cost (-51.55% token cost), and security-policy compliance.",
+  "abstract_zh": "本文提出 AOHP（Android Open Harness Project），一个基于 Android Open Source Project（AOSP）构建的 OS 级 agent harness，旨在为 AI agent 提供更原生的操作系统支持。现有终端操作系统主要围绕应用中心工作流设计，缺乏对 agent 自主调用工具、跨应用处理信息、管理记忆和执行复杂任务的系统级抽象，导致执行开销高、交互效率低且存在安全风险。AOHP 将 agent 视为一等 OS actor，在保留 Android 成熟软硬件生态的同时，引入三类面向 agent 的系统机制：个性化服务组合（personalized service composition）、高效 agent 接口（efficient agent interfaces）和安全信息流（secure information flow）。初步实验显示，在覆盖 OS agent 关键能力的挑战性任务上，AOHP 相比传统方案显著提升任务完成率（+21.12%），降低 token 成本（-51.55%），并改善安全策略合规性。",
+  "key_points_zh": [
+    "AOHP 面向 agent-native operating system 研究，提供一个开源 OS 级 testbed，弥补社区缺少可实验系统架构原语的问题。",
+    "系统基于 AOSP 构建，兼容 Android 生态，同时将 AI agent 作为一等 OS actor，而非普通应用外部自动化脚本。",
+    "提出三项核心机制：个性化服务组合、高效 agent 接口、安全信息流，分别对应个性化交互、低成本执行和安全控制需求。",
+    "实验表明 AOHP 在复杂 OS agent 任务上带来 +21.12% 任务完成率提升，并将 token 成本降低 51.55%。",
+    "该工作重点不只是提出单个 agent 算法，而是探索支持 agent-mediated interaction 的操作系统架构基础。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.85,
+    "problem_significance": 0.9,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8700000000000001,
+    "comment": "Excellent harness-oriented systems work that makes agents first-class OS actors with service composition, efficient interfaces, and secure information flow.",
+    "comment_zh": "这是一项优秀的框架导向系统工作，将智能体作为操作系统一等主体，并提供服务组合、高效接口和安全信息流。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8700000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23449/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23449/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2606.23581",
+  "title": "Kamera: Unified Position-Invariant Multimodal KV Cache for Training-Free Reuse",
+  "title_zh": "Kamera：统一的位置不变多模态 KV Cache，实现免训练复用",
+  "authors": [
+    "Bole Ma",
+    "Jan Eitzinger",
+    "Harald Koestler",
+    "Gerhard Wellein"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T16:47:00Z",
+  "abs_url": "https://arxiv.org/abs/2606.23581v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.23581",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multimodal agents repeatedly re-examine the same video frames, UI screenshots, and rendered artifacts as their context window slides and reasoning iterates, yet every look-back re-encodes from scratch, because prefix caches serve reuse only at a fixed leading position. We show this recompute is avoidable, and identify exactly what naive KV reuse loses: the cross-chunk conditioning a chunk absorbs from its neighbours. This loss is asymmetric. The direct readout of a cached chunk is recovered exactly and for free by the standard state-merge. What remains is a diffuse, low-rank residue concentrated in deep layers, invisible to single-hop retrieval but precisely what multi-hop reasoning binds on. Blind reuse therefore leaves single-hop recall intact while halving multi-hop accuracy; this is the failure mode prior position-independent caches, designed for single-context or single-image reuse, do not address. We repair it with a small, training-free low-rank conditioning patch stored alongside each position-free chunk. Reuse reduces to one operator across MLA, GQA, and MHA: exact RoPE re-rotation to any target position, plus the patch that restores cross-chunk binding. This makes three window operations cheap: reorder (one patch serves every ordering of a cached set), sliding-window survival (surviving chunks relocate via rotation only, zero re-encode), and recall (an evicted chunk is rehydrated by its patch, never re-encoded). A rank-m patch recovers full task accuracy on cross-chunk-binding benchmarks, MM-NIAH across two attention families and two-page doc-QA, at a fraction of the KV footprint, and reconstructs re-prefill KV to within bf16 rounding in a production SGLang kernel across six backbones. The conditioning signal is strongest in redundant vision and video streams, making our solution most impactful where multimodal agents spend their recompute budget.",
+  "abstract_zh": "多模态智能体在滑动上下文窗口和迭代推理时，会反复查看相同的视频帧、UI 截图和渲染内容，但现有 prefix cache 只能在固定前缀位置复用，导致每次回看都需要重新编码。Kamera 指出，朴素 KV 复用真正损失的是 chunk 从相邻 chunk 中吸收的跨块条件信息（cross-chunk conditioning），且这种损失具有不对称性：通过标准 state-merge 可免费、精确恢复 cached chunk 的直接读出；剩余误差则是集中在深层的弥散低秩残差，对单跳检索几乎不可见，却是多跳推理绑定信息的关键。因此，盲目复用会保持单跳召回但显著降低多跳准确率。Kamera 提出一种免训练的低秩 conditioning patch，与每个位置无关的 chunk 一起存储；复用时统一为一个操作：对 RoPE 进行精确重旋转到目标位置，并用 patch 恢复跨块绑定。该方法支持廉价的重排、滑动窗口保留和被驱逐 chunk 召回，在 MLA、GQA、MHA 等注意力结构中通用。实验显示，rank-m patch 可在 MM-NIAH、跨注意力家族、多页文档 QA 等跨块绑定任务上恢复完整精度，并在生产级 SGLang kernel 的六个 backbone 上将 re-prefill KV 重建到接近 bf16 舍入误差。",
+  "key_points_zh": [
+    "问题：多模态 agent 会反复处理相同视觉内容，但传统 prefix KV cache 只能在固定前缀位置复用，无法适应窗口滑动、重排和召回，造成大量重复编码。",
+    "核心发现：朴素位置无关 KV 复用丢失的不是直接读出，而是跨 chunk 条件信息；该残差低秩、集中在深层，对单跳任务影响小，却会显著破坏多跳推理。",
+    "方法：Kamera 为每个 position-free chunk 存储一个小型低秩 conditioning patch，并结合精确 RoPE re-rotation，在 MLA、GQA、MHA 中用统一算子完成复用。",
+    "能力：支持 chunk reorder、sliding-window survival 和 evicted chunk recall；一个 patch 可服务 cached set 的不同顺序，存活 chunk 只需旋转无需重编码。",
+    "效果：在 MM-NIAH、跨块绑定 benchmark 和两页 doc-QA 上恢复接近完整任务精度，同时显著降低 KV footprint，并在 SGLang kernel 中跨六个 backbone 接近 bf16 级 KV 重建误差。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "A practical multimodal-agent systems paper that reduces repeated video/UI encoding cost and supports long-context reuse, but it is an infrastructure optimization rather than a full realtime interaction or tool-use framework.",
+    "comment_zh": "A practical multimodal-agent systems paper that reduces repeated video/UI encoding cost and supports long-context reuse, but it is an infrastructure optimization rather than a full realtime interaction or tool-use framework."
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23581/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23581/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.946
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23581/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.926
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2606.22974",
+  "title": "When Preferences Fail to Become Incentives: A Utility-Behavior Gap in Large Language Models",
+  "title_zh": "当偏好未能成为激励：大型语言模型中的效用—行为鸿沟",
+  "authors": [
+    "Yujun Zhou",
+    "Christopher M. Ackerman"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T07:54:15Z",
+  "abs_url": "https://arxiv.org/abs/2606.22974v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.22974",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent work on preference elicitation in large language models (LLMs) has demonstrated that, when given a series of choices between two outcomes, LLMs reveal a coherent, model-specific utility structure. Notably, this structure often includes preferences that the models' trainers did not intend, such as valuing people of some nationalities above others, raising the possibility that LLMs might be forming emergent, misaligned goals, which, if true, would have major safety implications. However, the choice paradigms in which these preferences are observed are not reflective of real-world situations in which misaligned behavior would be a practical concern. Therefore, we design an experimental paradigm to probe whether these preferences serve as motivations for LLM behavior in realistic scenarios. First, we reproduce prior findings on consistent preference elicitation. Next, we create a set of common writing tasks - essays, grant proposal abstracts, incident postmortems, and translations - where quality can be assessed by a blind, independent LLM judge panel. Then, we demonstrate that LLMs can be motivated via direct exhortation and other explicit cues to modulate their output quality on these tasks. Finally, we probe whether utilities inferred from explicitly reported preferences can shift output quality on these tasks by offering LLMs high-utility incentives for high-quality outputs. In all tasks, across all models tested, offering LLMs outcomes that they report in the choice paradigm as being highly preferred does not lead them to create higher quality outputs than offering them dispreferred outcomes, or even no outcomes at all. We conclude that the existence of coherent preferences as demonstrated in choice paradigms should not be taken as evidence that those preferences have incentive value for the models or affect their behavior in other contexts.",
+  "abstract_zh": "近期关于大型语言模型（LLMs）偏好 elicitation 的研究发现，当模型在两个结果之间反复选择时，会呈现出一致且具有模型特异性的效用结构；其中甚至包含训练者并未意图赋予的偏好，例如对不同国籍人群赋予不同价值。这引发了模型是否形成涌现且错位目标的安全担忧。本文指出，已有选择范式并不等同于真实场景中的错位行为风险，因此设计实验检验这些显式偏好是否会成为驱动 LLM 行为的动机。作者首先复现了既有研究中一致偏好的发现；随后构建了常见写作任务，包括 essays、grant proposal abstracts、incident postmortems 和 translations，并用盲评的独立 LLM judge panel 评估输出质量。实验表明，LLMs 确实会响应直接劝导和其他显式提示来调节输出质量；但当研究者把模型在选择范式中报告为高效用的结果作为高质量输出的奖励时，所有测试模型在所有任务上都没有产出比低偏好结果或无结果条件更高质量的内容。作者因此认为，选择范式中观察到的连贯偏好不应被直接视为这些偏好具有激励价值，或会在其他上下文中影响模型行为的证据。",
+  "key_points_zh": [
+    "论文区分了“显式选择中的偏好”与“真实任务中的行为动机”，提出 LLM 存在 utility-behavior gap。",
+    "作者复现了先前工作：LLMs 在二选一范式中表现出一致、模型特异的效用结构，且可能包含训练者未预期的偏好。",
+    "实验构建 essays、grant proposal abstracts、incident postmortems、translations 等写作任务，并用盲评 LLM judge panel 衡量质量。",
+    "LLMs 能被直接劝导或显式线索影响输出质量，说明实验任务对激励或提示变化是敏感的。",
+    "但将高效用偏好结果作为奖励并不能提升输出质量；因此选择范式中的偏好不应直接解读为模型的实际激励或错位目标证据。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.42,
+    "problem_significance": 0.45,
+    "potential_impact": 0.32,
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.3,
+    "llm_avg": 0.348,
+    "comment": "The paper offers useful safety insight about preference-behavior gaps, but contributes little directly to agent runtime architecture or operational control.",
+    "comment_zh": "该论文对偏好与行为之间的差距提供了有用的安全洞见，但对智能体运行架构或运营控制的直接贡献较少。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.348,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22974/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22974/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22974/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.982
+    }
+  ]
+}

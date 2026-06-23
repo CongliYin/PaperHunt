@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.22803",
+  "title": "Towards Fast Domain Adaptation and Fine-Grained User Simulation for Evaluating Conversational Recommender Systems",
+  "title_zh": "面向会话推荐系统评估的快速领域适应与细粒度用户模拟",
+  "authors": [
+    "Yuanzi Li",
+    "Quanyu Dai",
+    "Xueyang Feng",
+    "Zihang Tian",
+    "Junhao Wang",
+    "Xu Chen",
+    "Zhenhua Dong",
+    "Huifeng Guo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T03:26:08Z",
+  "abs_url": "https://arxiv.org/abs/2606.22803v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.22803",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Conversational Recommender Systems (CRSs) enhance user experience through multi-turn interactions, yet evaluating their performance remains challenging. While Large Language Model (LLM) based user simulators are effective, they suffer from three key limitations: (1) Lack of Domain Adaptability: Reliance on fixed prompts and predefined action spaces hinders transfer to novel domains; (2) Limited User Modeling: Inability to accurately replicate subtle linguistic styles and dynamic preferences; (3) Insufficient Evaluation Validity: Existing simulators fail to adequately assess fundamental capabilities and system robustness. To overcome these, we propose AdaptSim, an Adaptive domain and automatic prompt tuning User Simulator. AdaptSim offers an efficient framework for evaluating CRSs by enabling realistic behavior modeling and diverse style generation. It leverages automatic prompt generation and an open action mechanism to reduce manual effort and improve cross-domain flexibility. For response generation, we employ controlled text generation with a \"think-then-respond\" strategy for fine-grained control over language style. For CRS evaluation, AdaptSim incorporates a novel Breadth-First Search (BFS)-based, turn-level pairwise comparison framework for comprehensive assessment. Extensive experiments across three domains and four LLMs demonstrate that AdaptSim generates realistic dialogues, enabling a highly effective and reliable evaluation of CRS capabilities and robustness.",
+  "abstract_zh": "会话推荐系统（Conversational Recommender Systems, CRSs）通过多轮交互提升用户体验，但其性能评估仍然困难。现有基于 Large Language Model（LLM）的用户模拟器虽有效，却存在三类局限：依赖固定 prompts 与预定义 action spaces，难以迁移到新领域；用户建模能力有限，难以复现细微语言风格与动态偏好；评估有效性不足，无法充分检验系统基础能力与鲁棒性。为此，论文提出 AdaptSim，一个具备自适应领域迁移与自动 prompt 调优能力的用户模拟器。AdaptSim 通过自动 prompt 生成与开放动作机制减少人工配置，并提升跨领域灵活性；在回复生成阶段采用受控文本生成与“think-then-respond”策略，以细粒度控制语言风格；在 CRS 评估阶段引入基于 Breadth-First Search（BFS）的轮次级成对比较框架，以实现更全面的能力评估。跨三个领域和四种 LLM 的实验表明，AdaptSim 能生成更真实的对话，并有效、可靠地评估 CRS 的能力与鲁棒性。",
+  "key_points_zh": [
+    "提出 AdaptSim，用于快速适配不同领域的 CRS 用户模拟与评估，缓解固定 prompts 和预定义 action spaces 带来的迁移困难。",
+    "采用自动 prompt 生成与开放动作机制，降低人工设计成本，并增强用户模拟器在新领域中的灵活性。",
+    "通过受控文本生成和“think-then-respond”策略，实现对用户语言风格、行为模式和动态偏好的细粒度建模。",
+    "设计基于 Breadth-First Search（BFS）的轮次级成对比较评估框架，更系统地衡量 CRS 的基础能力与鲁棒性。",
+    "在三个领域和四种 LLM 上的实验显示，AdaptSim 能生成更真实的交互对话，并提供更有效、可靠的 CRS 评估结果。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "A useful LLM-based evaluation framework for conversational recommenders, but its commerce grounding appears broad rather than specifically tied to product catalogs or shopping workflows.",
+    "comment_zh": "A useful LLM-based evaluation framework for conversational recommenders, but its commerce grounding appears broad rather than specifically tied to product catalogs or shopping workflows."
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22803/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22803/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22803/fig3.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.945
+    }
+  ]
+}

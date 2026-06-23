@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2606.23543",
+  "title": "VeriEvol: Scaling Multimodal Mathematical Reasoning via Verifiable Evol-Instruct",
+  "title_zh": "VeriEvol：通过可验证 Evol-Instruct 扩展多模态数学推理",
+  "authors": [
+    "Haoling Li",
+    "Kai Zheng",
+    "Jie Wu",
+    "Can Xu",
+    "Qingfeng Sun",
+    "Han Hu",
+    "Yujiu Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T16:17:30Z",
+  "abs_url": "https://arxiv.org/abs/2606.23543v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.23543",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Scaling reinforcement learning for visual mathematical reasoning requires more than generating harder questions: as data volume grows, the reward labels themselves must remain reliable. Yet existing data pipelines scale supervision while trusting the labeller, and policy-side methods assume the underlying answers are already correct. We instead treat scaling as a verifiable data-construction problem and decouple two axes before any policy update: prompt difficulty, expanded by route-specific evolution operators, and answer reliability, enforced by offline hypothesis-test falsification. We instantiate this as VeriEvol, an iterative framework with two extensible components: a type-aware evolution module that rewrites low-difficulty image-question seeds into harder, image-grounded prompts; and HTV-Agent, a verifier that accepts an answer only after multi-source counter-evidence has failed to refute it. The resulting verified data scales in volume, extends by adding evolution routes or verifier channels, and plugs directly into existing GRPO-style RL recipes. On a five-benchmark visual-math suite, scaling evolved SFT data from 10K to 250K samples raises the mean accuracy from 35.42 to 54.73; then, with backbone, SFT initialization, and GRPO recipe held fixed, VeriEvol adds a cumulative +3.88 over an un-evolved RL baseline, of which +1.82 comes from evolved prompts and +2.06 from the HTV-Agent verifier. We release the prompts, data, models, code, and the full verifier trace of every sample, so that downstream work can scale and audit the pipeline rather than only inspect its outputs.",
+  "abstract_zh": "本文关注视觉数学推理中强化学习数据扩展的核心问题：不仅要生成更难的问题，还要保证随数据规模增长而来的奖励标签可靠性。现有数据流水线通常默认标注者可信，策略优化方法也往往假设答案已正确。作者将扩展问题重新定义为可验证的数据构建问题，在策略更新前解耦两个维度：通过特定路径的 evolution operators 提升 prompt 难度；通过离线假设检验式证伪保证答案可靠性。基于此，论文提出 VeriEvol，一个迭代式框架，包含类型感知的 evolution module，将低难度图像-问题种子改写为更难且图像相关的 prompt；以及 HTV-Agent verifier，只有当多源反证均无法推翻候选答案时才接受该答案。生成的 verified data 可通过增加 evolution routes 或 verifier channels 持续扩展，并能直接接入现有 GRPO-style RL 训练流程。在五个视觉数学 benchmark 上，将 evolved SFT 数据从 10K 扩展到 250K，使平均准确率从 35.42 提升到 54.73；在 backbone、SFT 初始化和 GRPO recipe 固定的情况下，VeriEvol 相比未 evolution 的 RL baseline 累计提升 +3.88，其中 +1.82 来自 evolved prompts，+2.06 来自 HTV-Agent verifier。作者还发布 prompts、data、models、code 以及每个样本的完整 verifier trace，便于后续扩展和审计。",
+  "key_points_zh": [
+    "提出 VeriEvol，将多模态数学推理的数据扩展拆分为 prompt 难度提升与答案可靠性验证两个独立环节，在 RL 训练前降低错误监督风险。",
+    "设计 type-aware evolution module，针对不同题型用 route-specific evolution operators 将低难度 image-question seeds 改写为更难、仍保持图像 grounding 的问题。",
+    "提出 HTV-Agent verifier，通过多源 counter-evidence 和离线 hypothesis-test falsification 机制，仅在候选答案无法被反证时接受标签。",
+    "实验显示，evolved SFT 数据从 10K 扩展到 250K 后，五个视觉数学 benchmark 平均准确率由 35.42 提升至 54.73。",
+    "在固定 backbone、SFT 初始化和 GRPO recipe 下，VeriEvol 相比未进化 RL baseline 额外提升 +3.88，其中 prompt evolution 与 verifier 分别贡献 +1.82 和 +2.06。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.65,
+    "problem_significance": 0.6,
+    "potential_impact": 0.6,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.55,
+    "llm_avg": 0.5700000000000001,
+    "comment": "Solid verifier-backed data construction for multimodal math RL with audit traces, but it is more task-specific training pipeline than general agent harness evolution.",
+    "comment_zh": "这是一项扎实的多模态数学强化学习可验证数据构建工作，并提供审计轨迹，但更偏任务训练流水线而非通用智能体框架演化。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5700000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23543/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23543/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.944
+    }
+  ]
+}

@@ -1,0 +1,522 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-06-22",
+  "generated_at": "2026-06-23T21:56:35Z",
+  "papers": [
+    {
+      "arxiv_id": "2606.22741",
+      "title": "GRADE: Graph Representation of LLM Agent Dependency and Execution",
+      "title_zh": "GRADE：LLM Agent 依赖与执行的图表示",
+      "authors": [
+        "Yue Zhao"
+      ],
+      "total_score": 0.6770000000000002,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8,
+        "other": 0.2833333333333334
+      },
+      "tags": [
+        "GitHub",
+        "trace driven evolution"
+      ],
+      "tldr_zh": "用图统一表示并诊断 LLM agent 运行",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.22741.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22741/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.23449",
+      "title": "AOHP: An Open-Source OS-Level Agent Harness for Personalized, Efficient and Secure Interaction",
+      "title_zh": "AOHP：面向个性化、高效与安全交互的开源 OS 级 Agent Harness",
+      "authors": [
+        "Shanhui Zhao",
+        "Jiacheng Liu",
+        "Guohong Liu",
+        "Jichao Yan",
+        "Jialei Ye",
+        "Yuhao Yang",
+        "Hao Wen",
+        "Shizuo Tian",
+        "Yizhen Yuan",
+        "Yuxuan Chen",
+        "Yunxin Liu",
+        "Ju Ren",
+        "Ya-Qin Zhang",
+        "Chao Huang",
+        "Yao Guo",
+        "Yuanchun Li"
+      ],
+      "total_score": 0.6770000000000002,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8700000000000001,
+        "other": 0.2666666666666667
+      },
+      "tags": [
+        "Code soon",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "基于 AOSP 的开源 OS 级 Agent 测试床",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.23449.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23449/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.23654",
+      "title": "EnterpriseClawBench: Benchmarking Agents from Real Workplace Sessions",
+      "title_zh": "EnterpriseClawBench：基于真实工作场景会话的企业 Agent 基准",
+      "authors": [
+        "Jincheng Zhong",
+        "Weizhi Wang",
+        "Che Jiang",
+        "Kai Tian",
+        "Zhenzhao Yuan",
+        "Junlin Yang",
+        "Dianqiao Lei",
+        "Kaiyan Zhang"
+      ],
+      "total_score": 0.6652472895220134,
+      "scores": {
+        "topic_relevance": 0.7200000000000001,
+        "llm_assessment": 0.7399999999999999,
+        "other": 0.5174909650733778
+      },
+      "tags": [
+        "HF Daily ★56",
+        "GitHub",
+        "production agent platform"
+      ],
+      "tldr_zh": "真实企业会话构建的 Agent 评测协议",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.23654.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23654/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.23416",
+      "title": "Detecting Malicious Agent Skills in the Wild using Attention",
+      "title_zh": "使用 Attention 检测真实市场中的恶意 Agent Skills",
+      "authors": [
+        "Bacem Etteib",
+        "Daniele Lunghi",
+        "Tégawendé F. Bissyandé"
+      ],
+      "total_score": 0.6641947575628934,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.8099999999999999,
+        "other": 0.177315858542978
+      },
+      "tags": [
+        "h=48",
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "用 attention 低成本定位恶意 agent skills",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.23416.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23416/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.22737",
+      "title": "GroundEval: A Deterministic Replacement for LLM-as-Judge in Stateful Agent Evaluation",
+      "title_zh": "GroundEval：用于有状态 Agent 评估的确定性 LLM-as-Judge 替代方案",
+      "authors": [
+        "Jeffrey Flynt"
+      ],
+      "total_score": 0.6540000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.86,
+        "other": 0.2
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "用确定性轨迹证据替代 LLM 评审",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.22737.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22737/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.23127",
+      "title": "Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation",
+      "title_zh": "管理 LLM Agent 的程序性记忆：控制、适应与评估",
+      "authors": [
+        "Julia Belikova",
+        "Rauf Parchiev",
+        "Evgeny Egorov",
+        "Grigorii Davydenko",
+        "Gleb Gusev",
+        "Andrey Savchenko",
+        "Maksim Makarenko"
+      ],
+      "total_score": 0.6375,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.79,
+        "other": 0.10833333333333334
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "AFTER 系统评估 LLM Agent 程序性记忆迁移",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.23127.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23127/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.23664",
+      "title": "MAS-PromptBench: When Does Prompt Optimization Improve Multi-Agent LLM Systems?",
+      "title_zh": "MAS-PromptBench：Prompt 优化何时能提升 Multi-Agent LLM Systems？",
+      "authors": [
+        "Juyang Bai",
+        "Laixi Shi"
+      ],
+      "total_score": 0.6250000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.41,
+        "other": 0.5000000000000001
+      },
+      "tags": [
+        "GitHub",
+        "Project Page",
+        "multi agent coordination"
+      ],
+      "tldr_zh": "系统评测 MAS 中 prompt 优化的收益边界",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.23664.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23664/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.22953",
+      "title": "Plans Don't Persist: Why Context Management Is Load Bearing for LLM Agents",
+      "title_zh": "计划不会持久存在：为什么上下文管理是 LLM Agent 的承重结构",
+      "authors": [
+        "Aman Mehta",
+        "Anupam Datta"
+      ],
+      "total_score": 0.6150000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.73,
+        "other": 0.2
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "LLM Agent 计划依赖上下文而非持久记忆",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.22953.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22953/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.22995",
+      "title": "Group-Graph Policy Optimization for Long-Horizon Agentic Reinforcement Learning",
+      "title_zh": "面向长时程 Agentic 强化学习的 Group-Graph Policy Optimization",
+      "authors": [
+        "Yunan Wang",
+        "Minghui Song",
+        "Zihan Zhang",
+        "Shaohan Huang",
+        "Haizhen Huang",
+        "Furu Wei",
+        "Weiwei Deng",
+        "Feng Sun",
+        "Qi Zhang"
+      ],
+      "total_score": 0.6032125493756885,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.71,
+        "other": 0.127375164585628
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "用状态转移图改进长时程Agent RL",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.22995.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22995/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.23195",
+      "title": "Memory Contagion: Cross-Temporal Propagation of Evaluator Bias via Agent Memory",
+      "title_zh": "Memory Contagion：通过 Agent Memory 跨时间传播评估器偏见",
+      "authors": [
+        "Zewen Liu"
+      ],
+      "total_score": 0.5740000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.73,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "Agent记忆会跨时间传播评估器偏见",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.23195.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23195/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.23678",
+      "title": "AIR: Adaptive Interleaved Reasoning with Code in MLLMs",
+      "title_zh": "AIR：在 MLLMs 中通过代码实现自适应交错推理",
+      "authors": [
+        "Cong Han",
+        "Xiaohan Lan",
+        "Haibo Qiu",
+        "Yujie Zhong"
+      ],
+      "total_score": 0.559,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.43,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "用强化学习让 MLLMs 自适应调用代码推理",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.23678.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23678/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.23175",
+      "title": "Position: Correct Answer, Wrong Mechanism -- When AI Scientists Defend General Claims Their Own Data Contradicts",
+      "title_zh": "立场：答案正确，机制错误——当 AI 科学家为被自身数据反驳的一般性主张辩护",
+      "authors": [
+        "Steven Young Eulig"
+      ],
+      "total_score": 0.5420000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.5700000000000001,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "AI 科学家可能答对却讲错机制",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.23175.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23175/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.22859",
+      "title": "AI Scientists as Engines of Discovery: A Case for Development within Reformed Institutions",
+      "title_zh": "作为发现引擎的 AI 科学家：在改革后的制度中发展的论证",
+      "authors": [
+        "Raul Jimenez",
+        "Boris Bolliet",
+        "Francisco Villaescusa-Navarro",
+        "Rabih Zbib",
+        "Benjamin Wandelt",
+        "David N. Spergel",
+        "Thomas Meier",
+        "Jessica Montgomery",
+        "Hana Aliee",
+        "Licia Verde"
+      ],
+      "total_score": 0.5150000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.45,
+        "other": 0.2
+      },
+      "tags": [
+        "multi agent coordination"
+      ],
+      "tldr_zh": "AI 科学家需制度重构护航",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.22859.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.23543",
+      "title": "VeriEvol: Scaling Multimodal Mathematical Reasoning via Verifiable Evol-Instruct",
+      "title_zh": "VeriEvol：通过可验证 Evol-Instruct 扩展多模态数学推理",
+      "authors": [
+        "Haoling Li",
+        "Kai Zheng",
+        "Jie Wu",
+        "Can Xu",
+        "Qingfeng Sun",
+        "Han Hu",
+        "Yujiu Yang"
+      ],
+      "total_score": 0.5030000000000001,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.5700000000000001,
+        "other": 0.2
+      },
+      "tags": [
+        "judge reward verifier"
+      ],
+      "tldr_zh": "可验证数据进化提升视觉数学推理",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.23543.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23543/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.23464",
+      "title": "An Automated Framework for Input Alphabet Construction in Stateful Protocol Implementation Learning",
+      "title_zh": "面向有状态协议实现学习的输入字母表自动构建框架",
+      "authors": [
+        "JiongHan Wang",
+        "WenChao Huang"
+      ],
+      "total_score": 0.48500000000000004,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.35000000000000003,
+        "other": 0.2
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "用 LLM 自动生成协议学习输入字母表",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.23464.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23464/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.23405",
+      "title": "OptChain: Achieving Optimal Throughput of Permissionless Blockchains",
+      "title_zh": "OptChain：实现无许可区块链的最优吞吐量",
+      "authors": [
+        "Chunjiang Che",
+        "Songze Li",
+        "Xuechao Wang"
+      ],
+      "total_score": 0.43100000000000005,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.16999999999999998,
+        "other": 0.2
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "OptChain 逼近无许可链吞吐理论上限",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.23405.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23405/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.22844",
+      "title": "RaMem: Contextual Reinstatement for Long-term Agentic Memory",
+      "title_zh": "RaMem：面向长期智能体记忆的上下文重建",
+      "authors": [
+        "Wei Yang",
+        "Bryce Kan",
+        "Shixuan Li",
+        "Li Li",
+        "Yuehan Qin",
+        "Jiate Li",
+        "Paul Bogdan",
+        "Jesse Thomason"
+      ],
+      "total_score": 0.41662408120874206,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.6839999999999999,
+        "other": 0.22474693736247373
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "用上下文验证提升长期记忆检索可靠性",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.22844.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22844/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.22974",
+      "title": "When Preferences Fail to Become Incentives: A Utility-Behavior Gap in Large Language Models",
+      "title_zh": "当偏好未能成为激励：大型语言模型中的效用—行为鸿沟",
+      "authors": [
+        "Yujun Zhou",
+        "Christopher M. Ackerman"
+      ],
+      "total_score": 0.37940000000000007,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.348,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "judge reward verifier"
+      ],
+      "tldr_zh": "LLM偏好不等于行为激励",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.22974.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22974/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.22811",
+      "title": "Bagpiper-TTS: Natural Language Guided Universal Speech Synthesis",
+      "title_zh": "Bagpiper-TTS：自然语言引导的通用语音合成",
+      "authors": [
+        "Jinchuan Tian",
+        "Haoran Wang",
+        "Siddhant Arora",
+        "Takashi Maekaku",
+        "Keita Goto",
+        "Jin Sakuma",
+        "Yusuke Shinohara",
+        "Chao-Han Huck Yang",
+        "Shinji Watanabe"
+      ],
+      "total_score": 0.36180000000000007,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.20600000000000002,
+        "other": 0.2
+      },
+      "tags": [
+        "judge reward verifier"
+      ],
+      "tldr_zh": "用自然语言统一驱动多任务语音合成",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.22811.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22811/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.22731",
+      "title": "Closed-loop Auto Research for Molecular Property Prediction: Discovering and Certifying Generalizable Improvements",
+      "title_zh": "面向分子性质预测的闭环 Auto Research：发现并认证可泛化改进",
+      "authors": [
+        "Jingjie Ning",
+        "Xiaochuan Li",
+        "Ji Zeng",
+        "Chenyan Xiong",
+        "Guolin Ke"
+      ],
+      "total_score": 0.28019999999999995,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.734,
+        "other": 0.2
+      },
+      "tags": [],
+      "tldr_zh": "闭环 agent 可发现需测试认证的泛化改进",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.22731.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22731/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.23525",
+      "title": "Self-Compacting Language Model Agents",
+      "title_zh": "自压缩语言模型智能体",
+      "authors": [
+        "Tianjian Li",
+        "Jingyu Zhang",
+        "William Jurayj",
+        "Xi Wang",
+        "Chuanyang Jin",
+        "Mehrdad Farajtabar",
+        "Eric Nalisnick",
+        "Daniel Khashabi"
+      ],
+      "total_score": 0.2728313287254385,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.664,
+        "other": 0.24543776241812834
+      },
+      "tags": [
+        "HF Daily ★10"
+      ],
+      "tldr_zh": "让模型按轨迹状态自适应压缩上下文",
+      "detail_file": "agent-harness-evolution/2026-06-22/2606.23525.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23525/thumb.webp"
+    }
+  ]
+}
