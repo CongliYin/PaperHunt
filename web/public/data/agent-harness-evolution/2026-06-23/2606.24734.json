@@ -1,0 +1,61 @@
+{
+  "arxiv_id": "2606.24734",
+  "title": "Task Decomposition for Efficient Annotation",
+  "title_zh": "面向高效标注的任务分解",
+  "authors": [
+    "Nupoor Gandhi",
+    "Emma Strubell"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-23T15:58:46Z",
+  "abs_url": "https://arxiv.org/abs/2606.24734v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.24734",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "High-quality annotations of structured representations are expensive to collect over large corpora. Manual annotation of structure is laborious, and model-based annotation, although cheaper to generate, requires expensive validation and potentially significant supervision to ensure that the annotation quality is strong enough to be useful downstream. In traditional annotation workflows, annotation of each complete example is performed end-to-end by a single annotator. However, structured annotation is complex, and each aspect of the task represents a unique challenge with an associated inferential load for a given annotator. Modern annotation projects can incorporate heterogeneous groups of annotators, including both models and human annotators with varying domain and linguistic expertise. It remains unclear, however, how to redesign annotation tasks in this setting, where efforts are discriminately allocated across heterogeneous annotators with respect to distinct annotation challenges. We propose to decompose annotation tasks into sub-tasks in order to reduce the aggregate inferential load of annotation projects. Inspired by the notion of centers from centering theory, we introduce a formal model of inferential load based on the degrees of freedom in the space of valid annotations. Using this model, we show that identifying these centers (i.e. salient anchor entities realized by annotation sub-tasks) constrains the output space complexity, and decompositions which isolate and advance center identification reduce the aggregate inferential load. We provide guidelines for decomposing complex structured annotation tasks, supported by examples demonstrating improved cost-efficiency from our prior work. Finally, we present a procedure for allocating sub-tasks across annotators to maximize quality under a fixed budget.",
+  "abstract_zh": "大规模语料上的高质量结构化标注成本高昂：人工端到端标注耗时费力，模型生成标注虽更便宜，但仍需要昂贵验证与监督以保证下游可用性。本文指出，结构化标注包含多个具有不同推理负担（inferential load）的子挑战，而现代标注项目通常可利用异质标注者，包括模型、领域专家和语言专家。作者提出将复杂标注任务分解为多个子任务，以降低整体推理负担。受 centering theory 中“中心”（centers）概念启发，论文基于有效标注空间中的自由度建立了推理负担的形式化模型，并说明识别这些中心，即由子任务实现的显著锚定实体，可以约束输出空间复杂度；优先隔离并推进中心识别的分解方式能够降低总体标注难度。论文进一步给出复杂结构化标注任务的分解指南，结合作者既有工作展示成本效率提升，并提出在固定预算下将子任务分配给不同标注者以最大化质量的流程。",
+  "key_points_zh": [
+    "提出将复杂结构化标注拆解为子任务，使不同推理难点可由更合适的人类或模型标注者分别处理。",
+    "基于有效标注空间的自由度，形式化定义标注任务的推理负担（inferential load）。",
+    "借鉴 centering theory，强调识别显著锚定实体（centers）可约束输出空间，从而降低标注复杂度。",
+    "给出任务分解指南，并通过既有工作案例说明该策略可提升结构化标注的成本效率。",
+    "提出固定预算下的子任务分配流程，用于在异质标注者之间分配工作以最大化标注质量。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.35,
+    "problem_significance": 0.4,
+    "potential_impact": 0.3,
+    "paradigm_shift": 0.2,
+    "lasting_value": 0.25,
+    "llm_avg": 0.3,
+    "comment": "The annotation-decomposition framework may aid data workflows but has little direct relevance to agent harnesses or self-improving runtime systems.",
+    "comment_zh": "该标注分解框架可能有助于数据流程，但与智能体底座或自改进运行时系统的直接关联较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.3,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

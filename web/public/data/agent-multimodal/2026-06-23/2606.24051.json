@@ -1,0 +1,95 @@
+{
+  "arxiv_id": "2606.24051",
+  "title": "DriveStack-VLA: Render-Teacher Alignment for BEV-Based DeepStack Vision-Language-Action Model",
+  "title_zh": "DriveStack-VLA：面向 BEV-Based DeepStack Vision-Language-Action 模型的 Render-Teacher Alignment",
+  "authors": [
+    "Jingke Wang",
+    "Zhenru Zhao",
+    "Shuangming Lei",
+    "Hao Su",
+    "Yuehao Huang",
+    "Yijia Xie",
+    "Kai Tang",
+    "Guanglin Xu",
+    "AiXue Ye",
+    "Yukai Ma",
+    "Yong Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-23T01:40:54Z",
+  "abs_url": "https://arxiv.org/abs/2606.24051v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.24051",
+  "links": {
+    "github": null,
+    "project_page": "https://anonymous.4open.science/w/drivestack-vla/."
+  },
+  "abstract_en": "Vision-Language-Action driving models convert a pretrained Vision-Language Model into a driving policy, allowing them to use world knowledge and follow language guidances. However, existing VLA driving models still lack driving-oriented spatial intelligence: their policies are mainly grounded on perspective image tokens and language priors, while precise motion planning requires metric geometry, top-down scene structure, and attention to safety-critical perceptual cues. This limitation makes current models vulnerable to weak visual geometry modeling and perceptual coverage in expert demonstrations. In this paper, we present DriveStack-VLA, a framework built upon a large VLM backbone. To strengthen the spatial grounding of VLA driving, we develop dual visual modeling components. We inject a Bird-Eye-View representation into the Large Language Model decoder through a DeepStack-style connection, and propose Render-Teacher Alignment to align the perceptual focus of real images with that of rasterized images. Furthermore, to bridge the gap in multimodal trajectory selection, we introduce a head-based self-critique module that ranks sampled trajectories and conditionally refines the best one. DriveStack-VLA achieves 91.6 PDMS on NAVSIMv1, 91.0 EPDMS on NAVSIMv2 (with the human penalty filter enabled), and a driving score of 79.49 with a success rate of 56.36\\% on the closed-loop Bench2Drive. More visualizations are available on our project page: https://anonymous.4open.science/w/drivestack-vla/.",
+  "abstract_zh": "本文提出 DriveStack-VLA，一个基于大型 VLM backbone 的自动驾驶 Vision-Language-Action 框架。针对现有 VLA 驾驶模型过度依赖透视图像 tokens 与语言先验、缺乏面向驾驶的空间智能问题，作者引入双重视觉建模：一方面通过 DeepStack-style connection 将 Bird-Eye-View（BEV，鸟瞰图）表示注入 Large Language Model decoder，以增强度量几何与俯视场景结构建模；另一方面提出 Render-Teacher Alignment，使真实图像的感知关注与 rasterized images 的关注模式对齐，从而强化安全关键感知线索。为弥合多模态轨迹选择差距，论文还设计了 head-based self-critique 模块，对采样轨迹进行排序，并在必要时细化最优轨迹。实验显示，DriveStack-VLA 在 NAVSIMv1 上达到 91.6 PDMS，在启用 human penalty filter 的 NAVSIMv2 上达到 91.0 EPDMS，并在闭环 Bench2Drive 上获得 79.49 driving score 与 56.36% success rate。",
+  "key_points_zh": [
+    "指出现有 VLA driving models 缺乏驾驶所需的空间智能，难以充分建模 metric geometry、top-down scene structure 与安全关键感知线索。",
+    "提出 DriveStack-VLA，在大型 VLM backbone 上通过 DeepStack-style connection 将 BEV representation 注入 LLM decoder，增强空间 grounding。",
+    "设计 Render-Teacher Alignment，对齐真实图像与 rasterized images 的感知关注，缓解专家示范中视觉几何建模与感知覆盖不足的问题。",
+    "引入 head-based self-critique 模块，对多条采样轨迹进行排序，并条件式细化最佳轨迹，以改进多模态轨迹选择。",
+    "在 NAVSIMv1、NAVSIMv2 与闭环 Bench2Drive 上取得强结果，分别达到 91.6 PDMS、91.0 EPDMS 和 79.49 driving score。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.62,
+    "problem_significance": 0.58,
+    "potential_impact": 0.52,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.45,
+    "llm_avg": 0.51,
+    "comment": "A solid VLA driving architecture with useful spatial grounding ideas, but its value for realtime multimodal agents is mostly indirect and domain-specific.",
+    "comment_zh": "这是一篇扎实的VLA自动驾驶工作，空间 grounding 思路有用，但对实时多模态智能体的价值较为间接且偏领域化。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.51,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://anonymous.4open.science/w/drivestack-vla/.",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24051/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24051/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.954
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24051/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24051/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.967
+    }
+  ]
+}

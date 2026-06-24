@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2606.24194",
+  "title": "Dialogue to Discovery: Attribute-Aware Preference Elicitation for Conversational Product Search Assistants",
+  "title_zh": "Dialogue to Discovery：面向对话式商品搜索助手的属性感知偏好引导",
+  "authors": [
+    "Sarthak Harne",
+    "Natwar Modani",
+    "Debabrata Mahapatra",
+    "Shubham Agarwal"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-23T06:30:31Z",
+  "abs_url": "https://arxiv.org/abs/2606.24194v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.24194",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Conversational product search assistants offer a more expressive, natural, and interactive alternative to traditional keyword-based product search. With limited screen space, showing only a few items increases the need for precise preference elicitation, which can prolong conversations, leading to user frustration and session abandonment. Conversely, rushing to recommend items without a clear understanding of preferences risks poor matches and a degraded user experience. We present Dialogue to Discovery (D2D), an attribute-oriented preference elicitation framework that dynamically exploits the structure of product attributes to efficiently steer conversations toward the user's desired item. D2D adaptively prioritizes the most informative queries and strategically times product recommendations, reducing premature or off-target suggestions that harm engagement. To evaluate D2D, we curate three datasets from the Amazon Reviews corpus. In simulated conversations modelled using a multi-factor utilitarian patience framework, D2D achieves a 22.2-29.9% improvement in target-finding accuracy, 6.6-16.1% reduction in abandonment, and 27.5% shorter average conversations over the state-of-the-art baselines. A complementary user study further confirms significant gains in both user satisfaction and perceived efficiency.",
+  "abstract_zh": "对话式商品搜索助手相比传统关键词搜索更自然、表达力更强且交互性更好，但由于屏幕空间有限，系统通常只能展示少量商品，因此需要更精准地获取用户偏好。若询问过多会拉长对话、引发用户不满甚至放弃会话；若过早推荐，则可能因偏好理解不足而造成匹配不佳。本文提出 Dialogue to Discovery（D2D），一个面向商品属性的偏好引导框架，能够动态利用商品属性结构，高效地将对话引向用户真正想要的商品。D2D 自适应地优先询问信息量最高的问题，并策略性决定推荐时机，从而减少过早或偏离目标的推荐。作者基于 Amazon Reviews corpus 构建了三个数据集，并在采用多因素效用型耐心框架建模的模拟对话中评估 D2D。相比当前最优基线，D2D 将目标商品命中准确率提升 22.2%–29.9%，将用户放弃率降低 6.6%–16.1%，并将平均对话长度缩短 27.5%。补充用户研究进一步验证了 D2D 在用户满意度和感知效率上的显著提升。",
+  "key_points_zh": [
+    "提出 Dialogue to Discovery（D2D），一个属性导向的偏好引导框架，用于对话式商品搜索助手。",
+    "D2D 动态利用商品属性结构，优先选择最具信息量的问题，以更快缩小候选商品空间。",
+    "框架会策略性决定何时进行商品推荐，避免过早推荐或偏离用户真实偏好。",
+    "基于 Amazon Reviews corpus 构建三个评测数据集，并使用多因素效用型耐心框架模拟用户会话。",
+    "实验显示 D2D 相比最优基线显著提升目标命中率、降低放弃率，并缩短平均对话长度；用户研究也验证了满意度和效率提升。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.92,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8200000000000001,
+    "comment": "A strong e-commerce agent paper with clear advances in attribute-aware preference elicitation for conversational product search and convincing commerce-specific evaluation.",
+    "comment_zh": "这是一篇很强的电商智能体论文，在面向商品搜索的属性感知偏好澄清方面有明确进展，并有扎实的电商场景评估。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8200000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24194/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24194/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.973
+    }
+  ]
+}

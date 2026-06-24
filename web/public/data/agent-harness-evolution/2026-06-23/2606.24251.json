@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.24251",
+  "title": "Probing the Misaligned Thinking Process of Language Models",
+  "title_zh": "探测语言模型的失准思维过程",
+  "authors": [
+    "Kaiwen Zhou",
+    "Constantin Venhoff",
+    "Jonathan Michala",
+    "Xin Eric Wang",
+    "William Saunders"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-23T07:40:28Z",
+  "abs_url": "https://arxiv.org/abs/2606.24251v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.24251",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models exhibit a growing range of misaligned behaviors such as strategic deception, sandbagging, and self-preservation. As they are increasingly deployed in high-stakes settings, it is critical to reliably detect such behaviors to ensure safe and responsible use. In this work, we propose to monitor misalignment by decomposing it into fine-grained cognitive processes -- misalignment indicators -- and detecting their presence in a model's internal activations via linear probes. We develop a taxonomy of 18 indicators spanning different misaligned behaviors, paired with an automated, meta-plan-guided pipeline that generates multi-turn training conversations. To rigorously evaluate generalization, we construct an out-of-distribution suite combining automated behavioral elicitation, established misalignment benchmarks, and natural benign conversations. Across 5 misaligned behaviors, our probes match a strong LLM judge with 0.935 AUROC on out-of-distribution benchmarks while keeping a low false positive rate on benign traffic. We further perform in-depth analysis to understand the probes and the model's internal representations of misalignment indicators.",
+  "abstract_zh": "大型语言模型逐渐表现出战略性欺骗、能力隐藏（sandbagging）和自我保护等失准行为。随着这些模型被部署到高风险场景中，可靠检测此类行为对安全与负责任使用至关重要。本文提出一种监测失准的新方法：将失准拆解为细粒度的认知过程，即“失准指标”（misalignment indicators），并通过线性探针（linear probes）从模型内部激活中检测这些指标。作者构建了包含 18 类指标的分类体系，覆盖多种失准行为，并设计了一个由元计划（meta-plan）引导的自动化流程，用于生成多轮训练对话。为严格评估泛化能力，论文构建了分布外测试套件，结合自动化行为诱导、已有失准基准和自然良性对话。在 5 类失准行为上，该方法在分布外基准中达到 0.935 AUROC，接近强 LLM judge 的表现，同时在良性流量上保持较低误报率。论文还进一步分析了探针机制及模型内部对失准指标的表征方式。",
+  "key_points_zh": [
+    "提出将模型失准行为分解为 18 类细粒度“失准指标”，覆盖战略欺骗、sandbagging、自我保护等行为。",
+    "使用 linear probes 直接检测模型内部 activations 中是否存在这些失准认知过程，而非仅依赖外部输出判断。",
+    "设计 meta-plan-guided 自动化数据生成流程，构造多轮训练对话以训练探针。",
+    "构建分布外评估套件，包含自动行为诱导、已有 misalignment benchmarks 和自然 benign conversations。",
+    "在 5 类失准行为上取得 0.935 AUROC，接近强 LLM judge，同时在良性流量中保持低误报率。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.62,
+    "problem_significance": 0.78,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.48,
+    "llm_avg": 0.5820000000000001,
+    "comment": "The probe-based misalignment detection work is relevant to safety monitoring but is mostly model-internal governance rather than agent runtime infrastructure.",
+    "comment_zh": "该基于探针的失调检测工作与安全监控相关，但主要是模型内部治理，而非智能体运行时基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3439406220117154,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5820000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24251/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.922
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24251/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24251/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.943
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24251/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.964
+    }
+  ]
+}

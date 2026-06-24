@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2606.24535",
+  "title": "Governed Shared Memory for Multi-Agent LLM Systems",
+  "title_zh": "面向多智能体 LLM 系统的受治理共享记忆",
+  "authors": [
+    "Yanki Margalit",
+    "Nurit Cohen-Inger",
+    "Erni Avram",
+    "Ran Taig",
+    "Oded Margalit"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-23T13:04:14Z",
+  "abs_url": "https://arxiv.org/abs/2606.24535v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.24535",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-agent LLM environments require robust mechanisms for shared knowledge management. This paper formalizes the fleet-memory problem and identifies four foundational failure modes: unauthorized leakage, stale propagation, contradiction persistence, and provenance collapse. To address these, we define explicit systems-level primitives: scoped retrieval, temporal supersession, provenance tracking, and policy-governed memory propagation. These primitives are implemented in MemClaw, a production multi-tenant memory service, and evaluated via ArgusFleet, a reproducible harness testing four governance dimensions. Rather than a baseline comparison, this study measures a live production service, emphasizing real-world architectural insights and negative results. Key Evaluation Results Provenance: Successfully reconstructed 100% of depth-four derivation chains with correct writer identity at sub-second per-hop latency. Propagation: Demonstrated high intra-fleet visibility with zero cross-fleet leakage. Under strong write mode, write-to-visible latency was optimized to a single search round-trip. Production Architectural Issues Discovered Asymmetric Scope Enforcement: Tenant isolation held, but sub-tenant scope was initially bypassed on direct GET-by-id requests for agent-scoped credentials (disclosed and remediated during the study). Pipeline Ordering Conflict: While contradiction supersession works for admitted writes, a synchronous near-duplicate gate can prematurely reject contradictory writes before the asynchronous contradiction detector can evaluate them. Conclusion: Long-context retrieval alone is insufficient for production multi-agent memory. Governed shared memory demands explicit systems-level abstractions, and live evaluation is vital to expose enforcement and pipeline-ordering failures missed by design-only treatments.",
+  "abstract_zh": "多智能体 LLM 环境需要可靠的共享知识管理机制。本文形式化了 fleet-memory 问题，并指出四类基础失效模式：未授权泄漏、过时信息传播、矛盾持续存在，以及来源信息崩塌。为解决这些问题，作者提出了系统级原语：scoped retrieval（范围化检索）、temporal supersession（时间替代/版本覆盖）、provenance tracking（来源追踪）和 policy-governed memory propagation（策略治理的记忆传播）。这些原语被实现于生产级多租户记忆服务 MemClaw，并通过可复现实验框架 ArgusFleet 在四个治理维度上评估。论文并非进行传统 baseline 对比，而是测量真实生产服务，强调实际架构洞察与负面结果。实验显示，MemClaw 能以亚秒级每跳延迟重建 100% 的四层派生链，并保持正确写入者身份；传播方面实现了高 fleet 内可见性且无跨 fleet 泄漏，在 strong write 模式下写入到可见的延迟可优化为一次搜索往返。同时，研究也发现了生产架构问题：直接 GET-by-id 请求曾绕过 agent-scoped credential 的子租户范围检查，后已披露并修复；同步近重复过滤可能先于异步矛盾检测拒绝矛盾写入，导致 pipeline ordering 冲突。结论是，仅依赖长上下文检索不足以支撑生产级多智能体记忆，受治理共享记忆需要明确的系统抽象和真实部署评估。",
+  "key_points_zh": [
+    "论文形式化 fleet-memory 问题，并归纳四类关键失效：unauthorized leakage、stale propagation、contradiction persistence 与 provenance collapse。",
+    "提出并实现四个治理原语：scoped retrieval、temporal supersession、provenance tracking 和 policy-governed memory propagation，落地于生产级多租户服务 MemClaw。",
+    "通过 ArgusFleet 对真实生产服务进行评估，而非传统 baseline 对比；结果显示 provenance 链可 100% 正确重建，且跨 fleet 泄漏为零。",
+    "研究暴露了真实系统中的重要负面结果：子租户 scope 在直接 GET-by-id 路径曾被绕过，以及近重复过滤与矛盾检测存在 pipeline ordering 冲突。",
+    "核心结论是长上下文检索不能替代受治理记忆；生产多智能体 LLM 系统需要显式权限、时序、来源和传播策略机制。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.86,
+    "problem_significance": 0.9,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8560000000000001,
+    "comment": "Highly valuable production-oriented work defining governed shared-memory primitives, provenance, scoping, and live multi-tenant evaluation for agent fleets.",
+    "comment_zh": "该工作面向生产环境，定义了受治理共享记忆、溯源、作用域和多租户实测机制，对智能体集群平台价值很高。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8560000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24535/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.945
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24535/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.968
+    }
+  ]
+}

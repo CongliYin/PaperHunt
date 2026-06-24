@@ -1,0 +1,94 @@
+{
+  "arxiv_id": "2606.24595",
+  "title": "MEMPROBE: Probing Long-Term Agent Memory via Hidden User-State Recovery",
+  "title_zh": "MEMPROBE：通过隐藏用户状态恢复探测长期 Agent 记忆",
+  "authors": [
+    "Enze Ma",
+    "Yufan Zhou",
+    "Wei-Chieh Huang",
+    "Jie Yang",
+    "Huanhuan Ma",
+    "Zixuan Wang",
+    "Chengze Li",
+    "Chunyu Miao",
+    "Philip S. Yu",
+    "Zhen Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-23T13:52:46Z",
+  "abs_url": "https://arxiv.org/abs/2606.24595v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.24595",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-term memory promises LLM agents that grow more capable across sessions, maintaining an accurate, evolving understanding of the user that interaction forms. In practice, however, this memory is evaluated mostly through downstream behavior, such as later answers, personalization quality, or task success, which tests that understanding only indirectly and leaves the memory artifact itself largely unaudited. We argue that long-term memory should instead be evaluated as an auditable post-interaction artifact: after ordinary assistance, what structured user state can be reconstructed from the memory the agent leaves behind? We instantiate this view in MEMPROBE, a benchmark in which a memory-equipped agent assists simulated users, each carrying a hidden, taxonomy-anchored user-state bank, across a trajectory of leak-controlled tasks, after which that bank is reconstructed from the agent's resulting memory under both full-store and top-k access. Built on synthetic ground truth for efficient, scalable measurement, MEMPROBE spans 50 simulated users with 31 hidden dimensions each (1,550 recovery targets) and tests 5 representative memory systems. Testing state-of-the-art memory agents, we find that successful assistance and recoverable memory behave as distinct capabilities. Task completion nearly saturates, even for a memoryless baseline, while category-balanced recovery stays moderate (about 0.6) and drops further under top-k retrieval. MEMPROBE is the first benchmark to study memory recovery directly, reconstructing the user state a system retains and scoring it against ground truth. We see recovery as a concrete objective for future memory agents to optimize, and MEMPROBE as a step toward an environment where agents are trained to remember their users, growing more faithful the longer they know them.",
+  "abstract_zh": "长期记忆有望让 LLM agents 在跨会话交互中持续积累能力，并形成对用户准确、动态的理解。然而现有评估多依赖后续回答、个性化质量或任务成功率等下游行为，间接检验记忆效果，而很少直接审计记忆内容本身。本文提出应将长期记忆视为交互后的可审计产物：在普通辅助任务结束后，能否从 agent 留下的记忆中重建结构化用户状态？基于这一观点，作者提出 MEMPROBE benchmark：带记忆的 agent 与模拟用户交互，每个用户拥有基于分类体系的隐藏用户状态库，并完成一系列泄露程度受控的任务；随后在 full-store 与 top-k 访问设置下，从 agent 生成的记忆中重建该状态库。MEMPROBE 使用合成真值以支持高效、可扩展测量，覆盖 50 个模拟用户、每人 31 个隐藏维度，共 1,550 个恢复目标，并评测 5 类代表性记忆系统。实验发现，成功完成任务与可恢复记忆是不同能力：即使无记忆 baseline 的任务完成率也接近饱和，而类别均衡恢复分数仅约 0.6，并在 top-k 检索下进一步下降。MEMPROBE 是首个直接研究记忆恢复的 benchmark，旨在推动未来记忆型 agents 将“准确记住用户”作为优化目标。",
+  "key_points_zh": [
+    "提出 MEMPROBE，将长期记忆评估从下游行为转向对交互后记忆产物的直接审计。",
+    "benchmark 设计为模拟用户携带隐藏 user-state bank，agent 完成泄露受控任务后，再从其记忆中重建用户状态。",
+    "覆盖 50 个用户、31 个隐藏维度、共 1,550 个恢复目标，并评测 5 种代表性 memory systems。",
+    "实验显示 task completion 与 memory recovery 明显解耦：任务成功率几乎饱和，但用户状态恢复仅中等水平。",
+    "在 top-k retrieval 访问限制下，恢复性能进一步下降，说明检索机制会显著影响长期记忆可用性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.66,
+    "problem_significance": 0.72,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.42,
+    "lasting_value": 0.55,
+    "llm_avg": 0.586,
+    "comment": "MEMPROBE offers a useful audit-oriented benchmark for long-term agent memory, though it is primarily evaluative rather than a runtime or improvement-loop system.",
+    "comment_zh": "MEMPROBE为长期智能体记忆提供了有用的审计型基准，但主要是评测工作而非运行时或自改进系统。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.586,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24595/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24595/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.331
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24595/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24595/fig4.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.761
+    }
+  ]
+}

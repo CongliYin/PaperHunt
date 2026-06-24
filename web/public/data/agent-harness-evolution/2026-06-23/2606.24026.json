@@ -1,0 +1,102 @@
+{
+  "arxiv_id": "2606.24026",
+  "title": "Can Language Model Agents be Helpful Circuit Explainers in Mechanistic Interpretability?",
+  "title_zh": "语言模型智能体能否成为机制可解释性中的电路解释助手？",
+  "authors": [
+    "Ayan Antik Khan",
+    "Harsh Kohli",
+    "Yuekun Yao",
+    "Huan Sun",
+    "Ziyu Yao"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Ayan Antik Khan",
+      "affiliations": [
+        "Jayanta Sadhu",
+        "Abhik Bhattacharjee",
+        "Dr Rifat Shahriyar"
+      ]
+    }
+  ],
+  "published_at": "2026-06-23T00:04:31Z",
+  "abs_url": "https://arxiv.org/abs/2606.24026v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.24026",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Mechanistic interpretability has made substantial progress in automatically localizing circuits, but explaining what localized components do remains labor-intensive and difficult to standardize. In this work, we study whether language model (LM) agents can assist with this explanation problem once a circuit has already been identified. We introduce AgenticInterpBench, a benchmark for circuit explanation built from 84 semi-synthetic transformer circuits with 163 component-level annotations. We propose HyVE (Hypothesize, Validate, Explain), an agentic explainer that analyzes each component through an iterative loop of observation, hypothesis generation, and causal validation, eventually producing a component-level explanation and a circuit-level task description. Across four LM backbones, HyVE recovers useful component- and task-level explanations, but no backbone is uniformly best. Our analysis shows that strong backbones usually form observation-grounded hypotheses, while failures more often arise later in the validation loop, through incomplete validation plans, code execution errors, or unresolved hypotheses. A case study on an arithmetic circuit in Llama-3-8B shows that the same formulation can extend beyond semi-synthetic benchmarks to naturally trained models. Overall, LM agents are promising circuit explainers, but reliable validation remains the key obstacle.",
+  "abstract_zh": "机制可解释性在自动定位电路方面已有显著进展，但解释已定位组件的具体功能仍然耗时、难以标准化。本文研究在电路已被识别的前提下，语言模型（LM）智能体能否辅助完成电路解释任务。作者提出 AgenticInterpBench，这是一个面向电路解释的基准，包含 84 个半合成 Transformer 电路和 163 个组件级标注。论文进一步提出 HyVE（Hypothesize, Validate, Explain），一种智能体式解释器，通过“观察—假设生成—因果验证”的迭代流程分析每个组件，最终输出组件级解释和电路级任务描述。在四种 LM backbone 上，HyVE 能恢复有用的组件级与任务级解释，但没有任何 backbone 在所有设置下都最优。分析表明，强 backbone 通常能形成基于观察的假设，而失败更多发生在验证环节，例如验证计划不完整、代码执行错误或假设未能收敛。作者还在 Llama-3-8B 的算术电路案例中展示，该方法可从半合成基准扩展到自然训练模型。总体而言，LM 智能体有潜力成为电路解释器，但可靠验证仍是核心瓶颈。",
+  "key_points_zh": [
+    "提出 AgenticInterpBench，用于评估电路解释能力，包含 84 个半合成 Transformer 电路与 163 个组件级标注。",
+    "提出 HyVE 智能体解释框架，通过 Hypothesize、Validate、Explain 的迭代流程生成组件级解释和整体任务描述。",
+    "实验覆盖四种 LM backbone，结果显示 HyVE 能产生有用解释，但不同 backbone 各有优势，没有统一最优模型。",
+    "错误分析发现，强模型通常能提出贴合观察的假设，主要失败点集中在因果验证阶段，如验证计划不充分、代码执行失败和未解决假设。",
+    "在 Llama-3-8B 的算术电路案例中，HyVE 展示出从半合成基准迁移到自然训练模型的潜力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.5,
+    "potential_impact": 0.42,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.35,
+    "llm_avg": 0.434,
+    "comment": "HyVE is an interesting agentic interpretability workflow, but its main contribution lies in mechanistic interpretability rather than deployable agent harness evolution.",
+    "comment_zh": "HyVE是有趣的智能体式可解释性流程，但主要贡献在机制可解释性，而非可部署智能体底座演进。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2794153127047222,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.434,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [
+      "Jayanta Sadhu",
+      "Abhik Bhattacharjee",
+      "Dr Rifat Shahriyar"
+    ],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24026/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24026/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24026/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24026/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.976
+    }
+  ]
+}

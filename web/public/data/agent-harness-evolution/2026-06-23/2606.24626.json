@@ -1,0 +1,97 @@
+{
+  "arxiv_id": "2606.24626",
+  "title": "SAFARI: Scaling Long Horizon Agentic Fault Attribution via Active Investigation",
+  "title_zh": "SAFARI：通过主动调查扩展长时程智能体故障归因",
+  "authors": [
+    "Chenyang Zhu",
+    "Jiayu Yao",
+    "Kushal Chawla",
+    "Youbing Yin",
+    "Nathan Wolfe",
+    "Pengshan Cai",
+    "Jingyu Wu",
+    "Spencer Hong",
+    "Sangwoo Cho",
+    "Shi-Xiong Zhang",
+    "Daben Liu",
+    "Sambit Sahu",
+    "Erin Babinsky"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-23T14:23:40Z",
+  "abs_url": "https://arxiv.org/abs/2606.24626v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.24626",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As autonomous agents tackle increasingly complex multi-step, multi-agent tasks, their execution trajectories have scaled beyond the constraints of even the largest context windows. Current methods for effectively diagnosing agent failures load the full trajectory into an LLM's context window, which suffers from attention dilution and fails when agentic traces inevitably exceed context limits. To address this, we introduce SAFARI (Scaling long-horizon Agentic Fault AttRibution via active Investigation), a framework that replaces linear context loading with a tool-augmented diagnostic loop. By equipping LLMs with a specialized toolbox to read and search trajectory segments alongside a persistent Short-Term Memory (STM) for cross-turn reasoning, SAFARI effectively decouples diagnostic accuracy from architectural context limits. Our experiments demonstrate that SAFARI outperforms state-of-the-art results by 20% on the Who&When dataset within a 1M token budget, and by 19% on TRAIL GAIA subset on a 25K token budget. Most significantly, SAFARI maintains a 0.58 precision even when the target fault resides 5x beyond the model's native context window, a scenario where traditional evaluators fail entirely.",
+  "abstract_zh": "随着 autonomous agents 处理越来越复杂的多步骤、多智能体任务，其执行轨迹长度已超出最大上下文窗口的承载能力。现有智能体失败诊断方法通常将完整轨迹加载进 LLM 上下文，但这会受到注意力稀释影响，并在轨迹超过上下文限制时失效。为此，论文提出 SAFARI（Scaling long-horizon Agentic Fault AttRibution via active Investigation），用工具增强的诊断循环替代线性上下文加载。SAFARI 为 LLM 配备专门工具箱，用于读取和搜索轨迹片段，并结合持久化短期记忆（Short-Term Memory, STM）支持跨轮推理，从而将诊断准确率与模型架构上下文限制解耦。实验显示，在 Who&When 数据集上，SAFARI 在 1M token 预算内较 SOTA 提升 20%；在 TRAIL GAIA 子集上，在 25K token 预算内提升 19%。更重要的是，即使目标故障位置超出模型原生上下文窗口 5 倍，SAFARI 仍保持 0.58 precision，而传统评估器在该场景下完全失效。",
+  "key_points_zh": [
+    "提出 SAFARI，将长轨迹故障诊断从“完整上下文加载”转为工具增强的主动调查循环，缓解上下文窗口限制与注意力稀释问题。",
+    "方法为 LLM 提供轨迹读取、搜索等专用工具，并引入持久化 Short-Term Memory（STM）支持跨轮诊断推理。",
+    "在 Who&When 数据集上，SAFARI 在 1M token 预算内较现有 SOTA 提升 20%；在 TRAIL GAIA 子集上，在 25K token 预算内提升 19%。",
+    "在故障位置超出模型原生上下文窗口 5 倍的极端长程场景中，SAFARI 仍达到 0.58 precision，而传统基于全轨迹上下文的评估器完全失败。",
+    "该工作强调长时程 agentic fault attribution 应从扩大上下文转向可检索、可迭代、带记忆的诊断范式。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.8,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.82,
+    "llm_avg": 0.7899999999999999,
+    "comment": "SAFARI is a strong trace-diagnostic framework for long-horizon agents, with clear value for observability, fault attribution, and closed-loop improvement.",
+    "comment_zh": "SAFARI是强有力的长程智能体轨迹诊断框架，对可观测性、故障归因和闭环改进具有明确价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4058149490012195,
+    "venue_signal": 1.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7899999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 8,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24626/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24626/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.853
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24626/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.815
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24626/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.982
+    }
+  ]
+}
