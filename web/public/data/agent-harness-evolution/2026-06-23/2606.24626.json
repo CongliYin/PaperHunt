@@ -26,32 +26,32 @@
     "project_page": null
   },
   "abstract_en": "As autonomous agents tackle increasingly complex multi-step, multi-agent tasks, their execution trajectories have scaled beyond the constraints of even the largest context windows. Current methods for effectively diagnosing agent failures load the full trajectory into an LLM's context window, which suffers from attention dilution and fails when agentic traces inevitably exceed context limits. To address this, we introduce SAFARI (Scaling long-horizon Agentic Fault AttRibution via active Investigation), a framework that replaces linear context loading with a tool-augmented diagnostic loop. By equipping LLMs with a specialized toolbox to read and search trajectory segments alongside a persistent Short-Term Memory (STM) for cross-turn reasoning, SAFARI effectively decouples diagnostic accuracy from architectural context limits. Our experiments demonstrate that SAFARI outperforms state-of-the-art results by 20% on the Who&When dataset within a 1M token budget, and by 19% on TRAIL GAIA subset on a 25K token budget. Most significantly, SAFARI maintains a 0.58 precision even when the target fault resides 5x beyond the model's native context window, a scenario where traditional evaluators fail entirely.",
-  "abstract_zh": "随着自主智能体处理越来越复杂的多步骤、多智能体任务，其执行轨迹长度已超出最大上下文窗口的承载能力。现有故障诊断方法通常将完整轨迹加载到 LLM 上下文中，不仅会遭遇注意力稀释，也会在轨迹超过上下文限制时失效。为此，论文提出 SAFARI（Scaling long-horizon Agentic Fault AttRibution via active Investigation），用工具增强的诊断循环替代线性上下文加载。SAFARI 为 LLM 配备专门工具箱，用于读取与搜索轨迹片段，并引入持久化短期记忆（Short-Term Memory, STM）支持跨轮推理，从而将诊断准确率与模型原生上下文长度解耦。实验表明，SAFARI 在 1M token 预算下于 Who&When 数据集上较当前最优方法提升 20%，在 25K token 预算下于 TRAIL GAIA 子集上提升 19%。更重要的是，当目标故障位于模型原生上下文窗口 5 倍之外时，传统评估器完全失效，而 SAFARI 仍能保持 0.58 的精确率。",
+  "abstract_zh": "随着 autonomous agents 处理越来越复杂的多步骤、多智能体任务，其执行轨迹长度已超出最大上下文窗口的承载能力。现有故障诊断方法通常将完整轨迹加载到 LLM 上下文中，容易受到注意力稀释影响，并在轨迹超过上下文限制时失效。为此，论文提出 SAFARI（Scaling long-horizon Agentic Fault AttRibution via active Investigation），用工具增强的诊断循环替代线性上下文加载。SAFARI 为 LLM 配备可读取和搜索轨迹片段的专用工具箱，并引入持久 Short-Term Memory（STM）支持跨轮推理，从而将诊断准确率与模型上下文长度限制解耦。实验显示，在 1M token 预算下，SAFARI 在 Who&When 数据集上较现有最佳方法提升 20%；在 25K token 预算下，在 TRAIL GAIA 子集上提升 19%。更重要的是，当目标故障位置超出模型原生上下文窗口 5 倍时，SAFARI 仍保持 0.58 precision，而传统评估器完全失效。",
   "key_points_zh": [
-    "提出 SAFARI，将长轨迹故障归因从“全量上下文加载”改为工具增强的主动调查循环，缓解注意力稀释与上下文溢出问题。",
-    "核心机制包括可读取、搜索轨迹片段的 specialized toolbox，以及用于跨轮累积证据和推理的 Short-Term Memory（STM）。",
-    "SAFARI 使诊断过程不再强依赖 LLM 原生上下文窗口长度，可处理远超上下文限制的智能体执行轨迹。",
-    "在 Who&When 数据集上，SAFARI 在 1M token 预算内较 SOTA 提升 20%；在 TRAIL GAIA 子集上，25K token 预算内提升 19%。",
-    "当目标故障位置超出模型原生上下文窗口 5 倍时，SAFARI 仍保持 0.58 precision，而传统评估方法完全失效。"
+    "提出 SAFARI，用工具增强的主动调查循环替代将完整执行轨迹一次性塞入 LLM 上下文的传统诊断方式。",
+    "通过轨迹片段读取、搜索工具与持久 Short-Term Memory（STM），支持跨轮推理并缓解长轨迹中的注意力稀释问题。",
+    "方法核心是将 fault attribution 的诊断能力与模型原生上下文窗口大小解耦，适用于长时程、多步骤、多智能体任务。",
+    "在 Who&When 数据集上，SAFARI 在 1M token 预算内较 state-of-the-art 提升 20%；在 TRAIL GAIA 子集上，在 25K token 预算内提升 19%。",
+    "当故障位置位于模型上下文窗口 5 倍之外时，SAFARI 仍达到 0.58 precision，而传统完整上下文评估方法基本失效。"
   ],
   "llm_assessment": {
-    "novelty": 0.5,
-    "problem_significance": 0.5,
-    "potential_impact": 0.5,
-    "paradigm_shift": 0.5,
-    "lasting_value": 0.5,
-    "llm_avg": 0.5,
-    "comment": "Strong trace-based diagnostic framework for long-horizon agent failures, especially valuable for observability and postmortem attribution.",
-    "comment_zh": "Strong trace-based diagnostic framework for long-horizon agent failures, especially valuable for observability and postmortem attribution."
+    "novelty": 0.84,
+    "problem_significance": 0.87,
+    "potential_impact": 0.83,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.86,
+    "llm_avg": 0.844,
+    "comment": "SAFARI is a strong agent-debugging method because it scales fault attribution beyond context-window limits with active investigation.",
+    "comment_zh": "SAFARI 是一个很强的 agent 调试方法，因为它通过主动调查突破了上下文窗口对故障归因的限制。"
   },
   "scores": {
     "topic_relevance": 0.36000000000000004,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.45529837524566663,
+    "author_reputation": 0.3,
     "venue_signal": 1.0,
     "generality": 0.9,
-    "llm_assessment": 0.5,
+    "llm_assessment": 0.844,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -64,34 +64,9 @@
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": 8,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24626/fig1.webp",
-      "page": 3,
-      "kind": "figure",
-      "confidence": 0.963
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24626/fig2.webp",
-      "page": 4,
-      "kind": "figure",
-      "confidence": 0.853
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24626/fig3.webp",
-      "page": 4,
-      "kind": "figure",
-      "confidence": 0.815
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24626/fig4.webp",
-      "page": 6,
-      "kind": "table",
-      "confidence": 0.982
-    }
-  ]
+  "figures": []
 }

@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.24623",
   "title": "Privacy-Preserving RAG via Multi-Agent Semantic Rewriting: Achieving Confidentiality Without Compromising Contextual Fidelity",
-  "title_zh": "通过多智能体语义重写实现隐私保护 RAG：在不牺牲上下文保真度的前提下保障机密性",
+  "title_zh": "通过多智能体语义重写实现隐私保护 RAG：在不牺牲上下文保真度的前提下实现机密性",
   "authors": [
     "Yuanhe Zhao",
     "Tianyu Zhang",
@@ -19,32 +19,32 @@
     "project_page": null
   },
   "abstract_en": "Retrieval-Augmented Generation enhances large language models by incorporating external knowledge, but deploying it in sensitive scenarios risks privacy leakage via malicious prompts. To address this, we propose a multi-agent framework that sanitizes retrieved content through semantic rewriting. By employing three specialized agents for privacy extraction, semantic analysis, and reconstruction, our approach collaboratively removes sensitive identifiers while preserving the semantic core. We evaluate the framework on the ChatDoctor and Wiki-PII datasets across six large language models. Experimental results demonstrate a significant reduction in privacy leakage under targeted attacks. For instance, we reduced targeted information exposure in LLaMA-3-8B from 144 instances in the baseline to just 1. Furthermore, we maintain strong contextual fidelity with a BLEU-1 score of 0.122, outperforming the existing SAGE method's 0.117. Finally, the framework operates as an asynchronous preprocessing module, introducing no additional latency to online inference, as all rewriting is executed as a one-time offline preprocessing step. To promote reproducibility, the source code of this work is publicly available at https://github.com/foursoils/Privacy-Preserving-RAG.",
-  "abstract_zh": "本文针对 Retrieval-Augmented Generation（RAG）在敏感场景中可能因恶意提示导致隐私泄露的问题，提出一种基于多智能体语义重写的隐私保护框架。该框架包含三个专门智能体，分别负责隐私信息抽取、语义分析与内容重构，通过协作移除敏感标识符，同时尽可能保留原始语义核心。作者在 ChatDoctor 和 Wiki-PII 数据集上，结合六种大型语言模型进行评估。实验显示，该方法在定向攻击下显著降低隐私泄露，例如在 LLaMA-3-8B 上将基线中的 144 次定向信息暴露降至 1 次。同时，该框架保持了较好的上下文保真度，BLEU-1 得分为 0.122，优于已有 SAGE 方法的 0.117。此外，该方法作为异步预处理模块运行，重写过程为一次性离线处理，因此不会增加在线推理延迟。代码已开源。",
+  "abstract_zh": "本文关注 Retrieval-Augmented Generation（RAG）在敏感场景中因恶意提示导致隐私泄露的问题，提出一种基于多智能体语义重写的隐私保护框架。该方法使用三个专门智能体分别负责隐私提取、语义分析与内容重构，通过协作方式移除敏感标识符，同时保留原始语义核心。作者在 ChatDoctor 与 Wiki-PII 数据集上，跨六个大型语言模型进行评估。实验表明，该框架能显著降低定向攻击下的隐私泄露，例如在 LLaMA-3-8B 上，将基线中的 144 次目标信息暴露降至仅 1 次。同时，该方法保持了较好的上下文保真度，BLEU-1 达到 0.122，优于现有 SAGE 方法的 0.117。此外，该框架作为异步预处理模块运行，所有重写均为一次性离线处理，因此不会为在线推理引入额外延迟。代码已开源。",
   "key_points_zh": [
-    "提出多智能体语义重写框架，用于在 RAG 检索内容进入生成流程前清洗敏感信息。",
-    "框架由隐私抽取、语义分析和重构三个专用 agents 组成，目标是在去除敏感标识符的同时保留语义核心。",
-    "在 ChatDoctor 与 Wiki-PII 上评测六种 LLM，定向攻击下隐私泄露显著下降；LLaMA-3-8B 的暴露实例从 144 降至 1。",
-    "上下文保真度保持较好，BLEU-1 达到 0.122，略高于 SAGE 的 0.117。",
-    "该方法作为离线异步预处理模块运行，不增加在线 RAG 推理延迟，并已公开源代码。"
+    "提出面向 RAG 的多智能体隐私保护框架，通过语义重写在检索内容进入生成阶段前完成脱敏。",
+    "框架包含隐私提取、语义分析、内容重构三个 specialized agents，目标是在删除敏感标识符的同时保留语义核心。",
+    "在 ChatDoctor 和 Wiki-PII 上跨六个 LLM 评估，定向攻击下隐私泄露显著下降；LLaMA-3-8B 上暴露实例从 144 降至 1。",
+    "相比 SAGE，该方法在上下文保真度上略优，BLEU-1 为 0.122，高于 SAGE 的 0.117。",
+    "重写作为离线异步预处理执行，不增加在线推理延迟，适合部署在敏感知识库的 RAG 管线中。"
   ],
   "llm_assessment": {
-    "novelty": 0.5,
-    "problem_significance": 0.5,
-    "potential_impact": 0.5,
-    "paradigm_shift": 0.5,
-    "lasting_value": 0.5,
-    "llm_avg": 0.5,
-    "comment": "Useful privacy protection for RAG pipelines, but it is closer to offline sanitization than a general agent harness contribution.",
-    "comment_zh": "Useful privacy protection for RAG pipelines, but it is closer to offline sanitization than a general agent harness contribution."
+    "novelty": 0.25,
+    "problem_significance": 0.3,
+    "potential_impact": 0.28,
+    "paradigm_shift": 0.15,
+    "lasting_value": 0.22,
+    "llm_avg": 0.24000000000000005,
+    "comment": "The method is a reasonable privacy wrapper for RAG, but it is mostly an incremental multi-agent preprocessing trick.",
+    "comment_zh": "该方法只是一个合理的 RAG 隐私包装层，整体上仍是增量式的多智能体预处理技巧。"
   },
   "scores": {
     "topic_relevance": 0.88,
     "open_source": 0.5,
     "community_heat": 0.0,
-    "author_reputation": 0.3,
+    "author_reputation": 0.3210331475111057,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.5,
+    "llm_assessment": 0.24000000000000005,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -54,25 +54,12 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": null,
-    "first_author_found": false,
+    "first_author_h_index": 3,
+    "first_author_found": true,
     "first_author_affiliations": [],
     "last_author_h_index": null,
     "last_author_found": false,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24623/fig1.webp",
-      "page": 2,
-      "kind": "figure",
-      "confidence": 0.974
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24623/fig2.webp",
-      "page": 5,
-      "kind": "figure",
-      "confidence": 0.963
-    }
-  ]
+  "figures": []
 }

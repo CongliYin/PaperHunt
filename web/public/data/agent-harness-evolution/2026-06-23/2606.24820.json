@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.24820",
   "title": "SHERLOC: Structured Diagnostic Localization for Code Repair Agents",
-  "title_zh": "SHERLOC：面向代码修复智能体的结构化诊断定位",
+  "title_zh": "SHERLOC：面向代码修复 Agent 的结构化诊断定位",
   "authors": [
     "Hovhannes Tamoyan",
     "Sean Narenthiran",
@@ -18,32 +18,32 @@
     "project_page": null
   },
   "abstract_en": "LLM agents solve repository-level coding tasks through multi-turn tool use, but utilize half their budget on locating faults before editing. Dedicated localization frameworks have emerged, yet are still evaluated as file retrieval rather than actionable diagnosis, producing locations without the diagnostic context a repair agent needs. We introduce SHERLOC (Structured Hypothesis-driven Exploration and Reasoning for Localization), a training-free framework pairing a reasoning LLM with compact repository tools and self-recovery, without fine-tuning or multi-agent orchestration. SHERLOC reaches state-of-the-art localization across model scales: 84.33% accuracy@1 on SWE-Bench Lite and 81.27% recall@1 on SWE-Bench Verified; at ~30B parameters, it matches or outperforms other agentic methods. Injecting our locations and diagnostic findings into repair agents yields, on average, +5.95 pp resolve rate on SWE-Bench Verified while cutting localization and total tokens by 36.7% and 23.1%.",
-  "abstract_zh": "LLM agents 在解决 repository-level coding tasks 时依赖多轮工具调用，但往往将约一半预算消耗在故障定位上。现有专门 localization 框架多被按文件检索任务评估，输出位置却缺少 repair agent 真正需要的诊断上下文。本文提出 SHERLOC（Structured Hypothesis-driven Exploration and Reasoning for Localization），一个无需训练的定位框架，将 reasoning LLM 与紧凑的 repository tools 和 self-recovery 机制结合，无需微调或多智能体编排。SHERLOC 在不同模型规模上实现 state-of-the-art 定位效果：在 SWE-Bench Lite 上达到 84.33% accuracy@1，在 SWE-Bench Verified 上达到 81.27% recall@1；约 30B 参数规模下即可匹配或超过其他 agentic methods。将 SHERLOC 产出的代码位置与诊断发现注入修复智能体后，在 SWE-Bench Verified 上平均提升 +5.95 个百分点 resolve rate，同时将定位 token 与总 token 分别减少 36.7% 和 23.1%。",
+  "abstract_zh": "LLM Agent 在解决仓库级代码任务时依赖多轮工具调用，但往往将约一半预算消耗在编辑前的故障定位上。现有专用定位框架多以文件检索形式评估，难以提供修复 Agent 真正需要的诊断上下文。论文提出 SHERLOC（Structured Hypothesis-driven Exploration and Reasoning for Localization），一个无需训练的定位框架，将推理型 LLM 与紧凑仓库工具、自恢复机制结合起来，不需要微调或多 Agent 编排。SHERLOC 在不同模型规模下实现了领先的定位性能：在 SWE-Bench Lite 上达到 84.33% accuracy@1，在 SWE-Bench Verified 上达到 81.27% recall@1；约 30B 参数规模时即可匹配或超过其他 Agentic 方法。将其定位结果和诊断发现注入修复 Agent 后，在 SWE-Bench Verified 上平均提升 5.95 个百分点的 resolve rate，同时将定位 token 和总 token 分别减少 36.7% 与 23.1%。",
   "key_points_zh": [
-    "SHERLOC 将代码定位从“文件检索”推进到“可执行诊断”：不仅给出位置，还提供 repair agent 可用的诊断上下文与故障假设。",
-    "框架无需 fine-tuning，也不依赖 multi-agent orchestration，而是结合 reasoning LLM、紧凑 repository tools 与 self-recovery 机制完成结构化探索。",
-    "在 SWE-Bench Lite 上取得 84.33% accuracy@1，在 SWE-Bench Verified 上取得 81.27% recall@1，达到跨模型规模的 state-of-the-art localization 表现。",
-    "约 30B 参数模型即可匹配或超过其他 agentic localization 方法，说明该框架对中等规模模型也具备较强实用性。",
-    "将 SHERLOC 的定位与诊断结果注入修复智能体后，SWE-Bench Verified 平均 resolve rate 提升 5.95 个百分点，并显著降低 token 消耗。"
+    "提出 SHERLOC，一个 training-free 的结构化故障定位框架，面向仓库级代码修复 Agent。",
+    "不同于仅做文件检索的方法，SHERLOC 输出可操作的诊断上下文，包括定位结果与故障假设推理。",
+    "框架结合 reasoning LLM、紧凑 repository tools 和 self-recovery，无需微调或多 Agent 协作编排。",
+    "在 SWE-Bench Lite 达到 84.33% accuracy@1，在 SWE-Bench Verified 达到 81.27% recall@1，具备当前领先定位性能。",
+    "将 SHERLOC 注入修复 Agent 后，SWE-Bench Verified resolve rate 平均提升 5.95 个百分点，并显著降低 token 开销。"
   ],
   "llm_assessment": {
-    "novelty": 0.5,
-    "problem_significance": 0.5,
-    "potential_impact": 0.5,
-    "paradigm_shift": 0.5,
-    "lasting_value": 0.5,
-    "llm_avg": 0.5,
-    "comment": "Useful diagnostic tooling for code repair agents, but its contribution is task-specific and only moderately harness-level.",
-    "comment_zh": "Useful diagnostic tooling for code repair agents, but its contribution is task-specific and only moderately harness-level."
+    "novelty": 0.76,
+    "problem_significance": 0.82,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.8,
+    "llm_avg": 0.7680000000000001,
+    "comment": "SHERLOC improves code-agent localization with actionable diagnostics, which is more useful than simple fault retrieval.",
+    "comment_zh": "SHERLOC 通过可执行的诊断信息提升代码 agent 的定位能力，比单纯的故障检索更有用。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.3,
+    "author_reputation": 0.22577486063332924,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.5,
+    "llm_assessment": 0.7680000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -56,34 +56,9 @@
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": null,
-    "last_author_found": false,
+    "last_author_h_index": 1,
+    "last_author_found": true,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24820/fig1.webp",
-      "page": 2,
-      "kind": "figure",
-      "confidence": 0.335
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24820/fig2.webp",
-      "page": 3,
-      "kind": "figure",
-      "confidence": 0.965
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24820/fig3.webp",
-      "page": 2,
-      "kind": "figure",
-      "confidence": 0.682
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24820/fig4.webp",
-      "page": 2,
-      "kind": "figure",
-      "confidence": 0.398
-    }
-  ]
+  "figures": []
 }

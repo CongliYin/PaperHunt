@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.25161",
   "title": "TRUSTMEM: Learning Trustworthy Memory Consolidation for LLM Agents with Long-Term Memory",
-  "title_zh": "TRUSTMEM：面向具备长期记忆的 LLM Agent 学习可信记忆巩固",
+  "title_zh": "TRUSTMEM：面向具备长期记忆的 LLM Agents 的可信记忆巩固学习",
   "authors": [
     "Tianyu Yang",
     "Sudipta Paul",
@@ -18,32 +18,32 @@
     "project_page": null
   },
   "abstract_en": "Large language model (LLM) agents rely on long-term memory to support extended interactions and personalized assistance beyond finite context windows. Existing memory agents actively update external memory through generated write, revise, and delete operations, but these updates may omit important information, corrupt existing memory, or introduce unsupported hallucinated content. Once stored, such errors become persistent system-state failures that can affect future reasoning and generation. In this paper, we propose TrustMem, a framework designed to improve the trustworthiness of memory consolidation. TrustMem relies on a Memory Transition Verifier to evaluate the transition process of memory updates in terms of coverage, preservation, and faithfulness. It further constructs preference pairs among candidate updates under the same memory state, enabling preference-guided reinforcement learning to directly optimize memory updating behaviors. Extensive experiments demonstrate that TrustMem improves both memory utility and reliability: it achieves state-of-the-art results across MemoryAgentBench, HaluMem, and the Mem-alpha validation set, improves HaluMem memory extraction by 12.14 F1 points, and reduces transition-level omission, corruption, and hallucination by 40.1\\%, 79.1\\%, and 50.0\\%, respectively, compared with the strongest baseline for each error type.",
-  "abstract_zh": "LLM Agent 依赖长期记忆来支持超出有限上下文窗口的持续交互与个性化辅助。现有记忆型 Agent 通常通过生成写入、修订和删除操作来主动更新外部记忆，但这些更新可能遗漏关键信息、破坏已有记忆，或引入缺乏依据的幻觉内容。一旦错误被写入记忆，它们会成为持久的系统状态故障，并影响后续推理与生成。本文提出 TrustMem，一个旨在提升记忆巩固可信度的框架。TrustMem 使用 Memory Transition Verifier 从覆盖性、保留性和忠实性三个维度评估记忆更新的状态转移过程；同时，它在相同记忆状态下构造候选更新之间的偏好对，并通过偏好引导的强化学习直接优化记忆更新行为。大量实验表明，TrustMem 同时提升了记忆可用性与可靠性：在 MemoryAgentBench、HaluMem 和 Mem-alpha validation set 上取得 state-of-the-art 结果；在 HaluMem 记忆抽取任务上提升 12.14 个 F1 点；相较各类错误最强 baseline，分别将转移级遗漏、破坏和幻觉错误降低 40.1%、79.1% 和 50.0%。",
+  "abstract_zh": "LLM agents 依赖长期记忆来支持超出有限上下文窗口的持续交互与个性化辅助。现有 memory agents 会通过生成写入、修订和删除操作主动更新外部记忆，但这些更新可能遗漏重要信息、破坏已有记忆，或引入缺乏依据的幻觉内容。一旦错误被写入记忆，就会成为持久性的系统状态故障，影响后续推理与生成。本文提出 TrustMem，一个旨在提升记忆巩固可信度的框架。TrustMem 使用 Memory Transition Verifier 从覆盖性、保留性和忠实性三个维度评估记忆更新的转移过程，并在相同记忆状态下构造候选更新之间的偏好对，从而通过偏好引导的强化学习直接优化记忆更新行为。大量实验表明，TrustMem 同时提升了记忆实用性与可靠性：在 MemoryAgentBench、HaluMem 和 Mem-alpha validation set 上取得 state-of-the-art 结果；在 HaluMem 记忆抽取任务上提升 12.14 个 F1 点；相较各类错误的最强 baseline，分别将转移级遗漏、破坏和幻觉降低 40.1%、79.1% 和 50.0%。",
   "key_points_zh": [
-    "提出 TrustMem，面向 LLM Agent 长期记忆场景，重点解决记忆更新中的遗漏、已有记忆破坏和幻觉写入问题。",
-    "设计 Memory Transition Verifier，从 coverage、preservation、faithfulness 三个维度评估一次记忆更新的状态转移质量。",
-    "在同一记忆状态下比较多个候选更新，构造偏好对，并使用偏好引导的强化学习优化写入、修订和删除行为。",
-    "实验覆盖 MemoryAgentBench、HaluMem 和 Mem-alpha validation set，TrustMem 在多项基准上达到 state-of-the-art。",
-    "相较最强 baseline，TrustMem 在 HaluMem 上提升 12.14 F1，并显著降低遗漏、破坏和幻觉三类转移级错误。"
+    "针对 LLM agents 长期记忆更新中的三类核心风险：遗漏重要信息、破坏已有记忆、写入幻觉内容，提出 TrustMem 框架。",
+    "设计 Memory Transition Verifier，从 coverage、preservation、faithfulness 三个维度评估记忆状态转移，而不仅是评估最终记忆文本。",
+    "在同一记忆状态下构造候选更新的偏好对，并使用偏好引导的 reinforcement learning 优化写入、修订和删除等记忆操作。",
+    "在 MemoryAgentBench、HaluMem 和 Mem-alpha validation set 上达到 state-of-the-art，说明方法兼顾记忆效用与可靠性。",
+    "实验显示 TrustMem 在 HaluMem 记忆抽取上提升 12.14 F1，并显著减少遗漏、破坏和幻觉等转移级错误。"
   ],
   "llm_assessment": {
-    "novelty": 0.5,
-    "problem_significance": 0.5,
-    "potential_impact": 0.5,
-    "paradigm_shift": 0.5,
-    "lasting_value": 0.5,
-    "llm_avg": 0.5,
-    "comment": "Strong closed-loop memory-consolidation work using transition verification and preference optimization to improve persistent agent state.",
-    "comment_zh": "Strong closed-loop memory-consolidation work using transition verification and preference optimization to improve persistent agent state."
+    "novelty": 0.86,
+    "problem_significance": 0.89,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.85,
+    "lasting_value": 0.9,
+    "llm_avg": 0.876,
+    "comment": "TrustMem is a strong agent-memory training paper because it uses a verifier and preference learning to improve consolidation quality.",
+    "comment_zh": "TrustMem 是一篇很强的 agent 记忆训练论文，因为它用验证器和偏好学习提升了记忆整合质量。"
   },
   "scores": {
-    "topic_relevance": 0.6400000000000001,
+    "topic_relevance": 0.4,
     "open_source": 0.0,
     "community_heat": 0.0,
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.5,
+    "llm_assessment": 0.876,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -60,30 +60,5 @@
     "last_author_found": false,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.25161/fig1.webp",
-      "page": 4,
-      "kind": "figure",
-      "confidence": 0.944
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.25161/fig2.webp",
-      "page": 2,
-      "kind": "figure",
-      "confidence": 0.896
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.25161/fig3.webp",
-      "page": 4,
-      "kind": "figure",
-      "confidence": 0.297
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.25161/fig4.webp",
-      "page": 3,
-      "kind": "figure",
-      "confidence": 0.958
-    }
-  ]
+  "figures": []
 }

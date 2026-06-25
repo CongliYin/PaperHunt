@@ -23,32 +23,32 @@
     "project_page": null
   },
   "abstract_en": "Long-term memory promises LLM agents that grow more capable across sessions, maintaining an accurate, evolving understanding of the user that interaction forms. In practice, however, this memory is evaluated mostly through downstream behavior, such as later answers, personalization quality, or task success, which tests that understanding only indirectly and leaves the memory artifact itself largely unaudited. We argue that long-term memory should instead be evaluated as an auditable post-interaction artifact: after ordinary assistance, what structured user state can be reconstructed from the memory the agent leaves behind? We instantiate this view in MEMPROBE, a benchmark in which a memory-equipped agent assists simulated users, each carrying a hidden, taxonomy-anchored user-state bank, across a trajectory of leak-controlled tasks, after which that bank is reconstructed from the agent's resulting memory under both full-store and top-k access. Built on synthetic ground truth for efficient, scalable measurement, MEMPROBE spans 50 simulated users with 31 hidden dimensions each (1,550 recovery targets) and tests 5 representative memory systems. Testing state-of-the-art memory agents, we find that successful assistance and recoverable memory behave as distinct capabilities. Task completion nearly saturates, even for a memoryless baseline, while category-balanced recovery stays moderate (about 0.6) and drops further under top-k retrieval. MEMPROBE is the first benchmark to study memory recovery directly, reconstructing the user state a system retains and scoring it against ground truth. We see recovery as a concrete objective for future memory agents to optimize, and MEMPROBE as a step toward an environment where agents are trained to remember their users, growing more faithful the longer they know them.",
-  "abstract_zh": "长期记忆有望让 LLM agents 在跨会话交互中持续积累对用户的准确、动态理解。但现有评估多依赖后续回答、个性化质量或任务成功率等下游行为，间接检验记忆效果，缺少对记忆产物本身的审计。本文提出应将长期记忆视为交互后的可审计产物：在普通辅助任务结束后，能从 agent 留下的记忆中重建出怎样的结构化用户状态？为此，作者提出 MEMPROBE benchmark：带记忆的 agent 与模拟用户交互，每个用户拥有基于分类体系的隐藏 user-state bank；经过一系列受控泄露任务后，系统在 full-store 和 top-k access 两种条件下，从 agent 产生的记忆中恢复该用户状态。MEMPROBE 基于合成真值，便于高效、可扩展评测，覆盖 50 个模拟用户、每人 31 个隐藏维度，共 1,550 个恢复目标，并测试 5 类代表性 memory systems。实验发现，成功完成任务与可恢复记忆是两种不同能力：即使 memoryless baseline 的任务完成率也接近饱和，而类别平衡恢复分数仅中等水平（约 0.6），在 top-k retrieval 下进一步下降。MEMPROBE 是首个直接研究 memory recovery 的 benchmark，通过重建系统保留的用户状态并与真值对照打分，为未来 memory agents 提供了明确优化目标。",
+  "abstract_zh": "长期记忆有望让 LLM agents 在跨会话交互中持续积累对用户的准确、动态理解。然而现有评估多依赖后续回答、个性化质量或任务成功率等下游行为，只能间接检验这种理解，记忆内容本身缺乏审计。本文提出应将长期记忆作为交互后的可审计产物来评估：在普通辅助任务之后，能否从 agent 留下的 memory 中重建结构化用户状态？基于这一观点，作者提出 MEMPROBE benchmark：让带记忆的 agent 与模拟用户完成一系列泄露受控任务，每个用户拥有基于 taxonomy 的隐藏 user-state bank；交互结束后，在 full-store 和 top-k access 两种设置下，从 agent 记忆中恢复该状态库。MEMPROBE 使用合成 ground truth 以支持高效、可扩展评测，覆盖 50 个模拟用户、每人 31 个隐藏维度，共 1,550 个恢复目标，并测试 5 类代表性 memory systems。实验发现，成功完成任务与可恢复记忆是不同能力：即使 memoryless baseline 的任务完成率也接近饱和，但类别均衡恢复分数仅中等（约 0.6），且在 top-k retrieval 下进一步下降。MEMPROBE 是首个直接研究 memory recovery 的 benchmark，通过重建系统保留的用户状态并与 ground truth 对齐打分，为未来 memory agents 优化“记住用户”的能力提供了具体目标。",
   "key_points_zh": [
-    "提出 MEMPROBE，将长期记忆评估从下游行为转向对交互后 memory artifact 的直接审计。",
-    "benchmark 让 memory-equipped agents 与带隐藏 user-state bank 的模拟用户交互，并在 full-store 与 top-k access 设置下恢复用户状态。",
+    "提出 MEMPROBE，将长期记忆评估从下游行为转向交互后 memory artifact 的直接审计，关注能否恢复隐藏的结构化 user state。",
+    "benchmark 设计为模拟用户携带 taxonomy-anchored user-state bank，经过泄露受控任务轨迹后，在 full-store 与 top-k access 条件下重建该状态库。",
     "数据规模包含 50 个模拟用户、每人 31 个隐藏维度，共 1,550 个 recovery targets，并评测 5 种代表性 memory systems。",
-    "实验显示任务成功率与记忆可恢复性并不等价：任务完成几乎饱和，但 category-balanced recovery 仅约 0.6。",
-    "top-k retrieval 会进一步降低用户状态恢复效果，说明真实检索式记忆访问下仍存在明显瓶颈。"
+    "实验显示任务成功率与记忆可恢复性并不等价：任务完成几乎饱和，甚至 memoryless baseline 也表现较好，但 category-balanced recovery 仅约 0.6。",
+    "top-k retrieval 会进一步削弱恢复效果，说明实际检索访问下的长期记忆可靠性仍是关键瓶颈。"
   ],
   "llm_assessment": {
-    "novelty": 0.5,
-    "problem_significance": 0.5,
-    "potential_impact": 0.5,
-    "paradigm_shift": 0.5,
-    "lasting_value": 0.5,
-    "llm_avg": 0.5,
-    "comment": "A valuable benchmark for auditing long-term agent memory artifacts, though it contributes little runtime architecture or direct improvement loop.",
-    "comment_zh": "A valuable benchmark for auditing long-term agent memory artifacts, though it contributes little runtime architecture or direct improvement loop."
+    "novelty": 0.8,
+    "problem_significance": 0.85,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.87,
+    "llm_avg": 0.8240000000000001,
+    "comment": "MEMPROBE is a strong memory evaluation benchmark because it directly audits recoverable user state rather than downstream task success.",
+    "comment_zh": "MEMPROBE 是一个很强的记忆评测基准，因为它直接审计可恢复的用户状态，而不是只看下游任务成功率。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
     "open_source": 0.0,
     "community_heat": 0.6522803944013564,
-    "author_reputation": 0.3,
+    "author_reputation": 0.44848162417484216,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.5,
+    "llm_assessment": 0.8240000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -58,37 +58,12 @@
     "has_video_demo": false,
     "hf_listed": true,
     "hf_upvotes": 1,
-    "first_author_h_index": null,
-    "first_author_found": false,
+    "first_author_h_index": 13,
+    "first_author_found": true,
     "first_author_affiliations": [],
     "last_author_h_index": null,
     "last_author_found": false,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24595/fig1.webp",
-      "page": 4,
-      "kind": "figure",
-      "confidence": 0.967
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24595/fig2.webp",
-      "page": 3,
-      "kind": "figure",
-      "confidence": 0.331
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24595/fig3.webp",
-      "page": 2,
-      "kind": "figure",
-      "confidence": 0.961
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24595/fig4.webp",
-      "page": 3,
-      "kind": "table",
-      "confidence": 0.761
-    }
-  ]
+  "figures": []
 }

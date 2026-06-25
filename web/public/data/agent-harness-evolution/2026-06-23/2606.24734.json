@@ -15,32 +15,32 @@
     "project_page": null
   },
   "abstract_en": "High-quality annotations of structured representations are expensive to collect over large corpora. Manual annotation of structure is laborious, and model-based annotation, although cheaper to generate, requires expensive validation and potentially significant supervision to ensure that the annotation quality is strong enough to be useful downstream. In traditional annotation workflows, annotation of each complete example is performed end-to-end by a single annotator. However, structured annotation is complex, and each aspect of the task represents a unique challenge with an associated inferential load for a given annotator. Modern annotation projects can incorporate heterogeneous groups of annotators, including both models and human annotators with varying domain and linguistic expertise. It remains unclear, however, how to redesign annotation tasks in this setting, where efforts are discriminately allocated across heterogeneous annotators with respect to distinct annotation challenges. We propose to decompose annotation tasks into sub-tasks in order to reduce the aggregate inferential load of annotation projects. Inspired by the notion of centers from centering theory, we introduce a formal model of inferential load based on the degrees of freedom in the space of valid annotations. Using this model, we show that identifying these centers (i.e. salient anchor entities realized by annotation sub-tasks) constrains the output space complexity, and decompositions which isolate and advance center identification reduce the aggregate inferential load. We provide guidelines for decomposing complex structured annotation tasks, supported by examples demonstrating improved cost-efficiency from our prior work. Finally, we present a procedure for allocating sub-tasks across annotators to maximize quality under a fixed budget.",
-  "abstract_zh": "高质量结构化标注在大规模语料上成本高昂：人工端到端标注费时费力，模型生成标注虽更便宜，但仍需要昂贵验证和监督以保证下游可用性。本文指出，传统由单一标注者完成完整样本的流程并不适合由不同能力的人类与模型共同参与的现代标注项目。作者提出将复杂结构化标注任务分解为多个子任务，以降低总体推理负担（inferential load）。受中心化理论（centering theory）中“中心”概念启发，论文建立了一个基于有效标注空间自由度的形式化推理负担模型，说明识别显著锚定实体（centers）可以约束输出空间复杂度；优先隔离并推进中心识别的任务分解能够降低总体标注难度。论文进一步给出复杂结构化标注任务分解指南，并结合作者既有工作展示成本效率提升，最后提出一种在固定预算下将子任务分配给不同标注者以最大化质量的流程。",
+  "abstract_zh": "本文关注大规模语料中结构化表示的高质量标注成本问题。传统流程通常由单个标注者端到端完成完整样本标注，但结构化标注包含多个难点，不同子问题对标注者的推理负荷不同；同时，现代标注项目往往混合使用模型标注者与具备不同领域、语言能力的人类标注者。作者提出将复杂标注任务分解为多个子任务，以降低整体推理负荷并提升成本效率。受 centering theory 中“中心”（centers）概念启发，论文建立了一个基于有效标注空间自由度的推理负荷形式化模型，指出识别显著锚定实体（salient anchor entities）能够约束输出空间复杂度；优先隔离并推进这些中心识别的任务分解，可减少总体标注负担。论文进一步给出复杂结构化标注任务的分解准则，结合作者以往工作的案例展示成本效率提升，并提出在固定预算下将子任务分配给不同标注者以最大化质量的流程。",
   "key_points_zh": [
-    "针对结构化标注成本高、验证难的问题，提出用任务分解替代单一标注者端到端完成整例标注的传统流程。",
-    "构建基于有效标注空间自由度的推理负担（inferential load）形式化模型，用于衡量不同标注设计的复杂度。",
-    "借鉴 centering theory，强调识别中心实体（centers）可作为锚点约束输出空间，从而降低后续子任务难度。",
-    "给出复杂结构化标注任务的分解原则，并用既有工作案例说明该策略可提升成本效率。",
-    "提出固定预算下的子任务分配流程，用于在人类专家、普通标注者与模型等异构标注者之间优化质量与成本。"
+    "提出将复杂结构化标注拆成子任务，而非由单一标注者端到端完成，以适配人类与模型混合标注场景。",
+    "引入基于有效标注空间自由度的推理负荷模型，用于刻画不同标注子任务的难度与成本。",
+    "借鉴 centering theory，强调识别“中心”或显著锚定实体可显著约束输出空间，从而降低标注复杂度。",
+    "给出任务分解准则：优先隔离并推进中心识别相关子任务，以减少整体推理负荷。",
+    "提出固定预算下的子任务分配流程，根据不同标注者能力与成本分配工作，以最大化最终标注质量。"
   ],
   "llm_assessment": {
-    "novelty": 0.5,
-    "problem_significance": 0.5,
-    "potential_impact": 0.5,
-    "paradigm_shift": 0.5,
-    "lasting_value": 0.5,
-    "llm_avg": 0.5,
-    "comment": "Annotation-task decomposition is only tangentially related to agent harness evolution and lacks runtime or self-improvement relevance.",
-    "comment_zh": "Annotation-task decomposition is only tangentially related to agent harness evolution and lacks runtime or self-improvement relevance."
+    "novelty": 0.15,
+    "problem_significance": 0.1,
+    "potential_impact": 0.12,
+    "paradigm_shift": 0.05,
+    "lasting_value": 0.1,
+    "llm_avg": 0.10400000000000001,
+    "comment": "This is a general annotation-decomposition paper and is only weakly connected to agent harness evolution.",
+    "comment_zh": "这是一篇通用的标注任务拆解论文，与 agent harness 演化的关联较弱。"
   },
   "scores": {
     "topic_relevance": 0.6000000000000001,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.6600588164045906,
+    "author_reputation": 0.639025668893485,
     "venue_signal": 0.0,
     "generality": 0.4,
-    "llm_assessment": 0.5,
+    "llm_assessment": 0.10400000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -50,8 +50,8 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": 3,
-    "first_author_found": true,
+    "first_author_h_index": null,
+    "first_author_found": false,
     "first_author_affiliations": [],
     "last_author_h_index": 29,
     "last_author_found": true,

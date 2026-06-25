@@ -2,7 +2,7 @@
   "domain": "agent-harness-evolution",
   "display_name": "Agent Harness Evolution",
   "date": "2026-06-23",
-  "generated_at": "2026-06-25T12:52:52Z",
+  "generated_at": "2026-06-25T14:43:05Z",
   "papers": [
     {
       "arxiv_id": "2606.24775",
@@ -18,72 +18,40 @@
         "Feiyu Xiong",
         "Fan Wu"
       ],
-      "total_score": 0.6591418726358395,
+      "total_score": 0.740264478789751,
       "scores": {
         "topic_relevance": 0.88,
-        "llm_assessment": 0.5,
-        "other": 0.5238062421194644
+        "llm_assessment": 0.772,
+        "other": 0.5222149292991695
       },
       "tags": [
-        "HF Daily ★61",
+        "HF Daily ★82",
         "GitHub",
         "runtime execution engine"
       ],
-      "tldr_zh": "系统评测 Agent 记忆架构与成本权衡",
+      "tldr_zh": "系统评测 LLM agent memory 架构取舍",
       "detail_file": "agent-harness-evolution/2026-06-23/2606.24775.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24775/thumb.webp"
+      "thumb": ""
     },
     {
-      "arxiv_id": "2606.24112",
-      "title": "ReMMD: Realistic Multilingual Multi-Image Agentic Verification for Multimodal Misinformation Detection",
-      "title_zh": "ReMMD：面向多模态虚假信息检测的真实多语言多图 Agentic 验证框架",
+      "arxiv_id": "2606.24322",
+      "title": "Securing LLM-Agent Long-Term Memory Against Poisoning: Non-Malleable, Origin-Bound Authority with Machine-Checked Guarantees",
+      "title_zh": "保护 LLM-Agent 长期记忆免受投毒：具备机器验证保证的不可篡改、来源绑定权限机制",
       "authors": [
-        "Chenhao Dang",
-        "Dantong Zhu",
-        "Jun Yang",
-        "Conghui He",
-        "Weijia Li"
+        "Yedidel Louck"
       ],
-      "total_score": 0.6201431232324534,
+      "total_score": 0.6950000000000001,
       "scores": {
-        "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.5,
-        "other": 0.4471437441081771
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.89,
+        "other": 0.2
       },
       "tags": [
-        "HF Daily ★2",
-        "Project Page",
         "session context memory"
       ],
-      "tldr_zh": "真实多语多图虚假信息验证新基准与Agent",
-      "detail_file": "agent-harness-evolution/2026-06-23/2606.24112.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24112/thumb.webp"
-    },
-    {
-      "arxiv_id": "2606.24623",
-      "title": "Privacy-Preserving RAG via Multi-Agent Semantic Rewriting: Achieving Confidentiality Without Compromising Contextual Fidelity",
-      "title_zh": "通过多智能体语义重写实现隐私保护 RAG：在不牺牲上下文保真度的前提下保障机密性",
-      "authors": [
-        "Yuanhe Zhao",
-        "Tianyu Zhang",
-        "Huafei Xing",
-        "Derek F. Wong",
-        "Jianbin Li",
-        "Tao Fang"
-      ],
-      "total_score": 0.6120000000000001,
-      "scores": {
-        "topic_relevance": 0.88,
-        "llm_assessment": 0.5,
-        "other": 0.36666666666666675
-      },
-      "tags": [
-        "GitHub",
-        "multi agent coordination"
-      ],
-      "tldr_zh": "多智能体重写降低 RAG 隐私泄露",
-      "detail_file": "agent-harness-evolution/2026-06-23/2606.24623.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24623/thumb.webp"
+      "tldr_zh": "用来源绑定权限阻断LLM记忆投毒",
+      "detail_file": "agent-harness-evolution/2026-06-23/2606.24322.json",
+      "thumb": ""
     },
     {
       "arxiv_id": "2606.24595",
@@ -101,39 +69,19 @@
         "Philip S. Yu",
         "Zhen Wang"
       ],
-      "total_score": 0.578614019720068,
+      "total_score": 0.68323810092881,
       "scores": {
         "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.5,
-        "other": 0.30871339906689277
+        "llm_assessment": 0.8240000000000001,
+        "other": 0.33346033642936646
       },
       "tags": [
         "HF Daily ★1",
         "session context memory"
       ],
-      "tldr_zh": "直接评测长期记忆能否恢复用户状态",
+      "tldr_zh": "直接评测Agent记忆能否恢复用户状态",
       "detail_file": "agent-harness-evolution/2026-06-23/2606.24595.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24595/thumb.webp"
-    },
-    {
-      "arxiv_id": "2606.24322",
-      "title": "Securing LLM-Agent Long-Term Memory Against Poisoning: Non-Malleable, Origin-Bound Authority with Machine-Checked Guarantees",
-      "title_zh": "保护 LLM Agent 长期记忆免受投毒：具有机器校验证明的不可篡改、来源绑定权限机制",
-      "authors": [
-        "Yedidel Louck"
-      ],
-      "total_score": 0.5780000000000001,
-      "scores": {
-        "topic_relevance": 0.92,
-        "llm_assessment": 0.5,
-        "other": 0.2
-      },
-      "tags": [
-        "session context memory"
-      ],
-      "tldr_zh": "用来源绑定权限彻底阻断记忆投毒",
-      "detail_file": "agent-harness-evolution/2026-06-23/2606.24322.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24322/thumb.webp"
+      "thumb": ""
     },
     {
       "arxiv_id": "2606.24535",
@@ -146,97 +94,18 @@
         "Ran Taig",
         "Oded Margalit"
       ],
-      "total_score": 0.562,
+      "total_score": 0.6712000000000001,
       "scores": {
         "topic_relevance": 0.88,
-        "llm_assessment": 0.5,
+        "llm_assessment": 0.8640000000000001,
         "other": 0.2
       },
       "tags": [
         "session context memory"
       ],
-      "tldr_zh": "生产级多智能体共享记忆需显式治理",
+      "tldr_zh": "多智能体共享记忆需系统级治理",
       "detail_file": "agent-harness-evolution/2026-06-23/2606.24535.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24535/thumb.webp"
-    },
-    {
-      "arxiv_id": "2606.24689",
-      "title": "Automated Summarization of Software Documents: An LLM-based Multi-Agent Approach",
-      "title_zh": "自动化软件文档摘要：一种基于 LLM 的多智能体方法",
-      "authors": [
-        "Duc S. H. Nguyen",
-        "Minh T. Nguyen",
-        "Phuong T. Nguyen",
-        "Juri Di Rocco",
-        "Davide Di Ruscio"
-      ],
-      "total_score": 0.5460000000000002,
-      "scores": {
-        "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.5,
-        "other": 0.2
-      },
-      "tags": [
-        "multi agent coordination"
-      ],
-      "tldr_zh": "Metagente 用多智能体提升软件文档摘要质量",
-      "detail_file": "agent-harness-evolution/2026-06-23/2606.24689.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24689/thumb.webp"
-    },
-    {
-      "arxiv_id": "2606.24820",
-      "title": "SHERLOC: Structured Diagnostic Localization for Code Repair Agents",
-      "title_zh": "SHERLOC：面向代码修复智能体的结构化诊断定位",
-      "authors": [
-        "Hovhannes Tamoyan",
-        "Sean Narenthiran",
-        "Erik Arakelyan",
-        "Mira Mezini",
-        "Boris Ginsburg"
-      ],
-      "total_score": 0.5460000000000002,
-      "scores": {
-        "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.5,
-        "other": 0.2
-      },
-      "tags": [
-        "multi agent coordination"
-      ],
-      "tldr_zh": "结构化诊断定位提升代码修复效率",
-      "detail_file": "agent-harness-evolution/2026-06-23/2606.24820.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24820/thumb.webp"
-    },
-    {
-      "arxiv_id": "2606.24151",
-      "title": "Metis: Bridging Text and Code Memory for Self-Evolving Agents",
-      "title_zh": "Metis：连接文本记忆与代码记忆的自进化 Agent",
-      "authors": [
-        "Zijie Dai",
-        "Siuhin He",
-        "Hui Li",
-        "Qihui Zhou",
-        "Jiajun Li",
-        "Mingcong Song",
-        "Guoping Long",
-        "Hongjie Si",
-        "Xin Yao",
-        "Lin Zhang",
-        "James Cheng",
-        "Xiao Yan"
-      ],
-      "total_score": 0.5300000000000001,
-      "scores": {
-        "topic_relevance": 0.8,
-        "llm_assessment": 0.5,
-        "other": 0.2
-      },
-      "tags": [
-        "closed loop agent improvement"
-      ],
-      "tldr_zh": "双记忆架构提升自进化Agent效率与准确率",
-      "detail_file": "agent-harness-evolution/2026-06-23/2606.24151.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24151/thumb.webp"
+      "thumb": ""
     },
     {
       "arxiv_id": "2606.24311",
@@ -265,86 +134,124 @@
         "Xiaohui Geng",
         "Jianping Fan"
       ],
-      "total_score": 0.5300000000000001,
+      "total_score": 0.6476000000000002,
       "scores": {
         "topic_relevance": 0.8,
-        "llm_assessment": 0.5,
+        "llm_assessment": 0.892,
         "other": 0.2
       },
       "tags": [
         "runtime execution engine"
       ],
-      "tldr_zh": "为长程Agent提供受控工作区与时间感知执行",
+      "tldr_zh": "为长程LLM智能体提供受控执行框架",
       "detail_file": "agent-harness-evolution/2026-06-23/2606.24311.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24311/thumb.webp"
+      "thumb": ""
     },
     {
-      "arxiv_id": "2606.25161",
-      "title": "TRUSTMEM: Learning Trustworthy Memory Consolidation for LLM Agents with Long-Term Memory",
-      "title_zh": "TRUSTMEM：面向具备长期记忆的 LLM Agent 学习可信记忆巩固",
+      "arxiv_id": "2606.24151",
+      "title": "Metis: Bridging Text and Code Memory for Self-Evolving Agents",
+      "title_zh": "Metis：连接文本与代码记忆的自进化智能体",
       "authors": [
-        "Tianyu Yang",
-        "Sudipta Paul",
-        "Vijay Srinivasan",
-        "Vivek Kulkarni",
-        "Srinivas Chappidi"
+        "Zijie Dai",
+        "Siuhin He",
+        "Hui Li",
+        "Qihui Zhou",
+        "Jiajun Li",
+        "Mingcong Song",
+        "Guoping Long",
+        "Hongjie Si",
+        "Xin Yao",
+        "Lin Zhang",
+        "James Cheng",
+        "Xiao Yan"
       ],
-      "total_score": 0.466,
+      "total_score": 0.6314000000000002,
       "scores": {
-        "topic_relevance": 0.6400000000000001,
-        "llm_assessment": 0.5,
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.8380000000000001,
         "other": 0.2
       },
       "tags": [
-        "judge reward verifier"
+        "closed loop agent improvement"
       ],
-      "tldr_zh": "用偏好强化学习提升LLM记忆更新可信度",
-      "detail_file": "agent-harness-evolution/2026-06-23/2606.25161.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.25161/thumb.webp"
+      "tldr_zh": "双记忆机制提升自进化智能体效率与准确率",
+      "detail_file": "agent-harness-evolution/2026-06-23/2606.24151.json",
+      "thumb": ""
     },
     {
-      "arxiv_id": "2606.24251",
-      "title": "Probing the Misaligned Thinking Process of Language Models",
-      "title_zh": "探测语言模型的错位思维过程",
+      "arxiv_id": "2606.24112",
+      "title": "ReMMD: Realistic Multilingual Multi-Image Agentic Verification for Multimodal Misinformation Detection",
+      "title_zh": "ReMMD：面向多模态虚假信息检测的真实多语言多图 Agentic 验证框架",
       "authors": [
-        "Kaiwen Zhou",
-        "Constantin Venhoff",
-        "Jonathan Michala",
-        "Xin Eric Wang",
-        "William Saunders"
+        "Chenhao Dang",
+        "Dantong Zhu",
+        "Jun Yang",
+        "Conghui He",
+        "Weijia Li"
       ],
-      "total_score": 0.45,
+      "total_score": 0.6302280394401358,
       "scores": {
-        "topic_relevance": 0.6000000000000001,
-        "llm_assessment": 0.5,
-        "other": 0.2
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.53,
+        "other": 0.4507601314671189
       },
       "tags": [
-        "judge reward verifier"
+        "HF Daily ★3",
+        "Project Page",
+        "session context memory"
       ],
-      "tldr_zh": "用线性探针检测模型内部错位意图",
-      "detail_file": "agent-harness-evolution/2026-06-23/2606.24251.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24251/thumb.webp"
+      "tldr_zh": "真实多语多图虚假信息验证基准与Agent",
+      "detail_file": "agent-harness-evolution/2026-06-23/2606.24112.json",
+      "thumb": ""
     },
     {
-      "arxiv_id": "2606.24734",
-      "title": "Task Decomposition for Efficient Annotation",
-      "title_zh": "面向高效标注的任务分解",
+      "arxiv_id": "2606.24820",
+      "title": "SHERLOC: Structured Diagnostic Localization for Code Repair Agents",
+      "title_zh": "SHERLOC：面向代码修复 Agent 的结构化诊断定位",
       "authors": [
-        "Nupoor Gandhi",
-        "Emma Strubell"
+        "Hovhannes Tamoyan",
+        "Sean Narenthiran",
+        "Erik Arakelyan",
+        "Mira Mezini",
+        "Boris Ginsburg"
       ],
-      "total_score": 0.44300294082022956,
+      "total_score": 0.6226887430316667,
       "scores": {
-        "topic_relevance": 0.6000000000000001,
-        "llm_assessment": 0.5,
-        "other": 0.17667646940076512
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.7680000000000001,
+        "other": 0.18762914343888823
       },
       "tags": [
-        "planning and policy"
+        "harness multi agent orchestration"
       ],
-      "tldr_zh": "分解结构化标注任务以降本提质",
-      "detail_file": "agent-harness-evolution/2026-06-23/2606.24734.json",
+      "tldr_zh": "用结构化诊断提升代码修复定位效率",
+      "detail_file": "agent-harness-evolution/2026-06-23/2606.24820.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.24623",
+      "title": "Privacy-Preserving RAG via Multi-Agent Semantic Rewriting: Achieving Confidentiality Without Compromising Contextual Fidelity",
+      "title_zh": "通过多智能体语义重写实现隐私保护 RAG：在不牺牲上下文保真度的前提下实现机密性",
+      "authors": [
+        "Yuanhe Zhao",
+        "Tianyu Zhang",
+        "Huafei Xing",
+        "Derek F. Wong",
+        "Jianbin Li",
+        "Tao Fang"
+      ],
+      "total_score": 0.5350516573755554,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.24000000000000005,
+        "other": 0.370172191251851
+      },
+      "tags": [
+        "GitHub",
+        "harness multi agent orchestration"
+      ],
+      "tldr_zh": "多智能体语义重写降低 RAG 隐私泄露",
+      "detail_file": "agent-harness-evolution/2026-06-23/2606.24623.json",
       "thumb": ""
     },
     {
@@ -366,41 +273,64 @@
         "Sambit Sahu",
         "Erin Babinsky"
       ],
-      "total_score": 0.4117649187622833,
+      "total_score": 0.5072,
       "scores": {
         "topic_relevance": 0.36000000000000004,
-        "llm_assessment": 0.5,
-        "other": 0.39254972920761116
+        "llm_assessment": 0.844,
+        "other": 0.36666666666666675
       },
       "tags": [
         "general llm agents",
         "Accepted"
       ],
-      "tldr_zh": "用主动检索诊断超长智能体故障",
+      "tldr_zh": "用主动检索诊断超长智能体轨迹故障",
       "detail_file": "agent-harness-evolution/2026-06-23/2606.24626.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24626/thumb.webp"
+      "thumb": ""
     },
     {
-      "arxiv_id": "2606.24026",
-      "title": "Can Language Model Agents be Helpful Circuit Explainers in Mechanistic Interpretability?",
-      "title_zh": "语言模型 Agent 能否成为机制可解释性中的有效电路解释器？",
+      "arxiv_id": "2606.25161",
+      "title": "TRUSTMEM: Learning Trustworthy Memory Consolidation for LLM Agents with Long-Term Memory",
+      "title_zh": "TRUSTMEM：面向具备长期记忆的 LLM Agents 的可信记忆巩固学习",
       "authors": [
-        "Ayan Antik Khan",
-        "Harsh Kohli",
-        "Yuekun Yao",
-        "Huan Sun",
-        "Ziyu Yao"
+        "Tianyu Yang",
+        "Sudipta Paul",
+        "Vijay Srinivasan",
+        "Vivek Kulkarni",
+        "Srinivas Chappidi"
       ],
-      "total_score": 0.18188245938114164,
+      "total_score": 0.4828,
       "scores": {
-        "topic_relevance": 0.0,
-        "llm_assessment": 0.5,
-        "other": 0.10627486460380554
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.876,
+        "other": 0.2
       },
-      "tags": [],
-      "tldr_zh": "LM Agent 可解释电路，但验证仍是瓶颈",
-      "detail_file": "agent-harness-evolution/2026-06-23/2606.24026.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24026/thumb.webp"
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "用偏好强化学习提升长期记忆更新可信度",
+      "detail_file": "agent-harness-evolution/2026-06-23/2606.25161.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.24734",
+      "title": "Task Decomposition for Efficient Annotation",
+      "title_zh": "面向高效标注的任务分解",
+      "authors": [
+        "Nupoor Gandhi",
+        "Emma Strubell"
+      ],
+      "total_score": 0.3231512834446743,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.10400000000000001,
+        "other": 0.17317094481558087
+      },
+      "tags": [
+        "planning and policy"
+      ],
+      "tldr_zh": "分解结构化标注任务以降本提质",
+      "detail_file": "agent-harness-evolution/2026-06-23/2606.24734.json",
+      "thumb": ""
     }
   ]
 }

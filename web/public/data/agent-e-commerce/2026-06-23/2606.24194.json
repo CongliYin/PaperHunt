@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.24194",
   "title": "Dialogue to Discovery: Attribute-Aware Preference Elicitation for Conversational Product Search Assistants",
-  "title_zh": "面向对话式商品搜索的属性感知偏好引导：从对话到发现",
+  "title_zh": "Dialogue to Discovery：面向对话式商品搜索助手的属性感知偏好引导",
   "authors": [
     "Sarthak Harne",
     "Natwar Modani",
@@ -17,23 +17,23 @@
     "project_page": null
   },
   "abstract_en": "Conversational product search assistants offer a more expressive, natural, and interactive alternative to traditional keyword-based product search. With limited screen space, showing only a few items increases the need for precise preference elicitation, which can prolong conversations, leading to user frustration and session abandonment. Conversely, rushing to recommend items without a clear understanding of preferences risks poor matches and a degraded user experience. We present Dialogue to Discovery (D2D), an attribute-oriented preference elicitation framework that dynamically exploits the structure of product attributes to efficiently steer conversations toward the user's desired item. D2D adaptively prioritizes the most informative queries and strategically times product recommendations, reducing premature or off-target suggestions that harm engagement. To evaluate D2D, we curate three datasets from the Amazon Reviews corpus. In simulated conversations modelled using a multi-factor utilitarian patience framework, D2D achieves a 22.2-29.9% improvement in target-finding accuracy, 6.6-16.1% reduction in abandonment, and 27.5% shorter average conversations over the state-of-the-art baselines. A complementary user study further confirms significant gains in both user satisfaction and perceived efficiency.",
-  "abstract_zh": "对话式商品搜索助手相比传统关键词搜索，更自然、交互性更强，但在屏幕空间有限的场景下，若只展示少量商品，就需要更精准的偏好引导，否则对话会拉长并增加用户挫败感；若在未充分理解偏好的情况下过早推荐，又容易造成匹配不佳、体验下降。本文提出 Dialogue to Discovery（D2D），一种面向属性的偏好引导框架，能够动态利用商品属性结构，高效推动对话收敛到用户想要的目标商品。D2D 会自适应地优先提出最具信息量的问题，并策略性地安排商品推荐时机，从而减少过早或偏离目标的建议，提升交互质量。作者基于 Amazon Reviews corpus 构建了三个数据集，并在采用多因素实用性耐心框架（multi-factor utilitarian patience framework）的模拟对话中进行评估。结果显示，D2D 相比现有最优基线在目标商品命中准确率上提升 22.2%-29.9%，弃用率降低 6.6%-16.1%，平均对话长度缩短 27.5%。补充的用户研究进一步验证了其在用户满意度和感知效率上的显著提升。",
+  "abstract_zh": "对话式商品搜索助手相比传统关键词搜索更自然、交互性更强，但由于屏幕空间有限，每次只能展示少量商品，因此需要更精准地引导用户表达偏好。过度追问会拉长对话、引发挫败和放弃；过早推荐则可能因偏好理解不足导致匹配不佳。本文提出 Dialogue to Discovery（D2D），一个面向商品属性的偏好引导框架，能够动态利用商品属性结构，优先询问信息量最高的问题，并在合适时机进行推荐，从而更高效地将对话引向用户目标商品。作者基于 Amazon Reviews corpus 构建了三个数据集，并在采用多因素效用-耐心模型的模拟对话中评估 D2D。结果显示，相比当前最优基线，D2D 将目标商品找到准确率提升 22.2%–29.9%，用户放弃率降低 6.6%–16.1%，平均对话长度缩短 27.5%。补充用户研究也验证了其在用户满意度和感知效率上的显著提升。",
   "key_points_zh": [
-    "提出 Dialogue to Discovery（D2D），一种 attribute-aware 的对话式商品搜索偏好引导框架。",
-    "核心思想是利用商品属性结构，自适应选择最有信息量的问题，并控制推荐时机。",
-    "在 Amazon Reviews corpus 构建的三个数据集上进行评估，覆盖模拟对话与用户研究。",
-    "相比 SOTA baselines，D2D 显著提升 target-finding accuracy，并降低 abandonment。",
-    "同时缩短平均对话长度，提升用户满意度与感知效率。"
+    "提出 Dialogue to Discovery（D2D），一个属性导向的偏好引导框架，用于对话式商品搜索助手。",
+    "D2D 动态利用商品属性结构，优先选择最具信息量的问题，并策略性决定何时推荐商品。",
+    "该方法在避免过早推荐和减少无效追问之间取得平衡，降低用户挫败和会话放弃风险。",
+    "作者基于 Amazon Reviews corpus 构建三个评测数据集，并使用多因素效用-耐心框架模拟用户对话行为。",
+    "实验显示 D2D 相比 SOTA 基线将目标找到准确率提升 22.2%–29.9%，放弃率降低 6.6%–16.1%，平均对话缩短 27.5%。"
   ],
   "llm_assessment": {
-    "novelty": 0.82,
-    "problem_significance": 0.9,
-    "potential_impact": 0.88,
-    "paradigm_shift": 0.55,
-    "lasting_value": 0.9,
-    "llm_avg": 0.8100000000000002,
-    "comment": "A strong commerce-grounded paper that advances conversational product search through attribute-aware preference elicitation with convincing accuracy, abandonment, and satisfaction gains.",
-    "comment_zh": "这是一篇扎根电商场景的高价值论文，通过属性感知偏好引导显著提升了对话式商品搜索的准确率、弃用率和用户满意度。"
+    "novelty": 0.72,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.78,
+    "llm_avg": 0.752,
+    "comment": "A strong commerce-focused conversational search paper that improves preference elicitation and recommendation timing for product discovery.",
+    "comment_zh": "这是一篇面向电商对话式搜索的强论文，改进了偏好澄清与推荐时机，从而提升商品发现效率。"
   },
   "scores": {
     "topic_relevance": 0.92,
@@ -42,7 +42,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.8100000000000002,
+    "llm_assessment": 0.752,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -59,18 +59,5 @@
     "last_author_found": false,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24194/fig1.webp",
-      "page": 5,
-      "kind": "figure",
-      "confidence": 0.959
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24194/fig2.webp",
-      "page": 5,
-      "kind": "table",
-      "confidence": 0.973
-    }
-  ]
+  "figures": []
 }

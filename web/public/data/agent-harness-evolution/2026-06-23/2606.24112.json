@@ -18,32 +18,32 @@
     "project_page": "https://dang-ai.github.io/ReMMD"
   },
   "abstract_en": "Multimodal misinformation detection is increasingly important because viral posts now combine long multilingual narratives, several images, mixed provenance, and subtle text--image framing errors. Existing benchmarks and methods remain poorly matched to this setting: they usually isolate short captions, single images, binary labels, or one manipulation source, while agentic verification remains costly under realistic evidence search. We present ReMMD, a realistic multilingual multi-image agentic verification framework for multimodal misinformation detection. ReMMD includes ReMMDBench, a real-world multimodal misinformation detection benchmark with 500 samples, 2,756 images, five monolingual languages, two cross-lingual settings, three text-length tiers, multi-image posts, five-way veracity labels, eight distortion labels, evidence provenance, and rationales. It also includes ReMMD-Agent, a persistent-memory verifier that decomposes posts into atomic points, builds a reusable evidence set, and predicts structured L1/L2/L3 outputs. Across proprietary systems, open LVLMs, MMD-Agent, and T2-Agent, ReMMD-Agent obtains the best five-way veracity performance, with 41.80% accuracy and 39.12% macro-F1 using GPT-5.2, while reducing cost by 17.5% relative to MMD-Agent and 79.9% relative to T2-Agent. The project is available at https://dang-ai.github.io/ReMMD.",
-  "abstract_zh": "本文提出 ReMMD，一个更贴近真实社交媒体场景的多语言、多图像、Agentic 多模态虚假信息检测框架。针对现有基准多聚焦短文本、单图、二分类或单一篡改来源，难以覆盖长篇多语言叙事、多图混合来源与细微图文框架错误的问题，ReMMD 构建了 ReMMDBench：包含 500 个真实样本、2,756 张图像、5 种单语语言、2 种跨语言设置、3 档文本长度、多图帖子、五类真实性标签、8 类失真标签、证据来源与解释理由。同时，作者提出 ReMMD-Agent，通过持久记忆将帖子拆解为原子论点，复用证据集合，并输出结构化的 L1/L2/L3 预测。实验显示，在 proprietary systems、open LVLMs、MMD-Agent 和 T2-Agent 对比中，基于 GPT-5.2 的 ReMMD-Agent 取得最佳五分类真实性检测性能，准确率 41.80%、macro-F1 39.12%，同时相比 MMD-Agent 降低 17.5% 成本，相比 T2-Agent 降低 79.9% 成本。",
+  "abstract_zh": "本文提出 ReMMD，一个面向真实场景的多语言、多图像、Agentic 验证框架，用于多模态虚假信息检测。作者指出，现有基准和方法多聚焦短文本、单图、二分类或单一篡改来源，难以覆盖现实社交媒体中长篇多语言叙事、多图混合来源以及细微图文框架错误等复杂情况。ReMMD 包含 ReMMDBench：一个含 500 个样本、2,756 张图像的真实世界基准，覆盖五种单语语言、两种跨语言设置、三档文本长度、多图帖子、五类真实性标签、八类失真标签、证据来源与推理依据；同时包含 ReMMD-Agent：一种带持久记忆的验证器，可将帖子分解为原子论点，构建可复用证据集，并输出结构化的 L1/L2/L3 预测。实验显示，基于 GPT-5.2 的 ReMMD-Agent 在五分类真实性判断上取得最佳表现，准确率 41.80%、macro-F1 39.12%，同时相比 MMD-Agent 降低 17.5% 成本，相比 T2-Agent 降低 79.9% 成本。",
   "key_points_zh": [
-    "提出 ReMMD 框架，面向真实社交媒体中的长文本、多语言、多图像和混合来源虚假信息检测。",
-    "构建 ReMMDBench，包含 500 个样本、2,756 张图像、五类真实性标签、8 类失真标签，并提供证据来源与解释理由。",
-    "覆盖 5 种单语语言、2 种跨语言设置和 3 档文本长度，更接近现实中复杂多模态帖子。",
-    "提出 ReMMD-Agent，利用持久记忆将帖子拆解为原子论点，构建可复用证据集，并进行结构化 L1/L2/L3 输出。",
-    "实验中 ReMMD-Agent 在五分类真实性检测上表现最佳，GPT-5.2 版本达到 41.80% accuracy 和 39.12% macro-F1，并显著降低验证成本。"
+    "提出 ReMMD，面向更贴近现实社交媒体的多模态虚假信息检测，覆盖长文本、多语言、多图像和复杂图文误导关系。",
+    "构建 ReMMDBench，包含 500 个样本、2,756 张图像，支持五类真实性标签、八类失真标签、证据 provenance 和人工 rationale。",
+    "设计 ReMMD-Agent，通过持久记忆、原子论点分解和可复用证据集构建，实现结构化 L1/L2/L3 验证输出。",
+    "在 proprietary systems、open LVLMs、MMD-Agent 和 T2-Agent 对比中，ReMMD-Agent 使用 GPT-5.2 取得最高五分类性能：41.80% accuracy、39.12% macro-F1。",
+    "在提升验证效果的同时，ReMMD-Agent 还显著降低证据搜索成本，相比 MMD-Agent 降低 17.5%，相比 T2-Agent 降低 79.9%。"
   ],
   "llm_assessment": {
-    "novelty": 0.5,
-    "problem_significance": 0.5,
-    "potential_impact": 0.5,
-    "paradigm_shift": 0.5,
-    "lasting_value": 0.5,
-    "llm_avg": 0.5,
-    "comment": "Primarily a domain-specific misinformation benchmark and verifier agent with limited reusable agent-platform infrastructure value.",
-    "comment_zh": "Primarily a domain-specific misinformation benchmark and verifier agent with limited reusable agent-platform infrastructure value."
+    "novelty": 0.58,
+    "problem_significance": 0.55,
+    "potential_impact": 0.52,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.55,
+    "llm_avg": 0.53,
+    "comment": "This is a solid evaluation framework for multimodal misinformation, but its agent-harness contribution is only moderate.",
+    "comment_zh": "这是一项扎实的多模态谣言评测框架，但对 agent harness 的贡献较为有限。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
     "open_source": 0.4,
-    "community_heat": 0.6828624646490623,
+    "community_heat": 0.704560788802713,
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.5,
+    "llm_assessment": 0.53,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -52,7 +52,7 @@
     "code_promised": false,
     "has_video_demo": false,
     "hf_listed": true,
-    "hf_upvotes": 2,
+    "hf_upvotes": 3,
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
@@ -60,30 +60,5 @@
     "last_author_found": false,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24112/fig1.webp",
-      "page": 3,
-      "kind": "figure",
-      "confidence": 0.973
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24112/fig2.webp",
-      "page": 5,
-      "kind": "figure",
-      "confidence": 0.969
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24112/fig3.webp",
-      "page": 1,
-      "kind": "figure",
-      "confidence": 0.968
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24112/fig4.webp",
-      "page": 2,
-      "kind": "table",
-      "confidence": 0.967
-    }
-  ]
+  "figures": []
 }

@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.24051",
   "title": "DriveStack-VLA: Render-Teacher Alignment for BEV-Based DeepStack Vision-Language-Action Model",
-  "title_zh": "DriveStack-VLA：面向 BEV DeepStack Vision-Language-Action 驾驶模型的 Render-Teacher Alignment",
+  "title_zh": "DriveStack-VLA：面向 BEV-Based DeepStack Vision-Language-Action 模型的 Render-Teacher Alignment",
   "authors": [
     "Jingke Wang",
     "Zhenru Zhao",
@@ -24,23 +24,23 @@
     "project_page": "https://anonymous.4open.science/w/drivestack-vla/."
   },
   "abstract_en": "Vision-Language-Action driving models convert a pretrained Vision-Language Model into a driving policy, allowing them to use world knowledge and follow language guidances. However, existing VLA driving models still lack driving-oriented spatial intelligence: their policies are mainly grounded on perspective image tokens and language priors, while precise motion planning requires metric geometry, top-down scene structure, and attention to safety-critical perceptual cues. This limitation makes current models vulnerable to weak visual geometry modeling and perceptual coverage in expert demonstrations. In this paper, we present DriveStack-VLA, a framework built upon a large VLM backbone. To strengthen the spatial grounding of VLA driving, we develop dual visual modeling components. We inject a Bird-Eye-View representation into the Large Language Model decoder through a DeepStack-style connection, and propose Render-Teacher Alignment to align the perceptual focus of real images with that of rasterized images. Furthermore, to bridge the gap in multimodal trajectory selection, we introduce a head-based self-critique module that ranks sampled trajectories and conditionally refines the best one. DriveStack-VLA achieves 91.6 PDMS on NAVSIMv1, 91.0 EPDMS on NAVSIMv2 (with the human penalty filter enabled), and a driving score of 79.49 with a success rate of 56.36\\% on the closed-loop Bench2Drive. More visualizations are available on our project page: https://anonymous.4open.science/w/drivestack-vla/.",
-  "abstract_zh": "本文提出 DriveStack-VLA，一个基于大型 VLM 骨干的自动驾驶 Vision-Language-Action 框架。针对现有 VLA 驾驶模型过度依赖透视图像 token 与语言先验、缺乏面向驾驶的空间智能问题，作者引入双重视觉建模：一方面通过 DeepStack-style 连接将 Bird-Eye-View 表征注入 Large Language Model decoder，以增强度量几何与俯视场景结构理解；另一方面提出 Render-Teacher Alignment，使真实图像的感知关注与栅格化图像的关注模式对齐，从而强化安全关键线索的覆盖。为解决多模态轨迹选择差距，论文还设计了 head-based self-critique 模块，对采样轨迹进行排序，并在需要时细化最优轨迹。DriveStack-VLA 在 NAVSIMv1 上达到 91.6 PDMS，在启用 human penalty filter 的 NAVSIMv2 上达到 91.0 EPDMS，并在闭环 Bench2Drive 上取得 79.49 driving score 与 56.36% success rate。",
+  "abstract_zh": "Vision-Language-Action（VLA）驾驶模型通常将预训练 Vision-Language Model 转化为驾驶策略，使其能够利用世界知识并遵循语言指令。然而，现有 VLA 驾驶模型仍缺乏面向驾驶的空间智能：其策略主要依赖透视图像 token 和语言先验，而精确运动规划需要度量几何、俯视场景结构以及对安全关键感知线索的关注。为此，论文提出 DriveStack-VLA，一个基于大型 VLM backbone 的自动驾驶框架。该方法通过双视觉建模增强 VLA 的空间 grounding：一方面以 DeepStack-style connection 将 Bird-Eye-View（BEV）表征注入 Large Language Model decoder；另一方面提出 Render-Teacher Alignment，使真实图像的感知关注与栅格化图像的关注模式对齐。此外，为弥合多模态轨迹选择差距，作者引入基于 head 的 self-critique 模块，对采样轨迹进行排序，并在必要时优化最佳轨迹。DriveStack-VLA 在 NAVSIMv1 上取得 91.6 PDMS，在启用 human penalty filter 的 NAVSIMv2 上取得 91.0 EPDMS，并在闭环 Bench2Drive 上达到 79.49 driving score 和 56.36% success rate。",
   "key_points_zh": [
-    "指出现有 VLA driving models 缺乏驾驶所需的空间智能，难以充分建模度量几何、俯视拓扑结构和安全关键感知线索。",
-    "提出 DriveStack-VLA，在大型 VLM backbone 上通过 DeepStack-style connection 将 BEV representation 注入 LLM decoder，增强空间 grounding。",
-    "提出 Render-Teacher Alignment，用 rasterized images 作为教师信号，对齐真实图像中的感知关注区域，提升对关键驾驶元素的覆盖。",
-    "设计 head-based self-critique module，对多条采样轨迹进行排序，并条件式优化最佳轨迹，以改善多模态轨迹选择。",
-    "在 NAVSIMv1、NAVSIMv2 和闭环 Bench2Drive 上取得强性能，显示 BEV 结构化表征与渲染监督对 VLA 驾驶策略有效。"
+    "指出现有 VLA driving models 过度依赖透视图像 token 与语言先验，缺少度量几何和 top-down 场景结构，难以满足安全关键的精确规划需求。",
+    "提出 DriveStack-VLA，在大型 VLM backbone 上通过 DeepStack-style connection 将 BEV representation 注入 LLM decoder，强化空间 grounding。",
+    "提出 Render-Teacher Alignment，将真实图像的感知关注与 rasterized images 的关注对齐，以提升对驾驶关键视觉线索的覆盖。",
+    "设计 head-based self-critique module，对多条采样轨迹进行排序，并在条件满足时细化最优轨迹，缓解多模态轨迹选择问题。",
+    "实验表现强：NAVSIMv1 达到 91.6 PDMS，NAVSIMv2 达到 91.0 EPDMS，Bench2Drive 闭环测试取得 79.49 driving score 和 56.36% success rate。"
   ],
   "llm_assessment": {
-    "novelty": 0.58,
-    "problem_significance": 0.62,
-    "potential_impact": 0.55,
-    "paradigm_shift": 0.42,
-    "lasting_value": 0.45,
-    "llm_avg": 0.524,
-    "comment": "A solid VLA driving paper with useful spatial grounding ideas, but it is peripheral to realtime multimodal conversational or tool-using agents.",
-    "comment_zh": "这是一篇扎实的驾驶VLA论文，具有有用的空间 grounding 思路，但与实时多模态对话或工具型智能体的核心方向较为边缘。"
+    "novelty": 0.74,
+    "problem_significance": 0.83,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.76,
+    "llm_avg": 0.7539999999999999,
+    "comment": "This paper meaningfully strengthens BEV-grounded VLA driving with render alignment and trajectory self-critique.",
+    "comment_zh": "这篇工作通过BEV对齐和轨迹自检显著增强了具身驾驶中的空间 grounding。"
   },
   "scores": {
     "topic_relevance": 0.68,
@@ -49,7 +49,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.524,
+    "llm_assessment": 0.7539999999999999,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -66,30 +66,5 @@
     "last_author_found": false,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24051/fig1.webp",
-      "page": 3,
-      "kind": "figure",
-      "confidence": 0.961
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24051/fig2.webp",
-      "page": 4,
-      "kind": "figure",
-      "confidence": 0.954
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24051/fig3.webp",
-      "page": 2,
-      "kind": "figure",
-      "confidence": 0.967
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24051/fig4.webp",
-      "page": 6,
-      "kind": "table",
-      "confidence": 0.967
-    }
-  ]
+  "figures": []
 }

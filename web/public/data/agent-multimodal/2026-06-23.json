@@ -2,7 +2,7 @@
   "domain": "agent-multimodal",
   "display_name": "Realtime Multimodal Agent",
   "date": "2026-06-23",
-  "generated_at": "2026-06-25T13:05:14Z",
+  "generated_at": "2026-06-25T14:53:47Z",
   "papers": [
     {
       "arxiv_id": "2606.25041",
@@ -34,24 +34,24 @@
         "Yun Zheng",
         "Zoubin Bi"
       ],
-      "total_score": 0.7469963532101977,
+      "total_score": 0.7572176138285278,
       "scores": {
         "topic_relevance": 0.92,
-        "llm_assessment": 0.9200000000000002,
-        "other": 0.34332117736732526
+        "llm_assessment": 0.952,
+        "other": 0.3453920460950926
       },
       "tags": [
-        "HF Daily ★34",
+        "HF Daily ★36",
         "realtime voice agent"
       ],
-      "tldr_zh": "统一流式音视频交互基础模型",
+      "tldr_zh": "端到端低延迟全双工音视频交互模型",
       "detail_file": "agent-multimodal/2026-06-23/2606.25041.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.25041/thumb.webp"
+      "thumb": ""
     },
     {
       "arxiv_id": "2606.24051",
       "title": "DriveStack-VLA: Render-Teacher Alignment for BEV-Based DeepStack Vision-Language-Action Model",
-      "title_zh": "DriveStack-VLA：面向 BEV DeepStack Vision-Language-Action 驾驶模型的 Render-Teacher Alignment",
+      "title_zh": "DriveStack-VLA：面向 BEV-Based DeepStack Vision-Language-Action 模型的 Render-Teacher Alignment",
       "authors": [
         "Jingke Wang",
         "Zhenru Zhao",
@@ -65,19 +65,19 @@
         "Yukai Ma",
         "Yong Liu"
       ],
-      "total_score": 0.5292000000000001,
+      "total_score": 0.5982000000000001,
       "scores": {
         "topic_relevance": 0.68,
-        "llm_assessment": 0.524,
+        "llm_assessment": 0.7539999999999999,
         "other": 0.33333333333333337
       },
       "tags": [
         "Project Page",
         "data simulator training"
       ],
-      "tldr_zh": "用 BEV 与渲染教师增强 VLA 驾驶",
+      "tldr_zh": "用BEV与渲染对齐增强VLA驾驶规划",
       "detail_file": "agent-multimodal/2026-06-23/2606.24051.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24051/thumb.webp"
+      "thumb": ""
     },
     {
       "arxiv_id": "2606.24101",
@@ -91,37 +91,37 @@
         "Xingjian He",
         "Jing Liu"
       ],
-      "total_score": 0.506,
+      "total_score": 0.5712473787814468,
       "scores": {
         "topic_relevance": 0.6000000000000001,
-        "llm_assessment": 0.52,
-        "other": 0.36666666666666675
+        "llm_assessment": 0.718,
+        "other": 0.38615792927148906
       },
       "tags": [
         "data simulator training",
         "Accepted"
       ],
-      "tldr_zh": "用统一世界模型做前瞻式视觉导航规划",
+      "tldr_zh": "用统一世界模型做前瞻式视觉导航",
       "detail_file": "agent-multimodal/2026-06-23/2606.24101.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24101/thumb.webp"
+      "thumb": ""
     },
     {
       "arxiv_id": "2606.24169",
       "title": "Data Scale, Not Latency, Shapes Cross-Lingual Encoder Transfer in Streaming ASR",
-      "title_zh": "数据规模而非延迟决定流式 ASR 中跨语言 Encoder 迁移效果",
+      "title_zh": "数据规模而非延迟决定流式 ASR 中跨语言编码器迁移效果",
       "authors": [
         "Nenad Banfic"
       ],
-      "total_score": 0.3222,
+      "total_score": 0.37679999999999997,
       "scores": {
         "topic_relevance": 0.36000000000000004,
-        "llm_assessment": 0.394,
+        "llm_assessment": 0.576,
         "other": 0.2
       },
       "tags": [
         "general speech systems"
       ],
-      "tldr_zh": "低数据用多语初始化，大数据差异趋零",
+      "tldr_zh": "多语初始化优势随数据增大快速消失",
       "detail_file": "agent-multimodal/2026-06-23/2606.24169.json",
       "thumb": ""
     }
