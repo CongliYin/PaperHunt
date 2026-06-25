@@ -1,0 +1,65 @@
+{
+  "arxiv_id": "2606.25876",
+  "title": "The Web4 Agent Economy: A Large-Scale Empirical Study of the Landscape, Challenges, and Opportunities",
+  "title_zh": "Web4 Agent Economy：大规模实证研究",
+  "authors": [
+    "Yuhan Jin",
+    "Shuohan Wu",
+    "Chong Chen",
+    "Lingfeng Bao",
+    "Xiaohu Yang",
+    "Jiachi Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-24T14:20:51Z",
+  "abs_url": "https://arxiv.org/abs/2606.25876v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.25876",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The Internet is transitioning from Web3 toward Web4, where autonomous agents serve as independent economic actors. These agents can now hold crypto wallets, execute on-chain trades, and pay for external API calls. This transition calls for a new infrastructure stack capable of supporting key agent operations, including agent-to-tool interaction, agent-to-agent payments, and verifiable agent identity, represented by emerging protocols such as the Model Context Protocol, x402, and EIP-8004. Despite growing industrial interest in these protocols, the real-world Web4 agent ecosystem remains largely underexplored. To bridge this gap, we conduct the first large-scale empirical study of the Web4 ecosystem. Specifically, our study targets three interconnected questions: how Web4 agents are deployed and used in practice; what engineering challenges developers face when building Web4 agents; how current project communities respond to these challenges. To answer these questions, we analyze 99,448 multi-chain identity registrations, 317,596,323 transaction logs, the source code of 341 MCP projects, and 349 filtered GitHub issues. Our findings reveal that autonomous agents have established a highly active machine-to-machine payment economy, processing millions of daily transactions. However, this growth is built on immature infrastructure, including identity/authorization practice, cross-environment operation, and payment interoperability. Our follow-up analysis shows that community responses are visible but unevenly distributed across repositories, and payment interoperability remains the most persistent unresolved bottleneck. Overall, this study reveals a critical gap between the rapid growth of the Web4 agent economy and its fragile underlying infrastructure, highlighting future directions for building a more secure Web4 agent ecosystem.",
+  "abstract_zh": "本文研究 Web4 时代自主代理（agent）作为独立经济主体的兴起，重点分析其在链上交易、外部 API 支付、身份认证与 agent-to-agent 交互中的真实生态。作者通过 99,448 条多链身份注册、317,596,323 条交易日志、341 个 MCP 项目源码以及 349 条筛选后的 GitHub issues，首次对 Web4 agent 生态进行大规模实证研究。结果表明，autonomous agents 已形成活跃的 machine-to-machine 支付经济，每日处理数百万笔交易，但其增长建立在尚不成熟的基础设施之上，主要问题包括身份/授权实践不足、跨环境运行困难以及支付互操作性欠缺。进一步分析发现，社区对这些问题已有回应，但分布不均，其中 payment interoperability 仍是最持久的瓶颈。整体而言，研究揭示了 Web4 agent 经济快速扩张与底层基础设施脆弱之间的显著落差，并指出了未来构建更安全生态的方向。",
+  "key_points_zh": [
+    "首次对 Web4 agent 生态开展大规模实证研究，覆盖身份注册、交易日志、MCP 项目和 GitHub issues。",
+    "autonomous agents 已形成高活跃的 machine-to-machine 支付经济，每日处理数百万笔交易。",
+    "当前基础设施仍不成熟，主要痛点包括身份/授权、跨环境运行和支付互操作性。",
+    "社区对工程问题已有响应，但分布不均，repository 间差异明显。",
+    "payment interoperability 是最持续、最难解决的瓶颈。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.6,
+    "problem_significance": 0.78,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.46,
+    "lasting_value": 0.72,
+    "llm_avg": 0.6599999999999999,
+    "comment": "This empirical study is useful for understanding emerging agent infrastructure, especially identity, payments, and tool-interaction bottlenecks.",
+    "comment_zh": "这项实证研究有助于理解新兴代理基础设施，尤其是身份、支付和工具交互方面的瓶颈。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6599999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

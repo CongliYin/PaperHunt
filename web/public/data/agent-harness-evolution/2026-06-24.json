@@ -1,0 +1,230 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-06-24",
+  "generated_at": "2026-06-25T21:52:14Z",
+  "papers": [
+    {
+      "arxiv_id": "2606.25605",
+      "title": "Constraint Tax in Open-Weight LLMs: An Empirical Study of Tool Calling Suppression Under Structured Output Constraints",
+      "title_zh": "开放权重 LLM 中的约束税：结构化输出约束下 Tool Calling 抑制的实证研究",
+      "authors": [
+        "Fangzheng Li",
+        "Aimin Zhang",
+        "Chen Lv"
+      ],
+      "total_score": 0.7232000000000002,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8240000000000001,
+        "other": 0.46666666666666673
+      },
+      "tags": [
+        "GitHub",
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "JSON Schema 约束会抑制 open-weight LLM 的工具调用",
+      "detail_file": "agent-harness-evolution/2026-06-24/2606.25605.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.26027",
+      "title": "Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It",
+      "title_zh": "为什么多步工具使用强化学习会崩溃，以及监督信号如何修复它",
+      "authors": [
+        "Yupu Hao",
+        "Zhuoran Jin",
+        "Huanxuan Liao",
+        "Kang Liu",
+        "Jun Zhao"
+      ],
+      "total_score": 0.7148000000000001,
+      "scores": {
+        "topic_relevance": 1.0,
+        "llm_assessment": 0.766,
+        "other": 0.2833333333333334
+      },
+      "tags": [
+        "GitHub",
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "SFT+RL可缓解工具使用崩溃，但OOD泛化仍弱",
+      "detail_file": "agent-harness-evolution/2026-06-24/2606.26027.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.25514",
+      "title": "Unlocking Model Potentials Through Adaptive Multi-Agent Scaffolding for Efficient Issue Resolution",
+      "title_zh": "通过自适应多智能体脚手架释放模型潜力，实现高效问题修复",
+      "authors": [
+        "Yang Chen",
+        "Aliya Ahmad",
+        "Yiheng Zhou",
+        "Reyhaneh Jabbarvand"
+      ],
+      "total_score": 0.6482066295022214,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.8500000000000002,
+        "other": 0.24402209834073718
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "用自适应多智能体脚手架显著提升代码修复效率与效果",
+      "detail_file": "agent-harness-evolution/2026-06-24/2606.25514.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.25332",
+      "title": "Decoupling Reconnaissance and Exploitation: Measuring the Capability Boundaries of LLM-Based Web Penetration Testing",
+      "title_zh": "解耦侦察与利用：衡量基于LLM的Web渗透测试能力边界",
+      "authors": [
+        "Liwei Yu",
+        "Shuo Li",
+        "Ming Zhou",
+        "Ge Chu",
+        "Yan Guo"
+      ],
+      "total_score": 0.6480000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.72,
+        "other": 0.2666666666666667
+      },
+      "tags": [
+        "Code soon",
+        "session context memory"
+      ],
+      "tldr_zh": "解耦评估揭示LLM渗透测试能力鸿沟",
+      "detail_file": "agent-harness-evolution/2026-06-24/2606.25332.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.25588",
+      "title": "IntentTester: Intent-Driven Multi-agent Framework for Cross-Library Test Migration",
+      "title_zh": "IntentTester：面向跨库测试迁移的意图驱动多智能体框架",
+      "authors": [
+        "Yi Gao",
+        "Ziyuan Zhang",
+        "Xing Hu",
+        "Xiaohu Yang",
+        "Xin Xia"
+      ],
+      "total_score": 0.5446000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.48200000000000004,
+        "other": 0.2666666666666667
+      },
+      "tags": [
+        "Code soon",
+        "harness multi agent orchestration"
+      ],
+      "tldr_zh": "用语义意图替代代码映射，实现跨库跨语言测试迁移",
+      "detail_file": "agent-harness-evolution/2026-06-24/2606.25588.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.25532",
+      "title": "Agentic evolution of physically constrained foundation models",
+      "title_zh": "具备物理约束的基础模型智能进化",
+      "authors": [
+        "Jiangwei Zhang",
+        "Wen Sun",
+        "Chong Wang",
+        "Shiyao Li",
+        "Cheng Che",
+        "Chunjing Han",
+        "Dan Meng",
+        "Jian Yang",
+        "Yu Wang",
+        "Rui Hou"
+      ],
+      "total_score": 0.5224000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.36800000000000005,
+        "other": 0.2
+      },
+      "tags": [
+        "closed loop agent improvement"
+      ],
+      "tldr_zh": "知识驱动的多智能体实现硬件约束下模型自动进化",
+      "detail_file": "agent-harness-evolution/2026-06-24/2606.25532.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.25656",
+      "title": "Is GraphRAG Needed? From Basic RAG to Graph-/Agentic Solutions with Context Optimization",
+      "title_zh": "Is GraphRAG Needed? 从基础 RAG 到 Graph-/Agentic 方案与上下文优化",
+      "authors": [
+        "Long Chen",
+        "Ryan Razkenari",
+        "Yuxuan Zhou",
+        "Yuan Tian",
+        "Rahul Ghosh",
+        "Venkatesh Pappakrishnan",
+        "Disha Ahuja",
+        "Vidya Sagar Ravipati"
+      ],
+      "total_score": 0.5143824593811418,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.29,
+        "other": 0.19794153127047226
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "系统比较RAG/GraphRAG/Agentic RAG适用性",
+      "detail_file": "agent-harness-evolution/2026-06-24/2606.25656.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.25876",
+      "title": "The Web4 Agent Economy: A Large-Scale Empirical Study of the Landscape, Challenges, and Opportunities",
+      "title_zh": "Web4 Agent Economy：大规模实证研究",
+      "authors": [
+        "Yuhan Jin",
+        "Shuohan Wu",
+        "Chong Chen",
+        "Lingfeng Bao",
+        "Xiaohu Yang",
+        "Jiachi Chen"
+      ],
+      "total_score": 0.5140000000000001,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.6599999999999999,
+        "other": 0.2
+      },
+      "tags": [
+        "production agent platform"
+      ],
+      "tldr_zh": "Web4 agent 经济增长迅速，但基础设施仍脆弱。",
+      "detail_file": "agent-harness-evolution/2026-06-24/2606.25876.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.25422",
+      "title": "Information flow security on persistent memory",
+      "title_zh": "持久内存上的信息流安全（Information flow security on persistent memory）",
+      "authors": [
+        "Graeme Smith"
+      ],
+      "total_score": 0.40406680171977694,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.062,
+        "other": 0.21822267239925625
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "提出持久内存信息流逻辑，并用rif推理x86",
+      "detail_file": "agent-harness-evolution/2026-06-24/2606.25422.json",
+      "thumb": ""
+    }
+  ]
+}

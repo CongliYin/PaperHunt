@@ -1,0 +1,63 @@
+{
+  "arxiv_id": "2606.25514",
+  "title": "Unlocking Model Potentials Through Adaptive Multi-Agent Scaffolding for Efficient Issue Resolution",
+  "title_zh": "通过自适应多智能体脚手架释放模型潜力，实现高效问题修复",
+  "authors": [
+    "Yang Chen",
+    "Aliya Ahmad",
+    "Yiheng Zhou",
+    "Reyhaneh Jabbarvand"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-24T07:48:05Z",
+  "abs_url": "https://arxiv.org/abs/2606.25514v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.25514",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Resolving issues with ambiguous and incomplete descriptions, particularly concerning complex bugs, requires a sophisticated, long-horizon workflow. Agents must navigate codebases to locate the root cause, reproduce the failure, implement a fix, and validate the resulting patch. Inefficient context management, thereby, can lead to rapid context degradation and context poisoning, preventing successful resolution. We propose icat-agent, a decentralized, multi-agent scaffolding that replaces shared context with synchronous, event-based message passing. Utilizing a rubric-based issue quality check, icat-agent strategically pivots its workflow: it initiates parallel patching and validation for well-defined issues, while deploying preliminary exploration for low-quality ones. A comprehensive evaluation of icat-agent on SWE-bench Verified and SWE-bench Pro demonstrates that it consistently outperforms prominent baselines across all difficulty levels, including SWE-agent, mini-SWE-agent, and Claude Code, while using the same underlying models, improving by 3.6-8.4% on SWE-bench Verified and 6.3-18.5% on SWE-bench Pro. icat-agent is also computationally efficient, reducing the average cost by $1.18 per instance compared with the multi-agent Claude Code baseline. Our findings reveal that a robust scaffold such as icat-agent unlocks substantial latent capability within a fixed model, with the same backbone resolving markedly more issues under icat-agent than under existing scaffolds. icat-agent +GPT-5.4-xhigh resolves 67.4% of SWE-bench Pro problems, outperforming the current best result on SWE-bench Pro (59.10%, mini-SWE-agent+GPT-5.4-xhigh) by 8.3 percentage points.",
+  "abstract_zh": "针对描述含糊、不完整且通常涉及复杂 bug 的问题修复任务，需要一个长时程工作流：智能体必须在代码库中定位根因、复现失败、实现修复并验证补丁。若上下文管理低效，容易导致上下文快速退化和污染，从而无法成功解决问题。本文提出 icat-agent，一种去中心化的多智能体脚手架，用同步的、基于事件的消息传递替代共享上下文。借助基于 rubric 的问题质量检查，icat-agent 会动态切换工作流：对于定义清晰的问题，启动并行补丁与验证；对于质量较低的问题，则先进行初步探索。作者在 SWE-bench Verified 和 SWE-bench Pro 上进行了全面评测，结果表明，在使用相同底座模型的情况下，icat-agent 在所有难度级别上都持续优于 SWE-agent、mini-SWE-agent 和 Claude Code，分别在 SWE-bench Verified 上提升 3.6-8.4%，在 SWE-bench Pro 上提升 6.3-18.5%。此外，icat-agent 还更具计算效率，相比多智能体 Claude Code 基线，平均每个实例降低 1.18 美元成本。实验结果表明，像 icat-agent 这样的强脚手架能够在固定模型下释放显著潜在能力，使同一 backbone 在 icat-agent 下解决的问题数量远多于现有脚手架。特别地，icat-agent +GPT-5.4-xhigh 在 SWE-bench Pro 上达到 67.4% 的解决率，超过当前最佳结果 59.10%（mini-SWE-agent+GPT-5.4-xhigh）8.3 个百分点。",
+  "key_points_zh": [
+    "提出 icat-agent：一种去中心化的多智能体脚手架，使用同步事件式消息传递替代共享上下文。",
+    "通过 rubric-based 质量检查判断问题质量，并自适应切换为并行补丁验证或前期探索流程。",
+    "在 SWE-bench Verified 和 SWE-bench Pro 上，ic at-agent 在相同底座模型下优于 SWE-agent、mini-SWE-agent 和 Claude Code。",
+    "性能提升达到 SWE-bench Verified 上 3.6-8.4%，SWE-bench Pro 上 6.3-18.5%，同时平均每实例成本降低 1.18 美元。",
+    "结果说明：合适的 scaffold 能显著释放固定模型的潜力；icat-agent +GPT-5.4-xhigh 在 SWE-bench Pro 上达到 67.4% 的新高。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.8,
+    "problem_significance": 0.9,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8500000000000002,
+    "comment": "This is strong agent-scaffolding work because it improves long-horizon issue resolution with a more robust multi-agent execution design.",
+    "comment_zh": "这是一篇很强的代理脚手架论文，通过更稳健的多代理执行设计提升了长程问题修复能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5641325900444227,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8500000000000002,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 15,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

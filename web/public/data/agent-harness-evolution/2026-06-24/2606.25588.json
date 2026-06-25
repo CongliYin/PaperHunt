@@ -1,0 +1,64 @@
+{
+  "arxiv_id": "2606.25588",
+  "title": "IntentTester: Intent-Driven Multi-agent Framework for Cross-Library Test Migration",
+  "title_zh": "IntentTester：面向跨库测试迁移的意图驱动多智能体框架",
+  "authors": [
+    "Yi Gao",
+    "Ziyuan Zhang",
+    "Xing Hu",
+    "Xiaohu Yang",
+    "Xin Xia"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-24T08:59:01Z",
+  "abs_url": "https://arxiv.org/abs/2606.25588v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.25588",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Unit tests capture both functional checks and domain-specific knowledge, but this knowledge remains locked within individual projects and is rarely reused across libraries with overlapping functionality. Existing migration techniques based on structural code mappings (e.g., API signatures) often break down under divergent designs or cross-language settings, resulting in non-executable migrated tests. In this paper, we present IntentTester, a multi-agent framework for intent-driven test reuse. Instead of translating raw code, IntentTester abstracts tests into a language-agnostic Test Description Language (TDL), aligns them with semantically related entities and dependencies in a repository graph, and synthesizes executable tests through LLM-guided reasoning and iterative validation. This design enables cross-library and cross-language migration without manual intervention, producing migrated tests that existing structure-mapping approaches cannot achieve. We evaluate IntentTester on nine open-source projects across three domains (JSON, HTML, and Time) and two languages (Java and Python). IntentTester generates 2,776 syntactically correct tests with 85\\% correctness; in comparison, the two baselines achieve 51\\% and 43\\%. Among them, 2,410 tests executed successfully, yielding a 74\\% effectiveness rate. Beyond higher success rates, IntentTester also surfaced previously unknown defects including stack overflows, null dereferences, and parsing inconsistencies, several of which have been acknowledged or patched by maintainers. Our results show that intent-driven migration shifts the focus from code mappings to semantic alignment, allowing practical cross-library and cross-language test reuse while improving test quality and exposing implementation flaws.",
+  "abstract_zh": "单元测试不仅包含功能校验，还沉淀了领域知识，但这些知识通常被局限在单个项目中，难以在功能相近的库之间复用。现有基于结构映射（如 API 签名）的迁移方法，在设计差异或跨语言场景下往往失效，生成的测试不可执行。为此，本文提出 IntentTester，一个面向测试复用的意图驱动多智能体框架。该方法不直接翻译源代码，而是先将测试抽象为语言无关的 Test Description Language (TDL)，再结合 repository graph 中语义相关的实体与依赖进行对齐，最后在 LLM 引导的推理与迭代验证下合成可执行测试。该设计支持跨库、跨语言迁移，无需人工干预，并能生成传统结构映射方法难以获得的测试。作者在 9 个开源项目上进行了评估，覆盖 JSON、HTML 和 Time 三个领域，以及 Java 和 Python 两种语言。IntentTester 生成了 2,776 个语法正确测试，正确率为 85%，而两个基线分别为 51% 和 43%；其中 2,410 个测试成功执行，有效性达到 74%。此外，该框架还发现了多种未知缺陷，包括栈溢出、空指针解引用和解析不一致，部分已被维护者确认或修复。结果表明，意图驱动迁移将重点从代码映射转向语义对齐，从而更实用地支持跨库、跨语言测试复用，并提升测试质量、暴露实现缺陷。",
+  "key_points_zh": [
+    "提出 IntentTester：一种 intent-driven 的多智能体测试迁移框架。",
+    "先将测试抽象为语言无关的 TDL，再通过 repository graph 做语义对齐。",
+    "结合 LLM-guided 推理与迭代验证，合成可执行的跨库、跨语言测试。",
+    "在 9 个项目上达到 85% 语法正确率、74% 执行成功率，优于基线。",
+    "还发现了栈溢出、空指针解引用、解析不一致等未知缺陷。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.5,
+    "potential_impact": 0.48,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.5,
+    "llm_avg": 0.48200000000000004,
+    "comment": "This framework is practically useful for test migration, but it is more about code reuse than agent evolution or harness design.",
+    "comment_zh": "这个框架对测试迁移很实用，但更偏向代码复用，而不是代理演化或运行时设计。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.48200000000000004,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

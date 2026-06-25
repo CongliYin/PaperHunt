@@ -1,0 +1,59 @@
+{
+  "arxiv_id": "2606.25422",
+  "title": "Information flow security on persistent memory",
+  "title_zh": "持久内存上的信息流安全（Information flow security on persistent memory）",
+  "authors": [
+    "Graeme Smith"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-24T05:31:13Z",
+  "abs_url": "https://arxiv.org/abs/2606.25422v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.25422",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Persistent memory is a recently proposed memory paradigm that delivers many system-wide benefits, including improved runtime efficiency and the ability of programs to recover from power outages and system crashes. While recent research has investigated techniques for proving functional correctness of programs running on related architectures, this is not the case for the orthogonal concept of information flow security. In this paper, we provide an information flow logic for an unstructured language (i.e., with gotos rather than loops) modelling a simple assembly language. We apply this logic to x86 assembly using a notion of reordering interference freedom (rif) to reason about potential out-of-order propagation of instructions to memory. We then show how this same notion of rif can be used to similarly reason about information flow on persistent memory.",
+  "abstract_zh": "持久内存（persistent memory）是一种新近提出的内存范式，能够提升系统运行效率，并支持程序在断电或系统崩溃后恢复。尽管相关架构上的程序功能正确性已被较多研究验证，但与之正交的信息流安全（information flow security）仍缺乏系统方法。本文针对一种非结构化语言（使用 goto 而非循环）建立了信息流逻辑，用以刻画一个简单汇编语言模型。随后，作者将该逻辑应用于 x86 assembly，并借助重排序干扰自由（reordering interference freedom, rif）来推理指令可能以乱序方式传播到内存的情况。最后，论文说明同样的 rif 概念也可用于推理持久内存上的信息流安全。",
+  "key_points_zh": [
+    "持久内存兼具高效运行与崩溃恢复能力，但其信息流安全研究不足。",
+    "论文为带 goto 的非结构化语言构建了信息流逻辑，形式化描述简单汇编语义。",
+    "引入 reordering interference freedom（rif），处理 x86 中指令乱序传播到内存的问题。",
+    "证明 rif 不仅适用于 x86 汇编，也可用于持久内存上的信息流安全推理。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.05,
+    "problem_significance": 0.08,
+    "potential_impact": 0.06,
+    "paradigm_shift": 0.04,
+    "lasting_value": 0.08,
+    "llm_avg": 0.062,
+    "comment": "This is a solid systems-security paper, but it falls outside the agent harness and self-improving agent scope.",
+    "comment_zh": "这是一篇扎实的系统安全论文，但不属于代理基础设施或自我改进代理的范围。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4093360343955374,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.062,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

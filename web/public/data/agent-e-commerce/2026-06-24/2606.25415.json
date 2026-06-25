@@ -1,0 +1,64 @@
+{
+  "arxiv_id": "2606.25415",
+  "title": "S2-CAR: Segmentation-Supervised Complexity-Adaptive Recommendation",
+  "title_zh": "S2-CAR：分割监督的复杂度自适应推荐",
+  "authors": [
+    "Linjiang Guo",
+    "Nitin Bisht",
+    "Shiqing Wu",
+    "Xianzhi Wang",
+    "Guandong Xu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-24T05:24:18Z",
+  "abs_url": "https://arxiv.org/abs/2606.25415v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.25415",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Sequential recommendation aims to predict user preferences from interaction histories, yet existing models often struggle when behavior patterns become complex and heterogeneous. A key reason is that interaction histories are rarely uniform: users' interests shift in a latent way over time, yet existing models either treat the full sequence as a homogeneous context or rely on rigid time-window segmentation that misaligns with true intent boundaries. This mis-segmentation not only introduces cross-intent interference at intermediate sequence positions but also leads to over-reliance on short-term interest signals. To address this, we propose S2-CAR, a segmentation-supervised and complexity-adaptive framework for sequential recommendation that models user intent as a continuous latent energy state. Specifically, it uses the Context-Aware Soft Temporal Point Process (Soft-TPP) to segment boundaries triggered by the natural decay of latent-state energy rather than fixed intervals, enabling intent segmentation without fixed time-gap rules. Next, upon this segmentation, a Segment-Count-Adaptive Multi-Intent Extraction module hierarchically aggregates intent-coherent segments into a compact set of multi-interest representations. Extensive experiments on 3 representative public benchmark datasets spanning movie, e-commerce, and gaming domains across 13 baselines demonstrate that S2-CAR consistently outperforms state-of-the-art methods across all datasets and metrics. Further analysis shows that the proposed energy-based segmentation serves as a plug-and-play module, yielding consistent improvements when integrated into existing sequential recommendation backbones.",
+  "abstract_zh": "序列推荐旨在根据用户交互历史预测其偏好，但当行为模式变得复杂且异质时，现有模型往往表现不足。根本原因在于交互历史通常并不均匀：用户兴趣会随时间以隐式方式变化，而现有方法要么将整段序列视为同质上下文，要么依赖固定时间窗切分，导致与真实意图边界不匹配。这种切分偏差不仅会在序列中间位置引入跨意图干扰，还会使模型过度依赖短期兴趣信号。为此，作者提出 S2-CAR，一个分割监督且复杂度自适应的序列推荐框架，将用户意图建模为连续的潜在能量状态。具体而言，框架采用 Context-Aware Soft Temporal Point Process (Soft-TPP)，根据潜在状态能量的自然衰减来触发边界切分，而非依赖固定时间间隔规则，从而实现无需人工设定间隔的意图分割。随后，基于该分割结果，Segment-Count-Adaptive Multi-Intent Extraction 模块对具有一致意图的片段进行层次化聚合，形成紧凑的多兴趣表示。在覆盖电影、电商和游戏三个领域的 3 个公开基准数据集上，作者与 13 个 baseline 进行大量实验，结果表明 S2-CAR 在所有数据集和指标上均稳定优于 SOTA 方法。进一步分析显示，基于能量的分割机制还可作为即插即用模块，与现有序列推荐 backbone 结合并持续带来收益。",
+  "key_points_zh": [
+    "指出传统序列推荐的核心问题是：固定窗口切分与真实意图边界不匹配，易造成跨意图干扰。",
+    "提出 S2-CAR，将用户意图建模为连续潜在能量状态，用 Context-Aware Soft Temporal Point Process (Soft-TPP) 做自适应边界分割。",
+    "设计 Segment-Count-Adaptive Multi-Intent Extraction，对意图一致片段进行层次聚合，得到紧凑的多兴趣表示。",
+    "在 3 个公开基准数据集、覆盖电影/电商/游戏场景的实验中，S2-CAR 相比 13 个 baseline 稳定取得最佳结果。",
+    "能量式分割具有即插即用特性，可直接增强现有 sequential recommendation backbone。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.58,
+    "problem_significance": 0.66,
+    "potential_impact": 0.57,
+    "paradigm_shift": 0.31,
+    "lasting_value": 0.52,
+    "llm_avg": 0.528,
+    "comment": "The paper offers a reasonably novel adaptive segmentation method for sequential recommendation with solid benchmark gains, but it is still an incremental advance rather than a field-changing idea.",
+    "comment_zh": "本文提出了较新颖的自适应序列分割方法，并在基准上取得稳定提升，但整体仍属于增量改进而非范式变革。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.528,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

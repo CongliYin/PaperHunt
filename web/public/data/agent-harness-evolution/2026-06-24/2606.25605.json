@@ -1,0 +1,62 @@
+{
+  "arxiv_id": "2606.25605",
+  "title": "Constraint Tax in Open-Weight LLMs: An Empirical Study of Tool Calling Suppression Under Structured Output Constraints",
+  "title_zh": "开放权重 LLM 中的约束税：结构化输出约束下 Tool Calling 抑制的实证研究",
+  "authors": [
+    "Fangzheng Li",
+    "Aimin Zhang",
+    "Chen Lv"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-24T09:14:18Z",
+  "abs_url": "https://arxiv.org/abs/2606.25605v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.25605",
+  "links": {
+    "github": "https://github.com/Fzsama/Constrain-Tax-26-06.git.",
+    "project_page": null
+  },
+  "abstract_en": "Tool Calling and Structured Output are two core capabilities of modern Agent systems, yet their interaction under joint deployment conditions remains insufficiently understood. This paper reports a reproducible phenomenon observed in a production Agent system: when Tool Calling and JSON Schema constraints are simultaneously enabled, multiple open-weight models cease invoking tools despite maintaining high schema compliance. We refer to this behavior as Tool Suppression. Through controlled experiments across multiple model families and deployment settings, we consistently reproduce Tool Suppression under joint constraints, while tool execution and schema compliance remain functional when evaluated independently. Further analysis reveals that JSON Schema constraints are compiled into grammar-based token masks, causing tool-call tokens to become unreachable during decoding. This provides an implementation-level explanation for the observed behavior. To interpret the phenomenon, we formulate the Constraint Priority Inversion (CPI) hypothesis, which suggests that schema satisfaction may dominate action-selection behavior under multiple simultaneous constraints. We present CPI as a behavioral hypothesis consistent with the observed evidence rather than a verified internal mechanism. To mitigate the problem, we propose Transparent Two-Pass Execution, an inference-time strategy that decouples tool execution from schema-constrained response generation. Experimental results show that this approach restores tool invocation while preserving structured output guarantees without requiring model retraining. These findings suggest that evaluating tool use and structured output separately may overlook important reliability issues in production Agent systems. Code, data, and docs will be released at https://github.com/Fzsama/Constrain-Tax-26-06.git.",
+  "abstract_zh": "本文研究现代 Agent 系统中 Tool Calling 与 Structured Output 的联合部署问题。作者在生产环境中观察到：当 Tool Calling 与 JSON Schema 约束同时开启时，多个 open-weight model 会在保持较高 schema compliance 的同时停止调用工具，这一现象被称为 Tool Suppression。通过跨多模型家族与部署设置的受控实验，论文复现了该现象，并发现当两类约束分别单独评估时，工具执行与结构化输出均正常。进一步分析表明，JSON Schema 约束会被编译为基于 grammar 的 token mask，使得 tool-call token 在解码过程中变得不可达，从实现层面解释了该行为。为解释这一现象，作者提出 Constraint Priority Inversion (CPI) 假设，认为在多重约束下 schema 满足可能压倒动作选择；该假设是对观测证据的行为解释，而非已证实的内部机制。为缓解问题，论文提出 Transparent Two-Pass Execution，将工具执行与受约束的响应生成解耦。实验结果显示，该方法可在不重新训练模型的情况下恢复工具调用，同时保留结构化输出保证。研究提示，仅分别评估 tool use 和 structured output 可能会掩盖生产级 Agent 系统中的可靠性问题。",
+  "key_points_zh": [
+    "在生产 Agent 系统中，Tool Calling 与 JSON Schema 约束同时启用时，多个 open-weight model 出现 Tool Suppression：高 schema compliance 但不再调用工具。",
+    "作者通过多模型、多部署设置的受控实验复现了该现象，且工具执行与结构化输出在单独评估时都正常。",
+    "实现层面原因是 JSON Schema 被编译为 grammar-based token mask，导致 tool-call token 在解码时不可达。",
+    "论文提出 Constraint Priority Inversion (CPI) 假设，用于解释多重约束下 schema 满足可能优先于动作选择。",
+    "Transparent Two-Pass Execution 通过解耦工具执行与受约束生成，在无需 retraining 的情况下恢复工具调用并保留结构化输出。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8240000000000001,
+    "comment": "This paper exposes a production-relevant failure mode in tool calling under structured constraints and offers a practical inference-time fix.",
+    "comment_zh": "这篇论文揭示了结构化约束下工具调用的生产级失效模式，并给出了可行的推理时修复方案。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.6,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8240000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Fzsama/Constrain-Tax-26-06.git.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

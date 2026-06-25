@@ -1,0 +1,64 @@
+{
+  "arxiv_id": "2606.25332",
+  "title": "Decoupling Reconnaissance and Exploitation: Measuring the Capability Boundaries of LLM-Based Web Penetration Testing",
+  "title_zh": "解耦侦察与利用：衡量基于LLM的Web渗透测试能力边界",
+  "authors": [
+    "Liwei Yu",
+    "Shuo Li",
+    "Ming Zhou",
+    "Ge Chu",
+    "Yan Guo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-24T02:51:58Z",
+  "abs_url": "https://arxiv.org/abs/2606.25332v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.25332",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large Language Models (LLMs) have shown promise for automated penetration testing, yet existing end-to-end black-box evaluations are highly susceptible to error cascading: failures in early reconnaissance can mask an agent's actual ability to exploit vulnerabilities. To more accurately characterize these capabilities, we propose a two-stage decoupled evaluation framework that separates exploit execution from reconnaissance. Using ground-truth injection and knowledge-driven ablation across 70 high-fidelity web vulnerability testbeds, our framework isolates exploitation performance from reconnaissance noise. We empirically evaluate five open-source penetration-testing agents, covering multiagent, monolithic, and graph-driven architectures, on a strictly aligned subset of 50 representative vulnerabilities. The results reveal a substantial capability gap. With accurate vulnerability context, agents achieve a functional success rate of up to 90.0%, whereas autonomous reconnaissance, measured by targeted vulnerability recall, plateaus at approximately 50.0%, primarily due to failures in parsing unstructured telemetry. Cross-architectural analysis further reveals distinct capability niches: multi-agent isolation is more effective for long-sequence interactions such as de-serialization, while monolithic and graph-driven designs perform better on short-chain injections and cross-session access-control vulnerabilities, respectively. This decoupled evaluation work provides a fine-grained benchmarking protocol and an empirical basis for designing next-generation automated offensive security agents.",
+  "abstract_zh": "本文指出，现有基于LLM的端到端黑盒渗透测试评估容易受到“前序侦察失败导致后续利用能力被掩盖”的误差级联影响。为更准确刻画模型能力，作者提出一个两阶段解耦评估框架，将漏洞利用执行与侦察发现分离，并通过ground-truth injection与knowledge-driven ablation，在70个高保真Web漏洞测试床上进行测评。研究在严格对齐的50个代表性漏洞子集上评估了5种开源渗透测试agent，涵盖multiagent、monolithic和graph-driven三类架构。结果表明：当提供准确漏洞上下文时，agent的功能性成功率最高可达90.0%；而自主侦察的目标漏洞召回率仅约50.0%，主要瓶颈在于对非结构化telemetry的解析失败。进一步分析显示，不同架构存在互补优势：multi-agent更适合长链路交互如de-serialization，monolithic与graph-driven则分别在短链注入和跨会话访问控制漏洞上表现更好。该工作为自动化进攻安全agent提供了更细粒度的benchmark协议与设计依据。",
+  "key_points_zh": [
+    "提出将Web渗透测试拆分为侦察与利用的两阶段解耦评估框架，减少误差级联干扰。",
+    "在70个高保真Web漏洞测试床上，结合ground-truth injection与knowledge-driven ablation评估5种开源agent。",
+    "结果显示：给定准确漏洞上下文时，利用成功率可达90.0%，但自主侦察的漏洞召回率仅约50.0%。",
+    "主要瓶颈来自对非结构化telemetry的解析失败，而非纯粹的利用执行能力不足。",
+    "不同架构各有优势：multi-agent更擅长长链路交互，monolithic与graph-driven分别在短链注入和跨会话访问控制上更强。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.7,
+    "problem_significance": 0.76,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.74,
+    "llm_avg": 0.72,
+    "comment": "This paper improves offensive agent evaluation by decoupling reconnaissance from exploitation to isolate true capability boundaries.",
+    "comment_zh": "这篇论文通过将侦察与利用解耦来改进攻击型代理评估，从而更准确地刻画能力边界。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.72,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

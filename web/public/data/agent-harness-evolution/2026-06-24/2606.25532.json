@@ -1,0 +1,68 @@
+{
+  "arxiv_id": "2606.25532",
+  "title": "Agentic evolution of physically constrained foundation models",
+  "title_zh": "具备物理约束的基础模型智能进化",
+  "authors": [
+    "Jiangwei Zhang",
+    "Wen Sun",
+    "Chong Wang",
+    "Shiyao Li",
+    "Cheng Che",
+    "Chunjing Han",
+    "Dan Meng",
+    "Jian Yang",
+    "Yu Wang",
+    "Rui Hou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-24T08:07:59Z",
+  "abs_url": "https://arxiv.org/abs/2606.25532v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.25532",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Artificial intelligence increasingly drives automated scientific discovery, yet contemporary generalist agents lack physical grounding, frequently hallucinating hardware-incompatible designs. Here, we present a physically grounded, multi-agent discovery engine that autonomously architects hardware-compliant computing systems. Anchored by an Evolutionary Knowledge Graph structuring past scientific innovations, the framework extracts an \"algorithmic Chain-of-Thought\" to transform blind stochastic search into directed structural evolution. Applied to the extreme testbed of foundation model deployment, the engine evolved two hardware-aware compression methodologies surpassing human-engineered heuristics: Q-Enhance mitigates long-context accuracy loss in dense models, and MoE-Salient-AQ outperforms state-of-the-art manual sparse Mixture-of-Experts designs by 3.7% at sub-3-bit regimes. Utilizing a bandwidth-efficient Sensitivity Profile, we successfully deployed a massive 235-billion-parameter model onto a constrained dual-A100 server, reducing memory requirements by 75% with a marginal 0.64% accuracy degradation. By transforming unconstrained combinatorial search into knowledge-driven autonomy, this establishes a scalable hardware-software co-design paradigm for machine-driven discovery within strict physical boundaries.",
+  "abstract_zh": "人工智能正越来越多地用于自动化科学发现，但现有通用智能体缺乏物理约束，常会产生与硬件不兼容的设计。本文提出一种具备物理 grounding 的多智能体发现引擎，可自主设计符合硬件约束的计算系统。该框架以 Evolutionary Knowledge Graph 为核心，组织已有科学创新，并提取一种“algorithmic Chain-of-Thought”，将盲目的随机搜索转化为有方向的结构进化。作者将其用于基础模型部署这一极端测试场景，进化出两种硬件感知压缩方法：Q-Enhance 用于缓解稠密模型在长上下文下的精度下降，MoE-Salient-AQ 在亚 3-bit 量化下比最先进的人工设计稀疏 Mixture-of-Experts 方案高 3.7%。借助带宽高效的 Sensitivity Profile，研究还将一个 235-billion-parameter 大模型成功部署到受限的双 A100 服务器上，内存需求降低 75%，精度仅下降 0.64%。该工作将无约束的组合搜索转变为知识驱动的自主进化，为严格物理边界内的人机协同软硬件共设计提供了可扩展范式。",
+  "key_points_zh": [
+    "提出基于 Evolutionary Knowledge Graph 的多智能体发现引擎，把随机搜索转为知识驱动的结构进化。",
+    "在基础模型部署上自动发现两种硬件感知压缩方法：Q-Enhance 与 MoE-Salient-AQ。",
+    "MoE-Salient-AQ 在亚 3-bit 量化下优于人工稀疏 MoE 设计 3.7%。",
+    "借助 Sensitivity Profile，将 235B 参数模型部署到双 A100 上，内存降 75%，精度仅降 0.64%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.45,
+    "problem_significance": 0.35,
+    "potential_impact": 0.34,
+    "paradigm_shift": 0.3,
+    "lasting_value": 0.4,
+    "llm_avg": 0.36800000000000005,
+    "comment": "The paper is interesting as an evolutionary discovery system, but it is only weakly connected to agent harness infrastructure.",
+    "comment_zh": "这篇论文作为进化式发现系统很有意思，但与代理基础设施的关联较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.36800000000000005,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

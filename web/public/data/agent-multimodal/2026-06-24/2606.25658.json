@@ -1,0 +1,67 @@
+{
+  "arxiv_id": "2606.25658",
+  "title": "Towards a Dynamic and Fixed-budget Memory Bank for Efficient Streaming Video Understanding",
+  "title_zh": "面向高效流式视频理解的动态且固定预算记忆库",
+  "authors": [
+    "Baiyang Song",
+    "Yuli Lin",
+    "Qiong Wu",
+    "Tao Chen",
+    "Jun Peng",
+    "Xiao Chen",
+    "Yiyi Zhou",
+    "Rongrong Ji"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-24T10:11:08Z",
+  "abs_url": "https://arxiv.org/abs/2606.25658v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.25658",
+  "links": {
+    "github": "https://github.com/hktk07/CausalMem",
+    "project_page": null
+  },
+  "abstract_en": "Currently, streaming video understanding is still a daunting task for existing \\emph{multimodal large language models} (MLLMs). Its difficulties not only lie in handling the ever-increasing video frames, but also in the unpredictability of future video content and input instructions. In this paper, we study this task from the perspective of constructing a dynamic but fixed-budget memory bank, and propose a novel and training-free approach termed \\emph{\\textbf{CausalMem}}. CausalMem is dedicated to constructing a dynamic visual memory update mechanism, thereby maximizing the amount of information in streaming video within a limited memory space, much like the human brain. In practice, CausalMem estimates the redundancy of visual tokens and updates the memory bank via an online semantic basis, which models the principal semantics of the observed video stream. To validate CausalMem, we apply it to two representative MLLMs, namely LLaVA-OneVision and Qwen2.5-VL respectively, and conduct extensive experiments on both streaming and offline video understanding benchmarks. The experimental results not only show the great advantages than existing methods under both streaming and offline settings, \\emph{e.g.}, $+3.2\\%$ and $+3.0\\%$ average accuracy gains respectively, but also witness the superior semantic preservation for streaming videos, \\emph{e.g.}, using 12$k$ token budgets to memorize hour-long streaming videos, which achieves more than \\textbf{20$\\times$} visual token compression ratio and only occupies about \\textbf{82 MB} storage. \\textbf{Our code} is given in \\href{https://github.com/hktk07/CausalMem}{CausalMem}.",
+  "abstract_zh": "当前，流式视频理解对现有多模态大语言模型（multimodal large language models, MLLMs）仍然十分困难，原因不仅在于需要处理不断增长的视频帧，还在于未来视频内容和输入指令都具有不可预测性。本文从构建一个“动态但固定预算”的记忆库角度研究该问题，并提出一种新的、无需训练的方法 CausalMem。CausalMem 旨在建立动态的视觉记忆更新机制，在有限记忆空间内最大化保留流式视频的信息，类似人类大脑的记忆方式。具体来说，CausalMem 通过估计视觉 token 的冗余度，并借助一个在线语义基（online semantic basis）来更新记忆库，该语义基用于建模已观察视频流的主要语义。为验证 CausalMem 的有效性，作者将其应用于 LLaVA-OneVision 和 Qwen2.5-VL 两种代表性 MLLMs，并在流式与离线视频理解基准上进行了大量实验。结果表明，该方法在两种设置下均显著优于现有方法，例如平均准确率分别提升 3.2% 和 3.0%；同时它在流式视频的语义保真方面也表现出色，例如使用 12k token 预算即可记忆长达一小时的流式视频，实现超过 20× 的视觉 token 压缩比，且仅占用约 82 MB 存储空间。",
+  "key_points_zh": [
+    "提出训练-free 的 CausalMem，用于流式视频的动态记忆更新。",
+    "通过估计视觉 token 冗余并维护 online semantic basis，构建固定预算记忆库。",
+    "可插拔到 LLaVA-OneVision 和 Qwen2.5-VL，兼顾流式与离线视频理解。",
+    "在多个基准上优于现有方法，平均准确率提升约 3% 左右。",
+    "可用 12k token 记忆一小时视频，实现 20× 以上压缩，存储仅约 82 MB。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.83,
+    "problem_significance": 0.84,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.77,
+    "llm_avg": 0.784,
+    "comment": "A strong streaming-video memory paper that introduces a practical fixed-budget update mechanism with clear gains on long-horizon video understanding.",
+    "comment_zh": "这是一篇很强的流式视频记忆论文，提出了实用的固定预算更新机制，并在长时程视频理解上取得了明确提升。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.784,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/hktk07/CausalMem",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

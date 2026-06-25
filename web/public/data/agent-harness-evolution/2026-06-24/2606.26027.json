@@ -1,0 +1,64 @@
+{
+  "arxiv_id": "2606.26027",
+  "title": "Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It",
+  "title_zh": "为什么多步工具使用强化学习会崩溃，以及监督信号如何修复它",
+  "authors": [
+    "Yupu Hao",
+    "Zhuoran Jin",
+    "Huanxuan Liao",
+    "Kang Liu",
+    "Jun Zhao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-24T16:55:56Z",
+  "abs_url": "https://arxiv.org/abs/2606.26027v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.26027",
+  "links": {
+    "github": "https://github.com/hypasd-art/Tool-RL-Box.",
+    "project_page": null
+  },
+  "abstract_en": "Tool use enables large language models (LLMs) to perform complex tasks, and recent agentic reinforcement learning (RL) methods show promise for enhancing model capabilities. However, RL alone often leads to instability or limited gains in tool-use tasks. In our experiments, some models exhibit catastrophic collapse, where performance abruptly drops and tool-invocation structures fail. The analysis reveals that these failures stem from unexpected probability spikes in specific control tokens, disrupting structured execution, yet the underlying tool-use capability remains intact, merely obscured by specific formats. To address this, we systematically investigate a diverse set of supervisory signals, including off-policy supervision, hint-based guidance, erroneous example supervision, and others, applied under both synchronous and interleaved training schemes. We find that interleaving supervised fine-tuning (SFT) with RL substantially improves stability, but exhibits degraded performance under format and content out-of-distribution (OOD) evaluation. We also analyze the impact of learning rates and generalization across settings. These results highlight the importance of understanding RL failures and demonstrate how diverse supervisory signals can guide exploratory learning, enabling robust training of LLMs for complex, multi-step tool-use tasks. Our Code is available at https://github.com/hypasd-art/Tool-RL-Box.",
+  "abstract_zh": "工具使用使大语言模型（LLMs）能够完成复杂任务，近期面向智能体的强化学习（RL）方法也显示出提升模型能力的潜力。然而，单独依赖RL在工具使用任务中往往带来不稳定性或收益有限。作者实验发现，部分模型会出现灾难性崩溃：性能突然下降，工具调用结构失效。分析表明，这类失败源于某些控制 token 的概率异常飙升，破坏了结构化执行，但模型底层的工具使用能力仍然存在，只是被特定格式掩盖。为此，作者系统研究了多种监督信号，包括 off-policy supervision、hint-based guidance、erroneous example supervision 等，并比较了同步与交错训练方案。结果显示，将监督微调（SFT）与RL交错训练能显著提升稳定性，但在格式和内容分布外（OOD）评测上性能会下降。论文还分析了学习率以及不同设置下的泛化表现，指出理解RL失效机制并引入多样化监督信号，有助于引导探索式学习，从而更稳健地训练用于复杂多步工具使用任务的LLMs。",
+  "key_points_zh": [
+    "单独使用RL训练工具调用时，模型可能因控制 token 概率异常飙升而发生灾难性崩溃。",
+    "崩溃更多是“格式失效”而非能力丢失：底层工具使用能力仍然存在。",
+    "off-policy supervision、hint-based guidance、erroneous example supervision 等监督信号可显著改善训练稳定性。",
+    "交错进行 SFT 与 RL 比纯 RL 更稳，但在格式与内容 OOD 评测中泛化会下降。",
+    "学习率和训练编排方式会明显影响多步工具使用 RL 的稳定性与泛化能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.82,
+    "potential_impact": 0.79,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.76,
+    "llm_avg": 0.766,
+    "comment": "This paper is valuable for agent training because it diagnoses tool-use RL collapse and shows how supervisory signals can stabilize multi-step execution.",
+    "comment_zh": "这篇论文有助于代理训练，因为它诊断了工具使用强化学习的崩溃问题，并展示了监督信号如何稳定多步执行。"
+  },
+  "scores": {
+    "topic_relevance": 1.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.766,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/hypasd-art/Tool-RL-Box.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

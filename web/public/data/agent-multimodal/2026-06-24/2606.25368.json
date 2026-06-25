@@ -1,0 +1,63 @@
+{
+  "arxiv_id": "2606.25368",
+  "title": "Hypergraph Normal World Models for Logical Visual Anomaly Detection",
+  "title_zh": "用于逻辑视觉异常检测的超图正常世界模型",
+  "authors": [
+    "Weizhi Nie",
+    "Zibo Xu",
+    "Weijie Wang",
+    "Yuting Su"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-24T03:56:50Z",
+  "abs_url": "https://arxiv.org/abs/2606.25368v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.25368",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Visual anomaly detection is often deployed with only normal training images. Most one-class detectors map test patches or features to a normal reference distribution. This works well for local structural defects. Logical anomalies are different. Each visible part may look normal, while the whole image violates a normal count, co-occurrence, or spatial relation. This paper studies whether a model can learn such a category-specific normal world from nominal images alone. We propose the Hypergraph Normal World Model, a normal-only detector that distills frozen DINOv2 patch tokens into patch, relation, and hypergraph statistics. It builds spatial hyperedges over token groups. It then scores each test image with an information quotient that separates local, relational, hyperedge, and hyperedge-relation evidence. On the available MVTec LOCO breakfast-box validation data, the full hypergraph model improves logical anomaly AUROC from 0.8434 for DINOv2 patch-kNN to 0.9279. It also improves over the non-hypergraph variant, from 0.9013 to 0.9279. Few-shot experiments show that the model remains effective with very limited normal images. We also test whether the score reflects normal-world knowledge rather than a shallow mapping. t-SNE separates logical anomalies in the learned energy space. Relation counterfactuals increase the information quotient by 83.13 on average. Random hypergraphs reduce logical AUROC, and hyperedge attribution is much larger on logical anomalies. Qualitative examples show that high scores are driven by relation-bearing terms. These results suggest that logical visual anomaly detection should model normal relations, not only normal local patches.",
+  "abstract_zh": "本文关注仅使用正常训练图像的视觉异常检测。传统 one-class 方法通常将测试 patch 或特征映射到正常参考分布，对局部结构缺陷有效，但难以发现逻辑异常：单个可见部件可能都正常，整体却违反正常的数量、共现或空间关系。为此，论文提出 Hypergraph Normal World Model，一种仅依赖正常样本的检测器，将冻结的 DINOv2 patch tokens 蒸馏为 patch、relation 与 hypergraph 统计量，并在 token 组上构建空间 hyperedges。测试时，模型使用 information quotient 综合局部、关系、超边及超边关系证据进行评分。在 MVTec LOCO breakfast-box 验证集上，完整超图模型将逻辑异常 AUROC 从 DINOv2 patch-kNN 的 0.8434 提升到 0.9279，也优于非超图变体的 0.9013。Few-shot 实验表明其在极少正常图像下仍有效。进一步分析显示，t-SNE 可在学习到的 energy space 中分离逻辑异常；relation counterfactuals 平均使 information quotient 增加 83.13；随机超图会降低逻辑 AUROC；逻辑异常上的 hyperedge attribution 更高。结果表明，逻辑视觉异常检测应建模正常关系，而不只是正常局部 patch。",
+  "key_points_zh": [
+    "论文针对逻辑视觉异常检测：异常不一定表现为局部缺陷，而可能是数量、共现或空间关系违反正常模式。",
+    "提出 Hypergraph Normal World Model，基于冻结 DINOv2 patch tokens，学习 patch、relation、hypergraph 等多层正常统计，并通过 information quotient 进行异常评分。",
+    "在 MVTec LOCO breakfast-box 验证集上，逻辑异常 AUROC 达到 0.9279，显著优于 DINOv2 patch-kNN 的 0.8434 和非超图变体的 0.9013。",
+    "Few-shot 结果显示模型在正常样本很少时仍具有效果，说明其对正常世界结构的建模具有一定数据效率。",
+    "反事实关系、随机超图消融与 attribution 分析表明，性能提升主要来自对关系和超边结构的建模，而非浅层特征匹配。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.56,
+    "potential_impact": 0.48,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.5,
+    "llm_avg": 0.528,
+    "comment": "The paper offers a thoughtful hypergraph-based approach to logical anomaly detection, but its value is mostly confined to a narrow inspection setting.",
+    "comment_zh": "这篇论文为逻辑异常检测提供了有想法的超图方法，但其价值主要局限于较窄的检测场景。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.528,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

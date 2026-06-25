@@ -1,0 +1,67 @@
+{
+  "arxiv_id": "2606.25656",
+  "title": "Is GraphRAG Needed? From Basic RAG to Graph-/Agentic Solutions with Context Optimization",
+  "title_zh": "Is GraphRAG Needed? 从基础 RAG 到 Graph-/Agentic 方案与上下文优化",
+  "authors": [
+    "Long Chen",
+    "Ryan Razkenari",
+    "Yuxuan Zhou",
+    "Yuan Tian",
+    "Rahul Ghosh",
+    "Venkatesh Pappakrishnan",
+    "Disha Ahuja",
+    "Vidya Sagar Ravipati"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-24T10:11:02Z",
+  "abs_url": "https://arxiv.org/abs/2606.25656v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.25656",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As advanced RAG variants like GraphRAG and Agentic RAG emerge, one leading question is when and how to use them. Here, we introduce a framework for different RAG scenarios evaluation and comparison on semi-structured knowledge bases, including regular RAG, GraphRAG, Modular RAG and Agentic RAG. We provide implementation for 9 standardized RAG scenarios, and conduct experiments for a comprehensive comparison. These scenarios are designed for real use cases regarding data and domain restrictions, spanning from simple document-based retrieval to advanced features such as hybrid text-graph retrieval, integration with computed or pre-defined domain knowledge graphs, agentic multi-step planning, and agent-graph integration. Besides, we present a novel context engineering method for GraphRAG and Agentic RAG, addressing the context/memory overflow issues, efficiently managing text and graph retrievals with new representations and agentic loop design, leading to 19%-53% reduction on token usage. Moreover, further analysis identifies a retrieval-generation gap where expanded retrieval does not proportionally improve generation quality, suggesting retrieval-oriented metrics overstate advanced retrieval benefits. This work provides data-driven insights on when and how to use them for building production-ready intelligent RAG systems.",
+  "abstract_zh": "本文围绕“何时以及如何使用 GraphRAG 和 Agentic RAG”这一问题，提出了一个用于半结构化知识库场景下的 RAG 评估与比较框架，覆盖 regular RAG、GraphRAG、Modular RAG 和 Agentic RAG 等方案。作者实现了 9 个标准化 RAG 场景，并通过实验对这些方法进行了系统比较，场景设计面向真实应用需求，从简单的文档检索扩展到混合 text-graph 检索、结合计算得到或预定义的领域知识图谱、agentic 多步规划以及 agent-graph 集成等复杂能力。除此之外，论文提出一种面向 GraphRAG 和 Agentic RAG 的新型 context engineering 方法，用于缓解上下文/记忆溢出问题，通过新的表示方式与 agentic loop 设计，更高效地管理文本与图检索，token 使用量降低 19%–53%。进一步分析还发现，retrieval 与 generation 之间存在明显 gap：检索结果扩展并不一定能同比提升生成质量，这表明仅依赖 retrieval-oriented 指标会高估高级检索方法的实际收益。该工作为构建 production-ready 的智能 RAG 系统提供了数据驱动的选型与设计依据。",
+  "key_points_zh": [
+    "提出面向半结构化知识库的 RAG 评估框架，统一比较 regular RAG、GraphRAG、Modular RAG 和 Agentic RAG。",
+    "实现 9 个标准化 RAG 场景，覆盖从文档检索到 hybrid text-graph、知识图谱融合、agentic 多步规划等真实需求。",
+    "提出新的 context engineering 方法，缓解上下文和记忆溢出，token 使用量降低 19%–53%。",
+    "发现 retrieval-generation gap：更强的检索扩展不一定带来更好的生成质量。",
+    "指出仅看 retrieval-oriented 指标会高估高级 RAG 方案收益，需结合生成效果进行评估。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.35,
+    "problem_significance": 0.28,
+    "potential_impact": 0.3,
+    "paradigm_shift": 0.22,
+    "lasting_value": 0.3,
+    "llm_avg": 0.29,
+    "comment": "This is a useful RAG comparison study, but it is still mostly a retrieval-centric paper with limited agent-harness value.",
+    "comment_zh": "这是一篇有用的 RAG 对比研究，但整体仍偏检索导向，代理基础设施价值有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.29,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}
