@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.24655",
   "title": "AI-PAVE-Br: Leveraging Large Language Models for Enhanced Product Attribute Value Extraction through a Golden Set Approach",
-  "title_zh": "AI-PAVE-Br：通过 Golden Set 方法利用 Large Language Models 增强产品属性值抽取",
+  "title_zh": "AI-PAVE-Br：通过 Golden Set 方法利用大型语言模型增强产品属性值抽取",
   "authors": [
     "Murilo Gazzola",
     "Hugo Gobato Souto",
@@ -20,31 +20,32 @@
     "project_page": null
   },
   "abstract_en": "The explosive growth and complexity of product data within the dynamic Brazilian e-commerce landscape demand robust and specialized methods for structured information extraction. Traditional approaches to Product Attribute Value Extraction (PAVE) often struggle with the linguistic nuances and sheer diversity of product descriptions in Portuguese. To address this critical gap, this paper introduces two major contributions. First, we present AI-PAVEBr, a specialized system engineered with Large Language Models (LLMs) to perform high-accuracy PAVE specifically for Brazilian e-commerce catalogs. Second, to facilitate reproducible research and provide a definitive benchmark, we introduce and share the Golden Set, a new, meticulously curated, and manually annotated dataset for PAVE in Portuguese. We detail the creation process and structure (Entity, Category, Subcategories) of this high-quality reference set. Our experiments conclusively show that AI-PAVE-Br, leveraging targeted prompt engineering, dramatically outperforms conventional Named Entity Recognition (NER) baselines. This work not only delivers a superior, scalable solution for a major non-English market but also enriches the NLP community with a valuable, publicly available resource for future PAVE research.",
-  "abstract_zh": "本文面向巴西电商场景中快速增长且复杂的葡萄牙语商品数据，提出用于 Product Attribute Value Extraction（PAVE，产品属性值抽取）的专用系统 AI-PAVE-Br。传统 PAVE 方法往往难以处理葡萄牙语商品描述中的语言细节与品类多样性。论文的两项主要贡献是：其一，构建基于 Large Language Models（LLMs）的 AI-PAVE-Br，用于巴西电商目录中的高精度属性值抽取；其二，发布 Golden Set，一个经过人工精标、面向葡萄牙语 PAVE 的高质量基准数据集，包含 Entity、Category、Subcategories 等结构。实验表明，借助定向 prompt engineering，AI-PAVE-Br 显著优于传统 Named Entity Recognition（NER）基线。该工作既为非英语大型电商市场提供了可扩展的抽取方案，也为 NLP 社区贡献了可复现研究资源。",
+  "abstract_zh": "本文面向巴西电商场景中的葡萄牙语商品数据，提出了 AI-PAVE-Br，一个基于 Large Language Models（LLMs）的 Product Attribute Value Extraction（PAVE）系统，用于从复杂、多样的商品描述中高精度抽取结构化属性值。针对传统 PAVE 和 Named Entity Recognition（NER）方法难以处理葡萄牙语语言细节与电商目录多样性的问题，作者同时构建并公开了 Golden Set：一个经过人工精标、包含 Entity、Category、Subcategories 结构的葡萄牙语 PAVE 基准数据集。实验表明，通过有针对性的 prompt engineering，AI-PAVE-Br 显著优于传统 NER baseline，为非英语电商市场提供了可扩展的信息抽取方案，也为后续 PAVE 研究提供了可复现的公开资源。",
   "key_points_zh": [
-    "提出 AI-PAVE-Br，一个面向巴西电商商品目录的 LLM-based PAVE 系统，专注葡萄牙语商品属性值抽取。",
-    "构建并公开 Golden Set：人工精标的葡萄牙语 PAVE 基准数据集，结构包含 Entity、Category 与 Subcategories。",
-    "通过 targeted prompt engineering，AI-PAVE-Br 在实验中显著超过传统 NER baselines。",
-    "论文强调非英语电商市场中的语言细节、商品描述多样性与可复现评测需求，为后续 PAVE 研究提供数据和方法参考。"
+    "提出 AI-PAVE-Br，专门用于巴西电商目录中的葡萄牙语 Product Attribute Value Extraction（PAVE）。",
+    "构建并公开 Golden Set，一个人工精标的葡萄牙语 PAVE 数据集，包含 Entity、Category、Subcategories 等结构。",
+    "方法核心依赖 Large Language Models（LLMs）与定向 prompt engineering，以适配商品描述的语言差异和类别多样性。",
+    "实验显示 AI-PAVE-Br 显著优于传统 Named Entity Recognition（NER）baseline。",
+    "论文价值在于同时提供面向非英语市场的实用系统和可复现的公开基准资源。"
   ],
   "llm_assessment": {
-    "novelty": 0.68,
-    "problem_significance": 0.82,
-    "potential_impact": 0.78,
-    "paradigm_shift": 0.42,
-    "lasting_value": 0.74,
-    "llm_avg": 0.6880000000000001,
-    "comment": "A practical and valuable product-understanding contribution for Brazilian e-commerce catalogs, though more incremental as an LLM-based PAVE system and benchmark than a new agentic paradigm.",
-    "comment_zh": "这是一项面向巴西电商目录的实用商品理解工作，但作为基于大模型的属性抽取系统和基准，其范式创新相对有限。"
+    "novelty": 0.65,
+    "problem_significance": 0.8,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.78,
+    "llm_avg": 0.6759999999999999,
+    "comment": "A practical and useful product-understanding contribution for Brazilian e-commerce, with strong catalog-quality relevance though limited agentic or paradigm-changing depth.",
+    "comment_zh": "这是一项面向巴西电商商品理解的实用贡献，对目录质量提升很有价值，但智能体属性和范式突破相对有限。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.2876491876228333,
+    "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.6880000000000001,
+    "llm_assessment": 0.6759999999999999,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -57,8 +58,8 @@
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": 2,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": [

@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.24151",
   "title": "Metis: Bridging Text and Code Memory for Self-Evolving Agents",
-  "title_zh": "Metis：为自进化 Agent 架起文本记忆与代码记忆的桥梁",
+  "title_zh": "Metis：连接文本记忆与代码记忆的自进化 Agent",
   "authors": [
     "Zijie Dai",
     "Siuhin He",
@@ -25,23 +25,23 @@
     "project_page": null
   },
   "abstract_en": "Self-evolving agents improve over time by distilling experience from past executions and reusing it in future tasks. Existing systems represent such experience either as natural-language text injected into the agent context or as code exposed as callable tools. However, the choice between these representations is typically made at design time rather than derived from the characteristics of the experience itself, leaving the trade-offs between them poorly understood. We present the first controlled study that isolates text memory and code memory over an identical set of experiences. Our results show that the two forms exhibit complementary trade-offs in construction cost, execution efficiency, and transferability, such that neither representation alone is sufficient. Guided by these findings, we propose Metis, a self-evolving agent system built on a hierarchical dual-representation memory. Metis organizes textual experience into execution plans, environment facts, and common pitfalls, and selectively crystallizes recurring plans into validated callable tools. This design combines the broad applicability of text memory with the execution efficiency of code memory while incurring tool-generation cost only when justified by repeated reuse. We evaluate Metis on AppWorld, a challenging benchmark for interactive agents. The results show that Metis improves task accuracy by up to 20.6% over ReAct while reducing execution cost by up to 22.8%. Compared with representative self-evolving agent systems, Metis consistently achieves a better balance between accuracy, execution efficiency, and memory-construction cost.",
-  "abstract_zh": "自进化 Agent 通过从历史执行中提炼经验并在未来任务中复用来持续改进。现有系统通常将经验表示为注入上下文的自然语言文本，或表示为可调用工具的代码；但这种表示选择往往在系统设计阶段固定，而非依据经验本身的特性决定，导致二者权衡缺乏系统理解。本文首次在相同经验集合上对文本记忆（text memory）与代码记忆（code memory）进行受控研究，发现二者在构建成本、执行效率与迁移性上具有互补取舍，单一表示均不足够。基于这些发现，作者提出 Metis：一种采用层次化双表示记忆的自进化 Agent 系统。Metis 将文本经验组织为执行计划、环境事实与常见陷阱，并选择性地把反复出现的计划固化为经过验证的可调用工具。该设计结合了文本记忆的广泛适用性与代码记忆的执行效率，并仅在重复复用足以 justify 时承担工具生成成本。在交互式 Agent 基准 AppWorld 上，Metis 相比 ReAct 最高提升 20.6% 任务准确率，同时最高降低 22.8% 执行成本；与代表性自进化 Agent 系统相比，Metis 在准确率、执行效率与记忆构建成本之间取得了更优平衡。",
+  "abstract_zh": "自进化 Agent 通过从过往执行中提炼经验，并在未来任务中复用来持续改进。现有系统通常将经验表示为注入上下文的自然语言文本，或表示为可调用工具形式的代码；但这种表示选择往往在系统设计阶段预先决定，而非依据经验本身的特性动态确定，导致两类记忆的权衡缺乏系统理解。本文首次在相同经验集合上对 text memory 与 code memory 进行受控研究，发现二者在构建成本、执行效率与迁移性上具有互补优劣，单独使用任一形式都不充分。基于这些发现，作者提出 Metis：一种采用层次化双表示记忆的自进化 Agent 系统。Metis 将文本经验组织为执行计划、环境事实与常见陷阱，并选择性地将反复出现的计划固化为经过验证的可调用工具。该设计结合了文本记忆的广泛适用性与代码记忆的执行效率，并仅在重复复用足以抵消成本时才生成工具。作者在交互式 Agent 基准 AppWorld 上评估 Metis，结果显示其相较 ReAct 最高提升 20.6% 任务准确率，同时最高降低 22.8% 执行成本；相较代表性自进化 Agent 系统，Metis 在准确率、执行效率与记忆构建成本之间取得了更好的平衡。",
   "key_points_zh": [
-    "首次在相同经验集合上受控比较 text memory 与 code memory，揭示二者在构建成本、执行效率和迁移性上的互补关系。",
-    "提出 Metis，一种层次化双表示记忆系统，将文本经验划分为执行计划、环境事实和常见陷阱。",
-    "Metis 会将高频复用的执行计划选择性固化为经过验证的 callable tools，从而避免无谓的工具生成开销。",
-    "在 AppWorld 上，相比 ReAct，Metis 最高带来 20.6% 的任务准确率提升，并最高减少 22.8% 的执行成本。",
-    "相较代表性 self-evolving agent 系统，Metis 在准确性、效率和记忆构建成本之间表现出更好的综合权衡。"
+    "论文首次在相同经验集合上受控比较 text memory 与 code memory，揭示二者在构建成本、执行效率和迁移能力上的互补关系。",
+    "Metis 采用层次化双表示记忆：文本侧记录执行计划、环境事实和常见陷阱，代码侧将高频复用计划转化为 validated callable tools。",
+    "该方法避免固定选择单一经验表示，而是根据经验复用价值选择性生成工具，从而降低不必要的 tool-generation cost。",
+    "在 AppWorld 基准上，Metis 相比 ReAct 最高提升 20.6% 任务准确率，并最高减少 22.8% 执行成本。",
+    "与代表性 self-evolving agent 系统相比，Metis 在性能、推理/执行效率和记忆构建成本之间表现出更优折中。"
   ],
   "llm_assessment": {
-    "novelty": 0.82,
-    "problem_significance": 0.82,
-    "potential_impact": 0.82,
-    "paradigm_shift": 0.68,
-    "lasting_value": 0.84,
-    "llm_avg": 0.796,
-    "comment": "Metis is a strong self-evolving agent-memory system that connects execution experience to reusable text and code memories with clear platform relevance.",
-    "comment_zh": "Metis是较强的自进化智能体记忆系统，将执行经验转化为可复用文本和代码记忆，具备明显平台价值。"
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "Strong self-evolving agent memory work that bridges textual experience and validated callable tools for reusable improvement.",
+    "comment_zh": "Strong self-evolving agent memory work that bridges textual experience and validated callable tools for reusable improvement."
   },
   "scores": {
     "topic_relevance": 0.8,
@@ -50,7 +50,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.796,
+    "llm_assessment": 0.5,
     "domain_multiplier": 1.0
   },
   "enriched": {

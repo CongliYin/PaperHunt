@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.24322",
   "title": "Securing LLM-Agent Long-Term Memory Against Poisoning: Non-Malleable, Origin-Bound Authority with Machine-Checked Guarantees",
-  "title_zh": "保护 LLM Agent 长期记忆免受投毒：具有机器校验保证的不可篡改、来源绑定权限机制",
+  "title_zh": "保护 LLM Agent 长期记忆免受投毒：具有机器校验证明的不可篡改、来源绑定权限机制",
   "authors": [
     "Yedidel Louck"
   ],
@@ -14,32 +14,32 @@
     "project_page": null
   },
   "abstract_en": "LLM agents increasingly rely on persistent long-term memory, which creates a critical vulnerability that we study here: memory poisoning. An adversary can store untrusted content in one session that later steers a consequential action, such as a payment, a setting change, or data exfiltration, in a future session. Existing defenses base a memory item's authority to act on either its content (detection or trust-scoring) or its derivation history (lineage). We show that both signals are malleable. An attacker can launder an untrusted origin through three channels specific to LLM agents: the agent's own summarization, a trusted-tool echo, and manufactured corroboration. Each makes the content look benign and breaks or flips its derivation edge to ``trusted.'' We formalize malleability for the memory write-retrieve-act pipeline and prove a machine-checked separation theorem. No content- or lineage-based defense is sound under laundering (T1), write-time origin binding is necessary (T2), and non-malleable origin-bound authority with Sybil-resistant corroboration-gated elevation is sufficient (T3). Our construction, TMA-NM (Tamper-evident Memory Authority, Non-Malleable), instantiates non-malleable information-flow control (IFC) for LLM-agent memory. A cross-defense, cross-attack, and cross-model benchmark over eight frontier models shows that existing defenses fail exactly where the theory predicts (up to 68% laundering attack-success), while TMA-NM reaches 0% attack success on both direct and laundering attacks across all models and channels, at full legitimate utility. We release the benchmark, harness, and machine-checked TLA+ models to support reproducibility.",
-  "abstract_zh": "LLM agents 越来越依赖持久化长期记忆，但这带来了关键安全风险：memory poisoning（记忆投毒）。攻击者可在一次会话中写入不可信内容，并在未来会话中诱导 agent 执行支付、修改设置或数据外泄等高影响操作。现有防御通常根据记忆内容本身（检测或信任评分）或其派生历史（lineage）来判断记忆项是否具有行动权限。本文指出，这两类信号都具有可篡改性（malleable）：攻击者可通过 LLM agent 特有的三种渠道“洗白”不可信来源，包括 agent 自身摘要、可信工具回显，以及伪造的多方佐证，使内容看似良性，并破坏或反转其派生边为“可信”。作者形式化了 memory write-retrieve-act 流水线中的可篡改性，并给出机器校验的分离定理：仅依赖内容或 lineage 的防御在洗白攻击下都不可靠（T1）；写入时的来源绑定是必要条件（T2）；结合 Sybil-resistant corroboration-gated elevation 的不可篡改来源绑定权限机制是充分条件（T3）。基于此，论文提出 TMA-NM（Tamper-evident Memory Authority, Non-Malleable），为 LLM-agent memory 实例化不可篡改的信息流控制（IFC）。在覆盖 8 个 frontier models、多个防御、攻击与模型的基准测试中，现有防御在理论预测的位置失效，洗白攻击成功率最高达 68%；而 TMA-NM 在所有模型与渠道上对直接攻击和洗白攻击均达到 0% 攻击成功率，同时保持完整合法效用。论文还发布 benchmark、harness 与机器校验的 TLA+ 模型以支持可复现性。",
+  "abstract_zh": "本文研究 LLM agents 使用持久化长期记忆带来的关键安全风险：memory poisoning。攻击者可在一次会话中写入不可信内容，并在后续会话中诱导 agent 执行支付、设置修改或数据外泄等高影响操作。作者指出，现有防御通常依据记忆内容本身（检测或信任评分）或派生历史（lineage）判断其行动权限，但二者都具有可塑性（malleable）。攻击者可通过三类 LLM agent 特有通道“洗白”不可信来源：agent 自身摘要、可信工具回显、伪造佐证，使恶意内容看似良性，并破坏或翻转其派生边为“可信”。论文形式化了 memory write-retrieve-act 流程中的可塑性，并给出机器校验的分离定理：在来源洗白下，任何基于内容或 lineage 的防御都不可靠（T1）；写入时来源绑定是必要条件（T2）；具备 Sybil-resistant corroboration-gated elevation 的不可篡改来源绑定权限机制是充分条件（T3）。作者提出 TMA-NM（Tamper-evident Memory Authority, Non-Malleable），将不可篡改信息流控制（IFC）实例化到 LLM-agent memory。跨防御、跨攻击、跨模型基准测试覆盖 8 个 frontier models，结果显示现有防御在理论预测的位置失败，洗白攻击成功率最高达 68%；而 TMA-NM 在所有模型和通道上对直接攻击与洗白攻击均达到 0% 攻击成功率，同时保持完整合法效用。论文还发布 benchmark、harness 与机器校验的 TLA+ models 以支持复现。",
   "key_points_zh": [
-    "论文聚焦 LLM agents 的长期记忆投毒风险：攻击者可跨会话植入不可信记忆，并在后续触发高风险行动。",
-    "作者证明内容检测、信任评分和 lineage-based 防御都可被“洗白”攻击绕过，包括 agent 摘要、可信工具回显和伪造佐证三类渠道。",
-    "提出并机器校验三个理论结论：内容或 lineage 防御不可靠，写入时 origin binding 必要，不可篡改的 origin-bound authority 机制充分。",
-    "TMA-NM 将 non-malleable information-flow control 引入 LLM-agent memory，并通过 Sybil-resistant corroboration-gated elevation 控制权限提升。",
-    "跨 8 个 frontier models 的实验显示，现有防御最高 68% 洗白攻击成功率；TMA-NM 在直接与洗白攻击下均实现 0% 成功率且不损害合法效用。"
+    "问题聚焦于 LLM agents 的长期记忆投毒：不可信内容可跨会话残留，并在未来触发支付、配置变更、数据泄露等高风险行为。",
+    "论文证明仅依赖内容检测、信任评分或 lineage 的防御不可靠，因为攻击者可通过 agent 摘要、可信工具回显、伪造佐证等方式洗白不可信来源。",
+    "作者形式化 memory write-retrieve-act 管线中的 malleability，并给出机器校验分离定理：内容/lineage 防御不充分，写入时 origin binding 必要，不可篡改来源绑定权限机制充分。",
+    "提出 TMA-NM，将 non-malleable IFC 应用于 LLM-agent memory，并引入 Sybil-resistant corroboration-gated elevation 来控制权限提升。",
+    "在覆盖 8 个 frontier models 的基准中，现有防御洗白攻击成功率最高 68%；TMA-NM 对直接攻击和洗白攻击均为 0% 成功率，且保持完整合法效用。"
   ],
   "llm_assessment": {
-    "novelty": 0.88,
-    "problem_significance": 0.9,
-    "potential_impact": 0.88,
-    "paradigm_shift": 0.75,
-    "lasting_value": 0.9,
-    "llm_avg": 0.8620000000000001,
-    "comment": "Excellent agent-memory security work with formal guarantees, runtime authority semantics, benchmarks, and direct applicability to production agent platforms.",
-    "comment_zh": "这是一项优秀的智能体记忆安全工作，具备形式化保证、运行时权限语义、基准测试，并高度适用于生产级智能体平台。"
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "Excellent agent-memory security work with formal guarantees, attack harnesses, and production-relevant authority controls.",
+    "comment_zh": "Excellent agent-memory security work with formal guarantees, attack harnesses, and production-relevant authority controls."
   },
   "scores": {
     "topic_relevance": 0.92,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.2794153127047222,
+    "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.8620000000000001,
+    "llm_assessment": 0.5,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -49,11 +49,11 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": 2,
-    "first_author_found": true,
+    "first_author_h_index": null,
+    "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": 2,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": [

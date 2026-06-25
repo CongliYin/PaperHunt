@@ -34,32 +34,32 @@
     "project_page": null
   },
   "abstract_en": "As large language model (LLM) agents are applied to longer tasks, they increasingly modify workspace state across multiple rounds of iteration. However, agents typically observe only tool outputs and log fragments, while the actual state changes occur in the file system. Without explicit workspace boundaries, state-changing operations such as file writes and temporary artifact generation may scatter changes across paths. Over time, these weakly constrained changes accumulate, making states such as modified files difficult to track. This paper presents LemonHarness, an integrated execution framework for long-horizon agents. LemonHarness establishes an explicit execution boundary by constraining state-changing operations within a clearly defined workspace and bringing model invocation, tool execution, and rule knowledge within a single controlled boundary. State-changing operations, including file writes, dependency installation, and temporary artifact creation, are executed through structured tool interfaces, with execution feedback recorded as observations available to subsequent model decisions. The system also introduces a reusable rule knowledge base, which turns recurring execution rules and acceptance criteria into runtime knowledge. LemonHarness further adds a time-aware execution mechanism that exposes elapsed and remaining budget to the model, so it can rebalance exploration, implementation, and validation effort as time pressure shifts and avoid timeouts from long waits or excessive verification. On Terminal-Bench 2.0, LemonHarness_GPT-5.3-CodeX reached 84.49% accuracy over 445 trials; pairing the same framework with the stronger GPT-5.5 backbone raised the average accuracy to 86.52% across five jobs. The results suggest that a unified runtime boundary, callable rule knowledge, and time-aware execution can improve the stability of long-horizon agent execution.",
-  "abstract_zh": "随着大语言模型（LLM）智能体被用于更长周期的任务，它们会在多轮迭代中持续修改工作区状态。然而，智能体通常只能观察工具输出和日志片段，而真实的状态变化发生在文件系统中。缺乏明确工作区边界时，文件写入、临时产物生成等会将修改分散到不同路径，长期积累后使已修改文件等状态难以追踪。本文提出 LemonHarness：一个面向长程智能体的集成执行框架。它通过明确定义的 workspace 约束状态改变操作，并将模型调用、工具执行与规则知识纳入统一受控边界。文件写入、依赖安装、临时产物创建等操作均通过结构化工具接口执行，其反馈会作为 observation 供后续模型决策使用。系统还引入可复用的规则知识库，将重复出现的执行规则与验收标准转化为运行时知识。此外，LemonHarness 提供时间感知执行机制，将已用时间和剩余预算暴露给模型，使其能在探索、实现与验证之间动态权衡，减少长等待或过度验证导致的超时。在 Terminal-Bench 2.0 上，LemonHarness_GPT-5.3-CodeX 在 445 次试验中达到 84.49% 准确率；同一框架结合更强的 GPT-5.5 backbone 后，五个 jobs 的平均准确率提升至 86.52%。结果表明，统一运行时边界、可调用规则知识和时间感知执行可提升长程智能体执行的稳定性。",
+  "abstract_zh": "随着大型语言模型（LLM）agent 被用于更长周期的任务，它们会在多轮迭代中持续修改工作区状态。然而，agent 通常只能观察工具输出和日志片段，而真实的状态变化发生在文件系统中。若缺乏明确的工作区边界，文件写入、临时产物生成等会改变状态的操作可能分散到多个路径，随着时间推移造成修改文件等状态难以追踪。本文提出 LemonHarness，一个面向长程 agent 的集成执行框架。它通过将状态变化操作限制在明确定义的 workspace 内，并把模型调用、工具执行和规则知识纳入同一受控边界，建立显式执行边界。文件写入、依赖安装、临时产物创建等状态变化操作均通过结构化工具接口执行，其反馈会被记录为 observation，供后续模型决策使用。系统还引入可复用的 rule knowledge base，将反复出现的执行规则和验收标准转化为运行时知识。此外，LemonHarness 提供时间感知执行机制，向模型暴露已用时间和剩余预算，使其能够在探索、实现和验证之间动态权衡，减少长时间等待或过度验证导致的超时。在 Terminal-Bench 2.0 上，LemonHarness_GPT-5.3-CodeX 在 445 次试验中达到 84.49% accuracy；搭配更强的 GPT-5.5 backbone 后，五个任务的平均 accuracy 提升至 86.52%。结果表明，统一运行时边界、可调用规则知识和时间感知执行有助于提升长程 agent 执行的稳定性。",
   "key_points_zh": [
-    "LemonHarness 为长程 LLM agents 建立显式 workspace 边界，限制文件写入、依赖安装和临时产物生成等状态改变操作的作用范围，减少状态漂移与难以追踪的问题。",
-    "框架将模型调用、工具执行和规则知识整合到同一受控运行时中，并通过结构化工具接口记录执行反馈，使后续决策能基于完整 observation。",
-    "提出可复用 rule knowledge base，将常见执行规则、验收标准和任务约束转化为运行时可调用知识，帮助智能体在多轮任务中保持一致行为。",
-    "引入 time-aware execution，将已消耗时间和剩余预算显式提供给模型，促使其在探索、实现和验证之间自适应分配时间，降低超时风险。",
-    "在 Terminal-Bench 2.0 上，LemonHarness_GPT-5.3-CodeX 达到 84.49% 准确率；结合 GPT-5.5 后平均准确率升至 86.52%，显示该执行框架能提升长程任务稳定性。"
+    "提出 LemonHarness：一个面向 long-horizon LLM agents 的集成执行框架，核心是建立明确的 workspace 边界，避免状态变化散落在文件系统各处。",
+    "将文件写入、依赖安装、临时 artifact 创建等状态改变操作封装为结构化 tool interfaces，并把执行反馈记录为 observations，供后续决策使用。",
+    "引入 reusable rule knowledge base，将常见执行规则、验收标准和约束转化为运行时可调用知识，提升 agent 在复杂任务中的一致性。",
+    "设计 time-aware execution 机制，向模型提供 elapsed time 和 remaining budget，帮助其在探索、实现、验证之间自适应分配时间，降低超时风险。",
+    "在 Terminal-Bench 2.0 上，LemonHarness_GPT-5.3-CodeX 达到 84.49% accuracy；结合 GPT-5.5 backbone 后平均 accuracy 提升至 86.52%，显示出更稳定的长程执行能力。"
   ],
   "llm_assessment": {
-    "novelty": 0.82,
-    "problem_significance": 0.86,
-    "potential_impact": 0.86,
-    "paradigm_shift": 0.65,
-    "lasting_value": 0.86,
-    "llm_avg": 0.8099999999999999,
-    "comment": "LemonHarness is highly relevant harness work, contributing execution boundaries, structured tools, state control, rule knowledge, and time-aware long-horizon execution.",
-    "comment_zh": "LemonHarness是高度相关的智能体底座工作，贡献了执行边界、结构化工具、状态控制、规则知识和时间感知长程执行。"
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "A highly relevant long-horizon execution harness with controlled workspaces, structured tools, rule knowledge, and time-aware runtime control.",
+    "comment_zh": "A highly relevant long-horizon execution harness with controlled workspaces, structured tools, rule knowledge, and time-aware runtime control."
   },
   "scores": {
     "topic_relevance": 0.8,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.2505165737555528,
+    "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.8099999999999999,
+    "llm_assessment": 0.5,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -69,8 +69,8 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": 1,
-    "first_author_found": true,
+    "first_author_h_index": null,
+    "first_author_found": false,
     "first_author_affiliations": [],
     "last_author_h_index": null,
     "last_author_found": false,

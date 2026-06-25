@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.24783",
   "title": "Paying to Know: Micro-Transaction Markets for Verified Product Information in Agentic E-Commerce",
-  "title_zh": "付费求真：Agentic E-Commerce 中面向已验证商品信息的微交易市场",
+  "title_zh": "付费求真：Agentic E-Commerce 中面向已验证产品信息的微交易市场",
   "authors": [
     "Filippos Ventirozos",
     "Matthew Shardlow"
@@ -15,32 +15,32 @@
     "project_page": null
   },
   "abstract_en": "Commercial NLP treats the shopping chatbot as a recommender or a conversion tool: its job is to match a user to a catalogue entry and close a sale. We argue that the arrival of agent-native micro-payment rails (e.g., x402, AP2) changes what is scarce. When the buyer is an autonomous agent that can investigate exhaustively, the bottleneck is no longer matching products but acquiring trustworthy, decision-relevant information about them. We envision agentic e-commerce as a micro-transaction market for verified information: buyer agents spend fractions of a cent to progressively unlock seller- and reviewer-supplied data -- service histories, third-party test reports, bills of materials, audited sales and support metrics -- paid for a la carte under a freemium model, with reviewer trust scored reputationally. We sketch the architecture of such a market and argue that it rewards genuine product quality and yields truer competition than ranking-based storefronts. We then translate the vision into concrete NLP problems -- cost-optimal information acquisition, data pricing and negotiation, real-time entity resolution, grounded value exchange, and privacy-preserving persona modelling -- and argue that these, not chat fluency, deserve the field's attention.",
-  "abstract_zh": "本文提出一种关于 agentic e-commerce 的愿景：随着 x402、AP2 等面向智能体的微支付基础设施出现，电商中的稀缺资源将不再是商品匹配能力，而是可信、可验证且与决策相关的商品信息。作者认为，当买家由可自主调查的智能体代理时，购物系统的核心应从“推荐并促成转化”转向“按需购买 verified information”。在该市场中，buyer agents 可以以极低成本逐步解锁由卖家或评测者提供的数据，如服务历史、第三方测试报告、物料清单、经审计的销售与支持指标等；信息采用 freemium 与按项付费模式，评测者可信度由声誉机制评分。论文进一步勾勒该市场架构，并认为这种机制能奖励真实产品质量，带来比基于排名的店铺更真实的竞争。最后，作者将愿景转化为一组具体 NLP 问题，包括成本最优的信息获取、数据定价与协商、实时实体消歧、有依据的价值交换，以及隐私保护的用户画像建模，并主张这些问题比聊天流畅度更值得关注。",
+  "abstract_zh": "本文是一篇 vision paper，指出传统商业 NLP 往往将购物 chatbot 视为推荐器或转化工具，目标是把用户匹配到商品并促成购买。但随着面向智能体的微支付基础设施（如 x402、AP2）出现，稀缺资源将从“商品匹配”转向“可信、与决策相关的产品信息获取”。作者设想一种 agentic e-commerce 信息市场：买方 agents 以极小金额按需解锁卖家和评测者提供的已验证数据，如服务历史、第三方测试报告、物料清单（bill of materials）、经审计的销售与支持指标等；该市场采用 freemium 与按项付费模式，并通过声誉机制评估 reviewer trust。论文进一步勾勒该市场架构，认为它能奖励真实产品质量，并比基于排名的 storefronts 产生更真实的竞争。最后，作者将这一愿景转化为一组 NLP 研究问题，包括成本最优信息获取、数据定价与协商、实时实体消解、可溯源价值交换，以及隐私保护的 persona modelling，并强调这些问题比单纯提升聊天流畅度更值得关注。",
   "key_points_zh": [
-    "论文认为，在 agent-native micro-payment rails 如 x402、AP2 出现后，电商瓶颈将从商品推荐转向可信商品信息获取。",
-    "提出面向 agentic e-commerce 的微交易市场：buyer agents 可按需解锁服务记录、测试报告、物料清单、审计指标等 verified information。",
-    "市场采用 freemium 与按项付费模式，并通过声誉机制评估 reviewer trust，从而激励高质量产品与高质量信息供给。",
-    "作者认为该机制相比 ranking-based storefronts 更能促进真实竞争，因为它让商品质量证据直接参与购买决策。",
-    "论文将愿景落到 NLP 研究议题，包括成本最优信息获取、数据定价与协商、实时实体解析、grounded value exchange 和隐私保护画像建模。"
+    "论文认为在 agent-native micro-payment rails（如 x402、AP2）下，电商瓶颈不再是推荐匹配，而是低成本获取可信且决策相关的产品信息。",
+    "作者提出一个面向 agentic e-commerce 的微交易信息市场：买方 agents 可按需购买服务历史、第三方测试报告、物料清单、审计指标等已验证数据。",
+    "市场采用 freemium 与 a la carte 付费机制，并通过声誉系统对 reviewer trust 进行评分，从而激励高质量评测和真实产品质量。",
+    "相比传统排名式 storefronts，该机制被认为能减少排名操纵，推动更基于事实和质量的竞争。",
+    "论文将愿景落到 NLP 研究议题：cost-optimal information acquisition、data pricing and negotiation、real-time entity resolution、grounded value exchange、privacy-preserving persona modelling。"
   ],
   "llm_assessment": {
     "novelty": 0.9,
-    "problem_significance": 0.78,
-    "potential_impact": 0.82,
-    "paradigm_shift": 0.88,
-    "lasting_value": 0.72,
-    "llm_avg": 0.82,
-    "comment": "A highly original vision paper reframing agentic e-commerce around paid verified product information markets, but its lasting value depends on future technical validation and adoption.",
-    "comment_zh": "这是一篇很有原创性的愿景论文，将智能体电商重塑为付费可信商品信息市场，但其长期价值取决于后续技术验证和落地。"
+    "problem_significance": 0.75,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.85,
+    "lasting_value": 0.62,
+    "llm_avg": 0.764,
+    "comment": "A highly novel agentic e-commerce vision reframing shopping around paid verified product information, but its lasting value depends on future technical validation and market adoption.",
+    "comment_zh": "这篇论文提出了以付费可信商品信息为核心的智能体电商新愿景，创新性很强，但长期价值取决于后续技术验证和市场落地。"
   },
   "scores": {
     "topic_relevance": 0.68,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.4497154826450447,
+    "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.82,
+    "llm_assessment": 0.764,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -50,11 +50,11 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": 1,
-    "first_author_found": true,
+    "first_author_h_index": null,
+    "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": 11,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": [

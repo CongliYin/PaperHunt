@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.24101",
   "title": "NavWM: A Unified Navigation World Model for Foresight-Driven Planning",
-  "title_zh": "NavWM：面向前瞻驱动规划的统一导航世界模型",
+  "title_zh": "NavWM：用于前瞻驱动规划的统一导航世界模型",
   "authors": [
     "Yanghong Mei",
     "Longteng Guo",
@@ -19,32 +19,32 @@
     "project_page": null
   },
   "abstract_en": "Conventional visual navigation policies often struggle with myopic decision-making and mode collapse in complex environments. While world models offer a promising alternative, existing paradigms typically isolate perception, generation, and control, failing to capture their shared spatio-temporal dynamics. In this paper, we propose NavWM, a unified navigation world model that seamlessly integrates latent world reasoning, multimodal action prediction, and controllable visual generation. At its core, NavWM leverages latent world tokens to distill geometric and semantic priors, endowing the agent with robust structural understanding. To overcome the limitations of deterministic policies, we introduce an anchor-based multimodal trajectory forecasting framework that generates a diverse action space. This inherent diversity explicitly empowers the generative world model to act as a robust closed-loop planner, utilizing visual foresight to evaluate and select the optimal path. Extensive experiments across diverse robotics datasets demonstrate that NavWM significantly advances the state-of-the-art, delivering remarkable improvements in both high-fidelity future state generation and zero-shot navigation success.",
-  "abstract_zh": "传统视觉导航策略在复杂环境中常受限于短视决策和模式坍缩。尽管世界模型提供了有前景的替代方案，现有方法通常将感知、生成与控制割裂开来，难以捕获它们共享的时空动态。本文提出 NavWM，一个统一的导航世界模型，将潜在世界推理、多模态动作预测与可控视觉生成无缝结合。NavWM 的核心是利用 latent world tokens 蒸馏几何与语义先验，使智能体获得更稳健的结构理解。为突破确定性策略的局限，作者引入基于 anchor 的多模态轨迹预测框架，生成多样化动作空间。这种内在多样性使生成式世界模型能够作为稳健的闭环规划器，通过视觉前瞻评估并选择最优路径。多个机器人数据集上的实验表明，NavWM 在高保真未来状态生成和零样本导航成功率上均显著刷新现有水平。",
+  "abstract_zh": "传统视觉导航策略在复杂环境中常受限于短视决策和模式坍塌。NavWM 提出一种统一的导航世界模型，将潜在世界推理（latent world reasoning）、多模态动作预测和可控视觉生成整合到同一框架中。其核心通过 latent world tokens 蒸馏几何与语义先验，使智能体获得更稳健的结构理解；同时引入基于 anchor 的多模态轨迹预测机制，生成多样化动作候选，缓解确定性策略的局限。借助这种动作多样性，生成式世界模型可在闭环中进行视觉前瞻评估并选择最优路径。跨多个机器人数据集的实验表明，NavWM 在高保真未来状态生成和 zero-shot 导航成功率上均显著优于现有方法。",
   "key_points_zh": [
-    "提出 NavWM，将潜在世界推理、多模态动作预测和可控视觉生成统一到同一导航世界模型中，避免感知、生成、控制模块割裂。",
-    "通过 latent world tokens 提取并压缩几何与语义先验，增强智能体对环境结构和时空动态的理解能力。",
-    "设计 anchor-based multimodal trajectory forecasting，生成多样化候选轨迹，缓解确定性导航策略的模式坍缩问题。",
-    "利用生成式世界模型进行视觉前瞻，在闭环中预测未来状态、评估候选动作并选择最优路径。",
-    "在多个 robotics datasets 上取得强结果，尤其提升了高保真未来状态生成质量和 zero-shot navigation 成功率。"
+    "提出 NavWM，将感知、生成与控制统一到导航世界模型中，建模共享的时空动态。",
+    "使用 latent world tokens 提取几何与语义先验，增强智能体对场景结构的理解能力。",
+    "设计 anchor-based 多模态轨迹预测，生成多样化动作空间，缓解确定性策略的模式坍塌。",
+    "将生成式世界模型作为闭环规划器，通过视觉前瞻评估候选轨迹并选择最优路径。",
+    "在多类机器人数据集上取得 state-of-the-art 表现，提升未来状态生成质量与 zero-shot 导航成功率。"
   ],
   "llm_assessment": {
-    "novelty": 0.64,
-    "problem_significance": 0.6,
-    "potential_impact": 0.55,
-    "paradigm_shift": 0.42,
-    "lasting_value": 0.47,
-    "llm_avg": 0.5359999999999999,
-    "comment": "The unified navigation world-model framing is promising for embodied planning, though it lacks explicit realtime interaction, speech/tool use, or reusable agent evaluation infrastructure.",
-    "comment_zh": "统一导航世界模型的设定对具身规划有潜力，但缺少明确的实时交互、语音工具使用或可复用智能体评测基础设施。"
+    "novelty": 0.62,
+    "problem_significance": 0.58,
+    "potential_impact": 0.52,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.43,
+    "llm_avg": 0.52,
+    "comment": "The navigation world-model framing is technically interesting, but its relevance to realtime multimodal agent interaction infrastructure is indirect.",
+    "comment_zh": "该导航世界模型框架在技术上有一定新意，但与实时多模态智能体交互基础设施的相关性较为间接。"
   },
   "scores": {
     "topic_relevance": 0.6000000000000001,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.2505165737555528,
+    "author_reputation": 0.3,
     "venue_signal": 1.0,
     "generality": 0.9,
-    "llm_assessment": 0.5359999999999999,
+    "llm_assessment": 0.52,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -54,8 +54,8 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": 1,
-    "first_author_found": true,
+    "first_author_h_index": null,
+    "first_author_found": false,
     "first_author_affiliations": [],
     "last_author_h_index": null,
     "last_author_found": false,

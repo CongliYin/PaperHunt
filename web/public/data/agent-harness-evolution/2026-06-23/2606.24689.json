@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.24689",
   "title": "Automated Summarization of Software Documents: An LLM-based Multi-Agent Approach",
-  "title_zh": "软件文档自动摘要：一种基于 LLM 的多智能体方法",
+  "title_zh": "自动化软件文档摘要：一种基于 LLM 的多智能体方法",
   "authors": [
     "Duc S. H. Nguyen",
     "Minh T. Nguyen",
@@ -18,23 +18,23 @@
     "project_page": null
   },
   "abstract_en": "Large Language Models (LLMs) and LLM-based Multi-Agent Systems (MAS) are revolutionizing software engineering (SE) by advancing automation, decision-making, and knowledge processing. Their recent application to SE tasks has already shown promising results. In this paper, we focus on summarization as a key application area. We present Metagente, an LLM-based MAS designed to generate concise and accurate summaries of software documentation. Metagente employs a Teacher-Student architecture where multiple LLM agents collaborate to enhance relevance and precision of produced summaries. An empirical evaluation on real-world datasets demonstrates Metagente's effectiveness in streamlining workflows, outperforming the considered baselines. The evaluation provides evidence that Metagente improves summarization for requirements analysis and technical documentation. Our findings underscore the transformative potential of these technologies in SE, while identifying challenges and future research directions for their seamless integration.",
-  "abstract_zh": "本文聚焦软件工程（SE）中的文档摘要任务，提出 Metagente：一种基于 Large Language Models（LLMs）的 Multi-Agent System（MAS），用于生成简洁且准确的软件文档摘要。Metagente 采用 Teacher-Student 架构，由多个 LLM agents 协作，以提升摘要的相关性与精确性。作者在真实世界数据集上进行实证评估，结果表明 Metagente 在需求分析和技术文档摘要场景中优于所比较的基线方法，能够有效简化软件工程工作流。论文同时讨论了 LLM-based MAS 在 SE 中的潜力、落地挑战与未来研究方向。",
+  "abstract_zh": "本文聚焦软件工程（SE）中的文档摘要任务，提出 Metagente：一种基于 Large Language Models（LLMs）的 Multi-Agent System（MAS），用于生成简洁且准确的软件文档摘要。Metagente 采用 Teacher-Student 架构，通过多个 LLM agents 协作提升摘要的相关性与精确性。作者在真实世界数据集上进行实证评估，结果显示 Metagente 在需求分析与技术文档摘要场景中优于所比较的 baselines，能够有效简化软件工程工作流。论文同时讨论了 LLM 与 MAS 在软件工程集成中的潜力、挑战与未来研究方向。",
   "key_points_zh": [
     "提出 Metagente，一个面向软件文档摘要的 LLM-based Multi-Agent System。",
     "采用 Teacher-Student 架构，让多个 LLM agents 协作生成更相关、更精确的摘要。",
-    "在真实世界数据集上的实证评估显示，Metagente 优于所选基线方法。",
-    "方法在需求分析和技术文档摘要中表现出改进效果，有助于简化软件工程工作流。",
-    "论文指出 LLM 与 MAS 在软件工程自动化中的潜力，同时讨论集成挑战与未来方向。"
+    "在真实世界数据集上的实证评估表明，Metagente 优于所选 baselines。",
+    "方法对需求分析和技术文档摘要尤其有效，可帮助简化软件工程工作流。",
+    "论文指出 LLM 与 MAS 在软件工程中的应用潜力，同时讨论集成挑战与未来方向。"
   ],
   "llm_assessment": {
-    "novelty": 0.25,
-    "problem_significance": 0.35,
-    "potential_impact": 0.28,
-    "paradigm_shift": 0.12,
-    "lasting_value": 0.22,
-    "llm_avg": 0.244,
-    "comment": "This is a fairly generic multi-agent summarization application with limited contribution to agent harness architecture, reliability, governance, or self-improvement.",
-    "comment_zh": "这是一项较通用的多智能体摘要应用，对智能体底座架构、可靠性、治理或自改进贡献有限。"
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "A conventional multi-agent summarization application with little reusable harness, governance, or self-improvement infrastructure.",
+    "comment_zh": "A conventional multi-agent summarization application with little reusable harness, governance, or self-improvement infrastructure."
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
@@ -43,7 +43,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.244,
+    "llm_assessment": 0.5,
     "domain_multiplier": 1.0
   },
   "enriched": {

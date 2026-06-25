@@ -2,12 +2,56 @@
   "domain": "agent-multimodal",
   "display_name": "Realtime Multimodal Agent",
   "date": "2026-06-23",
-  "generated_at": "2026-06-24T21:45:00Z",
+  "generated_at": "2026-06-25T13:05:14Z",
   "papers": [
+    {
+      "arxiv_id": "2606.25041",
+      "title": "Wan-Streamer v0.1: End-to-end Real-time Interactive Foundation Models",
+      "title_zh": "Wan-Streamer v0.1：端到端实时交互式基础模型",
+      "authors": [
+        "Lianghua Huang",
+        "Zhifan Wu",
+        "Wei Wang",
+        "Yupeng Shi",
+        "Mengyang Feng",
+        "Junjie He",
+        "Chenwei Xie",
+        "Yu Liu",
+        "Jingren Zhou",
+        "Ang Wang",
+        "Bang Zhang",
+        "Baole Ai",
+        "Chen Liang",
+        "Cheng Yu",
+        "Chongyang Zhong",
+        "Jinwei Qi",
+        "Kai Zhu",
+        "Pandeng Li",
+        "Peng Zhang",
+        "Wenyuan Zhang",
+        "Xinhua Cheng",
+        "Yitong Huang",
+        "Yun Zheng",
+        "Zoubin Bi"
+      ],
+      "total_score": 0.7469963532101977,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.9200000000000002,
+        "other": 0.34332117736732526
+      },
+      "tags": [
+        "HF Daily ★34",
+        "realtime voice agent"
+      ],
+      "tldr_zh": "统一流式音视频交互基础模型",
+      "detail_file": "agent-multimodal/2026-06-23/2606.25041.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.25041/thumb.webp"
+    },
     {
       "arxiv_id": "2606.24051",
       "title": "DriveStack-VLA: Render-Teacher Alignment for BEV-Based DeepStack Vision-Language-Action Model",
-      "title_zh": "DriveStack-VLA：面向 BEV-Based DeepStack Vision-Language-Action 模型的 Render-Teacher Alignment",
+      "title_zh": "DriveStack-VLA：面向 BEV DeepStack Vision-Language-Action 驾驶模型的 Render-Teacher Alignment",
       "authors": [
         "Jingke Wang",
         "Zhenru Zhao",
@@ -21,24 +65,24 @@
         "Yukai Ma",
         "Yong Liu"
       ],
-      "total_score": 0.5243824593811418,
+      "total_score": 0.5292000000000001,
       "scores": {
         "topic_relevance": 0.68,
-        "llm_assessment": 0.51,
-        "other": 0.3312748646038056
+        "llm_assessment": 0.524,
+        "other": 0.33333333333333337
       },
       "tags": [
         "Project Page",
         "data simulator training"
       ],
-      "tldr_zh": "用 BEV 与渲染对齐增强 VLA 驾驶模型",
+      "tldr_zh": "用 BEV 与渲染教师增强 VLA 驾驶",
       "detail_file": "agent-multimodal/2026-06-23/2606.24051.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24051/thumb.webp"
     },
     {
       "arxiv_id": "2606.24101",
       "title": "NavWM: A Unified Navigation World Model for Foresight-Driven Planning",
-      "title_zh": "NavWM：面向前瞻驱动规划的统一导航世界模型",
+      "title_zh": "NavWM：用于前瞻驱动规划的统一导航世界模型",
       "authors": [
         "Yanghong Mei",
         "Longteng Guo",
@@ -47,39 +91,39 @@
         "Xingjian He",
         "Jing Liu"
       ],
-      "total_score": 0.5083258286877776,
+      "total_score": 0.506,
       "scores": {
         "topic_relevance": 0.6000000000000001,
-        "llm_assessment": 0.5359999999999999,
-        "other": 0.3584194289592589
+        "llm_assessment": 0.52,
+        "other": 0.36666666666666675
       },
       "tags": [
         "data simulator training",
         "Accepted"
       ],
-      "tldr_zh": "统一世界模型实现前瞻式视觉导航规划",
+      "tldr_zh": "用统一世界模型做前瞻式视觉导航规划",
       "detail_file": "agent-multimodal/2026-06-23/2606.24101.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24101/thumb.webp"
     },
     {
       "arxiv_id": "2606.24169",
       "title": "Data Scale, Not Latency, Shapes Cross-Lingual Encoder Transfer in Streaming ASR",
-      "title_zh": "数据规模而非延迟决定流式 ASR 中的跨语言 Encoder 迁移效果",
+      "title_zh": "数据规模而非延迟决定流式 ASR 中跨语言 Encoder 迁移效果",
       "authors": [
         "Nenad Banfic"
       ],
-      "total_score": 0.32280000000000003,
+      "total_score": 0.3222,
       "scores": {
         "topic_relevance": 0.36000000000000004,
-        "llm_assessment": 0.396,
+        "llm_assessment": 0.394,
         "other": 0.2
       },
       "tags": [
         "general speech systems"
       ],
-      "tldr_zh": "低数据用多语初始化，大数据差异消失",
+      "tldr_zh": "低数据用多语初始化，大数据差异趋零",
       "detail_file": "agent-multimodal/2026-06-23/2606.24169.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24169/thumb.webp"
+      "thumb": ""
     }
   ]
 }

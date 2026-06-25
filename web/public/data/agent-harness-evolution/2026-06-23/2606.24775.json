@@ -21,32 +21,32 @@
     "project_page": null
   },
   "abstract_en": "Memory for large language model (LLM) agents has rapidly evolved from simple retrieval-augmented mechanisms into a data management system that supports persistent information storage, retrieval, update, consolidation, and dynamic lifecycle governance throughout agent execution. Despite this evolution, existing evaluations still benchmark agent memory mainly through end-to-end task success metrics (e.g., F1, BLEU), while treating the underlying system as a monolithic black box. As a result, critical system-level concerns, including operational costs, architectural trade-offs across memory modules, and robustness under dynamic knowledge updates, remain insufficiently explored. In this paper, we present a systematic experimental study of agent memory from a data management perspective. We propose an analytical framework that decomposes agent memory into four core modules: memory representation and storage, extraction, retrieval and routing, and maintenance. Under this framework, we evaluate 12 representative memory systems and two reference baselines across five benchmark workloads spanning 11 datasets. Our extensive end-to-end evaluation shows that no single architecture dominates across all scenarios; instead, effectiveness depends heavily on how well the memory structure aligns with the workload bottleneck. Furthermore, through fine-grained ablation studies, we quantify their individual effects on representation fidelity, retrieval precision, update correctness, and long-horizon stability. Finally, we reveal cost-performance trade-offs under realistic workloads, showing localized maintenance is more cost-efficient than global reorganization. Based on these findings, we identify promising directions towards building truly agent-native memory systems. The code is publicly available at https://github.com/OpenDataBox/MemoryData.",
-  "abstract_zh": "本文从数据管理视角系统研究 LLM agents 的 memory system。作者指出，agent memory 已从简单的 retrieval-augmented 机制演化为支持持久化存储、检索、更新、整合与动态生命周期治理的数据管理系统，但现有评测仍主要依赖端到端任务指标（如 F1、BLEU），将 memory system 视为黑盒，忽视了成本、架构权衡、动态知识更新鲁棒性等系统级问题。为此，论文提出一个分析框架，将 agent memory 分解为四个核心模块：memory representation and storage、extraction、retrieval and routing、maintenance，并在覆盖 11 个数据集的 5 类 benchmark workloads 上评估 12 个代表性 memory systems 与 2 个参考 baseline。实验表明，没有单一架构能在所有场景中占优，性能取决于 memory structure 与 workload bottleneck 的匹配程度。进一步的细粒度 ablation 量化了各模块对 representation fidelity、retrieval precision、update correctness 和 long-horizon stability 的影响。论文还揭示了真实工作负载下的成本-性能权衡，发现 localized maintenance 通常比 global reorganization 更具成本效率，并据此提出构建真正 agent-native memory systems 的未来方向。",
+  "abstract_zh": "本文从数据管理视角系统研究 LLM agent 的记忆系统。作者指出，现有 agent memory 已从简单的检索增强机制，演化为支持持久化存储、检索、更新、整合与动态生命周期治理的数据管理系统；但当前评测仍多以 F1、BLEU 等端到端任务指标为主，将记忆系统视为黑盒，忽略了操作成本、模块架构权衡、动态知识更新下的鲁棒性等系统级问题。为此，论文提出一个分析框架，将 agent memory 分解为四个核心模块：memory representation and storage、extraction、retrieval and routing、maintenance。基于该框架，作者在覆盖 11 个数据集的 5 类 benchmark workloads 上评测了 12 个代表性 memory systems 与 2 个参考 baseline。实验表明，没有单一架构能在所有场景中占优，效果高度依赖记忆结构与 workload bottleneck 的匹配程度。进一步的细粒度消融量化了各模块对表示保真度、检索精度、更新正确性和长程稳定性的影响，并揭示了现实负载下的成本-性能权衡：局部维护通常比全局重组更具成本效率。论文最后总结了构建真正 agent-native memory systems 的关键研究方向。",
   "key_points_zh": [
-    "提出从数据管理角度分析 agent memory 的框架，将其拆分为 representation/storage、extraction、retrieval/routing、maintenance 四个模块。",
-    "在 5 类 workloads、11 个 datasets 上评估 12 个代表性 memory systems 和 2 个 baselines，发现不存在全场景最优架构。",
-    "实验显示 memory structure 必须与 workload bottleneck 匹配：不同任务对表示保真度、检索精度、更新正确性和长程稳定性的需求不同。",
-    "通过细粒度 ablation 分析各模块贡献，揭示 memory 设计中的架构 trade-off，而非仅依赖端到端指标判断优劣。",
-    "成本分析表明，在真实 workloads 下 localized maintenance 比 global reorganization 更具成本效率，为 agent-native memory system 设计提供方向。"
+    "提出数据管理视角的 agent memory 分析框架，将系统拆解为 representation/storage、extraction、retrieval/routing、maintenance 四个模块。",
+    "在 5 类 benchmark workloads、11 个数据集上评测 12 个代表性 memory systems 和 2 个 baseline，覆盖端到端效果与模块级能力。",
+    "实验发现不存在通用最优 memory architecture，性能取决于记忆结构是否匹配具体 workload bottleneck。",
+    "细粒度消融分析量化了各模块对表示保真度、检索精度、更新正确性与长程稳定性的贡献。",
+    "揭示现实负载下的 cost-performance trade-off：相比全局重组，localized maintenance 通常更高效，也更适合动态更新场景。"
   ],
   "llm_assessment": {
-    "novelty": 0.7,
-    "problem_significance": 0.8,
-    "potential_impact": 0.72,
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
     "paradigm_shift": 0.5,
-    "lasting_value": 0.72,
-    "llm_avg": 0.688,
-    "comment": "A strong system-level study of agent memory architectures that is directly relevant to reusable memory infrastructure and operational trade-offs.",
-    "comment_zh": "这是一项强系统视角的智能体记忆架构研究，对可复用记忆基础设施和运行成本权衡具有直接价值。"
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "Strong systems-oriented study of agent memory architectures and trade-offs, but mostly evaluative rather than a closed-loop self-improvement harness.",
+    "comment_zh": "Strong systems-oriented study of agent memory architectures and trade-offs, but mostly evaluative rather than a closed-loop self-improvement harness."
   },
   "scores": {
     "topic_relevance": 0.88,
     "open_source": 0.5,
-    "community_heat": 0.0,
-    "author_reputation": 0.3,
+    "community_heat": 0.9112877314501275,
+    "author_reputation": 0.3315497212666585,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.688,
+    "llm_assessment": 0.5,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -54,13 +54,13 @@
     "project_page_url": null,
     "code_promised": true,
     "has_video_demo": false,
-    "hf_listed": false,
-    "hf_upvotes": 0,
+    "hf_listed": true,
+    "hf_upvotes": 61,
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": null,
-    "last_author_found": false,
+    "last_author_h_index": 3,
+    "last_author_found": true,
     "last_author_affiliations": []
   },
   "figures": [

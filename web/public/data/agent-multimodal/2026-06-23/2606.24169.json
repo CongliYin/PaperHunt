@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2606.24169",
   "title": "Data Scale, Not Latency, Shapes Cross-Lingual Encoder Transfer in Streaming ASR",
-  "title_zh": "数据规模而非延迟决定流式 ASR 中的跨语言 Encoder 迁移效果",
+  "title_zh": "数据规模而非延迟决定流式 ASR 中跨语言 Encoder 迁移效果",
   "authors": [
     "Nenad Banfic"
   ],
@@ -14,23 +14,23 @@
     "project_page": null
   },
   "abstract_en": "Adapting a streaming speech recognition model to a new language requires choosing between two plausible warm starts: a multilingual (ML) encoder or an English-only (EN) encoder. The common intuition is that the multilingual encoder should help most at low data, but it is unclear how long that advantage persists, whether tight streaming latency amplifies it, and whether it survives deployment quantization. We answer these questions with a controlled sweep of a 0.6 B-parameter cache-aware FastConformer transducer across eight European languages, up to five target-language data scales (100 h to 2500 h), three streaming tiers plus offline decoding, and up to four public test sets. The main result is that multilingual initialization is a data-limited advantage, not a latency-limited one. On FLEURS at 160 ms, the mean EN-ML word error rate (WER) gap falls from +4.21 percentage points (pp) at 100 h to +0.20 pp at 2500 h; a power-law fit summarizes this decay, with each doubling of target-language data roughly halving the remaining advantage. Across the three streaming tiers, the across-language mean EN-ML gap is approximately stable at each scale from 100 to 1000 h, and is near zero by 2500 h. Finally, 4-bit weight-only encoder quantization at the matched 560 ms streaming tier reduces the encoder footprint by about 3x, with an average FLEURS WER increase of about 0.5 pp. The resulting guideline is simple: use multilingual initialization in low-data regimes, treat the choice as effectively irrelevant at large data, and make latency and quantization decisions independently.",
-  "abstract_zh": "本文研究将流式语音识别模型适配到新语言时，应该从 multilingual (ML) encoder 还是 English-only (EN) encoder 初始化。作者使用 0.6B 参数的 cache-aware FastConformer transducer，在 8 种欧洲语言、100h 到 2500h 的目标语言数据规模、3 个流式延迟档位及离线解码、最多 4 个公开测试集上进行受控实验。核心结论是：multilingual 初始化的优势主要受数据规模限制，而不是受流式延迟限制。在 FLEURS、160 ms 场景下，EN 相对 ML 的平均 WER 差距从 100h 时的 +4.21 个百分点下降到 2500h 时的 +0.20 个百分点；幂律拟合显示，目标语言数据每翻倍，ML 初始化剩余优势约减半。不同流式延迟档位下，在 100h 到 1000h 数据规模内跨语言平均 EN-ML 差距基本稳定，到 2500h 时接近于零。此外，在匹配的 560 ms 流式档位下，4-bit weight-only encoder 量化可将 encoder footprint 降低约 3 倍，FLEURS 平均 WER 仅增加约 0.5 个百分点。由此给出的实用建议是：低数据场景使用 multilingual 初始化；大数据场景下初始化选择基本无关；延迟与量化决策可相对独立考虑。",
+  "abstract_zh": "本文研究将流式语音识别模型适配到新语言时，应选择 multilingual (ML) encoder 还是 English-only (EN) encoder 作为初始化。作者在八种欧洲语言上，对 0.6B 参数的 cache-aware FastConformer transducer 进行了受控实验，覆盖 100h 到 2500h 的目标语言数据规模、三档流式延迟设置以及 offline decoding，并在最多四个公开测试集上评估。核心结论是：multilingual initialization 的优势主要受数据规模限制，而不是受流式延迟限制。在 FLEURS、160 ms 设置下，EN 与 ML 的平均 WER 差距从 100h 时的 +4.21 个百分点下降到 2500h 时的 +0.20 个百分点；power-law 拟合显示，目标语言数据每翻倍，ML 初始化剩余优势大约减半。不同流式延迟档位下，在 100h 到 1000h 各数据规模上，跨语言平均 EN-ML 差距基本稳定，并在 2500h 时接近为零。此外，在匹配的 560 ms 流式设置下，4-bit weight-only encoder quantization 可将 encoder 占用减少约 3 倍，FLEURS 平均 WER 仅增加约 0.5 个百分点。实践建议是：低资源场景使用 multilingual initialization；大数据场景下初始化选择基本无关紧要；延迟和量化决策可相对独立处理。",
   "key_points_zh": [
-    "研究比较 streaming ASR 适配新语言时，multilingual encoder 与 English-only encoder 两种 warm start 的效果。",
-    "在 8 种欧洲语言、100h–2500h 数据规模、多个流式延迟档位和公开测试集上系统评估 0.6B cache-aware FastConformer transducer。",
-    "multilingual 初始化优势随目标语言数据增加快速衰减：FLEURS 160 ms 下 EN-ML WER 差距从 100h 的 +4.21 pp 降至 2500h 的 +0.20 pp。",
-    "不同流式延迟档位下，同一数据规模的 EN-ML 差距基本稳定，说明优势主要由数据规模而非 latency 决定。",
-    "4-bit weight-only encoder quantization 可将 encoder footprint 降低约 3 倍，平均 WER 仅增加约 0.5 pp，量化决策可与初始化和延迟选择相对解耦。"
+    "研究对象是 0.6B 参数 cache-aware FastConformer transducer，在八种欧洲语言、最多五档数据规模、三档流式延迟和 offline decoding 下进行系统对比。",
+    "multilingual encoder 的优势主要来自低数据条件，而非低延迟条件；随着目标语言数据增加，EN 与 ML 初始化的 WER 差距快速缩小。",
+    "在 FLEURS 160 ms 设置下，EN-ML 平均 WER 差距从 100h 的 +4.21 pp 降至 2500h 的 +0.20 pp；数据每翻倍，剩余优势约减半。",
+    "不同 streaming tiers 下，同一数据规模的跨语言平均 EN-ML 差距相对稳定，说明 latency 不会显著放大 multilingual initialization 的收益。",
+    "4-bit weight-only encoder quantization 在 560 ms 设置下将 encoder footprint 降低约 3 倍，平均 WER 仅上升约 0.5 pp，表明量化决策可与初始化选择基本解耦。"
   ],
   "llm_assessment": {
-    "novelty": 0.48,
+    "novelty": 0.46,
     "problem_significance": 0.5,
     "potential_impact": 0.42,
-    "paradigm_shift": 0.22,
-    "lasting_value": 0.36,
-    "llm_avg": 0.396,
-    "comment": "A careful streaming ASR scaling and latency study with practical deployment guidance, but it remains mostly a pure ASR paper rather than a realtime agent contribution.",
-    "comment_zh": "这是一项严谨的流式ASR规模与延迟研究，并给出实用部署建议，但整体仍主要是纯ASR工作而非实时智能体贡献。"
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.34,
+    "llm_avg": 0.394,
+    "comment": "A careful streaming ASR transfer study with latency implications, but it remains mostly an ASR optimization paper rather than an agent interaction contribution.",
+    "comment_zh": "这是一项严谨的流式ASR迁移研究并涉及延迟因素，但整体上仍主要是ASR优化而非智能体交互贡献。"
   },
   "scores": {
     "topic_relevance": 0.36000000000000004,
@@ -39,7 +39,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.396,
+    "llm_assessment": 0.394,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -56,30 +56,5 @@
     "last_author_found": false,
     "last_author_affiliations": []
   },
-  "figures": [
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24169/fig1.webp",
-      "page": 4,
-      "kind": "figure",
-      "confidence": 0.883
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24169/fig2.webp",
-      "page": 5,
-      "kind": "figure",
-      "confidence": 0.969
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24169/fig3.webp",
-      "page": 5,
-      "kind": "figure",
-      "confidence": 0.966
-    },
-    {
-      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.24169/fig4.webp",
-      "page": 4,
-      "kind": "table",
-      "confidence": 0.906
-    }
-  ]
+  "figures": []
 }
