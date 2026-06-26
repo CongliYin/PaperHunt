@@ -30,6 +30,7 @@ jobs:
       RUN_DATE_OFFSET_DAYS: "1"
       RUN_ROLLBACK_WEEKENDS: "1"
       FIGURE_BACKEND: yolo
+      FIGURE_MAX_COUNT: "2"
       STORAGE_BACKEND: blob
       LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
       LLM_API_KEY: ${{ secrets.LLM_API_KEY }}

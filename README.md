@@ -26,6 +26,7 @@ Non-secret runtime env:
 | --- | --- | --- |
 | `RUN_TZ` | `Asia/Tokyo` | timezone used to define "yesterday" |
 | `FIGURE_BACKEND` | `yolo` in CI | `yolo` or `pymupdf` |
+| `FIGURE_MAX_COUNT` | `4` (`2` in CI) | max detail figures per paper; lower values reduce Blob advanced operations |
 | `STORAGE_BACKEND` | `blob` | `blob` or `repo` |
 
 ## Local Usage

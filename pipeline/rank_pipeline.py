@@ -416,6 +416,58 @@ def _other_score(scores: dict) -> float:
     return sum(scores.get(k, 0) * WEIGHTS[k] for k in keys) / total_w if total_w else 0.0
 
 
+def _load_existing_figure_assets(data_dir: Path) -> dict[str, dict]:
+    """Collect already-published figure URLs from generated JSON files."""
+    assets: dict[str, dict] = {}
+    if not data_dir.exists():
+        return assets
+
+    for path in data_dir.rglob("*.json"):
+        if path.name == "index.json":
+            continue
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except Exception as exc:  # noqa: BLE001 - stale output must not block a run
+            print(f"[figures-cache] skipped {path}: {exc}")
+            continue
+
+        figures = payload.get("figures")
+        if isinstance(figures, list):
+            arxiv_id = re.sub(r"v\d+$", "", str(payload.get("arxiv_id") or path.stem).strip())
+            usable_figures = [
+                figure
+                for figure in figures
+                if isinstance(figure, dict) and figure.get("src")
+            ]
+            if arxiv_id and usable_figures:
+                record = assets.setdefault(arxiv_id, {})
+                record.setdefault("figures", usable_figures)
+                inferred_thumb = _infer_thumb_from_figures(usable_figures)
+                if inferred_thumb:
+                    record.setdefault("thumb", inferred_thumb)
+
+        papers = payload.get("papers")
+        if isinstance(papers, list):
+            for paper in papers:
+                if not isinstance(paper, dict):
+                    continue
+                arxiv_id = re.sub(r"v\d+$", "", str(paper.get("arxiv_id") or "").strip())
+                thumb = str(paper.get("thumb") or "").strip()
+                if arxiv_id and thumb:
+                    record = assets.setdefault(arxiv_id, {})
+                    record.setdefault("thumb", thumb)
+
+    return assets
+
+
+def _infer_thumb_from_figures(figures: list[dict]) -> str:
+    for figure in figures:
+        src = str(figure.get("src") or "").strip()
+        if re.search(r"/fig\d+\.webp$", src):
+            return re.sub(r"/fig\d+\.webp$", "/thumb.webp", src)
+    return ""
+
+
 def update_index_json(data_dir: Path, domain: str, display_name: str, date: str, paper_count: int) -> None:
     index_path = data_dir / "index.json"
     if index_path.exists():
@@ -471,6 +523,7 @@ def emit_json_outputs(
         backend=storage_backend,
         public_dir=Path.cwd() / "web" / "public",
     )
+    existing_figure_assets = _load_existing_figure_assets(data_dir)
 
     list_items = []
     emitted = 0
@@ -487,11 +540,24 @@ def emit_json_outputs(
 
         figures_payload = {"figures": [], "thumb": ""}
         if not skip_figures:
-            figures_payload = extract_figures(
-                arxiv_id,
-                figures_work_dir,
-                storage=storage,
-            )
+            cached_assets = existing_figure_assets.get(arxiv_id) or {}
+            if cached_assets.get("figures"):
+                print(f"[figures-cache] {arxiv_id}: reusing existing figures")
+                figures_payload = {
+                    "figures": cached_assets.get("figures", []),
+                    "thumb": cached_assets.get("thumb", ""),
+                }
+            else:
+                figures_payload = extract_figures(
+                    arxiv_id,
+                    figures_work_dir,
+                    storage=storage,
+                )
+                if figures_payload.get("figures"):
+                    existing_figure_assets[arxiv_id] = {
+                        "figures": figures_payload.get("figures", []),
+                        "thumb": figures_payload.get("thumb") or "",
+                    }
 
         scores = paper.get("scores", {})
         detail_file = f"{domain}/{date}/{arxiv_id}.json"

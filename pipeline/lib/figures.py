@@ -40,13 +40,15 @@ def extract_figures(
     out_dir: str | Path,
     *,
     storage: FigureStorage | None = None,
-    max_figures: int = 4,
+    max_figures: int | None = None,
     max_pages: int = 6,
 ) -> dict[str, Any]:
     """Download a paper PDF, crop key figures, upload/copy them, return metadata."""
     configure_figure_runtime_cache()
     storage = storage or FigureStorage()
     backend = os.getenv("FIGURE_BACKEND", "pymupdf")
+    if max_figures is None:
+        max_figures = int(os.getenv("FIGURE_MAX_COUNT", "4"))
     work_dir = Path(out_dir) / _clean_id(arxiv_id)
     work_dir.mkdir(parents=True, exist_ok=True)
     try:
