@@ -1,0 +1,70 @@
+{
+  "arxiv_id": "2606.26790",
+  "title": "OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning",
+  "title_zh": "OPID：面向智能体强化学习的 On-Policy 技能蒸馏",
+  "authors": [
+    "Shuo Yang",
+    "Jinyang Wu",
+    "Zhengxi Lu",
+    "Yuhao Shen",
+    "Fan Zhang",
+    "Lang Feng",
+    "Shuai Zhang",
+    "Haoran Luo",
+    "Zheng Lian",
+    "Zhengqi Wen",
+    "Jianhua Tao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-25T09:24:09Z",
+  "abs_url": "https://arxiv.org/abs/2606.26790v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.26790",
+  "links": {
+    "github": "https://github.com/jinyangwu/OPID",
+    "project_page": null
+  },
+  "abstract_en": "Outcome-based reinforcement learning provides a stable optimization backbone for language agents, but its sparse trajectory-level rewards provide little guidance on which intermediate decisions should be reinforced or suppressed. On-policy self-distillation offers dense token-level supervision, yet existing skill-conditioned variants often rely on external skill memories or retrieved privileged context, which are costly to maintain and can be mismatched with the state distribution induced by the current policy in multi-turn interaction. We propose \\textbf{OPID} (\\textbf{O}n-\\textbf{P}olicy Sk\\textbf{i}ll \\textbf{D}istillation), a framework that extracts skill supervision directly from completed on-policy trajectories. OPID represents trajectory hindsight as hierarchical skills: episode-level skills capture global workflows or failure-avoidance rules, while step-level skills capture local decision knowledge at critical timesteps. A critical-first routing mechanism uses step-level skills when critical decisions are identified and falls back to episode-level skills as default guidance otherwise. The selected skill is injected into the interaction history, allowing the old policy to re-score the same sampled response under both original and skill-augmented contexts. The resulting log-probability shift yields a token-level self-distillation advantage, which is combined with the outcome advantage for policy optimization. OPID thus preserves RL as the primary training objective while introducing dense, distribution-matched hindsight supervision. Experiments on ALFWorld, WebShop and Search-based QA demonstrate that OPID generally improves agent performance, sample efficiency, and robustness over outcome-only RL and existing skill-distillation baselines. Our code is available at https://github.com/jinyangwu/OPID/tree/main.",
+  "abstract_zh": "基于结果的强化学习为语言智能体提供了稳定的优化框架，但其稀疏的轨迹级奖励难以指明哪些中间决策应被强化或抑制。On-policy 自蒸馏能够提供稠密的 token 级监督，但现有技能条件化方法通常依赖外部技能记忆或检索到的特权上下文，维护成本高，并且可能与当前策略在多轮交互中诱导出的状态分布不匹配。本文提出 OPID（On-Policy Skill Distillation），直接从已完成的 on-policy 轨迹中提取技能监督。OPID 将轨迹后见信息表示为层次化技能：episode-level skills 捕获全局工作流或避错规则，step-level skills 捕获关键时间步的局部决策知识。其 critical-first routing 机制在识别到关键决策时优先使用 step-level skills，否则回退到 episode-level skills 作为默认指导。被选中的技能会注入交互历史，使旧策略在原始上下文和技能增强上下文下对同一采样响应重新打分；由此得到的 log-probability shift 构成 token 级自蒸馏 advantage，并与 outcome advantage 结合用于策略优化。OPID 保留 RL 作为主要训练目标，同时引入稠密且分布匹配的后见监督。在 ALFWorld、WebShop 和 Search-based QA 上的实验表明，OPID 相比仅基于结果的 RL 和已有技能蒸馏基线，通常能提升智能体性能、样本效率与鲁棒性。",
+  "key_points_zh": [
+    "提出 OPID，一种无需外部技能记忆或特权检索上下文的 on-policy skill distillation 框架，直接从当前策略生成的完整轨迹中提取后见技能监督。",
+    "将轨迹经验组织为层次化技能：episode-level skills 负责全局流程与失败规避，step-level skills 聚焦关键时间步的局部决策知识。",
+    "设计 critical-first routing：若检测到关键决策则注入 step-level skill，否则使用 episode-level skill，从而在局部精确指导与全局默认指导之间切换。",
+    "通过比较旧策略在原始上下文与技能增强上下文下对同一响应的 log-probability shift，构造 token 级自蒸馏 advantage，并与 outcome advantage 联合优化。",
+    "在 ALFWorld、WebShop 和 Search-based QA 上，OPID 相比 outcome-only RL 与已有 skill-distillation 方法整体提升了任务表现、样本效率和鲁棒性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.82,
+    "llm_avg": 0.8280000000000001,
+    "comment": "Strong agent-RL work that turns on-policy trajectories into dense skill supervision for more sample-efficient tool-use learning.",
+    "comment_zh": "这是一篇较强的智能体强化学习论文，将在线轨迹转化为密集技能监督以提升工具使用学习效率。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.5,
+    "community_heat": 0.8659745638428135,
+    "author_reputation": 0.43279927259299455,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8280000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/jinyangwu/OPID",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 33,
+    "first_author_h_index": 11,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

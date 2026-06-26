@@ -1,0 +1,61 @@
+{
+  "arxiv_id": "2606.26627",
+  "title": "Agents That Know Too Much: A Data-Centric Survey of Privacy in LLM Agents",
+  "title_zh": "知道得太多的智能体：LLM Agents 隐私的数据中心化综述",
+  "authors": [
+    "Nada Lahjouji",
+    "Ashwin Gerard Colaco"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-25T05:44:18Z",
+  "abs_url": "https://arxiv.org/abs/2606.26627v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.26627",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model agents increasingly query databases, search document collections, call external APIs, remember past interactions, and act on a user's behalf. As they move from answering questions to operating over sensitive data, privacy becomes harder to enforce. An agent touches many data sources, runs multi-step workflows, keeps state across sessions, and acts with delegated permissions. Sensitive information can therefore leak not only through its final answer but through the queries it issues, the intermediate results it handles, the memory it writes, and the messages it exchanges with other agents. We survey the privacy of LLM agents from a data-centric view, organizing the field around the data an agent touches rather than by attack type, and we use data agent as shorthand for an LLM agent that works with data. Research on these risks is active but scattered across retrieval-augmented generation, text-to-SQL interfaces, agent memory, prompt injection, access control, and contextual privacy. This survey brings that work together: we taxonomize the data sources an agent touches, the privacy risks each source creates, and the governance mechanisms that address them; we map the benchmarks used to measure these risks and identify what is missing; and we set out the open problems. Two findings recur: among governance mechanisms only information-flow control covers both compositional and cross-session inference leakage, the two least-protected risks; and no benchmark drives an agent across its data surfaces under one privacy policy, the instrument the field most lacks. Our goal is a reference that situates the scattered literature and gives future work a common framing.",
+  "abstract_zh": "随着 Large Language Model agents 越来越多地查询数据库、检索文档集合、调用外部 API、记忆历史交互并代表用户执行操作，隐私保护变得更难落实。不同于只生成回答的传统场景，LLM agent 会接触多类敏感数据源、执行多步工作流、跨会话保持状态，并以委托权限行动，因此信息泄露可能发生在最终答案、发出的查询、中间结果、写入的记忆以及与其他 agents 的通信中。本文从数据中心化视角综述 LLM agents 的隐私问题，以 agent 触达的数据而非攻击类型来组织研究，并用 data agent 指代处理数据的 LLM agent。论文整合了 retrieval-augmented generation、text-to-SQL、agent memory、prompt injection、access control 和 contextual privacy 等分散领域的工作，系统分类了数据源、对应隐私风险和治理机制，梳理相关 benchmark，并指出缺失与开放问题。核心发现包括：在治理机制中，只有 information-flow control 同时覆盖组合式泄露和跨会话推理泄露这两类保护最薄弱的风险；当前缺少一个能在统一隐私策略下驱动 agent 跨多个数据表面运行的 benchmark。",
+  "key_points_zh": [
+    "本文提出数据中心化视角：围绕 LLM agent 接触的数据源来分析隐私，而不是按攻击类型分类，更适合描述多源、多步、跨会话的 agent 工作流。",
+    "隐私泄露面不仅包括最终输出，还包括 agent 发出的查询、中间检索或计算结果、长期记忆、外部 API 调用，以及与其他 agents 的消息交换。",
+    "论文统一梳理了 RAG、text-to-SQL、agent memory、prompt injection、access control、contextual privacy 等分散研究，并给出数据源、风险和治理机制的分类框架。",
+    "作者指出 information-flow control 是少数能同时处理组合式推理泄露与跨会话推理泄露的机制，而这两类风险也是当前最缺乏保护的。",
+    "现有 benchmarks 多覆盖局部隐私问题，缺少一个在统一隐私策略下评测 agent 跨数据库、文档、记忆、API 等多个数据表面的综合 benchmark。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.45,
+    "problem_significance": 0.78,
+    "potential_impact": 0.63,
+    "paradigm_shift": 0.42,
+    "lasting_value": 0.68,
+    "llm_avg": 0.592,
+    "comment": "A useful survey that frames agent privacy around data surfaces and governance gaps, but it contributes limited new infrastructure.",
+    "comment_zh": "这是一篇有用的综述，从数据接触面和治理缺口梳理智能体隐私问题，但新增基础设施贡献有限。"
+  },
+  "scores": {
+    "topic_relevance": 1.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.592,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

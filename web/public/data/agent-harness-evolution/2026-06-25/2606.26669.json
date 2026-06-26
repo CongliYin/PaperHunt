@@ -1,0 +1,64 @@
+{
+  "arxiv_id": "2606.26669",
+  "title": "SKILL-DISCO: Distilling and Compiling Agent Traces into Reusable Procedural Skills",
+  "title_zh": "SKILL-DISCO：将智能体轨迹蒸馏并编译为可复用的过程技能",
+  "authors": [
+    "Zhongxin Guo",
+    "Danrui Qi",
+    "Hanwen Gu",
+    "Peng Cheng",
+    "Yongqiang Xiong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-25T07:02:32Z",
+  "abs_url": "https://arxiv.org/abs/2606.26669v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.26669",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agents often repeatedly solve similar task instances from scratch, leading to unnecessary reasoning cost and long execution traces. Prior work has explored workflow reuse and executable skill induction, but it remains unclear which task scenarios admit procedural skills and how the shared procedural structure should be represented across successful traces. We study this problem in FSM-defined scenarios, where successful traces can be viewed as paths in an unknown transition graph, and formulate procedural skills as reusable parameterized control-flow subgraphs. Based on this view, we introduce SkillDisCo, a distillation-and-compilation framework that distills reusable PFSM subgraphs from successful traces and compiles them into callable, executable, and verifiable procedural skills. Experiments on ALFWorld and WebArena show that SkillDisCo improves success rates and reduces agent turns across benchmarks and model scales, demonstrating the benefits of representing shared experience as reusable execution structures.",
+  "abstract_zh": "智能体经常从零开始反复解决相似任务实例，导致不必要的推理成本和冗长执行轨迹。已有研究探索了工作流复用和可执行技能归纳，但哪些任务场景适合形成过程技能，以及如何在成功轨迹之间表示共享的过程结构，仍不清楚。本文在由 FSM（有限状态机）定义的场景中研究该问题，将成功轨迹视为未知转移图中的路径，并把过程技能形式化为可复用的、参数化的控制流子图。基于这一视角，作者提出 SkillDisCo，一个“蒸馏—编译”框架：从成功轨迹中蒸馏可复用的 PFSM 子图，并将其编译为可调用、可执行且可验证的过程技能。在 ALFWorld 和 WebArena 上的实验表明，SkillDisCo 在不同基准和模型规模下均能提升成功率并减少智能体交互轮数，说明将共享经验表示为可复用执行结构具有明显收益。",
+  "key_points_zh": [
+    "将成功智能体轨迹建模为未知转移图中的路径，并把过程技能定义为参数化控制流子图，而非简单文本经验或固定脚本。",
+    "提出 SkillDisCo 框架，通过蒸馏成功轨迹中的共享 PFSM 子图，再将其编译为可调用、可执行、可验证的技能模块。",
+    "该方法面向 FSM-defined scenarios，重点回答哪些任务结构适合复用过程技能，以及共享结构应如何表示。",
+    "在 ALFWorld 和 WebArena 实验中，SkillDisCo 同时提升任务成功率并减少 agent turns，且收益覆盖不同模型规模。",
+    "核心贡献在于把经验复用从“记忆轨迹”推进到“复用执行结构”，降低重复推理与长轨迹开销。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.86,
+    "problem_significance": 0.84,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.84,
+    "llm_avg": 0.842,
+    "comment": "SkillDisCo is strong trace-driven agent-evolution work that compiles successful trajectories into reusable, executable procedural skills.",
+    "comment_zh": "SkillDisCo 是很强的轨迹驱动智能体进化工作，可将成功轨迹编译为可复用、可执行的过程技能。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.34373441375821495,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.842,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

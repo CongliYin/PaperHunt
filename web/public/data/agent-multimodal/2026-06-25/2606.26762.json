@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2606.26762",
+  "title": "ProtoKV: Streaming Video Understanding under Delayed Query with Summary-State Memory",
+  "title_zh": "ProtoKV：面向延迟查询的流式视频理解摘要状态记忆",
+  "authors": [
+    "Le Tu Ngoc Minh",
+    "Jinyeong Lim",
+    "Dongsu Han"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Le Tu Ngoc Minh",
+      "affiliations": [
+        "KAIST"
+      ]
+    },
+    {
+      "name": "Jinyeong Lim",
+      "affiliations": [
+        "KAIST"
+      ]
+    },
+    {
+      "name": "Dongsu Han",
+      "affiliations": [
+        "KAIST"
+      ]
+    }
+  ],
+  "published_at": "2026-06-25T08:47:15Z",
+  "abs_url": "https://arxiv.org/abs/2606.26762v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.26762",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Streaming video understanding (SVU) must answer queries that arrive asynchronously while visual tokens stream continuously under strict GPU-memory and query-time latency budgets. A key challenge is delayed query: decisive cues may appear briefly, yet many subsequent updates occur before the query arrives, increasing the risk that those cues are evicted or diluted under bounded memory. We propose ProtoKV, a constant-footprint SVU memory that represents far history as a fixed-capacity summary state rather than retaining token instances. ProtoKV keeps an exact near-window KV cache and aggregates older content into a semantic-spatial prototype bank with residual statistics. At query time, each prototype is exposed through a bounded pseudo-token interface that is drop-in compatible with standard attention. Under matched budgets and comparable query-time cost, ProtoKV improves accuracy by up to 12.5 points over token-retention baselines on SVU benchmarks in the long-delay regime, with gains that grow as query delay increases.",
+  "abstract_zh": "本文研究流式视频理解（Streaming Video Understanding, SVU）中的延迟查询问题：视频视觉 token 持续到达，而查询可能异步且很晚才出现；在严格 GPU 显存和低查询延迟约束下，早期短暂但关键的视觉线索容易被淘汰或被后续信息稀释。作者提出 ProtoKV，一种固定内存占用的 SVU 记忆机制。它保留精确的近窗口 KV cache，并将更早历史压缩为语义-空间 prototype bank，同时维护 residual statistics。查询时，每个 prototype 通过有界 pseudo-token 接口暴露，可直接兼容标准 attention。在相同资源预算和相近查询开销下，ProtoKV 在长延迟场景的 SVU benchmark 上相比 token-retention 基线最高提升 12.5 个准确率点，且查询延迟越长收益越明显。",
+  "key_points_zh": [
+    "聚焦 SVU 的 delayed query 难题：关键视觉证据可能早已出现，但查询到来前经历大量更新，传统有限 KV 保留策略易丢失关键信息。",
+    "ProtoKV 采用 constant-footprint memory：近历史用精确 KV cache 保存，远历史不再保留 token 实例，而压缩为固定容量的 semantic-spatial prototype bank。",
+    "引入 residual statistics 以补充 prototype 对历史信息的近似表达，降低远程信息被过度压缩或语义稀释的风险。",
+    "查询阶段将 prototype 转换为 bounded pseudo-token，与标准 attention drop-in compatible，无需大幅改动现有模型推理接口。",
+    "在长延迟 SVU benchmark 中，相同预算下相较 token-retention baselines 最高提升 12.5 个准确率点，并且延迟越长优势越大。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.82,
+    "potential_impact": 0.75,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.76,
+    "llm_avg": 0.7380000000000001,
+    "comment": "A strong streaming-video memory paper with clear relevance to low-latency visual agents, though it is more an architectural improvement than a full agent interaction framework.",
+    "comment_zh": "这是一篇与低延迟视觉智能体高度相关的流式视频记忆论文，但更偏向架构改进而非完整的智能体交互框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 1.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7380000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

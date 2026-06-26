@@ -1,0 +1,62 @@
+{
+  "arxiv_id": "2606.26614",
+  "title": "HiLSVA: Design and Evaluation of a Human-in-the-Loop Agentic System for Scientific Visualization",
+  "title_zh": "HiLSVA：面向科学可视化的人在环 Agentic 系统设计与评估",
+  "authors": [
+    "Kuangshi Ai",
+    "Patrick Phuoc Do",
+    "Chaoli Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-25T05:19:07Z",
+  "abs_url": "https://arxiv.org/abs/2606.26614v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.26614",
+  "links": {
+    "github": null,
+    "project_page": "https://hilsva.github.io/."
+  },
+  "abstract_en": "Large language model (LLM) agents enable natural language interaction for scientific visualization (SciVis). Still, prior systems have essentially prioritized autonomy over human analytical control, thereby limiting transparency and human oversight. We present HiLSVA, a human-in-the-loop agentic system that supports mixed-initiative SciVis workflows. HiLSVA integrates a plan-first multi-agent architecture with explicit human oversight, stepwise provenance tracking, and learn-at-test-time adaptation from user feedback. The system supports fluid handoff between humans and agents through both natural language and direct manipulation of visualizations, while sandboxed execution ensures safe, reproducible workflows. In doing so, HiLSVA reframes agentic SciVis as a collaborative process that augments, rather than replaces, human analytical reasoning. We evaluate HiLSVA through representative case studies and a controlled user study with twelve participants of varying expertise across multiple autonomy settings. Results show that mixed-initiative interaction improves task completion, user control, and workflow transparency across different levels of user expertise, while revealing a tradeoff between execution efficiency and human oversight. These findings highlight the importance of human-centered design in agentic SciVis and guide the development of future collaborative visualization systems. We encourage readers to explore our demo video, case studies, and source code at https://hilsva.github.io/.",
+  "abstract_zh": "本文提出 HiLSVA，一个面向科学可视化（Scientific Visualization, SciVis）的人在环 Agentic 系统。不同于以往更强调自主性的 LLM agent 可视化系统，HiLSVA 将人类分析控制、透明性和监督机制置于核心位置。系统采用先规划（plan-first）的多智能体架构，结合显式人工监督、逐步溯源记录，以及基于用户反馈的测试时学习适应机制。用户既可通过自然语言，也可通过直接操作可视化结果，与 agent 流畅交接任务；同时，沙箱执行机制保证流程安全且可复现。论文通过代表性案例研究和包含 12 名不同经验水平参与者的受控用户实验，在多种自主性设置下评估系统。结果表明，混合主动式交互能够提升任务完成度、用户控制感和工作流透明性，但也揭示了执行效率与人工监督之间的权衡。该研究强调了以人为中心的设计对于 Agentic SciVis 系统的重要性。",
+  "key_points_zh": [
+    "HiLSVA 将 Agentic SciVis 从“自动替代人”重新定义为“增强人类分析推理”的协作流程，强调 human-in-the-loop 与 mixed-initiative interaction。",
+    "系统采用 plan-first multi-agent architecture，支持显式人工监督、逐步 provenance tracking，以及从用户反馈中进行 learn-at-test-time adaptation。",
+    "用户可通过自然语言和直接操控可视化结果与 agent 交互，实现人机之间灵活的任务交接；沙箱执行提升安全性与可复现性。",
+    "案例研究和 12 人受控实验显示，混合主动式交互提升了任务完成、用户控制感和工作流透明度，适用于不同专业水平用户。",
+    "实验同时发现执行效率与人工监督之间存在权衡，为未来协作式科学可视化系统设计提供了经验依据。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.57,
+    "problem_significance": 0.55,
+    "potential_impact": 0.52,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.48,
+    "llm_avg": 0.514,
+    "comment": "HiLSVA offers a practical human-in-the-loop agent workflow with provenance and sandboxing, but its value is fairly domain-specific to scientific visualization.",
+    "comment_zh": "HiLSVA 提供了带有溯源和沙箱的人机协同智能体流程，但其价值较集中于科学可视化场景。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.514,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://hilsva.github.io/.",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

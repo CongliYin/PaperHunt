@@ -1,0 +1,65 @@
+{
+  "arxiv_id": "2606.27122",
+  "title": "Mostly Automatic Translation of Language Interpreters from C to Safe Rust",
+  "title_zh": "从 C 到 Safe Rust 的语言解释器近自动翻译",
+  "authors": [
+    "Bo Wang",
+    "Brandon Paulsen",
+    "Joey Dodds",
+    "Daniel Kroening",
+    "Umang Mathur",
+    "Prateek Saxena"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-25T14:59:08Z",
+  "abs_url": "https://arxiv.org/abs/2606.27122v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.27122",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Translating C programs to safe Rust is challenging owing to significant differences in typing constraints, ownership, and borrowing rules. Interpreter programs are particularly important targets for such translation, as they often handle untrusted inputs and suffer from memory-related vulnerabilities. We present Reboot, a mostly-automatic technique that translates real-world interpreter programs from C to safe Rust. Using Reboot, we have translated six interpreters ranging from 6k to 23k lines of C code to safe Rust, with each translation requiring only 1 to 11 brief user interventions. All translations pass 100% of the provided test suites, and achieve 62%--92% pass rates on separately created validation tests that were never exposed to the system. A security case study on mujs shows that memory vulnerabilities such as heap buffer overflows and use-after-free present in C are eliminated in the safe Rust translation. Two ideas underpin Reboot. First, feature reduction decomposes the translation by program features, creating a sequence of milestones where each is a complete, testable program; the translation starts from the simplest version and incrementally restores features, with each milestone validated before proceeding. Second, a multi-agent architecture orchestrates inherently unreliable coding agents through automated validation and feedback, keeping long-running translation workflows on track with minimal human involvement. An ablation study confirms that feature reduction improves translation correctness compared to using multi-agent translation alone, with 6%--20% improvements in pass rates on validation test suites.",
+  "abstract_zh": "将 C 程序翻译为 safe Rust 面临类型约束、所有权与借用规则差异带来的挑战。解释器程序尤其重要，因为它们常处理不可信输入，并容易受到内存相关漏洞影响。论文提出 Reboot，一种近自动化技术，用于将真实世界的 C 语言解释器翻译为 safe Rust。作者使用 Reboot 将 6 个规模为 6k 到 23k 行 C 代码的解释器翻译为 safe Rust，每个翻译过程仅需 1 到 11 次简短人工干预。所有翻译结果均通过原始测试套件的 100% 测试，并在额外构造、系统未见过的验证测试上达到 62%–92% 的通过率。针对 mujs 的安全案例研究表明，C 版本中存在的 heap buffer overflow、use-after-free 等内存漏洞在 safe Rust 翻译版本中被消除。Reboot 的核心包括两点：其一，feature reduction 按程序特性分解翻译过程，形成一系列完整且可测试的里程碑，从最简版本开始逐步恢复功能，并在每个里程碑验证后继续；其二，multi-agent 架构通过自动验证与反馈协调不可靠的 coding agents，使长流程翻译在最少人工参与下保持正确方向。消融实验显示，相比仅使用 multi-agent 翻译，feature reduction 可将验证测试通过率提升 6%–20%。",
+  "key_points_zh": [
+    "提出 Reboot，将真实 C 解释器近自动翻译为 safe Rust，目标是减少内存安全风险。",
+    "在 6 个 6k–23k 行 C 代码解释器上验证，每个项目仅需 1–11 次简短人工干预。",
+    "翻译结果全部通过原测试套件，并在未见验证测试上达到 62%–92% 通过率。",
+    "核心方法包括 feature reduction：将翻译拆成可测试的功能里程碑，逐步恢复程序特性。",
+    "multi-agent 架构结合自动验证与反馈；消融显示 feature reduction 可带来 6%–20% 通过率提升。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.58,
+    "problem_significance": 0.57,
+    "potential_impact": 0.6,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.55,
+    "llm_avg": 0.5599999999999999,
+    "comment": "Reboot has useful long-horizon coding-agent orchestration and validation ideas, but its main contribution is program translation rather than agent harness evolution.",
+    "comment_zh": "Reboot 包含有用的长程代码智能体编排和验证思路，但主要贡献仍是程序翻译而非智能体框架进化。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4142509875137679,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5599999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 9,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

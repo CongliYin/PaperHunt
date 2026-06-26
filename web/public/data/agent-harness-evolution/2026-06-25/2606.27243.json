@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2606.27243",
+  "title": "NOVA: A Verification-Aware Agent Harness for Architecture Evolution in Industrial Recommender Systems",
+  "title_zh": "NOVA：面向工业推荐系统架构演进的验证感知智能体框架",
+  "authors": [
+    "Shaohua Liu",
+    "Liang Fang",
+    "Yilong Sun",
+    "Shudong Huang",
+    "Qingsong Luo",
+    "Xiaoyang Chen",
+    "Dongqiang Liu",
+    "Chuangang Ma",
+    "Zhenzhen Chai",
+    "Henghuan Wang",
+    "Shijie Quan",
+    "Changyuan Cui",
+    "Zhangbin Zhu",
+    "Peng Chen",
+    "Wei Xu",
+    "Lei Xiao",
+    "Haijie Gu",
+    "Jie Jiang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-25T16:30:39Z",
+  "abs_url": "https://arxiv.org/abs/2606.27243v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.27243",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Industrial advertising recommender models are continuously improved through architecture evolution. Upgrades such as RankMixer, TokenMixer-Large, and MixFormer show that better structures remain a key source of quality and business gains. Yet developing such upgrades in production is expert-intensive and difficult to scale. Existing automation is insufficient: AutoML mainly tunes hyper-parameters, while effective gains often require cross-module changes under strict constraints; generic LLM coding agents optimize for runnable code, but runnable code does not imply a valid recommender architecture. Candidates may pass local tests while causing silent failures that degrade performance. We present NOVA, a level-aware agent harness for verification-aware architecture evolution. NOVA uses an architecture gradient, an SGD-inspired, non-differentiable update signal that aggregates prior modifications, verification diagnostics, metric feedback, and trajectory memory to guide the next modification. A verification cascade checks structure semantics, local executability, offline effectiveness, and online impact; invalid candidates are blocked early, with failure patterns recorded as forbidden directions. L1--L4 task-level control matches automation to task complexity and risk, routing high-risk tasks to Copilot for human oversight. Deployed in an industrial advertising system, NOVA achieves the highest effective pass rate on L2 ScaleUp and L3 Literature-to-Production tasks (54.5% and 60.0%), reduces silent failures compared with coding-agent baselines, and shortens one literature-to-production cycle by over 13x in human-attended time. In online A/B testing, the selected L3 candidate improves GMV on three pCVR objectives by +1.25%, +1.70%, and +2.02%, while reducing pCVR bias by 58.8%, 66.7%, and 37.3%.",
+  "abstract_zh": "本文提出 NOVA，一个用于工业广告推荐系统架构演进的验证感知智能体框架。针对现有 AutoML 主要调参、通用 LLM coding agent 只保证代码可运行但难以保证推荐架构有效的问题，NOVA 引入 architecture gradient：一种受 SGD 启发的非可微更新信号，综合历史修改、验证诊断、指标反馈与轨迹记忆来指导下一步架构改动。同时，NOVA 采用验证级联机制，依次检查结构语义、本地可执行性、离线效果与在线影响，并将失败模式记录为 forbidden directions，以提前阻断无效候选。其 L1--L4 任务级控制根据任务复杂度和风险调节自动化程度，高风险任务会路由到 Copilot 以引入人工监督。在工业广告系统部署中，NOVA 在 L2 ScaleUp 与 L3 Literature-to-Production 任务上取得最高有效通过率，分别为 54.5% 和 60.0%，相较 coding-agent baseline 减少 silent failures，并将一次从论文到生产的人工参与周期缩短超过 13 倍。在线 A/B 测试中，选中的 L3 候选在三个 pCVR 目标上分别提升 GMV +1.25%、+1.70%、+2.02%，并将 pCVR bias 分别降低 58.8%、66.7%、37.3%。",
+  "key_points_zh": [
+    "NOVA 面向工业广告推荐系统的架构演进，解决通用 LLM coding agent“代码可运行但架构未必有效”的问题。",
+    "核心机制 architecture gradient 汇聚历史修改、验证诊断、指标反馈与轨迹记忆，作为非可微更新信号指导下一次架构改动。",
+    "验证级联覆盖结构语义、本地执行、离线效果与在线影响，并将失败模式沉淀为 forbidden directions，以减少 silent failures。",
+    "通过 L1--L4 任务级控制匹配自动化程度与风险，高风险任务交由 Copilot 进行人工监督。",
+    "工业部署结果显示，NOVA 在 L2 ScaleUp 和 L3 Literature-to-Production 上有效通过率达 54.5% 与 60.0%，并在在线 A/B 测试中带来 GMV 提升和 pCVR bias 显著下降。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.9,
+    "problem_significance": 0.91,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.87,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8940000000000001,
+    "comment": "NOVA is a strong production agent-harness paper combining verification cascades, trajectory memory, human gating, and deployment evidence.",
+    "comment_zh": "NOVA 是一篇很强的生产级智能体框架论文，结合了验证级联、轨迹记忆、人工门控和线上部署证据。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8940000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

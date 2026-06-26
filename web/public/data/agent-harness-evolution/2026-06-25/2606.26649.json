@@ -1,0 +1,62 @@
+{
+  "arxiv_id": "2606.26649",
+  "title": "Autoformalization of Agent Instructions into Policy-as-Code",
+  "title_zh": "将智能体指令自动形式化为 Policy-as-Code",
+  "authors": [
+    "Adam Mondl",
+    "Matthew Maisel",
+    "John H. Brock"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-25T06:23:15Z",
+  "abs_url": "https://arxiv.org/abs/2606.26649v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.26649",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent safety in high-stakes domains requires formal policy enforcement, but most existing approaches either rely on probabilistic guardrails (fine-tuned classifiers, prompt-based steering) that offer no formal guarantees, or on hand-coded symbolic enforcement that does not scale to the breadth of real policy specifications. We present an autoformalization pipeline that translates agent prompts, MCP tool descriptions, and natural language policy documents into formally verified policies using an LLM-based generator-critic loop. The resulting policies are written in the Cedar Policy Language. On the MedAgentBench benchmark, our autoformalized policies cover substantially more of the source natural-language specification than the hand-coded symbolic enforcement in prior work.",
+  "abstract_zh": "本文关注高风险领域中的智能体安全问题：现有方法要么依赖微调分类器、提示词引导等概率式 guardrails，无法提供形式化保证；要么依赖人工编写的符号化策略执行，难以覆盖复杂而广泛的真实政策规范。作者提出一个自动形式化（autoformalization）流水线，将智能体提示词、MCP 工具描述以及自然语言政策文档转换为经过形式化验证的策略。该流水线采用基于 LLM 的 generator-critic 循环，生成的策略使用 Cedar Policy Language 表达。在 MedAgentBench 基准上，自动形式化策略相比以往手写符号执行方法，能覆盖更多源自然语言规范内容。",
+  "key_points_zh": [
+    "提出面向智能体安全的自动形式化流水线，将 prompts、MCP tool descriptions 和自然语言 policy documents 转换为 Policy-as-Code。",
+    "生成的策略采用 Cedar Policy Language，可用于形式化验证与策略执行，相比概率式 guardrails 提供更强的安全保证。",
+    "方法使用 LLM-based generator-critic loop，在生成策略后通过批判与修正提升规范覆盖度和正确性。",
+    "在 MedAgentBench 上，自动生成的策略比既有手写 symbolic enforcement 覆盖了更多自然语言规范内容。",
+    "工作面向高风险场景中的 agent safety，试图在可扩展性与形式化保证之间取得平衡。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.78,
+    "llm_avg": 0.788,
+    "comment": "The paper addresses a key governance bottleneck by translating natural-language agent policies and tool descriptions into enforceable policy-as-code.",
+    "comment_zh": "该论文通过将自然语言智能体策略和工具描述转为可执行的策略代码，解决了重要治理瓶颈。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 1.0,
+    "generality": 0.9,
+    "llm_assessment": 0.788,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

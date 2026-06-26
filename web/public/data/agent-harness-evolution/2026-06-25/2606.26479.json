@@ -1,0 +1,63 @@
+{
+  "arxiv_id": "2606.26479",
+  "title": "Adaptive Evaluation of Out-of-Band Defenses Against Prompt Injection in LLM Agents",
+  "title_zh": "面向 LLM Agent 提示注入的带外防御自适应评估",
+  "authors": [
+    "Praneeth Narisetty",
+    "Shiva Nagendra Babu Kore",
+    "Uday Kumar Reddy Kattamanchi",
+    "Jayaram Kumarapu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-25T00:35:23Z",
+  "abs_url": "https://arxiv.org/abs/2606.26479v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.26479",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent work (2024 to 2026) has converged on a strategy for defending tool-using LLM agents against indirect prompt injection: rather than training the model to refuse malicious instructions, enforce security outside the model with a deterministic policy that mediates the agent's actions. Systems such as CaMeL, FIDES, Progent, RTBAS, and FORGE realize this with capabilities, information-flow labels, and reference monitors, and several report near-elimination of attacks on the AgentDojo benchmark. We make two contributions. First, we organize these out-of-band defenses as instances of classical integrity protection (Biba), reference monitoring, and least privilege, yielding a structured comparison of what they do and do not cover. Second, we warn that every one of them is validated only on static benchmarks (a fixed set of injection attempts), the same methodology that made in-band defenses look strong until adaptive, defense-aware attacks broke twelve of them at over 90% success; we specify the threat model and protocol an adaptive evaluation requires. We then run that protocol as an independent reproduction and extension of Progent's own adaptive-attack analysis, on AgentDojo, with an open-weight agent (Qwen2.5-7B) self-hosted on a single H200, a setting its authors did not test. Averaged over three runs, the defense held: Progent cut mean attack success roughly sixfold (25.8% to 4.2%), and a hand-crafted adaptive attack did not raise it (2.6%). This is one small-scale data point on a weak model with a single black-box attack template; a stronger optimized (white-box GCG) attack remains open. The result is consistent with, but does not establish, the hypothesis that deterministic out-of-band enforcement is a harder target for an adaptive attacker than in-band detection.",
+  "abstract_zh": "本文研究工具使用型 LLM agents 面对间接提示注入（indirect prompt injection）时的带外防御（out-of-band defenses）。近期方法如 CaMeL、FIDES、Progent、RTBAS 和 FORGE 不再依赖模型自身识别并拒绝恶意指令，而是在模型外部通过确定性安全策略调解 agent 行为，例如能力机制（capabilities）、信息流标签（information-flow labels）和引用监控器（reference monitors）。作者首先将这些方法统一到经典完整性保护 Biba、引用监控和最小权限原则框架下，比较其覆盖范围与局限。其次，作者指出现有验证大多依赖静态 benchmark，这可能高估防御效果；因此提出针对带外防御的自适应评估威胁模型与协议。随后，论文在 AgentDojo 上复现并扩展 Progent 的自适应攻击分析，使用单张 H200 自托管的开源权重 agent Qwen2.5-7B。三次运行平均结果显示，Progent 将平均攻击成功率从 25.8% 降至 4.2%，手工构造的自适应攻击未能提升成功率，反而为 2.6%。作者强调这只是弱模型、单一黑盒攻击模板下的小规模证据，白盒 GCG 等更强优化攻击仍有待研究。",
+  "key_points_zh": [
+    "论文将 CaMeL、FIDES、Progent、RTBAS、FORGE 等带外防御统一解释为 Biba 完整性、reference monitoring 和 least privilege 的实例，提供结构化比较。",
+    "作者批评现有 Prompt Injection 防御评估过度依赖静态 benchmark，指出这曾导致 in-band defenses 在自适应攻击下被严重击穿。",
+    "论文提出评估带外防御所需的自适应威胁模型与协议，强调攻击者应了解防御机制并针对性构造攻击。",
+    "在 AgentDojo 上使用 Qwen2.5-7B 和单张 H200 复现实验，Progent 将平均攻击成功率约从 25.8% 降到 4.2%。",
+    "手工自适应攻击未能突破 Progent，但结果仍受限于小规模设置、弱模型和单一黑盒攻击模板，白盒 GCG 攻击仍是开放问题。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.68,
+    "problem_significance": 0.87,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.74,
+    "llm_avg": 0.742,
+    "comment": "This is valuable agent-security evaluation work because it formalizes adaptive testing for out-of-band prompt-injection defenses.",
+    "comment_zh": "这是一篇有价值的智能体安全评估工作，因为它形式化了对带外提示注入防御的自适应测试。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.23816576137838616,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.742,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

@@ -1,0 +1,67 @@
+{
+  "arxiv_id": "2606.26524",
+  "title": "VIGIL: Runtime Enforcement of Behavioral Specifications in AI Agent Skills",
+  "title_zh": "VIGIL：AI Agent 技能中行为规范的运行时强制执行",
+  "authors": [
+    "Ying Li",
+    "Yanju Chen",
+    "Hongbo Wen",
+    "Bosi Zhang",
+    "Hanzhi Liu",
+    "Peiran Wang",
+    "Yu Feng",
+    "Yuan Tian"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-25T01:58:44Z",
+  "abs_url": "https://arxiv.org/abs/2606.26524v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.26524",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic systems increasingly act through third-party skills, allowing model-generated decisions to affect files, communication channels, and cyber-physical devices. These skills often include natural-language specifications that define access permissions, disclosure limits, execution privileges, and required preconditions. Although such specifications describe the intended boundaries of skill behavior, they do not by themselves provide executable runtime enforcement. Enforcing them raises a contextual granularity challenge: even when a policy is written for a particular task context, a monitor must still decide which events to observe, what state to retain, how far across the execution to reason, and where to intervene. Choosing the wrong granularity can either block benign executions or miss violations that emerge only across multiple actions. Most existing enforcement mechanisms, however, assume a fixed event model or enforcement point. In this work, we present VIGIL, an end-to-end runtime enforcement framework for agentic systems. VIGIL checks an agent's actual execution trace against behavioral policies from skill specifications, operator-defined constraints, and global rules spanning multiple skills. To make such policies executable, VIGIL introduces a policy language that captures context-specific enforcement requirements over agent-tool events, including temporal dependencies, argument constraints, and value-flow conditions. The language is paired with symbolic evaluation rules that translate policies into SMT constraints over finite traces, allowing VIGIL to detect violations that depend on event order, argument relationships, or cross-call value flow rather than relying on fixed single-call filters. On real LLM-agent runs spanning office-document, operational, and engineering tasks, VIGIL detects policy violations with over 95% recall and a false-positive rate below 10%.",
+  "abstract_zh": "随着 Agentic systems 越来越多地通过第三方 skills 执行操作，模型生成的决策可能影响文件、通信渠道以及网络物理设备。这些 skills 往往包含自然语言规范，用于描述访问权限、信息披露限制、执行权限和必要前置条件，但这些规范本身并不能直接转化为可执行的运行时约束。本文提出 VIGIL，一个面向 Agentic systems 的端到端运行时强制执行框架，用于检查 agent 的真实执行轨迹是否违反 skill specifications、operator-defined constraints 以及跨多个 skills 的 global rules。VIGIL 设计了一种策略语言，可表达基于 agent-tool events 的上下文相关约束，包括时序依赖、参数约束和值流条件；并通过符号求值规则将策略转换为有限轨迹上的 SMT constraints，从而检测依赖事件顺序、参数关系或跨调用值流的违规行为。实验表明，在真实 LLM-agent 运行场景中，VIGIL 对策略违规检测的召回率超过 95%，误报率低于 10%。",
+  "key_points_zh": [
+    "提出 VIGIL，一个用于 AI Agent skills 的端到端运行时 enforcement framework，可检查实际执行 trace 是否符合行为规范。",
+    "针对自然语言 skill specifications 难以直接执行的问题，VIGIL 引入 policy language 来刻画上下文相关的 agent-tool event 约束。",
+    "支持 temporal dependencies、argument constraints 和 value-flow conditions，可发现跨多步调用才显现的违规，而非仅依赖单次调用过滤。",
+    "通过 symbolic evaluation 将策略编译为有限 trace 上的 SMT constraints，实现对事件顺序、参数关系和值流传播的形式化检查。",
+    "在 office-document、operational 和 engineering 等真实 LLM-agent 任务中，VIGIL 达到超过 95% 的违规检测召回率，误报率低于 10%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.88,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.88,
+    "llm_avg": 0.884,
+    "comment": "VIGIL is highly relevant agent-runtime security work, providing executable policy enforcement over tool-event traces and cross-call value flows.",
+    "comment_zh": "VIGIL 是高度相关的智能体运行时安全工作，可对工具事件轨迹和跨调用值流执行策略约束。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.884,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

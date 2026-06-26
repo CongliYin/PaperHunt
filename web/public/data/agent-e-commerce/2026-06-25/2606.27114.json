@@ -1,0 +1,66 @@
+{
+  "arxiv_id": "2606.27114",
+  "title": "Cross-Head Attention Uplift Network with Inverse Propensity Score under Unobserved Confounding",
+  "title_zh": "未观测混杂下结合逆倾向评分的跨头注意力 Uplift 网络",
+  "authors": [
+    "Haoran Zhang",
+    "Chuanpu Li",
+    "Yuxin Fu",
+    "Bin Tong",
+    "Guan Wang",
+    "Bo Zheng",
+    "Feng Zhou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-25T14:49:50Z",
+  "abs_url": "https://arxiv.org/abs/2606.27114v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.27114",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Uplift modeling, crucial for estimating individual treatment effects (ITE), faces dual challenges: flexibly leveraging inter-group similarity to enhance discriminative power and debiasing under unobserved confounding scenarios. In this paper, we propose the Cross-Head Attention Uplift Network (CHAUN) and Robust Adversarial Inverse Propensity Score (RA-IPS) method to address these limitations. CHAUN employs shared feature embeddings and cross-head attention mechanisms to dynamically integrate treatment-specific and control-specific representations, enhancing inter-group correlation modeling. Theoretically, we prove that access to the true propensity scores ensures ITE identifiability even with unobserved confounders. For practical scenarios lacking true propensity scores, RA-IPS adversarially optimizes propensity weights within constrained uncertainty sets to mitigate bias from unobserved variables. Experiments on public datasets (CRITEO-UPLIFT, LAZADA) and a production e-commerce dataset demonstrate CHAUN's superiority over state-of-the-art uplift models, achieving relative improvements of up to 25.6% in QINI scores. RA-IPS further enhances robustness, outperforming standard IPS by 5.4% under unobserved confounding. The results validate the effectiveness of our proposed methods in real-world causal inference tasks.",
+  "abstract_zh": "本文面向 Uplift modeling 中个体处理效应（ITE）估计的两个核心难题：如何灵活利用处理组与对照组之间的相似性以提升判别能力，以及如何在存在未观测混杂（unobserved confounding）时进行去偏。作者提出 Cross-Head Attention Uplift Network（CHAUN）与 Robust Adversarial Inverse Propensity Score（RA-IPS）。CHAUN 通过共享特征嵌入与跨头注意力机制，动态融合 treatment-specific 与 control-specific 表征，从而增强组间相关性建模能力。理论上，论文证明若可获得真实倾向评分（propensity scores），即使存在未观测混杂，ITE 仍可识别。针对真实倾向评分不可得的实际场景，RA-IPS 在受约束的不确定集合内对倾向权重进行对抗优化，以缓解未观测变量带来的偏差。实验在 CRITEO-UPLIFT、LAZADA 以及一个生产级电商数据集上验证了方法有效性：CHAUN 相比现有 Uplift 模型在 QINI 分数上最高取得 25.6% 的相对提升；RA-IPS 在未观测混杂场景下相比标准 IPS 进一步提升 5.4%，显示出更强鲁棒性。",
+  "key_points_zh": [
+    "提出 CHAUN，通过共享 embedding 与 cross-head attention 动态融合 treatment/control 表征，更好建模组间相关性。",
+    "提出 RA-IPS，在倾向评分不确定集合内进行对抗式权重优化，以缓解未观测混杂导致的偏差。",
+    "理论证明：若可获得真实 propensity scores，即便存在 unobserved confounders，ITE 仍具备可识别性。",
+    "在 CRITEO-UPLIFT、LAZADA 和生产级电商数据集上，CHAUN 的 QINI 分数相对提升最高达 25.6%。",
+    "RA-IPS 在未观测混杂设定下相比标准 IPS 进一步提升 5.4%，增强了真实因果推断任务中的鲁棒性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.65,
+    "problem_significance": 0.75,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.6,
+    "llm_avg": 0.61,
+    "comment": "A solid causal uplift modeling paper with practical e-commerce value, though it is more incremental modeling work than an agentic commerce-system contribution.",
+    "comment_zh": "这是一篇具有实际电商价值的因果增益建模论文，但更偏向增量式模型改进，而非智能体化电商系统贡献。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4996072807374295,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.61,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 7,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}
