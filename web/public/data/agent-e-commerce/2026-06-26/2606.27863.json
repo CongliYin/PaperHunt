@@ -1,0 +1,62 @@
+{
+  "arxiv_id": "2606.27863",
+  "title": "GNBAN: Graph Neural Basis Attention Networks for Long-Horizon Forecasting over Large Entity Sets",
+  "title_zh": "GNBAN：面向大规模实体集长周期预测的图神经基注意力网络",
+  "authors": [
+    "Janak M. Patel",
+    "Anirudh Deodhar",
+    "Dagnachew Birru"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-26T09:05:15Z",
+  "abs_url": "https://arxiv.org/abs/2606.27863v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.27863",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Demand forecasting at the bottom of a retail hierarchy requires predicting tens of thousands of correlated long-horizon series across products, stores, and regions. Modern systems must scale across massive catalogs, capture shared demand dynamics, and remain interpretable enough to be trusted. Classical statistical methods need a separate model per series and are hard to manage at scale; deep autoregressive models struggle as the joint state grows to tens of thousands of dimensions; and recent graph-based forecasters, while capturing cross-entity dependencies, often produce opaque long-horizon forecasts. We propose GNBAN (Graph Neural Basis Attention Network), an end-to-end architecture combining heterogeneous graph representation learning with an interpretable basis-decomposition head. Retail data are represented directly as a heterogeneous graph derived from the relational schema, so a single model serves the entire catalog. Rather than predicting the horizon directly, GNBAN decomposes each forecast into trend, seasonal, and generic components. Its key innovation is a per-basis attention mechanism: each basis function keeps its own learnable query and retrieves information independently from the entity's historical neighborhood, letting different bases specialize to distinct temporal patterns while preserving interpretability. On two large-scale benchmarks, M5 Walmart and Favorita Grocery Sales, evaluated under matched protocols, GNBAN improves volume-weighted WRMSSE by roughly 4-5% over a matched graph baseline. Qualitative analysis shows the learned decomposition exposes trend, seasonal, and residual demand drivers without post-hoc explanation methods. These results demonstrate that scalable relational forecasting and interpretable forecast decomposition can be achieved together in a unified graph-based framework.",
+  "abstract_zh": "本文面向零售层级底部的需求预测问题：需要在商品、门店、区域等维度上，对数万条相互相关的长周期时间序列进行预测。作者提出 GNBAN（Graph Neural Basis Attention Network），一种端到端架构，将异构图表示学习与可解释的基函数分解预测头结合起来。方法直接从关系型数据模式构建 heterogeneous graph，使单个模型即可覆盖整个商品目录；同时不直接预测完整预测窗口，而是将预测结果分解为趋势、季节性和通用残差等组成部分。其核心创新是 per-basis attention：每个基函数拥有独立的可学习 query，并从目标实体的历史邻域中独立检索信息，使不同基函数能够专门捕捉不同时间模式，同时保持预测分解的可解释性。在 M5 Walmart 和 Favorita Grocery Sales 两个大规模基准上，GNBAN 在相同评测协议下，相比匹配的 graph baseline 将 volume-weighted WRMSSE 降低约 4–5%。定性分析表明，模型学习到的分解能够揭示趋势、季节性和残余需求驱动因素，而无需额外的 post-hoc 解释方法。",
+  "key_points_zh": [
+    "提出 GNBAN，将 heterogeneous graph 表示学习与 basis-decomposition forecast head 结合，用单个模型服务大规模零售商品、门店和区域实体。",
+    "不同于直接输出长预测窗口，GNBAN 将预测拆解为 trend、seasonal 和 generic components，提升长周期预测的可解释性。",
+    "核心机制是 per-basis attention：每个 basis function 使用独立可学习 query，从实体历史邻域中检索信息，从而让不同基函数专注于不同时间模式。",
+    "在 M5 Walmart 与 Favorita Grocery Sales 上，GNBAN 相比匹配的 graph baseline 在 volume-weighted WRMSSE 上提升约 4–5%。",
+    "模型分解结果可直接展示趋势、季节性与残差需求驱动因素，减少对 post-hoc explanation 的依赖。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.65,
+    "problem_significance": 0.72,
+    "potential_impact": 0.65,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.58,
+    "llm_avg": 0.596,
+    "comment": "A useful retail forecasting model for catalog-scale operations, though it is less central to shopping agents or product recommendation workflows.",
+    "comment_zh": "该工作对大规模零售运营预测有价值，但与购物智能体或商品推荐流程的核心关联较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.16000000000000003,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4631426063525406,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.596,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 9,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

@@ -1,0 +1,71 @@
+{
+  "arxiv_id": "2606.27923",
+  "title": "Home3D 1.0: A High-Fidelity Image-to-3D Asset Generation System for Interior Design",
+  "title_zh": "Home3D 1.0：面向室内设计的高保真图像到 3D 资产生成系统",
+  "authors": [
+    "Yiyun Fei",
+    "Guoqiu Li",
+    "Jin Song",
+    "Chuqiao Wu",
+    "Delong Wu",
+    "Hong Wu",
+    "Ziru Zeng",
+    "Haohui Chen",
+    "YinDong Kong",
+    "Jing Li",
+    "Qi Wu",
+    "Feng Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-26T10:15:47Z",
+  "abs_url": "https://arxiv.org/abs/2606.27923v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.27923",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We present Home3D 1.0, a modular image-to-3D generation system that produces high-quality 3D assets from a single reference image, targeting interior design and e-commerce applications. Given a photograph of a furniture or decor item, the system outputs a mesh with physically-based rendering (PBR) materials, and the mesh can be decomposed into material-specific components. The pipeline is organized into four tightly coupled modules: Geometry reconstructs a watertight mesh through latent SDF modelling with a geometry VAE and a coarse-to-fine flow-matching DiT; Texture predicts multiview albedo observations, reprojects them onto the mesh, and completes unseen surface regions with a 3D texture field; Material uses MatWeaver to obtain component masks through video-based segmentation and UV-space voting, then retrieves and bakes PBR maps from a curated material library through hierarchical multi-modal matching; and Parts generates material-editable semantic part meshes with a PartVAE and PartDiT, decoding multi-head part-specific SDF fields in one pass. Each module is evaluated independently with dedicated metrics, highlighting both the current system capability and the remaining gaps toward broader deployment.",
+  "abstract_zh": "本文提出 Home3D 1.0，一个模块化的 image-to-3D 生成系统，可从单张参考图像生成高质量 3D 资产，主要面向室内设计与电商场景。给定家具或装饰品照片，系统输出带有物理真实渲染材质（PBR materials）的网格，并支持按材质分解为不同组件。整体流水线包含四个紧密耦合的模块：Geometry 模块通过 latent SDF 建模、geometry VAE 以及 coarse-to-fine flow-matching DiT 重建 watertight mesh；Texture 模块预测多视角 albedo 观测，将其重投影到网格，并用 3D texture field 补全不可见表面；Material 模块使用 MatWeaver，通过基于视频的分割与 UV-space voting 获得组件掩码，再从精选材质库中通过分层多模态匹配检索并烘焙 PBR maps；Parts 模块结合 PartVAE 与 PartDiT，一次性解码多头部件专属 SDF fields，生成支持材质编辑的语义部件网格。论文对各模块分别设计指标进行评估，展示了当前系统能力及距离大规模部署仍需解决的差距。",
+  "key_points_zh": [
+    "Home3D 1.0 面向室内设计与电商，从单张家具或装饰品图像生成高保真 3D mesh，并支持 PBR materials 与材质级组件分解。",
+    "Geometry 模块采用 latent SDF、geometry VAE 和 coarse-to-fine flow-matching DiT，目标是生成封闭、可渲染的 watertight mesh。",
+    "Texture 模块通过多视角 albedo 预测、网格重投影与 3D texture field 补全，提升可见与不可见表面的纹理一致性。",
+    "Material 模块引入 MatWeaver，结合视频分割、UV-space voting 与分层多模态检索，从材质库生成并烘焙 PBR maps。",
+    "Parts 模块使用 PartVAE 与 PartDiT 生成语义部件网格，使资产具备更细粒度的材质编辑能力；论文还对各模块进行独立评测以揭示系统短板。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.68,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.62,
+    "llm_avg": 0.648,
+    "comment": "A promising product-asset generation system for interior-design commerce, mainly valuable for visualization and catalog enrichment rather than agentic shopping.",
+    "comment_zh": "这是一个有潜力的家居电商商品资产生成系统，主要价值在于可视化和目录增强而非智能体购物。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3315497212666585,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.648,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

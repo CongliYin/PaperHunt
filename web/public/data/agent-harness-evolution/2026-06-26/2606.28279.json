@@ -1,0 +1,63 @@
+{
+  "arxiv_id": "2606.28279",
+  "title": "Agentic Hardware Design as Repository-Level Code Evolution",
+  "title_zh": "将 Agentic 硬件设计视为仓库级代码演化",
+  "authors": [
+    "Cunxi Yu",
+    "Chenhui Deng",
+    "Nathaniel Pinckney",
+    "Brucek Khailany"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-26T17:21:06Z",
+  "abs_url": "https://arxiv.org/abs/2606.28279v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.28279",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We present HORIZON, a self-evolving agent framework that treats hardware design as repository-level code evolution. A Markdown harness is compiled into a project pack containing domain knowledge, an executable evaluator, an acceptance predicate, and a git/runtime policy; a hands-free agent loop then evolves an isolated git worktree, using repository operations for state management, tracing, and replay. This extends prior works of repository-scale self-evolution from EDA software systems, to hardware-design artifacts themselves. We evaluate our approach on ChipBench, RTLLM, Verilog-Eval, and nine CVDP categories, achieving 100\\% benchmark completion across all suites with a fully hands-free agentic loop. However, we do not claim that agentic AI for hardware design is solved: these benchmarks are controlled proxies for a much broader engineering problem in chip design. Section~\\ref{sec:discuss} examines the limitations of the current study and highlights open research challenges.",
+  "abstract_zh": "本文提出 HORIZON，一个自演化智能体框架，将硬件设计建模为仓库级代码演化问题。该方法把 Markdown harness 编译为 project pack，其中包含领域知识、可执行评测器、验收谓词以及 git/runtime 策略；随后通过无需人工干预的智能体循环，在隔离的 git worktree 中持续演化设计，并利用仓库操作进行状态管理、追踪与回放。HORIZON 将此前面向 EDA 软件系统的仓库级自演化思想扩展到硬件设计产物本身。实验在 ChipBench、RTLLM、Verilog-Eval 以及九类 CVDP 任务上进行，所有基准均达到 100% 完成率，展示了全自动 agentic loop 在受控硬件设计代理任务中的有效性。但作者强调，这并不意味着 agentic AI 已解决硬件设计问题；现有基准仍只是芯片设计复杂工程问题的受控代理，论文也讨论了当前研究限制与开放挑战。",
+  "key_points_zh": [
+    "提出 HORIZON，自演化 agent 框架，将硬件设计转化为 repository-level code evolution。",
+    "通过 Markdown harness 生成 project pack，集成领域知识、评测器、验收条件和 git/runtime 策略。",
+    "智能体在隔离 git worktree 中全自动修改、评测、回溯与重放硬件设计代码。",
+    "在 ChipBench、RTLLM、Verilog-Eval 和九类 CVDP 上实现 100% benchmark completion。",
+    "作者明确指出结果来自受控基准，真实芯片设计仍面临规模、验证、规范理解和工程集成等开放挑战。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.78,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.78,
+    "llm_avg": 0.788,
+    "comment": "HORIZON is strong agent-harness work because it combines executable evaluators, acceptance predicates, git-based state management, tracing, replay, and hands-free repository evolution.",
+    "comment_zh": "HORIZON 价值较高，因为它结合了可执行评估器、验收谓词、基于 git 的状态管理、追踪、回放和自动化仓库演化。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.8972670371628246,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.788,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 20,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 46,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

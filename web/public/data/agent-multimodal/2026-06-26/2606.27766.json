@@ -1,0 +1,60 @@
+{
+  "arxiv_id": "2606.27766",
+  "title": "RS-Diffuser: Risk-Sensitive Diffusion Planning with Distributional Value Guidance",
+  "title_zh": "RS-Diffuser：基于分布式价值引导的风险敏感扩散规划",
+  "authors": [
+    "Shiqiang Gong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-26T06:51:16Z",
+  "abs_url": "https://arxiv.org/abs/2606.27766v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.27766",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Offline reinforcement learning enables policy learning from fixed datasets without additional environment interaction, making it appealing for safety-critical applications where online exploration is costly or unsafe. Diffusion-based decision-making methods have recently achieved strong performance in offline RL by modeling rich, multimodal trajectory distributions. However, existing diffusion planners are typically risk-neutral and therefore may overlook rare but catastrophic outcomes that are crucial in real-world deployment. In this work, we propose RS-Diffuser, a risk-sensitive offline diffusion planning framework that combines diffusion-based trajectory generation with distributional value critics. RS-Diffuser learns a diffusion planner over future state trajectories, a separate inverse dynamics model for action decoding, and a Monte Carlo distributional critic that estimates the full return distribution of candidate plans through quantile regression. At sampling time, we incorporate a risk-sensitive guidance signal into the denoising process, using gradients computed from tail-aware objectives such as Conditional Value at Risk to steer generation toward desired risk profiles. As a result, a single trained model can flexibly produce risk-averse, risk-neutral, or risk-seeking behaviors by changing only the inference-time risk parameter. Extensive experiments on risk-sensitive D4RL and risky robot navigation benchmarks demonstrate that RS-Diffuser achieves state-of-the-art performance, improving both overall return and worst-case robustness while reducing safety violations.",
+  "abstract_zh": "本文提出 RS-Diffuser，一个面向离线强化学习的风险敏感扩散规划框架。现有 diffusion-based decision-making 方法虽然能建模多模态轨迹分布并在 offline RL 中表现强劲，但通常是风险中性的，容易忽视低概率但高代价的灾难性结果。RS-Diffuser 将未来状态轨迹的扩散生成器、用于动作解码的 inverse dynamics model，以及通过 quantile regression 学习完整回报分布的 Monte Carlo distributional critic 结合起来。在采样阶段，方法利用 Conditional Value at Risk 等尾部感知目标计算梯度，并将风险敏感引导信号注入去噪过程，从而将生成轨迹导向不同风险偏好。该框架无需重新训练，仅通过调整推理时风险参数，即可产生风险规避、风险中性或风险偏好行为。在 risk-sensitive D4RL 和 risky robot navigation 基准上的实验表明，RS-Diffuser 在总体回报、最坏情况鲁棒性和安全违规减少方面均达到 state-of-the-art 表现。",
+  "key_points_zh": [
+    "提出 RS-Diffuser，将 diffusion trajectory planner 与 distributional value critic 结合，用于风险敏感 offline RL。",
+    "通过 quantile regression 估计候选轨迹的完整回报分布，而非仅预测期望回报，从而捕捉尾部风险。",
+    "在去噪采样过程中引入基于 CVaR 等风险目标的梯度引导，可在推理时灵活切换风险规避、风险中性或风险偏好策略。",
+    "采用状态轨迹扩散生成与独立 inverse dynamics model 解码动作的设计，提升规划与控制的模块化能力。",
+    "在 risk-sensitive D4RL 与 risky robot navigation benchmark 上提升总体回报和 worst-case robustness，并减少 safety violations。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.25,
+    "problem_significance": 0.2,
+    "potential_impact": 0.15,
+    "paradigm_shift": 0.1,
+    "lasting_value": 0.12,
+    "llm_avg": 0.16399999999999998,
+    "comment": "A solid offline RL diffusion-planning paper, but it has little relevance to realtime multimodal agents, speech/tool interaction, or streaming visual grounding.",
+    "comment_zh": "这是一篇扎实的离线强化学习扩散规划论文，但与实时多模态智能体、语音工具交互或流式视觉定位关系很弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.16399999999999998,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

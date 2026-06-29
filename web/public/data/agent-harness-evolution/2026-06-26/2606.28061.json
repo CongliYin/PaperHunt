@@ -1,0 +1,63 @@
+{
+  "arxiv_id": "2606.28061",
+  "title": "ToolPrivacyBench: Benchmarking Purpose-Bound Privacy in Tool-Using LLM Agents",
+  "title_zh": "ToolPrivacyBench：评测工具调用型 LLM Agent 中的目的绑定隐私",
+  "authors": [
+    "Shijing Hu",
+    "Liang Liu",
+    "Zhu Meng",
+    "Zhicheng Zhao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-26T13:08:46Z",
+  "abs_url": "https://arxiv.org/abs/2606.28061v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.28061",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) have increasingly moved from standalone text generation systems to agents that invoke external tools, access environments, and execute multi-step tasks. However, conventional function-calling benchmarks mainly evaluate task completion and API correctness, while privacy evaluation benchmarks typically focus on final responses or privacy judgments. Neither perspective captures purpose-bound information flow across an executed multi-tool trajectory. Motivated by this limitation in current agent evaluation, ToolPrivacyBench audits whether task-private atoms are routed only to authorized tools and downstream sinks, thereby evaluating both task completion and privacy over-disclosure during tool use. The benchmark contains 2,150 cases, including 1,150 fully synthetic privacy-sensitive business workflows and 1,000 cases adapted from existing multi-tool and function-calling benchmarks. Each case is represented by a policy knowledge base. After an agent executes against mock business backends, the evaluator compares recorded tool arguments and backend audit logs with this policy knowledge base. The evaluation covers nine widely used agents to characterize purpose-bound privacy over-disclosure. The results show that successful tool execution does not imply appropriate privacy disclosure: an agent may complete a task while transmitting unnecessary private information through intermediate tool calls. ToolPrivacyBench therefore formalizes a need-to-know disclosure boundary, under which each tool should receive only the information necessary for its stated purpose, and uses trajectory-level auditing to identify privacy over-disclosure in multi-tool workflows.",
+  "abstract_zh": "随着大语言模型（LLM）从独立文本生成系统演进为可调用外部工具、访问环境并执行多步任务的 Agent，现有评测逐渐暴露不足：传统 function-calling 基准主要关注任务完成度和 API 调用正确性，而隐私评测通常只检查最终回复或隐私判断，难以覆盖多工具执行轨迹中的目的绑定信息流。ToolPrivacyBench 针对这一缺口，审计任务私有信息原子（task-private atoms）是否只被传递给授权工具及下游接收端，从而同时评估任务完成与工具使用过程中的隐私过度披露。该基准包含 2,150 个案例，其中 1,150 个为完全合成的隐私敏感商业工作流，1,000 个改编自现有 multi-tool 与 function-calling 基准。每个案例都由一个策略知识库（policy knowledge base）表示；Agent 在模拟商业后端上执行后，评测器会将记录的工具参数和后端审计日志与策略知识库进行比对。论文评测了 9 个常用 Agent，结果表明：成功完成工具调用任务并不等于隐私披露合理，Agent 可能在中间工具调用中传输不必要的私密信息。ToolPrivacyBench 因此形式化了“need-to-know”披露边界，即每个工具只应接收其声明目的所必需的信息，并通过轨迹级审计识别多工具工作流中的隐私过度披露。",
+  "key_points_zh": [
+    "提出 ToolPrivacyBench，用于评估工具调用型 LLM Agent 在多工具执行轨迹中的目的绑定隐私（purpose-bound privacy）与过度披露问题。",
+    "不同于只看最终回答或 API 正确性的评测，该基准检查工具参数与后端审计日志，判断私有信息是否仅流向被授权的工具和下游接收端。",
+    "数据集包含 2,150 个案例：1,150 个合成隐私敏感商业工作流，以及 1,000 个改编自现有 multi-tool / function-calling benchmarks 的案例。",
+    "每个案例配有 policy knowledge base，作为 need-to-know 披露边界的判定依据，明确每个工具在特定目的下可接收的信息范围。",
+    "对 9 个常用 Agent 的实验显示，任务成功率不能代表隐私安全；Agent 即使完成任务，也可能在中间工具调用中泄露不必要的私密信息。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.82,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.8,
+    "llm_avg": 0.7600000000000001,
+    "comment": "ToolPrivacyBench is a strong agent-evaluation contribution because it audits privacy at the tool-trajectory level using policies, mock backends, and execution logs.",
+    "comment_zh": "ToolPrivacyBench 是较强的智能体评测工作，因为它基于策略、模拟后端和执行日志在工具调用轨迹层面审计隐私。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.416947575628934,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.7600000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 6,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

@@ -1,0 +1,69 @@
+{
+  "arxiv_id": "2606.28270",
+  "title": "Agent-Native Immune System: Architecture, Taxonomy, and Engineering",
+  "title_zh": "Agent-Native Immune System：架构、分类与工程化",
+  "authors": [
+    "Bo Shen",
+    "Lifeng Chang",
+    "Tianyuan Wei",
+    "Yunpeng Li",
+    "Feng Shi",
+    "Yichen Han",
+    "Peijie Gao",
+    "Shiyi Kuang",
+    "Xin Chang",
+    "Dehui Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-26T17:08:06Z",
+  "abs_url": "https://arxiv.org/abs/2606.28270v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.28270",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The transition from static chat bots to autonomous agents--equipped with persistent memory, tool-use protocols, and multi-agent collaboration--has fundamentally expanded the AI threat landscape. Current defense mechanisms, such as perimeter security and training-time alignment, remain external to the agent's active reasoning loop. Consequently, they fall short: a fully aligned agent remains highly vulnerable to runtime hijacking via memory poisoning, tool-chain manipulation, or multi-agent protocol attacks. To address this critical gap, we introduce the Agent-Native Immune System (ANIS), the first biologically inspired, endogenous defense architecture embedded directly within the agent's cognitive loop. Our framework presents four primary contributions. First, we design a six-layer Immune Tower (L0-L5), distinctly incorporating Barrier Immunity (L1) as a non-cognitive, physical-and-logical isolation layer. Second, we establish a unified taxonomy of Agent Viruses and Agent Vaccines, formalizing the critical distinction between superficial non-parametric defenses and robust parametric vaccines. Third, we conceptualize the Harness Triad--Meta, Self, and Auto--a self-monitoring, meta-cognitive automation backbone that drives Continual Immune Learning (CIL), enabling vaccines to dynamically adapt to novel threats. Finally, we establish a rigorous theoretical demarcation between model alignment and agent immunity: while alignment provides a static \"constitutional\" value foundation during training, ANIS serves as the dynamic \"law enforcement\" mechanism during runtime. We conclude by framing open challenges for the field, including immune protocol standardization, novel evaluation metrics such as the Autoimmunity Rate (false-positive intervention rate), and the co-evolutionary dynamics between pathogens and vaccines within collective intelligence ecosystems.",
+  "abstract_zh": "随着 AI 从静态聊天机器人演进为具备持久记忆、工具调用协议和多智能体协作能力的 autonomous agents，威胁面被显著扩大。现有防御机制如 perimeter security 和 training-time alignment 多位于 agent 主动推理循环之外，因此难以抵御运行时劫持，例如 memory poisoning、tool-chain manipulation 和 multi-agent protocol attacks。本文提出 Agent-Native Immune System（ANIS），一种受生物免疫启发、内生嵌入 agent 认知循环的防御架构。论文设计了六层 Immune Tower（L0-L5），其中 Barrier Immunity（L1）作为非认知的物理与逻辑隔离层；提出 Agent Viruses 与 Agent Vaccines 的统一分类，并区分浅层 non-parametric defenses 与更稳健的 parametric vaccines；进一步提出 Harness Triad（Meta、Self、Auto）作为自监控、元认知自动化骨干，驱动 Continual Immune Learning（CIL），使 vaccines 能够动态适应新威胁。论文还明确区分 model alignment 与 agent immunity：alignment 是训练期的静态“宪法”价值基础，而 ANIS 是运行期的动态“执法”机制。最后，作者讨论了 immune protocol 标准化、Autoimmunity Rate 等评估指标，以及集体智能生态中 pathogens 与 vaccines 的共同演化问题。",
+  "key_points_zh": [
+    "提出 Agent-Native Immune System（ANIS），将防御机制嵌入 agent 的认知与推理循环，而非仅依赖外部边界防护或训练期 alignment。",
+    "设计六层 Immune Tower（L0-L5），特别强调 Barrier Immunity（L1）作为非认知的物理与逻辑隔离层，用于降低运行时攻击面。",
+    "建立 Agent Viruses 与 Agent Vaccines 的统一分类，区分浅层的 non-parametric defenses 与可适应、更鲁棒的 parametric vaccines。",
+    "提出 Harness Triad（Meta、Self、Auto）与 Continual Immune Learning（CIL），支持 agent 对新型攻击进行持续监测、学习和免疫更新。",
+    "从理论上区分 model alignment 与 agent immunity：前者提供训练期价值约束，后者负责运行期动态威胁检测、干预与恢复。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.58,
+    "problem_significance": 0.78,
+    "potential_impact": 0.6,
+    "paradigm_shift": 0.6,
+    "lasting_value": 0.55,
+    "llm_avg": 0.6220000000000001,
+    "comment": "The paper targets an important agent-runtime security problem with a useful architectural taxonomy, but appears largely conceptual without concrete harnesses, datasets, or empirical validation.",
+    "comment_zh": "这篇论文关注重要的智能体运行时安全问题并提出有用架构分类，但整体偏概念化，缺少具体框架、数据集或实证验证。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6220000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

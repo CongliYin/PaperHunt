@@ -1,0 +1,65 @@
+{
+  "arxiv_id": "2606.28059",
+  "title": "Fast and Feasible: Permutation-based Constrained Reranking for Revenue Maximization",
+  "title_zh": "快速且可行：基于排列的约束重排序用于收入最大化",
+  "authors": [
+    "Svetlana Shirokovskikh",
+    "Anastasiia Soboleva",
+    "Ekaterina Solodneva",
+    "Aleksandr Katrutsa",
+    "Roman Loginov",
+    "Egor Samosvat"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-26T13:04:00Z",
+  "abs_url": "https://arxiv.org/abs/2606.28059v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.28059",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Search and recommender systems have produced highly relevant search results. A natural next step in the development of such systems in e-commerce is to rerank these results to increase the platform's revenue from paid promotion products. However, maximizing revenue alone may degrade the user experience by reducing relevance or increasing fraud risk. To avoid this, we state the reranking problem as an integer linear program ($ILP$) that maximizes revenue subject to per-query constraints on other metrics, e.g., relevance. Since solving $ILP$ exactly for every query is slow for deployment to the online service, we propose a lightweight permutation-based reranking approximation algorithm PermR. At each step, the algorithm selects a pair of neighboring items and swaps them to either improve the objective or repair a violated constraint. We evaluate PermR across multiple categories of a large classified platform in offline and online settings. PermR achieves about 63\\% of the ILP revenue improvement, within production latency limits, preserving all constraints. In a 14-day online A/B test over 56 million search queries, PermR increased revenue by $2$\\%.",
+  "abstract_zh": "本文研究电商搜索与推荐系统中的付费推广商品重排序问题：在提升平台收入的同时，避免因相关性下降或欺诈风险上升而损害用户体验。作者将该问题建模为整数线性规划（ILP），目标是在满足每次查询的多项指标约束（如 relevance）的前提下最大化 revenue。由于在线服务中逐查询精确求解 ILP 延迟过高，论文提出轻量级的基于排列的近似重排序算法 PermR。PermR 通过逐步选择相邻商品对并交换位置，在提升目标函数或修复约束违反之间进行迭代。作者在大型分类信息平台的多个类别上进行离线与在线评估，结果显示 PermR 在满足生产延迟与全部约束的同时，可达到约 63% 的 ILP 收入提升效果；在覆盖 5600 万次搜索查询的 14 天线上 A/B 测试中，PermR 带来 2% 的收入增长。",
+  "key_points_zh": [
+    "将电商搜索/推荐中的收入最大化重排序建模为带逐查询约束的整数线性规划（ILP），兼顾 revenue、relevance 与风险等指标。",
+    "提出 PermR，一种轻量级 permutation-based 近似算法，通过相邻 item swap 来提升目标或修复约束违反，适合在线部署。",
+    "相比精确求解 ILP，PermR 在生产延迟限制内运行，同时保持所有约束不被破坏。",
+    "离线实验中，PermR 获得约 63% 的 ILP revenue improvement，体现了速度与收益之间的折中。",
+    "14 天线上 A/B 测试覆盖 5600 万次 search queries，PermR 使平台 revenue 提升 2%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.65,
+    "problem_significance": 0.85,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.8,
+    "llm_avg": 0.7060000000000001,
+    "comment": "A practical e-commerce reranking paper with strong production evidence for revenue gains under relevance and safety constraints.",
+    "comment_zh": "这是一篇实用的电商重排序论文，在相关性和安全约束下展示了可靠的线上增收效果。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7060000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

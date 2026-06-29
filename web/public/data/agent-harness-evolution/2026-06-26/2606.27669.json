@@ -1,0 +1,65 @@
+{
+  "arxiv_id": "2606.27669",
+  "title": "When Search Agents Should Ask: DiscoBench for Clarification-Aware Deep Search",
+  "title_zh": "搜索智能体何时应提问：面向澄清感知深度搜索的 DiscoBench",
+  "authors": [
+    "Yiling Tao",
+    "Shihan Deng",
+    "Meiling Tao",
+    "Pengzhi Wei",
+    "Zhichao Hu",
+    "Zhihao Zhu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-26T02:57:15Z",
+  "abs_url": "https://arxiv.org/abs/2606.27669v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.27669",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Search agents powered by large language models (LLMs) are increasingly used to solve complex information-seeking tasks, requiring multi-step retrieval and reasoning to fulfill user goals. However, existing benchmarks often assume that user queries are complete and explicit, overlooking the fact that real-world search requests are frequently vague, underspecified, or even factually incorrect. In deep search scenarios, such ambiguity can propagate along multi-step reasoning chains and lead agents toward incorrect search trajectories. To address this gap, we introduce DiscoBench, a benchmark for clarification-aware deep search, designed to evaluate whether search agents can proactively identify ambiguity, ask effective clarification questions, and recover correct reasoning paths through user interaction. DiscoBench contains 211 samples and 463 ambiguity instances across 11 real-world domains, covering four ambiguity types. We further design a user simulator for multi-turn interaction and evaluate model performance from four perspectives: task utility, ambiguity detection, interaction strategy, and cost efficiency. Experiments on representative LLMs show that ambiguity detection and effective clarification are distinct capabilities, and that repeatedly searching instead of asking for clarification often performs worse than direct guessing, highlighting a critical gap between retrieval ability and interactive problem-solving in current search agents.",
+  "abstract_zh": "由大语言模型（LLMs）驱动的搜索智能体越来越多地用于解决复杂信息检索任务，这类任务通常需要多步检索与推理来满足用户目标。然而，现有基准往往默认用户查询是完整且明确的，忽视了真实搜索请求经常存在模糊、信息不足，甚至事实错误的问题。在深度搜索场景中，这些歧义会沿多步推理链传播，导致智能体走向错误的搜索路径。为弥补这一缺口，论文提出 DiscoBench，一个面向澄清感知深度搜索（clarification-aware deep search）的基准，用于评估搜索智能体能否主动识别歧义、提出有效澄清问题，并通过用户交互恢复正确推理路径。DiscoBench 包含 211 个样本、463 个歧义实例，覆盖 11 个真实领域和 4 类歧义。作者进一步设计了用于多轮交互的用户模拟器，并从任务效用、歧义检测、交互策略和成本效率四个角度评估模型表现。对代表性 LLMs 的实验表明，歧义检测与有效澄清是不同能力；反复搜索而不提问往往比直接猜测表现更差，揭示了当前搜索智能体在检索能力与交互式问题解决能力之间的关键鸿沟。",
+  "key_points_zh": [
+    "提出 DiscoBench，用于评估搜索智能体在深度搜索中识别歧义、主动提问并修正推理路径的能力。",
+    "数据集包含 211 个样本、463 个歧义实例，覆盖 11 个真实世界领域与 4 类歧义类型。",
+    "设计用户模拟器支持多轮交互，并从任务效用、歧义检测、交互策略和成本效率四个维度进行评测。",
+    "实验发现，能检测到歧义并不等于能提出有效澄清问题，二者是相互区分的能力。",
+    "结果显示，在不确定时反复搜索而非澄清，常常比直接猜测更差，暴露当前 LLM 搜索智能体的交互式问题解决短板。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.55,
+    "potential_impact": 0.46,
+    "paradigm_shift": 0.36,
+    "lasting_value": 0.45,
+    "llm_avg": 0.4640000000000001,
+    "comment": "DiscoBench usefully evaluates clarification behavior in search agents, but it remains closer to an interactive search benchmark than reusable agent harness or self-improvement infrastructure.",
+    "comment_zh": "DiscoBench 有助于评估搜索智能体的澄清能力，但更接近交互式搜索基准，而非可复用智能体框架或自我改进基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36560162063732243,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.4640000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}
