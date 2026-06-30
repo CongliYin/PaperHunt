@@ -1,0 +1,61 @@
+{
+  "arxiv_id": "2606.29771",
+  "title": "CLQT: A Closed-Loop, Cost-Aware, Strategy-Consistent Benchmark for Diagnostic Evaluation of LLM Portfolio-Management Agents",
+  "title_zh": "CLQT：用于诊断评估 LLM 投资组合管理智能体的闭环、成本感知、策略一致性基准",
+  "authors": [
+    "Bo Qu",
+    "Mingguang Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-29T04:26:30Z",
+  "abs_url": "https://arxiv.org/abs/2606.29771v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.29771",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM agents are increasingly cast as autonomous portfolio managers, and benchmarks have moved from financial question-answering to sequential trading. Yet most still rank agents by returns over a fixed window -- a weak proxy, since a period's return is dominated by the market path and apparent alpha can dissolve once look-ahead leakage is controlled. Such a ranking certifies neither sound reasoning, nor a consistent strategy, nor a durable edge. We introduce CLQT, which reframes closed-loop trading evaluation as diagnosis rather than ranking: an instrument that localizes where and why an agent's process succeeds or fails. CLQT is a fully closed-loop, cost-aware, strategy-consistent, temporally-gated environment whose agents run a five-stage cycle: gather, synthesize, allocate, execute, reflect. Each round emits a complete DecisionRound sealed into a recompute-verifiable hash chain, so every metric is reconstructable from the trail. Six pillars form the substrate: a hard TimeGate, institutional transaction- and financing-cost modeling, strategy-consistency scoring, three-tier memory, a Model-Context-Protocol tool layer, and mandate-aware synthesis. The same agent runs as a constrained committee of specialized roles or a single full-autonomy orchestrator, making process scaffolding an experimental variable. From the audit trail we compute a five-axis capability scorecard (APM-CS: Coherence, Acuity, Composure, Discipline, Reliability), with Coherence judged partly by a held-out, out-of-cohort LLM to curb self-preference bias. We validate it on a contamination-controlled multi-model backtest with an ablation grid and a live broker track on unseen, post-cutoff data, against a repeated-run noise floor. CLQT separates outcome from capability, yielding not a model ranking but a durable, extensible map of agent competencies and limitations.",
+  "abstract_zh": "本文提出 CLQT，一个面向 LLM portfolio-management agents 的诊断式评估基准。不同于多数基准用固定窗口收益率对智能体排名，CLQT 认为收益容易被市场路径主导，且在控制 look-ahead leakage 后表观 alpha 可能消失，因此难以证明推理质量、策略一致性或长期优势。CLQT 将闭环交易评估从“排名”重构为“诊断”：定位智能体流程在何处、为何成功或失败。该环境具备完全闭环、成本感知、策略一致、时间门控等特征，智能体按 gather、synthesize、allocate、execute、reflect 五阶段运行。每轮生成完整 DecisionRound，并封装进可重算验证的 hash chain，使所有指标都可从审计轨迹重建。CLQT 的六个基础支柱包括：严格 TimeGate、机构级交易与融资成本建模、策略一致性评分、三层记忆、Model-Context-Protocol 工具层，以及 mandate-aware synthesis。相同智能体可作为受约束的专家角色委员会运行，也可作为单一全自主 orchestrator 运行，从而把流程脚手架本身作为实验变量。基于审计轨迹，CLQT 计算五轴能力评分卡 APM-CS：Coherence、Acuity、Composure、Discipline、Reliability；其中 Coherence 部分由 held-out、out-of-cohort LLM 评判，以降低自偏好偏差。作者通过污染控制的多模型回测、消融网格、以及基于未见 post-cutoff 数据的 live broker track，并结合 repeated-run noise floor 进行验证。CLQT 的目标不是给模型排名，而是将结果与能力分离，形成对智能体能力和局限的可扩展诊断图谱。",
+  "key_points_zh": [
+    "核心问题：现有 sequential trading benchmarks 多按固定窗口收益率排名，但收益受市场路径、数据泄漏和随机噪声影响，难以反映 LLM agent 的真实推理、策略稳定性与可持续 alpha。",
+    "方法设计：CLQT 构建完全 closed-loop 的交易环境，智能体执行 gather、synthesize、allocate、execute、reflect 五阶段循环，并通过 TimeGate 防止未来信息泄漏。",
+    "可审计性：每个 DecisionRound 都写入可重算验证的 hash chain，支持从完整轨迹重建指标，便于诊断决策过程而不只看最终收益。",
+    "评估维度：提出 APM-CS 五轴能力评分卡，包括 Coherence、Acuity、Composure、Discipline、Reliability；Coherence 使用 held-out、out-of-cohort LLM 辅助评判以减少自偏好偏差。",
+    "实验价值：通过污染控制多模型回测、消融实验和 post-cutoff live broker track 验证，CLQT 将 outcome 与 capability 分离，为 LLM 投资组合管理智能体提供能力地图而非简单排行榜。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.84,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.8,
+    "llm_avg": 0.8,
+    "comment": "Strong domain-specific agent evaluation harness with closed-loop execution, audit trails, temporal gating, costs, memory, and process diagnostics.",
+    "comment_zh": "这是较强的领域智能体评估框架，包含闭环执行、审计轨迹、时间门控、成本、记忆和过程诊断。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3315497212666585,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.8,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

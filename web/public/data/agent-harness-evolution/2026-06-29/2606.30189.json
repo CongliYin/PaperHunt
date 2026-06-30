@@ -1,0 +1,65 @@
+{
+  "arxiv_id": "2606.30189",
+  "title": "DAIN: Dynamic Agent-Based Interaction Network for Efficient and Collaborative Multimodal Reasoning",
+  "title_zh": "DAIN：用于高效协作式多模态推理的动态 Agent 交互网络",
+  "authors": [
+    "Xinxin Chen",
+    "Yuchen Li",
+    "Zihan Wang",
+    "Haoyu Zhang",
+    "Ruixin Liu",
+    "Mingyuan Zhao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-29T12:04:01Z",
+  "abs_url": "https://arxiv.org/abs/2606.30189v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.30189",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Current multimodal fusion approaches, particularly those based on static Mixture-of-Experts (MoE) architectures, often struggle to provide the adaptive and efficient collaborative reasoning required by complex real-world applications. We introduce the Dynamic Agent-based Interaction Network (DAIN), which reconceptualizes multimodal fusion as a dynamic, multi-agent collaborative process. DAIN employs a context-aware Meta-Controller that dynamically schedules sparse activation of specialized interaction agents and orchestrates compressed inter-agent communication for consensus-building. The framework is guided by a multi-objective loss function that jointly optimizes task accuracy, agent specialization, and operational efficiency through sparse activation and communication regularization. Comprehensive evaluations across five diverse benchmarks -- ADNI, MIMIC-IV, MM-IMDB, CMU-MOSI, and ENRICO -- establish DAIN as a new state-of-the-art, delivering significant performance improvements including a 2.6\\% accuracy gain on ADNI. Ablation studies verify the critical roles of both dynamic scheduling and agent communication. Furthermore, DAIN offers enhanced interpretability by exposing context-dependent agent roles and collaboration patterns while maintaining computational efficiency through sample-wise sparse agent activation. Our work demonstrates the promise of dynamic, agent-based paradigms for multimodal reasoning.",
+  "abstract_zh": "本文提出 Dynamic Agent-based Interaction Network（DAIN），将多模态融合从传统静态 Mixture-of-Experts（MoE）范式重新建模为动态多 Agent 协作过程。DAIN 通过上下文感知的 Meta-Controller，按样本动态调度专门化 interaction agents 的稀疏激活，并组织压缩的 Agent 间通信以形成协同共识。其多目标损失同时优化任务性能、Agent 专门化程度与运行效率，并通过稀疏激活和通信正则化控制计算开销。在 ADNI、MIMIC-IV、MM-IMDB、CMU-MOSI 和 ENRICO 五个多样化基准上的实验表明，DAIN 达到新的 state-of-the-art，例如在 ADNI 上带来 2.6% 的准确率提升。消融实验验证了动态调度与 Agent 通信的关键作用，同时 DAIN 还能揭示上下文相关的 Agent 角色与协作模式，提升多模态推理的可解释性。",
+  "key_points_zh": [
+    "DAIN 将多模态融合建模为动态 Agent 协作，而非静态 MoE 式专家选择。",
+    "上下文感知 Meta-Controller 可按样本稀疏激活 specialized interaction agents，提升效率。",
+    "引入压缩的 Agent 间通信机制，用于协同推理与共识构建。",
+    "多目标损失联合约束任务准确率、Agent 专门化、稀疏激活和通信成本。",
+    "在 ADNI、MIMIC-IV、MM-IMDB、CMU-MOSI、ENRICO 上取得 state-of-the-art，并增强可解释性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.32,
+    "problem_significance": 0.28,
+    "potential_impact": 0.3,
+    "paradigm_shift": 0.22,
+    "lasting_value": 0.26,
+    "llm_avg": 0.276,
+    "comment": "Despite agent terminology, this is primarily a multimodal fusion architecture rather than agent harness or agent-evaluation infrastructure.",
+    "comment_zh": "尽管使用了智能体术语，该工作主要是多模态融合架构，而非智能体运行框架或评估基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.39342404825616256,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.276,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

@@ -1,0 +1,437 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-06-29",
+  "generated_at": "2026-06-30T21:47:04Z",
+  "papers": [
+    {
+      "arxiv_id": "2606.30616",
+      "title": "Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent",
+      "title_zh": "扩展 Horizon 而非参数：35B Agent 达到万亿参数级性能",
+      "authors": [
+        "Lei Bai",
+        "Zongsheng Cao",
+        "Yang Chen",
+        "Zhiyao Cui",
+        "Shangheng Du",
+        "Yue Fan",
+        "Shiyang Feng",
+        "Zijie Guo",
+        "Haonan He",
+        "Liang He",
+        "Xiaohan He",
+        "Shuyue Hu",
+        "Yusong Hu",
+        "Songtao Huang",
+        "Yichen Jiang",
+        "Hao Li",
+        "Xin Li",
+        "Dahua Lin",
+        "Weihao Lin",
+        "Fenghua Ling",
+        "Dongrui Liu",
+        "Zhuo Liu",
+        "Runmin Ma",
+        "Chunjiang Mu",
+        "Haoyang Peng",
+        "Tianshuo Peng",
+        "Jinxin Shi",
+        "Luohe Shi",
+        "Boyuan Sun",
+        "Zelin Tan",
+        "Shengji Tang",
+        "Qianyi Wang",
+        "Yiming Wu",
+        "Yi Xie",
+        "Xiangchao Yan",
+        "Jingqi Ye",
+        "Peng Ye",
+        "Fangchen Yu",
+        "Jiakang Yuan",
+        "Bihao Zhan",
+        "Bo Zhang",
+        "Chen Zhang",
+        "Shufei Zhang",
+        "Shuaiyu Zhang",
+        "Wenlong Zhang",
+        "Yiqun Zhang",
+        "Junpeng Zhao",
+        "Zhijie Zhong",
+        "Bowen Zhou",
+        "Yuhao Zhou"
+      ],
+      "total_score": 0.779456876767547,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.852,
+        "other": 0.5195229225584896
+      },
+      "tags": [
+        "HF Daily ★66",
+        "GitHub",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "35B Agent 靠扩展长程能力匹敌 1T 模型",
+      "detail_file": "agent-harness-evolution/2026-06-29/2606.30616.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.30306",
+      "title": "Always-OnAgents:A Survey of Persistent Memory, State, and Governance in LLMAgents",
+      "title_zh": "Always-On Agents：LLM Agent 中持久记忆、状态与治理的综述",
+      "authors": [
+        "Tianyu Ding",
+        "Aditya Nannapaneni",
+        "Bingfan Liu",
+        "Ling Zhang"
+      ],
+      "total_score": 0.6672662290949994,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8280000000000001,
+        "other": 0.22288743031666466
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "综述 LLM Agent 持久状态治理",
+      "detail_file": "agent-harness-evolution/2026-06-29/2606.30306.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.30566",
+      "title": "Forensic Trajectory Signatures for Agent Memory Poisoning Detection",
+      "title_zh": "用于检测 Agent 记忆投毒的取证轨迹签名",
+      "authors": [
+        "Jun Wen Leong"
+      ],
+      "total_score": 0.6544000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.808,
+        "other": 0.2
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "用工具调用轨迹检测 Agent 记忆投毒",
+      "detail_file": "agent-harness-evolution/2026-06-29/2606.30566.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.29788",
+      "title": "MemLeak: Diagnosing Information Leaks in Multimodal Agent Memory",
+      "title_zh": "MemLeak：诊断多模态 Agent 记忆中的信息泄露",
+      "authors": [
+        "Kuan Wang",
+        "Chao Zhang"
+      ],
+      "total_score": 0.6283883062540946,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.776,
+        "other": 0.19862768751364818
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "多模态记忆删文本仍会从图像泄密",
+      "detail_file": "agent-harness-evolution/2026-06-29/2606.29788.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.29932",
+      "title": "SAGA: Scene-Aware, Goal-Evolving Agents for Long-Horizon CivRealm Strategy Planning",
+      "title_zh": "SAGA：面向长程 CivRealm 策略规划的场景感知、目标演化智能体",
+      "authors": [
+        "Tianyu Jin",
+        "Shuo Chen",
+        "Yida Wang",
+        "Liuyu Xiang",
+        "Yingzhuo Liu",
+        "Zhiyao Jiang",
+        "Yexin Li",
+        "Zhaofeng He"
+      ],
+      "total_score": 0.6118000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.606,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "harness multi agent orchestration"
+      ],
+      "tldr_zh": "SAGA提升LLM长程策略规划能力",
+      "detail_file": "agent-harness-evolution/2026-06-29/2606.29932.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.29778",
+      "title": "Mandol: An Agglomerative Agent Memory System for Long-Term Conversations",
+      "title_zh": "Mandol：面向长期对话的凝聚式 Agent 记忆系统",
+      "authors": [
+        "Yuhan Zhang",
+        "Zhiyuan Guo",
+        "Ziheng Zeng",
+        "Wei Wang",
+        "Wentao Wu",
+        "Lijie Xu"
+      ],
+      "total_score": 0.6093824593811418,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.6599999999999999,
+        "other": 0.19794153127047226
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "统一语义图记忆，加速长期对话检索",
+      "detail_file": "agent-harness-evolution/2026-06-29/2606.29778.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.29914",
+      "title": "MemDelta: Controlled Baselines and Hidden Confounds in Agent Memory Evaluation",
+      "title_zh": "MemDelta：Agent 记忆评估中的受控基线与隐藏混杂因素",
+      "authors": [
+        "Kuan Wang"
+      ],
+      "total_score": 0.6001707656352362,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.6839999999999999,
+        "other": 0.1965692187841204
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "记忆评估需控变量，否则结论易反转",
+      "detail_file": "agent-harness-evolution/2026-06-29/2606.29914.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.29957",
+      "title": "SWE-Together: Evaluating Coding Agents in Interactive User Sessions",
+      "title_zh": "SWE-Together：在交互式用户会话中评估编码 Agent",
+      "authors": [
+        "Yifan Wu",
+        "Zhuokai Zhao",
+        "Songlin Li",
+        "Ho Hin Lee",
+        "Jiacheng Zhu",
+        "Shirley Wu",
+        "Tianhe Yu",
+        "Serena Li",
+        "Lizhu Zhang",
+        "Xiangjun Fan",
+        "Shengzhi Li"
+      ],
+      "total_score": 0.5986711626725888,
+      "scores": {
+        "topic_relevance": 0.7200000000000001,
+        "llm_assessment": 0.796,
+        "other": 0.23957054224196256
+      },
+      "tags": [
+        "HF Daily ★11",
+        "agent environment data services"
+      ],
+      "tldr_zh": "用真实多轮会话评估编码Agent协作能力",
+      "detail_file": "agent-harness-evolution/2026-06-29/2606.29957.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.30317",
+      "title": "MCP Server Architecture Patterns for LLM-Integrated Applications",
+      "title_zh": "面向 LLM 集成应用的 MCP Server 架构模式",
+      "authors": [
+        "Carson Rodrigues",
+        "Oysturn Vas"
+      ],
+      "total_score": 0.5744000000000001,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.748,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "production agent platform"
+      ],
+      "tldr_zh": "系统总结 MCP server 五类架构模式",
+      "detail_file": "agent-harness-evolution/2026-06-29/2606.30317.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.29981",
+      "title": "Hephaestus: Toward a Cybersecurity AI Scientist",
+      "title_zh": "Hephaestus：迈向网络安全 AI 科学家",
+      "authors": [
+        "Jiaqi Li",
+        "Yang Zhao",
+        "Wen Lu",
+        "Lvyang Zhang",
+        "Lidong Zhai"
+      ],
+      "total_score": 0.5672000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.624,
+        "other": 0.2
+      },
+      "tags": [
+        "observability governance security"
+      ],
+      "tldr_zh": "提出网络安全 AI 科学家框架",
+      "detail_file": "agent-harness-evolution/2026-06-29/2606.29981.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.30573",
+      "title": "SWE-INTERACT: Reimagining SWE Benchmarks as User-Driven Long-Horizon Coding Sessions",
+      "title_zh": "SWE-INTERACT：将 SWE 基准重构为用户驱动的长程编码会话",
+      "authors": [
+        "Mohit Raghavendra",
+        "Anisha Gunjal",
+        "Aakash Sabharwal",
+        "Yunzhong He"
+      ],
+      "total_score": 0.5512000000000001,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.784,
+        "other": 0.2
+      },
+      "tags": [
+        "agent environment data services"
+      ],
+      "tldr_zh": "评测编码智能体多轮交互开发能力",
+      "detail_file": "agent-harness-evolution/2026-06-29/2606.30573.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.29771",
+      "title": "CLQT: A Closed-Loop, Cost-Aware, Strategy-Consistent Benchmark for Diagnostic Evaluation of LLM Portfolio-Management Agents",
+      "title_zh": "CLQT：用于诊断评估 LLM 投资组合管理智能体的闭环、成本感知、策略一致性基准",
+      "authors": [
+        "Bo Qu",
+        "Mingguang Chen"
+      ],
+      "total_score": 0.5300774860633329,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.8,
+        "other": 0.11359162021110976
+      },
+      "tags": [
+        "production agent platform"
+      ],
+      "tldr_zh": "CLQT诊断LLM交易智能体能力而非收益排名",
+      "detail_file": "agent-harness-evolution/2026-06-29/2606.29771.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.30133",
+      "title": "Query-Aware Spreading Activation for Multi-Hop Retrieval over Knowledge Graphs",
+      "title_zh": "面向知识图谱多跳检索的查询感知扩散激活",
+      "authors": [
+        "Illia Makarov",
+        "Mykola Glybovets"
+      ],
+      "total_score": 0.5066887430316664,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.328,
+        "other": 0.18762914343888823
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "用语义门控实现高效查询感知图检索",
+      "detail_file": "agent-harness-evolution/2026-06-29/2606.30133.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.29742",
+      "title": "MicroAgent: Context-Augmented Multi-Agent Framework for Automatic Microservice Decomposition",
+      "title_zh": "MicroAgent：用于自动微服务拆分的上下文增强多智能体框架",
+      "authors": [
+        "Zishan Su",
+        "Junjie Huang",
+        "Shiwen Shan",
+        "Xingyan Chen",
+        "Hui Zeng",
+        "Yuxin Su",
+        "Yanlin Wang",
+        "Michael R. Lyu"
+      ],
+      "total_score": 0.48449465275131026,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.328,
+        "other": 0.22031550917103415
+      },
+      "tags": [
+        "harness multi agent orchestration"
+      ],
+      "tldr_zh": "多智能体上下文增强微服务自动拆分",
+      "detail_file": "agent-harness-evolution/2026-06-29/2606.29742.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.30189",
+      "title": "DAIN: Dynamic Agent-Based Interaction Network for Efficient and Collaborative Multimodal Reasoning",
+      "title_zh": "DAIN：用于高效协作式多模态推理的动态 Agent 交互网络",
+      "authors": [
+        "Xinxin Chen",
+        "Yuchen Li",
+        "Zihan Wang",
+        "Haoyu Zhang",
+        "Ruixin Liu",
+        "Mingyuan Zhao"
+      ],
+      "total_score": 0.46747120241280815,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.276,
+        "other": 0.21557067470936045
+      },
+      "tags": [
+        "harness multi agent orchestration"
+      ],
+      "tldr_zh": "动态多Agent协作提升多模态推理",
+      "detail_file": "agent-harness-evolution/2026-06-29/2606.30189.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2606.30015",
+      "title": "Parametric Skills",
+      "title_zh": "参数化技能",
+      "authors": [
+        "Xuan Zhao",
+        "Haonan He",
+        "Qingyu Yang",
+        "Minglei Li",
+        "Jingqi Ye",
+        "Zelin Tan",
+        "Bo Wan",
+        "Peng Ye"
+      ],
+      "total_score": 0.35440000000000005,
+      "scores": {
+        "topic_relevance": 0.16000000000000003,
+        "llm_assessment": 0.7680000000000001,
+        "other": 0.2
+      },
+      "tags": [
+        "adjacent rag and prompting"
+      ],
+      "tldr_zh": "把文本技能转成LoRA参数，提升SWE任务表现",
+      "detail_file": "agent-harness-evolution/2026-06-29/2606.30015.json",
+      "thumb": ""
+    }
+  ]
+}

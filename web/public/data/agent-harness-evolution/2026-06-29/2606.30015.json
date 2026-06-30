@@ -1,0 +1,67 @@
+{
+  "arxiv_id": "2606.30015",
+  "title": "Parametric Skills",
+  "title_zh": "参数化技能",
+  "authors": [
+    "Xuan Zhao",
+    "Haonan He",
+    "Qingyu Yang",
+    "Minglei Li",
+    "Jingqi Ye",
+    "Zelin Tan",
+    "Bo Wan",
+    "Peng Ye"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-29T09:19:32Z",
+  "abs_url": "https://arxiv.org/abs/2606.30015v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.30015",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Since intelligence fundamentally relies on efficient skill acquisition (Chollet, 2019), the ability to leverage skills is critical. For LLMs, skills, manually authored or extracted from task trajectories, are textual recipes encoding mature problem-solving experience and are critical to agentic capabilities. Despite widespread deployment, their utility is limited by the model's ability to comprehend and follow skill instructions, especially under complex and long-context scenarios, where key instructions are difficult to locate and adhere to. To address this limitation, we propose ParametricSkills, a framework that can convert free-form textual skills into parameters at test time, enabling context-free skill exploitation. Specifically, we first construct a large-scale, high-quality skill library, and synthesize single-turn and multi-turn skill exploitation trajectories built around these skills with OpenCode. Using these data, we then train a hypernetwork that parameterizes both the skill content and the test-time exploitation methodology by receiving textual skills and converting them into LoRA adapters. Experimental results on six complex software engineering (SWE) subtasks demonstrate that, the proposed ParametricSkills averagely outperforms in-context learning by 6.44 points as judged by DeepSeek-V4-Flash, while also achieving significantly higher BERT Score and F1 score, confirming its effectiveness. Beyond performance, we further find that parametric skills, being inherently accumulative, offer a preliminary yet promising avenue toward test-time continual learning.",
+  "abstract_zh": "本文关注 LLM 在复杂、长上下文场景中利用文本技能（skill）的困难：现有技能通常以人工编写或从任务轨迹中抽取的文本配方形式存在，虽然包含成熟的问题求解经验，但模型需要在上下文中理解、定位并严格遵循关键指令，导致效果受限。为此，论文提出 ParametricSkills 框架，在测试时将自由形式的文本技能转换为模型参数，从而实现无需上下文注入的技能利用。具体而言，作者首先构建大规模高质量 skill library，并基于 OpenCode 合成围绕这些技能的单轮与多轮技能利用轨迹；随后使用这些数据训练一个 hypernetwork，使其接收文本技能并生成 LoRA adapters，同时参数化技能内容与测试时的技能调用方法。在六个复杂软件工程（SWE）子任务上的实验表明，相比 in-context learning，ParametricSkills 在 DeepSeek-V4-Flash 评判下平均提升 6.44 分，并取得更高的 BERT Score 与 F1 score。论文还指出，参数化技能具有天然可累积性，为测试时持续学习（test-time continual learning）提供了初步但有前景的方向。",
+  "key_points_zh": [
+    "提出 ParametricSkills：在测试时将自由形式 textual skills 转换为 LoRA adapters，减少对长上下文中显式技能指令的依赖。",
+    "训练一个 hypernetwork 来同时编码技能内容与技能利用方法，使模型能以参数形式吸收并调用技能。",
+    "构建大规模高质量 skill library，并用 OpenCode 合成单轮和多轮 skill exploitation trajectories 作为训练数据。",
+    "在六个复杂 SWE 子任务上，相比 in-context learning 平均提升 6.44 分，并在 BERT Score、F1 score 上取得更好结果。",
+    "参数化技能具备可累积特性，为 test-time continual learning 提供了一个初步可行的研究方向。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.8,
+    "problem_significance": 0.76,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.74,
+    "llm_avg": 0.7680000000000001,
+    "comment": "Novel agent-skill learning work that converts trajectory-derived textual skills into test-time parameters, suggesting a path toward accumulative self-improvement.",
+    "comment_zh": "这是新颖的智能体技能学习工作，将轨迹来源的文本技能转化为测试时参数，展示了累积式自我改进路径。"
+  },
+  "scores": {
+    "topic_relevance": 0.16000000000000003,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7680000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

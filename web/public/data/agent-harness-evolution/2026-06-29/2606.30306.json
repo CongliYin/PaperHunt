@@ -1,0 +1,63 @@
+{
+  "arxiv_id": "2606.30306",
+  "title": "Always-OnAgents:A Survey of Persistent Memory, State, and Governance in LLMAgents",
+  "title_zh": "Always-On Agents：LLM Agent 中持久记忆、状态与治理的综述",
+  "authors": [
+    "Tianyu Ding",
+    "Aditya Nannapaneni",
+    "Bingfan Liu",
+    "Ling Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-29T13:47:42Z",
+  "abs_url": "https://arxiv.org/abs/2606.30306v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.30306",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Always-on agents are systems whose future behavior depends on durable state accumulated across earlier interactions. We treat them as persistent-state systems: the operative system includes retrievable memories, but also task ledgers, permissions, credentials, commitments, provenance and audit records, shared state, trigger conditions, and externally committed effects linked to those records. The survey reads the literature through six diagnostic axes for each state item, authority, scope, mutability, provenance, recoverability, and actionability, and through a lifecycle in which state is written, validated, organized, retrieved, acted upon, updated, forgotten, audited, and sometimes rolled back. Across a 435-work coded corpus, treated as a scoped map rather than an exhaustive census, the literature concentrates more heavily on accumulating and retrieving state than on governing, recovering, or relinquishing it. We therefore introduce the Always-On Evaluation Protocol (AOEP-v0), a pilot evaluation contract that makes these governance requirements concrete by scoring state mutation and recovery obligations rather than answer quality alone. The resulting agenda connects always-on agents to databases, distributed systems, formal methods, capability security, and machine unlearning.",
+  "abstract_zh": "本文将 Always-on agents 定义为未来行为依赖于跨交互累积的持久状态的系统，并从“持久状态系统”视角重新审视相关研究。这里的状态不仅包括可检索记忆，还包括任务账本、权限、凭证、承诺、溯源与审计记录、共享状态、触发条件，以及与这些记录相关的外部已提交影响。作者提出六个诊断维度来分析每类状态项：authority、scope、mutability、provenance、recoverability 和 actionability，并梳理状态从写入、验证、组织、检索、执行、更新、遗忘、审计到回滚的生命周期。基于 435 篇工作的编码语料，论文指出现有研究更关注状态的积累与检索，而较少处理治理、恢复和放弃状态等问题。为此，作者提出 Always-On Evaluation Protocol（AOEP-v0），将评估重点从单纯回答质量扩展到状态变更与恢复义务，进而把 Always-on agents 的研究议程与数据库、分布式系统、形式化方法、能力安全和机器遗忘等方向连接起来。",
+  "key_points_zh": [
+    "提出将 Always-on agents 视为 persistent-state systems，强调 Agent 的行为不仅受记忆影响，也受权限、凭证、任务账本、审计记录、共享状态和外部承诺等持久状态约束。",
+    "构建六个状态诊断维度：authority、scope、mutability、provenance、recoverability 和 actionability，用于系统分析不同状态项的控制权、作用范围、可变性、来源、可恢复性与可执行性。",
+    "总结状态生命周期：写入、验证、组织、检索、行动、更新、遗忘、审计与回滚，指出现有 LLM Agent 文献主要集中在状态积累和检索，而治理、恢复、撤销和遗忘机制明显不足。",
+    "基于 435 篇论文的编码语料给出研究版图，并强调该语料是 scoped map 而非穷尽式普查，用于揭示 Always-on agents 研究中的系统性空白。",
+    "提出 Always-On Evaluation Protocol（AOEP-v0），把评估从答案质量扩展到状态变更、恢复和治理义务，为长期运行 Agent 的安全性与可控性评测提供初步协议。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.9,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8280000000000001,
+    "comment": "High-value survey and protocol because it reframes persistent agent state around governance, auditability, rollback, and evaluation obligations.",
+    "comment_zh": "该综述和协议价值较高，因为它将持久化智能体状态置于治理、审计、回滚和评估义务框架下。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.43732458189998774,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8280000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 7,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

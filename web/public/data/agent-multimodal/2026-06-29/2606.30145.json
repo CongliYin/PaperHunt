@@ -1,0 +1,64 @@
+{
+  "arxiv_id": "2606.30145",
+  "title": "FacePlex: Full-Duplex Joint Speech-Facial Motion Generation for Conversational Avatars",
+  "title_zh": "FacePlex：面向对话式 Avatar 的全双工联合语音-面部运动生成",
+  "authors": [
+    "Habin Lim",
+    "Jae-Ho Lee",
+    "Hah Min Lew",
+    "Ji-Su Kang",
+    "Gyeong-Moon Park"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-29T11:22:50Z",
+  "abs_url": "https://arxiv.org/abs/2606.30145v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.30145",
+  "links": {
+    "github": null,
+    "project_page": "https://hahminlew.github.io/faceplex"
+  },
+  "abstract_en": "Natural face-to-face conversation requires real-time speech generation together with synchronized facial motion. Existing systems only partially address this problem: speech-only full-duplex models can generate speech in real time but do not produce facial motion, while audio-driven facial motion models animate a face from already available audio rather than jointly generating speech and motion online. To bridge this gap, we first formalize full-duplex joint speech-facial motion generation, where speech tokens and facial motion tokens are produced together every step. Building on this formulation, we propose FacePlex, a unified streaming framework with two key components. First, Rolling Flow Matching adapts flow matching to online motion generation by committing new motion frames at each streaming step. Second, Rolling Cross-Attention couples the streaming audio queue with the motion queue, allowing speech and facial motion to condition each other as generation progresses. Through extensive experiments, ablation studies, and a user study, we show that FacePlex enables full-duplex joint speech-facial motion generation under online streaming constraints, while achieving stronger lip-sync quality and motion fidelity than audio-driven facial motion baselines.",
+  "abstract_zh": "自然面对面对话需要实时生成语音，并同步产生面部运动。现有系统通常只解决其中一部分：speech-only full-duplex 模型能实时生成语音但不生成面部动作；audio-driven facial motion 模型则依赖已给定音频来驱动人脸动画，无法在线联合生成语音与运动。本文首先形式化定义了全双工联合语音-面部运动生成任务，即在每个流式步骤同时生成 speech tokens 与 facial motion tokens。基于该设定，作者提出 FacePlex，一个统一的流式生成框架，包含两个关键组件：Rolling Flow Matching 将 flow matching 适配到在线运动生成，通过每个流式步骤提交新的运动帧；Rolling Cross-Attention 将流式音频队列与运动队列耦合，使语音与面部运动在生成过程中相互条件化。大量实验、消融实验与用户研究表明，FacePlex 能在在线流式约束下实现全双工联合语音-面部运动生成，并在唇同步质量与运动保真度上优于 audio-driven facial motion 基线。",
+  "key_points_zh": [
+    "提出 full-duplex joint speech-facial motion generation 任务设定：在在线流式对话中，每一步同步生成语音 token 与面部运动 token。",
+    "FacePlex 是统一的 streaming framework，可让 conversational avatar 在生成语音的同时产生同步面部动作，而非事后由音频驱动动画。",
+    "Rolling Flow Matching 将 flow matching 改造为适合在线运动生成的形式，通过逐步提交新 motion frames 满足流式约束。",
+    "Rolling Cross-Attention 连接 streaming audio queue 与 motion queue，使语音与面部运动在生成过程中双向条件化、相互协调。",
+    "实验、消融与用户研究显示，FacePlex 在 lip-sync quality 和 motion fidelity 上优于传统 audio-driven facial motion baselines。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.72,
+    "potential_impact": 0.66,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.68,
+    "llm_avg": 0.678,
+    "comment": "A technically novel streaming full-duplex speech-and-face generation framework for conversational avatars, though its relevance to tool-using realtime agents is indirect.",
+    "comment_zh": "该工作提出了较新颖的流式全双工语音与面部动作联合生成框架，但与工具型实时智能体的关系较为间接。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.678,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://hahminlew.github.io/faceplex",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

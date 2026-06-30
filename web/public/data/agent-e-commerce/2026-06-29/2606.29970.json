@@ -1,0 +1,68 @@
+{
+  "arxiv_id": "2606.29970",
+  "title": "From Extraction to Navigation: Progressive Retrieval with Indirectly Infinite Depth",
+  "title_zh": "从抽取到导航：具备间接无限深度的渐进式检索",
+  "authors": [
+    "Linxiao Che",
+    "Shanshan Huang",
+    "Haitao Lu",
+    "Yijia Sun",
+    "Qiang Luo",
+    "Ruiming Tang",
+    "Han Li",
+    "Kun Gai",
+    "Guorui Zhou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-29T08:47:17Z",
+  "abs_url": "https://arxiv.org/abs/2606.29970v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.29970",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Modern large-scale recommender retrieval is shifting from static similarity matching to dynamic item space navigation, framing retrieval as iterative goal-driven graph traversal. Conventional item-to-item (i2i) methods fall into the \"interest tunnel\" and fail to excavate deep user interests, while existing index-based retrieval suffers from persistent \"search drift\", caused by static entry nodes and fixed graph topologies unable to track shifting real-time user intent. To resolve the above defects, we present IID-Nav, a framework modeling retrieval as stateful autonomous graph exploration with three core contributions: (1) A goal-aware navigation policy substituting passive neighborhood expansion with active intent routing supervised by a target discriminator; (2) A recursive state evolution mechanism supporting Indirectly Infinite Depth (IID) via cross-request state reuse, which enables logical unlimited-depth graph traversal without linearly rising inference latency; (3) A trajectory-aligned training paradigm equipped with graph hard negative sampling to stabilize optimization over full navigation paths. Evaluations on billion-level industrial datasets show IID-Nav surpasses mainstream retrieval baselines under strict latency budgets. Empirical results verify that our method alleviates search drift remarkably and retains high precision for deep retrieval paths, offering an efficient, robust retrieval solution for industrial recommendation systems.",
+  "abstract_zh": "本文针对大规模推荐检索从静态相似度匹配转向动态 Item 空间导航的趋势，提出 IID-Nav。传统 item-to-item（i2i）方法容易陷入“兴趣隧道”，难以挖掘用户深层兴趣；现有基于索引的检索方法则受静态入口节点和固定图拓扑限制，难以跟踪实时意图变化，产生持续的“搜索漂移”。IID-Nav 将检索建模为有状态的自主图探索过程，包含三项核心设计：由目标判别器监督的 goal-aware navigation policy，用主动意图路由替代被动邻域扩展；支持 Indirectly Infinite Depth（IID）的递归状态演化机制，通过跨请求复用状态实现逻辑上的无限深度图遍历，同时避免推理延迟线性增长；以及结合 graph hard negative sampling 的轨迹对齐训练范式，以稳定整条导航路径的优化。十亿级工业数据集实验表明，IID-Nav 在严格延迟约束下优于主流检索基线，显著缓解 search drift，并在深层检索路径上保持较高精度。",
+  "key_points_zh": [
+    "将推荐检索从静态相似匹配重构为有状态、目标驱动的图导航过程，以缓解 i2i 的“兴趣隧道”和索引检索的 search drift。",
+    "提出 goal-aware navigation policy，通过目标判别器监督导航方向，实现主动意图路由，而非简单扩展邻居节点。",
+    "设计递归状态演化机制，引入 Indirectly Infinite Depth（IID），通过跨请求状态复用实现逻辑无限深度探索，同时控制在线推理延迟。",
+    "采用轨迹对齐训练范式，并结合 graph hard negative sampling，提升完整导航路径优化的稳定性与区分能力。",
+    "在十亿级工业数据集上，IID-Nav 在严格延迟预算下超过主流检索方法，并能在深层检索路径中保持高精度。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.65,
+    "problem_significance": 0.7,
+    "potential_impact": 0.65,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.6,
+    "llm_avg": 0.63,
+    "comment": "A promising industrial recommender retrieval framework with likely relevance to e-commerce ranking and discovery, though it lacks explicit shopping-agent or commerce-specific grounding.",
+    "comment_zh": "这是一项有前景的工业推荐召回框架，可能适用于电商排序与发现，但缺少明确的购物智能体或电商场景 grounding。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.21754098571521813,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.63,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

@@ -1,0 +1,61 @@
+{
+  "arxiv_id": "2606.29788",
+  "title": "MemLeak: Diagnosing Information Leaks in Multimodal Agent Memory",
+  "title_zh": "MemLeak：诊断多模态 Agent 记忆中的信息泄露",
+  "authors": [
+    "Kuan Wang",
+    "Chao Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-29T05:07:02Z",
+  "abs_url": "https://arxiv.org/abs/2606.29788v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.29788",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "When a multimodal AI agent is asked to forget a fact, current memory systems usually delete the text entry and report success. We find that the fact can remain recoverable from retained user images, including images tagged to entirely different facts, because VLMs use implicit visual cues at inference time. We introduce the Information Provenance Graph (IPG), a taxonomy that classifies memory representations by deletion affordance. The IPG reveals that deletion fails through multiple channels. Our benchmark, MemLeak, measures this across a deletion cascade: direct probing of deletion-capable systems yields <1%, but retained correlated text enables 18.3% recovery, and retained images enable 12.0% recovery (0.0% blind baseline, 0.3% FPR) -- with 47% of image leaks not text-recoverable. Content-aware semantic deletion reduces the image residual to 2.0%. The residual appears across multiple VLMs, a production memory system, and real Unsplash-licensed photographs. Dual-annotator human validation (kappa = 0.88) confirms judge reliability.",
+  "abstract_zh": "本文研究多模态 AI Agent 在被要求“遗忘”某个事实后，现有记忆系统是否真的完成删除。作者发现，系统通常只删除文本记忆并返回成功，但相关事实仍可能从保留的用户图像中被恢复，甚至来自被标注为其他事实的图像，因为 VLM 会在推理时利用隐式视觉线索。论文提出 Information Provenance Graph（IPG），按“可删除性”对记忆表征进行分类，揭示删除失败存在多条泄露通道。作者构建 MemLeak 基准，在删除级联场景中评测信息恢复：对支持删除的系统直接探测恢复率低于 1%，但保留的相关文本可带来 18.3% 恢复率，保留图像可带来 12.0% 恢复率，盲测基线为 0.0%，误报率为 0.3%；其中 47% 的图像泄露无法通过文本恢复。内容感知的语义删除可将图像残留泄露降至 2.0%。该现象在多个 VLM、一个生产级记忆系统以及真实 Unsplash 授权照片上均存在。双标注者人工验证的一致性 kappa 为 0.88，确认评测裁判可靠。",
+  "key_points_zh": [
+    "提出 Information Provenance Graph（IPG），用于刻画多模态 Agent 记忆中不同表征的来源与删除可行性，指出仅删除文本条目并不足以保证遗忘。",
+    "构建 MemLeak 基准，系统评测删除后的信息恢复路径：直接探测恢复率低于 1%，但相关文本和保留图像分别导致 18.3% 与 12.0% 的恢复率。",
+    "发现图像是独立且重要的泄露源：47% 的图像泄露无法通过文本恢复，说明 VLM 会利用隐式视觉线索重建被删除事实。",
+    "内容感知语义删除可将图像残留泄露从 12.0% 降至 2.0%，但仍未完全消除风险。",
+    "实验覆盖多个 VLM、生产级记忆系统和真实 Unsplash 照片，并通过双标注者验证获得 kappa=0.88，增强了结论可信度。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.84,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.8,
+    "llm_avg": 0.776,
+    "comment": "Valuable agent-memory governance work that exposes durable multimodal deletion failures and provides a provenance-based benchmark.",
+    "comment_zh": "这是有价值的智能体记忆治理工作，揭示了多模态遗忘失败并提供了基于溯源的基准。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.776,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

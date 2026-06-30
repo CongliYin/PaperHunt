@@ -1,0 +1,64 @@
+{
+  "arxiv_id": "2606.29981",
+  "title": "Hephaestus: Toward a Cybersecurity AI Scientist",
+  "title_zh": "Hephaestus：迈向网络安全 AI 科学家",
+  "authors": [
+    "Jiaqi Li",
+    "Yang Zhao",
+    "Wen Lu",
+    "Lvyang Zhang",
+    "Lidong Zhai"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-29T08:56:37Z",
+  "abs_url": "https://arxiv.org/abs/2606.29981v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.29981",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Cyber offense is moving to machine speed; cyber research itself is not. Existing AI scientist systems make end-to-end research automation increasingly plausible, but they target relatively stable scientific domains. We argue that AI-native cybersecurity is a different kind of scientific object. Its recurring units of study are security events and interaction traces, not static assets; its model and tool substrate is non-stationary, not steady-state; and credible evaluation depends on digital twins, cyber ranges, and auditable evidence rather than on a single benchmark score. We call this object the Cybersecurity AI Scientist. A practical realization is a modular, role-specialized multi-agent research system that coordinates problem framing, threat modeling, tool generation, controlled experimentation, evaluation, governance, and scientific reporting, and that anchors its concrete objectives in a four-zeros frame spanning risk, trust, incident, and energy dimensions. As a representative agenda we focus on AI-native defense, where steady-state perimeters give way to resilient agent legions and the classical category of terminal security is itself being deconstructed into agent security. This paper defines the object, separates it from any single organizational realization, and offers an architecture and an agenda on which later systems, benchmarks, and empirical programs can be built.",
+  "abstract_zh": "本文提出“Cybersecurity AI Scientist（网络安全 AI 科学家）”这一研究对象，指出网络攻防正在进入机器速度，而网络安全研究本身仍未同步自动化。不同于面向相对稳定科学领域的现有 AI scientist 系统，AI-native cybersecurity 的核心研究单元是安全事件与交互轨迹，而非静态资产；其模型与工具基础设施具有非平稳性；可信评估也依赖 digital twins、cyber ranges 和可审计证据，而不是单一 benchmark 分数。作者主张，一个可行实现应是模块化、角色专门化的 multi-agent research system，协同完成问题定义、威胁建模、工具生成、受控实验、评估、治理与科学报告，并以覆盖风险、信任、事件与能耗维度的“四个零”目标框架来锚定任务。论文重点讨论 AI-native defense：传统稳态边界防御将转向具备韧性的 agent legions，terminal security 也将被重构为 agent security。该文并非提出单一系统实现，而是定义研究对象、给出架构蓝图与研究议程，为后续系统、基准和实证研究奠基。",
+  "key_points_zh": [
+    "将 Cybersecurity AI Scientist 定义为一种面向 AI-native cybersecurity 的新型科学研究对象，强调其研究单元是安全事件与交互轨迹，而非静态系统资产。",
+    "指出网络安全研究环境具有强非平稳性：攻击、防御、模型、工具与基础设施持续变化，因此不能简单套用传统 AI scientist 或单一 benchmark 评估范式。",
+    "提出模块化、角色专门化的 multi-agent research system 架构，覆盖 problem framing、threat modeling、tool generation、controlled experimentation、evaluation、governance 和 reporting。",
+    "主张可信评估应基于 digital twins、cyber ranges 与可审计证据链，而不是仅依赖排行榜式指标。",
+    "以 AI-native defense 为代表议程，认为未来防御将从稳态边界与 terminal security 转向 resilient agent legions 和 agent security。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.58,
+    "problem_significance": 0.72,
+    "potential_impact": 0.62,
+    "paradigm_shift": 0.6,
+    "lasting_value": 0.6,
+    "llm_avg": 0.624,
+    "comment": "Conceptually relevant agenda-setting work for cyber agent research infrastructure, but it lacks empirical validation or a concrete reusable harness.",
+    "comment_zh": "该工作在网络安全智能体研究基础设施上具有议程设定意义，但缺少实证验证和具体可复用框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.624,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

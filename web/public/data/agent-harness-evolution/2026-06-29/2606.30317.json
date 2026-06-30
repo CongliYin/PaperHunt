@@ -1,0 +1,61 @@
+{
+  "arxiv_id": "2606.30317",
+  "title": "MCP Server Architecture Patterns for LLM-Integrated Applications",
+  "title_zh": "面向 LLM 集成应用的 MCP Server 架构模式",
+  "authors": [
+    "Carson Rodrigues",
+    "Oysturn Vas"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-29T13:59:41Z",
+  "abs_url": "https://arxiv.org/abs/2606.30317v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.30317",
+  "links": {
+    "github": "https://github.com/rodriguescarson/mcp-patterns-icsme2026",
+    "project_page": null
+  },
+  "abstract_en": "The Model Context Protocol (MCP), introduced by Anthropic in November 2024, defines a standardized interface for connecting large language models (LLMs) to external tools, data sources, and services. Within months of release, hundreds of community-built MCP servers appeared on GitHub, but no software-maintenance literature has yet described how the ecosystem is being structured in production. This industry experience paper catalogues five recurring MCP server architectural patterns observed across an enumerated corpus of fifteen independently developed servers (five production servers from the ANSYR voice AI platform plus ten public servers from the official MCP registry): Resource Gateway, Tool Orchestrator, Stateful Session Server, Proxy Aggregator, and Domain-Specific Adapter. Each pattern is described in the structured form of Gamma et al.: context, problem, solution, and consequences. We also document four anti-patterns and a set of cross-cutting concerns around authentication, versioning, and observability. The quantitative evaluation contributes three measurements: inter-rater reliability of the taxonomy across two independent LLM raters on 54 held-out servers (Cohen's kappa = 0.76), which also localizes three pattern-boundary ambiguities; transport overhead measured end-to-end on loopback and modeled for cross-host paths; and a tool-count study showing tool-selection accuracy drops below 90% between 10 and 15 tools per context for Claude Haiku 4.5 and between 20 and 30 tools for Sonnet 4. Code, corpus, and prompts are released as a replication package.",
+  "abstract_zh": "本文研究 Anthropic 于 2024 年 11 月提出的 Model Context Protocol（MCP）在生产生态中的服务器架构实践。作者基于 15 个独立开发的 MCP server（包括 ANSYR voice AI platform 的 5 个生产服务器和官方 MCP registry 的 10 个公开服务器），总结出五类反复出现的架构模式：Resource Gateway、Tool Orchestrator、Stateful Session Server、Proxy Aggregator 和 Domain-Specific Adapter，并按照 Gamma et al. 的模式格式描述其上下文、问题、方案与影响。论文还归纳了 4 类反模式，以及认证、版本管理、可观测性等横切关注点。定量评估包括：在 54 个留出服务器上由两个独立 LLM 评审进行分类，一致性 Cohen's kappa 达到 0.76；测量本地 loopback 端到端传输开销并建模跨主机场景；工具数量研究显示 Claude Haiku 4.5 在每个上下文 10–15 个工具之间工具选择准确率降至 90% 以下，Sonnet 4 则在 20–30 个工具之间出现类似下降。作者发布了代码、语料与提示词作为可复现包。",
+  "key_points_zh": [
+    "论文首次从软件维护与生产实践角度系统梳理 MCP server 生态，基于 15 个真实服务器归纳架构模式。",
+    "提出五类 MCP server 架构模式：Resource Gateway、Tool Orchestrator、Stateful Session Server、Proxy Aggregator、Domain-Specific Adapter。",
+    "除正向模式外，论文还总结 4 类反模式，并讨论认证、版本管理、可观测性等跨架构关注点。",
+    "在 54 个留出服务器上的分类实验显示，两个独立 LLM 评审的一致性 Cohen's kappa 为 0.76，说明该 taxonomy 具有较好可复现性。",
+    "工具数量实验表明，单上下文工具过多会显著降低 LLM 工具选择准确率：Claude Haiku 4.5 在 10–15 个工具后低于 90%，Sonnet 4 在 20–30 个工具后下降。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.82,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.8,
+    "llm_avg": 0.748,
+    "comment": "Useful production-oriented agent infrastructure paper that catalogs MCP server patterns, anti-patterns, authentication, versioning, and observability concerns.",
+    "comment_zh": "这是有用的生产级智能体基础设施论文，系统归纳了 MCP 服务器模式、反模式、认证、版本和可观测性问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.748,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/rodriguescarson/mcp-patterns-icsme2026",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

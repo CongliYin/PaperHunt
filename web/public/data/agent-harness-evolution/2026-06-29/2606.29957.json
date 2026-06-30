@@ -1,0 +1,70 @@
+{
+  "arxiv_id": "2606.29957",
+  "title": "SWE-Together: Evaluating Coding Agents in Interactive User Sessions",
+  "title_zh": "SWE-Together：在交互式用户会话中评估编码 Agent",
+  "authors": [
+    "Yifan Wu",
+    "Zhuokai Zhao",
+    "Songlin Li",
+    "Ho Hin Lee",
+    "Jiacheng Zhu",
+    "Shirley Wu",
+    "Tianhe Yu",
+    "Serena Li",
+    "Lizhu Zhang",
+    "Xiangjun Fan",
+    "Shengzhi Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-29T08:35:15Z",
+  "abs_url": "https://arxiv.org/abs/2606.29957v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.29957",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Most coding-agent benchmarks are static: an agent receives a complete task description up front and is judged only by its final code. Real coding assistance is interactive, with users clarifying goals, adding constraints, and correcting mistakes over multiple turns. We introduce SWE-Together, a multi-turn benchmark reconstructed from real user-agent coding sessions. To make real interactions verifiable, we curate 109 repository-level tasks from 11,260 recorded sessions, selecting sessions with recoverable repository states, clear user goals, and observable outcomes. To replay these interactions across agents, we build a reactive LLM-based user simulator that preserves the original users' intents and provides feedback when the coding agent's progress requires it. To evaluate agents as collaborators, we measure both final repository correctness and the number of corrective feedback turns required during the interaction. Experiments with frontier coding agents show that stronger agents generally achieve higher final success rates while requiring fewer interventions, suggesting an improved user experience.",
+  "abstract_zh": "现有多数 coding-agent benchmark 是静态的：Agent 一开始获得完整任务描述，并仅根据最终代码评判。但真实编码辅助往往是多轮交互过程，用户会不断澄清目标、增加约束并纠正错误。本文提出 SWE-Together，一个从真实用户-Agent 编码会话中重构的多轮 benchmark。为使真实交互可验证，作者从 11,260 条记录会话中筛选出 109 个 repository-level 任务，要求具备可恢复的仓库状态、明确的用户目标和可观察的结果。为在不同 Agent 上复现交互，作者构建了一个 reactive LLM-based user simulator，用于保留原始用户意图，并在编码 Agent 进展需要时提供反馈。评估时，SWE-Together 同时衡量最终仓库正确性以及交互过程中所需的纠正反馈轮数。对 frontier coding agents 的实验表明，更强的 Agent 通常具有更高最终成功率，同时需要更少用户干预，意味着更好的用户体验。",
+  "key_points_zh": [
+    "提出 SWE-Together：一个面向真实交互式编码场景的多轮 coding-agent benchmark，区别于传统一次性静态任务评测。",
+    "数据来自 11,260 条真实用户-Agent 编码会话，最终筛选出 109 个可验证的 repository-level 任务。",
+    "构建 reactive LLM-based user simulator，在重放任务时保留原始用户意图，并根据 Agent 进展动态提供纠正反馈。",
+    "评估指标不仅关注最终代码或仓库是否正确，也统计完成任务过程中需要多少轮用户纠正，衡量协作体验。",
+    "实验显示 frontier coding agents 的能力提升通常伴随更高成功率和更少干预轮数，说明交互式评测能更贴近真实使用体验。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.84,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.82,
+    "llm_avg": 0.796,
+    "comment": "Strong evaluation contribution because it reconstructs real interactive coding-agent sessions with replayable user simulation and intervention metrics.",
+    "comment_zh": "这是较强的评估贡献，因为它重建真实交互式编码智能体会话，并引入可回放用户模拟和干预指标。"
+  },
+  "scores": {
+    "topic_relevance": 0.7200000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.7874232534517753,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.796,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 11,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

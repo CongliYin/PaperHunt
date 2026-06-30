@@ -1,0 +1,63 @@
+{
+  "arxiv_id": "2606.30573",
+  "title": "SWE-INTERACT: Reimagining SWE Benchmarks as User-Driven Long-Horizon Coding Sessions",
+  "title_zh": "SWE-INTERACT：将 SWE 基准重构为用户驱动的长程编码会话",
+  "authors": [
+    "Mohit Raghavendra",
+    "Anisha Gunjal",
+    "Aakash Sabharwal",
+    "Yunzhong He"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-29T17:17:45Z",
+  "abs_url": "https://arxiv.org/abs/2606.30573v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.30573",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We introduce SWE-Interact, a new testbed for evaluating coding agents on multi-turn, interactive, user-driven software engineering tasks. Existing frontier SWE benchmarks typically provide complete requirements upfront and evaluate agents on autonomous implementation. In contrast, SWE-Interact places agents in a realistic developer workflow: a carefully designed user simulator starts with vague or incomplete instructions, progressively reveals requirements, inspects the agent's workspace, and provides targeted feedback, revisions, and new constraints until the full task goal has been handed off. Grounded in large-scale studies of real coding-agent interactions, this setup tests whether agents can discover user intent, adapt to evolving requirements, and build on their own prior work. Across a suite of frontier and open-weight models, we find that strong performance on single-turn SWE tasks does not reliably transfer to multi-turn, user-driven workflows: the best-performing models solve roughly 50% of single-turn baseline tasks but only 25% of the corresponding SWE-Interact tasks. The strongest models in our evaluation, including Opus 4.8 and GPT 5.5, start strong even in the face of vague initial instructions, persevere until all the requirements are surfaced by the user, integrate them better and write clean code. However, they still suffer from over-agentic coding, forgetting requirements and technical mistakes. Weaker models start poorly under ambiguity, give up early, forget or ignore instructions and rework their code more. Overall, SWE-Interact measures an orthogonal, real-world capability axis for frontier model development: interactive goal discovery and iterative refinement with a user in the loop.",
+  "abstract_zh": "本文提出 SWE-Interact，一个用于评估编码智能体在多轮、交互式、用户驱动软件工程任务中能力的新测试平台。不同于现有前沿 SWE benchmarks 通常一次性给出完整需求并评估智能体的自主实现能力，SWE-Interact 将智能体置于更真实的开发流程中：精心设计的用户模拟器以模糊或不完整指令开场，随后逐步揭示需求、检查智能体工作区，并提供有针对性的反馈、修改意见和新约束，直到完整任务目标被交接给智能体。该设定基于对真实 coding-agent 交互的大规模研究，重点测试智能体能否发现用户意图、适应变化需求，并在自身已有工作的基础上持续迭代。实验覆盖前沿模型和 open-weight models，结果显示：单轮 SWE 任务上的强表现并不能可靠迁移到多轮用户驱动工作流；最佳模型在单轮基线任务上约解决 50%，但在对应 SWE-Interact 任务上仅约 25%。Opus 4.8、GPT 5.5 等最强模型即使面对模糊初始指令也能较好启动，坚持交互直到用户揭示全部需求，并更好整合需求、写出更干净代码，但仍存在过度自主编码、遗忘需求和技术错误等问题。较弱模型则更容易在模糊情境下开局不佳、过早放弃、遗忘或忽略指令，并反复重写代码。总体而言，SWE-Interact 衡量了前沿模型发展的一个正交且更贴近真实世界的能力维度：在用户参与下进行交互式目标发现与迭代式改进。",
+  "key_points_zh": [
+    "提出 SWE-Interact，将 SWE 任务从一次性完整需求改造为多轮、用户驱动、长程编码会话，更贴近真实开发工作流。",
+    "核心机制是用户模拟器：从模糊指令开始，逐步揭示需求、检查工作区，并提供反馈、修订和新约束。",
+    "实验发现单轮 SWE 表现不能可靠迁移到交互式场景：最佳模型单轮约 50% 解决率，但 SWE-Interact 仅约 25%。",
+    "Opus 4.8、GPT 5.5 等强模型更擅长处理模糊需求、坚持交互并整合新约束，但仍会过度自主编码、遗忘需求或犯技术错误。",
+    "SWE-Interact 衡量的是与传统单轮编码能力不同的真实世界能力轴：交互式目标发现、需求跟踪和迭代 refinement。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.84,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.8,
+    "llm_avg": 0.784,
+    "comment": "Strong benchmark work for coding agents that evaluates realistic multi-turn goal discovery, user feedback, and iterative refinement.",
+    "comment_zh": "这是较强的编码智能体基准工作，评估真实多轮目标发现、用户反馈和迭代改进能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.784,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

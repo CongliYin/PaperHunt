@@ -1,0 +1,60 @@
+{
+  "arxiv_id": "2606.30566",
+  "title": "Forensic Trajectory Signatures for Agent Memory Poisoning Detection",
+  "title_zh": "用于检测 Agent 记忆投毒的取证轨迹签名",
+  "authors": [
+    "Jun Wen Leong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-29T17:09:03Z",
+  "abs_url": "https://arxiv.org/abs/2606.30566v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.30566",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We discover a behavioral invariant in LLM agents under persistent memory poisoning: in architectures where routing information is retrieved through observable memory-tool invocations, successful attacks require calling memory_recall_fact before email_send_email, a transition that non-exfiltrating sessions rarely exhibit. Under the evaluated architecture, this invariant follows from the attack's information-retrieval dependency rather than being merely an empirical correlation, and suppressing it breaks the attack. A simple rule exploiting this invariant alone achieves AUC = 0.9563. A Random Forest classifier over 19 trajectory features refines it to AUC = 0.9904 (BCa 95% CI [0.987, 0.993], N=10,000 resamples), demonstrating that the attack imprints on multiple independent behavioral channels. The signature is overdetermined: removing all recall-related features (half the feature set) leaves AUC unchanged at 0.990, confirming that memory poisoning induces a distributed trajectory signature rather than a single observable anomaly. Cross-model hold-out on 9 models (7B-120B parameters) confirms AUC = 1.000 on 6/9 hold-out splits, with all three exceptions mechanistically explained. The invariant generalizes to frontier models (GPT-4.1, GPT-4o) without retraining. A strictly prefix-only variant achieves AUC = 0.934, suggesting that real-time blocking is feasible with moderate degradation. The boundary is forensically useful: prompt-injection attacks that bypass memory produce a distinct trajectory (score = 0.541), enabling incident responders to distinguish memory-channel attacks from prompt-injection attacks using tool-call logs alone.",
+  "abstract_zh": "本文发现了 LLM agents 在持久化记忆投毒（persistent memory poisoning）下的一种行为不变量：在路由信息需要通过可观测 memory-tool 调用检索的架构中，成功攻击必须先调用 memory_recall_fact，再调用 email_send_email；而非外泄会话很少出现这一转移。在评估架构下，该不变量源于攻击的信息检索依赖，而不仅是经验相关性，抑制该转移会破坏攻击。仅利用这一不变量的简单规则即可达到 AUC=0.9563。基于 19 个轨迹特征的 Random Forest 分类器进一步提升到 AUC=0.9904（BCa 95% CI [0.987, 0.993]，N=10,000 重采样），表明攻击会在多个独立行为通道留下痕迹。该签名具有过度确定性：移除所有 recall 相关特征（约一半特征）后 AUC 仍为 0.990，说明记忆投毒诱导的是分布式轨迹签名，而非单一异常。跨模型留出实验覆盖 9 个模型（7B–120B 参数），其中 6/9 个留出划分达到 AUC=1.000，另外 3 个例外也得到机制性解释。该不变量无需重新训练即可泛化到 frontier models（GPT-4.1、GPT-4o）。严格 prefix-only 变体达到 AUC=0.934，显示实时阻断具有可行性但性能略有下降。该方法还具备取证边界价值：绕过记忆的 prompt-injection 攻击呈现不同轨迹（score=0.541），使事件响应者仅凭 tool-call logs 区分 memory-channel attacks 与 prompt-injection attacks。",
+  "key_points_zh": [
+    "核心发现：成功的 memory poisoning 攻击在特定 agent 架构中依赖 memory_recall_fact → email_send_email 的工具调用转移，这是由攻击检索外泄路由信息的机制决定的。",
+    "简单规则仅利用该不变量即可取得 AUC=0.9563；结合 19 个轨迹特征的 Random Forest 可提升至 AUC=0.9904，说明攻击会留下多维行为签名。",
+    "签名并不依赖单一 recall 异常：移除所有 recall 相关特征后 AUC 仍约为 0.990，证明 memory poisoning 会产生分布式 trajectory signature。",
+    "跨模型评估覆盖 9 个 7B–120B 模型，6/9 个留出划分达到 AUC=1.000，并可泛化到 GPT-4.1、GPT-4o 等 frontier models，无需重新训练。",
+    "prefix-only 检测 AUC=0.934，支持实时阻断；同时可通过 tool-call logs 区分 memory-channel attacks 与绕过记忆的 prompt-injection attacks。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.8,
+    "llm_avg": 0.808,
+    "comment": "Strong agent-security work using tool-call trajectory signatures to detect and potentially block memory-poisoning attacks.",
+    "comment_zh": "这是较强的智能体安全工作，利用工具调用轨迹特征检测并可能阻断记忆投毒攻击。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.808,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

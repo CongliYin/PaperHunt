@@ -1,0 +1,67 @@
+{
+  "arxiv_id": "2606.29742",
+  "title": "MicroAgent: Context-Augmented Multi-Agent Framework for Automatic Microservice Decomposition",
+  "title_zh": "MicroAgent：用于自动微服务拆分的上下文增强多智能体框架",
+  "authors": [
+    "Zishan Su",
+    "Junjie Huang",
+    "Shiwen Shan",
+    "Xingyan Chen",
+    "Hui Zeng",
+    "Yuxin Su",
+    "Yanlin Wang",
+    "Michael R. Lyu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-29T03:36:00Z",
+  "abs_url": "https://arxiv.org/abs/2606.29742v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.29742",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The adoption of Microservice Architecture (MSA) has revolutionized software engineering by enhancing scalability, agility, and maintainability over traditional monolithic applications. As more developers transition their legacy systems to microservice-based architectures, effective microservice decomposition-partitioning monolithic applications into highly cohesive services-becomes vital. However, this decomposition task presents significant challenges. Manual approaches are time-consuming and labor-intensive. Existing automated methods often fail to capture the necessary semantic insights from complex applications, while naive applications of Large Language Models tend to overlook crucial contextual information and design principles, leading to suboptimal results. To address these challenges, we propose MicroAgent, a Context-Augmented Multi-Agent Framework for Microservice Decomposition. Our framework divides the decomposition process into five distinct subtasks and assigns each to a specialized agent. To enhance the effectiveness of each agent, we provide tailored, multi-granularity context that keeps its analysis focused and mitigates information overload. Furthermore, to ensure the decomposition adheres to established design principles, we integrate analytical tools that guide the agents' decision-making. Experimental evaluations on 10 Java Web applications demonstrate that MicroAgent achieves an average decomposition accuracy of 89.2%, outperforming the state-of-the-art method by 24.6%. We also conduct a case study to highlight the practical benefits of our design.",
+  "abstract_zh": "本文提出 MicroAgent，一个面向单体应用自动微服务拆分的上下文增强多智能体框架。针对人工拆分成本高、现有自动方法难以捕获复杂应用语义、直接使用 Large Language Models 容易忽略关键上下文与设计原则的问题，MicroAgent 将微服务拆分流程划分为五个子任务，并为每个子任务分配专门的 agent。框架为不同 agent 提供定制化、多粒度上下文，以聚焦分析并减少信息过载；同时集成分析工具，引导 agent 遵循既有微服务设计原则。作者在 10 个 Java Web applications 上评估，MicroAgent 平均拆分准确率达到 89.2%，相比 state-of-the-art 方法提升 24.6%，并通过案例研究展示其实际收益。",
+  "key_points_zh": [
+    "MicroAgent 将微服务拆分拆解为五个专门子任务，由不同 agent 分工完成，提升复杂单体系统分析的结构化程度。",
+    "框架为各 agent 提供定制化、多粒度上下文，既补足 Large Language Models 容易遗漏的语义信息，又缓解上下文过载。",
+    "通过集成分析工具约束和指导决策过程，使拆分结果更符合微服务高内聚、低耦合等设计原则。",
+    "在 10 个 Java Web applications 上，MicroAgent 平均拆分准确率为 89.2%，较 state-of-the-art 方法提升 24.6%。",
+    "论文被 ASE 2026 接收，并通过案例研究展示该框架在真实微服务迁移场景中的实用价值。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.36,
+    "problem_significance": 0.38,
+    "potential_impact": 0.36,
+    "paradigm_shift": 0.24,
+    "lasting_value": 0.3,
+    "llm_avg": 0.328,
+    "comment": "Mostly a domain-specific multi-agent application for software architecture decomposition with limited reusable harness or trajectory-learning contribution.",
+    "comment_zh": "该工作主要是面向软件架构拆分的领域多智能体应用，对可复用框架或轨迹学习贡献有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.42189305502620456,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.328,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 9,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}
