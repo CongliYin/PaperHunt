@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2608.02356",
+  "title": "SkillTrace: Traversing a Query-Skill Graph for Composable LLM Agents",
+  "title_zh": "SkillTrace：遍历 Query-Skill 图以构建可组合 LLM Agent",
+  "authors": [
+    "Yue Yao",
+    "Shengyuan Wang",
+    "Xin Chen",
+    "Minke Zhang",
+    "Jia He",
+    "Bingjun Luo",
+    "Tom Gedeon"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T15:07:11Z",
+  "abs_url": "https://arxiv.org/abs/2608.02356v2",
+  "pdf_url": "https://arxiv.org/pdf/2608.02356",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model agents increasingly solve complex tasks by composing reusable skills from a library. To address this, the key challenge is not merely to retrieve individually relevant skills, but to identify a complete and executable skill composition. In this paper, we argue that this problem can be solved in a graph with three levels: compositional relations among skill queries, similarity between queries and candidates in the skill library, and the dependencies among the selected candidates. We introduce SkillTrace, which organizes the user query into a semantic hierarchy, matches skill queries and candidates, and propagates over the skill dependencies. Experiments on SkillsBench and ALFWorld demonstrate that SkillTrace achieves state-of-the-art performance, reaching a success rate of 53.17% on SkillsBench and 91.43% on ALFWorld. SkillTrace also delivers consistent improvements across different backbone language models, demonstrating the generality and robustness of graph-based skill retrieval.",
+  "abstract_zh": "随着大型语言模型 Agent 越来越多地通过组合技能库中的可复用技能来解决复杂任务，核心挑战已不再是检索单个相关技能，而是识别一套完整且可执行的技能组合。本文提出 SkillTrace，将该问题建模为一个三层图结构：技能查询之间的组合关系、用户查询与技能库候选技能之间的相似性，以及被选中候选技能之间的依赖关系。SkillTrace 首先将用户查询组织为语义层级结构，再匹配技能查询与候选技能，并在技能依赖图上进行传播。实验表明，SkillTrace 在 SkillsBench 和 ALFWorld 上取得了当前最优性能，分别达到 53.17% 和 91.43% 的成功率；同时在不同 backbone language models 上均带来稳定提升，说明基于图的技能检索方法具有良好的通用性与鲁棒性。",
+  "key_points_zh": [
+    "提出 SkillTrace，将复杂任务的技能检索建模为 Query-Skill 图遍历问题，而非独立检索单个相关技能。",
+    "方法包含三类关系：技能查询间的组合关系、查询与技能候选的相似性、以及候选技能之间的执行依赖。",
+    "SkillTrace 会将用户查询分解为语义层级，并结合技能匹配与依赖传播来生成可执行的技能组合。",
+    "在 SkillsBench 和 ALFWorld 上达到 state-of-the-art，成功率分别为 53.17% 和 91.43%。",
+    "在不同 backbone language models 上均有稳定增益，体现了图结构技能检索的通用性和鲁棒性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.58,
+    "problem_significance": 0.6,
+    "potential_impact": 0.61,
+    "paradigm_shift": 0.48,
+    "lasting_value": 0.55,
+    "llm_avg": 0.5640000000000001,
+    "comment": "SkillTrace addresses reusable skill composition for agents with a graph-based retrieval mechanism, but offers limited runtime governance or learning-loop infrastructure.",
+    "comment_zh": "SkillTrace 通过图检索解决智能体可复用技能组合问题，但在运行时治理或学习闭环基础设施方面较有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.5640000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02356/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02356/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02356/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.534
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02356/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2608.02880",
+  "title": "Field Aware Agent Skill Retrieval",
+  "title_zh": "面向字段感知的 Agent 技能检索",
+  "authors": [
+    "Paimon Goulart",
+    "Liang Wu",
+    "Kelly Wan",
+    "Evangelos E. Papalexakis",
+    "Liangjie Hong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T21:01:48Z",
+  "abs_url": "https://arxiv.org/abs/2608.02880v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02880",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As lifelong learning agents accumulate lifelong growing skill banks, retrieving the correct skill becomes an increasingly important bottleneck. Most current skill retrieval methods treat each skill as one flat document by concatenating fields such as the name, description, and body. However, skills are naturally structured, multi-field objects, where each field provides different information about when and how the skill should be used. In this work, we study whether preserving this structure improves skill retrieval. We represent each skill as its separate components, and compute sparse and dense similarities for each field independently, exposing a naturally tensorized, field-aware representation of the skill bank. We then combine these field-level scores either with uniform weights or with a small learned MLP. Across two different skill retrieval benchmarks, SkillRet and SRA-Bench, we find that keeping fields separate improves hybrid retrieval, and learning over the field-level scores gives the strongest and most consistent results. Our field-aware MLP reaches $77.95$ Recall@10 on SkillRet and $83.78$ Recall@10 on SRA-Bench, outperforming the corresponding concatenated learned baselines. We also find that the advantage grows as the skill bank becomes larger, suggesting that field-aware skill retrieval becomes especially useful in the setting where retrieval is most difficult. Our results show that skill representation itself matters, and that simply preserving the structure already present in skill files can substantially improve retrieval.",
+  "abstract_zh": "随着终身学习 Agent 不断积累规模日益增长的技能库，如何准确检索到合适技能成为关键瓶颈。现有技能检索方法通常将每个技能视为一个扁平文档，把名称、描述、主体等字段简单拼接。本文指出，技能本质上是结构化的多字段对象，不同字段分别提供关于技能使用时机与使用方式的信息。作者将每个技能表示为独立字段，并分别计算各字段的稀疏相似度与稠密相似度，从而得到一种自然张量化的字段感知技能库表示。随后，方法使用均匀权重或一个小型 MLP 融合字段级分数。在 SkillRet 与 SRA-Bench 两个技能检索基准上，保持字段分离能提升 hybrid retrieval 表现，而基于字段级分数学习融合的 MLP 取得最强且最稳定的结果。字段感知 MLP 在 SkillRet 上达到 77.95 Recall@10，在 SRA-Bench 上达到 83.78 Recall@10，超过对应的拼接式学习基线。实验还发现，技能库越大，该方法优势越明显，说明字段感知技能检索在检索更困难的大规模场景中尤其有价值。",
+  "key_points_zh": [
+    "问题：现有技能检索常将 skill name、description、body 等字段拼接成单一文档，忽略了技能文件天然的多字段结构。",
+    "方法：将每个技能拆分为独立字段，分别计算 sparse 与 dense 相似度，形成 field-aware 的技能表示，再用均匀权重或小型 MLP 融合字段级分数。",
+    "结果：field-aware MLP 在 SkillRet 上达到 77.95 Recall@10，在 SRA-Bench 上达到 83.78 Recall@10，优于对应的 concatenated learned baselines。",
+    "发现：随着技能库规模增大，字段感知方法相对优势增强，表明其更适合大规模 lifelong learning agent 的技能检索场景。",
+    "意义：论文强调 skill representation 本身很重要，仅保留技能文件中已有的结构信息，就能显著改善 hybrid retrieval。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.58,
+    "problem_significance": 0.64,
+    "potential_impact": 0.62,
+    "paradigm_shift": 0.48,
+    "lasting_value": 0.6,
+    "llm_avg": 0.584,
+    "comment": "Field-aware skill retrieval tackles a real lifelong-agent bottleneck, but the method is mainly an incremental retrieval improvement.",
+    "comment_zh": "字段感知技能检索解决了终身智能体的真实瓶颈，但方法主要是增量式检索改进。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.584,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02880/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.916
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02880/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.979
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02880/fig3.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.979
+    }
+  ]
+}

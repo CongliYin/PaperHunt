@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2608.02217",
+  "title": "VC-Tooler: Learning Compositional and Adaptive Visual Tool Use",
+  "title_zh": "VC-Tooler：学习组合式与自适应的视觉工具使用",
+  "authors": [
+    "Yizheng Wu",
+    "Jiashen Hua",
+    "Bing Deng",
+    "Jieping Ye"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T13:38:37Z",
+  "abs_url": "https://arxiv.org/abs/2608.02217v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02217",
+  "links": {
+    "github": null,
+    "project_page": "https://w1zheng.github.io/VC-Tooler"
+  },
+  "abstract_en": "Agentic multimodal reasoning extends passive image understanding by allowing VLMs to actively acquire and refine visual evidence through visual tool interactions. Effective visual tool use requires three capabilities: grounding tool calls in visual context, composing tools across multiple steps, and adapting reasoning to tool-returned observations. However, existing approaches largely focus on grounding within fixed tool spaces and rigid invocation patterns, leaving composition and adaptation insufficiently addressed. We present VC-Tooler, which learns visual tool use as a compositional and adaptive capability. To this end, we first build a trajectory bank through a hierarchical synthesis pipeline covering three capability levels: single-tool grounding, multi-tool composition, and diverse tool contexts and interfaces. We then train the model in two stages: a supervised cold start that establishes these capabilities, followed by reinforcement learning that encourages accurate, efficient, and context-aware visual tool use. VC-Tooler achieves state-of-the-art performance among open-source models on both general-purpose and agentic benchmarks, including $95.8\\%$ on V* and $35.3\\%$ on VTC-Bench, and shows promising transfer under richer tool settings at inference time. Project page: https://w1zheng.github.io/VC-Tooler",
+  "abstract_zh": "Agentic multimodal reasoning 通过让 VLM 主动调用视觉工具来获取和细化视觉证据，从而超越被动图像理解。有效的视觉工具使用需要三类能力：基于视觉上下文定位工具调用、跨多步组合工具，以及根据工具返回的观察结果自适应调整推理。现有方法多聚焦于固定工具空间和刚性调用模式下的工具定位，对组合与自适应能力支持不足。本文提出 VC-Tooler，将视觉工具使用建模为一种组合式且自适应的能力。方法上，作者首先通过分层合成流程构建轨迹库，覆盖单工具定位、多工具组合、多样化工具上下文与接口三个能力层级；随后采用两阶段训练：先通过监督冷启动建立基础能力，再通过强化学习鼓励准确、高效、上下文感知的视觉工具使用。VC-Tooler 在通用与 agentic benchmark 上均取得开源模型中的 SOTA 表现，包括 V* 上 95.8%、VTC-Bench 上 35.3%，并在推理阶段更丰富的工具设置下展现出良好的迁移能力。",
+  "key_points_zh": [
+    "提出 VC-Tooler，强调视觉工具使用中的三项核心能力：视觉上下文 grounding、多步工具 composition，以及对工具返回结果的 adaptive reasoning。",
+    "构建分层合成的 trajectory bank，覆盖单工具调用、多工具组合，以及多样工具上下文和接口，缓解现有方法工具空间固定、调用模式僵化的问题。",
+    "采用两阶段训练：监督学习冷启动用于建立工具使用基础能力，随后通过强化学习优化准确性、效率和上下文感知的工具调用策略。",
+    "在 V* 和 VTC-Bench 等通用及 agentic benchmark 上达到开源模型 SOTA，分别取得 95.8% 和 35.3% 的成绩。",
+    "实验显示 VC-Tooler 在推理时面对更丰富的工具设置也具备一定迁移能力，说明其学习到的不只是固定工具调用模板。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.78,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.78,
+    "llm_avg": 0.7539999999999999,
+    "comment": "A solid visual tool-use training paper that advances compositional and adaptive VLM tool invocation, though it appears less focused on realtime interaction constraints.",
+    "comment_zh": "这是一篇扎实的视觉工具使用训练论文，提升了组合式和自适应视觉工具调用能力，但对实时交互约束关注较少。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.6000000000000001,
+    "community_heat": 0.0,
+    "author_reputation": 0.3210331475111057,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.7539999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://w1zheng.github.io/VC-Tooler",
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02217/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.912
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02217/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02217/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.759
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02217/fig4.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.941
+    }
+  ]
+}

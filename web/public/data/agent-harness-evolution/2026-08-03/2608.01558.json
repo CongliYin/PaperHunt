@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2608.01558",
+  "title": "Securing Agentic AI: From Per-Action Checks to Trajectory Assurance",
+  "title_zh": "保障 Agentic AI 安全：从单步动作检查到轨迹级保证",
+  "authors": [
+    "Alireza Lotfi",
+    "Subangkar Karmaker Shanto",
+    "Imtiaz Karim",
+    "Elisa Bertino"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T00:28:49Z",
+  "abs_url": "https://arxiv.org/abs/2608.01558v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01558",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Autonomous agents are increasingly used to execute consequential tasks in environments governed by operational constraints, organizational policies, regulatory requirements, and technical standards. Their safety is therefore determined not by the correctness of individual actions, but by whether their overall behavior remains consistent with the rules and invariants of the systems in which they operate. As large language model (LLM)-based agents become more autonomous and increasingly delegate tasks across organizational boundaries, securing them evolves from a single challenge into a broad and interconnected landscape spanning the entire agentic stack. At the single-agent level, untrusted inputs through prompts, memory, retrieved knowledge, and tool interfaces create attack surfaces. In multi-agent settings, delegation and communication introduce challenges related to identity, trust, capability control, and decision transparency, while the underlying model routing and execution control plane remains vulnerable to manipulation and to unverified model provenance. Perhaps the most fundamental challenge is behavioral containment: sequences of individually permissible actions may collectively violate system-level constraints and safety invariants. At the broader level, supply-chain integrity, provenance, accountability, and end-to-end observability remain largely open problems. A common principle unifies these directions: security must become a verifiable property of the architectures, protocols, and runtimes that govern agent behavior, rather than an optional layer of guidance. Charting these challenges provides a roadmap toward trustworthy autonomous agent deployment.",
+  "abstract_zh": "自主智能体正越来越多地被用于执行具有实际影响的任务，而这些任务通常受到操作约束、组织政策、监管要求和技术标准的共同约束。因此，智能体安全不应只看单个动作是否正确，而应关注其整体行为轨迹是否始终符合所在系统的规则与不变量。随着基于大语言模型（LLM）的 agents 变得更自主，并开始跨组织边界委派任务，安全问题也从单点挑战扩展为覆盖整个 agentic stack 的系统性问题。在单智能体层面，prompt、memory、retrieved knowledge 和 tool interfaces 中的不可信输入都会形成攻击面；在多智能体场景中，delegation 与 communication 又引入身份、信任、能力控制和决策透明度等挑战；底层 model routing 与 execution control plane 也容易受到操纵，并面临模型来源未验证的问题。论文强调，最根本的挑战是 behavioral containment：一系列单独看似允许的动作，组合起来可能违反系统级约束和安全不变量。更广义上，supply-chain integrity、provenance、accountability 与 end-to-end observability 仍是开放问题。作者提出统一原则：安全必须成为支配智能体行为的架构、协议和运行时中的可验证属性，而不是附加的指导层。",
+  "key_points_zh": [
+    "论文将 Agentic AI 安全问题从传统的 per-action checks 扩展到 trajectory assurance，强调应验证完整行为序列是否满足系统级规则与安全不变量。",
+    "在单智能体场景中，prompts、memory、retrieved knowledge 和 tool interfaces 都可能引入不可信输入，构成新的攻击面。",
+    "在多智能体系统中，任务委派与跨组织通信带来 identity、trust、capability control 和 decision transparency 等安全治理难题。",
+    "作者指出 model routing、execution control plane 与模型 provenance 也是关键风险点，可能被操纵或依赖未经验证的模型来源。",
+    "核心观点是：安全应内建为 agent 架构、协议和 runtime 的可验证属性，而非事后添加的提示、规则或软性约束。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.86,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.74,
+    "llm_avg": 0.7060000000000001,
+    "comment": "This position paper frames a crucial shift from per-action checks to trajectory-level assurance, but lacks implemented infrastructure or empirical validation.",
+    "comment_zh": "这篇立场论文提出了从单动作检查到轨迹级保障的重要转向，但缺少已实现基础设施和实证验证。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7060000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01558/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.953
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01558/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.948
+    }
+  ]
+}

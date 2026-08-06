@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2608.01710",
+  "title": "Beyond Single-Use Tokens: Durable Authorization State for Replay-Resistant LLM Agent Actions",
+  "title_zh": "超越单次使用 Token：面向抗重放 LLM Agent 行动的持久授权状态",
+  "authors": [
+    "Jinghan Xu",
+    "Longze Fan",
+    "Zeyuan Wang",
+    "Xinjin Li",
+    "Hankai Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T05:16:02Z",
+  "abs_url": "https://arxiv.org/abs/2608.01710v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01710",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Tool-using large language model agents frequently replan, retry failed operations, delegate tasks, and resume after crashes. These behaviors can cause one user authorization to be requested and executed multiple times under freshly issued token identifiers, even when each individual token is single-use. We call this failure semantic replay: exceeding the execution budget of a token-independent authorization instance rather than merely reusing an old token identifier. We show that identifier-local token consumption cannot prevent fresh reissuance unless the issuer retains monotonic durable state over the authorized action, confirmation event, and remaining execution budget. We introduce CapLease, an authorization-consumption layer that follows proposal- and authority-level defenses, binds an authenticated user confirmation to a canonical action, and enforces transactional Issue-Prepare-Commit transitions. Across LLM-agent replanning, retry, delegation, concurrency, confirmation-replay, and crash-recovery scenarios, identifier-local tokens permit fresh semantic reissuance, whereas CapLease and an equally stateful Server Ledger prevent duplicate admission and, with an idempotent sink, duplicate external effects. Our results identify durable authorization state, rather than token representation alone, as the systems requirement for replay-resistant agent execution.",
+  "abstract_zh": "使用工具的 LLM Agent 常常会重新规划、重试失败操作、委派任务，或在崩溃后恢复。这些行为可能导致同一次用户授权在不同新发放的 token 标识符下被多次请求和执行，即使每个 token 本身都是单次使用的。论文将这种问题称为语义重放（semantic replay）：它突破的是与 token 标识符无关的授权实例执行预算，而不只是复用旧 token。作者指出，若授权发行方不维护关于已授权动作、确认事件和剩余执行预算的单调持久状态，仅依赖 token 标识符级别的本地消耗无法阻止新的语义重发放。论文提出 CapLease，一个授权消耗层：它继承 proposal-level 与 authority-level 防御思想，将经过认证的用户确认绑定到规范化动作，并通过事务化的 Issue-Prepare-Commit 状态转换来执行授权预算。在 LLM Agent 的重新规划、重试、委派、并发、确认重放和崩溃恢复等场景中，标识符本地的 token 机制仍允许新的语义重发放；而 CapLease 以及同样具备状态的 Server Ledger 能阻止重复准入，并在外部执行端具备幂等性时阻止重复外部效果。论文结论是：抗重放 Agent 执行所需的系统关键不是 token 表示形式本身，而是持久授权状态。",
+  "key_points_zh": [
+    "提出“语义重放”（semantic replay）概念：即使单个 token 是一次性的，Agent 的重试、重规划、委派或恢复也可能让同一授权被以新 token 多次执行。",
+    "指出 identifier-local token consumption 不足以防止重放；必须由发行方维护针对动作、用户确认和执行预算的单调持久状态。",
+    "提出 CapLease 授权消耗层，将认证用户确认绑定到 canonical action，并采用事务化 Issue-Prepare-Commit 流程控制授权执行。",
+    "在重新规划、重试、并发、确认重放和崩溃恢复等 LLM Agent 场景中，CapLease 与有状态 Server Ledger 能阻止重复准入。",
+    "论文强调系统设计重点应从 token 表示转向 durable authorization state；若外部执行端具备幂等性，还可避免重复外部副作用。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8560000000000001,
+    "comment": "CapLease is highly relevant production agent infrastructure because it defines durable authorization state for replay-resistant tool execution under retries and delegation.",
+    "comment_zh": "CapLease 与生产级代理基础设施高度相关，因为它为重试和委托场景下的防重放工具执行定义了持久授权状态。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8560000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01710/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01710/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.949
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01710/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.979
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01710/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.98
+    }
+  ]
+}

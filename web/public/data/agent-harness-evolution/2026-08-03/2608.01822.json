@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2608.01822",
+  "title": "SearchMaster: Grounded and Regulated Self-Play for Search Agents",
+  "title_zh": "SearchMaster：面向搜索智能体的有依据且受规控的自博弈训练",
+  "authors": [
+    "Wentao Tan",
+    "Qiong Cao",
+    "Jiaqi Wang",
+    "Nan Duan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T07:29:11Z",
+  "abs_url": "https://arxiv.org/abs/2608.01822v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01822",
+  "links": {
+    "github": "https://github.com/WentaoTan/SearchMaster.",
+    "project_page": null
+  },
+  "abstract_en": "Training LLM-based search agents requires high-quality search data: tasks that demand genuine multi-hop retrieval and trajectories that use search tools effectively. Existing pipelines often depend on human-written tasks, expert demonstrations, or stronger teacher models. We present SearchMaster, a self-play framework that trains a single LLM from search tasks it generates, solves, and verifies in a local search environment. The key challenge is that self-generated tasks and rollouts can yield misleading signals: pseudo multi-hop questions, success-rate difficulty estimates that ignore search depth, and rollouts with excessive opening but little targeted evidence acquisition. SearchMaster addresses these failure modes with three controls. An Evidence-Chain Generator (ECG) grounds task generation in explicit cross-document evidence chains to reduce pseudo multi-hop questions. A Search-Depth Reward (SDR) scores task difficulty by the search depth of successful rollouts rather than success rate alone, keeping retained tasks search-intensive. An Over-Opening Penalty (OOP) regulates tool use by discouraging excessive document opening, avoiding long but shallow browsing. Verified Proposer and Solver rollouts are then jointly optimized with GRPO. Across six deep-search benchmarks, SearchMaster improves a Qwen3.5-9B backbone from 38.19% to 51.52% average accuracy, with a 30.1-point gain on BrowseComp-Plus. These results show that grounded and regulated self-play can provide effective search-agent training data without human-labeled QA pairs or expert demonstrations. The code is available at https://github.com/WentaoTan/SearchMaster.",
+  "abstract_zh": "训练基于 LLM 的搜索智能体需要高质量搜索数据，包括真正需要多跳检索的任务，以及能有效使用搜索工具的轨迹。现有流程通常依赖人工编写任务、专家示范或更强的教师模型。SearchMaster 提出一种自博弈框架，让单个 LLM 在本地搜索环境中自行生成、求解并验证搜索任务。针对自生成任务和轨迹中常见的误导信号，SearchMaster 设计了三项控制机制：Evidence-Chain Generator（ECG）通过显式跨文档证据链来约束任务生成，减少伪多跳问题；Search-Depth Reward（SDR）根据成功轨迹的搜索深度而非单纯成功率评估任务难度，保留更具搜索强度的任务；Over-Opening Penalty（OOP）惩罚过度打开文档的行为，避免长但浅的浏览轨迹。随后，经过验证的 Proposer 与 Solver 轨迹使用 GRPO 联合优化。在六个深度搜索基准上，SearchMaster 将 Qwen3.5-9B 的平均准确率从 38.19% 提升到 51.52%，并在 BrowseComp-Plus 上取得 30.1 个百分点提升，表明有依据且受规控的自博弈无需人工标注 QA 对或专家示范，也能生成有效的搜索智能体训练数据。",
+  "key_points_zh": [
+    "提出 SearchMaster，让单个 LLM 在本地搜索环境中自行生成任务、求解任务并验证结果，减少对人工任务、专家轨迹和强教师模型的依赖。",
+    "Evidence-Chain Generator（ECG）用显式跨文档证据链约束问题生成，缓解自生成数据中的伪多跳检索问题。",
+    "Search-Depth Reward（SDR）按成功轨迹的搜索深度评估任务难度，而非仅看成功率，从而筛选更需要深度搜索的任务。",
+    "Over-Opening Penalty（OOP）抑制无目标地大量打开文档，鼓励更聚焦的证据获取过程。",
+    "在六个 deep-search benchmarks 上，SearchMaster 将 Qwen3.5-9B 平均准确率从 38.19% 提升至 51.52%，BrowseComp-Plus 提升 30.1 个百分点。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.86,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8560000000000001,
+    "comment": "SearchMaster is strong agent-training work because it synthesizes verified search-agent trajectories through grounded self-play and tool-use regulation.",
+    "comment_zh": "SearchMaster 是很强的智能体训练工作，因为它通过有依据的自博弈和工具使用约束合成可验证的搜索智能体轨迹。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8560000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/WentaoTan/SearchMaster.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01822/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01822/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01822/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.982
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01822/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.757
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2608.02409",
+  "title": "MonitrLLM: A Community-Centered Evaluation Infrastructure for Large Language Models",
+  "title_zh": "MonitrLLM：面向社区的大语言模型评估基础设施",
+  "authors": [
+    "Victor Ojewale",
+    "Ro Encarnación",
+    "Suresh Venkatasubramanian",
+    "Danaé Metaxa"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T15:50:33Z",
+  "abs_url": "https://arxiv.org/abs/2608.02409v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02409",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Benchmark suites assess model capability on controlled tasks; large-scale conversation corpora capture naturalistic use without user feedback; and in-interface feedback mechanisms record satisfaction without task purpose. Together, they leave a critical gap in LLM evaluation: no existing infrastructure routinely links interaction trajectories to user-defined outcomes. We introduce MonitrLLM, open-source infrastructure for community-centered LLM evaluations that links full conversation transcripts to user-reported task intent and outcome assessments, treating all three as primary evaluative signals rather than optional metadata. To demonstrate the value of this approach, we conducted a two-week feasibility pilot with 26 college students using ChatGPT, collecting 206 evaluation reports with full conversation transcripts. The findings from our pilot demonstrate the value of connecting conversation trajectories with user-reported outcomes. For instance, despite reporting high average satisfaction (4.19/5) with their LLM interactions, participants also experience a substantial 23.1% failure rate on their goal tasks. We also find that multi-turn conversations are reported as failing at 2.5 times the rate of single-turn exchanges, a pattern that reframes extended interaction as a signal of difficulty rather than engagement. We conclude by discussing the value of incorporating direct user feedback with observational data for robust LLM evaluations, and the possibilities for infrastructure that enables this goal.",
+  "abstract_zh": "现有 LLM 评估方式各有缺口：benchmark suites 能在受控任务上衡量模型能力，大规模对话语料能记录自然使用情境但缺少用户反馈，界面内反馈机制能收集满意度却不了解任务目的。论文提出 MonitrLLM，一个开源的、面向社区的 LLM 评估基础设施，将完整对话轨迹、用户报告的任务意图和结果评估关联起来，并把三者都作为核心评估信号。作者开展了为期两周的可行性试点研究，招募 26 名大学生使用 ChatGPT，收集了 206 份包含完整对话记录的评估报告。结果显示，仅看满意度会掩盖关键失败：尽管平均满意度较高（4.19/5），用户目标任务仍有 23.1% 的失败率；多轮对话的失败率是单轮交互的 2.5 倍，提示长对话可能更常反映任务困难，而非单纯用户参与度。论文强调，将直接用户反馈与观察性对话数据结合，是构建更稳健 LLM 评估体系的重要方向。",
+  "key_points_zh": [
+    "提出 MonitrLLM：一个开源评估基础设施，将完整 conversation transcripts、用户任务意图和用户结果评估进行关联。",
+    "论文指出现有评估的关键盲点：benchmark 缺少真实使用语境，对话日志缺少用户结果反馈，满意度反馈缺少任务目的。",
+    "两周 pilot study 覆盖 26 名大学生使用 ChatGPT 的真实场景，共收集 206 份带完整对话的评估报告。",
+    "实验发现平均满意度高达 4.19/5，但用户目标任务仍有 23.1% 失败率，说明满意度不能充分代表任务成功。",
+    "多轮对话失败率是单轮的 2.5 倍，提示 extended interaction 可能是任务困难信号，而不一定代表更高 engagement。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.56,
+    "problem_significance": 0.62,
+    "potential_impact": 0.6,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.58,
+    "llm_avg": 0.5720000000000001,
+    "comment": "MonitrLLM offers useful trajectory-linked user-outcome evaluation infrastructure, but it targets general LLM conversations more than agent runtimes or execution traces.",
+    "comment_zh": "MonitrLLM 提供了有用的轨迹与用户结果关联评测基础设施，但更偏向通用 LLM 对话而非代理运行时或执行轨迹。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5720000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02409/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.849
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02409/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "arxiv_id": "2608.02685",
+  "title": "BulkPR-Bench: Benchmarking Queue-Level Governance of Interacting Pull Requests",
+  "title_zh": "BulkPR-Bench：面向交互式 Pull Request 队列级治理的基准测试",
+  "authors": [
+    "Zetong Xiong",
+    "Qiao Zhao",
+    "Jun Zhang",
+    "Xueying Lyu",
+    "Zhi Li",
+    "Yixiang Tu",
+    "Xiaowen Yang",
+    "Yunjie Zhang",
+    "Yufeng Wang",
+    "Zhe Zhang",
+    "Kaize Yu",
+    "Hanwen Du",
+    "Zhongkai Sun",
+    "Zhuoxin Liu",
+    "Zekun Lin",
+    "Jianwen Yang",
+    "Ruining Chen",
+    "Ying Zhang",
+    "Tingxuan Pan",
+    "Ke Chen",
+    "Shubin Han",
+    "Chuanhao Sun",
+    "Yehua Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T07:24:33Z",
+  "abs_url": "https://arxiv.org/abs/2608.02685v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02685",
+  "links": {
+    "github": "https://github.com/Eureka246/BulkPR-Bench-Release",
+    "project_page": null
+  },
+  "abstract_en": "Coding-agent benchmarks increasingly cover long-horizon, end-to-end, and interactive development, but typically retain one requested outcome or a fixed change sequence. Sequential policies can process a pull-request (PR) queue one candidate at a time, but when queued PRs interact, maximizing safe delivery can require jointly deciding which changes to merge and in what order. We introduce BulkPR-Bench, an executable benchmark in which an agent must recover consequential PR relations and return a large safe subset in executable order under a rolling-release protocol. The suite contains 581 newly authored candidate PRs on frozen snapshots of 18 real repositories. Registered state-by-state repository execution, including hidden safety checks, validates the gold relation graph; an exact oracle then computes the largest safe subset. Our primary metric, Relational Delivery Score (RDS), scores safe delivery and correct rejection over relation groups from the realized merge trace; Global Safety-Gated Yield (Global-SGY) separately measures strict delivery of the realized whole-queue plan. Under the buffered primary protocol with batch size $K=32$, the three highest RDS estimates among the six models are 66.6%, 62.0%, and 57.9%, compared with 53.1% for the strongest sequential baseline. Only 8 of 324 model runs complete a queue exactly. Critical-relation recall ranges from 35.2% to 57.7%, and diagnostic runs supplied with the gold relations show substantial remaining headroom. Gains on relation groups therefore do not yet translate into dependable whole-queue governance.",
+  "abstract_zh": "现有 coding-agent 基准越来越关注长程、端到端和交互式开发，但通常仍假设单一目标结果或固定变更序列。对于 Pull Request（PR）队列，顺序策略可以逐个处理候选 PR；然而当多个 PR 之间存在相互影响时，最大化安全交付需要联合决定哪些变更应被合并以及合并顺序。本文提出 BulkPR-Bench，这是一个可执行基准，要求智能体恢复关键 PR 关系，并在滚动发布协议下返回一个规模尽可能大的安全子集及其可执行顺序。该套件包含基于 18 个真实代码仓库冻结快照新编写的 581 个候选 PR。通过逐状态注册的仓库执行流程，包括隐藏安全检查，验证 gold relation graph；随后使用精确 oracle 计算最大安全子集。主要指标 Relational Delivery Score（RDS）基于实际合并轨迹，在关系组层面评估安全交付与正确拒绝；Global Safety-Gated Yield（Global-SGY）则单独衡量整个队列计划的严格安全交付能力。在 batch size K=32 的 buffered primary protocol 下，六个模型中前三名 RDS 分别为 66.6%、62.0% 和 57.9%，而最强顺序基线为 53.1%。324 次模型运行中仅 8 次精确完成整个队列。关键关系召回率仅为 35.2% 至 57.7%；即便在诊断实验中提供 gold relations，仍显示出显著提升空间。结果表明，关系组层面的收益尚未转化为可靠的整队列治理能力。",
+  "key_points_zh": [
+    "BulkPR-Bench 聚焦 PR 队列级治理，要求 agent 同时判断 PR 间依赖、冲突等关系，并输出安全可执行的合并子集与顺序。",
+    "基准包含 18 个真实 repository 冻结快照上的 581 个新编写候选 PR，并通过可执行仓库状态和隐藏安全检查验证 gold relation graph。",
+    "论文提出 Relational Delivery Score（RDS）衡量关系组层面的安全交付与正确拒绝，并用 Global-SGY 评估整个队列计划的严格安全交付。",
+    "在 K=32 buffered protocol 下，最佳模型 RDS 为 66.6%，优于最强 sequential baseline 的 53.1%，但整体队列精确完成率极低。",
+    "关键关系召回率仅 35.2%–57.7%，说明当前模型虽能部分处理 PR 交互关系，但距离可靠的 whole-queue governance 仍有明显差距。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.84,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.84,
+    "llm_avg": 0.82,
+    "comment": "BulkPR-Bench is a strong executable benchmark for queue-level coding-agent governance with relation recovery and safety-gated validation.",
+    "comment_zh": "BulkPR-Bench 是一个强的可执行编码智能体治理基准，覆盖队列级关系恢复和安全门控验证。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.82,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Eureka246/BulkPR-Bench-Release",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02685/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02685/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.422
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02685/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.788
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02685/fig4.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.976
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "arxiv_id": "2608.02101",
+  "title": "Cross-Domain Hybrid OPD for Generalizable Search Agents",
+  "title_zh": "面向可泛化搜索智能体的跨领域混合 OPD",
+  "authors": [
+    "Hongzhan Chen",
+    "Xiaoyu Liu",
+    "Dengming Zhang",
+    "Minzhou Huang",
+    "Dongliang Xu",
+    "Jingcheng Xie",
+    "Dongxiang Fang",
+    "Bowen Qin",
+    "Minsheng Hao",
+    "Yaozong Shen",
+    "Xiaojun Quan",
+    "Mona Zhou",
+    "Haosheng Zou",
+    "Jeff Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T12:01:18Z",
+  "abs_url": "https://arxiv.org/abs/2608.02101v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02101",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent advances in Reinforcement Learning (RL) have substantially improved the capabilities of autonomous search agents, enabling sophisticated planning, and iterative retrieval over dynamic information sources. However, optimizing language models for specialized search behaviors often incurs an alignment tax, where gains in search performance come at the expense of general-purpose capabilities, limiting their effectiveness as universal assistants. In this technical report, we present the training framework behind the Yuanbao search agent, designed to achieve search specialization without sacrificing general intelligence. Built upon the Hunyuan3 architecture, our framework combines agentic reinforcement learning for autonomous search with a cross-domain expert On-Policy Distillation (OPD) pipeline. Experts specializing in complementary general-purpose domains are distilled into the search-specialized student, restoring and further enhancing its broad capabilities. Rather than treating specialization and general capability as competing objectives, our hybrid training strategy jointly optimizes both, effectively mitigating the alignment tax. Extensive experiments demonstrate that the resulting model achieves competitive search performance while consistently improving its general-purpose capabilities, providing a favorable balance between specialized execution and broad generalization in real-world search scenarios.",
+  "abstract_zh": "本文介绍 Yuanbao search agent 的训练框架，目标是在强化搜索能力的同时避免通用能力下降。该框架基于 Hunyuan3 architecture，将用于自主搜索的 agentic reinforcement learning 与跨领域专家 On-Policy Distillation（OPD）结合：先训练具备搜索专长的学生模型，再将多个互补通用领域的专家能力蒸馏进去，从而恢复并增强其广泛任务能力。论文认为，搜索专精与通用能力不应被视为相互竞争的目标，而可通过混合训练策略联合优化。实验显示，该模型在真实搜索场景中保持有竞争力的搜索表现，同时持续提升通用能力，有效缓解 alignment tax。",
+  "key_points_zh": [
+    "提出 Yuanbao search agent 训练框架，面向动态信息源上的自主规划与迭代检索。",
+    "基于 Hunyuan3 architecture，结合 agentic reinforcement learning 与跨领域专家 On-Policy Distillation（OPD）。",
+    "通过蒸馏多个通用领域专家，补偿搜索专精训练带来的 alignment tax，并进一步增强通用能力。",
+    "将搜索能力与通用能力联合优化，而非作为冲突目标处理。",
+    "实验表明模型在搜索任务上具备竞争力，同时在通用能力评测中持续提升，适合真实搜索场景。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.62,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.52,
+    "llm_avg": 0.544,
+    "comment": "A solid agentic RL and distillation framework for search specialization, but its harness and trace infrastructure contributions appear limited.",
+    "comment_zh": "这是一项较扎实的搜索智能体强化学习与蒸馏框架，但在智能体运行框架和轨迹基础设施上的贡献有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.544,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02101/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02101/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02101/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02101/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.975
+    }
+  ]
+}

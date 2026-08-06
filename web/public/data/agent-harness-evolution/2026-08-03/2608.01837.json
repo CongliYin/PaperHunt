@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2608.01837",
+  "title": "PCSD: Persistent Consistency for Self-Distillation in Agentic Reinforcement Learning",
+  "title_zh": "PCSD：Agentic 强化学习中用于自蒸馏的持久一致性方法",
+  "authors": [
+    "Chunji Lv",
+    "Yangguang Wei",
+    "Junlin Liu",
+    "Yang Gao",
+    "Ming Liu",
+    "Xinming Wang",
+    "Jinyang Wu",
+    "Guoren Wang",
+    "Changsheng Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T07:47:59Z",
+  "abs_url": "https://arxiv.org/abs/2608.01837v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01837",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model agents have shown strong potential in complex interactive tasks, yet their reinforcement learning (RL) is often hindered by sparse rewards, as a long multi-turn trajectory may receive only a single outcome-level signal. On-policy self-distillation (OPSD) provides dense token-level supervision from a privileged teacher, but the teacher may not be reliable at every position. Existing methods commonly rely on isolated token-level discrepancies, which can be sensitive to noise, or assign a shared step-level weight that may overlook positional variation. We propose Persistent Consistency Self-Distillation (PCSD), which derives token-level distillation weights from the local persistence of teacher-favoring signals. PCSD combines adaptive windows with exponentially decayed aggregation to capture persistent relative teacher support, applies trend-aware modulation to attenuate locally declining support, and produces continuous weights through sigmoid gating. The resulting objective is jointly optimized with GRPO, combining dense teacher guidance with sparse environmental feedback. Without inference-time skills, PCSD achieves the best ALFWorld Overall results among all baselines on both backbones, exceeding GRPO by 15.6 and 13.3 points and SDAR by 6.2 and 5.5 points, while remaining competitive on WebShop and gaining 15.8 points over GRPO on unseen ALFWorld split.",
+  "abstract_zh": "大语言模型 Agent 在复杂交互任务中表现出潜力，但其强化学习常受稀疏奖励限制：一条多轮轨迹可能只有最终结果级反馈。On-policy self-distillation（OPSD）可利用特权 teacher 提供密集的 token 级监督，但 teacher 并非在每个位置都可靠。现有方法通常依赖孤立的 token 级差异，容易受噪声影响；或使用共享的 step 级权重，难以刻画位置差异。本文提出 Persistent Consistency Self-Distillation（PCSD），根据 teacher-favoring 信号的局部持久性生成 token 级蒸馏权重。PCSD 结合自适应窗口与指数衰减聚合，捕捉 teacher 相对支持的持续性；引入趋势感知调制以削弱局部下降的支持信号；并通过 sigmoid gating 生成连续权重。该目标与 GRPO 联合优化，将密集 teacher 指导与稀疏环境反馈结合。无需推理时额外技能，PCSD 在两个 backbone 上均取得 ALFWorld Overall 最佳结果，分别超过 GRPO 15.6 和 13.3 分，超过 SDAR 6.2 和 5.5 分；同时在 WebShop 上保持竞争力，并在 ALFWorld unseen split 上较 GRPO 提升 15.8 分。",
+  "key_points_zh": [
+    "针对 Agentic RL 中稀疏奖励问题，PCSD 用 token 级自蒸馏提供更密集的学习信号。",
+    "核心思想是评估 teacher-favoring 信号的局部持久性，而非仅依赖单点 token 差异或粗粒度 step 权重。",
+    "方法包含自适应窗口、指数衰减聚合、趋势感知调制与 sigmoid gating，用于生成连续且位置敏感的蒸馏权重。",
+    "PCSD 与 GRPO 联合训练，将 teacher 的密集指导和环境的稀疏反馈结合，且不增加推理时技能模块。",
+    "实验显示 PCSD 在 ALFWorld 上显著优于 GRPO 与 SDAR，并在 WebShop 上保持竞争力，体现较好的泛化能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.67,
+    "problem_significance": 0.78,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.66,
+    "llm_avg": 0.6900000000000001,
+    "comment": "PCSD is relevant agentic RL work that improves sparse-reward trajectory learning, though the main contribution is an incremental distillation-weighting objective.",
+    "comment_zh": "PCSD 是相关的代理强化学习工作，改善了稀疏奖励轨迹学习，但主要贡献是较增量的蒸馏权重目标。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.8743637201925607,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.6900000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 37,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01837/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01837/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.952
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01837/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.978
+    }
+  ]
+}

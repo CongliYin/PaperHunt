@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2608.02296",
+  "title": "TrainShield: Targeted Awareness for Cybersecurity Training",
+  "title_zh": "TrainShield：面向网络安全培训的定向情境感知",
+  "authors": [
+    "Giovanni Pizzenti",
+    "Alberto Verna",
+    "Nikhil Jha",
+    "Giuseppe Tipaldo",
+    "Stefano Traverso",
+    "Marco Mellia"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T14:24:29Z",
+  "abs_url": "https://arxiv.org/abs/2608.02296v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02296",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "In recent years, cybersecurity threats have increasingly exploited human behaviour rather than purely technical vulnerabilities, exposing the limits of traditional awareness programmes delivered outside real-world contexts. To bridge this gap, we introduce TrainShield, an interaction paradigm for contextual cybersecurity training that embeds adaptive learning interventions directly within user workflows. The system integrates real-time risk detection (e.g., phishing and data loss prevention) with event-triggered hypermedia overlays that dynamically connect users to context-specific learning nodes embedded within their browsing workflow to deliver personalised micro-learning content and structured feedback tailored to the user's knowledge level and current context. This approach operationalises behavioural theories by transforming security incidents into immediate learning opportunities, shifting users from automatic to reflective decision-making at critical moments. We further formalise a design model that maps detected events to adaptive training instances, combining user modelling, context extraction, and large language model (LLM)-based content generation. A preliminary study indicates that the approach is perceived as useful in increasing risk awareness and is preferred over lengthy and asynchronous traditional training formats, while also highlighting challenges in aligning generated content with user expectations. Overall, the results suggest that embedding contextual, event-driven training within everyday interactions is a promising direction for behaviour-oriented cybersecurity education.",
+  "abstract_zh": "本文提出 TrainShield，一种面向情境化网络安全培训的交互范式，旨在弥补传统安全意识培训脱离真实工作流的问题。TrainShield 将实时风险检测（如 phishing 与 data loss prevention）嵌入用户日常浏览流程，并在触发安全事件时通过 hypermedia overlays 提供个性化微学习内容与结构化反馈。系统会根据用户知识水平、当前上下文与检测到的风险事件，动态连接到相应学习节点，并利用 LLM 生成与情境匹配的培训内容。该方法将安全事件转化为即时学习机会，促使用户在关键时刻从自动化反应转向反思性决策。初步研究显示，用户认为该方式有助于提升风险意识，并相比冗长、异步的传统培训更受欢迎；但同时也暴露出生成内容与用户预期对齐方面的挑战。",
+  "key_points_zh": [
+    "提出 TrainShield，将网络安全培训直接嵌入用户浏览与工作流程，而非依赖脱离情境的传统课程。",
+    "结合实时风险检测、事件触发式 hypermedia overlays、用户建模与上下文抽取，提供个性化微学习内容。",
+    "利用 LLM 生成与当前安全事件和用户知识水平匹配的培训反馈，将风险事件转化为即时学习机会。",
+    "初步用户研究表明，该方法被认为更有助于提升风险意识，并优于冗长、异步的传统培训形式。",
+    "主要挑战在于确保 LLM 生成内容准确、相关，并符合用户在具体情境中的预期。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.3,
+    "problem_significance": 0.27,
+    "potential_impact": 0.28,
+    "paradigm_shift": 0.22,
+    "lasting_value": 0.25,
+    "llm_avg": 0.264,
+    "comment": "TrainShield is primarily contextual cybersecurity education and workflow training, not agent harness infrastructure or agent self-improvement.",
+    "comment_zh": "TrainShield 主要是情境化网络安全教育和工作流培训，而不是智能体 harness 基础设施或智能体自我改进。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.264,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02296/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02296/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02296/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.973
+    }
+  ]
+}

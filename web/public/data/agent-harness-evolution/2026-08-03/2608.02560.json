@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2608.02560",
+  "title": "Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection",
+  "title_zh": "面向边缘语言模型的结构化记忆：通过 O(1) SSM 状态注入实现持久上下文与语料检索",
+  "authors": [
+    "Anusha Madan Gopal",
+    "Aras Pirbadian",
+    "Kristofor D. Carlson",
+    "M Anthony Lewis",
+    "Jonathan Tapson"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T17:43:36Z",
+  "abs_url": "https://arxiv.org/abs/2608.02560v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02560",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Retrieval-augmented generation (RAG) imposes a prefill cost proportional to retrieved context length, and -- with Transformer backbones -- a KV-cache that grows with each generated token. State-Space Models (SSMs) avoid the second cost by construction; we eliminate the first, collapsing prefill from $O(L_{context})$ to $O(1)$ per query. We introduce PRECOG (Pre-Computed Context Injection), a retrieval mechanism that exploits a property unique to SSMs: the fixed-size, position-agnostic recurrent hidden state is a complete summary of everything the model has read. PRECOG pre-encodes document corpora offline as SSM hidden states and injects the best-matching state directly at query time, bypassing in-context re-ingestion entirely. The same state-injection mechanism enables SMC (Structured Memory Consolidation): a hierarchical persistent memory with cognitive-domain clustering, an adjustable fidelity-vs-storage dial, and $O(1)$ session initialization, which consolidates short-term episodic states into long-term semantic memory and fuses both with retrieved corpus states at query time. We demonstrate the system on TENNs-LLM, a 1.2B-parameter gated-SSM language model with a 192 KB hidden state. PRECOG matches in-context RAG answer quality, reducing prefill latency from $\\sim$27 s to $<$6 ms on edge hardware -- a $\\sim$4500$\\times$ speedup that crosses the threshold from unusable to interactive. The mechanism is architecturally impossible for Transformer KV-caches, which are position-entangled and grow linearly with context length.",
+  "abstract_zh": "本文提出 PRECOG（Pre-Computed Context Injection），利用 State-Space Models（SSMs）固定大小、与位置无关的循环隐藏状态，将文档语料离线预编码为 SSM hidden states，并在查询时直接注入最匹配状态，从而绕过传统 RAG 对检索上下文的重新预填充，将每次查询的 prefill 成本从 O(L_context) 降至 O(1)。在此基础上，作者进一步提出 SMC（Structured Memory Consolidation），构建分层持久记忆机制，支持认知域聚类、可调的保真度—存储权衡，以及 O(1) 会话初始化，可将短期情节状态整合为长期语义记忆，并在查询时与检索到的语料状态融合。实验基于 TENNs-LLM，一个 1.2B 参数 gated-SSM 语言模型，其 hidden state 仅 192 KB。结果显示，PRECOG 在答案质量上可匹配 in-context RAG，同时在边缘硬件上将 prefill 延迟从约 27 秒降至小于 6 毫秒，实现约 4500 倍加速。作者强调，该机制依赖 SSM 状态的固定大小和位置无关性，因而无法直接用于 Transformer 的 KV-cache。",
+  "key_points_zh": [
+    "PRECOG 将文档语料离线编码为 SSM hidden states，查询时直接注入最相关状态，避免重新读取检索上下文。",
+    "该方法把 RAG 的 prefill 复杂度从 O(L_context) 降为 O(1)，特别适合受限的边缘设备部署。",
+    "SMC 提供分层持久记忆，将短期 episodic states 整合为长期 semantic memory，并可与检索语料状态在查询时融合。",
+    "在 TENNs-LLM（1.2B gated-SSM，192 KB hidden state）上，PRECOG 达到与 in-context RAG 相近的回答质量。",
+    "实测 prefill 延迟从约 27 秒降至小于 6 毫秒，约 4500 倍加速；作者认为 Transformer KV-cache 因位置纠缠和线性增长无法实现同类机制。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.58,
+    "problem_significance": 0.5,
+    "potential_impact": 0.55,
+    "paradigm_shift": 0.48,
+    "lasting_value": 0.54,
+    "llm_avg": 0.53,
+    "comment": "PRECOG proposes an interesting SSM memory and retrieval mechanism, but it is primarily model-architecture RAG acceleration rather than agent harness evolution.",
+    "comment_zh": "PRECOG 提出了有趣的 SSM 记忆与检索机制，但主要是模型架构层面的 RAG 加速而非代理基础设施演进。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.53,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02560/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.952
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02560/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02560/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02560/fig4.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.98
+    }
+  ]
+}

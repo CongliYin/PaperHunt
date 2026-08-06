@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.02687",
+  "title": "PolicyGuard: Prompt-Configurable Semantic DLP for LLM Coding Agents",
+  "title_zh": "PolicyGuard：面向 LLM 编码代理的可提示配置语义 DLP",
+  "authors": [
+    "Kyutae Park",
+    "Jungwon Kim",
+    "Daeyeol Shim"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T08:10:15Z",
+  "abs_url": "https://arxiv.org/abs/2608.02687v2",
+  "pdf_url": "https://arxiv.org/pdf/2608.02687",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "AI coding agents accept free-form natural language prompts that may inadvertently contain credentials, personally identifiable information (PII), or proprietary business data. Existing data loss prevention (DLP) solutions rely on rigid regex patterns, model fine-tuning, or vendor-managed classifiers with limited customizability. We present PolicyGuard, a pre-model interception framework that classifies user prompts using an LLM guided by a natural language policy file. Our key contributions are: (1) the policy-as-prompt paradigm, where DLP classification criteria are defined entirely in a plaintext policy document editable by non-engineers without code changes or model retraining; (2) a sealed evaluation protocol with template-family-level data splits, hidden holdouts, and frozen test sets to rigorously assess generalization; and (3) a comprehensive empirical evaluation across 2,000 multilingual prompts demonstrating 96.5% effective block rate (EBR) with only 3.0% false positive rate (FPR) on a frozen test set of 927 prompts, and perfect 100% accuracy on a 217-prompt hidden holdout. Information-matched baseline experiments show that PolicyGuard's natural language format significantly outperforms equivalent content in JSON format (McNemar chi-squared = 31.58, p < 0.001) and dramatically outperforms zero-shot classification (Cohen's h = 0.915). Cross-model portability experiments demonstrate that the same policy achieves 86.4-96.5% EBR across four different LLMs without modification.",
+  "abstract_zh": "本文提出 PolicyGuard，一个部署在模型调用前的拦截框架，用于检测 AI coding agents 用户提示词中可能泄露的凭证、PII 或企业敏感数据。不同于依赖正则表达式、微调模型或厂商托管分类器的传统 DLP 方案，PolicyGuard 使用自然语言 policy 文件指导 LLM 完成语义级分类，使非工程人员无需改代码或重新训练即可调整规则。论文还提出 sealed evaluation protocol，通过模板族级数据划分、隐藏 holdout 和冻结测试集评估泛化能力。在 2,000 条多语言提示词实验中，PolicyGuard 在 927 条冻结测试集上达到 96.5% effective block rate 和 3.0% false positive rate，并在 217 条隐藏 holdout 上报告 100% accuracy。对照实验显示，自然语言 policy 显著优于等价 JSON 格式，也明显优于 zero-shot classification；跨模型实验表明同一 policy 可在四种 LLM 上实现 86.4%–96.5% EBR。需要注意的是，论文已被作者撤回，原因是仍需补充实验验证以支撑结果的严谨性。",
+  "key_points_zh": [
+    "核心方法是 policy-as-prompt：将 DLP 判定规则写成可编辑的自然语言 policy 文件，由 LLM 在模型调用前对用户 prompt 进行分类。",
+    "目标场景是 LLM coding agents，重点防止 prompt 中泄露 credentials、PII、proprietary business data 等敏感信息。",
+    "论文设计 sealed evaluation protocol，包括 template-family-level splits、hidden holdouts 和 frozen test sets，以降低数据泄漏并测试泛化。",
+    "实验报告显示，PolicyGuard 在多语言 prompt 上实现高 EBR、低 FPR，且同一 policy 可迁移到多个 LLM；自然语言 policy 优于等价 JSON 表达和 zero-shot baseline。",
+    "重要限制：该论文已被撤回，作者表示需要更多实验验证，因此当前结果应视为初步且未充分确认。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.62,
+    "problem_significance": 0.76,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.67,
+    "llm_avg": 0.6599999999999999,
+    "comment": "PolicyGuard targets a concrete production risk for coding agents with configurable pre-model DLP, though it is narrower than a full agent governance framework.",
+    "comment_zh": "PolicyGuard 针对编码智能体的生产级数据泄露风险提出可配置的模型前置防护，但范围窄于完整的智能体治理框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6599999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02687/fig1.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02687/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02687/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.951
+    }
+  ]
+}

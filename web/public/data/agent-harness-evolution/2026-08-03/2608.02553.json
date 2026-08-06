@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2608.02553",
+  "title": "A Taxonomy of Cognitive Capability Gaps in Generative and Agentic AI",
+  "title_zh": "生成式与智能体 AI 中认知能力缺口的分类体系",
+  "authors": [
+    "Taye Akinrele",
+    "Sindhuja Penchala",
+    "Noorbakhsh Amiri Golilarz",
+    "Sudip Mittal",
+    "Shahram Rahimi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T17:37:38Z",
+  "abs_url": "https://arxiv.org/abs/2608.02553v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02553",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Cognitive AI seeks to move beyond language generation and autonomous task execution toward systems capable of sustained reasoning, adaptive behavior, persistent memory, and self-regulation. While generative and agentic AI have demonstrated impressive capabilities across a wide range of tasks, many fundamental cognitive functions remain fragmented or weakly developed, limiting reliable operation over extended time horizons. This paper presents a taxonomy-driven survey of the major cognitive capability gaps that continue to constrain the development of Cognitive AI. The literature is organized around five dimensions: persistent state modeling, goal-directed autonomy, self-monitoring and control, environment interaction, and learning and adaptation. For each dimension, we review recent advances, identify recurring limitations, and discuss open research challenges. Building on these insights, we outline a conceptual Adaptive Cognitive Intelligence Architecture (ACIA) and examine emerging directions in cognition-centric evaluation. The proposed taxonomy provides a unified framework for organizing existing research, identifying unresolved challenges, and guiding the design of future cognitively capable systems. Together, the taxonomy, architectural perspective, and evaluation framework offer a roadmap for advancing AI systems that exhibit more reliable long-term reasoning, adaptive decision-making, and continual learning. The survey highlights key research opportunities toward more adaptive, reliable, and cognitively capable AI systems, providing a foundation for future progress toward Cognitive AI and, ultimately, Artificial General Intelligence (AGI).",
+  "abstract_zh": "本文是一篇面向 Cognitive AI 的分类综述，旨在梳理当前 Generative AI 与 Agentic AI 距离持续推理、自适应行为、持久记忆和自我调节等认知能力仍存在的关键差距。论文从五个维度组织已有研究：持久状态建模（persistent state modeling）、目标导向自主性（goal-directed autonomy）、自我监控与控制（self-monitoring and control）、环境交互（environment interaction）、学习与适应（learning and adaptation）。作者分别回顾近期进展、总结共性局限，并提出开放研究挑战。在此基础上，论文进一步提出概念性的 Adaptive Cognitive Intelligence Architecture（ACIA），并讨论以认知能力为中心的评测方向。整体而言，该分类体系为理解现有 AI 系统的认知短板、设计更可靠的长期推理与持续学习系统提供了统一框架，也被视为迈向 Cognitive AI 乃至 AGI 的研究路线图。",
+  "key_points_zh": [
+    "论文提出一个面向 Cognitive AI 的 taxonomy，将当前 Generative AI 与 Agentic AI 的认知能力缺口归纳为五大维度。",
+    "五个核心维度包括持久状态建模、目标导向自主性、自我监控与控制、环境交互、学习与适应，覆盖长期可靠运行所需的关键认知功能。",
+    "作者指出，现有系统虽在语言生成和任务执行上表现突出，但在长期记忆、一致性目标管理、自我纠错、真实环境反馈和持续学习方面仍较薄弱。",
+    "论文提出概念性 Adaptive Cognitive Intelligence Architecture（ACIA），作为整合记忆、控制、交互和适应机制的认知智能架构视角。",
+    "文章强调需要新的 cognition-centric evaluation，用于评估长期推理、自适应决策、持续学习和可靠自主行为等能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.32,
+    "problem_significance": 0.5,
+    "potential_impact": 0.38,
+    "paradigm_shift": 0.28,
+    "lasting_value": 0.42,
+    "llm_avg": 0.38,
+    "comment": "This is a broad conceptual taxonomy for cognitive and agentic AI rather than a concrete harness, evaluation, or self-improvement contribution.",
+    "comment_zh": "这是一篇较宽泛的认知与智能体 AI 分类综述，而非具体的运行框架、评测或自我改进贡献。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.38,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02553/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.953
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02553/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02553/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.926
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02553/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.972
+    }
+  ]
+}

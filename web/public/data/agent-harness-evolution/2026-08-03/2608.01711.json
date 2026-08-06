@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2608.01711",
+  "title": "Constructing Executable Analytical Knowledge Representations for Meta-Analysis Synthesis Using an Agentic Harness",
+  "title_zh": "使用 Agentic Harness 构建用于 Meta-Analysis Synthesis 的可执行分析知识表示",
+  "authors": [
+    "Lingbo Li",
+    "Anuradha Mathrani",
+    "Teo Susnjak"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T05:19:05Z",
+  "abs_url": "https://arxiv.org/abs/2608.01711v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01711",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Meta-analysis synthesis highlights a fundamental challenge in knowledge-based scientific analysis: structured evidence does not by itself represent the analytical knowledge required for executable computation. Decisions about evidence assignment, analytical contrasts, outcome and time-point alignment, effect-size formulation, and methodological admissibility must be explicit before statistical execution. Existing automated approaches often embed these decisions in model outputs, generated code, or workflow traces rather than representing them as independently verifiable knowledge. We introduce the Executable Analytical Knowledge Representation (EAKR), a machine-actionable representation of the knowledge required to transform structured evidence into executable meta-analysis. An EAKR represents evidence, relations, numerical inputs, constraints, provenance, and unresolved issues. We operationalise EAKR in MetaSynDec, an agentic harness in which large language models propose structured updates and deterministic services govern schema- and contract-based validation and execution. Across 58 synthesis units, MetaSynDec constructed all EAKRs, with 57 proceeding to statistical execution. Of 56 units with sufficient information to define a reference analysis object, 38 (67.9%) achieved complete object fidelity and 42 (75.0%) exact evidence-set agreement, with a mean Jaccard similarity of 0.909. Generated and published confidence intervals overlapped in 54 of 55 units (98.2%). MetaSynDec outperformed direct LLM generation in reference synthesis-structure agreement (57/58 versus 23/58; p<0.001) and among 23 jointly completed units, exact reference-formulation agreement (23/23 versus 1/23; p<0.001). These findings provide feasibility evidence that EAKR supports formal validation, traceability, statistical execution, and improved methodological agreement relative to direct LLM generation.",
+  "abstract_zh": "本文关注 meta-analysis synthesis 中的核心问题：结构化证据本身并不足以表示可直接执行统计计算所需的分析知识。证据分配、分析对比、结局与时间点对齐、效应量定义、方法学可采纳性等决策，必须在统计执行前被显式表达。现有自动化方法常将这些决策隐含在模型输出、生成代码或工作流轨迹中，缺乏可独立验证的知识表示。作者提出 Executable Analytical Knowledge Representation（EAKR），一种机器可操作的表示，用于将结构化证据转化为可执行的 meta-analysis。EAKR 显式表示证据、关系、数值输入、约束、溯源信息和未解决问题。作者在 MetaSynDec 中实现 EAKR：这是一个 agentic harness，由 large language models 提出结构化更新，并由确定性服务负责基于 schema 和 contract 的验证与执行。在 58 个 synthesis units 上，MetaSynDec 成功构建全部 EAKR，其中 57 个进入统计执行。在 56 个具备足够信息定义参考分析对象的单元中，38 个（67.9%）达到完整对象一致性，42 个（75.0%）达到精确证据集一致性，平均 Jaccard 相似度为 0.909。生成结果与已发表置信区间在 55 个单元中的 54 个重叠（98.2%）。相较直接 LLM generation，MetaSynDec 在参考 synthesis structure 一致性上显著更优（57/58 vs 23/58；p<0.001）；在 23 个共同完成单元中，参考 formulation 精确一致性也显著更高（23/23 vs 1/23；p<0.001）。结果表明，EAKR 能支持形式化验证、可追踪性、统计执行，并较直接 LLM 生成获得更好的方法学一致性。",
+  "key_points_zh": [
+    "提出 Executable Analytical Knowledge Representation（EAKR），将 meta-analysis synthesis 中的分析决策显式表示为机器可操作知识，而非隐含在 LLM 输出或代码中。",
+    "EAKR 覆盖证据、关系、数值输入、约束、provenance（溯源）和 unresolved issues（未解决问题），支持从结构化证据到统计执行的完整链路。",
+    "实现系统 MetaSynDec 采用 agentic harness：LLM 负责提出结构化更新，确定性服务负责 schema/contract 验证与统计执行，兼顾生成能力与可控性。",
+    "在 58 个 synthesis units 上，MetaSynDec 构建了全部 EAKR，57 个可执行统计分析；参考对象完整一致率为 67.9%，证据集精确一致率为 75.0%。",
+    "相比直接 LLM generation，MetaSynDec 在 synthesis structure agreement 和 reference-formulation agreement 上显著更优，显示显式知识表示有助于提升方法学可靠性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.75,
+    "problem_significance": 0.72,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.76,
+    "llm_avg": 0.7300000000000001,
+    "comment": "MetaSynDec provides a credible domain agentic harness with schema validation, provenance, deterministic services, and executable traceability.",
+    "comment_zh": "MetaSynDec 提供了可信的领域智能体框架，包含模式验证、来源追踪、确定性服务和可执行可追溯性。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3210331475111057,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7300000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01711/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01711/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.96
+    }
+  ]
+}

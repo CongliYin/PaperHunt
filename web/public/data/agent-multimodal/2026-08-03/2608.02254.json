@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2608.02254",
+  "title": "Homebot: A Personal AI Agent for Conversational Home Assistance and Automation",
+  "title_zh": "Homebot：用于对话式家庭辅助与自动化的个人 AI Agent",
+  "authors": [
+    "Shengyuan Ye",
+    "Yixin Zhang",
+    "Han Liang",
+    "Liekang Zeng",
+    "Jiangsu Du",
+    "Mu Yuan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T14:01:44Z",
+  "abs_url": "https://arxiv.org/abs/2608.02254v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02254",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "\\texttt{Homebot} is a locally deployable AI agent for conversational household assistance and automation. It accepts voice and instant-messaging requests through a shared runtime that combines language-model responses with registered tools and task-specific skills. The design separates common request processing from session ownership: messaging history remains scoped to a channel and chat, whereas voice interaction is bounded by wake-word activation. For hands-free use, \\texttt{Homebot} combines local wake-word detection, streaming speech recognition and synthesis, and an explicit dialogue-state protocol for ending, following up, or continuing a conversation. Clear channel, tool, and skill contracts support practical customization for household use.",
+  "abstract_zh": "Homebot 是一个可本地部署的个人 AI Agent，面向家庭场景中的对话式辅助与自动化。它通过统一运行时接收语音和即时消息请求，将语言模型回复与已注册的工具、任务特定技能相结合。系统设计将通用请求处理与会话归属解耦：消息历史按频道和聊天范围隔离，而语音交互则由唤醒词激活限定。为支持免手操作，Homebot 集成本地唤醒词检测、流式语音识别与语音合成，并使用显式对话状态协议来管理结束、追问或继续对话。清晰的频道、工具和技能接口使其更易于在家庭环境中定制和扩展。",
+  "key_points_zh": [
+    "提出 Homebot，一个面向家庭辅助与自动化的本地可部署 AI Agent，支持语音和即时消息两类交互入口。",
+    "采用共享运行时，将语言模型能力与注册工具、任务特定 skills 结合，便于执行家庭场景中的具体操作。",
+    "设计上区分通用请求处理与会话所有权：消息会话按 channel/chat 隔离，语音会话由 wake-word 激活控制。",
+    "集成本地 wake-word detection、streaming speech recognition 和 speech synthesis，支持免手操作的连续对话体验。",
+    "通过明确的 channel、tool 与 skill contracts 提升系统可定制性，便于家庭用户按需扩展自动化能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.48,
+    "problem_significance": 0.76,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.62,
+    "llm_avg": 0.584,
+    "comment": "Practical home voice-agent system with wake-word, streaming ASR/TTS, and tool contracts, but its research novelty and benchmark contribution seem limited.",
+    "comment_zh": "这是一个实用的家庭语音智能体系统，包含唤醒词、流式语音识别合成和工具接口，但研究新颖性和评测贡献较有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.16000000000000003,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.584,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02254/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02254/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.953
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02254/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.952
+    }
+  ]
+}

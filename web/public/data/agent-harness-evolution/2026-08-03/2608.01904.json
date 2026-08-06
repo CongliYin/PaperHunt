@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2608.01904",
+  "title": "CoEvoKG: Co-Evolving Knowledge Graphs with Self-Evolving Search Agents",
+  "title_zh": "CoEvoKG：将知识图谱与自演化搜索智能体共同演化",
+  "authors": [
+    "Zhaoyang Li",
+    "Zenghuang Fu",
+    "Qiuyuan Ai",
+    "Ping Jiang",
+    "Haoyu Wu",
+    "Minghui Wu",
+    "Chenxu Zhao",
+    "Jie Song",
+    "Guannan He"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T08:39:16Z",
+  "abs_url": "https://arxiv.org/abs/2608.01904v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01904",
+  "links": {
+    "github": "https://github.com/lazzy1225/CoEvoKG.",
+    "project_page": null
+  },
+  "abstract_en": "Large language models can improve with reinforcement learning for search agents, yet existing self play agents repeatedly generate tasks while discarding the knowledge gained during successful searches. We introduce CoEvoKG, a framework that turns a knowledge graph into both a source of verifiable training tasks and a persistent evidence memory for agent evolution. CoEvoKG jointly trains a task generator and a search agent: the generator creates multihop questions from entity chains sampled from the knowledge graph, while the agent learns from rewards for answer correctness and search trajectories whose entity paths are supported by graph evidence. When a search succeeds, CoEvoKG verifies and deduplicates the retrieved evidence, then writes it back to the corresponding graph nodes and edges. Future rounds reuse this enriched graph for task generation and reward computation, closing the loop between model self evolution and knowledge accumulation. Experiments on six QA benchmarks (NQ, TriviaQA, PopQA, HotpotQA, 2WikiMultiHopQA, and Bamboogle) with three backbone models show that CoEvoKG improves macro average accuracy over the corresponding base models by +11.2, +10.1, and +11.6 points on Qwen2.5-3B-Instruct, Qwen2.5-7B-Instruct, and Llama-3.1-8B-Instruct, respectively. Under matched training budgets, CoEvoKG further improves over competitive self play baselines and RL baselines for search agents by +2.6 to +3.7 macro average points across the three backbones. Code is available at https://github.com/lazzy1225/CoEvoKG.",
+  "abstract_zh": "本文提出 CoEvoKG，一个将 Knowledge Graph 同时作为可验证训练任务来源和持久化证据记忆的框架，用于改进基于强化学习的搜索智能体。与以往 self-play 方法反复生成任务却丢弃成功搜索中获得的知识不同，CoEvoKG 联合训练任务生成器与搜索智能体：生成器从知识图谱采样实体链并构造多跳问题；智能体根据答案正确性以及由图谱证据支持的搜索轨迹获得奖励。每当搜索成功，系统会验证、去重检索到的证据，并写回对应的图节点和边，使后续训练轮次能够复用被增强的图谱进行任务生成和奖励计算，从而闭合模型自演化与知识积累之间的循环。在 NQ、TriviaQA、PopQA、HotpotQA、2WikiMultiHopQA 和 Bamboogle 六个 QA 基准上，基于 Qwen2.5-3B-Instruct、Qwen2.5-7B-Instruct 和 Llama-3.1-8B-Instruct 的实验显示，CoEvoKG 相比对应基座模型的宏平均准确率分别提升 +11.2、+10.1 和 +11.6 个百分点；在相同训练预算下，也比强 self-play 与搜索智能体 RL 基线高出 +2.6 至 +3.7 个百分点。",
+  "key_points_zh": [
+    "CoEvoKG 将 Knowledge Graph 用作双重角色：一方面生成可验证的多跳 QA 训练任务，另一方面作为持久化证据记忆存储成功搜索得到的新证据。",
+    "框架联合优化任务生成器和搜索智能体：生成器基于图中实体链构造问题，智能体通过答案正确性和图证据支持的搜索路径获得强化学习奖励。",
+    "成功搜索后的证据会经过验证、去重，并写回图谱节点和边；被增强的图谱再用于后续任务生成与奖励计算，形成知识积累和智能体能力提升的闭环。",
+    "在六个 QA 基准和三个 backbone 上，CoEvoKG 相比基座模型带来约 +10 到 +12 个百分点的宏平均准确率提升。",
+    "在相同训练预算下，CoEvoKG 仍优于竞争性 self-play 和搜索智能体 RL 基线，宏平均准确率额外提升 +2.6 至 +3.7 个百分点。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.79,
+    "problem_significance": 0.78,
+    "potential_impact": 0.77,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.76,
+    "llm_avg": 0.7799999999999999,
+    "comment": "CoEvoKG offers a meaningful closed loop between verifiable search-agent training, trajectory evidence, and persistent knowledge accumulation.",
+    "comment_zh": "CoEvoKG 在可验证搜索代理训练、轨迹证据和持久知识积累之间形成了有意义的闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7799999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/lazzy1225/CoEvoKG.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01904/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01904/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01904/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.979
+    }
+  ]
+}

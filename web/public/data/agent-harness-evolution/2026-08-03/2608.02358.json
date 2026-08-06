@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2608.02358",
+  "title": "ScrambleToolBench: Agents Search Exhaustively Even When Their Own Map Points to the Next Step",
+  "title_zh": "ScrambleToolBench：即使已有“地图”指向下一步，Agent 仍会穷举搜索",
+  "authors": [
+    "Vernon Toh",
+    "Navonil Majumder",
+    "Zhengyuan Liu",
+    "Nancy F. Chen",
+    "Soujanya Poria"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T15:07:46Z",
+  "abs_url": "https://arxiv.org/abs/2608.02358v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02358",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "To operate robustly in open-world environments, autonomous agents should be able to infer the behavior of unfamiliar systems through interaction alone, even in the absence of documentation. However, existing tool-use benchmarks expose semantic tool schemas in static environments, allowing agents to rely on prior knowledge rather than autonomous discovery. To address this limitation, we introduce ScrambleToolBench, an interactive terminal benchmark designed to isolate behavioral reasoning. By removing semantic cues and enforcing a continuous task curriculum, the benchmark requires agents to uncover hidden tool behaviors entirely through trial-and-error interaction. The benchmark further introduces dynamic challenges, including mapping drift, stochastic action failures, and temporal execution windows, to evaluate whether agents can revise and adapt their hypotheses as the environment changes. Our evaluation of state-of-the-art language models reveals that successful initial discovery does not translate into robust adaptation. When faced with structural changes such as mapping drift, agents fail to use deductive strategies such as cycle tracing, and instead exhibit belief inertia or fall back to exhaustive search. Increasing test-time reasoning only amplifies this expensive brute-force search rather than enabling deductive recovery. While equipping agents with persistent memory reduces compounding errors, they remain unable to efficiently infer structural changes, highlighting a gap in current agent reasoning.",
+  "abstract_zh": "为在开放世界环境中稳健运行，自主 Agent 应能仅通过交互推断陌生系统的行为，即使没有文档说明。然而，现有工具使用基准通常提供带语义信息的工具 schema，并处于静态环境中，使 Agent 可依赖先验知识而非自主发现。为解决这一局限，论文提出 ScrambleToolBench：一个交互式终端基准，旨在隔离并评估行为推理能力。该基准移除语义线索，并设置连续任务课程，要求 Agent 完全通过试错交互发现隐藏工具行为。同时，ScrambleToolBench 引入动态挑战，包括 mapping drift（映射漂移）、随机动作失败和时间执行窗口，用于考察 Agent 是否能在环境变化时修正并适应其假设。对当前先进语言模型的评测显示，初始发现成功并不意味着具备稳健适应能力。面对 mapping drift 等结构性变化时，Agent 往往不会采用 cycle tracing（循环追踪）等演绎策略，而是表现出信念惯性或退回到穷举搜索。增加测试时推理预算只会放大昂贵的暴力搜索，而非带来演绎式恢复。尽管持久记忆可减少累积错误，Agent 仍难以高效推断结构变化，暴露出当前 Agent 推理能力的重要缺口。",
+  "key_points_zh": [
+    "提出 ScrambleToolBench，一个去除语义工具线索的交互式终端基准，用于评估 Agent 通过试错发现隐藏工具行为的能力。",
+    "基准引入连续任务课程和动态环境变化，包括 mapping drift、随机动作失败与时间执行窗口，考察 Agent 的假设修正与适应能力。",
+    "实验发现，模型即使能完成初始工具发现，面对结构变化时仍常出现信念惯性，或退回到低效的穷举搜索。",
+    "增加 test-time reasoning 并未促成更强的演绎推理，反而可能扩大暴力搜索成本。",
+    "持久记忆可降低累积错误，但无法根本解决 Agent 对结构性变化缺乏高效推断能力的问题。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.73,
+    "problem_significance": 0.78,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.76,
+    "llm_avg": 0.7300000000000001,
+    "comment": "ScrambleToolBench is a useful interactive benchmark for tool-behavior discovery and adaptation, with durable diagnostic value despite limited training-loop integration.",
+    "comment_zh": "ScrambleToolBench 是有用的交互式工具行为发现与适应评测，虽缺少训练闭环但具有持久诊断价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.7808604494268809,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.7300000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 10,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02358/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02358/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.745
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02358/fig3.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.533
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02358/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.69
+    }
+  ]
+}

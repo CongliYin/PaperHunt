@@ -1,0 +1,1089 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-08-03",
+  "generated_at": "2026-08-06T04:39:23Z",
+  "papers": [
+    {
+      "arxiv_id": "2608.02287",
+      "title": "SKT: Skill-Use Training at Scale via Verified Synthetic Data Generation",
+      "title_zh": "SKT：通过可验证合成数据生成进行大规模技能使用训练",
+      "authors": [
+        "Zelin Tan",
+        "Yiqun Zhang",
+        "Hao Li",
+        "Zhiyao Cui",
+        "Hejia Geng",
+        "Shao Zhang",
+        "Hangfan Zhang",
+        "Yang Chen",
+        "Xiaosong Wang",
+        "Lilong Wang",
+        "Zhenfei Yin",
+        "Shuyue Hu",
+        "Chen Zhang",
+        "Lei Bai"
+      ],
+      "total_score": 0.7002988581209784,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8720000000000001,
+        "other": 0.34232952706992736
+      },
+      "tags": [
+        "HF Daily ★28",
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "用可验证合成轨迹提升智能体技能使用",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02287.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02287/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02843",
+      "title": "MutMem: Cryptographically Authorized Mutation in Persistent Agent Memory",
+      "title_zh": "MutMem：持久化智能体记忆中的密码学授权变更",
+      "authors": [
+        "Walid Saidi"
+      ],
+      "total_score": 0.683,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.82,
+        "other": 0.2833333333333334
+      },
+      "tags": [
+        "GitHub",
+        "session context memory"
+      ],
+      "tldr_zh": "用签名协议审计智能体记忆变更",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02843.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2608.02508",
+      "title": "RoMeRL: Balancing Feedback Coverage and the Memory-Reward Trap in Self-Evolving Agent Memory via Reduced-Order Utility States",
+      "title_zh": "RoMeRL：通过降阶效用状态平衡自进化 Agent 记忆中的反馈覆盖与记忆-奖励陷阱",
+      "authors": [
+        "Yi Yang",
+        "Zhennan Chen",
+        "Yihong Zhuang",
+        "Tiehan Fan",
+        "Yinan Chen",
+        "Jian Li",
+        "Jian Yang",
+        "Ying Tai"
+      ],
+      "total_score": 0.6734000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.7879999999999999,
+        "other": 0.2833333333333334
+      },
+      "tags": [
+        "GitHub",
+        "session context memory"
+      ],
+      "tldr_zh": "用固定降阶效用状态提升 Agent 记忆学习",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02508.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02508/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01904",
+      "title": "CoEvoKG: Co-Evolving Knowledge Graphs with Self-Evolving Search Agents",
+      "title_zh": "CoEvoKG：将知识图谱与自演化搜索智能体共同演化",
+      "authors": [
+        "Zhaoyang Li",
+        "Zenghuang Fu",
+        "Qiuyuan Ai",
+        "Ping Jiang",
+        "Haoyu Wu",
+        "Minghui Wu",
+        "Chenxu Zhao",
+        "Jie Song",
+        "Guannan He"
+      ],
+      "total_score": 0.6640000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.7799999999999999,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "closed loop agent improvement"
+      ],
+      "tldr_zh": "知识图谱记忆驱动搜索智能体自演化",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.01904.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01904/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01710",
+      "title": "Beyond Single-Use Tokens: Durable Authorization State for Replay-Resistant LLM Agent Actions",
+      "title_zh": "超越单次使用 Token：面向抗重放 LLM Agent 行动的持久授权状态",
+      "authors": [
+        "Jinghan Xu",
+        "Longze Fan",
+        "Zeyuan Wang",
+        "Xinjin Li",
+        "Hankai Liu"
+      ],
+      "total_score": 0.6598,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.8560000000000001,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "抗重放关键是持久授权状态",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.01710.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01710/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01759",
+      "title": "Benign Alone, Harmful Together: Exploiting Experience Composition in Self-Evolving LLM Agents",
+      "title_zh": "单独无害，组合有害：利用自进化 LLM Agent 中的经验组合",
+      "authors": [
+        "Bingyu Yan",
+        "Xiaoming Zhang",
+        "Chaozhuo Li",
+        "Ziyi Zhou",
+        "Yirui Qi",
+        "Litian Zhang"
+      ],
+      "total_score": 0.6448,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.776,
+        "other": 0.2
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "良性经验累积可组合突破安全边界",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.01759.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01759/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01719",
+      "title": "MNC: Scope-Bound Semantic Declassification for Private LLM-Agent Communication",
+      "title_zh": "MNC：面向私有 LLM-Agent 通信的范围绑定语义解密",
+      "authors": [
+        "Jinghan Xu",
+        "Longze Fan",
+        "Zeyuan Wang",
+        "Xinjin Li",
+        "Hankai Liu"
+      ],
+      "total_score": 0.6426000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.852,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "用范围绑定最小披露保护多Agent通信",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.01719.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01719/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02302",
+      "title": "Trajectories That Segment Themselves: Agent-Declared Boundaries as a Training Unit",
+      "title_zh": "自我分段的轨迹：将 Agent 声明的边界作为训练单元",
+      "authors": [
+        "Jingxi Wei"
+      ],
+      "total_score": 0.633,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.82,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "让编码 Agent 生成时自声明语义阶段边界",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02302.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02302/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02518",
+      "title": "Magnet: Detecting Cross-Session AI Misuse Through Capability Accumulation",
+      "title_zh": "Magnet：通过能力累积检测跨会话 AI 滥用",
+      "authors": [
+        "Natalie Isak",
+        "Matthew Dressman"
+      ],
+      "total_score": 0.6318000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.7859999999999999,
+        "other": 0.2
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "跨会话累积能力检测 AI 滥用",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02518.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02518/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01679",
+      "title": "When Memory Becomes Authority: Benchmarking Authority Collapse at the Memory Consolidation Boundary",
+      "title_zh": "当记忆成为权威：在记忆整合边界基准测试 Authority Collapse",
+      "authors": [
+        "Qiuyang Zhan",
+        "Rui Zhang",
+        "Sheng Guo",
+        "Lepeng Zhao",
+        "Zhuotao Liu"
+      ],
+      "total_score": 0.6281,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8119999999999999,
+        "other": 0.10833333333333334
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "LLM 记忆需保留来源权威，避免越权使用",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.01679.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01679/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02358",
+      "title": "ScrambleToolBench: Agents Search Exhaustively Even When Their Own Map Points to the Next Step",
+      "title_zh": "ScrambleToolBench：即使已有“地图”指向下一步，Agent 仍会穷举搜索",
+      "authors": [
+        "Vernon Toh",
+        "Navonil Majumder",
+        "Zhengyuan Liu",
+        "Nancy F. Chen",
+        "Soujanya Poria"
+      ],
+      "total_score": 0.6265430224713442,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.7300000000000001,
+        "other": 0.23847674157114682
+      },
+      "tags": [
+        "HF Daily ★10",
+        "session context memory"
+      ],
+      "tldr_zh": "Agent 会发现工具，却难适应变化",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02358.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02358/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02915",
+      "title": "LACE: Large Language Model Aided Multi-Agent Framework for Agile RISC-V Instruction Extension",
+      "title_zh": "LACE：由大语言模型辅助的多智能体框架，用于敏捷 RISC-V 指令扩展",
+      "authors": [
+        "Pingqing Zheng",
+        "Jiayin Qin",
+        "Fuqi Zhang",
+        "Zishen Wan",
+        "Shang Wu",
+        "Yu Cao",
+        "Caiwen Ding",
+        "Yang Katie Zhao"
+      ],
+      "total_score": 0.6224000000000002,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.588,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "harness multi agent orchestration"
+      ],
+      "tldr_zh": "LLM多智能体自动生成并验证RISC-V扩展",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02915.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02915/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01881",
+      "title": "Hear, Invoke, and Understand: A Skill-Calling Multimodal Agent for Large Audio Language Models",
+      "title_zh": "Hear, Invoke, and Understand：面向大型音频语言模型的技能调用多模态智能体",
+      "authors": [
+        "Yuwen Wang",
+        "Tian-Hao Zhang",
+        "Minghao Cai",
+        "Yilin Ren",
+        "Ziyang Jiang",
+        "Xin Wang",
+        "Zhichao Wang",
+        "Pan Zhou",
+        "Kun Zhan",
+        "Xinyuan Qian"
+      ],
+      "total_score": 0.6220000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.7,
+        "other": 0.2
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "让音频大模型学会调用工具推理",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.01881.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01881/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01837",
+      "title": "PCSD: Persistent Consistency for Self-Distillation in Agentic Reinforcement Learning",
+      "title_zh": "PCSD：Agentic 强化学习中用于自蒸馏的持久一致性方法",
+      "authors": [
+        "Chunji Lv",
+        "Yangguang Wei",
+        "Junlin Liu",
+        "Yang Gao",
+        "Ming Liu",
+        "Xinming Wang",
+        "Jinyang Wu",
+        "Guoren Wang",
+        "Changsheng Li"
+      ],
+      "total_score": 0.6217181860096282,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.6900000000000001,
+        "other": 0.2623939533654268
+      },
+      "tags": [
+        "HF Daily ★37",
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "用持久一致性筛选可靠teacher监督",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.01837.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01837/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01558",
+      "title": "Securing Agentic AI: From Per-Action Checks to Trajectory Assurance",
+      "title_zh": "保障 Agentic AI 安全：从单步动作检查到轨迹级保证",
+      "authors": [
+        "Alireza Lotfi",
+        "Subangkar Karmaker Shanto",
+        "Imtiaz Karim",
+        "Elisa Bertino"
+      ],
+      "total_score": 0.6213258286877777,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.7060000000000001,
+        "other": 0.19175276229259217
+      },
+      "tags": [
+        "observability governance security"
+      ],
+      "tldr_zh": "Agent 安全需从单步检查走向轨迹验证",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.01558.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01558/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02712",
+      "title": "Don't Regenerate, Debug: A Domain-Specific Agent for Repairing Near-Miss Hardware Operators",
+      "title_zh": "不要重生成，而要调试：面向近失硬件算子的领域专用修复 Agent",
+      "authors": [
+        "Yansong Sun",
+        "Shenxiu Wu",
+        "Siyuan Chen",
+        "Runlin Hou",
+        "Junhao Qiu",
+        "Junming Cao",
+        "Shudi Shao",
+        "Zhichao Lu",
+        "Qingfu Zhang"
+      ],
+      "total_score": 0.6136887430316665,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.7379999999999999,
+        "other": 0.18762914343888823
+      },
+      "tags": [
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "用调试替代重生成，低成本修复硬件算子",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02712.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02712/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01652",
+      "title": "SyncPlan: Long-Horizon LLM Coordination with Explicit Synchronization and Adaptive Correction",
+      "title_zh": "SyncPlan：通过显式同步与自适应纠错实现长程 LLM 协调",
+      "authors": [
+        "Shen You",
+        "Xiaoming Zhu",
+        "Weining Weng",
+        "Hefei Mei",
+        "Weixuan Wang",
+        "Zhongshen Li",
+        "Zeji LI",
+        "Ye-Wen Wang",
+        "Zijun Liao",
+        "Juchao Zhuo",
+        "Yang Wei",
+        "Fuhao Qiu",
+        "Siqin Li",
+        "Zhenjie Lian",
+        "Danei Gong",
+        "Junkai Ji",
+        "Xiangtao Li",
+        "Qiuzhen Lin",
+        "Liang Wang",
+        "Ka-Chun Wong"
+      ],
+      "total_score": 0.6130000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.67,
+        "other": 0.2
+      },
+      "tags": [
+        "harness multi agent orchestration"
+      ],
+      "tldr_zh": "一次规划，显式同步，必要时自适应重规划",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.01652.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01652/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02685",
+      "title": "BulkPR-Bench: Benchmarking Queue-Level Governance of Interacting Pull Requests",
+      "title_zh": "BulkPR-Bench：面向交互式 Pull Request 队列级治理的基准测试",
+      "authors": [
+        "Zetong Xiong",
+        "Qiao Zhao",
+        "Jun Zhang",
+        "Xueying Lyu",
+        "Zhi Li",
+        "Yixiang Tu",
+        "Xiaowen Yang",
+        "Yunjie Zhang",
+        "Yufeng Wang",
+        "Zhe Zhang",
+        "Kaize Yu",
+        "Hanwen Du",
+        "Zhongkai Sun",
+        "Zhuoxin Liu",
+        "Zekun Lin",
+        "Jianwen Yang",
+        "Ruining Chen",
+        "Ying Zhang",
+        "Tingxuan Pan",
+        "Ke Chen",
+        "Shubin Han",
+        "Chuanhao Sun",
+        "Yehua Yang"
+      ],
+      "total_score": 0.6120000000000001,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.82,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "evaluation operations"
+      ],
+      "tldr_zh": "评测 AI 合并交互 PR 队列的能力",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02685.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02685/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02110",
+      "title": "IACM-RL: Intent-Aware Context Management and Reinforcement Learning for Complex Tool Invocation under Dynamic Intent Fluctuations",
+      "title_zh": "IACM-RL：面向动态意图波动下复杂工具调用的意图感知上下文管理与强化学习",
+      "authors": [
+        "Dingwei Zhu",
+        "Jiahan Li",
+        "Chengjun Pan",
+        "Yunxian Yang",
+        "Yunbin Zhao",
+        "Yunke Zhang",
+        "Zhonghang Lu",
+        "Zhuohui Sheng",
+        "Chenhao Huang",
+        "Jiahang Lin",
+        "Yajie Yang",
+        "Junlin Shang",
+        "Shichun Liu",
+        "Yuhui Wang",
+        "Honglin Guo",
+        "Junjie Ye",
+        "Xin Guo",
+        "Jiazheng Zhang",
+        "Ming Zhang",
+        "Shihan Dou",
+        "Zhiheng Xi",
+        "Tao Gui",
+        "Qi Zhang",
+        "Xipeng Qiu",
+        "Xuanjing Huang"
+      ],
+      "total_score": 0.6083691800690525,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.756,
+        "other": 0.20523060023017473
+      },
+      "tags": [
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "用意图感知上下文管理提升复杂工具调用鲁棒性",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02110.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02110/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02113",
+      "title": "MemArbiter: Decision-Time Memory Arbitration for Long-Horizon LLM Agents",
+      "title_zh": "MemArbiter：面向长程 LLM Agent 的决策时记忆仲裁",
+      "authors": [
+        "Jiajun Dong",
+        "Yutao Hu",
+        "Fengrui Fan",
+        "Shihan Dou",
+        "Yueming Wu",
+        "Deqing Zou"
+      ],
+      "total_score": 0.6012000000000002,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.684,
+        "other": 0.2
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "用功能感知记忆仲裁提升长程 Agent 决策",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02113.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02113/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01711",
+      "title": "Constructing Executable Analytical Knowledge Representations for Meta-Analysis Synthesis Using an Agentic Harness",
+      "title_zh": "使用 Agentic Harness 构建用于 Meta-Analysis Synthesis 的可执行分析知识表示",
+      "authors": [
+        "Lingbo Li",
+        "Anuradha Mathrani",
+        "Teo Susnjak"
+      ],
+      "total_score": 0.6000516573755554,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.7300000000000001,
+        "other": 0.2035055245851843
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "EAKR让荟萃分析知识可验证可执行",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.01711.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01711/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01639",
+      "title": "Mutate to Bypass: Autonomous Endpoint Evasion via Knowledge-Driven Multi-Agent Orchestration",
+      "title_zh": "变异以绕过：基于知识驱动多智能体编排的自主端点规避",
+      "authors": [
+        "Weifeng Yuan",
+        "Wenbo Guo",
+        "Qingyun Du",
+        "Jun Chen",
+        "Feng Dong",
+        "Haoyu Wang",
+        "Yang Liu"
+      ],
+      "total_score": 0.5930807119021062,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.526,
+        "other": 0.2776023730070205
+      },
+      "tags": [
+        "Code soon",
+        "harness multi agent orchestration"
+      ],
+      "tldr_zh": "用多智能体自动评估并绕过EDR",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.01639.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01639/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02409",
+      "title": "MonitrLLM: A Community-Centered Evaluation Infrastructure for Large Language Models",
+      "title_zh": "MonitrLLM：面向社区的大语言模型评估基础设施",
+      "authors": [
+        "Victor Ojewale",
+        "Ro Encarnación",
+        "Suresh Venkatasubramanian",
+        "Danaé Metaxa"
+      ],
+      "total_score": 0.5716000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.5720000000000001,
+        "other": 0.2666666666666667
+      },
+      "tags": [
+        "Code soon",
+        "trace driven evolution"
+      ],
+      "tldr_zh": "用用户目标与结果评估补齐LLM评测缺口",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02409.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02409/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02560",
+      "title": "Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection",
+      "title_zh": "面向边缘语言模型的结构化记忆：通过 O(1) SSM 状态注入实现持久上下文与语料检索",
+      "authors": [
+        "Anusha Madan Gopal",
+        "Aras Pirbadian",
+        "Kristofor D. Carlson",
+        "M Anthony Lewis",
+        "Jonathan Tapson"
+      ],
+      "total_score": 0.5710000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.53,
+        "other": 0.2
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "用 SSM 状态注入把 RAG 预填充降至 O(1)",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02560.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02560/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01619",
+      "title": "When Memory Updates but Behavior Does Not: Repairing Implicit Stale Dependencies in Personalized Agent Responses",
+      "title_zh": "当记忆更新而行为不变：修复个性化智能体响应中的隐式陈旧依赖",
+      "authors": [
+        "Haofei Sun",
+        "Lin He"
+      ],
+      "total_score": 0.5706712024128082,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.62,
+        "other": 0.21557067470936045
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "StateAuditor 修复智能体陈旧记忆依赖",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.01619.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01619/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01918",
+      "title": "HarnessCompass: Guiding Automatic Harness Evolution toward Generalizable and Effective Agent Harnesses",
+      "title_zh": "HarnessCompass：引导自动 Harness 演化，生成更具泛化性与有效性的 Agent Harness",
+      "authors": [
+        "Luan Zhang",
+        "Ruochen Zhou",
+        "Dandan Song",
+        "Zhengyu Chen",
+        "Yuhang Tian",
+        "Jun Yang",
+        "Huipeng Ma",
+        "Chenhao Li",
+        "Guangyuan Feng",
+        "Xudong Li",
+        "Yizhou Jin",
+        "Yan Xu"
+      ],
+      "total_score": 0.5700000000000001,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.9,
+        "other": 0.2
+      },
+      "tags": [
+        "agent environment data services"
+      ],
+      "tldr_zh": "自动演化更泛化的 Agent Harness",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.01918.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01918/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02101",
+      "title": "Cross-Domain Hybrid OPD for Generalizable Search Agents",
+      "title_zh": "面向可泛化搜索智能体的跨领域混合 OPD",
+      "authors": [
+        "Hongzhan Chen",
+        "Xiaoyu Liu",
+        "Dengming Zhang",
+        "Minzhou Huang",
+        "Dongliang Xu",
+        "Jingcheng Xie",
+        "Dongxiang Fang",
+        "Bowen Qin",
+        "Minsheng Hao",
+        "Yaozong Shen",
+        "Xiaojun Quan",
+        "Mona Zhou",
+        "Haosheng Zou",
+        "Jeff Chen"
+      ],
+      "total_score": 0.5592000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.544,
+        "other": 0.2
+      },
+      "tags": [
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "用跨领域 OPD 缓解搜索智能体能力税",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02101.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02101/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02515",
+      "title": "LiveMem: Maintaining Memory State Continuity in Long-Running LLM Inference",
+      "title_zh": "LiveMem：在长时运行 LLM 推理中维持记忆状态连续性",
+      "authors": [
+        "Zhichen Liu",
+        "Ruihan Sun",
+        "Hengjie Yang",
+        "Zipeng Wu",
+        "Zhaohan Chen",
+        "Xiaofan Zhang",
+        "Yang Xu"
+      ],
+      "total_score": 0.5566000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.672,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "让LLM在上下文换出后仍保留记忆状态",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02515.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02515/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01995",
+      "title": "Long-Horizon Autonomous Architecture Research with a Language-Model Agent: A Behavioural Case Study",
+      "title_zh": "用语言模型 Agent 进行长周期自主架构研究：一项行为案例研究",
+      "authors": [
+        "Aon Safdar",
+        "Mohamed Saadeldin"
+      ],
+      "total_score": 0.5540000000000002,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.5800000000000001,
+        "other": 0.2
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "工作流深刻影响科研型 LLM agent 表现",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.01995.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01995/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02880",
+      "title": "Field Aware Agent Skill Retrieval",
+      "title_zh": "面向字段感知的 Agent 技能检索",
+      "authors": [
+        "Paimon Goulart",
+        "Liang Wu",
+        "Kelly Wan",
+        "Evangelos E. Papalexakis",
+        "Liangjie Hong"
+      ],
+      "total_score": 0.5295824593811418,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.584,
+        "other": 0.1146081979371389
+      },
+      "tags": [
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "保留技能字段结构可显著提升检索",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02880.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02880/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01651",
+      "title": "Bole: Efficient Tree Speculation for Hybrid-Attention Language Models",
+      "title_zh": "Bole：面向 Hybrid-Attention 语言模型的高效树状推测解码",
+      "authors": [
+        "Li Wang",
+        "Yi Su",
+        "Xiabao Wu",
+        "Chiran You",
+        "Yongchao Liu",
+        "Zhan Qiu",
+        "Juelu Zhang",
+        "Jiajun Zheng",
+        "Fangxin Liu",
+        "Jie Zhang",
+        "Chen Tian",
+        "Chengying Huan"
+      ],
+      "total_score": 0.5261657923174274,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.43,
+        "other": 0.20388597439142458
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "Bole高效加速Hybrid LLM树状推测解码",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.01651.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01651/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02336",
+      "title": "Lost in Permissions: Exploring the Microsoft 365 App Ecosystem",
+      "title_zh": "迷失在权限中：探索 Microsoft 365 应用生态系统",
+      "authors": [
+        "Vincenzo Longo",
+        "Alberto Verna",
+        "Nikhil Jha",
+        "Marco Mellia"
+      ],
+      "total_score": 0.5228,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.476,
+        "other": 0.2
+      },
+      "tags": [
+        "observability governance security"
+      ],
+      "tldr_zh": "M365 第三方应用普遍权限过宽且透明度不足",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02336.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02336/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02553",
+      "title": "A Taxonomy of Cognitive Capability Gaps in Generative and Agentic AI",
+      "title_zh": "生成式与智能体 AI 中认知能力缺口的分类体系",
+      "authors": [
+        "Taye Akinrele",
+        "Sindhuja Penchala",
+        "Noorbakhsh Amiri Golilarz",
+        "Sudip Mittal",
+        "Shahram Rahimi"
+      ],
+      "total_score": 0.5100000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.38,
+        "other": 0.2
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "综述认知型 AI 的五类关键能力缺口",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02553.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02553/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01742",
+      "title": "MemSIF: From Structured Interactions to Dual-Track Fact Memory for LLM Agents",
+      "title_zh": "MemSIF：从结构化交互到面向 LLM Agent 的双轨事实记忆",
+      "authors": [
+        "YuFei Luo",
+        "Xiucheng Xu",
+        "Zhen Yang"
+      ],
+      "total_score": 0.4172,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.5439999999999999,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "general llm agents"
+      ],
+      "tldr_zh": "结构化交互与双轨事实记忆提升长程记忆",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.01742.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01742/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02046",
+      "title": "CompanionBench: A Theory-Anchored, Real-World-Grounded Benchmark for AI Emotional Companionship",
+      "title_zh": "CompanionBench：一个以理论为锚、基于真实世界数据的 AI 情感陪伴基准",
+      "authors": [
+        "Yao Liu",
+        "Guangjia Chai",
+        "Yuming Huang",
+        "Jihao Huang",
+        "Lei Wang",
+        "Junchen Wan"
+      ],
+      "total_score": 0.3943000000000001,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.406,
+        "other": 0.10833333333333334
+      },
+      "tags": [
+        "agent environment data services"
+      ],
+      "tldr_zh": "真实数据驱动的双语 AI 情感陪伴基准",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02046.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02046/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01822",
+      "title": "SearchMaster: Grounded and Regulated Self-Play for Search Agents",
+      "title_zh": "SearchMaster：面向搜索智能体的有依据且受规控的自博弈训练",
+      "authors": [
+        "Wentao Tan",
+        "Qiong Cao",
+        "Jiaqi Wang",
+        "Nan Duan"
+      ],
+      "total_score": 0.3668,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.8560000000000001,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub"
+      ],
+      "tldr_zh": "自博弈生成并规控高质量搜索训练数据",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.01822.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01822/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02356",
+      "title": "SkillTrace: Traversing a Query-Skill Graph for Composable LLM Agents",
+      "title_zh": "SkillTrace：遍历 Query-Skill 图以构建可组合 LLM Agent",
+      "authors": [
+        "Yue Yao",
+        "Shengyuan Wang",
+        "Xin Chen",
+        "Minke Zhang",
+        "Jia He",
+        "Bingjun Luo",
+        "Tom Gedeon"
+      ],
+      "total_score": 0.34820000000000007,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.5640000000000001,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "用图检索完整可执行技能组合",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02356.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02356/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02683",
+      "title": "$S^3$: Improving Agent Safety through Multi-Stage Defense",
+      "title_zh": "$S^3$：通过多阶段防御提升 Agent 安全性",
+      "authors": [
+        "Zibo Xiao",
+        "Haoyu Wang",
+        "Jun Sun"
+      ],
+      "total_score": 0.312547378143425,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.788,
+        "other": 0.2538245938114167
+      },
+      "tags": [],
+      "tldr_zh": "用阶段化安全技能守护LLM Agent全流程",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02683.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02683/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02687",
+      "title": "PolicyGuard: Prompt-Configurable Semantic DLP for LLM Coding Agents",
+      "title_zh": "PolicyGuard：面向 LLM 编码代理的可提示配置语义 DLP",
+      "authors": [
+        "Kyutae Park",
+        "Jungwon Kim",
+        "Daeyeol Shim"
+      ],
+      "total_score": 0.25799999999999995,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.6599999999999999,
+        "other": 0.2
+      },
+      "tags": [],
+      "tldr_zh": "用自然语言策略拦截敏感提示词",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02687.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02687/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02347",
+      "title": "Mamba with Hierarchical Memory: Solving Representation Bottleneck in Long Sequence Modeling",
+      "title_zh": "Hierarchical Memory Mamba：解决长序列建模中的表示瓶颈",
+      "authors": [
+        "Qinwen Wang",
+        "Jieping Luo",
+        "Aoxiang Qin",
+        "Ruoyu Zhao",
+        "Jianxiong Tang",
+        "Wei Zhang",
+        "Zhichao Lu",
+        "Luziwei Leng"
+      ],
+      "total_score": 0.18780000000000002,
+      "scores": {
+        "topic_relevance": 0.16000000000000003,
+        "llm_assessment": 0.29600000000000004,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "adjacent rag and prompting"
+      ],
+      "tldr_zh": "用层级记忆增强 Mamba 长上下文能力",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02347.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02347/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02296",
+      "title": "TrainShield: Targeted Awareness for Cybersecurity Training",
+      "title_zh": "TrainShield：面向网络安全培训的定向情境感知",
+      "authors": [
+        "Giovanni Pizzenti",
+        "Alberto Verna",
+        "Nikhil Jha",
+        "Giuseppe Tipaldo",
+        "Stefano Traverso",
+        "Marco Mellia"
+      ],
+      "total_score": 0.13920000000000002,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.264,
+        "other": 0.2
+      },
+      "tags": [],
+      "tldr_zh": "在真实工作流中触发式网络安全微培训",
+      "detail_file": "agent-harness-evolution/2026-08-03/2608.02296.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02296/thumb.webp"
+    }
+  ]
+}

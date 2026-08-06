@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2608.01995",
+  "title": "Long-Horizon Autonomous Architecture Research with a Language-Model Agent: A Behavioural Case Study",
+  "title_zh": "用语言模型 Agent 进行长周期自主架构研究：一项行为案例研究",
+  "authors": [
+    "Aon Safdar",
+    "Mohamed Saadeldin"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T09:56:34Z",
+  "abs_url": "https://arxiv.org/abs/2608.01995v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01995",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We study what happens when a single general-purpose large language model acts as the sole researcher on a long-horizon neural architecture design problem. The agent receives a scientific question, an initial hypothesis and motivation, a compute budget, and research affordances (source and experiment management, experiment tracking, literature access, and persistent memory), then autonomously proposes, implements, evaluates, and records experiments over an extended period. The study comprises three phases, separated by human-declared transitions, that progressively expand the agent's tool surface or problem scale. Across approximately 100 sequential experiments, the agent improves a non-standard Vision Transformer from a weak baseline to a stronger, efficient model on small benchmarks and a usable but sub-SOTA model on ImageNet-1K, while producing a dense behavioural trace. We report four findings.(i)Productivity exhibits a clear phase structure: rapid early gains, a multi-dozen-hypothesis saturation wall, and recovery, with recovery triggered by expanding the action surface rather than changing the underlying model.(ii)A single early hypothesis contributes more to accuracy gain, with later improvements long-tailed.(iii)The preference for greedy, incremental hypotheses is largely workflow-induced: a commit-or-discard evaluation rule is isomorphic to greedy hill-climbing; the remainder reflects risk aversion after bold failures and anchoring on familiar literature. (iv)The agent independently rediscovers established results and, in the unfamiliar regime of pure channel attention, overturns a standard design choice. We conclude that workflow design was at least as influential as agent capability in this study and propose diversified search, budgeted moonshot hypotheses, explicit forks, and regime-aware re-validation as testable directions for future autonomous research.",
+  "abstract_zh": "本文研究当单个通用大型语言模型作为唯一研究者，独立处理一个长周期神经网络架构设计问题时会发生什么。该 agent 接收科学问题、初始假设与动机、计算预算，以及源码/实验管理、实验追踪、文献访问和持久记忆等研究工具，随后在较长时间内自主提出、实现、评估并记录实验。研究分为三个阶段，由人工宣布阶段转换，并逐步扩展 agent 的工具表面或问题规模。在约 100 个连续实验中，该 agent 将一个非标准 Vision Transformer 从较弱基线提升为在小型 benchmark 上更强且高效的模型，并在 ImageNet-1K 上得到可用但低于 SOTA 的模型，同时产生了密集的行为轨迹。论文报告四点发现：生产力呈现明显阶段结构，包括早期快速提升、多轮假设后的饱和墙以及由扩展行动空间触发的恢复；单个早期假设贡献了最大精度增益，后续改进呈长尾分布；偏好贪心式渐进假设主要由工作流诱导，因为“提交或丢弃”的评估规则等价于 greedy hill-climbing，剩余因素来自大胆失败后的风险规避和对熟悉文献的锚定；agent 独立重新发现了既有结论，并在纯 channel attention 这一不熟悉设定中推翻了一个标准设计选择。作者认为，在本研究中工作流设计至少与 agent 能力同等重要，并提出多样化搜索、带预算的 moonshot 假设、显式分叉和面向特定机制区间的重新验证作为未来自主研究的可检验方向。",
+  "key_points_zh": [
+    "论文将单个通用 LLM agent 置于长周期神经架构设计任务中，让其在给定预算和工具支持下自主提出、实现、评估并记录约 100 个实验。",
+    "agent 将非标准 Vision Transformer 从弱基线提升到小型 benchmark 上更强且高效的模型，并在 ImageNet-1K 上得到可用但仍低于 SOTA 的结果。",
+    "实验过程呈现阶段性：早期快速收益，随后进入多十个假设的饱和期；当工具表面或行动空间被扩展后，性能改进重新恢复。",
+    "agent 的贪心、渐进式搜索偏好很大程度由工作流造成，尤其是 commit-or-discard 规则与 greedy hill-climbing 的同构性，而非完全由模型能力限制决定。",
+    "研究表明 autonomous research 的成败不仅取决于模型本身，也强依赖工作流设计；作者建议引入多样化搜索、显式 forks、预算化高风险假设和 regime-aware re-validation。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.65,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.52,
+    "lasting_value": 0.6,
+    "llm_avg": 0.5800000000000001,
+    "comment": "This case study offers useful evidence about long-horizon agent workflow effects but lacks a reusable evaluation or improvement harness.",
+    "comment_zh": "该案例研究提供了关于长程智能体工作流影响的有用证据，但缺少可复用的评测或改进框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5800000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01995/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01995/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.986
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01995/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.965
+    }
+  ]
+}

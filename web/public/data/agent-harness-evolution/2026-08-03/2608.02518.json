@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2608.02518",
+  "title": "Magnet: Detecting Cross-Session AI Misuse Through Capability Accumulation",
+  "title_zh": "Magnet：通过能力累积检测跨会话 AI 滥用",
+  "authors": [
+    "Natalie Isak",
+    "Matthew Dressman"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T17:15:55Z",
+  "abs_url": "https://arxiv.org/abs/2608.02518v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02518",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The most capable AI deployments are not single models but ensembles of specialized agents that delegate and act in coordination. This architecture unlocks powerful new capabilities, and it also introduces risks that existing frameworks for monitoring, detection, and mitigation were not designed to address. Most state-of-the-art AI abuse detection literature focuses on single-turn or multi-turn (single-session) threat models. This leaves a critical gap: an attacker can decompose a harmful goal into innocuous-looking units and execute each in isolated agentic sessions. The agent is stateless between conversations, but the attacker is not. This asymmetry allows for cross-session trajectories that are effective at evading detection. Our contributions are twofold. First, we demonstrate cross-session goal decomposition as an evasion technique, showing it may elicit more harmful capability than equivalent single-session or multi-turn attacks. By capability we mean an artifact produced at one step of an objective, evidenced by what an interaction produced (model responses and tool-call results), and composable with capabilities accrued elsewhere into a harmful whole. Second, we propose Magnet: an efficient and robust detection approach that models relevant capabilities accrued over time and across agentic conversations, aggregated at a higher-level correlator (in this case, a user ID) rather than per-conversation state. The main challenge is assembling the evidence bundle Magnet reasons over. The incriminating artifacts may be needles scattered through a haystack of benign sessions that are individually harmless, dangerous only once collected. Rather than searching the haystack straw-by-straw (i.e. per-session inspection), Magnet does what its name implies: it attracts the relevant needles out of the hay, across sessions and across time, into a compact evidence bundle a detector can act on.",
+  "abstract_zh": "本文指出，现代高能力 AI 部署往往由多个专用 agent 协同组成，而现有 AI 滥用检测多聚焦于单轮或单会话威胁模型，难以发现攻击者将有害目标拆解为多个表面无害任务、分散到不同 agent 会话中执行的跨会话规避行为。作者首先展示了 cross-session goal decomposition 作为一种有效规避技术，可能比等价的单会话或多轮攻击诱导出更多有害能力。随后提出 Magnet：一种在用户 ID 等更高层级相关器上聚合跨时间、跨会话能力证据的检测方法。Magnet 不逐会话穷举检查，而是从大量良性会话中“吸出”与有害目标相关的关键产物，形成紧凑证据包供检测器判断。",
+  "key_points_zh": [
+    "提出跨会话目标拆解（cross-session goal decomposition）威胁模型：攻击者将有害目标拆成多个看似无害的子任务，在独立 agentic sessions 中完成，从而绕过单会话检测。",
+    "强调“能力”（capability）不是模型内部状态，而是交互中产生的可组合产物，如模型回复和 tool-call 结果，可跨会话累积成有害整体。",
+    "提出 Magnet，在用户 ID 等高层级 correlator 上聚合跨时间、跨会话证据，而不是仅依赖每个 conversation 的局部状态。",
+    "Magnet 的核心是从大量 benign sessions 中提取与潜在滥用相关的关键 artifacts，构建紧凑 evidence bundle，提高检测效率与鲁棒性。",
+    "论文指出当前 AI abuse detection 框架在多 agent、跨会话、能力累积场景下存在关键盲区，需要面向长期用户轨迹的监测机制。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.84,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.73,
+    "lasting_value": 0.78,
+    "llm_avg": 0.7859999999999999,
+    "comment": "Magnet is highly relevant to agent-platform governance because it detects harmful capability accumulation across otherwise benign agent sessions.",
+    "comment_zh": "Magnet 对智能体平台治理很有价值，因为它能检测跨会话累积的有害能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7859999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02518/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02518/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.881
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02518/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.951
+    }
+  ]
+}

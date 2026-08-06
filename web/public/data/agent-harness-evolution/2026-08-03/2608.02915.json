@@ -1,0 +1,92 @@
+{
+  "arxiv_id": "2608.02915",
+  "title": "LACE: Large Language Model Aided Multi-Agent Framework for Agile RISC-V Instruction Extension",
+  "title_zh": "LACE：由大语言模型辅助的多智能体框架，用于敏捷 RISC-V 指令扩展",
+  "authors": [
+    "Pingqing Zheng",
+    "Jiayin Qin",
+    "Fuqi Zhang",
+    "Zishen Wan",
+    "Shang Wu",
+    "Yu Cao",
+    "Caiwen Ding",
+    "Yang Katie Zhao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T22:07:06Z",
+  "abs_url": "https://arxiv.org/abs/2608.02915v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02915",
+  "links": {
+    "github": "https://github.com/UMN-ZhaoLab/LACE.",
+    "project_page": null
+  },
+  "abstract_en": "Domain-specific Instruction Set Architecture eXtensions (ISAX) are widely adopted in the RISC-V ecosystem to accelerate emerging workloads, but implementing and validating ISAXes across different cores remains slow and fragmented. Existing frameworks still require per-core interface adaptation, and differential testing often breaks once either the microarchitecture or the ISAX changes. We present LACE, an LLM-aided multi-agent workflow that translates natural-language ISAX intents into a compact two-level IR (operation-level and HDL task-level), performs retrieval-guided localized RTL edits over large repositories, and closes the loop with a compiler-agnostic riscv-formal checking flow (assuming RVFI availability or instrumentation). Across four embedded RISC-V cores, LACE raises pass@1 generation accuracy from near-zero to 72.8\\% within our evaluation setup, while improving code localization and reducing integration rework. The code of LACE is available at https://github.com/UMN-ZhaoLab/LACE.",
+  "abstract_zh": "面向特定领域的指令集架构扩展（ISAX）在 RISC-V 生态中被广泛用于加速新兴工作负载，但在不同处理器核上实现和验证 ISAX 仍然耗时且碎片化。现有框架通常需要针对每个核心进行接口适配，而当微架构或 ISAX 发生变化时，差分测试也容易失效。本文提出 LACE，一个由大语言模型辅助的多智能体工作流，可将自然语言描述的 ISAX 意图转化为紧凑的两级中间表示（operation-level 与 HDL task-level），在大型代码仓库中通过检索引导进行局部 RTL 修改，并结合编译器无关的 riscv-formal 检查流程闭环验证，前提是具备 RVFI 或可进行相应插桩。在四个嵌入式 RISC-V 核上的实验中，LACE 在其评测设置下将 pass@1 生成准确率从接近 0 提升至 72.8%，同时改善代码定位并减少集成返工。代码已开源于 https://github.com/UMN-ZhaoLab/LACE。",
+  "key_points_zh": [
+    "提出 LACE：一个 LLM-aided multi-agent workflow，用于从自然语言 ISAX 需求生成并集成 RISC-V 指令扩展。",
+    "设计两级 IR：operation-level IR 描述指令语义，HDL task-level IR 面向 RTL 修改任务，降低从需求到硬件实现的复杂度。",
+    "通过 retrieval-guided localized RTL edits 在大型硬件代码仓库中定位并修改相关 RTL，减少人工接口适配和集成返工。",
+    "采用 compiler-agnostic riscv-formal 验证闭环，在具备 RVFI 或插桩能力时，对生成的扩展实现进行形式化检查。",
+    "在四个嵌入式 RISC-V cores 上，LACE 将 pass@1 生成准确率提升至 72.8%，显著优于接近零的基线表现。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.63,
+    "problem_significance": 0.62,
+    "potential_impact": 0.6,
+    "paradigm_shift": 0.52,
+    "lasting_value": 0.57,
+    "llm_avg": 0.588,
+    "comment": "LACE is a credible domain-specific agent workflow with formal checking, but its value is concentrated in RISC-V RTL automation rather than general agent harness evolution.",
+    "comment_zh": "LACE 是一个结合形式化检查的可信领域代理流程，但价值主要集中在 RISC-V RTL 自动化而非通用代理基础设施演进。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.588,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/UMN-ZhaoLab/LACE.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02915/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02915/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02915/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02915/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.953
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2608.02683",
+  "title": "$S^3$: Improving Agent Safety through Multi-Stage Defense",
+  "title_zh": "$S^3$：通过多阶段防御提升 Agent 安全性",
+  "authors": [
+    "Zibo Xiao",
+    "Haoyu Wang",
+    "Jun Sun"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T02:06:06Z",
+  "abs_url": "https://arxiv.org/abs/2608.02683v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02683",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large Language Model (LLM) agents rely on multi-stage agentic workflows, with stages such as memory, planning, and tool execution, to accomplish complex tasks. However, risks may emerge at different stages, propagate across steps, and become difficult to detect and mitigate. Existing safety methods protect only isolated stages and are difficult to integrate, leaving agents without comprehensive protection throughout the workflow. To address these limitations, we introduce Stage-Specific Safety Skills, a unified abstraction that represents heterogeneous safety designs as reusable and composable components with explicit stage semantics. We further develop an automated transformation pipeline that converts existing safety designs into reusable safety skills and establish a community-driven safety skill library. Building on this abstraction, we propose $S^3$, a multi-stage defense framework in which a guard agent orchestrates stage-specific safety skills for risk detection and mitigation throughout the agentic workflow. We also construct the Multi-Stage Risk Benchmark (MSRB) to evaluate representative risks across workflow stages. Experimental results show that $S^3$ consistently outperforms representative state-of-the-art baselines in both safety effectiveness and utility preservation. These results demonstrate the potential of stage-specific safety skills as a scalable and composable foundation for building resilient and trustworthy agent systems.",
+  "abstract_zh": "LLM agents 通常依赖包含 memory、planning、tool execution 等环节的多阶段 agentic workflows 来完成复杂任务，但风险可能在不同阶段出现、跨步骤传播，并变得难以检测和缓解。现有安全方法多只保护孤立阶段，集成困难，难以为完整工作流提供全面防护。为此，论文提出 Stage-Specific Safety Skills：一种统一抽象，将异构安全设计表示为可复用、可组合且具有明确阶段语义的组件。作者进一步构建自动化转换流水线，将现有安全设计转化为可复用 safety skills，并建立社区驱动的 safety skill library。在此基础上，论文提出 $S^3$ 多阶段防御框架，由 guard agent 编排不同阶段的安全技能，在 agentic workflow 全程进行风险检测与缓解。论文还构建 Multi-Stage Risk Benchmark (MSRB)，用于评估跨工作流阶段的代表性风险。实验表明，$S^3$ 在安全有效性与任务效用保持方面均稳定优于代表性 state-of-the-art baselines，显示了 stage-specific safety skills 作为构建可靠、可信 Agent 系统的可扩展、可组合基础的潜力。",
+  "key_points_zh": [
+    "提出 Stage-Specific Safety Skills，将不同安全机制统一抽象为带有阶段语义的可复用、可组合组件，覆盖 memory、planning、tool execution 等工作流阶段。",
+    "设计自动化转换流水线，把已有安全设计转化为 safety skills，并构建社区驱动的 safety skill library，提升安全能力的复用与集成效率。",
+    "提出 $S^3$ 多阶段防御框架，由 guard agent 根据工作流阶段动态编排安全技能，实现跨阶段风险检测、缓解与传播控制。",
+    "构建 Multi-Stage Risk Benchmark (MSRB)，系统评估 Agent 工作流不同阶段中的代表性安全风险。",
+    "实验结果显示，$S^3$ 相比代表性 SOTA baselines 在安全效果和效用保持上均更优，说明多阶段、可组合防御对可信 Agent 系统具有实际价值。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.84,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.78,
+    "llm_avg": 0.788,
+    "comment": "S3 is a relevant agent-safety infrastructure paper with composable stage-specific defenses and a workflow-stage risk benchmark.",
+    "comment_zh": "S3 是一篇相关的智能体安全基础设施论文，提出了可组合的阶段化防御和工作流阶段风险评测。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.6229475628685,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.788,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 26,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02683/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02683/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.827
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02683/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.976
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02683/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.309
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "arxiv_id": "2608.02110",
+  "title": "IACM-RL: Intent-Aware Context Management and Reinforcement Learning for Complex Tool Invocation under Dynamic Intent Fluctuations",
+  "title_zh": "IACM-RL：面向动态意图波动下复杂工具调用的意图感知上下文管理与强化学习",
+  "authors": [
+    "Dingwei Zhu",
+    "Jiahan Li",
+    "Chengjun Pan",
+    "Yunxian Yang",
+    "Yunbin Zhao",
+    "Yunke Zhang",
+    "Zhonghang Lu",
+    "Zhuohui Sheng",
+    "Chenhao Huang",
+    "Jiahang Lin",
+    "Yajie Yang",
+    "Junlin Shang",
+    "Shichun Liu",
+    "Yuhui Wang",
+    "Honglin Guo",
+    "Junjie Ye",
+    "Xin Guo",
+    "Jiazheng Zhang",
+    "Ming Zhang",
+    "Shihan Dou",
+    "Zhiheng Xi",
+    "Tao Gui",
+    "Qi Zhang",
+    "Xipeng Qiu",
+    "Xuanjing Huang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T12:09:50Z",
+  "abs_url": "https://arxiv.org/abs/2608.02110v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02110",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Executing long-horizon tool invocations in real-world environments is severely challenged by dynamic user intent noise. Existing methods attempt robustness via implicit history scanning or text compression, yet predominantly assume perfect instructions in simplistic scenarios. Inevitably, under fluctuating contexts, obsolete constraints dilute model attention, triggering catastrophic intent deviation and infinite API loops. To resolve this, we propose IACM-RL, a comprehensive framework for robust tool invocation. First, we introduce the DynamicIntent pipeline, synthesizing trajectories across 13 fine-grained fluctuation scenarios, paired with a five-dimensional diagnostic metric suite. Second, IACM-RL deploys a BeliefState-based Self-Generated Context Manager that proactively tracks shifting goals and isolates overwritten parameters using structural stale flags. To autonomously internalize this state-tracking capability, we optimize the policy using a hierarchical intent-driven reward alongside three auxiliary losses (action calibration, CM extraction, and state distillation). Experiments on DynamicIntent, BFCL-V3, and $\\mathrmτ^2$-Bench demonstrate that IACM-RL significantly outperforms baselines, reducing infinite loops and stale context errors while enhancing out-of-domain generalization.",
+  "abstract_zh": "本文针对真实环境中长程工具调用面临的动态用户意图噪声问题，提出 IACM-RL 框架。现有方法多依赖隐式历史扫描或文本压缩来提升鲁棒性，但通常假设指令完美且场景简单；在上下文频繁变化时，过时约束会分散模型注意力，导致严重意图偏移甚至无限 API 循环。为此，作者首先构建 DynamicIntent pipeline，合成覆盖 13 类细粒度意图波动场景的轨迹，并配套五维诊断指标。随后，IACM-RL 引入基于 BeliefState 的 Self-Generated Context Manager，主动追踪用户目标变化，并通过结构化 stale flags 隔离被覆盖的参数。训练方面，框架使用层级化意图驱动奖励，并结合 action calibration、CM extraction、state distillation 三个辅助损失，使策略模型内化状态追踪能力。实验表明，IACM-RL 在 DynamicIntent、BFCL-V3 和 τ²-Bench 上显著优于基线，减少无限循环与陈旧上下文错误，并提升域外泛化能力。",
+  "key_points_zh": [
+    "提出 DynamicIntent pipeline，合成 13 类细粒度动态意图波动场景，并设计五维诊断指标，用于评估工具调用中的意图偏移、陈旧上下文和循环等问题。",
+    "IACM-RL 使用基于 BeliefState 的 Self-Generated Context Manager，显式追踪用户目标变化，并通过结构化 stale flags 标记被新意图覆盖的旧参数。",
+    "训练框架结合层级化意图驱动奖励与三个辅助损失：action calibration、CM extraction 和 state distillation，以强化模型的状态维护与工具调用决策能力。",
+    "在 DynamicIntent、BFCL-V3 和 τ²-Bench 上，IACM-RL 相比基线显著降低无限 API 循环和 stale context errors，并提升复杂动态场景下的域外泛化。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.8,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.74,
+    "llm_avg": 0.756,
+    "comment": "IACM-RL is a relevant tool-use training and context-management framework grounded in dynamic-intent trajectories and rewards.",
+    "comment_zh": "IACM-RL 是一个相关性较强的工具调用训练与上下文管理框架，基于动态意图轨迹和奖励信号。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3313836013810483,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.756,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02110/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02110/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02110/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.985
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02110/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.977
+    }
+  ]
+}

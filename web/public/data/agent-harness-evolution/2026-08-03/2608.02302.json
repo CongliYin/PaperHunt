@@ -1,0 +1,67 @@
+{
+  "arxiv_id": "2608.02302",
+  "title": "Trajectories That Segment Themselves: Agent-Declared Boundaries as a Training Unit",
+  "title_zh": "自我分段的轨迹：将 Agent 声明的边界作为训练单元",
+  "authors": [
+    "Jingxi Wei"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T14:27:58Z",
+  "abs_url": "https://arxiv.org/abs/2608.02302v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02302",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-horizon coding-agent trajectories are poorly matched to the credit units available to train on: a single action has no stable value, an episode label merges productive exploration with abandoned directions, and a fixed window cuts where the logging mechanics fall. We introduce collection-time semantic self-segmentation, in which a declarative contract has the acting agent expose its own boundaries while the trajectory is generated. Instantiated with falsifiable causal hypotheses, successive adoptions expose variable-length semantic phases, and no milestone vocabulary, gold patch, environment replay, teacher logits, or retrospective segmenter places a boundary. Because the agent names its conjecture, a reviewer can negate it by name, which lets our protocol manufacture wrong-cause-then-correction transitions that recorded work rarely contains; one collection then yields four supervised targets, including audit supervision from exactly the failed regions an episode label discards. We then ask what survives deleting the declaration. Given the cut points but not the hypothesis, a model attributes action blocks to their governing hypothesis at over twice chance, beating equal-length blocks over the same trajectories (paired sign test $p = 0.0002$), surviving a lexical control and collapsing under label permutation. Asked instead to place boundaries, a code-blind annotator matches 24 of 40 where random placement matches 11.5, while a mechanical test-event rule beats chance at neither end of a strict-to-permissive sweep. The segments are therefore coherent and not cheaply reproducible. Downstream, DPO on 2,551 phase-boundary pairs changes no decision on 91 adversarial held-out items, while four of 60 change on matched-construction items, all wrong to right, where two controls change none: with 1,825 pairs from one generator, the variable to vary next is corpus diversity, not the boundary.",
+  "abstract_zh": "本文关注长程 coding-agent 轨迹中训练信用分配单元不匹配的问题：单步动作价值不稳定，整段 episode 标签会混合有效探索与被放弃方向，固定窗口又只反映日志切分机制。作者提出 collection-time semantic self-segmentation，即让执行中的 agent 通过声明式契约在生成轨迹时主动暴露语义边界。该方法以可证伪因果假设为核心，通过连续采纳假设形成可变长度语义阶段，不依赖里程碑词表、gold patch、环境回放、teacher logits 或事后分段器。由于 agent 会命名自己的假设，评审者可以按名称否定它，从而构造“错误原因—纠正”转换，并从一次采集中产生四类监督目标，包括来自失败区域的 audit supervision。实验显示，即使删除声明文本，仅给定切点，模型仍能以超过两倍随机水平将动作块归因到对应假设，并显著优于等长块；边界定位任务中，code-blind annotator 明显优于随机，而机械测试事件规则无法稳定超过随机。下游方面，用 2,551 个 phase-boundary pairs 做 DPO，在 91 个对抗 held-out 项上无决策变化，在 60 个匹配构造项中有 4 个由错变对，两个对照组无变化。作者认为下一步应优先扩大语料多样性，而不是质疑边界形式本身。",
+  "key_points_zh": [
+    "提出 collection-time semantic self-segmentation：让 coding agent 在执行过程中声明当前可证伪因果假设，并以假设采纳变化作为可变长度语义阶段边界。",
+    "该分段不依赖固定窗口、gold patch、环境回放、teacher logits 或事后 segmenter，避免把日志机制或整段 episode 标签误当训练信用单元。",
+    "因 agent 会命名假设，评审者可直接否定该假设，从而制造罕见的“wrong-cause-then-correction”训练样本，并从失败区域提取 audit supervision。",
+    "实验证明这些片段具有语义一致性：删除声明后，模型仍能显著高于随机地将动作块归因到对应假设；人工边界定位也远优于随机，机械测试事件规则则不可靠。",
+    "下游 DPO 在匹配构造集上出现少量由错到对的改进，但对抗集无变化；作者认为当前瓶颈更可能是 corpus diversity，而非 agent-declared boundary 本身。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.86,
+    "problem_significance": 0.82,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.8,
+    "llm_avg": 0.82,
+    "comment": "Agent-declared trajectory segmentation is a novel and useful training-data abstraction for credit assignment in long-horizon coding agents.",
+    "comment_zh": "智能体自声明轨迹分段是一种新颖且有用的训练数据抽象，有助于长程编码智能体的信用分配。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.82,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02302/fig1.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.986
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "arxiv_id": "2608.01651",
+  "title": "Bole: Efficient Tree Speculation for Hybrid-Attention Language Models",
+  "title_zh": "Bole：面向 Hybrid-Attention 语言模型的高效树状推测解码",
+  "authors": [
+    "Li Wang",
+    "Yi Su",
+    "Xiabao Wu",
+    "Chiran You",
+    "Yongchao Liu",
+    "Zhan Qiu",
+    "Juelu Zhang",
+    "Jiajun Zheng",
+    "Fangxin Liu",
+    "Jie Zhang",
+    "Chen Tian",
+    "Chengying Huan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T03:43:14Z",
+  "abs_url": "https://arxiv.org/abs/2608.01651v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01651",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Hybrid-attention large language models combine full attention with recurrent linear attention to reduce long-context inference costs, yet their autoregressive decoding remains memory-bound. Tree speculative decoding offers an attractive acceleration path, but existing tree-speculation systems are designed around the key--value caches of full-attention models. On hybrid models, they traverse recurrent layers branch by branch and materialize a full state for every proposal node, causing verification latency and transient memory to scale poorly with tree and batch sizes. We present Bole, a kernel--runtime co-design that enables efficient tree speculation for hybrid-attention LLMs. Bole transforms the linear-attention recurrence into a tree-structured closed form and realizes it with a resource-efficient GPU kernel, verifying all proposal nodes in parallel and accelerating linear-attention tree verification by 3.4--7.7$\\times$. It losslessly encodes speculative state updates as token-level factors and reconstructs only the state selected after sampling, reducing transient state memory by 82--99$\\times$ and freeing GPU capacity for KV caches. Its integration into SGLang, a widely deployed production LLM serving engine, couples efficient state management with a batch-wide verification budget calibrated to the complete hybrid forward. Across four models, two GPU platforms, and diverse datasets, Bole delivers up to $4.72\\times$ the offline decode throughput of autoregressive decoding and up to $2.03\\times$ that of the strongest tree-speculative baseline. Under online agent workloads, it reduces TTFT and TPOT by up to $67.6%$ and $49.9%$, respectively, over the strongest tree-speculative baseline.",
+  "abstract_zh": "Hybrid-attention 大语言模型通过结合 full attention 与 recurrent linear attention 来降低长上下文推理成本，但其自回归解码仍受内存带宽限制。树状推测解码是有潜力的加速路径，但现有系统主要围绕 full-attention 模型的 KV cache 设计；在 hybrid 模型上，它们需要按分支遍历 recurrent layers，并为每个 proposal node 实体化完整状态，导致验证延迟与瞬时内存随树规模和 batch size 扩展很差。本文提出 Bole，一种 kernel--runtime 协同设计，用于在 hybrid-attention LLM 上实现高效树状推测解码。Bole 将 linear-attention recurrence 转换为树结构闭式形式，并通过资源高效的 GPU kernel 并行验证所有 proposal nodes，使 linear-attention 树验证加速 3.4–7.7 倍。它还将推测状态更新无损编码为 token-level factors，仅在采样后重建被选中路径的状态，将瞬时状态内存降低 82–99 倍，从而为 KV caches 释放 GPU 容量。Bole 集成进生产级 LLM serving engine SGLang，并结合高效状态管理与面向完整 hybrid forward 的 batch-wide verification budget。实验覆盖 4 个模型、2 类 GPU 平台和多种数据集，Bole 相比自回归解码最高实现 4.72 倍离线解码吞吐提升，相比最强树状推测基线最高提升 2.03 倍；在在线 agent workloads 中，相比最强基线，TTFT 和 TPOT 分别最高降低 67.6% 与 49.9%。",
+  "key_points_zh": [
+    "针对 Hybrid-attention LLM 的树状推测解码瓶颈，Bole 避免按分支遍历 recurrent layers 和为每个 proposal node 存储完整状态。",
+    "将 linear-attention recurrence 改写为树结构闭式形式，并实现专用 GPU kernel，可并行验证所有 proposal nodes，带来 3.4–7.7 倍 linear-attention 树验证加速。",
+    "通过 token-level factors 无损编码推测状态更新，只重建采样后被选中的状态，使瞬时状态内存降低 82–99 倍。",
+    "Bole 已集成到 SGLang，结合状态管理与 batch-wide verification budget，使其适配生产级 LLM serving 场景。",
+    "在多模型、多 GPU 和多数据集评测中，Bole 相比自回归解码最高提升 4.72 倍离线吞吐；在线 agent workloads 中显著降低 TTFT 与 TPOT。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.46,
+    "problem_significance": 0.42,
+    "potential_impact": 0.48,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.44,
+    "llm_avg": 0.43,
+    "comment": "Bole is strong LLM serving optimization with some agent-workload relevance, but it is mainly inference-runtime acceleration rather than agent harness evolution.",
+    "comment_zh": "Bole 是较强的 LLM 服务优化并对代理负载有一定意义，但主要属于推理运行时加速而非代理框架演进。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3233158463485474,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.43,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01651/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01651/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01651/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01651/fig4.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.952
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "arxiv_id": "2608.02843",
+  "title": "MutMem: Cryptographically Authorized Mutation in Persistent Agent Memory",
+  "title_zh": "MutMem：持久化智能体记忆中的密码学授权变更",
+  "authors": [
+    "Walid Saidi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T19:58:37Z",
+  "abs_url": "https://arxiv.org/abs/2608.02843v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02843",
+  "links": {
+    "github": "https://github.com/wallidsaydi-creator/HOM-AIMOS.",
+    "project_page": null
+  },
+  "abstract_en": "Persistent agent memory must adapt as later outcomes change earlier evidence, yet mutable retrieval weights create an attribution problem: reviewers must distinguish authorized adaptation from database tampering. We present MutMem, an authorized-mutation protocol in HOM-AIMOS, a persistent agent-memory engine. MutMem retains memory content, records signed positive and negative outcome evidence without age-based expiry, and commits each nontrivial weight change as a housekeeper-authorized transition. Each transition binds a terminal provenance node, signer epoch, quantized old and new weights, a no-fork predecessor, and two domain-separated SHA-256 commitments. Ed25519 verification runs in both the database writer and a portable verifier. Content classified as poison-likely is retained with signed, revisable labels used by recall as trust evidence. We evaluate utility, mutation integrity, and poisoning adaptation. HOM-AIMOS answers 459/500 LongMemEval questions correctly under LLM judgment (91.8%). On LoCoMo, it obtains 74.12% judged accuracy and, under a separate upstream-compatible protocol, 58.20 token F1. A native suite passes all declared authorization, topology, tamper, signer-epoch, and post-mutation-recall cases; median signed-transition latency is 4.865 ms. In a declared N=100 PoisonedRAG adaptation, no injected poison appears in attacked top-5 disclosures (0/100; 95% Wilson upper bound 3.70%), while induced target-answer attack success among 98 clean-negative targets is 1/98 (1.02%). A preregistered four-arm ablation attributes the retrieval reduction to signed stored labels: the retriever selects poison for 94/100 targets when epistemic policy is bypassed and 0/100 when labels are restored. MutMem provides evidence of integrity, authorization, traceability, and historical continuity; it does not establish content truth.",
+  "abstract_zh": "持久化智能体记忆需要随着后续结果对早期证据的修正而动态调整，但可变的检索权重会带来归因问题：审查者必须区分“授权适配”和“数据库篡改”。本文提出 MutMem，这是 HOM-AIMOS 持久化智能体记忆引擎中的一种授权变更协议。MutMem 保留原始记忆内容，记录带签名的正向与负向结果证据，且不依赖基于时间的过期机制；每次非平凡权重变化都会被提交为由 housekeeper 授权的状态转移。每个转移绑定终端 provenance node、signer epoch、量化的新旧权重、无分叉前驱，以及两个域分离的 SHA-256 承诺。Ed25519 验证同时在数据库写入器和可移植验证器中执行。被判定为 poison-likely 的内容不会被删除，而是保留为带签名、可修订的标签，并作为召回时的信任证据。实验显示，HOM-AIMOS 在 LongMemEval 上由 LLM 评判正确回答 459/500 个问题，准确率 91.8%；在 LoCoMo 上达到 74.12% judged accuracy，并在单独的上游兼容协议下达到 58.20 token F1。原生测试套件通过了所有声明的授权、拓扑、篡改、signer-epoch 和变更后召回测试；签名转移的中位延迟为 4.865 ms。在 N=100 的 PoisonedRAG 适配实验中，被攻击的 top-5 披露结果中没有注入毒素出现，比例为 0/100，95% Wilson 上界为 3.70%；在 98 个 clean-negative 目标中，诱导目标答案攻击成功率为 1/98，即 1.02%。预注册的四臂消融表明，检索风险下降主要来自带签名的存储标签：当绕过 epistemic policy 时，检索器在 94/100 个目标中选择毒素；恢复标签后则为 0/100。MutMem 提供了完整性、授权性、可追踪性和历史连续性的证据，但并不证明内容本身为真。",
+  "key_points_zh": [
+    "MutMem 解决持久化 agent memory 中可变检索权重的审计归因问题，将每次重要权重更新记录为 housekeeper 授权的密码学状态转移。",
+    "协议使用 Ed25519 签名、SHA-256 域分离承诺、signer epoch、无分叉前驱和 provenance node，确保变更具备可验证的授权、拓扑一致性和防篡改证据。",
+    "对疑似投毒内容，MutMem 不删除原始记忆，而是保留带签名且可修订的 poison-likely 标签，使召回阶段能利用信任证据进行适配。",
+    "实验中 HOM-AIMOS 在 LongMemEval 达到 91.8% LLM judged accuracy，在 LoCoMo 达到 74.12% judged accuracy；签名转移中位延迟仅 4.865 ms。",
+    "PoisonedRAG 实验显示，恢复签名标签后攻击 top-5 中毒内容出现率从高风险条件下的 94/100 降至 0/100，说明检索鲁棒性主要来自可验证标签机制。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.84,
+    "llm_avg": 0.82,
+    "comment": "MutMem is strong agent-runtime security work because it formalizes authorized mutable memory with provenance, tamper evidence, and poisoning adaptation.",
+    "comment_zh": "MutMem 是较强的代理运行时安全工作，因为它用授权、溯源和防篡改机制规范了可变持久记忆。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.82,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/wallidsaydi-creator/HOM-AIMOS.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

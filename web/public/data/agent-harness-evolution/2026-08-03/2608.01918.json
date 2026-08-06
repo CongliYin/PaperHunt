@@ -1,0 +1,96 @@
+{
+  "arxiv_id": "2608.01918",
+  "title": "HarnessCompass: Guiding Automatic Harness Evolution toward Generalizable and Effective Agent Harnesses",
+  "title_zh": "HarnessCompass：引导自动 Harness 演化，生成更具泛化性与有效性的 Agent Harness",
+  "authors": [
+    "Luan Zhang",
+    "Ruochen Zhou",
+    "Dandan Song",
+    "Zhengyu Chen",
+    "Yuhang Tian",
+    "Jun Yang",
+    "Huipeng Ma",
+    "Chenhao Li",
+    "Guangyuan Feng",
+    "Xudong Li",
+    "Yizhou Jin",
+    "Yan Xu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T08:51:50Z",
+  "abs_url": "https://arxiv.org/abs/2608.01918v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01918",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Harness design plays a critical role in agent performance by shaping how large language models (LLMs) perceive, reason over, and act within executable environments. Recent work has proposed automatic harness evolution, which iteratively improves the harness from agent--environment interactions. However, existing methods often overfit to the evolution tasks, rely exclusively on trajectory-derived signals, and optimize harness components jointly, causing interference across components. We propose HarnessCompass, a novel automatic harness evolution framework built around constrained evolution, proactive feedback, and component-wise optimization. HarnessCompass first enforces global constraints on evolution, restricting modifications to task-agnostic harness changes that generalize beyond the evolution tasks. It then augments trajectory-derived evidence with proactive first-person feedback from the agent about harness usage, yielding richer signals for evolution. Finally, it decouples the optimization of different harness components before consolidating them into a unified harness, reducing cross-component interference while preserving component synergy. On SWE-bench Verified with GPT-5.4, HarnessCompass improves Pass@1 from 54\\% to 66\\% in only 5 evolution iterations, outperforming AHE in both effectiveness and evolution efficiency. In addition, the evolved harness transfers effectively to held-out tasks and other models, demonstrating substantially stronger generalization than prior automatic harness evolution methods.",
+  "abstract_zh": "Harness 设计通过影响大语言模型（LLM）在可执行环境中的感知、推理与行动方式，对 Agent 性能起关键作用。近期工作提出自动 Harness 演化，即基于 Agent 与环境的交互迭代改进 Harness。然而，现有方法容易过拟合演化任务，过度依赖轨迹信号，并且联合优化多个 Harness 组件，导致组件间相互干扰。本文提出 HarnessCompass，一个新的自动 Harness 演化框架，核心包括约束式演化（constrained evolution）、主动反馈（proactive feedback）和组件级优化（component-wise optimization）。HarnessCompass 首先施加全局约束，将修改限制为任务无关、可泛化的 Harness 变化；随后结合轨迹证据与 Agent 关于 Harness 使用的一人称主动反馈，为演化提供更丰富信号；最后将不同 Harness 组件解耦优化，再整合为统一 Harness，以减少跨组件干扰并保留组件协同。在 SWE-bench Verified 上，结合 GPT-5.4，HarnessCompass 仅用 5 轮演化就将 Pass@1 从 54% 提升到 66%，在效果与演化效率上均优于 AHE。此外，演化后的 Harness 能有效迁移到留出任务和其他模型，显示出显著强于既有自动 Harness 演化方法的泛化能力。",
+  "key_points_zh": [
+    "提出 HarnessCompass，用于自动改进 Agent Harness，目标是提升 LLM Agent 在可执行环境中的任务表现与泛化能力。",
+    "通过全局约束限制演化方向，只允许任务无关的 Harness 修改，从而缓解对演化任务的过拟合。",
+    "引入 Agent 的一人称主动反馈，补充传统轨迹信号，为 Harness 演化提供更丰富、更直接的使用体验证据。",
+    "采用组件级解耦优化，再统一整合 Harness，减少不同组件联合优化时的相互干扰。",
+    "在 SWE-bench Verified 上使用 GPT-5.4，5 轮演化将 Pass@1 从 54% 提升到 66%，并在留出任务与其他模型上表现出更强迁移性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.9,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.88,
+    "lasting_value": 0.9,
+    "llm_avg": 0.9,
+    "comment": "A highly relevant agent-harness evolution paper with constrained, feedback-augmented, component-wise optimization aimed at generalizable runtime improvements.",
+    "comment_zh": "这是一篇高度相关的智能体 harness 演化论文，通过约束、主动反馈和组件级优化提升可泛化的运行时能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01918/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01918/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01918/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.532
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01918/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.961
+    }
+  ]
+}

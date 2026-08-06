@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2608.01738",
+  "title": "SPEAR: Selection-aware Personalized End-to-end Adaptive Rewriting and Retrieval for Community Search",
+  "title_zh": "SPEAR：面向社区搜索的选择感知个性化端到端自适应改写与检索",
+  "authors": [
+    "Wenbin Wu",
+    "Yuzhong Wu",
+    "Yufan Xu",
+    "Kuan Fang",
+    "Xing Xu",
+    "Cheng Ye",
+    "Xiaobin Hu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T06:03:58Z",
+  "abs_url": "https://arxiv.org/abs/2608.01738v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01738",
+  "links": {
+    "github": "https://github.com/mallocagi1-cell/spear",
+    "project_page": null
+  },
+  "abstract_en": "Query reformulation bridges user intent and retrieval in e-commerce search, yet production systems optimize rewrite quality and retrieval effectiveness separately, leaving the two stages structurally misaligned. Path-based architectures unify them end-to-end but were designed for personalization, where relevance is not an explicit constraint-search additionally requires the rewrite to remain faithful to the user's stated query intent. Transplanted directly, these models learn a shortcut we term the generic-word dominance effect: they favor generic rewrites that score well on paths but drift from query intent. To address this, we propose SPEAR (Selection-aware Personalized End-to-end Adaptive Rewriting and Retrieval), which integrates three components that each target one failure mode: (1) a dual-embedding backbone with auxiliary loss and gradient isolation that shields recall-side semantics from being eroded by CTR-driven ranking signals; (2) a multiplicative gating aggregator that lets a rewrite score high only when both its confidence and item relevance are strong, eliminating the generic-word shortcut; (3) a Dynamic Rewrite Selector that jointly generates request-specific rewrite weights and user-query-conditioned scale and bias terms, allowing both rewrite preference and relevance calibration to adapt to each request. Offline evaluation on 100K held-out industrial search sessions shows that the proposed framework improves rewrite semantic similarity@10 by +18.2 and click recall@10 by +99.5 over the production baseline. In online A/B testing, SPEAR achieves +0.259 in query-view CTR and +0.733 in average reading depth, confirming that improved rewrite selection translates into stronger retrieval and deeper user engagement. The proposed SPEAR system has been fully deployed in Dewu's community search platform since 2025. Our code is available at https://github.com/mallocagi1-cell/spear.",
+  "abstract_zh": "本文关注电商社区搜索中的 Query Reformulation（查询改写）问题。传统生产系统通常将改写质量与检索效果分开优化，导致两阶段目标不一致；而已有 path-based 端到端架构主要面向个性化推荐，缺少对用户原始查询意图的显式约束，直接迁移到搜索场景会产生作者称为 generic-word dominance effect 的捷径：模型偏好泛化词改写，虽然路径得分高，但容易偏离查询意图。为此，论文提出 SPEAR（Selection-aware Personalized End-to-end Adaptive Rewriting and Retrieval），通过三部分解决关键失效模式：双 embedding 主干结合辅助损失与梯度隔离，避免召回语义被 CTR 排序信号侵蚀；乘法门控聚合器要求改写置信度与 item 相关性同时较强，从而抑制泛化词捷径；Dynamic Rewrite Selector 根据每次请求生成改写权重，并结合用户-查询条件化的 scale 与 bias，实现改写偏好和相关性校准的动态自适应。在 10 万条工业搜索会话离线评测中，SPEAR 相比生产基线将 rewrite semantic similarity@10 提升 18.2，click recall@10 提升 99.5；在线 A/B 测试中，query-view CTR 提升 0.259，平均阅读深度提升 0.733。系统已于 2025 年在 Dewu 社区搜索平台全量部署。",
+  "key_points_zh": [
+    "指出社区搜索中直接使用 path-based 个性化架构会出现 generic-word dominance effect：模型倾向选择泛化改写词，提升路径得分却偏离用户原始查询意图。",
+    "提出 SPEAR，将查询改写选择与检索端到端联合建模，同时保持对用户显式查询意图的约束，解决生产系统中改写与检索目标割裂的问题。",
+    "设计双 embedding 主干、辅助损失与梯度隔离，保护召回侧语义表示，避免其被 CTR 驱动的排序信号过度改写。",
+    "引入乘法门控聚合器，使候选改写只有在改写置信度和 item 相关性都高时才能获得高分，从机制上削弱泛化词捷径。",
+    "Dynamic Rewrite Selector 针对每次请求动态生成改写权重及用户-查询条件化校准参数；离线和在线实验均显示其显著提升语义一致性、点击召回、CTR 与阅读深度。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.88,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8020000000000002,
+    "comment": "A strong production-grounded e-commerce search paper with clear gains in personalized query rewriting and retrieval alignment.",
+    "comment_zh": "这是一篇扎根生产环境的电商搜索论文，在个性化查询改写与检索对齐方面有明确收益。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.37528413502487346,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8020000000000002,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/mallocagi1-cell/spear",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01738/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01738/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.949
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01738/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01738/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.966
+    }
+  ]
+}

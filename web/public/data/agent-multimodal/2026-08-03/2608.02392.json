@@ -1,0 +1,94 @@
+{
+  "arxiv_id": "2608.02392",
+  "title": "GROVE: Growing and Reasoning over Temporally Stratified Memory from Streaming Video Experience",
+  "title_zh": "GROVE：从流式视频经验中生长并推理时序分层记忆",
+  "authors": [
+    "Sitong Gong",
+    "Caixin Kang",
+    "Tianyu Yan",
+    "Guo Chen",
+    "Bo Zheng",
+    "Kaipeng Zhang",
+    "Yunzhi Zhuge",
+    "Xiang Ruan",
+    "Huchuan Lu",
+    "Yifei Huang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T15:35:28Z",
+  "abs_url": "https://arxiv.org/abs/2608.02392v2",
+  "pdf_url": "https://arxiv.org/pdf/2608.02392",
+  "links": {
+    "github": "https://github.com/SitongGong/GROVE.",
+    "project_page": null
+  },
+  "abstract_en": "A wearable assistant should both answer questions about its visual history and recognize when that history is useful to the present situation. Existing video-memory systems primarily support question-conditioned recall, whereas proactive assistants typically use separate memory and control mechanisms. We introduce GROVE, a training-free framework that supports both behaviors with one memory grown causally from a continuous video stream. GROVE retains fine-grained perceptual evidence and incrementally consolidates it into time-stamped moments, coherent episodes, and recurring cross-day patterns. Each stratum is paired with a scale-native retrieval skill for locating an observation, replaying an activity, or traversing long-range regularities. Reactive QA and proactive assistance share this memory and access interface, differing in whether retrieval is initiated by a user query or the current situation. Across multiple benchmarks including the challenging MM-lifelong and EgoServe, GROVE achieves the best results among the compared methods. Controlled ablations show that the temporal strata and their access skills are complementary, with patterns providing the largest benefit when evidence spans multiple days. Code will be available at https://github.com/SitongGong/GROVE.",
+  "abstract_zh": "可穿戴助手既需要回答关于自身视觉历史的问题，也需要判断这些历史经验何时对当前情境有用。现有视频记忆系统多侧重于由问题驱动的回忆，而主动式助手通常依赖相互独立的记忆与控制机制。本文提出 GROVE，一个无需训练的框架，可基于连续视频流因果式构建统一记忆，并同时支持反应式问答与主动辅助。GROVE 保留细粒度感知证据，并逐步整合为带时间戳的 moments、连贯的 episodes，以及跨天重复出现的 patterns。每一层记忆都配套尺度原生的检索能力，用于定位观察、回放活动或遍历长期规律。反应式 QA 与主动辅助共享同一记忆和访问接口，区别仅在于检索由用户问题触发还是由当前情境触发。在 MM-lifelong、EgoServe 等多个基准上，GROVE 在对比方法中取得最佳结果。消融实验表明，时序分层与对应访问技能具有互补性，尤其当证据跨越多天时，patterns 带来最大收益。",
+  "key_points_zh": [
+    "提出 GROVE：一个 training-free 的流式视频记忆框架，从连续视频中因果式生长记忆，无需额外训练。",
+    "构建三层时序记忆：细粒度 moments、连贯 episodes、跨天 recurring patterns，同时保留感知证据与时间结构。",
+    "为不同记忆层设计 scale-native retrieval skills，分别支持定位具体观察、回放活动过程、挖掘长期规律。",
+    "反应式视频问答和主动式情境辅助共享同一套记忆与访问接口，统一了以往分离的记忆与控制机制。",
+    "在 MM-lifelong、EgoServe 等基准上优于对比方法；消融显示跨天证据场景下 patterns 的贡献最大。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8200000000000001,
+    "comment": "Strong streaming video-memory work for wearable assistants, with proactive retrieval and reusable temporally stratified memory likely to matter for realtime visual agents.",
+    "comment_zh": "这是一篇很强的流式视频记忆工作，面向可穿戴助手的主动检索和分层长期记忆对实时视觉智能体很有价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.8042537812213639,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8200000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/SitongGong/GROVE.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 14,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02392/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02392/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02392/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.978
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02392/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.983
+    }
+  ]
+}

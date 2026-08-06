@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2608.02287",
+  "title": "SKT: Skill-Use Training at Scale via Verified Synthetic Data Generation",
+  "title_zh": "SKT：通过可验证合成数据生成进行大规模技能使用训练",
+  "authors": [
+    "Zelin Tan",
+    "Yiqun Zhang",
+    "Hao Li",
+    "Zhiyao Cui",
+    "Hejia Geng",
+    "Shao Zhang",
+    "Hangfan Zhang",
+    "Yang Chen",
+    "Xiaosong Wang",
+    "Lilong Wang",
+    "Zhenfei Yin",
+    "Shuyue Hu",
+    "Chen Zhang",
+    "Lei Bai"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T14:18:00Z",
+  "abs_url": "https://arxiv.org/abs/2608.02287v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02287",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent skills have become an important mechanism for equipping language-model agents with reusable procedural knowledge. However, providing skills alone does not guarantee that current models can effectively identify, apply, and coordinate them. To improve skill-use capabilities, we introduce SKT, a verified data synthesis pipeline that constructs skill-grounded tasks and executable trajectories from large collections of agent skills. SKT selects suitable single-skill and multi-skill configurations, synthesizes tasks through rule-based and agent-based verification with feedback-guided repair, and retains only successful trajectories that substantially use every required skill. Using 2,000 public skills, SKT produces 4,000 task packages and 27,164 verified trajectories. Based on the same pipeline and a disjoint test pool, we further construct SkillEval, a held-out executable benchmark for evaluating skill use. Experiments across diverse models, benchmarks, and agent harnesses show that supervised fine-tuning on SKT-generated trajectories consistently improves skill-use performance. Verification ablations, cross-harness evaluation, and scaling experiments further demonstrate that these gains depend on high-quality supervision, extend beyond a single agent interface, and increase with broader skill coverage. Together, these results establish verified data synthesis as an effective and scalable approach for skill-use training.",
+  "abstract_zh": "Agent skills 已成为为语言模型智能体提供可复用过程性知识的重要机制。然而，仅提供技能并不意味着当前模型能够有效识别、应用并协调这些技能。为提升模型的技能使用能力，本文提出 SKT，一个可验证的数据合成流水线，可从大规模 agent skills 集合中构建基于技能的任务与可执行轨迹。SKT 会选择合适的单技能与多技能配置，通过规则验证和基于智能体的验证生成任务，并结合反馈引导修复；最终仅保留成功且充分使用所有必需技能的执行轨迹。基于 2,000 个公开技能，SKT 生成了 4,000 个任务包和 27,164 条验证轨迹。作者还使用同一流水线和不重叠的测试技能池构建了 SkillEval，一个用于评估技能使用能力的留出可执行基准。跨多种模型、基准和 agent harness 的实验表明，使用 SKT 生成轨迹进行监督微调能够稳定提升技能使用性能。验证消融、跨 harness 评估和规模化实验进一步说明，这些收益依赖高质量监督，可迁移到不同智能体接口，并随技能覆盖范围扩大而增强。整体而言，本文证明了可验证数据合成是进行技能使用训练的一种有效且可扩展的方法。",
+  "key_points_zh": [
+    "提出 SKT：面向 agent skills 的可验证数据合成流水线，自动构造单技能和多技能任务，并生成可执行轨迹。",
+    "核心机制包括技能配置选择、规则与智能体验证、反馈引导修复，以及只保留成功且充分使用所有目标技能的轨迹。",
+    "基于 2,000 个公开技能生成 4,000 个任务包和 27,164 条验证轨迹，并构建独立测试基准 SkillEval。",
+    "监督微调 SKT 轨迹可在不同模型、基准和 agent harness 上稳定提升技能使用能力。",
+    "消融与扩展实验表明，性能提升依赖高质量验证监督，并随技能覆盖规模扩大而增强。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.86,
+    "problem_significance": 0.88,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8720000000000001,
+    "comment": "SKT is highly relevant because it provides verified executable trajectories, a held-out skill benchmark, and cross-harness evidence for scalable agent skill-use training.",
+    "comment_zh": "SKT 价值很高，因为它提供了经过验证的可执行轨迹、技能评测集以及跨框架的代理技能使用训练证据。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.8539771624195638,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8720000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 28,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02287/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.937
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02287/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.96
+    }
+  ]
+}

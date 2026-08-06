@@ -1,0 +1,93 @@
+{
+  "arxiv_id": "2608.02500",
+  "title": "Requirement--Evidence Alignment for Compositional E-Commerce Queries",
+  "title_zh": "面向组合式电商查询的需求—证据对齐",
+  "authors": [
+    "Weihao Shen",
+    "Wei Chen",
+    "Fuwei Zhang",
+    "Meng Yuan",
+    "Yuqin Lan",
+    "Guojun Liu",
+    "Qingsong Hua",
+    "Wei Lin",
+    "Fuzhen Zhuang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T17:03:58Z",
+  "abs_url": "https://arxiv.org/abs/2608.02500v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02500",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Compositional e-commerce queries express multiple requirements that must hold jointly, yet existing rerankers collapse these constraints into aggregate relevance and often promote topical near misses over feasible products. In this paper, we introduce REAlign, a novel requirement-evidence-aligned reranking framework that explicitly connects typed query requirements with visible evidence. REAlign distinguishes satisfied, violated, and unsupported conditions, constructs requirement-targeted contrasts that expose failure modes, and optimizes duplicate-free partial rankings through Requirement-Aware Group-Relative Policy Optimization. Its list utility preserves relevance while incorporating requirement satisfaction, evidence support, material violations, and output validity. Experiments on two fixed-pool e-commerce benchmarks show consistent improvements over strong supervised and policy-optimization baselines under matched training budgets, with fewer violations among top-ranked candidates and larger gains at shallow ranks. Controlled ablations confirm the complementary value of requirement modeling, evidence grounding, and decomposed optimization.",
+  "abstract_zh": "本文关注组合式电商查询中的重排序问题：用户查询往往包含多个必须同时满足的需求，但现有 reranker 常将这些约束压缩为整体相关性评分，导致主题相近但不满足条件的商品被排在前列。论文提出 REAlign，一种需求—证据对齐的重排序框架，显式连接类型化查询需求与商品可见证据。REAlign 区分已满足、被违反和缺少证据支持的条件，构造面向具体需求的对比样本以暴露失败模式，并通过 Requirement-Aware Group-Relative Policy Optimization 优化无重复的部分排序。其列表效用函数在保持相关性的同时纳入需求满足度、证据支持、实质性违反和输出有效性。在两个固定候选池电商基准上的实验表明，REAlign 在相同训练预算下稳定优于强监督和策略优化基线，能减少 top-ranked 候选中的约束违反，并在浅层排序位置取得更大收益。消融实验进一步验证了需求建模、证据 grounding 和分解式优化的互补价值。",
+  "key_points_zh": [
+    "提出 REAlign，将组合式查询中的类型化需求与商品页面中的可见证据显式对齐，避免仅依赖整体相关性。",
+    "框架区分 satisfied、violated 和 unsupported 条件，能识别商品是否真正满足用户多重约束，而非只是主题相近。",
+    "通过 requirement-targeted contrasts 暴露不同需求上的失败模式，并使用 Requirement-Aware Group-Relative Policy Optimization 优化无重复部分排序。",
+    "列表效用同时考虑相关性、需求满足、证据支持、实质违反和输出有效性，使重排序目标更贴近电商可购买性。",
+    "在两个固定候选池电商 benchmark 上，REAlign 相比强监督与 policy-optimization baseline 稳定提升，尤其在浅层排名减少违反项、收益更明显。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.6,
+    "lasting_value": 0.85,
+    "llm_avg": 0.8099999999999999,
+    "comment": "A valuable e-commerce reranking paper that directly addresses compositional shopping constraints through explicit requirement-evidence alignment.",
+    "comment_zh": "这是一篇有价值的电商重排序论文，通过显式的需求—证据对齐解决组合式购物约束问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4204484602158279,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8099999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 11,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02500/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.942
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02500/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02500/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.986
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02500/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.956
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2608.01639",
+  "title": "Mutate to Bypass: Autonomous Endpoint Evasion via Knowledge-Driven Multi-Agent Orchestration",
+  "title_zh": "变异以绕过：基于知识驱动多智能体编排的自主端点规避",
+  "authors": [
+    "Weifeng Yuan",
+    "Wenbo Guo",
+    "Qingyun Du",
+    "Jun Chen",
+    "Feng Dong",
+    "Haoyu Wang",
+    "Yang Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T03:19:24Z",
+  "abs_url": "https://arxiv.org/abs/2608.01639v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01639",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Public reports and open-source resources expose many EDR evasion techniques, but it remains unclear whether commercial Endpoint Detection and Response (EDR) systems can withstand these documented attacks. Evaluating them requires turning fragmented security knowledge into working payloads and refining those payloads from opaque alerts, tasks that existing automation does not address. We present AutoBypass, a knowledge-grounded, closed-loop multi-agent framework for automated EDR resilience assessment. A Detection-Aware Knowledge Base structures threat intelligence, expert analyses, and open-source proofs of concept into evasion techniques and operational constraints. Agents use this knowledge to plan attacks, generate polymorphic code, and compile binaries, while a telemetry-driven reasoning engine diagnoses failures and feeds corrective evidence back into the strategy. Across seven commercial endpoint security platforms, AutoBypass bypassed every target, reaching 90% evasion against Windows Defender and 86.7% against Trend Micro AV. Ablations show that the knowledge base raises the success rates of 8B open-weight models from 27--53% to 43--83%, bringing them close to large proprietary models. These results demonstrate a systematic way to operationalize public security knowledge for continuous, automated assessment of EDR resilience.",
+  "abstract_zh": "该论文提出 AutoBypass，一个面向 EDR（Endpoint Detection and Response）韧性评估的知识增强闭环多智能体框架。作者指出，公开报告和开源资源中已有大量 EDR evasion 技术，但将碎片化安全知识转化为可运行 payload，并根据不透明告警持续改进，仍是现有自动化方法难以覆盖的问题。AutoBypass 通过 Detection-Aware Knowledge Base 组织威胁情报、专家分析和开源 PoC，将其结构化为规避技术与操作约束；多个 agent 据此规划攻击、生成多态代码并编译二进制文件；遥测驱动的推理引擎则诊断失败原因，并将纠正性证据反馈到策略中。在 7 个商业端点安全平台上的实验显示，AutoBypass 可绕过所有目标，在 Windows Defender 上达到 90% 规避率，在 Trend Micro AV 上达到 86.7%。消融实验表明，该知识库可将 8B 开源模型的成功率从 27–53% 提升至 43–83%，接近大型闭源模型水平。",
+  "key_points_zh": [
+    "提出 AutoBypass：一个知识驱动、闭环、多智能体框架，用于自动化评估商业 EDR 系统的韧性。",
+    "核心组件 Detection-Aware Knowledge Base 将公开威胁情报、专家分析和开源 PoC 结构化为可操作的规避技术与约束。",
+    "系统通过 agent 协同完成攻击规划、多态代码生成、二进制编译，并利用遥测反馈诊断失败、迭代修正策略。",
+    "在 7 个商业端点安全平台上，AutoBypass 绕过所有测试目标；对 Windows Defender 和 Trend Micro AV 分别达到 90% 与 86.7% 规避率。",
+    "消融结果显示，知识库显著增强 8B 开源模型能力，使其成功率接近大型专有模型，体现了公开安全知识自动操作化的风险与评估价值。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.62,
+    "problem_significance": 0.58,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.48,
+    "lasting_value": 0.45,
+    "llm_avg": 0.526,
+    "comment": "AutoBypass is an agentic closed-loop security assessment system, but its offensive EDR-evasion focus is only indirectly aligned with safe agent platform evolution.",
+    "comment_zh": "AutoBypass 是一个闭环代理化安全评估系统，但其 EDR 规避的攻击性重点与安全代理平台演进只间接相关。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3656142380421227,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.526,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 6,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01639/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01639/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01639/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01639/fig4.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.512
+    }
+  ]
+}

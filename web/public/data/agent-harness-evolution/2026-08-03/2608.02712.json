@@ -1,0 +1,93 @@
+{
+  "arxiv_id": "2608.02712",
+  "title": "Don't Regenerate, Debug: A Domain-Specific Agent for Repairing Near-Miss Hardware Operators",
+  "title_zh": "不要重生成，而要调试：面向近失硬件算子的领域专用修复 Agent",
+  "authors": [
+    "Yansong Sun",
+    "Shenxiu Wu",
+    "Siyuan Chen",
+    "Runlin Hou",
+    "Junhao Qiu",
+    "Junming Cao",
+    "Shudi Shao",
+    "Zhichao Lu",
+    "Qingfu Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T17:59:48Z",
+  "abs_url": "https://arxiv.org/abs/2608.02712v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02712",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Kernel generation for hardware accelerators such as GPUs and NPUs has become a proving ground for large language models (LLMs), and state-of-the-art systems raise correctness through pipelines that couple LLMs with agentic reinforcement learning and evolutionary search. Such pipelines generate, compile, and execute large numbers of candidate kernels, discarding most of them and forgoing the opportunity to distill failures into reusable knowledge. Many discarded candidates are near-miss operators that compile and run but fail numerical validation; each embodies genuine domain knowledge and a nontrivial investment in LLM inference, cross-compilation, and hardware execution. We argue for a paradigm shift: rather than regenerate, debug. Debugging is far more constrained than generating from scratch: the search space is small and feedback is dense. We present a domain-specific debug agent that addresses three core challenges in autonomous repair: mitigating knowledge scarcity through retrieved patterns and diagnostic instrumentation, ensuring integrity through anti-cheat detection and full-coverage evaluation, and controlling cost via convergence guards and bounded iteration. Debugging serves two complementary roles: it extends the capability frontier by recovering operators that repeated regeneration fails to produce, and it lowers cost per deliverable operator. Debug Pass@1 achieves 66.7% versus Regenerate Avg Pass@1's 25.9% and Regenerate Pass@3's 40.7%, while consuming 92.8% fewer tokens per success than three-trial regeneration. Component ablations show that the knowledge base drives recovery, while integrity gates reject 12.5-33.3% of the successes the workflow itself accepted.",
+  "abstract_zh": "本文关注 GPU、NPU 等硬件加速器的 kernel 生成问题。现有 LLM 系统通常结合 agentic reinforcement learning 与 evolutionary search，通过大量生成、编译、执行候选 kernel 来提升正确性，但会丢弃许多“近失”算子：它们能够编译和运行，却未通过数值验证。作者认为这些失败样本包含有价值的领域知识，也消耗了昂贵的 LLM 推理、交叉编译和硬件执行成本，因此提出范式转变：不要从头重生成，而应对近失算子进行调试。论文提出一个领域专用 debug agent，通过检索式修复模式与诊断插桩缓解知识稀缺，通过反作弊检测和全覆盖评估保证结果完整性，并用收敛保护和有界迭代控制成本。实验显示，Debug Pass@1 达到 66.7%，显著高于 Regenerate Avg Pass@1 的 25.9% 和 Regenerate Pass@3 的 40.7%；相比三次重生成，每个成功算子消耗的 token 减少 92.8%。消融结果表明知识库是修复成功的主要驱动因素，而完整性门控会拒绝工作流自身接受的 12.5% 到 33.3% 的“成功”结果。",
+  "key_points_zh": [
+    "提出“不要重生成，而要调试”的 kernel 修复范式，专门针对可编译运行但数值验证失败的 near-miss hardware operators。",
+    "设计领域专用 debug agent，结合 retrieved patterns、diagnostic instrumentation、anti-cheat detection、full-coverage evaluation 与 bounded iteration。",
+    "调试搜索空间比从头生成更小、反馈更密集，可回收被传统生成流程丢弃的候选 kernel，并将失败经验转化为可复用知识。",
+    "实验中 Debug Pass@1 达到 66.7%，优于 Regenerate Avg Pass@1 的 25.9% 和 Regenerate Pass@3 的 40.7%。",
+    "相较三次重生成，调试方案每个成功算子的 token 成本降低 92.8%；消融显示知识库贡献最大，完整性门控能过滤 12.5%–33.3% 的伪成功。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.74,
+    "problem_significance": 0.77,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.72,
+    "llm_avg": 0.7379999999999999,
+    "comment": "The debug-rather-than-regenerate workflow is a strong domain-specific agent harness with dense feedback, integrity gates, and cost control.",
+    "comment_zh": "“调试而非重生成”的流程是一个较强的领域智能体框架，结合了密集反馈、完整性门控和成本控制。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7379999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02712/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02712/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02712/fig3.webp",
+      "page": 2,
+      "kind": "table",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02712/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.97
+    }
+  ]
+}

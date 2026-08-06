@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2608.02336",
+  "title": "Lost in Permissions: Exploring the Microsoft 365 App Ecosystem",
+  "title_zh": "迷失在权限中：探索 Microsoft 365 应用生态系统",
+  "authors": [
+    "Vincenzo Longo",
+    "Alberto Verna",
+    "Nikhil Jha",
+    "Marco Mellia"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T14:54:23Z",
+  "abs_url": "https://arxiv.org/abs/2608.02336v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02336",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The Microsoft 365 (M365) ecosystem hosts thousands of third-party applications that integrate with enterprise tenants via fine-grained OAuth permissions, potentially granting access to sensitive organisational resources such as emails, files, calendars, chats, and user directories. Despite the security implications of these permission grants, the M365 ecosystem has not been systematically studied. We present the first privacy- and security-oriented measurement of M365 third-party applications. By combining public marketplace APIs with automated tenant-side deployment, we crawl over 8,000 applications. We find that only 1,069 of them expose both descriptions and permission sets, with significant inconsistencies in transparency across official distribution channels. Next, we leverage a topic-aware anomaly detection framework to assess whether requested permissions align with declared functionality. We cluster applications via Neural Topic Modelling and apply unsupervised anomaly detection within each topic to identify deviations from peer permission profiles. LLM-assisted analysis of the most anomalous cases and blind manual inspection reveal a correlation between anomalous permission profiles and the risk associated with the requested permissions. We find that many applications request overly broad tenant-wide scopes (e.g., directory-wide read/write access), violating least-privilege principles and increasing the organisational attack surface. Our pipeline provides tenant administrators with actionable insights by identifying anomalous applications and the permissions that most contribute to their anomalousness. Overall, our findings expose systemic opacity and structural immaturity in the M365 app ecosystem, where permission disclosure is inconsistent and over-privileged access is common.",
+  "abstract_zh": "本文对 Microsoft 365（M365）第三方应用生态进行了首个面向隐私与安全的系统性测量研究。M365 生态中存在数千个通过细粒度 OAuth 权限接入企业租户的第三方应用，可能访问邮件、文件、日历、聊天记录和用户目录等敏感组织资源。作者结合公开 marketplace APIs 与自动化租户侧部署，爬取了 8,000 多个应用，发现其中仅 1,069 个同时公开应用描述与权限集合，且不同官方分发渠道在透明度上存在显著不一致。为评估应用请求权限是否与其声明功能匹配，论文提出 topic-aware anomaly detection 框架：先使用 Neural Topic Modelling 对应用按主题聚类，再在各主题内执行无监督异常检测，以发现相较同类应用权限画像偏离明显的案例。通过 LLM-assisted analysis 与盲人工检查，作者发现异常权限画像与所请求权限的风险程度存在相关性。研究显示，许多应用请求过宽的租户级权限，例如目录级读写访问，违反最小权限原则并扩大组织攻击面。该分析流水线可帮助租户管理员定位异常应用及导致异常的关键权限。整体而言，论文揭示了 M365 应用生态在权限披露、治理成熟度和过度授权方面的系统性问题。",
+  "key_points_zh": [
+    "首次对 Microsoft 365 第三方应用生态进行隐私与安全视角的大规模测量，覆盖 8,000 多个应用。",
+    "仅 1,069 个应用同时公开描述与权限集合，显示官方分发渠道之间存在明显的权限披露不一致问题。",
+    "提出 topic-aware anomaly detection 框架，结合 Neural Topic Modelling 与主题内无监督异常检测，判断应用权限是否偏离同类功能需求。",
+    "LLM-assisted analysis 与盲人工检查表明，权限画像越异常，通常对应更高风险的权限请求。",
+    "大量应用请求过宽的租户级权限，如 directory-wide read/write access，违背 least-privilege 原则并扩大企业攻击面。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.44,
+    "problem_significance": 0.58,
+    "potential_impact": 0.52,
+    "paradigm_shift": 0.34,
+    "lasting_value": 0.5,
+    "llm_avg": 0.476,
+    "comment": "The permission-risk measurement is useful for enterprise app governance but only indirectly applies to AI agent runtimes.",
+    "comment_zh": "该权限风险测量对企业应用治理有用，但与 AI 智能体运行时的关系较为间接。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.476,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02336/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.818
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02336/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.573
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02336/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.94
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02336/fig4.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.869
+    }
+  ]
+}

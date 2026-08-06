@@ -1,0 +1,104 @@
+{
+  "arxiv_id": "2608.01652",
+  "title": "SyncPlan: Long-Horizon LLM Coordination with Explicit Synchronization and Adaptive Correction",
+  "title_zh": "SyncPlan：通过显式同步与自适应纠错实现长程 LLM 协调",
+  "authors": [
+    "Shen You",
+    "Xiaoming Zhu",
+    "Weining Weng",
+    "Hefei Mei",
+    "Weixuan Wang",
+    "Zhongshen Li",
+    "Zeji LI",
+    "Ye-Wen Wang",
+    "Zijun Liao",
+    "Juchao Zhuo",
+    "Yang Wei",
+    "Fuhao Qiu",
+    "Siqin Li",
+    "Zhenjie Lian",
+    "Danei Gong",
+    "Junkai Ji",
+    "Xiangtao Li",
+    "Qiuzhen Lin",
+    "Liang Wang",
+    "Ka-Chun Wong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T03:43:57Z",
+  "abs_url": "https://arxiv.org/abs/2608.01652v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01652",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM-based multi-agent coordination faces a fundamental trade-off between efficiency and adaptivity in dynamic environments. Existing approaches typically rely on repeated LLM invocations or multi-round communication to adapt decisions during execution, introducing substantial latency and making coordination vulnerable to asynchronous progress and environmental changes. Conversely, one-shot planning reduces coordination overhead but produces open-loop plans that can quickly become stale or fail when actions depend on other agents and the environment. We introduce SyncPlan, a plan-execute-correct framework for long-horizon coordination through explicit synchronization and adaptive correction. Given the state and team-level task, a centralized LLM coordinator generates per-agent action chains in a single planning call. During execution, explicit wait primitives and deadlock detection enforce inter-agent and agent-environment dependencies, while a lightweight Plan Staleness Detector continuously assesses the remaining plan and triggers replanning when environmental changes invalidate its assumptions. We further optimize the coordinator through SFT and planning-oriented RL with dense task progress and outcome-level execution feedback. Experiments on the public Overcooked benchmark and the complex Honor of Kings environment show that SyncPlan achieves state-of-the-art task success rates while using less than 0.05% of the wall-clock runtime compared with existing LLM-based coordinators. Code and datasets will be made publicly available.",
+  "abstract_zh": "本文关注动态环境中基于 LLM 的多智能体协调问题：现有方法若依赖反复调用 LLM 或多轮通信，虽能提升适应性，却会带来高延迟，并易受异步执行进度与环境变化影响；而一次性规划虽能降低协调开销，却容易生成过时的开环计划。为此，论文提出 SyncPlan，一个面向长程协调的“规划-执行-纠错”（plan-execute-correct）框架。给定环境状态与团队任务后，中心化 LLM 协调器仅通过一次规划调用生成各智能体的动作链；执行过程中，框架通过显式 wait primitives 与死锁检测机制处理智能体间、智能体与环境间的依赖关系，并利用轻量级 Plan Staleness Detector 持续评估剩余计划，在环境变化使计划假设失效时触发重规划。作者还通过 SFT 与面向规划的 RL 优化协调器，引入密集任务进度反馈和执行结果级反馈。在 Overcooked benchmark 与复杂的 Honor of Kings 环境中，SyncPlan 达到当前最优任务成功率，同时运行时开销低于现有 LLM 协调器墙钟时间的 0.05%。",
+  "key_points_zh": [
+    "提出 SyncPlan 框架，用单次中心化 LLM 规划生成多智能体长程动作链，兼顾低通信开销与可执行性。",
+    "通过显式 wait primitives 和死锁检测处理智能体间依赖、智能体-环境依赖，缓解异步进度导致的协调失败。",
+    "设计轻量级 Plan Staleness Detector，持续判断剩余计划是否因环境变化而失效，并在必要时触发重规划。",
+    "使用 SFT 和规划导向 RL 优化 LLM 协调器，结合密集任务进度反馈与 outcome-level 执行反馈提升规划质量。",
+    "在 Overcooked 和 Honor of Kings 环境中取得 state-of-the-art 成功率，同时墙钟运行时间不足现有 LLM-based coordinators 的 0.05%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.7,
+    "problem_significance": 0.72,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.63,
+    "llm_avg": 0.67,
+    "comment": "SyncPlan contributes useful execution synchronization, staleness detection, and feedback optimization for long-horizon coordination, but remains benchmark-specific.",
+    "comment_zh": "SyncPlan 为长程协作提供了有用的同步、计划失效检测和反馈优化，但仍较依赖特定评测环境。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.67,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01652/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.949
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01652/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.937
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01652/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.929
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01652/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.956
+    }
+  ]
+}

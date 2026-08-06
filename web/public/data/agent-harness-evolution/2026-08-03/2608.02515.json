@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.02515",
+  "title": "LiveMem: Maintaining Memory State Continuity in Long-Running LLM Inference",
+  "title_zh": "LiveMem：在长时运行 LLM 推理中维持记忆状态连续性",
+  "authors": [
+    "Zhichen Liu",
+    "Ruihan Sun",
+    "Hengjie Yang",
+    "Zipeng Wu",
+    "Zhaohan Chen",
+    "Xiaofan Zhang",
+    "Yang Xu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T17:12:05Z",
+  "abs_url": "https://arxiv.org/abs/2608.02515v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.02515",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-running assistants and agents consume interaction streams that eventually outgrow the context. Existing context retention, summarization, and retrieval preserve access to selected history, but do not provide a persistent state over the full lifecycle when working context changes. We formulate this missing inference capability as \\emph{state continuity under context turnover}: carrying computation forward through a fixed-capacity memory state whose lifetime is independent of the active context. We introduce an intrinsic memory method, \\textbf{LiveMem}, which augments a pretrained full-attention LLM with a memory state that preserves the historical information over the whole lifecycle while the main attention path retains a bounded KV window. Context turnover and memory state maintaining, memory-oriented post-training, and state-aware serving jointly make this memory state load bearing after its originating tokens are released. Our experiments show that LiveMem achieves leading overall performance among evaluated systems and other intrinsic memory methods. Experiments on LongMemEval show that LiveMem is able to answer the question based on the memory state, even when the supporting evidence has been removed from the current context, and evidence-distance analysis shows that useful information persists beyond the active window. LiveMem thus establishes state continuity as a distinct and complementary abstraction for continual LLM inference.",
+  "abstract_zh": "长时运行的助手与智能体会持续消费交互流，而这些历史最终会超出模型上下文窗口。现有的上下文保留、摘要与检索方法虽然能保存部分历史访问能力，但当工作上下文不断更替时，无法在完整生命周期内提供一个持久的推理状态。本文将这一缺失能力定义为“上下文周转下的状态连续性”（state continuity under context turnover）：通过固定容量的记忆状态，在活动上下文之外持续承载并传递计算。作者提出 intrinsic memory 方法 LiveMem，在预训练 full-attention LLM 上加入 memory state，用于在主注意力路径仅保留有界 KV window 的同时，保存整个生命周期中的历史信息。LiveMem 结合上下文周转与记忆状态维护、面向记忆的后训练（memory-oriented post-training）以及状态感知服务（state-aware serving），使得 memory state 在其来源 token 被释放后仍能承担有效推理。实验表明，LiveMem 在评测系统及其他 intrinsic memory 方法中取得领先整体表现；在 LongMemEval 上，即使支持证据已从当前上下文中移除，模型仍能基于 memory state 回答问题，证据距离分析也显示有用信息可持续存在于活动窗口之外。LiveMem 将状态连续性确立为持续 LLM 推理中一种独立且互补的抽象能力。",
+  "key_points_zh": [
+    "提出“上下文周转下的状态连续性”概念，强调长时推理中需要独立于当前上下文窗口的持久 memory state。",
+    "LiveMem 在 pretrained full-attention LLM 中加入 intrinsic memory，使主注意力仅维护有界 KV window，而历史信息由固定容量 memory state 延续。",
+    "方法包含上下文周转与记忆维护、memory-oriented post-training、state-aware serving，使被释放 token 的信息仍可影响后续推理。",
+    "在 LongMemEval 等实验中，LiveMem 即使在支持证据不在当前上下文内时仍能回答问题，且整体性能领先于评测系统和其他 intrinsic memory 方法。",
+    "该工作将 state continuity 定位为与检索、摘要、上下文扩展互补的持续 LLM 推理能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.68,
+    "problem_significance": 0.72,
+    "potential_impact": 0.66,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.68,
+    "llm_avg": 0.672,
+    "comment": "LiveMem introduces a meaningful state-continuity abstraction for long-running inference, though it is closer to model memory than agent harness infrastructure.",
+    "comment_zh": "LiveMem 提出了有意义的长时推理状态连续性抽象，但更偏模型记忆而非智能体框架基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.672,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02515/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02515/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}

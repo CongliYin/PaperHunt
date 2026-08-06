@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2608.01759",
+  "title": "Benign Alone, Harmful Together: Exploiting Experience Composition in Self-Evolving LLM Agents",
+  "title_zh": "单独无害，组合有害：利用自进化 LLM Agent 中的经验组合",
+  "authors": [
+    "Bingyu Yan",
+    "Xiaoming Zhang",
+    "Chaozhuo Li",
+    "Ziyi Zhou",
+    "Yirui Qi",
+    "Litian Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T06:28:21Z",
+  "abs_url": "https://arxiv.org/abs/2608.01759v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01759",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Self-evolving large language model agents improve their capabilities by distilling interaction trajectories into persistent experiences. Yet this mechanism introduces a new safety risk: experiences that are benign in isolation may jointly weaken an agent's safety boundary when accumulated and reused across sessions. Existing memory attacks typically require direct memory access or induce explicitly malicious records, limiting their stealthiness and applicability. We propose EvoBreak, an experience-conditioned sequential attack that operates through individually benign attack-stage tasks and induced experiences. EvoBreak repeatedly observes the experiences distilled by the victim, identifies uncovered target-relevant requirements, and adaptively acquires complementary experiences before reformulating the final query to activate them jointly. To support training, we introduce BreakGym, a structure-first synthesis pipeline that generates decomposable safety-sensitive targets with diverse dependency structures. EvoBreak is optimized using rejection-sampling supervised fine-tuning and Hint-guided GRPO. Experiments across self-evolving frameworks, victim backbones, pre-evolution domains, and safety benchmarks demonstrate that EvoBreak consistently outperforms existing attacks while maintaining high benignness. These results reveal benign experience composition as a persistent attack surface in self-evolving agents.",
+  "abstract_zh": "自进化大语言模型 Agent 会将交互轨迹蒸馏为可持久复用的经验，从而持续提升能力。但论文指出，这一机制带来新的安全风险：一些单独看似良性的经验，在跨会话累积并联合调用时，可能削弱 Agent 的安全边界。现有记忆攻击通常需要直接访问记忆，或诱导写入明显恶意的记录，因此隐蔽性和适用性有限。作者提出 EvoBreak，一种以经验为条件的序列攻击方法：它通过一系列单独良性的阶段性任务诱导目标 Agent 生成经验，持续观察受害者蒸馏出的经验，识别尚未覆盖的目标相关需求，并自适应获取互补经验，最后重写最终查询以联合激活这些经验。为支持训练，作者构建 BreakGym，这是一个结构优先的合成流水线，用于生成可分解的安全敏感目标及多样依赖结构。EvoBreak 采用 rejection-sampling supervised fine-tuning 与 Hint-guided GRPO 进行优化。实验覆盖不同自进化框架、受害模型骨干、预进化领域和安全基准，结果显示 EvoBreak 在保持高良性表象的同时，稳定优于现有攻击方法，揭示了良性经验组合是自进化 Agent 的持久攻击面。",
+  "key_points_zh": [
+    "提出新的安全风险：自进化 LLM Agent 中单条经验看似无害，但多条经验被累积、复用并联合激活后，可能导致越狱或安全边界退化。",
+    "提出 EvoBreak：一种 experience-conditioned sequential attack，通过多轮良性阶段任务诱导受害者写入互补经验，并在最终查询中组合利用这些经验。",
+    "构建 BreakGym：结构优先的合成训练流水线，可生成可分解的安全敏感目标和多样化依赖结构，用于训练和评估组合型攻击。",
+    "训练方法结合 rejection-sampling supervised fine-tuning 与 Hint-guided GRPO，使攻击器能更有效识别缺失需求并规划后续经验获取。",
+    "在多个自进化框架、victim backbones、预进化领域和安全 benchmark 上，EvoBreak 较现有攻击更有效，同时保持较高 benignness，说明该攻击面具有隐蔽性和持久性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.84,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.73,
+    "lasting_value": 0.77,
+    "llm_avg": 0.776,
+    "comment": "EvoBreak identifies an important persistent-memory attack surface in self-evolving agents and provides a useful synthesis and training environment for studying it.",
+    "comment_zh": "EvoBreak 揭示了自演化代理持久记忆中的重要攻击面，并提供了有用的合成与训练环境来研究该问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.776,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01759/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01759/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01759/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.946
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01759/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

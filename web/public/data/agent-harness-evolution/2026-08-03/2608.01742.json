@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2608.01742",
+  "title": "MemSIF: From Structured Interactions to Dual-Track Fact Memory for LLM Agents",
+  "title_zh": "MemSIF：从结构化交互到面向 LLM Agent 的双轨事实记忆",
+  "authors": [
+    "YuFei Luo",
+    "Xiucheng Xu",
+    "Zhen Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T06:09:57Z",
+  "abs_url": "https://arxiv.org/abs/2608.01742v2",
+  "pdf_url": "https://arxiv.org/pdf/2608.01742",
+  "links": {
+    "github": "https://github.com/luoyufeihaha/MemSIF.",
+    "project_page": null
+  },
+  "abstract_en": "Long-term memory is critical for LLM agents operating over long-horizon interactions. However, several persistent limitations of existing memory systems can be traced to two recurring misalignment patterns in long-term interaction settings: Temporal-Structural Misalignment (TSM) and Delayed Utility Manifestation (DUM). TSM arises when temporal proximity does not reliably align with topical or event-level relatedness, whereas DUM arises when write-time salience does not reliably predict future query utility. To mitigate these misalignment patterns, we propose MemSIF (Memory with Structured Interactions and Facts), a structured interaction-to-fact memory framework. Structured Interaction Memory organizes raw interactions into Topical Segments that preserve local topical coherence and Event Trajectories that maintain cross-time event continuity. Dual-Track Fact Memory uses two complementary tracks: CoreFact memory consolidates stable, schema-guided information at write time, whereas ActiveFact memory forms facts on demand and promotes those supported by multiple historical sources and recurring query demand for reuse. Experiments on LoCoMo and LongMemEval-S across five backbone LLMs show that MemSIF achieves the highest Total ACC in all settings, outperforming the strongest baseline by 2.29%-8.79% on LoCoMo and 2.87%-6.15% on LongMemEval-S. These results support the effectiveness of combining Structured Interaction Memory with Dual-Track Fact Memory to mitigate TSM and DUM. Code is available at https://github.com/luoyufeihaha/MemSIF.",
+  "abstract_zh": "长期记忆对处理长程交互的 LLM agents 至关重要。现有记忆系统的局限常源于两类错配：Temporal-Structural Misalignment（TSM），即时间接近不等于主题或事件相关；Delayed Utility Manifestation（DUM），即写入时看似重要的信息未必对未来查询有用。为此，论文提出 MemSIF（Memory with Structured Interactions and Facts），一个从结构化交互到事实记忆的框架。其 Structured Interaction Memory 将原始交互组织为保持局部主题一致性的 Topical Segments，以及维持跨时间事件连续性的 Event Trajectories。其 Dual-Track Fact Memory 包含两条互补路径：CoreFact memory 在写入时基于 schema 固化稳定信息；ActiveFact memory 则按需形成事实，并将由多历史来源支持、且被反复查询的信息提升为可复用事实。在 LoCoMo 和 LongMemEval-S 上，跨 5 个 backbone LLM 的实验显示，MemSIF 在所有设置中取得最高 Total ACC，相比最强基线在 LoCoMo 上提升 2.29%-8.79%，在 LongMemEval-S 上提升 2.87%-6.15%。",
+  "key_points_zh": [
+    "论文指出长期交互记忆中的两类核心问题：TSM 使时间邻近与语义/事件相关性错位，DUM 使写入时显著性难以预测未来查询价值。",
+    "MemSIF 用 Structured Interaction Memory 将原始对话拆分为 Topical Segments 和 Event Trajectories，分别建模局部主题连贯性与跨时间事件连续性。",
+    "Dual-Track Fact Memory 结合 CoreFact 与 ActiveFact：前者写入时沉淀稳定 schema-guided facts，后者在查询时按需生成并根据多源支持和查询复现进行提升复用。",
+    "在 LoCoMo 和 LongMemEval-S 两个长记忆评测上，MemSIF 跨 5 个 backbone LLM 均取得最高 Total ACC，稳定优于最强基线。",
+    "结果表明，将结构化交互记忆与双轨事实记忆结合，能有效缓解长期记忆中的时间结构错配和延迟效用问题。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.58,
+    "potential_impact": 0.56,
+    "paradigm_shift": 0.46,
+    "lasting_value": 0.57,
+    "llm_avg": 0.5439999999999999,
+    "comment": "MemSIF is relevant as an agent memory-management framework, though its contribution is closer to structured long-term memory than full harness evolution.",
+    "comment_zh": "MemSIF 作为智能体记忆管理框架具有一定相关性，但更偏向结构化长期记忆而非完整的 harness 演化。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5439999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/luoyufeihaha/MemSIF.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01742/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01742/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01742/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.923
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01742/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.986
+    }
+  ]
+}

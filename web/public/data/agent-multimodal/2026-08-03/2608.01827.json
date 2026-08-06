@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2608.01827",
+  "title": "DeepVoyager-VL: Incentivizing Vision-in-the-Loop Search for Long-Horizon Multimodal Agents",
+  "title_zh": "DeepVoyager-VL：激励长程多模态智能体进行视觉在环搜索",
+  "authors": [
+    "Huanyao Zhang",
+    "Jiepeng Zhou",
+    "Runhao Zhao",
+    "Yanzhe Shan",
+    "Jiaoyang Chen",
+    "Bowen Zhou",
+    "Bo Li",
+    "Fang Wang",
+    "Jialong Wu",
+    "Zhengwei Tao",
+    "Lang Mei",
+    "Xiaohan Yu",
+    "Liyan Liu",
+    "Chong Chen",
+    "Wentao Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T07:36:48Z",
+  "abs_url": "https://arxiv.org/abs/2608.01827v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01827",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multimodal large language models (MLLMs) have advanced visual understanding and reasoning, yet their static parametric knowledge limits their ability to address knowledge-intensive and dynamically evolving open-world problems. To move beyond this limitation, multimodal deep search has emerged as a key direction for open-world information access, evolving from single-turn factual retrieval toward long-horizon, multi-turn search guided by visual evidence. However, existing methods typically confine vision to the input or answer stage, overlooking its role in intermediate reasoning, and lack designs tailored to long-horizon interaction. Consequently, visual evidence rarely drives continued retrieval, constraining both interaction depth and reasoning span. To address these limitations, we propose DeepVoyager-VL, a long-horizon multimodal deep-search framework for vision-in-the-loop search. Specifically, we construct a multimodal event graph to drive data synthesis, yielding problems with intermediate visual dependencies and long reasoning chains. We then design an agent framework for active visual acquisition and on-demand image loading. Finally, we fine-tune models on the synthesized data without reinforcement learning. Extensive experiments across ten multimodal search benchmarks demonstrate the effectiveness of our method.",
+  "abstract_zh": "多模态大语言模型（MLLMs）虽已显著提升视觉理解与推理能力，但其静态参数知识限制了其应对知识密集、动态变化开放世界问题的能力。多模态深度搜索因此成为开放世界信息获取的重要方向，正从单轮事实检索发展为由视觉证据引导的长程、多轮搜索。然而，现有方法通常只在输入或答案阶段使用视觉信息，忽视视觉在中间推理过程中的作用，也缺少面向长程交互的设计，导致视觉证据难以持续驱动检索，限制了交互深度与推理跨度。为解决这些问题，论文提出 DeepVoyager-VL，一个面向 vision-in-the-loop search 的长程多模态深度搜索框架。该方法构建 multimodal event graph 来驱动数据合成，生成具有中间视觉依赖和长推理链的问题；同时设计支持主动视觉获取与按需图像加载的 agent 框架；最后在合成数据上进行监督微调，无需强化学习。十个多模态搜索基准上的实验验证了该方法的有效性。",
+  "key_points_zh": [
+    "提出 DeepVoyager-VL，将视觉信息引入搜索与推理的中间过程，而不只用于输入理解或最终回答。",
+    "通过构建 multimodal event graph 合成训练数据，使任务包含中间视觉依赖与长链路推理需求。",
+    "设计长程多模态 agent，支持主动视觉获取（active visual acquisition）和按需图像加载（on-demand image loading）。",
+    "方法采用合成数据监督微调，不依赖 reinforcement learning，降低训练复杂度。",
+    "在十个多模态搜索 benchmarks 上取得有效结果，表明 vision-in-the-loop 对开放世界多轮检索与推理有帮助。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.7,
+    "problem_significance": 0.72,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.66,
+    "llm_avg": 0.672,
+    "comment": "Useful vision-in-the-loop search agent work with active visual acquisition, but its main emphasis is long-horizon multimodal search rather than realtime multimodal agency.",
+    "comment_zh": "该工作在视觉参与的长程搜索智能体上有用，但重点更偏多模态深度搜索而非实时多模态交互智能体。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.813694169441457,
+    "author_reputation": 0.34373441375821495,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.672,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 16,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01827/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01827/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

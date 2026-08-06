@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2608.02046",
+  "title": "CompanionBench: A Theory-Anchored, Real-World-Grounded Benchmark for AI Emotional Companionship",
+  "title_zh": "CompanionBench：一个以理论为锚、基于真实世界数据的 AI 情感陪伴基准",
+  "authors": [
+    "Yao Liu",
+    "Guangjia Chai",
+    "Yuming Huang",
+    "Jihao Huang",
+    "Lei Wang",
+    "Junchen Wan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T10:44:04Z",
+  "abs_url": "https://arxiv.org/abs/2608.02046v2",
+  "pdf_url": "https://arxiv.org/pdf/2608.02046",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM companions are deployed at scale in personally consequential settings, yet poorly evaluated. Existing benchmarks use hand-authored scenarios and prompted simulators, aggregate empathy into one score, and overlook judge biases such as same-family favoritism and scale drift. We introduce CompanionBench, an interactive bilingual benchmark. To our knowledge, it is the first companion benchmark to ground both its scenarios and a trained user simulator in de-identified real-world data. A hidden disclosure gate branches each persona's trajectory on the agent's own behavior, controlling the interaction state space without scripting dialogue. We operationalize ten capabilities derived from 25 theories across psychology and counseling, four of them not graded explicitly by prior work: holding ambiguity, selfobject responsiveness, positive resonance and calibrated challenge. Agents are assessed on two complementary axes: a subjective ten-capability rubric and a deterministic measure of whether deeper disclosure was earned. A cross-family panel dilutes same-family favoritism; an Item Response Theory model separates agent quality from judge severity. Theory fixes what to measure and how personas are structured; real data supply events, history, and profiles -- coverage from theory, authenticity from data. Rankings are reproducible in both languages (rho = 0.996 ZH / 0.953 EN). Evaluating 28 agents reveals capability-level differences obscured by aggregate scores. Emotion regulation and calibrated challenge remain common weaknesses; holding ambiguity discriminates most. Role-play agents rank near the bottom: immersion does not imply relational competence. Across agents, the dominant failure mode is substituting surface warmth for substantive relational support. We will release 500 Chinese-English parallel pairs and the evaluation code.",
+  "abstract_zh": "本文提出 CompanionBench，一个中英双语交互式基准，用于评估大规模部署中的 LLM 情感陪伴能力。不同于依赖人工编写场景和提示式模拟器的既有基准，CompanionBench 将场景与训练后的用户模拟器都建立在去标识化真实世界数据之上。其设计包含隐藏的 disclosure gate，会根据智能体自身行为决定 persona 是否进入更深层自我披露，从而在不脚本化对话的情况下控制交互状态空间。该基准从心理学与咨询领域 25 种理论中提炼出 10 项能力，其中 holding ambiguity、selfobject responsiveness、positive resonance 和 calibrated challenge 是此前工作较少显式评分的能力。评估同时包含主观的十能力 rubric 与确定性指标，即智能体是否赢得了更深层披露。为减少同模型家族偏好，作者采用跨家族评审面板，并用 Item Response Theory 区分智能体质量与评审严格程度。对 28 个 agents 的实验显示，聚合分数会掩盖能力层面的差异；emotion regulation 与 calibrated challenge 是普遍弱项，holding ambiguity 最具区分度；role-play agents 排名靠后，说明沉浸式角色扮演不等于关系能力。总体失败模式是用表层温暖替代实质性关系支持。作者将发布 500 组中英平行样本与评估代码。",
+  "key_points_zh": [
+    "CompanionBench 是一个面向 LLM companions 的中英双语交互式基准，场景与用户模拟器均基于去标识化真实世界数据构建，强调真实性而非人工编写情境。",
+    "基准从心理学和咨询领域 25 种理论中提炼 10 项情感陪伴能力，并补充评估 holding ambiguity、selfobject responsiveness、positive resonance、calibrated challenge 等既有工作较少覆盖的维度。",
+    "评估设计结合主观十能力 rubric 与确定性 disclosure 指标；隐藏 disclosure gate 会根据 agent 行为决定用户是否进一步自我披露，避免完全脚本化对话。",
+    "为缓解评审偏差，CompanionBench 使用跨模型家族评审面板，并通过 Item Response Theory 分离 agent 能力与 judge 严格程度；中英文排名具有较高可复现性。",
+    "对 28 个 agents 的评测发现，emotion regulation 和 calibrated challenge 普遍薄弱，holding ambiguity 最能区分模型；role-play agents 排名靠后，表明角色沉浸不等于真实关系支持能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.48,
+    "problem_significance": 0.38,
+    "potential_impact": 0.42,
+    "paradigm_shift": 0.32,
+    "lasting_value": 0.43,
+    "llm_avg": 0.406,
+    "comment": "A thoughtful interactive benchmark for emotional companions, but it is only weakly connected to agent harness evolution or production agent infrastructure.",
+    "comment_zh": "这是一项细致的情感陪伴交互评测，但与智能体 harness 演化或生产级智能体基础设施关联较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.406,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02046/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02046/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.788
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02046/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02046/fig4.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

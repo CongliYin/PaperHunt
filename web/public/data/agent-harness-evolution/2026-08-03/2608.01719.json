@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2608.01719",
+  "title": "MNC: Scope-Bound Semantic Declassification for Private LLM-Agent Communication",
+  "title_zh": "MNC：面向私有 LLM-Agent 通信的范围绑定语义解密",
+  "authors": [
+    "Jinghan Xu",
+    "Longze Fan",
+    "Zeyuan Wang",
+    "Xinjin Li",
+    "Hankai Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T05:36:49Z",
+  "abs_url": "https://arxiv.org/abs/2608.01719v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01719",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-agent large language model (LLM) systems can expose protected state through internal messages, tool arguments, logs, and persistent memory even when their public outputs appear innocuous. Existing privacy prompts, redaction methods, and source-level access controls restrict surface content or data access, but do not specify what a legitimately informed agent should disclose or how that disclosure may be reused downstream. We introduce Minimum-Necessary Communication (MNC), a typed semantic-declassification protocol that selects a task-sufficient disclosure from an application-authored candidate family and binds it to explicit recipient, purpose, forwarding, lifetime, logging, and memory scopes. A reference monitor enforces these scopes across subsequent operations, while a history-aware extension accounts for inference risk accumulated over repeated disclosures. Controlled semantic-join, memory, probing, and longitudinal experiments show that conventional defenses can preserve protocol-level utility while exposing substantial additional inference signal. Under identical receipt text, MNC preserves authorized delivery while blocking unauthorized forwarding, logging, durable storage, and retrieval after expiration that a text-only semantic declassifier permits. Two-backbone MAGPIE executions further show that mediated disclosures propagate through subsequent planning, tool use, coordination, and memory retrieval. These results support scope-bound semantic declassification as a practical communication boundary for private LLM-agent systems.",
+  "abstract_zh": "多智能体 LLM 系统即使在公开输出看似无害时，也可能通过内部消息、工具参数、日志和持久记忆泄露受保护状态。现有隐私提示、脱敏方法和源级访问控制主要限制表层内容或数据访问，但未明确一个合法知情的 agent 应该披露什么，以及这些披露在下游可如何复用。本文提出 Minimum-Necessary Communication（MNC），一种带类型的语义解密协议：它从应用作者定义的候选披露集合中选择满足任务所需的最小披露，并将其绑定到显式的接收者、用途、转发、生命周期、日志和记忆范围。参考监控器在后续操作中强制执行这些范围；历史感知扩展进一步考虑重复披露累积带来的推理风险。通过受控的语义连接、记忆、探测和纵向实验，作者发现传统防御虽能保持协议级效用，却仍暴露大量额外推理信号。在相同接收文本下，MNC 保留授权交付，同时阻止文本级语义解密器无法防止的未授权转发、日志记录、持久存储和过期后检索。基于两个 backbone 的 MAGPIE 执行还表明，经 MNC 调解的披露会影响后续规划、工具使用、协作和记忆检索。结果支持将范围绑定语义解密作为私有 LLM-agent 系统的实用通信边界。",
+  "key_points_zh": [
+    "提出 Minimum-Necessary Communication（MNC）：在应用定义的候选披露族中选择任务充分但最小必要的语义披露。",
+    "MNC 将披露绑定到 recipient、purpose、forwarding、lifetime、logging、memory 等显式作用域，并由 reference monitor 在后续操作中强制执行。",
+    "历史感知扩展建模多次披露导致的累积推理风险，避免单次看似安全的信息在长期交互中组合泄露敏感状态。",
+    "实验显示，传统隐私提示、脱敏和访问控制在保持效用的同时仍会泄露额外推理信号；MNC 能阻止未授权转发、日志、持久记忆和过期检索。",
+    "在 MAGPIE 多 backbone 执行中，MNC 调解的披露可贯穿后续规划、工具调用、agent 协作与记忆检索，体现其实用性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.84,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.86,
+    "llm_avg": 0.852,
+    "comment": "MNC is a strong agent-runtime security contribution with typed declassification, scoped enforcement, and downstream communication governance.",
+    "comment_zh": "MNC 是一项很强的智能体运行时安全贡献，提供类型化解密、范围约束执行和下游通信治理。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.852,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01719/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01719/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01719/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01719/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.977
+    }
+  ]
+}

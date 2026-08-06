@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2608.01679",
+  "title": "When Memory Becomes Authority: Benchmarking Authority Collapse at the Memory Consolidation Boundary",
+  "title_zh": "当记忆成为权威：在记忆整合边界基准测试 Authority Collapse",
+  "authors": [
+    "Qiuyang Zhan",
+    "Rui Zhang",
+    "Sheng Guo",
+    "Lepeng Zhao",
+    "Zhuotao Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T04:15:40Z",
+  "abs_url": "https://arxiv.org/abs/2608.01679v2",
+  "pdf_url": "https://arxiv.org/pdf/2608.01679",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Persistent memory allows (self-evolving) LLM agents to adapt across tasks by consolidating heterogeneous interaction histories into reusable facts, preferences, observations, and rules. Yet consolidation also imposes an implicit authorization boundary: it determines whether stored information may later be consumed as a user fact, an attested observation, or a standing instruction. We identify authority collapse, in which consolidation preserves a claim while erasing the source constraints governing its authorized use, causing the stored memory to imply greater authority than its source permits. We introduce AuthMem-Bench, a controlled paired benchmark that holds the focal claim and downstream task fixed while varying only source authority. It evaluates write-time collapse, downstream authorization errors, and automatic authority preservation. Across seven consolidators based on widely used agent-memory systems and seven LLM backbones, we observe authority collapse in 48 of 49 evaluated configurations. In a controlled action-grounded evaluation, collapsed memories without authority metadata yield a mean unauthorized-action rate of 50.3%. In an end-to-end evaluation, automatically predicted and persisted authority labels reduce the observed unauthorized-action rate from 16.9% to 0.0%, while benign task success remains essentially unchanged. These findings show that memory-driven adaptation must preserve not only what was learned, but also the authority under which it may be reused.",
+  "abstract_zh": "持久记忆使自演化 LLM agents 能够通过将异构交互历史整合为可复用的事实、偏好、观察和规则来跨任务适应。然而，记忆整合也隐含了一条授权边界：它决定存储信息之后能否被当作用户事实、经证实的观察或长期指令来使用。本文识别出 authority collapse 现象，即整合过程保留了某个主张，却抹去了约束其授权使用的来源信息，导致存储记忆暗示出高于原始来源许可的权威性。作者提出 AuthMem-Bench，这是一个受控的成对基准，在固定核心主张和下游任务的同时，仅改变信息来源的权威级别，用于评估写入时的权威坍塌、下游授权错误以及自动权威保留能力。对基于常见 agent-memory 系统的 7 种 consolidators 和 7 个 LLM backbones 的实验显示，49 种配置中有 48 种出现 authority collapse。在受控的 action-grounded 评估中，缺少权威元数据的坍塌记忆导致平均 50.3% 的未授权动作率；在端到端评估中，自动预测并持久化 authority labels 可将未授权动作率从 16.9% 降至 0.0%，同时基本不影响良性任务成功率。研究表明，记忆驱动的适应不仅要保存“学到了什么”，还必须保存“在何种权威下可被复用”。",
+  "key_points_zh": [
+    "提出 authority collapse：记忆整合保留内容但丢失来源授权约束，使低权威信息在后续被误当作高权威指令或事实使用。",
+    "构建 AuthMem-Bench，通过固定核心 claim 与下游任务、仅改变 source authority，系统评估写入阶段坍塌、下游越权行为和权威信息保留。",
+    "覆盖 7 种基于主流 agent-memory 系统的 consolidators 与 7 个 LLM backbones，49 个配置中有 48 个出现 authority collapse，说明问题具有普遍性。",
+    "在 action-grounded 评估中，缺少 authority metadata 的坍塌记忆带来 50.3% 的平均 unauthorized-action rate。",
+    "端到端实验表明，自动预测并持久化 authority labels 可将未授权动作率从 16.9% 降至 0.0%，且几乎不损害正常任务成功率。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.79,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.83,
+    "llm_avg": 0.8119999999999999,
+    "comment": "AuthMem-Bench identifies a durable authorization failure at the memory boundary and offers a practical evaluation path for safer agent memory.",
+    "comment_zh": "AuthMem-Bench 揭示了记忆边界上的持久授权失效，并为更安全的智能体记忆提供了实用评测路径。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.8119999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01679/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.948
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01679/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.734
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01679/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01679/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.982
+    }
+  ]
+}

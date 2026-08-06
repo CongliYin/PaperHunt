@@ -1,0 +1,94 @@
+{
+  "arxiv_id": "2608.01881",
+  "title": "Hear, Invoke, and Understand: A Skill-Calling Multimodal Agent for Large Audio Language Models",
+  "title_zh": "Hear, Invoke, and Understand：面向大型音频语言模型的技能调用多模态智能体",
+  "authors": [
+    "Yuwen Wang",
+    "Tian-Hao Zhang",
+    "Minghao Cai",
+    "Yilin Ren",
+    "Ziyang Jiang",
+    "Xin Wang",
+    "Zhichao Wang",
+    "Pan Zhou",
+    "Kun Zhan",
+    "Xinyuan Qian"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T08:24:54Z",
+  "abs_url": "https://arxiv.org/abs/2608.01881v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01881",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Complex acoustic problems may require models to perform acoustic operations, interact with external tools and reason over the resulting textual or processed-audio observations rather than answer directly from a fixed audio input. We study such problems as tool-interactive audio reasoning and develop SpeechAgent-R, an audio agent that coordinates its intrinsic multimodal understanding with external skills and tools. To support this capability, we construct HIU-Corpus, comprising 65,492 interaction trajectories and 507.6 hours of audio across 24 tasks, 8 skills and 9 tools. SpeechAgent-R first learns structured interaction behaviors through trajectory-based supervised fine-tuning and then improves its decisions through multi-turn reinforcement learning. We further introduce HIU-Bench to jointly evaluate task performance, interaction quality and generalization to diverse task settings. It contains 1,395 samples across 56 tasks, including in-distribution (ID) and out-of-distribution (OOD) splits with substantial shifts in tool usage and workflow composition. SpeechAgent-R achieves 84.17 on ID tasks and 70.94 on OOD tasks, improving over the base model under the same agent harness by 15.40 and 14.23 points. These results demonstrate that learning skill and tool coordination improves audio agents' ability to handle diverse task settings and adaptive tool interactions.",
+  "abstract_zh": "本文研究“工具交互式音频推理”（tool-interactive audio reasoning）：复杂声学问题往往不能仅依赖固定音频输入直接回答，而需要模型执行声学操作、调用外部工具，并基于返回的文本或处理后音频观测继续推理。为此，作者提出 SpeechAgent-R，一个将自身多模态理解能力与外部技能、工具协同起来的音频智能体。论文构建了 HIU-Corpus，包含 65,492 条交互轨迹、507.6 小时音频，覆盖 24 类任务、8 种技能和 9 个工具。SpeechAgent-R 先通过基于轨迹的监督微调学习结构化交互行为，再通过多轮强化学习优化决策。作者还提出 HIU-Bench，用于联合评估任务性能、交互质量以及对多样化任务设置的泛化能力，包含 1,395 个样本、56 类任务，并划分 ID 与 OOD 场景，其中 OOD 在工具使用和工作流组合上存在显著分布变化。实验显示，SpeechAgent-R 在 ID 任务上达到 84.17，在 OOD 任务上达到 70.94，相比同一智能体框架下的基座模型分别提升 15.40 和 14.23 分，证明学习技能与工具协同能显著增强音频智能体处理复杂任务与自适应工具交互的能力。",
+  "key_points_zh": [
+    "提出 SpeechAgent-R，将大型音频语言模型的内在多模态理解与外部 skills/tools 协同，用于解决需要多步操作和反馈推理的复杂声学问题。",
+    "构建 HIU-Corpus，包含 65,492 条交互轨迹、507.6 小时音频，覆盖 24 个任务、8 种技能和 9 个工具，为音频智能体的工具调用学习提供训练数据。",
+    "训练流程结合 trajectory-based supervised fine-tuning 与 multi-turn reinforcement learning：先学习结构化交互范式，再优化多轮决策与工具选择。",
+    "提出 HIU-Bench，包含 1,395 个样本和 56 个任务，同时评估任务完成效果、交互质量以及 ID/OOD 泛化，尤其关注工具使用和工作流组合的分布外变化。",
+    "SpeechAgent-R 在 HIU-Bench 上相较基座模型显著提升：ID 得分 84.17、OOD 得分 70.94，分别提升 15.40 和 14.23 分，显示工具协同对音频推理泛化有明显帮助。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.7,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.7,
+    "llm_avg": 0.7,
+    "comment": "SpeechAgent-R is a solid trajectory-training and benchmark contribution for multimodal tool-using agents, though its audio specialization narrows general harness value.",
+    "comment_zh": "SpeechAgent-R 是面向多模态工具代理的扎实轨迹训练与评测贡献，但音频专用性限制了其通用框架价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01881/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01881/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01881/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.926
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01881/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.959
+    }
+  ]
+}
