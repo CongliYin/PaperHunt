@@ -6,19 +6,30 @@ PaperHunt currently treats each research domain as a broad arXiv category union 
 
 The historical output demonstrates the failure mode: urban mobility, sEMG recognition, and quantum-learning papers entered Agent Harness Evolution; retail banking and marketplace operations entered E-commerce Agent; and offline TTS/ASR datasets entered Realtime Multimodal Agent. The LLM often identified these papers as irrelevant, but its score only affected ordering and never rejected them.
 
-The user approved a V1 gold set containing ten required inclusions and ten required exclusions for each of the three domains. The user also fixed these scope rules:
+The user approved a V1 gold set containing ten required inclusions and ten required exclusions for each of the three domains. After reviewing the first August 5 output, the user added eight labels, bringing the regression set to 68 papers. The user also fixed these scope rules:
 
 - every paper has exactly one primary domain;
 - E-commerce Agent covers product search, recommendation, product understanding, and shopping agents, not general commerce operations;
 - Realtime Multimodal Agent requires realtime or streaming interaction;
-- Agent Harness Evolution covers reusable runtime, orchestration, memory, trace, training, evaluation, security, and governance infrastructure rather than vertical applications.
+- Agent Harness Evolution includes reusable runtime, harness, orchestration engines, memory systems/services, Agent training and RL, Skill evolution, coding Agents, and search Agents.
+- Security research is globally out of scope for all three domains, including attacks, red teaming, prompt injection, phishing, malware, privacy, and cyber defense. This exclusion overrides otherwise positive Agent/RL/coding/search signals.
+- Medical, clinical, surgical, and intraoperative work is globally out of scope even when it claims realtime or low-latency video understanding.
+- Skill valuation alone is not Skill evolution.
+
+### August 5 scope labels
+
+The following newly reviewed papers define the revised boundary:
+
+- must include in Agent Harness Evolution: `2608.05102` ABSeeker (search-Agent training), `2608.04934` State2State (Agent training), and `2608.04682` Active-SWE (coding-Agent benchmark);
+- must exclude from Agent Harness Evolution: `2608.04562` What Is a Skill Worth? (valuation rather than evolution), `2608.04317` Trident (cyber defense), `2608.04741` LoginTrap (prompt-injection security), and `2608.05108` Agent Against Agent (prompt-injection red teaming);
+- must exclude from Realtime Multimodal Agent: `2608.04676` SurgNarrator (surgical/clinical video understanding).
 
 ## Goals
 
 - Make primary-domain selection deterministic, explainable, and exclusive.
 - Replace single-keyword admission with contextual signal combinations.
 - Use the LLM as a strict semantic relevance gate, not only a ranking signal.
-- Preserve a versioned, executable 60-paper gold set.
+- Preserve a versioned, executable 68-paper gold set.
 - Report historical before/after quality with reproducible metrics.
 - Keep arXiv fetching, enrichment, translation, and figure generation unchanged.
 
@@ -72,6 +83,8 @@ Phase one loads all selection policies and applies primary-domain selection dire
 
 Existing tiered topic scoring remains a ranking feature after membership is established. Its accidental matches can no longer admit a paper.
 
+Hard exclusions are evaluated before positive signals in every policy. Harness positives are separated into explicit trunks: infrastructure, Agent training/RL, Skill evolution, coding Agents, and search Agents. Broad terms such as `skill`, `framework`, `security`, or `benchmark` are not independently sufficient. Medical and surgical candidates are rejected regardless of realtime/latency language.
+
 ### Unified LLM relevance contract
 
 All domain rubrics use one output contract:
@@ -85,6 +98,8 @@ All domain rubrics use one output contract:
 - `comment` and `comment_zh`.
 
 `domain_fit` measures whether the paper belongs in the current domain. The five existing dimensions measure value only after that relevance question. Missing or invalid required scores invalidate the assessment instead of silently defaulting to `0.5`.
+
+The Harness rubric mirrors the deterministic trunks and gives all security work low domain fit. The multimodal rubric treats realtime medical perception as out of scope and does not equate low latency with interactive agency.
 
 Final emission requires both a valid assessment and `domain_fit >= minimum_llm_domain_fit`. `llm_avg` continues to rank accepted papers but cannot override a failed domain-fit gate.
 
@@ -135,7 +150,7 @@ Existing LLM scores are only a historical proxy because they predate `domain_fit
 ## Tests
 
 - Selector unit tests cover grouped matching, exclusions, scoring, and deterministic ties.
-- The 60-paper gold regression test exercises real historical titles and abstracts.
+- The 68-paper gold regression test exercises real historical titles and abstracts, including the reviewed August 5 boundary cases.
 - Scorer tests require the unified schema and reject missing or invalid `domain_fit`.
 - Pipeline tests verify final domain-fit gating.
 - The full offline test suite runs in GitHub Actions before the daily pipeline.
