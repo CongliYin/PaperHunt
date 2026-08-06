@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2608.04934",
+  "title": "State2State: Environment-Derived Mid-Training for LLM Agents",
+  "title_zh": "State2State：面向 LLM Agent 的环境派生式中期训练",
+  "authors": [
+    "Xuanyu Lei",
+    "Yiqi Zhu",
+    "Chenliang Li",
+    "Kaiming Liu",
+    "Peng Li",
+    "Ming Yan",
+    "Jieping Ye",
+    "Ya-Qin Zhang",
+    "Yang Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T15:02:41Z",
+  "abs_url": "https://arxiv.org/abs/2608.04934v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04934",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Training LLM agents commonly relies on supervised fine-tuning from expert trajectories or online reinforcement learning over human-specified tasks with handcrafted verifiers. Though effective, both remain bottlenecked by externally specified tasks and supervision signals, limiting the scalability and diversity of agent training. We study an environment learning paradigm in which agents acquire interaction and manipulation capabilities solely through environment interaction, without externally specified tasks. We propose State2State, an environment-derived mid-training method that converts explored environment states into training objectives, challenging agents to reach a specified target state. By deriving tasks from environment exploration and verifying success through rule-based state matching, State2State provides scalable and verifiable training objectives without expert supervision or manual task design. Experiments on ALFWorld and ScienceWorld show that State2State improves agent performance as a standalone environment-learning stage in most settings. As initialization for downstream RL, it further improves final performance and learning efficiency, with promising evidence of cross-environment generalization.",
+  "abstract_zh": "LLM Agent 的训练通常依赖专家轨迹监督微调，或在人工指定任务与手工验证器上进行在线强化学习。尽管这些方法有效，但外部任务与监督信号限制了训练规模与多样性。本文研究一种环境学习范式：Agent 仅通过与环境交互来获得交互与操作能力，而不依赖外部指定任务。作者提出 State2State，一种环境派生的中期训练方法，将探索到的环境状态转换为训练目标，要求 Agent 到达指定目标状态。通过从环境探索中自动派生任务，并用基于规则的状态匹配验证成功，State2State 在无需专家监督或人工任务设计的情况下，提供了可扩展且可验证的训练目标。在 ALFWorld 和 ScienceWorld 上的实验表明，State2State 作为独立的环境学习阶段，在多数设置中提升了 Agent 性能；作为下游 RL 的初始化，还进一步提升最终性能与学习效率，并展现出跨环境泛化的潜力。",
+  "key_points_zh": [
+    "提出 State2State：将 Agent 探索得到的环境状态转化为“到达目标状态”的训练任务，用于 LLM Agent 的中期训练。",
+    "不依赖专家轨迹、人工任务设计或外部监督信号，而是通过环境交互自动生成训练目标。",
+    "使用基于规则的状态匹配作为验证机制，使任务成功判定可扩展、可验证。",
+    "在 ALFWorld 和 ScienceWorld 上，State2State 作为独立环境学习阶段通常能提升 Agent 表现。",
+    "作为下游 RL 初始化时，State2State 可提高最终性能与学习效率，并显示一定跨环境泛化能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.85,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.87,
+    "llm_avg": 0.8719999999999999,
+    "comment": "A strong agent-training paper that derives verifiable objectives from environment states without expert trajectories or manual task design.",
+    "comment_zh": "这是一篇很强的智能体训练论文，可从环境状态中自动生成可验证目标，而不依赖专家轨迹或人工任务设计。"
+  },
+  "scores": {
+    "topic_relevance": 0.44000000000000006,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8719999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04934/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04934/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

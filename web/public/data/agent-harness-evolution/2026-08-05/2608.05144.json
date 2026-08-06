@@ -1,0 +1,99 @@
+{
+  "arxiv_id": "2608.05144",
+  "title": "Argus: A General-Purpose Agentic Runtime for Long-Horizon Reasoning",
+  "title_zh": "Argus：面向长程推理的通用 Agentic Runtime",
+  "authors": [
+    "Boxiu Li",
+    "Zimo Wen",
+    "Yijia Fan",
+    "Junxiang Lei",
+    "Sufeng Guo",
+    "Jiaao Wu",
+    "Ruize Tang",
+    "Mukai Li",
+    "Yifei Shen",
+    "Xiaoyu Chen",
+    "Wanbo Zhang",
+    "Runjing Gu",
+    "Yifei Gao",
+    "Yuheng Wu",
+    "Xuyao Huang",
+    "Zelong Zhao",
+    "Jiachen Zhang",
+    "Shibo Hu",
+    "Hangxi Guo",
+    "Yilin Chen",
+    "Yuzhe Zhang",
+    "Fan Yang",
+    "Chuan Wen",
+    "Xian Zhang",
+    "Xuanhe Zhou",
+    "Zhijie Deng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T17:58:58Z",
+  "abs_url": "https://arxiv.org/abs/2608.05144v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.05144",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-horizon reasoning requires an agentic runtime that can persist when evidence supports its current approach and pivot when measurements reveal failure, hidden constraints, or a misspecified objective. We present Argus, a persistent, self-evolving runtime in which Manager, Planner, Engineer, and Reviewer execute bounded missions over durable project state. Argus separates stable user intent from operational objectives, constraints, and verification criteria, and admits memories, skills, procedures, verifiers, routing decisions, and rejected routes only after role-owned review and, when available, task-native verification. Model weights remain fixed; self-evolution occurs through persistent runtime state and control policy, with autonomous execution between operator-owned escalation points. Across seven GPT-5.5 benchmark arenas, Argus achieves about 78% on SWE-Bench Pro versus 59% for Direct Copilot while using 1.41 times the aggregate tokens. After verification-gated self-evolution, mature SWE-Bench waves use 21% fewer solve-input tokens and 15% less active workflow time per task than startup waves, while recording 34 verifier recoveries and 22 strict review-loop rescues. Argus also reaches 76.8% on AARRI-Bench and a 28.0-point gap on mathematical data synthesis, with competitive GPU-kernel and language-model-training results. Beyond benchmarks, an optimized RWKV6 kernel was merged upstream; a multi-day mathematics campaign retained falsified routes and proof-backed frontier updates; and six paper pipelines completed 254 missions with 16 stage rollbacks. These results show that a fixed-weight, self-evolving harness can revise, recover, and accumulate verified approaches while producing structured trajectories for future supervised and reinforcement learning.",
+  "abstract_zh": "本文提出 Argus，一个持久化、自演化的 agentic runtime，用于支持长程推理任务中的坚持、转向与恢复。Argus 由 Manager、Planner、Engineer、Reviewer 四类角色围绕持久项目状态执行有界任务，将稳定的用户意图与可操作目标、约束和验证标准分离；记忆、技能、流程、验证器、路由决策和被拒路径等只有在角色审查以及可用的任务原生验证后才会被写入。其模型权重保持不变，自演化来自持久运行时状态与控制策略，并在操作员拥有的升级节点之间自主执行。在七个 GPT-5.5 benchmark arenas 上，Argus 在 SWE-Bench Pro 达到约 78%，高于 Direct Copilot 的 59%，但使用 1.41 倍总 token。经过验证门控的自演化后，成熟 SWE-Bench 波次相比启动波次减少 21% solve-input tokens 和 15% 主动工作流时间，并记录 34 次 verifier recoveries 与 22 次严格 review-loop rescues。Argus 还在 AARRI-Bench 达到 76.8%，在数学数据合成上取得 28.0 分优势，并在 GPU kernel 与语言模型训练任务上表现有竞争力。真实应用中，优化后的 RWKV6 kernel 已被 upstream merge，多日数学任务保留了被证伪路线和有证明支撑的前沿更新，六条论文流水线完成 254 个 missions 并发生 16 次阶段回滚。",
+  "key_points_zh": [
+    "Argus 将长程任务拆分给 Manager、Planner、Engineer、Reviewer，并基于 durable project state 持久维护目标、约束、验证标准与执行轨迹。",
+    "自演化不更新模型权重，而是通过持久化记忆、技能、流程、verifiers、routing decisions 与 rejected routes 来改进运行时状态和控制策略。",
+    "写入长期状态前需要 role-owned review，且在可用时通过 task-native verification，从而降低错误经验累积并支持失败恢复。",
+    "在 SWE-Bench Pro 上 Argus 约 78%，显著高于 Direct Copilot 的 59%，但代价是使用 1.41 倍 aggregate tokens。",
+    "验证门控自演化后，成熟任务波次减少 21% solve-input tokens 和 15% active workflow time，并在代码、数学、GPU kernel、论文流水线等场景展示长期积累能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.88,
+    "problem_significance": 0.93,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.89,
+    "lasting_value": 0.93,
+    "llm_avg": 0.9099999999999999,
+    "comment": "A highly relevant runtime paper centered on persistent state, verification-gated self-evolution, recoveries, rollbacks, and reusable trajectories.",
+    "comment_zh": "这是一篇高度相关的运行时论文，核心在于持久状态、验证门控自演化、恢复、回滚和可复用轨迹。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36228269883744174,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9099999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05144/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05144/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.976
+    }
+  ]
+}

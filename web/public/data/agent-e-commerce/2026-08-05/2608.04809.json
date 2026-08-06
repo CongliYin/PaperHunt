@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.04809",
   "title": "DEGR: Dual Exploration-Driven Generative Re-Ranking for Adaptive Cross-Request Context Bridging",
-  "title_zh": "DEGR：双重探索驱动的生成式重排序，用于自适应跨请求上下文桥接",
+  "title_zh": "DEGR：面向自适应跨请求上下文桥接的双重探索驱动生成式重排序",
   "authors": [
     "Binglei Zhao",
     "Xuanhua Yang",
@@ -17,32 +17,33 @@
     "project_page": null
   },
   "abstract_en": "In industrial recommendation systems, the re-ranking stage balances business objectives and diversity for sequence-level optimization while modeling contextual information. However, constrained by fixed upstream supply, existing methods fail to deliver further effectiveness gains, especially under low-quality supply. To overcome this, re-ranking can actively balance immediate and exploratory value, for instance, by prioritizing exploratory exposure under low-quality supply to preserve browsing potential and facilitate serendipitous conversions. Therefore, we propose a Dual Exploration-Driven Generative Re-Ranking (DEGR) method. DEGR adopts a hybrid supervised-reinforcement exploration and optimization paradigm, guided by an exploratory reward model that adaptively balances immediate and exploratory value. The hybrid optimization paradigm integrates three key components: supervised learning, exploration diversity constraint, and adaptive reward-weighted ORPO for preference optimization. Through this dual exploration, the generator ultimately acts as an adaptive cross-request contextual bridge. Offline and online experiments indicate that DEGR outperforms SOTA methods, achieving improvements of up to 1.22% UCTR and 0.20% PV in the JD E-commerce recommendation system.",
-  "abstract_zh": "工业推荐系统中的 re-ranking 阶段需要在序列级优化中同时权衡业务目标、多样性与上下文建模。然而，现有方法受限于上游固定供给，尤其在低质量供给场景下难以继续提升效果。为此，论文提出 Dual Exploration-Driven Generative Re-Ranking（DEGR），通过主动平衡即时价值与探索价值，在低质量供给时优先增加探索性曝光，以保持用户浏览潜力并促进意外转化。DEGR 采用混合的监督学习与强化学习探索优化范式，由探索性 reward model 引导，自适应平衡即时收益和探索收益。该范式包含三个核心组件：监督学习、探索多样性约束，以及用于偏好优化的 adaptive reward-weighted ORPO。通过双重探索机制，生成器最终成为自适应的跨请求上下文桥接器。离线与线上实验表明，DEGR 优于 SOTA 方法，并在 JD E-commerce 推荐系统中最高带来 1.22% UCTR 和 0.20% PV 提升。",
+  "abstract_zh": "工业推荐系统中的 re-ranking 阶段需要在序列级优化中同时平衡业务目标与多样性，并建模上下文信息。然而，现有方法受限于固定的上游候选供给，尤其在低质量供给场景下难以继续提升效果。为此，论文提出 Dual Exploration-Driven Generative Re-Ranking（DEGR），通过主动平衡即时价值与探索价值，在低质量供给时优先给予探索性曝光，从而保持用户浏览潜力并促成意外转化。DEGR 采用监督学习与强化学习结合的混合探索优化范式，并由探索式奖励模型自适应调节即时价值和探索价值。该范式包含三部分：监督学习、探索多样性约束，以及基于自适应奖励加权的 ORPO 偏好优化。通过双重探索机制，生成器最终成为自适应的跨请求上下文桥梁。离线与线上实验表明，DEGR 优于 SOTA 方法，并在 JD E-commerce 推荐系统中最高带来 1.22% UCTR 和 0.20% PV 提升。",
   "key_points_zh": [
-    "针对工业 re-ranking 受限于固定上游供给的问题，DEGR 强调在低质量候选集下主动引入探索性曝光，而非仅优化当前请求内的即时点击或转化。",
-    "方法采用双重探索驱动：一方面通过探索多样性约束提升结果序列的可探索空间，另一方面通过 reward model 自适应权衡即时价值与探索价值。",
-    "DEGR 将 supervised learning、reinforcement-style exploration 与 adaptive reward-weighted ORPO 结合，用于生成式重排序中的偏好优化。",
-    "生成器被设计为 adaptive cross-request contextual bridge，利用跨请求上下文连接用户连续浏览行为，从而增强后续推荐机会与偶发转化。",
-    "在 JD E-commerce 推荐系统的离线与在线实验中，DEGR 相比 SOTA 方法取得最高 1.22% UCTR 和 0.20% PV 提升，显示出工业落地价值。"
+    "针对工业推荐 re-ranking 受限于固定上游供给、低质量候选下效果受限的问题，DEGR 引入探索性曝光以提升长期浏览与转化潜力。",
+    "方法采用混合 supervised-reinforcement 优化范式，通过探索式 reward model 自适应平衡 immediate value 与 exploratory value。",
+    "核心训练目标包含 supervised learning、exploration diversity constraint，以及 adaptive reward-weighted ORPO，用于更稳定地进行偏好优化。",
+    "DEGR 将生成式重排序器建模为跨请求上下文桥梁，使模型能够在不同请求之间传递探索信号与用户兴趣线索。",
+    "在 JD E-commerce 推荐系统的离线与线上实验中，DEGR 超越 SOTA，最高提升 1.22% UCTR 和 0.20% PV。"
   ],
   "llm_assessment": {
-    "novelty": 0.75,
+    "domain_fit": 0.88,
+    "novelty": 0.74,
     "problem_significance": 0.86,
-    "potential_impact": 0.84,
-    "paradigm_shift": 0.62,
-    "lasting_value": 0.83,
-    "llm_avg": 0.78,
-    "comment": "A practically important industrial e-commerce re-ranking method that improves exploration and cross-request recommendation quality with online gains.",
-    "comment_zh": "这是一项具有实际价值的工业级电商重排序方法，通过探索机制和跨请求建模提升推荐质量并取得线上收益。"
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.8,
+    "llm_avg": 0.776,
+    "comment": "A highly relevant industrial e-commerce re-ranking paper with online gains in JD recommendation serving.",
+    "comment_zh": "这是一篇高度相关的工业电商重排序论文，并在京东推荐系统中展示了线上收益。"
   },
   "scores": {
     "topic_relevance": 0.88,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.3,
+    "author_reputation": 0.29176612508188887,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.78,
+    "llm_assessment": 0.776,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -52,11 +53,11 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": null,
-    "first_author_found": false,
+    "first_author_h_index": 2,
+    "first_author_found": true,
     "first_author_affiliations": [],
-    "last_author_h_index": null,
-    "last_author_found": false,
+    "last_author_h_index": 0,
+    "last_author_found": true,
     "last_author_affiliations": []
   },
   "figures": [

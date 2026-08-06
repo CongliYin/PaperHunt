@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2608.04458",
+  "title": "Architectural Implications of Agentic AI Workflows",
+  "title_zh": "Agentic AI 工作流的体系结构影响",
+  "authors": [
+    "Jirong Yang",
+    "Peizhe Liu",
+    "Chaojie Zhang",
+    "Jovan Stojkovic"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T05:31:33Z",
+  "abs_url": "https://arxiv.org/abs/2608.04458v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04458",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic AI is emerging in datacenters, but its architectural implications remain unexplored. We organize agentic workflows in a taxonomy and present its first architectural characterization with a production study at Microsoft Azure and a controlled study of open-source frameworks. We show that agentic execution is fragmented and heterogeneous. Requests expand into a workflow of LLM inferences, tool invocations, and orchestration decisions that repeatedly cross the CPU-GPU boundary. Our taxonomy explains how this fragmentation turns into resource demand. As orchestration and tools run on the host, the CPU sits on the critical path. Execution structure sets the load over time, which stays low with sudden spikes. Model composition sets how evenly the workflow uses the GPUs. Diversity in tasks and tools widens this range even further. These characteristics expose architectural mismatches of conventional uniform servers. Fragmented execution strands CPU and GPU capacity despite bursty demand. Different software roles make homogeneous CPU provisioning inefficient. Finally, multiplexing many agents onto shared cores degrades microarchitectural locality. Guided by our findings, we derive implications for agentic servers and examine them through Agora, our prototype for commodity servers. Agora dynamically harvests idle CPU cores for co-located throughput work, while protecting agentic tail latency against tool spikes. It oversubscribes GPU memory by placing more agents on each GPU, prefetching the next agent's state to hide swap latency. To match the machine to the heterogeneous roles, Agora pools cores by role and applies affinity-aware scheduling to restore locality. It automatically tunes mechanisms to the workload. Agora improves utilization and server throughput while preserving agent tail latency. Our insights also identify key directions for future server architectures for agentic AI.",
+  "abstract_zh": "本文研究 Agentic AI 在数据中心落地时带来的体系结构影响。作者构建了 agentic workflows 的分类体系，并结合 Microsoft Azure 的生产环境研究与开源框架的受控实验，给出了首个体系结构层面的特征分析。研究发现，Agentic AI 执行具有明显的碎片化与异构性：一次请求会展开为由多次 LLM 推理、工具调用和编排决策组成的工作流，并频繁跨越 CPU-GPU 边界。由于编排逻辑和工具主要运行在主机侧，CPU 进入关键路径；工作流结构决定负载随时间的变化，整体负载通常较低但会出现突发峰值；模型组合影响 GPU 使用是否均衡，而任务与工具多样性进一步扩大资源需求差异。这些特征暴露了传统同构服务器的架构不匹配：突发且碎片化的执行会导致 CPU/GPU 容量搁置，不同软件角色使统一 CPU 配置低效，多 agent 共享核心还会破坏微体系结构局部性。基于这些发现，作者提出原型系统 Agora，用于 commodity servers。Agora 动态回收空闲 CPU 核心运行共置吞吐任务，同时保护 agentic tail latency；通过在每个 GPU 上放置更多 agent 并预取下一个 agent 状态来超额订阅 GPU memory、隐藏换页延迟；通过按角色池化核心和 affinity-aware scheduling 改善局部性，并自动调优机制以适配负载。实验表明 Agora 在保持 agent 尾延迟的同时提升了资源利用率和服务器吞吐量。",
+  "key_points_zh": [
+    "提出 agentic workflows 分类体系，并基于 Microsoft Azure 生产环境和开源框架进行首个体系结构特征分析。",
+    "发现 Agentic AI 请求会分解为 LLM 推理、工具调用与编排决策，频繁跨越 CPU-GPU 边界，导致执行碎片化和资源需求异构。",
+    "指出传统同构服务器存在不匹配：CPU 进入关键路径、负载突发、CPU/GPU 容量被搁置，且多 agent 复用核心会损害缓存等微体系结构局部性。",
+    "提出 Agora 原型，通过空闲 CPU 核心回收、GPU memory 超额订阅与状态预取、按角色核心池化及亲和性感知调度提升效率。",
+    "Agora 在保护 agent tail latency 的同时提升服务器利用率和吞吐量，并为未来 Agentic AI 服务器架构设计指出方向。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.72,
+    "problem_significance": 0.82,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.74,
+    "llm_avg": 0.7280000000000001,
+    "comment": "Strong fit for production agent infrastructure because it characterizes real agentic workflow execution and proposes scheduling mechanisms for serving reliability and utilization.",
+    "comment_zh": "该论文较符合生产级智能体基础设施方向，因为它刻画真实智能体工作流执行特征并提出提升服务可靠性和利用率的调度机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.43798072314003966,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7280000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 6,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04458/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04458/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

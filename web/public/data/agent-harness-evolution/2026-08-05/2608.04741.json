@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2608.04741",
+  "title": "LoginTrap: Uncovering Task-Agnostic Phishing-Style Indirect Prompt Injection Attacks against LLM-based Web Agents",
+  "title_zh": "LoginTrap：揭示针对 LLM-based Web Agents 的任务无关钓鱼式间接提示注入攻击",
+  "authors": [
+    "Longtao Guo",
+    "Zelin Zhang",
+    "Kaifeng Huang",
+    "Yang Shi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T12:08:16Z",
+  "abs_url": "https://arxiv.org/abs/2608.04741v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04741",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM-based web agents automate user tasks by observing webpages and executing browser actions on behalf of users. As these agents operate on real web services, login becomes a sensitive authentication boundary because it involves credentials and sensitive information. Existing work shows that malicious webpage content can manipulate web agent actions, but it has not fully examined whether such content can induce login and cause end-to-end private data leakage. We study this attack surface and present LoginTrap, a task-agnostic login-inducing attack against LLM-based web agents. LoginTrap assumes a black box attacker that controls the webpage context and the induced login flow without knowing the user task or web agent internals. Under this threat model, LoginTrap uses webpage context to generate page-specific indirect injections through a fuzzing-inspired process, making login appear as a plausible prerequisite for continuing the task and guiding the agent to a controlled login page. We conduct a comprehensive analysis of LoginTrap across realistic web agent executions. The results show that LoginTrap reaches 86\\% average end-to-end attack success across LLM backbones and remains effective across agent architectures and defenses. These findings identify login inducement as a systematic authentication boundary risk and motivate further research on authentication-aware defenses for web agents.",
+  "abstract_zh": "LLM-based web agents 通过观察网页并代表用户执行浏览器操作来自动完成任务。由于这些 agents 运行在真实 Web 服务上，登录成为涉及凭据与敏感信息的关键认证边界。已有研究表明，恶意网页内容可以操纵 web agent 的行为，但尚未充分考察此类内容是否能够诱导 agent 登录，并造成端到端的隐私数据泄露。本文研究这一攻击面，并提出 LoginTrap：一种面向 LLM-based web agents 的任务无关登录诱导攻击。LoginTrap 假设攻击者为黑盒，只控制网页上下文与被诱导的登录流程，不知道用户任务或 agent 内部机制。在该威胁模型下，LoginTrap 利用网页上下文，通过类似 fuzzing 的过程生成页面特定的间接提示注入，使登录看起来像继续任务的合理前置条件，并引导 agent 进入攻击者控制的登录页面。作者在真实 web agent 执行环境中进行了全面分析，结果显示 LoginTrap 在不同 LLM backbones 上平均端到端攻击成功率达到 86%，且在多种 agent 架构与防御机制下仍保持有效。该研究指出，登录诱导是 web agents 在认证边界上的系统性风险，并呼吁开展面向认证感知的防御研究。",
+  "key_points_zh": [
+    "提出 LoginTrap，一种任务无关的 phishing-style indirect prompt injection attack，目标是诱导 LLM-based web agents 进入攻击者控制的登录流程。",
+    "威胁模型为黑盒攻击：攻击者无需知道用户任务、LLM backbone 或 agent 内部架构，只需控制网页上下文与伪造登录页面。",
+    "方法通过 fuzzing-inspired process 生成页面特定注入内容，使“登录”被 agent 误判为继续完成任务的合理前提。",
+    "实验显示 LoginTrap 在不同 LLM backbones 上达到 86% 平均端到端攻击成功率，并能绕过多种 agent 架构与现有防御。",
+    "研究强调登录是 LLM-based web agents 的敏感认证边界，现有安全机制需要引入 authentication-aware defenses。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.66,
+    "novelty": 0.67,
+    "problem_significance": 0.78,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.66,
+    "llm_avg": 0.6620000000000001,
+    "comment": "LoginTrap is relevant to agent security and governance through authentication-boundary attacks on web agents, though its focus remains a specific browser-agent threat model.",
+    "comment_zh": "LoginTrap通过研究Web智能体认证边界攻击而与智能体安全和治理相关，但其重点仍是特定浏览器智能体威胁模型。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.6620000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04741/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04741/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "arxiv_id": "2608.05108",
+  "title": "Agent Against Agent: An Agentic System for Automatic Prompt Injection Red Teaming",
+  "title_zh": "Agent 对抗 Agent：用于自动 Prompt Injection 红队测试的智能体系统",
+  "authors": [
+    "Yanting Wang",
+    "Chenlong Yin",
+    "Runpeng Geng",
+    "Jinyuan Jia"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T17:44:09Z",
+  "abs_url": "https://arxiv.org/abs/2608.05108v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.05108",
+  "links": {
+    "github": "https://github.com/wang-yanting/PIMiner",
+    "project_page": null
+  },
+  "abstract_en": "Prompt injection poses significant security risks to LLM agents. Efficient and effective red-teaming is therefore critical, both for evaluating these risks and for collecting training data to improve defenses. Existing state-of-the-art prompt injection red-teaming methods primarily rely on reinforcement learning (RL), producing attacker models that often generalize poorly to new target LLMs. In this work, we develop PIMiner, an agentic system for prompt injection red-teaming. During training, PIMiner is trained on a sequence of (dataset, target model) pairs and builds a strategy library from scratch. At test time, the learned strategy library can be directly transferred to a previously unseen target LLM without additional training. PIMiner requires only a small number of queries to a target agent (e.g., 10) per test sample. Experimental results demonstrate that PIMiner achieves strong performance. On IPIArena, it attains a 76.2% ASR against Gemini-2.5-Pro, 61.9% ASR against GPT-5.1, and 42.9% ASR against Claude-Sonnet-4.5. On AgentDojo, it achieves an 86.7% ASR against Gemini-2.5-Pro, 53.3% ASR against GPT-5.1, and 40.0% ASR against Claude-Sonnet-4.5.",
+  "abstract_zh": "Prompt injection 对 LLM agents 构成显著安全风险，因此高效、有效的红队测试对于风险评估与防御训练数据收集都至关重要。现有最先进的 prompt injection 红队方法主要依赖强化学习（RL），但训练出的攻击模型往往难以泛化到新的目标 LLM。本文提出 PIMiner，一个用于 prompt injection 红队测试的 agentic system。训练阶段，PIMiner 在一系列（dataset, target model）组合上学习，并从零构建策略库；测试阶段，该策略库可直接迁移到未见过的目标 LLM，无需额外训练。PIMiner 对每个测试样本仅需少量目标 agent 查询（如 10 次）。实验表明，PIMiner 具有很强攻击效果：在 IPIArena 上，对 Gemini-2.5-Pro、GPT-5.1、Claude-Sonnet-4.5 的 ASR 分别为 76.2%、61.9%、42.9%；在 AgentDojo 上，对上述模型的 ASR 分别为 86.7%、53.3%、40.0%。",
+  "key_points_zh": [
+    "提出 PIMiner：一个用于自动 prompt injection red-teaming 的 agentic system，通过智能体间对抗生成攻击策略。",
+    "区别于依赖 RL 的方法，PIMiner 在训练中构建可复用的 strategy library，测试时可迁移到未见目标 LLM，无需额外训练。",
+    "查询效率高：每个测试样本仅需约 10 次目标 agent 查询，适合低成本安全评估。",
+    "在 IPIArena 和 AgentDojo 上对 Gemini-2.5-Pro、GPT-5.1、Claude-Sonnet-4.5 均取得较高 ASR，显示较强跨模型泛化能力。",
+    "代码已开源：https://github.com/wang-yanting/PIMiner"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.76,
+    "problem_significance": 0.88,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.78,
+    "llm_avg": 0.788,
+    "comment": "A relevant agent-security system that automates prompt-injection red teaming and yields transferable attack strategies for evaluating defenses.",
+    "comment_zh": "这是一项相关的智能体安全系统，可自动化提示注入红队测试并生成可迁移攻击策略以评估防御。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.5,
+    "community_heat": 0.7351428590504188,
+    "author_reputation": 0.36228269883744174,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.788,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/wang-yanting/PIMiner",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 5,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05108/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.972
+    }
+  ]
+}

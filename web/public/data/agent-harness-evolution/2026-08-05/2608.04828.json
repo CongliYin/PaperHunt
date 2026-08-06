@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2608.04828",
+  "title": "Skill-Use: Can LLMs Actually Use Skills in Agentic Harnesses?",
+  "title_zh": "Skill-Use：LLM 能否在智能体框架中真正使用技能？",
+  "authors": [
+    "Jinyi Han",
+    "Yuanjian Xu",
+    "Ying Liao",
+    "Xinyi Wang",
+    "Zishang Jiang",
+    "Zixiang Di",
+    "Fanyang Lu",
+    "Zhichao Hu",
+    "Yanghua Xiao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T13:29:16Z",
+  "abs_url": "https://arxiv.org/abs/2608.04828v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04828",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM) agents increasingly rely on skills, structured documents that specify when to act, which procedure to follow, and which tools are allowed. Existing evaluations mostly judge the quality of a skill or its contribution to task success, leaving unexamined whether an agent can recognize a relevant skill and apply it on its own. We introduce Skill-Use, a benchmark that evaluates skill use under progressive disclosure, where an agent sees only a skill's name and short description and must retrieve the full procedure before following it. Skill-Use separates three facets of skill use. Trigger measures whether the agent invokes the relevant skill, Compliance measures how faithfully it follows the prescribed procedure, and Boundary measures whether it avoids forbidden operations. A Skill-Use (SU) score combines the three and credits execution only after the skill is triggered. Skill-Use pairs 79 real skills with 177 executable tasks across nine domains, each grounded in real files, run in an isolated Docker sandbox, and scored by a trajectory-based rubric. Evaluating eight LLMs under two agent harnesses, we find that reliable skill use remains out of reach, as the strongest configuration reaches an SU of only 0.613. Triggering and procedural compliance fail as independent bottlenecks, and both scores and model rankings shift with the harness, so skill use behaves as a capability conditioned on the harness rather than a fixed property of the model.",
+  "abstract_zh": "本文研究 LLM agents 是否能在真实 agentic harnesses 中自主识别并执行“技能”（skills）。作者提出 Skill-Use 基准，采用渐进式披露（progressive disclosure）设定：agent 初始只能看到技能名称和简短描述，必须先检索完整流程，再按要求执行。Skill-Use 将技能使用拆分为三个维度：Trigger 衡量是否调用相关技能，Compliance 衡量是否遵循规定流程，Boundary 衡量是否避免被禁止操作；综合 SU 分数仅在技能被触发后才计入执行质量。该基准包含 79 个真实技能、177 个可执行任务，覆盖 9 个领域，任务基于真实文件，在隔离 Docker 沙箱中运行，并通过轨迹级评分规则评估。对 8 个 LLM 和 2 种 agent harnesses 的实验显示，即使最强配置 SU 也仅为 0.613，可靠技能使用仍未实现；触发技能与遵循流程是相互独立的瓶颈，且模型排名会随 harness 改变，说明技能使用更像是“模型 + 框架”共同决定的能力，而非模型自身固定属性。",
+  "key_points_zh": [
+    "提出 Skill-Use 基准，专门评估 LLM agents 在只看到技能名称和简介时，能否主动检索并正确使用完整技能流程。",
+    "将技能使用拆分为 Trigger、Compliance、Boundary 三个维度，并设计 SU 综合分数，避免只用任务成功率掩盖具体失败原因。",
+    "基准包含 79 个真实 skills 与 177 个可执行任务，覆盖 9 个领域，所有任务在隔离 Docker sandbox 中运行，并基于执行轨迹评分。",
+    "实验覆盖 8 个 LLM 与 2 种 agent harnesses，最强配置 SU 仅为 0.613，表明当前 LLM agents 的可靠技能使用仍有明显差距。",
+    "结果显示技能触发与流程遵循是独立瓶颈，且不同 harness 会改变分数和模型排名，说明 skill use 是受 agent harness 强烈影响的系统级能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.8,
+    "problem_significance": 0.86,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8240000000000001,
+    "comment": "A strong agent-evaluation benchmark that directly measures skill triggering, compliance, and boundary behavior inside executable harnesses.",
+    "comment_zh": "这是一项很强的智能体评估基准，直接衡量可执行框架中的技能触发、流程遵循和边界行为。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.8240000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04828/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04828/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

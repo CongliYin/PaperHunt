@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2608.04676",
+  "title": "SurgNarrator: A Generative Retrieval Framework for Surgical Video Understanding",
+  "title_zh": "SurgNarrator：用于手术视频理解的生成式检索框架",
+  "authors": [
+    "Yuqing Feng",
+    "Jiawei Ma",
+    "Kevin Qinghong Lin",
+    "Kun Yuan",
+    "Nicolas Padoy",
+    "Daniel S. Elson",
+    "Anh Nguyen",
+    "Stamatia Giannarou",
+    "Baoru Huang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T10:39:19Z",
+  "abs_url": "https://arxiv.org/abs/2608.04676v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04676",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Surgical procedures unfold as structured and recurring clinical events, whose real-time understanding via intraoperative surgical videos is critical for intraoperative decision-making and support. However, existing video understanding methods force a trade-off: autoregressive video-language models support comprehensive reasoning but are not practical for time-sensitive clinical applications, whereas contrastive models offer low latency but struggle with complex scene understanding. Recently, generative retrieval has been explored for general-domain video understanding, but transferring it to surgery is not trivial because near-identical visual appearances may indicate semantically distinct events, and the terminology involved is highly surgery-specific. To this end, we propose SurgNarrator, a new generative retrieval framework tailored for surgical video understanding. We construct a well-curated surgery-centric vocabulary from surgical captions to define a clinically meaningful retrieval space. We then adapt the pre-trained Qwen3-VL-Embedding-8B to learn discriminative clinical representations with a temporally-aware contrastive objective. During inference, a hierarchical, procedure-aware retrieval strategy narrows the search space to the relevant procedure type, delivering fast and effective responses. Our method is comprehensively evaluated on twelve benchmarks in a zero-shot setting and achieves consistent performance gains over state-of-the-art baselines, while reducing output-stage latency by more than two orders of magnitude compared with the generative baseline.",
+  "abstract_zh": "该论文面向术中手术视频的实时理解问题，提出 SurgNarrator。现有方法通常在推理能力与低延迟之间权衡：自回归 video-language model 能进行复杂理解，但难以满足临床实时性；contrastive model 延迟低，却不擅长复杂场景语义。SurgNarrator 将生成式检索（generative retrieval）引入手术视频理解，并针对手术场景进行适配：首先从手术 caption 中构建 surgery-centric vocabulary，定义具有临床意义的检索空间；随后基于预训练 Qwen3-VL-Embedding-8B，通过 temporally-aware contrastive objective 学习更具判别性的临床表征；推理阶段采用 hierarchical, procedure-aware retrieval，先缩小到相关手术类型，再进行检索。实验在 12 个 benchmark 上以 zero-shot 设置评估，SurgNarrator 相比 state-of-the-art baseline 取得稳定提升，并相较生成式 baseline 将输出阶段延迟降低两个数量级以上。",
+  "key_points_zh": [
+    "提出 SurgNarrator，将 generative retrieval 用于 surgical video understanding，缓解自回归模型高延迟与对比模型语义理解不足的矛盾。",
+    "构建 surgery-centric vocabulary，使检索空间更贴合手术术语与临床事件语义，避免通用域词表难以表达手术细节的问题。",
+    "在 Qwen3-VL-Embedding-8B 基础上引入 temporally-aware contrastive objective，学习区分近似视觉外观但语义不同的手术事件。",
+    "推理时采用 hierarchical, procedure-aware retrieval，先按 procedure type 缩小搜索范围，从而提升检索效率与响应速度。",
+    "在 12 个 benchmark 的 zero-shot 评估中持续优于现有 SOTA baseline，并将输出阶段延迟较生成式 baseline 降低超过两个数量级。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.72,
+    "novelty": 0.65,
+    "problem_significance": 0.8,
+    "potential_impact": 0.75,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.68,
+    "llm_avg": 0.6660000000000001,
+    "comment": "A relevant low-latency surgical video understanding paper, though it is more retrieval/perception than a full realtime agent loop.",
+    "comment_zh": "该论文与低延迟手术视频理解相关，但更偏检索感知而非完整实时智能体闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6660000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04676/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04676/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}

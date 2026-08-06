@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2608.05102",
+  "title": "ABSeeker: Training Long-Horizon Search Agents via Answer-Backtracked Credit Assignment",
+  "title_zh": "ABSeeker：通过答案回溯信用分配训练长程搜索智能体",
+  "authors": [
+    "Yijun Lu",
+    "Rui Ye",
+    "Jiajun Wang",
+    "Yuwen Du",
+    "Tian Jin",
+    "Songhua Liu",
+    "Siheng Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T17:41:31Z",
+  "abs_url": "https://arxiv.org/abs/2608.05102v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.05102",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-horizon search agents must make multiple sequential actions (steps) to search, retrieve, verify, and integrate evidence to reach a final answer. However, existing methods for training these agents typically treat all steps within a trajectory uniformly during both supervised fine-tuning (SFT) and reinforcement learning (RL), failing to distinguish useful actions from erroneous or redundant ones. In this paper, we propose Answer-Backtracked Credit Assignment (ABC), a fine-grained credit assignment framework for training long-horizon search agents by converting sparse trajectory-level outcomes into dense step-level supervision that rewards useful actions (even in failed trajectories) while suppressing erroneous or redundant actions. Specifically, given a potentially obscure query and its corresponding ground-truth answer, ABC first performs Answer-Backtracked Clue Recovery, which traces back from the answer to recover intermediate clues required to solve the question. It then applies Clue-Anchored Step Scoring to evaluate each search step against these clues, converting sparse binary outcome supervision into dense step-level rewards. Based on these rewards, we develop ABC-SFT, which reweights the loss of each turn, and ABC-GRPO, which uses the step-level scores as rewards in GRPO. Building on this framework, we train ABSeeker based on Qwen3.5-4B with only 8.5k examples. ABSeeker achieves 37.3% on BrowseComp and 39.1% on BrowseComp-ZH. With context management, the scores further improve to 55.3% and 52.9%, respectively, significantly outperforming same-scale (4B) agents and even matching the performance of larger ones (approximately 30B). These results demonstrate the effectiveness of answer-backtracked step-level credit assignment for training long-horizon search agents.",
+  "abstract_zh": "本文提出 Answer-Backtracked Credit Assignment（ABC），用于训练需要多步搜索、检索、验证与整合证据的长程搜索智能体。不同于以往在 SFT 和 RL 中对整条轨迹的所有步骤一视同仁，ABC 将稀疏的轨迹级结果转化为密集的步骤级监督：从真实答案出发回溯恢复解题所需的中间线索（Answer-Backtracked Clue Recovery），再用这些线索评估每个搜索步骤的价值（Clue-Anchored Step Scoring），从而奖励有用步骤、抑制错误或冗余步骤。基于该框架，作者提出 ABC-SFT 与 ABC-GRPO，分别在监督微调中重加权每轮损失、在 GRPO 中引入步骤级奖励。基于 Qwen3.5-4B，仅用 8.5k 样本训练得到的 ABSeeker 在 BrowseComp 和 BrowseComp-ZH 上分别达到 37.3% 和 39.1%；加入上下文管理后进一步提升至 55.3% 和 52.9%，显著优于同规模 4B 智能体，并接近约 30B 大模型智能体表现。",
+  "key_points_zh": [
+    "提出 Answer-Backtracked Credit Assignment（ABC），将轨迹级成败信号细化为步骤级奖励，解决长程搜索训练中无法区分有效、错误和冗余动作的问题。",
+    "ABC 包含 Answer-Backtracked Clue Recovery 与 Clue-Anchored Step Scoring：先从标准答案反推关键线索，再用线索对每个搜索步骤打分。",
+    "提出 ABC-SFT 和 ABC-GRPO：前者按步骤分数重加权 SFT 损失，后者将步骤级分数作为 GRPO 强化学习奖励。",
+    "基于 Qwen3.5-4B、仅 8.5k 样本训练的 ABSeeker，在 BrowseComp / BrowseComp-ZH 上取得 37.3% / 39.1%，加入上下文管理后提升至 55.3% / 52.9%。",
+    "实验表明，答案回溯的细粒度信用分配能显著提升小规模长程搜索智能体，并可接近更大规模约 30B 智能体的性能。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.82,
+    "problem_significance": 0.89,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.85,
+    "llm_avg": 0.844,
+    "comment": "A strong long-horizon agent-training method that turns sparse answer success into dense step-level credit for search trajectories.",
+    "comment_zh": "这是一篇很强的长程智能体训练方法，将稀疏答案成功信号转化为搜索轨迹中的密集步骤级信用。"
+  },
+  "scores": {
+    "topic_relevance": 0.20000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.8950630275459597,
+    "author_reputation": 0.3911814377866111,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.844,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 49,
+    "first_author_h_index": 8,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05102/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.922
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05102/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.866
+    }
+  ]
+}

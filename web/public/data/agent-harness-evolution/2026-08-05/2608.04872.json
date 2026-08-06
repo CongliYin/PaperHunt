@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2608.04872",
+  "title": "A-SR: Self-Evolving Agentic LLMs for Symbolic Regression via Hierarchical Coordination",
+  "title_zh": "A-SR：通过层次化协同实现用于符号回归的自进化 Agentic LLM",
+  "authors": [
+    "Wenxiao Zhao",
+    "Dong Liu",
+    "Kaiyi Xu",
+    "Feng Liu",
+    "Zhen Zhao",
+    "Fei Ben",
+    "Shu Wang",
+    "Wenhao Li",
+    "Yingnian Wu",
+    "Fenghua Ling",
+    "Haobo Li",
+    "Lei Bai"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T14:01:10Z",
+  "abs_url": "https://arxiv.org/abs/2608.04872v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04872",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Symbolic regression aims to discover closed-form equations from data, but existing LLM-guided methods often rely on a unified proposal loop that compresses heterogeneous search failures into a scalar score and a single prompt. We propose A-SR, a self-evolving agentic framework that shifts the control unit from expression edits to role-conditioned evidence views. A-SR coordinates formula discovery through routing among coordination protocols, an online evaluator-reward role policy, and state-routed process memory. During search, evaluator feedback characterizes reliability and productivity, updates role-level utilities, and routes elite motifs, failure traces, and validity diagnostics to different agents. The framework self-evolves at two timescales: within a run, it adapts the search process without updating LLM parameters; across runs, recorded trajectories can be distilled into open-source LLMs as role-conditioned proposal priors. Averaged over the four LSR-Synth scientific domains in LLM-SRBench, A-SR improves Acc@0.01 over baselines from 25.79% to 48.30% with Llama3.1-8B, while A-SR-LoRA improves the corresponding Qwen3-4B result from 24.58% to 38.29%. On four real-world scientific discovery tasks, A-SR obtains the best in-distribution or out-of-distribution normalized mean squared error on 7 of 8 reported metrics.",
+  "abstract_zh": "符号回归旨在从数据中发现闭式方程，但现有 LLM 引导方法通常依赖统一的提案循环，将异质性的搜索失败压缩为单一标量分数和单个 prompt。本文提出 A-SR，一个自进化的 agentic 框架，将控制单元从“表达式编辑”转向“角色条件化的证据视图”。A-SR 通过协调协议路由、在线 evaluator-reward 角色策略，以及状态路由的过程记忆来组织公式发现。在搜索过程中，evaluator 反馈刻画候选的可靠性与产出效率，更新角色级效用，并将精英 motif、失败轨迹和有效性诊断分别路由给不同 agents。该框架在两个时间尺度上自进化：单次运行内无需更新 LLM 参数即可自适应调整搜索过程；跨运行时，可将记录的轨迹蒸馏到开源 LLM 中，形成角色条件化的 proposal priors。在 LLM-SRBench 的四个 LSR-Synth 科学领域上，A-SR 使用 Llama3.1-8B 将 Acc@0.01 从基线的 25.79% 提升到 48.30%；A-SR-LoRA 使用 Qwen3-4B 将对应结果从 24.58% 提升到 38.29%。在四个真实科学发现任务上，A-SR 在 8 个报告指标中的 7 个上取得最佳的分布内或分布外归一化均方误差。",
+  "key_points_zh": [
+    "提出 A-SR，将符号回归搜索从单一表达式编辑循环扩展为多角色、分层协同的 agentic 框架。",
+    "核心机制包括 coordination protocol routing、在线 evaluator-reward 角色策略，以及 state-routed process memory，用于分发精英模式、失败轨迹和有效性诊断。",
+    "框架支持运行内自适应搜索，无需更新 LLM 参数；也支持跨运行轨迹蒸馏，将经验注入开源 LLM 形成 role-conditioned proposal priors。",
+    "在 LLM-SRBench 的四个 LSR-Synth 科学领域上，A-SR + Llama3.1-8B 将 Acc@0.01 从 25.79% 提升至 48.30%。",
+    "在四个真实科学发现任务中，A-SR 在 8 个分布内/分布外 NMSE 指标中的 7 个取得最优结果。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.66,
+    "novelty": 0.65,
+    "problem_significance": 0.58,
+    "potential_impact": 0.6,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.56,
+    "llm_avg": 0.5940000000000001,
+    "comment": "The paper includes agentic self-evolution and trajectory distillation, but its contribution is mostly tied to symbolic regression as a vertical application.",
+    "comment_zh": "该论文包含智能体自演化和轨迹蒸馏，但主要贡献仍绑定在符号回归这一垂直应用上。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5940000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04872/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04872/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.944
+    }
+  ]
+}
