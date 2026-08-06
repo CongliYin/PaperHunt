@@ -1,8 +1,8 @@
 You are evaluating an academic paper for lasting value in the field of Realtime Multimodal Agents: voice agents, speech tool calling, low-latency spoken interaction, realtime video agents, streaming visual understanding, visual grounding for tool workflows, proactive perception, and reusable evaluation/data/training infrastructure.
 
-The target direction is NOT generic multimodal LLMs, pure ASR/TTS, pure VLM benchmarks, pure image/video recognition, or isolated long-video QA. Prefer papers where voice, image, or video is part of an agent interaction loop, tool invocation workflow, remote diagnosis/shopping task, realtime conversation, or reusable agent data/evaluation/training pipeline.
+The target direction is NOT generic multimodal LLMs, pure ASR/TTS, pure VLM benchmarks, pure image/video recognition, or isolated offline long-video QA. A paper must contribute to realtime/streaming interaction or to a closed-loop visual agent that repeatedly perceives, invokes tools, acts, and verifies evidence. One-shot offline perception does not qualify.
 
-Based on the paper's title, abstract, and introduction (if available), rate the following 5 dimensions on a scale of 0.0 to 1.0:
+Set `domain_fit` from 0.0 to 1.0 first. It is a strict membership score, independent of novelty. Papers without realtime/streaming interaction or an explicit iterative visual tool-agent loop should receive low domain fit. An iterative perception-tool-action loop counts as interactive even when the paper optimizes reasoning rather than latency. Use these questions as evidence for `domain_fit`; do not emit them as separate fields:
 
 1. **realtime_agent_fit** (0-1): Does the work target realtime or streaming voice/video agent interaction rather than offline multimodal understanding? High scores require low-latency, turn-taking, streaming, endpointing, frame budgeting, proactive perception, or live conversation constraints.
 
@@ -14,11 +14,13 @@ Based on the paper's title, abstract, and introduction (if available), rate the 
 
 5. **data_eval_training_reuse** (0-1): Does the work contribute reusable evaluation, benchmarks, simulators, trajectory data, SFT/RL training loops, or test protocols that can share infrastructure with text agents while measuring voice/video agent behavior?
 
-Output ONLY a JSON object with these 5 scores and a brief "comment" field (1 sentence in English explaining your overall assessment).
+Then score the generic value dimensions requested by the caller: `novelty`, `problem_significance`, `potential_impact`, `paradigm_shift`, and `lasting_value`.
+
+Return exactly `domain_fit`, the five generic value dimensions, `comment`, and `comment_zh`. Do not return the five domain-fit questions as field names.
 
 Example output:
 ```json
-{"realtime_agent_fit": 0.85, "speech_tool_interaction": 0.9, "streaming_video_grounding": 0.35, "latency_and_system_design": 0.8, "data_eval_training_reuse": 0.75, "comment": "Strong realtime voice-agent paper that connects low-latency turn taking with reliable speech-driven tool calling and reusable evaluation traces."}
+{"domain_fit": 0.93, "novelty": 0.82, "problem_significance": 0.88, "potential_impact": 0.86, "paradigm_shift": 0.72, "lasting_value": 0.84, "comment": "Strong realtime voice-agent paper that connects low-latency turn taking with reliable speech-driven tool calling and reusable evaluation traces.", "comment_zh": "该工作把低延迟轮次控制、语音工具调用和可复用评测轨迹紧密结合。"}
 ```
 
 Calibration guidelines:

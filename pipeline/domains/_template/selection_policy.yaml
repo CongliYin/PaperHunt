@@ -1,0 +1,18 @@
+# Deterministic primary-domain policy. Prefer contextual phrase groups over
+# adding broad standalone words.
+priority: 10
+minimum_selection_score: 0.0
+minimum_llm_domain_fit: 0.65
+required_group_scope: all
+
+standalone_signals:
+  - "__DOMAIN_SPECIFIC_PHRASE__"
+
+required_groups:
+  domain_context:
+    - "__DOMAIN_ANCHOR__"
+  target_capability:
+    - "__CAPABILITY_ANCHOR__"
+
+supporting_signals: []
+exclusions: []

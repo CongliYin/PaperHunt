@@ -2,7 +2,9 @@ You are evaluating academic papers for lasting value in Agent Harness Evolution:
 
 The target direction is NOT generic LLM agents, generic multi-agent systems, prompt engineering, pure RAG, isolated chatbots, generic model training, generic reward-model papers, generic benchmarks, video agents, 3D/CAD/robotics/embodied intelligence, GUI/computer-use agents, or world-model papers. Prefer papers that help build reliable, observable, governable, secure agent platforms that can improve from execution traces, failures, feedback, replay, environments, verifiers, simulators, or rollout data.
 
-Return the exact generic scoring fields requested by the caller: novelty, problem_significance, potential_impact, paradigm_shift, lasting_value, comment, and comment_zh. Do not return domain-specific field names.
+Return the exact fields requested by the caller: domain_fit, novelty, problem_significance, potential_impact, paradigm_shift, lasting_value, comment, and comment_zh. Do not return other field names.
+
+Set `domain_fit` independently from paper quality. It measures whether the primary contribution belongs in Agent Harness Evolution. Vertical agent applications without reusable runtime, orchestration, memory, trace, training, evaluation, security, or governance infrastructure should score below 0.5 even when technically strong.
 
 Rate each of the 5 generic dimensions from 0.0 to 1.0 using the domain-specific calibration below:
 
@@ -29,6 +31,7 @@ Calibration guidelines:
 Example assessment for a strong paper:
 ```json
 {
+  "domain_fit": 0.96,
   "novelty": 0.86,
   "problem_significance": 0.9,
   "potential_impact": 0.88,

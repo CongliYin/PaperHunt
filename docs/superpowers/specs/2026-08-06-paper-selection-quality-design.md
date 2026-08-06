@@ -54,13 +54,15 @@ This design uses deterministic policies for candidate admission and unique owner
 Each domain receives a `selection_policy.yaml` with:
 
 - `priority`: tie-breaker that favors specialized domains over the horizontal Harness domain;
+- `minimum_selection_score`: minimum deterministic evidence required after grouped matching;
+- `required_group_scope`: whether grouped evidence may come from the full record or must be explicit in the title;
 - `standalone_signals`: phrases strong enough to establish scope directly;
 - `required_groups`: contextual groups that must all match when no standalone signal exists;
 - `supporting_signals`: additional evidence used for ownership scoring;
 - `exclusions`: unambiguous out-of-scope verticals or task families;
 - `minimum_llm_domain_fit`: final semantic threshold.
 
-The generic selector compiles the same boundary-aware regex format already used by the project. A policy qualifies when it has a standalone signal or at least one hit in every required group, and has no exclusion. Its score rewards standalone, group, and supporting hits. The highest qualifying score becomes the primary domain; ties use policy priority and then domain ID for deterministic output.
+The generic selector compiles the same boundary-aware regex format already used by the project. A policy qualifies when it has a standalone signal or at least one hit in every required group, has no exclusion, and reaches the policy's minimum evidence score. Its score rewards standalone, group, and supporting hits, with an extra bonus for grouped evidence stated in the title so a secondary application example in the abstract cannot easily claim primary ownership. The highest qualifying score becomes the primary domain; ties use policy priority and then domain ID for deterministic output.
 
 Specialized policies receive higher tie priority than Agent Harness Evolution. A clearly Harness-specific standalone phrase such as `agent harness` still outweighs a weaker commerce or multimodal group match.
 
@@ -110,7 +112,7 @@ Final emission requires both a valid assessment and `domain_fit >= minimum_llm_d
 
 ### Gold-set metrics
 
-The baseline represents current published history, where all 60 examples were admitted. The new selector reports confusion matrices, precision, recall, F1, and accuracy by domain and overall.
+The baseline re-evaluates each example with the legacy domain keyword filter. The new selector reports confusion matrices, precision, recall, F1, and accuracy by domain and overall.
 
 Acceptance criteria:
 
@@ -125,6 +127,7 @@ For every existing historical output, the evaluator applies the new deterministi
 - retained paper count;
 - mean existing LLM score;
 - number and percentage with existing `llm_avg < 0.4`;
+- retention of existing papers with `llm_avg >= 0.7`, to expose over-aggressive filtering;
 - duplicate cross-domain assignments.
 
 Existing LLM scores are only a historical proxy because they predate `domain_fit`. The gold-set metrics remain the release gate.

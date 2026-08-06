@@ -4,7 +4,7 @@ Paper Hunt ranks recent arXiv papers for configured research domains and serves 
 
 ## Architecture
 
-- `pipeline/`: Python pipeline. It fetches arXiv papers, filters by domain keywords, enriches metadata, scores candidates, calls an OpenAI-compatible LLM, translates summaries to Chinese, extracts figures, and emits JSON.
+- `pipeline/`: Python pipeline. It fetches arXiv papers, assigns one deterministic primary domain, enriches and scores candidates, applies an LLM domain-fit gate, translates summaries to Chinese, extracts figures, and emits JSON.
 - `web/`: Next.js App Router frontend. It reads static JSON from `web/public/data` and renders the list/detail pages.
 - `.github/workflows/daily.yml`: daily GitHub Actions workflow. It runs the pipeline at `0 20 * * *` UTC, uploads images to Vercel Blob by default, commits JSON, and lets Vercel redeploy the `web/` project.
 
@@ -16,7 +16,7 @@ Required GitHub Actions secrets:
 | --- | --- |
 | `LLM_BASE_URL` | OpenAI-compatible base URL, without trailing `/chat/completions` |
 | `LLM_API_KEY` | LLM API key |
-| `LLM_MODEL_SCORING` | model used for five-dimension paper scoring |
+| `LLM_MODEL_SCORING` | model used for domain-fit classification and five-dimension paper scoring |
 | `LLM_MODEL_TRANSLATION` | model used for Chinese summaries |
 | `BLOB_READ_WRITE_TOKEN` | Vercel Blob token for figure uploads |
 
@@ -72,6 +72,16 @@ python pipeline/run_daily.py --domains robotics --date 2026-06-12
 ```
 
 `run_daily.py` automatically discovers all directories under `pipeline/domains/` except names starting with `_` or `.`.
+
+Every domain must define `selection_policy.yaml`. A paper qualifies through either a high-precision standalone phrase or all configured contextual signal groups, unless an exclusion matches. The selector compares every qualifying policy and assigns exactly one primary domain. The LLM then independently scores `domain_fit`; papers below the policy's `minimum_llm_domain_fit` are not published.
+
+Run the offline selection regression before changing domain boundaries:
+
+```bash
+python pipeline/evaluate_selection_quality.py
+```
+
+The report compares the legacy filters and current selector on the user-approved gold set and checked-in historical output.
 
 ## Vercel Deployment
 

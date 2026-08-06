@@ -3,7 +3,7 @@
 
 Two-phase pipeline:
   Phase 1 (--phase1-only):
-    Fetch → Filter → Enrich → Automated scoring
+    Fetch → Select primary domain → Enrich → Automated scoring
     Output: Temporary phase1.json for LLM evaluation
 
   Finalize (--finalize):
@@ -36,9 +36,9 @@ sys.path.insert(0, SCRIPT_DIR)
 
 from lib.fetcher import fetch_papers_by_date_multi_category
 from lib.arxiv_cache import load_papers_from_cache
-from lib.filter import filter_papers_by_keywords
+from lib.selector import load_selection_policies, select_papers_for_domain
 from lib.enricher import fetch_hf_daily_papers, enrich_papers, AuthorMetricsCache
-from lib.utils import load_yaml, log_normalize, clamp
+from lib.utils import log_normalize, clamp
 from lib.scorer import score_phase1_json
 from lib.translator import enrich_zh
 from lib.figures import extract_figures
@@ -82,10 +82,9 @@ def _load_domain_config(domain: str, domains_dir: str) -> dict:
         raise FileNotFoundError(f"Domain '{domain}' not found at {domain_dir}.{hint}")
 
     domain_yaml = os.path.join(domain_dir, "domain.yaml")
-    filter_yaml = os.path.join(domain_dir, "filter_keywords.yaml")
     topic_yaml = os.path.join(domain_dir, "topic_keywords.yaml")
     scoring_md = os.path.join(domain_dir, "scoring_criteria.md")
-    for path in (domain_yaml, filter_yaml, topic_yaml, scoring_md):
+    for path in (domain_yaml, topic_yaml, scoring_md):
         if not os.path.isfile(path):
             raise FileNotFoundError(f"Required domain file missing: {path}")
 
@@ -93,8 +92,6 @@ def _load_domain_config(domain: str, domains_dir: str) -> dict:
         meta = yaml.safe_load(f) or {}
     with open(topic_yaml, "r", encoding="utf-8") as f:
         topic_cfg = yaml.safe_load(f) or {}
-    filter_cfg = load_yaml(filter_yaml)
-
     categories = meta.get("arxiv_categories") or [meta.get("arxiv_category") or "cs.CV"]
     if isinstance(categories, str):
         categories = [categories]
@@ -107,7 +104,6 @@ def _load_domain_config(domain: str, domains_dir: str) -> dict:
         "arxiv_categories": categories,
         "output_suffix": meta.get("output_suffix") or f"{domain}_paper_rank",
         "default_top_pct": float(meta.get("default_top_pct", 0.4)),
-        "filter_cfg": filter_cfg,
         "topic_cfg": topic_cfg,
         "scoring_criteria_path": scoring_md,
     }
@@ -332,6 +328,40 @@ def merge_llm_scores(papers: list, llm_scores: dict) -> int:
             p.setdefault("scores", {})["llm_assessment"] = float(assessment.get("llm_avg", 0.5))
             merged_count += 1
     return merged_count
+
+
+def filter_by_llm_domain_fit(
+    papers: list,
+    *,
+    minimum_domain_fit: float,
+    verbose: bool = True,
+) -> list:
+    """Keep only papers with a valid LLM assessment above the relevance gate."""
+    kept = []
+    rejected_missing = 0
+    rejected_fit = 0
+    for paper in papers:
+        assessment = paper.get("llm_assessment")
+        if not isinstance(assessment, dict):
+            rejected_missing += 1
+            continue
+        try:
+            domain_fit = float(assessment["domain_fit"])
+        except (KeyError, TypeError, ValueError):
+            rejected_missing += 1
+            continue
+        if not 0.0 <= domain_fit <= 1.0 or domain_fit < minimum_domain_fit:
+            rejected_fit += 1
+            continue
+        kept.append(paper)
+
+    if verbose:
+        print(
+            f"  [domain-fit] kept={len(kept)} / total={len(papers)} "
+            f"(minimum={minimum_domain_fit:.2f}, missing={rejected_missing}, "
+            f"below={rejected_fit})"
+        )
+    return kept
 
 
 def _pdf_url_json(paper: dict) -> str:
@@ -588,6 +618,7 @@ def emit_json_outputs(
         list_scores = {
             "topic_relevance": scores.get("topic_relevance", 0),
             "llm_assessment": scores.get("llm_assessment", 0),
+            "domain_fit": (paper.get("llm_assessment") or {}).get("domain_fit", 0),
             "other": _other_score(scores),
         }
         list_items.append(
@@ -880,9 +911,12 @@ def run_phase1(args):
     json_path = args.output_json or os.path.join(tmp_dir, "phase1.json")
     Path(json_path).unlink(missing_ok=True)
 
-    filter_cfg = domain_cfg["filter_cfg"]
     topic_cfg = domain_cfg["topic_cfg"]
     top_pct = args.top_pct if args.top_pct is not None else domain_cfg["default_top_pct"]
+    selection_policies = load_selection_policies(args.domains_dir)
+    if args.domain not in selection_policies:
+        raise RuntimeError(f"No selection policy configured for domain {args.domain}")
+    selection_policy = selection_policies[args.domain]
 
     # Step 1: Fetch
     print(
@@ -910,11 +944,16 @@ def run_phase1(args):
         print("No papers fetched. Exiting.")
         return
 
-    # Step 2: Filter
-    print(f"[2/5] Filtering {domain_cfg['display_name']} papers...")
-    domain_papers = filter_papers_by_keywords(papers, filter_cfg, verbose=verbose)
+    # Step 2: Deterministic primary-domain selection
+    print(f"[2/5] Selecting primary-domain {domain_cfg['display_name']} papers...")
+    domain_papers = select_papers_for_domain(
+        papers,
+        domain=args.domain,
+        policies=selection_policies,
+        verbose=verbose,
+    )
     if not domain_papers:
-        print(f"No {domain_cfg['display_name']} papers after filtering. Exiting.")
+        print(f"No {domain_cfg['display_name']} papers after primary-domain selection. Exiting.")
         return
 
     # Step 3: HF Daily Papers
@@ -949,6 +988,7 @@ def run_phase1(args):
         "arxiv_categories": domain_cfg["arxiv_categories"],
         "output_suffix": domain_cfg["output_suffix"],
         "scoring_criteria_path": domain_cfg["scoring_criteria_path"],
+        "minimum_llm_domain_fit": selection_policy.minimum_llm_domain_fit,
         "total_fetched": len(papers),
         "total_filtered": len(domain_papers),
         "top_n": top_n,
@@ -989,9 +1029,13 @@ def run_finalize(args):
     merged_count = merge_llm_scores(papers, llm_scores)
     print(f"[finalize] Merged LLM scores for {merged_count} papers.")
 
-    # Final ranking — only keep papers with LLM scores for display
+    # Final ranking — a valid LLM domain-fit score is a hard publication gate.
     ranked_all = compute_final_scores(papers)
-    ranked_llm = [p for p in ranked_all if p.get("llm_assessment")]
+    minimum_domain_fit = float(metadata.get("minimum_llm_domain_fit", 0.65))
+    ranked_llm = filter_by_llm_domain_fit(
+        ranked_all,
+        minimum_domain_fit=minimum_domain_fit,
+    )
 
     # Output — same date-based directory as phase1
     date_range = metadata.get("date_range", "")
@@ -1027,7 +1071,10 @@ def run_finalize(args):
         print(f"  Cleaned up: {tmp_dir}/")
 
     print(f"\n  Final HTML: {html_path}")
-    print(f"  Total papers: {len(ranked_all)} (showing {len(ranked_llm)} with LLM scores)")
+    print(
+        f"  Total papers: {len(ranked_all)} "
+        f"(showing {len(ranked_llm)} above the LLM domain-fit gate)"
+    )
     print(f"\nFinal Top 10:")
     for i, p in enumerate(ranked_llm[:10]):
         llm = p.get("llm_assessment", {})
@@ -1055,7 +1102,11 @@ def run_emit_json(args):
     llm_scores = load_llm_scores(args.llm_scores)
     merged = merge_llm_scores(papers, llm_scores)
     print(f"[emit-json] Merged LLM scores for {merged} papers.")
-    ranked_llm = [p for p in compute_final_scores(papers) if p.get("llm_assessment")]
+    minimum_domain_fit = float(metadata.get("minimum_llm_domain_fit", 0.65))
+    ranked_llm = filter_by_llm_domain_fit(
+        compute_final_scores(papers),
+        minimum_domain_fit=minimum_domain_fit,
+    )
     list_path, emitted = emit_json_outputs(
         ranked_llm,
         metadata,
@@ -1077,7 +1128,7 @@ def main():
     # Mode selection
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--phase1-only", action="store_true",
-                      help="Run Phase 1 only: fetch → filter → enrich → score → JSON")
+                      help="Run Phase 1 only: fetch → select → enrich → score → JSON")
     mode.add_argument("--score-llm", action="store_true",
                       help="Score top papers from Phase 1 with an OpenAI-compatible LLM")
     mode.add_argument("--finalize", action="store_true",
