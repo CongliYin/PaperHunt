@@ -6,7 +6,7 @@ PaperHunt currently treats each research domain as a broad arXiv category union 
 
 The historical output demonstrates the failure mode: urban mobility, sEMG recognition, and quantum-learning papers entered Agent Harness Evolution; retail banking and marketplace operations entered E-commerce Agent; and offline TTS/ASR datasets entered Realtime Multimodal Agent. The LLM often identified these papers as irrelevant, but its score only affected ordering and never rejected them.
 
-The user approved a V1 gold set containing ten required inclusions and ten required exclusions for each of the three domains. After reviewing the first August 5 output, the user added eight labels, bringing the regression set to 68 papers. The user also fixed these scope rules:
+The user approved a V1 gold set containing ten required inclusions and ten required exclusions for each of the three domains. After reviewing the first August 5 output, the user added nine labels, bringing the regression set to 69 papers. The user also fixed these scope rules:
 
 - every paper has exactly one primary domain;
 - E-commerce Agent covers product search, recommendation, product understanding, and shopping agents, not general commerce operations;
@@ -29,7 +29,7 @@ The following newly reviewed papers define the revised boundary:
 - Make primary-domain selection deterministic, explainable, and exclusive.
 - Replace single-keyword admission with contextual signal combinations.
 - Use the LLM as a strict semantic relevance gate, not only a ranking signal.
-- Preserve a versioned, executable 68-paper gold set.
+- Preserve a versioned, executable 69-paper gold set.
 - Report historical before/after quality with reproducible metrics.
 - Keep arXiv fetching, enrichment, translation, and figure generation unchanged.
 
@@ -66,6 +66,7 @@ Each domain receives a `selection_policy.yaml` with:
 
 - `priority`: tie-breaker that favors specialized domains over the horizontal Harness domain;
 - `minimum_selection_score`: minimum deterministic evidence required after grouped matching;
+- `standalone_signal_scope`: whether standalone phrases may match the full record or must occur in the title;
 - `required_group_scope`: whether grouped evidence may come from the full record or must be explicit in the title;
 - `standalone_signals`: phrases strong enough to establish scope directly;
 - `required_groups`: contextual groups that must all match when no standalone signal exists;
@@ -83,7 +84,7 @@ Phase one loads all selection policies and applies primary-domain selection dire
 
 Existing tiered topic scoring remains a ranking feature after membership is established. Its accidental matches can no longer admit a paper.
 
-Hard exclusions are evaluated before positive signals in every policy. Harness positives are separated into explicit trunks: infrastructure, Agent training/RL, Skill evolution, coding Agents, and search Agents. Broad terms such as `skill`, `framework`, `security`, or `benchmark` are not independently sufficient. Medical and surgical candidates are rejected regardless of realtime/latency language.
+Hard exclusions are evaluated before positive signals in every policy. Harness positives are separated into explicit trunks: infrastructure, Agent training/RL, Skill evolution, coding Agents, and search Agents. Harness standalone signals must occur in the title, preventing incidental mentions in an abstract from claiming the domain. Multimodal standalone and grouped evidence must likewise be explicit in the title, so generic video understanding or streaming-ASR studies cannot enter through incidental abstract wording. Broad terms such as `skill`, `framework`, `security`, or `benchmark` are not independently sufficient. Security, medical, and surgical candidates are rejected regardless of otherwise positive Agent or realtime language.
 
 ### Unified LLM relevance contract
 
@@ -150,7 +151,7 @@ Existing LLM scores are only a historical proxy because they predate `domain_fit
 ## Tests
 
 - Selector unit tests cover grouped matching, exclusions, scoring, and deterministic ties.
-- The 68-paper gold regression test exercises real historical titles and abstracts, including the reviewed August 5 boundary cases.
+- The 69-paper gold regression test exercises real historical titles and abstracts, including the reviewed August 5 boundary cases.
 - Scorer tests require the unified schema and reject missing or invalid `domain_fit`.
 - Pipeline tests verify final domain-fit gating.
 - The full offline test suite runs in GitHub Actions before the daily pipeline.

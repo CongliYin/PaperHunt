@@ -1,7 +1,8 @@
 priority: 20
 minimum_selection_score: 0.0
 minimum_llm_domain_fit: 0.65
-required_group_scope: all
+standalone_signal_scope: title
+required_group_scope: title
 
 standalone_signals:
   - "end-to-end real-time interactive"
@@ -17,6 +18,8 @@ standalone_signals:
   - "streaming video understanding"
   - "real-time personalized agent"
   - "real time personalized agent"
+  - "personalized agent for the physical world"
+  - "conversational home assistance"
   - "tool-augmented visual agent"
   - "tool-augmented visual agents"
   - "visual tool use"
@@ -69,6 +72,45 @@ supporting_signals:
   - "live"
 
 exclusions:
+  - "security evaluation"
+  - "security benchmark"
+  - "security benchmarks"
+  - "security agent"
+  - "security agents"
+  - "agent security"
+  - "cybersecurity"
+  - "cyber defense"
+  - "prompt injection"
+  - "red teaming"
+  - "red-teaming"
+  - "phishing"
+  - "jailbreak"
+  - "malware"
+  - "data poisoning"
+  - "AI safety"
+  - "content safety"
+  - "cyber attack"
+  - "cyber attacks"
+  - "cyber threat"
+  - "cyber threats"
+  - "endpoint evasion"
+  - "endpoint detection and response"
+  - "EDR evasion"
+  - "threat intelligence"
+  - "vulnerability exploitation"
+  - "misinformation detection"
+  - "disinformation detection"
+  - "fake news detection"
+  - "adversarial attack"
+  - "adversarial attacks"
+  - "adversarial robustness"
+  - "medical"
+  - "clinical"
+  - "surgical"
+  - "surgery"
+  - "intraoperative"
+  - "patient"
+  - "healthcare"
   - "mobile GUI"
   - "GUI agent"
   - "GUI agents"
@@ -80,6 +122,7 @@ exclusions:
   - "dysarthric ASR"
   - "elderly speech recognition"
   - "online speaker adaptation"
+  - "cross-lingual encoder transfer"
   - "expressive speech corpus"
   - "TTS corpus"
   - "financial trading"

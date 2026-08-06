@@ -30,6 +30,7 @@ class SelectionPolicy:
     priority: int
     minimum_selection_score: float
     minimum_llm_domain_fit: float
+    standalone_signal_scope: str
     required_group_scope: str
     standalone_signals: tuple[str, ...]
     required_groups: tuple[SignalGroup, ...]
@@ -104,6 +105,9 @@ def load_selection_policy(path: str | Path, *, domain: str) -> SelectionPolicy:
     priority = payload.get("priority", 0)
     selection_threshold = payload.get("minimum_selection_score", 0.0)
     llm_threshold = payload.get("minimum_llm_domain_fit", 0.65)
+    standalone_signal_scope = str(
+        payload.get("standalone_signal_scope", "all")
+    ).strip().lower()
     required_group_scope = str(payload.get("required_group_scope", "all")).strip().lower()
     try:
         priority = int(priority)
@@ -115,6 +119,10 @@ def load_selection_policy(path: str | Path, *, domain: str) -> SelectionPolicy:
         raise SelectionPolicyError(f"minimum_selection_score must be non-negative: {source}")
     if not math.isfinite(llm_threshold) or not 0.0 <= llm_threshold <= 1.0:
         raise SelectionPolicyError(f"minimum_llm_domain_fit must be between 0 and 1: {source}")
+    if standalone_signal_scope not in {"all", "title"}:
+        raise SelectionPolicyError(
+            f"standalone_signal_scope must be 'all' or 'title': {source}"
+        )
     if required_group_scope not in {"all", "title"}:
         raise SelectionPolicyError(f"required_group_scope must be 'all' or 'title': {source}")
 
@@ -145,6 +153,7 @@ def load_selection_policy(path: str | Path, *, domain: str) -> SelectionPolicy:
         priority=priority,
         minimum_selection_score=selection_threshold,
         minimum_llm_domain_fit=llm_threshold,
+        standalone_signal_scope=standalone_signal_scope,
         required_group_scope=required_group_scope,
         standalone_signals=standalone,
         required_groups=groups,
@@ -156,14 +165,15 @@ def load_selection_policy(path: str | Path, *, domain: str) -> SelectionPolicy:
 def evaluate_policy(paper: Mapping[str, Any], policy: SelectionPolicy) -> PolicyEvaluation:
     """Evaluate one paper against one explainable domain policy."""
     text = _paper_text(paper)
-    group_text = str(paper.get("title", "")) if policy.required_group_scope == "title" else text
+    title = str(paper.get("title", ""))
+    standalone_text = title if policy.standalone_signal_scope == "title" else text
+    group_text = title if policy.required_group_scope == "title" else text
     exclusion_hits = _matches(text, policy.exclusions)
-    standalone_hits = _matches(text, policy.standalone_signals)
+    standalone_hits = _matches(standalone_text, policy.standalone_signals)
     group_hits = tuple(
         (group.name, _matches(group_text, group.keywords))
         for group in policy.required_groups
     )
-    title = str(paper.get("title", ""))
     title_group_hits = tuple(
         (group.name, _matches(title, group.keywords))
         for group in policy.required_groups
@@ -248,6 +258,7 @@ def select_papers_for_domain(
             "policy": {
                 "minimum_selection_score": policies[domain].minimum_selection_score,
                 "minimum_llm_domain_fit": policies[domain].minimum_llm_domain_fit,
+                "standalone_signal_scope": policies[domain].standalone_signal_scope,
                 "required_group_scope": policies[domain].required_group_scope,
             },
             "domain_scores": {

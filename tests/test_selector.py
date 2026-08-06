@@ -24,6 +24,7 @@ def policy(
     *,
     priority: int = 0,
     minimum_selection_score: float = 0.0,
+    standalone_signal_scope: str = "all",
     required_group_scope: str = "all",
     standalone: tuple[str, ...] = ("exact domain phrase",),
     groups: tuple[SignalGroup, ...] = (
@@ -37,6 +38,7 @@ def policy(
         priority=priority,
         minimum_selection_score=minimum_selection_score,
         minimum_llm_domain_fit=0.65,
+        standalone_signal_scope=standalone_signal_scope,
         required_group_scope=required_group_scope,
         standalone_signals=standalone,
         required_groups=groups,
@@ -103,6 +105,16 @@ class SelectorUnitTests(unittest.TestCase):
 
         evaluation = evaluate_policy(
             {"title": "domain study", "abstract": "capability"},
+            candidate,
+        )
+
+        self.assertFalse(evaluation.qualified)
+
+    def test_title_standalone_scope_ignores_incidental_abstract_matches(self) -> None:
+        candidate = policy("one", standalone_signal_scope="title")
+
+        evaluation = evaluate_policy(
+            {"title": "unrelated study", "abstract": "exact domain phrase"},
             candidate,
         )
 

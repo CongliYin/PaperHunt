@@ -73,7 +73,7 @@ python pipeline/run_daily.py --domains robotics --date 2026-06-12
 
 `run_daily.py` automatically discovers all directories under `pipeline/domains/` except names starting with `_` or `.`.
 
-Every domain must define `selection_policy.yaml`. A paper qualifies through either a high-precision standalone phrase or all configured contextual signal groups, unless an exclusion matches. The selector compares every qualifying policy and assigns exactly one primary domain. The LLM then independently scores `domain_fit`; papers below the policy's `minimum_llm_domain_fit` are not published.
+Every domain must define `selection_policy.yaml`. A paper qualifies through either a high-precision standalone phrase or all configured contextual signal groups, unless an exclusion matches. Policies can restrict standalone and grouped evidence to the title with `standalone_signal_scope` and `required_group_scope`. The selector compares every qualifying policy and assigns exactly one primary domain. The LLM then independently scores `domain_fit`; papers below the policy's `minimum_llm_domain_fit` are not published.
 
 Run the offline selection regression before changing domain boundaries:
 

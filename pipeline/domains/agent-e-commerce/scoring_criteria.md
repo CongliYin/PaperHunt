@@ -2,6 +2,8 @@ You are evaluating an academic paper for lasting value in E-commerce Agents. Thi
 
 The target direction is NOT generic multi-agent systems, generic RAG/chatbots, advertising, marketing attribution, pricing, demand or sales forecasting, payments, fraud, logistics, supply-side marketplace operations, or merchant operations. Buyer/seller or marketplace work belongs only when its primary contribution directly improves product search, recommendation, product understanding, or a shopping agent. Industrial recommender systems are in scope when they improve recommendation iteration or serving.
 
+Security-focused and medical/clinical/surgical papers are globally out of scope. Give them `domain_fit <= 0.2` even when they mention products, retail, Agents, search, or recommendation.
+
 Set `domain_fit` from 0.0 to 1.0 first. It is a strict membership score, independent of novelty: a strong generic paper can still have low domain fit. Use these questions as evidence for `domain_fit`; do not emit them as separate fields:
 
 1. **commerce_domain_fit** (0-1): Does the work clearly target online shopping, product catalogs, product search, product recommendation, product understanding, or shopping assistance?
