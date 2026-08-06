@@ -1,0 +1,61 @@
+{
+  "arxiv_id": "2608.01042",
+  "title": "What Could the Agent See at 19:05? Generating Temporal Enterprise Scenarios from Real Research and Replaying Them to Evaluate Agents",
+  "title_zh": "19:05 时智能体能看到什么？基于真实研究生成时序企业场景并回放以评估智能体",
+  "authors": [
+    "Tezan Sahu",
+    "Himani Arora"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-02T06:56:56Z",
+  "abs_url": "https://arxiv.org/abs/2608.01042v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01042",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Enterprise AI agents act across many apps whose data changes continuously, so an answer is correct only relative to what data existed and who could see it at the moment it was asked. Offline evaluation today grades against a single static snapshot, effectively the end of the episode. So, it can only evaluate one situation, the final one, even though every earlier moment of the episode is a different situation that invites its own realistic questions with its own correct answers. Recreating each of those moments as a separate snapshot would mean re-provisioning a whole tenant per instant, which is prohibitively costly; and even a single snapshot leaks future state hidden inside records and cannot represent the multi-app, time-ordered way real work happens. Our system closes two gaps at once: it generates a realistic, persona-driven, temporally-evolving enterprise world from real research, and replays that world at any chosen moment to evaluate any pluggable agent. A schema-inferred temporal description drives a deterministic-plus-LLM rebuild of each record's past state; because the queryable moments are finite, all rebuilds are precomputed into a compact difference cache, making evaluation a fast, reproducible lookup with no model in the path. We describe the design, an architecture spanning both flows, and early experience evaluating enterprise agents.",
+  "abstract_zh": "企业 AI agents 需要在多个应用之间执行任务，而这些应用中的数据会持续变化。因此，某个回答是否正确，取决于提问当时存在哪些数据以及用户当时有权看到哪些数据。当前离线评估通常基于单一静态快照打分，本质上只评估 episode 结束时的最终状态；但 episode 中每个更早的时刻都对应不同情境，也应有各自真实的问题与正确答案。若为每个时刻重新部署完整 tenant，成本极高；而单个快照还会泄露未来状态，无法刻画真实工作中跨应用、按时间推进的过程。本文提出的系统同时解决两类问题：一是从真实研究出发，生成由 persona 驱动、随时间演化的真实企业世界；二是能在任意选定时刻回放该世界，用于评估任意可插拔 agent。系统通过 schema-inferred temporal description 驱动“确定性方法 + LLM”的流程，重建每条记录的历史状态；由于可查询时刻是有限的，所有重建结果会预计算为紧凑的 difference cache，使评估成为快速、可复现、无模型参与的查表过程。论文描述了系统设计、覆盖生成与回放两条流程的架构，并报告了评估企业 agents 的早期经验。",
+  "key_points_zh": [
+    "指出现有企业 agent 离线评估依赖单一静态快照，只能评估最终状态，无法回答“某一历史时刻 agent 能看到什么”的问题。",
+    "提出从真实研究生成 persona-driven、temporally-evolving 的企业场景，模拟跨应用、按时间推进的真实工作流。",
+    "使用 schema-inferred temporal description 结合确定性逻辑与 LLM，重建每条记录在不同历史时刻的状态。",
+    "将有限查询时刻的重建结果预计算为紧凑 difference cache，使评估阶段无需调用模型，具备快速、可复现的查表式执行。",
+    "系统支持任意 pluggable agent 的回放式评估，并给出企业 agents 评测的早期实践经验。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.86,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8640000000000001,
+    "comment": "A strong agent-evaluation harness that combines temporal enterprise simulation, permission-aware replay, reproducible snapshots, and pluggable agent testing.",
+    "comment_zh": "这是一项很强的智能体评测基础设施工作，结合了时序企业仿真、权限感知回放、可复现快照和可插拔智能体测试。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5031796205502992,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8640000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 12,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

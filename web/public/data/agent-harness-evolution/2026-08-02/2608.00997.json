@@ -1,0 +1,60 @@
+{
+  "arxiv_id": "2608.00997",
+  "title": "Registry Descriptions Go Stale Unevenly: An 89-Day Measurement of Model Context Protocol Drift, and Why Drift-Ranked Re-Auditing Under-Covers It",
+  "title_zh": "注册表描述会不均匀地过时：对 Model Context Protocol 漂移的 89 天测量，以及为何按漂移排序的重审计会覆盖不足",
+  "authors": [
+    "Gautam Bharti"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-02T04:54:06Z",
+  "abs_url": "https://arxiv.org/abs/2608.00997v2",
+  "pdf_url": "https://arxiv.org/pdf/2608.00997",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Security studies of the Model Context Protocol (MCP) ecosystem share a design: each audits a registry at a single point in time. None reports how long the registry descriptions those audits judged stay current - a necessary condition for any description-level finding to still apply, though not a sufficient one: we measure the shelf-life of the audited text, not the validity of a security finding itself (Sec. 7.1). We reconstruct 120 observations of the official MCP registry over 88.6 days, covering 19,099 distinct servers as it grew from 3,510 to 18,966. Our central result is a policy one: you cannot keep description-level findings current by re-auditing the servers that drift most. At a top-5% re-audit budget, ranking by prior drift catches only ~20% of the previously-seen servers whose description changes in a held-out window - versus ~27% for descriptor drift overall - and only ~10% of all description changers. The limit is not unpredictability: the ranking still buys ~4x lift. It is that the description surface is sparse - 8.6% of servers ever rewrite one, against 24.8% for descriptors - and that roughly half of all description changes land on new arrivals a history ranking cannot reach, so the same lift buys far less coverage. The control that fits is content-binding - revalidate the moment a description's hash moves - plus a sized periodic full-catalog sweep; a drift-history ranking is at best a partial, blind-to-new-arrivals control. This is scanner hygiene for a description-level auditor, not a runtime trust signal. Of servers observed across at least ten intervals, three-quarters never change, the most active 5% generate 61% of all change events, and only 11.9% of a cohort's descriptors change within 30 days; naive compounding predicts 35.8% at 30 days (73% at 89), a heavy-tail overestimate we use only as a diagnostic. We release the panel, figure generator, and analysis code.",
+  "abstract_zh": "本文研究 Model Context Protocol（MCP）生态中注册表描述的时效性问题。既有安全研究通常只在单一时间点审计 MCP registry，但并未衡量这些被审计的描述文本能保持多久不过时。作者重建了官方 MCP registry 在 88.6 天内的 120 次观测，覆盖 19,099 个不同 servers，期间 registry 从 3,510 个增长到 18,966 个。核心发现是：不能仅通过优先重审计“历史上漂移最多”的 servers 来保持描述级安全结论的时效性。在 top-5% 重审计预算下，按先前漂移排序只能捕获留出窗口中约 20% 的已见 servers 的 description 变化；相比之下，对 descriptor drift 的覆盖约为 27%，而对所有 description changers 的覆盖仅约 10%。问题并非完全不可预测，因为排序仍带来约 4 倍提升；真正限制在于 description 变化面稀疏，只有 8.6% 的 servers 曾重写 description，而 descriptor 变化比例为 24.8%，且约一半 description 变化发生在新加入 servers 上，历史排序无法覆盖。作者建议采用 content-binding：当 description hash 变化时立即重新验证，并配合定期全目录扫描。漂移历史排序最多只能作为部分控制手段，且对新到达项失明。该工作定位为 description-level auditor 的扫描卫生机制，而非运行时信任信号。",
+  "key_points_zh": [
+    "论文对官方 MCP registry 进行了 88.6 天、120 次观测，覆盖 19,099 个 servers，量化 registry descriptions 和 descriptors 的漂移行为。",
+    "description-level findings 的时效性不能靠单次审计保证；作者测量的是被审计文本的“保质期”，而非安全结论本身是否仍然成立。",
+    "按历史漂移对 top-5% servers 重审计只能覆盖约 20% 的已见 description changers，以及约 10% 的全部 description changers，主要因为大量变化来自新到达 servers。",
+    "description 变化比 descriptor 更稀疏：仅 8.6% 的 servers 曾重写 description，而 descriptor 变化比例为 24.8%；最活跃 5% servers 贡献了 61% 的变化事件。",
+    "推荐控制策略是 content-binding：description hash 一变化就重新验证，并结合定期全 catalog 扫描；drift-history ranking 只能作为辅助策略。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.58,
+    "problem_significance": 0.72,
+    "potential_impact": 0.62,
+    "paradigm_shift": 0.46,
+    "lasting_value": 0.6,
+    "llm_avg": 0.596,
+    "comment": "A solid MCP ecosystem measurement study with practical governance implications for agent tool registries, though it is more scanner hygiene than runtime assurance.",
+    "comment_zh": "这是一项扎实的MCP生态测量研究，对智能体工具注册表治理有实践意义，但更偏扫描器维护而非运行时保障。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2794153127047222,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.596,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

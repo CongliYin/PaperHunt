@@ -1,0 +1,70 @@
+{
+  "arxiv_id": "2608.01117",
+  "title": "SoK: Intent-Oriented Systematization of Multi-Turn LLM Jailbreaks",
+  "title_zh": "SoK：面向意图的多轮 LLM 越狱系统化研究",
+  "authors": [
+    "Siyuan Li",
+    "Aodu Wulianghai",
+    "Zehao Liu",
+    "Xi Lin",
+    "Qinghua Mao",
+    "Haoyu Li",
+    "Xiang Chen",
+    "Siyuan Liang",
+    "Jun Wu",
+    "Jianhua Li",
+    "Dacheng Tao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-02T09:24:08Z",
+  "abs_url": "https://arxiv.org/abs/2608.01117v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01117",
+  "links": {
+    "github": "https://github.com/SiyuanLi00/INTACT.",
+    "project_page": null
+  },
+  "abstract_en": "Large Language Models (LLMs) are increasingly deployed in interactive settings, where user intent commonly unfolds through multi-turn dialogue. Multi-turn jailbreaks exploit this pattern by advancing a harmful intent across turns, so that no single message exposes the full objective. However, existing work treats these attacks as a loose collection of prompt patterns and does not analyze how the adversary organizes and advances harmful intent across an interaction. We develop a four-part, intent-oriented taxonomy that organizes multi-turn jailbreaks by adversarial intent structure. Through controlled ablations, we find that effectiveness is driven by how deliberately intent is organized across turns rather than by context length or query count. We further show that the way intent is organized determines the level at which it becomes detectable, pushing the required detection surface outward from the turn level to the session level to the cross-session level. These findings indicate that turn-local safety mechanisms are structurally insufficient and that single-point evaluation overlooks how intent is organized, motivating evaluation protocols aligned to the level at which harmful intent becomes observable. The code is available at: https://github.com/SiyuanLi00/INTACT.",
+  "abstract_zh": "随着 Large Language Models (LLMs) 越来越多地部署在交互式场景中，用户意图往往会在多轮对话中逐步展开。多轮 jailbreak 利用这一交互模式，将有害意图分散并推进到多个轮次中，使得单条消息都不暴露完整目标。本文指出，现有研究多将这类攻击视为零散的 prompt 模式集合，缺乏对攻击者如何在交互过程中组织和推进有害意图的分析。为此，作者提出了一个由四部分组成的、面向意图的分类体系，用于按对抗性意图结构组织多轮 jailbreak。通过受控消融实验，论文发现攻击有效性主要由意图在多轮中的组织方式驱动，而不是上下文长度或查询次数。进一步地，意图组织方式决定了其可检测层级：检测面可能从单轮级扩展到会话级，甚至跨会话级。研究表明，仅依赖单轮局部安全机制在结构上是不充分的，单点评测也会忽略有害意图的组织方式，因此需要与有害意图可观测层级相匹配的评测协议。",
+  "key_points_zh": [
+    "提出面向意图的四部分 taxonomy，用于系统化分析 multi-turn LLM jailbreaks，而非仅归纳表层 prompt 模式。",
+    "受控消融显示，攻击成功率主要取决于有害意图如何跨轮组织和推进，而不是 context length 或 query count。",
+    "不同意图组织方式会改变可检测层级，使检测需求从 turn-level 扩展到 session-level 或 cross-session-level。",
+    "结论指出 turn-local safety mechanisms 存在结构性不足，传统 single-point evaluation 难以覆盖多轮意图展开攻击。",
+    "论文发布代码 INTACT，用于支持相关 taxonomy、实验与评测协议研究。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.42,
+    "problem_significance": 0.5,
+    "potential_impact": 0.38,
+    "paradigm_shift": 0.32,
+    "lasting_value": 0.4,
+    "llm_avg": 0.404,
+    "comment": "The session-level jailbreak taxonomy is relevant to interactive safety evaluation, but it is mostly generic LLM security rather than agent-runtime protection.",
+    "comment_zh": "该多轮越狱分类法对交互式安全评测有一定价值，但整体更偏通用LLM安全，而非智能体运行时防护。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.404,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/SiyuanLi00/INTACT.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

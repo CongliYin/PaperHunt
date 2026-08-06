@@ -1,0 +1,67 @@
+{
+  "arxiv_id": "2608.01001",
+  "title": "From AI Technical Debt to Agentic Technical Debt: A Systematic Mapping of Root Causes and Manifestations in Agentic AI Systems",
+  "title_zh": "从 AI Technical Debt 到 Agentic Technical Debt：Agentic AI Systems 中根因与表现形式的系统映射",
+  "authors": [
+    "Muhammad Tukur",
+    "Hayatullahi B. Adeyemo",
+    "Tao Chen",
+    "Nour Ali",
+    "Anis Zarrad",
+    "Marco Agus",
+    "Rick Kazman",
+    "Rami Bahsoon"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-02T05:09:28Z",
+  "abs_url": "https://arxiv.org/abs/2608.01001v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01001",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The emergence of Agentic AI systems, characterized by autonomous reasoning, multi-agent collaboration, tool orchestration, adaptive decision-making, and persistent memory, represents a fundamental shift from traditional AI pipelines to dynamic software ecosystems. While AI Technical Debt (AITD) has been widely studied in machine learning and software engineering, existing models assume static, component-level architectures and fail to capture the dynamic and emergent behaviors of agentic environments. To address this gap, this paper introduces Agentic Technical Debt (AgTD), defined as technical debt that emerges, accumulates, propagates, and amplifies due to the autonomous and collaborative nature of Agentic AI systems. Building on our prior systematic scoping review of 31 AITDs across seven root-cause categories, we employ a theory-informed transformation methodology to reinterpret these debts in Agentic AI through direct transformation, contextual transformation, and manifestation expansion. We present the first systematic mapping of established AITDs to their agentic manifestations, showing how conventional debts evolve into system-level liabilities, including memory inconsistencies, orchestration fragility, cascading failures, and unsafe autonomous decision-making. Our findings show that technical debt extends beyond software artifacts to encompass agent behaviors, coordination mechanisms, and interactions among agents, tools, and execution environments. We further examine its implications for AI Trust, Risk, and Security Management (AI TRiSM), highlighting impacts on trustworthiness, governance, security, operational resilience, and Sustainability Technical Debt. Overall, this work establishes AgTD as a foundational software engineering construct and provides a transformation framework, taxonomy, and research agenda for managing technical debt in autonomous multi-agent AI systems.",
+  "abstract_zh": "本文关注 Agentic AI systems 中新型技术债的形成机制。与传统 AI pipeline 不同，Agentic AI systems 具备自主推理、多智能体协作、工具编排、自适应决策和持久记忆等特征，使技术债不再局限于静态组件或模型层面。作者提出 Agentic Technical Debt（AgTD）概念，指因智能体的自主性、协作性和动态交互而产生、累积、传播并放大的技术债。论文基于此前对 31 类 AI Technical Debt（AITD）的系统范围综述，使用理论驱动的转换方法，将既有 AITD 通过直接转换、情境转换和表现扩展映射到 Agentic AI 场景。研究展示了传统技术债如何演化为系统级风险，例如记忆不一致、编排脆弱性、级联故障以及不安全的自主决策。作者进一步讨论 AgTD 对 AI Trust, Risk, and Security Management（AI TRiSM）的影响，涵盖可信性、治理、安全、运营韧性和 Sustainability Technical Debt。论文贡献在于将 AgTD 建立为自主多智能体 AI 系统中的基础软件工程概念，并提供分类体系、转换框架和未来研究议程。",
+  "key_points_zh": [
+    "提出 Agentic Technical Debt（AgTD）概念，用于描述自主、多智能体、工具驱动 AI 系统中因动态行为和协作交互产生并放大的技术债。",
+    "基于 31 类既有 AI Technical Debt（AITD），通过直接转换、情境转换和表现扩展，系统映射其在 Agentic AI systems 中的新表现。",
+    "指出技术债从传统软件或模型组件层面扩展到智能体行为、协调机制、工具调用、执行环境以及多智能体交互层面。",
+    "总结 Agentic AI 中典型技术债表现，包括 memory inconsistencies、orchestration fragility、cascading failures 和 unsafe autonomous decision-making。",
+    "将 AgTD 与 AI TRiSM 关联，分析其对可信性、治理、安全、运营韧性和 Sustainability Technical Debt 的影响，并提出后续研究议程。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.46,
+    "problem_significance": 0.66,
+    "potential_impact": 0.48,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.52,
+    "llm_avg": 0.5,
+    "comment": "The taxonomy highlights real operational debt in agentic systems, but it appears primarily conceptual rather than an actionable harness or feedback-loop contribution.",
+    "comment_zh": "该分类法指出了智能体系统中的真实运维债务，但主要是概念性工作，而不是可执行的框架或反馈闭环贡献。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}
