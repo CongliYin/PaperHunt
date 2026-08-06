@@ -1,0 +1,73 @@
+{
+  "arxiv_id": "2608.00739",
+  "title": "EduPluginBench: Executable Assurance for AI-Generated Educational Plugins",
+  "title_zh": "EduPluginBench：面向 AI 生成教育插件的可执行保障基准",
+  "authors": [
+    "Nizam Kadir"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-01T16:22:35Z",
+  "abs_url": "https://arxiv.org/abs/2608.00739v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.00739",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Code-generation models can produce executable components, but compilation and functional tests do not establish compliance with least privilege, telemetry consent, provenance, privileged-write authority, lifecycle constraints, or bounded failure. We introduce EduPluginBench, an executable benchmark and staged admission method for generated plugins in governed software ecosystems. Across 1,440 activation-checked first-order mutants from 30 specifications, P0-P4 increased release-blocking-defect recall by 74.7 percentage points (specification-clustered 95% CI 73.4-75.8) over P0-P2, with no observed rejection among 120 clean references (95% Wilson upper bound 3.1%). A frozen transfer study of 600 unmodified generations from two current coding models found that 300/600 parsed, but none passed P0 or achieved P0-P4 conformance (95% upper bound 0.64%); downstream assurance estimands were undefined. An independently labelled Moodle study retained 16 vulnerable/fixed pairs; the frozen generic PHP detector found no vulnerable revisions. These negative transfer results prevent controlled contract consistency from being read as independent real-defect effectiveness. An earlier 540-generation diagnostic found that post-hoc bounded repair yielded 112 P0 passes, all nonconforming, with recall increasing from 13.4% to 100%. The artifact retains protocols, public-source provenance, raw generations, row-level decisions, audits, analysis code, and reproduction instructions.",
+  "abstract_zh": "本文提出 EduPluginBench，一个用于治理型软件生态中 AI 生成教育插件的可执行基准与分阶段准入方法。作者指出，代码生成模型产出的组件即使能够编译并通过功能测试，也不能保证其满足最小权限、遥测同意、来源可追溯、特权写入授权、生命周期约束或有界失败等治理要求。实验基于 30 个规格构造的 1,440 个激活检查一阶变异体，发现完整 P0-P4 阶段相较 P0-P2 将发布阻断缺陷召回率提高 74.7 个百分点，且在 120 个干净参考实现中未观察到误拒。对两个当前代码模型的 600 个未修改生成结果进行冻结迁移研究时，仅 300/600 可解析，但没有任何样本通过 P0 或达到 P0-P4 合规，导致下游保障估计量无法定义。独立标注的 Moodle 漏洞/修复对研究也显示，冻结通用 PHP 检测器未能发现脆弱版本。因此，受控合约一致性不能被解读为独立真实缺陷有效性。作者还报告早期 540 次生成诊断中，事后有界修复虽得到 112 个 P0 通过样本，但全部不合规；完整流程将召回率从 13.4% 提升至 100%。论文发布了协议、公开来源、原始生成、逐行决策、审计、分析代码与复现实验说明。",
+  "key_points_zh": [
+    "EduPluginBench 关注 AI-generated educational plugins 的治理合规，而不仅是编译通过或功能正确。",
+    "P0-P4 分阶段准入显著提升发布阻断缺陷召回率，比 P0-P2 高 74.7 个百分点，且在干净参考实现上未观察到误拒。",
+    "对两个当前 coding models 的 600 个冻结生成样本进行迁移测试，虽有半数可解析，但无一通过 P0 或达到 P0-P4 conformance。",
+    "Moodle 漏洞/修复对实验中，通用 PHP detector 未检出脆弱版本，说明基准内合约一致性不能直接等同于真实缺陷检测能力。",
+    "论文强调可复现性，提供 protocols、raw generations、row-level decisions、audits、analysis code 和 reproduction instructions。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.78,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.74,
+    "llm_avg": 0.7200000000000001,
+    "comment": "EduPluginBench offers a concrete executable assurance and admission framework for generated plugins, with durable ideas despite a narrow educational-plugin domain.",
+    "comment_zh": "EduPluginBench 为生成式插件提供了具体的可执行保障与准入框架，虽领域较窄但思想具有持久价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.7200000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00739/fig1.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.985
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00739/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.979
+    }
+  ]
+}

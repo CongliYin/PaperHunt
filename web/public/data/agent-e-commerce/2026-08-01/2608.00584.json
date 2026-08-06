@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2608.00584",
+  "title": "Element-Aware Group Learning for E-Commerce Image Generation",
+  "title_zh": "面向电商图像生成的元素感知组学习",
+  "authors": [
+    "Jingtong Chen",
+    "Jiahui Wang",
+    "Xue Zhao",
+    "ShaoGuo Liu",
+    "Minghao Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-01T10:45:03Z",
+  "abs_url": "https://arxiv.org/abs/2608.00584v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.00584",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent advances in image generation and editing have made prompt quality a key bottleneck for e-commerce creatives. Vision-language models (VLMs) can generate image-editing prompts from product images and metadata, but further improving their prompt-writing capabilities requires post-training with feedback from the generated images. Group Relative Policy Optimization (GRPO) is a natural framework for such outcome-level reward optimization. However, it assigns credit only at the full-prompt level, even though image quality often depends on specific design elements such as composition, background, and the presentation of selling points. Existing fine-grained credit assignment methods typically require step-level supervision or learned critics. To address this, we propose EAGLE-GRPO (Element-Aware Group Learning for E-Commerce Image Generation), which decomposes the group-centered reward over predefined elements. We cast element-level credit assignment as a kernel ridge regression problem and derive a closed-form solution, without additional rollouts or separate credit-assignment models. This yields interpretable per-element advantages and more precise policy updates. Experiments show that EAGLE-GRPO sustains performance gains over more training steps before plateauing and generates prompts that produce higher-quality e-commerce images than competitive VLM prompt-writing baselines.",
+  "abstract_zh": "本文关注电商创意图像生成中的提示词质量瓶颈。现有 Vision-Language Models（VLMs）可基于商品图像与元数据生成图像编辑提示词，但若要进一步提升提示词撰写能力，需要利用生成图像的反馈进行后训练。Group Relative Policy Optimization（GRPO）适合进行结果级奖励优化，但其仅在完整提示词层面分配信用，难以识别构图、背景、卖点呈现等具体设计元素对图像质量的贡献。为此，论文提出 EAGLE-GRPO（Element-Aware Group Learning for E-Commerce Image Generation），将组中心奖励分解到预定义元素上，并将元素级信用分配建模为 kernel ridge regression 问题，推导出闭式解。该方法无需额外 rollout 或独立 critic，即可得到可解释的逐元素 advantage，从而实现更精细的策略更新。实验表明，EAGLE-GRPO 能在更多训练步内持续提升性能，并生成比强竞争 VLM 提示词基线更高质量的电商图像提示词。",
+  "key_points_zh": [
+    "提出 EAGLE-GRPO，将 GRPO 的完整提示词级奖励细化到构图、背景、卖点呈现等电商设计元素。",
+    "把元素级信用分配形式化为 kernel ridge regression，并给出闭式解，避免额外 rollout 或单独训练 critic。",
+    "方法可产生可解释的 per-element advantages，帮助模型更准确地更新提示词生成策略。",
+    "实验显示 EAGLE-GRPO 相比 VLM prompt-writing baselines 能生成更高质量的电商图像提示词，并在更长训练过程中保持增益。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.64,
+    "problem_significance": 0.6,
+    "potential_impact": 0.62,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.56,
+    "llm_avg": 0.5599999999999999,
+    "comment": "A commerce-relevant VLM post-training method for improving product creative generation, though it is peripheral to search, recommendation, and shopping-agent decision workflows.",
+    "comment_zh": "该方法面向电商商品创意生成且具有实用性，但与搜索、推荐和购物智能体决策流程关联较间接。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.416947575628934,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5599999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 6,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00584/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00584/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.95
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00584/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00584/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

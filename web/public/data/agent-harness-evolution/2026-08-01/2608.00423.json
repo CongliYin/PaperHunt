@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2608.00423",
+  "title": "Diagnose Before You Compress: Prediction-Independent Bottleneck Witness Refinement for LLM Serving Traces",
+  "title_zh": "先诊断再压缩：用于 LLM 服务轨迹的预测无关瓶颈见证精炼",
+  "authors": [
+    "Liming Liu",
+    "Chao Hu",
+    "Mingfei Lu",
+    "Cong Tan",
+    "Yiwei Ge",
+    "Chijin Zhou",
+    "Yongjun Xie",
+    "Runzhe Wang",
+    "Xiaohai Shi",
+    "Heyuan Shi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-01T03:43:55Z",
+  "abs_url": "https://arxiv.org/abs/2608.00423v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.00423",
+  "links": {
+    "github": "https://github.com/llmllmllm/BPW",
+    "project_page": null
+  },
+  "abstract_en": "Production LLM serving generates millions of diverse requests, making full-trace replay across serving configurations increasingly expensive. Existing trace reduction methods mainly preserve workload distributions or representative requests, but bottleneck-revealing workloads may be rare and non-representative. Moreover, evidence for one component cannot compensate for missing evidence in another, while using predicted bottlenecks as target truth creates circular evaluation. These limitations make it necessary to preserve evidence for every bottleneck component rather than rely on workload representativeness alone. We propose Bottleneck-Preserving Witnessing (BPW), a quality-constrained framework for compact and diagnostically reliable LLM serving replay suites. BPW first performs Workload Candidate Nomination using response-blind workload features and closed source-side measurements. This stage identifies workloads that may expose scheduler, prefill, decode, or KV-cache bottlenecks. Coverage-Priority Sequence Construction then organizes multi-component proposals as reusable hyperedges and prioritizes weak and uncovered dimensions. Finally, Bottleneck Truth Verification derives prediction-independent labels solely from direct target-system measurements. The verified results determine the earliest prefix satisfying the direct two-witness requirement for every component. Experiments on BurstGPT, ServeGen, and Mooncake show that BPW reaches the verified gate with a compact workload set and outperforms 16 policies, achieving relative improvements of 2.3% and 16.3% in Mean prefix Macro-F1 and WBRC-AUC, respectively. Stage-resolved and sensitivity analyses confirm the distinct contributions and local stability of its three stages. Our code is publicly available at https://github.com/llmllmllm/BPW",
+  "abstract_zh": "生产级 LLM serving 会产生海量且多样的请求，使得在不同服务配置下进行完整 trace replay 成本越来越高。现有 trace reduction 方法多关注保持工作负载分布或代表性请求，但真正揭示瓶颈的工作负载可能十分稀有且不具代表性；同时，某一组件的证据无法弥补另一组件证据的缺失，而将预测瓶颈作为真值又会造成循环评估。为此，论文提出 Bottleneck-Preserving Witnessing（BPW），一个面向紧凑且诊断可靠的 LLM serving replay suite 的质量约束框架。BPW 首先利用与响应无关的 workload features 和源侧闭环测量进行 Workload Candidate Nomination，筛选可能暴露 scheduler、prefill、decode 或 KV-cache 瓶颈的工作负载；随后通过 Coverage-Priority Sequence Construction 将多组件候选组织为可复用 hyperedges，并优先覆盖薄弱和未覆盖维度；最后使用 Bottleneck Truth Verification，仅基于目标系统直接测量获得预测无关标签，并确定满足每个组件“两见证”要求的最早前缀。实验在 BurstGPT、ServeGen 和 Mooncake 上验证，BPW 以更小工作负载集合达到验证门槛，并优于 16 种策略，在 Mean prefix Macro-F1 和 WBRC-AUC 上分别取得 2.3% 和 16.3% 的相对提升。",
+  "key_points_zh": [
+    "论文指出传统 trace reduction 过度依赖分布代表性，可能遗漏稀有但关键的瓶颈触发请求，尤其不适合 LLM serving 的多组件诊断场景。",
+    "提出 BPW 框架，目标不是复现整体 workload 分布，而是为 scheduler、prefill、decode、KV-cache 等每类瓶颈保留足够直接证据。",
+    "BPW 包含三阶段：候选提名、覆盖优先序列构造、预测无关真值验证，避免用模型预测结果充当瓶颈标签导致循环评估。",
+    "通过“两见证”要求，BPW 选择满足每个瓶颈组件直接证据覆盖的最早 replay 前缀，从而兼顾压缩率与诊断可靠性。",
+    "在 BurstGPT、ServeGen、Mooncake 上，BPW 相比 16 种基线策略取得更优 Mean prefix Macro-F1 和 WBRC-AUC，消融与敏感性分析也验证了各阶段的贡献。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.48,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.4,
+    "lasting_value": 0.52,
+    "llm_avg": 0.49000000000000005,
+    "comment": "BPW is solid LLM-serving trace infrastructure, but it is only weakly connected to agent harnesses, tool-use rollouts, or agent evaluation loops.",
+    "comment_zh": "BPW 是扎实的 LLM 服务轨迹基础设施，但与智能体框架、工具调用轨迹或智能体评测闭环关联较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.36671719094560273,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.49000000000000005,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/llmllmllm/BPW",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 12,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00423/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.895
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00423/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "arxiv_id": "2608.00783",
+  "title": "Safety Invariants for Agents Orchestrating Irreversible State Transitions: A Four-Dimensional Formalism Evaluated on Public Ledgers",
+  "title_zh": "面向编排不可逆状态转移的智能体安全不变量：一种四维形式化及其在 Public Ledgers 上的评估",
+  "authors": [
+    "Zhaoming Yin"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-01T17:29:42Z",
+  "abs_url": "https://arxiv.org/abs/2608.00783v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.00783",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Autonomous agents are increasingly asked to produce irreversible effects on external systems - transferring funds, writing to durable storage, actuating hardware. Existing agent frameworks (ReAct, Reflexion, MCP) optimize task success on benchmarks and give little attention to the safety of irreversible side-effects. We formalize one such setting, movement of value across public ledgers, as state transitions in a four-dimensional space indexed by (wallet, chain, address, protocol), and use that formalism to state and prove a guarantee we call execution fidelity: under a fault model admitting planner mis-mapping, ambiguous outcomes, retries, at-least-once delivery, and delegated non-human callers, a session's realized effect on the ledger is either nothing at all or exactly the transition that was rendered to the user, exactly once. The theorem deliberately does not claim that the rendered transition matches the user's intent - no runtime layer can decide that - but it confines that unbounded question to a single predicate over a finite object, which is what makes a preview a sufficient control rather than a formality. Seven safety invariants, derived from the fidelity condition rather than enumerated from experience, discharge the guarantee. Empirically, on a controlled N=60 adversarial suite the stack lifts pass rate by ~74 percentage points over a naive-ReAct baseline on two write-aggressive backing models, but by only ~3 points on a write-cautious one - evidence that single-model evaluations of agent safety stacks are close to unfalsifiable. The system is deployed; 108 production write operations across 8 chains back the failure taxonomy. Although the evaluation setting is public ledgers, the formalism and invariants apply to any probabilistic agent acting on irreversible external state.",
+  "abstract_zh": "本文关注 autonomous agents 在外部系统上执行不可逆操作时的安全性，例如转账、写入持久存储或驱动物理硬件。现有 agent frameworks（如 ReAct、Reflexion、MCP）多优化 benchmark 上的任务成功率，却较少系统处理不可逆副作用的安全风险。论文以 public ledgers 上的 value movement 为例，将其形式化为由 wallet、chain、address、protocol 四个维度索引的状态转移空间，并提出 execution fidelity 保证：在允许 planner mis-mapping、ambiguous outcomes、retries、at-least-once delivery、delegated non-human callers 等故障模型下，一个 session 在 ledger 上的实际效果要么完全不发生，要么恰好是展示给用户的那次状态转移，且仅执行一次。该定理并不保证展示内容一定匹配用户真实意图，因为运行时层无法判定这一点；它将开放式的意图匹配问题压缩为对有限对象的单一 predicate，使 preview 成为充分控制手段而非形式主义。论文从 fidelity 条件推导出 7 个 safety invariants，并以此支撑保证。实验上，在 N=60 的 adversarial suite 中，该栈相较 naive-ReAct baseline 在两个 write-aggressive backing models 上将通过率提升约 74 个百分点，但在一个 write-cautious model 上仅提升约 3 个百分点，说明仅基于单一模型评估 agent safety stack 近乎不可证伪。系统已部署，来自 8 条链的 108 次生产写操作支撑其 failure taxonomy。尽管评估场景是 public ledgers，该形式化与不变量适用于任何对不可逆外部状态采取行动的 probabilistic agent。",
+  "key_points_zh": [
+    "提出四维状态转移形式化：以 wallet、chain、address、protocol 描述 public ledgers 上的 value movement，为不可逆外部操作建立可验证模型。",
+    "定义并证明 execution fidelity：在多类现实故障下，ledger 上的实际效果要么为空，要么与展示给用户的 transition 完全一致且仅发生一次。",
+    "强调 fidelity 不等同于 intent alignment：系统不判断用户真实意图，只将风险收敛到对 preview 中有限对象的单一 predicate 检查。",
+    "从 fidelity 条件推导出 7 个 safety invariants，而非依赖经验枚举，用于系统性排除 mis-mapping、重试、重复投递等安全问题。",
+    "实验显示安全栈对 write-aggressive models 提升显著，但对 write-cautious model 提升有限，提示 agent safety 评估必须覆盖多种 backing models。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.8,
+    "problem_significance": 0.88,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8240000000000001,
+    "comment": "This is strong agent-safety infrastructure work because it formalizes durable invariants for irreversible external actions and validates them with adversarial and production evidence.",
+    "comment_zh": "这是一篇很强的智能体安全基础设施工作，因为它为不可逆外部动作形式化了持久安全不变量，并用对抗与生产证据验证。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8240000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00783/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00783/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.978
+    }
+  ]
+}

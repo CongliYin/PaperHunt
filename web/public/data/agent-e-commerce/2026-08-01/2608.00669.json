@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.00669",
+  "title": "GARDRec: Decision-Level Graph Grounding for Large Language Model Recommendation",
+  "title_zh": "GARDRec：面向大语言模型推荐的决策级图 grounding",
+  "authors": [
+    "Yong Wang",
+    "Hongliang Sun",
+    "Jinlan Liu",
+    "Hua Zhang",
+    "Dianbo Sui",
+    "Dianhui Chu",
+    "Zhiying Tu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-01T13:44:04Z",
+  "abs_url": "https://arxiv.org/abs/2608.00669v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.00669",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) offer new opportunities for recommendation by interpreting item descriptions, user instructions, and external knowledge through natural-language prompts. However, existing graph-augmented LLM recommenders often use knowledge graphs mainly as prompt-level evidence, leaving ranking decisions weakly constrained by structured user-item relations. This is problematic for next-item recommendation, where the model must compare candidates under the same user context while preserving temporal preference, collaborative signals, and attribute matches. To address this issue, we propose \\emph{GARDRec}, a Graph-grounded Adaptive Reasoning and Decision-aware Recommendation framework for LLM-based next-item ranking. GARDRec constructs semantic-structural item representations from textual node features and graph propagation, derives personalized graph contexts from temporally weighted histories and first-order neighborhoods, and aligns graph-derived representations with a frozen LLM through continuous multimodal prompts. Explicit interaction and matching features are injected through late-stage decision branches, while inter-candidate attention and restricted generative likelihood support final ranking. Experiments on three public benchmarks with multiple LLM backbones show that GARDRec generally improves candidate-ranking performance over representative baselines. Ablation and diagnostic analyses verify the contributions of graph projection, neighborhood retrieval, explicit decision features, ranking loss, and generative calibration.",
+  "abstract_zh": "本文提出 GARDRec，一个用于 LLM-based next-item ranking 的 Graph-grounded Adaptive Reasoning and Decision-aware Recommendation 框架。针对现有 graph-augmented LLM recommender 主要将知识图作为 prompt 证据、难以在排序决策层充分约束结构化 user-item 关系的问题，GARDRec 将文本节点特征与图传播结合，构建语义-结构 item 表示；基于时间加权用户历史与一阶邻域检索生成个性化 graph context；并通过连续 multimodal prompts 将图表示对齐到冻结的 LLM。框架还在后期决策分支中注入显式交互与匹配特征，结合 inter-candidate attention 和受限生成似然进行最终排序。三组公开 benchmark 与多个 LLM backbone 上的实验表明，GARDRec 通常优于代表性 baseline；消融与诊断分析进一步验证了图投影、邻域检索、显式决策特征、排序损失和生成校准的有效性。",
+  "key_points_zh": [
+    "问题聚焦：现有图增强 LLM 推荐多停留在 prompt-level evidence，排序决策仍缺乏对 temporal preference、collaborative signals 和属性匹配的强约束。",
+    "核心方法：GARDRec 结合文本节点特征与 graph propagation，学习 semantic-structural item representations，并从时间加权历史与一阶邻域中构造 personalized graph contexts。",
+    "LLM 对齐：通过 continuous multimodal prompts 将图派生表示接入 frozen LLM，避免全量微调，同时保留语言模型的语义推理能力。",
+    "决策增强：在 late-stage decision branches 注入显式 interaction/matching features，并使用 inter-candidate attention 与 restricted generative likelihood 支持候选排序。",
+    "实验结论：在三个公开 benchmark 和多个 LLM backbone 上，GARDRec 相比代表性 baseline 整体提升 candidate-ranking performance；消融验证各模块均有贡献。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.62,
+    "problem_significance": 0.68,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.55,
+    "llm_avg": 0.556,
+    "comment": "A technically solid LLM-graph recommendation framework with useful ranking improvements, but only weakly grounded in e-commerce-specific shopping workflows.",
+    "comment_zh": "该工作在LLM与图推荐结合上较扎实并有排序改进，但与电商购物场景的绑定较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4795492938099868,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.556,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 18,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00669/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00669/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.941
+    }
+  ]
+}

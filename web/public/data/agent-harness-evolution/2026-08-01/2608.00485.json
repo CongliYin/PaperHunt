@@ -1,0 +1,96 @@
+{
+  "arxiv_id": "2608.00485",
+  "title": "SERL-SQL: Selective Hindsight Distillation for Text-to-SQL Reinforcement Agentic Learning",
+  "title_zh": "SERL-SQL：面向 Text-to-SQL 强化学习智能体的选择性后见蒸馏",
+  "authors": [
+    "Tao Liu",
+    "Tao Feng",
+    "Xiangheng Li",
+    "Jinwang Song",
+    "Yifan Li",
+    "Xiaoqing Cheng",
+    "Dixuan Zhang",
+    "Siquan Li",
+    "Lin Lan",
+    "Hongying Zan",
+    "Kunli Zhang",
+    "Chao Wu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-01T07:24:12Z",
+  "abs_url": "https://arxiv.org/abs/2608.00485v2",
+  "pdf_url": "https://arxiv.org/pdf/2608.00485",
+  "links": {
+    "github": "https://github.com/Ffunkytao/SERL-SQL.",
+    "project_page": null
+  },
+  "abstract_en": "Recent Text-to-SQL systems increasingly rely on multi-turn interaction, execution feedback, and reinforcement learning. However, most existing methods use execution correctness only as a trajectory-level reward, which provides limited guidance for identifying the SQL decisions responsible for success or failure. We propose SERL-SQL, a selective execution-grounded reinforcement learning framework for multi-turn Text-to-SQL agents. SERL-SQL samples on-policy SQL interaction trajectories and uses a training-only teacher to re-score student actions with execution feedback. The resulting teacher--student likelihood gap is converted into bounded, masked weights that reweight GRPO advantages only on SQL and tool-action tokens. In this way, task rewards preserve the optimization direction, while execution hindsight provides localized credit assignment. Experiments on BIRD, Spider, and cross-domain benchmarks show that SERL-SQL achieves competitive performance, reaching 76.56% execution accuracy on BIRD-Dev and 89.92% on Spider-Test. Moreover, our reward-based selection strategy closely approaches the oracle Best-of-N upper bound and consistently outperforms consistency-based selection, showing that SERL-SQL produces high-quality candidates that can be reliably identified by lightweight execution-grounded rewards. Our code will be released at https://github.com/Ffunkytao/SERL-SQL.",
+  "abstract_zh": "近期 Text-to-SQL 系统越来越依赖多轮交互、执行反馈与强化学习，但多数方法仅将执行正确性作为整条轨迹级奖励，难以定位哪些 SQL 决策导致成功或失败。本文提出 SERL-SQL，一个面向多轮 Text-to-SQL agent 的选择性、基于执行反馈的强化学习框架。SERL-SQL 采样 on-policy SQL 交互轨迹，并使用仅训练阶段存在的 teacher 模型结合执行反馈对 student 动作重新评分；随后将 teacher-student 似然差距转换为有界且带 mask 的权重，仅对 SQL 与 tool-action token 上的 GRPO advantage 进行重加权。这样既保留任务奖励的优化方向，又利用执行后见信息实现更局部的 credit assignment。实验显示，SERL-SQL 在 BIRD、Spider 与跨域基准上取得有竞争力的表现，在 BIRD-Dev 达到 76.56% 执行准确率，在 Spider-Test 达到 89.92%。此外，其基于奖励的候选选择策略接近 oracle Best-of-N 上界，并稳定优于基于一致性的选择方法，说明 SERL-SQL 能生成可由轻量执行奖励可靠筛选的高质量候选。",
+  "key_points_zh": [
+    "提出 SERL-SQL：面向多轮 Text-to-SQL agent 的 selective execution-grounded RL 框架，解决轨迹级奖励难以进行局部归因的问题。",
+    "使用训练阶段 teacher 结合执行反馈重评 student 动作，并将 teacher-student likelihood gap 转为有界 masked weights。",
+    "仅在 SQL 与 tool-action tokens 上重加权 GRPO advantages，在保持任务奖励优化方向的同时提供更细粒度 credit assignment。",
+    "在 BIRD-Dev 达到 76.56% execution accuracy，在 Spider-Test 达到 89.92%，并在 BIRD、Spider 与跨域测试中表现稳健。",
+    "基于 reward 的候选选择接近 oracle Best-of-N 上界，且持续优于 consistency-based selection，表明候选质量与可筛选性较强。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.75,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.65,
+    "llm_avg": 0.6839999999999999,
+    "comment": "SERL-SQL is a relevant execution-grounded agent RL method with localized credit assignment, but its impact is narrowed by the Text-to-SQL setting.",
+    "comment_zh": "SERL-SQL 是相关的执行反馈驱动智能体强化学习方法，提供局部信用分配，但影响范围受限于 Text-to-SQL 场景。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.4555005388401039,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6839999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Ffunkytao/SERL-SQL.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 14,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00485/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00485/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.919
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00485/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.78
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00485/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.433
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2608.00805",
+  "title": "AgentSLABench: Evaluating and Benchmarking Agentic Systems Under Resource Constraints",
+  "title_zh": "AgentSLABench：在资源约束下评估与基准测试智能体系统",
+  "authors": [
+    "Meher Bhaskar Madiraju",
+    "Meher Sai Preetam Madiraju"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-01T18:17:47Z",
+  "abs_url": "https://arxiv.org/abs/2608.00805v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.00805",
+  "links": {
+    "github": "https://github.com/MeherBhaskar/agentslabench",
+    "project_page": null
+  },
+  "abstract_en": "We present AgentSLABench, a resource-aware evaluation framework for autonomous AI agents that measures correctness alongside latency, cost, compute, memory, and network usage under declared resource budgets. Unlike standard benchmarks that report only accuracy, AgentSLABench produces a multi-dimensional profile per agent per task - the same way systems profilers (perf, pprof, cProfile) measure resource consumption of code, but extended with task correctness as a first-class dimension. AgentSLABench provides 16 task environments across 6 categories (5 core: multi-hop QA, retail substitution, code generation, web shopping, travel planning; 11 extended) with isolated Docker containers, declared CPU/memory/time/network budgets, sealed test sets with SHA256 hashes, and a standardized profiling protocol. We profile 5 general-purpose baseline agents (ReAct, PlanAndSolve, Reflexion, CoT, Random) plus 4 task-specialized agents, finding that specialized agents achieve 100% success on 3/5 core tasks (fact_qa, web_shopping, travel_planning) and 66.7-83.3% on retail and code_gen, while general baselines fail entirely on 4/5 domain tasks. Crucially, we report the Efficiency-Adjusted Success Rate (EASR) - success weighted by resource consumption relative to declared budgets - revealing that high accuracy at unbounded cost is not production-viable. We release the full infrastructure, sealed test sets, and profiling results to enable reproducible, resource-aware agent evaluation.",
+  "abstract_zh": "本文提出 AgentSLABench，一个面向自主 AI agents 的资源感知评估框架，在声明式资源预算下同时衡量任务正确性、延迟、成本、计算量、内存与网络使用。不同于仅报告准确率的传统 benchmark，AgentSLABench 为每个 agent 在每项任务上生成多维画像，类似 perf、pprof、cProfile 等系统 profiler 对代码资源消耗的度量，但将任务正确性作为核心维度纳入。该框架包含 6 类共 16 个任务环境，其中 5 个核心任务包括 multi-hop QA、retail substitution、code generation、web shopping 与 travel planning，并提供隔离 Docker 容器、CPU/内存/时间/网络预算、带 SHA256 哈希的封闭测试集以及标准化 profiling 协议。作者评测了 5 个通用 baseline agents（ReAct、PlanAndSolve、Reflexion、CoT、Random）和 4 个任务专用 agents，发现专用 agents 在 3/5 个核心任务上达到 100% 成功率，而通用 baselines 在 4/5 个领域任务上完全失败。论文进一步报告 Efficiency-Adjusted Success Rate（EASR），即按相对资源消耗加权的成功率，强调无界成本下的高准确率并不具备生产可行性。",
+  "key_points_zh": [
+    "提出 AgentSLABench，将正确性与延迟、成本、CPU、内存、网络等资源指标联合评估，补足传统只看准确率的 agent benchmark。",
+    "提供 16 个任务环境、隔离 Docker 容器、声明式资源预算、封闭测试集 SHA256 哈希与标准化 profiling 协议，强调可复现性。",
+    "评测 ReAct、PlanAndSolve、Reflexion、CoT、Random 等通用 agents 以及任务专用 agents，结果显示专用 agents 在多个核心任务上显著优于通用方法。",
+    "引入 Efficiency-Adjusted Success Rate（EASR），用资源消耗对成功率加权，揭示高准确率但高成本方案在生产环境中可能不可行。",
+    "开源完整基础设施、封闭测试集与 profiling artifacts，便于后续研究进行资源感知的 agent 评测。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.7,
+    "problem_significance": 0.82,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.8,
+    "llm_avg": 0.75,
+    "comment": "AgentSLABench is a useful production-oriented agent evaluation harness because it couples correctness with reproducible resource-budget profiling.",
+    "comment_zh": "AgentSLABench 是有价值的生产导向智能体评测框架，因为它将正确性与可复现的资源预算剖析结合起来。"
+  },
+  "scores": {
+    "topic_relevance": 0.7200000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.75,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/MeherBhaskar/agentslabench",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00805/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.934
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00805/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.839
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00805/fig3.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.981
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00805/fig4.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.757
+    }
+  ]
+}

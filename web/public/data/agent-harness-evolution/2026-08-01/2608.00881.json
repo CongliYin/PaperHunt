@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2608.00881",
+  "title": "AOSpec: Action and Observation Co-Speculation for Low-Latency Agent Serving",
+  "title_zh": "AOSpec：面向低延迟智能体服务的动作与观测协同推测",
+  "authors": [
+    "Hao Mark Chen",
+    "Jinnan Guo",
+    "Wayne Luk",
+    "Hongxiang Fan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-01T22:06:52Z",
+  "abs_url": "https://arxiv.org/abs/2608.00881v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.00881",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model agents increasingly act through stateful tools, yet model generation and environment execution remain serialized at every step. As decoding accelerates, tool execution becomes a growing bottleneck. Existing action- or observation-only speculation leaves much of this latency exposed: value is concentrated in a few slow calls, some outcomes emerge only through execution, and longer lookahead typically requires an increasingly unlikely chain of action predictions. We present AOSpec, a lossless framework that co-speculates actions and observations across the full agent-environment loop. Expected Value Decoding (EVD) directs observation speculation toward outcomes with the greatest expected latency benefit, optimizing expected time hidden rather than hit rate. For outcomes only execution can reveal, AOSpec launches latency-critical target actions in isolated forks that contain their effects, while Joint Action-State Verification (JASV) verifies both the action and its origin state against committed execution before reuse. JASV recasts long-horizon action dependency from full-chain prediction into target action-state verification, breaking the lookahead--accuracy tradeoff and unlocking long-range overlap without sacrificing serial semantics. Across Terminal-Bench serving settings spanning four harnesses, five actor models, and five serving speeds, AOSpec outperforms every practical baseline, reducing mean end-to-end latency by 11.8-32.5% and p99 latency by up to 42.8%. Its gains increase as decoding accelerates, and its observation model transfers from Terminal-Bench to SWE-bench Verified without retraining.",
+  "abstract_zh": "大型语言模型智能体越来越多地通过有状态工具执行任务，但模型生成与环境执行在每一步仍通常串行进行。随着解码速度提升，工具执行逐渐成为主要延迟瓶颈。现有仅推测动作或仅推测观测的方法难以充分隐藏延迟：少数慢调用贡献了主要收益，部分结果只能通过真实执行获得，而更长前瞻又依赖越来越不可靠的动作预测链。本文提出 AOSpec，一个无损的动作—观测协同推测框架，覆盖完整的智能体—环境循环。其 Expected Value Decoding（EVD）将观测推测引导到预期延迟收益最大的结果上，优化的是预期可隐藏时间而非命中率。对于只能通过执行揭示的结果，AOSpec 在隔离分叉中启动关键目标动作以控制副作用，并通过 Joint Action-State Verification（JASV）在复用前同时验证动作及其来源状态是否与已提交执行一致。JASV 将长程动作依赖从完整链路预测转化为目标动作—状态验证，缓解前瞻长度与准确率之间的权衡，在不破坏串行语义的前提下实现长距离重叠。实验覆盖 Terminal-Bench 的四种 harness、五个 actor models 和五种服务速度，AOSpec 相比所有实用基线将平均端到端延迟降低 11.8%–32.5%，p99 延迟最高降低 42.8%。其收益随解码加速而增大，且观测模型可从 Terminal-Bench 迁移到 SWE-bench Verified，无需重新训练。",
+  "key_points_zh": [
+    "AOSpec 针对 LLM agents 中模型解码与有状态工具执行串行化导致的延迟瓶颈，提出动作与观测协同推测的无损 serving 框架。",
+    "Expected Value Decoding（EVD）不单纯追求观测预测命中率，而是优先推测能带来最大预期延迟隐藏收益的观测结果。",
+    "对于必须执行才能得知的结果，AOSpec 在隔离 forks 中提前运行关键目标动作，并用 Joint Action-State Verification（JASV）验证动作及其来源状态，避免副作用破坏串行语义。",
+    "JASV 将长前瞻所需的完整动作链预测转化为目标 action-state 验证，突破 lookahead 越长准确率越低的限制。",
+    "在 Terminal-Bench 多设置实验中，AOSpec 将平均端到端延迟降低 11.8%–32.5%，p99 延迟最高降低 42.8%，且观测模型可迁移到 SWE-bench Verified。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.86,
+    "problem_significance": 0.84,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.82,
+    "llm_avg": 0.8300000000000001,
+    "comment": "AOSpec is a strong agent-serving runtime contribution because it overlaps model generation with stateful tool execution while preserving serial semantics through verification.",
+    "comment_zh": "AOSpec 是很强的智能体服务运行时工作，因为它在验证串行语义的同时重叠模型生成与有状态工具执行。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8300000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00881/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.95
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00881/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.741
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00881/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00881/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.946
+    }
+  ]
+}

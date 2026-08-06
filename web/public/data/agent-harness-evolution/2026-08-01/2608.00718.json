@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2608.00718",
+  "title": "Adversarial Attacks in Multi-Agent LLM Pipelines: Unveiling Structural Vulnerabilities in Agentic AI Architectures",
+  "title_zh": "多智能体 LLM 流水线中的对抗攻击：揭示 Agentic AI 架构的结构性漏洞",
+  "authors": [
+    "Faisal Haque Bappy",
+    "Tahrim Hossain",
+    "Tarannum Shaila Zaman",
+    "Raiful Hasan",
+    "Kamrul Hasan",
+    "Tariqul Islam"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-01T15:35:58Z",
+  "abs_url": "https://arxiv.org/abs/2608.00718v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.00718",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-agent LLM pipelines orchestrate multiple specialized language model agents into structured workflows where intermediate outputs are passed across agents to solve complex tasks. This design introduces a security gap absent in single-agent settings: once an agent accepts adversarial content, it is propagated as trusted input throughout the pipeline. We argue that this vulnerability stems from the absence of boundary verification, a security primitive that enforces explicit validation of data as it crosses inter-agent boundaries, including content, identity, execution intent, and state integrity. Without such verification, modern pipelines embed implicit trust assumptions that are not adversarially robust, giving rise to structurally distinct attack surfaces (e.g., content injection, agent impersonation, plan deviation, and memory poisoning). Leveraging annotated production traces from the GAIA and SWE-Bench benchmark, we show that these vulnerabilities arise in benign deployments and largely evade existing evaluation frameworks. We further operationalize these failure modes within a controlled multi-agent setting and evaluate them across GPT-5-mini, Claude Sonnet 4.5, and Kimi K2.5 under identical pipeline configurations. The results reveal that attack success aligns with pipeline structure rather than model capability, indicating that adversarial vulnerability is fundamentally an architectural property and motivating a shift toward pipeline-level defenses.",
+  "abstract_zh": "本文研究多智能体 LLM pipelines 中的安全问题。这类系统将多个专用语言模型 agent 编排成结构化工作流，并在 agent 之间传递中间输出以完成复杂任务。作者指出，这种设计引入了单智能体设置中不存在的安全缺口：一旦某个 agent 接受了对抗性内容，该内容就可能作为“可信输入”在整个流水线中传播。论文将根因归结为缺乏边界验证（boundary verification），即在跨 agent 边界传递数据时，对内容、身份、执行意图和状态完整性进行显式校验的安全机制。由于现代多智能体流水线普遍依赖隐式信任假设，攻击者可利用内容注入（content injection）、agent 冒充（agent impersonation）、计划偏移（plan deviation）和记忆投毒（memory poisoning）等结构性攻击面。基于 GAIA 与 SWE-Bench 的生产级标注轨迹，作者发现这些漏洞会在正常部署中自然出现，并且很大程度上逃逸现有评测框架。进一步地，论文在受控多智能体环境中复现这些失效模式，并在相同流水线配置下评估 GPT-5-mini、Claude Sonnet 4.5 与 Kimi K2.5。结果显示，攻击成功率主要与流水线结构相关，而非单个模型能力，说明对抗脆弱性本质上是架构属性，因而需要转向流水线级防御。",
+  "key_points_zh": [
+    "指出多智能体 LLM pipelines 的核心安全缺口：agent 间中间输出一旦被接受，后续模块往往默认信任并继续传播。",
+    "提出边界验证（boundary verification）作为关键安全原语，涵盖内容、身份、执行意图与状态完整性的跨边界校验。",
+    "归纳出多类结构性攻击面，包括 content injection、agent impersonation、plan deviation 和 memory poisoning。",
+    "基于 GAIA 与 SWE-Bench 的标注生产轨迹，证明这些漏洞可在良性部署中出现，且现有评测框架难以捕捉。",
+    "在 GPT-5-mini、Claude Sonnet 4.5 和 Kimi K2.5 上的对比表明，攻击成功更受 pipeline structure 影响，而非模型能力本身。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.66,
+    "problem_significance": 0.8,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.7,
+    "llm_avg": 0.708,
+    "comment": "This paper usefully reframes multi-agent security as a pipeline-boundary verification problem, though it appears more diagnostic than infrastructural.",
+    "comment_zh": "该论文有价值地将多智能体安全重构为流水线边界验证问题，但整体更偏诊断而非基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.708,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00718/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00718/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.951
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00718/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00718/fig4.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.947
+    }
+  ]
+}

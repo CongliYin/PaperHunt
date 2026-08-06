@@ -1,0 +1,73 @@
+{
+  "arxiv_id": "2608.00558",
+  "title": "AiFlow: Token-Native Reactive Orchestration with Bounded Backpressure for Streaming LLM Applications",
+  "title_zh": "AiFlow：面向流式 LLM 应用的 Token 原生响应式编排与有界背压",
+  "authors": [
+    "Qunhui Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-01T09:33:29Z",
+  "abs_url": "https://arxiv.org/abs/2608.00558v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.00558",
+  "links": {
+    "github": "https://github.com/ModelEngine-Group/fit-framework",
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM) applications increasingly operate as streaming workflows combining retrieval, tool calls, safety filters, and multi-agent coordination. Although contemporary frameworks expose provider deltas, workflow nodes often treat generation as coarse request-response steps, leaving queue management, worker allocation, ordering, and backpressure to ad hoc callback code. This paper presents AiFlow, a token-native reactive orchestration model that normalizes provider deltas into typed Context<T> events propagated through a directed streaming graph. Each node is managed by a Node Guardian that declares and enforces local queue bounds, worker concurrency, ordering, overflow policy, cancellation propagation, and retry discipline. We formalize the bounded-memory property, present the compilation from a compact DSL and JSON graph form, and provide static validation for type safety, state concurrency, and injection compatibility. Controlled microbenchmarks, captured DeepSeek trace replay (30 runs), descriptive online runs, LangGraph baselines, a streaming RAG workload, and an Ollama local-backend check show that AiFlow does not alter provider-side Model TTFT but reduces Application TTFPT by 70.9-94.7\\% versus aggregation and keeps runtime-owned queue depth within declared bounds (93.7-96.5\\% MaxQ reduction versus unbounded policies). The supplementary artifact contains scripts, raw traces, machine-readable tables, checksums, and an API-free smoke test; the public implementation is available through the FIT Framework repository.",
+  "abstract_zh": "本文提出 AiFlow，一种面向流式 LLM 应用的 token 原生响应式编排模型。针对检索、工具调用、安全过滤、多智能体协作等流式工作流中，现有框架虽暴露 provider delta，但工作流节点仍常以粗粒度请求-响应方式处理生成过程，导致队列管理、worker 分配、顺序控制和背压依赖临时 callback 代码的问题，AiFlow 将 provider delta 规范化为带类型的 Context<T> 事件，并在有向流式图中传播。每个节点由 Node Guardian 管理，显式声明并执行本地队列上界、worker 并发、顺序约束、溢出策略、取消传播和重试规则。论文形式化了有界内存性质，给出从紧凑 DSL 与 JSON 图表示到运行时的编译流程，并提供类型安全、状态并发与注入兼容性的静态验证。实验包括受控微基准、DeepSeek trace replay、在线运行、LangGraph baseline、streaming RAG workload 与 Ollama 本地后端检查。结果显示，AiFlow 不改变 provider 侧 Model TTFT，但相较聚合式处理将 Application TTFPT 降低 70.9%–94.7%，并将运行时拥有的队列深度维持在声明边界内，相比无界策略 MaxQ 降低 93.7%–96.5%。",
+  "key_points_zh": [
+    "AiFlow 将 LLM provider deltas 统一抽象为类型化 Context<T> 事件，在有向流式图中进行 token 级传播，避免将生成过程退化为粗粒度请求-响应步骤。",
+    "核心机制 Node Guardian 为每个节点声明并强制执行队列上界、worker 并发度、顺序策略、溢出策略、取消传播与重试纪律，从框架层解决背压和资源控制问题。",
+    "论文提供有界内存性质的形式化描述，并支持从紧凑 DSL 和 JSON graph form 编译到运行时，同时进行类型安全、状态并发和注入兼容性的静态验证。",
+    "实验显示 AiFlow 不影响 provider 侧 Model TTFT，但相较聚合式方案可将 Application TTFPT 降低 70.9%–94.7%，改善用户感知首 token 延迟。",
+    "在 DeepSeek trace replay、LangGraph baselines、streaming RAG 与 Ollama 本地后端等测试中，AiFlow 将运行时队列深度控制在声明范围内，相比无界策略 MaxQ 降低 93.7%–96.5%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.82,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.78,
+    "llm_avg": 0.766,
+    "comment": "AiFlow is strong agent-runtime infrastructure for streaming orchestration, bounded queues, typed events, and trace replay, though it is more systems-engineering than self-improving agent evolution.",
+    "comment_zh": "AiFlow 是较强的流式智能体运行时基础设施，覆盖有界队列、类型化事件和轨迹回放，但更偏系统工程而非自改进智能体演化。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.766,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/ModelEngine-Group/fit-framework",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00558/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.704
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00558/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.978
+    }
+  ]
+}

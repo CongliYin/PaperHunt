@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2608.00548",
+  "title": "DrawAI: Agentic Benchmark and Workflow for Making Raster Images Editable",
+  "title_zh": "DrawAI：用于将栅格图像转为可编辑资产的智能体基准与工作流",
+  "authors": [
+    "Pu Cao",
+    "Qingye Kong",
+    "Xuedan Yin",
+    "Xuekun Zhao",
+    "Rupeng Yan",
+    "Qing Song",
+    "Yao Zhang",
+    "Lu Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-01T09:05:06Z",
+  "abs_url": "https://arxiv.org/abs/2608.00548v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.00548",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent image-generation models and multimodal agents can produce high-quality visuals for increasingly complex visual communication tasks. Yet their raster outputs remain difficult to use directly because meaningful content and relationships are flattened into pixels, preventing users from inspecting, modifying, rearranging, or reusing individual components. We formulate image-to-editable reconstruction, which recovers a structured, directly manipulable artifact from a raster image while preserving its visual and semantic content. The central challenge is to jointly satisfy Fidelity and Editability, which often trade off in practice. To study this task, we introduce DrawAI, comprising an agentic benchmark, DrawAI-Bench, and a reconstruction workflow, DrawAI-Flow. DrawAI-Bench spans scientific figures, presentation slides, posters, and diagrams, combining real and AI-generated images to reflect practical visual-creation scenarios. It evaluates Fidelity and Editability through a hybrid protocol of 39 criteria: deterministic rule-based metrics measure properties with direct correspondences, while asset-specific vision-language rubrics capture semantic and perceptual qualities for which exact matching is misleading. Besides, we propose DrawAI-Flow, a two-stage agentic workflow in which a Parser Agent turns extracted elements evidence into an explicit reconstruction plan, and a Reconstruction Agent realizes the plan as executable graphics code through an iterative code-render-validate-revise loop. On DrawAI-Bench, we systematically evaluate thirteen models across five agent harnesses to study the effects of model capability, harness choice, and workflow design. The results show that reconstruction quality and costs vary substantially across model-harness configurations, while DrawAI-Flow consistently improves editable structure.",
+  "abstract_zh": "本文提出 image-to-editable reconstruction 任务：从扁平化的 raster image 中恢复结构化、可直接操控的可编辑图形资产，同时保留视觉与语义内容。该任务的核心难点在于同时满足 Fidelity（视觉/语义保真）与 Editability（结构可编辑性），二者在实践中常存在权衡。为系统研究该问题，作者提出 DrawAI，包括智能体基准 DrawAI-Bench 与重建工作流 DrawAI-Flow。DrawAI-Bench 覆盖 scientific figures、presentation slides、posters 和 diagrams，结合真实图像与 AI 生成图像，使用包含 39 项标准的混合评测协议：可精确对应的属性用 deterministic rule-based metrics 衡量，语义和感知质量则用 asset-specific vision-language rubrics 评估。DrawAI-Flow 是两阶段智能体流程：Parser Agent 将提取到的元素证据转化为显式重建计划，Reconstruction Agent 通过 code-render-validate-revise 迭代生成可执行图形代码。作者在 DrawAI-Bench 上评测 13 个模型与 5 种 agent harness，发现不同模型和 harness 的质量与成本差异显著，而 DrawAI-Flow 能稳定提升可编辑结构质量。",
+  "key_points_zh": [
+    "提出 image-to-editable reconstruction 任务，目标是把 raster image 还原为结构化、可操作的图形资产，而不只是生成视觉相似图像。",
+    "构建 DrawAI-Bench，覆盖科学图、幻灯片、海报和示意图，并混合真实与 AI 生成样本，更贴近实际视觉创作场景。",
+    "设计包含 39 项标准的混合评测：规则指标评估可直接匹配的属性，vision-language rubrics 评估语义、感知与资产特定质量。",
+    "提出 DrawAI-Flow，两阶段由 Parser Agent 生成重建计划，再由 Reconstruction Agent 通过代码渲染与验证迭代生成可执行图形代码。",
+    "系统评测 13 个模型和 5 种 agent harness，结果显示模型/框架选择显著影响质量与成本，DrawAI-Flow 可持续改善 Editability。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.45,
+    "problem_significance": 0.35,
+    "potential_impact": 0.25,
+    "paradigm_shift": 0.15,
+    "lasting_value": 0.25,
+    "llm_avg": 0.29,
+    "comment": "Useful agentic benchmark/workflow for editable visual reconstruction, but it is largely outside realtime multimodal agent interaction, speech/tool use, or streaming video grounding.",
+    "comment_zh": "该工作提出了有用的可编辑视觉重建智能体基准和流程，但总体上偏离实时多模态智能体交互、语音工具调用和流式视频 grounding 方向。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.39342404825616256,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.29,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00548/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00548/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.741
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00548/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.545
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2608.00494",
+  "title": "TaPR: Test-Aware Policy Refinement for Feedback-Conditioned Code Generation",
+  "title_zh": "TaPR：面向反馈条件代码生成的测试感知策略精炼",
+  "authors": [
+    "Aofan Liu",
+    "Jingxiang Meng",
+    "Fangxin Liu",
+    "Yongbiao Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-01T07:35:06Z",
+  "abs_url": "https://arxiv.org/abs/2608.00494v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.00494",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-turn code agents rely on execution feedback to repair incorrect programs, yet standard reinforcement learning paradigms optimize and evaluate policy performance primarily using single-shot outcome rewards. This misalignment conflates initial code generation with feedback-driven refinement, discards granular execution signals across intermediate turns, and fails to evaluate whether the policy actually acquires self-repair capabilities. We propose Test-aware Policy Refinement (TaPR), a framework that transforms execution feedback into a dense per-turn test-pass-ratio reward under a consistent multi-turn interaction protocol. Across six models on 219 code-generation problems from LiveCodeBench, TaPR improves the pooled three-turn success rate (Pass@3) by 2.44 percentage points. In the predefined 7B/8B high-headroom slice, pooled accuracy increases from 30.25% to 33.56% (+3.31 pp), with 42 improvements and 13 regressions in paired trials. On a matched Qwen3-8B ablation, the dense reward supplies nonzero feedback in all of the first ten steps and reaches a higher Hard-subset peak than outcome-only GRPO within the tested budget, although GRPO nearly matches pooled Pass@3 by step 300. Our primary contribution is a reward-decomposition framework and a turn-aware evaluation protocol that decouple first-shot generation quality from multi-turn repair competence.",
+  "abstract_zh": "多轮代码智能体依赖执行反馈来修复错误程序，但标准强化学习范式通常主要用单次结果奖励来优化和评估策略表现。这种不匹配会混淆初始代码生成能力与基于反馈的修复能力，丢弃中间轮次中的细粒度执行信号，也难以判断策略是否真正学会了自我修复。本文提出 Test-aware Policy Refinement（TaPR），在统一的多轮交互协议下，将执行反馈转化为逐轮密集的测试通过率奖励（test-pass-ratio reward）。在 LiveCodeBench 的 219 个代码生成问题上，TaPR 在六个模型中将汇总三轮成功率 Pass@3 提升 2.44 个百分点。在预定义的 7B/8B 高提升空间切片中，汇总准确率从 30.25% 提升到 33.56%（+3.31 pp），配对实验中有 42 次改进、13 次退化。在匹配的 Qwen3-8B 消融实验中，密集奖励在前十个训练步骤均提供非零反馈，并在测试预算内达到比仅使用结果奖励的 GRPO 更高的 Hard 子集峰值，尽管 GRPO 到第 300 步时几乎追平汇总 Pass@3。本文的主要贡献是提出奖励分解框架与轮次感知评估协议，从而解耦首轮生成质量与多轮修复能力。",
+  "key_points_zh": [
+    "指出现有代码生成 RL 评估偏向单次结果奖励，难以区分初始生成能力与多轮反馈修复能力。",
+    "提出 TaPR，将执行反馈分解为逐轮密集的 test-pass-ratio reward，使每一轮修复过程都能获得更细粒度训练信号。",
+    "在 LiveCodeBench 219 个问题、六个模型上，TaPR 将汇总三轮成功率 Pass@3 提升 2.44 个百分点。",
+    "在 7B/8B 高提升空间模型切片中，准确率从 30.25% 提升至 33.56%，配对试验显示改进显著多于退化。",
+    "Qwen3-8B 消融表明，密集奖励比 outcome-only GRPO 更早提供有效反馈，并在 Hard 子集上达到更高峰值。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.68,
+    "problem_significance": 0.74,
+    "potential_impact": 0.65,
+    "paradigm_shift": 0.6,
+    "lasting_value": 0.67,
+    "llm_avg": 0.6679999999999999,
+    "comment": "TaPR addresses multi-turn code-agent repair with dense execution feedback and turn-aware evaluation, but the demonstrated gains are modest.",
+    "comment_zh": "TaPR 通过密集执行反馈和轮次感知评测处理多轮代码智能体修复问题，但实证提升较为有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6679999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00494/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00494/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00494/fig3.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.985
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.00494/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.966
+    }
+  ]
+}
