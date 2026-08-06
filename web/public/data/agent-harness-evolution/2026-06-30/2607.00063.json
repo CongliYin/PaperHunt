@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2607.00063",
+  "title": "Spectral Geometry and Bosonic-Bloch Probes: Explorations in Quantum Learning",
+  "title_zh": "谱几何与 Bosonic-Bloch 探针：量子学习探索",
+  "authors": [
+    "Santanu Ganguly",
+    "Xing Liang",
+    "Dimitrios Makris"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T11:06:25Z",
+  "abs_url": "https://arxiv.org/abs/2607.00063v3",
+  "pdf_url": "https://arxiv.org/pdf/2607.00063",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "This paper studies how spectral geometry emerges in quantum learning models and how it can be diagnosed with physically grounded probes. In graph-regularized quantum networks, training reorganizes the output similarity graph, increases the effective spectral dimension Delta S = +0.23, and reshapes the Laplacian spectrum. Edge-resolved two-boson interference directly probes this restructuring: the bosonic enhancement Delta P_uv correlates with the Fiedler edge split |Delta v_2| (r = -0.50), linking learned spectral partitions to interference signatures. A phase diagram shows a nonmonotonic dependence of performance on coupling strength gamma and noise delta, with graph regularization improving fidelity only in a restricted regime; hardware experiments confirm the predicted interference behavior within shot-noise uncertainty. We also analyze a hybrid quantum autoencoder and introduce Bloch-space drift as a geometric diagnostic of its latent representation. With an unsupervised benign-data threshold, the model achieves high ranking performance (ROC-AUC about 0.99) and negligible false-negative rates. Absolute Bloch drift strongly discriminates anomalies (ROC-AUC at least about 0.9), while consecutive drift is near random (ROC-AUC about 0.5), showing that detection arises from persistent state-space displacement rather than local fluctuations. Through the geometry of reduced single-qubit states and associated quantum Fisher information, these results show that learning-induced spectral organization appears as measurable quantum-state structure, establishing a unified spectral-geometric framework for diagnosing quantum learning systems with bosonic and Bloch probes.",
+  "abstract_zh": "本文研究量子学习模型中谱几何如何涌现，以及如何用具有物理基础的探针进行诊断。在图正则化量子网络中，训练会重组输出相似性图，提高有效谱维度（Delta S = +0.23），并重塑 Laplacian 谱。边级两玻色子干涉可直接探测这种重构：玻色增强 Delta P_uv 与 Fiedler 边分裂 |Delta v_2| 相关（r = -0.50），将学习到的谱划分与干涉信号联系起来。相图显示，性能对耦合强度 gamma 和噪声 delta 呈非单调依赖，图正则化只在有限区域内提升保真度；硬件实验在 shot-noise 不确定度内验证了预测的干涉行为。论文还分析了混合量子自编码器，并提出 Bloch-space drift 作为潜在表示的几何诊断量。在无监督良性数据阈值下，该模型实现了很高的排序性能（ROC-AUC 约 0.99）和可忽略的假阴性率。绝对 Bloch drift 能强区分异常（ROC-AUC 至少约 0.9），而连续 drift 接近随机（ROC-AUC 约 0.5），表明检测信号来自持久的状态空间位移，而非局部波动。通过约化单量子比特态几何及相关 quantum Fisher information，本文表明学习诱导的谱组织可体现为可测量的量子态结构，并建立了用 bosonic 与 Bloch 探针诊断量子学习系统的统一谱-几何框架。",
+  "key_points_zh": [
+    "在 graph-regularized quantum networks 中，训练会重组输出相似性图，提升有效谱维度并改变 Laplacian spectrum，说明学习过程会诱导可观测的谱几何结构。",
+    "edge-resolved two-boson interference 可作为物理探针：bosonic enhancement Delta P_uv 与 Fiedler edge split |Delta v_2| 存在相关性，将谱划分与量子干涉信号相连接。",
+    "性能对 coupling strength gamma 与 noise delta 呈非单调相图；graph regularization 只在特定参数区域提升 fidelity，硬件实验在 shot-noise 范围内支持理论预测。",
+    "在 hybrid quantum autoencoder 中，Bloch-space drift 被用作潜在表示的几何诊断；无监督良性阈值下异常检测 ROC-AUC 约 0.99，假阴性率很低。",
+    "绝对 Bloch drift 明显优于连续 drift，说明异常检测主要来自持久的量子态空间位移，而不是短期局部扰动。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.08,
+    "problem_significance": 0.06,
+    "potential_impact": 0.05,
+    "paradigm_shift": 0.04,
+    "lasting_value": 0.06,
+    "llm_avg": 0.05800000000000001,
+    "comment": "This is primarily quantum learning diagnostics and has little relevance to agent harnesses, trajectory loops, or production agent evaluation.",
+    "comment_zh": "这篇论文主要是量子学习诊断，和智能体运行框架、轨迹闭环或生产级智能体评估关系很弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.05800000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2607.00063/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2607.00063/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2607.00063/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.957
+    }
+  ]
+}

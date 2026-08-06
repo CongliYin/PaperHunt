@@ -1,0 +1,67 @@
+{
+  "arxiv_id": "2606.31511",
+  "title": "Falsification, Not Exposure: An Internally Preregistered Placebo-Controlled Decomposition of Self-Repair Feedback in Frozen Small Code Models",
+  "title_zh": "证伪而非再暴露：对冻结小型代码模型自修复反馈的内部预注册安慰剂对照分解",
+  "authors": [
+    "Mehmet Iscan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T11:26:14Z",
+  "abs_url": "https://arxiv.org/abs/2606.31511v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.31511",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "In deployment settings where retraining is infeasible, small frozen code models are routinely asked to repair a failed program after seeing their own failing output, usually treated as a retry mechanism. From a Popperian view, a generated program is a conjecture and a test-execution violation is an oracle-relative, executable counterexample, so feedback's value should be attributed not to re-exposure to failing code but to whether the conjecture is opened to external, executable criticism. As the third stage of a falsification-centered measurement program, this study builds a placebo-controlled instrument that decomposes the feedback packet against a blind-resampling baseline at matched output-generation budget and against content-free, shape-matched placebos. The contribution is not a new repair algorithm but a reflexive methodology (packet decomposition, placebo mirroring, matched-budget discordant-pair tests, fresh-generation confirmation, executable audits) that makes both the model's program conjecture and the researcher's \"feedback content works\" claim falsifiable. Across six HumanEval+/MBPP+ cells with three 0.5B-1.5B frozen models, 290 dead task-cell units (no best-of-8 candidate passing the public tier) were evaluated; the main run produced 7,000 fresh generations and a preregistered follow-up 1,400 more. Blind resampling exceeded bare-code retry by +18 net unlocks (25/7, Holm p=0.0021). Code-plus-facts recovered +18 over bare code (21/3, p=0.00042) and +15 over a generic-bullet placebo (p=0.0041). An instruction-only effect was not distinguishable (+3, p=0.36). Code-plus-facts and blind resampling tied at 26 unlocks each (not equivalence). Six external-controller follow-ups tied a content-free shape placebo. In this regime, falsification helped not as vocabulary or self-critique, but as comparison with external, executable counterexamples.",
+  "abstract_zh": "本文研究在无法重新训练的部署场景中，冻结小型代码模型如何利用自身失败输出后的反馈进行程序修复。作者从 Popperian 视角出发，将生成程序视为“猜想”，将测试执行失败视为相对于 oracle 的可执行反例；因此，反馈的价值不应归因于再次看到失败代码，而应归因于模型的程序猜想是否被置于外部、可执行的批判之下。论文提出的不是新修复算法，而是一套反身性测量方法：反馈包分解、形状匹配安慰剂、匹配预算的 discordant-pair tests、fresh-generation confirmation 与 executable audits。实验覆盖 HumanEval+/MBPP+ 上 6 个任务单元组合，使用 3 个 0.5B–1.5B 冻结模型，对 290 个“死亡”task-cell units 进行评估；主实验生成 7,000 次新输出，预注册后续实验再生成 1,400 次。结果显示，blind resampling 相比 bare-code retry 多解锁 18 个任务（25/7，Holm p=0.0021）；code-plus-facts 相比 bare code 多 18 个（21/3，p=0.00042），相比 generic-bullet placebo 多 15 个（p=0.0041）；instruction-only 效应不显著（+3，p=0.36）。code-plus-facts 与 blind resampling 均解锁 26 个任务，但这不是等价性结论。6 个 external-controller 后续实验与 content-free shape placebo 打平。总体表明，在该实验条件下，有效的不是失败代码再暴露、词汇提示或自我批评，而是与外部可执行反例的比较。",
+  "key_points_zh": [
+    "论文将代码生成视为可证伪的程序猜想，把测试失败视为外部、可执行 counterexample，强调“falsification”而非简单 exposure。",
+    "贡献是一套测量方法论，而非新 repair algorithm：包括 packet decomposition、placebo mirroring、matched-budget discordant-pair tests、fresh-generation confirmation 和 executable audits。",
+    "在 HumanEval+/MBPP+、3 个 0.5B–1.5B 冻结模型、290 个死亡 task-cell units 上，blind resampling 显著优于 bare-code retry，多解锁 18 个任务。",
+    "code-plus-facts 相比 bare code 和 generic-bullet placebo 均有显著提升，但 instruction-only effect 不显著，说明有效信息主要来自可执行事实而非泛化指令。",
+    "code-plus-facts 与 blind resampling 解锁数相同，但不能推断等价；external-controller follow-ups 与 content-free shape placebo 打平，削弱了“自我批评内容有效”的解释。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.52,
+    "problem_significance": 0.57,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.48,
+    "lasting_value": 0.5,
+    "llm_avg": 0.514,
+    "comment": "The placebo-controlled executable-feedback methodology is relevant to repair-loop evaluation, though it is more measurement-oriented than reusable agent infrastructure.",
+    "comment_zh": "其安慰剂对照的可执行反馈方法对修复循环评估有价值，但更偏测量研究而非可复用智能体基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.514,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31511/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.943
+    }
+  ]
+}

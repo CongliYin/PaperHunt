@@ -1,0 +1,93 @@
+{
+  "arxiv_id": "2606.31648",
+  "title": "Think in English, Answer in Korean: Efficient Adaptation of Multilingual Tool-Using Agents",
+  "title_zh": "用英语思考，用韩语回答：多语言工具使用智能体的高效适配",
+  "authors": [
+    "Utsav Garg",
+    "Sungjin Hong",
+    "Jason Jung",
+    "Justin Lee",
+    "Shaan Desai",
+    "Joon Hee Kim",
+    "Anirudh Shrinivason",
+    "Edmond Wen",
+    "Susie Park"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T13:29:16Z",
+  "abs_url": "https://arxiv.org/abs/2606.31648v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.31648",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We present LuckyStar 111B, a 111B-parameter hybrid reasoning model developed through a collaboration between Cohere and LG CNS for Korean-English enterprise agents under practical memory and serving constraints. The model trains from Cohere's fully post-trained Command A model rather than a new pretraining run, and uses preamble conditioning to switch between concise non-reasoning behavior and longer tool-oriented reasoning. We study four choices for scaling tool-using agents efficiently: multilingual supervised fine-tuning, reinforcement learning with verifiable rewards for multi-step tool-use tasks, language-consistency rewards for Korean user-facing responses, and 4-bit quantization for single-GPU serving. The adapted model improves mathematical reasoning, function calling, and agentic natural-language-to-SQL (NL2SQL) performance while preserving general Korean and English instruction-following quality. These results provide a practical recipe and failure-mode analysis for adapting post-trained multilingual models to verifiable agentic workflows under memory-constrained deployment.",
+  "abstract_zh": "本文介绍 LuckyStar 111B，这是 Cohere 与 LG CNS 合作开发的 111B 参数混合推理模型，面向韩英双语企业智能体，并考虑实际内存与服务部署限制。该模型并未重新预训练，而是基于 Cohere 已完成后训练的 Command A 继续适配；通过 preamble conditioning 在简洁非推理模式与更长的工具导向推理模式之间切换。论文系统研究了高效扩展工具使用智能体的四项关键选择：多语言监督微调、面向多步工具使用任务的可验证奖励强化学习、用于韩语用户可见回答的语言一致性奖励，以及支持单 GPU 服务的 4-bit 量化。实验显示，适配后的模型提升了数学推理、函数调用和 agentic NL2SQL 性能，同时保持了韩语与英语通用指令跟随能力。该工作给出了在内存受限部署条件下，将已后训练多语言模型适配到可验证智能体工作流的实用方案与失败模式分析。",
+  "key_points_zh": [
+    "提出 LuckyStar 111B，基于 Cohere Command A 继续适配，而非重新预训练，降低了训练成本。",
+    "通过 preamble conditioning 控制模型在简洁回答与长链路工具推理之间切换，适配企业智能体场景。",
+    "结合多语言 SFT、可验证奖励 RL、多步工具使用训练与韩语语言一致性奖励，提升工具调用可靠性。",
+    "在数学推理、function calling 和 agentic NL2SQL 上取得改进，同时保持韩英通用指令跟随能力。",
+    "采用 4-bit quantization 支持单 GPU 部署，强调内存受限场景下的实用性与失败模式分析。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.62,
+    "problem_significance": 0.72,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.66,
+    "llm_avg": 0.664,
+    "comment": "This is a practical agent-training adaptation recipe using verifiable tool-use rewards and deployment constraints, though much of the contribution is model-specific.",
+    "comment_zh": "这是一套结合可验证工具使用奖励和部署约束的实用智能体训练适配方案，但贡献较依赖具体模型。"
+  },
+  "scores": {
+    "topic_relevance": 0.7200000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.664,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31648/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.951
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31648/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.951
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31648/fig3.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.98
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31648/fig4.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.97
+    }
+  ]
+}

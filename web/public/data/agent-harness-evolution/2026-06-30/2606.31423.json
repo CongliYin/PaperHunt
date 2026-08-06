@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2606.31423",
+  "title": "DA-Studio: An Agentic System for End-to-End Data Analysis",
+  "title_zh": "DA-Studio：用于端到端数据分析的智能体系统",
+  "authors": [
+    "Yizhe Liu",
+    "Shaolei Zhang",
+    "Ju Fan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T09:45:49Z",
+  "abs_url": "https://arxiv.org/abs/2606.31423v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.31423",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Real-world data analysis is a multi-step process over heterogeneous inputs rather than merely producing a final answer. A practical system should autonomously organize multi-step workflows, execute generated code in a sandboxed and controllable environment, and remain inspectable through visible action traces and intermediate artifacts. Existing LLM-based analysis tools, however, often emphasize isolated subtasks, leaving limited support for complete execution-grounded workflows. We present DA-Studio (Data Analysis Studio), an interactive web-based demo system for end-to-end data analysis that is autonomous, sandboxed, and inspectable. DA-Studio integrates an action-structured analysis backend, a sandboxed execution workspace, and a browser interface for task setup, streamed action traces, artifact preview, code editing and rerunning, and report export. Through iterative action generation, code execution, and feedback incorporation, it incrementally constructs executable analysis steps from raw files and natural-language requests while exposing intermediate results and artifacts throughout the process.",
+  "abstract_zh": "真实世界的数据分析通常是一个面向异构输入的多步骤流程，而不只是生成最终答案。实用系统需要能够自主组织多步骤工作流，在沙盒化、可控的环境中执行生成代码，并通过可见的动作轨迹和中间产物保持可检查性。现有基于 LLM 的分析工具往往更关注孤立子任务，对完整的、以执行为基础的数据分析流程支持有限。本文提出 DA-Studio（Data Analysis Studio），一个面向端到端数据分析的交互式 Web Demo 系统，具备自主性、沙盒执行和可检查性。DA-Studio 集成了动作结构化的分析后端、沙盒执行工作区，以及支持任务设置、流式动作轨迹、中间产物预览、代码编辑与重跑、报告导出的浏览器界面。系统通过迭代式动作生成、代码执行与反馈整合，从原始文件和自然语言请求中逐步构建可执行的分析步骤，并在整个过程中暴露中间结果和分析产物。",
+  "key_points_zh": [
+    "提出 DA-Studio，一个交互式 Web-based Demo 系统，面向从原始数据到报告导出的端到端数据分析流程。",
+    "系统强调 autonomous、sandboxed、inspectable 三个特性：自主规划分析步骤、在受控沙盒中执行代码，并展示动作轨迹与中间产物。",
+    "采用 action-structured analysis backend，将数据分析过程组织为可执行、可追踪的动作序列，而非仅输出最终答案。",
+    "前端支持任务配置、流式 action traces、artifact preview、代码编辑与 rerun、报告导出，便于研究者检查和干预分析过程。",
+    "定位为 VLDB 2026 Demo submission，主要贡献在系统集成与交互式执行环境，而非单一模型或算法指标提升。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.5,
+    "problem_significance": 0.58,
+    "potential_impact": 0.56,
+    "paradigm_shift": 0.42,
+    "lasting_value": 0.5,
+    "llm_avg": 0.512,
+    "comment": "DA-Studio is a practical sandboxed and inspectable data-analysis agent demo, but appears more like system integration than a durable new harness methodology.",
+    "comment_zh": "DA-Studio是一个实用的沙箱化、可检查数据分析代理演示系统，但更像系统集成而非持久的新型框架方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.1,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.512,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": true,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31423/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31423/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.925
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31423/fig3.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

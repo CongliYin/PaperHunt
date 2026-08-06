@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2606.31349",
+  "title": "PGUDA: Pressure-Guided Unsupervised Domain Adaptation with Cross-Modal Knowledge Distillation for sEMG-Based Gesture Recognition",
+  "title_zh": "PGUDA：用于基于 sEMG 手势识别的压力引导无监督域适应与跨模态知识蒸馏",
+  "authors": [
+    "Yurui Liu",
+    "Xiao-Cong Zhong",
+    "Qisong Wang",
+    "Xuefu Wang",
+    "Dan Liu",
+    "Jinwei Sun"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T08:45:55Z",
+  "abs_url": "https://arxiv.org/abs/2606.31349v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.31349",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Surface electromyography (sEMG)-based gesture recognition has emerged as a promising technology for natural human-computer interaction. However, its practical deployment remains challenging due to severe performance degradation caused by feature distribution discrepancies across different subjects and recording sessions. Although domain adaptation (DA) techniques are commonly employed to mitigate such discrepancies, conventional methods often struggle to effectively aligning sEMG features, primarily due to their inherent stochasticity and the scarcity of labeled data. To address these limitations, this paper proposes a novel Pressure-Guided Unsupervised Domain Adaptation (PGUDA) framework, which leverages the robustness and stability of pressure signals to introduce a cross-modal knowledge distillation strategy that transfers consistent physical semantics across modalities. Specifically, a teacher network trained on pressure signals guides an sEMG student network on unlabeled target domains, thereby regularizing the representation learning process with transferable and modality-invariant knowledge. Extensive experiments conducted on a self-collected multimodal dataset involving eleven subjects validate the effectiveness of the proposed PGUDA framework. The results demonstrate that our proposed PGUDA achieves leading performance in both cross-subject and cross-session classification tasks, achieving average accuracies of 58.08% and substantially outperforming existing DA approaches. Notably, PGUDA exhibits remarkable label efficiency: it attains classification accuracy comparable to fully supervised benchmarks while requiring only 5% of labeled data for teacher network training. This framework offers a robust and data-efficient solution that can significantly reduce the calibration burden in practical sEMG-based gesture recognition systems.",
+  "abstract_zh": "本文针对基于 surface electromyography（sEMG）的手势识别在跨被试、跨采集会话中因特征分布差异导致性能下降的问题，提出 Pressure-Guided Unsupervised Domain Adaptation（PGUDA）框架。该方法利用压力信号相较 sEMG 更稳定、鲁棒的特点，引入跨模态知识蒸馏：先用少量标注压力数据训练 teacher network，再用其在未标注目标域上指导 sEMG student network，从而将一致的物理语义迁移到 sEMG 表征学习中。作者在包含 11 名被试的自采集多模态数据集上进行实验，结果显示 PGUDA 在跨被试和跨会话分类任务中优于现有 domain adaptation 方法，平均准确率达到 58.08%。此外，该方法仅需 5% 标注数据训练 teacher network，即可达到接近全监督基线的性能，显示出较强的数据效率和降低实际系统校准成本的潜力。",
+  "key_points_zh": [
+    "核心问题：sEMG 手势识别在不同被试和不同 recording sessions 间存在显著域偏移，传统 domain adaptation 难以稳定对齐随机性较强的 sEMG 特征。",
+    "方法亮点：PGUDA 利用压力信号的稳定物理语义作为引导，通过跨模态知识蒸馏将 pressure teacher network 的知识迁移给 sEMG student network。",
+    "训练设定：teacher network 仅依赖少量标注压力数据训练，student network 可在未标注目标域上接受蒸馏监督，实现无监督域适应。",
+    "实验结果：在 11 名被试的自采集多模态数据集上，PGUDA 在跨被试和跨会话任务中取得领先表现，平均准确率为 58.08%。",
+    "实用价值：PGUDA 仅用 5% 标注数据训练 teacher 即可接近全监督基线，有望显著减少 sEMG 手势识别系统的用户校准负担。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.12,
+    "problem_significance": 0.12,
+    "potential_impact": 0.1,
+    "paradigm_shift": 0.08,
+    "lasting_value": 0.1,
+    "llm_avg": 0.10400000000000001,
+    "comment": "This is an sEMG domain-adaptation paper with no meaningful connection to agent harnesses, trajectories, or agent evaluation.",
+    "comment_zh": "这是一篇sEMG领域自适应论文，与代理框架、轨迹或代理评测没有实质关联。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.46206629502221136,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.10400000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 15,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31349/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31349/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31349/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31349/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.952
+    }
+  ]
+}

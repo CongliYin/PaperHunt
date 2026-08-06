@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.31461",
+  "title": "CSTrader: A Testbed for Language-Grounded Trading in a Community-Driven Virtual Asset Market",
+  "title_zh": "CSTrader：面向社区驱动虚拟资产市场的语言落地交易测试平台",
+  "authors": [
+    "Yao Shi",
+    "Kingfung Luo",
+    "Nan Tang",
+    "Yuyu Luo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T10:40:40Z",
+  "abs_url": "https://arxiv.org/abs/2606.31461v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.31461",
+  "links": {
+    "github": "https://github.com/IatomicreactorI/CSGOTrading",
+    "project_page": null
+  },
+  "abstract_en": "Niche asset markets, such as Counter-Strike 2 (CS2) weapon skins, are small, volatile, and heavily driven by community discussions and platform rules. These properties make them hard for traditional quantitative models, but provide an ideal testbed for studying how large language models (LLMs) turn unstructured text into trading actions. We present CSTrader, a multi-agent framework for language-grounded trading in the CS2 skin market. The system first integrates heterogeneous signals from various sources, then uses specialized agents for technical analysis, liquidity, events, and (reversed) sentiment, and finally applies risk control, transaction friction, and portfolio management agents to produce buy, sell, or hold decisions under realistic trading frictions. We build a live-like evaluation environment with real CS2 data from a highly volatile period and evaluate several recent LLM backbones. Across models, CSTrader consistently outperforms both a falling market index (-15.62%) and simple single-prompt LLM baselines, achieving up to a 7.58% cumulative return with controlled risk. Ablation studies show that liquidity, reversed sentiment, and transaction friction agents are crucial for turning noisy language signals into stable profits, suggesting that niche, language-driven markets are a useful benchmark for future language-to-action research. Code is available at: https://github.com/IatomicreactorI/CSGOTrading?tab=readme-ov-file#quick-start",
+  "abstract_zh": "本文提出 CSTrader，一个用于 Counter-Strike 2（CS2）武器皮肤市场的多智能体语言落地交易框架。该类小众虚拟资产市场规模小、波动高，价格强烈受社区讨论与平台规则影响，因此传统量化模型较难建模，但适合研究 LLM 如何将非结构化文本转化为交易动作。CSTrader 首先整合多源异构信号，再通过技术分析、流动性、事件、反向情绪等专门智能体进行分析，最后结合风险控制、交易摩擦与组合管理智能体，在真实交易约束下生成买入、卖出或持有决策。作者基于高波动时期的真实 CS2 数据构建近似实时的评测环境，并测试多个近期 LLM backbone。实验显示，CSTrader 稳定优于下跌的市场指数（-15.62%）和简单 single-prompt LLM baseline，最高获得 7.58% 累计收益且风险可控。消融实验表明，流动性、反向情绪和交易摩擦智能体对将噪声语言信号转化为稳定收益至关重要。",
+  "key_points_zh": [
+    "提出 CSTrader，将社区文本、市场数据、平台规则等异构信号整合到 CS2 skin 交易决策中，作为 language-to-action 研究测试床。",
+    "采用多智能体架构，包含技术分析、流动性、事件、反向情绪、风险控制、交易摩擦和投资组合管理等专门 agents。",
+    "在真实 CS2 高波动时期数据上，CSTrader 最高实现 7.58% 累计收益，显著优于下跌市场指数（-15.62%）和 single-prompt LLM baselines。",
+    "消融结果显示，liquidity、reversed sentiment 和 transaction friction agents 是获得稳定收益的关键组件。",
+    "论文强调小众、社区驱动、语言密集型市场可作为评估 LLM 从非结构化文本到实际行动能力的有价值 benchmark。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.32,
+    "problem_significance": 0.28,
+    "potential_impact": 0.3,
+    "paradigm_shift": 0.22,
+    "lasting_value": 0.26,
+    "llm_avg": 0.276,
+    "comment": "The work is mainly a domain-specific multi-agent trading system rather than reusable agent harness, training, or evaluation infrastructure.",
+    "comment_zh": "该工作主要是特定领域的多代理交易系统，而不是可复用的代理基础设施、训练或评测方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.276,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/IatomicreactorI/CSGOTrading",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31461/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.977
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31461/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31461/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31461/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.96
+    }
+  ]
+}

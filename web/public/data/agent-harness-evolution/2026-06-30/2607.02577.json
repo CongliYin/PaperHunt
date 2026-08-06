@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2607.02577",
+  "title": "Benchmarking the Benchmarks: A Validity Audit of Tool-Calling Evaluation",
+  "title_zh": "基准测试的基准测试：工具调用评测的有效性审计",
+  "authors": [
+    "Vishvesh Bhat",
+    "Jay Vaghasiya",
+    "Muhammad Ahmed Mohsin",
+    "Asad Aali"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T21:10:42Z",
+  "abs_url": "https://arxiv.org/abs/2607.02577v1",
+  "pdf_url": "https://arxiv.org/pdf/2607.02577",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Tool-calling benchmarks are increasingly used to rank language-model agents, yet their scores are often treated as ground truth without validating the evaluators themselves. We present a systematic validity and reproducibility audit of four major tool-calling benchmark families: BFCL v4, τ2-Bench, LiveMCPBench, and MCP-Atlas. Across 496 expert-reviewed benchmark tasks, we find 92 evaluator-human disagreements, corresponding to an 18.5% misalignment rate. The failures are not isolated annotation mistakes: deterministic benchmarks exhibit brittle state matching, trajectory lock-in, incorrect ground truths, substring-based communication failures, and reward-basis misalignment, while LLM-judge benchmarks exhibit rubric drift, hallucinated completion, answer-only scoring, and substantial run-to-run variance. In LiveMCPBench, 23 repeated evaluations of the same setup produce scores ranging from 57.9% to 76.8%, a spread of 18.9 percentage points, large enough to change leaderboard conclusions. These results show that current tool-calling scores can reflect evaluator artifacts rather than agent capability. We introduce a unified taxonomy of tool-calling evaluation failures, release trace-level audit artifacts and corrected evaluation components, and argue for decomposed metrics that separately measure tool invocation, task completion, and outcome verification. Our findings suggest that progress in tool-using agents requires benchmarks whose evaluators are themselves reproducible, auditable, and aligned with human judgments of task success. We further introduce Tool-Veritas, a configurable benchmark that combines deterministic state verification with optional qualitative judging, and Harness Lab, an open-source system for benchmark execution, trace inspection, repeated-run comparison, and evaluator debugging.",
+  "abstract_zh": "工具调用基准越来越常用于给语言模型智能体排序，但其分数常被当作真实能力指标，而评测器本身却缺乏验证。本文系统审计了四个主要工具调用基准家族的有效性与可复现性：BFCL v4、τ2-Bench、LiveMCPBench 和 MCP-Atlas。作者对 496 个任务进行专家复核，发现 92 处评测器与人类判断不一致，错配率达 18.5%。这些问题并非孤立标注错误：确定性基准存在脆弱的状态匹配、轨迹锁定、错误标准答案、基于子串的通信失败、奖励依据错位等问题；LLM-judge 基准则存在评分细则漂移、幻觉式完成判断、仅看答案评分以及显著的多次运行方差。在 LiveMCPBench 中，相同设置重复评测 23 次，分数从 57.9% 到 76.8% 不等，跨度达 18.9 个百分点，足以改变排行榜结论。结果表明，当前工具调用分数可能更多反映评测器伪影，而非智能体真实能力。论文提出统一的工具调用评测失败分类体系，发布 trace 级审计产物和修正后的评测组件，并主张采用分解式指标，分别衡量工具调用、任务完成和结果验证。同时，作者引入 Tool-Veritas，一个结合确定性状态验证与可选定性判断的可配置基准；以及 Harness Lab，一个用于基准执行、trace 检查、重复运行比较和评测器调试的开源系统。",
+  "key_points_zh": [
+    "审计 BFCL v4、τ2-Bench、LiveMCPBench 和 MCP-Atlas 四类工具调用基准，在 496 个专家复核任务中发现 92 处评测器与人类判断不一致，错配率为 18.5%。",
+    "确定性评测的主要问题包括状态匹配脆弱、轨迹锁定、错误 ground truth、子串匹配导致的通信失败，以及奖励依据与真实任务成功标准不一致。",
+    "LLM-judge 评测存在 rubric drift、幻觉式完成判断、只看最终答案而忽略过程、以及显著的 run-to-run variance；LiveMCPBench 同设置 23 次评测分数跨度达 18.9 个百分点。",
+    "论文指出当前排行榜分数可能反映 evaluator artifacts，而非 agent capability，因此建议使用分解式指标分别评估 tool invocation、task completion 和 outcome verification。",
+    "作者发布 trace 级审计产物与修正组件，并提出 Tool-Veritas 和 Harness Lab，用于更可复现、可审计、可调试的工具调用基准评测。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8640000000000001,
+    "comment": "This is highly relevant because it audits tool-calling evaluators and contributes trace artifacts, corrected components, and a reusable benchmark harness.",
+    "comment_zh": "这篇论文高度相关，因为它审计工具调用评测器，并提供轨迹级审计产物、修正组件和可复用评测框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8640000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2607.02577/fig1.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.986
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2607.02577/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.983
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2607.00054",
+  "title": "A Quantitative Framework for Estimating System Complexity and Cost via Component Interface Analysis",
+  "title_zh": "通过组件接口分析估计系统复杂度与成本的定量框架",
+  "authors": [
+    "Ken Y. Chan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T01:52:28Z",
+  "abs_url": "https://arxiv.org/abs/2607.00054v2",
+  "pdf_url": "https://arxiv.org/pdf/2607.00054",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "This paper introduces a formal modeling framework designed to estimate the complexity and cost associated with system changes induced by external requirements. We model a system as a directed graph of couplings, capturing the intricate dependencies and information flows between components and elements within a specific context. The proposed method enables the estimation of bounded change complexity through component interfaces, even when internal logic remains opaque. Additionally, the framework provides a mechanism for bounding the cost of system-wide modifications by associating external drivers and cost factors with individual system elements. We propose a multi-view approach to the model, providing graphical, algebraic, and tabular representations to suit different levels of abstraction and computational needs. By bridging the gap between component-based modeling and project cost estimation, our method provides actionable insights for architecture design, software engineering, and lifecycle operations. The model is validated through a case study involving the integration of a sample retail banking platform.",
+  "abstract_zh": "本文提出一个形式化建模框架，用于估计由外部需求触发的系统变更所带来的复杂度与成本。该方法将系统建模为耦合关系的有向图，以刻画特定上下文中组件与元素之间的依赖关系和信息流。即使组件内部逻辑不可见，框架也可通过组件接口估计有界的变更复杂度。同时，它将外部驱动因素与成本因子关联到单个系统元素，从而为全系统修改成本提供上界估计。论文采用多视图建模方式，提供图形、代数和表格表示，以适应不同抽象层级和计算需求。通过连接组件化建模与项目成本估算，该方法可为架构设计、软件工程和生命周期运维提供可操作的分析依据，并通过一个示例零售银行平台集成案例进行验证。",
+  "key_points_zh": [
+    "将系统表示为耦合关系的 directed graph，用于描述组件间依赖、接口交互和信息流。",
+    "在组件内部逻辑不透明的情况下，通过 component interface analysis 估计有界变更复杂度。",
+    "将 external drivers 与 cost factors 映射到系统元素，以推导系统级修改成本的上界。",
+    "提供 graphical、algebraic、tabular 三种视图，兼顾架构理解、形式化计算与工程落地。",
+    "通过 sample retail banking platform 集成案例验证框架在软件工程与成本估算中的适用性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.3,
+    "problem_significance": 0.25,
+    "potential_impact": 0.2,
+    "paradigm_shift": 0.1,
+    "lasting_value": 0.15,
+    "llm_avg": 0.2,
+    "comment": "The work is a generic system complexity and cost modeling framework with almost no meaningful grounding in e-commerce agents or shopping/search/recommendation systems.",
+    "comment_zh": "该工作主要是通用系统复杂度与成本建模框架，几乎没有体现电商智能体、购物、搜索或推荐系统价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.2,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2607.00054/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.775
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2607.00054/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.341
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2607.00054/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.334
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2607.00054/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.319
+    }
+  ]
+}

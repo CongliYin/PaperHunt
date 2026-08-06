@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2606.31174",
+  "title": "ClawArena-Team: Benchmarking Subagent Orchestration and Dynamic Workflows in Language-Model Agents",
+  "title_zh": "ClawArena-Team：评测语言模型 Agent 的子 Agent 编排与动态工作流能力",
+  "authors": [
+    "Kaiwen Xiong",
+    "Haonian Ji",
+    "Shi Qiu",
+    "Zeyu Zheng",
+    "Cihang Xie",
+    "Xinyu Ye",
+    "Huaxiu Yao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T06:06:08Z",
+  "abs_url": "https://arxiv.org/abs/2606.31174v2",
+  "pdf_url": "https://arxiv.org/pdf/2606.31174",
+  "links": {
+    "github": "https://github.com/aiming-lab/ClawArena.",
+    "project_page": null
+  },
+  "abstract_en": "Production large language-model (LLM) agents are increasingly deployed not as lone problem-solvers but as managers: a main model creates specialized subagents, delegates work, and orchestrates their parallel, asynchronous returns through dynamic workflows. Whether one model can actually run such a team is largely unmeasured: existing benchmarks score a policy's own task-solving or a fixed multi-agent system's emergent behavior, but none isolate the management ability of the single LLM acting as leader. We introduce ClawArena-Team, a benchmark of 41 multi-turn, multimodal, multi-directory scenarios spanning 258 evaluation rounds and 72 staged updates that measures this management ability. The main agent is deliberately constrained: it natively perceives only text and directly accesses only part of the workspace. It commands a fixed, locally served subagent pool, so score differences reflect management skill, not raw capability. All scoring is execution-based with no LLM judge: an overall score -- the Subagent-Management Score (SMS) -- multiplies task correctness by a least-privilege and modality-routing factor. Across twelve proprietary, community-hosted, and self-hosted models, experiments show that the management bottleneck is privilege granting rather than perception (no model exceeds 50% workspace-permission precision); that cost and management quality are decoupled (API cost spans over 100 times while the overall score spans under 4 times, with the cheapest open models on the Pareto frontier); and that most leaderboard scores cluster within a 9.9-point band while orchestration behaviors diverge by more than an order of magnitude. Code is available at https://github.com/aiming-lab/ClawArena.",
+  "abstract_zh": "生产级 LLM Agent 正从单独解题者转向“管理者”：主模型需要创建专门的 subagent、分派任务，并通过动态工作流编排其并行、异步返回结果。然而，单个 LLM 是否真正具备带领团队的管理能力仍缺乏专门衡量。论文提出 ClawArena-Team，一个包含 41 个多轮、多模态、多目录场景的基准，覆盖 258 个评测回合与 72 个阶段性更新，专门评估单个 LLM 作为 leader 的 subagent 管理能力。主 Agent 被刻意限制：原生只能感知文本，且只能直接访问部分 workspace；它需要指挥固定的本地 subagent 池，因此分数差异主要反映管理能力而非模型原始能力。该基准采用无 LLM judge 的执行式评分，并提出 Subagent-Management Score（SMS），将任务正确性与最小权限、模态路由因素相乘。对 12 个 proprietary、community-hosted 与 self-hosted 模型的实验表明：管理瓶颈主要在权限授予而非感知，没有模型的 workspace-permission precision 超过 50%；API 成本与管理质量解耦，成本相差超过 100 倍而总体分数差距小于 4 倍，最便宜的开源模型位于 Pareto frontier；多数 leaderboard 分数集中在 9.9 分区间内，但编排行为差异超过一个数量级。",
+  "key_points_zh": [
+    "提出 ClawArena-Team，面向单个 LLM leader 的 subagent orchestration 能力评测，而非评估固定多 Agent 系统的整体涌现表现。",
+    "基准包含 41 个多轮、多模态、多目录场景，覆盖 258 个 evaluation rounds 与 72 个 staged updates，更贴近动态工作流中的真实管理挑战。",
+    "主 Agent 被限制为仅原生感知文本、仅访问部分 workspace，并指挥固定本地 subagent 池，从而隔离“管理能力”而非模型本身的多模态或工具能力。",
+    "评分完全基于执行结果，无需 LLM judge；SMS 同时衡量任务正确性、最小权限控制与模态路由质量。",
+    "实验发现权限授予是核心瓶颈：所有模型 workspace-permission precision 均低于 50%；同时成本与管理质量并不强相关，低成本开源模型也能处于 Pareto frontier。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.68,
+    "problem_significance": 0.74,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.7,
+    "llm_avg": 0.692,
+    "comment": "This is a useful execution-based benchmark for subagent orchestration, permissions, and workflow management in production-style agents.",
+    "comment_zh": "这是一项有价值的执行式基准，聚焦生产型代理中的子代理编排、权限和工作流管理。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.43732458189998774,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.692,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/aiming-lab/ClawArena.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 7,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31174/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.893
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31174/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31174/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.98
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31174/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.923
+    }
+  ]
+}

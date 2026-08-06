@@ -1,0 +1,69 @@
+{
+  "arxiv_id": "2606.31207",
+  "title": "Towards Inclusive Mobility Modeling: Characterizing and Evaluating Elderly Trajectory Patterns in Urban Systems",
+  "title_zh": "迈向包容性移动建模：城市系统中老年人轨迹模式的刻画与评估",
+  "authors": [
+    "Zhengxuan Wang",
+    "Haohan He",
+    "Mengying Zhou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T06:39:02Z",
+  "abs_url": "https://arxiv.org/abs/2606.31207v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.31207",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The rapid advance of smart cities increasingly depends on trajectory data mining, yet underrepresented demographic groups, particularly the elderly, are often sparsely represented in public mobility datasets. This underrepresentation can introduce systematic bias into mobility modeling and downstream urban planning. Using the 2016-2020 Jersey City subset of the Citi Bike System Data, this study quantitatively examines how the absence of underrepresented subgroups' mobility signatures affects mobility modeling, using synthetic trajectory generation as a case study. The analysis reveals that elderly riders exhibit a structurally distinct mobility signature, including localized activity spaces (958 m vs. 1,189 m for young riders), lower mobility entropy (1.82 vs. 4.15), and asymmetric off-peak temporal patterns. To demonstrate that relying on majority-dominated training data yields biased synthetic outcomes, we further evaluate both a first-order Markov chain and a Qwen3-4B model fine-tuned with QLoRA across three demographic training settings: the full population, young riders only, and elderly riders only. Results show that models trained on majority-dominated populations systematically misrepresent elderly mobility behavior, particularly for spatial mobility metrics. The Markov model trained on the full population overestimates elderly step length by 4.5% and dwell time by 8.9%, whereas the elderly-specific model achieves substantially lower errors across most metrics. Comparisons between the Markov and LLM-based frameworks further show that higher-capability models do not necessarily improve subgroup-level fidelity under limited demographic data. These findings underscore the importance of demographic representation in mobility modeling and its downstream applications for underrepresented populations.",
+  "abstract_zh": "本文关注智慧城市轨迹数据挖掘中的人口代表性偏差问题，尤其是公共移动数据集中老年人等欠代表群体样本稀疏所带来的系统性影响。研究使用 2016–2020 年 Citi Bike System Data 的 Jersey City 子集，定量分析老年骑行者移动特征缺失如何影响移动建模，并以合成轨迹生成作为案例。结果显示，老年骑行者具有结构性不同的移动签名：活动空间更局部化（958 m vs. 年轻骑行者 1,189 m）、移动熵更低（1.82 vs. 4.15），且具有不对称的非高峰时段出行模式。进一步地，论文比较了一阶 Markov chain 与使用 QLoRA 微调的 Qwen3-4B，在全体人群、仅年轻人、仅老年人三种训练设置下的表现。实验表明，由多数群体主导的数据训练出的模型会系统性误表征老年人的移动行为，尤其在空间移动指标上更明显；例如，全体人群训练的 Markov 模型对老年人步长高估 4.5%、停留时间高估 8.9%，而老年人专属模型在多数指标上误差更低。同时，Markov 与 LLM 框架的比较显示，在人口数据有限时，更强模型并不必然带来更好的子群体保真度。研究强调了人口代表性对于移动建模及其城市规划下游应用的重要性。",
+  "key_points_zh": [
+    "论文基于 Jersey City 的 Citi Bike System Data，研究老年人等欠代表群体在轨迹数据中的稀疏性如何影响城市移动建模与合成轨迹生成。",
+    "老年骑行者呈现显著不同的移动模式：活动空间更小、移动熵更低，并表现出不同于年轻人的非高峰时段出行节律。",
+    "在全体人群或年轻人主导数据上训练的 Markov chain 和 Qwen3-4B + QLoRA 模型，都会系统性误表征老年人的移动行为，尤其是空间相关指标。",
+    "老年人专属训练数据虽然规模较小，但在多数老年移动指标上优于多数群体主导模型，说明人口匹配比单纯扩大总体数据更关键。",
+    "实验表明，更高能力的 LLM 并不必然提升欠代表子群体的建模保真度，强调移动建模中需要显式考虑人口代表性与公平性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.16,
+    "problem_significance": 0.18,
+    "potential_impact": 0.16,
+    "paradigm_shift": 0.1,
+    "lasting_value": 0.14,
+    "llm_avg": 0.148,
+    "comment": "This is a mobility modeling and demographic-bias paper, not an agent harness, agent training, or agent evaluation contribution.",
+    "comment_zh": "这是一篇关于出行建模和人群偏差的论文，并非代理框架、代理训练或代理评测方向的贡献。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.148,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31207/fig1.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.969
+    }
+  ]
+}

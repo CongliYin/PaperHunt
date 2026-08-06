@@ -1,0 +1,575 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-06-30",
+  "generated_at": "2026-08-06T01:30:25Z",
+  "papers": [
+    {
+      "arxiv_id": "2607.02577",
+      "title": "Benchmarking the Benchmarks: A Validity Audit of Tool-Calling Evaluation",
+      "title_zh": "基准测试的基准测试：工具调用评测的有效性审计",
+      "authors": [
+        "Vishvesh Bhat",
+        "Jay Vaghasiya",
+        "Muhammad Ahmed Mohsin",
+        "Asad Aali"
+      ],
+      "total_score": 0.7072000000000002,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.8640000000000001,
+        "other": 0.2666666666666667
+      },
+      "tags": [
+        "Code soon",
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "工具调用评测器本身存在显著失真",
+      "detail_file": "agent-harness-evolution/2026-06-30/2607.02577.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2607.02577/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.32017",
+      "title": "TRIAGE: Role-Typed Credit Assignment for Agentic Reinforcement Learning",
+      "title_zh": "TRIAGE：面向 Agentic Reinforcement Learning 的角色类型化信用分配",
+      "authors": [
+        "Yuanda Xu",
+        "Zhengze Zhou",
+        "Hejian Sang",
+        "Xiaomin Li",
+        "Jiaxin Zhang",
+        "Xinchen Du",
+        "Sen Na",
+        "Zhipeng Wang",
+        "Alborz Geramifard"
+      ],
+      "total_score": 0.7068475395600617,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.808,
+        "other": 0.37482513186687244
+      },
+      "tags": [
+        "HF Daily ★12",
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "用角色类型化奖励改进智能体RL信用分配",
+      "detail_file": "agent-harness-evolution/2026-06-30/2606.32017.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.32017/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.31174",
+      "title": "ClawArena-Team: Benchmarking Subagent Orchestration and Dynamic Workflows in Language-Model Agents",
+      "title_zh": "ClawArena-Team：评测语言模型 Agent 的子 Agent 编排与动态工作流能力",
+      "authors": [
+        "Kaiwen Xiong",
+        "Haonian Ji",
+        "Shi Qiu",
+        "Zeyu Zheng",
+        "Cihang Xie",
+        "Xinyu Ye",
+        "Huaxiu Yao"
+      ],
+      "total_score": 0.6764662290949994,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.692,
+        "other": 0.3895540969833313
+      },
+      "tags": [
+        "GitHub",
+        "observability governance security"
+      ],
+      "tldr_zh": "评测 LLM 统领子 Agent 的管理能力",
+      "detail_file": "agent-harness-evolution/2026-06-30/2606.31174.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31174/thumb.webp"
+    },
+    {
+      "arxiv_id": "2607.02579",
+      "title": "When Not to Write Memory: Governing False Promotion from Correlated Agent Traces",
+      "title_zh": "何时不应写入记忆：从相关智能体轨迹中治理错误提升",
+      "authors": [
+        "Yijiashun Qi",
+        "Xiang Xu",
+        "Yuxuan Li"
+      ],
+      "total_score": 0.658,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.82,
+        "other": 0.2
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "智能体记忆写入需治理相关证据",
+      "detail_file": "agent-harness-evolution/2026-06-30/2607.02579.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2607.02579/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.31763",
+      "title": "A Self-Evolving Agentic System for Automated Generation and Execution of Biological Protocols",
+      "title_zh": "用于自动生成与执行生物实验流程的自进化 Agentic 系统",
+      "authors": [
+        "Yankai Jiang",
+        "Weiting Tang",
+        "Haoran Sun",
+        "Zhenyu Tang",
+        "Yuejie Hou",
+        "Yingnan Han",
+        "Rubo Wang",
+        "Yueyuxiao Yang",
+        "Cheng Liang",
+        "Lilong Wang",
+        "Wenjie Lou",
+        "Xiaosong Wang",
+        "Lei Bai",
+        "Meng Yang"
+      ],
+      "total_score": 0.6424000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.768,
+        "other": 0.2
+      },
+      "tags": [
+        "harness multi agent orchestration"
+      ],
+      "tldr_zh": "ProtoPilot实现可验证湿实验自动化",
+      "detail_file": "agent-harness-evolution/2026-06-30/2606.31763.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31763/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.31410",
+      "title": "Xiaomi-GUI-0 Technical Report",
+      "title_zh": "Xiaomi-GUI-0 技术报告",
+      "authors": [
+        "Wanxia Cao",
+        "Chengzhen Duan",
+        "Pei Fu",
+        "Pengzhi Gao",
+        "Niu Lian",
+        "Fazhan Liu",
+        "Hui Liu",
+        "Heng Qu",
+        "Qinzhuo Wu",
+        "Zhehao Yu",
+        "Tongbo Chen",
+        "Shiqi Cui",
+        "Anan Du",
+        "Shukai Jia",
+        "Yuanfa Li",
+        "Wei Liu",
+        "Yike Liu",
+        "Wenchao Lu",
+        "Zhenbo Luo",
+        "Haoyuan Sun",
+        "Jiatong Sun",
+        "Cheng Tan",
+        "Yajie Wang",
+        "Changqiao Wu",
+        "Tao Xiong",
+        "Jiahui Yang",
+        "Yuxuan Yuan",
+        "Ruoceng Zhang",
+        "Shaojie Zhang",
+        "Jian Zhu",
+        "Jian Luan",
+        "Cong Zou"
+      ],
+      "total_score": 0.632199490830496,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.516,
+        "other": 0.3646649694349862
+      },
+      "tags": [
+        "HF Daily ★20",
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "真实设备闭环训练的移动 GUI agent",
+      "detail_file": "agent-harness-evolution/2026-06-30/2606.31410.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31410/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.31229",
+      "title": "Agentic-Ideation: Sample Efficient Agentic Trajectories Synthesis for Scientific Ideation Agents",
+      "title_zh": "Agentic-Ideation：面向科学构思智能体的样本高效 Agentic 轨迹合成",
+      "authors": [
+        "Keyu Zhao",
+        "Lingyan Kong",
+        "Fengli Xu",
+        "Yong Li"
+      ],
+      "total_score": 0.6221082880689194,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.764,
+        "other": 0.1896942935630644
+      },
+      "tags": [
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "用 oracle 高效合成科研构思智能体轨迹",
+      "detail_file": "agent-harness-evolution/2026-06-30/2606.31229.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31229/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.31478",
+      "title": "One Reflection Is Not Enough: Self-Correcting Autonomous Research via Multi-Hypothesis Failure Attribution",
+      "title_zh": "一次反思不够：通过多假设失败归因实现自纠正自主研究",
+      "authors": [
+        "Jie Ma",
+        "Binfei Chu",
+        "Jie Gao",
+        "Jinlu Zhang",
+        "Yiwei Ma",
+        "Yi Tan",
+        "Jiayi Ji",
+        "Xiaoshuai Sun",
+        "Rongrong Ji"
+      ],
+      "total_score": 0.6185,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.78,
+        "other": 0.10833333333333334
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "SAGE用多假设归因修复失败实验",
+      "detail_file": "agent-harness-evolution/2026-06-30/2606.31478.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31478/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.31272",
+      "title": "The Decomposition Is the Fingerprint: Per-Component Identity for Agent Skills",
+      "title_zh": "分解即指纹：面向智能体技能的逐组件身份识别",
+      "authors": [
+        "Hongliang Liu",
+        "Yuhao Wu",
+        "Tung-Ling Li"
+      ],
+      "total_score": 0.6180000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.74,
+        "other": 0.2
+      },
+      "tags": [
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "用逐组件 SimHash 识别 agent 技能谱系",
+      "detail_file": "agent-harness-evolution/2026-06-30/2606.31272.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31272/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.31693",
+      "title": "ShopX: A Foundation Model for Intent-to-Item Fulfillment in Agentic Shopping",
+      "title_zh": "ShopX：面向 Agentic Shopping 中 Intent-to-Item Fulfillment 的基础模型",
+      "authors": [
+        "Jiacheng Chen",
+        "Tao Zhang",
+        "Manxi Lin",
+        "Dunxian Huang",
+        "Teng Shi",
+        "Honghao Fu",
+        "Mengyan Li",
+        "Xinming Zhang",
+        "Chenchi Zhang",
+        "Xuan Lu",
+        "Xiaoxiong Du",
+        "Haibin Chen",
+        "Shaolin Ye",
+        "Hao Chang",
+        "Xiaoqi Li",
+        "Shuwen Xiao",
+        "Yujin Yuan",
+        "Jingxuan Feng",
+        "Shaopan Xiong",
+        "Huimin Yi",
+        "Ju Huang",
+        "Qiu Shen",
+        "Ying Chen",
+        "Junjun Zheng",
+        "Xiangheng Kong",
+        "Dan Ou",
+        "Haihong Tang",
+        "Yuning Jiang",
+        "Bo Zheng"
+      ],
+      "total_score": 0.5908000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.596,
+        "other": 0.2
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "用基础模型直接完成购物意图到商品履约",
+      "detail_file": "agent-harness-evolution/2026-06-30/2606.31693.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31693/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.31423",
+      "title": "DA-Studio: An Agentic System for End-to-End Data Analysis",
+      "title_zh": "DA-Studio：用于端到端数据分析的智能体系统",
+      "authors": [
+        "Yizhe Liu",
+        "Shaolei Zhang",
+        "Ju Fan"
+      ],
+      "total_score": 0.5596000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.512,
+        "other": 0.23333333333333336
+      },
+      "tags": [
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "面向端到端数据分析的可检查智能体系统",
+      "detail_file": "agent-harness-evolution/2026-06-30/2606.31423.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31423/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.31046",
+      "title": "OpenLife: Toward Open-World Artificial Life with Autonomous LLM Agents",
+      "title_zh": "OpenLife：迈向由自主 LLM Agent 构成的开放世界人工生命",
+      "authors": [
+        "Atsushi Masumori",
+        "Itsuki Doi",
+        "Norihiro Maruyama",
+        "Ryosuke Takata",
+        "Takashi Ikegami"
+      ],
+      "total_score": 0.5225926304075545,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.392,
+        "other": 0.2299754346918484
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "用 LLM Agent 探索开放世界人工生命",
+      "detail_file": "agent-harness-evolution/2026-06-30/2606.31046.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31046/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.31648",
+      "title": "Think in English, Answer in Korean: Efficient Adaptation of Multilingual Tool-Using Agents",
+      "title_zh": "用英语思考，用韩语回答：多语言工具使用智能体的高效适配",
+      "authors": [
+        "Utsav Garg",
+        "Sungjin Hong",
+        "Jason Jung",
+        "Justin Lee",
+        "Shaan Desai",
+        "Joon Hee Kim",
+        "Anirudh Shrinivason",
+        "Edmond Wen",
+        "Susie Park"
+      ],
+      "total_score": 0.5222000000000001,
+      "scores": {
+        "topic_relevance": 0.7200000000000001,
+        "llm_assessment": 0.664,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "production agent platform"
+      ],
+      "tldr_zh": "高效适配韩英双语工具智能体",
+      "detail_file": "agent-harness-evolution/2026-06-30/2606.31648.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31648/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.31041",
+      "title": "A Semantic-Layer-Mediated Agent for Natural Language to SQL over Heterogeneous Enterprise Databases",
+      "title_zh": "一种通过语义层中介实现异构企业数据库自然语言到 SQL 的 Agent",
+      "authors": [
+        "Ha Jeong Kim",
+        "Saksonita Khoeurn",
+        "Ye Ji Yoon"
+      ],
+      "total_score": 0.5190900354390214,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.7060000000000001,
+        "other": 0.22430011813007106
+      },
+      "tags": [
+        "planning and policy"
+      ],
+      "tldr_zh": "用语义层和 SMQ 提升企业 NL2SQL",
+      "detail_file": "agent-harness-evolution/2026-06-30/2606.31041.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31041/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.31461",
+      "title": "CSTrader: A Testbed for Language-Grounded Trading in a Community-Driven Virtual Asset Market",
+      "title_zh": "CSTrader：面向社区驱动虚拟资产市场的语言落地交易测试平台",
+      "authors": [
+        "Yao Shi",
+        "Kingfung Luo",
+        "Nan Tang",
+        "Yuyu Luo"
+      ],
+      "total_score": 0.5128,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.276,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "harness multi agent orchestration"
+      ],
+      "tldr_zh": "用多智能体 LLM 交易 CS2 皮肤市场",
+      "detail_file": "agent-harness-evolution/2026-06-30/2606.31461.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31461/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.31511",
+      "title": "Falsification, Not Exposure: An Internally Preregistered Placebo-Controlled Decomposition of Self-Repair Feedback in Frozen Small Code Models",
+      "title_zh": "证伪而非再暴露：对冻结小型代码模型自修复反馈的内部预注册安慰剂对照分解",
+      "authors": [
+        "Mehmet Iscan"
+      ],
+      "total_score": 0.5092000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.514,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "小代码模型修复收益来自可执行反例",
+      "detail_file": "agent-harness-evolution/2026-06-30/2606.31511.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31511/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.31976",
+      "title": "TreeAgent: A Generalizable Multi-Agent Framework for Automated Bias Labeling in Forestry via Compiled Expert Rules and Vision-Language Models",
+      "title_zh": "TreeAgent：通过编译专家规则与视觉语言模型实现林业自动偏差标注的通用多智能体框架",
+      "authors": [
+        "Shiyi Chen",
+        "Nicholas Saban",
+        "Collin Hargreaves",
+        "Huiqi Wang"
+      ],
+      "total_score": 0.48480000000000006,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.296,
+        "other": 0.2
+      },
+      "tags": [
+        "harness multi agent orchestration"
+      ],
+      "tldr_zh": "用多智能体VLM复现专家树木偏差标注",
+      "detail_file": "agent-harness-evolution/2026-06-30/2606.31976.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31976/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.31207",
+      "title": "Towards Inclusive Mobility Modeling: Characterizing and Evaluating Elderly Trajectory Patterns in Urban Systems",
+      "title_zh": "迈向包容性移动建模：城市系统中老年人轨迹模式的刻画与评估",
+      "authors": [
+        "Zhengxuan Wang",
+        "Haohan He",
+        "Mengying Zhou"
+      ],
+      "total_score": 0.45268874303166645,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.148,
+        "other": 0.18762914343888823
+      },
+      "tags": [
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "老年轨迹缺失会显著偏置城市移动模型",
+      "detail_file": "agent-harness-evolution/2026-06-30/2606.31207.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31207/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.31349",
+      "title": "PGUDA: Pressure-Guided Unsupervised Domain Adaptation with Cross-Modal Knowledge Distillation for sEMG-Based Gesture Recognition",
+      "title_zh": "PGUDA：用于基于 sEMG 手势识别的压力引导无监督域适应与跨模态知识蒸馏",
+      "authors": [
+        "Yurui Liu",
+        "Xiao-Cong Zhong",
+        "Qisong Wang",
+        "Xuefu Wang",
+        "Dan Liu",
+        "Jinwei Sun"
+      ],
+      "total_score": 0.4193033147511106,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.10400000000000001,
+        "other": 0.2270110491703686
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "用压力信号蒸馏提升跨域 sEMG 手势识别",
+      "detail_file": "agent-harness-evolution/2026-06-30/2606.31349.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31349/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.32025",
+      "title": "Generative Skill Composition for LLM Agents",
+      "title_zh": "面向 LLM Agent 的生成式技能组合",
+      "authors": [
+        "Xinyu Zhao",
+        "Zhen Tan",
+        "Vaishnav Tadiparthi",
+        "Nakul Agarwal",
+        "Kwonjoon Lee",
+        "Ehsan Moradi Pari",
+        "Hossein Nourkhiz Mahjoub",
+        "Tianlong Chen"
+      ],
+      "total_score": 0.41514737878144675,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.776,
+        "other": 0.12782459593815568
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "用自回归生成联合规划 LLM Agent 技能",
+      "detail_file": "agent-harness-evolution/2026-06-30/2606.32025.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.32025/thumb.webp"
+    },
+    {
+      "arxiv_id": "2607.00063",
+      "title": "Spectral Geometry and Bosonic-Bloch Probes: Explorations in Quantum Learning",
+      "title_zh": "谱几何与 Bosonic-Bloch 探针：量子学习探索",
+      "authors": [
+        "Santanu Ganguly",
+        "Xing Liang",
+        "Dimitrios Makris"
+      ],
+      "total_score": 0.3974000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.05800000000000001,
+        "other": 0.2
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "用玻色与Bloch探针诊断量子学习谱几何",
+      "detail_file": "agent-harness-evolution/2026-06-30/2607.00063.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2607.00063/thumb.webp"
+    }
+  ]
+}

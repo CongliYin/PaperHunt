@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.31976",
+  "title": "TreeAgent: A Generalizable Multi-Agent Framework for Automated Bias Labeling in Forestry via Compiled Expert Rules and Vision-Language Models",
+  "title_zh": "TreeAgent：通过编译专家规则与视觉语言模型实现林业自动偏差标注的通用多智能体框架",
+  "authors": [
+    "Shiyi Chen",
+    "Nicholas Saban",
+    "Collin Hargreaves",
+    "Huiqi Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T17:16:59Z",
+  "abs_url": "https://arxiv.org/abs/2606.31976v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.31976",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Human-labeled data are widely used as reference annotations in ML, despite known variability across annotators in many expert-driven domains. In addition, expert annotation is slow, inconsistent, and remains a major bottleneck for scaling tasks like tree height bias classification in forestry remote sensing. We propose a multi-agent system (MAS) that orchestrates expert decision trees with Vision-Language Models (VLMs), treating the decision tree as a structural prior while VLMs perform localized semantic perception at individual nodes, with multi-agent voting to mitigate VLM stochasticity. We formalize a Decoupled Declarative Decision (D3) Framework that enables zero-modification generalization across diverse expert-defined decision structures. On a tree bias classification testbed, our framework outperforms supervised ML baselines and reduces the amount of expert labeling effort required. These results suggest that agentic orchestration of VLMs with expert priors can reproduce expert-defined labeling procedures at substantially lower annotation cost while maintaining interpretability.",
+  "abstract_zh": "该论文关注林业遥感中 tree height bias classification 等专家标注任务的规模化瓶颈：人工标注不仅耗时昂贵，而且不同专家之间存在一致性问题。作者提出 TreeAgent，一个多智能体系统（MAS），将专家 decision tree 作为结构先验，并在每个节点调用 Vision-Language Models（VLMs）进行局部语义感知，再通过多智能体投票降低 VLM 随机性带来的不稳定。论文进一步形式化了 Decoupled Declarative Decision（D3）Framework，使系统能够在不修改代码的情况下适配不同专家定义的决策结构。在树木偏差分类测试平台上，TreeAgent 优于监督式 ML 基线，并显著减少所需专家标注工作量，表明将 VLM 与专家先验进行智能体式编排，有望以更低成本复现可解释的专家标注流程。",
+  "key_points_zh": [
+    "提出 TreeAgent，将专家 decision tree 与 VLM 结合，用专家规则约束推理流程，用 VLM 完成节点级视觉语义判断。",
+    "通过 multi-agent voting 缓解 VLM 输出随机性，提高自动标注的一致性与鲁棒性。",
+    "形式化 Decoupled Declarative Decision（D3）Framework，使框架可零代码修改迁移到不同专家决策树结构。",
+    "在 tree bias classification 测试中优于监督式 ML baselines，并降低专家标注需求。",
+    "方法保留专家规则路径，因此相比黑盒模型更具可解释性，适合专家驱动的遥感标注场景。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.34,
+    "problem_significance": 0.3,
+    "potential_impact": 0.32,
+    "paradigm_shift": 0.24,
+    "lasting_value": 0.28,
+    "llm_avg": 0.296,
+    "comment": "This is mostly a domain-specific VLM labeling orchestration system rather than reusable agent infrastructure or trajectory-based improvement.",
+    "comment_zh": "该工作主要是特定领域的VLM标注编排系统，而不是可复用代理基础设施或基于轨迹的改进方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.296,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31976/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31976/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31976/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31976/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.953
+    }
+  ]
+}

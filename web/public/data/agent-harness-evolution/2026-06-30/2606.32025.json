@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2606.32025",
+  "title": "Generative Skill Composition for LLM Agents",
+  "title_zh": "面向 LLM Agent 的生成式技能组合",
+  "authors": [
+    "Xinyu Zhao",
+    "Zhen Tan",
+    "Vaishnav Tadiparthi",
+    "Nakul Agarwal",
+    "Kwonjoon Lee",
+    "Ehsan Moradi Pari",
+    "Hossein Nourkhiz Mahjoub",
+    "Tianlong Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T17:53:09Z",
+  "abs_url": "https://arxiv.org/abs/2606.32025v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.32025",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent LLM agents benefit from skills for solving complex tasks. Skills encapsulate modular packages of procedural knowledge and instructions for performing specialized tasks, such as setting up a sandboxed environment, running a test suite, or refactoring a function across multiple files. As skill libraries grow and become reusable across tasks and domains, selecting an appropriate skill composition has emerged as a central bottleneck. Existing approaches fall into two categories. One exposes the agent's reasoning to the entire skill collection; the other performs skill retrieval via embeddings or LLM-based rerankers. Both provide useful insights; however, they miss the structural nature of skill composition, which is a joint decision over which skills, how many, and in what order -- three dimensions that cannot be decoupled. We formalize this as structured skill composition: given a task and a skill library, predict an executable skill plan that jointly specifies the activated subset, count, and execution order. We propose SkillComposer, which instantiates structured skill composition as task-conditioned skill sequence prediction. SkillComposer uses a constrained autoregressive decoder over skill identifiers, so subset, count, and order emerge jointly from a single decoding pass, and dependencies between successive skills are captured naturally. We build a training set of task-composition pairs from a real, human-curated skill library. We then evaluate SkillComposer along two axes: composition quality on a held-out test set, and downstream task success on SkillsBench across two production-grade coding agents. On GPT-5.2-Codex, Gemini-3-Pro-Preview, SkillComposer raises the pass rate by +23.1, +18.2pp over the no-skill baseline, surpassing top-3 retrieval and matching the gold-skill retrieval upper bound at lower prompt-token cost.",
+  "abstract_zh": "这篇论文关注 LLM agents 在复杂任务中如何从不断增长的 skill library 中选择合适的技能组合。已有方法通常要么把完整技能集合暴露给 agent 推理，要么通过 embedding 或 LLM reranker 做 skill retrieval，但它们没有显式建模技能组合的结构性：需要联合决定使用哪些技能、使用多少个技能以及按什么顺序执行。论文将该问题形式化为 structured skill composition，即给定任务和 skill library，预测一个可执行的 skill plan。作者提出 SkillComposer，把技能组合建模为任务条件下的 skill sequence prediction，并使用受约束的自回归 decoder 在 skill identifiers 上生成序列，使技能子集、数量和顺序在一次解码中联合产生，同时自然捕捉相邻技能间依赖。作者基于真实人工 curated skill library 构建 task-composition 训练集，并从组合质量和下游任务成功率两方面评估。实验显示，在 SkillsBench 上结合 GPT-5.2-Codex 与 Gemini-3-Pro-Preview 两个生产级 coding agents，SkillComposer 相比无技能基线分别提升 +23.1 和 +18.2 个百分点，优于 top-3 retrieval，并以更低 prompt-token 成本达到 gold-skill retrieval 上界水平。",
+  "key_points_zh": [
+    "论文将 skill selection 扩展为 structured skill composition，强调技能子集、数量和执行顺序必须联合建模，而不能拆成独立检索问题。",
+    "提出 SkillComposer，将任务条件下的技能组合视为 skill sequence prediction，通过受约束自回归 decoder 生成 skill identifiers 序列。",
+    "SkillComposer 能在一次解码中同时决定启用哪些技能、启用多少个以及执行顺序，并建模技能间的连续依赖关系。",
+    "作者基于真实人工 curated skill library 构建 task-composition 训练数据，并在 held-out 组合质量与 SkillsBench 下游成功率上评估。",
+    "在 GPT-5.2-Codex 和 Gemini-3-Pro-Preview 上，SkillComposer 相比无技能基线分别提升 +23.1、+18.2pp，超过 top-3 retrieval，并以更低 token 成本接近 gold-skill retrieval 上界。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.8,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.76,
+    "llm_avg": 0.776,
+    "comment": "Structured skill composition directly addresses reusable agent orchestration and can improve production coding agents with lower context cost.",
+    "comment_zh": "结构化技能组合直接面向可复用智能体编排，并能以更低上下文成本提升生产级编码智能体。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.416947575628934,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.776,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 6,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.32025/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.918
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.32025/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

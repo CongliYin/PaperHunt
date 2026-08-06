@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2606.30999",
+  "title": "Estimating Supply Incrementality in Two-sided Marketplaces: A Causal Machine Learning Approach",
+  "title_zh": "双边市场中供给增量性的估计：一种因果机器学习方法",
+  "authors": [
+    "Yufei Wu",
+    "Daniel Schmierer",
+    "Dan Zylberglejd"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T00:23:00Z",
+  "abs_url": "https://arxiv.org/abs/2606.30999v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.30999",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "In two-sided marketplaces with heterogeneous products, it is important to understand the causal relationship between additional supply and marketplace outcomes, such as the total quantity transacted or transaction value in the marketplace. This paper studies a causal machine learning approach to estimating this relationship across product segments. We use the Airbnb marketplace as an example, focusing on the impact of additional listing supply on total bookings, but the methodology applies to other two-sided marketplaces. Our approach combines double/debiased machine learning with a hierarchical Bayesian framework that leverages pre-existing knowledge as priors. We construct tractable and informative features for the model by leveraging measures of product segment similarity from the geospatial literature. We find that such a model provides plausible estimates of the marketplace returns to additional supply and strong out of sample performance.",
+  "abstract_zh": "本文研究双边市场中“新增供给”对市场结果的因果影响，尤其是在产品异质性较强的场景下，如何估计不同产品细分市场中的供给增量回报。论文以 Airbnb marketplace 为例，分析新增 listing supply 对总 bookings 的影响，但方法可推广到其他双边市场。作者将 double/debiased machine learning 与 hierarchical Bayesian framework 结合，并利用已有业务知识作为先验；同时借鉴地理空间文献中的产品细分相似度度量，构造可处理且信息量较高的特征。实验结果表明，该模型能够给出合理的新增供给市场回报估计，并具备较强的样本外预测表现。",
+  "key_points_zh": [
+    "关注双边市场中新增供给对总交易量或交易价值的因果影响，核心问题是估计 supply incrementality。",
+    "以 Airbnb marketplace 为案例，研究额外 listing supply 对 total bookings 的影响，并面向不同 product segments 给出异质性估计。",
+    "方法结合 double/debiased machine learning 与 hierarchical Bayesian framework，既降低混杂偏差，也利用先验知识提升稳定性。",
+    "通过地理空间相似度构造产品细分特征，使模型在复杂市场结构下仍具备可计算性和解释性。",
+    "结果显示模型能产生较合理的新增供给回报估计，并在 out-of-sample performance 上表现较强。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.7,
+    "potential_impact": 0.6,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.55,
+    "llm_avg": 0.55,
+    "comment": "This is a solid marketplace operations paper on causal supply incrementality, but it has limited connection to e-commerce agents, product search, or recommendation workflows.",
+    "comment_zh": "这是一篇扎实的 marketplace 供给增量因果评估论文，但与电商智能体、商品搜索或推荐流程的关联较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.55,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.30999/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.675
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.30999/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.555
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.30999/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.904
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.30999/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.955
+    }
+  ]
+}

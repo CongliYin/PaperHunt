@@ -1,0 +1,99 @@
+{
+  "arxiv_id": "2606.31947",
+  "title": "LuxEmo: Expressive Text-to-Speech Corpus for Luxembourgish",
+  "title_zh": "LuxEmo：面向 Luxembourgish 的表达性文本到语音语料库",
+  "authors": [
+    "Nina Hosseini-Kivanani",
+    "Sandipana Dowerah"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Sandipana Dowerah",
+      "affiliations": [
+        "Universite de Lorraine",
+        "CNRS",
+        "Inria"
+      ]
+    }
+  ],
+  "published_at": "2026-06-30T16:53:15Z",
+  "abs_url": "https://arxiv.org/abs/2606.31947v2",
+  "pdf_url": "https://arxiv.org/pdf/2606.31947",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "State-of-the-art speech datasets predominantly focus on widely spoken languages, often overlooking low-resource languages such as Luxembourgish, which remain underrepresented in speech technology research. In this work, we introduce LuxEmo, a 21-hour conversational expressive speech corpus for Luxembourgish with 4 emotion categories. LuxEmo is derived from Radio Télévision Luxembourg (RTL) youth broadcasts, using automated detection followed by human validation. We propose a semi-automatic curation workflow combining voice activity detection, denoising, language identification, LuxASR-based segmentation, automatic emotion prediction, lexical cues, and targeted human review. Additionally, we benchmark five expressive TTS systems covering German-based cross-lingual transfer, multilingual Luxembourgish support, Luxembourgish adaptation, and non-parametric prosody transfer. Performance is evaluated using both objective metrics and human evaluation.",
+  "abstract_zh": "本文提出 LuxEmo，一个面向低资源语言 Luxembourgish 的 21 小时对话式表达性语音语料库，包含 4 类情感标签。该语料来自 Radio Télévision Luxembourg（RTL）青年广播，通过自动检测与人工验证构建。作者设计了一套半自动清洗与标注流程，结合 voice activity detection、denoising、language identification、基于 LuxASR 的分段、自动情感预测、词汇线索以及有针对性的人工复核。此外，论文基准评测了 5 类 expressive TTS 系统，涵盖基于 German 的跨语言迁移、多语言 Luxembourgish 支持、Luxembourgish 适配以及非参数化 prosody transfer，并使用客观指标和人工评测进行综合比较。",
+  "key_points_zh": [
+    "发布 LuxEmo：一个 21 小时 Luxembourgish 对话式表达性语音语料库，覆盖 4 类情感，缓解该低资源语言在语音技术中的数据稀缺问题。",
+    "语料来源于 RTL 青年广播，采用自动化筛选后人工验证的方式，兼顾规模、质量与情感标注可靠性。",
+    "提出半自动语料构建流程，整合 VAD、降噪、语言识别、LuxASR 分段、自动情感预测、词汇线索和定向人工审核。",
+    "评测 5 种 expressive TTS 方案，包括 German-based cross-lingual transfer、多语言模型、Luxembourgish adaptation 与 non-parametric prosody transfer。",
+    "通过客观指标和人工主观评测分析不同 TTS 路线在 Luxembourgish 表达性语音合成上的表现。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.45,
+    "problem_significance": 0.35,
+    "potential_impact": 0.25,
+    "paradigm_shift": 0.1,
+    "lasting_value": 0.2,
+    "llm_avg": 0.27,
+    "comment": "A valuable low-resource expressive TTS corpus, but it is largely outside the realtime multimodal-agent and tool-interaction focus.",
+    "comment_zh": "这是一个有价值的低资源情感TTS语料库，但整体上偏离实时多模态智能体和工具交互方向。"
+  },
+  "scores": {
+    "topic_relevance": 0.7200000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.43798072314003966,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.27,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 6,
+    "last_author_found": true,
+    "last_author_affiliations": [
+      "Universite de Lorraine",
+      "CNRS",
+      "Inria"
+    ]
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31947/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31947/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.933
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31947/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31947/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

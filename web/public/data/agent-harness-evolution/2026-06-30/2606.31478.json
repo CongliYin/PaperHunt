@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2606.31478",
+  "title": "One Reflection Is Not Enough: Self-Correcting Autonomous Research via Multi-Hypothesis Failure Attribution",
+  "title_zh": "一次反思不够：通过多假设失败归因实现自纠正自主研究",
+  "authors": [
+    "Jie Ma",
+    "Binfei Chu",
+    "Jie Gao",
+    "Jinlu Zhang",
+    "Yiwei Ma",
+    "Yi Tan",
+    "Jiayi Ji",
+    "Xiaoshuai Sun",
+    "Rongrong Ji"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T10:54:16Z",
+  "abs_url": "https://arxiv.org/abs/2606.31478v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.31478",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Autonomous research agents can now draft hypotheses, write code, run experiments, and produce papers, but they remain brittle when experiments fail. Under the prevailing paradigm, failure recovery is usually delegated to a single free-form reflection: a rich trajectory of metrics, logs, and design choices is compressed into one verbal critique, which often leads either to localized trial-and-error or to hard pivots that discard useful context. We propose SAGE, a Self-correcting, Autonomous, Grounded Experimenter, to tackle this failure-recovery bottleneck. Its core mechanism, Multi-Hypothesis Failure Attribution (MHFA), treats recovery as a structured causal diagnosis. By analyzing dynamic trajectory features, MHFA systematically generates multiple evidence-grounded explanations for a failure, independently evaluates their severity, and deterministically routes the verified root cause to the correct intervention level (hypothesis, experimental design, or implementation). To guarantee scientific honesty, SAGE further employs a grounded reporting mechanism that explicitly constrains drafted results to actual measured values, redacting hallucinated numbers. On a 12-topic, 5-domain benchmark, SAGE increases metrics-bearing outputs from 42% to 92% over a reflection baseline, improves artifact quality from 5.00 to 6.75/10, and blindly outscores AI-Scientist-v2 (52.0 vs. 48.2), with gains concentrated in code development and execution. While fully autonomous scientific writing and generating conference-ready papers remain notoriously difficult open problems for the entire field, SAGE successfully produces significantly more reliable and higher-quality scientific artifacts. Ultimately, by coupling structured recovery with explicit grounding constraints, SAGE significantly outperforms monolithic reflection paradigms, establishing a highly trustworthy foundation for future autonomous research.",
+  "abstract_zh": "自主研究代理已经能够提出假设、编写代码、运行实验并生成论文，但在实验失败时仍然脆弱。现有方法通常依赖单次自由形式反思，将指标、日志和设计选择等丰富轨迹压缩成一段文字批评，容易导致局部试错或过度转向。本文提出 SAGE（Self-correcting, Autonomous, Grounded Experimenter），用于缓解失败恢复瓶颈。其核心机制 Multi-Hypothesis Failure Attribution（MHFA）将恢复过程建模为结构化因果诊断：通过分析动态实验轨迹特征，系统生成多个有证据支撑的失败解释，独立评估其严重性，并将确认后的根因确定性路由到合适的干预层级，包括研究假设、实验设计或代码实现。为保证科学诚实性，SAGE 还引入 grounded reporting 机制，将结果撰写显式约束在真实测量值范围内，并删除幻觉数字。在覆盖 12 个主题、5 个领域的 benchmark 上，SAGE 将包含指标的输出比例从 reflection baseline 的 42% 提升到 92%，artifact 质量从 5.00 提升到 6.75/10，并在盲评中超过 AI-Scientist-v2（52.0 vs. 48.2），主要收益集中在代码开发与实验执行环节。尽管全自动科学写作和生成会议级论文仍是开放难题，SAGE 显著提升了自主研究产物的可靠性与质量。",
+  "key_points_zh": [
+    "指出单次自由形式 reflection 难以充分利用实验轨迹信息，容易陷入局部修补或无根据的大幅转向。",
+    "提出 SAGE，其核心 MHFA 将失败恢复转化为结构化因果诊断，生成并评估多个证据驱动的失败假设。",
+    "MHFA 会把确认后的根因路由到不同干预层级：hypothesis、experimental design 或 implementation，从而避免盲目试错。",
+    "引入 grounded reporting，将论文结果限制为真实实验测量值，并自动删除幻觉数值，提升科学报告可信度。",
+    "在 12-topic、5-domain benchmark 上，SAGE 显著提升含指标输出比例、artifact 质量，并盲评超过 AI-Scientist-v2。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.82,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.78,
+    "llm_avg": 0.78,
+    "comment": "SAGE is relevant because it uses structured failure attribution over execution traces to improve autonomous research-agent recovery and grounded reporting.",
+    "comment_zh": "SAGE通过对执行轨迹进行结构化失败归因，提升自主研究代理的恢复能力和结果落地性，因此具有较高相关性。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.78,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31478/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.878
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31478/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.972
+    }
+  ]
+}

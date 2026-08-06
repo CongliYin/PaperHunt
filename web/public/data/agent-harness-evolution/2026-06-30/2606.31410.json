@@ -1,0 +1,98 @@
+{
+  "arxiv_id": "2606.31410",
+  "title": "Xiaomi-GUI-0 Technical Report",
+  "title_zh": "Xiaomi-GUI-0 技术报告",
+  "authors": [
+    "Wanxia Cao",
+    "Chengzhen Duan",
+    "Pei Fu",
+    "Pengzhi Gao",
+    "Niu Lian",
+    "Fazhan Liu",
+    "Hui Liu",
+    "Heng Qu",
+    "Qinzhuo Wu",
+    "Zhehao Yu",
+    "Tongbo Chen",
+    "Shiqi Cui",
+    "Anan Du",
+    "Shukai Jia",
+    "Yuanfa Li",
+    "Wei Liu",
+    "Yike Liu",
+    "Wenchao Lu",
+    "Zhenbo Luo",
+    "Haoyuan Sun",
+    "Jiatong Sun",
+    "Cheng Tan",
+    "Yajie Wang",
+    "Changqiao Wu",
+    "Tao Xiong",
+    "Jiahui Yang",
+    "Yuxuan Yuan",
+    "Ruoceng Zhang",
+    "Shaojie Zhang",
+    "Jian Zhu",
+    "Jian Luan",
+    "Cong Zou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T09:36:35Z",
+  "abs_url": "https://arxiv.org/abs/2606.31410v2",
+  "pdf_url": "https://arxiv.org/pdf/2606.31410",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Graphical user interface (GUI) agents build on vision-language models to complete user tasks end-to-end in real applications through interface actions such as tapping, swiping, text entry, and navigation. However, existing GUI agents are trained and evaluated largely on offline trajectories, simulated environments, and standardized benchmarks. These differ substantially from real applications in interface layout, interaction logic, and abnormal-state distribution, and cannot faithfully characterize execution stability in real-world use, where account states, permission dialogs, payment authentication, and risk control continually reshape the state distribution and open a persistent gap between benchmark scores and real usability. To close this gap, we propose Xiaomi-GUI-0, a native multimodal GUI agent for real mobile environments, trained and evaluated within a real-device closed loop. At its core is a real-device-dominant hybrid infrastructure, where physical devices are the primary execution environment and sandboxes provide auxiliary support, so that data collection, training, rollout, and evaluation share an execution distribution close to real deployment. We construct multi-source training data spanning high-frequency head tasks, high-generalization data for long-tail intents, and capability-enhancement data for reflection and memory, and introduce an error-driven data flywheel that turns failure trajectories into corrected actions, reflective explanations, and recovery demonstrations. The model is trained through a progressive three-stage pipeline of supervised fine-tuning, step-level reinforcement learning, and agentic reinforcement learning. Evaluated on public benchmarks and our in-house RealMobile, Xiaomi-GUI-0 achieves 72.0% success on RealMobile and 78.9% on AndroidWorld, while substantially improving execution stability and abnormal-state recognition in real-world tasks.",
+  "abstract_zh": "本文提出 Xiaomi-GUI-0，一个面向真实移动设备环境的原生多模态 GUI agent。不同于主要依赖离线轨迹、模拟环境和标准化基准的现有 GUI agent，Xiaomi-GUI-0 将真实设备作为主要执行环境，并以 sandbox 作为辅助，构建覆盖数据采集、训练、rollout 与评测的真实设备闭环，从而更贴近实际部署中的界面布局、交互逻辑与异常状态分布。论文构建了多源训练数据，包括高频头部任务、长尾意图的高泛化数据，以及用于反思与记忆的能力增强数据；同时引入 error-driven data flywheel，将失败轨迹转化为修正动作、反思解释和恢复示范。训练流程采用三阶段渐进式管线：监督微调、step-level reinforcement learning，以及 agentic reinforcement learning。在公开基准和内部 RealMobile 评测上，Xiaomi-GUI-0 分别取得 RealMobile 72.0% 与 AndroidWorld 78.9% 的成功率，并显著提升真实任务中的执行稳定性和异常状态识别能力。",
+  "key_points_zh": [
+    "指出现有 GUI agent 过度依赖离线轨迹、模拟环境和标准基准，难以反映真实移动应用中的账号状态、权限弹窗、支付认证和风控等复杂状态分布。",
+    "提出 Xiaomi-GUI-0，以真实物理设备为主、sandbox 为辅，形成数据采集、训练、rollout 和评测共享的真实设备闭环基础设施。",
+    "构建多源训练数据，覆盖高频任务、长尾泛化意图，以及反思（reflection）和记忆（memory）等能力增强场景。",
+    "引入 error-driven data flywheel，将失败执行轨迹转化为纠正动作、反思解释和恢复示范，用于持续改进模型稳定性。",
+    "采用监督微调、step-level reinforcement learning、agentic reinforcement learning 三阶段训练；在 RealMobile 达到 72.0% 成功率，在 AndroidWorld 达到 78.9%。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.54,
+    "problem_significance": 0.58,
+    "potential_impact": 0.52,
+    "paradigm_shift": 0.46,
+    "lasting_value": 0.48,
+    "llm_avg": 0.516,
+    "comment": "Although it has a strong real-device rollout and failure-data flywheel, its focus on GUI/mobile agents keeps it only partially aligned with agent harness evolution.",
+    "comment_zh": "尽管它具备真实设备闭环和失败数据飞轮，但其核心是GUI移动端代理，因此与代理基础设施演化方向只部分相关。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.8296320871988233,
+    "author_reputation": 0.45835772941109343,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.516,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 20,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 7,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31410/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2606.31763",
+  "title": "A Self-Evolving Agentic System for Automated Generation and Execution of Biological Protocols",
+  "title_zh": "用于自动生成与执行生物实验流程的自进化 Agentic 系统",
+  "authors": [
+    "Yankai Jiang",
+    "Weiting Tang",
+    "Haoran Sun",
+    "Zhenyu Tang",
+    "Yuejie Hou",
+    "Yingnan Han",
+    "Rubo Wang",
+    "Yueyuxiao Yang",
+    "Cheng Liang",
+    "Lilong Wang",
+    "Wenjie Lou",
+    "Xiaosong Wang",
+    "Lei Bai",
+    "Meng Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T14:51:13Z",
+  "abs_url": "https://arxiv.org/abs/2606.31763v2",
+  "pdf_url": "https://arxiv.org/pdf/2606.31763",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Autonomous wet-lab experimentation requires more than plausible protocol text: biological intent, quantitative procedures, device constraints and experimental feedback must remain aligned from protocol and SOP design to code and physical execution. We developed ProtoPilot, a self-evolving multi-agent system, together with an expert-grounded benchmark and evaluation framework for testing this conversion as an experimental automation problem. The framework spans 294 synthetic-biology and molecular-biology tasks derived from 98 gold-standard protocols, wet-lab expert rubrics, device-level validity gates and real experimental tests. ProtoPilot incorporates layer-wise verifiability, multi-agent orchestration and a runtime-updated skill library to generate protocols, expand SOPs, synthesize SDK-compliant code and revise workflows from wet-lab feedback. It achieved a Top@3 expert-preference rate of 90.2%, an overall protocol-to-code gate pass rate of 89.5% and an Opentrons pass rate of 88.24%, compared with 32.35% for OpenTrons-AI. Wet-lab validation produced interpretable readouts, Sanger-confirmed products and feedback-corrected PCA-assembled DNA targets, establishing a verifiable route to autonomous experimentation. Together, these results show that the evaluation framework captures execution-relevant requirements for autonomous wet-lab automation, and that ProtoPilot can meet them by converting protocol and code generation into validated execution and feedback-guided revision.",
+  "abstract_zh": "自主湿实验不仅需要生成看似合理的 protocol 文本，还必须在生物学意图、定量操作、设备约束与实验反馈之间保持一致，贯穿 protocol/SOP 设计、代码生成与物理执行全过程。本文提出 ProtoPilot，一个自进化多智能体系统，并构建了由专家知识支撑的 benchmark 与评估框架，将 protocol 到执行的转换视为实验自动化问题来测试。该框架覆盖 294 个合成生物学与分子生物学任务，来源于 98 个金标准 protocols，并结合湿实验专家评分、设备级有效性检查和真实实验测试。ProtoPilot 通过分层可验证性、多智能体编排以及运行时更新的技能库，生成 protocols、扩展 SOPs、合成符合 SDK 的代码，并根据湿实验反馈修订 workflow。实验显示，ProtoPilot 达到 90.2% 的 Top@3 专家偏好率、89.5% 的整体 protocol-to-code 检查通过率，以及 88.24% 的 Opentrons 通过率，显著优于 OpenTrons-AI 的 32.35%。湿实验验证进一步获得可解释读数、Sanger 测序确认产物，以及通过反馈纠正的 PCA 组装 DNA 靶标，展示了通向可验证自主实验的路径。",
+  "key_points_zh": [
+    "提出 ProtoPilot：一个自进化 multi-agent 系统，可从生物实验意图生成 protocol、扩展 SOP、合成 SDK-compliant code，并根据湿实验反馈迭代修正。",
+    "构建面向自动化湿实验的 expert-grounded benchmark，包含 294 个合成生物学与分子生物学任务，源自 98 个 gold-standard protocols。",
+    "核心设计包括 layer-wise verifiability、多智能体编排与 runtime-updated skill library，用于保证 biological intent、设备约束和执行代码的一致性。",
+    "在评估中，ProtoPilot 达到 90.2% Top@3 专家偏好率、89.5% protocol-to-code gate pass rate，以及 88.24% Opentrons pass rate，显著超过 OpenTrons-AI 的 32.35%。",
+    "真实湿实验验证获得 Sanger-confirmed products 和反馈纠正的 PCA-assembled DNA targets，说明系统具备从生成到物理执行再到反馈修订的闭环能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.82,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.76,
+    "llm_avg": 0.768,
+    "comment": "ProtoPilot is strong harness-oriented work with verifiability gates, runtime skill updates, execution feedback, and protocol-to-code evaluation.",
+    "comment_zh": "ProtoPilot具有较强的代理框架价值，结合了可验证关卡、运行时技能更新、执行反馈和协议到代码评测。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.768,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31763/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.868
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31763/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.923
+    }
+  ]
+}

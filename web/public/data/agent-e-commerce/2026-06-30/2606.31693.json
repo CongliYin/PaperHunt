@@ -1,0 +1,101 @@
+{
+  "arxiv_id": "2606.31693",
+  "title": "ShopX: A Foundation Model for Intent-to-Item Fulfillment in Agentic Shopping",
+  "title_zh": "ShopX：面向智能体购物中“意图到商品”履约的基础模型",
+  "authors": [
+    "Jiacheng Chen",
+    "Tao Zhang",
+    "Manxi Lin",
+    "Dunxian Huang",
+    "Teng Shi",
+    "Honghao Fu",
+    "Mengyan Li",
+    "Xinming Zhang",
+    "Chenchi Zhang",
+    "Xuan Lu",
+    "Xiaoxiong Du",
+    "Haibin Chen",
+    "Shaolin Ye",
+    "Hao Chang",
+    "Xiaoqi Li",
+    "Shuwen Xiao",
+    "Yujin Yuan",
+    "Jingxuan Feng",
+    "Shaopan Xiong",
+    "Huimin Yi",
+    "Ju Huang",
+    "Qiu Shen",
+    "Ying Chen",
+    "Junjun Zheng",
+    "Xiangheng Kong",
+    "Dan Ou",
+    "Haihong Tang",
+    "Yuning Jiang",
+    "Bo Zheng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T14:05:28Z",
+  "abs_url": "https://arxiv.org/abs/2606.31693v2",
+  "pdf_url": "https://arxiv.org/pdf/2606.31693",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The wave of AI-native applications is moving shopping beyond page- and feed-based browsing toward intent-driven experiences orchestrated by LLM agents. A common design wraps an LLM around existing search and recommendation pipelines, forcing complex intents through low-bandwidth retrieval or ranking interfaces and leaving a gap between language understanding and item-space fulfillment. Generative recommendation gives LLMs a direct item-space interface through semantic IDs (SIDs), but existing models mainly generate candidates for retrieval rather than translate flexible intents into item-space outcomes. We propose ShopX to address this bottleneck by unifying intent understanding, execution planning, and flexible SID-native item-space operations into a single foundation model. We deploy ShopX in agentic shopping workflows through a model-native item-fulfillment framework with a serving harness that defines a model-facing action protocol and exposes support surfaces for context access, catalog grounding, and state management. Within this framework, ShopX plans and composes SID-based item-space operations such as SID beam-search retrieval, listwise ranking, or product bundling. This model-centric design reduces lossy hand-offs between agent orchestration and item-space execution. To build ShopX, we design semantically recoverable, LLM-operable SIDs and a training recipe that equips a general LLM for flexible multi-turn item-space fulfillment while retaining the knowledge and instruction-following abilities needed by a shopping agent. We evaluate the ShopX framework against tool-mediated agentic systems on single- and multi-turn fulfillment tasks derived from anonymized Taobao production logs, showing that model-native fulfillment improves overall framework behavior, especially on complex or ambiguous requests.",
+  "abstract_zh": "本文提出 ShopX，用于解决 LLM Agent 驱动购物场景中从用户自然语言意图到具体商品空间操作之间的断层。现有智能体购物系统通常将 LLM 包裹在传统搜索与推荐管线之外，使复杂意图只能通过低带宽的检索或排序接口传递，导致语言理解与商品履约脱节。ShopX 将意图理解、执行规划与基于语义 ID（Semantic IDs, SIDs）的商品空间操作统一到一个基础模型中，并通过模型原生的 item-fulfillment 框架部署到 agentic shopping 工作流。该框架定义面向模型的 action protocol，并提供上下文访问、目录 grounding 与状态管理等支持面，使 ShopX 能够组合执行 SID beam-search retrieval、listwise ranking、product bundling 等操作。论文还设计了语义可恢复、LLM 可操作的 SIDs，以及相应训练方案，使通用 LLM 获得多轮、灵活的商品空间履约能力，同时保留购物智能体所需的知识与指令遵循能力。基于匿名 Taobao 生产日志构造的单轮与多轮履约任务实验表明，相比工具调用式 agentic 系统，ShopX 的模型原生履约方式在整体框架行为上更优，尤其适合复杂或含糊请求。",
+  "key_points_zh": [
+    "提出 ShopX，将意图理解、执行规划和 SID-native item-space operations 统一到单一基础模型中，减少 LLM Agent 与传统检索/推荐模块之间的信息损失。",
+    "设计模型原生 item-fulfillment framework，包括 action protocol、context access、catalog grounding 和 state management，使模型可直接规划并执行商品空间操作。",
+    "构建语义可恢复、LLM 可操作的 Semantic IDs，使商品既能被模型生成和组合，也能保持与真实商品目录的可 grounding 性。",
+    "支持多种 SID-based 操作，如 SID beam-search retrieval、listwise ranking 和 product bundling，面向复杂、多轮、模糊的购物需求。",
+    "在匿名 Taobao 生产日志构造的单轮与多轮任务上，ShopX 相比工具媒介式 agentic systems 表现更好，复杂请求场景收益更明显。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.9,
+    "problem_significance": 0.95,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.85,
+    "lasting_value": 0.9,
+    "llm_avg": 0.9,
+    "comment": "A highly relevant agentic-shopping paper that tightly integrates LLM planning, catalog-grounded item fulfillment, ranking, retrieval, and bundling for real marketplace workflows.",
+    "comment_zh": "这是一篇高度契合智能购物方向的论文，将LLM规划、商品目录 grounding、检索排序和搭配等能力紧密结合到真实电商场景中。"
+  },
+  "scores": {
+    "topic_relevance": 1.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.6535700849547261,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 32,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31693/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.92
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31693/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.932
+    }
+  ]
+}

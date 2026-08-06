@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2606.31229",
+  "title": "Agentic-Ideation: Sample Efficient Agentic Trajectories Synthesis for Scientific Ideation Agents",
+  "title_zh": "Agentic-Ideation：面向科学构思智能体的样本高效 Agentic 轨迹合成",
+  "authors": [
+    "Keyu Zhao",
+    "Lingyan Kong",
+    "Fengli Xu",
+    "Yong Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T07:07:51Z",
+  "abs_url": "https://arxiv.org/abs/2606.31229v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.31229",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Ideation plays a pivotal role in scientific discovery. Recent LLM, especially AI Scientist systems, show promising potential for automated ideation. However, existing approaches predominantly rely on pre-defined agentic workflows. This constraint severely limits the flexibility required to navigate the vast search space of scientific literature and the complex action space of research reasoning. Recently, training Agentic LLMs has emerged as a promising direction, offering flexible reasoning frameworks and the capability for autonomous tool utilization. However, there remains a non-trivial challenge: applying previous agentic data synthesis methods to scientific ideation suffers from prohibitively high data synthesis cost. To bridge this gap, we propose Agentic-Ideation, a novel framework comprising an automated trajectory synthesis pipeline and a specialized agentic LLM trained for scientific ideation. Specifically, we first define a comprehensive tool space incorporating three external tools and three cognitive tools. Then we introduce an Oracle-Guided Data Synthesis strategy. By leveraging a reference idea as oracle guidance, this approach steers the multi-agent system to efficiently reconstruct the logical reasoning and tool invocation paths, transforming aimless trial-and-error into directed trajectory generation. Finally, we train the agent on these synthesized trajectories, employing a masking strategy on tool execution results. This ensures the model focuses on decision-making logic without interference from external feedback. Experimental results demonstrate that our method outperforms the SOTA workflow-based baseline by \\textbf{11.91\\%} in overall quality. Furthermore, our approach improves the sample efficiency of high-quality data synthesis by \\textbf{over 10$\\times$}.",
+  "abstract_zh": "本文关注科学发现中的关键环节——科学构思（ideation）。现有 LLM 与 AI Scientist 系统虽已展现自动化构思潜力，但大多依赖预定义 agentic workflows，限制了其在海量科学文献搜索空间与复杂科研推理动作空间中的灵活性。为此，作者提出 Agentic-Ideation：一个包含自动化轨迹合成流水线与专用于科学构思的 agentic LLM 的框架。方法首先定义了包含 3 类外部工具与 3 类认知工具的综合工具空间；随后提出 Oracle-Guided Data Synthesis，利用参考 idea 作为 oracle，引导多智能体系统高效重构推理逻辑与工具调用路径，将无目标试错转化为定向轨迹生成；最后基于合成轨迹训练 agent，并对工具执行结果采用 masking 策略，使模型更专注于决策逻辑而非外部反馈。实验表明，该方法整体质量相比 SOTA workflow-based baseline 提升 11.91%，高质量数据合成的样本效率提升超过 10 倍。",
+  "key_points_zh": [
+    "提出 Agentic-Ideation，用于训练面向科学构思任务的 agentic LLM，突破固定 workflow 对灵活科研推理的限制。",
+    "构建包含 3 个外部工具与 3 个认知工具的工具空间，支持文献探索、推理规划与 idea 生成等复杂动作。",
+    "提出 Oracle-Guided Data Synthesis，以参考 idea 作为 oracle，引导多智能体系统生成高质量推理与工具调用轨迹，减少盲目试错成本。",
+    "训练阶段对工具执行结果进行 masking，使模型学习何时调用工具、如何推理等决策逻辑，而不过度依赖外部反馈内容。",
+    "实验显示，相比 SOTA workflow-based baseline，整体质量提升 11.91%，高质量轨迹合成样本效率提升超过 10 倍。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.78,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.76,
+    "llm_avg": 0.764,
+    "comment": "Agentic-Ideation is well aligned through sample-efficient trajectory synthesis and agent training for tool-using scientific ideation.",
+    "comment_zh": "Agentic-Ideation通过高效轨迹合成和面向工具使用科学构思的代理训练，与本方向高度契合。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.23816576137838616,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.764,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31229/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31229/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31229/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.889
+    }
+  ]
+}

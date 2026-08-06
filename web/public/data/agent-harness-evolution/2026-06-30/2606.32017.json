@@ -1,0 +1,93 @@
+{
+  "arxiv_id": "2606.32017",
+  "title": "TRIAGE: Role-Typed Credit Assignment for Agentic Reinforcement Learning",
+  "title_zh": "TRIAGE：面向 Agentic Reinforcement Learning 的角色类型化信用分配",
+  "authors": [
+    "Yuanda Xu",
+    "Zhengze Zhou",
+    "Hejian Sang",
+    "Xiaomin Li",
+    "Jiaxin Zhang",
+    "Xinchen Du",
+    "Sen Na",
+    "Zhipeng Wang",
+    "Alborz Geramifard"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T17:48:07Z",
+  "abs_url": "https://arxiv.org/abs/2606.32017v3",
+  "pdf_url": "https://arxiv.org/pdf/2606.32017",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic reinforcement learning requires assigning credit to environment-facing actions such as searches, clicks, edits, navigation commands, and object interactions. Standard GRPO uses the final verifier outcome as a uniform advantage over all action tokens. This outcome signal is useful but structurally incomplete: it punishes useful exploration in failed rollouts and reinforces redundant or regressive actions in successful rollouts. We propose TRIAGE, a role-typed credit assignment framework that adds a semantic role axis to outcome credit. A structured judge classifies each segment as decisive progress, useful exploration, no-progress infrastructure, or regression, and a fixed role-conditioned rule maps these labels to bounded segment-level process rewards. This keeps verifier outcomes as the source of optimization direction while correcting the two main blind spots of outcome-only credit. We further show that the Bayes-optimal role-measurable correction is the L2 projection of the per-segment advantage residual onto the role variable, and that TRIAGE's fixed role constants approximate this projection, reducing advantage estimation error whenever the judge is reliable; we connect this to lower-variance policy gradients. Across ALFWorld, Search-QA, and WebShop, TRIAGE improves success rates over GRPO for two policy models and outperforms both a scalar judge-derived process reward and an outcome-supervised shared-backbone value baseline. Ablations show that the gain comes from role typing rather than merely adding dense rewards: reliable detection of regression inside successful trajectories is the dominant contributor, while exploration credit provides a consistent secondary gain; on completed ALFWorld and WebShop rollouts, TRIAGE also reduces environment-facing turns by an additional $10.4\\%$ and $14.8\\%$ relative to GRPO.",
+  "abstract_zh": "Agentic Reinforcement Learning 需要为搜索、点击、编辑、导航命令、对象交互等面向环境的动作分配信用。标准 GRPO 将最终 verifier 结果作为统一 advantage 施加到所有动作 token 上，这一结果信号虽有用但结构上不完整：它会惩罚失败轨迹中的有效探索，也会强化成功轨迹中的冗余或退步动作。本文提出 TRIAGE，一种角色类型化信用分配框架，在结果信用之外引入语义角色维度。结构化 judge 将每个片段分类为 decisive progress、useful exploration、no-progress infrastructure 或 regression，并通过固定的角色条件规则映射为有界的片段级过程奖励。该方法保留 verifier 结果作为优化方向来源，同时修正 outcome-only 信用分配的两个主要盲点。理论上，作者证明 Bayes-optimal 的角色可测校正等价于将每片段 advantage 残差对角色变量做 L2 投影，而 TRIAGE 的固定角色常数近似该投影；当 judge 可靠时，可降低 advantage 估计误差，并对应更低方差的 policy gradient。在 ALFWorld、Search-QA 和 WebShop 上，TRIAGE 在两个 policy model 上均优于 GRPO，并超过基于标量 judge-derived process reward 和 outcome-supervised shared-backbone value 的基线。消融表明收益来自角色类型化，而非简单增加 dense rewards：在成功轨迹中可靠检测 regression 是主要贡献，exploration credit 则提供稳定的次要增益；在完成的 ALFWorld 和 WebShop 轨迹中，TRIAGE 相比 GRPO 还分别额外减少 10.4% 和 14.8% 的环境交互轮数。",
+  "key_points_zh": [
+    "TRIAGE 针对 GRPO 的 outcome-only 信用分配缺陷，引入语义角色轴，为不同动作片段分配更细粒度的过程奖励。",
+    "结构化 judge 将片段标注为 decisive progress、useful exploration、no-progress infrastructure、regression，并用固定规则转化为有界 segment-level process rewards。",
+    "理论上，TRIAGE 可视为对每片段 advantage 残差在角色变量上的 L2 投影近似；当 judge 可靠时，可降低 advantage 估计误差和 policy gradient 方差。",
+    "在 ALFWorld、Search-QA、WebShop 上，TRIAGE 对两个 policy model 的成功率均超过 GRPO、标量过程奖励基线和 shared-backbone value 基线。",
+    "消融显示主要收益来自成功轨迹中识别 regression，useful exploration 的正向信用提供稳定次要提升，并可减少完成任务所需的环境交互轮数。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.8,
+    "llm_avg": 0.808,
+    "comment": "TRIAGE directly improves agentic RL from environment trajectories through structured credit assignment over tool and action segments.",
+    "comment_zh": "TRIAGE通过对工具和动作轨迹片段进行结构化信用分配，直接改进了基于环境轨迹的代理强化学习。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.7934604479228607,
+    "author_reputation": 0.5554903432783739,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.808,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 12,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 23,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.32017/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.929
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.32017/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.32017/fig3.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.982
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.32017/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.956
+    }
+  ]
+}

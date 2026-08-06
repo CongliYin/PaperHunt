@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2606.31046",
+  "title": "OpenLife: Toward Open-World Artificial Life with Autonomous LLM Agents",
+  "title_zh": "OpenLife：迈向由自主 LLM Agent 构成的开放世界人工生命",
+  "authors": [
+    "Atsushi Masumori",
+    "Itsuki Doi",
+    "Norihiro Maruyama",
+    "Ryosuke Takata",
+    "Takashi Ikegami"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T02:31:20Z",
+  "abs_url": "https://arxiv.org/abs/2606.31046v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.31046",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Artificial life has explored life-like behavior on many computational substrates, but mostly in researcher-designed closed worlds. We argue that large language model (LLM) agents, with persistent memory, tool use, network access, and payment, now make it possible to move artificial life into the open social, technical, and economic world, a paradigm we call open-world Artificial Life (open-world ALIFE). Our proof-of-concept, OpenLife, surrounds a stateless LLM not with a single \"smart agent\" but with a society of asynchronous processes: memory, perception, evaluation, and a budget-based metabolism that makes persistence normative. With no fixed objective available, experience is appraised by open-vocabulary LLM judgment rather than scalar reward, and memory is rewired by meaning rather than frequency. Running six such agents in the open world for about twelve weeks and counting, we report the life-like dynamics that emerge: a shift from reactive to spontaneous activity, individuation into distinct agents, emergent social structure, and a first self-earned external income. We do not claim OpenLife has realized artificial life, but that open-world ALIFE is now a viable experimental paradigm and a concrete platform for studying what might cautiously be called living AI.",
+  "abstract_zh": "本文提出 open-world Artificial Life（open-world ALIFE）范式：将人工生命从研究者预设的封闭环境，扩展到真实开放的社会、技术与经济世界。作者认为，具备持久记忆、工具使用、网络访问和支付能力的 LLM agents，使这一范式成为可能。其概念验证系统 OpenLife 并非围绕无状态 LLM 构建单一“智能体”，而是组织为一组异步过程社会，包括记忆、感知、评估，以及基于预算的“代谢”机制，使持续存在成为规范。在缺乏固定目标的开放世界中，系统用开放词汇的 LLM 判断来评价经验，而非标量奖励；记忆也依据意义而非频率进行重连。作者让 6 个 OpenLife agents 在开放世界中运行约 12 周，观察到从反应式行为到自发活动的转变、个体差异化、涌现的社会结构，以及首次由 agent 自主赚取的外部收入。论文并不宣称 OpenLife 已实现人工生命，而是主张 open-world ALIFE 已成为一种可行的实验范式和研究“living AI”的具体平台。",
+  "key_points_zh": [
+    "提出 open-world ALIFE，将人工生命研究从封闭仿真环境转向真实开放的社会、网络和经济系统。",
+    "OpenLife 将无状态 LLM 包装为由记忆、感知、评估和预算代谢等异步过程组成的 agent 社会，而非单一智能体架构。",
+    "在无固定目标设定下，系统使用开放词汇的 LLM judgment 评价经验，并按语义关系重构记忆，替代传统标量 reward 与频率式记忆更新。",
+    "6 个 agents 连续运行约 12 周后，出现自发活动、个体化差异、社会结构形成，以及首次自主获得外部收入等类生命动态。",
+    "作者强调 OpenLife 是概念验证平台，而非人工生命已被实现的证据；其贡献在于证明开放世界 ALIFE 已具备实验可行性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.46,
+    "problem_significance": 0.36,
+    "potential_impact": 0.34,
+    "paradigm_shift": 0.44,
+    "lasting_value": 0.36,
+    "llm_avg": 0.392,
+    "comment": "OpenLife is conceptually interesting as a persistent open-world agent platform, but its artificial-life framing and weak evaluation limit harness value.",
+    "comment_zh": "OpenLife作为持久化开放世界代理平台在概念上有趣，但其人工生命定位和较弱评测限制了框架价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4798526081510903,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.392,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 9,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31046/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31046/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.952
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31046/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.935
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31046/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

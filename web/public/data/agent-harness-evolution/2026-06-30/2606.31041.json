@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2606.31041",
+  "title": "A Semantic-Layer-Mediated Agent for Natural Language to SQL over Heterogeneous Enterprise Databases",
+  "title_zh": "一种通过语义层中介实现异构企业数据库自然语言到 SQL 的 Agent",
+  "authors": [
+    "Ha Jeong Kim",
+    "Saksonita Khoeurn",
+    "Ye Ji Yoon"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-30T02:22:39Z",
+  "abs_url": "https://arxiv.org/abs/2606.31041v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.31041",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Natural language-to-SQL (NL2SQL) over real-world enterprise databases remains significantly more challenging than on academic benchmarks. Enterprise schemas often contain hundreds of physical tables with cryptic column names, heterogeneous SQL dialects, and complex analytical workloads requiring nested aggregations, temporal reasoning, and multi-table joins. We present a semantic-layer-mediated NL2SQL agent that decouples semantic intent from physical SQL execution. Rather than generating SQL directly over raw schemas, the agent reasons over a curated semantic layer through a compact intermediate representation called the Semantic Model Query (SMQ). A deterministic compiler translates each SMQ into dialect-specific SQL, providing verified building blocks that the agent composes into the final query. The system employs a constrained think-act loop, supports SQLite, BigQuery, and Snowflake backends, and is integrated into an end-to-end evaluation framework. Using Gemini 3 Pro, the system achieves 94.15% execution accuracy on the 547-task Spider2-snow benchmark, ranking third on the official leaderboard and substantially outperforming schema-only approaches. We describe the system architecture, SMQ representation, agent workflow, evaluation results, and discuss semantic-layer quality and the trade-off between improved grounding and overfitting.",
+  "abstract_zh": "本文面向真实企业数据库中的 Natural Language-to-SQL（NL2SQL）任务，提出一种由语义层中介的 NL2SQL agent。相比学术基准，企业数据库通常包含数百张物理表、晦涩列名、异构 SQL 方言，以及需要嵌套聚合、时间推理和多表连接的复杂分析查询。该方法不直接在原始 schema 上生成 SQL，而是让 agent 基于人工整理的语义层进行推理，并使用紧凑的中间表示 Semantic Model Query（SMQ）表达语义意图。随后，确定性编译器将 SMQ 转换为特定 SQL 方言的查询，从而提供可验证的构建块供 agent 组合。系统采用受约束的 think-act loop，支持 SQLite、BigQuery 和 Snowflake 后端，并集成在端到端评测框架中。基于 Gemini 3 Pro，该系统在 547 个任务的 Spider2-snow benchmark 上达到 94.15% 执行准确率，在官方排行榜排名第三，显著优于仅依赖 schema 的方法。论文还讨论了系统架构、SMQ 表示、agent 工作流、评测结果，以及语义层质量与过拟合风险之间的权衡。",
+  "key_points_zh": [
+    "提出语义层中介的 NL2SQL agent，将自然语言语义意图与物理 SQL 执行解耦，降低企业复杂 schema 对生成模型的干扰。",
+    "设计 Semantic Model Query（SMQ）作为紧凑中间表示，由 agent 在语义层上组合查询意图，再通过确定性编译器生成特定方言 SQL。",
+    "系统支持 SQLite、BigQuery 和 Snowflake，并采用受约束的 think-act loop，以提高查询构造的可控性和可验证性。",
+    "在 Spider2-snow benchmark 的 547 个任务上，结合 Gemini 3 Pro 达到 94.15% 执行准确率，官方排行榜排名第三，明显超过 schema-only 方法。",
+    "论文指出语义层质量是性能关键，同时语义层带来的更强 grounding 可能伴随对特定 benchmark 或业务建模的过拟合风险。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.67,
+    "problem_significance": 0.76,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.7,
+    "llm_avg": 0.7060000000000001,
+    "comment": "The semantic-layer IR, deterministic compiler, and constrained agent loop form useful enterprise NL2SQL harness infrastructure, despite being domain-specific.",
+    "comment_zh": "语义层中间表示、确定性编译器和受约束智能体循环构成了有用的企业级 NL2SQL 运行框架，尽管领域较窄。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4458007087804263,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7060000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 9,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31041/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31041/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31041/fig3.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.31041/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.972
+    }
+  ]
+}
