@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -97,8 +98,10 @@ def _score_batch(
             "role": "user",
             "content": (
                 "Evaluate these papers. Return a JSON object mapping arxiv_id to "
-                "an object with novelty, problem_significance, potential_impact, "
-                "paradigm_shift, lasting_value, comment, and comment_zh. "
+                "an object with domain_fit, novelty, problem_significance, "
+                "potential_impact, paradigm_shift, lasting_value, comment, and "
+                "comment_zh. domain_fit must measure whether the paper belongs "
+                "in this domain, independent of novelty or general paper quality. "
                 "comment should be one concise English sentence. comment_zh "
                 "should be one concise Chinese sentence.\n\n"
                 + json.dumps(payload, ensure_ascii=False)
@@ -112,22 +115,38 @@ def _score_batch(
         arxiv_id = _clean_id(key)
         if arxiv_id not in expected_ids or not isinstance(value, dict):
             continue
-        normalized = _normalize_assessment(value)
+        try:
+            normalized = _normalize_assessment(value)
+        except (TypeError, ValueError) as exc:
+            print(f"[score-llm] skipped {arxiv_id}: invalid assessment ({exc})")
+            continue
         out[arxiv_id] = normalized
     return out
 
 
 def _normalize_assessment(value: dict[str, Any]) -> dict[str, Any]:
-    item: dict[str, Any] = {}
+    item: dict[str, Any] = {"domain_fit": _required_score(value, "domain_fit")}
     vals = []
     for dim in LLM_DIMS:
-        score = clamp(float(value.get(dim, 0.5)))
+        score = _required_score(value, dim)
         item[dim] = score
         vals.append(score)
     item["llm_avg"] = sum(vals) / len(vals)
     item["comment"] = str(value.get("comment") or "").strip()
     item["comment_zh"] = str(value.get("comment_zh") or value.get("comment") or "").strip()
     return item
+
+
+def _required_score(value: dict[str, Any], field: str) -> float:
+    if field not in value:
+        raise ValueError(f"missing required score {field}")
+    try:
+        score = float(value[field])
+    except (TypeError, ValueError) as exc:
+        raise ValueError(f"invalid score {field}") from exc
+    if not math.isfinite(score) or not 0.0 <= score <= 1.0:
+        raise ValueError(f"score {field} must be between 0 and 1")
+    return clamp(score)
 
 
 def _load_phase1(path: str) -> tuple[dict[str, Any], list[dict[str, Any]]]:
@@ -156,4 +175,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

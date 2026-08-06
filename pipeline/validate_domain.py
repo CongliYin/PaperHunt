@@ -8,11 +8,14 @@ from pathlib import Path
 
 import yaml
 
+from lib.selector import SelectionPolicyError, load_selection_policy
+
 
 PIPELINE_DIR = Path(__file__).resolve().parent
 REQUIRED = [
     "domain.yaml",
     "filter_keywords.yaml",
+    "selection_policy.yaml",
     "topic_keywords.yaml",
     "scoring_criteria.md",
 ]
@@ -53,6 +56,14 @@ def main() -> None:
             errors.append(f"filter_keywords.yaml missing {key}")
     if "hard_negative" in filters and not isinstance(filters["hard_negative"], list):
         errors.append("filter_keywords.yaml hard_negative must be a list when present")
+
+    try:
+        load_selection_policy(
+            domain_dir / "selection_policy.yaml",
+            domain=args.domain_id,
+        )
+    except SelectionPolicyError as exc:
+        errors.append(str(exc))
 
     tiers = topics.get("tiers")
     if not isinstance(tiers, dict) or not tiers:

@@ -30,7 +30,9 @@ jobs:
       RUN_DATE_OFFSET_DAYS: "1"
       RUN_ROLLBACK_WEEKENDS: "1"
       FIGURE_BACKEND: yolo
+      FIGURE_MAX_COUNT: "2"
       STORAGE_BACKEND: blob
+      ARXIV_USER_AGENT: "PaperHunt/1.0 (+https://github.com/CongliYin/PaperHunt)"
       LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
       LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
       LLM_MODEL_SCORING: ${{ secrets.LLM_MODEL_SCORING }}
@@ -56,6 +58,11 @@ jobs:
 
       - name: Install pipeline dependencies
         run: pip install -r pipeline/requirements.txt
+
+      - name: Run pipeline tests
+        run: |
+          python -m unittest discover -s tests -p 'test_*.py'
+          python pipeline/evaluate_selection_quality.py
 
       - name: Run daily pipeline
         run: |
