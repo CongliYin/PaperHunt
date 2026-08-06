@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.05013",
+  "title": "OneDayAgent: Towards a Long-Horizon Harness for Autonomous Agents",
+  "title_zh": "OneDayAgent：面向自主智能体的长时程执行框架",
+  "authors": [
+    "Jingsheng Zheng",
+    "Xinyuan Fang",
+    "Jintian Zhang",
+    "Zhengke Gui",
+    "Huajun Chen",
+    "Ningyu Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T17:55:41Z",
+  "abs_url": "https://arxiv.org/abs/2608.05013v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.05013",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM agents are increasingly applied to open-ended everyday requests that span work, study, and life. These tasks are long-horizon, cross-environment, and multimodal, forcing the agent to preserve goals and constraints across many steps while navigating heterogeneous tools and attachments. While prior work has addressed individual failure modes such as goals drift, states loss, and context overflow, whether a single harness can manage them jointly and remain effective across backends has received less study. We present OneDayAgent, a long-horizon harness for autonomous agents. OneDayAgent turns an open-ended request into a managed execution process that decomposes tasks into bounded subtasks, maintains execution memory under context pressure, and verifies and repairs the final deliverable. We evaluate OneDayAgent on AgentIF-OneDay across 104 tasks. With the GLM-5.2 backend, OneDayAgent sets a new state of the art with an overall score of 0.821. The same harness runs across five backend LLMs from three model families, indicating the harness generalizes across backends without tuning, even as different models induce distinct execution styles under the same workflow.",
+  "abstract_zh": "LLM agents 正越来越多地处理覆盖工作、学习与生活的开放式日常请求。这类任务通常具有长时程、跨环境、多模态等特征，要求 agent 在大量步骤中持续保持目标与约束，同时操作异构工具和附件。以往研究多关注目标漂移、状态丢失、上下文溢出等单一失败模式，但较少探讨一个统一框架能否同时管理这些问题，并在不同后端模型上保持有效。本文提出 OneDayAgent，一个面向自主智能体的长时程执行框架。它将开放式请求转化为受管理的执行流程：把任务分解为有边界的子任务，在上下文压力下维护执行记忆，并对最终交付物进行验证与修复。作者在 AgentIF-OneDay 的 104 个任务上评估 OneDayAgent；在 GLM-5.2 后端下，其总体得分达到 0.821，刷新当前最佳结果。该框架还可运行于来自三个模型家族的五种后端 LLM，表明其无需针对特定模型调参即可跨后端泛化，尽管不同模型在相同工作流下会呈现不同执行风格。",
+  "key_points_zh": [
+    "提出 OneDayAgent，将开放式长时程请求转化为可管理的执行流程，覆盖任务分解、执行记忆维护、结果验证与修复。",
+    "面向长时程、跨环境、多模态任务，联合缓解目标漂移、状态丢失、上下文溢出等常见 agent 失败模式。",
+    "在 AgentIF-OneDay 的 104 个任务上评估，使用 GLM-5.2 后端取得 0.821 总体得分，达到新的 state of the art。",
+    "同一 harness 可适配三个模型家族的五种后端 LLM，无需针对后端调参，显示出较好的跨模型泛化能力。",
+    "论文指出不同后端模型在同一 OneDayAgent 工作流下仍会形成不同执行风格，为研究 agent harness 与模型能力交互提供了观察窗口。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.78,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8220000000000001,
+    "comment": "Strong agent-harness paper targeting long-horizon execution with decomposition, memory under context pressure, verification, and repair across model backends.",
+    "comment_zh": "这是一篇较强的智能体运行框架论文，面向长程执行，包含任务分解、上下文压力下的记忆、验证和修复，并可跨模型后端运行。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.8457408423242172,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8220000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 25,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05013/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05013/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.881
+    }
+  ]
+}

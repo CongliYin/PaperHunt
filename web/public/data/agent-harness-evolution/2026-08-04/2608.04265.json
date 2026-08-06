@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2608.04265",
+  "title": "Strategic Evaluation of Planning Strategies for LLM Agents in Cyber-Physical Systems",
+  "title_zh": "面向 Cyber-Physical Systems 中 LLM Agent 规划策略的战略性评估",
+  "authors": [
+    "J. de Curtò",
+    "I. de Zarzà"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T22:52:21Z",
+  "abs_url": "https://arxiv.org/abs/2608.04265v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04265",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Evaluations of LLM planning agents largely ask whether a task succeeds or a declared plan is followed. In strategic cyber-physical systems, a stronger question is whether the planning architecture remains appropriate after autonomous participants respond and physics constrains the outcome. We introduce a controlled, physics-grounded benchmark built around planning-induced control trajectories: the ordered planning operations and directives through which an execution architecture acts on other agents and the physical process. It implements predefined, sequential, hierarchical, and search executors in a smart-grid demand-response system with 40 heterogeneous prosumers and an independently simulated radial feeder. The LLM is bounded to typed policy declaration and short operator messages, while schedule construction, prosumer dynamics, and power flow remain explicit code. The protocol uses paired forced-mode counterfactuals, common random response draws, and event-level deadline feasibility. Three properties follow. Architecture materially changes outcomes: forced search is the oracle in all five baseline seeds. Execution fidelity needs more than mode agreement: objective substitution holds agreement at 1.0 while increasing voltage shortfall by 2.68x. A 144-scenario, 576-episode bank has feasible oracles from three of the four architectures. A prespecified stress-held-out ridge has mean regret 90.7 (95% interval [73.8, 108.6]) and no detectable value over fixed sequential; applying known deadline feasibility before quality prediction cuts regret to 29.0 and improves over fixed sequential by 61.1. An all-feasible ablation does not beat fixed search, localising the remaining challenge to within-feasible quality selection. A five-model extension separates stress-conditioned, state-blind, and invariant declarers; latency tails show that live feasibility should be treated probabilistically.",
+  "abstract_zh": "本文指出，现有对 LLM planning agents 的评估多关注任务是否成功或是否遵循声明计划，但在战略性 cyber-physical systems 中，更关键的问题是：当自主参与者作出响应且物理约束影响结果后，规划架构本身是否仍然合适。作者提出一个受控、基于物理仿真的 benchmark，围绕“规划诱导的控制轨迹”（planning-induced control trajectories）评估执行架构如何通过有序规划操作和指令影响其他 agent 与物理过程。该 benchmark 在 smart-grid demand-response 场景中实现 predefined、sequential、hierarchical 与 search 四类 executor，包含 40 个异质 prosumers 和独立仿真的 radial feeder。LLM 仅负责类型化策略声明与简短操作消息，而调度构造、prosumer 动态和 power flow 均由显式代码实现。实验采用成对 forced-mode counterfactuals、共享随机响应采样以及事件级 deadline feasibility。结果表明：规划架构会显著改变结果，forced search 在五个 baseline seeds 中均为 oracle；执行 fidelity 不能只看 mode agreement，因为 objective substitution 可保持 agreement 为 1.0，却使 voltage shortfall 增至 2.68 倍；在 144 个场景、576 个 episode 中，四种架构里有三种能产生 feasible oracle。预设 stress-held-out ridge 上，平均 regret 为 90.7，且相比固定 sequential 无显著收益；若先应用已知 deadline feasibility 再做质量预测，regret 降至 29.0，并相对固定 sequential 提升 61.1。进一步 ablation 表明，剩余挑战主要在 feasible 解内部的质量选择。五模型扩展区分了 stress-conditioned、state-blind 与 invariant declarers，并显示 latency tail 意味着在线 feasibility 应被视为概率性问题。",
+  "key_points_zh": [
+    "提出面向 cyber-physical systems 的 physics-grounded benchmark，以 planning-induced control trajectories 评估 LLM agent 规划架构在真实物理约束和参与者响应下的有效性。",
+    "在 smart-grid demand-response 场景中比较 predefined、sequential、hierarchical、search 四类 executor，LLM 只做策略声明和短消息，核心调度、行为响应与 power flow 由显式仿真代码控制。",
+    "实验显示架构选择会实质影响结果：forced search 在五个 baseline seeds 中均为 oracle；仅用 mode agreement 衡量执行一致性不足，objective substitution 虽保持 agreement 为 1.0，却显著恶化 voltage shortfall。",
+    "在 stress-held-out 设置下，直接质量预测的 regret 较高且不优于固定 sequential；先利用 deadline feasibility 过滤后，regret 大幅下降，并相对固定 sequential 获得明显改进。",
+    "消融表明，难点不只是找到 feasible 架构，而是在 feasible 候选中选择高质量方案；多模型扩展还揭示不同 LLM declarer 的 stress 条件敏感性与 latency tail 风险。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.7,
+    "problem_significance": 0.74,
+    "potential_impact": 0.69,
+    "paradigm_shift": 0.63,
+    "lasting_value": 0.7,
+    "llm_avg": 0.692,
+    "comment": "The paper contributes a controlled environment-evaluation protocol for planning architectures, though its cyber-physical specialization limits broader harness impact.",
+    "comment_zh": "该论文为规划架构提供了受控环境评估协议，但其网络物理系统专门化限制了更广泛的智能体框架影响。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.692,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04265/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.953
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04265/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.955
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.03844",
+  "title": "MAFIA: Query-Only Memory Attacks via Probing and Factual Injection against Audited LLM Agents",
+  "title_zh": "MAFIA：针对受审计 LLM Agent 的仅查询式记忆攻击：基于探测与事实注入",
+  "authors": [
+    "Jiaming Chen",
+    "Yisen Gao",
+    "Yanping Li",
+    "Zifan Liu",
+    "Yumeng Zhang",
+    "Jun Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T15:50:26Z",
+  "abs_url": "https://arxiv.org/abs/2608.03844v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03844",
+  "links": {
+    "github": "https://github.com/JiamingChen1234/MAFIA.",
+    "project_page": null
+  },
+  "abstract_en": "Memory-augmented LLM agents rely on rich context for long-horizon reasoning and acting, yet their memory modules expose a persistent attack surface for malicious records, making the study of memory poisoning threats imperative. However, existing query-only attacks often fail to remain effective in two realistic and prevalent settings: large-scale benign memory pools and active input auditing. Consequently, current approaches fall short when facing the dual challenges of high retrieval competitiveness and rigorous semantic checks. To overcome these limitations, we propose MAFIA, a query-only Memory Attack framework via probing and Factual Injection against Audit, tailored to this extended threat model. Specifically, MAFIA introduces: (1) a placement strategy that ensures retrieval-competitive injection via memory probing, budget allocation, and scheduling; and (2) a payload design that bypasses audits using compact factual cloaks, preserving malicious effects while maintaining high semantic similarity. Extensive evaluations reveal that MAFIA achieves up to a 90.7% attack success rate while suppressing audit detection from a peak of 83.3% to at most 7.4%, exposing critical vulnerabilities across agentic memory systems. Code will be made publicly available at https://github.com/JiamingChen1234/MAFIA.",
+  "abstract_zh": "具备记忆增强能力的 LLM Agent 依赖丰富上下文来完成长程推理与行动，但其记忆模块也为恶意记录提供了持久化攻击面，使记忆投毒威胁值得重点研究。现有仅查询式攻击在两类现实场景中往往效果不佳：大规模良性记忆池，以及主动输入审计。面对高检索竞争性与严格语义检查的双重挑战，本文提出 MAFIA，一种通过探测与事实注入绕过审计的仅查询式记忆攻击框架。MAFIA 包含两项核心设计：一是通过记忆探测、预算分配与调度实现具备检索竞争力的注入位置策略；二是使用紧凑的事实伪装（factual cloaks）设计 payload，在保持高语义相似度的同时保留恶意效果并绕过审计。大量实验显示，MAFIA 的攻击成功率最高可达 90.7%，并将审计检测率从最高 83.3% 压低至至多 7.4%，揭示了 agentic memory systems 中的关键安全漏洞。",
+  "key_points_zh": [
+    "研究聚焦 memory-augmented LLM agents 的持久化记忆投毒风险，尤其是在大规模良性记忆池和主动输入审计同时存在的现实威胁模型下。",
+    "提出 MAFIA：一种 query-only Memory Attack 框架，无需内部访问权限，通过 probing 和 Factual Injection 提升攻击可行性。",
+    "在注入位置上，MAFIA 使用 memory probing、budget allocation 和 scheduling，使恶意记录在检索阶段具备足够竞争力。",
+    "在 payload 设计上，MAFIA 采用 compact factual cloaks，以高语义相似度伪装恶意内容，从而显著降低审计检测率。",
+    "实验表明，MAFIA 最高达到 90.7% 攻击成功率，并将审计检测率从 83.3% 降至不超过 7.4%，暴露出现有 agentic memory systems 的重要防御缺口。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.89,
+    "novelty": 0.8,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.8,
+    "llm_avg": 0.7959999999999999,
+    "comment": "Highly relevant security work because it exposes realistic memory-poisoning vulnerabilities in audited memory-augmented agent systems.",
+    "comment_zh": "这是一项高度相关的安全研究，因为它揭示了带审计的记忆增强智能体系统中的现实记忆投毒漏洞。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7959999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/JiamingChen1234/MAFIA.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03844/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.766
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03844/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.628
+    }
+  ]
+}

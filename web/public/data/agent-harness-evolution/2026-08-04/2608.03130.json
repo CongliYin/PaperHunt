@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.03130",
   "title": "DP-MemView: A Memory Interface for Attribute-Level Transcript Privacy in Long-Term LLM Agents",
-  "title_zh": "DP-MemView：面向长期 LLM Agent 属性级转录隐私的记忆接口",
+  "title_zh": "DP-MemView：面向长期 LLM Agent 属性级对话隐私的记忆接口",
   "authors": [
     "Jong Wook Kim",
     "Byoungjae Min",
@@ -19,23 +19,24 @@
     "project_page": null
   },
   "abstract_en": "Long-term memory enables persistent personalization in LLM agents, but repeated memory-conditioned responses can cumulatively reveal protected attributes even when they are never stated explicitly. We formalize this threat as adaptive transcript privacy and introduce DP-MemView, a differentially private interface that privately selects public response-conditioning views and exposes those views---rather than raw memory---to the response LLM. Each private selection is charged to every protected attribute whose memory group intersects the read set. Per-attribute ledgers block any selection that would exceed its cap and return a fixed generic view instead. Under an explicit interface contract, we prove pure B_a-DP for the entire adaptive transcript. We also extend the result to stores that differ across multiple protected groups and bound how much observing the transcript can change an adversary's prior odds. We evaluate the online and preallocated modes with three response LLMs on a controlled adjacent-store benchmark and a public-corpus transfer track. Both modes keep transcript distinguishability near chance while preserving target-required personalization and overall response quality. Further diagnostics show that removing key safeguards causes mismatched output support, missing ledger charges, revealing side channels, or growing long-horizon leakage.",
-  "abstract_zh": "长期记忆使 LLM Agent 能够持续个性化，但即使受保护属性从未被明确说出，反复基于记忆生成的回复也可能累积泄露这些属性。本文将这一威胁形式化为自适应转录隐私（adaptive transcript privacy），并提出 DP-MemView：一种差分隐私接口，用于私密选择公开的回复条件视图（response-conditioning views），并将这些视图而非原始记忆暴露给响应 LLM。每次私有选择都会向其读取集合所交叉的所有受保护属性记忆组计费；逐属性账本会阻止任何超出预算上限的选择，并返回固定通用视图。在明确的接口契约下，作者证明了整个自适应转录满足纯 B_a-DP，并进一步扩展到多个受保护组差异的记忆存储场景，界定观察转录对攻击者先验赔率的影响。实验在受控相邻存储基准和公开语料迁移轨道上，使用三种响应 LLM 评估在线与预分配两种模式。结果表明，两种模式都能将转录可区分性维持在接近随机猜测水平，同时保留目标所需个性化和整体回复质量。诊断实验进一步显示，移除关键防护会导致输出支持不匹配、账本漏计费、侧信道泄露或长程泄露增长。",
+  "abstract_zh": "长期记忆让 LLM Agent 能持续提供个性化体验，但在多轮基于记忆的回复中，即使从未直接陈述受保护属性，模型输出也可能逐步泄露这些属性。本文将该威胁形式化为自适应 transcript privacy，并提出 DP-MemView：一种差分隐私记忆接口。它不把原始记忆暴露给 response LLM，而是私密选择用于生成回复的公共条件化视图（public response-conditioning views）。每次私有选择都会向所有与读取集合相交的受保护属性记忆组计入隐私消耗；若某属性的 per-attribute ledger 超出预算上限，则阻止该选择并返回固定 generic view。在明确的接口契约下，作者证明了整个自适应 transcript 满足纯 B_a-DP，并将结果扩展到多个受保护组同时变化的记忆库场景，同时界定观察 transcript 对攻击者先验 odds 的影响。实验在受控 adjacent-store benchmark 与 public-corpus transfer track 上，使用三个 response LLM 评估 online 与 preallocated 两种模式。结果显示，两种模式都能将 transcript 可区分性维持在接近随机猜测，同时保留目标任务所需的个性化和整体回复质量。消融诊断进一步表明，移除关键保护会导致输出支持不匹配、ledger 漏计、侧信道泄露或长期交互中的泄露增长。",
   "key_points_zh": [
-    "提出 adaptive transcript privacy，刻画长期 LLM Agent 在多轮记忆条件回复中逐步泄露受保护属性的风险。",
-    "设计 DP-MemView，只向响应 LLM 暴露经私有选择的公共视图，而非原始长期记忆，从接口层降低泄露面。",
-    "采用逐属性 privacy ledger：每次读取若涉及某受保护属性记忆组即计费，超预算则返回固定 generic view，避免继续泄露。",
-    "在明确接口契约下证明整个自适应转录满足纯 B_a-DP，并扩展到多个受保护组同时变化的记忆存储场景。",
-    "实验显示在线与预分配模式均能让转录区分度接近随机，同时保持必要个性化与响应质量；消融验证关键防护不可缺少。"
+    "提出 adaptive transcript privacy，刻画长期 LLM Agent 在反复基于记忆回复时对受保护属性的累积泄露风险。",
+    "设计 DP-MemView：通过差分隐私机制选择公共 conditioning view，而非直接向 response LLM 暴露 raw memory。",
+    "引入 per-attribute ledger：按受保护属性记账，超预算时返回固定 generic view，从机制层面限制长期泄露。",
+    "理论上证明在接口契约成立时，完整自适应 transcript 满足纯 B_a-DP，并扩展到多个受保护记忆组差异的情形。",
+    "实验显示 online 与 preallocated 模式在三个 response LLM 上均能保持接近随机的属性可区分性，同时维持个性化与回复质量。"
   ],
   "llm_assessment": {
-    "novelty": 0.78,
-    "problem_significance": 0.82,
-    "potential_impact": 0.8,
-    "paradigm_shift": 0.7,
-    "lasting_value": 0.78,
-    "llm_avg": 0.7760000000000001,
-    "comment": "A rigorous privacy interface for long-term agent memory that directly targets governance and leakage risks in persistent agent runtimes.",
-    "comment_zh": "该工作为长期记忆智能体提出严谨的隐私接口，直接面向持久化智能体运行时中的治理与泄露风险。"
+    "domain_fit": 0.9,
+    "novelty": 0.8,
+    "problem_significance": 0.88,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.83,
+    "llm_avg": 0.8140000000000001,
+    "comment": "Strong agent-runtime privacy work that formalizes and enforces long-horizon memory access control through a reusable differentially private interface.",
+    "comment_zh": "这是一项较强的智能体运行时隐私工作，通过可复用的差分隐私接口形式化并约束长期记忆访问。"
   },
   "scores": {
     "topic_relevance": 0.36000000000000004,
@@ -44,7 +45,7 @@
     "author_reputation": 0.22577486063332924,
     "venue_signal": 0.0,
     "generality": 0.35,
-    "llm_assessment": 0.7760000000000001,
+    "llm_assessment": 0.8140000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -54,8 +55,8 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": null,
-    "first_author_found": false,
+    "first_author_h_index": 0,
+    "first_author_found": true,
     "first_author_affiliations": [],
     "last_author_h_index": 1,
     "last_author_found": true,

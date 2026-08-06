@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.03899",
+  "title": "ATLAS: Learning to Recommend Across Unseen Domains",
+  "title_zh": "ATLAS：学习跨未见领域的推荐",
+  "authors": [
+    "Pervez Shaik",
+    "Prosenjit Biswas",
+    "Abhinav Thorat",
+    "Ravi Kolla",
+    "Niranjan Pedanekar"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T16:29:02Z",
+  "abs_url": "https://arxiv.org/abs/2608.03899v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03899",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recommender systems remain domain-bound: a model trained on one interaction environment typically requires retraining or target-domain adaptation before it can operate on a new catalogue. A recommender trained on movies cannot be directly deployed to recommend groceries or video games. Existing approaches mitigate this by transferring restricted forms of recommendation knowledge, adapting to the target domain, or leveraging large language models (LLMs) for transferable representations. We instead ask whether recommendation-specific knowledge learned solely from multiple heterogeneous domains can generalize to entirely unseen domains without target-domain adaptation or language-model pretraining. We introduce ATLAS, a multi-source recommendation domain generalization framework that learns a shared, domain-invariant user-item representation from disjoint source domains, enabling zero-shot recommendation on unseen domains. ATLAS combines a Gromov-Wasserstein alignment that preserves how users relate to one another across domains, an adversarial objective that makes item representations indistinguishable across domains, and residual vector quantization (RVQ) codebooks that compress user and item embeddings into a discrete latent space, capturing hierarchical interaction patterns while suppressing domain-specific variation. Trained on five Amazon domains and applied directly to ten unseen domains, ATLAS outperforms state-of-the-art sequential, graph-based, cross-domain, quantization-based, and LLM-based baselines on most unseen domains, with an average relative gain in HitRate of 24%. Ablations and representation analyses validate each component, and we identify a pronounced source-domain diversity effect: increasing source heterogeneity substantially improves zero-shot transfer. ATLAS establishes recommendation domain generalization as a promising paradigm for zero-shot recommendation.",
+  "abstract_zh": "本文研究推荐系统在全新领域中的零样本泛化问题：不同于传统方法依赖目标领域微调、跨域适配或 LLM 预训练表示，ATLAS 仅从多个异构源领域中学习推荐专用知识，并直接迁移到未见领域。ATLAS 是一个多源推荐领域泛化框架，通过学习共享且领域不变的 user-item 表示，实现无需目标领域数据适配的 zero-shot recommendation。其核心包括：使用 Gromov-Wasserstein alignment 保持跨领域用户关系结构；采用 adversarial objective 使 item 表示难以区分其所属领域；引入 residual vector quantization（RVQ）codebooks，将 user 和 item embedding 压缩到离散潜空间，以捕获层次化交互模式并抑制领域特有噪声。在 5 个 Amazon 源领域训练、直接测试于 10 个未见领域时，ATLAS 在多数领域超过 sequential、graph-based、cross-domain、quantization-based 和 LLM-based baselines，HitRate 平均相对提升 24%。消融和表示分析验证了各模块有效性，并发现源领域多样性越高，零样本迁移效果越好。",
+  "key_points_zh": [
+    "提出 ATLAS，将 recommendation domain generalization 建模为多源学习问题，目标是在未见 catalogue 上无需目标领域适配即可推荐。",
+    "通过 Gromov-Wasserstein alignment 对齐跨领域用户关系结构，学习更稳定的 domain-invariant user representation。",
+    "结合 adversarial item objective 与 RVQ 离散潜空间，降低领域特异信息，捕获层次化 user-item interaction pattern。",
+    "在 5 个 Amazon 源领域训练并零样本迁移到 10 个未见领域，HitRate 平均相对提升 24%，优于多类强基线包括 LLM-based 方法。",
+    "实验揭示 source-domain diversity effect：源领域越异构，ATLAS 的未见领域泛化能力越强。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.86,
+    "novelty": 0.8,
+    "problem_significance": 0.84,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.82,
+    "llm_avg": 0.7999999999999999,
+    "comment": "A well-aligned recommendation paper addressing zero-shot generalization across product domains with clear e-commerce applicability.",
+    "comment_zh": "该工作聚焦跨商品领域的零样本推荐泛化，具有明确的电商推荐应用价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4290907069818766,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7999999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 7,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03899/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03899/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.869
+    }
+  ]
+}

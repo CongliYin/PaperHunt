@@ -2,151 +2,26 @@
   "domain": "agent-multimodal",
   "display_name": "Realtime Multimodal Agent",
   "date": "2026-08-04",
-  "generated_at": "2026-08-06T10:34:47Z",
+  "generated_at": "2026-08-06T14:06:37Z",
   "papers": [
     {
-      "arxiv_id": "2608.03979",
-      "title": "Video-DeepResearch: Towards the Next-Generation Multimodal Deepresearch Agent",
-      "title_zh": "Video-DeepResearch：迈向下一代多模态深度研究 Agent",
+      "arxiv_id": "2608.03912",
+      "title": "StreamDAM: Presence-Aware Memory for Real-Time Streaming Video Object Segmentation",
+      "title_zh": "StreamDAM：面向实时流式视频目标分割的存在感知记忆",
       "authors": [
-        "Zhen Fang",
-        "Yu Zeng",
-        "Wenxuan Huang",
-        "Yiming Zhao",
-        "Shiting Huang",
-        "Tianfei Ren",
-        "Qi Lu",
-        "Qingnan Ren",
-        "Qisheng Su",
-        "Lionel Z. Wang",
-        "Qingyu Yin",
-        "Shuang Chen",
-        "Zehui Chen",
-        "Lin Chen",
-        "Zhenfei Yin",
-        "Yao Hu",
-        "Shaohui Lin",
-        "Wanli Ouyang",
-        "Shaosheng Cao",
-        "Feng Zhao"
-      ],
-      "total_score": 0.6404386998781496,
-      "scores": {
-        "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.5,
-        "other": 0.5147956662604982
-      },
-      "tags": [
-        "HF Daily ★45",
-        "GitHub",
-        "realtime video agent"
-      ],
-      "tldr_zh": "让视频 Agent 先看清再上网搜索",
-      "detail_file": "agent-multimodal/2026-08-04/2608.03979.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03979/thumb.webp"
-    },
-    {
-      "arxiv_id": "2608.03918",
-      "title": "When and Where to Look: Adaptive Visual Evidence Scheduling for Efficient Long Video Understanding",
-      "title_zh": "何时看、看哪里：面向高效长视频理解的自适应视觉证据调度",
-      "authors": [
-        "Ke Li",
-        "Jiayu Chen",
-        "Maoliang Li",
-        "Zihao Zheng",
-        "Hailong Zou",
-        "Hengyi Zhang",
-        "Xuanzhe Liu",
         "Xiang Chen"
       ],
-      "total_score": 0.6255258286877777,
+      "total_score": 0.26819999999999994,
       "scores": {
-        "topic_relevance": 0.92,
-        "llm_assessment": 0.5,
-        "other": 0.3584194289592589
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.694,
+        "domain_fit": 0.78,
+        "other": 0.2
       },
-      "tags": [
-        "GitHub",
-        "streaming video grounding"
-      ],
-      "tldr_zh": "EcoFrame用不确定性和注意力高效选帧",
-      "detail_file": "agent-multimodal/2026-08-04/2608.03918.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03918/thumb.webp"
-    },
-    {
-      "arxiv_id": "2608.03571",
-      "title": "Beyond Simply Environment Scaling: Designing Effective Environment Distributions for Multimodal Agent Learning",
-      "title_zh": "超越简单环境扩展：为多模态智能体学习设计有效的环境分布",
-      "authors": [
-        "Kejian Zhu",
-        "Zhuoran Jin",
-        "Dongqi Huang",
-        "Hongbang Yuan",
-        "Yupu Hao",
-        "Kang Liu",
-        "Jun Zhao"
-      ],
-      "total_score": 0.5810516573755554,
-      "scores": {
-        "topic_relevance": 0.8,
-        "llm_assessment": 0.5,
-        "other": 0.370172191251851
-      },
-      "tags": [
-        "GitHub",
-        "realtime video agent"
-      ],
-      "tldr_zh": "环境分布设计比单纯扩容更关键",
-      "detail_file": "agent-multimodal/2026-08-04/2608.03571.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03571/thumb.webp"
-    },
-    {
-      "arxiv_id": "2608.03650",
-      "title": "Echo-Aware Modulation for Compact-Latent Frequency-Time Modeling in Lightweight Acoustic Echo Cancellation",
-      "title_zh": "面向轻量级声学回声消除的紧凑潜变量频时建模回声感知调制",
-      "authors": [
-        "Ye Ni",
-        "Ruiyu Liang",
-        "Qingyun Wang",
-        "Kai Xie",
-        "Cairong Zou",
-        "Björn W. Schuller"
-      ],
-      "total_score": 0.5368990361570021,
-      "scores": {
-        "topic_relevance": 0.8,
-        "llm_assessment": 0.5,
-        "other": 0.22299678719000665
-      },
-      "tags": [
-        "low latency turn taking"
-      ],
-      "tldr_zh": "用回声感知调制增强轻量级 AEC",
-      "detail_file": "agent-multimodal/2026-08-04/2608.03650.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03650/thumb.webp"
-    },
-    {
-      "arxiv_id": "2608.03160",
-      "title": "Caved or Convinced: Temporal Sampling Gates Claim Deference in Video Large Language Models",
-      "title_zh": "屈从还是信服：时间采样门控 Video Large Language Models 中的主张依从",
-      "authors": [
-        "Yuxin Cao",
-        "Wei Song",
-        "Jingling Xue",
-        "Jin Song Dong"
-      ],
-      "total_score": 0.5175000000000001,
-      "scores": {
-        "topic_relevance": 0.8,
-        "llm_assessment": 0.5,
-        "other": 0.15833333333333335
-      },
-      "tags": [
-        "streaming video grounding"
-      ],
-      "tldr_zh": "视频模型依从失败源于采样与证据加权",
-      "detail_file": "agent-multimodal/2026-08-04/2608.03160.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03160/thumb.webp"
+      "tags": [],
+      "tldr_zh": "用存在感知记忆实现实时高精度VOS",
+      "detail_file": "agent-multimodal/2026-08-04/2608.03912.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03912/thumb.webp"
     }
   ]
 }

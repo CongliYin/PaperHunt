@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2608.03912",
+  "title": "StreamDAM: Presence-Aware Memory for Real-Time Streaming Video Object Segmentation",
+  "title_zh": "StreamDAM：面向实时流式视频目标分割的存在感知记忆",
+  "authors": [
+    "Xiang Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T16:40:02Z",
+  "abs_url": "https://arxiv.org/abs/2608.03912v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03912",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Quality-tier video object segmentation (VOS) trackers such as DAM4SAM top accuracy leaderboards, but they are measured offline, one frame at a time with no clock. Under an honest streaming protocol at 30 frames per second, where a frame that misses its budget is served the last mask already computed, the winner collapses: the rich memory that makes it accurate is too slow to keep up, and what it emits is blind to whether the object is even present. We trace both failures to one place, the tracker's memory pipeline, and rebuild it for streaming. \\method{} makes the memory machinery itself run at frame rate through in-model optimization rather than a bolted-on fallback, and governs it with a single learned presence signal that decides what enters memory, how far back the tracker reads, when to withhold output, and when to re-detect. A mechanism analysis shows why a fixed policy cannot win: the control that helps when an object truly disappears is the one that hurts when it is merely hard to see, so the choice must be made per frame. Across four benchmarks and five modern baselines, \\method{} is the strongest streaming tracker, recovers nearly all of the offline model's accuracy under the clock, and on the hardest content exceeds the offline model it is built from.",
+  "abstract_zh": "高精度视频目标分割（VOS）跟踪器如 DAM4SAM 通常在离线设置下逐帧评测，不考虑真实时间约束。但在 30 FPS 的流式协议中，若某帧超出时间预算就只能沿用上一帧已计算的 mask，这类方法会显著退化：其高精度所依赖的复杂记忆机制无法实时运行，且输出缺乏对目标是否存在的判断。本文将两类失败归因于跟踪器的 memory pipeline，并提出 StreamDAM，从模型内部优化记忆机制，使其可在帧率约束下运行；同时引入单一的 learned presence signal，用于决定哪些信息写入 memory、回溯读取多远、何时抑制输出以及何时重新检测。机制分析表明固定策略无法同时处理真实消失与短暂难见两种情况，因此必须逐帧自适应决策。在四个 benchmark 和五个现代 baseline 上，StreamDAM 成为最强的流式 VOS tracker，在实时约束下几乎恢复离线模型精度，并在最困难内容上超过其所基于的离线模型。",
+  "key_points_zh": [
+    "指出 DAM4SAM 等离线高精度 VOS tracker 在真实 30 FPS streaming protocol 下会因 memory pipeline 过慢而性能崩塌。",
+    "提出 StreamDAM，通过 in-model optimization 让记忆机制本身以帧率运行，而非依赖外部 fallback 或简单跳帧策略。",
+    "设计 learned presence signal，统一控制 memory 写入、历史读取范围、输出抑制和 re-detection，使模型能区分目标真实消失与短暂遮挡/难见。",
+    "机制分析说明固定 memory/control policy 难以兼顾不同场景，逐帧自适应存在判断是流式 VOS 的关键。",
+    "在四个 benchmarks 和五个现代 baselines 上取得最佳 streaming 表现，几乎恢复 offline accuracy，并在困难内容上超过原始离线模型。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.72,
+    "problem_significance": 0.76,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.7,
+    "llm_avg": 0.694,
+    "comment": "A well-aligned streaming video perception paper that explicitly evaluates under frame-rate constraints and designs memory control for realtime operation.",
+    "comment_zh": "该工作明确在帧率约束下评测并设计实时记忆控制，是契合度较高的流式视频感知论文。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.694,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03912/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03912/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.907
+    }
+  ]
+}

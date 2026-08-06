@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.03647",
+  "title": "Conditionally Identifiable Latent-Environment Modeling for Out-of-Distribution Recommendation",
+  "title_zh": "用于分布外推荐的条件可识别潜在环境建模",
+  "authors": [
+    "Qianqian Wang",
+    "Wenwu Gong",
+    "Yunshan Li",
+    "Zhenqing Wu",
+    "Ruili Wang",
+    "Lili Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T13:30:51Z",
+  "abs_url": "https://arxiv.org/abs/2608.03647v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03647",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Out-of-distribution (OOD) recommendation is vulnerable to preference shifts induced by a latent environment. Existing methods can infer latent states from logged interactions, yet the statistical meaning of the latent environment and its effect on preference remain underdetermined. We formulate this task as conditionally identifiable risk-aware recommendation (CI-RR) and propose Conditionally Identifiable Latent-Environment Recommendation (CILER). CILER uses a user-conditioned exponential family to model the latent environment and a feature-indexed polynomial to specify how it changes preference. It predicts by marginalizing item probabilities over the inferred environment distribution. Under sufficient variation, correct specification, and decoder regularity, CILER identifies the environment-sensitive representation up to the stated equivalence class. We further bound excess deployment log-risk by environment-inference error. Controlled studies test the observable consequences of sufficient variation and model specification. Experiments on three datasets show that CILER improves all twelve OOD ranking metrics under feature, temporal, and geographical shifts within shared support.",
+  "abstract_zh": "本文研究受潜在环境诱导偏好漂移影响的分布外推荐（OOD recommendation）问题。现有方法虽可从日志交互中推断潜在状态，但潜在环境的统计含义及其对偏好的作用仍缺乏明确刻画。作者将该任务形式化为条件可识别的风险感知推荐（CI-RR），并提出 Conditionally Identifiable Latent-Environment Recommendation（CILER）。CILER 使用以用户为条件的指数族分布建模潜在环境，并用以特征为索引的多项式描述环境如何改变用户偏好；预测时对推断出的环境分布上的物品概率进行边缘化。在充分变化、模型正确设定和解码器正则性等条件下，CILER 可在给定等价类意义下识别环境敏感表示。论文进一步给出了部署阶段超额对数风险与环境推断误差之间的上界关系。受控实验验证了充分变化与模型设定的可观测后果；在三个数据集上的实验表明，CILER 在特征、时间和地理分布偏移且共享支持的场景下，提升了全部 12 个 OOD 排序指标。",
+  "key_points_zh": [
+    "提出 CI-RR 形式化框架，明确潜在环境在 OOD 推荐中的统计含义及其对偏好漂移的作用。",
+    "提出 CILER：用用户条件指数族建模潜在环境，并用特征索引多项式刻画环境对偏好的影响。",
+    "理论上证明在充分变化、正确设定和解码器正则性条件下，可识别环境敏感表示，并给出部署风险上界。",
+    "预测阶段通过对潜在环境分布下的物品概率进行边缘化，增强对环境变化的鲁棒性。",
+    "在三个数据集的特征、时间、地理偏移实验中，CILER 改进全部 12 个 OOD ranking metrics。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.74,
+    "novelty": 0.78,
+    "problem_significance": 0.8,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.64,
+    "lasting_value": 0.76,
+    "llm_avg": 0.7440000000000001,
+    "comment": "A solid recommendation-methods paper on OOD robustness, though not explicitly grounded in shopping or product catalogs.",
+    "comment_zh": "该工作研究推荐系统的分布外鲁棒性，方法扎实但缺少明确的购物或商品目录场景 grounding。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.423099442533317,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.7440000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 7,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03647/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03647/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.858
+    }
+  ]
+}

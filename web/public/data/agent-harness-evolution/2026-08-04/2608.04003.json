@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2608.04003",
+  "title": "PAST-Bench: Benchmarking the Foundations of Recursive Self-Improvement in Personal Agents",
+  "title_zh": "PAST-Bench：评测 Personal Agents 中递归自我改进的基础能力",
+  "authors": [
+    "Shuhan Xue",
+    "Zixin Ding",
+    "Yichen Shen",
+    "Yinjie Wang",
+    "Zhenfei Yin",
+    "Yingcheng Wu",
+    "Yuxin Chen",
+    "Mengdi Wang",
+    "Ling Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T17:58:05Z",
+  "abs_url": "https://arxiv.org/abs/2608.04003v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04003",
+  "links": {
+    "github": "https://github.com/Gen-Verse/PAST-Bench",
+    "project_page": null
+  },
+  "abstract_en": "Recursive self-improvement requires agents to turn accumulated experience into better future behavior. Personal AI agents offer a concrete setting for studying this capability because they retain preferences, task histories, tool routines, and learned skills across sessions. Yet whether retained experience actually improves them over time has not been systematically tested. We introduce PAST-Bench, a benchmark designed to isolate this question. Each agent runs through ordered sequences of fresh-session tasks under matched conditions that turn retained experience on and off. It spans 26 scenarios and 204 episodes across memory, procedural reuse, information gathering, and update. We report both later-task gains and whether those gains follow the intended save, retrieve, and update pathway. Across seven base models and four agent frameworks, improvement is real but uneven across capabilities. Agents with the same headline gain can differ markedly in whether that gain is supported by evidence of the intended pathway. Guided by these findings, we develop Hermes+, which extends Hermes with five targeted interventions across stages of the agent loop. Hermes+ raises the average gain from retained experience and provides clearer pathway evidence, with its strongest improvement on tasks requiring outdated state to be replaced, although the effect remains capability- and model-dependent. Together, PAST-Bench and Hermes+ provide an evaluation and diagnostic foundation for studying how persistent agents can progress from retaining experience to systematically improving through it. Code: https://github.com/Gen-Verse/PAST-Bench",
+  "abstract_zh": "递归自我改进要求智能体能将累积经验转化为更好的未来行为。Personal AI agents 因跨会话保留偏好、任务历史、工具流程和已学技能，成为研究这一能力的具体场景。然而，保留经验是否真的能随时间提升智能体表现，尚缺乏系统测试。本文提出 PAST-Bench，用于隔离并评测这一问题：在匹配条件下，让每个 agent 执行有序的新会话任务序列，并分别开启或关闭经验保留。PAST-Bench 覆盖 26 个场景、204 个 episodes，涉及记忆、流程复用、信息收集与状态更新等能力。评测不仅报告后续任务收益，还检查收益是否遵循预期的保存、检索、更新路径。实验覆盖 7 个 base models 和 4 个 agent frameworks，发现经验带来的改进确实存在，但在不同能力上并不均衡；即使总体收益相同，不同 agent 在是否真正通过预期路径实现收益方面也可能差异显著。基于这些发现，作者提出 Hermes+，在 agent loop 的多个阶段对 Hermes 加入 5 项针对性干预。Hermes+ 提升了保留经验带来的平均收益，并提供更清晰的路径证据，尤其在需要替换过时状态的任务上改进最明显，但效果仍依赖具体能力与模型。",
+  "key_points_zh": [
+    "提出 PAST-Bench，专门评测 Personal AI agents 是否能把跨会话保留的经验转化为后续任务表现提升。",
+    "基准包含 26 个 scenarios 和 204 个 episodes，覆盖 memory、procedural reuse、information gathering、update 等核心能力。",
+    "评测设计通过开启/关闭 retained experience 的匹配条件，区分真实经验收益与其他因素，并进一步检查 save、retrieve、update 路径证据。",
+    "在 7 个 base models 和 4 个 agent frameworks 上，经验带来的提升真实存在但高度不均衡；相同表面增益可能对应不同的内部实现路径。",
+    "提出 Hermes+，通过 5 项 agent loop 干预提升经验利用效果，尤其改善对过时状态的更新，但仍受能力类型和底层模型影响。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.86,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.9,
+    "llm_avg": 0.876,
+    "comment": "Excellent fit because it evaluates persistent agents through controlled experience-retention pathways and adds diagnostic interventions for self-improvement.",
+    "comment_zh": "高度契合，因为它通过受控经验保留路径评估持久化智能体，并加入面向自我改进的诊断性干预。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.5,
+    "community_heat": 0.8539771624195638,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.876,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Gen-Verse/PAST-Bench",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 28,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04003/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04003/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.955
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.03272",
+  "title": "Attacking and Defending Multi-Agent Collaborative Filtering Systems Through Connectivity",
+  "title_zh": "通过连接性攻击与防御多智能体协同过滤系统",
+  "authors": [
+    "Anjun Hu",
+    "Hanting Xie",
+    "Saranya Govindan",
+    "Jas Kandola",
+    "Kurt Cutajar"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T07:49:58Z",
+  "abs_url": "https://arxiv.org/abs/2608.03272v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03272",
+  "links": {
+    "github": "https://github.com/anjunhu/ConnACF",
+    "project_page": null
+  },
+  "abstract_en": "Multi-agent collaborative filtering (CF) systems coordinate autonomous LLM-powered user and item agents through natural-language interaction to refine preferences and generate recommendations. These systems inherit vulnerabilities from both their data-driven nature and their multi-agent interactions, which manifest in distinct ways. Understanding how connectivity modulates vulnerability in these systems could facilitate the development of more robust recommendation pipelines. In this work, we adapt attacks and defenses from the general multi-agent systems (MAS) literature to the agent-based CF setting, evaluating them under systematically varied connectivity in the AgentCF framework, where CF connectivity is characterized along two axes: (i) candidate count (the number of item candidates per turn per user, measuring user-side interaction density) and (ii) catalog concentration (the degree of item catalog overlap across users). Our contributions include: (1) Adaptation: we reproduce MAS-inspired attacks and defenses in the agentic CF domain, confirming partial transferability of original observations. (2) Characterization: we characterize how the two aspects of connectivity shape attack and defense outcomes, revealing role asymmetries between user and item agents, non-monotonic temporal dynamics in attack efficacy, and divergent patterns across dissemination and extraction attack goals. Additionally, as an exploratory extension, we assess the applicability of epidemic-inspired static metrics in ranking CF configurations by expected attack outcome, potentially enabling cost-efficient robustness assessment. Implementation is available at https://github.com/anjunhu/ConnACF",
+  "abstract_zh": "本文研究 LLM 驱动的多智能体协同过滤（Collaborative Filtering, CF）系统中的安全脆弱性。该类系统通过用户智能体与物品智能体之间的自然语言交互来细化偏好并生成推荐，因此同时继承了数据驱动推荐系统与多智能体系统（Multi-Agent Systems, MAS）的风险。作者在 AgentCF 框架中引入并改造 MAS 文献中的攻击与防御方法，并系统改变两类 CF 连接性因素：候选数量（candidate count，即每轮每个用户可交互的物品候选数）和目录集中度（catalog concentration，即不同用户之间物品目录重叠程度）。实验表明，MAS 攻防现象只能部分迁移到 agentic CF 场景；连接性会显著影响攻击和防御效果，并呈现用户/物品智能体角色不对称、攻击效果随时间非单调变化，以及传播型攻击与抽取型攻击表现分化等现象。作者还探索了受流行病模型启发的静态指标，用于低成本预测不同 CF 配置下的攻击风险。",
+  "key_points_zh": [
+    "将 MAS 文献中的攻击与防御机制适配到 AgentCF 等多智能体协同过滤场景，验证其在推荐系统中的部分可迁移性。",
+    "从候选数量和目录集中度两个维度刻画 CF 连接性，分析用户侧交互密度与跨用户物品重叠如何影响系统脆弱性。",
+    "发现用户智能体与物品智能体在攻防中存在角色不对称，说明多智能体推荐系统不能简单套用通用 MAS 的安全结论。",
+    "攻击效果随时间可能呈非单调变化，且传播型攻击与抽取型攻击对连接性的响应模式不同。",
+    "探索使用受 epidemic model 启发的静态指标对 CF 配置的攻击风险进行排序，为低成本鲁棒性评估提供可能。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.72,
+    "problem_significance": 0.82,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.76,
+    "llm_avg": 0.732,
+    "comment": "A strong fit for e-commerce agents through robustness analysis of LLM-powered collaborative filtering under multi-agent connectivity.",
+    "comment_zh": "该工作通过分析多智能体连接性下 LLM 协同过滤的鲁棒性，较好契合电商推荐智能体方向。"
+  },
+  "scores": {
+    "topic_relevance": 0.48000000000000004,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.45529837524566663,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.732,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/anjunhu/ConnACF",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 8,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03272/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03272/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.953
+    }
+  ]
+}

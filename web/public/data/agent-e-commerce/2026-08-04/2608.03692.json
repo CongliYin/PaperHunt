@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.03692",
+  "title": "SITA: Semantic Interest Tokens for Target-Aware Compression in Long-Sequence Recommendation",
+  "title_zh": "SITA：面向长序列推荐中目标感知压缩的语义兴趣 Token",
+  "authors": [
+    "Rui Zhou",
+    "Bo Chen",
+    "Qinglin Jia",
+    "Jiezhou Ji",
+    "Chaoyi Ma",
+    "Ruiming Tang",
+    "Hao Wang",
+    "Enhong Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T13:59:44Z",
+  "abs_url": "https://arxiv.org/abs/2608.03692v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03692",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As user behavior histories continue to grow on modern Internet platforms, effectively modeling long behavior sequences has become crucial for predicting user interests in candidate items. Existing methods have evolved along two directions. One line dynamically retrieves target-relevant behaviors from long histories, enabling target-aware modeling but requiring target-dependent computation during inference. The other line compresses entire behavior sequences into compact user representations, achieving high efficiency and scalability but sacrificing target-specific adaptation due to target-independent encoding. The key challenge is therefore to enable target-aware modeling while preserving the efficiency and scalability of compressed user representations. To address this challenge, we propose \\textbf{SITA}, a target-aware compression framework for long-sequence recommendation. SITA enables target-aware compression by organizing compressed interests into semantic structures through semantic identifiers learned via parallel semantic quantization. Conditioned on the semantic identifier of the target item, SITA adaptively aggregates the corresponding structured interests to construct the target-specific user representation. Extensive experiments on public datasets and a large-scale industrial dataset demonstrate that SITA consistently outperforms representative baselines while maintaining strong scalability, highlighting its strong potential for real-world recommender systems.",
+  "abstract_zh": "随着现代互联网平台上的用户行为历史持续增长，如何有效建模长行为序列已成为预测用户对候选物品兴趣的关键问题。现有方法主要分为两类：一类从长历史中动态检索与目标物品相关的行为，具备目标感知能力，但推理时需要依赖目标的额外计算；另一类将完整行为序列压缩为紧凑的用户表示，具备较高效率与可扩展性，但由于编码过程与目标无关，牺牲了针对候选物品的自适应能力。为兼顾目标感知建模与压缩表示的效率，论文提出 SITA，一种用于长序列推荐的目标感知压缩框架。SITA 通过并行语义量化学习语义标识符（semantic identifiers），将压缩后的用户兴趣组织为结构化语义兴趣；在给定目标物品语义标识符的条件下，模型自适应聚合对应的结构化兴趣，构建目标特定的用户表示。公共数据集与大规模工业数据集上的实验表明，SITA 相比代表性基线持续取得更优效果，同时保持良好可扩展性，具备实际推荐系统落地潜力。",
+  "key_points_zh": [
+    "针对长序列推荐中“目标感知精度”与“压缩表示效率”难以兼得的问题，SITA 提出目标感知压缩框架。",
+    "通过 parallel semantic quantization 学习目标物品与用户兴趣的 semantic identifiers，将压缩兴趣组织成可检索、可聚合的语义结构。",
+    "推理时根据目标 item 的 semantic identifier，自适应聚合相应语义兴趣，生成 target-specific user representation。",
+    "相比动态检索类方法，SITA 避免大量目标依赖计算；相比传统压缩表示方法，保留了面向候选物品的自适应能力。",
+    "在公开数据集和大规模工业数据集上均优于代表性 baselines，并展现出较强的 scalability。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.76,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.64,
+    "lasting_value": 0.8,
+    "llm_avg": 0.78,
+    "comment": "A strong industrial recommender-system contribution for scalable target-aware long-sequence user modeling.",
+    "comment_zh": "该工作面向可扩展的目标感知长序列用户建模，是较强的工业推荐系统贡献。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3525828687777642,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.78,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03692/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03692/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

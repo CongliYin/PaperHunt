@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.04192",
   "title": "Behavioral Skill Reconstruction: Reconstructing Hidden Functionality from LLM Agent Skills",
-  "title_zh": "行为技能重构：从 LLM Agent Skills 中重构隐藏功能",
+  "title_zh": "行为技能重构：从 LLM Agent 技能中重构隐藏功能",
   "authors": [
     "Peichun Hua",
     "Haoxuan Xu",
@@ -16,23 +16,24 @@
     "project_page": null
   },
   "abstract_en": "Closed source agent skills may encode proprietary instructions, scripts, constants, and data. Providers may offer their capabilities as services while keeping the underlying packages hidden. Prior work focuses on prompt injection attacks that directly disclose these artifacts, and existing defenses accordingly aim to prevent such leakage. However, preventing file disclosure does not prevent users from recovering the functionality those files implement. This raises a fundamental question: can a user reconstruct a skill's functionality through ordinary use while its files remain hidden? We study behavioral skill reconstruction (BSR), in which an attacker uses valid task requests and observed responses to build a functional clone of a hidden skill. We introduce SkillClone, a black-box attack that clones a target skill by forming an interface hypothesis from its public advertisement, issuing structured benign probes, synthesizing an executable replica, and iteratively repairing it through differential validation against the victim skill. Across 30 skills spanning rules, tables, procedures, and algorithms, SkillClone achieves exact or partial recovery on held-out inputs for several targets. Iterative requerying closes gaps missed by single-round reconstruction. Because SkillClone uses only legitimate interactions, disclosure-focused defenses provide limited coverage, and less detailed skill descriptions offer limited protection. These results show that file secrecy alone does not ensure functional secrecy. Defenses must also limit cumulative information leakage from ordinary use.",
-  "abstract_zh": "闭源 Agent Skills 可能编码了专有指令、脚本、常量和数据。服务提供方可以在隐藏底层包文件的同时，以服务形式开放其能力。以往研究主要关注会直接泄露这些工件的 prompt injection 攻击，因此现有防御也多围绕阻止文件泄露展开。然而，阻止文件披露并不等于阻止用户恢复这些文件所实现的功能。本文研究 Behavioral Skill Reconstruction（BSR）：攻击者仅通过合法任务请求和观察响应，构建隐藏 Skill 的功能性克隆。作者提出 SkillClone，这是一种黑盒攻击方法：先根据公开的 Skill 描述形成接口假设，再发起结构化且看似良性的探测请求，随后合成可执行副本，并通过与受害 Skill 的差分验证进行迭代修复。在覆盖规则、表格、流程和算法的 30 个 Skills 上，SkillClone 在留出输入上对多个目标实现了精确或部分恢复。相比单轮重构，迭代式重新查询可弥补遗漏。由于 SkillClone 只使用合法交互，面向文件披露的防御覆盖有限，而减少 Skill 描述细节也只能提供有限保护。结果表明，仅依赖文件保密无法确保功能保密，防御还必须限制普通使用过程中累积的信息泄露。",
+  "abstract_zh": "闭源 Agent 技能可能包含专有指令、脚本、常量和数据。服务提供商可以通过服务形式开放能力，同时隐藏底层包文件。以往研究主要关注通过 prompt injection 直接泄露这些文件内容的攻击，相应防御也多集中在阻止文件泄露。然而，即使文件不被披露，用户仍可能通过正常使用恢复这些文件所实现的功能。本文研究 Behavioral Skill Reconstruction（BSR）：攻击者仅通过合法任务请求与观测响应，构建隐藏技能的功能性克隆。作者提出 SkillClone，一种黑盒攻击方法：先根据公开技能描述形成接口假设，再发起结构化且看似良性的探测请求，合成可执行副本，并通过与目标技能的差分验证迭代修复。作者在涵盖规则、表格、流程和算法的 30 个技能上评估发现，SkillClone 能在若干目标的留出输入上实现精确或部分恢复；多轮重新查询可弥补单轮重构遗漏。由于 SkillClone 只依赖合法交互，面向文件泄露的防御覆盖有限，减少技能描述细节也只能提供有限保护。结果表明，文件保密并不等价于功能保密，防御还必须限制普通使用过程中的累积信息泄露。",
   "key_points_zh": [
-    "论文提出 Behavioral Skill Reconstruction（BSR）威胁模型：攻击者不读取隐藏文件，只通过正常调用和响应观察来恢复 Skill 功能。",
-    "SkillClone 是一种黑盒攻击流程，包括接口假设、结构化 benign probes、可执行副本合成，以及基于差分验证的迭代修复。",
-    "在 30 个涵盖规则、表格、流程和算法的 Skills 上，SkillClone 对部分目标在留出输入上实现精确或部分功能恢复。",
-    "实验显示，迭代 requerying 能显著修补单轮重构遗漏，说明多轮普通使用会累积泄露功能信息。",
-    "文件披露防御和模糊化 Skill 描述不足以保证功能保密，系统需要限制长期交互中的累积信息泄露。"
+    "提出 Behavioral Skill Reconstruction（BSR）问题：即使隐藏技能文件，攻击者也可能通过正常调用恢复其行为逻辑。",
+    "提出黑盒攻击 SkillClone：利用公开说明推断接口，进行结构化探测，合成可执行副本，并通过差分验证迭代修复。",
+    "在 30 个涵盖规则、表格、流程和算法的技能上评估，部分目标可在留出输入上实现精确或部分功能恢复。",
+    "多轮 requerying 能显著弥补单轮重构的缺口，说明普通交互会产生可累积的信息泄露。",
+    "现有以防止文件披露为核心的防御效果有限；功能保密需要控制查询能力、输出信息量和长期交互泄露。"
   ],
   "llm_assessment": {
-    "novelty": 0.73,
-    "problem_significance": 0.78,
-    "potential_impact": 0.7,
-    "paradigm_shift": 0.65,
-    "lasting_value": 0.7,
-    "llm_avg": 0.712,
-    "comment": "A relevant agent-skill security study that exposes functional leakage through black-box trajectory probing, though defenses are less developed.",
-    "comment_zh": "这是一项相关的智能体技能安全研究，揭示了通过黑盒交互轨迹产生的功能泄漏，但防御方案仍不充分。"
+    "domain_fit": 0.82,
+    "novelty": 0.76,
+    "problem_significance": 0.81,
+    "potential_impact": 0.73,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.75,
+    "llm_avg": 0.746,
+    "comment": "Relevant agent-skill security work exposing functional leakage through ordinary tool use, though more attack analysis than platform infrastructure.",
+    "comment_zh": "这是相关的智能体技能安全研究，揭示了普通工具使用中的功能泄漏，但更偏攻击分析而非平台基础设施。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
@@ -41,7 +42,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.35,
-    "llm_assessment": 0.712,
+    "llm_assessment": 0.746,
     "domain_multiplier": 1.0
   },
   "enriched": {

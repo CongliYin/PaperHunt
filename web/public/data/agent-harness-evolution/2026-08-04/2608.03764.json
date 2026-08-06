@@ -25,32 +25,33 @@
     "project_page": null
   },
   "abstract_en": "Agent self-evolution updates an agent's persistent state from prior experience and reuses it to solve related tasks more effectively. Evaluating self-evolution is difficult: existing benchmarks provide limited coverage of economically valuable task domains, do not always design training and test tasks such that test-time gains can be attributed to training experience, and remain vulnerable to data contamination. We present GDPevo, an evolution-native benchmark grounded in GDP-related enterprise workflows, together with the fully automated data pipeline that generates it. Its core mechanism, rule hybridization, decomposes each enterprise workflow into atomic business rules, distributes subsets of these rules across training tasks, and recombines them in held-out test tasks so that test-time gains are attributable. GDPevo spans CRM, ERP, finance, healthcare, legal, and data-centric workflows. Its V1 release contains 120 tasks in 12 groups, with five training and five held-out test tasks per group. Full automation enables the pipeline to expand the suite to 240 tasks in 24 groups (V2) within two days, providing a practical response to contamination. Using GDPevo, we evaluate four agents, each comprising a harness and a model, under four supervision types. Self-evolution consistently improves held-out accuracy by up to 16.44 percentage points. But the best evolved agents remain far below the fully informed oracle ceiling of 91.6%, indicating that the self-evolution ability of current agents remains far from fully realized. We publicly release the pipeline, benchmark, and full evaluation results at https://github.com/Prism-Shadow/GDPevo.",
-  "abstract_zh": "本文提出 GDPevo，一个面向 Agent self-evolution（智能体自我进化）的新基准，用于评估 Agent 能否从过往经验中更新持久状态，并在相关任务中获得可归因的性能提升。现有基准往往覆盖的高经济价值任务有限，训练/测试任务设计不足以证明测试收益来自训练经验，且容易受到数据污染影响。GDPevo 基于与 GDP 相关的企业工作流，覆盖 CRM、ERP、finance、healthcare、legal 和 data-centric workflows。其核心机制是 rule hybridization：将企业流程拆解为原子业务规则，把规则子集分配到训练任务，再在保留测试任务中重新组合，从而使测试阶段的提升可归因于训练阶段学到的经验。V1 版本包含 12 组共 120 个任务，每组 5 个训练任务和 5 个保留测试任务；自动化数据流水线可在两天内扩展到 V2 的 24 组 240 个任务，以缓解污染问题。作者在四种监督类型下评估了四个由 harness 和 model 组成的 Agent，发现自我进化可稳定提升保留测试准确率，最高提升 16.44 个百分点；但最佳进化 Agent 仍显著低于 fully informed oracle 的 91.6% 上限，说明当前 Agent 的自我进化能力仍远未充分实现。",
+  "abstract_zh": "本文提出 GDPevo，一个面向 Agent self-evolution（自我进化）评估的基准与全自动数据生成流水线。Agent self-evolution 指智能体从历史经验中更新持久状态，并复用于相关任务以提升表现。现有基准在高经济价值任务覆盖、训练—测试任务因果归因设计以及数据污染防护方面存在不足。GDPevo 基于 GDP 相关企业工作流，覆盖 CRM、ERP、finance、healthcare、legal 与 data-centric workflows。其核心机制 rule hybridization（规则混合）将企业流程拆解为原子业务规则，将规则子集分配到训练任务，再在 held-out test tasks 中重新组合，从而使测试阶段收益可归因于训练经验。V1 包含 12 组共 120 个任务，每组 5 个训练任务与 5 个测试任务；自动化流水线可在两天内扩展到 V2 的 24 组 240 个任务，以缓解数据污染。作者使用 GDPevo 在四种监督类型下评估四类由 harness 与 model 组成的 agents，发现自我进化可将 held-out accuracy 最高提升 16.44 个百分点，但最佳进化 agent 仍显著低于 fully informed oracle 的 91.6% 上限，说明当前 agent 的自我进化能力仍未充分实现。",
   "key_points_zh": [
-    "提出 GDPevo，一个 evolution-native benchmark，专门评估 Agent 从历史任务中更新持久状态并迁移到保留测试任务的能力。",
-    "核心方法 rule hybridization 将企业工作流拆成原子业务规则，并在训练与测试中重组规则，使测试收益更容易归因于训练经验。",
-    "覆盖 CRM、ERP、finance、healthcare、legal、data-centric workflows 等高经济价值业务场景；V1 含 120 个任务，V2 可自动扩展到 240 个任务。",
-    "全自动数据生成流水线可快速扩展基准，有助于应对数据污染和基准泄露问题。",
-    "实验显示 self-evolution 最高带来 16.44 个百分点的保留测试准确率提升，但与 91.6% 的 oracle 上限仍有明显差距。"
+    "提出 GDPevo，一个面向真实企业工作流的 evolution-native benchmark，用于评估 Agent self-evolution 是否能从训练经验中获得可归因的测试收益。",
+    "核心方法 rule hybridization 将工作流拆为原子业务规则，在训练任务中分发规则子集，并在 held-out 测试任务中重组，增强训练经验与测试提升之间的因果可解释性。",
+    "基准覆盖 CRM、ERP、finance、healthcare、legal 和 data-centric workflows；V1 含 120 个任务，自动流水线可快速扩展至 V2 的 240 个任务以应对数据污染。",
+    "实验评估四种 agents 与四类监督设置，self-evolution 最高带来 16.44 个百分点的 held-out accuracy 提升。",
+    "即使最佳 evolved agents 仍远低于 91.6% 的 fully informed oracle ceiling，表明现有 agent 的自我进化能力仍有较大提升空间。"
   ],
   "llm_assessment": {
-    "novelty": 0.81,
+    "domain_fit": 0.9,
+    "novelty": 0.77,
     "problem_significance": 0.84,
-    "potential_impact": 0.83,
-    "paradigm_shift": 0.78,
-    "lasting_value": 0.84,
-    "llm_avg": 0.82,
-    "comment": "A valuable evolution-native benchmark with an automated generation pipeline and attribution-aware train-test design for self-improving agents.",
-    "comment_zh": "这是一项有价值的自进化智能体基准，具备自动生成流水线和可归因的训练测试设计。"
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.83,
+    "llm_avg": 0.8,
+    "comment": "Well-aligned evaluation work because it directly benchmarks persistent self-evolution with attributable train-test experience transfer.",
+    "comment_zh": "这项评测工作契合度很高，因为它直接评估持久化自我进化以及可归因的训练到测试经验迁移。"
   },
   "scores": {
     "topic_relevance": 0.8,
     "open_source": 0.5,
-    "community_heat": 0.8259521053750146,
+    "community_heat": 0.8331408438282375,
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.82,
+    "llm_assessment": 0.8,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -59,7 +60,7 @@
     "code_promised": false,
     "has_video_demo": false,
     "hf_listed": true,
-    "hf_upvotes": 19,
+    "hf_upvotes": 21,
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],

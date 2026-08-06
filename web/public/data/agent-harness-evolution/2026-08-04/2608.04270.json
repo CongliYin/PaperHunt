@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.04270",
+  "title": "CURATE: Leveraging LLM Agents to Compose, Catalog, and Deploy Reproducible Workflows",
+  "title_zh": "CURATE：利用 LLM Agent 组合、编目与部署可复现工作流",
+  "authors": [
+    "Nolan Cutler",
+    "Chia-Chen Kuo",
+    "Nanda Velugoti",
+    "Kathryn Newhart",
+    "Renato Figueiredo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T23:01:29Z",
+  "abs_url": "https://arxiv.org/abs/2608.04270v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04270",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic code generation has shown promise in automating and accelerating software development by utilizing Large Language Models (LLMs) to generate, test, and deploy code. For engineers and scientists, such systems have the potential to accelerate the development of applied and scientific workflows while reducing barriers to entry in domains that have yet to fully realize their benefits. However, a key gap remains: existing coding agents primarily focus on code generation and do not address the entire workflow lifecycle, including deployment and sharing. As a result, users develop and stitch modules independently while managing deployment on their own. To address this gap, we propose CURATE - Composition, User-in-the-loop, Reuse, and Automated Task Execution - a novel human-in-the-loop multi-agent system that uses LLM agents to manage and develop composable workflows across their entire lifecycle. A key feature of the system is a catalog that allows for the storage and reuse of modules across workflows. Module catalogs provide a foundation that can be expanded to support FAIR principles by facilitating the sharing and reuse of curated modules and subgraphs. We demonstrate the feasibility of our system with an initial prototype using Claude Opus 4.8, comprising 6 experiments: reproducing and adapting 4 workflows derived from the SeBS-Flow benchmark suite, and automating the development and scaling of a workflow that leverages a complex mechanistic model in environmental engineering used to simulate anaerobic digestion.",
+  "abstract_zh": "本文提出 CURATE（Composition, User-in-the-loop, Reuse, and Automated Task Execution），一个 human-in-the-loop 多 Agent 系统，用于让 LLM Agent 覆盖工作流从组合、开发、复用到部署的完整生命周期。现有 coding agents 多聚焦于代码生成，缺乏对模块复用、部署与共享的系统支持，导致工程师和科学家仍需手动拼接模块并自行管理部署。CURATE 引入模块 catalog，用于存储、检索和复用跨工作流的模块，为进一步支持 FAIR 原则下的可发现、可访问、可互操作、可复用模块与子图共享提供基础。论文基于 Claude Opus 4.8 构建初始原型，并通过 6 个实验验证可行性：复现和改造来自 SeBS-Flow benchmark suite 的 4 个工作流，以及自动开发并扩展一个环境工程中用于模拟厌氧消化的复杂机理模型工作流。",
+  "key_points_zh": [
+    "CURATE 将 LLM coding agent 的能力从单纯代码生成扩展到工作流组合、模块复用、部署与自动执行。",
+    "系统采用 human-in-the-loop 多 Agent 架构，在自动化生成与用户监督之间取得平衡，适合科学与工程工作流开发。",
+    "核心设计是模块 catalog，可跨工作流存储、检索和复用 curated modules 与 subgraphs，降低重复开发成本。",
+    "该 catalog 机制为支持 FAIR principles 提供基础，有助于提升科学工作流的共享性与可复现性。",
+    "实验基于 Claude Opus 4.8，覆盖 SeBS-Flow 工作流复现/改造以及环境工程厌氧消化机理模型工作流的自动开发与扩展。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.74,
+    "novelty": 0.62,
+    "problem_significance": 0.69,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.56,
+    "lasting_value": 0.66,
+    "llm_avg": 0.6420000000000001,
+    "comment": "CURATE has meaningful harness elements for workflow lifecycle management, deployment, reuse, and human-in-the-loop orchestration, though evidence is prototype-level.",
+    "comment_zh": "CURATE 在工作流生命周期管理、部署、复用和人机协同编排方面具有明显框架要素，但证据仍偏原型阶段。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6420000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04270/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04270/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}

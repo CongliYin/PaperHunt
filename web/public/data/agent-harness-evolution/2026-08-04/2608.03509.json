@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2608.03509",
+  "title": "SkillJack: Persistent Skill Backdoors in Self-Evolving Agents",
+  "title_zh": "SkillJack：自进化 Agent 中的持久化技能后门",
+  "authors": [
+    "Zonghao Ying",
+    "Xiangfan Wu",
+    "Huiyu Wu",
+    "Xing Zheng",
+    "Huangsheng Cheng",
+    "Xiaorong Shi",
+    "Jing Guo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T11:51:23Z",
+  "abs_url": "https://arxiv.org/abs/2608.03509v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03509",
+  "links": {
+    "github": "https://github.com/Tencent/AI-Infra-Guard",
+    "project_page": null
+  },
+  "abstract_en": "Self-evolving agents increasingly convert interaction histories into reusable skills that persist beyond individual tasks. While prior work studies memory and retrieval poisoning, such attacks only affect agents when poisoned records are retrieved as context. We uncover a new and more fundamental risk: poisoned experiences can be transformed by the agent itself into durable behavioral artifacts. We present \\textbf{SkillJack}, the first attack that exploits the experience-to-skill pipeline of self-evolving agents. Instead of directly manipulating runtime context, SkillJack hijacks the agent's own learning process to implant malicious behaviors into its reusable skill repertoire. We identify three key properties of this transformation: \\emph{sanitization whitewashing}, where malicious intent is obscured during skill extraction; \\emph{cross-layer promotion}, where transient experiences become persistent capabilities; and \\emph{persistence isolation}, where the attack survives removal of its original source records. We evaluate SkillJack on two representative systems, SkillX and Anything2Skill, using a shared dataset of 150 trajectories across four policy-risk categories. Results show that skill extraction substantially reduces attack detectability: in SkillX, safety detection drops from 98.5\\% for poisoned trajectories to 11.4\\% for extracted skills, while Anything2Skill shows a similar effect. Meanwhile, the implanted skills remain effective, achieving attack success rates of 56.2\\% and 89.2\\% on the two systems, respectively. Furthermore, 80.0\\% of skill-mediated attacks persist after deleting the original poisoned records, and some skills unintentionally activate on benign queries. Our findings reveal skill evolution as a new attack surface and motivate provenance-aware skill lifecycle protection. Our code is available at https://github.com/Tencent/AI-Infra-Guard/research/skilljack.",
+  "abstract_zh": "自进化 Agent 越来越多地将交互历史转化为可复用技能，并在单次任务之外长期保留。既有研究主要关注记忆与检索投毒，这类攻击只有在被投毒记录作为上下文被检索时才会影响 Agent。本文揭示了一种更基础的风险：被投毒的经验可能被 Agent 自身转化为持久的行为产物。作者提出 SkillJack，这是首个利用自进化 Agent“经验到技能”流水线的攻击方法。SkillJack 不直接操纵运行时上下文，而是劫持 Agent 的学习过程，将恶意行为植入其可复用技能库。论文总结了该转化过程的三个关键特性：sanitization whitewashing，即技能抽取过程中恶意意图被“洗白”并隐藏；cross-layer promotion，即临时经验被提升为持久能力；persistence isolation，即攻击在原始投毒记录被删除后仍能存活。作者在 SkillX 与 Anything2Skill 两个代表性系统上评估 SkillJack，使用覆盖四类策略风险的 150 条轨迹数据集。结果显示，技能抽取显著降低攻击可检测性：在 SkillX 中，安全检测率从投毒轨迹的 98.5% 降至抽取技能的 11.4%，Anything2Skill 也呈现类似趋势。同时，植入技能仍保持有效，两个系统上的攻击成功率分别达到 56.2% 与 89.2%。此外，80.0% 的技能介导攻击在删除原始投毒记录后仍然持续存在，部分技能还会在良性查询中被意外触发。研究表明，技能进化已成为新的攻击面，并提示需要具备来源感知的技能生命周期防护机制。",
+  "key_points_zh": [
+    "提出 SkillJack，首个针对自进化 Agent 经验到技能转化流程的持久化技能后门攻击。",
+    "攻击不依赖运行时检索投毒上下文，而是诱导 Agent 将恶意经验抽取为可复用技能，从而长期影响行为。",
+    "揭示三种关键机制：sanitization whitewashing、cross-layer promotion 与 persistence isolation，解释恶意行为如何被隐藏、提升并脱离原始记录存活。",
+    "在 SkillX 与 Anything2Skill 上实验显示，技能抽取会大幅降低安全检测率，同时植入技能仍具有较高攻击成功率。",
+    "即使删除原始投毒轨迹，80.0% 的技能介导攻击仍能持续存在，说明需要 provenance-aware 的技能生命周期安全防护。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.85,
+    "llm_avg": 0.8459999999999999,
+    "comment": "Highly relevant security work exposing a durable attack surface in self-evolving agents and motivating provenance-aware skill lifecycle controls.",
+    "comment_zh": "这是一项高度相关的安全研究，揭示了自进化智能体中持久技能的攻击面，并推动技能生命周期的溯源治理。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.8296320871988233,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8459999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Tencent/AI-Infra-Guard",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 20,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03509/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03509/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.978
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.04077",
+  "title": "FinProBench: Evaluating Financial AI Agents with Role-Grounded Rubrics Derived from Professional Deliverables",
+  "title_zh": "FinProBench：用源自专业交付物的角色扎根评分规准评估金融 AI Agent",
+  "authors": [
+    "Ben Wang",
+    "Kang Zhou",
+    "Lifan Guo",
+    "Feng Chen",
+    "Chi Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T18:00:00Z",
+  "abs_url": "https://arxiv.org/abs/2608.04077v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04077",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Evaluating financial AI agents requires criteria aligned with real professional work. Existing rubric methods typically derive criteria from task prompts or model outputs, overlooking tacit standards visible only in practitioner deliverables. We introduce FinProBench, a benchmark for professional financial tasks, and Role-Grounded Rubric Construction (RGRC), a reusable pipeline that derives rubrics from deliverables produced by practitioners in the same role. RGRC comprises four stages: Deliverable Collection, Competency Extraction, Rubric Synthesis, and Validation. Its rubrics capture tacit standards, distinguish quality levels, and transfer across tasks within a role. Before analysis, we classified 57 occupations by deliverable genre into 30 prior-rich conventional roles and 27 prior-sparse role-specialized roles. Across all roles, Prompt-only nearly matches RGRC for conventional roles (89.2% vs. 90.7%), but RGRC substantially outperforms it for role-specialized roles (99.1% vs. 78.0%). This split indicates that prompt engineering can approximate rubrics when conventions are well represented in model priors, while professional grounding is essential for standards beyond those priors. FinProBench is built from 1,723 curated deliverables spanning 57 occupations, 8 financial sub-industries, and 161 deliverable types, and releases an initial evaluation set of 20 complete tasks covering 20 roles in 7 sub-industries. With heterogeneous LLM judges and role-level rubrics, human deliverables rank first on average (73.7 vs. 70.3, 70.2, and 69.6 out of 100), while all four systems show overlapping 95% confidence intervals and complementary strengths. Reusing rubrics at the role level reduces estimated per-task construction effort by 6.7 times relative to authoring each rubric from scratch.",
+  "abstract_zh": "本文提出 FinProBench，一个面向专业金融任务的 AI Agent 评测基准，并提出 Role-Grounded Rubric Construction（RGRC）流程，从同一职业角色的真实从业者交付物中构建评分规准。不同于仅依据任务提示或模型输出生成评测标准的方法，RGRC 通过 Deliverable Collection、Competency Extraction、Rubric Synthesis、Validation 四个阶段捕捉专业工作中的隐性质量标准，并支持在同一角色内跨任务复用。研究将 57 个职业按交付物类型划分为 30 个常规角色和 27 个角色专门化角色。实验显示，在常规角色上 Prompt-only 与 RGRC 接近（89.2% vs. 90.7%），但在角色专门化角色上 RGRC 明显优于 Prompt-only（99.1% vs. 78.0%），说明当专业标准超出模型先验时，基于真实职业交付物的规准更关键。FinProBench 包含 1,723 份精选交付物，覆盖 57 个职业、8 个金融子行业和 161 类交付物，并发布了覆盖 20 个角色、7 个子行业的 20 个完整任务初始评测集。使用异构 LLM 评审和角色级规准后，人类交付物平均排名第一，但各系统 95% 置信区间重叠，表现出互补优势。角色级规准复用使单任务规准构建成本相较从零编写降低约 6.7 倍。",
+  "key_points_zh": [
+    "提出 FinProBench，覆盖 1,723 份金融专业交付物、57 个职业、8 个金融子行业和 161 类交付物。",
+    "提出 RGRC 流程，从从业者交付物中抽取能力并合成角色级评分规准，以捕捉提示词中难以显式描述的隐性专业标准。",
+    "在常规角色中 Prompt-only 与 RGRC 表现接近，但在角色专门化场景中 RGRC 大幅领先，说明专业扎根规准对低先验任务尤为重要。",
+    "初始评测集包含 20 个完整任务，覆盖 20 个角色和 7 个子行业；人类交付物平均得分最高，但与多个 AI 系统置信区间重叠。",
+    "角色级规准可跨任务复用，将每任务规准构建工作量相较逐任务从零编写降低约 6.7 倍。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.68,
+    "novelty": 0.65,
+    "problem_significance": 0.66,
+    "potential_impact": 0.64,
+    "paradigm_shift": 0.52,
+    "lasting_value": 0.67,
+    "llm_avg": 0.628,
+    "comment": "FinProBench is a domain benchmark, but its reusable role-grounded rubric pipeline gives it moderate value for agent evaluation infrastructure.",
+    "comment_zh": "FinProBench 是领域基准，但其可复用的角色扎根评分规程使其对智能体评估基础设施具有中等价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.628,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04077/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04077/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.957
+    }
+  ]
+}

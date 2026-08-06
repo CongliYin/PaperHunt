@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.04095",
+  "title": "FinPerMA: A Theory-Informed, Event-Grounded Personalized-Memory Benchmark for LLM Agents",
+  "title_zh": "FinPerMA：一个理论驱动、事件锚定的 LLM Agent 个性化记忆基准",
+  "authors": [
+    "Ben Wang",
+    "Kang Zhou",
+    "Lifan Guo",
+    "Feng Chen",
+    "Chi Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T18:00:04Z",
+  "abs_url": "https://arxiv.org/abs/2608.04095v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04095",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM) agents are increasingly used as personalized assistants in high-stakes domains such as financial advising, yet it remains unclear whether they can maintain and update an individualized user model over long horizons. Existing personalized-memory benchmarks primarily test factual retention or rely on weakly constrained model-generated trajectories, leaving event-driven preference adaptation underexplored. We introduce FinPerMA, an event-grounded benchmark that evaluates personalized memory against frozen longitudinal investor trajectories. Its generation pipeline combines deterministic, theory-informed impact rules, controlled LLM narration, and automated quality screening; a Post-Shock checkpoint isolates whether an agent has integrated a material event into its persistent user model. On 2,994 questions from 276 personas, seven frontier LLMs and up to seven memory configurations remain far from saturated: no full-context configuration exceeds approximately 0.47 overall accuracy or approximately 39% on multiple-choice questions. Attribution analysis shows that summary-based memory often preserves factual details while losing the preference signals needed for personalization; simple retrieval can therefore outperform purpose-built memory systems, with the gap widening after shocks.",
+  "abstract_zh": "随着 LLM agents 越来越多地用于金融建议等高风险个性化助理场景，模型能否在长时间跨度内维护并更新个体用户画像仍不清楚。现有个性化记忆基准多关注事实记忆，或依赖约束较弱的模型生成轨迹，较少评估事件驱动的偏好变化。本文提出 FinPerMA，一个基于冻结纵向投资者轨迹的事件锚定基准，用于评估个性化记忆能力。其生成流程结合了确定性的理论驱动影响规则、受控 LLM 叙事生成和自动质量筛选；其中 Post-Shock 检查点专门用于判断 agent 是否已将重大事件整合进持久用户模型。作者在 276 个 persona、2,994 个问题上评测了 7 个前沿 LLM 和最多 7 种记忆配置，结果显示当前系统远未饱和：即使使用完整上下文，总体准确率也不超过约 0.47，多选题准确率不超过约 39%。归因分析表明，基于摘要的记忆常能保留事实细节，却会丢失个性化所需的偏好信号；因此，简单检索有时反而优于专门设计的记忆系统，且该差距在冲击事件后进一步扩大。",
+  "key_points_zh": [
+    "提出 FinPerMA，用于评估 LLM agents 在金融投资建议场景中的长期个性化记忆与偏好更新能力。",
+    "基准构建基于冻结的纵向投资者轨迹，结合理论驱动的确定性影响规则、受控 LLM 叙事和自动质量筛选。",
+    "设计 Post-Shock 检查点，专门检验模型是否能在重大事件后更新持久用户画像与投资偏好。",
+    "在 276 个 persona、2,994 个问题上评测 7 个前沿 LLM 及多种记忆配置，完整上下文设置下总体准确率仍仅约 0.47。",
+    "实验发现摘要式记忆易保留事实但丢失偏好信号，简单 retrieval 在冲击事件后可能优于专门记忆系统。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.62,
+    "problem_significance": 0.74,
+    "potential_impact": 0.67,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.68,
+    "llm_avg": 0.652,
+    "comment": "A relevant memory-evaluation benchmark for long-horizon personalized agents, though its value is mainly diagnostic rather than a reusable harness or improvement loop.",
+    "comment_zh": "这是一项与长期个性化智能体记忆评测相关的工作，但主要价值在诊断而非可复用运行框架或改进闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.652,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04095/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04095/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.954
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.03499",
+  "title": "WeClawArena: An Auditable Sandbox and Benchmark for Cross-User Agents Collaboration and Security in Human-Centered Agent Networks",
+  "title_zh": "WeClawArena：面向以人为中心的 Agent 网络中跨用户 Agent 协作与安全的可审计沙箱和基准",
+  "authors": [
+    "Prince Zizhuang Wang",
+    "Aojie Yuan",
+    "Haiyue Zhang",
+    "Xiyang Hu",
+    "Yue Zhao",
+    "Shuli Jiang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T11:42:26Z",
+  "abs_url": "https://arxiv.org/abs/2608.03499v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03499",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent advances in persistent personal-agent frameworks are making human-centered agent networks realistic deployment targets: each user can be served by an AI agent that acts on the user's behalf, maintains state, and communicates with other agents through social and task relations. In these networks, everyday tool use becomes multi-party owned-agent collaboration over personal workspaces, where files, records, tools, and policies are not directly visible across owners. Existing agent benchmarks study tool use and collaboration, but they do not provide an end-to-end sandbox for verifiable cross-user agent collaboration with realistic user digital workspaces or test how harmful actions can travel through the human-centered agent network. We introduce WeClawArena, an auditable benchmark and runtime sandbox for multi-party owned-agent collaboration over personal workspaces. WeClawArena targets collaborative tool-use tasks in which personal workspaces serve as both operational tools and personal constraints. The benchmark contains 124 base tasks across six cross-user task domains and expands them into 620 scenario variants, with one benign control and four attack-vector variants per base task. The sandbox records peer messages, tool calls, resource operations, governed decisions, and final workspace states. WeClawArena reports utility and attack success rate separately and audits attack success from bounded runtime evidence, supporting diagnosis of task breakdown, privacy leakage, poisoned evidence, and invalid authority paths.",
+  "abstract_zh": "持久化个人 Agent 框架的最新进展，使以人为中心的 Agent 网络逐渐成为现实部署目标：每个用户都可由一个 AI Agent 代理服务，该 Agent 代表用户行动、维护状态，并通过社交或任务关系与其他 Agent 通信。在这类网络中，日常工具使用演变为围绕个人工作区的多方 owned-agent 协作；其中，文件、记录、工具和策略在不同所有者之间并非直接可见。现有 Agent 基准虽研究工具使用与协作，但缺少一个端到端沙箱，用于验证真实个人数字工作区中的跨用户 Agent 协作，也无法系统测试有害行为如何沿着以人为中心的 Agent 网络传播。本文提出 WeClawArena，一个面向多方 owned-agent 协作的可审计基准与运行时沙箱。WeClawArena 聚焦协作式工具使用任务，其中个人工作区既是操作工具，也是个人约束。该基准包含六个跨用户任务领域中的 124 个基础任务，并扩展为 620 个场景变体：每个基础任务包含一个良性对照和四个攻击向量变体。沙箱记录 peer messages、tool calls、resource operations、governed decisions 以及最终工作区状态。WeClawArena 分别报告任务效用和攻击成功率，并基于有界运行时证据审计攻击成功，支持诊断任务失败、隐私泄露、证据投毒和无效授权路径等问题。",
+  "key_points_zh": [
+    "提出 WeClawArena，用于评测以人为中心的 Agent 网络中跨用户 owned-agent 协作的任务能力与安全风险。",
+    "构建端到端可审计沙箱，模拟个人数字工作区中的文件、记录、工具和策略隔离，贴近真实多用户协作场景。",
+    "基准包含 124 个基础任务、6 个跨用户任务领域，并扩展为 620 个场景变体，覆盖良性对照与 4 类攻击向量。",
+    "记录 peer messages、tool calls、resource operations、governed decisions 和最终状态，支持从运行时证据审计攻击结果。",
+    "将 utility 与 attack success rate 分开报告，可诊断任务崩溃、隐私泄露、poisoned evidence 和无效 authority paths 等安全问题。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.84,
+    "problem_significance": 0.91,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.87,
+    "llm_avg": 0.8560000000000001,
+    "comment": "Strong fit because it provides an auditable sandbox, trace evidence, and security benchmark for cross-user tool-using agent networks.",
+    "comment_zh": "高度契合，因为它为跨用户工具型智能体网络提供了可审计沙箱、轨迹证据和安全基准。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8560000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03499/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.947
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03499/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

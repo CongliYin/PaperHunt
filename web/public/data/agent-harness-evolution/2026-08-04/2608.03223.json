@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.03223",
   "title": "Agentic Reinforcement Learning with Self-Distilled Reward Shaping",
-  "title_zh": "带自蒸馏奖励塑形的 Agentic 强化学习",
+  "title_zh": "带自蒸馏奖励塑形的 Agentic Reinforcement Learning",
   "authors": [
     "Ranxu Zhang",
     "Guinan Chen",
@@ -21,32 +21,33 @@
     "project_page": null
   },
   "abstract_en": "Agentic reinforcement learning enables LLM agents to learn through interaction, but sparse trajectory-level rewards reveal success without identifying which intermediate decisions deserve credit. Training-only privileged skills can provide denser supervision by allowing the same frozen policy snapshot to rescore fixed tokens from skill-free trajectories while conditioned on task-matched procedural skills. Existing methods, however, do not jointly calibrate teacher scores across interaction steps, relate teacher confidence to realized returns, and integrate the resulting signal into native reward-to-advantage construction. We introduce Agentic Reinforcement Learning with Self-Distilled Reward Shaping (ADRS), a framework for constructing return-associated token-level credit for multi-turn language agents. ADRS centers and normalizes privileged token scores within each step, modulates them with a return-associated Teacher Value Advantage (TVA) gate based on within-group confidence--return association, and incorporates the gated token signal into native RL credit construction. Together, these components determine what the teacher prefers, when that preference is return-relevant, and how it enters the native reinforcement-learning credit path, while keeping rollouts and inference skill-free. Finally, experiments across three interactive benchmarks show that ADRS consistently improves performance on long-horizon tasks, with gains persisting across RL backbones, reduced-data settings, unseen tasks, and extended training. For anonymous review, our code is available at the following the link: https://github.com/gitrxh/ADRS-arxiv",
-  "abstract_zh": "本文提出 Agentic Reinforcement Learning with Self-Distilled Reward Shaping（ADRS），用于解决 LLM 智能体在多轮交互强化学习中仅依赖稀疏轨迹级奖励导致的信用分配困难。ADRS 利用训练阶段可用的特权技能（privileged skills）作为教师信号：在不改变 rollout 与推理阶段无技能设定的前提下，让同一冻结策略快照在固定 token 上、结合任务匹配的程序性技能重新打分，从而生成更细粒度的 token 级监督。方法核心包括：在每个交互步骤内对特权 token 分数进行中心化与归一化；用 Teacher Value Advantage（TVA）门控衡量教师置信度与实际回报之间的组内关联；再将门控后的 token 信号整合进原生 RL 的 reward-to-advantage 信用构造路径。实验表明，ADRS 在三个交互式基准上稳定提升长时程任务表现，并在不同 RL backbone、低数据、未见任务和更长训练场景下保持收益。",
+  "abstract_zh": "本文提出 Agentic Reinforcement Learning with Self-Distilled Reward Shaping（ADRS），用于缓解 LLM agents 在交互式强化学习中仅依赖稀疏轨迹级奖励的问题。ADRS 利用训练阶段的特权技能（privileged skills）作为教师信号：在不改变 rollout 和推理阶段无技能设定的前提下，让同一冻结策略快照在给定任务匹配的过程技能条件下，对来自无技能轨迹的固定 token 重新评分。方法首先在每个交互步骤内对特权 token 分数进行中心化与归一化，以校准不同步骤的教师偏好；随后引入与回报相关的 Teacher Value Advantage（TVA）门控，根据组内教师置信度与实际回报的关联程度判断教师信号是否真正有助于提升任务表现；最后将门控后的 token 级信号整合进原生 RL 的 reward-to-advantage 构造流程。实验覆盖三个交互式 benchmark，结果表明 ADRS 在长程任务上稳定提升性能，并且在不同 RL backbone、低数据设置、未见任务与更长训练过程中保持收益。",
   "key_points_zh": [
-    "针对 LLM agent 多轮交互中的稀疏轨迹奖励问题，ADRS 构造与最终回报相关的 token 级信用信号，缓解中间决策难以归因的问题。",
-    "方法利用训练阶段的 privileged skills 对 skill-free 轨迹中的固定 token 重新评分，实现更密集的教师监督，同时保持 rollout 和推理阶段无需技能输入。",
-    "ADRS 通过步内中心化/归一化校准教师分数，并引入 Teacher Value Advantage（TVA）门控，只在教师偏好与实际回报相关时增强其影响。",
-    "门控后的 token 级信号被直接纳入原生 RL 的 reward-to-advantage 构造流程，使奖励塑形与强化学习信用分配路径一致。",
-    "在三个交互式 benchmark 上，ADRS 对长时程任务表现有稳定提升，并在不同 RL backbone、低数据、未见任务和延长训练设置下保持有效。"
+    "针对 agentic RL 中轨迹级稀疏奖励难以分配中间决策信用的问题，ADRS 构造回报相关的 token 级 credit signal。",
+    "利用训练阶段的 privileged skills 对无技能轨迹中的固定 token 重新评分，实现 teacher-style dense supervision；rollout 与推理阶段仍保持 skill-free。",
+    "通过步骤内中心化与归一化校准教师 token 分数，并用 Teacher Value Advantage（TVA）门控筛选与实际回报相关的教师偏好。",
+    "将门控后的 token 信号直接并入原生 RL 的 reward-to-advantage 构造，而非作为外部后处理奖励。",
+    "在三个交互式 benchmark 上验证，ADRS 在长程任务、不同 RL backbone、低数据、未见任务和延长训练场景中均带来稳定增益。"
   ],
   "llm_assessment": {
+    "domain_fit": 0.88,
     "novelty": 0.78,
-    "problem_significance": 0.82,
-    "potential_impact": 0.78,
-    "paradigm_shift": 0.74,
-    "lasting_value": 0.76,
-    "llm_avg": 0.776,
-    "comment": "A relevant agentic RL credit-assignment method that uses trajectory-derived shaping signals, though it is more algorithmic than harness-level infrastructure.",
-    "comment_zh": "这是一篇相关的智能体强化学习信用分配工作，利用轨迹信号塑造奖励，但更偏算法而非平台基础设施。"
+    "problem_significance": 0.84,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.78,
+    "llm_avg": 0.796,
+    "comment": "A strong agentic RL contribution focused on token-level credit assignment from interaction trajectories for long-horizon agents.",
+    "comment_zh": "这是一篇较强的智能体强化学习论文，聚焦于从交互轨迹中进行长程智能体的 token 级信用分配。"
   },
   "scores": {
     "topic_relevance": 0.92,
     "open_source": 0.5,
     "community_heat": 0.0,
-    "author_reputation": 0.3,
+    "author_reputation": 0.2876491876228333,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.776,
+    "llm_assessment": 0.796,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -59,8 +60,8 @@
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": null,
-    "last_author_found": false,
+    "last_author_h_index": 2,
+    "last_author_found": true,
     "last_author_affiliations": []
   },
   "figures": [

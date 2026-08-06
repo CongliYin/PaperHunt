@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2608.04053",
+  "title": "AgentAntibody: An Adaptive Immune System for Defending LLM Agents against Prompt Injection",
+  "title_zh": "AgentAntibody：用于防御 LLM Agent Prompt Injection 的自适应免疫系统",
+  "authors": [
+    "Shihao Weng",
+    "Yang Feng",
+    "Xiaofei Xie",
+    "Jiongchi Yu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T10:41:34Z",
+  "abs_url": "https://arxiv.org/abs/2608.04053v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04053",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Prompt injection remains a critical threat to LLM agents, yet existing defenses treat each task as a self-contained problem, independent of previous encounters. In practice, user requests are often underspecified: they describe the desired outcome without fully specifying acceptable behavior. An injection can exploit this ambiguity, causing the agent to complete the task in a way the user would reject. As the user's expectations become clearer through concrete cases, a defense should learn from each encounter and apply what it learns to the next. Inspired by adaptive immunity, we propose AgentAntibody, which equips LLM agents with a self-evolving immune system against prompt injection. AgentAntibody represents its evolving understanding of the user's security boundary as a persistent library of antibodies. At runtime, the library recognizes threats to this boundary and mounts corresponding immune responses. Across encounters, it evolves to strengthen the agent's immunity to future attacks. Extensive experiments across three benchmarks and four backbone LLMs show that, by learning the user's boundary through experience, AgentAntibody outperforms existing defenses in preventing harmful actions while preserving legitimate task completion, even when the harmful and legitimate actions are both compatible with the stated task.",
+  "abstract_zh": "Prompt injection 仍是 LLM Agent 面临的关键安全威胁。现有防御方法通常将每个任务视为独立问题，无法利用过往交互经验；而现实中用户请求往往欠明确，只描述期望结果，却未完整规定可接受行为边界。攻击者可利用这种模糊性，使 Agent 以用户无法接受的方式完成任务。本文受自适应免疫机制启发，提出 AgentAntibody，为 LLM Agent 构建一个可自我演化的“免疫系统”。该方法将对用户安全边界的持续理解表示为一个持久化的 antibody library，在运行时识别对该边界的威胁并触发相应 immune responses；在多次交互中不断更新，从而增强对未来攻击的免疫力。作者在三个 benchmark 和四种 backbone LLM 上进行了大量实验，结果显示 AgentAntibody 能通过经验学习用户边界，相比现有防御更有效地阻止有害行为，同时保持合法任务完成能力，即使有害行为与合法行为都符合表面任务描述。",
+  "key_points_zh": [
+    "提出 AgentAntibody，将 LLM Agent 的 Prompt Injection 防御建模为类似自适应免疫系统的持续学习过程，而非一次性任务内判断。",
+    "核心机制是维护持久化的 antibody library，用于表示不断演化的用户安全边界，并在运行时识别威胁、触发对应防御响应。",
+    "方法针对用户请求欠明确的场景：即攻击与正常操作都可能符合任务描述，但用户实际会拒绝其中的有害执行方式。",
+    "跨三个 benchmark 和四个 backbone LLM 的实验表明，AgentAntibody 在减少有害动作的同时，能较好保留合法任务完成能力。",
+    "论文强调从具体案例中学习用户偏好与安全边界，为 LLM Agent 防御从静态规则走向经验驱动的自适应安全机制提供思路。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.82,
+    "problem_significance": 0.89,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.85,
+    "llm_avg": 0.844,
+    "comment": "Strong fit because it frames prompt-injection defense as a persistent, self-evolving security layer for agent runtimes.",
+    "comment_zh": "高度契合，因为它把提示注入防御建模为智能体运行时中的持久化、自进化安全层。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.844,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04053/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.954
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04053/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

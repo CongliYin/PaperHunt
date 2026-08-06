@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2608.03451",
+  "title": "DataSpace: Benchmarking Data Agents for Verifiable Analytics over Heterogeneous Workspaces",
+  "title_zh": "DataSpace：面向异构工作空间中可验证分析的数据智能体基准",
+  "authors": [
+    "Boyan Li",
+    "Zhuowen Liang",
+    "Yupeng Xie",
+    "Xiaotian Lin",
+    "Tianqi Luo",
+    "Xinyu Liu",
+    "Yizhang Zhu",
+    "Zhangyang Peng",
+    "Yuan Li",
+    "Zhengxuan Zhang",
+    "Jiayi Zhang",
+    "Nan Tang",
+    "Guoliang Li",
+    "Yuyu Luo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T10:48:11Z",
+  "abs_url": "https://arxiv.org/abs/2608.03451v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03451",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Data agents enable natural-language analytics over organizational workspaces, where relevant evidence may be scattered across databases, structured files, long documents, and multimedia. Existing benchmarks largely isolate structured querying, retrieval, or open-ended analysis, leaving heterogeneous evidence discovery, complete tabular outputs, and deterministic evaluation insufficiently unified. We introduce DataSpace, a benchmark in which data agents produce verifiable tabular results from task-local heterogeneous workspaces. It contains 410 cross-language tasks and 7,439 artifacts totaling 15.01 GB across CSV, JSON, SQLite, Markdown, PDF, and video. DataSpace also served as the official evaluation benchmark for the KDD Cup 2026 Data Agents for Complex Data Analysis competition. Each agent receives only a question and workspace and returns the complete requested tabular result. We construct DataSpace with DataSpace-Builder, an execution-grounded framework comprising cross-language transformation, constraint-aware relational sampling, modality routing and artifact rendering, and human review and task repair by 11 domain experts. A deterministic evaluator performs header-invariant column alignment, type- and precision-aware normalization, and order-aware row comparison. Across six recently released frontier multimodal models and five widely used agent harnesses, the best accuracy reaches 66.34%, while harness choice creates a 15.36-point spread with the backbone fixed. Multimodal evidence integration and joins consistently reduce accuracy across all six backbones. These results show that DataSpace remains unsaturated and identify key challenges for improving data-agent reliability.",
+  "abstract_zh": "DataSpace 是一个用于评测 data agents 在组织级异构工作空间中进行自然语言数据分析的基准。与以往主要分离考察结构化查询、检索或开放式分析的基准不同，DataSpace 要求智能体在包含 CSV、JSON、SQLite、Markdown、PDF 和视频等多模态、多格式证据的任务局部工作空间中，返回完整且可验证的表格结果。该基准包含 410 个跨语言任务、7,439 个数据制品，总规模 15.01GB，并被用作 KDD Cup 2026 Data Agents for Complex Data Analysis 竞赛的官方评测基准。论文提出 DataSpace-Builder，通过跨语言转换、约束感知的关系采样、模态路由与制品渲染，以及 11 位领域专家的人审与任务修复来构建任务。其确定性评测器支持列名不敏感对齐、类型与精度感知归一化，以及行顺序感知比较。实验覆盖 6 个近期 frontier multimodal models 和 5 个常用 agent harnesses，最佳准确率为 66.34%；在固定 backbone 时，不同 harness 带来最高 15.36 个百分点差异。结果表明，多模态证据整合与跨表 join 仍显著降低准确率，DataSpace 尚未饱和，并揭示了提升数据智能体可靠性的关键挑战。",
+  "key_points_zh": [
+    "提出 DataSpace，评测 data agents 在异构工作空间中从自然语言问题生成完整、可验证的表格答案。",
+    "基准包含 410 个跨语言任务和 7,439 个 artifacts，覆盖 CSV、JSON、SQLite、Markdown、PDF、video，总规模 15.01GB。",
+    "构建框架 DataSpace-Builder 结合跨语言转换、关系采样、模态路由、制品渲染和 11 位专家人工审查修复。",
+    "确定性 evaluator 支持 header-invariant 列对齐、类型/精度感知归一化和顺序感知行比较，提升评测可复现性。",
+    "实验显示最佳准确率仅 66.34%，agent harness 选择可造成 15.36 点差距；多模态证据整合和 join 是主要瓶颈。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.86,
+    "novelty": 0.76,
+    "problem_significance": 0.84,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.82,
+    "llm_avg": 0.78,
+    "comment": "A substantial verifiable data-agent benchmark with heterogeneous workspaces, deterministic evaluation, and evidence about harness-level reliability differences.",
+    "comment_zh": "这是一项扎实的数据智能体可验证评测基准，包含异构工作空间、确定性评估，并揭示了框架层可靠性差异。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.78,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03451/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03451/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.957
+    }
+  ]
+}

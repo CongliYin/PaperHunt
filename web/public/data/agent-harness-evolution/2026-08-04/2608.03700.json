@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2608.03700",
+  "title": "When Agents Learn to Be You: Benchmarking Privacy Leakage, Impersonation Risk, and Defenses in Persona Skills",
+  "title_zh": "当智能体学会成为你：Persona Skills 中的隐私泄露、冒充风险与防御基准",
+  "authors": [
+    "Yongli Xiang",
+    "Zhifang Zhang",
+    "Bojun Yang",
+    "Ziming Hong",
+    "Lei Feng",
+    "Miao Xu",
+    "Tongliang Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T14:04:56Z",
+  "abs_url": "https://arxiv.org/abs/2608.03700v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03700",
+  "links": {
+    "github": null,
+    "project_page": "https://yonglixiang.github.io/AntiSkillBench"
+  },
+  "abstract_en": "Persona skills distill personal interaction histories into portable and executable artifacts for downstream agents. While enabling flexible personalization, this process concentrates fragmented personal signals, amplifies their impact through reuse, and challenges defenses designed for individual records or retrieval-based memory. To systematically investigate the safety of the persona-skill pipeline, we introduce AntiSkillBench, an end-to-end benchmark for evaluating risks and defenses across the persona-skill pipeline. It comprises: (i) a dataset of 7,500 persona-grounded dialogue traces, constructed from 50 behaviorally rich profiles spanning diverse task scenarios; (ii) an evaluation suite that measures skill-level privacy leakage and agent-level attribute disclosure and behavioral impersonation across three skill-distillation strategies; and (iii) a defense evaluation covering four configurations across online and post-hoc interventions, including active risk suppression and passive provenance protection. Experiments across three frontier agents show that persona-skill risks persist across agent backbones and distillation protocols, extending from explicit attributes to communication styles and personality traits. Existing defenses exhibit limited and distillation-dependent effectiveness, failing to generalize across risk and distillation strategies. These results highlight AntiSkillBench as a challenging benchmark for developing privacy-preserving and authenticity-aware persona skills.",
+  "abstract_zh": "Persona skills 将个人交互历史提炼为可移植、可执行的产物，供下游 agents 使用。该机制提升了个性化能力，但也会集中原本分散的个人信号，并因复用而放大风险，同时挑战仅面向单条记录或检索式记忆的传统防御。本文提出 AntiSkillBench，一个端到端基准，用于系统评估 persona-skill pipeline 中的风险与防御。AntiSkillBench 包含：基于 50 个行为丰富画像构建的 7,500 条 persona-grounded dialogue traces；覆盖三种 skill-distillation 策略的评测套件，用于衡量 skill-level 隐私泄露以及 agent-level 属性披露和行为冒充；以及涵盖 online 与 post-hoc 干预的四种防御配置评估，包括主动风险抑制与被动来源保护。基于三个 frontier agents 的实验表明，persona-skill 风险在不同 agent backbone 和蒸馏协议下持续存在，泄露范围从显式属性扩展到沟通风格和人格特征。现有防御效果有限且依赖具体蒸馏方式，难以跨风险类型和蒸馏策略泛化。AntiSkillBench 为开发隐私保护和真实性感知的 persona skills 提供了具有挑战性的评测平台。",
+  "key_points_zh": [
+    "提出 AntiSkillBench，端到端评估 persona-skill pipeline 中的隐私泄露、属性披露、行为冒充与防御效果。",
+    "构建包含 50 个行为丰富用户画像、7,500 条 persona-grounded dialogue traces 的数据集，覆盖多样任务场景。",
+    "评测三种 skill-distillation 策略下的风险，发现风险不仅涉及显式个人属性，也扩展到沟通风格与 personality traits。",
+    "在三个 frontier agents 上验证风险具有跨 backbone 和蒸馏协议的持续性，说明 persona skills 的复用会放大个人信号暴露。",
+    "分析四种 online/post-hoc 防御配置，发现现有方法效果有限且依赖蒸馏策略，难以在不同风险类型间泛化。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.74,
+    "problem_significance": 0.86,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.8,
+    "llm_avg": 0.7760000000000001,
+    "comment": "A strong benchmark for privacy and impersonation risks in persona-skill pipelines, useful for governing reusable agent personalization artifacts.",
+    "comment_zh": "这是一项针对人格技能流水线隐私与冒充风险的有价值基准，有助于治理可复用的智能体个性化产物。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.4,
+    "community_heat": 0.7657249292981246,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7760000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://yonglixiang.github.io/AntiSkillBench",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 8,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03700/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}

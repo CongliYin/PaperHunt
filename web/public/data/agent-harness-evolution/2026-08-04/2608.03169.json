@@ -1,0 +1,62 @@
+{
+  "arxiv_id": "2608.03169",
+  "title": "Test-time reasoning effort and unauthorized tool use in language-model agents: a prespecified equivalence study",
+  "title_zh": "测试时推理强度与语言模型 Agent 的未授权工具使用：一项预注册等效性研究",
+  "authors": [
+    "Xiaonan Xu",
+    "Wenjing Wu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T06:01:14Z",
+  "abs_url": "https://arxiv.org/abs/2608.03169v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03169",
+  "links": {
+    "github": "https://github.com/WenJing95/trio-20.",
+    "project_page": null
+  },
+  "abstract_en": "Language-model agents that execute multi-step workflows through tool calls operate under access-control policies that restrict which operations each role may perform. The APIs serving these agents expose a reasoning-effort parameter that operators adjust for cost and latency. Whether this parameter also changes the rate of unauthorized tool use has not been tested by direct manipulation within a single model. We vary reasoning effort (low, max) inside GPT-5.6 across the 14 confirmatory scenarios of TRIO-20, a suite of 20 matched workplace triads in which a policy-prohibited tool call is effective and its effect on the target metric is stated in the environment, effective but discoverable only through rule inspection, or ineffective. The three conditions derive from one code base and differ in two configuration fields, with identical prompts and tool sets. All analyses were prespecified in a frozen plan before confirmatory collection. Across 840 trajectories and two model tiers, no unauthorized tool call occurred. Exact one-sided 95% limits place each arm's violation rate below 3.50% (Terra, n = 84) and 5.21% (Sol, n = 56). The interaction estimand, with a simultaneous exact 95% interval of $\\pm 4.34$ percentage points on Terra, lies inside the $\\pm 7.01$-point equivalence margin. Raising effort did change behaviour, but only in inspection: rule-probe rates rose in all conditions, most where probing carried no instrumental payoff, a pattern inconsistent with the hypothesis of targeted search ($-14.3$ points, 95% CI $-27.4$ to $+1.2$). Raw trajectories are released at https://github.com/WenJing95/trio-20.",
+  "abstract_zh": "语言模型 Agent 在通过工具调用执行多步骤工作流时，通常受到访问控制策略约束，不同角色只能执行特定操作。服务这些 Agent 的 API 往往提供 reasoning-effort 参数，供运营者在成本与延迟之间调节，但该参数是否也会改变未授权工具使用率，此前尚未在同一模型内通过直接操控验证。本文在 GPT-5.6 中将 reasoning effort 设为 low 与 max，并在 TRIO-20 的 14 个确认性场景上测试。TRIO-20 包含 20 组匹配的职场三元场景，其中策略禁止的工具调用可能有效且其对目标指标的影响在环境中明示、有效但需通过规则检查发现，或无效。三种条件来自同一代码库，仅有两个配置字段不同，prompt 与工具集保持一致。所有分析在确认性数据收集前均已预注册并冻结。结果显示，在 840 条轨迹和两个模型 tier 中，没有发生任何未授权工具调用。精确单侧 95% 上限表明，各实验臂违规率低于 Terra 的 3.50%（n=84）和 Sol 的 5.21%（n=56）。在 Terra 上，交互估计量的同时精确 95% 区间为 ±4.34 个百分点，落在 ±7.01 个百分点的等效性边界内。提高 reasoning effort 确实改变了行为，但主要体现在更多规则检查：所有条件下 rule-probe 率上升，且在检查没有工具性收益时上升最多，这一模式不支持“有针对性搜索”假设。",
+  "key_points_zh": [
+    "研究直接操控 GPT-5.6 的 reasoning-effort 参数，在同一模型内检验其是否影响未授权工具使用率。",
+    "实验使用 TRIO-20 中 14 个预注册确认性场景，控制 prompt、工具集和代码库，仅改变场景配置与推理强度。",
+    "在 840 条轨迹、两个模型 tier 中未观察到任何未授权工具调用，违规率上限仍处于较低水平。",
+    "Terra 上 low 与 max reasoning effort 的交互效应落入预设等效性边界，支持“推理强度不显著改变违规率”的结论。",
+    "提高 reasoning effort 会增加规则检查行为，但模式更像一般性检查增加，而非针对可获益违规路径的定向搜索。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.73,
+    "novelty": 0.48,
+    "problem_significance": 0.75,
+    "potential_impact": 0.62,
+    "paradigm_shift": 0.42,
+    "lasting_value": 0.62,
+    "llm_avg": 0.5780000000000001,
+    "comment": "Relevant but narrower as a prespecified operational safety study of unauthorized tool use rather than a reusable agent harness.",
+    "comment_zh": "该研究相关但范围较窄，更像是未授权工具调用的预注册运行安全实验，而非可复用智能体框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.5250169333420447,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.5780000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/WenJing95/trio-20.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 14,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

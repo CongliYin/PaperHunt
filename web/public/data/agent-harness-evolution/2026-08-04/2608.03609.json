@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.03609",
   "title": "Formal Verification of Agentic Systems over Operational Data",
-  "title_zh": "基于运营数据的智能体系统形式化验证",
+  "title_zh": "面向操作数据的智能体系统形式化验证",
   "authors": [
     "Alejandro J. Mercado",
     "Alessio Lomuscio"
@@ -15,23 +15,24 @@
     "project_page": null
   },
   "abstract_en": "Agentic systems driven by large language models (LLMs) are increasingly deployed in real-world workflows where they act on persistent operational data. Before deployment, these systems need to be verified against business requirements that govern workflow execution and data evolution. However, existing approaches do not provide such system-level guarantees, as they mainly constrain or analyse behaviour at the agent's interface level. We study here the verification of agentic systems comprising a single LLM and a tool orchestration harness over relational operational data. We formalise them as Stateful Tool-Enabled Agentic Deployments (STEADs), give their semantics, define the problem of verifying them against First-Order Computation Tree Logic (FO-CTL) specifications, and show that it is undecidable. We identify sufficient conditions for exact preservation of FO-CTL specifications under a finite-domain restriction, over which verification is PSPACE-complete. The key requirement is that renaming opaque identifiers in the data must correspondingly rename the selected tool calls. We show that LLM-driven agents can violate this condition and introduce a canonical deployment wrapper that guarantees it for arbitrary base agents while preserving already-equivariant behaviour. We prove that computing canonical representations required by this construction is graph-isomorphism-hard. Finally, we illustrate our framework on an LLM agent orchestrating a case-management workflow.",
-  "abstract_zh": "本文研究由单个 LLM 与工具编排框架组成、并作用于关系型运营数据的智能体系统验证问题。作者将这类部署形式化为 Stateful Tool-Enabled Agentic Deployments（STEADs），给出其语义，并定义针对 First-Order Computation Tree Logic（FO-CTL）规格的验证任务。论文证明该验证问题在一般情形下不可判定；随后给出在有限域限制下精确保留 FO-CTL 规格的充分条件，此时验证复杂度为 PSPACE-complete。核心条件是：对数据中不透明标识符的重命名，必须对应地重命名所选择的工具调用。作者指出 LLM 驱动的智能体可能违反该等变性条件，并提出一种 canonical deployment wrapper，可为任意基础智能体保证该条件，同时保留其原本已满足等变性的行为。论文还证明该构造所需 canonical representation 的计算具有 graph-isomorphism-hard 难度，并通过一个 LLM 编排 case-management workflow 的例子展示框架。",
+  "abstract_zh": "本文研究由单个 LLM 与工具编排框架组成、并作用于关系型操作数据的智能体系统验证问题。作者将这类系统形式化为 Stateful Tool-Enabled Agentic Deployments（STEADs），给出其语义，并定义了针对 First-Order Computation Tree Logic（FO-CTL）规范的验证问题。论文证明一般情况下该问题不可判定；随后给出在有限域限制下精确保留 FO-CTL 规范的充分条件，并证明对应验证问题为 PSPACE-complete。核心条件是：数据中不透明标识符的重命名必须相应地重命名被选择的工具调用。作者指出 LLM 驱动的智能体可能违反这一等变性条件，因此提出一种 canonical deployment wrapper，可为任意基础智能体保证该条件，同时保留已有的等变行为。论文还证明，该构造所需的 canonical representations 计算具有 graph-isomorphism-hard 难度，并通过一个 LLM 编排的 case-management workflow 示例展示框架。",
   "key_points_zh": [
-    "提出 STEADs（Stateful Tool-Enabled Agentic Deployments）模型，用于刻画单个 LLM、工具编排框架与关系型运营数据共同组成的有状态智能体部署。",
-    "定义针对 FO-CTL（First-Order Computation Tree Logic）业务规格的系统级验证问题，并证明一般情况下该问题不可判定。",
-    "给出有限域限制下精确保留 FO-CTL 规格的充分条件；在该限制上，验证问题为 PSPACE-complete。",
-    "识别关键等变性要求：数据中不透明标识符的重命名必须同步反映到工具调用选择；LLM 智能体可能天然违反这一要求。",
-    "提出 canonical deployment wrapper，为任意基础智能体强制保证上述等变性，并证明相关 canonical representation 计算是 graph-isomorphism-hard。"
+    "提出 STEADs 形式化框架，用于描述单个 LLM 加工具编排 harness 在关系型操作数据上的状态化执行。",
+    "定义针对 FO-CTL 规范的系统级验证问题，并证明一般情况下该问题不可判定。",
+    "给出有限域限制下精确保留 FO-CTL 规范的充分条件；在该条件下验证复杂度为 PSPACE-complete。",
+    "发现关键要求是对数据中不透明 identifiers 的重命名应对应到工具调用的重命名，而 LLM agent 可能不满足该等变性。",
+    "提出 canonical deployment wrapper 来强制满足等变性，并证明其所需 canonical representations 的计算是 graph-isomorphism-hard。"
   ],
   "llm_assessment": {
+    "domain_fit": 0.95,
     "novelty": 0.88,
-    "problem_significance": 0.9,
-    "potential_impact": 0.82,
+    "problem_significance": 0.92,
+    "potential_impact": 0.86,
     "paradigm_shift": 0.86,
-    "lasting_value": 0.89,
-    "llm_avg": 0.8699999999999999,
-    "comment": "A rigorous formal foundation for verifying tool-enabled agent deployments over operational data, with durable relevance to governable agent platforms.",
-    "comment_zh": "这篇论文为基于工具和业务数据的智能体部署验证提供了严格形式化基础，对可治理平台具有长期价值。"
+    "lasting_value": 0.9,
+    "llm_avg": 0.884,
+    "comment": "Excellent fit because it formalizes verification of tool-enabled agent deployments over operational data and proposes a wrapper with guarantees.",
+    "comment_zh": "高度契合，因为它形式化了基于运行数据的工具型智能体部署验证，并提出了具有保证的封装层。"
   },
   "scores": {
     "topic_relevance": 0.88,
@@ -40,7 +41,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.8699999999999999,
+    "llm_assessment": 0.884,
     "domain_multiplier": 1.0
   },
   "enriched": {
