@@ -28,6 +28,10 @@ Non-secret runtime env:
 | `FIGURE_BACKEND` | `yolo` in CI | `yolo` or `pymupdf` |
 | `FIGURE_MAX_COUNT` | `4` (`2` in CI) | max detail figures per paper; lower values reduce Blob advanced operations |
 | `STORAGE_BACKEND` | `blob` | `blob` or `repo` |
+| `ARXIV_REQUEST_INTERVAL_SECONDS` | `3.1` | minimum interval between arXiv request starts |
+| `ARXIV_MAX_ATTEMPTS` | `4` | maximum attempts for transient arXiv failures |
+| `ARXIV_TIMEOUT_SECONDS` | `60` | timeout for each arXiv request |
+| `ARXIV_USER_AGENT` | PaperHunt repository URL | identifiable user agent sent to arXiv |
 
 ## Local Usage
 
@@ -77,7 +81,7 @@ Create a public Vercel Blob store and copy its `BLOB_READ_WRITE_TOKEN` into GitH
 
 ## Notes
 
-- arXiv fetches are rate-limited and use retries where practical. Weekend/holiday runs may produce zero papers.
+- Each daily run fetches every unique arXiv category once into an atomic cache shared by all domains. Requests are sequential and start at least 3.1 seconds apart. HTTP 429/5xx responses, timeouts, connection errors, and malformed XML are retried with bounded backoff. If any required category still fails, the whole job exits non-zero before domain processing, so incomplete data is never committed. A valid HTTP 200 response with no entries remains a successful zero-paper day.
 - DocLayout-YOLO is AGPL-3.0. This project uses it in an offline CI batch pipeline to generate static images. The Vercel frontend does not serve the model or expose model inference. Re-check licensing before closed-source or commercial use of the pipeline code.
 - `tmp/` and model caches are intentionally ignored. Phase intermediates under `reports/*/*/tmp/` are kept during runs for re-runs and debugging but should not be committed.
 - Blob cleanup is available through `FigureStorage.delete_older_than(days)`, which lists blobs under the configured prefix and deletes older URLs through the Vercel Blob HTTP API.

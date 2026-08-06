@@ -35,6 +35,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, SCRIPT_DIR)
 
 from lib.fetcher import fetch_papers_by_date_multi_category
+from lib.arxiv_cache import load_papers_from_cache
 from lib.filter import filter_papers_by_keywords
 from lib.enricher import fetch_hf_daily_papers, enrich_papers, AuthorMetricsCache
 from lib.utils import load_yaml, log_normalize, clamp
@@ -877,6 +878,7 @@ def run_phase1(args):
     os.makedirs(tmp_dir, exist_ok=True)
 
     json_path = args.output_json or os.path.join(tmp_dir, "phase1.json")
+    Path(json_path).unlink(missing_ok=True)
 
     filter_cfg = domain_cfg["filter_cfg"]
     topic_cfg = domain_cfg["topic_cfg"]
@@ -887,13 +889,23 @@ def run_phase1(args):
         f"[1/5] Fetching arXiv papers for {domain_cfg['display_name']} "
         f"({args.start_date} → {end_date}; categories={', '.join(domain_cfg['arxiv_categories'])})..."
     )
-    papers = fetch_papers_by_date_multi_category(
-        args.start_date,
-        args.end_date,
-        categories=domain_cfg["arxiv_categories"],
-        hard_limit=args.limit,
-        verbose=verbose,
-    )
+    if args.arxiv_cache:
+        print(f"  [arxiv-cache] reading {args.arxiv_cache}")
+        papers = load_papers_from_cache(
+            args.arxiv_cache,
+            start_date=args.start_date,
+            end_date=args.end_date,
+            categories=domain_cfg["arxiv_categories"],
+            hard_limit=args.limit,
+        )
+    else:
+        papers = fetch_papers_by_date_multi_category(
+            args.start_date,
+            args.end_date,
+            categories=domain_cfg["arxiv_categories"],
+            hard_limit=args.limit,
+            verbose=verbose,
+        )
     if not papers:
         print("No papers fetched. Exiting.")
         return
@@ -1081,6 +1093,11 @@ def main():
     parser.add_argument("--top-n", type=int, default=None,
                         help="Override: fixed number of top papers (overrides --top-pct)")
     parser.add_argument("--limit", type=int, default=None, help="Debug: hard limit on fetch")
+    parser.add_argument(
+        "--arxiv-cache",
+        default=None,
+        help="Strict daily arXiv cache created by run_daily.py",
+    )
     parser.add_argument("--output-json", default=None, help="Phase 1 JSON output path")
 
     # Finalize args

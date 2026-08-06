@@ -12,6 +12,10 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+import yaml
+
+from lib.arxiv_cache import build_arxiv_cache
+
 
 ROOT = Path(__file__).resolve().parents[1]
 PIPELINE_DIR = Path(__file__).resolve().parent
@@ -44,28 +48,68 @@ def local_date_offset(run_tz: str, offset_days: int, *, rollback_weekends: bool 
     return date.isoformat()
 
 
-def run_domain(args: argparse.Namespace, domain: str, date: str) -> DomainResult:
+def discover_arxiv_categories(domains_dir: Path, domains: list[str]) -> list[str]:
+    """Load the complete, de-duplicated arXiv category set for selected domains."""
+    categories: set[str] = set()
+    for domain in domains:
+        domain_yaml = domains_dir / domain / "domain.yaml"
+        try:
+            payload = yaml.safe_load(domain_yaml.read_text(encoding="utf-8")) or {}
+        except FileNotFoundError as exc:
+            raise RuntimeError(f"Required domain file missing: {domain_yaml}") from exc
+        except (OSError, yaml.YAMLError) as exc:
+            raise RuntimeError(f"Cannot read domain config {domain_yaml}: {exc}") from exc
+
+        if not isinstance(payload, dict):
+            raise RuntimeError(f"Domain config must be a mapping: {domain_yaml}")
+        configured = payload.get("arxiv_categories")
+        if configured is None:
+            configured = [payload.get("arxiv_category") or "cs.CV"]
+        elif isinstance(configured, str):
+            configured = [configured]
+        elif not isinstance(configured, list):
+            raise RuntimeError(f"arxiv_categories must be a list: {domain_yaml}")
+
+        normalized = {str(category).strip() for category in configured if str(category).strip()}
+        if not normalized:
+            raise RuntimeError(f"No arXiv categories configured: {domain_yaml}")
+        categories.update(normalized)
+
+    return sorted(categories)
+
+
+def run_domain(
+    args: argparse.Namespace,
+    domain: str,
+    date: str,
+    *,
+    arxiv_cache: Path | None = None,
+) -> DomainResult:
     date_folder = date
     report_dir = ROOT / "reports" / domain / date_folder
     tmp_dir = report_dir / "tmp"
     phase1_json = tmp_dir / "phase1.json"
     llm_scores_json = tmp_dir / "llm_scores.json"
 
+    # A previous local run must never make an empty or failed fetch look successful.
+    phase1_json.unlink(missing_ok=True)
+    llm_scores_json.unlink(missing_ok=True)
+
     try:
-        _run(
-            [
-                sys.executable,
-                str(RANK_PIPELINE),
-                "--phase1-only",
-                "--domain",
-                domain,
-                "--start-date",
-                date,
-                "--work-dir",
-                str(ROOT),
-            ]
-            + _optional_phase1_args(args)
-        )
+        phase1_cmd = [
+            sys.executable,
+            str(RANK_PIPELINE),
+            "--phase1-only",
+            "--domain",
+            domain,
+            "--start-date",
+            date,
+            "--work-dir",
+            str(ROOT),
+        ]
+        if arxiv_cache is not None:
+            phase1_cmd += ["--arxiv-cache", str(arxiv_cache)]
+        _run(phase1_cmd + _optional_phase1_args(args))
         if not phase1_json.exists():
             return DomainResult(domain, True, "no phase1 output; likely no papers")
 
@@ -164,7 +208,23 @@ def main() -> None:
         raise SystemExit(f"No domains found in {domains_dir}")
 
     print(f"[daily] date={date} run_tz={run_tz} domains={', '.join(domains)}")
-    results = [run_domain(args, domain, date) for domain in domains]
+    cache_path = ROOT / "tmp" / "arxiv-cache" / f"{date}.json"
+    try:
+        categories = discover_arxiv_categories(domains_dir, domains)
+        build_arxiv_cache(
+            cache_path,
+            start_date=date,
+            end_date=date,
+            categories=categories,
+        )
+    except (RuntimeError, ValueError) as exc:
+        print(f"[daily] arXiv prefetch failed: {exc}", file=sys.stderr)
+        raise SystemExit(1) from exc
+
+    results = [
+        run_domain(args, domain, date, arxiv_cache=cache_path)
+        for domain in domains
+    ]
 
     print("\n[daily] summary")
     for result in results:
