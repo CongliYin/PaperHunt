@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2608.04459",
+  "title": "AdaptAgent: A Multi-agent, Domain-Guided Reasoning Framework for Code Adaptation",
+  "title_zh": "AdaptAgent：用于代码适配的多智能体、领域引导推理框架",
+  "authors": [
+    "Xiaokai Rong",
+    "Hridya Dhulipala",
+    "Aashish Yadavally",
+    "Tien N. Nguyen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T05:34:40Z",
+  "abs_url": "https://arxiv.org/abs/2608.04459v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04459",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Developers often need to adapt into their projects the code generated from LLMs or code snippets from online forums. However, integrating them into an existing repository remains challenging in a manual process. A successful integration typically requires more than copying code as a user must produce correct adapting changes at a designated location in the target repository. We formalize this as the code adaptation problem: given a snippet, functional intent, a target repository, and an adaptation location, generate a patch that adapts the snippet into the repository. We present AdaptAgent, a multi-agent, domain-guided reasoning framework for code adaptation. Rather than relying on single-shot prompting, AdaptAgent decomposes adaptation into specialized agents that communicate via typed artifacts: an Intent Summarizer extracts adaptation goals from Q&A text; a Policy Agent derives domain policies from six adaptation categories; a Domain Planner generates a self-ordered plan; a Context Miner distills sibling-method semantics from the target codebase; and a Code Adapter realizes the plan as a minimal unified diff, iteratively refined using a compiler-based Verifier. This division of labor enables robust, policy-aligned adaptations and supports adapting code snippets into a project. On a real-world dataset, AdaptAgent outperforms strong baselines in semantic correctness and produces patches that mirror developers' actual adaptation patterns. Our ablation study shows each agent's necessity, especially planning for code-hardening and exception-handling, and intent for logic customization.",
+  "abstract_zh": "开发者经常需要将 LLM 生成的代码或在线论坛中的代码片段集成到现有项目中，但这通常不能简单复制粘贴，而需要根据目标仓库的上下文、指定插入位置和功能意图生成正确补丁。本文将该任务形式化为 code adaptation：给定代码片段、功能意图、目标仓库和适配位置，生成可将片段融入仓库的 patch。作者提出 AdaptAgent，一个多智能体、领域引导的代码适配推理框架。它不依赖单次提示，而是将流程拆分为多个专门 agent，并通过类型化 artifacts 协作：Intent Summarizer 从问答文本中提取适配目标；Policy Agent 基于六类适配范畴推导领域策略；Domain Planner 生成自排序计划；Context Miner 从目标代码库中提炼 sibling-method 语义；Code Adapter 将计划实现为最小 unified diff，并通过基于编译器的 Verifier 迭代修正。实验表明，AdaptAgent 在真实数据集上较强基线具有更高语义正确性，生成的补丁也更接近开发者的真实适配模式。消融实验显示各 agent 均有必要，尤其是 planning 对代码加固和异常处理重要，intent 对逻辑定制重要。",
+  "key_points_zh": [
+    "论文将代码片段集成到现有仓库的问题形式化为 code adaptation：输入 snippet、功能意图、目标仓库和适配位置，输出可应用的 patch。",
+    "AdaptAgent 采用多智能体分工，而非 single-shot prompting，通过 Intent Summarizer、Policy Agent、Domain Planner、Context Miner、Code Adapter 和 Verifier 协同完成适配。",
+    "框架强调 domain-guided reasoning：利用六类适配策略、目标代码库 sibling-method 语义和编译器反馈，生成更符合项目风格与约束的最小 unified diff。",
+    "在真实世界数据集上，AdaptAgent 相比强基线取得更好的语义正确性，并能生成更接近开发者实际修改模式的补丁。",
+    "消融实验表明各模块均有贡献，其中规划能力对 code-hardening 与 exception-handling 尤为关键，意图提取对逻辑定制尤为重要。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.62,
+    "problem_significance": 0.66,
+    "potential_impact": 0.64,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.58,
+    "llm_avg": 0.6,
+    "comment": "AdaptAgent provides a practical verifier-in-the-loop orchestration pattern for code adaptation, though it is still a specialized coding workflow.",
+    "comment_zh": "AdaptAgent 提供了实用的带验证器编排模式来完成代码适配，但仍属于较专门的代码工作流。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.45529837524566663,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 8,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04459/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04459/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.251
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04459/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.312
+    }
+  ]
+}

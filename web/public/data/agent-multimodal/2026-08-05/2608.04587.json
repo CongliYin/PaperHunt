@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2608.04587",
+  "title": "MetaVideoAgent: Automated Video-Agent Evolution for Long-Form Video Understanding",
+  "title_zh": "MetaVideoAgent：面向长视频理解的自动化 Video-Agent 演化框架",
+  "authors": [
+    "Benlei Cui",
+    "Ruize Wang",
+    "Junjie Li",
+    "Jinhao Chen",
+    "Longtao Huang",
+    "Yinghao Chen",
+    "Yuwen Zhai",
+    "Jingqun Tang",
+    "Ruijian Jia",
+    "Weiwei Wu",
+    "Pengfei Sun",
+    "Haiwen Hong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T08:50:23Z",
+  "abs_url": "https://arxiv.org/abs/2608.04587v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04587",
+  "links": {
+    "github": "https://github.com/Alibaba-VELLDEPTH/MetaVideoAgent",
+    "project_page": null
+  },
+  "abstract_en": "Long-form video understanding requires locating sparse, question-relevant evidence in long, multimodal videos. Real-world video distributions differ in modality-specific information density, content structure, and evidence patterns, causing fixed video-agent designs to incur redundant processing or fail when mismatched. Extending automated agent evolution from text to video is challenging because full long-video execution makes candidate validation expensive, failures propagate across coupled evidence-processing stages, and complex preprocessing, perception tools, and localization strategies make code-level updates difficult to implement reliably. We introduce MetaVideoAgent, a framework that automatically evolves a video agent for a target distribution. It profiles information density and evidence requirements from sparsely sampled frames and associated queries to guide initial design, then compresses localized failures into independently executable minimal validation tasks. It constructs evidence-grounded Gold Paths, audits Student trajectories, aggregates recurring failures across samples, and attributes them to responsible modules. A modular agent representation constrains each update to the primary responsible module and its necessary dependencies. We further introduce VA-EvoBench, covering eight video distributions with separate evolution and held-out splits. With four evolution iterations per distribution, MetaVideoAgent improves every initial agent and raises macro-average accuracy from 38.44% to 51.47%, at an average evolution cost of 3.54M tokens per distribution. The evolved agents outperform the strongest prior fixed-design video agent by 6.39 percentage points while using the fewest tokens and video frames per question among the compared video agents. We will release all code and data to support reproducible research.",
+  "abstract_zh": "长视频理解需要在冗长的多模态视频中定位稀疏且与问题相关的证据。不同真实视频分布在模态信息密度、内容结构和证据模式上差异显著，使固定设计的 video agent 容易产生冗余处理，或因分布不匹配而失败。MetaVideoAgent 提出一种面向目标分布自动演化 video agent 的框架：先基于稀疏采样帧与相关查询分析信息密度和证据需求，以指导初始设计；随后将局部失败压缩为可独立执行的最小验证任务。该方法构建基于证据的 Gold Paths，审计 Student trajectories，跨样本聚合重复失败，并将其归因到具体模块。通过模块化 agent 表示，MetaVideoAgent 将每次更新限制在主要责任模块及其必要依赖上，从而提高代码级更新的可靠性。作者还提出 VA-EvoBench，覆盖 8 类视频分布，并划分 evolution 与 held-out splits。每个分布经过 4 次演化迭代后，MetaVideoAgent 能提升所有初始 agent，将宏平均准确率从 38.44% 提升到 51.47%；平均每个分布的演化成本为 3.54M tokens。演化后的 agents 比最强的既有固定设计 video agent 高 6.39 个百分点，同时在对比的 video agents 中每题使用的 tokens 和视频帧数最少。",
+  "key_points_zh": [
+    "MetaVideoAgent 针对目标视频分布自动演化 video agent，缓解固定 agent 在不同信息密度、结构和证据模式下的分布不匹配问题。",
+    "框架通过稀疏采样帧和查询进行分布画像，估计模态信息密度与证据需求，用于指导初始 agent 设计。",
+    "方法将长视频执行中的局部失败压缩为最小可验证任务，并通过 Gold Paths、Student trajectories 审计和跨样本失败聚合，将错误归因到责任模块。",
+    "模块化 agent 表示约束每次代码更新只作用于主要责任模块及必要依赖，降低复杂视频预处理、感知工具和定位策略更新的风险。",
+    "在 VA-EvoBench 的 8 个视频分布上，4 轮演化将宏平均准确率从 38.44% 提升至 51.47%，超过最强固定设计 video agent 6.39 个百分点，并使用更少 tokens 与视频帧。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.62,
+    "problem_significance": 0.45,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.48,
+    "llm_avg": 0.48,
+    "comment": "A solid automated long-video agent optimization framework with reusable benchmark value, but its focus is mostly offline long-form video QA rather than realtime multimodal agent interaction.",
+    "comment_zh": "这是一项较扎实的长视频代理自动优化工作并具备一定基准复用价值，但重点更多是离线长视频问答而非实时多模态代理交互。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.36228269883744174,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.48,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Alibaba-VELLDEPTH/MetaVideoAgent",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04587/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04587/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04587/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.982
+    }
+  ]
+}

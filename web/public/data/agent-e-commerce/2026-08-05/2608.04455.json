@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.04455",
+  "title": "Multi-Objective Ranking for Live-Streaming: Balancing Fresh and Delayed Signals with Segment-Aware Targeting",
+  "title_zh": "面向直播推荐的多目标排序：用分段感知目标平衡即时与延迟信号",
+  "authors": [
+    "Xiaoyi Gu",
+    "Julia Tavares",
+    "Eder Santana",
+    "Carlos Mendoza-Cardenas",
+    "Nikita Mishra",
+    "Saad Ali"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T05:14:39Z",
+  "abs_url": "https://arxiv.org/abs/2608.04455v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04455",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "One of the most challenging problems entertainment live-streaming services face in recommendation systems is that user behaviors are sparse and delayed, and interaction data exhibits bias for different user segments. Unlike e-commerce applications where user actions follow linear sequences, live-streaming viewers engage in multiple concurrent behaviors of watching, chatting, following, and spending, each occurring with varying delays. We address these challenges through three key contributions: 1) a delayed window approach that extends feedback collection beyond immediate responses, 2) a multi-model architecture that combines fresh and delayed signals, and a segment-aware targeting module that optimizes ranking scores differently across user lifecycle stages, and 3) Multi-gate Mixture-of-Experts (MMoE) integration that jointly models correlated targets while reducing model parameters by 41.9% compared to independent models. Online A/B testing demonstrates significant improvements, including a +0.09% increase in Daily Active Viewers (DAV), generating millions more annual active viewer days, and +0.56% increase in highly engaged viewers' capped Average Revenue Per User (ARPU). Viewer-segment targeting achieved an additional +0.15% DAV improvement for newer and less engaged viewers, while MMoE enhancement added +0.08% overall DAV and +0.27% new follows. The proposed system processes ranking requests with low latency, providing a scalable approach for balancing multiple business objectives across diverse user populations. In addition, we tested the multi-model architecture on the Twitch mobile live feed and achieved a +1.12% increase in positive user-channel interactions (clicks, follows, and likes), demonstrating applicability beyond the primary use case.",
+  "abstract_zh": "本文针对娱乐直播推荐中的稀疏、延迟反馈以及不同用户分群的数据偏差问题，提出一套可扩展的多目标排序系统。不同于电商场景中较线性的用户行为，直播用户会并行产生观看、聊天、关注、消费等多类行为，且反馈延迟各不相同。论文的核心方案包括：通过 delayed window 扩展反馈收集窗口，捕获即时响应之外的延迟行为；采用 multi-model architecture 融合 fresh signals 与 delayed signals；引入 segment-aware targeting module，根据用户生命周期阶段差异化优化排序分数；并集成 Multi-gate Mixture-of-Experts（MMoE）联合建模相关目标，相比独立模型减少 41.9% 参数量。在线 A/B 测试显示，该系统带来 +0.09% Daily Active Viewers（DAV）提升，对高参与用户的 capped ARPU 提升 +0.56%；面向新用户和低参与用户的分群目标优化额外带来 +0.15% DAV；MMoE 进一步贡献 +0.08% 整体 DAV 和 +0.27% 新关注数增长。系统在低延迟下处理排序请求，并在 Twitch mobile live feed 上验证了泛化性，使正向用户-频道交互（点击、关注、点赞）提升 +1.12%。",
+  "key_points_zh": [
+    "提出 delayed window 方法，将反馈收集从即时行为扩展到延迟行为，更适配直播中观看、聊天、关注、消费等多并发且不同延迟的互动模式。",
+    "设计融合 fresh signals 与 delayed signals 的 multi-model architecture，并通过 segment-aware targeting module 针对不同用户生命周期阶段差异化优化排序目标。",
+    "引入 MMoE 联合建模多个相关目标，在减少 41.9% 参数量的同时保持多目标建模能力，降低相较独立模型的部署成本。",
+    "在线 A/B 测试显示系统带来 +0.09% DAV、+0.56% 高参与用户 capped ARPU；分群目标优化额外提升新用户和低参与用户 DAV +0.15%。",
+    "在 Twitch mobile live feed 上迁移验证，正向用户-频道交互（点击、关注、点赞）提升 +1.12%，表明方法具备跨场景适用性。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.54,
+    "problem_significance": 0.55,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.34,
+    "lasting_value": 0.36,
+    "llm_avg": 0.458,
+    "comment": "A solid live-streaming ranking system paper, but its domain grounding is entertainment recommendation rather than e-commerce agents or shopping workflows.",
+    "comment_zh": "这是一篇扎实的直播排序系统论文，但其领域核心是娱乐推荐，而不是电商智能体或购物流程。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3315497212666585,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.458,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04455/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04455/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.797
+    }
+  ]
+}

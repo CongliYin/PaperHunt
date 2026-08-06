@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2608.04311",
+  "title": "Pun Intended: Multi-Agent Translation of Wordplay with Contrastive Learning and Phonetic-Semantic Embeddings",
+  "title_zh": "双关有意：结合对比学习与音义嵌入的多智能体文字游戏翻译",
+  "authors": [
+    "Russell Taylor",
+    "Benjamin Herbert",
+    "Michael Sana"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T00:40:42Z",
+  "abs_url": "https://arxiv.org/abs/2608.04311v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04311",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Translating wordplay across languages has long challenged both professional translators and machine translation systems. We investigate three approaches to translating puns from English to French by combining large language models with linguistic constraints for wordplay generation. Our baseline uses a large language model with feedback from a discriminator prompted with positive and negative French examples. Our guided reasoning pipeline uses combined phonetic-semantic embeddings to retrieve lexical candidates for wordplay generation. Finally, our multi-agent framework iteratively evaluates and regenerates candidate translations using specialized feedback. Moving beyond literal translation, our objective is to preserve the linguistic creativity, ambiguity, and humor of the source-text wordplay rather than simply reproduce its vocabulary. The multi-agent and guided chain-of-thought systems ranked first and second, respectively, in the CLEF JOKER 2025 Task 2 competition under expert human evaluation, despite only modest improvements in BLEU and BERTScore. These findings suggest that both explicit phonetic-semantic guidance and iterative multi-agent evaluation can improve LLM-based wordplay translation relative to direct discriminator-guided generation, particularly when balancing semantic fidelity, phonetic similarity, and natural target-language expression",
+  "abstract_zh": "本文研究如何将英语双关语翻译成法语，重点不再是逐字复现原文词汇，而是保留源文本中的语言创造性、歧义性与幽默效果。作者提出并比较了三种结合大语言模型与语言学约束的方法：基线方法使用 LLM 生成译文，并由一个基于正负法语示例提示的 discriminator 提供反馈；guided reasoning pipeline 利用音义联合嵌入（phonetic-semantic embeddings）检索适合生成文字游戏的词汇候选；multi-agent framework 则通过多个专门化反馈智能体迭代评估并重新生成候选译文。在 CLEF JOKER 2025 Task 2 中，multi-agent 与 guided chain-of-thought 系统在专家人工评测下分别排名第一和第二，尽管 BLEU 与 BERTScore 仅有小幅提升。结果表明，显式的音义引导与迭代式多智能体评估能提升 LLM 在双关翻译中的表现，尤其有助于在语义忠实、语音相似和目标语言自然度之间取得平衡。",
+  "key_points_zh": [
+    "任务聚焦 English-to-French 双关语翻译，目标是保留幽默、歧义和语言创造性，而非简单追求字面对应。",
+    "提出三类方法：discriminator 反馈基线、基于 phonetic-semantic embeddings 的 guided reasoning pipeline，以及迭代评估生成的 multi-agent framework。",
+    "音义联合嵌入用于检索可产生文字游戏效果的词汇候选，帮助模型同时考虑语音相似性与语义相关性。",
+    "multi-agent 框架通过专门化反馈反复评估和重写译文，更好地平衡语义忠实、法语自然度和双关效果。",
+    "在 CLEF JOKER 2025 Task 2 专家人工评测中，multi-agent 与 guided chain-of-thought 分获第一和第二；自动指标 BLEU、BERTScore 改进有限，显示人工评测对创意翻译更关键。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.28,
+    "problem_significance": 0.2,
+    "potential_impact": 0.24,
+    "paradigm_shift": 0.18,
+    "lasting_value": 0.22,
+    "llm_avg": 0.22399999999999998,
+    "comment": "This is a task-specific multi-agent translation system with little reusable agent infrastructure or trajectory-learning contribution.",
+    "comment_zh": "这是一篇任务特定的多智能体翻译系统论文，几乎没有可复用的智能体基础设施或轨迹学习贡献。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.22399999999999998,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04311/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04311/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "arxiv_id": "2608.04317",
+  "title": "Trident : How to Break Deep Reinforcement Learning Cyber Defenses (Agentic)",
+  "title_zh": "Trident：如何攻破基于深度强化学习的自主网络防御（Agentic）",
+  "authors": [
+    "Ryozo Masukawa",
+    "Ian Bryant",
+    "Armita Kazeminajafabadi",
+    "Sanggeon Yun",
+    "Hyunwoo Oh",
+    "SungHeon Jeong",
+    "Nathaniel D. Bastian",
+    "Mahdi Imani",
+    "Mohsen Imani"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T00:54:57Z",
+  "abs_url": "https://arxiv.org/abs/2608.04317v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04317",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Autonomous cyber defense systems based on Deep Reinforcement Learning (DRL) have attracted significant research attention, yet remain evaluated almost exclusively against static, heuristic red agents, leaving their robustness against adaptive threats critically understudied. Meanwhile, recent advances in Reinforcement Learning with Verifiable Rewards (RLVR) have improved LLM reasoning, but their integration into cybersecurity remains elusive due to the absence of suitable benchmark environments and interaction datasets. To bridge this gap, we introduce Trident, an agentic LLM red teaming framework comprising three components: a dynamic benchmark with isolated sandbox servers spanning CybORG CAGE 4 and CyberWheel, a dataset comprises over 13,000 high-fidelity red-blue interaction trajectories for RLVR, and a ``Code-as-Policy'' RLVR agentic architecture Trident Agentic). The latter reformulates red agent training as a contextual bandit via a tripartite Log Summarizer--Planner--Coder design, where a trainable Planner generates complete attack strategies from compressed execution logs, which a frozen Coder translates into executable Python policies deployed against live DRL defenders. Empirical evaluations reveal a fundamental brittleness in existing defenses: with a single trainable 7B planner, Trident reduces blue agent defensive performance by an average of 522% compared to static red agent baselines while autonomously discovering emergent behaviors such as decoy avoidance and adaptive state prioritization that static heuristics entirely fail to uncover.",
+  "abstract_zh": "本文指出，当前基于 Deep Reinforcement Learning（DRL）的自主网络防御系统大多只在静态、启发式红队智能体下评估，导致其面对自适应攻击者时的鲁棒性被严重低估。为填补这一空白，作者提出 Trident，一个 agentic LLM 红队框架，包含三部分：覆盖 CybORG CAGE 4 与 CyberWheel 的隔离沙箱动态基准、包含 13,000 余条高保真红蓝交互轨迹的 RLVR 数据集，以及采用 “Code-as-Policy” 的 RLVR agentic 架构 Trident Agentic。该架构将红队训练重构为 contextual bandit，并采用 Log Summarizer--Planner--Coder 三段式设计：可训练的 Planner 基于压缩执行日志生成完整攻击策略，冻结的 Coder 将策略转化为可执行 Python policy，并部署到真实 DRL 防御者环境中。实验显示，现有 DRL 防御存在根本脆弱性：仅使用一个可训练的 7B Planner，Trident 相比静态红队基线可使蓝队防御性能平均下降 522%，并能自动发现诱饵规避、自适应状态优先级等静态启发式方法无法揭示的涌现攻击行为。",
+  "key_points_zh": [
+    "提出 Trident，一个面向自主网络防御评测的 agentic LLM 红队框架，用于研究 DRL 防御者在自适应攻击下的真实鲁棒性。",
+    "构建动态 benchmark，基于隔离 sandbox server 覆盖 CybORG CAGE 4 与 CyberWheel，并发布包含 13,000+ 高保真红蓝交互轨迹的数据集，可用于 RLVR 训练。",
+    "设计 Trident Agentic 架构，将红队策略学习建模为 contextual bandit，并采用 Log Summarizer--Planner--Coder 流程生成可执行攻击 policy。",
+    "实验表明，单个可训练 7B Planner 即可使蓝队 DRL 防御性能相比静态红队基线平均下降 522%，暴露出现有防御评测的严重盲区。",
+    "Trident 能自动发现 decoy avoidance、自适应状态优先级等涌现行为，说明静态启发式红队不足以揭示真实攻击面。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.82,
+    "llm_avg": 0.8240000000000001,
+    "comment": "A strong agent-evaluation and training contribution combining sandboxed cyber environments, interaction trajectories, and RLVR agent policies.",
+    "comment_zh": "这是一篇很强的智能体评测与训练论文，结合了沙箱网络环境、交互轨迹和 RLVR 智能体策略。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36228269883744174,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8240000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04317/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.891
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04317/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04317/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04317/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.987
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2608.04562",
+  "title": "What Is a Skill Worth? Structure-Aware Shapley Valuation of Agent Skills",
+  "title_zh": "一个技能值多少？面向 Agent 技能的结构感知 Shapley 估值",
+  "authors": [
+    "Tao Li",
+    "Junfeng Liu",
+    "Qinghua Zhao",
+    "Yifan Li",
+    "Lei Wang",
+    "Bo Shao",
+    "Xuejun Liu",
+    "Linjun Shou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T07:56:26Z",
+  "abs_url": "https://arxiv.org/abs/2608.04562v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04562",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent skills are increasingly optimized by automated feedback loops, producing long structured artifacts whose internal value remains unclear. We study skill valuation: assigning credit to the internal units of a fixed skill, such as rules, examples, scripts, and heuristics, under a fixed agent and held-out task distribution. Skill valuation differs from data or prompt-span valuation because skill units are structured: they may depend on other units, belong to a document hierarchy, trigger agent behavior, and consume limited prompt context. We introduce SkillSV, a structure-aware Shapley-style framework for skill valuation. SkillSV compiles a skill into units, dependencies, and hierarchy, so that only valid counterfactual skills are evaluated. It uses paired deletion and length-neutral padding to separate content value from context cost, and estimates the resulting values with a rollout-budgeted estimator for noisy agent evaluations. On four agentic benchmarks, we assess the faithfulness, actionability, and explanation of SkillSV: it recovers unit interactions, preserves aggregate skill lift, and guides safe pruning and compression.",
+  "abstract_zh": "随着 Agent 技能越来越多地通过自动反馈循环进行优化，生成的技能往往是包含规则、示例、脚本和启发式等内部单元的长结构化文档，但这些单元各自的价值并不清楚。本文研究 skill valuation：在固定 Agent 和保留任务分布下，为固定技能的内部单元分配信用。与数据估值或 prompt 片段估值不同，技能单元具有结构性：它们可能相互依赖、隶属于文档层级、触发 Agent 行为，并占用有限的 prompt 上下文。作者提出 SkillSV，一个结构感知的 Shapley 风格技能估值框架。SkillSV 将技能编译为单元、依赖关系和层级结构，只评估有效的反事实技能；同时使用 paired deletion 和 length-neutral padding 区分内容价值与上下文成本，并通过 rollout-budgeted estimator 在有噪声的 Agent 评测中估计价值。在四个 Agentic benchmark 上，SkillSV 被用于评估技能估值的忠实性、可操作性和解释能力：它能够恢复单元交互、保持总体技能提升，并指导安全剪枝与压缩。",
+  "key_points_zh": [
+    "提出 SkillSV，将技能文档编译为内部单元、依赖关系和层级结构，从而只构造并评估结构有效的反事实技能。",
+    "区别于传统数据估值或 prompt-span valuation，SkillSV 显式考虑技能单元之间的依赖、层级归属、行为触发以及 prompt 上下文占用。",
+    "通过 paired deletion 与 length-neutral padding 分离单元内容价值和上下文长度成本，避免将压缩收益误认为语义贡献。",
+    "采用 rollout-budgeted estimator，在 Agent 评测存在随机性和预算受限的情况下估计 Shapley 风格价值。",
+    "在四个 Agentic benchmarks 上，SkillSV 能恢复单元交互、解释技能整体增益，并支持安全的技能剪枝与压缩。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.78,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.76,
+    "llm_avg": 0.748,
+    "comment": "SkillSV addresses a core agent-evolution bottleneck by valuing structured skill units through rollout-based counterfactual evaluation.",
+    "comment_zh": "SkillSV 通过基于 rollout 的反事实评估为结构化技能单元估值，切中了智能体演进的核心瓶颈。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.44848162417484216,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.748,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 13,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04562/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04562/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04562/fig3.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.952
+    }
+  ]
+}

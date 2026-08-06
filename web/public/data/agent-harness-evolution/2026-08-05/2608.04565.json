@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2608.04565",
+  "title": "Breadcrumbing Search Agents",
+  "title_zh": "Breadcrumbing Search Agents：面向搜索智能体的“面包屑式”长程攻击",
+  "authors": [
+    "Xuebin Li",
+    "Hanqing Zhao",
+    "Siyuan Liang",
+    "Kejiang Chen",
+    "Weiming Zhang",
+    "Dacheng Tao",
+    "Nenghai Yu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T07:57:27Z",
+  "abs_url": "https://arxiv.org/abs/2608.04565v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04565",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM-based search agents are widely used for information-seeking tasks, but their reliance on external tool returns introduces a critical security risk: web content retrieved during execution is untrusted, exposing agents to prompt injection and goal hijacking. Prior work on search-agent safety primarily focuses on static web-content injection, but modern agents issue follow-up queries and cross-check competing sources, so a single injected page is often diluted or rejected. We show that the channel delivering search and page observations is a fragile security boundary: beyond exposing the agent to a single poisoned page, a mediated search interface can repeatedly steer how the agent gathers evidence and forms its final answer. Under a constrained tool-intermediary threat model, appending only one controlled result per query can substantially increase attack success when the evidence is coordinated across the agent's trajectory. We study this setting with a strategy-driven long-horizon attack system and introduce Authority-Chain Hijack (ACH), an expert-refined strategy that turns isolated search-result and page-content manipulations into a coherent evidence chain across seemingly corroborating sources. ACH achieves the highest Overall ASR among all baselines, reaching 55.9% / 83.3% ASR / MaxN ASR on the full SafeSearch test split. We further introduce Trace-Guided Strategy Evolution (TGSE), which automatically improves attacker strategies from execution traces, replacing manual redesign with trace-driven refinement; its strongest single setting reaches 71.4% / 95.0% in held-out evaluation.",
+  "abstract_zh": "本文研究 LLM-based search agents 在信息检索任务中的安全风险。由于搜索智能体依赖外部搜索结果和网页内容作为观察输入，而这些内容本质上不可信，因此容易受到 prompt injection 与目标劫持攻击。不同于以往主要关注单个网页静态注入的工作，本文指出现代搜索智能体会进行多轮查询、追问和交叉验证，单个被污染页面往往会被稀释或拒绝。作者提出，搜索与页面观察通道本身是脆弱的安全边界：在受限的 tool-intermediary threat model 下，攻击者即使每次查询只追加一个受控结果，也能通过跨轨迹协调证据显著提升攻击成功率。论文提出 Authority-Chain Hijack（ACH），将搜索结果操控与页面内容操控组织成看似相互印证的证据链，在 SafeSearch 完整测试集上达到最高 Overall ASR，取得 55.9% ASR / 83.3% MaxN ASR。此外，论文提出 Trace-Guided Strategy Evolution（TGSE），可基于执行轨迹自动优化攻击策略，在 held-out evaluation 中最强单设置达到 71.4% ASR / 95.0% MaxN ASR。",
+  "key_points_zh": [
+    "指出搜索智能体的工具观察通道是脆弱安全边界：攻击不必依赖单个恶意网页，而可在多轮搜索中持续引导证据收集与最终回答。",
+    "提出受限 tool-intermediary threat model：攻击者每次查询仅能追加一个受控搜索结果，但可跨查询协调搜索结果与页面内容。",
+    "提出 Authority-Chain Hijack（ACH），通过构造看似来自多个权威来源的连贯证据链，实现长程目标劫持。",
+    "ACH 在 SafeSearch 完整测试集上达到 55.9% ASR / 83.3% MaxN ASR，优于所有基线攻击策略。",
+    "提出 Trace-Guided Strategy Evolution（TGSE），利用执行轨迹自动迭代攻击策略，在 held-out evaluation 中达到 71.4% ASR / 95.0% MaxN ASR。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.84,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.8,
+    "llm_avg": 0.828,
+    "comment": "This is strong agent-security work because it studies trajectory-level search manipulation and trace-guided adversarial strategy evolution.",
+    "comment_zh": "这是一篇很强的智能体安全论文，研究了轨迹级搜索操控和基于执行轨迹的攻击策略演化。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.828,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04565/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.944
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04565/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04565/fig3.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.853
+    }
+  ]
+}

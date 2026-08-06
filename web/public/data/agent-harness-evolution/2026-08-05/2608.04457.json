@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2608.04457",
+  "title": "Eigenius: A Typed Knowledge-Graph DBMS with Epistemic Stratification and Institution-Mediated Reasoning",
+  "title_zh": "Eigenius：具备认知分层与机构中介推理的类型化知识图谱 DBMS",
+  "authors": [
+    "Hans-Martin Will",
+    "Allen L. Brown",
+    "Matthew Fuchs"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T05:28:22Z",
+  "abs_url": "https://arxiv.org/abs/2608.04457v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04457",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As \"AI Scientists\" emerge to drive research via the Model Context Protocol (MCP), systems relying on ephemeral scripts will fail. The sheer scale of stateful, interconnected evidence requires a machine-walkable warranty grounded in a purpose-built database architecture. Eigenius is an open-source, typed knowledge-graph DBMS built on a single premise: answering the audit question (\"what do you know, and what is your warranty?\") requires a unified kernel. By tightly coupling the type system, storage engine, and integration protocol, Eigenius turns data provenance into a structural invariant rather than a property reconstructed across subsystem boundaries. The kernel rests on three pillars: a dependent type theory woven through the core, institutions acting as strongly typed integration boundaries, and a content-addressed immutable storage layer. On this foundation, epistemic status (declared/observed/derived/verified) is enforced as a strict commit-time invariant. Cross-system translations (comorphisms) are checked at commit and materialized directly into the graph as durable, first-class resources. To eliminate O(N^2) polystore bottlenecks, shared on-chain intermediate representations (IRs) collapse multi-system translations to identity. Crucially, this architecture unifies both domains of scientific epistemology: it relies on justification logic for empirical science, while embedding a fast, in-process term checker to safely evaluate formal mathematical proofs (via Lean 4) without IPC overhead. In an end-to-end recomputation of a published Nature study from fragile scripts to a materialized evidence graph, all 52 derived conclusions hold from pinned data, surfacing four machine-checked discrepancies in the original study.",
+  "abstract_zh": "Eigenius 是一个开源的类型化知识图谱数据库管理系统（DBMS），面向由 AI Scientists 和 Model Context Protocol（MCP）驱动的科研自动化场景。论文认为，依赖临时脚本的系统难以支撑大规模、有状态、相互关联的科学证据管理；科研系统必须能够回答“你知道什么，以及你的保证依据是什么？”这一审计问题。Eigenius 通过统一类型系统、存储引擎和集成协议，将数据溯源从跨子系统事后重建的属性，提升为数据库内核的结构性不变量。其核心由三部分构成：嵌入内核的依赖类型理论、作为强类型集成边界的 institutions，以及内容寻址的不可变存储层。系统在提交时强制维护认知状态（declared/observed/derived/verified）不变量，并将跨系统翻译（comorphisms）检查后物化为图中的一等持久资源。为避免多存储系统中的 O(N^2) 翻译瓶颈，Eigenius 使用共享链上中间表示（IR）将多系统翻译退化为恒等映射。同时，它结合 justification logic 支持经验科学证据论证，并内嵌 Lean 4 项检查器以低开销验证形式化数学证明。论文在复现一篇 Nature 研究时，将脆弱脚本转换为物化证据图，验证了全部 52 个派生结论，并发现原研究中 4 处机器可检查的不一致。",
+  "key_points_zh": [
+    "提出 Eigenius：一个将类型系统、存储引擎和集成协议紧耦合的开源 typed knowledge-graph DBMS，用于支撑 AI Scientists 场景下的大规模科研证据管理。",
+    "将数据 provenance 设计为内核级结构不变量，并在 commit-time 强制检查 declared、observed、derived、verified 等 epistemic status。",
+    "使用 institutions 作为强类型系统集成边界，跨系统 comorphisms 在提交时验证，并作为持久一等资源物化进知识图谱。",
+    "通过共享 on-chain IR 避免 polystore 中多系统两两转换导致的 O(N^2) 瓶颈，将部分翻译简化为 identity。",
+    "同时支持经验科学与形式数学：前者基于 justification logic，后者通过进程内 Lean 4 term checker 安全验证证明；在 Nature 研究复现中确认 52 个结论并发现 4 处不一致。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.61,
+    "problem_significance": 0.58,
+    "potential_impact": 0.6,
+    "paradigm_shift": 0.52,
+    "lasting_value": 0.66,
+    "llm_avg": 0.5940000000000001,
+    "comment": "Eigenius proposes durable provenance infrastructure relevant to auditable agentic science, but it is closer to a knowledge-graph DBMS than an agent harness.",
+    "comment_zh": "Eigenius 提出了与可审计智能体科学相关的持久溯源基础设施，但更接近知识图谱数据库而非智能体运行框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.5940000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04457/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04457/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.849
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04457/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.905
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04457/fig4.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.692
+    }
+  ]
+}

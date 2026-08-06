@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2608.05141",
+  "title": "OctoLong: Mid-Training On Cross-Repository Code Contexts Enhances Long-Context Modeling",
+  "title_zh": "OctoLong：在跨代码仓库上下文上进行中期训练以增强长上下文建模",
+  "authors": [
+    "Indraneil Paul",
+    "Falko Helm",
+    "Goran Glavaš",
+    "Iryna Gurevych"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T17:58:15Z",
+  "abs_url": "https://arxiv.org/abs/2608.05141v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.05141",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Context lengths of language models (LMs) have dramatically increased, driven by the demands for in-context learning, self-improvement, and long-horizon agentic workflows. Existing long-context corpora, however, are dominated by books, academic articles, and code repositories, which are finite resources and often scarce in long-distance dependencies. In this work, we introduce OctoLong, a context engineering pipeline that instruments an AST parser, a language server backend, and a package manager to facilitate the recursive retrieval of code references, enabling the curation of dependency-rich code contexts of millions of tokens in length. We then train OctoLong-Instruct, a suite of capable long-context open LMs, derived from base models ranging in size from 600M to 14B parameters, via context-extension mid-training on a ~50B-token mixture containing ~6.2B tokens of OctoLong code contexts, followed by ~10B tokens of instruction tuning. Our training ablations and experimental evaluations against 18 state-of-the-art open-weight long-context LMs show that supplanting just 12% of traditional context-extension corpora with OctoLong data yields substantial gains in long-range retrieval, long-term state tracking, repository-level code understanding, and downstream agentic tasks, while also enhancing API usage in short-context coding scenarios.",
+  "abstract_zh": "随着上下文学习（in-context learning）、自我改进和长周期智能体工作流的需求增长，语言模型（LM）的上下文长度显著提升。然而，现有长上下文语料主要由书籍、学术论文和代码仓库构成，这些资源有限，且往往缺乏长距离依赖。本文提出 OctoLong：一种上下文工程流水线，结合 AST parser、language server backend 和 package manager，递归检索代码引用，从而构建长度可达数百万 token、依赖关系丰富的代码上下文。基于此，作者训练了 OctoLong-Instruct，一组开放权重长上下文语言模型，参数规模覆盖 600M 到 14B。训练流程包括在约 50B token 混合语料上进行上下文扩展中期训练，其中约 6.2B token 来自 OctoLong 代码上下文，随后再进行约 10B token 的指令微调。消融实验和对 18 个先进开放权重长上下文模型的评测表明，仅用 OctoLong 数据替换传统上下文扩展语料的 12%，即可在长程检索、长期状态跟踪、仓库级代码理解和下游智能体任务上带来显著提升，同时也改善短上下文代码场景中的 API 使用能力。",
+  "key_points_zh": [
+    "OctoLong 通过 AST parser、language server backend 和 package manager 递归追踪代码引用，构建跨仓库、依赖密集、百万 token 级别的长代码上下文。",
+    "作者基于 600M 到 14B 参数的基础模型训练 OctoLong-Instruct，先进行约 50B token 的上下文扩展中期训练，再进行约 10B token 指令微调。",
+    "训练语料中仅约 6.2B token 来自 OctoLong，占传统上下文扩展语料替换比例约 12%，但带来明显性能增益。",
+    "相较 18 个先进开放权重长上下文 LM，OctoLong-Instruct 在长程检索、长期状态跟踪、仓库级代码理解和智能体任务上表现更强。",
+    "OctoLong 不只提升长上下文能力，也增强了短上下文代码生成场景中的 API 使用能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.48,
+    "problem_significance": 0.45,
+    "potential_impact": 0.52,
+    "paradigm_shift": 0.34,
+    "lasting_value": 0.5,
+    "llm_avg": 0.458,
+    "comment": "The data pipeline may help coding agents indirectly, but the paper is primarily long-context model training rather than agent harness evolution.",
+    "comment_zh": "该数据管线可能间接帮助代码智能体，但论文核心仍是长上下文模型训练而非智能体运行框架演进。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.458,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05141/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05141/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05141/fig3.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05141/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.964
+    }
+  ]
+}

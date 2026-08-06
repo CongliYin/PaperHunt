@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2608.04504",
+  "title": "GeoReward: Mitigating Contextual Variable Overestimation in Vision-Language Models for Cross-Market Preference Prediction",
+  "title_zh": "GeoReward：缓解视觉语言模型在跨市场偏好预测中的上下文变量高估问题",
+  "authors": [
+    "Shuo Liu",
+    "Huixiang Cai",
+    "Weiru Zhang",
+    "Xiaoyi Zeng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T06:41:28Z",
+  "abs_url": "https://arxiv.org/abs/2608.04504v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04504",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Vision-language models excel in many multimodal tasks but remain prone to a subtle yet impactful failure mode: they tend to overestimate dominant visual-textual cues while underestimating sparse but decision-critical contextual variables. This issue, which we term Contextual Variable Overestimation (CVE), becomes particularly evident in real-world applications such as predicting advertisement image preferences across diverse geographic markets. For instance, when a VLM is asked to choose between two product images tailored for different countries, it often defaults to a consistent output, ignoring ground-truth regional variations. This collapse occurs because pervasive high-volume signals, such as product attributes and dense image patches, overwhelm the few but critical tokens that encode market-specific context. To address CVE, we first collect a new multimodal dataset of real advertising creatives and their click-through performance across multiple countries. We then introduce GeoReward, a reward model designed to predict ad image preferences across diverse geographic markets. GeoReward integrates three purpose-built mechanisms: (1) Market-Aware Retrieval Augmentation, (2) Context-Guided Visual Modulation, (3) Selective Sensitivity Loss. Furthermore, we demonstrate how GeoReward can guide the fine-tuning of RL for a VLM to generate background designs for text-to-image models, producing market-aware advertising creatives. Experiments validate that our framework mitigates CVE and outperforms existing baselines. This work not only diagnoses a systematic bias in VLMs toward dominant perceptual features but also delivers a targeted solution for applications where sparse contextual variables govern decision-making.",
+  "abstract_zh": "本文指出 Vision-Language Models（VLMs）在多模态决策中存在一种隐蔽但重要的失效模式：模型容易过度依赖显著的视觉-文本线索，却忽视稀疏但对决策关键的上下文变量。作者将其称为 Contextual Variable Overestimation（CVE）。在跨地理市场的广告图片偏好预测中，该问题尤为明显：当 VLM 需要在面向不同国家的产品图之间做选择时，往往输出固定偏好，忽略真实点击表现中的区域差异。为解决该问题，作者构建了一个包含真实广告素材及其多国 click-through performance 的多模态数据集，并提出 GeoReward，一个用于预测不同地理市场广告图片偏好的 reward model。GeoReward 包含三项机制：Market-Aware Retrieval Augmentation、Context-Guided Visual Modulation 和 Selective Sensitivity Loss，用于增强市场上下文建模、调制视觉特征并提升模型对关键稀疏变量的敏感性。进一步地，GeoReward 还能指导 VLM 的 RL fine-tuning，用于为 text-to-image models 生成更具市场感知能力的广告背景设计。实验表明，该框架有效缓解 CVE，并优于现有 baselines。",
+  "key_points_zh": [
+    "提出 Contextual Variable Overestimation（CVE）：VLMs 容易高估密集、显著的视觉或文本线索，低估稀疏但关键的市场上下文变量。",
+    "构建新的真实广告多模态数据集，包含 advertising creatives 及其在多个国家市场中的 click-through performance，用于跨市场偏好预测评估。",
+    "提出 GeoReward reward model，结合 Market-Aware Retrieval Augmentation、Context-Guided Visual Modulation 和 Selective Sensitivity Loss，以增强对地理市场差异的建模能力。",
+    "实验显示 GeoReward 能缓解 VLM 在跨国家广告偏好预测中的偏好坍缩问题，并在相关任务上超过现有 baselines。",
+    "进一步展示 GeoReward 可用于指导 VLM 的 RL fine-tuning，帮助 text-to-image models 生成更符合目标市场偏好的广告背景设计。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.74,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.56,
+    "lasting_value": 0.69,
+    "llm_avg": 0.6980000000000001,
+    "comment": "A useful VLM reward-modeling contribution for market-aware advertising creatives, though it is more ad-preference optimization than core e-commerce search or shopping assistance.",
+    "comment_zh": "这是一项面向地域化广告素材偏好的有价值VLM奖励建模工作，但更偏广告优化而非核心电商搜索或购物助手。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6980000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04504/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04504/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.975
+    }
+  ]
+}

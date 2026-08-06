@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2608.04570",
+  "title": "The Personalization Mirage: How LLMs Fabricate User Profiles, and Why Self-Monitoring Misleads",
+  "title_zh": "个性化幻象：LLM 如何编造用户画像，以及为何自我监控会误导",
+  "authors": [
+    "Yushi Sun",
+    "Yanjie Zhang",
+    "Rui Sheng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T08:00:54Z",
+  "abs_url": "https://arxiv.org/abs/2608.04570v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04570",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Personalized LLMs with persistent memory are increasingly deployed, yet the faithfulness of their user models remains unexamined. We study over-inference (OI): the phenomenon where LLMs fabricate user attributes beyond what evidence supports. We introduce MirageBench, comprising 150 personas balanced across stereotypical, counter-stereotypical, and neutral profiles, 6 personalization tasks spanning an ``imagination gradient'', a four-way faithfulness taxonomy operationalized by an independent judge (validated against a blind human annotator on 400 claims: Cohen's kappa = 0.863 four-class, kappa = 0.900 binary), and a leaderboard of 12 models across 7 families on 143616 judged claims. We find that over-inference is pervasive: every one of the 12 models over-infers 35%--49% of its claims (cross-model mean 41.6%; claim-weighted 41.8%), with no model in this evaluation escaping it. Most strikingly, we surface a Self-Monitoring Inversion: at the model-selection level, models' self-assessed OI is negatively rank-correlated with their judge-measured OI (rho = -0.60, p = 0.044; exploratory, wide bootstrap CI [-0.90, +0.06], n = 12). The models that report the least over-inference tend to be flagged as fabricating the most, so self-reported confidence is a misleading signal for comparing models, even though within a single model self-audit still ranks that model's own claims moderately well (AUROC 0.58--0.83). We further show that OI is task-dependent (27%--59%) and that, in a multi-turn pilot, inferred attributes accumulate approximately linearly with little revision. MirageBench positions external verification, rather than model self-report, as a more reliable foundation for trustworthy personalization.",
+  "abstract_zh": "本文研究带有持久记忆的个性化 LLM 中一个尚未被充分检验的问题：用户模型是否忠实于证据。作者提出 over-inference（OI，过度推断），指模型生成超出证据支持范围的用户属性。为系统评测该现象，论文引入 MirageBench，包含 150 个 personas，覆盖刻板、反刻板与中性用户画像；设计 6 类个性化任务，形成从低到高的“想象梯度”（imagination gradient）；并用独立 judge 操作化四分类忠实性 taxonomy。该 judge 在 400 条 claims 上与盲标人类标注高度一致，四分类 Cohen's kappa 为 0.863，二分类为 0.900。作者评测了 7 个模型家族的 12 个模型，共 143,616 条被判定 claims。结果显示，OI 普遍存在：所有 12 个模型都有 35%–49% 的 claims 被判为过度推断，跨模型均值为 41.6%，按 claim 加权为 41.8%。更重要的是，论文发现 Self-Monitoring Inversion：在模型选择层面，模型自评的 OI 与 judge 测得的 OI 呈负秩相关（rho = -0.60, p = 0.044），即自称最少过度推断的模型，往往被外部 judge 判定为编造最多。因此，自我报告置信度不适合作为跨模型比较信号，尽管在单个模型内部，自我审计仍能中等程度地区分自身 claims 的风险（AUROC 0.58–0.83）。此外，OI 具有明显任务依赖性（27%–59%），多轮 pilot 中推断属性近似线性累积且很少被修正。MirageBench 强调：可信个性化应依赖外部验证，而非模型自我报告。",
+  "key_points_zh": [
+    "提出 over-inference（OI）概念：LLM 在个性化场景中生成超出证据支持的用户属性，导致用户画像失真。",
+    "构建 MirageBench：包含 150 个 personas、6 类个性化任务、四分类忠实性 taxonomy，并在 12 个模型、143,616 条 claims 上进行评测。",
+    "实验发现 OI 普遍存在：所有模型都有 35%–49% 的 claims 被判为过度推断，跨模型平均约 41.6%。",
+    "发现 Self-Monitoring Inversion：模型自评 OI 与外部 judge 测得 OI 呈负相关，说明模型自我报告不适合用于跨模型可信度比较。",
+    "OI 随任务变化显著，并会在多轮对话中近似线性累积且很少修正，提示个性化记忆系统需要外部验证机制。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.55,
+    "problem_significance": 0.65,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.48,
+    "lasting_value": 0.6,
+    "llm_avg": 0.5720000000000001,
+    "comment": "MirageBench is a relevant external-verification benchmark for persistent memory personalization, but it is more diagnostic than infrastructural.",
+    "comment_zh": "MirageBench 是面向持久记忆个性化的相关外部验证基准，但更偏诊断而非基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.8702857181008377,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.5720000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 35,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04570/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04570/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.942
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04570/fig3.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04570/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.977
+    }
+  ]
+}

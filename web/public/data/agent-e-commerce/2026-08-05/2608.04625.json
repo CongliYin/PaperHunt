@@ -1,0 +1,93 @@
+{
+  "arxiv_id": "2608.04625",
+  "title": "A/B Agent: A Self-Evolving Agent for Strategy Iteration in Industrial A/B Testing",
+  "title_zh": "A/B Agent：用于工业 A/B 测试中策略迭代的自进化 Agent",
+  "authors": [
+    "Zhuohang Jiang",
+    "Yuxin Chen",
+    "Yongsen Pan",
+    "Zheng Hu",
+    "Wenqi Fan",
+    "Qing Li",
+    "Hongyang Wang",
+    "Jun Wang",
+    "Wenwu Ou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T09:28:43Z",
+  "abs_url": "https://arxiv.org/abs/2608.04625v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04625",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Industrial recommendation strategy iteration heavily relies on large-scale A/B experimentation. Traditional tuning requires experts to repeatedly design strategies, configure experiments, analyze results, and adjust parameters, making the process labor-intensive and time-consuming. Meanwhile, valuable knowledge from historical experiments is often fragmented, making systematic reuse difficult through manual expert effort alone. Existing RAG agents partially alleviate this burden by retrieving prior strategies, but typically organize experience in a flat manner, overlooking the hierarchical relationships among business scenarios, recommendation stages, optimization objectives, and experimental contexts. This often results in mismatched retrieval and limited cross-scenario transfer, while preventing agents from continuously refining strategies and parameters through sequential A/B feedback. % To address these limitations, we propose A/B Agent, a closed-loop A/B agent for industrial recommendation strategy optimization. The framework comprises three tightly coupled core components: Historical Strategy Knowledge Organization, Autonomous Target-Aware Strategy Generation, and Experiment-Guided Strategy Self-Evolution. It organizes historical strategies into a hierarchical experience tree, retrieves transferable evidence through multi-path Tree-RAG to generate executable strategies, and continuously analyzes online A/B feedback to guide autonomous tuning and update the experience tree for self-evolution. Extensive offline and online evaluations demonstrate its effectiveness, including a 4.829% improvement in GMV in a real-world short-video e-commerce recommendation system while maintaining positive gains across all guardrail metrics.",
+  "abstract_zh": "本文提出 A/B Agent，一个面向工业推荐策略优化的闭环 A/B Agent。针对传统推荐策略迭代依赖专家反复设计策略、配置实验、分析结果和调参，以及历史实验知识碎片化、难以系统复用的问题，A/B Agent 将历史策略组织为层次化经验树，显式建模业务场景、推荐阶段、优化目标与实验上下文之间的关系。其核心包括 Historical Strategy Knowledge Organization、Autonomous Target-Aware Strategy Generation 和 Experiment-Guided Strategy Self-Evolution 三部分：通过 multi-path Tree-RAG 检索可迁移证据并生成可执行策略，再根据线上 A/B 反馈持续分析、自动调参并更新经验树，实现策略自进化。离线与线上实验表明，该方法在真实短视频电商推荐系统中带来 4.829% GMV 提升，同时所有护栏指标保持正向收益。",
+  "key_points_zh": [
+    "提出 A/B Agent，将工业推荐中的 A/B 策略迭代建模为闭环自进化过程，减少专家手工设计、分析和调参成本。",
+    "构建层次化 Historical Strategy Knowledge Organization，以经验树组织业务场景、推荐阶段、优化目标和实验上下文，缓解传统 RAG 扁平检索导致的错配问题。",
+    "设计 multi-path Tree-RAG，从经验树中检索跨场景可迁移证据，并结合目标感知生成可执行的推荐策略。",
+    "通过 Experiment-Guided Strategy Self-Evolution 利用线上 A/B 反馈持续分析实验结果、自动调整参数，并反向更新经验树。",
+    "在真实短视频电商推荐系统中线上验证取得 4.829% GMV 提升，且所有 guardrail metrics 均保持正向收益。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8620000000000001,
+    "comment": "A strong commerce-agent paper that closes the loop between historical A/B knowledge, recommendation strategy generation, and online GMV-driven self-optimization.",
+    "comment_zh": "这是一篇很强的电商智能体论文，将历史A/B知识、推荐策略生成和线上GMV驱动的自我优化形成闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8620000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04625/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.908
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04625/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.941
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04625/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04625/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.971
+    }
+  ]
+}

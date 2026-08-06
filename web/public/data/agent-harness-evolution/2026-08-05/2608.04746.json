@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2608.04746",
+  "title": "Caching for the Future: Scrub Jay Episodic Memory Principles for Agent Memory Systems",
+  "title_zh": "面向未来的缓存：借鉴 Scrub Jay 情景记忆原则的 Agent 记忆系统",
+  "authors": [
+    "Kartikey Singh Bhandari",
+    "Aarya Wadhwani",
+    "Dhruv Kumar",
+    "Pratik Narang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T12:12:44Z",
+  "abs_url": "https://arxiv.org/abs/2608.04746v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04746",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM agents that persist across sessions accumulate stored memories whose validity varies enormously by content type, yet existing memory architectures treat all memories as equally persistent and systematically contaminate retrieved context with outdated facts. We show that per-memory, type-conditioned temporal decay, a property of western scrub jay episodic memory, can be operationalized as an auto-classified coefficient $π_i$ in an external LLM-agent memory store, yielding ScrubJay-MEM: each memory is encoded as a jointly-bound What--Where--When tuple with an estimated perishability $π_i$ and utility horizon $τ_i$, retrieved by query-adaptive scoring, and revised retroactively at $O(1)$ LLM calls per update. We introduce the Temporal Generalization Test (TGT), a benchmark with held-out retention intervals and a Generalization Gap (GenGap) metric. On TGT, ScrubJay-MEM is the only retrieval-based system with substantially positive GenGap ($+0.108$); on MemoryAgentBench EventQA-64k it improves F1 by $+2.66$ over Mem0 and $+3.09$ over Qwen3-Embedding-4B under a llm backbone. A decay ablation collapses GenGap by $5.7\\times$, establishing type-conditioned decay as necessary for the result. Gains narrow under stronger backbones and reverse on fact-consolidation tasks, scoping the contribution to temporal reasoning over perishable facts.",
+  "abstract_zh": "本文关注跨会话运行的 LLM agent 记忆污染问题：不同类型记忆的有效期差异很大，但现有记忆架构通常将所有记忆视为同等持久，导致检索上下文混入过时事实。作者借鉴 western scrub jay 的情景记忆机制，将“按记忆类型调节的时间衰减”建模为外部 LLM-agent 记忆库中的自动分类系数 π_i，提出 ScrubJay-MEM。该方法把每条记忆编码为绑定的 What--Where--When 三元组，并估计其易腐性 π_i 与效用期限 τ_i；检索时采用查询自适应打分，并能以每次更新 O(1) 次 LLM 调用进行回溯修订。论文还提出 Temporal Generalization Test（TGT），包含保留的时间间隔，并使用 Generalization Gap（GenGap）衡量时间泛化能力。实验显示，ScrubJay-MEM 是 TGT 上唯一取得显著正 GenGap（+0.108）的检索式系统；在 MemoryAgentBench EventQA-64k 上，相比 Mem0 提升 F1 +2.66，相比 Qwen3-Embedding-4B 在相同 LLM backbone 下提升 +3.09。消融实验表明，去除衰减机制会使 GenGap 下降 5.7 倍，说明类型条件时间衰减是关键因素。不过，在更强 backbone 下收益缩小，并且在事实整合类任务上可能反转，表明其主要适用于可过期事实的时间推理场景。",
+  "key_points_zh": [
+    "提出 ScrubJay-MEM，将每条 agent 记忆表示为 What--Where--When 三元组，并附加易腐性 π_i 与效用期限 τ_i，用于建模不同类型事实的时效性。",
+    "核心机制是 type-conditioned temporal decay：根据记忆类型自动估计时间衰减系数，使检索系统更少召回已过期或失效的信息。",
+    "提出 Temporal Generalization Test（TGT）与 GenGap 指标，用于评估模型在未见过保留时间间隔上的时间泛化能力。",
+    "实验中 ScrubJay-MEM 在 TGT 上取得显著正 GenGap（+0.108），并在 MemoryAgentBench EventQA-64k 上相较 Mem0 和 Qwen3-Embedding-4B 获得 F1 提升。",
+    "消融显示去除衰减后 GenGap 大幅下降 5.7 倍，但方法收益在更强 LLM backbone 下变小，且不适合所有事实整合任务。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.58,
+    "problem_significance": 0.57,
+    "potential_impact": 0.55,
+    "paradigm_shift": 0.46,
+    "lasting_value": 0.56,
+    "llm_avg": 0.544,
+    "comment": "The paper offers a plausible reusable memory decay mechanism for persistent agents, though its impact is scoped to temporal memory retrieval.",
+    "comment_zh": "论文提出了可复用的持久智能体记忆衰减机制，但影响范围主要限于时效性记忆检索。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.544,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04746/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04746/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.972
+    }
+  ]
+}

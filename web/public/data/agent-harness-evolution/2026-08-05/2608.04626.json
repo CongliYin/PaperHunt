@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2608.04626",
+  "title": "Blockchain Empowered Trustworthy Agent Networks: Foundations, Taxonomy, and Future Directions",
+  "title_zh": "区块链赋能可信智能体网络：基础、分类与未来方向",
+  "authors": [
+    "Liehuang Zhu",
+    "Yuhang Li",
+    "Tianxing Wang",
+    "Zhihao Chen",
+    "Ke Li",
+    "Hongyi Liu",
+    "Yajie Wang",
+    "Lei Xu",
+    "Peng Jiang",
+    "Zijian Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T09:32:35Z",
+  "abs_url": "https://arxiv.org/abs/2608.04626v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04626",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "AI agents are evolving from isolated task executors into networked autonomous entities that can communicate, delegate tasks, invoke tools, access external knowledge, and participate in cross-platform service and economic workflows. This evolution gives rise to open agent networks, where heterogeneous agents owned by different stakeholders interact without naturally shared infrastructures for identity, authorization, auditability, reputation, or settlement. This survey and tutorial article reviews the literature over the period 1980--2026 on the evolution from classical multi-agent systems to open agent networks, with a particular focus on LLM-based autonomous agents, agent interoperability protocols, Internet-of-Agents infrastructures, and blockchain-enabled trust mechanisms. We first review this evolution and show how the trust boundary expands from individual execution to cross-agent, cross-platform, and cross-organizational interaction. We then identify a network-level trust crisis that cannot be fully addressed by single-agent safety mechanisms or closed multi-agent coordination techniques, and develop a five-dimensional taxonomy covering entity and capability trust, authorization and delegation trust, information and provenance trust, coordination and group-robustness trust, and accountability and settlement trust. Based on this taxonomy, we examine how blockchain can provide shared identity, verifiable authorization, tamper-evident provenance, auditable collaboration, incentive alignment, and value settlement for trustworthy agent networks. We further synthesize the mapping between agent-network risks, trust requirements, and blockchain-enabled mechanisms, and clarify the role of blockchain as a shared trust layer rather than a replacement for agent security, semantic verification, privacy protection, or robust reasoning.",
+  "abstract_zh": "本文是一篇综述与教程，回顾了 1980—2026 年从经典 Multi-Agent Systems 到开放 Agent Networks 的演进，重点关注 LLM-based autonomous agents、agent interoperability protocols、Internet-of-Agents infrastructures 以及 blockchain-enabled trust mechanisms。作者指出，AI agents 正从孤立任务执行器发展为可通信、委托任务、调用工具、访问外部知识，并参与跨平台服务与经济流程的网络化自治实体。在由不同利益相关方拥有的异构 agents 组成的开放网络中，身份、授权、审计、声誉与结算等可信基础设施并非天然共享，由此产生网络级信任危机。论文提出五维分类框架：实体与能力信任、授权与委托信任、信息与溯源信任、协作与群体鲁棒性信任、问责与结算信任，并系统分析 blockchain 如何作为共享信任层，为 agent networks 提供共享身份、可验证授权、防篡改溯源、可审计协作、激励对齐与价值结算。作者同时强调，blockchain 并不能替代 agent security、semantic verification、privacy protection 或 robust reasoning，而应作为开放智能体网络中的跨组织信任基础设施。",
+  "key_points_zh": [
+    "论文将 AI agents 的演进脉络从经典 Multi-Agent Systems 扩展到开放 Agent Networks，强调信任边界已从单体执行扩大到跨 agent、跨平台、跨组织交互。",
+    "作者提出开放智能体网络中的“网络级信任危机”：单个 agent 的安全机制或封闭式多智能体协作方法，难以解决身份、授权、审计、声誉和结算等共享信任问题。",
+    "论文构建五维信任分类法，包括 entity and capability trust、authorization and delegation trust、information and provenance trust、coordination and group-robustness trust、accountability and settlement trust。",
+    "区块链被定位为共享信任层，可支持去中心化身份、可验证授权、防篡改 provenance、可审计协作、激励对齐与价值结算，从而增强开放 Agent Networks 的可信性。",
+    "论文明确 blockchain 的边界：它不能替代 agent 安全、语义验证、隐私保护或鲁棒推理，而应与这些机制互补，共同支撑可信智能体网络。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.42,
+    "problem_significance": 0.62,
+    "potential_impact": 0.48,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.55,
+    "llm_avg": 0.49000000000000005,
+    "comment": "A useful survey of trust infrastructure for open agent networks, but its contribution is taxonomic rather than a concrete harness or evaluation loop.",
+    "comment_zh": "这是一篇关于开放智能体网络信任基础设施的有用综述，但贡献主要是分类框架而非具体的运行时或评测闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.49000000000000005,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04626/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.973
+    }
+  ]
+}

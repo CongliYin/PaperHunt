@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.04661",
+  "title": "An Exploratory Study of Agent Plans for Agentic AI Coding Tools in Open-Source Software",
+  "title_zh": "开源软件中 Agentic AI 编程工具的 Agent Plans 探索性研究",
+  "authors": [
+    "Muhammad Auwal Abubakar",
+    "Seyedmoein Mohsenimofidi",
+    "Jai Lal Lulla",
+    "Jie M. Zhang",
+    "Christoph Treude",
+    "Sebastian Baltes",
+    "Matthias Galster"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T10:15:28Z",
+  "abs_url": "https://arxiv.org/abs/2608.04661v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04661",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Repository-level configuration artifacts allow developers to provide guidance for agentic AI coding tools, such as Claude Code, Gemini, etc. Although prior research has examined repository-shared context files that capture project-level instructions and conventions (e.g., AGENTS.md files), little is known about more task-oriented artifacts such as Agent Plans. We present an exploratory study of Agent Plans in open-source software repositories, examining how plan files are preserved, which development activities they support, and what information they provide to guide agent execution. We screened 36,710 GitHub repositories belonging to engineered software projects and identified 85 Markdown plan files from 10 repositories. Within this highly concentrated corpus, Agent Plans supported several kinds of software engineering work, including maintenance, design, construction, quality-related work, and process support. They also provided task-oriented execution guidance, most commonly through implementation steps, concrete files and locations, and testing and validation information. Overall, repository-preserved Agent Plans under these tool-specific directories appear to be a narrow but informative artifact for studying task intent and execution guidance in human-agent workflows.",
+  "abstract_zh": "仓库级配置文件可帮助开发者为 Claude Code、Gemini 等 agentic AI 编程工具提供项目指导。已有研究关注 AGENTS.md 等记录项目级指令和约定的共享上下文文件，但对更面向具体任务的 Agent Plans 了解较少。本文对开源软件仓库中的 Agent Plans 进行探索性研究，分析计划文件如何被保留、支持哪些开发活动，以及提供哪些信息来指导 agent 执行。作者筛查了 36,710 个 GitHub 工程软件项目仓库，在 10 个仓库中识别出 85 个 Markdown 计划文件。尽管样本高度集中，这些 Agent Plans 覆盖了维护、设计、构建、质量相关工作和流程支持等多类软件工程任务，并提供了面向任务执行的指导信息，其中最常见的是实现步骤、具体文件与位置、测试和验证信息。总体来看，保存在特定工具目录下的 Agent Plans 虽然规模较小，但为研究人类-agent 工作流中的任务意图与执行指导提供了有价值的证据。",
+  "key_points_zh": [
+    "研究对象是 agentic AI coding tools 使用的仓库级 Agent Plans，区别于 AGENTS.md 等项目级上下文文件，更强调具体任务执行。",
+    "作者筛查 36,710 个 GitHub 工程软件仓库，仅在 10 个仓库中发现 85 个 Markdown plan files，说明此类 artifact 目前较少且高度集中。",
+    "Agent Plans 支持多种软件工程活动，包括维护、设计、构建、质量保障以及流程支持。",
+    "计划文件通常提供实现步骤、相关文件与代码位置、测试和验证方案等信息，用于指导 agent 执行任务。",
+    "论文认为 repository-preserved Agent Plans 是研究人类-agent 协作中任务意图、执行约束和工作流指导的重要但尚小众的数据来源。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.42,
+    "problem_significance": 0.5,
+    "potential_impact": 0.43,
+    "paradigm_shift": 0.34,
+    "lasting_value": 0.48,
+    "llm_avg": 0.434,
+    "comment": "The study usefully characterizes repository-level agent planning artifacts, but remains observational and narrow in corpus size.",
+    "comment_zh": "该研究有助于刻画代码仓库中的智能体计划工件，但主要是观察性研究且语料规模较窄。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.434,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04661/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04661/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.981
+    }
+  ]
+}

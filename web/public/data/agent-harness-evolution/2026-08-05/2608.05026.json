@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.05026",
+  "title": "ArtAnno: Annotating Implicit Semantics in Artworks through LLM Agent-Driven Bidirectional Human-AI Augmentation",
+  "title_zh": "ArtAnno：通过 LLM Agent 驱动的双向人机增强标注艺术作品中的隐式语义",
+  "authors": [
+    "Xiaoyan Gu",
+    "Yifang Wang",
+    "Wenqing Zheng",
+    "Haozhong Liu",
+    "Yixia Zheng",
+    "Peiyi Jiang",
+    "Wenjie Ning",
+    "Wei Zhang",
+    "Wei Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T16:30:12Z",
+  "abs_url": "https://arxiv.org/abs/2608.05026v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.05026",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "High-quality annotation of artworks is essential for computational art research, yet extracting implicit semantics remains challenging due to the reliance on culturally grounded meanings and deep contextual knowledge behind the images. Current AI-assisted annotation tools often lack assistance or rely on one-way workflows where experts have to perform extra manual calibrations to improve AI models, resulting in limited efficiency. To address this, we propose Bidirectional Human-AI Augmentation(BiHAA), a closed-loop framework in which skills and domain knowledge base evolve through real-time interaction and bidirectional HAI augmentation. Informed by a formative study with 20 artwork annotators from different backgrounds, we implement this framework in ArtAnno, an artwork annotation system driven by a multi-agent architecture. The system includes a Proactive Agentic Support Module, where AI augments humans through semantic mining and label suggestion, and an Interaction-Driven Evolution Module, where human expertise continuously enhances the AI through distilling annotation trajectories into reusable experience. Evaluation through a user study and two case studies demonstrates that our framework and system improve annotation efficiency, enable knowledge accumulation, and reduce the effort of information seeking and verification for annotators with limited domain expertise. We conclude by discussing broader implications and future directions.",
+  "abstract_zh": "高质量艺术作品标注对计算艺术研究至关重要，但由于图像背后常包含文化语境、象征意义与深层背景知识，提取隐式语义仍然困难。现有 AI 辅助标注工具往往支持不足，或采用单向工作流，需要专家额外手动校准模型，效率有限。为此，论文提出 Bidirectional Human-AI Augmentation（BiHAA）闭环框架，使技能与领域知识库在实时交互中通过双向人机增强持续演化。基于对 20 名不同背景艺术作品标注者的形成性研究，作者实现了 ArtAnno：一个由多 Agent 架构驱动的艺术作品标注系统。系统包含 Proactive Agentic Support Module，通过语义挖掘与标签推荐增强人类标注；以及 Interaction-Driven Evolution Module，将人类标注轨迹蒸馏为可复用经验，持续提升 AI。用户研究与两个案例研究表明，该框架和系统能够提高标注效率、促进知识积累，并降低领域经验不足标注者的信息检索与验证负担。",
+  "key_points_zh": [
+    "提出 Bidirectional Human-AI Augmentation（BiHAA）框架，强调人类专家与 AI 在标注过程中双向增强，而非传统单向辅助。",
+    "实现 ArtAnno 系统，采用多 Agent 架构，面向艺术作品中的隐式语义挖掘、标签建议与上下文知识支持。",
+    "Proactive Agentic Support Module 负责主动提供语义挖掘和标注建议，降低标注者查找背景知识的负担。",
+    "Interaction-Driven Evolution Module 将人类标注轨迹提炼为可复用经验，使系统知识库和标注能力随交互持续演化。",
+    "用户研究与案例研究显示，ArtAnno 提升了标注效率，帮助低领域经验标注者完成更可靠的艺术语义标注。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.52,
+    "problem_significance": 0.42,
+    "potential_impact": 0.46,
+    "paradigm_shift": 0.48,
+    "lasting_value": 0.44,
+    "llm_avg": 0.46399999999999997,
+    "comment": "ArtAnno has a relevant human-feedback-to-experience loop, but its contribution is mainly a domain-specific annotation system.",
+    "comment_zh": "ArtAnno 具有相关的人类反馈到经验沉淀闭环，但主要贡献仍是领域特定的艺术标注系统。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.46399999999999997,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05026/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.948
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05026/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.845
+    }
+  ]
+}
