@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.03206",
   "title": "EduClaw-Bench: A Long-Horizon Benchmark for Pedagogical LLM Agents with Simulated Learners",
-  "title_zh": "EduClaw-Bench：面向教学型 LLM Agent 的长周期模拟学习者基准",
+  "title_zh": "EduClaw-Bench：面向教学型 LLM Agents 与模拟学习者的长周期基准",
   "authors": [
     "Unggi Lee",
     "Sookbun Lee",
@@ -19,23 +19,23 @@
     "project_page": null
   },
   "abstract_en": "Large language models (LLMs) power educational applications from tutoring to essay scoring, but each is a point solution to a single task, and only recently have these point solutions been integrated into agents operating over a learning management system (LMS). Yet tutoring is long-horizon, since a learner improves over days and weeks rather than in a single turn, and no benchmark evaluates an agent tutor across a sustained relationship. We introduce EduClaw-Bench, a benchmark that places an agent tutor in a continuous 30-day relationship with a simulated learner grounded in knowledge tracing (KT), whose knowledge-concept mastery, from a KT model trained on real-student data, drives its answers and is probed for learning gain across 55 scenarios. Each agent is scored on three primary axes (learning gain, responsiveness, and helpfulness) and two curriculum-design axes (Gagné and Rosenshine), with helpfulness and the curriculum axes judged by a cross-family panel of three LLM judges. Evaluating 10 agent adapters over three base-model tiers yields two findings that single-tier, single-session evaluation cannot reach. First, tutoring quality belongs to the base model and the agent harness together rather than either alone. Second, almost no combination sustains good tutoring over the full horizon. A calibration check ($\\text{ECE}=0.049$) and a live-classroom field study confirm that the simulated learner and its measurements track reality. Our work is a step toward trustworthy AI tutors for future education.",
-  "abstract_zh": "EduClaw-Bench 是一个评估教学型 LLM Agent 的长周期基准，将 Agent tutor 置于与模拟学习者连续 30 天互动的场景中。模拟学习者基于在真实学生数据上训练的知识追踪（Knowledge Tracing, KT）模型，其知识概念掌握状态决定答题表现，并用于衡量 55 个场景中的学习增益。基准从学习增益、响应性、帮助性三个主轴，以及 Gagné 和 Rosenshine 两个课程设计维度进行评分，其中帮助性与课程设计由跨模型家族的三个 LLM judge 评估。作者测试了 10 种 agent adapter 和三个 base-model 档位，发现教学质量取决于 base model 与 agent harness 的组合，而非单独一方；同时，几乎没有组合能在完整长周期内持续保持良好教学效果。校准检查（ECE=0.049）和真实课堂实地研究表明，模拟学习者及其测量结果与现实表现一致。",
+  "abstract_zh": "LLM 已被用于辅导、作文评分等教育应用，但现有系统多是单任务点解决方案；即使近期被整合为运行在学习管理系统（LMS）中的 agents，也缺少对长期教学关系的评测。本文提出 EduClaw-Bench：一个让 agent tutor 与基于知识追踪（Knowledge Tracing, KT）的模拟学习者持续互动 30 天的基准。模拟学习者的知识概念掌握度来自在真实学生数据上训练的 KT 模型，并在 55 个场景中通过学习增益进行评估。基准从学习增益、响应性、帮助性三个主要维度，以及 Gagné 与 Rosenshine 两个课程设计维度评分；其中帮助性和课程设计维度由跨模型家族的 3 个 LLM judges 评判。对 3 个基础模型层级上的 10 个 agent adapters 评测后，论文发现：教学质量同时取决于 base model 与 agent harness，而非单独一方；几乎没有组合能在完整长周期中持续保持良好教学表现。校准检查（ECE=0.049）和真实课堂现场研究进一步表明，模拟学习者及其测量结果与现实表现一致。",
   "key_points_zh": [
-    "提出 EduClaw-Bench，首个面向教学型 LLM Agent 的 30 天长周期基准，模拟持续师生关系而非单轮任务。",
-    "模拟学习者由真实学生数据训练的 Knowledge Tracing 模型驱动，可根据知识概念掌握状态生成回答并评估学习增益。",
-    "评估维度包括 learning gain、responsiveness、helpfulness，以及 Gagné 和 Rosenshine 两类课程设计指标。",
-    "实验覆盖 10 种 agent adapter 与三个 base-model 档位，发现教学效果由 base model 与 agent harness 共同决定。",
-    "校准结果 ECE=0.049，并通过真实课堂 field study 验证模拟学习者与评测指标具有现实一致性。"
+    "提出 EduClaw-Bench，用 30 天连续互动评测 pedagogical LLM agents，弥补单轮、短期教育评测无法衡量长期学习关系的问题。",
+    "构建基于 Knowledge Tracing 的 simulated learner，其概念掌握度来自真实学生数据训练的 KT 模型，并在 55 个教学场景中评估学习增益。",
+    "评分体系覆盖学习增益、响应性、帮助性，以及 Gagné 和 Rosenshine 两类课程设计维度；部分指标由跨模型家族 LLM judges 评估。",
+    "实验覆盖 10 个 agent adapters 与 3 个 base-model tiers，发现教学效果由 base model 与 agent harness 共同决定，不能只看模型能力或框架设计。",
+    "结果显示几乎没有 agent 组合能在 30 天完整周期内持续表现良好；校准结果和真实课堂研究支持该模拟评测与现实教学表现相关。"
   ],
   "llm_assessment": {
-    "novelty": 0.72,
-    "problem_significance": 0.7,
-    "potential_impact": 0.68,
-    "paradigm_shift": 0.62,
-    "lasting_value": 0.7,
-    "llm_avg": 0.6839999999999999,
-    "comment": "Solid long-horizon agent benchmark with simulated learners, though its domain specificity limits broader harness value.",
-    "comment_zh": "这是一个扎实的长程教育智能体基准，但领域专用性限制了其更广泛的智能体平台价值。"
+    "novelty": 0.7,
+    "problem_significance": 0.69,
+    "potential_impact": 0.66,
+    "paradigm_shift": 0.61,
+    "lasting_value": 0.68,
+    "llm_avg": 0.6679999999999999,
+    "comment": "A useful long-horizon educational-agent benchmark with simulated learners, though its domain specificity limits broader agent-platform impact.",
+    "comment_zh": "这是一个有用的长程教育智能体基准，包含模拟学习者，但领域专属性限制了其更广泛的平台影响。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
@@ -44,7 +44,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.6839999999999999,
+    "llm_assessment": 0.6679999999999999,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -57,8 +57,8 @@
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": 0,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": [

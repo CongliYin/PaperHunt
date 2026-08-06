@@ -2,7 +2,7 @@
   "domain": "agent-multimodal",
   "display_name": "Realtime Multimodal Agent",
   "date": "2026-08-04",
-  "generated_at": "2026-08-06T06:42:56Z",
+  "generated_at": "2026-08-06T10:34:47Z",
   "papers": [
     {
       "arxiv_id": "2608.03979",
@@ -30,10 +30,10 @@
         "Shaosheng Cao",
         "Feng Zhao"
       ],
-      "total_score": 0.7076386998781495,
+      "total_score": 0.6404386998781496,
       "scores": {
         "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.724,
+        "llm_assessment": 0.5,
         "other": 0.5147956662604982
       },
       "tags": [
@@ -41,7 +41,7 @@
         "GitHub",
         "realtime video agent"
       ],
-      "tldr_zh": "让视频 Agent 先看懂再上网搜索",
+      "tldr_zh": "让视频 Agent 先看清再上网搜索",
       "detail_file": "agent-multimodal/2026-08-04/2608.03979.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03979/thumb.webp"
     },
@@ -59,17 +59,17 @@
         "Xuanzhe Liu",
         "Xiang Chen"
       ],
-      "total_score": 0.6339258286877778,
+      "total_score": 0.6255258286877777,
       "scores": {
         "topic_relevance": 0.92,
-        "llm_assessment": 0.528,
+        "llm_assessment": 0.5,
         "other": 0.3584194289592589
       },
       "tags": [
         "GitHub",
         "streaming video grounding"
       ],
-      "tldr_zh": "用不确定性和注意力自适应选长视频帧",
+      "tldr_zh": "EcoFrame用不确定性和注意力高效选帧",
       "detail_file": "agent-multimodal/2026-08-04/2608.03918.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03918/thumb.webp"
     },
@@ -86,47 +86,24 @@
         "Kang Liu",
         "Jun Zhao"
       ],
-      "total_score": 0.5996516573755554,
+      "total_score": 0.5810516573755554,
       "scores": {
         "topic_relevance": 0.8,
-        "llm_assessment": 0.562,
+        "llm_assessment": 0.5,
         "other": 0.370172191251851
       },
       "tags": [
         "GitHub",
         "realtime video agent"
       ],
-      "tldr_zh": "环境分布设计比单纯扩规模更关键",
+      "tldr_zh": "环境分布设计比单纯扩容更关键",
       "detail_file": "agent-multimodal/2026-08-04/2608.03571.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03571/thumb.webp"
     },
     {
-      "arxiv_id": "2608.03160",
-      "title": "Caved or Convinced: Temporal Sampling Gates Claim Deference in Video Large Language Models",
-      "title_zh": "屈从还是信服：时间采样门控 Video Large Language Models 中的声明顺从",
-      "authors": [
-        "Yuxin Cao",
-        "Wei Song",
-        "Jingling Xue",
-        "Jin Song Dong"
-      ],
-      "total_score": 0.5120082880689193,
-      "scores": {
-        "topic_relevance": 0.8,
-        "llm_assessment": 0.492,
-        "other": 0.1480276268963977
-      },
-      "tags": [
-        "streaming video grounding"
-      ],
-      "tldr_zh": "视频模型顺从源于采样缺失与证据权重",
-      "detail_file": "agent-multimodal/2026-08-04/2608.03160.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03160/thumb.webp"
-    },
-    {
       "arxiv_id": "2608.03650",
       "title": "Echo-Aware Modulation for Compact-Latent Frequency-Time Modeling in Lightweight Acoustic Echo Cancellation",
-      "title_zh": "用于轻量级声学回声消除的紧凑潜变量频时建模回声感知调制",
+      "title_zh": "面向轻量级声学回声消除的紧凑潜变量频时建模回声感知调制",
       "authors": [
         "Ye Ni",
         "Ruiyu Liang",
@@ -135,18 +112,41 @@
         "Cairong Zou",
         "Björn W. Schuller"
       ],
-      "total_score": 0.4812516573755553,
+      "total_score": 0.5368990361570021,
       "scores": {
         "topic_relevance": 0.8,
-        "llm_assessment": 0.33399999999999996,
-        "other": 0.2035055245851843
+        "llm_assessment": 0.5,
+        "other": 0.22299678719000665
       },
       "tags": [
         "low latency turn taking"
       ],
-      "tldr_zh": "EAM增强压缩特征，提升轻量AEC效果",
+      "tldr_zh": "用回声感知调制增强轻量级 AEC",
       "detail_file": "agent-multimodal/2026-08-04/2608.03650.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03650/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.03160",
+      "title": "Caved or Convinced: Temporal Sampling Gates Claim Deference in Video Large Language Models",
+      "title_zh": "屈从还是信服：时间采样门控 Video Large Language Models 中的主张依从",
+      "authors": [
+        "Yuxin Cao",
+        "Wei Song",
+        "Jingling Xue",
+        "Jin Song Dong"
+      ],
+      "total_score": 0.5175000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.5,
+        "other": 0.15833333333333335
+      },
+      "tags": [
+        "streaming video grounding"
+      ],
+      "tldr_zh": "视频模型依从失败源于采样与证据加权",
+      "detail_file": "agent-multimodal/2026-08-04/2608.03160.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03160/thumb.webp"
     }
   ]
 }

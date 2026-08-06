@@ -20,23 +20,23 @@
     "project_page": null
   },
   "abstract_en": "Recent works train agents by constructing large-scale multimodal environment pools. However, we find that simply increasing the number of multimodal environments does not always benefit. We further analyze the limitations in current multimodal environment distributions through a series of experiments. Based on these findings, we study how to build more effective training environment distributions from two dimensions: **diversity** and **difficulty structure**. For diversity, we propose **Ability-aware Environment Selection (AES)** to obtain diverse environment sets. For difficulty structure, we propose **Hierarchical Difficulty Curriculum (HDC)**, which organizes curriculum learning through two difficulty levels: harness weakening and state-scale progression. Experiments show that AES and HDC effectively improve multimodal agent training.",
-  "abstract_zh": "近期研究通常通过构建大规模多模态环境池来训练智能体。然而，本文发现，单纯增加多模态环境数量并不总能带来性能提升。作者通过一系列实验分析了当前多模态环境分布的局限，并从两个维度研究如何构建更有效的训练环境分布：多样性（diversity）与难度结构（difficulty structure）。针对多样性，论文提出 Ability-aware Environment Selection（AES），用于选择更具能力覆盖性的多样化环境集合；针对难度结构，提出 Hierarchical Difficulty Curriculum（HDC），通过两级难度组织课程学习：harness weakening 与 state-scale progression。实验结果表明，AES 与 HDC 能有效提升多模态智能体训练效果。",
+  "abstract_zh": "近期工作通常通过构建大规模多模态环境池来训练智能体，但本文发现，单纯增加多模态环境数量并不总能带来收益。作者通过一系列实验分析了当前多模态环境分布的局限，并从“多样性”和“难度结构”两个维度研究如何构建更有效的训练环境分布。针对多样性，论文提出 Ability-aware Environment Selection（AES），用于选择更具能力覆盖性的多样化环境集合；针对难度结构，提出 Hierarchical Difficulty Curriculum（HDC），通过 harness weakening 和 state-scale progression 两级难度组织课程学习。实验表明，AES 与 HDC 能有效提升多模态智能体训练效果。",
   "key_points_zh": [
-    "论文指出，多模态智能体训练中简单扩大环境池规模并不一定提升性能，环境分布质量是关键因素。",
-    "作者从多样性与难度结构两个角度系统分析现有多模态环境分布的不足。",
-    "提出 Ability-aware Environment Selection（AES），根据智能体能力覆盖情况选择更有效、更多样的训练环境。",
-    "提出 Hierarchical Difficulty Curriculum（HDC），通过 harness weakening 与 state-scale progression 两级难度推进课程学习。",
-    "实验表明，AES 和 HDC 相比单纯环境扩展能更有效提升多模态智能体学习表现。"
+    "论文指出，多模态环境池规模扩大并不必然提升智能体性能，环境分布质量是关键因素。",
+    "作者从多样性和难度结构两个角度系统分析当前 multimodal environment distributions 的不足。",
+    "提出 Ability-aware Environment Selection（AES），根据智能体能力维度选择更具互补性和覆盖性的训练环境。",
+    "提出 Hierarchical Difficulty Curriculum（HDC），通过 harness weakening 与 state-scale progression 构建分层难度课程。",
+    "实验结果显示，AES 和 HDC 均能改善多模态智能体训练效果，优于简单 environment scaling。"
   ],
   "llm_assessment": {
-    "novelty": 0.55,
-    "problem_significance": 0.63,
-    "potential_impact": 0.6,
-    "paradigm_shift": 0.42,
-    "lasting_value": 0.61,
-    "llm_avg": 0.562,
-    "comment": "Relevant multimodal-agent training infrastructure paper on environment distribution design, but the abstract lacks realtime voice/video interaction or grounding specifics.",
-    "comment_zh": "这是一篇与多模态智能体训练基础设施相关的环境分布设计论文，但摘要缺少实时语音视频交互或视觉定位细节。"
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "Relevant multimodal-agent training infrastructure paper focused on environment distribution design, but with limited evidence of realtime voice or video interaction constraints.",
+    "comment_zh": "Relevant multimodal-agent training infrastructure paper focused on environment distribution design, but with limited evidence of realtime voice or video interaction constraints."
   },
   "scores": {
     "topic_relevance": 0.8,
@@ -45,7 +45,7 @@
     "author_reputation": 0.3210331475111057,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.562,
+    "llm_assessment": 0.5,
     "domain_multiplier": 1.0
   },
   "enriched": {

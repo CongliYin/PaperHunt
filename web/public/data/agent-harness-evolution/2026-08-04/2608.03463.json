@@ -19,23 +19,23 @@
     "project_page": null
   },
   "abstract_en": "Long-term memory is essential for LLM-based agents to sustain interactions and reliably leverage distant history. However, existing memory systems typically process heterogeneous dialogue content through a uniform summarization and retrieval pipeline, leading to either excessive token consumption or irreversible loss of fine-grained evidence. We argue that historical dialogue content should be handled differently according to its compressibility, temporal dynamics, and fidelity requirements. Based on this insight, we propose LeanMem, a lightweight long-term memory framework. LeanMem first filters out low-value content, then stores informative segments as compact profile memory, temporally structured event memory, or source-grounded record memory, depending on the nature of the information. During maintenance, only dynamically evolving event memories are selectively updated, avoiding redundant consolidation of stable profiles and immutable records. During inference, LeanMem dynamically selects memory types and allocates retrieval budgets according to query-specific evidence demands, assembling relevant evidence on demand. On LoCoMo and LongMemEval-S with GPT-4.1-mini and Qwen3-8B, LeanMem improves accuracy over the strongest memory-based baseline in every setting, by up to 15.1 points, at the lowest or near-lowest construction cost, inference tokens, and latency. The code and datasets are included in the supplementary materials.",
-  "abstract_zh": "长期记忆对于 LLM-based agents 维持持续交互并可靠利用久远历史至关重要。现有记忆系统通常用统一的摘要与检索流程处理异质对话内容，容易导致 token 消耗过高，或不可逆地丢失细粒度证据。本文认为，历史对话应根据其可压缩性、时间动态性和保真需求进行差异化处理。基于这一观点，作者提出 LeanMem，一个轻量级长期记忆框架。LeanMem 首先过滤低价值内容，然后根据信息性质，将有价值片段分别存储为紧凑的 profile memory、具备时间结构的 event memory，或保留来源依据的 record memory。在记忆维护阶段，LeanMem 仅选择性更新动态演化的 event memory，避免对稳定 profile 和不可变 record 进行冗余整合。在推理阶段，LeanMem 会根据查询所需证据动态选择记忆类型并分配检索预算，按需组装相关证据。在 LoCoMo 和 LongMemEval-S 上，结合 GPT-4.1-mini 与 Qwen3-8B，LeanMem 在所有设置中均超过最强 memory-based baseline，最高提升 15.1 个百分点，同时保持最低或接近最低的构建成本、推理 token 数和延迟。",
+  "abstract_zh": "长期记忆对基于 LLM 的 Agent 至关重要，可帮助其维持长期交互并可靠利用早期历史信息。现有记忆系统通常用统一的摘要与检索流程处理异构对话内容，容易导致 token 消耗过高，或不可逆地丢失细粒度证据。本文认为，历史对话应根据其可压缩性、时间动态性和保真需求进行差异化处理。基于这一洞察，作者提出 LeanMem，一个轻量级长期记忆框架。LeanMem 首先过滤低价值内容，然后依据信息性质，将有用片段存为紧凑的 profile memory、具有时间结构的 event memory，或基于原始来源的 record memory。在维护阶段，LeanMem 只选择性更新动态变化的 event memory，避免对稳定 profile 和不可变 record 做冗余整合。在推理阶段，LeanMem 会根据查询所需证据动态选择记忆类型并分配检索预算，按需组装相关证据。在 LoCoMo 和 LongMemEval-S 上，结合 GPT-4.1-mini 与 Qwen3-8B，LeanMem 在所有设置中均优于最强记忆基线，最高提升 15.1 个百分点，同时保持最低或接近最低的构建成本、推理 token 消耗和延迟。",
   "key_points_zh": [
-    "核心思想是打破统一摘要-检索范式，根据对话内容的可压缩性、时间变化和证据保真需求进行差异化记忆管理。",
-    "LeanMem 将信息划分为三类记忆：profile memory 用于稳定且可压缩的用户画像，event memory 用于时间演化事件，record memory 用于需要原始证据支撑的记录。",
-    "维护阶段只更新动态变化的 event memory，避免反复重写稳定信息和不可变证据，从而降低长期记忆构建与维护成本。",
-    "推理阶段根据具体查询动态选择记忆类型并分配检索预算，在证据需求较强的问题上保留更高保真度的上下文。",
-    "在 LoCoMo 和 LongMemEval-S 上，LeanMem 搭配 GPT-4.1-mini 和 Qwen3-8B 均优于最强记忆基线，最高准确率提升 15.1 点，并兼顾低 token、低延迟和低构建成本。"
+    "提出 LeanMem，将长期对话记忆按信息属性拆分为 profile memory、event memory 和 record memory，而非统一摘要处理。",
+    "核心思想是根据信息的可压缩性、时间动态性和保真需求选择不同存储方式，减少 token 浪费并保留关键证据。",
+    "维护阶段仅更新会随时间变化的 event memory，避免对稳定用户画像和不可变原始记录进行重复整合。",
+    "推理阶段根据具体查询的证据需求动态选择记忆类型并分配检索预算，实现按需取证。",
+    "在 LoCoMo 和 LongMemEval-S 上，LeanMem 搭配 GPT-4.1-mini 与 Qwen3-8B 均超过最强记忆基线，最高准确率提升 15.1 点，并保持较低成本与延迟。"
   ],
   "llm_assessment": {
-    "novelty": 0.6,
+    "novelty": 0.62,
     "problem_significance": 0.68,
     "potential_impact": 0.66,
-    "paradigm_shift": 0.5,
+    "paradigm_shift": 0.52,
     "lasting_value": 0.64,
-    "llm_avg": 0.616,
-    "comment": "LeanMem offers a practical reusable memory-management abstraction for agents, but it is more an efficient context subsystem than a full agent-evolution loop.",
-    "comment_zh": "LeanMem 提供了实用且可复用的智能体记忆管理抽象，但更像高效上下文子系统，而不是完整的智能体进化闭环。"
+    "llm_avg": 0.624,
+    "comment": "LeanMem offers a practical reusable memory-management abstraction for agents, but it is mainly an efficiency and retrieval design rather than a full agent-evolution loop.",
+    "comment_zh": "LeanMem提供了实用且可复用的智能体记忆管理抽象，但主要是效率与检索设计，而非完整的智能体演化闭环。"
   },
   "scores": {
     "topic_relevance": 0.36000000000000004,
@@ -44,7 +44,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.616,
+    "llm_assessment": 0.624,
     "domain_multiplier": 1.0
   },
   "enriched": {

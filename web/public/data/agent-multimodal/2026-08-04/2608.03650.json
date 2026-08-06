@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.03650",
   "title": "Echo-Aware Modulation for Compact-Latent Frequency-Time Modeling in Lightweight Acoustic Echo Cancellation",
-  "title_zh": "用于轻量级声学回声消除的紧凑潜变量频时建模回声感知调制",
+  "title_zh": "面向轻量级声学回声消除的紧凑潜变量频时建模回声感知调制",
   "authors": [
     "Ye Ni",
     "Ruiyu Liang",
@@ -19,32 +19,32 @@
     "project_page": null
   },
   "abstract_en": "Existing lightweight acoustic echo cancellation (AEC) systems often combine linear AEC with Bark-domain DNN-based suppression to lower the computational footprint. In such systems, downsampling layers further compress the input features into a compact bottleneck representation, but this compression weakens frequency-time modeling capacity and degrades performance. To mitigate this limitation, we propose MSA-EchoLite, a lightweight Bark-domain AEC framework with an asymmetric dual-branch encoder and an echo-aware frequency-time modulation (EAM) module. The EAM module enriches the compressed bottleneck representation by modeling discrepancy and correlation cues between the dual-branch microphone and echo-related latent features. Experimental results show that the Bark-domain variant of MSA-EchoLite offers a better performance-complexity trade-off than its frequency-domain counterpart but is more sensitive to feature compression. With only 26.1% additional FLOPs over its non-EAM Bark-domain variant, its EAM-enhanced version achieves 99.1% of the PESQ of the frequency-domain counterpart, which requires nearly twice the FLOPs, and even surpasses it in SDR. Overall, MSA-EchoLite outperforms state-of-the-art lightweight AEC models while using only 0.2 M parameters and 100 M FLOPs/s.",
-  "abstract_zh": "现有轻量级声学回声消除（Acoustic Echo Cancellation, AEC）系统通常结合线性 AEC 与 Bark-domain 的 DNN 抑制模块，以降低计算开销。然而，下采样层会进一步将输入特征压缩为紧凑瓶颈表示，削弱频率-时间建模能力并导致性能下降。为缓解这一问题，论文提出 MSA-EchoLite：一个轻量级 Bark-domain AEC 框架，包含非对称双分支编码器与回声感知频时调制模块（Echo-Aware Modulation, EAM）。EAM 通过建模麦克风分支与回声相关分支潜特征之间的差异与相关性线索，增强压缩后的瓶颈表示。实验表明，MSA-EchoLite 的 Bark-domain 版本相比 frequency-domain 版本具有更优的性能-复杂度权衡，但对特征压缩更敏感。加入 EAM 后，仅比无 EAM 的 Bark-domain 版本增加 26.1% FLOPs，即可达到 frequency-domain 对照模型 99.1% 的 PESQ，后者计算量接近两倍，并且在 SDR 上还超过该对照。总体而言，MSA-EchoLite 以仅 0.2M 参数和 100M FLOPs/s 超越了现有轻量级 AEC 方法。",
+  "abstract_zh": "现有轻量级 Acoustic Echo Cancellation（AEC）系统通常将线性 AEC 与 Bark-domain DNN 抑制器结合，以降低计算开销；同时，降采样层会将输入特征进一步压缩为紧凑瓶颈表示，但这会削弱频率-时间建模能力并影响性能。本文提出 MSA-EchoLite：一种轻量级 Bark-domain AEC 框架，包含非对称双分支编码器与 Echo-Aware Frequency-Time Modulation（EAM）模块。EAM 通过建模双分支中 microphone 与 echo-related 潜特征之间的差异与相关性线索，增强压缩瓶颈表示。实验表明，MSA-EchoLite 的 Bark-domain 版本相比 frequency-domain 版本具有更优的性能-复杂度权衡，但对特征压缩更敏感。在相对无 EAM 的 Bark-domain 变体仅增加 26.1% FLOPs 的情况下，EAM 增强版本达到 frequency-domain 对照 99.1% 的 PESQ，后者 FLOPs 近乎翻倍，并且该方法在 SDR 上还超过了 frequency-domain 对照。总体而言，MSA-EchoLite 以仅 0.2M 参数和 100M FLOPs/s 超越现有轻量级 AEC 模型。",
   "key_points_zh": [
-    "提出 MSA-EchoLite，一个面向轻量级 AEC 的 Bark-domain 框架，主打低参数量与低计算量。",
-    "设计非对称双分支编码器，分别处理麦克风与回声相关信息，为后续调制提供互补潜特征。",
-    "核心 EAM 模块建模双分支潜特征间的差异与相关性，补偿下采样压缩造成的频时建模能力损失。",
-    "实验显示 Bark-domain 方案比 frequency-domain 方案更具性能-复杂度优势，但更依赖 EAM 来缓解特征压缩敏感性。",
-    "最终模型仅需 0.2M 参数、100M FLOPs/s，性能超过现有轻量级 AEC 模型，并在 SDR 上优于计算量近两倍的 frequency-domain 对照。"
+    "提出 MSA-EchoLite，一个面向轻量级 AEC 的 Bark-domain 框架，结合非对称双分支编码器与 EAM 模块。",
+    "EAM 在压缩瓶颈特征上建模 microphone 与 echo-related 潜表示之间的差异和相关性，以弥补降采样导致的频时建模能力下降。",
+    "Bark-domain 版本比 frequency-domain 版本具备更好的性能-复杂度权衡，但对特征压缩更敏感，因此更需要瓶颈表示增强。",
+    "EAM 版本仅比无 EAM Bark-domain 变体增加 26.1% FLOPs，即达到 frequency-domain 对照 99.1% 的 PESQ，并在 SDR 上反超。",
+    "模型整体仅 0.2M 参数、100M FLOPs/s，性能超过现有 state-of-the-art 轻量级 AEC 方法。"
   ],
   "llm_assessment": {
-    "novelty": 0.42,
-    "problem_significance": 0.45,
-    "potential_impact": 0.34,
-    "paradigm_shift": 0.18,
-    "lasting_value": 0.28,
-    "llm_avg": 0.33399999999999996,
-    "comment": "Technically solid lightweight acoustic echo cancellation work, but it is mostly a speech enhancement paper with limited explicit agent or tool-workflow relevance.",
-    "comment_zh": "该工作在轻量级声学回声消除上技术扎实，但主要属于语音增强，缺少明确的智能体或工具流程关联。"
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "Lightweight acoustic echo cancellation may help voice-agent audio quality, but the work is primarily speech enhancement rather than agent interaction or tool use.",
+    "comment_zh": "Lightweight acoustic echo cancellation may help voice-agent audio quality, but the work is primarily speech enhancement rather than agent interaction or tool use."
   },
   "scores": {
     "topic_relevance": 0.8,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.3210331475111057,
+    "author_reputation": 0.43798072314003966,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.33399999999999996,
+    "llm_assessment": 0.5,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -57,8 +57,8 @@
     "first_author_h_index": 3,
     "first_author_found": true,
     "first_author_affiliations": [],
-    "last_author_h_index": null,
-    "last_author_found": false,
+    "last_author_h_index": 6,
+    "last_author_found": true,
     "last_author_affiliations": []
   },
   "figures": [

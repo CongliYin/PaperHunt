@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.03160",
   "title": "Caved or Convinced: Temporal Sampling Gates Claim Deference in Video Large Language Models",
-  "title_zh": "屈从还是信服：时间采样门控 Video Large Language Models 中的声明顺从",
+  "title_zh": "屈从还是信服：时间采样门控 Video Large Language Models 中的主张依从",
   "authors": [
     "Yuxin Cao",
     "Wei Song",
@@ -17,32 +17,32 @@
     "project_page": null
   },
   "abstract_en": "When asked which of two events came first, video large language models can fail in two opposite ways: cave to a false claim, or reject a true one. Prior video sycophancy work measures only the first and mitigates it by teaching the model to trust the user less, a fix known in text and image models to worsen the second. In video, both failures come from two causes the literature treats as one: availability, whether the sparse sampled frames contain the two events, and weighting, whether that evidence is trusted over the user. We separate them with two interventions that keep the claim fixed: a frame-preserving reorder that flips the claim's truth, and a sampling-offset shift that captures or misses both events at a fixed frame budget. When the events are missed, the two twins present identical frames, so each of the nine models we evaluate accepts a true and a false claim at the same rate, making Youden's $J=0$ by construction. Availability is necessary but not sufficient. Five of the nine read the order, yet four of those five still cave to the false claim, so their deference hits a weighting ceiling. Since trust cannot be calibrated over evidence that was never sampled, we propose a reversal test that cancels the model's order prior by scoring the sampled frames forward and reversed, then answers, resamples, or abstains without reading the claim. The test raises the order accuracy to 0.92-1.00 on the models that read the order and abstains rather than guesses on those that cannot.",
-  "abstract_zh": "本文研究 Video Large Language Models 在判断两个视频事件先后顺序时的两类相反失败：屈从于错误声明，或拒绝真实声明。既有 video sycophancy 工作通常只衡量前者，并通过降低模型对用户的信任来缓解，但这种修正在文本和图像模型中可能加剧后者。作者指出，视频场景中的两类失败源于两个被混淆的因素：availability，即稀疏采样帧是否包含两个事件；weighting，即模型是否相信视频证据而非用户声明。为分离二者，论文设计了两种保持声明不变的干预：一种保留帧但重排顺序以翻转声明真值，另一种改变采样偏移，使固定帧预算下捕获或错过两个事件。当事件未被采样到时，真假声明对应的视频帧完全相同，九个被评估模型对真假声明的接受率相同，因此 Youden's J 按构造为 0。结果表明，availability 是必要但不充分条件：九个模型中有五个能读出事件顺序，但其中四个仍会屈从于错误声明，说明其顺从受 weighting 上限约束。由于无法对未采样证据进行信任校准，作者提出 reversal test：在不读取用户声明的情况下，分别对正向和反向采样帧打分，以抵消模型的顺序先验，然后回答、重采样或拒答。该测试在能读取顺序的模型上将顺序准确率提升至 0.92–1.00，并让不能读取顺序的模型选择拒答而非猜测。",
+  "abstract_zh": "本文研究 Video Large Language Models 在判断两个事件先后顺序时的两类相反失败：屈从于错误主张，或拒绝正确主张。以往关于视频谄媚性（video sycophancy）的工作主要衡量前者，并通过降低模型对用户的信任来缓解，但这种做法在文本和图像模型中已知会加剧后者。作者指出，在视频场景中，这两类失败源于两个常被混为一谈的因素：可用性（availability），即稀疏采样帧是否包含两个事件；以及加权（weighting），即模型是否相信视觉证据而非用户说法。为分离二者，论文设计了两种保持用户主张不变的干预：一种是保留帧内容但重排顺序，从而翻转主张真值；另一种是移动采样偏移，在固定帧预算下使两个事件被捕获或同时错过。当事件未被采样到时，两组样本呈现相同帧，因此评测的九个模型对真实和错误主张的接受率相同，Youden's J 按构造为 0。结果表明，可用性是必要但不充分的：九个模型中有五个能读出顺序，但其中四个仍会屈从于错误主张，说明其依从性受到证据加权上限限制。由于无法对未采样到的证据校准信任，作者提出 reversal test：在不读取用户主张的情况下，对采样帧的正序和反序分别评分，以抵消模型的顺序先验，然后回答、重采样或拒答。该测试使能读出顺序的模型准确率提升至 0.92–1.00，并让不能读顺序的模型选择拒答而非猜测。",
   "key_points_zh": [
-    "论文区分了 video sycophancy 中常被混为一谈的两个因素：availability（采样帧是否包含关键事件）与 weighting（模型是否信任视觉证据超过用户声明）。",
-    "作者提出 frame-preserving reorder 与 sampling-offset shift 两种干预，在声明固定的情况下分别翻转真值或改变事件是否被采样到，从而解耦采样可得性和证据权重。",
-    "实验覆盖九个 Video Large Language Models：当关键事件未被采样时，真假声明对应输入帧相同，模型无法区分，Youden's J 必然为 0。",
-    "即使在能读取事件顺序的五个模型中，仍有四个会接受错误声明，说明单纯提高视觉可得性不足以解决顺从，模型还存在证据加权问题。",
-    "提出的 reversal test 不读取用户声明，而是比较正向与反向帧序列得分；它在能识别顺序的模型上达到 0.92–1.00 准确率，并在不确定时触发重采样或拒答。"
+    "论文区分了 Video Large Language Models 时间顺序判断失败中的两个因素：帧采样是否覆盖关键事件的 availability，以及模型是否信任视觉证据的 weighting。",
+    "作者提出两种干预：frame-preserving reorder 用于翻转主张真值，sampling-offset shift 用于在固定帧预算下控制事件是否被采样到。",
+    "当关键事件未被采样时，真假主张对应的输入帧完全相同，九个模型对两者接受率相同，Youden's J=0，说明缺失证据时无法校准信任。",
+    "实验显示，九个模型中五个能读出事件顺序，但其中四个仍会接受错误主张，表明仅有视觉可用性不足以避免对用户主张的过度依从。",
+    "提出 reversal test：不读取用户主张，比较正序与反序视频评分来抵消顺序先验；在能读顺序的模型上准确率达 0.92–1.00，对不能读顺序的模型则倾向拒答。"
   ],
   "llm_assessment": {
-    "novelty": 0.61,
-    "problem_significance": 0.57,
-    "potential_impact": 0.48,
-    "paradigm_shift": 0.34,
-    "lasting_value": 0.46,
-    "llm_avg": 0.492,
-    "comment": "Interesting diagnostic and mitigation study for temporal evidence failures in video LLMs, but it is mainly an offline robustness evaluation rather than realtime agent grounding.",
-    "comment_zh": "该工作对视频LLM的时序证据失败进行了有趣的诊断与缓解，但主要是离线鲁棒性评测而非实时智能体定位。"
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "Interesting diagnostic evaluation for temporal evidence and deference in video LLMs, but it is not framed as a realtime agent or tool-workflow system.",
+    "comment_zh": "Interesting diagnostic evaluation for temporal evidence and deference in video LLMs, but it is not framed as a realtime agent or tool-workflow system."
   },
   "scores": {
     "topic_relevance": 0.8,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.23816576137838616,
+    "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.65,
-    "llm_assessment": 0.492,
+    "llm_assessment": 0.5,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -52,11 +52,11 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": 1,
-    "first_author_found": true,
+    "first_author_h_index": null,
+    "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": 2,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": [

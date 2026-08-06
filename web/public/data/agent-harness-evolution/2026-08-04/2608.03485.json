@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.03485",
   "title": "SkillSentry: Adaptive Honey Worlds for Dynamic Safety Testing of Agent Skills",
-  "title_zh": "SkillSentry：用于 Agent Skills 动态安全测试的自适应蜜罐世界",
+  "title_zh": "SkillSentry：用于 Agent 技能动态安全测试的自适应蜜罐世界",
   "authors": [
     "Nizhang Li",
     "Zonghao Ying",
@@ -23,23 +23,23 @@
     "project_page": null
   },
   "abstract_en": "External skills extend the capabilities of large language model agents, but also introduce an execution-time attack surface: a skill that appears benign under inspection may reveal harmful behavior only after particular environmental states, resources, or interaction histories are encountered. Existing scanners primarily rely on static analysis, predefined rules, or one-shot semantic judgments, making such conditional behavior difficult to elicit and attribute. We present SkillSentry, a dynamic safety-testing framework based on adaptive honey worlds. SkillSentry infers the intended capability boundary of a skill, constructs an LLM-simulated environment with controlled decoy resources, and adaptively generates tasks to explore its behavioral states. It then compares skill-enabled trajectories with matched no-skill executions, grounding suspicious behaviors in source code and verified execution traces before making a final decision. We evaluate SkillSentry against seven scanner configurations. SkillSentry achieves 99.50% Recall and 96.26% average F1 on standard benchmarks. Under semantics-preserving evasion, it reaches 92.95% average F1, compared with 80.07% for the strongest baselines. Our code is available at https://github.com/nizhangli062-jpg/SkillSentry-Adaptive-Honey-Worlds-for-Dynamic-Safety-Testing-of-Agent-Skills.",
-  "abstract_zh": "外部 skills 能扩展大型语言模型智能体的能力，但也引入了执行时攻击面：某个 skill 在静态检查时看似无害，却可能在特定环境状态、资源或交互历史触发后表现出有害行为。现有扫描器主要依赖静态分析、预定义规则或一次性语义判断，难以诱发并归因这类条件性恶意行为。本文提出 SkillSentry，一个基于自适应蜜罐世界（adaptive honey worlds）的动态安全测试框架。SkillSentry 会推断 skill 的预期能力边界，构建带有受控诱饵资源的 LLM 模拟环境，并自适应生成任务以探索其行为状态。随后，它将启用 skill 的执行轨迹与匹配的无 skill 执行进行对比，并在最终判定前，将可疑行为定位到源代码和经验证的执行轨迹中。实验中，SkillSentry 与七种扫描器配置对比，在标准基准上达到 99.50% Recall 和 96.26% 平均 F1；在语义保持规避攻击下达到 92.95% 平均 F1，显著优于最强基线的 80.07%。",
+  "abstract_zh": "外部技能（external skills）扩展了大语言模型 Agent 的能力，但也引入了执行时攻击面：某个技能在静态检查时可能看似良性，却会在特定环境状态、资源或交互历史出现后暴露有害行为。现有扫描器多依赖静态分析、预定义规则或一次性语义判断，难以诱发并归因这类条件触发行为。本文提出 SkillSentry，一个基于自适应蜜罐世界（adaptive honey worlds）的动态安全测试框架。SkillSentry 首先推断技能的预期能力边界，构建带有受控诱饵资源的 LLM 模拟环境，并自适应生成任务以探索技能的行为状态。随后，它将启用技能的执行轨迹与匹配的无技能执行进行对比，并在最终判定前将可疑行为落到源代码和已验证执行轨迹上。实验中，SkillSentry 对比了七种扫描器配置，在标准基准上达到 99.50% Recall 和 96.26% 平均 F1；在语义保持规避攻击下，平均 F1 达到 92.95%，显著高于最强基线的 80.07%。",
   "key_points_zh": [
-    "提出 SkillSentry，用动态安全测试替代单纯静态扫描或一次性语义判断，重点发现仅在特定状态、资源或交互历史下触发的恶意 skill 行为。",
-    "核心机制是 adaptive honey worlds：先推断 skill 的能力边界，再构建包含受控诱饵资源的 LLM 模拟环境，用自适应任务探索潜在危险行为。",
-    "通过对比 skill-enabled trajectories 与 matched no-skill executions，SkillSentry 能更清晰地区分由 skill 引入的异常行为，而非环境或任务本身导致的行为。",
-    "框架会将可疑行为进一步关联到 source code 与 verified execution traces，提高检测结果的可解释性和归因可信度。",
-    "实验显示其在标准基准上取得 99.50% Recall、96.26% 平均 F1；面对 semantics-preserving evasion 时仍有 92.95% 平均 F1，优于最强基线。"
+    "问题：LLM Agent 的外部技能可能存在条件触发的恶意行为，静态扫描和一次性语义判断难以发现。",
+    "方法：SkillSentry 推断技能能力边界，构建 LLM-simulated adaptive honey worlds，并放置受控诱饵资源诱发潜在风险行为。",
+    "检测机制：通过自适应任务生成探索技能行为状态，并对比 skill-enabled trajectories 与 no-skill executions 以定位异常。",
+    "归因能力：框架在最终判定前将可疑行为关联到源代码和经过验证的执行轨迹，降低误报并提升可解释性。",
+    "效果：在标准基准上取得 99.50% Recall 和 96.26% 平均 F1；在语义保持规避场景下平均 F1 为 92.95%，优于最强基线的 80.07%。"
   ],
   "llm_assessment": {
     "novelty": 0.84,
-    "problem_significance": 0.9,
-    "potential_impact": 0.87,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
     "paradigm_shift": 0.8,
     "lasting_value": 0.85,
-    "llm_avg": 0.852,
-    "comment": "High-value agent security work introducing adaptive simulated environments and trace-grounded testing for external skills.",
-    "comment_zh": "这是一篇高价值的智能体安全论文，引入自适应模拟环境和基于执行轨迹的外部技能动态测试。"
+    "llm_avg": 0.8459999999999999,
+    "comment": "Strong agent-security infrastructure that dynamically tests skills through adaptive environments and verified execution traces.",
+    "comment_zh": "这是一项较强的智能体安全基础设施工作，通过自适应环境和可验证执行轨迹动态测试技能。"
   },
   "scores": {
     "topic_relevance": 0.88,
@@ -48,7 +48,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.852,
+    "llm_assessment": 0.8459999999999999,
     "domain_multiplier": 1.0
   },
   "enriched": {

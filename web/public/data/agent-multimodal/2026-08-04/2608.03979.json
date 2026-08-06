@@ -33,23 +33,23 @@
     "project_page": null
   },
   "abstract_en": "We introduce Video-DeepResearch (Video-DR), extending multimodal agents from static images to continuous video streams, a setting that demands dense spatiotemporal grounding coupled with open-web exploration. Preliminary evaluations reveal two critical bottlenecks in current models: (1) modality bias, where agents bypass visual tools in favor of textual search, and (2) parametric knowledge leakage, where models rely on internal memory rather than genuine tool-augmented execution. To address these challenges, we propose Video-DR, featuring a decoupled perception-exploration pipeline with stage-wise tool unlocking that compels exhaustive cross-frame visual grounding prior to web retrieval. Our framework adopts a two-stage training recipe: supervised fine-tuning followed by Group Relative Policy Optimization (GRPO), enabling autonomous exploration that breaks the imitation-learning ceiling. Furthermore, we curate Video-DR-Bench, a human-AI collaborative benchmark comprising 200 complex, multi-hop VQA instances. Empirical results demonstrate that our Video-DeepResearch-35B-A3B establishes a new state-of-the-art of 64.0% average accuracy, surpassing proprietary Claude-4.5-Sonnet (59.0%) by 5.0 points and significantly outperforming GPT-5 (52.5%) and Gemini 2.5 Pro (57.5%). The 30B-A3B variant achieves 59.3%, competitive with Claude-4.5-Sonnet and demonstrating the effectiveness of our training paradigm even at compact scale. Code: https://github.com/Osilly/Vision-DeepResearch.",
-  "abstract_zh": "本文提出 Video-DeepResearch（Video-DR），将多模态 Agent 从静态图像扩展到连续视频流场景，要求模型同时具备密集时空定位能力与开放网络探索能力。作者指出当前模型存在两类关键瓶颈：一是模态偏置（modality bias），即 Agent 倾向于绕过视觉工具而依赖文本搜索；二是参数知识泄漏（parametric knowledge leakage），即模型依赖内部记忆而非真实执行工具增强推理。为此，Video-DR 采用解耦的感知—探索流程，并通过分阶段工具解锁机制，强制模型在进行网页检索前完成充分的跨帧视觉定位。训练上，框架结合监督微调（SFT）与 Group Relative Policy Optimization（GRPO），使 Agent 能进行自主探索并突破模仿学习上限。作者还构建了 Video-DR-Bench，一个由人机协作生成的基准，包含 200 个复杂多跳视频问答实例。实验显示，Video-DeepResearch-35B-A3B 平均准确率达到 64.0%，超过 Claude-4.5-Sonnet 的 59.0%，并显著优于 GPT-5 和 Gemini 2.5 Pro；30B-A3B 版本也达到 59.3%，验证了该训练范式在较小规模模型上的有效性。",
+  "abstract_zh": "本文提出 Video-DeepResearch（Video-DR），将多模态 Agent 从静态图像扩展到连续视频流场景，强调密集时空定位（spatiotemporal grounding）与开放网络探索的结合。作者指出当前模型存在两类关键瓶颈：其一是模态偏置（modality bias），即 Agent 倾向绕过视觉工具而依赖文本搜索；其二是参数化知识泄漏（parametric knowledge leakage），即模型依靠内部记忆而非真实的工具增强执行。为此，Video-DR 采用解耦的感知-探索流程，并通过分阶段工具解锁机制，强制模型在进行网络检索前完成跨帧视觉定位。训练上，框架结合监督微调（SFT）与 Group Relative Policy Optimization（GRPO），使 Agent 能进行自主探索并突破模仿学习上限。作者还构建了 Video-DR-Bench，一个由人类与 AI 协作生成的基准，包含 200 个复杂多跳视频问答样例。实验显示，Video-DeepResearch-35B-A3B 达到 64.0% 平均准确率，超过 Claude-4.5-Sonnet 的 59.0%，并显著优于 GPT-5 与 Gemini 2.5 Pro；30B-A3B 版本也取得 59.3%，验证了该训练范式在较小规模模型上的有效性。",
   "key_points_zh": [
-    "提出 Video-DR，将 DeepResearch 类多模态 Agent 从图像扩展到连续视频流，强调跨帧时空 grounding 与开放网页探索的结合。",
-    "识别当前多模态 Agent 的两大问题：模态偏置导致过度依赖文本搜索，参数知识泄漏导致模型用内部记忆替代真实工具调用。",
-    "设计解耦的感知—探索 pipeline 与分阶段工具解锁机制，要求模型先完成充分视频理解，再进行网页检索和多跳推理。",
-    "采用 SFT + GRPO 两阶段训练，使模型从模仿工具使用转向自主探索，提升复杂任务求解能力。",
-    "构建 Video-DR-Bench，包含 200 个复杂多跳 VQA 样本；Video-DeepResearch-35B-A3B 达到 64.0% 准确率，超过 Claude-4.5-Sonnet、GPT-5 和 Gemini 2.5 Pro。"
+    "提出 Video-DR，将多模态 DeepResearch Agent 从图像扩展到连续视频流，面向需要跨帧时空定位与开放网络检索的复杂视频问答任务。",
+    "识别当前 Agent 的两大问题：偏向文本搜索而忽视视觉工具的模态偏置，以及依赖模型内部记忆而非真实工具调用的参数化知识泄漏。",
+    "设计解耦的感知-探索 pipeline 与分阶段工具解锁机制，要求模型先完成充分的跨帧视觉 grounding，再进行 web retrieval。",
+    "采用 SFT + GRPO 的两阶段训练策略，使模型从模仿学习转向更强的自主探索与工具使用能力。",
+    "构建 Video-DR-Bench，包含 200 个复杂多跳 VQA 样例；Video-DeepResearch-35B-A3B 达到 64.0% 准确率，超过 Claude-4.5-Sonnet、GPT-5 和 Gemini 2.5 Pro。"
   ],
   "llm_assessment": {
-    "novelty": 0.72,
-    "problem_significance": 0.78,
-    "potential_impact": 0.74,
-    "paradigm_shift": 0.62,
-    "lasting_value": 0.76,
-    "llm_avg": 0.724,
-    "comment": "Strong video-agent work with tool-augmented exploration, visual grounding, training, and benchmark contributions, though not clearly focused on realtime latency.",
-    "comment_zh": "这是一项较强的视频智能体工作，结合了工具增强探索、视觉定位、训练与基准贡献，但实时低延迟重点不够明确。"
+    "novelty": 0.5,
+    "problem_significance": 0.5,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.5,
+    "llm_avg": 0.5,
+    "comment": "Strong video-agent and benchmark contribution with tool-augmented visual grounding, though it emphasizes deep research over realtime low-latency interaction.",
+    "comment_zh": "Strong video-agent and benchmark contribution with tool-augmented visual grounding, though it emphasizes deep research over realtime low-latency interaction."
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
@@ -58,7 +58,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.724,
+    "llm_assessment": 0.5,
     "domain_multiplier": 1.0
   },
   "enriched": {

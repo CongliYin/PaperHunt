@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.03018",
   "title": "UrbanAgent: A Tool-Augmented Agent for Cross-System Urban Tasks",
-  "title_zh": "UrbanAgent：面向跨系统城市任务的工具增强智能体",
+  "title_zh": "UrbanAgent：用于跨系统城市任务的工具增强 Agent",
   "authors": [
     "Jiayu Cao",
     "Xingyuan Zeng",
@@ -22,23 +22,23 @@
     "project_page": null
   },
   "abstract_en": "Modern cities rely on an increasing number of digital services to operate, but residents' daily needs are still difficult to meet. Services are fragmented and have little interoperability, placing a heavy operational burden on users. Existing digital platforms, urban foundation models, and intelligent assistants each address only isolated aspects of an urban task. But they struggle to reliably convert complex natural-language requests into executable cross-system workflows. We propose Urban-Agent, a tool-augmented agent framework for cross-system urban tasks. It couples the cognitive and reasoning capabilities of a large language model with a tool-set supporting code execution, API calls, and Model Context Protocol. Through one adaptive closed loop, it clarifies missing information before acting, grounds tool use in live observations, and aligns the final response with observed evidence and task constraints. To address the evaluation gap, we introduce Urban-Eval, a benchmark specifically designed for cross-system urban request. Unlike prior benchmarks that assess either general tool use or urban knowledge and reasoning, Urban-Eval evaluates both task results and execution quality, including required tool coverage, dependency validity, and evidence traceability. Experimental results indicate that Urban-Agent reaches a 71% task success rate, 10 points above the strongest baseline. This lead holds across GPT-5-mini, Gemini-2.5-flash, DeepSeek-V4-flash, and Qwen3-235B-A22B.",
-  "abstract_zh": "现代城市依赖越来越多数字服务运行，但居民日常需求仍难以被顺畅满足：服务碎片化、互操作性弱，用户需要承担大量操作负担。现有数字平台、城市基础模型和智能助手通常只能处理城市任务的局部环节，难以将复杂自然语言请求可靠转化为可执行的跨系统工作流。论文提出 Urban-Agent，一个面向跨系统城市任务的工具增强智能体框架，将大语言模型的认知与推理能力，同支持代码执行、API 调用和 Model Context Protocol 的工具集结合起来。该框架通过自适应闭环，在行动前澄清缺失信息，在实时观测中约束工具使用，并使最终回答与证据和任务约束对齐。为弥补评测缺口，论文还提出 Urban-Eval，一个专门面向跨系统城市请求的基准，不仅评估任务结果，也评估执行质量，包括必要工具覆盖、依赖有效性和证据可追溯性。实验显示，Urban-Agent 达到 71% 的任务成功率，比最强基线高 10 个百分点，并且在 GPT-5-mini、Gemini-2.5-flash、DeepSeek-V4-flash 和 Qwen3-235B-A22B 上均保持领先。",
+  "abstract_zh": "现代城市依赖越来越多的数字服务运行，但居民日常需求仍难以被高效满足：服务割裂、互操作性弱，导致用户需要承担繁重的操作负担。现有数字平台、城市基础模型与智能助手通常只能处理城市任务的局部环节，难以将复杂自然语言请求可靠转化为可执行的跨系统工作流。本文提出 Urban-Agent，一个面向跨系统城市任务的工具增强 Agent 框架，将大语言模型的认知与推理能力同支持代码执行、API 调用和 Model Context Protocol 的工具集结合起来。它通过自适应闭环在行动前澄清缺失信息，在实时观测中约束工具使用，并使最终回答与证据和任务约束保持一致。为弥补评测空白，论文提出 Urban-Eval，一个专门评估跨系统城市请求的基准，不仅考察任务结果，也评估执行质量，包括必要工具覆盖、依赖有效性和证据可追溯性。实验显示，Urban-Agent 达到 71% 的任务成功率，比最强 baseline 高 10 个百分点，并在 GPT-5-mini、Gemini-2.5-flash、DeepSeek-V4-flash 和 Qwen3-235B-A22B 上保持领先。",
   "key_points_zh": [
-    "提出 Urban-Agent：面向城市服务场景的工具增强智能体，可将复杂自然语言需求转化为跨系统可执行工作流。",
-    "框架结合 LLM 推理能力与代码执行、API 调用、Model Context Protocol 等工具，并通过自适应闭环完成信息澄清、工具调用和证据对齐。",
-    "提出 Urban-Eval 基准，专门评测跨系统城市请求，覆盖任务成功率、工具覆盖、依赖有效性和证据可追溯性等维度。",
-    "实验中 Urban-Agent 取得 71% 任务成功率，较最强基线提升 10 个百分点。",
-    "方法在 GPT-5-mini、Gemini-2.5-flash、DeepSeek-V4-flash 和 Qwen3-235B-A22B 等不同模型上均保持稳定优势。"
+    "提出 Urban-Agent，将 LLM 推理与代码执行、API 调用、Model Context Protocol 等工具集结合，面向跨系统城市服务任务生成可执行工作流。",
+    "框架采用自适应闭环：先澄清缺失信息，再基于实时观测调用工具，最后依据证据与任务约束生成响应，提升执行可靠性。",
+    "构建 Urban-Eval 基准，专门评估跨系统城市请求，覆盖任务成功率、工具覆盖、依赖有效性和证据可追溯性等维度。",
+    "实验中 Urban-Agent 取得 71% 任务成功率，比最强 baseline 高 10 个百分点。",
+    "性能优势在 GPT-5-mini、Gemini-2.5-flash、DeepSeek-V4-flash 和 Qwen3-235B-A22B 等不同底座模型上均成立。"
   ],
   "llm_assessment": {
-    "novelty": 0.66,
-    "problem_significance": 0.72,
-    "potential_impact": 0.7,
-    "paradigm_shift": 0.58,
-    "lasting_value": 0.66,
-    "llm_avg": 0.664,
-    "comment": "UrbanAgent is a credible tool-augmented workflow agent with execution-quality evaluation and evidence traceability, though its domain specificity limits generality.",
-    "comment_zh": "UrbanAgent 是较可信的工具增强工作流智能体，并包含执行质量评测与证据可追溯性，但城市任务领域限制了其通用性。"
+    "novelty": 0.7,
+    "problem_significance": 0.76,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.64,
+    "lasting_value": 0.7,
+    "llm_avg": 0.708,
+    "comment": "A strong domain-grounded tool-agent framework with live observations, workflow execution, and traceable evaluation, though its durability depends on reuse beyond urban tasks.",
+    "comment_zh": "该工作提出了结合实时观测、工作流执行和可追踪评测的工具智能体框架，但长期价值取决于能否迁移到城市任务之外。"
   },
   "scores": {
     "topic_relevance": 0.6000000000000001,
@@ -47,7 +47,7 @@
     "author_reputation": 0.36228269883744174,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.664,
+    "llm_assessment": 0.708,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -60,8 +60,8 @@
     "first_author_h_index": 5,
     "first_author_found": true,
     "first_author_affiliations": [],
-    "last_author_h_index": null,
-    "last_author_found": false,
+    "last_author_h_index": 0,
+    "last_author_found": true,
     "last_author_affiliations": []
   },
   "figures": [

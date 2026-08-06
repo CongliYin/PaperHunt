@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.03403",
   "title": "Towards Robust Tool Use in Agents via Experience-Driven Adaptive Guidance",
-  "title_zh": "通过经验驱动的自适应指导提升 Agent 工具使用鲁棒性",
+  "title_zh": "通过经验驱动的自适应指导实现 Agent 鲁棒工具使用",
   "authors": [
     "Can Wang",
     "Haoran Chen",
@@ -20,23 +20,23 @@
     "project_page": null
   },
   "abstract_en": "The performance bottleneck of agents is increasingly shifting from model capability to the robustness of their execution processes. Tools play a central role as the primary interface through which agents interact with external environments, yet existing methods rarely focus on ensuring robust tool use across diverse runtime conditions. To address this problem, we propose ExpG, a mechanism that builds and refines adaptive guidance capturing each tool's capability boundaries and best practices, thereby enabling agents to use tools more robustly and effectively. ExpG consists of three phases: (1) experience acquisition, which analyzes tool invocation quality from historical execution trajectories, producing structured learnable experiences through multi-aspect attribution; (2) experience distillation, which keeps the experience pool effective by filtering unhelpful experiences, selecting representative ones with an equivalence-class-based method, and summarizing them into generalizable guidance; and (3) experience reuse, which applies the guidance adaptively during future task solving. Extensive experiments show that ExpG brings consistent improvements across the tool selection, tool calling, and response generation tasks, enabling smaller agents to outperform larger ones that do not use ExpG. Moreover, ExpG achieves particularly strong gains in challenging settings, suggesting a promising path toward more robust tool use. Our code, experiments, and results are available.",
-  "abstract_zh": "这篇论文关注 Agent 性能瓶颈从模型能力转向执行过程鲁棒性的趋势，尤其聚焦工具使用这一 Agent 与外部环境交互的关键接口。作者提出 ExpG，一种经验驱动的自适应指导机制，用于构建并持续优化每个工具的能力边界与最佳实践，从而帮助 Agent 在多样运行条件下更稳健、更有效地使用工具。ExpG 包含三个阶段：经验获取（experience acquisition）从历史执行轨迹中分析工具调用质量，并通过多维归因生成结构化可学习经验；经验蒸馏（experience distillation）通过过滤无效经验、基于等价类选择代表性经验，并将其总结为可泛化指导；经验复用（experience reuse）在未来任务求解时自适应应用这些指导。大量实验表明，ExpG 在工具选择、工具调用和响应生成任务上均带来稳定提升，并使较小 Agent 能够超过未使用 ExpG 的更大 Agent；在困难场景中收益尤为显著，展示了提升工具使用鲁棒性的潜力。",
+  "abstract_zh": "这篇论文关注 Agent 性能瓶颈从模型能力转向执行过程鲁棒性的趋势，指出工具（tools）作为 Agent 与外部环境交互的核心接口，其在不同运行条件下的稳定使用仍缺乏系统性保障。为此，作者提出 ExpG，一种通过构建和持续优化自适应指导来刻画每个工具的能力边界与最佳实践的机制，从而提升 Agent 使用工具的鲁棒性与有效性。ExpG 包含三个阶段：经验获取，从历史执行轨迹中分析工具调用质量，并通过多维归因生成结构化可学习经验；经验蒸馏，通过过滤无效经验、基于等价类选择代表性经验，并总结为可泛化指导，保持经验池有效；经验复用，在未来任务求解中自适应应用这些指导。大量实验表明，ExpG 在工具选择、工具调用和响应生成任务上均带来稳定提升，使较小 Agent 能够超过未使用 ExpG 的较大 Agent，并在高难度场景中取得尤其显著的收益。",
   "key_points_zh": [
-    "论文提出 ExpG，通过从历史执行轨迹中学习工具使用经验，刻画各工具的能力边界、常见失败模式与最佳实践。",
-    "ExpG 采用三阶段流程：经验获取、经验蒸馏与经验复用，使经验从单次轨迹中抽象为可泛化、可在未来任务中自适应调用的指导。",
-    "经验蒸馏阶段引入过滤无益经验、基于等价类选择代表样本和总结指导的机制，以保持经验池的有效性与紧凑性。",
-    "实验显示 ExpG 在 tool selection、tool calling 和 response generation 等任务上均稳定提升性能，尤其在复杂或挑战性设置中效果更明显。",
-    "结果表明，具备 ExpG 的较小 Agent 可超越未使用该机制的更大 Agent，说明执行过程优化可显著弥补模型规模差距。"
+    "提出 ExpG，通过经验驱动的自适应指导捕捉工具的能力边界与最佳使用方式，提升 Agent 在复杂运行环境中的工具使用鲁棒性。",
+    "ExpG 包含经验获取、经验蒸馏和经验复用三个阶段，分别负责从历史轨迹学习、筛选总结经验，并在新任务中动态应用。",
+    "经验蒸馏阶段使用过滤、基于等价类的代表性选择和总结机制，避免经验池冗余或低质量，增强指导的可泛化性。",
+    "实验显示 ExpG 在 tool selection、tool calling 和 response generation 上均有一致提升，小模型 Agent 甚至可超过未使用 ExpG 的大模型 Agent。",
+    "在更具挑战性的设置中，ExpG 的收益更明显，说明经验式指导是提升 Agent 工具执行可靠性的有效路径。"
   ],
   "llm_assessment": {
-    "novelty": 0.76,
-    "problem_significance": 0.82,
-    "potential_impact": 0.8,
-    "paradigm_shift": 0.72,
-    "lasting_value": 0.78,
-    "llm_avg": 0.776,
-    "comment": "Good trace-driven tool-use improvement method that distills historical execution experience into adaptive guidance.",
-    "comment_zh": "这是一种较好的基于轨迹的工具使用改进方法，将历史执行经验蒸馏为自适应指导。"
+    "novelty": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.79,
+    "lasting_value": 0.82,
+    "llm_avg": 0.826,
+    "comment": "Strong tool-use improvement work that turns historical execution trajectories into adaptive guidance for more robust future agent behavior.",
+    "comment_zh": "这是一项较强的工具使用改进工作，将历史执行轨迹转化为自适应指导以提升后续智能体鲁棒性。"
   },
   "scores": {
     "topic_relevance": 0.8,
@@ -45,7 +45,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.776,
+    "llm_assessment": 0.826,
     "domain_multiplier": 1.0
   },
   "enriched": {

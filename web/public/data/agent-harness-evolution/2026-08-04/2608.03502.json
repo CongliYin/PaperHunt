@@ -1,20 +1,13 @@
 {
   "arxiv_id": "2608.03502",
   "title": "Hybrid LLM-Augmented Reinforcement Learning Agents for Complex Sequential Decision Tasks",
-  "title_zh": "面向复杂序列决策任务的 Hybrid LLM-Augmented Reinforcement Learning Agents",
+  "title_zh": "面向复杂序列决策任务的 Hybrid LLM-Augmented Reinforcement Learning Agent",
   "authors": [
     "Christophe D. Hounwanou",
     "John Emeka Eze",
     "Yaé Ulrich Gaba"
   ],
-  "author_affiliations": [
-    {
-      "name": "Yaé Ulrich Gaba",
-      "affiliations": [
-        "Quantum Leap Africa"
-      ]
-    }
-  ],
+  "author_affiliations": [],
   "published_at": "2026-08-04T11:44:07Z",
   "abs_url": "https://arxiv.org/abs/2608.03502v1",
   "pdf_url": "https://arxiv.org/pdf/2608.03502",
@@ -23,32 +16,32 @@
     "project_page": null
   },
   "abstract_en": "Large Language Models (LLMs) have recently shown strong capabilities in reasoning, planning, and tool-use, enabling new forms of autonomous agents. However, LLM-based agents struggle with long-horizon sequential decision tasks that require precise action optimization and environment interaction. Reinforcement Learning (RL), while effective for sequential control, often lacks the high-level abstraction and task decomposition abilities needed for complex scenarios. This paper introduces an LLM-Augmented Reinforcement Learning Agent that integrates LLM-driven planning with RL-based action optimization. The proposed architecture leverages the LLM to generate subgoals, structured plans, and contextual guidance, while the RL agent refines low-level actions through interaction with the environment. Experiments on sequential decision tasks demonstrate improved sample efficiency, higher success rates, and more coherent action trajectories compared to RL-only and LLM-only baselines. This hybrid paradigm highlights a promising direction for building more capable autonomous systems.",
-  "abstract_zh": "本文提出一种 LLM-Augmented Reinforcement Learning Agent，将 Large Language Models（LLMs）的高层推理、规划与任务分解能力，和 Reinforcement Learning（RL）的低层动作优化与环境交互能力结合起来。该架构由 LLM 生成子目标、结构化计划和上下文指导，再由 RL agent 通过与环境交互细化具体动作。实验表明，在复杂序列决策任务中，相比 RL-only 与 LLM-only 基线，该混合范式能提升样本效率、任务成功率，并产生更连贯的动作轨迹，展示了构建更强自主智能体的潜力。",
+  "abstract_zh": "本文提出一种 LLM-Augmented Reinforcement Learning Agent，将 Large Language Model（LLM）的高层规划能力与 Reinforcement Learning（RL）的低层动作优化能力结合起来。该架构利用 LLM 生成子目标、结构化计划和上下文指导，再由 RL agent 通过与环境交互细化具体动作。实验表明，在复杂序列决策任务中，该混合范式相比 RL-only 和 LLM-only 基线具备更高样本效率、更高成功率以及更连贯的动作轨迹，为构建更强自主智能体提供了有前景的方向。",
   "key_points_zh": [
-    "针对 LLM-based agents 在长程序列决策中动作精度不足、RL 缺乏高层抽象的问题，提出混合式 LLM+RL 架构。",
-    "LLM 负责生成 subgoals、structured plans 与 contextual guidance，为复杂任务提供高层分解和规划。",
-    "RL agent 负责在环境交互中优化低层动作，使计划能够转化为可执行且更精确的行为序列。",
-    "实验显示该方法相较 RL-only 和 LLM-only baselines 具有更高 sample efficiency、success rate 和更连贯的 action trajectories。",
-    "论文强调 LLM-driven planning 与 RL-based action optimization 的互补性，为复杂 autonomous agents 提供了可扩展方向。"
+    "提出 Hybrid LLM-Augmented Reinforcement Learning Agent，融合 LLM 的任务分解、规划能力与 RL 的环境交互和动作优化能力。",
+    "LLM 负责生成子目标、结构化计划与上下文指导，帮助 RL agent 在长时程任务中获得更清晰的高层策略约束。",
+    "RL agent 负责在环境中学习和细化低层动作，弥补 LLM-only agent 在精确控制和长期交互优化上的不足。",
+    "实验显示该方法相比 RL-only 和 LLM-only baselines 在样本效率、任务成功率和动作轨迹一致性上均有提升。",
+    "论文强调 LLM+RL 的混合智能体范式适合复杂序列决策任务，可作为更通用自主系统的重要构建方向。"
   ],
   "llm_assessment": {
     "novelty": 0.34,
     "problem_significance": 0.42,
     "potential_impact": 0.38,
-    "paradigm_shift": 0.32,
+    "paradigm_shift": 0.3,
     "lasting_value": 0.34,
-    "llm_avg": 0.36000000000000004,
-    "comment": "The hybrid LLM-plus-RL idea is plausible but remains generic sequential-decision work without a clear reusable agent harness or trajectory-improvement infrastructure.",
-    "comment_zh": "LLM 与 RL 结合的思路合理，但整体仍偏通用序贯决策，缺少明确可复用的智能体框架或轨迹改进基础设施。"
+    "llm_avg": 0.35600000000000004,
+    "comment": "The LLM-planning plus RL-control combination addresses sequential decision making but remains a generic hybrid-agent pattern with limited harness or trajectory-improvement contribution.",
+    "comment_zh": "LLM规划结合RL控制虽面向序贯决策，但整体仍是较通用的混合智能体模式，对智能体平台或轨迹改进贡献有限。"
   },
   "scores": {
     "topic_relevance": 0.6400000000000001,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.49919890888949187,
+    "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.36000000000000004,
+    "llm_assessment": 0.35600000000000004,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -58,14 +51,12 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": null,
-    "first_author_found": false,
+    "first_author_h_index": 0,
+    "first_author_found": true,
     "first_author_affiliations": [],
-    "last_author_h_index": 11,
-    "last_author_found": true,
-    "last_author_affiliations": [
-      "Quantum Leap Africa"
-    ]
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
   },
   "figures": [
     {

@@ -17,23 +17,23 @@
     "project_page": null
   },
   "abstract_en": "Large language models are being integrated into critical infrastructure and enterprise workflows at unprecedented scale,yet the lifecycle frameworks governing their development and operations were designed for operational efficiency rather than security analysis. As a result, security-relevant activities such as data provenance verification, artifact signing, agentic permission control, and decommissioning are often left implicit or assumed to receive due care. Governance frameworks, in turn, organise requirements around risk levels or management processes without clearly linking them to the lifecycle stages where they apply. This paper addresses both deficiencies. We propose a lifecycle model for LLM systems that supports security analysis by structuring it around security-relevant boundaries rather than workflow optimisation. The model comprises 32 stages across four core pipeline layers (Data, Model, Distribution, Application), supported by a 12-stage LLMOps pillar and a 9-category governance pillar. Thirteen stages are introduced here as separate units because they expose distinct security concerns that existing frameworks do not clearly distinguish. A governance mapping synthesising the NIST AI RMF, the EU AI Act, and ISO/IEC 42001 reveals a structural property of the current regulatory landscape: governance evidence concentrates at deployment-facing stages, where systems are visible to regulators, while the most consequential decisions, data selection, alignment strategy, and capability boundaries, are made at development-facing stages, where regulatory visibility is lowest.",
-  "abstract_zh": "本文指出，Large Language Model（LLM）正大规模进入关键基础设施与企业流程，但现有生命周期框架多以运营效率为核心，并不适合系统化安全分析，导致数据来源验证、制品签名、智能体权限控制、退役等安全活动常被隐含处理。同时，NIST AI RMF、EU AI Act、ISO/IEC 42001 等治理框架通常按风险等级或管理流程组织要求，缺少与具体生命周期阶段的清晰对应。为此，论文提出一个面向安全分析的 LLM 系统生命周期模型，以安全相关边界而非工作流优化为组织原则。该模型包含 Data、Model、Distribution、Application 四个核心流水线层，共 32 个阶段，并由 12 阶段的 LLMOps 支柱和 9 类治理支柱支撑。其中 13 个阶段被单独抽象出来，以刻画现有框架未充分区分的安全关注点。论文进一步将该模型映射到 NIST AI RMF、EU AI Act 和 ISO/IEC 42001，揭示当前监管结构的一个关键问题：治理证据主要集中在面向部署、监管可见度较高的阶段，而最关键的决策，如数据选择、对齐策略和能力边界，往往发生在面向开发、监管可见度最低的阶段。",
+  "abstract_zh": "本文指出，当前 Large Language Model（LLM）系统正大规模进入关键基础设施与企业流程，但既有生命周期框架多以运行效率为中心，难以支撑系统化安全分析；数据来源验证、制品签名、Agent 权限控制、退役等安全关键活动常被隐含处理。作者提出一个面向安全边界而非工作流优化的 LLM 系统生命周期模型，覆盖 Data、Model、Distribution、Application 四个核心流水线层，共 32 个阶段，并由 12 阶段 LLMOps 支柱与 9 类治理支柱支撑。其中 13 个阶段被单独抽象出来，以刻画现有框架未充分区分的安全风险。论文进一步将该模型映射到 NIST AI RMF、EU AI Act 与 ISO/IEC 42001，发现当前监管证据主要集中在面向部署的阶段，而数据选择、对齐策略、能力边界等关键决策发生在面向开发的阶段，恰恰是监管可见性最低的位置。",
   "key_points_zh": [
-    "论文提出一个面向安全分析的 LLM 系统生命周期模型，不再按运营效率组织流程，而是按安全相关边界划分阶段。",
-    "模型覆盖 Data、Model、Distribution、Application 四个核心层，共 32 个阶段，并增加 LLMOps 与治理两类支撑支柱。",
-    "作者将 13 个安全敏感环节显式拆分为独立阶段，例如数据来源、制品签名、Agentic 权限控制和系统退役等，以暴露传统框架中被弱化的风险点。",
-    "通过映射 NIST AI RMF、EU AI Act 和 ISO/IEC 42001，论文发现治理证据集中在部署侧，而关键安全决策多发生在开发侧。",
-    "该工作为研究者和安全团队提供了一个更适合威胁建模、合规映射与责任分配的 LLM 系统生命周期分析框架。"
+    "提出覆盖 32 个阶段的 LLM 系统生命周期模型，按 Data、Model、Distribution、Application 四层组织，强调安全相关边界而非流程效率。",
+    "将 LLMOps 作为 12 阶段支柱、治理作为 9 类支柱纳入模型，使运维、合规与安全分析能与具体生命周期阶段对齐。",
+    "新增或显式拆分 13 个阶段，用于刻画数据溯源、模型制品签名、Agent 权限控制、系统退役等传统框架中常被忽略的安全问题。",
+    "通过映射 NIST AI RMF、EU AI Act 与 ISO/IEC 42001，揭示治理要求在部署阶段更可见，而开发早期的关键安全决策监管可见性不足。",
+    "论文的核心贡献是为 LLM 系统安全评估、治理证据收集与责任划分提供更细粒度的生命周期分析框架。"
   ],
   "llm_assessment": {
-    "novelty": 0.48,
-    "problem_significance": 0.58,
-    "potential_impact": 0.5,
-    "paradigm_shift": 0.38,
-    "lasting_value": 0.52,
-    "llm_avg": 0.492,
-    "comment": "Useful governance taxonomy with some agentic permission relevance, but mostly a broad LLM security lifecycle framework.",
-    "comment_zh": "这是一个有用的治理分类框架，部分涉及智能体权限，但总体仍是宽泛的LLM安全生命周期模型。"
+    "novelty": 0.54,
+    "problem_significance": 0.72,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.46,
+    "lasting_value": 0.6,
+    "llm_avg": 0.58,
+    "comment": "A broad LLM-system security lifecycle model with some agent-permission relevance, but it is mostly governance taxonomy rather than agent runtime infrastructure.",
+    "comment_zh": "这是一套广义LLM系统安全生命周期模型，部分涉及智能体权限，但主要是治理分类而非运行时基础设施。"
   },
   "scores": {
     "topic_relevance": 0.8,
@@ -42,7 +42,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.492,
+    "llm_assessment": 0.58,
     "domain_multiplier": 1.0
   },
   "enriched": {

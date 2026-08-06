@@ -22,32 +22,32 @@
     "project_page": null
   },
   "abstract_en": "Multilingual multi-agent systems exhibit substantial degradation beyond English, yet prior work rarely identifies how task-critical information is lost when user requests are converted into executable plans. We study the planner in a multi-agent system as the request-to-action interface and derive an actionable taxonomy of planning-grounding failures from failed real-world task executions. LLM-based analysis shows that these failures constitute an increasing share of unsuccessful executions as language-resource availability declines, with the strongest effects in low-resource languages. To test whether the taxonomy supports mitigation, we introduce TART, Taxonomy-Guided Actionable Representation, that makes the taxonomy's key aspects explicit to the planner and downstream sub-agents. Across multiple languages, three LLM backbones, two datasets, and two agentic configurations, TART consistently improves performance. On multilingual GAIA, it raises a state-of-the-art system's accuracy by 5.6 percentage points averaged across eleven languages spanning low- to high-resource settings.",
-  "abstract_zh": "本文研究多语言 multi-agent systems 在非英语场景下性能显著下降的问题，重点关注用户请求被转换为可执行计划时，任务关键信息如何丢失。作者将 planner 视为从请求到行动的接口，并基于真实任务执行失败案例，归纳出一套可操作的 planning-grounding failures 分类体系。LLM 分析显示，随着语言资源可用性降低，这类失败在总失败中的占比上升，低资源语言中影响最显著。为验证该分类能否用于缓解问题，作者提出 TART（Taxonomy-Guided Actionable Representation），将分类中的关键因素显式提供给 planner 和下游 sub-agents。实验覆盖多种语言、三个 LLM backbones、两个 datasets 和两种 agentic configurations，结果表明 TART 能稳定提升性能；在 multilingual GAIA 上，TART 将一个 state-of-the-art system 在 11 种语言上的平均准确率提升了 5.6 个百分点。",
+  "abstract_zh": "本文研究多语言 Multi-Agent Systems 在非英语场景下性能显著下降的原因，重点关注用户请求被转换为可执行计划时，任务关键信息如何丢失。作者将多智能体系统中的 planner 视为“请求到行动”的接口，并基于真实任务执行失败案例，提出一套可操作的规划落地失败分类法。LLM 分析表明，随着语言资源可用性降低，这类规划失败在失败执行中的占比持续上升，在低资源语言中影响最强。为验证该分类法能否指导缓解，作者提出 TART（Taxonomy-Guided Actionable Representation），将分类法中的关键因素显式提供给 planner 和下游 sub-agents。实验覆盖多种语言、三种 LLM backbone、两个数据集和两种 agentic configuration，结果显示 TART 稳定提升性能；在 multilingual GAIA 上，它使一个 state-of-the-art 系统在覆盖低到高资源的 11 种语言上平均准确率提升 5.6 个百分点。",
   "key_points_zh": [
-    "论文聚焦 multilingual multi-agent systems 中 planner 的失败，分析用户请求到可执行计划转换过程中任务关键信息的丢失机制。",
-    "作者从真实任务执行失败中构建了 actionable taxonomy，将 planning-grounding failures 系统化分类，便于定位和缓解问题。",
-    "LLM-based analysis 发现，语言资源越低，planning-grounding failures 在失败执行中的占比越高，低资源语言受影响最明显。",
-    "提出 TART（Taxonomy-Guided Actionable Representation），把失败分类中的关键信息显式注入 planner 和 downstream sub-agents。",
-    "在多语言、三个 LLM backbones、两个 datasets 与两种 agentic configurations 上，TART 均带来稳定提升；在 multilingual GAIA 上平均准确率提升 5.6 个百分点。"
+    "论文聚焦多语言 Multi-Agent Systems 中 planner 的失败机制，分析用户请求到可执行计划转换过程中任务关键信息的丢失。",
+    "作者从真实世界任务失败执行中归纳出一套 actionable taxonomy，用于描述 planning-grounding failures，即规划与任务落地之间的错配。",
+    "LLM-based analysis 显示，语言资源越低，规划落地失败在总体失败中的占比越高，低资源语言受影响最明显。",
+    "提出 TART（Taxonomy-Guided Actionable Representation），将分类法中的关键信息显式注入 planner 与下游 sub-agents，以改善执行表现。",
+    "在 multilingual GAIA 等实验中，TART 跨语言、LLM backbone、数据集和智能体配置均带来稳定提升，并使 SOTA 系统在 11 种语言上平均准确率提升 5.6 个百分点。"
   ],
   "llm_assessment": {
-    "novelty": 0.62,
-    "problem_significance": 0.74,
+    "novelty": 0.64,
+    "problem_significance": 0.72,
     "potential_impact": 0.68,
-    "paradigm_shift": 0.55,
-    "lasting_value": 0.64,
-    "llm_avg": 0.646,
-    "comment": "The paper addresses real execution failures in multilingual agent planning and offers an actionable taxonomy that can improve agent orchestration.",
-    "comment_zh": "该论文针对多语言智能体规划中的真实执行失败，并提出了可操作的分类体系来改进智能体编排。"
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.65,
+    "llm_avg": 0.654,
+    "comment": "Grounding multilingual planning failures in failed executions and feeding the taxonomy back into agent planning makes this practically relevant for agent reliability.",
+    "comment_zh": "该工作从失败执行中归纳多语言规划故障并反馈到智能体规划，对提升智能体可靠性有实际价值。"
   },
   "scores": {
     "topic_relevance": 0.68,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.3,
+    "author_reputation": 0.29176612508188887,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.646,
+    "llm_assessment": 0.654,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -57,8 +57,8 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": null,
-    "first_author_found": false,
+    "first_author_h_index": 2,
+    "first_author_found": true,
     "first_author_affiliations": [],
     "last_author_h_index": null,
     "last_author_found": false,

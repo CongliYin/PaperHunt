@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.03009",
   "title": "Tiny Enough to Break In: Agentic Remote Access Trojans Powered by Small Language Models",
-  "title_zh": "小到足以入侵：由小语言模型驱动的智能体远程访问木马",
+  "title_zh": "小到足以入侵：由 Small Language Models 驱动的 Agentic Remote Access Trojans",
   "authors": [
     "Yuhan You",
     "Suhas Adavelly",
@@ -19,23 +19,23 @@
     "project_page": null
   },
   "abstract_en": "Agentic artificial intelligence raises a new security concern: cyber threats that reason, act, and adapt locally without continuous human direction. We examine this threat through an Agentic Remote Access Trojan (agentic RAT): a Remote Access Trojan augmented with a locally deployed Small Language Model (SLM). The SLM interprets host and network observations, selects actions, recovers from failed steps, and reduces reliance on an external operator. We implement the concept in a controlled, network-isolated lab built from Kali Linux, a Metasploitable2 target, LM Studio, and a local 8-billion-parameter Dolphin-family model. We then test whether a model this small can support autonomous cyber decision-making. This is architecturally feasible today. On commodity hardware, with no cloud service and no operator in the loop, the SLM closed the full observe-decide-act cycle: it interpreted ranked reconnaissance evidence supplied by the controller, selected actions, and obtained verified root-shell access on real vulnerable services. However, it is not yet operationally reliable. The same model hallucinated commands, misread output, and recovered from failure inconsistently, completing 10.9% of a deliberately strict checklist. That gap reflects the limits of today's small models, not a ceiling on the concept. As SLMs improve, agentic endpoint systems may become more practical, more autonomous, and harder to detect, straining existing monitoring, containment, and policy-enforcement mechanisms. Real-world incidents in 2025-2026 already show AI-driven intrusions moving from concept toward practice. That makes the local, self-contained variant we study a plausible near-term direction, not a hypothetical one.",
-  "abstract_zh": "本文研究一种新的安全威胁：能够在本地推理、行动并自适应的智能体式网络攻击。作者提出 Agentic Remote Access Trojan（agentic RAT），即在传统 Remote Access Trojan（RAT）中集成本地部署的 Small Language Model（SLM），使其能够解释主机与网络观测结果、选择攻击动作、从失败步骤中恢复，并降低对外部操作者的依赖。实验在隔离实验室环境中进行，使用 Kali Linux、Metasploitable2、LM Studio，以及本地 8B 参数 Dolphin-family 模型。结果表明，即使如此小的模型，在普通硬件、无云服务、无人类实时操控的条件下，也能完成 observe-decide-act 闭环：理解控制器提供的侦察证据、选择攻击步骤，并在真实脆弱服务上获得经验证的 root shell 访问。然而，该系统尚不具备稳定实战能力：模型会幻觉命令、误读输出，失败恢复不一致，在严格检查清单中仅完成 10.9%。作者认为，这反映的是当前 SLM 能力限制，而非该方向的上限。随着 SLM 提升，本地自包含的智能体端点威胁可能变得更实用、更自主且更难检测，对现有监控、隔离和策略执行机制构成压力。",
+  "abstract_zh": "本文研究一种新的安全威胁：具备智能体能力的 AI 可在本地进行推理、行动与自适应，而无需持续的人类操作者指挥。作者提出并实现了 Agentic Remote Access Trojan（agentic RAT）概念，即在传统 Remote Access Trojan 中加入本地部署的 Small Language Model（SLM）。该 SLM 可解释主机与网络观测结果、选择攻击动作、从失败步骤中恢复，并降低对外部操作者的依赖。实验在隔离实验室中进行，环境包含 Kali Linux、Metasploitable2 靶机、LM Studio，以及一个本地 8B 参数的 Dolphin-family 模型。结果表明，即使如此小的模型，在消费级硬件、无云服务、无人类闭环干预的条件下，也能完成“观察—决策—行动”循环：解释控制器提供的排序侦察证据、选择操作，并在真实脆弱服务上获得经验证的 root shell。然而，其可靠性仍不足：模型会幻觉命令、误读输出，且失败恢复不稳定，在严格检查清单中仅完成 10.9%。作者认为，这反映的是当前小模型能力限制，而非该路线的上限。随着 SLM 进步，本地自包含的 agentic endpoint 系统可能变得更实用、更自主、更难检测，并对现有监控、隔离与策略执行机制构成压力。",
   "key_points_zh": [
-    "提出 agentic RAT：将本地 Small Language Model 嵌入 Remote Access Trojan，使其具备解释观测、决策行动和失败恢复能力。",
-    "实验环境完全隔离，基于 Kali Linux、Metasploitable2、LM Studio 和 8B Dolphin-family 模型，验证无需云服务和人工操控的本地攻击闭环。",
-    "结果显示该架构当下已可行：SLM 能根据侦察证据选择动作，并在真实漏洞服务上获得经验证的 root-shell access。",
-    "当前可靠性仍然不足：模型存在命令幻觉、输出误读和不稳定恢复问题，严格 checklist 完成率仅 10.9%。",
-    "论文警示，随着 SLM 能力提升，本地自包含的智能体恶意软件可能更自主、更隐蔽，并挑战现有检测与防御体系。"
+    "提出 agentic RAT：将本地部署的 Small Language Model 嵌入 Remote Access Trojan，使其能基于环境观测自主选择攻击动作。",
+    "实验使用 Kali Linux、Metasploitable2、LM Studio 和本地 8B Dolphin-family 模型，在网络隔离环境中验证概念可行性。",
+    "SLM 在无云服务、无操作者参与的情况下完成 observe-decide-act 闭环，并成功获得真实漏洞服务上的 root shell。",
+    "当前可靠性仍较低：模型存在命令幻觉、输出误读、失败恢复不稳定等问题，严格清单完成率仅 10.9%。",
+    "论文警示：随着 SLM 能力提升，本地自治型恶意软件可能更实用且更难检测，挑战现有终端监控与安全策略。"
   ],
   "llm_assessment": {
     "novelty": 0.5,
-    "problem_significance": 0.62,
+    "problem_significance": 0.66,
     "potential_impact": 0.45,
     "paradigm_shift": 0.38,
     "lasting_value": 0.42,
-    "llm_avg": 0.47400000000000003,
-    "comment": "Security-relevant threat demonstration, but it is more a cyber risk case study than agent harness or defense infrastructure.",
-    "comment_zh": "该论文展示了有安全意义的威胁，但更像网络风险案例研究而非智能体运行或防御基础设施。"
+    "llm_avg": 0.48200000000000004,
+    "comment": "A security case study of autonomous malicious agents that is relevant to threat modeling but contributes little reusable defensive harness infrastructure.",
+    "comment_zh": "这是一项自主恶意智能体安全案例研究，对威胁建模相关，但几乎不提供可复用防御性运行基础设施。"
   },
   "scores": {
     "topic_relevance": 0.8,
@@ -44,7 +44,7 @@
     "author_reputation": 0.31611819439287525,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.47400000000000003,
+    "llm_assessment": 0.48200000000000004,
     "domain_multiplier": 1.0
   },
   "enriched": {

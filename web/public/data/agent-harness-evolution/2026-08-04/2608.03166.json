@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.03166",
   "title": "Adversarial Stress Testing of Role-Playing Language Agents using Multi-Agent Evaluation",
-  "title_zh": "使用多智能体评估对角色扮演语言智能体进行对抗性压力测试",
+  "title_zh": "使用多智能体评估对角色扮演语言智能体进行对抗压力测试",
   "authors": [
     "Saqib Shouqi",
     "Abdullah Nazly",
@@ -17,23 +17,23 @@
     "project_page": null
   },
   "abstract_en": "Role-Playing Language Agents (RPLAs) are increasingly deployed in high-stakes applications such as healthcare assistance, customer support, and education, where maintaining consistent personas, ethical constraints, and behavioral coherence under adversarial pressure is critical. Existing evaluation approaches rely on static benchmarks or isolated single-turn prompts that fail to capture cumulative behavioral failures emerging over extended interactions. We present a modular multi-agent platform for adversarially stress-testing RPLAs through structured, multi-turn dialogue. The system coordinates three agents: a strategy-driven Interrogator Agent that applies six progressive adversarial strategies, a Target Agent representing the RPLA under evaluation, and an automated Judging Agent that scores behavior across role fidelity, drift, ethical deviation, and consistency dimensions. Through experiments across three personas and three LLM families, we demonstrate that multi-strategy adversarial evaluation reveals failure modes invisible to single-strategy testing, reducing overall robustness scores by 0.17--0.20 points on average. Cross-model validation confirms consistent degradation patterns across Llama-3.3-70B, GPT-4o-mini, and Claude-3.5-Haiku, with Authority Challenge and Emotional Manipulation emerging as the most effective attack strategies. Automated judging achieves strong human alignment ($r = 0.82$, Fleiss' $κ= 0.71$). This work is released as an open-source platform to support AI safety and reproducible RPLA benchmarking. While the framework enables systematic discovery of failure modes, we acknowledge potential ethical risks associated with adversarial testing methodologies and emphasize responsible usage for improving AI safety.",
-  "abstract_zh": "本文针对 Role-Playing Language Agents（RPLAs）在医疗辅助、客服、教育等高风险场景中的安全评估问题，提出一个模块化多智能体对抗压力测试平台。不同于依赖静态基准或单轮提示的传统评估，该平台通过结构化多轮对话揭示长期交互中逐步累积的角色漂移、伦理偏离和行为不一致等失败模式。系统由三个智能体组成：采用六种递进式对抗策略的 Interrogator Agent、作为被测对象的 Target Agent，以及从角色忠实度、漂移、伦理偏差和一致性等维度自动评分的 Judging Agent。实验覆盖三类 persona 和三个 LLM families，结果显示，多策略对抗评估能发现单一策略测试难以暴露的问题，使整体鲁棒性评分平均下降 0.17–0.20。跨模型验证表明，Llama-3.3-70B、GPT-4o-mini 和 Claude-3.5-Haiku 均呈现一致的退化模式，其中 Authority Challenge 和 Emotional Manipulation 是最有效的攻击策略。自动评审与人工标注具有较强一致性（r=0.82，Fleiss' κ=0.71）。作者开源该平台，以支持 AI safety 和可复现的 RPLA benchmark，同时强调对抗测试方法需负责任使用。",
+  "abstract_zh": "本文关注 Role-Playing Language Agents（RPLAs）在医疗辅助、客服、教育等高风险场景中的安全评估问题。作者指出，现有静态基准或单轮提示难以发现长程交互中逐步累积的角色偏移、伦理失范和行为不一致。为此，论文提出一个模块化多智能体对抗压力测试平台，由三类 Agent 协同工作：基于策略的 Interrogator Agent 负责执行六种递进式对抗策略，Target Agent 作为待测 RPLA，Judging Agent 自动从角色忠实度、漂移、伦理偏差和一致性等维度进行评分。实验覆盖三种 persona 和三个 LLM family，结果显示，多策略多轮对抗评估能暴露单策略测试难以发现的失败模式，使整体鲁棒性得分平均下降 0.17–0.20。跨模型验证表明，Llama-3.3-70B、GPT-4o-mini 和 Claude-3.5-Haiku 均呈现一致的鲁棒性退化趋势，其中 Authority Challenge 和 Emotional Manipulation 是最有效的攻击策略。自动评审与人类评审高度一致，相关系数 r=0.82，Fleiss' κ=0.71。该平台开源，旨在支持 AI safety 与可复现的 RPLA benchmark。",
   "key_points_zh": [
-    "提出一个面向 RPLAs 的模块化多智能体压力测试平台，通过多轮对话模拟持续对抗压力，而非只依赖静态 benchmark 或单轮 prompt。",
-    "系统包含 Interrogator Agent、Target Agent 和 Judging Agent；评估维度覆盖 role fidelity、drift、ethical deviation 与 consistency。",
-    "六种递进式对抗策略可揭示单策略测试难以发现的失败模式，使整体鲁棒性评分平均降低 0.17–0.20。",
-    "在 Llama-3.3-70B、GPT-4o-mini、Claude-3.5-Haiku 上均观察到一致退化，其中 Authority Challenge 和 Emotional Manipulation 攻击最有效。",
-    "自动 Judging Agent 与人工评审高度一致（r=0.82，Fleiss' κ=0.71），平台开源以支持 AI safety 与可复现评测。"
+    "提出一个面向 Role-Playing Language Agents 的模块化多智能体压力测试平台，用多轮结构化对话替代传统静态或单轮评测。",
+    "系统包含 Interrogator Agent、Target Agent 和 Judging Agent，分别负责对抗提问、扮演待测模型和自动行为评分。",
+    "六种递进式对抗策略能发现单策略评测遗漏的失败模式，使 RPLA 整体鲁棒性评分平均下降 0.17–0.20。",
+    "在 Llama-3.3-70B、GPT-4o-mini、Claude-3.5-Haiku 上观察到一致退化，其中 Authority Challenge 与 Emotional Manipulation 攻击最有效。",
+    "自动 Judging Agent 与人类评审高度一致，达到 r=0.82 和 Fleiss' κ=0.71，并作为开源平台支持可复现安全评测。"
   ],
   "llm_assessment": {
-    "novelty": 0.56,
+    "novelty": 0.55,
     "problem_significance": 0.58,
-    "potential_impact": 0.52,
+    "potential_impact": 0.56,
     "paradigm_shift": 0.42,
-    "lasting_value": 0.5,
-    "llm_avg": 0.516,
-    "comment": "A useful adversarial multi-turn evaluation platform for role-playing agents, but its scope is relatively narrow and not deeply tied to reusable production agent harnesses.",
-    "comment_zh": "这是一个有用的角色扮演智能体多轮对抗评测平台，但范围较窄，和可复用生产级智能体框架的关联不深。"
+    "lasting_value": 0.52,
+    "llm_avg": 0.526,
+    "comment": "A useful adversarial multi-turn evaluation platform for role-playing agents, but it is closer to specialized benchmarking than reusable agent-harness infrastructure.",
+    "comment_zh": "这是一个有用的角色扮演智能体多轮对抗评测平台，但更偏专项基准而非通用智能体基础设施。"
   },
   "scores": {
     "topic_relevance": 0.68,
@@ -42,7 +42,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.516,
+    "llm_assessment": 0.526,
     "domain_multiplier": 1.0
   },
   "enriched": {

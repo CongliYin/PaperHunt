@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.03137",
   "title": "Verifiable Memory: Learning Unified Memory Management with Local and Global Verifiers for Large Language Model Agents",
-  "title_zh": "Verifiable Memory：用局部与全局验证器学习大语言模型智能体的统一记忆管理",
+  "title_zh": "Verifiable Memory：用局部与全局验证器学习大语言模型 Agent 的统一记忆管理",
   "authors": [
     "Xiaolong Sun",
     "Qichao Wang",
@@ -17,13 +17,13 @@
     "project_page": null
   },
   "abstract_en": "Large language model (LLM) agents must retain reusable information, control a bounded active context, and recover earlier evidence during long-horizon interaction. Existing methods commonly optimize long-term memory (LTM) and short-term memory (STM) separately, while unified policies are often trained primarily with trajectory-level feedback, which provides weak credit for individual memory decisions. We present Verifiable Memory (VerMem), a framework that represents LTM, active context, and episodic history as distinct states and controls them with one memory operation policy. Seven atomic operations let the policy add, revise, or soft-delete LTM entries; retrieve LTM into the active context; filter or summarize the active context; and restore selected episodic fragments. VerMem is initialized by supervised fine-tuning and trained with a three-stage reinforcement-learning curriculum. The local verifier scores executable memory transitions, and a global verifier assesses evidence coherence and terminal-memory consistency after task completion. These scores are combined with programmatically computed task, evidence-recall, efficiency, and constraint signals through hierarchical credit assignment. The verifiers are used only during training. Across five benchmarks and two LLM backbones, VerMem achieves the best result on the vast majority of reported metrics and consistently outperforms strong memory baselines. Under controlled online-token budgets on three interactive benchmarks, it also achieves the strongest efficiency--performance frontier among the compared methods. Code is available at https://github.com/Sun-SYSU-24/VerMem.",
-  "abstract_zh": "大语言模型（LLM）智能体在长程交互中需要保留可复用信息、控制有限的活动上下文，并能恢复早期证据。现有方法通常分别优化长期记忆（LTM）与短期记忆（STM），而统一策略多依赖轨迹级反馈训练，难以为单个记忆决策提供精确信用分配。本文提出 Verifiable Memory（VerMem），将 LTM、活动上下文与情节历史表示为不同状态，并用同一个记忆操作策略进行控制。VerMem 定义了七种原子操作，用于添加、修订或软删除 LTM 条目，将 LTM 检索到活动上下文，过滤或总结活动上下文，以及恢复选定的情节片段。该框架先通过监督微调初始化，再采用三阶段强化学习课程训练。局部验证器评估可执行的记忆状态转移，全局验证器在任务完成后评估证据一致性与终端记忆一致性；这些分数与程序化计算的任务表现、证据召回、效率和约束信号结合，通过层次化信用分配优化策略。验证器仅在训练阶段使用。实验显示，在五个基准和两个 LLM backbone 上，VerMem 在绝大多数指标上取得最佳结果，并稳定优于强记忆基线；在三个交互式基准的受控在线 token 预算下，也实现了最优的效率—性能权衡。",
+  "abstract_zh": "本文提出 Verifiable Memory（VerMem），面向长程交互中的 LLM Agent 统一管理长期记忆（LTM）、短期主动上下文（active context）与情节历史（episodic history）。不同于以往将 LTM 与 STM 分开优化，或主要依赖轨迹级反馈训练统一策略的方法，VerMem 将三类记忆表示为不同状态，并用一个记忆操作策略统一控制。该策略支持 7 种原子操作，包括新增、修改、软删除 LTM，检索 LTM 到主动上下文，过滤或总结主动上下文，以及恢复选定的情节片段。训练上，VerMem 先经监督微调初始化，再通过三阶段强化学习课程优化；其中局部验证器评估可执行的记忆状态转移，全局验证器在任务完成后评估证据一致性与终态记忆一致性。验证器信号与任务得分、证据召回、效率和约束等程序化信号结合，并通过层级信用分配为单次记忆决策提供更细粒度监督。验证器仅在训练阶段使用。实验显示，在五个基准和两个 LLM backbone 上，VerMem 在多数指标上取得最佳结果，并稳定优于强记忆基线；在三个交互式基准的受控在线 token 预算下，也展现出最优的效率—性能权衡。",
   "key_points_zh": [
-    "提出 VerMem，将长期记忆、活动上下文和情节历史统一建模，并由单一记忆操作策略管理。",
-    "设计七种原子记忆操作，覆盖 LTM 增删改、检索、上下文过滤/总结和历史片段恢复。",
-    "引入局部验证器与全局验证器，分别监督可执行记忆转移和任务结束后的证据/记忆一致性。",
-    "采用监督微调加三阶段强化学习课程，并结合任务、证据召回、效率和约束信号进行层次化信用分配。",
-    "在五个 benchmark、两个 LLM backbone 上优于强基线，并在受限在线 token 预算下取得更好的效率—性能前沿。"
+    "提出 VerMem，将 LTM、active context 与 episodic history 建模为不同状态，并由单一记忆操作策略统一管理。",
+    "设计 7 种原子记忆操作，覆盖 LTM 增删改、检索、上下文过滤/总结以及历史片段恢复。",
+    "引入局部验证器与全局验证器，为具体记忆转移和任务完成后的证据一致性提供训练信号，缓解轨迹级反馈信用分配过粗的问题。",
+    "采用监督微调初始化加三阶段强化学习课程，并结合任务、证据召回、效率和约束信号进行层级信用分配。",
+    "在五个基准、两个 LLM backbone 及受控 token 预算实验中，VerMem 普遍优于强记忆基线，并取得更好的效率—性能前沿。"
   ],
   "llm_assessment": {
     "novelty": 0.86,
@@ -32,14 +32,14 @@
     "paradigm_shift": 0.82,
     "lasting_value": 0.86,
     "llm_avg": 0.8539999999999999,
-    "comment": "Strong agent-memory training work with verifier-backed local/global credit assignment for long-horizon execution.",
-    "comment_zh": "这是一项很强的智能体记忆训练工作，用局部和全局验证器为长程执行提供细粒度信用分配。"
+    "comment": "Strong agent-memory training work with unified operations, verifier-backed credit assignment, and clear relevance to long-horizon agent reliability.",
+    "comment_zh": "这是一篇较强的智能体记忆训练论文，将统一记忆操作、验证器信用分配和长程可靠性紧密结合。"
   },
   "scores": {
     "topic_relevance": 0.9600000000000001,
     "open_source": 0.5,
     "community_heat": 0.0,
-    "author_reputation": 0.3,
+    "author_reputation": 0.34373441375821495,
     "venue_signal": 0.0,
     "generality": 0.9,
     "llm_assessment": 0.8539999999999999,
@@ -52,8 +52,8 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": null,
-    "first_author_found": false,
+    "first_author_h_index": 4,
+    "first_author_found": true,
     "first_author_affiliations": [],
     "last_author_h_index": null,
     "last_author_found": false,

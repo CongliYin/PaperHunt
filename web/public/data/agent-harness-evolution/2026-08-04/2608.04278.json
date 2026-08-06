@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.04278",
   "title": "EA-Graph: Artifact-Anchored Verification Memory for Coding Agents under Upstream Drift",
-  "title_zh": "EA-Graph：面向上游漂移下 Coding Agents 的工件锚定验证记忆",
+  "title_zh": "EA-Graph：面向上游漂移下编码智能体的工件锚定验证记忆",
   "authors": [
     "Hwai-Jung Hsu",
     "Cheng-Jan Chi",
@@ -16,23 +16,23 @@
     "project_page": null
   },
   "abstract_en": "Coding agents increasingly work across sessions, but prose notes can preserve a conclusion without the program state that supported it. After an upstream change, a repository may still build even though earlier verification claims are no longer valid. EA-Graph is an artifact-anchored memory for verification claims. It represents artifacts at sub-path granularity, resolves aliases to leaf definitions, anchors each claim to the content used to establish it, and keeps evidence strength separate from freshness. When replacement content is unavailable, the claim becomes unprovable rather than guessed. EA-Graph is evaluated on generated repositories whose behavior-to-artifact ground truth is known by construction. The task is to classify prior claims as unaffected, affected, or unprovable after value drift, logic drift, and deliberately withheld upstream content. The analysis covers 42 sessions across seven clean worlds, 14 model-world instances, three memory conditions, and two model tiers. In the Haiku round, artifact-anchored memory outscored prose notes and no persistent memory in all seven worlds; each exact paired Wilcoxon comparison yielded p = 0.0156. In the Sonnet round, the anchored condition was perfect, but frequent control ceilings left the preregistered contrasts non-significant. No session fabricated withheld content. These results support a bounded claim: artifact-anchored memory improved the smaller model's provability judgments in this testbed. An exploratory comparison further suggests that structured claim memory may narrow a capability gap by externalizing in-session re-derivation, but it does not establish cross- model equivalence. The study makes no claim about efficiency or repair quality.",
-  "abstract_zh": "本文提出 EA-Graph，一种用于 Coding Agents 的工件锚定验证记忆（artifact-anchored verification memory）。传统 prose notes 可能只保留结论，而丢失支撑该结论的程序状态；当上游代码发生变化后，仓库即使仍能构建，先前的验证声明也可能失效。EA-Graph 以子路径粒度表示 artifacts，将别名解析到叶级定义，把每条 claim 锚定到当时用于验证的具体内容，并将证据强度与新鲜度分离；若替换内容不可用，则将 claim 标记为 unprovable，而不是猜测。论文在由构造过程提供行为到工件真值的生成式代码仓库上评估 EA-Graph，任务是在 value drift、logic drift 以及故意隐藏上游内容后，将历史 claims 分类为 unaffected、affected 或 unprovable。实验覆盖 42 个 sessions、7 个 clean worlds、14 个 model-world instances、3 种 memory conditions 和 2 个 model tiers。Haiku 轮次中，artifact-anchored memory 在全部 7 个 worlds 上优于 prose notes 和 no persistent memory，精确配对 Wilcoxon 检验均为 p = 0.0156。Sonnet 轮次中，anchored condition 达到满分，但由于对照组频繁触顶，预注册对比未显著。实验中没有 session 捏造被隐藏的内容。结果支持一个有限结论：在该测试床中，artifact-anchored memory 改善了较小模型的可证明性判断；探索性分析还表明，结构化 claim memory 可能通过外化会话内重新推导来缩小能力差距，但不能证明跨模型等价。论文不主张其提升效率或修复质量。",
+  "abstract_zh": "编码智能体越来越多地跨会话工作，但普通文本笔记往往只保留结论，而不保留支撑该结论的程序状态。上游代码发生变化后，仓库可能仍能构建成功，但先前的验证声明已经不再成立。EA-Graph 提出一种面向验证声明的工件锚定记忆（artifact-anchored memory）：它以子路径粒度表示工件，将别名解析到叶级定义，把每个声明锚定到建立该声明时使用的具体内容，并将证据强度与新鲜度分离。当替换内容不可用时，声明会被标记为不可证明，而不是由模型猜测。论文在自动生成、且行为到工件真值已知的仓库上评估 EA-Graph，任务是在数值漂移、逻辑漂移以及故意隐藏上游内容后，将旧声明分类为未受影响、受影响或不可证明。实验覆盖 7 个 clean worlds、42 个会话、14 个 model-world 实例、3 种记忆条件和 2 个模型层级。在 Haiku 轮次中，工件锚定记忆在全部 7 个世界中均优于文本笔记和无持久记忆，成对 Wilcoxon 检验均得到 p = 0.0156。在 Sonnet 轮次中，锚定条件达到满分，但对照组频繁触顶，使预注册对比不显著。没有会话伪造被隐藏的内容。结果支持一个有限结论：在该测试床中，工件锚定记忆提升了较小模型的可证明性判断。探索性比较还表明，结构化声明记忆可能通过外化会话内重新推导来缩小能力差距，但不能证明跨模型等价。研究不主张其在效率或修复质量上的收益。",
   "key_points_zh": [
-    "EA-Graph 将验证声明锚定到具体代码 artifacts 和内容片段，而不仅保存自然语言结论，从而更好应对上游代码漂移。",
-    "方法以子路径粒度建模 artifacts，解析 aliases 到叶级定义，并区分 evidence strength 与 freshness；当缺少替换内容时，声明被判为 unprovable 而非臆测。",
-    "评估任务是在生成式仓库中，根据已知真值判断旧 claims 在 value drift、logic drift 和 withheld upstream content 后是 unaffected、affected 还是 unprovable。",
-    "在 Haiku 模型轮次中，artifact-anchored memory 在 7 个 worlds 全部优于 prose notes 和无持久记忆，配对 Wilcoxon 检验均达到 p = 0.0156。",
-    "在 Sonnet 轮次中 anchored condition 达到满分，但对照组天花板效应导致预注册对比不显著；论文仅声称其改善该测试床中较小模型的可证明性判断。"
+    "EA-Graph 将验证声明锚定到具体代码工件内容，而非仅保存自然语言结论，从而更可靠地应对上游代码漂移。",
+    "方法以子路径粒度建模工件，解析别名到叶级定义，并区分证据强度与内容新鲜度；若缺少替换内容，则输出“不可证明”而非猜测。",
+    "实验在具备构造性真值的生成仓库上进行，评估旧声明在 value drift、logic drift 和 withheld upstream content 下应被判为未受影响、受影响或不可证明。",
+    "在 Haiku 模型轮次中，EA-Graph 在 7 个世界全部优于 prose notes 和无持久记忆，配对 Wilcoxon 检验均为 p = 0.0156。",
+    "在 Sonnet 轮次中锚定记忆达到满分，但由于对照组天花板效应，预注册对比不显著；论文不声称提升效率或修复质量。"
   ],
   "llm_assessment": {
-    "novelty": 0.8,
-    "problem_significance": 0.82,
-    "potential_impact": 0.76,
-    "paradigm_shift": 0.75,
-    "lasting_value": 0.82,
-    "llm_avg": 0.7899999999999999,
-    "comment": "Strong structured-memory approach for coding agents that anchors verification claims to artifacts under upstream drift.",
-    "comment_zh": "这是一种较强的编码智能体结构化记忆方法，将验证声明锚定到代码工件以应对上游变化。"
+    "novelty": 0.78,
+    "problem_significance": 0.8,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.71,
+    "lasting_value": 0.77,
+    "llm_avg": 0.76,
+    "comment": "A useful structured verification-memory approach for coding agents that anchors claims to artifacts and handles upstream drift conservatively.",
+    "comment_zh": "这是一种有用的编码智能体验证记忆方法，将声明锚定到工件并保守处理上游漂移。"
   },
   "scores": {
     "topic_relevance": 0.8,
@@ -41,7 +41,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.4,
-    "llm_assessment": 0.7899999999999999,
+    "llm_assessment": 0.76,
     "domain_multiplier": 1.0
   },
   "enriched": {

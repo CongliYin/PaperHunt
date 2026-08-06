@@ -16,23 +16,23 @@
     "project_page": null
   },
   "abstract_en": "Agentic AI is increasingly used to coordinate planning, implementation, review, and testing in software development, yet it often offers limited transparency into its decisions and interactions. Many such systems also assume that users can effectively guide the AI's decisions and validate its outputs. This assumption poses a particular challenge for novices, who must simultaneously learn how agentic AI works, how to collaborate with it effectively, and how to evaluate its outputs critically. To address this challenge, we present \\textit{AgentForge}, an immersive learning system in which novices take on one of four software-engineering roles: Task Planner, Patch Author, Code Reviewer, or Test Runner, within a multi-agent code-repair workflow. In each practice session, the novices perform their chosen role while AI agents perform the remaining three. Through role-based scaffolding and metacognitive support, AgentForge clarifies role-specific responsibilities, makes agent coordination and intermediate artifacts visible, and encourages novices to monitor and evaluate their decisions. In a study with 37 novice developers, participants achieved high task-completion rates with AI-agent support. However, interaction demands differed significantly across practices: the Code Reviewer practice required more interaction turns, reroutes, and completion time ($p_{\\mathrm{adj}} = .004$) and was perceived as the most challenging. Participants nevertheless reported significant gains in their understanding of software repair and agent collaboration ($p_{\\mathrm{adj}} < .001$). These findings suggest that AgentForge can help novices develop practical software-engineering skills while learning to collaborate with agentic AI more critically and effectively.",
-  "abstract_zh": "Agentic AI 正越来越多地用于协调软件开发中的规划、实现、评审与测试，但其决策和交互过程往往缺乏透明性。这类系统通常还默认用户能够有效引导 AI 决策并验证其输出；对于新手而言，这尤其困难，因为他们需要同时理解 Agentic AI 的工作机制、学习如何与其协作，并批判性评估结果。为此，论文提出 AgentForge，一个沉浸式学习系统，让新手在多智能体代码修复流程中扮演四种软件工程角色之一：Task Planner、Patch Author、Code Reviewer 或 Test Runner；其余三个角色由 AI agents 执行。通过基于角色的脚手架与元认知支持，AgentForge 明确各角色职责，展示智能体协作与中间产物，并鼓励学习者监控和评估自己的决策。作者对 37 名新手开发者进行研究，结果显示，在 AI-agent 支持下参与者任务完成率较高；但不同实践的交互负担差异显著，其中 Code Reviewer 需要更多交互轮次、重路由与完成时间，并被认为最具挑战性。尽管如此，参与者在软件修复理解和智能体协作理解方面均报告显著提升。研究表明，AgentForge 可帮助新手发展实用软件工程能力，并更批判、有效地学习与 Agentic AI 协作。",
+  "abstract_zh": "随着 Agentic AI 越来越多地用于软件开发中的规划、实现、评审与测试，其决策过程和智能体间交互往往缺乏透明度，并且默认用户具备有效引导 AI 决策、验证 AI 输出的能力。对于新手开发者而言，这意味着他们需要同时学习 Agentic AI 的工作机制、如何与其协作，以及如何批判性评估其结果。为此，论文提出 AgentForge，一个沉浸式学习系统，让新手在多智能体代码修复流程中扮演四类软件工程角色之一：Task Planner、Patch Author、Code Reviewer 或 Test Runner，其余三个角色由 AI agents 执行。AgentForge 通过基于角色的脚手架与元认知支持，明确各角色职责，展示智能体协作过程与中间产物，并鼓励学习者监控和评估自身决策。在包含 37 名新手开发者的研究中，参与者在 AI-agent 支持下实现了较高任务完成率；但不同实践的交互负担显著不同，其中 Code Reviewer 需要更多交互轮次、重路由和完成时间（调整后 p = .004），也被认为最具挑战性。尽管如此，参与者在软件修复与智能体协作理解方面均报告了显著提升（调整后 p < .001）。结果表明，AgentForge 有助于新手在发展软件工程实践能力的同时，更批判、有效地学习与 Agentic AI 协作。",
   "key_points_zh": [
-    "提出 AgentForge，一个面向新手开发者的沉浸式角色扮演学习平台，用于理解和实践 Agentic Software Engineering。",
-    "系统将多智能体代码修复流程拆分为四个角色：Task Planner、Patch Author、Code Reviewer 和 Test Runner；学习者扮演一个角色，其余由 AI agents 完成。",
-    "通过角色脚手架、元认知提示和中间产物可视化，AgentForge 提升智能体协作过程的透明度，并帮助学习者评估 AI 输出。",
-    "37 名新手开发者实验显示，参与者在 AI-agent 支持下任务完成率较高，但 Code Reviewer 角色交互成本最高、耗时最长，也被认为最难。",
-    "参与者在软件修复流程理解和 agent collaboration 理解上均显著提升，说明该平台有助于培养与 Agentic AI 协作的实践能力。"
+    "提出 AgentForge，一个面向新手的软件工程学习平台，通过沉浸式角色扮演帮助用户理解多智能体代码修复流程。",
+    "系统设计四个角色：Task Planner、Patch Author、Code Reviewer 和 Test Runner；学习者扮演其中一个，其余由 AI agents 完成。",
+    "AgentForge 强调角色脚手架、元认知支持和过程可视化，使智能体协作、中间产物与决策责任更加透明。",
+    "37 名新手开发者研究显示，AI-agent 支持下任务完成率较高，但 Code Reviewer 任务交互成本最高、主观难度最大。",
+    "参与者在软件修复理解与 Agentic AI 协作认知上显著提升，说明该平台可用于培养更批判有效的人机协作能力。"
   ],
   "llm_assessment": {
     "novelty": 0.38,
-    "problem_significance": 0.35,
+    "problem_significance": 0.34,
     "potential_impact": 0.32,
-    "paradigm_shift": 0.25,
+    "paradigm_shift": 0.24,
     "lasting_value": 0.3,
-    "llm_avg": 0.32,
-    "comment": "Primarily an educational interaction system rather than reusable agent harness, evaluation, or self-improvement infrastructure.",
-    "comment_zh": "该工作主要是教育交互系统，而不是可复用的智能体运行、评测或自改进基础设施。"
+    "llm_avg": 0.316,
+    "comment": "Mostly an educational human-learning platform around agentic software workflows rather than reusable agent harness or evaluation infrastructure.",
+    "comment_zh": "这主要是围绕智能体软件流程的教育学习平台，而不是可复用的智能体运行或评测基础设施。"
   },
   "scores": {
     "topic_relevance": 0.88,
@@ -41,7 +41,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.32,
+    "llm_assessment": 0.316,
     "domain_multiplier": 1.0
   },
   "enriched": {
