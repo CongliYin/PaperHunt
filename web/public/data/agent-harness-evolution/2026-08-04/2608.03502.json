@@ -1,0 +1,96 @@
+{
+  "arxiv_id": "2608.03502",
+  "title": "Hybrid LLM-Augmented Reinforcement Learning Agents for Complex Sequential Decision Tasks",
+  "title_zh": "面向复杂序列决策任务的 Hybrid LLM-Augmented Reinforcement Learning Agents",
+  "authors": [
+    "Christophe D. Hounwanou",
+    "John Emeka Eze",
+    "Yaé Ulrich Gaba"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Yaé Ulrich Gaba",
+      "affiliations": [
+        "Quantum Leap Africa"
+      ]
+    }
+  ],
+  "published_at": "2026-08-04T11:44:07Z",
+  "abs_url": "https://arxiv.org/abs/2608.03502v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03502",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large Language Models (LLMs) have recently shown strong capabilities in reasoning, planning, and tool-use, enabling new forms of autonomous agents. However, LLM-based agents struggle with long-horizon sequential decision tasks that require precise action optimization and environment interaction. Reinforcement Learning (RL), while effective for sequential control, often lacks the high-level abstraction and task decomposition abilities needed for complex scenarios. This paper introduces an LLM-Augmented Reinforcement Learning Agent that integrates LLM-driven planning with RL-based action optimization. The proposed architecture leverages the LLM to generate subgoals, structured plans, and contextual guidance, while the RL agent refines low-level actions through interaction with the environment. Experiments on sequential decision tasks demonstrate improved sample efficiency, higher success rates, and more coherent action trajectories compared to RL-only and LLM-only baselines. This hybrid paradigm highlights a promising direction for building more capable autonomous systems.",
+  "abstract_zh": "本文提出一种 LLM-Augmented Reinforcement Learning Agent，将 Large Language Models（LLMs）的高层推理、规划与任务分解能力，和 Reinforcement Learning（RL）的低层动作优化与环境交互能力结合起来。该架构由 LLM 生成子目标、结构化计划和上下文指导，再由 RL agent 通过与环境交互细化具体动作。实验表明，在复杂序列决策任务中，相比 RL-only 与 LLM-only 基线，该混合范式能提升样本效率、任务成功率，并产生更连贯的动作轨迹，展示了构建更强自主智能体的潜力。",
+  "key_points_zh": [
+    "针对 LLM-based agents 在长程序列决策中动作精度不足、RL 缺乏高层抽象的问题，提出混合式 LLM+RL 架构。",
+    "LLM 负责生成 subgoals、structured plans 与 contextual guidance，为复杂任务提供高层分解和规划。",
+    "RL agent 负责在环境交互中优化低层动作，使计划能够转化为可执行且更精确的行为序列。",
+    "实验显示该方法相较 RL-only 和 LLM-only baselines 具有更高 sample efficiency、success rate 和更连贯的 action trajectories。",
+    "论文强调 LLM-driven planning 与 RL-based action optimization 的互补性，为复杂 autonomous agents 提供了可扩展方向。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.34,
+    "problem_significance": 0.42,
+    "potential_impact": 0.38,
+    "paradigm_shift": 0.32,
+    "lasting_value": 0.34,
+    "llm_avg": 0.36000000000000004,
+    "comment": "The hybrid LLM-plus-RL idea is plausible but remains generic sequential-decision work without a clear reusable agent harness or trajectory-improvement infrastructure.",
+    "comment_zh": "LLM 与 RL 结合的思路合理，但整体仍偏通用序贯决策，缺少明确可复用的智能体框架或轨迹改进基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.49919890888949187,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.36000000000000004,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 11,
+    "last_author_found": true,
+    "last_author_affiliations": [
+      "Quantum Leap Africa"
+    ]
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03502/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03502/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.954
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03502/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03502/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

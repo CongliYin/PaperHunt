@@ -1,0 +1,92 @@
+{
+  "arxiv_id": "2608.03918",
+  "title": "When and Where to Look: Adaptive Visual Evidence Scheduling for Efficient Long Video Understanding",
+  "title_zh": "何时看、看哪里：面向高效长视频理解的自适应视觉证据调度",
+  "authors": [
+    "Ke Li",
+    "Jiayu Chen",
+    "Maoliang Li",
+    "Zihao Zheng",
+    "Hailong Zou",
+    "Hengyi Zhang",
+    "Xuanzhe Liu",
+    "Xiang Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T16:49:53Z",
+  "abs_url": "https://arxiv.org/abs/2608.03918v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03918",
+  "links": {
+    "github": "https://github.com/AK-DREAM/EcoFrame.",
+    "project_page": null
+  },
+  "abstract_en": "Efficient long-video understanding requires vision--language models (VLMs) to reason over a small number of frames selected as sparse visual evidence. Existing relevance-based methods rely on static one-shot selection with fixed frame budgets and candidate pools, while agent-based schedulers achieve adaptivity through costly multi-round reasoning and interactive search. We propose EcoFrame, a training-free framework for low-overhead query-adaptive visual evidence scheduling. EcoFrame leverages the VLM's inference feedback to determine when to increase the frame budget and where to search for additional candidate evidence. Specifically, entropy-gated budget scheduling uses output uncertainty to stop early when the current evidence is sufficient or progressively expand the frame budget otherwise. Meanwhile, attention-guided candidate proposal converts frame-level attention into a temporal prior, enabling dense local search in informative regions while preserving global coverage when attention is diffuse. Experiments on Video-MME, LongVideoBench, and MLVU demonstrate that EcoFrame achieves a better accuracy--efficiency trade-off across multiple VLM backbones. On Qwen2.5-VL, EcoFrame achieves an average accuracy of 64.4, surpassing BOLT at 63.5, while providing a $1.85\\times$ speedup over AKS and BOLT. Compared with the agent-based A.I.R., EcoFrame maintains comparable accuracy with up to a $13.5\\times$ inference speedup. Code will be available at https://github.com/AK-DREAM/EcoFrame.",
+  "abstract_zh": "长视频理解要求 vision-language models（VLMs）在少量稀疏抽取的帧上进行推理，以降低计算开销。现有基于相关性的方法通常采用一次性静态选择，帧预算和候选池固定；而 agent-based 调度器虽具备自适应性，却依赖多轮推理和交互式搜索，成本较高。本文提出 EcoFrame，一个无需训练（training-free）的低开销、查询自适应视觉证据调度框架。EcoFrame 利用 VLM 推理过程中的反馈来决定何时增加帧预算、以及在哪里搜索额外候选证据。具体而言，entropy-gated budget scheduling 通过输出不确定性判断当前证据是否足够，若足够则提前停止，否则逐步扩展帧预算；attention-guided candidate proposal 将帧级注意力转化为时间先验，在信息丰富区域进行密集局部搜索，同时在注意力分散时保持全局覆盖。实验表明，在 Video-MME、LongVideoBench 和 MLVU 上，EcoFrame 在多个 VLM backbones 中实现了更优的准确率—效率权衡。基于 Qwen2.5-VL，EcoFrame 平均准确率达到 64.4，超过 BOLT 的 63.5，并相较 AKS 和 BOLT 提供 1.85× 加速；与 agent-based A.I.R. 相比，EcoFrame 在保持相近准确率的同时最高实现 13.5× 推理加速。",
+  "key_points_zh": [
+    "提出 EcoFrame：一个 training-free 的长视频视觉证据调度框架，面向低开销、query-adaptive 的帧选择。",
+    "通过 entropy-gated budget scheduling 根据 VLM 输出不确定性动态决定是否增加帧预算，可在证据充分时提前停止。",
+    "通过 attention-guided candidate proposal 将帧级注意力转为时间先验，在关键片段密集搜索，并在注意力分散时保留全局覆盖。",
+    "在 Video-MME、LongVideoBench、MLVU 上验证，EcoFrame 在多种 VLM backbones 上取得更好的准确率—效率折中。",
+    "在 Qwen2.5-VL 上平均准确率 64.4，超过 BOLT 的 63.5；相较 AKS/BOLT 加速 1.85×，相较 A.I.R. 最高加速 13.5×。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.58,
+    "problem_significance": 0.64,
+    "potential_impact": 0.56,
+    "paradigm_shift": 0.36,
+    "lasting_value": 0.5,
+    "llm_avg": 0.528,
+    "comment": "Useful efficient long-video frame scheduling work with relevance to streaming evidence selection, but it remains closer to offline VLM inference than agent interaction.",
+    "comment_zh": "该工作在高效长视频帧调度方面有用，并与流式证据选择相关，但整体仍更接近离线VLM推理而非智能体交互。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.528,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/AK-DREAM/EcoFrame.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03918/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03918/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03918/fig3.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.94
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03918/fig4.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2608.03341",
+  "title": "Route-Align-Verify for Functional Correctness in Code Generation",
+  "title_zh": "面向代码生成函数正确性的 Route-Align-Verify",
+  "authors": [
+    "Erxue Zhou",
+    "Jingxiang Meng",
+    "Aofan Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T08:52:40Z",
+  "abs_url": "https://arxiv.org/abs/2608.03341v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03341",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) have substantially improved code generation, yet achieving strong functional correctness remains difficult, especially for heterogeneous programming tasks where a single prompting strategy and a single directly generated output are often insufficient. In this paper, we present RAV, a lightweight and modular framework that improves code generation with a fixed backbone model through three coordinated stages: Route, which applies task-aware prompt routing before generation; Align, which reduces the mismatch between fine-tuning prompts and inference-time prompts through aligned LoRA adaptation; and Verify, which selects the final output by executing multiple candidates against visible public tests. We evaluate RAV on the MBPP benchmark under both the sanitized and full settings. The complete RAV pipeline achieves the best performance among all evaluated configurations, reaching 0.8911 on MBPP Sanitized and 0.8520 on MBPP Full. Compared with the base model, these results represent improvements of 6.35 and 9.92 percentage points, respectively. Component-wise ablation experiments further show that task-aware routing and aligned adaptation become substantially more effective when combined with execution-based verification. Additional robustness and contamination analyses support the reliability of the observed improvements. Overall, the results indicate that functional correctness in code generation can be meaningfully improved without modifying the backbone architecture, by jointly optimizing how tasks are prompted, how the model is adapted, and how final outputs are selected.",
+  "abstract_zh": "本文提出 RAV，一个轻量、模块化的代码生成改进框架，在不修改 backbone model 的前提下提升 functional correctness。RAV 包含三阶段：Route 根据任务类型进行 prompt routing；Align 通过 aligned LoRA adaptation 缩小微调提示与推理提示之间的不匹配；Verify 执行多个候选代码并用可见 public tests 选择最终输出。作者在 MBPP Sanitized 与 MBPP Full 上评估，完整 RAV 分别达到 0.8911 和 0.8520，相比 base model 提升 6.35 与 9.92 个百分点。消融实验表明，task-aware routing 与 aligned adaptation 在结合 execution-based verification 后效果更显著；鲁棒性与污染分析进一步支持改进的可靠性。",
+  "key_points_zh": [
+    "RAV 将代码生成流程拆为 Route、Align、Verify 三个模块，分别优化提示选择、模型适配和候选答案筛选。",
+    "Route 使用 task-aware prompt routing，为异构编程任务选择更合适的提示策略，避免单一 prompt 覆盖所有任务的局限。",
+    "Align 采用 aligned LoRA adaptation，缓解 fine-tuning prompts 与 inference-time prompts 的分布不一致问题。",
+    "Verify 通过执行多个候选代码并在 visible public tests 上验证，选择函数行为更可能正确的最终输出。",
+    "在 MBPP Sanitized 和 MBPP Full 上，完整 RAV 均取得最佳结果，说明无需改动 backbone architecture，也能通过流程级优化显著提升 functional correctness。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.38,
+    "problem_significance": 0.42,
+    "potential_impact": 0.4,
+    "paradigm_shift": 0.32,
+    "lasting_value": 0.36,
+    "llm_avg": 0.37600000000000006,
+    "comment": "RAV improves code generation with routing, adaptation, and execution verification, but it is mainly a code-generation pipeline rather than agent harness evolution.",
+    "comment_zh": "RAV 通过路由、适配和执行验证改进代码生成，但主要是代码生成流程，而非智能体框架演化。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.37600000000000006,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03341/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03341/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03341/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03341/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.965
+    }
+  ]
+}

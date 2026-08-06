@@ -1,0 +1,104 @@
+{
+  "arxiv_id": "2608.03979",
+  "title": "Video-DeepResearch: Towards the Next-Generation Multimodal Deepresearch Agent",
+  "title_zh": "Video-DeepResearch：迈向下一代多模态深度研究 Agent",
+  "authors": [
+    "Zhen Fang",
+    "Yu Zeng",
+    "Wenxuan Huang",
+    "Yiming Zhao",
+    "Shiting Huang",
+    "Tianfei Ren",
+    "Qi Lu",
+    "Qingnan Ren",
+    "Qisheng Su",
+    "Lionel Z. Wang",
+    "Qingyu Yin",
+    "Shuang Chen",
+    "Zehui Chen",
+    "Lin Chen",
+    "Zhenfei Yin",
+    "Yao Hu",
+    "Shaohui Lin",
+    "Wanli Ouyang",
+    "Shaosheng Cao",
+    "Feng Zhao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T17:45:16Z",
+  "abs_url": "https://arxiv.org/abs/2608.03979v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03979",
+  "links": {
+    "github": "https://github.com/Osilly/Vision-DeepResearch.",
+    "project_page": null
+  },
+  "abstract_en": "We introduce Video-DeepResearch (Video-DR), extending multimodal agents from static images to continuous video streams, a setting that demands dense spatiotemporal grounding coupled with open-web exploration. Preliminary evaluations reveal two critical bottlenecks in current models: (1) modality bias, where agents bypass visual tools in favor of textual search, and (2) parametric knowledge leakage, where models rely on internal memory rather than genuine tool-augmented execution. To address these challenges, we propose Video-DR, featuring a decoupled perception-exploration pipeline with stage-wise tool unlocking that compels exhaustive cross-frame visual grounding prior to web retrieval. Our framework adopts a two-stage training recipe: supervised fine-tuning followed by Group Relative Policy Optimization (GRPO), enabling autonomous exploration that breaks the imitation-learning ceiling. Furthermore, we curate Video-DR-Bench, a human-AI collaborative benchmark comprising 200 complex, multi-hop VQA instances. Empirical results demonstrate that our Video-DeepResearch-35B-A3B establishes a new state-of-the-art of 64.0% average accuracy, surpassing proprietary Claude-4.5-Sonnet (59.0%) by 5.0 points and significantly outperforming GPT-5 (52.5%) and Gemini 2.5 Pro (57.5%). The 30B-A3B variant achieves 59.3%, competitive with Claude-4.5-Sonnet and demonstrating the effectiveness of our training paradigm even at compact scale. Code: https://github.com/Osilly/Vision-DeepResearch.",
+  "abstract_zh": "本文提出 Video-DeepResearch（Video-DR），将多模态 Agent 从静态图像扩展到连续视频流场景，要求模型同时具备密集时空定位能力与开放网络探索能力。作者指出当前模型存在两类关键瓶颈：一是模态偏置（modality bias），即 Agent 倾向于绕过视觉工具而依赖文本搜索；二是参数知识泄漏（parametric knowledge leakage），即模型依赖内部记忆而非真实执行工具增强推理。为此，Video-DR 采用解耦的感知—探索流程，并通过分阶段工具解锁机制，强制模型在进行网页检索前完成充分的跨帧视觉定位。训练上，框架结合监督微调（SFT）与 Group Relative Policy Optimization（GRPO），使 Agent 能进行自主探索并突破模仿学习上限。作者还构建了 Video-DR-Bench，一个由人机协作生成的基准，包含 200 个复杂多跳视频问答实例。实验显示，Video-DeepResearch-35B-A3B 平均准确率达到 64.0%，超过 Claude-4.5-Sonnet 的 59.0%，并显著优于 GPT-5 和 Gemini 2.5 Pro；30B-A3B 版本也达到 59.3%，验证了该训练范式在较小规模模型上的有效性。",
+  "key_points_zh": [
+    "提出 Video-DR，将 DeepResearch 类多模态 Agent 从图像扩展到连续视频流，强调跨帧时空 grounding 与开放网页探索的结合。",
+    "识别当前多模态 Agent 的两大问题：模态偏置导致过度依赖文本搜索，参数知识泄漏导致模型用内部记忆替代真实工具调用。",
+    "设计解耦的感知—探索 pipeline 与分阶段工具解锁机制，要求模型先完成充分视频理解，再进行网页检索和多跳推理。",
+    "采用 SFT + GRPO 两阶段训练，使模型从模仿工具使用转向自主探索，提升复杂任务求解能力。",
+    "构建 Video-DR-Bench，包含 200 个复杂多跳 VQA 样本；Video-DeepResearch-35B-A3B 达到 64.0% 准确率，超过 Claude-4.5-Sonnet、GPT-5 和 Gemini 2.5 Pro。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.78,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.76,
+    "llm_avg": 0.724,
+    "comment": "Strong video-agent work with tool-augmented exploration, visual grounding, training, and benchmark contributions, though not clearly focused on realtime latency.",
+    "comment_zh": "这是一项较强的视频智能体工作，结合了工具增强探索、视觉定位、训练与基准贡献，但实时低延迟重点不够明确。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.8887739975629887,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.724,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Osilly/Vision-DeepResearch.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 45,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03979/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.765
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03979/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.427
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03979/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03979/fig4.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.974
+    }
+  ]
+}

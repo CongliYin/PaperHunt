@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2608.03223",
+  "title": "Agentic Reinforcement Learning with Self-Distilled Reward Shaping",
+  "title_zh": "带自蒸馏奖励塑形的 Agentic 强化学习",
+  "authors": [
+    "Ranxu Zhang",
+    "Guinan Chen",
+    "Chenshaodong",
+    "Jinghao Lin",
+    "Xiaozhou Xu",
+    "Sunzhe",
+    "Yanyong Zhang",
+    "Chao Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T06:56:47Z",
+  "abs_url": "https://arxiv.org/abs/2608.03223v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03223",
+  "links": {
+    "github": "https://github.com/gitrxh/ADRS-arxiv",
+    "project_page": null
+  },
+  "abstract_en": "Agentic reinforcement learning enables LLM agents to learn through interaction, but sparse trajectory-level rewards reveal success without identifying which intermediate decisions deserve credit. Training-only privileged skills can provide denser supervision by allowing the same frozen policy snapshot to rescore fixed tokens from skill-free trajectories while conditioned on task-matched procedural skills. Existing methods, however, do not jointly calibrate teacher scores across interaction steps, relate teacher confidence to realized returns, and integrate the resulting signal into native reward-to-advantage construction. We introduce Agentic Reinforcement Learning with Self-Distilled Reward Shaping (ADRS), a framework for constructing return-associated token-level credit for multi-turn language agents. ADRS centers and normalizes privileged token scores within each step, modulates them with a return-associated Teacher Value Advantage (TVA) gate based on within-group confidence--return association, and incorporates the gated token signal into native RL credit construction. Together, these components determine what the teacher prefers, when that preference is return-relevant, and how it enters the native reinforcement-learning credit path, while keeping rollouts and inference skill-free. Finally, experiments across three interactive benchmarks show that ADRS consistently improves performance on long-horizon tasks, with gains persisting across RL backbones, reduced-data settings, unseen tasks, and extended training. For anonymous review, our code is available at the following the link: https://github.com/gitrxh/ADRS-arxiv",
+  "abstract_zh": "本文提出 Agentic Reinforcement Learning with Self-Distilled Reward Shaping（ADRS），用于改进多轮 LLM agent 在交互式任务中的信用分配。传统 agentic RL 通常依赖稀疏的轨迹级奖励，只能判断任务是否成功，却难以指出哪些中间决策真正贡献了回报。ADRS 利用仅训练阶段可见的 privileged skills，让同一个冻结策略快照在固定、无技能轨迹 token 上重新打分，从而构造更密集的 token 级监督信号。方法首先在每个交互步骤内对 privileged token scores 进行中心化和归一化；随后通过 Teacher Value Advantage（TVA）门控，根据教师置信度与实际回报之间的组内关联，判断教师偏好是否与最终收益相关；最后将门控后的 token 信号接入原生 RL 的 reward-to-advantage 构造流程。这样，ADRS 同时回答了教师偏好什么、何时该信任该偏好、以及如何把该信号融入强化学习信用路径。实验显示，ADRS 在三个交互式 benchmark 上稳定提升长程任务性能，并且在不同 RL backbone、低数据设置、未见任务和更长训练中均保持收益；推理与 rollout 阶段仍无需 privileged skills。",
+  "key_points_zh": [
+    "针对 agentic RL 中轨迹级稀疏奖励难以进行中间决策信用分配的问题，ADRS 构造 return-associated token-level credit，为多轮语言 agent 提供更细粒度监督。",
+    "ADRS 使用训练阶段的 privileged skills 对无技能轨迹中的固定 token 重新打分，实现自蒸馏式 reward shaping；rollout 与推理阶段仍保持 skill-free，不增加部署依赖。",
+    "方法包含三部分：step 内 privileged token scores 中心化与归一化、基于教师置信度—回报关联的 Teacher Value Advantage（TVA）门控、以及将门控 token 信号并入原生 reward-to-advantage 计算。",
+    "TVA gate 用于校准教师信号：只有当教师偏好与实际回报在组内呈现有效关联时，才更强地影响 RL 信用分配，降低错误或无关教师偏好的干扰。",
+    "在三个交互式 benchmark 上，ADRS 对长程任务表现出稳定提升，并在不同 RL backbone、少数据、未见任务和延长训练设置下保持泛化收益。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.82,
+    "potential_impact": 0.79,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.77,
+    "llm_avg": 0.78,
+    "comment": "Useful agentic RL method that improves trajectory credit assignment with self-distilled token-level reward shaping.",
+    "comment_zh": "这是一种有用的智能体强化学习方法，通过自蒸馏的词元级奖励塑形改进轨迹信用分配。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.78,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/gitrxh/ADRS-arxiv",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03223/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.838
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03223/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.926
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03223/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}

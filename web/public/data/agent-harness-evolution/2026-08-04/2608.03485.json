@@ -1,0 +1,94 @@
+{
+  "arxiv_id": "2608.03485",
+  "title": "SkillSentry: Adaptive Honey Worlds for Dynamic Safety Testing of Agent Skills",
+  "title_zh": "SkillSentry：用于 Agent Skills 动态安全测试的自适应蜜罐世界",
+  "authors": [
+    "Nizhang Li",
+    "Zonghao Ying",
+    "Xiangfan Wu",
+    "Zonglei Jing",
+    "Xixun Lin",
+    "Hao Zhang",
+    "Wenxin Zhang",
+    "Jiaye Lin",
+    "Quanchen Zou",
+    "Xiangzheng Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T11:22:22Z",
+  "abs_url": "https://arxiv.org/abs/2608.03485v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03485",
+  "links": {
+    "github": "https://github.com/nizhangli062-jpg/SkillSentry-Adaptive-Honey-Worlds-for-Dynamic-Safety-Testing-of-Agent-Skills.",
+    "project_page": null
+  },
+  "abstract_en": "External skills extend the capabilities of large language model agents, but also introduce an execution-time attack surface: a skill that appears benign under inspection may reveal harmful behavior only after particular environmental states, resources, or interaction histories are encountered. Existing scanners primarily rely on static analysis, predefined rules, or one-shot semantic judgments, making such conditional behavior difficult to elicit and attribute. We present SkillSentry, a dynamic safety-testing framework based on adaptive honey worlds. SkillSentry infers the intended capability boundary of a skill, constructs an LLM-simulated environment with controlled decoy resources, and adaptively generates tasks to explore its behavioral states. It then compares skill-enabled trajectories with matched no-skill executions, grounding suspicious behaviors in source code and verified execution traces before making a final decision. We evaluate SkillSentry against seven scanner configurations. SkillSentry achieves 99.50% Recall and 96.26% average F1 on standard benchmarks. Under semantics-preserving evasion, it reaches 92.95% average F1, compared with 80.07% for the strongest baselines. Our code is available at https://github.com/nizhangli062-jpg/SkillSentry-Adaptive-Honey-Worlds-for-Dynamic-Safety-Testing-of-Agent-Skills.",
+  "abstract_zh": "外部 skills 能扩展大型语言模型智能体的能力，但也引入了执行时攻击面：某个 skill 在静态检查时看似无害，却可能在特定环境状态、资源或交互历史触发后表现出有害行为。现有扫描器主要依赖静态分析、预定义规则或一次性语义判断，难以诱发并归因这类条件性恶意行为。本文提出 SkillSentry，一个基于自适应蜜罐世界（adaptive honey worlds）的动态安全测试框架。SkillSentry 会推断 skill 的预期能力边界，构建带有受控诱饵资源的 LLM 模拟环境，并自适应生成任务以探索其行为状态。随后，它将启用 skill 的执行轨迹与匹配的无 skill 执行进行对比，并在最终判定前，将可疑行为定位到源代码和经验证的执行轨迹中。实验中，SkillSentry 与七种扫描器配置对比，在标准基准上达到 99.50% Recall 和 96.26% 平均 F1；在语义保持规避攻击下达到 92.95% 平均 F1，显著优于最强基线的 80.07%。",
+  "key_points_zh": [
+    "提出 SkillSentry，用动态安全测试替代单纯静态扫描或一次性语义判断，重点发现仅在特定状态、资源或交互历史下触发的恶意 skill 行为。",
+    "核心机制是 adaptive honey worlds：先推断 skill 的能力边界，再构建包含受控诱饵资源的 LLM 模拟环境，用自适应任务探索潜在危险行为。",
+    "通过对比 skill-enabled trajectories 与 matched no-skill executions，SkillSentry 能更清晰地区分由 skill 引入的异常行为，而非环境或任务本身导致的行为。",
+    "框架会将可疑行为进一步关联到 source code 与 verified execution traces，提高检测结果的可解释性和归因可信度。",
+    "实验显示其在标准基准上取得 99.50% Recall、96.26% 平均 F1；面对 semantics-preserving evasion 时仍有 92.95% 平均 F1，优于最强基线。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.85,
+    "llm_avg": 0.852,
+    "comment": "High-value agent security work introducing adaptive simulated environments and trace-grounded testing for external skills.",
+    "comment_zh": "这是一篇高价值的智能体安全论文，引入自适应模拟环境和基于执行轨迹的外部技能动态测试。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.852,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/nizhangli062-jpg/SkillSentry-Adaptive-Honey-Worlds-for-Dynamic-Safety-Testing-of-Agent-Skills.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03485/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03485/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.951
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03485/fig3.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.946
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03485/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.964
+    }
+  ]
+}

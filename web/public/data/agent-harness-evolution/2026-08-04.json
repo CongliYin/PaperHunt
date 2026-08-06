@@ -1,0 +1,569 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-08-04",
+  "generated_at": "2026-08-06T06:29:15Z",
+  "papers": [
+    {
+      "arxiv_id": "2608.03137",
+      "title": "Verifiable Memory: Learning Unified Memory Management with Local and Global Verifiers for Large Language Model Agents",
+      "title_zh": "Verifiable Memory：用局部与全局验证器学习大语言模型智能体的统一记忆管理",
+      "authors": [
+        "Xiaolong Sun",
+        "Qichao Wang",
+        "Hangyu Li",
+        "Liang Chen"
+      ],
+      "total_score": 0.7502000000000001,
+      "scores": {
+        "topic_relevance": 0.9600000000000001,
+        "llm_assessment": 0.8539999999999999,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "session context memory"
+      ],
+      "tldr_zh": "用验证器训练统一记忆管理策略",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.03137.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03137/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.03485",
+      "title": "SkillSentry: Adaptive Honey Worlds for Dynamic Safety Testing of Agent Skills",
+      "title_zh": "SkillSentry：用于 Agent Skills 动态安全测试的自适应蜜罐世界",
+      "authors": [
+        "Nizhang Li",
+        "Zonghao Ying",
+        "Xiangfan Wu",
+        "Zonglei Jing",
+        "Xixun Lin",
+        "Hao Zhang",
+        "Wenxin Zhang",
+        "Jiaye Lin",
+        "Quanchen Zou",
+        "Xiangzheng Zhang"
+      ],
+      "total_score": 0.7176000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.852,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "用自适应蜜罐动态检测恶意技能",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.03485.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03485/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.03223",
+      "title": "Agentic Reinforcement Learning with Self-Distilled Reward Shaping",
+      "title_zh": "带自蒸馏奖励塑形的 Agentic 强化学习",
+      "authors": [
+        "Ranxu Zhang",
+        "Guinan Chen",
+        "Chenshaodong",
+        "Jinghao Lin",
+        "Xiaozhou Xu",
+        "Sunzhe",
+        "Yanyong Zhang",
+        "Chao Wang"
+      ],
+      "total_score": 0.7113824593811419,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.78,
+        "other": 0.364608197937139
+      },
+      "tags": [
+        "GitHub",
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "用自蒸馏密集信用改进LLM智能体RL",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.03223.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03223/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.03609",
+      "title": "Formal Verification of Agentic Systems over Operational Data",
+      "title_zh": "基于操作数据的 Agentic Systems 形式化验证",
+      "authors": [
+        "Alejandro J. Mercado",
+        "Alessio Lomuscio"
+      ],
+      "total_score": 0.6751867206879107,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8699999999999999,
+        "other": 0.20728906895970253
+      },
+      "tags": [
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "形式化验证操作数据上的LLM智能体",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.03609.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2608.03764",
+      "title": "GDPevo: Evaluating Agent Self-Evolution on Real Business Tasks",
+      "title_zh": "GDPevo：在真实商业任务上评估 Agent 自我进化能力",
+      "authors": [
+        "Leijun Zhou",
+        "Zhihao Liu",
+        "Xiang Qu",
+        "Chenxu Liu",
+        "Yifei Liu",
+        "Yanke Yu",
+        "Jingzhe Xu",
+        "Xuejun Wu",
+        "Buyue Qian",
+        "Xi Chen",
+        "Yaowei Zheng",
+        "Junhao Hu"
+      ],
+      "total_score": 0.6748000000000002,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.8160000000000001,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "session context memory"
+      ],
+      "tldr_zh": "GDPevo评测商业任务中的Agent自我进化",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.03764.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03764/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.04066",
+      "title": "The LLM Proposes, the Executive Disposes: A Self-Verifying Agent Instrument that Dissociates Commitment Drift from Binding Drift in Long-Horizon Agents",
+      "title_zh": "LLM 负责提议，Executive 负责处置：一种自验证 Agent 工具，用于区分长程 Agent 中的承诺漂移与绑定漂移",
+      "authors": [
+        "Mohsen Arjmandi"
+      ],
+      "total_score": 0.6404145717194442,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.782,
+        "other": 0.17938190573148036
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "用结构化自验证拆解长程Agent漂移",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.04066.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04066/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.03699",
+      "title": "TARL: Transaction-Aware Reliable Ledgers for Executable Memory Management in Long-Term Agents",
+      "title_zh": "TARL：面向长期智能体可执行记忆管理的事务感知可靠账本",
+      "authors": [
+        "Han Xiao",
+        "Hongjun Xu",
+        "Xin Zhang",
+        "Yidong Chen",
+        "Xiaodong Shi"
+      ],
+      "total_score": 0.6384000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.808,
+        "other": 0.2
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "用事务账本提升长期智能体记忆更新可靠性",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.03699.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03699/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.04289",
+      "title": "SafeCommit: Certifying When Memory-Grounded Agents May Safely Act",
+      "title_zh": "SafeCommit：认证基于记忆的智能体何时可以安全行动",
+      "authors": [
+        "Mayur Akewar",
+        "Ravi Ranjan"
+      ],
+      "total_score": 0.616,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.8699999999999999,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "为记忆型智能体提供行动安全认证层",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.04289.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04289/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.03403",
+      "title": "Towards Robust Tool Use in Agents via Experience-Driven Adaptive Guidance",
+      "title_zh": "通过经验驱动的自适应指导提升 Agent 工具使用鲁棒性",
+      "authors": [
+        "Can Wang",
+        "Haoran Chen",
+        "Li Yu",
+        "Ding Hao",
+        "Bohai Zhao",
+        "Zhaoyang Liu",
+        "Zhiying Tu"
+      ],
+      "total_score": 0.6128000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.776,
+        "other": 0.2
+      },
+      "tags": [
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "ExpG用历史经验提升Agent工具调用鲁棒性",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.03403.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03403/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.03206",
+      "title": "EduClaw-Bench: A Long-Horizon Benchmark for Pedagogical LLM Agents with Simulated Learners",
+      "title_zh": "EduClaw-Bench：面向教学型 LLM Agent 的长周期模拟学习者基准",
+      "authors": [
+        "Unggi Lee",
+        "Sookbun Lee",
+        "Yeil Jeong",
+        "Eunjoo Lee",
+        "Minchul Shin",
+        "Hoilym Kwon"
+      ],
+      "total_score": 0.6012000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.6839999999999999,
+        "other": 0.2
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "评测30天持续教学型LLM Agent",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.03206.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03206/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.04278",
+      "title": "EA-Graph: Artifact-Anchored Verification Memory for Coding Agents under Upstream Drift",
+      "title_zh": "EA-Graph：面向上游漂移下 Coding Agents 的工件锚定验证记忆",
+      "authors": [
+        "Hwai-Jung Hsu",
+        "Cheng-Jan Chi",
+        "Hanna Everett"
+      ],
+      "total_score": 0.5920000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.7899999999999999,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "EA-Graph提升小模型验证记忆可靠性",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.04278.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04278/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.04192",
+      "title": "Behavioral Skill Reconstruction: Reconstructing Hidden Functionality from LLM Agent Skills",
+      "title_zh": "行为技能重建：从 LLM Agent 技能中重建隐藏功能",
+      "authors": [
+        "Peichun Hua",
+        "Haoxuan Xu",
+        "Mengyuan Li"
+      ],
+      "total_score": 0.5808258286877777,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.716,
+        "other": 0.10008609562592546
+      },
+      "tags": [
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "合法交互也能克隆隐藏 Agent 技能",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.04192.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04192/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.03626",
+      "title": "A Security-Oriented Lifecycle Model for Large Language Model Systems",
+      "title_zh": "面向安全的大语言模型系统生命周期模型",
+      "authors": [
+        "Eleftherios Batzolis",
+        "George Drosatos",
+        "Vassilis Katsouros",
+        "Konstantinos Rantos"
+      ],
+      "total_score": 0.5276000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.492,
+        "other": 0.2
+      },
+      "tags": [
+        "observability governance security"
+      ],
+      "tldr_zh": "提出面向安全的LLM全生命周期模型",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.03626.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03626/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.03735",
+      "title": "An Actionable Diagnosis of Multilingual, Multi-Agent Planning Failures",
+      "title_zh": "多语言多智能体规划失败的可操作诊断",
+      "authors": [
+        "Vikas Pahuja",
+        "Jonathan Brokman",
+        "Omer Hofman",
+        "Tamir Nizri",
+        "Daniel Vishna",
+        "Seraphina Goldfarb-Tarrant",
+        "Kelly Marchisio",
+        "Hisashi Kojima",
+        "Roman Vainshtein"
+      ],
+      "total_score": 0.5258,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.646,
+        "other": 0.2
+      },
+      "tags": [
+        "planning and policy"
+      ],
+      "tldr_zh": "用失败分类指导多语言智能体规划",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.03735.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03735/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.03009",
+      "title": "Tiny Enough to Break In: Agentic Remote Access Trojans Powered by Small Language Models",
+      "title_zh": "小到足以入侵：由小语言模型驱动的智能体远程访问木马",
+      "authors": [
+        "Yuhan You",
+        "Suhas Adavelly",
+        "Victoria Lovelace",
+        "Cameron Berryman",
+        "Joel Sadler",
+        "Daniel Graham"
+      ],
+      "total_score": 0.5230059097196438,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.47400000000000003,
+        "other": 0.2026863657321459
+      },
+      "tags": [
+        "observability governance security"
+      ],
+      "tldr_zh": "本地小模型已能驱动自主入侵闭环",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.03009.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03009/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.03134",
+      "title": "CLEAR: Causal Context-Based Agentic Reasoning for Vulnerability Detection",
+      "title_zh": "CLEAR：用于漏洞检测的基于因果上下文的智能体推理框架",
+      "authors": [
+        "Sungju Yun",
+        "Sijune Hwang",
+        "Yeonjoon Lee",
+        "Kyungtae Kang",
+        "Sungbin Park"
+      ],
+      "total_score": 0.5109883062540945,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.438,
+        "other": 0.19862768751364818
+      },
+      "tags": [
+        "harness multi agent orchestration"
+      ],
+      "tldr_zh": "用因果知识图谱增强多智能体漏洞检测",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.03134.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03134/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.04148",
+      "title": "AgentForge: An Immersive Role-Playing Platform for Learning Agentic Software Engineering",
+      "title_zh": "AgentForge：用于学习智能体式软件工程的沉浸式角色扮演平台",
+      "authors": [
+        "Zihan Fang",
+        "Yueke Zhang",
+        "Yu Huang"
+      ],
+      "total_score": 0.5080000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.32,
+        "other": 0.2
+      },
+      "tags": [
+        "harness multi agent orchestration"
+      ],
+      "tldr_zh": "角色扮演平台教新手协作软件工程智能体",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.04148.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04148/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.03166",
+      "title": "Adversarial Stress Testing of Role-Playing Language Agents using Multi-Agent Evaluation",
+      "title_zh": "使用多智能体评估对角色扮演语言智能体进行对抗性压力测试",
+      "authors": [
+        "Saqib Shouqi",
+        "Abdullah Nazly",
+        "Januki Wanniarachchi",
+        "Ravisha De Alwis"
+      ],
+      "total_score": 0.5068,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.516,
+        "other": 0.2666666666666667
+      },
+      "tags": [
+        "Code soon",
+        "production agent platform"
+      ],
+      "tldr_zh": "多智能体对抗测试揭示RPLA隐藏失效",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.03166.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03166/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.03018",
+      "title": "UrbanAgent: A Tool-Augmented Agent for Cross-System Urban Tasks",
+      "title_zh": "UrbanAgent：面向跨系统城市任务的工具增强智能体",
+      "authors": [
+        "Jiayu Cao",
+        "Xingyuan Zeng",
+        "feiyu Li",
+        "Zhijing Huang",
+        "Xujie Yuan",
+        "Rongxiang Chen",
+        "Shimin Di",
+        "Libin Zheng",
+        "Jian Yin"
+      ],
+      "total_score": 0.5023141349418722,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.664,
+        "other": 0.21038044980624032
+      },
+      "tags": [
+        "production agent platform"
+      ],
+      "tldr_zh": "工具增强智能体处理跨系统城市任务",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.03018.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03018/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.03502",
+      "title": "Hybrid LLM-Augmented Reinforcement Learning Agents for Complex Sequential Decision Tasks",
+      "title_zh": "面向复杂序列决策任务的 Hybrid LLM-Augmented Reinforcement Learning Agents",
+      "authors": [
+        "Christophe D. Hounwanou",
+        "John Emeka Eze",
+        "Yaé Ulrich Gaba"
+      ],
+      "total_score": 0.4339599454444747,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.36000000000000004,
+        "other": 0.23319981814824864
+      },
+      "tags": [
+        "planning and policy"
+      ],
+      "tldr_zh": "LLM 规划结合 RL 优化，提升长程决策表现",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.03502.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03502/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.03130",
+      "title": "DP-MemView: A Memory Interface for Attribute-Level Transcript Privacy in Long-Term LLM Agents",
+      "title_zh": "DP-MemView：面向长期 LLM Agent 属性级转录隐私的记忆接口",
+      "authors": [
+        "Jong Wook Kim",
+        "Byoungjae Min",
+        "Kennedy Edemacu",
+        "Yoonhyuk Choi",
+        "Sae-Hong Cho",
+        "Beakcheol Jang"
+      ],
+      "total_score": 0.4057,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.764,
+        "other": 0.10833333333333334
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "用差分隐私记忆视图防止长期LLM泄露属性",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.03130.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03130/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.03463",
+      "title": "LeanMem: Simple and Efficient Long-Term Memory for LLM Agents",
+      "title_zh": "LeanMem：面向 LLM Agent 的简单高效长期记忆框架",
+      "authors": [
+        "Yuxin Liao",
+        "Le Wu",
+        "Min Hou",
+        "Hao Liu",
+        "Han Wu",
+        "Zishu Wang"
+      ],
+      "total_score": 0.3888,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.616,
+        "other": 0.2
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "按信息类型分层存储，低成本提升长期记忆",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.03463.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03463/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.03341",
+      "title": "Route-Align-Verify for Functional Correctness in Code Generation",
+      "title_zh": "面向代码生成函数正确性的 Route-Align-Verify",
+      "authors": [
+        "Erxue Zhou",
+        "Jingxiang Meng",
+        "Aofan Liu"
+      ],
+      "total_score": 0.1690887430316665,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.37600000000000006,
+        "other": 0.18762914343888823
+      },
+      "tags": [],
+      "tldr_zh": "三阶段提示、适配与验证提升代码正确性",
+      "detail_file": "agent-harness-evolution/2026-08-04/2608.03341.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03341/thumb.webp"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "arxiv_id": "2608.03609",
+  "title": "Formal Verification of Agentic Systems over Operational Data",
+  "title_zh": "基于操作数据的 Agentic Systems 形式化验证",
+  "authors": [
+    "Alejandro J. Mercado",
+    "Alessio Lomuscio"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T13:01:30Z",
+  "abs_url": "https://arxiv.org/abs/2608.03609v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03609",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic systems driven by large language models (LLMs) are increasingly deployed in real-world workflows where they act on persistent operational data. Before deployment, these systems need to be verified against business requirements that govern workflow execution and data evolution. However, existing approaches do not provide such system-level guarantees, as they mainly constrain or analyse behaviour at the agent's interface level. We study here the verification of agentic systems comprising a single LLM and a tool orchestration harness over relational operational data. We formalise them as Stateful Tool-Enabled Agentic Deployments (STEADs), give their semantics, define the problem of verifying them against First-Order Computation Tree Logic (FO-CTL) specifications, and show that it is undecidable. We identify sufficient conditions for exact preservation of FO-CTL specifications under a finite-domain restriction, over which verification is PSPACE-complete. The key requirement is that renaming opaque identifiers in the data must correspondingly rename the selected tool calls. We show that LLM-driven agents can violate this condition and introduce a canonical deployment wrapper that guarantees it for arbitrary base agents while preserving already-equivariant behaviour. We prove that computing canonical representations required by this construction is graph-isomorphism-hard. Finally, we illustrate our framework on an LLM agent orchestrating a case-management workflow.",
+  "abstract_zh": "本文研究由单个 LLM 与工具编排框架组成、并作用于关系型持久化操作数据的 agentic systems 的系统级验证问题。作者将此类部署形式化为 Stateful Tool-Enabled Agentic Deployments（STEADs），给出其语义，并定义了针对 First-Order Computation Tree Logic（FO-CTL）规约的验证问题。论文证明该问题一般情况下不可判定；随后给出在有限域限制下精确保留 FO-CTL 规约的充分条件，此时验证问题为 PSPACE-complete。核心条件是：对数据中不透明标识符的重命名，必须对应地重命名 agent 选择的工具调用。作者指出 LLM-driven agents 可能违反这一等变性条件，并提出一种 canonical deployment wrapper，可为任意基础 agent 保证该条件，同时保留其已有的等变行为。论文还证明，该构造所需的规范表示计算是 graph-isomorphism-hard。最后，作者以一个由 LLM agent 编排的 case-management workflow 展示该框架的应用。",
+  "key_points_zh": [
+    "提出 Stateful Tool-Enabled Agentic Deployments（STEADs），用于建模单个 LLM 通过工具编排操作关系型持久化数据的部署形态。",
+    "定义 STEADs 针对 FO-CTL 业务规约的验证问题，并证明一般情形下该问题不可判定。",
+    "给出有限域限制下精确保留 FO-CTL 规约的充分条件；在该限制上，验证复杂度为 PSPACE-complete。",
+    "识别关键等变性要求：数据中 opaque identifiers 的重命名必须同步反映到所选工具调用；LLM-driven agents 可能不满足该要求。",
+    "提出 canonical deployment wrapper，为任意基础 agent 强制满足等变性，同时证明其所需 canonical representations 的计算是 graph-isomorphism-hard。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.88,
+    "problem_significance": 0.89,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8699999999999999,
+    "comment": "Foundational formal work for verifying tool-enabled agent deployments over operational data, though practical adoption may be difficult.",
+    "comment_zh": "这是一项面向工具型智能体和业务数据验证的基础性形式化工作，但实际落地可能较难。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.34373441375821495,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8699999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

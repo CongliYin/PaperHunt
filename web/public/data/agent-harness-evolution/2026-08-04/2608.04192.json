@@ -1,0 +1,69 @@
+{
+  "arxiv_id": "2608.04192",
+  "title": "Behavioral Skill Reconstruction: Reconstructing Hidden Functionality from LLM Agent Skills",
+  "title_zh": "行为技能重建：从 LLM Agent 技能中重建隐藏功能",
+  "authors": [
+    "Peichun Hua",
+    "Haoxuan Xu",
+    "Mengyuan Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T19:51:15Z",
+  "abs_url": "https://arxiv.org/abs/2608.04192v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04192",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Closed source agent skills may encode proprietary instructions, scripts, constants, and data. Providers may offer their capabilities as services while keeping the underlying packages hidden. Prior work focuses on prompt injection attacks that directly disclose these artifacts, and existing defenses accordingly aim to prevent such leakage. However, preventing file disclosure does not prevent users from recovering the functionality those files implement. This raises a fundamental question: can a user reconstruct a skill's functionality through ordinary use while its files remain hidden? We study behavioral skill reconstruction (BSR), in which an attacker uses valid task requests and observed responses to build a functional clone of a hidden skill. We introduce SkillClone, a black-box attack that clones a target skill by forming an interface hypothesis from its public advertisement, issuing structured benign probes, synthesizing an executable replica, and iteratively repairing it through differential validation against the victim skill. Across 30 skills spanning rules, tables, procedures, and algorithms, SkillClone achieves exact or partial recovery on held-out inputs for several targets. Iterative requerying closes gaps missed by single-round reconstruction. Because SkillClone uses only legitimate interactions, disclosure-focused defenses provide limited coverage, and less detailed skill descriptions offer limited protection. These results show that file secrecy alone does not ensure functional secrecy. Defenses must also limit cumulative information leakage from ordinary use.",
+  "abstract_zh": "闭源 Agent 技能可能包含专有指令、脚本、常量与数据。服务提供方通常希望在隐藏底层包文件的同时，对外提供能力服务。以往研究主要关注通过 prompt injection 直接泄露这些文件内容，现有防御也多围绕阻止文件泄露展开。然而，即使文件本身不被披露，用户仍可能通过正常使用恢复这些文件所实现的功能。本文研究行为技能重建（Behavioral Skill Reconstruction, BSR）：攻击者仅通过合法任务请求和观察到的响应，构建隐藏技能的功能性克隆。作者提出 SkillClone，一种黑盒攻击方法：先根据公开技能描述形成接口假设，再发送结构化且看似良性的探测请求，合成可执行副本，并通过与目标技能的差分验证迭代修复。作者在涵盖规则、表格、流程和算法的 30 个技能上评估，发现 SkillClone 能在保留测试输入上对多个目标实现精确或部分恢复；迭代式重新查询可弥补单轮重建遗漏。由于 SkillClone 只使用合法交互，面向信息披露的防御覆盖有限，而减少技能描述细节也只能提供有限保护。结果表明，仅靠文件保密并不能保证功能保密，防御还必须限制普通使用过程中的累积信息泄露。",
+  "key_points_zh": [
+    "提出 Behavioral Skill Reconstruction（BSR）问题：在技能文件不可见的情况下，仅通过正常使用恢复隐藏技能功能。",
+    "提出黑盒攻击 SkillClone：利用公开说明推断接口，进行结构化探测，合成可执行副本，并通过差分验证迭代修复。",
+    "在 30 个涵盖规则、表格、流程和算法的技能上实验，SkillClone 可对多个目标实现精确或部分功能恢复。",
+    "迭代 requerying 能显著补足单轮重建中的缺口，说明长期普通交互会累积泄露功能信息。",
+    "结论指出，防 prompt injection 或防文件泄露不足以保障功能机密性，闭源技能还需限制累计行为信息泄露。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.72,
+    "problem_significance": 0.78,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.72,
+    "llm_avg": 0.716,
+    "comment": "Important agent-skill security study showing functional leakage through black-box behavioral reconstruction.",
+    "comment_zh": "这是一项重要的智能体技能安全研究，揭示了通过黑盒行为重构造成的功能泄露。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.716,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04192/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.972
+    }
+  ]
+}

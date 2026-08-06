@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2608.03134",
+  "title": "CLEAR: Causal Context-Based Agentic Reasoning for Vulnerability Detection",
+  "title_zh": "CLEAR：用于漏洞检测的基于因果上下文的智能体推理框架",
+  "authors": [
+    "Sungju Yun",
+    "Sijune Hwang",
+    "Yeonjoon Lee",
+    "Kyungtae Kang",
+    "Sungbin Park"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T05:03:11Z",
+  "abs_url": "https://arxiv.org/abs/2608.03134v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03134",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Detecting source code vulnerabilities is increasingly difficult as modern security flaws are rooted in complex causal dependencies between execution flows, control conditions, and program states. Despite recent advances in Large Language Models (LLMs) and multi-agent frameworks, existing approaches primarily address superficial similarities between benign and vulnerable functions while failing to capture the complex causal dependencies inherent in security flaws. To address these limitations, we propose Causal Context-based Agentic Reasoning (CLEAR), a novel multi-agent vulnerability detection framework integrated with a causal knowledge graph. CLEAR systematically constructs a Vulnerability Causal Knowledge Graph (VCKG) that models the causal chains between entrypoints, preconditions, root causes, and fix intents across vulnerability instances. Leveraging this structured knowledge, four specialized agents, including the Collector, Claim, Critic, and Judge, collaboratively verify vulnerability hypotheses through retrieved causal contexts. Experimental results on C/C++ and Java vulnerability benchmarks demonstrate that CLEAR improves Pair-Correct (P-C) performance by 130.7% and 71.56% over state-of-the-art approaches, demonstrating the effectiveness of causal knowledge graph-guided reasoning for automated vulnerability detection.",
+  "abstract_zh": "现代源代码漏洞往往源于执行流、控制条件与程序状态之间复杂的因果依赖，使自动检测愈发困难。现有基于 Large Language Models（LLMs）和多智能体框架的方法，多数仍停留在良性函数与漏洞函数的表层相似性对比，难以刻画安全缺陷背后的因果链。为此，论文提出 Causal Context-based Agentic Reasoning（CLEAR），一种结合因果知识图谱的多智能体漏洞检测框架。CLEAR 构建 Vulnerability Causal Knowledge Graph（VCKG），系统建模漏洞实例中的入口点、前置条件、根因与修复意图之间的因果链，并通过 Collector、Claim、Critic、Judge 四类专用智能体，基于检索到的因果上下文协同验证漏洞假设。在 C/C++ 与 Java 漏洞基准上的实验显示，CLEAR 相比现有先进方法在 Pair-Correct（P-C）指标上分别提升 130.7% 和 71.56%，证明了因果知识图谱引导推理对自动化漏洞检测的有效性。",
+  "key_points_zh": [
+    "提出 CLEAR，将多智能体推理与因果知识图谱结合，用于识别复杂代码漏洞。",
+    "构建 Vulnerability Causal Knowledge Graph（VCKG），显式表示入口点、前置条件、根因和修复意图之间的因果链。",
+    "设计 Collector、Claim、Critic、Judge 四类智能体，通过检索因果上下文来生成、质疑并裁决漏洞假设。",
+    "在 C/C++ 和 Java 漏洞检测基准上，CLEAR 的 Pair-Correct（P-C）性能较 SOTA 分别提升 130.7% 和 71.56%。",
+    "核心贡献在于从表层代码相似性转向因果依赖建模，提高了对真实安全缺陷的推理能力。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.46,
+    "problem_significance": 0.5,
+    "potential_impact": 0.45,
+    "paradigm_shift": 0.36,
+    "lasting_value": 0.42,
+    "llm_avg": 0.438,
+    "comment": "A domain-specific multi-agent vulnerability detector with causal retrieval, but limited relevance to agent harness evolution.",
+    "comment_zh": "这是一种结合因果检索的领域型多智能体漏洞检测方法，但与智能体基础设施演进关系有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.438,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03134/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.948
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03134/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03134/fig3.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.923
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03134/fig4.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.959
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "arxiv_id": "2608.04278",
+  "title": "EA-Graph: Artifact-Anchored Verification Memory for Coding Agents under Upstream Drift",
+  "title_zh": "EA-Graph：面向上游漂移下 Coding Agents 的工件锚定验证记忆",
+  "authors": [
+    "Hwai-Jung Hsu",
+    "Cheng-Jan Chi",
+    "Hanna Everett"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T23:13:32Z",
+  "abs_url": "https://arxiv.org/abs/2608.04278v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04278",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents increasingly work across sessions, but prose notes can preserve a conclusion without the program state that supported it. After an upstream change, a repository may still build even though earlier verification claims are no longer valid. EA-Graph is an artifact-anchored memory for verification claims. It represents artifacts at sub-path granularity, resolves aliases to leaf definitions, anchors each claim to the content used to establish it, and keeps evidence strength separate from freshness. When replacement content is unavailable, the claim becomes unprovable rather than guessed. EA-Graph is evaluated on generated repositories whose behavior-to-artifact ground truth is known by construction. The task is to classify prior claims as unaffected, affected, or unprovable after value drift, logic drift, and deliberately withheld upstream content. The analysis covers 42 sessions across seven clean worlds, 14 model-world instances, three memory conditions, and two model tiers. In the Haiku round, artifact-anchored memory outscored prose notes and no persistent memory in all seven worlds; each exact paired Wilcoxon comparison yielded p = 0.0156. In the Sonnet round, the anchored condition was perfect, but frequent control ceilings left the preregistered contrasts non-significant. No session fabricated withheld content. These results support a bounded claim: artifact-anchored memory improved the smaller model's provability judgments in this testbed. An exploratory comparison further suggests that structured claim memory may narrow a capability gap by externalizing in-session re-derivation, but it does not establish cross- model equivalence. The study makes no claim about efficiency or repair quality.",
+  "abstract_zh": "本文提出 EA-Graph，一种用于 Coding Agents 的工件锚定验证记忆（artifact-anchored verification memory）。传统 prose notes 可能只保留结论，而丢失支撑该结论的程序状态；当上游代码发生变化后，仓库即使仍能构建，先前的验证声明也可能失效。EA-Graph 以子路径粒度表示 artifacts，将别名解析到叶级定义，把每条 claim 锚定到当时用于验证的具体内容，并将证据强度与新鲜度分离；若替换内容不可用，则将 claim 标记为 unprovable，而不是猜测。论文在由构造过程提供行为到工件真值的生成式代码仓库上评估 EA-Graph，任务是在 value drift、logic drift 以及故意隐藏上游内容后，将历史 claims 分类为 unaffected、affected 或 unprovable。实验覆盖 42 个 sessions、7 个 clean worlds、14 个 model-world instances、3 种 memory conditions 和 2 个 model tiers。Haiku 轮次中，artifact-anchored memory 在全部 7 个 worlds 上优于 prose notes 和 no persistent memory，精确配对 Wilcoxon 检验均为 p = 0.0156。Sonnet 轮次中，anchored condition 达到满分，但由于对照组频繁触顶，预注册对比未显著。实验中没有 session 捏造被隐藏的内容。结果支持一个有限结论：在该测试床中，artifact-anchored memory 改善了较小模型的可证明性判断；探索性分析还表明，结构化 claim memory 可能通过外化会话内重新推导来缩小能力差距，但不能证明跨模型等价。论文不主张其提升效率或修复质量。",
+  "key_points_zh": [
+    "EA-Graph 将验证声明锚定到具体代码 artifacts 和内容片段，而不仅保存自然语言结论，从而更好应对上游代码漂移。",
+    "方法以子路径粒度建模 artifacts，解析 aliases 到叶级定义，并区分 evidence strength 与 freshness；当缺少替换内容时，声明被判为 unprovable 而非臆测。",
+    "评估任务是在生成式仓库中，根据已知真值判断旧 claims 在 value drift、logic drift 和 withheld upstream content 后是 unaffected、affected 还是 unprovable。",
+    "在 Haiku 模型轮次中，artifact-anchored memory 在 7 个 worlds 全部优于 prose notes 和无持久记忆，配对 Wilcoxon 检验均达到 p = 0.0156。",
+    "在 Sonnet 轮次中 anchored condition 达到满分，但对照组天花板效应导致预注册对比不显著；论文仅声称其改善该测试床中较小模型的可证明性判断。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.8,
+    "problem_significance": 0.82,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.82,
+    "llm_avg": 0.7899999999999999,
+    "comment": "Strong structured-memory approach for coding agents that anchors verification claims to artifacts under upstream drift.",
+    "comment_zh": "这是一种较强的编码智能体结构化记忆方法，将验证声明锚定到代码工件以应对上游变化。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.7899999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04278/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.934
+    }
+  ]
+}

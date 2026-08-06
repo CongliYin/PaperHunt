@@ -1,0 +1,70 @@
+{
+  "arxiv_id": "2608.03626",
+  "title": "A Security-Oriented Lifecycle Model for Large Language Model Systems",
+  "title_zh": "面向安全的大语言模型系统生命周期模型",
+  "authors": [
+    "Eleftherios Batzolis",
+    "George Drosatos",
+    "Vassilis Katsouros",
+    "Konstantinos Rantos"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T13:13:48Z",
+  "abs_url": "https://arxiv.org/abs/2608.03626v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03626",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models are being integrated into critical infrastructure and enterprise workflows at unprecedented scale,yet the lifecycle frameworks governing their development and operations were designed for operational efficiency rather than security analysis. As a result, security-relevant activities such as data provenance verification, artifact signing, agentic permission control, and decommissioning are often left implicit or assumed to receive due care. Governance frameworks, in turn, organise requirements around risk levels or management processes without clearly linking them to the lifecycle stages where they apply. This paper addresses both deficiencies. We propose a lifecycle model for LLM systems that supports security analysis by structuring it around security-relevant boundaries rather than workflow optimisation. The model comprises 32 stages across four core pipeline layers (Data, Model, Distribution, Application), supported by a 12-stage LLMOps pillar and a 9-category governance pillar. Thirteen stages are introduced here as separate units because they expose distinct security concerns that existing frameworks do not clearly distinguish. A governance mapping synthesising the NIST AI RMF, the EU AI Act, and ISO/IEC 42001 reveals a structural property of the current regulatory landscape: governance evidence concentrates at deployment-facing stages, where systems are visible to regulators, while the most consequential decisions, data selection, alignment strategy, and capability boundaries, are made at development-facing stages, where regulatory visibility is lowest.",
+  "abstract_zh": "本文指出，Large Language Model（LLM）正大规模进入关键基础设施与企业流程，但现有生命周期框架多以运营效率为核心，并不适合系统化安全分析，导致数据来源验证、制品签名、智能体权限控制、退役等安全活动常被隐含处理。同时，NIST AI RMF、EU AI Act、ISO/IEC 42001 等治理框架通常按风险等级或管理流程组织要求，缺少与具体生命周期阶段的清晰对应。为此，论文提出一个面向安全分析的 LLM 系统生命周期模型，以安全相关边界而非工作流优化为组织原则。该模型包含 Data、Model、Distribution、Application 四个核心流水线层，共 32 个阶段，并由 12 阶段的 LLMOps 支柱和 9 类治理支柱支撑。其中 13 个阶段被单独抽象出来，以刻画现有框架未充分区分的安全关注点。论文进一步将该模型映射到 NIST AI RMF、EU AI Act 和 ISO/IEC 42001，揭示当前监管结构的一个关键问题：治理证据主要集中在面向部署、监管可见度较高的阶段，而最关键的决策，如数据选择、对齐策略和能力边界，往往发生在面向开发、监管可见度最低的阶段。",
+  "key_points_zh": [
+    "论文提出一个面向安全分析的 LLM 系统生命周期模型，不再按运营效率组织流程，而是按安全相关边界划分阶段。",
+    "模型覆盖 Data、Model、Distribution、Application 四个核心层，共 32 个阶段，并增加 LLMOps 与治理两类支撑支柱。",
+    "作者将 13 个安全敏感环节显式拆分为独立阶段，例如数据来源、制品签名、Agentic 权限控制和系统退役等，以暴露传统框架中被弱化的风险点。",
+    "通过映射 NIST AI RMF、EU AI Act 和 ISO/IEC 42001，论文发现治理证据集中在部署侧，而关键安全决策多发生在开发侧。",
+    "该工作为研究者和安全团队提供了一个更适合威胁建模、合规映射与责任分配的 LLM 系统生命周期分析框架。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.48,
+    "problem_significance": 0.58,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.52,
+    "llm_avg": 0.492,
+    "comment": "Useful governance taxonomy with some agentic permission relevance, but mostly a broad LLM security lifecycle framework.",
+    "comment_zh": "这是一个有用的治理分类框架，部分涉及智能体权限，但总体仍是宽泛的LLM安全生命周期模型。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.492,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03626/fig1.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.979
+    }
+  ]
+}

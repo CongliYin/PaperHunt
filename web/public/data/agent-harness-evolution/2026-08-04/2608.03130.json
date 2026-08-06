@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2608.03130",
+  "title": "DP-MemView: A Memory Interface for Attribute-Level Transcript Privacy in Long-Term LLM Agents",
+  "title_zh": "DP-MemView：面向长期 LLM Agent 属性级转录隐私的记忆接口",
+  "authors": [
+    "Jong Wook Kim",
+    "Byoungjae Min",
+    "Kennedy Edemacu",
+    "Yoonhyuk Choi",
+    "Sae-Hong Cho",
+    "Beakcheol Jang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T05:00:10Z",
+  "abs_url": "https://arxiv.org/abs/2608.03130v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03130",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-term memory enables persistent personalization in LLM agents, but repeated memory-conditioned responses can cumulatively reveal protected attributes even when they are never stated explicitly. We formalize this threat as adaptive transcript privacy and introduce DP-MemView, a differentially private interface that privately selects public response-conditioning views and exposes those views---rather than raw memory---to the response LLM. Each private selection is charged to every protected attribute whose memory group intersects the read set. Per-attribute ledgers block any selection that would exceed its cap and return a fixed generic view instead. Under an explicit interface contract, we prove pure B_a-DP for the entire adaptive transcript. We also extend the result to stores that differ across multiple protected groups and bound how much observing the transcript can change an adversary's prior odds. We evaluate the online and preallocated modes with three response LLMs on a controlled adjacent-store benchmark and a public-corpus transfer track. Both modes keep transcript distinguishability near chance while preserving target-required personalization and overall response quality. Further diagnostics show that removing key safeguards causes mismatched output support, missing ledger charges, revealing side channels, or growing long-horizon leakage.",
+  "abstract_zh": "长期记忆让 LLM Agent 能够实现持续个性化，但在多轮基于记忆生成回复的过程中，即使受保护属性从未被显式说出，也可能被逐步泄露。本文将这一风险形式化为自适应转录隐私（adaptive transcript privacy），并提出 DP-MemView：一种差分隐私记忆接口。它不直接向响应 LLM 暴露原始记忆，而是以隐私方式选择公开的、用于回复条件化的记忆视图（public response-conditioning views）。每次私有选择都会向所有与读取集合相交的受保护属性记忆组计入隐私消耗；若某个属性的账本即将超过上限，则阻止该选择并返回固定的通用视图。在明确的接口契约下，作者证明了整个自适应转录满足纯 B_a-DP，并进一步扩展到多个受保护组同时变化的记忆库场景，给出观察转录后攻击者先验赔率变化的上界。实验在受控相邻记忆库基准和公共语料迁移设置中，使用三个 response LLM 评估在线模式与预分配模式。结果显示，两种模式都能将转录可区分性维持在接近随机猜测，同时保留目标所需个性化和整体回复质量。诊断实验表明，移除关键保护会导致输出支持不匹配、账本漏计、侧信道泄露或长程泄露累积。",
+  "key_points_zh": [
+    "提出 adaptive transcript privacy，用于刻画长期 LLM Agent 在多轮记忆条件化回复中对受保护属性的累积泄露风险。",
+    "DP-MemView 通过私有选择公开记忆视图替代暴露原始记忆，并对涉及的每个受保护属性维护独立隐私账本。",
+    "当某个属性隐私预算超限时，系统返回固定 generic view，从而避免继续泄露并保持输出支持一致性。",
+    "理论上证明在接口契约下整个自适应转录满足纯 B_a-DP，并扩展到多个受保护记忆组同时变化的场景。",
+    "实验显示在线与预分配模式均能让攻击者区分能力接近随机，同时维持个性化效果和响应质量；消融揭示账本、固定回退视图等机制对防泄露至关重要。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.78,
+    "problem_significance": 0.82,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.78,
+    "llm_avg": 0.764,
+    "comment": "DP-MemView is strong agent-infrastructure work because it formalizes and enforces transcript-level privacy for long-term memory through a reusable governed interface.",
+    "comment_zh": "DP-MemView 是较强的智能体基础设施工作，因为它通过可复用的治理接口形式化并执行长期记忆的转录级隐私保护。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.764,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03130/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03130/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03130/fig3.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.982
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03130/fig4.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.971
+    }
+  ]
+}

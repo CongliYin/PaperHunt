@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.03764",
+  "title": "GDPevo: Evaluating Agent Self-Evolution on Real Business Tasks",
+  "title_zh": "GDPevo：在真实商业任务上评估 Agent 自我进化能力",
+  "authors": [
+    "Leijun Zhou",
+    "Zhihao Liu",
+    "Xiang Qu",
+    "Chenxu Liu",
+    "Yifei Liu",
+    "Yanke Yu",
+    "Jingzhe Xu",
+    "Xuejun Wu",
+    "Buyue Qian",
+    "Xi Chen",
+    "Yaowei Zheng",
+    "Junhao Hu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T14:51:56Z",
+  "abs_url": "https://arxiv.org/abs/2608.03764v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03764",
+  "links": {
+    "github": "https://github.com/Prism-Shadow/GDPevo.",
+    "project_page": null
+  },
+  "abstract_en": "Agent self-evolution updates an agent's persistent state from prior experience and reuses it to solve related tasks more effectively. Evaluating self-evolution is difficult: existing benchmarks provide limited coverage of economically valuable task domains, do not always design training and test tasks such that test-time gains can be attributed to training experience, and remain vulnerable to data contamination. We present GDPevo, an evolution-native benchmark grounded in GDP-related enterprise workflows, together with the fully automated data pipeline that generates it. Its core mechanism, rule hybridization, decomposes each enterprise workflow into atomic business rules, distributes subsets of these rules across training tasks, and recombines them in held-out test tasks so that test-time gains are attributable. GDPevo spans CRM, ERP, finance, healthcare, legal, and data-centric workflows. Its V1 release contains 120 tasks in 12 groups, with five training and five held-out test tasks per group. Full automation enables the pipeline to expand the suite to 240 tasks in 24 groups (V2) within two days, providing a practical response to contamination. Using GDPevo, we evaluate four agents, each comprising a harness and a model, under four supervision types. Self-evolution consistently improves held-out accuracy by up to 16.44 percentage points. But the best evolved agents remain far below the fully informed oracle ceiling of 91.6%, indicating that the self-evolution ability of current agents remains far from fully realized. We publicly release the pipeline, benchmark, and full evaluation results at https://github.com/Prism-Shadow/GDPevo.",
+  "abstract_zh": "本文提出 GDPevo，一个面向 Agent self-evolution（智能体自我进化）的评测基准，用于衡量智能体能否从历史经验中更新持久状态，并在相关新任务中复用这些经验。现有基准在高经济价值任务覆盖、训练/测试任务因果归因设计以及数据污染防护方面存在不足。GDPevo 基于 GDP 相关企业工作流构建，覆盖 CRM、ERP、金融、医疗、法律和数据中心型流程。其核心机制 rule hybridization（规则混合）将企业工作流拆解为原子业务规则，将规则子集分配到训练任务，再在未见测试任务中重组，从而使测试性能提升可归因于训练经验。V1 包含 12 组共 120 个任务，每组 5 个训练任务和 5 个 held-out 测试任务；自动化流水线可在两天内扩展到 V2 的 24 组 240 个任务，以应对污染风险。实验评估了由 harness 和 model 组成的 4 种 Agent，在 4 类监督设置下，自我进化最高带来 16.44 个百分点的 held-out 准确率提升。但最佳进化 Agent 仍显著低于 91.6% 的 fully informed oracle 上限，说明当前 Agent 的自我进化能力仍远未充分实现。",
+  "key_points_zh": [
+    "提出 GDPevo，一个面向真实企业工作流的 evolution-native benchmark，用于评估 Agent self-evolution 在经济价值任务中的有效性。",
+    "核心方法 rule hybridization 将业务流程拆解为原子规则，并在训练任务与 held-out 测试任务间重组规则，使测试提升更可归因于经验学习。",
+    "基准覆盖 CRM、ERP、finance、healthcare、legal 和 data-centric workflows；V1 含 120 个任务，自动化流水线可快速扩展到 V2 的 240 个任务。",
+    "在 4 种 Agent 和 4 类监督设置下，自我进化可将 held-out accuracy 最高提升 16.44 个百分点。",
+    "尽管有明显提升，最佳进化 Agent 仍远低于 91.6% 的 fully informed oracle ceiling，表明当前智能体自我进化能力仍有很大提升空间。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.8,
+    "problem_significance": 0.84,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8160000000000001,
+    "comment": "Strong self-evolution benchmark because it attributes held-out gains to generated training experience in realistic workflows.",
+    "comment_zh": "这是一个较强的自进化评测基准，能在真实业务流程中将泛化提升归因于训练经验。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8160000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Prism-Shadow/GDPevo.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03764/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

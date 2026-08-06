@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.03403",
+  "title": "Towards Robust Tool Use in Agents via Experience-Driven Adaptive Guidance",
+  "title_zh": "通过经验驱动的自适应指导提升 Agent 工具使用鲁棒性",
+  "authors": [
+    "Can Wang",
+    "Haoran Chen",
+    "Li Yu",
+    "Ding Hao",
+    "Bohai Zhao",
+    "Zhaoyang Liu",
+    "Zhiying Tu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T09:56:31Z",
+  "abs_url": "https://arxiv.org/abs/2608.03403v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03403",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The performance bottleneck of agents is increasingly shifting from model capability to the robustness of their execution processes. Tools play a central role as the primary interface through which agents interact with external environments, yet existing methods rarely focus on ensuring robust tool use across diverse runtime conditions. To address this problem, we propose ExpG, a mechanism that builds and refines adaptive guidance capturing each tool's capability boundaries and best practices, thereby enabling agents to use tools more robustly and effectively. ExpG consists of three phases: (1) experience acquisition, which analyzes tool invocation quality from historical execution trajectories, producing structured learnable experiences through multi-aspect attribution; (2) experience distillation, which keeps the experience pool effective by filtering unhelpful experiences, selecting representative ones with an equivalence-class-based method, and summarizing them into generalizable guidance; and (3) experience reuse, which applies the guidance adaptively during future task solving. Extensive experiments show that ExpG brings consistent improvements across the tool selection, tool calling, and response generation tasks, enabling smaller agents to outperform larger ones that do not use ExpG. Moreover, ExpG achieves particularly strong gains in challenging settings, suggesting a promising path toward more robust tool use. Our code, experiments, and results are available.",
+  "abstract_zh": "这篇论文关注 Agent 性能瓶颈从模型能力转向执行过程鲁棒性的趋势，尤其聚焦工具使用这一 Agent 与外部环境交互的关键接口。作者提出 ExpG，一种经验驱动的自适应指导机制，用于构建并持续优化每个工具的能力边界与最佳实践，从而帮助 Agent 在多样运行条件下更稳健、更有效地使用工具。ExpG 包含三个阶段：经验获取（experience acquisition）从历史执行轨迹中分析工具调用质量，并通过多维归因生成结构化可学习经验；经验蒸馏（experience distillation）通过过滤无效经验、基于等价类选择代表性经验，并将其总结为可泛化指导；经验复用（experience reuse）在未来任务求解时自适应应用这些指导。大量实验表明，ExpG 在工具选择、工具调用和响应生成任务上均带来稳定提升，并使较小 Agent 能够超过未使用 ExpG 的更大 Agent；在困难场景中收益尤为显著，展示了提升工具使用鲁棒性的潜力。",
+  "key_points_zh": [
+    "论文提出 ExpG，通过从历史执行轨迹中学习工具使用经验，刻画各工具的能力边界、常见失败模式与最佳实践。",
+    "ExpG 采用三阶段流程：经验获取、经验蒸馏与经验复用，使经验从单次轨迹中抽象为可泛化、可在未来任务中自适应调用的指导。",
+    "经验蒸馏阶段引入过滤无益经验、基于等价类选择代表样本和总结指导的机制，以保持经验池的有效性与紧凑性。",
+    "实验显示 ExpG 在 tool selection、tool calling 和 response generation 等任务上均稳定提升性能，尤其在复杂或挑战性设置中效果更明显。",
+    "结果表明，具备 ExpG 的较小 Agent 可超越未使用该机制的更大 Agent，说明执行过程优化可显著弥补模型规模差距。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.76,
+    "problem_significance": 0.82,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.78,
+    "llm_avg": 0.776,
+    "comment": "Good trace-driven tool-use improvement method that distills historical execution experience into adaptive guidance.",
+    "comment_zh": "这是一种较好的基于轨迹的工具使用改进方法，将历史执行经验蒸馏为自适应指导。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.776,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03403/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03403/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.97
+    }
+  ]
+}

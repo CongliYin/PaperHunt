@@ -1,0 +1,73 @@
+{
+  "arxiv_id": "2608.04066",
+  "title": "The LLM Proposes, the Executive Disposes: A Self-Verifying Agent Instrument that Dissociates Commitment Drift from Binding Drift in Long-Horizon Agents",
+  "title_zh": "LLM 负责提议，Executive 负责处置：一种自验证 Agent 工具，用于区分长程 Agent 中的承诺漂移与绑定漂移",
+  "authors": [
+    "Mohsen Arjmandi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T15:10:37Z",
+  "abs_url": "https://arxiv.org/abs/2608.04066v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04066",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "How do you verify a long-horizon agent when its own state and self-reports are exactly what you cannot trust? We present an agent instrument built so that verification is structural rather than post-hoc. A deterministic Executive owns all belief; a language model may only file typed proposals, and a claim is admitted only when a prediction pre-registered before acting is matched against observation by code. Two properties make the instrument a verifier of its own science, not just of the agent: every run invalidates itself when per-organ write-error, render-size, or salted-canary-echo floors are breached (four of the first eight architecture runs were invalidated, each localizing a real defect); and a render-invisible shadow reference compiles the plan the full system would have committed in every ablation cell, so drift metrics are defined even where the mechanism under test has been removed. Using this instrument we report a clean, single-variable result on a failure every long-horizon agent suffers: ablating the commitment mechanism flips goal-abandonment from 0.00 to 1.00 while binding error stays flat at 0.00 (three seeds per cell, up to 394 reference beats per run, every run gated valid). The binding channel, by contrast, does not reappear as per-beat drift when its repair is ablated -- because binding is code-owned, the failure class is structurally absorbed, its only residue appearing one layer upstream as a collapse in hypothesis formation. We report these under full disclosure that task efficacy is null (zero level completions across 52 gated runs on ARC-AGI-3), pre-registered as a structural defeater. The contribution is a verification methodology for agent development and the drift decomposition it makes measurable.",
+  "abstract_zh": "本文提出一种面向长程 Agent 的结构化自验证工具，用于在不能信任 Agent 自身状态与自报告的情况下进行验证。其核心设计是：确定性的 Executive 掌控全部信念状态，LLM 只能提交类型化提案；任何声明只有在行动前预注册的预测被代码与观测匹配后，才能被接纳。该工具不仅验证 Agent，也验证实验本身：当每个 organ 的写入错误、渲染大小或 salted-canary-echo 指标低于阈值时，整次运行自动失效；前八次架构运行中有四次被判无效，并定位到真实缺陷。同时，系统引入 render-invisible shadow reference，在每个消融设置中编译完整系统本会承诺的计划，因此即使被测机制被移除，也能定义漂移指标。实验显示，在长程 Agent 常见的目标放弃问题上，移除 commitment mechanism 会使 goal-abandonment 从 0.00 跃升到 1.00，而 binding error 保持 0.00；每个条件三组随机种子，单次运行最多 394 个 reference beats，且所有运行均通过有效性门控。相反，移除 binding repair 后，binding channel 并不会以逐步漂移形式重新出现，因为绑定由代码掌控，该错误类型被结构性吸收，只在上游表现为 hypothesis formation 崩溃。作者同时披露任务有效性为零：在 ARC-AGI-3 上 52 次有效运行均未完成关卡，并将其预注册为结构性否决因素。论文贡献在于提出一种 Agent 开发验证方法，并使 commitment drift 与 binding drift 的分解可测量。",
+  "key_points_zh": [
+    "提出一种自验证 Agent instrument：LLM 只生成类型化 proposals，确定性 Executive 负责信念、承诺与验证，避免依赖不可信的自报告。",
+    "验证机制是结构性的而非事后分析：行动前预注册预测，之后由代码将预测与观测匹配；若写入错误、渲染大小或 canary 回显等门控失败，则整次运行作废。",
+    "引入 render-invisible shadow reference，使消融实验中即便移除了某个机制，也能知道完整系统本会提交的计划，从而定义并比较 drift metrics。",
+    "实验发现移除 commitment mechanism 会使 goal-abandonment 从 0.00 变为 1.00，但 binding error 仍为 0.00，说明 commitment drift 与 binding drift 可被分离测量。",
+    "作者坦诚披露 ARC-AGI-3 上任务完成率为零，强调本文主要贡献不是任务性能，而是面向长程 Agent 的验证方法与漂移分解框架。"
+  ],
+  "llm_assessment": {
+    "novelty": 0.82,
+    "problem_significance": 0.8,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.81,
+    "lasting_value": 0.76,
+    "llm_avg": 0.782,
+    "comment": "Interesting structural verification instrument for long-horizon agents, but evidence is narrow and task efficacy is explicitly null.",
+    "comment_zh": "这是一个有趣的长程智能体结构化验证工具，但实验证据较窄且任务效果明确为零。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.782,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04066/fig1.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04066/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.977
+    }
+  ]
+}
