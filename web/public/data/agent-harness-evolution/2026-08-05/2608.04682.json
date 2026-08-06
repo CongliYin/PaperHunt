@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.04682",
   "title": "Active-SWE: Benchmarking Coding Agents for Proactive Bug Fixing without Issue Reports",
-  "title_zh": "Active-SWE：无 Issue Report 场景下主动 Bug 修复 Coding Agents 基准",
+  "title_zh": "Active-SWE：无 Issue Report 场景下主动修复 Bug 的 Coding Agent 基准",
   "authors": [
     "Haobin Li",
     "Ping Deng",
@@ -20,24 +20,24 @@
     "project_page": null
   },
   "abstract_en": "Coding agents powered by large language models (LLMs) are increasingly adopted in software engineering (SWE) scenarios, capable of fixing a specific bug in large-scale codebase. However, existing SWE benchmarks typically assume that high-quality issue reports with detailed information are always available, which is easily violated in practice due to the complexity of report acquisition and curation. To address this, we introduce Active-SWE, a benchmark for evaluating coding agents on proactively discovering and fixing multiple bugs without report guidance, covering 1,663 tasks across six bug categories and eight languages. Beyond shifting the focus from existing reactive bug fixing to proactive bug fixing, Active-SWE enables a more in-depth evaluation by expanding the scope from fixing a specific recorded bug to multiple-bug fixing and potential bug discovery scenarios. To construct Active-SWE, we propose a novel difficulty-aware task formulation pipeline with a dual-track evaluation framework, facilitating comprehensive evaluation of proactive bug-fixing capability. Extensive experiments reveal that most state-of-the-art coding agents struggle with proactive bug-fixing tasks, demonstrating limited performance in locating and resolving recorded bugs, handling multiple bug fixing scenarios, and discovering valid potential bugs.",
-  "abstract_zh": "由大语言模型（LLMs）驱动的 Coding Agents 正越来越多地用于软件工程（SWE）场景，能够在大规模代码库中修复特定 bug。然而，现有 SWE 基准通常假设始终存在信息详尽的高质量 issue reports，这在真实实践中由于报告获取与整理成本高而难以满足。为此，论文提出 Active-SWE：一个评估 Coding Agents 在无报告指导下主动发现并修复多个 bug 能力的基准，包含 1,663 个任务，覆盖 6 类 bug 与 8 种编程语言。Active-SWE 将评估重点从既有的被动式 bug 修复转向主动式 bug 修复，并将范围从修复单个已记录 bug 扩展到多 bug 修复与潜在 bug 发现。为构建该基准，作者设计了难度感知的任务构造流程，并提出双轨评估框架，以更全面衡量主动 bug 修复能力。大量实验表明，当前多数 state-of-the-art Coding Agents 在主动 bug 修复任务上表现有限，尤其在定位并修复已记录 bug、处理多 bug 场景以及发现有效潜在 bug 方面仍面临显著挑战。",
+  "abstract_zh": "由大语言模型（LLM）驱动的 Coding Agent 正在软件工程（SWE）场景中被广泛采用，已能在大型代码库中修复特定 Bug。然而，现有 SWE 基准通常默认存在高质量、信息充分的 Issue Report，这一假设在实际中并不稳固，因为报告获取与整理成本高且复杂。为此，论文提出 Active-SWE：一个评估 Coding Agent 在无报告引导下主动发现并修复多个 Bug 能力的基准，覆盖 6 类 Bug、8 种编程语言，共 1,663 个任务。Active-SWE 将评测重点从被动修复已报告 Bug 转向主动修复 Bug，并进一步扩展到多 Bug 修复与潜在 Bug 发现。论文设计了难度感知的任务构建流程，以及双轨评测框架，以更全面衡量主动 Bug 修复能力。大量实验表明，当前多数最先进 Coding Agent 在主动 Bug 修复任务上表现有限，尤其在定位与修复已记录 Bug、处理多 Bug 场景，以及发现有效潜在 Bug 方面仍面临显著挑战。",
   "key_points_zh": [
-    "提出 Active-SWE，用于评估 Coding Agents 在没有 issue reports 指导时主动发现和修复 bug 的能力。",
-    "基准包含 1,663 个任务，覆盖 6 类 bug 和 8 种编程语言，支持更贴近真实软件工程场景的评测。",
-    "评估范围从传统的单个已知 bug 修复扩展到多 bug 修复和潜在 bug 发现，强调 proactive bug fixing。",
-    "设计难度感知的任务构造流程与双轨评估框架，以更系统地衡量定位、修复和发现能力。",
-    "实验显示，当前 state-of-the-art Coding Agents 在主动 bug 修复中仍表现较弱，尤其难以稳定定位并解决多重或潜在缺陷。"
+    "提出 Active-SWE，面向无 Issue Report 引导的主动 Bug 发现与修复评测，区别于传统被动式 SWE 基准。",
+    "基准包含 1,663 个任务，覆盖 6 类 Bug 与 8 种编程语言，支持更贴近真实开发环境的评估。",
+    "任务范围从修复单个已记录 Bug 扩展到多 Bug 修复和潜在 Bug 发现，提升评测深度与复杂度。",
+    "构建了难度感知的任务生成流程与双轨评测框架，用于系统衡量 Coding Agent 的主动修复能力。",
+    "实验显示，当前 state-of-the-art Coding Agent 在 Bug 定位、修复、多 Bug 处理和潜在 Bug 发现上仍显著不足。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.82,
-    "novelty": 0.7,
-    "problem_significance": 0.8,
-    "potential_impact": 0.76,
-    "paradigm_shift": 0.58,
-    "lasting_value": 0.78,
-    "llm_avg": 0.724,
-    "comment": "Active-SWE is a strong agent-evaluation contribution because it expands coding-agent assessment to proactive bug discovery and multi-bug fixing with a reusable benchmark pipeline.",
-    "comment_zh": "Active-SWE是较强的智能体评测贡献，因为它通过可复用基准流程将编程智能体评估扩展到主动发现漏洞和多漏洞修复。"
+    "domain_fit": 0.91,
+    "novelty": 0.72,
+    "problem_significance": 0.85,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.79,
+    "llm_avg": 0.756,
+    "comment": "A clearly in-scope coding-agent benchmark that broadens evaluation to proactive bug discovery and multi-bug fixing.",
+    "comment_zh": "这是一项明确属于领域内的编码智能体基准，将评测扩展到主动缺陷发现和多缺陷修复。"
   },
   "scores": {
     "topic_relevance": 0.0,
@@ -46,7 +46,7 @@
     "author_reputation": 0.2876491876228333,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.724,
+    "llm_assessment": 0.756,
     "domain_multiplier": 1.0
   },
   "enriched": {

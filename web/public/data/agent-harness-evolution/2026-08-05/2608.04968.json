@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.04968",
   "title": "EvolveNet: Collaborative Harness Evolution for Agent Self-Improvement",
-  "title_zh": "EvolveNet：用于智能体自我改进的协作式 Harness 演化",
+  "title_zh": "EvolveNet：用于智能体自我改进的协同 Harness 演化",
   "authors": [
     "Jun Nie",
     "Yonggang Zhang",
@@ -19,24 +19,24 @@
     "project_page": null
   },
   "abstract_en": "The capabilities of an LLM agent depend not only on its model but on the harness: the executable program that constructs context, invokes tools, verifies results, and recovers from failure. Recent work shows that evolving the harness yields persistent improvements without updating model weights. Existing approaches, however, assume that all execution experience can be routed to a single optimizer, which evolves one harness along a sequential trajectory. Real agent ecosystems violate that assumption: users, organizations, and environments generate isolated streams of experience that cannot be pooled, so the experience most worth learning from is exactly the experience that cannot be directly centralized. We introduce EvolveNet, a paradigm of collaborative harness evolution that moves experience extraction to the data. A shared harness is broadcast to data-local agent deployments, each of which evolves it on its own workload. Only the resulting program adaptations are composed into an updated shared harness and redistributed, so that every participating agent inherits operational experience discovered by the others. By shifting the aggregation boundary from raw workloads to learned adaptations, EvolveNet keeps workloads local and allows multiple evolutionary searches to proceed concurrently with reduced serial depth. Because independently modified programs cannot be averaged like model parameters and may conflict when composed, EvolveNet introduces scope-typed, evidence-guided program aggregation. Across five settings spanning text-to-SQL, data-science coding, competitive programming, software engineering, and agentic workflows, EvolveNet improves the shared harness in all five, with the largest gains under heterogeneous workloads, and ablations attribute the improvement to composition of adaptations from different agents rather than to selecting among them.",
-  "abstract_zh": "LLM Agent 的能力不仅取决于底座模型，也取决于 harness：即负责构造上下文、调用工具、验证结果并从失败中恢复的可执行程序。已有研究表明，在不更新模型权重的情况下，演化 harness 可以带来持续性能提升。但现有方法通常假设所有执行经验都能汇聚到单个优化器中，并沿着一条序列轨迹演化同一个 harness；而真实的 Agent 生态中，用户、组织和环境往往产生彼此隔离、无法集中共享的经验流。EvolveNet 提出协作式 harness 演化范式：将共享 harness 分发到各个数据本地的 Agent 部署中，每个部署在自身工作负载上独立演化；随后只聚合得到的程序适配，而非原始数据或执行日志，并将更新后的共享 harness 再分发给所有参与方。这样既保持工作负载本地化，又允许多条演化搜索并行进行，减少串行优化深度。由于独立修改的程序不能像模型参数那样直接平均，且组合时可能冲突，EvolveNet 引入了基于作用域类型和证据引导的程序聚合机制。论文在 text-to-SQL、数据科学代码、竞赛编程、软件工程和 Agentic workflows 五类任务上验证，EvolveNet 在全部设置中都提升了共享 harness，尤其在异构工作负载下收益最大；消融实验表明，性能提升来自不同 Agent 适配的组合，而非简单选择最优适配。",
+  "abstract_zh": "LLM 智能体的能力不仅取决于模型本身，还取决于 harness：负责构建上下文、调用工具、验证结果并从失败中恢复的可执行程序。近期研究表明，在不更新模型权重的情况下，演化 harness 可以带来持续性能提升。然而，现有方法通常假设所有执行经验都能汇聚到单一优化器中，并沿着一条顺序轨迹演化一个 harness。真实智能体生态并不满足这一假设：用户、组织和环境会产生彼此隔离、无法集中汇聚的经验流，而最有学习价值的经验往往正是这些无法直接中心化的数据。本文提出 EvolveNet，一种协同 harness 演化范式，将经验提取过程下沉到数据本地。系统将共享 harness 广播到各个数据本地的智能体部署中，每个部署在自身工作负载上独立演化它；随后仅聚合由此得到的程序适配，并组合成更新后的共享 harness 再分发，使所有参与智能体都能继承其他智能体发现的操作经验。通过将聚合边界从原始工作负载转移到学习到的程序适配，EvolveNet 保持工作负载本地化，同时支持多个演化搜索并行进行，降低串行深度。由于独立修改后的程序无法像模型参数那样直接平均，且组合时可能冲突，EvolveNet 引入了基于作用域类型（scope-typed）和证据引导（evidence-guided）的程序聚合机制。在 text-to-SQL、数据科学编程、竞技编程、软件工程和 agentic workflows 五类任务设置中，EvolveNet 均提升了共享 harness，尤其在异构工作负载下收益最大；消融实验表明，性能提升主要来自不同智能体适配的组合，而非简单选择其中某个适配。",
   "key_points_zh": [
-    "提出 EvolveNet，将 harness 演化从集中式单优化器扩展为协作式、多部署并行演化，适配真实场景中数据和经验无法集中共享的问题。",
-    "核心思想是“移动经验提取到数据本地”：各本地 Agent 在自身 workload 上演化共享 harness，只上传程序级 adaptations，而不上传原始工作负载或执行经验。",
-    "为解决程序适配无法像模型参数一样平均、且可能互相冲突的问题，提出 scope-typed、evidence-guided program aggregation，用于组合不同 Agent 产生的修改。",
-    "在 text-to-SQL、data-science coding、competitive programming、software engineering、agentic workflows 五类任务中，EvolveNet 均提升共享 harness 表现，异构工作负载下提升最明显。",
-    "消融实验显示，收益主要来自跨 Agent 的 adaptations 组合，而不是在多个候选 harness 中做选择，说明协作聚合本身是关键贡献。"
+    "提出 EvolveNet，将 harness 演化从单一中心化优化扩展为多智能体协同演化，适用于数据和经验无法集中汇聚的真实部署场景。",
+    "核心思想是“经验提取在本地进行”：共享 harness 被分发到各本地工作负载上独立演化，仅上传和聚合学习到的程序适配，而不集中原始数据或执行经验。",
+    "针对程序修改无法像模型参数一样平均、且可能相互冲突的问题，提出 scope-typed、evidence-guided program aggregation，用于组合不同智能体产生的适配。",
+    "在 text-to-SQL、数据科学编程、竞技编程、软件工程和 agentic workflows 五个设置中均带来性能提升，异构工作负载下提升最明显。",
+    "消融实验显示，EvolveNet 的收益主要来自跨智能体适配的组合，而不是从多个候选 harness 中做选择。"
   ],
   "llm_assessment": {
     "domain_fit": 0.98,
     "novelty": 0.9,
     "problem_significance": 0.92,
     "potential_impact": 0.91,
-    "paradigm_shift": 0.9,
+    "paradigm_shift": 0.89,
     "lasting_value": 0.92,
-    "llm_avg": 0.9099999999999999,
-    "comment": "An excellent fit that directly advances collaborative harness evolution through distributed experience extraction and program-adaptation aggregation.",
-    "comment_zh": "该论文与领域高度契合，通过分布式经验提取和程序适配聚合直接推进协作式智能体框架演化。"
+    "llm_avg": 0.908,
+    "comment": "Excellent fit because it directly advances collaborative harness evolution with reusable program adaptation and aggregation mechanisms.",
+    "comment_zh": "该论文高度契合方向，直接推进了协作式 harness 演化，并提出可复用的程序适配与聚合机制。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
@@ -45,7 +45,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.4,
-    "llm_assessment": 0.9099999999999999,
+    "llm_assessment": 0.908,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -58,8 +58,8 @@
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": 0,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": [

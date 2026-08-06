@@ -15,33 +15,33 @@
     "project_page": null
   },
   "abstract_en": "Agent evaluations tell us that a model picked the wrong tool, but rarely why. We introduce canary tools: diagnostic probe tools planted in an agent's Model Context Protocol (MCP) tool set, each engineered to probe one specific tool-selection weakness. A six-type taxonomy (semantic decoys, parameter traps, capability mirages, prerequisite blindness, temporal decoys, and granularity traps) turns a single \"wrong tool\" outcome into a multi-dimensional profile of how a model reasons about tools. We evaluate eight models -- six hosted and two 8B open-weight -- spanning three capability tiers, on 120 tasks across three canary-density conditions and three seeds (8,640 runs), plus a 2,880-run subtlety ablation. Task success is graded by a provider-independent judge, corroborated by a second independent judge (Cohen's kappa = 0.75). We report three findings. First, susceptibility drops sharply as models get more capable: the per-task canary susceptibility rate (CSR) ranges about 36x across models, lowest for Claude Opus 4.8 and highest for Llama 3.1 8B. Second, capability tier alone does not predict safety: the most susceptible hosted model is mid-tier, and within a provider the cheaper model can be the safer one. Third, the taxonomy is capability-stratified: capability mirages most reliably trap frontier models, while the other types are largely inert on strong models but fire on small open models, so they discriminate by capability rather than being weak. Softening each canary's give-away phrase leaves frontier CSR essentially unchanged, evidence that the probes measure reasoning, not phrase-spotting. Susceptibility also predicts task failure (Spearman rho = -0.34), while the most robust models are not significantly degraded by canary pressure. We release the framework, canary schemas, tasks, and logs.",
-  "abstract_zh": "本文提出 canary tools：一种植入 Agent 的 Model Context Protocol（MCP）工具集中的诊断探针工具，用于定位模型在工具选择时的具体推理弱点，而不仅是判断其是否选错工具。作者构建了六类工具选择缺陷分类：semantic decoys、parameter traps、capability mirages、prerequisite blindness、temporal decoys 和 granularity traps，将单一的“错误工具选择”扩展为多维诊断画像。实验覆盖 8 个模型，包括 6 个托管模型和 2 个 8B 开源权重模型，跨 3 个能力层级，在 120 个任务、3 种 canary 密度、3 个随机种子下共进行 8,640 次运行，并额外进行了 2,880 次 subtlety ablation。任务成功率由与模型提供方无关的评审器评分，并由第二个独立评审器验证，Cohen's kappa 为 0.75。结果显示：模型越强，对 canary tools 的易感性显著越低，不同模型的 per-task canary susceptibility rate（CSR）相差约 36 倍；能力层级本身并不能完全预测安全性，中端托管模型可能最易受影响，同一提供方内更便宜的模型反而可能更安全；不同 canary 类型呈现能力分层特征，capability mirages 最能诱导前沿模型，而其他类型主要影响小型开源模型。削弱 canary 中明显提示性短语后，前沿模型 CSR 基本不变，说明该方法测量的是工具选择推理而非关键词匹配。CSR 还与任务失败显著相关，Spearman rho = -0.34；最稳健的模型在 canary 压力下没有显著性能退化。作者发布了框架、canary schemas、任务与日志。",
+  "abstract_zh": "现有 Agent 评测通常只能发现模型选错了工具，却难以解释其原因。本文提出 canary tools：在 Agent 的 Model Context Protocol（MCP）工具集中植入诊断性探针工具，每个工具专门检测一种工具选择弱点。作者构建了六类 taxonomy，包括 semantic decoys、parameter traps、capability mirages、prerequisite blindness、temporal decoys 和 granularity traps，将单一的“选错工具”结果转化为多维度的工具推理画像。实验覆盖 8 个模型，包括 6 个 hosted models 和 2 个 8B open-weight models，横跨三个能力层级，在 120 个任务、三种 canary 密度、三个随机种子下共运行 8,640 次，并额外进行了 2,880 次 subtlety ablation。任务成功率由独立于模型提供商的 judge 评估，并由第二个独立 judge 验证，Cohen's kappa 为 0.75。结果显示：第一，模型越强，canary susceptibility rate（CSR）显著下降，不同模型间 CSR 相差约 36 倍，Claude Opus 4.8 最低，Llama 3.1 8B 最高。第二，能力层级并不能单独预测安全性：最易受影响的 hosted model 来自中等层级，同一提供商内部更便宜的模型反而可能更安全。第三，不同 canary 类型呈现能力分层特征：capability mirages 最能诱捕 frontier models，而其他类型对强模型基本无效、对小型 open models 更敏感，说明这些探针区分的是能力而非设计过弱。削弱 canary 中明显提示语后，frontier CSR 基本不变，表明该框架测量的是推理缺陷而非短语匹配。CSR 还与任务失败相关，Spearman rho = -0.34；最稳健模型在 canary 压力下无显著性能退化。作者发布了框架、canary schemas、任务和日志。",
   "key_points_zh": [
-    "提出 canary tools，将诊断探针工具植入 MCP 工具集，用于识别 LLM Agent 选错工具背后的具体推理缺陷。",
-    "构建六类工具选择弱点 taxonomy：semantic decoys、parameter traps、capability mirages、prerequisite blindness、temporal decoys 和 granularity traps。",
-    "在 8 个模型、120 个任务、8,640 次主实验运行及 2,880 次消融中发现，模型能力越强通常 CSR 越低，但能力层级不能完全预测安全性。",
-    "不同 canary 类型具有能力分层效应：capability mirages 对 frontier models 更有效，其他类型主要区分较弱的小型开源模型。",
-    "削弱明显诱导性措辞后前沿模型 CSR 基本不变，表明 probes 主要测量工具选择推理，而不是简单的 phrase-spotting。"
+    "提出 canary tools：在 MCP 工具集中植入诊断探针，将“选错工具”细分为六类工具选择推理缺陷。",
+    "构建六类 taxonomy：semantic decoys、parameter traps、capability mirages、prerequisite blindness、temporal decoys 和 granularity traps。",
+    "大规模评测 8 个模型、120 个任务、8,640 次主实验运行，发现 CSR 随模型能力增强显著下降，模型间差异约 36 倍。",
+    "能力层级并不完全决定安全性：mid-tier hosted model 可能最易受 canary 影响，同一提供商中便宜模型也可能更稳健。",
+    "capability mirages 对 frontier models 最有诊断力；削弱明显提示语后结果基本不变，说明该方法主要测量工具选择推理而非表面短语匹配。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.9,
-    "novelty": 0.8,
-    "problem_significance": 0.84,
-    "potential_impact": 0.84,
-    "paradigm_shift": 0.74,
-    "lasting_value": 0.84,
-    "llm_avg": 0.8119999999999999,
-    "comment": "A strong diagnostic evaluation framework for tool-selection failures with reusable probes, schemas, tasks, and logs.",
-    "comment_zh": "这是一项很强的工具选择失败诊断评估框架，提供了可复用的探针、模式、任务和日志。"
+    "domain_fit": 0.74,
+    "novelty": 0.67,
+    "problem_significance": 0.7,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.52,
+    "lasting_value": 0.66,
+    "llm_avg": 0.6460000000000001,
+    "comment": "An in-scope diagnostic evaluation harness for tool-selection failures, though it is more evaluative than evolutionary.",
+    "comment_zh": "这是一项面向工具选择失败的智能体诊断评测框架，属于领域内工作但演化性较弱。"
   },
   "scores": {
     "topic_relevance": 0.6400000000000001,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.3,
+    "author_reputation": 0.543099442533317,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.8119999999999999,
+    "llm_assessment": 0.6460000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -54,8 +54,8 @@
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": null,
-    "last_author_found": false,
+    "last_author_h_index": 15,
+    "last_author_found": true,
     "last_author_affiliations": []
   },
   "figures": [

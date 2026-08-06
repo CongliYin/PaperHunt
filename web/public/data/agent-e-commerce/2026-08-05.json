@@ -2,12 +2,12 @@
   "domain": "agent-e-commerce",
   "display_name": "E-commerce Agent",
   "date": "2026-08-05",
-  "generated_at": "2026-08-06T13:10:14Z",
+  "generated_at": "2026-08-06T14:28:57Z",
   "papers": [
     {
       "arxiv_id": "2608.04625",
       "title": "A/B Agent: A Self-Evolving Agent for Strategy Iteration in Industrial A/B Testing",
-      "title_zh": "A/B Agent：面向工业 A/B 测试策略迭代的自进化 Agent",
+      "title_zh": "A/B Agent：面向工业 A/B 测试中策略迭代的自进化 Agent",
       "authors": [
         "Zhuohang Jiang",
         "Yuxin Chen",
@@ -19,41 +19,41 @@
         "Jun Wang",
         "Wenwu Ou"
       ],
-      "total_score": 0.6789141349418721,
+      "total_score": 0.674377486063333,
       "scores": {
         "topic_relevance": 0.92,
-        "llm_assessment": 0.826,
+        "llm_assessment": 0.8160000000000001,
         "domain_fit": 0.92,
-        "other": 0.21038044980624032
+        "other": 0.20525828687777645
       },
       "tags": [
         "product recommendation"
       ],
-      "tldr_zh": "用树状经验与A/B反馈自进化推荐策略",
+      "tldr_zh": "用层级 Tree-RAG 自进化优化 A/B 策略",
       "detail_file": "agent-e-commerce/2026-08-05/2608.04625.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04625/thumb.webp"
     },
     {
       "arxiv_id": "2608.04809",
       "title": "DEGR: Dual Exploration-Driven Generative Re-Ranking for Adaptive Cross-Request Context Bridging",
-      "title_zh": "DEGR：面向自适应跨请求上下文桥接的双重探索驱动生成式重排序",
+      "title_zh": "DEGR：用于自适应跨请求上下文桥接的双重探索驱动生成式重排序",
       "authors": [
         "Binglei Zhao",
         "Xuanhua Yang",
         "Xiwei Zhao",
         "Sulong Xu"
       ],
-      "total_score": 0.6443883062540945,
+      "total_score": 0.6460000000000001,
       "scores": {
         "topic_relevance": 0.88,
-        "llm_assessment": 0.776,
-        "domain_fit": 0.88,
-        "other": 0.19862768751364818
+        "llm_assessment": 0.78,
+        "domain_fit": 0.95,
+        "other": 0.2
       },
       "tags": [
         "product recommendation"
       ],
-      "tldr_zh": "用双重探索增强生成式重排序",
+      "tldr_zh": "DEGR用双重探索提升工业重排序效果",
       "detail_file": "agent-e-commerce/2026-08-05/2608.04809.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04809/thumb.webp"
     }

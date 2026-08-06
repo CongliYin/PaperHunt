@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.04625",
   "title": "A/B Agent: A Self-Evolving Agent for Strategy Iteration in Industrial A/B Testing",
-  "title_zh": "A/B Agent：面向工业 A/B 测试策略迭代的自进化 Agent",
+  "title_zh": "A/B Agent：面向工业 A/B 测试中策略迭代的自进化 Agent",
   "authors": [
     "Zhuohang Jiang",
     "Yuxin Chen",
@@ -22,33 +22,33 @@
     "project_page": null
   },
   "abstract_en": "Industrial recommendation strategy iteration heavily relies on large-scale A/B experimentation. Traditional tuning requires experts to repeatedly design strategies, configure experiments, analyze results, and adjust parameters, making the process labor-intensive and time-consuming. Meanwhile, valuable knowledge from historical experiments is often fragmented, making systematic reuse difficult through manual expert effort alone. Existing RAG agents partially alleviate this burden by retrieving prior strategies, but typically organize experience in a flat manner, overlooking the hierarchical relationships among business scenarios, recommendation stages, optimization objectives, and experimental contexts. This often results in mismatched retrieval and limited cross-scenario transfer, while preventing agents from continuously refining strategies and parameters through sequential A/B feedback. % To address these limitations, we propose A/B Agent, a closed-loop A/B agent for industrial recommendation strategy optimization. The framework comprises three tightly coupled core components: Historical Strategy Knowledge Organization, Autonomous Target-Aware Strategy Generation, and Experiment-Guided Strategy Self-Evolution. It organizes historical strategies into a hierarchical experience tree, retrieves transferable evidence through multi-path Tree-RAG to generate executable strategies, and continuously analyzes online A/B feedback to guide autonomous tuning and update the experience tree for self-evolution. Extensive offline and online evaluations demonstrate its effectiveness, including a 4.829% improvement in GMV in a real-world short-video e-commerce recommendation system while maintaining positive gains across all guardrail metrics.",
-  "abstract_zh": "工业推荐策略迭代高度依赖大规模 A/B 实验。传统调参流程需要专家反复设计策略、配置实验、分析结果并调整参数，耗时且人力成本高；同时，历史实验中的有效经验往往分散，难以被系统复用。现有 RAG Agent 虽能检索过往策略，但通常以扁平方式组织经验，忽视业务场景、推荐阶段、优化目标与实验上下文之间的层级关系，容易导致检索不匹配、跨场景迁移能力有限，也难以基于连续 A/B 反馈持续优化策略。为此，论文提出 A/B Agent，一个用于工业推荐策略优化的闭环 A/B Agent 框架。它包含三大核心组件：Historical Strategy Knowledge Organization、Autonomous Target-Aware Strategy Generation 和 Experiment-Guided Strategy Self-Evolution。该方法将历史策略组织为层级经验树，通过多路径 Tree-RAG 检索可迁移证据并生成可执行策略，再持续分析线上 A/B 反馈以指导自动调参，并更新经验树实现自进化。离线与线上实验表明，A/B Agent 在真实短视频电商推荐系统中带来 4.829% 的 GMV 提升，同时所有 guardrail metrics 均保持正向收益。",
+  "abstract_zh": "工业推荐策略迭代高度依赖大规模 A/B 实验。传统调参流程需要专家反复设计策略、配置实验、分析结果并调整参数，耗时且人力成本高；同时，历史实验中的宝贵经验往往碎片化，难以被系统复用。现有 RAG Agent 虽可检索历史策略，但通常以扁平方式组织经验，忽略业务场景、推荐阶段、优化目标与实验上下文之间的层级关系，容易导致检索不匹配、跨场景迁移能力有限，也难以基于连续 A/B 反馈持续优化策略。为此，论文提出 A/B Agent，一个面向工业推荐策略优化的闭环 A/B Agent 框架。该框架包含 Historical Strategy Knowledge Organization、Autonomous Target-Aware Strategy Generation 和 Experiment-Guided Strategy Self-Evolution 三个核心模块：通过层级经验树组织历史策略，利用多路径 Tree-RAG 检索可迁移证据并生成可执行策略，再持续分析线上 A/B 反馈以指导自动调参，并更新经验树实现自进化。离线与线上评估表明，A/B Agent 在真实短视频电商推荐系统中带来 4.829% GMV 提升，同时所有 guardrail metrics 均保持正向收益。",
   "key_points_zh": [
-    "提出 A/B Agent，将工业推荐中的策略生成、A/B 实验反馈分析与经验更新整合为闭环自进化流程。",
-    "设计层级经验树来组织历史策略知识，显式建模业务场景、推荐阶段、优化目标和实验上下文之间的关系。",
-    "采用多路径 Tree-RAG 检索历史可迁移证据，相比扁平 RAG 更能减少策略错配并提升跨场景复用能力。",
-    "通过 Experiment-Guided Strategy Self-Evolution 持续利用线上 A/B 结果进行自主调参与经验树更新。",
-    "在真实短视频电商推荐系统线上验证中，A/B Agent 带来 4.829% GMV 提升，并保持所有 guardrail metrics 正向。"
+    "提出 A/B Agent，将工业推荐中的 A/B 策略优化建模为闭环自进化过程，覆盖策略生成、实验反馈分析与经验更新。",
+    "设计 Historical Strategy Knowledge Organization，用层级经验树组织历史实验知识，显式建模业务场景、推荐阶段、优化目标和实验上下文之间的关系。",
+    "采用多路径 Tree-RAG 进行目标感知检索，缓解传统扁平 RAG 中的经验错配问题，并提升跨场景策略迁移能力。",
+    "通过 Experiment-Guided Strategy Self-Evolution 持续利用线上 A/B 反馈进行参数调整和策略迭代，同时将新经验写回经验树。",
+    "在真实短视频电商推荐系统中实现 4.829% GMV 提升，并且所有 guardrail metrics 均保持正向收益，验证了工业落地有效性。"
   ],
   "llm_assessment": {
     "domain_fit": 0.92,
     "novelty": 0.78,
-    "problem_significance": 0.9,
-    "potential_impact": 0.88,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
     "paradigm_shift": 0.72,
-    "lasting_value": 0.85,
-    "llm_avg": 0.826,
-    "comment": "Strong e-commerce recommendation paper using an agentic closed loop to accelerate industrial A/B-driven strategy iteration.",
-    "comment_zh": "这是一篇很契合电商推荐的工作，用智能体闭环提升工业 A/B 策略迭代效率。"
+    "lasting_value": 0.84,
+    "llm_avg": 0.8160000000000001,
+    "comment": "A strong e-commerce recommendation-agent paper that closes the loop between historical A/B knowledge, strategy generation, and online self-evolution.",
+    "comment_zh": "这是一篇较强的电商推荐智能体论文，将历史 A/B 知识、策略生成与在线自进化形成闭环。"
   },
   "scores": {
     "topic_relevance": 0.92,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.36228269883744174,
+    "author_reputation": 0.3315497212666585,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.826,
+    "llm_assessment": 0.8160000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -58,11 +58,11 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": 5,
-    "first_author_found": true,
+    "first_author_h_index": null,
+    "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": null,
-    "last_author_found": false,
+    "last_author_h_index": 3,
+    "last_author_found": true,
     "last_author_affiliations": []
   },
   "figures": [

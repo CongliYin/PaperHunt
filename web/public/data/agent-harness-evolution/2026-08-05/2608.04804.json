@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2608.04804",
+  "title": "Scrouting: Cost-Aware Routing of Coding Agents by Scouting the Repository First",
+  "title_zh": "Scrouting：先侦察代码仓库的成本感知 Coding Agent 路由",
+  "authors": [
+    "Ishaan Bhola",
+    "Adithyan Krishnan",
+    "Mukunda NS"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T13:11:31Z",
+  "abs_url": "https://arxiv.org/abs/2608.04804v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04804",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Frontier language models can resolve repository-level software issues, but each attempt is expensive, and existing routers select a model from the issue text alone. We present SuperScout, which routes after scouting the repository: a 7B searcher, SuperScout-7B, first explores the repository and produces a structured handoff whose reproduction claims are sandbox-verified, with false claims stripped before delivery. The searcher's hidden states, together with the task text, then feed a resume-based router that dispatches the task to one of four frontier fixers. Adding a new fixer requires no retraining. On the full Python slice of SWE-bench Pro (266 tasks) under the benchmark's official capped budget tier, SuperScout matches the best single model's solve rate (159 of 266 for SuperScout, 158 for the best model) at about a fifth of the total cost per solve, and the reported configuration sits above the random traffic-splitting baseline. A no-router ablation, always the cheapest fixer with the handoff, ties the routed system on this benchmark, so the handoff rather than the routing decision carries the result. A paired calibration study points to the mechanism: the handoff appears to redistribute rather than add solving ability, lifting the three cheaper fixers while slightly hurting the strongest, though at $N=99$ the per-fixer effects are directional only; the searcher's hidden states improve cost routing on the calibration labels while the handoff's own text does not. The searcher's compute adds less than half a cent of GPU time per task.",
+  "abstract_zh": "前沿语言模型能够解决 repository-level 软件问题，但每次调用成本高昂，而现有 router 通常只根据 issue 文本选择模型。本文提出 SuperScout：先由 7B searcher（SuperScout-7B）探索代码仓库，生成结构化 handoff，并在沙箱中验证复现声明、移除错误声明；随后将 searcher 的 hidden states 与任务文本输入 resume-based router，在四个前沿 fixer 中选择一个执行修复。该方法支持新增 fixer 而无需重新训练。在 SWE-bench Pro 的完整 Python 子集（266 个任务）及官方 capped budget tier 下，SuperScout 以约五分之一的每解题总成本，达到与最佳单模型相当的 solve rate（159/266 vs. 158/266），并优于 random traffic-splitting baseline。不过消融显示，不使用 router、始终选择最便宜 fixer 加 handoff 的方案在该基准上与路由系统打平，说明主要收益来自 handoff 而非路由决策。配对校准研究表明，handoff 更像是在 fixer 之间重新分配解题能力：提升三个较便宜 fixer，略微削弱最强 fixer；但在 N=99 下，各 fixer 效应仍主要是方向性证据。searcher 的 hidden states 能提升成本路由的校准标签表现，而 handoff 文本本身不能。searcher 计算开销每任务低于半美分 GPU 时间。",
+  "key_points_zh": [
+    "提出 SuperScout：用 7B SuperScout-7B 先探索 repository，生成经沙箱验证的结构化 handoff，再由 router 选择四个 frontier fixer 之一。",
+    "在 SWE-bench Pro Python 子集 266 题上，SuperScout 解出 159 题，基本匹配最佳单模型的 158 题，但每解成本约为其五分之一。",
+    "关键消融显示：始终使用最便宜 fixer 加 handoff 与完整路由系统打平，表明主要增益来自仓库侦察与 handoff，而非 router 本身。",
+    "校准实验提示 handoff 会提升较便宜 fixer、略微影响最强 fixer；searcher hidden states 对成本路由有帮助，但 handoff 文本本身没有明显路由增益。",
+    "方法对新增 fixer 友好，无需重新训练；searcher 额外计算成本很低，每任务少于半美分 GPU 时间。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.76,
+    "problem_significance": 0.84,
+    "potential_impact": 0.83,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.78,
+    "llm_avg": 0.774,
+    "comment": "A practical coding-agent orchestration method whose repository scouting handoff materially reduces cost despite weaker evidence for routing gains.",
+    "comment_zh": "这是一项实用的编码智能体编排方法，其仓库预侦察交接显著降低成本，但路由增益证据较弱。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.774,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04804/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.915
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04804/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

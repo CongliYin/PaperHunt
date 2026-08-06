@@ -20,33 +20,33 @@
     "project_page": null
   },
   "abstract_en": "Long-horizon search agents must make multiple sequential actions (steps) to search, retrieve, verify, and integrate evidence to reach a final answer. However, existing methods for training these agents typically treat all steps within a trajectory uniformly during both supervised fine-tuning (SFT) and reinforcement learning (RL), failing to distinguish useful actions from erroneous or redundant ones. In this paper, we propose Answer-Backtracked Credit Assignment (ABC), a fine-grained credit assignment framework for training long-horizon search agents by converting sparse trajectory-level outcomes into dense step-level supervision that rewards useful actions (even in failed trajectories) while suppressing erroneous or redundant actions. Specifically, given a potentially obscure query and its corresponding ground-truth answer, ABC first performs Answer-Backtracked Clue Recovery, which traces back from the answer to recover intermediate clues required to solve the question. It then applies Clue-Anchored Step Scoring to evaluate each search step against these clues, converting sparse binary outcome supervision into dense step-level rewards. Based on these rewards, we develop ABC-SFT, which reweights the loss of each turn, and ABC-GRPO, which uses the step-level scores as rewards in GRPO. Building on this framework, we train ABSeeker based on Qwen3.5-4B with only 8.5k examples. ABSeeker achieves 37.3% on BrowseComp and 39.1% on BrowseComp-ZH. With context management, the scores further improve to 55.3% and 52.9%, respectively, significantly outperforming same-scale (4B) agents and even matching the performance of larger ones (approximately 30B). These results demonstrate the effectiveness of answer-backtracked step-level credit assignment for training long-horizon search agents.",
-  "abstract_zh": "本文提出 Answer-Backtracked Credit Assignment（ABC），用于训练需要多步搜索、检索、验证与整合证据的长程搜索智能体。不同于以往在 SFT 和 RL 中对整条轨迹的所有步骤一视同仁，ABC 将稀疏的轨迹级结果转化为密集的步骤级监督：从真实答案出发回溯恢复解题所需的中间线索（Answer-Backtracked Clue Recovery），再用这些线索评估每个搜索步骤的价值（Clue-Anchored Step Scoring），从而奖励有用步骤、抑制错误或冗余步骤。基于该框架，作者提出 ABC-SFT 与 ABC-GRPO，分别在监督微调中重加权每轮损失、在 GRPO 中引入步骤级奖励。基于 Qwen3.5-4B，仅用 8.5k 样本训练得到的 ABSeeker 在 BrowseComp 和 BrowseComp-ZH 上分别达到 37.3% 和 39.1%；加入上下文管理后进一步提升至 55.3% 和 52.9%，显著优于同规模 4B 智能体，并接近约 30B 大模型智能体表现。",
+  "abstract_zh": "长程搜索智能体需要通过多步连续行动完成搜索、检索、验证与证据整合，最终得到答案。然而，现有训练方法在监督微调（SFT）和强化学习（RL）中通常对轨迹内所有步骤一视同仁，难以区分有效动作、错误动作与冗余动作。本文提出 Answer-Backtracked Credit Assignment（ABC），一种细粒度信用分配框架，可将稀疏的轨迹级结果转化为密集的步骤级监督：奖励有用动作（即使它们出现在失败轨迹中），同时抑制错误或冗余动作。具体而言，ABC 首先通过 Answer-Backtracked Clue Recovery 从标准答案反向恢复解题所需的中间线索；随后使用 Clue-Anchored Step Scoring 将每个搜索步骤与这些线索对齐并打分，从而把二值结果监督转化为步骤级奖励。在此基础上，作者提出 ABC-SFT，对每轮损失进行重加权；以及 ABC-GRPO，将步骤级分数作为 GRPO 的奖励信号。基于 Qwen3.5-4B，作者仅用 8.5k 样本训练得到 ABSeeker。该模型在 BrowseComp 和 BrowseComp-ZH 上分别达到 37.3% 和 39.1%；结合上下文管理后进一步提升至 55.3% 和 52.9%，显著优于同规模（4B）智能体，并接近约 30B 级模型表现。结果表明，基于答案回溯的步骤级信用分配对训练长程搜索智能体非常有效。",
   "key_points_zh": [
-    "提出 Answer-Backtracked Credit Assignment（ABC），将轨迹级成败信号细化为步骤级奖励，解决长程搜索训练中无法区分有效、错误和冗余动作的问题。",
-    "ABC 包含 Answer-Backtracked Clue Recovery 与 Clue-Anchored Step Scoring：先从标准答案反推关键线索，再用线索对每个搜索步骤打分。",
-    "提出 ABC-SFT 和 ABC-GRPO：前者按步骤分数重加权 SFT 损失，后者将步骤级分数作为 GRPO 强化学习奖励。",
-    "基于 Qwen3.5-4B、仅 8.5k 样本训练的 ABSeeker，在 BrowseComp / BrowseComp-ZH 上取得 37.3% / 39.1%，加入上下文管理后提升至 55.3% / 52.9%。",
-    "实验表明，答案回溯的细粒度信用分配能显著提升小规模长程搜索智能体，并可接近更大规模约 30B 智能体的性能。"
+    "提出 Answer-Backtracked Credit Assignment（ABC），将最终答案级稀疏监督转化为搜索过程中的细粒度步骤级奖励。",
+    "ABC 通过 Answer-Backtracked Clue Recovery 从 ground-truth answer 反向恢复关键线索，再用 Clue-Anchored Step Scoring 评估每一步搜索动作的价值。",
+    "基于 ABC 设计 ABC-SFT 和 ABC-GRPO：前者按步骤质量重加权 SFT 损失，后者将步骤级分数作为 GRPO 强化学习奖励。",
+    "ABSeeker 基于 Qwen3.5-4B、仅使用 8.5k 样本训练，在 BrowseComp / BrowseComp-ZH 上达到 37.3% / 39.1%。",
+    "加入上下文管理后，ABSeeker 提升至 55.3% / 52.9%，超过同规模 4B 智能体，并接近约 30B 模型表现。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.92,
-    "novelty": 0.82,
+    "domain_fit": 0.96,
+    "novelty": 0.83,
     "problem_significance": 0.89,
     "potential_impact": 0.86,
     "paradigm_shift": 0.8,
     "lasting_value": 0.85,
-    "llm_avg": 0.844,
-    "comment": "A strong long-horizon agent-training method that turns sparse answer success into dense step-level credit for search trajectories.",
-    "comment_zh": "这是一篇很强的长程智能体训练方法，将稀疏答案成功信号转化为搜索轨迹中的密集步骤级信用。"
+    "llm_avg": 0.8459999999999999,
+    "comment": "Strong search-agent training work that introduces answer-backtracked step-level credit assignment for long-horizon search trajectories.",
+    "comment_zh": "这是一篇很强的搜索智能体训练论文，提出了面向长程搜索轨迹的答案回溯式步骤级信用分配。"
   },
   "scores": {
     "topic_relevance": 0.20000000000000004,
     "open_source": 0.0,
-    "community_heat": 0.8950630275459597,
-    "author_reputation": 0.3911814377866111,
+    "community_heat": 0.8980212367255738,
+    "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.844,
+    "llm_assessment": 0.8459999999999999,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -55,12 +55,12 @@
     "code_promised": false,
     "has_video_demo": false,
     "hf_listed": true,
-    "hf_upvotes": 49,
-    "first_author_h_index": 8,
-    "first_author_found": true,
+    "hf_upvotes": 51,
+    "first_author_h_index": null,
+    "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": 2,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": [

@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.04788",
   "title": "Agentic Reinforcement Learning with Observation-Calibrated Self-Distillation",
-  "title_zh": "带观察校准自蒸馏的智能体强化学习",
+  "title_zh": "带有观察校准自蒸馏的智能体强化学习",
   "authors": [
     "Yi Yang",
     "Cong Qin",
@@ -24,24 +24,24 @@
     "project_page": null
   },
   "abstract_en": "Large language model agents are commonly trained through reinforcement learning with sparse trajectory-level rewards, which offer limited guidance on how strongly individual tokens should be updated. On-Policy Self-Distillation (OPSD) addresses this by re-scoring generated tokens under a privileged replay view to obtain dense, token-level supervision. However, we identify a confounding issue: the resulting support may reflect both the privileged information contained in the replay view and score shifts induced by the replay scaffold, making it difficult to attribute the support specifically to that information. This issue is especially pronounced when future environment observations serve as privileged information, since replaying them requires reconstructing an extended scaffold that itself perturbs token scores. To resolve this confounding, we propose Observation-Calibrated Self-Distillation (OCSD), which contrasts two structurally matched replay views, Full and Observation-Ablated, differing only in whether the actual future observation is present, to derive an observation residual that discounts score changes shared by the replay scaffold. OCSD then applies this residual to modulate token-level GRPO updates at high-uncertainty steps, while preserving the trajectory-level update direction. Experiments on ALFWorld, WebShop, and Search-QA across three Qwen3 model scales show that OCSD consistently outperforms strong baselines. Diagnostic analyses further confirm that the calibrated residual aligns better with local environment feedback. Our code is publicly available at https://github.com/yiy1x/OCSD.",
-  "abstract_zh": "大型语言模型智能体通常使用稀疏的轨迹级奖励进行强化学习训练，但这类奖励难以精确指导单个 token 的更新强度。On-Policy Self-Distillation（OPSD）通过在特权 replay view 下重新评分生成 token，提供稠密的 token 级监督。然而，本文指出其中存在混杂问题：token 支持度可能同时来自 replay view 中的特权信息，以及 replay scaffold 本身引起的分数偏移，因此难以判断提升究竟源于特权信息。该问题在使用未来环境观察作为特权信息时尤为明显，因为重放未来观察需要构造扩展 scaffold，而 scaffold 自身会扰动 token 分数。为解决这一问题，作者提出 Observation-Calibrated Self-Distillation（OCSD）：对比两个结构匹配的 replay view，即 Full 与 Observation-Ablated，二者仅在是否包含真实未来观察上不同，由此提取 observation residual，并抵消 replay scaffold 共享造成的分数变化。随后，OCSD 将该残差用于调制高不确定步骤的 token 级 GRPO 更新，同时保持轨迹级更新方向。实验在 ALFWorld、WebShop 和 Search-QA 上，覆盖三个 Qwen3 模型规模，结果显示 OCSD 稳定优于强基线。诊断分析进一步表明，校准后的残差与局部环境反馈更加一致。",
+  "abstract_zh": "大型语言模型智能体通常通过稀疏的轨迹级奖励进行强化学习训练，但这种奖励难以指示单个 token 应被更新的强度。On-Policy Self-Distillation（OPSD）通过在特权 replay view 下重新评分生成 token，提供密集的 token 级监督。然而，本文指出其中存在混杂问题：得到的支持信号可能同时来自 replay view 中的特权信息，以及 replay scaffold 本身引起的分数偏移，因此难以判断该支持究竟是否源于特权信息。尤其当未来环境观察被用作特权信息时，重放这些观察需要构造扩展 scaffold，而 scaffold 本身也会扰动 token 分数。为解决该问题，作者提出 Observation-Calibrated Self-Distillation（OCSD）：对比两个结构匹配的 replay view，即 Full 与 Observation-Ablated，二者唯一差异在于是否包含真实未来观察，从而提取观察残差（observation residual），并消除 replay scaffold 共享带来的分数变化。随后，OCSD 将该残差用于调制高不确定性步骤上的 token 级 GRPO 更新，同时保持轨迹级更新方向不变。在 ALFWorld、WebShop 和 Search-QA 上，跨三种 Qwen3 模型规模的实验表明，OCSD 稳定优于强基线。诊断分析进一步验证，校准后的残差与局部环境反馈更一致。",
   "key_points_zh": [
-    "问题：稀疏轨迹级奖励难以提供 token 级训练信号；OPSD 虽可用特权 replay view 生成稠密监督，但存在 replay scaffold 引入的分数偏移混杂。",
-    "核心方法：OCSD 构造 Full 与 Observation-Ablated 两个结构匹配的 replay view，仅改变是否包含真实未来观察，从二者差异中提取 observation residual。",
-    "训练机制：OCSD 用校准后的 observation residual 调制高不确定步骤的 token 级 GRPO 更新，同时保持原有轨迹级强化学习更新方向。",
-    "实验结果：在 ALFWorld、WebShop、Search-QA 三个智能体任务及三个 Qwen3 模型规模上，OCSD 持续优于强基线。",
-    "诊断发现：相比未校准信号，OCSD 的残差更能反映局部环境反馈，说明其更有效地区分了未来观察信息与 scaffold 扰动。"
+    "指出 OPSD 在使用特权 replay view 时存在混杂：token 分数变化可能来自真实特权信息，也可能来自 replay scaffold 本身的扰动。",
+    "提出 OCSD，通过对比 Full 与 Observation-Ablated 两个结构匹配的 replay view，提取仅由未来环境观察贡献的 observation residual。",
+    "将校准后的残差用于调制高不确定性步骤的 token 级 GRPO 更新，同时保持整体轨迹级奖励方向，兼顾细粒度监督与训练稳定性。",
+    "在 ALFWorld、WebShop、Search-QA 三个智能体任务上，跨三种 Qwen3 模型规模均超过强基线，显示出稳定泛化收益。",
+    "诊断实验表明，OCSD 的 observation residual 比未校准信号更能对齐局部环境反馈，说明其更有效地捕捉了未来观察中的有用信息。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.9,
-    "novelty": 0.8,
+    "domain_fit": 0.94,
+    "novelty": 0.78,
     "problem_significance": 0.86,
-    "potential_impact": 0.83,
-    "paradigm_shift": 0.78,
-    "lasting_value": 0.82,
-    "llm_avg": 0.8180000000000002,
-    "comment": "Strong agent-training work that converts environment observations and replay views into calibrated token-level credit for tool-using agents.",
-    "comment_zh": "这是一篇很强的智能体训练论文，将环境观测和回放视图转化为校准后的 token 级信用分配。"
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.8,
+    "llm_avg": 0.8039999999999999,
+    "comment": "Strong in-scope agent-RL work that improves token-level credit assignment from environment trajectory replays.",
+    "comment_zh": "这是一篇高度契合领域的智能体强化学习论文，改进了基于环境轨迹回放的 token 级信用分配。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
@@ -50,7 +50,7 @@
     "author_reputation": 0.37796505041928935,
     "venue_signal": 0.0,
     "generality": 0.4,
-    "llm_assessment": 0.8180000000000002,
+    "llm_assessment": 0.8039999999999999,
     "domain_multiplier": 1.0
   },
   "enriched": {

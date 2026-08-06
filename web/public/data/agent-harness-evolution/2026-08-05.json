@@ -2,12 +2,12 @@
   "domain": "agent-harness-evolution",
   "display_name": "Agent Harness Evolution",
   "date": "2026-08-05",
-  "generated_at": "2026-08-06T13:11:34Z",
+  "generated_at": "2026-08-06T14:30:03Z",
   "papers": [
     {
       "arxiv_id": "2608.04788",
       "title": "Agentic Reinforcement Learning with Observation-Calibrated Self-Distillation",
-      "title_zh": "带观察校准自蒸馏的智能体强化学习",
+      "title_zh": "带有观察校准自蒸馏的智能体强化学习",
       "authors": [
         "Yi Yang",
         "Cong Qin",
@@ -21,25 +21,25 @@
         "Jiaye Lin",
         "Yi Feng"
       ],
-      "total_score": 0.6702982525209646,
+      "total_score": 0.6660982525209646,
       "scores": {
         "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.8180000000000002,
-        "domain_fit": 0.9,
+        "llm_assessment": 0.8039999999999999,
+        "domain_fit": 0.94,
         "other": 0.2963275084032149
       },
       "tags": [
         "GitHub",
         "agent training and trajectory data"
       ],
-      "tldr_zh": "OCSD校准未来观察信号，改进智能体RL。",
+      "tldr_zh": "OCSD校准未来观察信号，提升智能体RL",
       "detail_file": "agent-harness-evolution/2026-08-05/2608.04788.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04788/thumb.webp"
     },
     {
       "arxiv_id": "2608.04968",
       "title": "EvolveNet: Collaborative Harness Evolution for Agent Self-Improvement",
-      "title_zh": "EvolveNet：用于智能体自我改进的协作式 Harness 演化",
+      "title_zh": "EvolveNet：用于智能体自我改进的协同 Harness 演化",
       "authors": [
         "Jun Nie",
         "Yonggang Zhang",
@@ -48,76 +48,19 @@
         "Xinmei Tian",
         "Bo Han"
       ],
-      "total_score": 0.644,
+      "total_score": 0.6434000000000001,
       "scores": {
         "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.9099999999999999,
+        "llm_assessment": 0.908,
         "domain_fit": 0.98,
         "other": 0.11666666666666668
       },
       "tags": [
         "closed loop agent improvement"
       ],
-      "tldr_zh": "让多地Agent协作演化共享harness",
+      "tldr_zh": "协同演化智能体 harness，保留本地数据",
       "detail_file": "agent-harness-evolution/2026-08-05/2608.04968.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04968/thumb.webp"
-    },
-    {
-      "arxiv_id": "2608.04562",
-      "title": "What Is a Skill Worth? Structure-Aware Shapley Valuation of Agent Skills",
-      "title_zh": "一个技能值多少钱？面向 Agent 技能的结构感知 Shapley 估值",
-      "authors": [
-        "Tao Li",
-        "Junfeng Liu",
-        "Qinghua Zhao",
-        "Yifan Li",
-        "Lei Wang",
-        "Bo Shao",
-        "Xuejun Liu",
-        "Linjun Shou"
-      ],
-      "total_score": 0.6357842432724744,
-      "scores": {
-        "topic_relevance": 0.8,
-        "llm_assessment": 0.776,
-        "domain_fit": 0.87,
-        "other": 0.2766141442415812
-      },
-      "tags": [
-        "skill tool orchestration"
-      ],
-      "tldr_zh": "用结构感知 Shapley 评估 Agent 技能单元价值",
-      "detail_file": "agent-harness-evolution/2026-08-05/2608.04562.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04562/thumb.webp"
-    },
-    {
-      "arxiv_id": "2608.04317",
-      "title": "Trident : How to Break Deep Reinforcement Learning Cyber Defenses (Agentic)",
-      "title_zh": "Trident：如何攻破基于深度强化学习的自主网络防御（Agentic）",
-      "authors": [
-        "Ryozo Masukawa",
-        "Ian Bryant",
-        "Armita Kazeminajafabadi",
-        "Sanggeon Yun",
-        "Hyunwoo Oh",
-        "SungHeon Jeong",
-        "Nathaniel D. Bastian",
-        "Mahdi Imani",
-        "Mohsen Imani"
-      ],
-      "total_score": 0.6337141349418722,
-      "scores": {
-        "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.782,
-        "domain_fit": 0.86,
-        "other": 0.21038044980624032
-      },
-      "tags": [
-        "trace driven evolution"
-      ],
-      "tldr_zh": "LLM 红队显著击穿 DRL 网络防御",
-      "detail_file": "agent-harness-evolution/2026-08-05/2608.04317.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04317/thumb.webp"
     },
     {
       "arxiv_id": "2608.04746",
@@ -129,17 +72,17 @@
         "Dhruv Kumar",
         "Pratik Narang"
       ],
-      "total_score": 0.6242000000000001,
+      "total_score": 0.6396145717194442,
       "scores": {
         "topic_relevance": 0.92,
-        "llm_assessment": 0.6540000000000001,
-        "domain_fit": 0.78,
-        "other": 0.2
+        "llm_assessment": 0.726,
+        "domain_fit": 0.88,
+        "other": 0.17938190573148036
       },
       "tags": [
         "session context memory"
       ],
-      "tldr_zh": "按记忆类型衰减，减少过时事实干扰",
+      "tldr_zh": "按记忆类型衰减，减少过期事实干扰",
       "detail_file": "agent-harness-evolution/2026-08-05/2608.04746.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04746/thumb.webp"
     },
@@ -151,50 +94,24 @@
         "Atul Anand",
         "Sourav Chattaraj"
       ],
-      "total_score": 0.5596000000000001,
+      "total_score": 0.521954972126666,
       "scores": {
         "topic_relevance": 0.6400000000000001,
-        "llm_assessment": 0.8119999999999999,
-        "domain_fit": 0.9,
-        "other": 0.2
+        "llm_assessment": 0.6460000000000001,
+        "domain_fit": 0.74,
+        "other": 0.24051657375555285
       },
       "tags": [
         "production agent platform"
       ],
-      "tldr_zh": "用诱饵工具诊断 Agent 工具选择弱点",
+      "tldr_zh": "用诱饵工具诊断LLM工具选择弱点",
       "detail_file": "agent-harness-evolution/2026-08-05/2608.04719.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04719/thumb.webp"
     },
     {
-      "arxiv_id": "2608.05108",
-      "title": "Agent Against Agent: An Agentic System for Automatic Prompt Injection Red Teaming",
-      "title_zh": "Agent 对抗 Agent：用于自动 Prompt Injection 红队测试的智能体系统",
-      "authors": [
-        "Yanting Wang",
-        "Chenlong Yin",
-        "Runpeng Geng",
-        "Jinyuan Jia"
-      ],
-      "total_score": 0.5462712778943931,
-      "scores": {
-        "topic_relevance": 0.4,
-        "llm_assessment": 0.788,
-        "domain_fit": 0.88,
-        "other": 0.49957092631464345
-      },
-      "tags": [
-        "HF Daily ★5",
-        "GitHub",
-        "general llm agents"
-      ],
-      "tldr_zh": "PIMiner少量查询即可迁移攻击新LLM",
-      "detail_file": "agent-harness-evolution/2026-08-05/2608.05108.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05108/thumb.webp"
-    },
-    {
       "arxiv_id": "2608.05144",
       "title": "Argus: A General-Purpose Agentic Runtime for Long-Horizon Reasoning",
-      "title_zh": "Argus：面向长程推理的通用 Agentic Runtime",
+      "title_zh": "Argus：用于长程推理的通用智能体运行时",
       "authors": [
         "Boxiu Li",
         "Zimo Wen",
@@ -223,17 +140,17 @@
         "Xuanhe Zhou",
         "Zhijie Deng"
       ],
-      "total_score": 0.49611413494187206,
+      "total_score": 0.484,
       "scores": {
         "topic_relevance": 0.4,
-        "llm_assessment": 0.9099999999999999,
-        "domain_fit": 0.98,
-        "other": 0.21038044980624032
+        "llm_assessment": 0.8799999999999999,
+        "domain_fit": 0.97,
+        "other": 0.2
       },
       "tags": [
         "generic verifier reward eval terms"
       ],
-      "tldr_zh": "固定权重Agent运行时可自演化长程推理",
+      "tldr_zh": "固定权重智能体运行时可自演化长程推理",
       "detail_file": "agent-harness-evolution/2026-08-05/2608.05144.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05144/thumb.webp"
     },
@@ -252,17 +169,17 @@
         "Ya-Qin Zhang",
         "Yang Liu"
       ],
-      "total_score": 0.4726,
+      "total_score": 0.46360000000000007,
       "scores": {
         "topic_relevance": 0.44000000000000006,
-        "llm_assessment": 0.8719999999999999,
-        "domain_fit": 0.94,
+        "llm_assessment": 0.842,
+        "domain_fit": 0.95,
         "other": 0.11666666666666668
       },
       "tags": [
         "general llm agents"
       ],
-      "tldr_zh": "从环境状态自动生成任务训练LLM Agent",
+      "tldr_zh": "用环境状态自动生成训练任务",
       "detail_file": "agent-harness-evolution/2026-08-05/2608.04934.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04934/thumb.webp"
     },
@@ -279,54 +196,48 @@
         "Songhua Liu",
         "Siheng Chen"
       ],
-      "total_score": 0.44251222326662853,
+      "total_score": 0.43870106183627866,
       "scores": {
         "topic_relevance": 0.20000000000000004,
-        "llm_assessment": 0.844,
-        "domain_fit": 0.92,
-        "other": 0.3643740775554285
+        "llm_assessment": 0.8459999999999999,
+        "domain_fit": 0.96,
+        "other": 0.34967020612092903
       },
       "tags": [
-        "HF Daily ★49",
+        "HF Daily ★51",
         "adjacent model training"
       ],
-      "tldr_zh": "用答案回溯为搜索步骤分配信用",
+      "tldr_zh": "答案回溯实现步骤级奖励，强化长程搜索",
       "detail_file": "agent-harness-evolution/2026-08-05/2608.05102.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05102/thumb.webp"
     },
     {
-      "arxiv_id": "2608.04828",
-      "title": "Skill-Use: Can LLMs Actually Use Skills in Agentic Harnesses?",
-      "title_zh": "Skill-Use：LLM 能否在智能体框架中真正使用技能？",
+      "arxiv_id": "2608.04804",
+      "title": "Scrouting: Cost-Aware Routing of Coding Agents by Scouting the Repository First",
+      "title_zh": "Scrouting：先侦察代码仓库的成本感知 Coding Agent 路由",
       "authors": [
-        "Jinyi Han",
-        "Yuanjian Xu",
-        "Ying Liao",
-        "Xinyi Wang",
-        "Zishang Jiang",
-        "Zixiang Di",
-        "Fanyang Lu",
-        "Zhichao Hu",
-        "Yanghua Xiao"
+        "Ishaan Bhola",
+        "Adithyan Krishnan",
+        "Mukunda NS"
       ],
-      "total_score": 0.4237,
+      "total_score": 0.4362,
       "scores": {
         "topic_relevance": 0.36000000000000004,
-        "llm_assessment": 0.8240000000000001,
+        "llm_assessment": 0.774,
         "domain_fit": 0.93,
-        "other": 0.10833333333333334
+        "other": 0.2
       },
       "tags": [
         "generic verifier reward eval terms"
       ],
-      "tldr_zh": "LLM 仍难可靠触发并遵循技能",
-      "detail_file": "agent-harness-evolution/2026-08-05/2608.04828.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04828/thumb.webp"
+      "tldr_zh": "先侦察仓库，低成本匹配最强修复率",
+      "detail_file": "agent-harness-evolution/2026-08-05/2608.04804.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04804/thumb.webp"
     },
     {
       "arxiv_id": "2608.05095",
       "title": "Hierarchical Graph Memory for LLM Agents with Path-level Localization and Rewrite",
-      "title_zh": "用于 LLM Agent 的层次化图记忆：路径级定位与重写",
+      "title_zh": "面向 LLM Agents 的层次化图记忆：路径级定位与重写",
       "authors": [
         "Xiawei Yue",
         "Boran Wang",
@@ -334,52 +245,19 @@
         "Shuxin Zheng",
         "Ziwei Zhang"
       ],
-      "total_score": 0.4176356850355411,
+      "total_score": 0.4284,
       "scores": {
         "topic_relevance": 0.36000000000000004,
-        "llm_assessment": 0.694,
-        "domain_fit": 0.8,
-        "other": 0.2181189501184705
+        "llm_assessment": 0.748,
+        "domain_fit": 0.9,
+        "other": 0.2
       },
       "tags": [
         "general llm agents"
       ],
-      "tldr_zh": "HiGram用层次图记忆提升长期推理",
+      "tldr_zh": "HiGram 用层次图记忆提升检索与更新效率",
       "detail_file": "agent-harness-evolution/2026-08-05/2608.05095.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05095/thumb.webp"
-    },
-    {
-      "arxiv_id": "2608.04872",
-      "title": "A-SR: Self-Evolving Agentic LLMs for Symbolic Regression via Hierarchical Coordination",
-      "title_zh": "A-SR：通过层次化协同实现用于符号回归的自进化 Agentic LLM",
-      "authors": [
-        "Wenxiao Zhao",
-        "Dong Liu",
-        "Kaiyi Xu",
-        "Feng Liu",
-        "Zhen Zhao",
-        "Fei Ben",
-        "Shu Wang",
-        "Wenhao Li",
-        "Yingnian Wu",
-        "Fenghua Ling",
-        "Haobo Li",
-        "Lei Bai"
-      ],
-      "total_score": 0.40220000000000006,
-      "scores": {
-        "topic_relevance": 0.36000000000000004,
-        "llm_assessment": 0.5940000000000001,
-        "domain_fit": 0.66,
-        "other": 0.2666666666666667
-      },
-      "tags": [
-        "Code soon",
-        "generic verifier reward eval terms"
-      ],
-      "tldr_zh": "多角色自进化 LLM 显著提升符号回归",
-      "detail_file": "agent-harness-evolution/2026-08-05/2608.04872.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04872/thumb.webp"
     },
     {
       "arxiv_id": "2608.04458",
@@ -391,24 +269,24 @@
         "Chaojie Zhang",
         "Jovan Stojkovic"
       ],
-      "total_score": 0.305299036157002,
+      "total_score": 0.32209903615700197,
       "scores": {
         "topic_relevance": 0.0,
-        "llm_assessment": 0.7280000000000001,
-        "domain_fit": 0.78,
+        "llm_assessment": 0.784,
+        "domain_fit": 0.86,
         "other": 0.2896634538566733
       },
       "tags": [
         "Code soon"
       ],
-      "tldr_zh": "Agentic AI 使服务器需重构资源调度",
+      "tldr_zh": "Agentic AI 需要异构感知服务器架构",
       "detail_file": "agent-harness-evolution/2026-08-05/2608.04458.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04458/thumb.webp"
     },
     {
       "arxiv_id": "2608.04682",
       "title": "Active-SWE: Benchmarking Coding Agents for Proactive Bug Fixing without Issue Reports",
-      "title_zh": "Active-SWE：无 Issue Report 场景下主动 Bug 修复 Coding Agents 基准",
+      "title_zh": "Active-SWE：无 Issue Report 场景下主动修复 Bug 的 Coding Agent 基准",
       "authors": [
         "Haobin Li",
         "Ping Deng",
@@ -418,39 +296,17 @@
         "Mouxing Yang",
         "Xi Peng"
       ],
-      "total_score": 0.2765824593811416,
+      "total_score": 0.2861824593811417,
       "scores": {
         "topic_relevance": 0.0,
-        "llm_assessment": 0.724,
-        "domain_fit": 0.82,
+        "llm_assessment": 0.756,
+        "domain_fit": 0.91,
         "other": 0.19794153127047226
       },
       "tags": [],
-      "tldr_zh": "无报告主动修 Bug 基准 Active-SWE",
+      "tldr_zh": "无报告主动修 Bug 基准，现有 Agent 表现不足",
       "detail_file": "agent-harness-evolution/2026-08-05/2608.04682.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04682/thumb.webp"
-    },
-    {
-      "arxiv_id": "2608.04741",
-      "title": "LoginTrap: Uncovering Task-Agnostic Phishing-Style Indirect Prompt Injection Attacks against LLM-based Web Agents",
-      "title_zh": "LoginTrap：揭示针对 LLM-based Web Agents 的任务无关钓鱼式间接提示注入攻击",
-      "authors": [
-        "Longtao Guo",
-        "Zelin Zhang",
-        "Kaifeng Huang",
-        "Yang Shi"
-      ],
-      "total_score": 0.22862582868777764,
-      "scores": {
-        "topic_relevance": 0.0,
-        "llm_assessment": 0.6620000000000001,
-        "domain_fit": 0.66,
-        "other": 0.10008609562592546
-      },
-      "tags": [],
-      "tldr_zh": "LoginTrap 诱导 Web Agent 登录并泄露隐私",
-      "detail_file": "agent-harness-evolution/2026-08-05/2608.04741.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04741/thumb.webp"
     }
   ]
 }

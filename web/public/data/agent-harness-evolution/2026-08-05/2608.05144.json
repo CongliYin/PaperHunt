@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.05144",
   "title": "Argus: A General-Purpose Agentic Runtime for Long-Horizon Reasoning",
-  "title_zh": "Argus：面向长程推理的通用 Agentic Runtime",
+  "title_zh": "Argus：用于长程推理的通用智能体运行时",
   "authors": [
     "Boxiu Li",
     "Zimo Wen",
@@ -39,33 +39,33 @@
     "project_page": null
   },
   "abstract_en": "Long-horizon reasoning requires an agentic runtime that can persist when evidence supports its current approach and pivot when measurements reveal failure, hidden constraints, or a misspecified objective. We present Argus, a persistent, self-evolving runtime in which Manager, Planner, Engineer, and Reviewer execute bounded missions over durable project state. Argus separates stable user intent from operational objectives, constraints, and verification criteria, and admits memories, skills, procedures, verifiers, routing decisions, and rejected routes only after role-owned review and, when available, task-native verification. Model weights remain fixed; self-evolution occurs through persistent runtime state and control policy, with autonomous execution between operator-owned escalation points. Across seven GPT-5.5 benchmark arenas, Argus achieves about 78% on SWE-Bench Pro versus 59% for Direct Copilot while using 1.41 times the aggregate tokens. After verification-gated self-evolution, mature SWE-Bench waves use 21% fewer solve-input tokens and 15% less active workflow time per task than startup waves, while recording 34 verifier recoveries and 22 strict review-loop rescues. Argus also reaches 76.8% on AARRI-Bench and a 28.0-point gap on mathematical data synthesis, with competitive GPU-kernel and language-model-training results. Beyond benchmarks, an optimized RWKV6 kernel was merged upstream; a multi-day mathematics campaign retained falsified routes and proof-backed frontier updates; and six paper pipelines completed 254 missions with 16 stage rollbacks. These results show that a fixed-weight, self-evolving harness can revise, recover, and accumulate verified approaches while producing structured trajectories for future supervised and reinforcement learning.",
-  "abstract_zh": "本文提出 Argus，一个持久化、自演化的 agentic runtime，用于支持长程推理任务中的坚持、转向与恢复。Argus 由 Manager、Planner、Engineer、Reviewer 四类角色围绕持久项目状态执行有界任务，将稳定的用户意图与可操作目标、约束和验证标准分离；记忆、技能、流程、验证器、路由决策和被拒路径等只有在角色审查以及可用的任务原生验证后才会被写入。其模型权重保持不变，自演化来自持久运行时状态与控制策略，并在操作员拥有的升级节点之间自主执行。在七个 GPT-5.5 benchmark arenas 上，Argus 在 SWE-Bench Pro 达到约 78%，高于 Direct Copilot 的 59%，但使用 1.41 倍总 token。经过验证门控的自演化后，成熟 SWE-Bench 波次相比启动波次减少 21% solve-input tokens 和 15% 主动工作流时间，并记录 34 次 verifier recoveries 与 22 次严格 review-loop rescues。Argus 还在 AARRI-Bench 达到 76.8%，在数学数据合成上取得 28.0 分优势，并在 GPU kernel 与语言模型训练任务上表现有竞争力。真实应用中，优化后的 RWKV6 kernel 已被 upstream merge，多日数学任务保留了被证伪路线和有证明支撑的前沿更新，六条论文流水线完成 254 个 missions 并发生 16 次阶段回滚。",
+  "abstract_zh": "长程推理需要一种智能体运行时：当证据支持当前方案时能够持续推进，当测量结果暴露失败、隐藏约束或目标设定错误时能够及时转向。本文提出 Argus，一个持久化、自演化的运行时系统，其中 Manager、Planner、Engineer 和 Reviewer 围绕持久项目状态执行有边界的任务。Argus 将稳定的用户意图与操作目标、约束和验证标准分离；记忆、技能、流程、验证器、路由决策以及被拒绝路线，只有经过角色负责的审查，并在可用时通过任务原生验证后，才会被纳入系统。模型权重保持固定，自演化发生在持久运行时状态和控制策略层面，并在操作者拥有的升级节点之间自主执行。在七个 GPT-5.5 benchmark arenas 中，Argus 在 SWE-Bench Pro 上取得约 78% 的成绩，高于 Direct Copilot 的 59%，同时使用 1.41 倍的总 token。经过验证门控的自演化后，成熟阶段的 SWE-Bench 任务相比启动阶段减少 21% solve-input tokens，并降低 15% 主动工作流时间，同时记录了 34 次 verifier recovery 和 22 次严格 review-loop rescue。Argus 还在 AARRI-Bench 上达到 76.8%，在数学数据合成任务中取得 28.0 分优势，并在 GPU kernel 与语言模型训练任务上表现具竞争力。基准之外，Argus 优化的 RWKV6 kernel 已被上游合并；一次多日数学攻关保留了被证伪路线并更新了有证明支撑的研究前沿；六条论文流水线完成 254 个 missions，并发生 16 次阶段回滚。这些结果表明，固定权重的自演化 harness 能够修正、恢复并积累经验证的方法，同时生成可用于未来监督学习和强化学习的结构化轨迹。",
   "key_points_zh": [
-    "Argus 将长程任务拆分给 Manager、Planner、Engineer、Reviewer，并基于 durable project state 持久维护目标、约束、验证标准与执行轨迹。",
-    "自演化不更新模型权重，而是通过持久化记忆、技能、流程、verifiers、routing decisions 与 rejected routes 来改进运行时状态和控制策略。",
-    "写入长期状态前需要 role-owned review，且在可用时通过 task-native verification，从而降低错误经验累积并支持失败恢复。",
-    "在 SWE-Bench Pro 上 Argus 约 78%，显著高于 Direct Copilot 的 59%，但代价是使用 1.41 倍 aggregate tokens。",
-    "验证门控自演化后，成熟任务波次减少 21% solve-input tokens 和 15% active workflow time，并在代码、数学、GPU kernel、论文流水线等场景展示长期积累能力。"
+    "Argus 是一个持久化 agentic runtime，由 Manager、Planner、Engineer、Reviewer 分工协作，在 durable project state 上执行长程任务。",
+    "系统不更新模型权重，而是通过持久化 memories、skills、procedures、verifiers、routing decisions 等运行时状态和控制策略实现自演化。",
+    "Argus 强调验证门控：新经验或路线需经角色审查，并在可能时通过 task-native verification，降低错误积累和目标漂移风险。",
+    "在 SWE-Bench Pro 上，Argus 达到约 78%，显著高于 Direct Copilot 的 59%，但总 token 使用量为其 1.41 倍。",
+    "自演化后系统效率提升：成熟 SWE-Bench waves 的 solve-input tokens 减少 21%，主动工作流时间减少 15%，并记录多次 verifier recoveries 与 review-loop rescues。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.98,
-    "novelty": 0.88,
-    "problem_significance": 0.93,
-    "potential_impact": 0.92,
-    "paradigm_shift": 0.89,
-    "lasting_value": 0.93,
-    "llm_avg": 0.9099999999999999,
-    "comment": "A highly relevant runtime paper centered on persistent state, verification-gated self-evolution, recoveries, rollbacks, and reusable trajectories.",
-    "comment_zh": "这是一篇高度相关的运行时论文，核心在于持久状态、验证门控自演化、恢复、回滚和可复用轨迹。"
+    "domain_fit": 0.97,
+    "novelty": 0.84,
+    "problem_significance": 0.91,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.89,
+    "llm_avg": 0.8799999999999999,
+    "comment": "Strong agent-runtime work centered on persistent state, verification-gated self-evolution, recovery, and reusable trajectories.",
+    "comment_zh": "这是一篇很强的智能体运行时论文，核心在于持久状态、验证门控自演化、恢复机制和可复用轨迹。"
   },
   "scores": {
     "topic_relevance": 0.4,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.36228269883744174,
+    "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.9099999999999999,
+    "llm_assessment": 0.8799999999999999,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -75,8 +75,8 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": 5,
-    "first_author_found": true,
+    "first_author_h_index": null,
+    "first_author_found": false,
     "first_author_affiliations": [],
     "last_author_h_index": null,
     "last_author_found": false,
