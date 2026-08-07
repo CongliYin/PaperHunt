@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.05959",
+  "title": "AgentExecutor: Partial Code Execution via Agentic Context Generation",
+  "title_zh": "AgentExecutor：通过智能体上下文生成实现部分代码执行",
+  "authors": [
+    "Junkai Chen",
+    "Chengran Yang",
+    "Xing Hu",
+    "Zhenhao Li",
+    "Xin Xia",
+    "David Lo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-06T12:33:58Z",
+  "abs_url": "https://arxiv.org/abs/2608.05959v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.05959",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Executing code snippets is essential for dynamic program analysis, but it remains challenging to execute an arbitrary code snippet due to issues like missing context and incomplete dependencies. Existing approaches to partial code execution, such as LExecutor and Treefix, leverage the power of language models to infer missing information and enable execution. However, they suffer from (i) limited action spaces and feedback, and (ii) rigid optimization strategies, which restrict their effectiveness and efficiency. In this paper, we propose AgentExecutor, a novel multi-agent framework for partial code execution. Our approach introduces a three-phase design: execution environment preparation, dynamic exploration with iterative refinement, and prefix evolution via program synthesis. Supported by the power of LLM agents who can think, act, and get feedback iteratively, AgentExecutor is able to autonomously explore a richer action space, enabling diverse operations such as creating resource files and resolving environment configuration. Furthermore, it adopts adaptive optimization strategies, including coverage-guided context pruning and prefix evolution via program synthesis, to systematically improve the execution quality of partial code. We evaluate AgentExecutor on two widely used datasets comprising Stack Overflow snippets and open-source project code. The results show that AgentExecutor achieves up to 94% and 90% code coverage, outperforming the state-of-the-art approach Treefix by 19.9% and 13.8%, respectively. In addition, AgentExecutor significantly reduces execution time (by up to 80.3%) and cost (by up to 56.6%). These findings demonstrate that AgentExecutor provides an effective and efficient solution for partial code execution.",
+  "abstract_zh": "执行代码片段是动态程序分析的关键，但任意代码片段常因缺失上下文、依赖不完整、环境配置不足等问题而难以运行。现有部分代码执行方法如 LExecutor 和 Treefix 借助语言模型推断缺失信息以支持执行，但受限于动作空间与反馈机制较窄、优化策略较僵硬，影响了效果与效率。本文提出 AgentExecutor，一个用于部分代码执行的多智能体框架。该方法包含三个阶段：执行环境准备、带迭代优化的动态探索，以及通过程序合成进行前缀演化。借助能够思考、行动并基于反馈迭代的 LLM agents，AgentExecutor 可自主探索更丰富的动作空间，支持创建资源文件、解决环境配置等多样化操作。同时，它采用自适应优化策略，包括覆盖率引导的上下文裁剪和基于程序合成的前缀演化，以系统提升部分代码的执行质量。作者在 Stack Overflow 代码片段和开源项目代码两个常用数据集上评估该方法，结果显示 AgentExecutor 分别达到最高 94% 和 90% 的代码覆盖率，相比当前最优方法 Treefix 分别提升 19.9% 和 13.8%；同时执行时间最多降低 80.3%，成本最多降低 56.6%。结果表明，AgentExecutor 是一种高效且有效的部分代码执行方案。",
+  "key_points_zh": [
+    "提出 AgentExecutor，一个面向 partial code execution 的多智能体框架，用 LLM agents 自动生成和修复执行所需上下文。",
+    "采用三阶段流程：执行环境准备、动态探索与迭代细化、基于 program synthesis 的 prefix evolution。",
+    "相比 LExecutor、Treefix 等方法，AgentExecutor 具备更丰富的动作空间，可处理资源文件创建、环境配置、依赖补全等复杂问题。",
+    "引入覆盖率引导的上下文裁剪和前缀演化等自适应优化策略，在提升执行覆盖率的同时降低时间与调用成本。",
+    "在 Stack Overflow snippets 和开源项目代码数据集上，最高达到 94% 与 90% 覆盖率，并较 Treefix 分别提升 19.9% 和 13.8%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.86,
+    "novelty": 0.7,
+    "problem_significance": 0.76,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.73,
+    "llm_avg": 0.7180000000000001,
+    "comment": "In-scope coding-agent infrastructure work that uses agentic context generation and iterative execution feedback to improve partial code execution.",
+    "comment_zh": "这是一篇符合范围的代码智能体基础设施工作，通过智能体上下文生成和迭代执行反馈改进代码片段执行。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7180000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05959/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05959/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

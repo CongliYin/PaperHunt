@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2608.05703",
+  "title": "StreamArena: Toward Continuous, Interactive, and Long-Horizon Agentic Streaming Video Understanding",
+  "title_zh": "StreamArena：迈向连续、交互式、长时程的智能体流式视频理解",
+  "authors": [
+    "Xichen Zhang",
+    "Guankai Li",
+    "Yinghao Zhu",
+    "Shijian Wang",
+    "Sitong Wu",
+    "Shaozuo Yu",
+    "Meng Chu",
+    "Yuan Lu",
+    "Jiaya Jia"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-06T07:46:37Z",
+  "abs_url": "https://arxiv.org/abs/2608.05703v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.05703",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Deploying autonomous multimodal agents in continuous, real-world environments requires them to ingest unbounded audio-visual streams and maintain hour-scale memory. However, current evaluations predominantly rely on brief clips and multiple-choice formats. This design allows minimal baselines that process only the last four frames to match or surpass complex streaming models, while answer options also expose language shortcuts. We introduce StreamArena, a benchmark for hour-scale, interactive streaming video understanding. StreamArena contains 243 full-length videos averaging 88.8 minutes and 3,646 rigorously annotated, open-ended question-answer pairs that evaluate real-time perception, historical retrospection, proactive interaction, and multimodal tool utilization. Evaluation across diverse systems exposes a tension between continuous interaction and long-horizon multimodal comprehension. Methods that retain only recent frames cannot recover distant events, methods that convert past observations into text lose visual evidence, and methods that repeatedly compress visual memory struggle to preserve fine-grained details over time. We address this tension with StreamMind, a two-tier architecture that assigns latency-critical interaction and proactive monitoring to independently scheduled frontend workers, while backend workers asynchronously construct persistent multimodal memory and perform historical recall and external search. StreamMind outperforms existing streaming baselines across all four capabilities and reduces query-to-answer latency by reusing persistent state.",
+  "abstract_zh": "将自主多模态智能体部署到连续真实环境中，要求其能够处理无边界的音视频流，并维持小时级记忆。然而，现有评测多依赖短视频片段和选择题形式，使得仅处理最后四帧的简单基线也能匹敌甚至超过复杂流式模型，同时选项还可能泄露语言捷径。本文提出 StreamArena，一个面向小时级、交互式流式视频理解的基准，包含 243 个完整长视频，平均时长 88.8 分钟，以及 3,646 个严格标注的开放式问答对，覆盖实时感知、历史回溯、主动交互和多模态工具使用四类能力。对多种系统的评测揭示了连续交互与长时程多模态理解之间的矛盾：只保留近期帧的方法无法恢复远期事件，将历史观察转为文本的方法会丢失视觉证据，而反复压缩视觉记忆的方法难以长期保留细粒度细节。为此，作者提出 StreamMind，一种双层架构：前端 worker 独立调度，负责低延迟交互与主动监控；后端 worker 异步构建持久多模态记忆，并执行历史回忆与外部搜索。实验表明，StreamMind 在四类能力上均优于现有流式基线，并通过复用持久状态降低查询到回答的延迟。",
+  "key_points_zh": [
+    "提出 StreamArena 基准，包含 243 个平均 88.8 分钟的完整视频和 3,646 个开放式 QA，用于评估真实长时程流式视频理解。",
+    "评测能力覆盖实时感知、历史回溯、主动交互和多模态工具使用，避免短片段与选择题带来的捷径问题。",
+    "实验发现现有方法存在明显局限：近期帧缓存丢失远期事件，文本化记忆丢失视觉证据，压缩式视觉记忆难以保留细粒度信息。",
+    "提出 StreamMind 双层架构，将低延迟前端交互与异步后端持久多模态记忆解耦，缓解连续交互和长时程理解的冲突。",
+    "StreamMind 在四类能力上全面优于现有 streaming baselines，并通过复用持久状态降低 query-to-answer latency。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.86,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8720000000000001,
+    "comment": "An excellent fit that contributes a reusable benchmark and system architecture for long-horizon, interactive streaming video agents.",
+    "comment_zh": "该工作非常契合本领域，为长时程交互式流式视频智能体提供了可复用基准和系统架构。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2794153127047222,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8720000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05703/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.976
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05703/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.973
+    }
+  ]
+}

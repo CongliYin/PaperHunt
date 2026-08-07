@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2608.05987",
+  "title": "AgentOPSD: Recursive Self-Distillation for Agentic Reinforcement Learning",
+  "title_zh": "AgentOPSD：用于智能体强化学习的递归自蒸馏",
+  "authors": [
+    "Zi-Han Wang",
+    "Zhengxi Lu",
+    "Zhiyuan Yao",
+    "Jinyang Wu",
+    "Jie Wu",
+    "Zhengzhou Cai",
+    "Yueqing Sun",
+    "Ziang Ye",
+    "Linji Hao",
+    "Qi Gu",
+    "Xunliang Cai",
+    "Yongliang Shen",
+    "Yujiu Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-06T13:00:59Z",
+  "abs_url": "https://arxiv.org/abs/2608.05987v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.05987",
+  "links": {
+    "github": "https://github.com/ZethWang/AgentOPSD",
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement learning (RL) with verifiable rewards constructs trajectory-level advantage estimates, yet it often fails to credit the few pivotal decisions that determine outcomes in long-horizon, multi-turn agentic tasks. Recent work introduces privileged self-distillation for credit assignment, providing denser supervision, but it remains unclear how such local signals should represent sequential credit. We propose AgentOPSD, a critic-free, recursive method for turn-level credit assignment in agentic reinforcement learning. AgentOPSD aggregates token-level teacher-student log-probability gaps into turn-level evidence and recursively updates a Bayesian belief state in log-odds space. This yields a principled reweighting scheme that converts sparse outcome supervision into turn-level credit signals and identifies pivotal turns through the marginal belief revision between consecutive states. The method is fully compatible with standard policy optimization and requires neither an additional critic nor extra rollouts. We evaluate AgentOPSD on ALFWorld, WebShop, and Search-QA using Qwen2.5 models at two scales (3B and 7B). AgentOPSD outperforms GRPO and strong self-distillation baselines, achieving 89.1% success on ALFWorld with Qwen2.5-7B. Ablation studies attribute the gains to turn-level aggregation and history-dependent recursive belief updates.",
+  "abstract_zh": "本文提出 AgentOPSD，一种无需 critic 的递归自蒸馏方法，用于长程、多轮智能体强化学习中的回合级信用分配。传统基于可验证奖励的 RL 通常只能提供轨迹级 advantage，难以定位决定任务成败的关键决策；已有 privileged self-distillation 虽能提供更密集监督，但对序列信用如何建模仍不明确。AgentOPSD 将 teacher-student 的 token 级 log-probability 差异聚合为 turn 级证据，并在 log-odds 空间中递归更新 Bayesian belief state，从而把稀疏结果监督转化为回合级信用信号，并通过相邻 belief state 的边际修正识别关键回合。该方法可直接兼容标准策略优化，不需要额外 critic 或额外 rollout。在 ALFWorld、WebShop 和 Search-QA 上，基于 Qwen2.5-3B/7B 的实验显示，AgentOPSD 优于 GRPO 和强自蒸馏基线；其中 Qwen2.5-7B 在 ALFWorld 上达到 89.1% 成功率。消融实验表明，收益主要来自 turn-level aggregation 与依赖历史的递归 belief update。",
+  "key_points_zh": [
+    "针对长程多轮 agentic RL 中轨迹级奖励难以定位关键决策的问题，AgentOPSD 提供 turn-level credit assignment。",
+    "方法将 token 级 teacher-student log-probability gap 聚合为回合级证据，并在 log-odds 空间递归更新 Bayesian belief state。",
+    "通过相邻 belief state 的 marginal belief revision 识别 pivotal turns，将稀疏 outcome supervision 转化为更细粒度的信用信号。",
+    "AgentOPSD 无需额外 critic、无需额外 rollouts，可与标准 policy optimization 流程兼容。",
+    "在 ALFWorld、WebShop、Search-QA 上优于 GRPO 和自蒸馏基线；Qwen2.5-7B 在 ALFWorld 上取得 89.1% success rate。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.8,
+    "problem_significance": 0.86,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.79,
+    "llm_avg": 0.8,
+    "comment": "Well-aligned agentic RL work addressing long-horizon credit assignment with turn-level recursive self-distillation over agent trajectories.",
+    "comment_zh": "这篇论文高度契合智能体强化学习方向，通过轮级递归自蒸馏解决长程轨迹中的信用分配问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.9171375353509377,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/ZethWang/AgentOPSD",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 66,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05987/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05987/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.946
+    }
+  ]
+}

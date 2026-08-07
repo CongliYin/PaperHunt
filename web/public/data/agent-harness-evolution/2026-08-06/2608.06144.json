@@ -1,0 +1,138 @@
+{
+  "arxiv_id": "2608.06144",
+  "title": "FinEvo-Bench: A Longitudinal Benchmark for Self-Evolving Agents in Professional Financial Workflows",
+  "title_zh": "FinEvo-Bench：面向专业金融工作流中自进化 Agent 的纵向基准",
+  "authors": [
+    "Bo Deng",
+    "Kang Zhou",
+    "Lifan Guo",
+    "Chongyang Tao",
+    "Xuanren Chen",
+    "Chenggang Xie",
+    "Renzhao Liang",
+    "Feng Chen",
+    "Chi Zhang"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Bo Deng",
+      "affiliations": [
+        "Beihang University",
+        "Qwen DianJin Team, Alibaba Cloud Computing"
+      ]
+    },
+    {
+      "name": "Kang Zhou",
+      "affiliations": [
+        "Qwen DianJin Team, Alibaba Cloud Computing"
+      ]
+    },
+    {
+      "name": "Lifan Guo",
+      "affiliations": [
+        "Qwen DianJin Team, Alibaba Cloud Computing"
+      ]
+    },
+    {
+      "name": "Chongyang Tao",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "name": "Xuanren Chen",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "name": "Chenggang Xie",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "name": "Renzhao Liang",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "name": "Feng Chen",
+      "affiliations": [
+        "Qwen DianJin Team, Alibaba Cloud Computing"
+      ]
+    },
+    {
+      "name": "Chi Zhang",
+      "affiliations": [
+        "Qwen DianJin Team, Alibaba Cloud Computing"
+      ]
+    }
+  ],
+  "published_at": "2026-08-06T15:14:54Z",
+  "abs_url": "https://arxiv.org/abs/2608.06144v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.06144",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Most agent benchmarks evaluate tasks independently and cannot measure whether experience from one task helps with later tasks. Existing self-evolution benchmarks do not jointly cover professional workflows, open-ended deliverables, and multi-aspect evaluation. We introduce FinEvo-Bench, a longitudinal benchmark with 120 real-case-grounded tasks, 20 business scenes across six financial domains. Institution-provided professional procedures define the required operations and constraints. Eligible institution-provided and publicly documented cases supply the task facts. Each scene contains six related but substantively distinct cases that share a professional procedure and a manually reviewed rubric for task quality and financial compliance. We compare four self-evolving agent scaffolds using the same Qwen3.7-Max backbone and three independently shuffled, globally interleaved task streams. Paired non-evolving controls estimate each scaffold's self-evolution gain from retained experience, while an independent Claude Code scoring agent backed by Claude Opus 4.6 evaluates all outputs. Letta achieves the highest evolved score (91.65) and fewest compliance issues (0.09 per task); Codex achieves the largest self-evolution gain (+19.37). Across scaffolds, the evolving condition raises scores by 9.33-19.37 points and reduces compliance issues by 0.12-0.44 per task. Paired score gains at within-scene ranks 4-6 exceed those at ranks 1-3 by 6.10-8.70 points. In Claude Code, skill-only evolution produces higher task quality and fewer compliance issues than memory-only and combined memory-skill evolution. Across all four scaffolds, rubric feedback also yields higher scores and fewer compliance issues than reference-answer feedback. FinEvo-Bench measures both professional performance and self-evolution ability: how effectively an agent turns prior experience into later improvement.",
+  "abstract_zh": "本文提出 FinEvo-Bench，一个用于评估自进化 Agent 在专业金融工作流中能否将先前经验转化为后续能力提升的纵向基准。不同于多数只独立评测单任务的 Agent benchmark，FinEvo-Bench 覆盖 6 个金融领域、20 个业务场景、120 个基于真实案例的任务；每个场景包含 6 个相关但实质不同的案例，共享由金融机构提供的专业流程，并配套人工审核的任务质量与金融合规性评分 rubric。作者使用相同的 Qwen3.7-Max backbone，对 4 种自进化 agent scaffolds 进行比较，并构造 3 条独立打乱、全局交错的任务流；同时设置非进化对照组以估计保留经验带来的自进化收益。所有输出由基于 Claude Opus 4.6 的 Claude Code scoring agent 评估。实验显示，Letta 获得最高进化后得分 91.65，且合规问题最少；Codex 获得最大自进化增益 +19.37。总体上，自进化条件带来 9.33–19.37 分提升，并使每任务合规问题减少 0.12–0.44。场景内后半段任务的收益显著高于前半段，说明经验积累确实改善后续表现。",
+  "key_points_zh": [
+    "FinEvo-Bench 强调纵向评测：不只看单次任务表现，而是衡量 Agent 是否能从早期金融任务经验中学习，并在后续相关任务中提升。",
+    "基准包含 120 个真实案例驱动任务，覆盖 6 个金融领域、20 个业务场景；任务事实来自机构提供或公开记录，流程和约束由金融机构专业程序定义。",
+    "评测同时关注任务质量与金融合规性，每个场景都有人工审核的 rubric，并由基于 Claude Opus 4.6 的 Claude Code scoring agent 统一评分。",
+    "在相同 Qwen3.7-Max backbone 下，4 种自进化 scaffold 均显著优于非进化对照，得分提升 9.33–19.37，合规问题也同步减少。",
+    "实验发现 skill-only evolution 优于 memory-only 与 memory-skill combined evolution；rubric feedback 也比 reference-answer feedback 更能提升质量并减少合规风险。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.68,
+    "problem_significance": 0.74,
+    "potential_impact": 0.69,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.72,
+    "llm_avg": 0.696,
+    "comment": "The benchmark is in scope because it measures longitudinal self-evolution, though its financial vertical focus limits generality.",
+    "comment_zh": "该基准因衡量长期自演化能力而属于本领域，但金融垂直场景限制了其通用性。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.696,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.06144/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.947
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.06144/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.941
+    }
+  ]
+}

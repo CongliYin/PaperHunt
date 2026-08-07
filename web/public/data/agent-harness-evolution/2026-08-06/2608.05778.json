@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2608.05778",
+  "title": "When Do Prompt-Side Agent Playbooks Transfer? Accuracy, Cost, and Runtime Shift in Agent Deployment",
+  "title_zh": "Prompt 侧 Agent Playbooks 何时可迁移？Agent 部署中的准确率、成本与运行时偏移",
+  "authors": [
+    "Weihong Lin",
+    "Lin Sun",
+    "Xiangzheng Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-06T09:10:25Z",
+  "abs_url": "https://arxiv.org/abs/2608.05778v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.05778",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Prompt-side playbooks can improve tool-using language agents without retraining, but their portability beyond the source setting is unclear. We study frozen playbook transfer under a shared distill--validate--transfer protocol. On ALFWorld, transfer is beneficial under controlled greedy decoding and, in one near-budget-matched comparison, distilled guidance outperforms five fixed demonstrations. On TAU2-Bench, a prespecified aggregate contrast supports a modest average matched-domain advantage, but global Holm correction retains only one of 135 route-level effects; the remaining grid provides descriptive evidence of compatibility-sensitive heterogeneity. On XBench-DeepSearch, one artifact--runtime pairing preserves useful first-try heuristics while producing repeated queries, delayed stopping, and substantial cost inflation after a context-runtime shift. Across benchmarks, transferred and target-derived playbooks both require target-side validation of success, termination, protocol compatibility, and cost. Frozen transfer is therefore a conditional cold-start option, not a reuse-by-default strategy or a universally preferable alternative to target-side redistillation.",
+  "abstract_zh": "本文研究无需重新训练即可提升工具使用型语言 Agent 的 prompt-side playbooks 在源环境之外的可迁移性。作者采用统一的 distill–validate–transfer 协议评估 frozen playbook transfer。实验显示，在 ALFWorld 上，受控 greedy decoding 条件下迁移通常有益；在一次近似预算匹配的比较中，蒸馏得到的指导优于五个固定 demonstrations。在 TAU2-Bench 上，预先设定的聚合对比支持 matched-domain 下的 modest 平均优势，但经过全局 Holm 校正后，135 个 route-level 效应中仅保留一个显著结果，其余网格主要提供了关于兼容性敏感异质性的描述性证据。在 XBench-DeepSearch 上，某个 artifact–runtime 配对保留了有用的首次尝试启发式，但在 context-runtime shift 后产生重复查询、延迟停止以及显著成本膨胀。总体而言，无论是迁移 playbooks 还是目标域重新蒸馏得到的 playbooks，都需要在目标侧验证成功率、终止行为、协议兼容性和成本。因此，frozen transfer 更适合作为有条件的冷启动方案，而不是默认复用策略，也不能普遍替代目标侧 redistillation。",
+  "key_points_zh": [
+    "论文系统评估 prompt-side playbooks 在不同 Agent 部署环境中的 frozen transfer 能力，关注准确率、成本和运行时变化。",
+    "在 ALFWorld 中，playbook 迁移在受控 greedy decoding 下表现有益，并在一次近预算匹配实验中优于固定 demonstrations。",
+    "在 TAU2-Bench 中，整体 matched-domain 对比显示小幅优势，但 Holm 校正后显著 route-level 效应极少，说明迁移效果高度依赖兼容性。",
+    "在 XBench-DeepSearch 中，context-runtime shift 会导致重复查询、停止延迟和成本膨胀，即使部分启发式仍然有效。",
+    "结论强调 frozen playbook transfer 只能作为条件性冷启动手段，部署前必须在目标环境验证成功率、终止逻辑、协议兼容性与成本。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.65,
+    "novelty": 0.52,
+    "problem_significance": 0.62,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.57,
+    "llm_avg": 0.548,
+    "comment": "This is a useful empirical study of prompt-side agent playbook transfer, but it offers limited new reusable harness or evolution mechanism.",
+    "comment_zh": "这是一项有用的提示侧智能体 playbook 迁移实证研究，但新的可复用框架或演化机制较有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.548,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05778/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.941
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05778/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.965
+    }
+  ]
+}

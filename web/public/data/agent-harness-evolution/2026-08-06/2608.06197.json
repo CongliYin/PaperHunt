@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2608.06197",
+  "title": "EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning",
+  "title_zh": "EnvACE：通过 World Rehearsal 内化环境动态的智能体强化学习方法",
+  "authors": [
+    "Zishan Xu",
+    "Zhiyuan Yao",
+    "Yuxin Chen",
+    "Yifu Guo",
+    "Zhengxi Lu",
+    "Yuquan Lu",
+    "Jinyang Huang",
+    "Yan Xu",
+    "Yasheng Wang",
+    "Weinan Zhang",
+    "Xingshan Zeng",
+    "Weiwen Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-06T15:54:36Z",
+  "abs_url": "https://arxiv.org/abs/2608.06197v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.06197",
+  "links": {
+    "github": "https://github.com/Within-yao/EnvACE.",
+    "project_page": null
+  },
+  "abstract_en": "Training large language model agents for long-horizon tool use typically relies on interactions with real or synthesized executable environments, whose construction and verification are costly, or on external simulators that are difficult to ground. We introduce EnvACE, an agentic reinforcement learning method that replaces external environment interaction during training with world rehearsal. The policy alternates between acting and rehearsal: it first generates a tool call, then plays the role of the environment to produce the response induced by that action, and conditions subsequent decisions on the rehearsed response. Both roles are jointly optimized end-to-end using task-success rewards. Through world rehearsal, the policy internalizes the relationship between actions and their environment responses in its parameters, yielding an agent world model that directly supports decision making. Across BFCL-v4, tau^2-Bench, VitaBench, and FinMCP-Bench, EnvACE achieves strong and transferable performance, outperforming environment-scaling baselines in the overall evaluation. Controlled studies further show that world rehearsal consistently improves policy learning across model scales. At test time, the internalized world model enables private rehearsal before committed execution, yielding further gains under a moderate rehearsal budget without additional external interaction. Our findings establish world rehearsal as a new path toward scaling LLM agent training beyond the constraints of external environments. Our code is publicly available at https://github.com/Within-yao/EnvACE.",
+  "abstract_zh": "本文提出 EnvACE，一种面向长程工具使用任务的 agentic reinforcement learning 方法。不同于依赖真实/合成可执行环境或外部模拟器进行训练，EnvACE 用 world rehearsal 替代训练时的外部环境交互：策略先生成工具调用，再扮演环境生成该动作对应的响应，并基于排练出的响应继续决策。动作生成与环境响应生成两个角色通过任务成功奖励进行端到端联合优化，使模型在参数中内化动作与环境反馈之间的关系，形成可直接支持决策的 agent world model。在 BFCL-v4、tau^2-Bench、VitaBench 和 FinMCP-Bench 上，EnvACE 展现出强泛化与迁移能力，并在总体评测中超过环境扩展类 baselines。受控实验进一步表明，world rehearsal 在不同模型规模下都能稳定提升策略学习。测试时，内化的 world model 还能支持提交执行前的私有排练，在中等排练预算下无需额外交互即可进一步提升性能。",
+  "key_points_zh": [
+    "EnvACE 将训练阶段的外部环境交互替换为 world rehearsal，降低构建、验证真实或合成环境的成本，也避免外部模拟器难以对齐真实任务的问题。",
+    "方法让同一策略交替扮演 agent 与 environment：先生成 tool call，再生成该调用诱发的环境响应，并将该响应作为后续决策上下文。",
+    "动作策略与环境响应生成能力通过 task-success rewards 端到端联合优化，使 LLM 在参数中内化环境动态，形成 agent world model。",
+    "在 BFCL-v4、tau^2-Bench、VitaBench、FinMCP-Bench 上，EnvACE 整体优于 environment-scaling baselines，并表现出较好的迁移性。",
+    "测试阶段可利用内化 world model 进行 private rehearsal，在不增加外部环境交互的情况下，用适度排练预算进一步提升执行效果。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.86,
+    "problem_significance": 0.88,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.83,
+    "llm_avg": 0.8459999999999999,
+    "comment": "Strong in-scope agentic RL work that proposes world rehearsal as an alternative to costly external environment rollouts for long-horizon tool-use training.",
+    "comment_zh": "这是一篇很强的智能体强化学习论文，用世界排练替代昂贵的外部环境交互来训练长程工具使用智能体。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.8539771624195638,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8459999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Within-yao/EnvACE.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 28,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.06197/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.06197/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}
