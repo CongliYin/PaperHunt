@@ -67,6 +67,7 @@ class Confusion:
 
 
 def load_history(domain: str) -> dict[str, dict]:
+    """Load papers referenced by published daily lists for historical metrics."""
     domain_dir = DATA_DIR / domain
     records: dict[str, dict] = {}
     for list_path in sorted(domain_dir.glob("????-??-??.json")):
@@ -76,14 +77,30 @@ def load_history(domain: str) -> dict[str, dict]:
             detail_path = domain_dir / list_path.stem / f"{arxiv_id}.json"
             if not arxiv_id or not detail_path.exists():
                 continue
-            detail = json.loads(detail_path.read_text(encoding="utf-8"))
-            records[arxiv_id] = {
-                "arxiv_id": arxiv_id,
-                "title": detail.get("title", ""),
-                "abstract": detail.get("abstract_en", ""),
-                "llm_avg": (detail.get("llm_assessment") or {}).get("llm_avg"),
-            }
+            records[arxiv_id] = _history_record(detail_path)
     return records
+
+
+def load_detail_history(domain: str) -> dict[str, dict]:
+    """Load the retained detail corpus, including papers excluded from publication."""
+    domain_dir = DATA_DIR / domain
+    records: dict[str, dict] = {}
+    for detail_path in sorted(domain_dir.glob("????-??-??/*.json")):
+        record = _history_record(detail_path)
+        arxiv_id = record["arxiv_id"]
+        if arxiv_id:
+            records[arxiv_id] = record
+    return records
+
+
+def _history_record(detail_path: Path) -> dict:
+    detail = json.loads(detail_path.read_text(encoding="utf-8"))
+    return {
+        "arxiv_id": str(detail.get("arxiv_id") or "").strip(),
+        "title": detail.get("title", ""),
+        "abstract": detail.get("abstract_en", ""),
+        "llm_avg": (detail.get("llm_assessment") or {}).get("llm_avg"),
+    }
 
 
 def evaluate_gold() -> tuple[dict[str, tuple[Confusion, Confusion]], Confusion]:
@@ -93,7 +110,7 @@ def evaluate_gold() -> tuple[dict[str, tuple[Confusion, Confusion]], Confusion]:
     overall_after = Confusion()
 
     for domain, labels in gold["domains"].items():
-        history = load_history(domain)
+        history = load_detail_history(domain)
         filter_path = DOMAINS_DIR / domain / "filter_keywords.yaml"
         legacy_config = yaml.safe_load(filter_path.read_text(encoding="utf-8")) or {}
         before = Confusion()
