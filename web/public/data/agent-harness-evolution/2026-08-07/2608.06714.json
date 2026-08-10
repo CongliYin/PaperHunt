@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.06714",
+  "title": "The Optimizer Is the Agent: Reasoning-Driven Search across Prompts, Programs, and ML Workflows",
+  "title_zh": "优化器即智能体：跨 Prompt、程序与 ML 工作流的推理驱动搜索",
+  "authors": [
+    "Junbo Li",
+    "Boyi Liu",
+    "Canwen Xu",
+    "Yite Wang",
+    "Yuxiong He",
+    "Zhangyang Wang",
+    "Qiang Liu",
+    "Zhewei Yao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-07T02:15:39Z",
+  "abs_url": "https://arxiv.org/abs/2608.06714v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.06714",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent systems for optimizing prompts, programs, and ML workflows typically rely on explicit outer-loop controllers such as evolutionary search, bandits, or textual-gradient methods. We ask a fundamentally different question: how much of this search policy can be internalized by a single tool-using agent? We present ReASearch, a unified framework for reasoning-driven optimization in which the agent autonomously decides what to evaluate, how to diagnose failures, which edits to make, and when to verify or restart. Rather than serving only as a proposal generator guided by hand-designed heuristics, the agent actively analyzes outcomes, allocates budget, and refines its strategy over long horizons through persistent memory. With a shared agent loop and domain-specific tools, ReASearch instantiates the exact same scaffold to optimize prompts, programs, and ML workflows. Across 14 diverse tasks, it is competitive with and mostly better than specialized optimization systems, achieving gains of 2% to 40% over strong domain-specific baselines, and in some cases discovering solutions that improve on prior human best-known results. Crucially, we observe that complex search behaviors, which are typically implemented by explicit controllers, emerge naturally from the agent's reasoning process.",
+  "abstract_zh": "本文提出 ReASearch，一个用于 Prompt、程序和 ML 工作流优化的统一推理驱动框架。不同于依赖进化搜索、bandit 或文本梯度等显式外循环控制器的方法，ReASearch 将搜索策略内化到单个可使用工具的 agent 中：agent 自主决定评估对象、诊断失败原因、执行修改，并判断何时验证或重启。它不只是由人工启发式规则引导的候选生成器，而是能基于长期推理和持久记忆主动分析结果、分配预算并持续改进策略。通过共享的 agent loop 与领域特定工具，ReASearch 能用同一套框架优化 prompts、programs 和 ML workflows。在 14 个多样任务上，ReASearch 与专门优化系统相比具有竞争力，并在多数场景更优，相比强领域基线提升 2% 到 40%，部分情况下还发现了超过此前人类已知最优结果的方案。实验表明，许多通常由显式控制器实现的复杂搜索行为，可以从 agent 的推理过程中自然涌现。",
+  "key_points_zh": [
+    "提出 ReASearch，将优化搜索策略从显式外循环控制器转移到单个 tool-using agent 的推理过程中。",
+    "同一 agent scaffold 可跨领域复用，用于优化 prompts、programs 和 ML workflows，仅需搭配不同领域工具。",
+    "agent 能自主完成候选评估、失败诊断、编辑决策、预算分配、验证与重启，并通过 persistent memory 支持长程优化。",
+    "在 14 个任务上，相比强领域专用基线提升 2% 到 40%，多数任务优于 specialized optimization systems。",
+    "论文的重要观察是：复杂搜索行为可由 agent reasoning 自然涌现，而不必手工设计为独立控制器。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.78,
+    "problem_significance": 0.82,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.78,
+    "llm_avg": 0.788,
+    "comment": "This is strong search-agent infrastructure work that replaces hand-designed outer-loop optimizers with a reusable tool-using agent scaffold.",
+    "comment_zh": "这是一项较强的搜索智能体基础设施工作，用可复用的工具型智能体框架替代手工设计的外层优化器。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.6828624646490623,
+    "author_reputation": 0.36228269883744174,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.788,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 2,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.06714/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.06714/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.957
+    }
+  ]
+}

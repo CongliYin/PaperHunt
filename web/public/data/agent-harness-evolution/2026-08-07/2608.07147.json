@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.07147",
+  "title": "DiDPO: Diff-in-Diff Policy Optimization for Coding Agent Training",
+  "title_zh": "DiDPO：用于代码智能体训练的 Diff-in-Diff 策略优化",
+  "authors": [
+    "Xucong Wang",
+    "Zhe Zhao",
+    "Liheng Yu",
+    "Di Wu",
+    "Xiaofeng Cao",
+    "Pengkun Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-07T12:07:12Z",
+  "abs_url": "https://arxiv.org/abs/2608.07147v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.07147",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement learning with Verifiable Reward (RLVR) has emerged as a powerful paradigm for training coding agents, where the execution feedback from compilation and tests provides objective verification. However, unlike agent tasks, coding agents face a unique and finer-grained credit assignment challenge: at each step, coding actions simultaneously pack varying changes into different regions of a code version, which makes the contribution of independent change indistinguishable. Existing RLVR methods mostly leverage the outcome reward or step-level reward, which fails to dive into a code diff and makes unique properties of coding actions invisible to training. In this paper, we propose Diff-in-Diff Policy Optimization (DiDPO), a critic-free RL method that constructs fine-grained credit units directly from the structure of code diffs. DiDPO organizes multi-turn coding interactions into multiple thought--action steps and discovers code diffs across sampled trajectories. It then selects anchors by aggregating highly similar sub-diffs split from each whole diff by our ``groupability score'', which provides the splitting schema that optimally balances the semantic scope of anchors and the group mass they may form. Finally these anchors form advantage groups and project the diff-level advantage back to individual response tokens. Experiments on long-horizon coding and reasoning benchmarks show that DiDPO significantly outperforms strong agentic RL baselines. On Qwen2.5-7B-Coder, DiDPO exceeds comparable methods by over 10\\% and narrows the gap with far larger models, offering a principled framework for fine-grained credit assignment in coding agent training. We also open-source verl-code, an agentic rl codebase that supports various RL methods and coding benchmarks.",
+  "abstract_zh": "本文关注基于可验证奖励的强化学习（RLVR）在 coding agent 训练中的细粒度信用分配问题。不同于一般 agent 任务，代码智能体的每一步动作往往会在同一代码版本的多个区域同时引入不同修改，使得单个代码变更的贡献难以区分。现有 RLVR 方法多依赖最终结果奖励或 step-level reward，无法深入 code diff 内部建模代码动作的结构特性。为此，论文提出 Diff-in-Diff Policy Optimization（DiDPO），一种无需 critic 的强化学习方法，直接利用 code diff 结构构造细粒度信用单元。DiDPO 将多轮代码交互组织为多个 thought-action 步骤，从采样轨迹中发现 code diffs，并通过 groupability score 将完整 diff 切分为子 diff，选择高相似子 diff 聚合形成 anchors，在语义范围与可聚合规模之间取得平衡。随后，这些 anchors 构成 advantage groups，并将 diff-level advantage 投影回具体 response tokens。实验表明，DiDPO 在长程代码与推理基准上显著优于强 agentic RL baseline；在 Qwen2.5-7B-Coder 上相比可比方法提升超过 10%，缩小了与更大模型的差距。论文还开源了 verl-code，一个支持多种 RL 方法与代码基准的 agentic RL 代码库。",
+  "key_points_zh": [
+    "提出 DiDPO，一种 critic-free RL 方法，面向 coding agent 中由 code diff 引发的细粒度信用分配问题。",
+    "核心思想是从多轮 thought-action 轨迹中提取 code diffs，并基于 groupability score 将完整 diff 切分为语义合适、可聚合的 sub-diffs。",
+    "通过聚合高相似 sub-diffs 选择 anchors，形成 advantage groups，再将 diff-level advantage 映射回 response tokens，实现 token-level 训练信号。",
+    "实验覆盖长程代码与推理 benchmark，DiDPO 显著超过强 agentic RL baselines；在 Qwen2.5-7B-Coder 上提升超过 10%。",
+    "论文开源 verl-code，为 agentic RL 在代码任务上的多方法、多基准训练与评测提供基础设施。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.86,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8600000000000001,
+    "comment": "DiDPO directly addresses fine-grained credit assignment for coding-agent RL with verifier-backed execution feedback and a reusable training codebase.",
+    "comment_zh": "DiDPO 直接解决了编码智能体强化学习中的细粒度信用分配问题，并结合可验证执行反馈与可复用训练代码库。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8600000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.07147/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.951
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.07147/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.965
+    }
+  ]
+}

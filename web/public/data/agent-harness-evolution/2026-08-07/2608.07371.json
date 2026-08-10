@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2608.07371",
+  "title": "Trajectory-Relative Hindsight Distillation for Agentic Reinforcement Learning",
+  "title_zh": "面向智能体强化学习的轨迹相对后见蒸馏",
+  "authors": [
+    "Haoyu Zheng",
+    "Yun Zhu",
+    "Qing Wang",
+    "Wenqiao Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-07T16:12:58Z",
+  "abs_url": "https://arxiv.org/abs/2608.07371v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.07371",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent agentic reinforcement learning methods use hindsight to complement sparse outcome rewards. However, a completed rollout can yield many such signals, leaving their appropriate allocation across turns unclear. We introduce TRIAL, a trajectory-relative hindsight distillation framework with a unified turn-aligned scoring protocol. For each decision turn, TRIAL extracts an outcome view of that decision's realized consequence and evaluates the same response under ordinary and hindsight-conditioned contexts. The signed log-probability gap determines the direction and local strength of token-level supervision, while turn-level magnitudes are normalized jointly over the realized trajectory. The resulting allocation multipliers have an eligible-token-weighted mean of one, redistributing dense supervision across turns while fixing its average multiplier. Experiments on WebShop and ALFWorld with different backbones show that TRIAL outperforms GRPO across all eight combinations of backbone, environment, and evaluation metric, while achieving the best or tied-best performance among six methods on six of them. On WebShop with Qwen3-1.7B, TRIAL improves the success rate from 56.4% to 75.2% and the task score from 78.7% to 85.7%. Controlled ablations further show that trajectory-relative turn allocation provides substantial gains beyond those of dense hindsight distillation alone.",
+  "abstract_zh": "近期的 agentic reinforcement learning 方法利用后见信息（hindsight）来补充稀疏的结果奖励，但一次完整 rollout 往往会产生多个后见监督信号，如何将这些信号合理分配到不同决策轮次仍不明确。本文提出 TRIAL，一个轨迹相对的后见蒸馏框架，并设计了统一的、与决策轮次对齐的评分协议。对每个决策轮次，TRIAL 提取该决策实际后果的 outcome view，并在普通上下文与后见条件上下文中评估同一响应；带符号的 log-probability gap 决定 token 级监督的方向与局部强度，而轮次级幅度则在已实现轨迹内联合归一化。由此得到的分配乘子在 eligible-token 加权均值上保持为 1，从而在固定平均监督强度的同时，将稠密监督重新分配到各轮次。实验在 WebShop 和 ALFWorld 上使用不同 backbone，结果显示 TRIAL 在 backbone、环境与评估指标的 8 种组合中均优于 GRPO，并在 6 种方法对比中于其中 6 项取得最佳或并列最佳表现。在 WebShop + Qwen3-1.7B 上，TRIAL 将成功率从 56.4% 提升到 75.2%，任务分数从 78.7% 提升到 85.7%。消融实验进一步表明，轨迹相对的轮次分配相比单纯的稠密后见蒸馏带来了显著额外收益。",
+  "key_points_zh": [
+    "提出 TRIAL：一种 trajectory-relative hindsight distillation 框架，用于解决多轮 agentic RL 中后见监督信号在不同决策轮次间如何分配的问题。",
+    "核心机制是在每个决策轮次对同一响应分别进行普通上下文与 hindsight-conditioned 上下文评估，用 signed log-probability gap 指导 token 级监督方向与强度。",
+    "TRIAL 将轮次级监督幅度在完整 realized trajectory 内联合归一化，使 allocation multipliers 的 eligible-token 加权均值保持为 1，实现“重新分配而非整体放大”监督。",
+    "在 WebShop 和 ALFWorld 上，TRIAL 在 8 个 backbone-环境-指标组合中全部优于 GRPO，并在 6 种方法对比中有 6 项达到最佳或并列最佳。",
+    "在 WebShop + Qwen3-1.7B 上，TRIAL 将 success rate 从 56.4% 提升至 75.2%，task score 从 78.7% 提升至 85.7%，消融验证了轨迹相对轮次分配的独立贡献。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.8,
+    "problem_significance": 0.88,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.82,
+    "llm_avg": 0.8240000000000001,
+    "comment": "TRIAL is a strong agentic RL contribution that improves long-horizon trajectory credit assignment through turn-aligned hindsight supervision.",
+    "comment_zh": "TRIAL 是一项较强的智能体强化学习工作，通过按回合对齐的 hindsight 监督改进长程轨迹信用分配。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8240000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.07371/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.07371/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.962
+    }
+  ]
+}

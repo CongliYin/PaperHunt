@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2608.07449",
+  "title": "SkillProx: Self-Evolving Agent Skills via Proximal Textual Gradient Descent",
+  "title_zh": "SkillProx：通过近端文本梯度下降实现自进化 Agent 技能",
+  "authors": [
+    "Mingxuan Zheng",
+    "Yujin Zhou",
+    "Chuxue Cao",
+    "Boqin Yin",
+    "Yuyao Zhang",
+    "Jiapeng Sun",
+    "Shuaishuai Gong",
+    "Sirui Han",
+    "Yike Guo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-07T17:40:33Z",
+  "abs_url": "https://arxiv.org/abs/2608.07449v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.07449",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM agents increasingly adapt to recurring tasks by accumulating procedural knowledge in skills. These skills are lightweight, reusable textual artifacts that are loaded into the agent's context without weight updates. Recent methods refine skills through iterative task execution, failure diagnosis, and trajectory-guided text-space updates. However, existing frameworks lack explicit diagnosis--outcome feedback and treat deletion as a generic edit operation rather than a dedicated mechanism for consolidating accumulated knowledge. We introduce SkillProx, a proximal-gradient-inspired forward--backward framework that couples closed-loop diagnostic evolution with utility-aware proximal refinement. Motivated by a composite objective balancing task loss and skill complexity, the forward stage re-executes diagnosis-driven edits on the same task batch, rolls back regressions, and feeds measured outcomes into subsequent diagnoses. The backward stage decomposes the resulting skill into auditable knowledge units, estimates their contributions using a frozen leave-one-out utility audit, and applies validation-gated consolidation, demotion, or removal. Experiments on in-distribution and out-of-distribution benchmarks across multiple backbone LLMs show that SkillProx improves average accuracy by 3.0 percentage points over the strongest gradient-based baseline. Component ablations demonstrate the complementary effects of closed-loop diagnosis and proximal refinement.",
+  "abstract_zh": "本文提出 SkillProx，用于让 LLM agent 在无需更新模型权重的情况下，通过轻量级可复用的文本技能（skills）持续适应重复任务。现有方法通常依赖迭代执行、失败诊断和基于轨迹的文本更新来优化技能，但缺少显式的“诊断—结果”闭环反馈，也未将删除操作作为知识整合的专门机制。SkillProx 借鉴近端梯度思想，设计了前向—后向框架：前向阶段在同一任务批次上重新执行由诊断驱动的技能编辑，检测并回滚性能退化，并将真实结果反馈给后续诊断；后向阶段将技能分解为可审计的知识单元，通过冻结的 leave-one-out 效用评估估计各单元贡献，再基于验证结果进行保留、降级或删除。多种 backbone LLM 上的同分布与分布外基准实验表明，SkillProx 相比最强的梯度式技能优化基线平均准确率提升 3.0 个百分点。消融实验进一步验证了闭环诊断与近端精炼的互补作用。",
+  "key_points_zh": [
+    "提出 SkillProx，将 LLM agent 的技能优化建模为兼顾任务损失与技能复杂度的组合目标，并借鉴 proximal gradient descent 设计文本空间更新流程。",
+    "前向阶段引入 closed-loop diagnosis：在同一任务批次上执行诊断驱动的技能编辑，测量结果、回滚退化更新，并把结果反馈给下一轮诊断。",
+    "后向阶段进行 utility-aware proximal refinement：将技能拆解为知识单元，通过 frozen leave-one-out utility audit 评估贡献，并进行验证门控的整合、降级或移除。",
+    "实验覆盖同分布与分布外基准以及多个 backbone LLM，SkillProx 相比最强 gradient-based baseline 平均准确率提升 3.0 个百分点。",
+    "消融结果显示，闭环诊断反馈与近端式知识精炼分别带来收益，且二者具有互补效果。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.78,
+    "problem_significance": 0.84,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.84,
+    "llm_avg": 0.808,
+    "comment": "SkillProx is well aligned with skill evolution because it provides a closed-loop mechanism for editing, auditing, rolling back, and consolidating reusable agent skills.",
+    "comment_zh": "SkillProx 与技能演化方向高度契合，因为它提供了编辑、审计、回滚和压缩可复用智能体技能的闭环机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.308682335133939,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.808,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.07449/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.07449/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.986
+    }
+  ]
+}
