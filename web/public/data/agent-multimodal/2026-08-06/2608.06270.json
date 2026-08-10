@@ -17,33 +17,33 @@
     "project_page": null
   },
   "abstract_en": "The \"thinking-with-images\" paradigm equips multimodal LLMs with active visual operations such as crop-and-zoom. However, models using these operations often achieve only marginal or negative gains over direct inference at substantially higher token cost. They may also repeatedly crop irrelevant regions and fail on questions that direct inference answers correctly. We ask whether the returned visual evidence causally affects the answer. To answer this question, we formulate visual tool-use as a causal graph that separates observation-mediated paths from action-induced shortcuts. We then audit it through interventions at the three levels: policy (comparing tool-use with direct inference), trajectory (corrupting all observations during rollout), and step (counterfactually replacing one individual observation under a fixed prefix). Our step-level estimand, Visual Evidence Gain, isolates the contribution of each returned observation. Across six representative models and five fine-grained perception benchmarks, we uncover policy miscalibration with two failure modes. In Calling Without Looking, returned observations have no causal effect on the answer. In Looking Without Planning, observations are informative but the call schedule is incoherent. A trajectory-level diagnostic decomposes the policy-level accuracy gain and shows that the gain is concentrated in a Calibrated minority. We term this discrepancy the illusion of visual tool-use: despite aggregate accuracy gains, visual tool-use is not causally effective across a broad range of rollouts. The code is available at https://github.com/OpenCausaLab/CauAudit.",
-  "abstract_zh": "本文审视 multimodal LLMs 在“thinking-with-images”范式下使用 crop-and-zoom 等主动视觉操作时，返回的视觉证据是否真正因果影响最终答案。作者将 visual tool-use 建模为因果图，区分由观察传递的信息路径与由行动策略引入的捷径，并在 policy、trajectory、step 三个层级进行干预审计：比较工具使用与直接推理、在 rollout 中污染所有观察、以及在固定前缀下反事实替换单步观察。论文提出 step-level 指标 Visual Evidence Gain，用于衡量单个返回观察对答案的独立贡献。基于六个代表性模型和五个细粒度感知 benchmark，研究发现视觉工具使用存在 policy miscalibration，并归纳出两类失败模式：Calling Without Looking，即模型调用工具但观察结果对答案无因果作用；Looking Without Planning，即观察本身有信息量但调用计划不连贯。进一步的 trajectory-level 诊断显示，整体准确率收益主要集中在少数 Calibrated 样本中。作者将这种现象称为 visual tool-use illusion：尽管平均指标可能提升，但在大量 rollout 中视觉工具并未真正发挥因果作用。",
+  "abstract_zh": "本文审视多模态 LLM 中的“thinking-with-images”范式，即让模型主动调用视觉操作（如 crop-and-zoom）来辅助推理。作者指出，这类工具调用相较直接推理往往只带来微弱甚至负收益，却显著增加 token 成本；模型还可能反复裁剪无关区域，并在直接推理可答对的问题上失败。论文将视觉工具使用形式化为因果图，区分由视觉观察介导的有效路径与由动作诱发的捷径，并从 policy、trajectory、step 三个层级进行干预审计。其 step 级指标 Visual Evidence Gain 用于隔离单次返回视觉观察对最终答案的因果贡献。在 6 个代表性模型和 5 个细粒度感知 benchmark 上，作者发现两类 policy miscalibration：Calling Without Looking（调用但不看，返回观察对答案无因果影响）与 Looking Without Planning（观察有信息但调用计划不连贯）。轨迹级诊断进一步表明，整体准确率收益主要集中在少数 Calibrated 样本中。论文将这种现象称为视觉工具使用的幻觉：即使平均准确率有所提升，许多 rollout 中视觉工具并未真正产生因果有效作用。",
   "key_points_zh": [
-    "提出将 visual tool-use 表述为因果图，区分 observation-mediated paths 与 action-induced shortcuts，从而检验视觉证据是否真正影响模型答案。",
-    "设计三层因果审计：policy-level 比较工具使用与 direct inference，trajectory-level 污染整段观察，step-level 反事实替换单步观察。",
-    "提出 Visual Evidence Gain 指标，用于隔离并量化每个返回视觉观察对最终答案的因果贡献。",
-    "在六个代表性 multimodal LLMs 与五个细粒度感知 benchmarks 上发现两类失败：Calling Without Looking 和 Looking Without Planning。",
-    "结论指出 aggregate accuracy gain 可能掩盖真实问题：视觉工具收益主要来自少数 Calibrated 样本，大量调用并非因果有效。"
+    "提出将 visual tool-use 建模为因果图，区分 observation-mediated paths 与 action-induced shortcuts，用于判断视觉证据是否真正影响答案。",
+    "设计三层干预审计：policy 级比较工具调用与直接推理，trajectory 级破坏整条轨迹观察，step 级在固定前缀下替换单个观察。",
+    "提出 Visual Evidence Gain，衡量单次返回图像观察对最终答案的因果贡献，避免仅凭总体准确率误判工具有效性。",
+    "在 6 个多模态模型和 5 个细粒度感知 benchmark 上发现两种失败模式：Calling Without Looking 与 Looking Without Planning。",
+    "实验显示总体收益主要来自少数 Calibrated 样本，大量工具调用 rollout 并未因视觉证据而受益，形成“visual tool-use illusion”。"
   ],
   "llm_assessment": {
     "domain_fit": 0.72,
-    "novelty": 0.82,
+    "novelty": 0.8,
     "problem_significance": 0.78,
-    "potential_impact": 0.76,
+    "potential_impact": 0.74,
     "paradigm_shift": 0.68,
-    "lasting_value": 0.77,
-    "llm_avg": 0.7620000000000001,
-    "comment": "A strong causal evaluation of iterative visual tool-use, relevant to visual agents despite lacking realtime or streaming interaction constraints.",
-    "comment_zh": "该工作对迭代式视觉工具使用进行了有力的因果评估，虽缺少实时或流式交互约束，但与视觉智能体高度相关。"
+    "lasting_value": 0.76,
+    "llm_avg": 0.7520000000000001,
+    "comment": "A strong causal evaluation of iterative visual tool use, relevant to closed-loop visual agents despite lacking realtime or streaming interaction constraints.",
+    "comment_zh": "该工作对迭代式视觉工具使用进行因果审计，虽不强调实时流式交互，但对闭环视觉智能体很有参考价值。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
     "open_source": 0.5,
     "community_heat": 0.0,
-    "author_reputation": 0.457151341903981,
+    "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.65,
-    "llm_assessment": 0.7620000000000001,
+    "llm_assessment": 0.7520000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -53,11 +53,11 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": 7,
-    "first_author_found": true,
+    "first_author_h_index": null,
+    "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": 4,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": [

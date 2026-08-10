@@ -10,40 +10,40 @@
   ],
   "author_affiliations": [],
   "published_at": "2026-08-06T15:01:29Z",
-  "abs_url": "https://arxiv.org/abs/2608.06128v1",
+  "abs_url": "https://arxiv.org/abs/2608.06128v2",
   "pdf_url": "https://arxiv.org/pdf/2608.06128",
   "links": {
     "github": null,
     "project_page": null
   },
-  "abstract_en": "Search agents extend large language models beyond static parametric memory by enabling them to acquire and use ex ternal evidence during multi-step reasoning. For knowledge intensive tasks involving complex or evolving information, their reliability depends not only on retrieving relevant ev idence but also on using it to guide subsequent reasoning. However, existing methods primarily reward final-answer cor rectness or intermediate progress, without directly assessing whether post-retrieval actions are grounded in the retrieved evidence. This misalignment encourages prior-driven reason ing: agents form conclusions based on internal knowledge and use retrieval mainly to confirm them, resulting in confirma tion bias and inefficient evidenceuse.Toaddressthisissue, we propose Contextual Information Policy Optimization (CIPO), an evidence-oriented reinforcement learning framework that explicitly aligns policy optimization with external evidence use. CIPO assigns dense, turn-level credit to reasoning ac tions influenced by retrieved information, while combining this evidence-use signal with a global outcome reward to pre serveanswercorrectness.Withthismanner,CIPOdiscourages evidence-detached guesses and promotes reasoning trajecto ries in which retrieved facts can guide or revise subsequent reasoning. Importantly, CIPO requires neither human process annotations nor an additional reward model. Extensive exper iments on seven in-domain and out-of-domain benchmarks show that CIPO reduces the prevalence of prior-driven rea soning and achieves excellent performance on most tasks.",
-  "abstract_zh": "搜索智能体通过在多步推理中获取并使用外部证据，扩展了大语言模型超越静态参数记忆的能力。在复杂或动态变化的知识密集型任务中，智能体的可靠性不仅取决于能否检索到相关证据，也取决于能否用这些证据指导后续推理。现有方法主要奖励最终答案正确性或中间推理进展，却缺少对“检索后动作是否真正基于检索证据”的直接评估，容易导致先验驱动推理：智能体先依据内部知识形成结论，再用检索结果加以确认，从而产生确认偏差和低效证据使用。为此，论文提出 Contextual Information Policy Optimization (CIPO)，一种面向证据使用的强化学习框架，显式将策略优化与外部证据利用对齐。CIPO 为受检索信息影响的推理动作提供稠密的轮级信用分配，并结合全局结果奖励以保持答案正确性。该方法抑制脱离证据的猜测，鼓励检索事实指导或修正后续推理轨迹；同时无需人工过程标注或额外奖励模型。七个域内与域外基准上的实验表明，CIPO 能减少先验驱动推理，并在多数任务上取得优秀表现。",
+  "abstract_en": "Search agents extend large language models beyond static parametric memory by enabling them to acquire and use external evidence during multi-step reasoning. For knowledge-intensive tasks involving complex or evolving information, their reliability depends not only on retrieving relevant evidence but also on using it to guide subsequent reasoning. However, existing methods primarily reward final-answer correctness or intermediate progress, without directly assessing whether post-retrieval actions are grounded in the retrieved evidence. This misalignment encourages prior-driven reasoning: agents form conclusions based on internal knowledge and use retrieval mainly to confirm them, resulting in confirmation bias and inefficient evidence use. To address this issue, we propose Contextual Information Policy Optimization (CIPO), an evidence-oriented reinforcement learning framework that explicitly aligns policy optimization with external evidence use. CIPO assigns dense, turn-level credit to reasoning actions influenced by retrieved information, while combining this evidence-use signal with a global outcome reward to preserve answer correctness. With this manner, CIPO discourages evidence-detached guesses and promotes reasoning trajectories in which retrieved facts can guide or revise subsequent reasoning. Importantly, CIPO requires neither human process annotations nor an additional reward model. Extensive experiments on seven in-domain and out-of-domain benchmarks show that CIPO reduces the prevalence of prior-driven reasoning and achieves excellent performance on most tasks.",
+  "abstract_zh": "本文关注 Search Agents 在多步推理中如何有效利用外部检索证据。现有方法通常只奖励最终答案正确性或中间进展，缺少对“检索后动作是否真正基于证据”的直接约束，容易导致模型依赖内部先验先得出结论，再用检索结果进行确认，从而产生确认偏差与低效证据使用。为此，论文提出 Contextual Information Policy Optimization（CIPO），一种面向证据使用的强化学习框架。CIPO 在每个推理轮次为受检索信息影响的动作分配稠密信用，同时结合全局结果奖励以保持最终答案准确性。该方法鼓励智能体让检索事实指导或修正后续推理，减少脱离证据的猜测，并且无需人工过程标注或额外奖励模型。作者在 7 个域内与域外基准上实验，表明 CIPO 能降低先验驱动推理比例，并在多数任务上取得优秀表现。",
   "key_points_zh": [
-    "指出现有搜索智能体训练目标与证据使用不匹配：只奖励最终正确或中间进展，可能鼓励模型依赖内部先验并用检索结果做事后确认。",
-    "提出 Contextual Information Policy Optimization (CIPO)，在强化学习中显式优化“检索证据是否影响后续推理动作”。",
-    "CIPO 通过稠密的 turn-level 信用分配奖励基于外部证据的推理，同时结合全局 outcome reward 维持最终答案准确性。",
-    "方法不需要人工过程标注，也不依赖额外 reward model，降低了训练与标注成本。",
-    "在七个 in-domain 与 out-of-domain benchmark 上，CIPO 减少 prior-driven reasoning，并在多数任务中取得强性能。"
+    "问题动机：现有 Search Agents 训练目标多关注最终正确性，未显式评估检索后推理是否基于外部证据，容易出现 prior-driven reasoning（先验驱动推理）和 confirmation bias（确认偏差）。",
+    "核心方法：提出 Contextual Information Policy Optimization（CIPO），在强化学习中加入证据使用导向的稠密、轮次级信用分配，奖励被检索信息实际影响的推理动作。",
+    "训练优势：CIPO 将局部证据使用信号与全局答案奖励结合，既鼓励依据证据修正推理轨迹，也避免牺牲最终答案正确性。",
+    "标注成本：该框架不需要人工过程标注，也不依赖额外 reward model，降低了搜索智能体训练的工程与数据成本。",
+    "实验结果：在 7 个域内和域外 benchmark 上，CIPO 减少先验驱动推理，并在大多数任务上取得优良性能。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.94,
+    "domain_fit": 0.96,
     "novelty": 0.78,
-    "problem_significance": 0.84,
-    "potential_impact": 0.82,
-    "paradigm_shift": 0.74,
-    "lasting_value": 0.8,
-    "llm_avg": 0.7959999999999999,
-    "comment": "Strongly in-scope search-agent RL work that optimizes turn-level credit for grounded use of retrieved evidence.",
-    "comment_zh": "这是一篇高度契合的搜索智能体强化学习论文，针对检索证据的落地使用进行轮级信用优化。"
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.82,
+    "llm_avg": 0.812,
+    "comment": "Strongly in-scope search-agent RL work that optimizes evidence-grounded reasoning from retrieved information.",
+    "comment_zh": "这是一篇高度契合方向的搜索智能体强化学习论文，优化了基于检索证据的推理过程。"
   },
   "scores": {
     "topic_relevance": 0.36000000000000004,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.3,
+    "author_reputation": 0.72,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.7959999999999999,
+    "llm_assessment": 0.812,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -56,8 +56,8 @@
     "first_author_h_index": null,
     "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": null,
-    "last_author_found": false,
+    "last_author_h_index": 55,
+    "last_author_found": true,
     "last_author_affiliations": []
   },
   "figures": [

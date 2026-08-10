@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.05573",
   "title": "SkillTV-Bench: Benchmarking How Well Judges Perform on Skill-Augmented Agentic Execution",
-  "title_zh": "SkillTV-Bench：评测 Judge 在技能增强型智能体执行验证中的能力",
+  "title_zh": "SkillTV-Bench：评测裁判在技能增强型智能体执行中的表现",
   "authors": [
     "Zhi Han",
     "Chenxi Zeng",
@@ -19,24 +19,24 @@
     "project_page": null
   },
   "abstract_en": "LLM agents increasingly execute long-horizon tasks through tool use and environment interaction, shifting evaluation from final-response scoring to verification of complete executions. For skill-augmented agents, verification additionally requires the procedural knowledge encoded in task-time skills, because this knowledge indicates what evidence to inspect and which failures are task-critical. However, existing judge benchmarks often expose final responses or static trajectories, and rarely combine task-time skills with directly inspectable artifacts and environments. We therefore introduce SkillTV-Bench, a 681-case benchmark of real agent trajectories from 50 tasks across eleven domains, designed to evaluate skill-aware trajectory verification for both LLM-as-a-Judge and Agent-as-a-Judge methods. Additionally, we propose SkillTV-Evolve, which externalizes verification knowledge as a reusable JudgeSkill that guides an agent judge to plan targeted inspections and issue evidence-grounded verdicts. On a disjoint development pool, an automated evolution loop further refines the JudgeSkill using misjudged cases. On SkillTV-Bench, the refined skill increases the same agent judge's accuracy by 14.8 percentage points. In offline rollout-pool selection, it increases selected-trajectory success from 22.9% with one rollout to 45.5% with ten rollouts. The code and data are available at https://github.com/HanZhi306/SkillTV-Bench",
-  "abstract_zh": "随着 LLM agents 越来越多地通过工具使用和环境交互完成长程任务，评测重点正从最终回答打分转向对完整执行过程的验证。对于 skill-augmented agents，验证还需要理解任务执行时引入的技能知识，因为这些知识决定了应检查哪些证据、哪些失败对任务至关重要。现有 judge benchmarks 通常只暴露最终回答或静态轨迹，较少同时提供任务时技能、可直接检查的产物与环境。为此，论文提出 SkillTV-Bench：一个包含 681 个真实 agent trajectories、覆盖 11 个领域 50 个任务的基准，用于评估 LLM-as-a-Judge 与 Agent-as-a-Judge 的 skill-aware trajectory verification 能力。论文还提出 SkillTV-Evolve，将验证知识外化为可复用的 JudgeSkill，引导 agent judge 进行有针对性的检查并给出基于证据的判决；同时在独立开发集上通过自动演化循环，利用误判案例持续改进 JudgeSkill。在 SkillTV-Bench 上，优化后的 skill 使同一 agent judge 的准确率提升 14.8 个百分点；在离线 rollout-pool selection 中，使用 10 条 rollouts 时所选轨迹成功率从单 rollout 的 22.9% 提升到 45.5%。",
+  "abstract_zh": "随着 LLM agents 越来越多地通过工具使用与环境交互来完成长时程任务，评测重点正从最终回答打分转向对完整执行过程的验证。对于 skill-augmented agents，验证还需要理解任务执行时引入的程序性知识，即 task-time skills，因为这些知识决定了应检查哪些证据、哪些失败对任务至关重要。现有 judge benchmarks 往往只暴露最终回答或静态轨迹，较少同时提供任务时技能、可直接检查的产物与环境。因此，论文提出 SkillTV-Bench：一个包含 681 个真实智能体轨迹案例的基准，覆盖 11 个领域的 50 个任务，用于评估 LLM-as-a-Judge 与 Agent-as-a-Judge 在技能感知轨迹验证上的能力。论文还提出 SkillTV-Evolve，将验证知识外化为可复用的 JudgeSkill，引导 agent judge 进行有针对性的检查，并给出基于证据的判决。在互斥开发集上，自动演化循环会利用误判案例持续改进 JudgeSkill。实验显示，在 SkillTV-Bench 上，改进后的技能使同一 agent judge 的准确率提升 14.8 个百分点；在离线 rollout-pool 选择中，将选中轨迹的成功率从单次 rollout 的 22.9% 提升到 10 次 rollout 下的 45.5%。",
   "key_points_zh": [
-    "提出 SkillTV-Bench，包含 681 个真实 agent trajectories，覆盖 50 个任务与 11 个领域，面向 skill-augmented agent 的执行过程验证。",
-    "基准强调 skill-aware trajectory verification：judge 不仅要看最终结果，还要结合任务时技能知识判断应检查的证据和关键失败点。",
-    "提出 SkillTV-Evolve，将验证知识封装为可复用的 JudgeSkill，用于指导 Agent-as-a-Judge 制定检查计划并输出证据支撑的 verdicts。",
-    "通过自动演化循环在独立开发集上利用误判样本迭代优化 JudgeSkill，使同一 agent judge 在 SkillTV-Bench 上准确率提升 14.8 个百分点。",
-    "在 offline rollout-pool selection 场景中，改进后的 JudgeSkill 可显著提升轨迹筛选质量，10 条 rollouts 下成功率达到 45.5%。"
+    "提出 SkillTV-Bench，包含 681 个真实 agent trajectories，覆盖 50 个任务与 11 个领域，面向 skill-aware trajectory verification。",
+    "强调 skill-augmented agents 的评测不能只看最终答案，还需结合 task-time skills、可检查产物与环境证据来判断执行是否成功。",
+    "提出 SkillTV-Evolve，将验证知识封装为 JudgeSkill，指导 Agent-as-a-Judge 规划针对性检查并输出证据支撑的 verdicts。",
+    "通过自动演化循环在开发集误判案例上优化 JudgeSkill，使同一 agent judge 在 SkillTV-Bench 上准确率提升 14.8 个百分点。",
+    "在离线 rollout-pool 选择任务中，使用演化后的 JudgeSkill 可将选中轨迹成功率从 22.9% 提升到 45.5%。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.93,
-    "novelty": 0.78,
-    "problem_significance": 0.83,
-    "potential_impact": 0.81,
-    "paradigm_shift": 0.76,
-    "lasting_value": 0.84,
-    "llm_avg": 0.8039999999999999,
-    "comment": "A solid agent-evaluation and skill-evolution benchmark with reusable trajectory verification skills and an automated improvement loop.",
-    "comment_zh": "这是一篇扎实的智能体评测与技能演化工作，提供了可复用的轨迹验证技能和自动改进闭环。"
+    "domain_fit": 0.9,
+    "novelty": 0.8,
+    "problem_significance": 0.84,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.85,
+    "llm_avg": 0.818,
+    "comment": "A valuable trajectory-verification benchmark and skill-evolution loop for skill-augmented agent execution.",
+    "comment_zh": "这是一项有价值的轨迹验证基准和技能演化闭环，面向技能增强型智能体执行。"
   },
   "scores": {
     "topic_relevance": 0.9600000000000001,
@@ -45,7 +45,7 @@
     "author_reputation": 0.4557067470936043,
     "venue_signal": 0.0,
     "generality": 0.35,
-    "llm_assessment": 0.8039999999999999,
+    "llm_assessment": 0.818,
     "domain_multiplier": 1.0
   },
   "enriched": {

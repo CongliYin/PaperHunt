@@ -26,24 +26,24 @@
     "project_page": null
   },
   "abstract_en": "LLM-based agentic systems have shown remarkable capabilities in complex domains, while suffering from cascading errors and difficulty in debugging. Critical error detection aims to locate the earliest error step in a failed trajectory that is responsible for the final failure. However, progress faces two main challenges. First, long trajectories make it difficult to identify individual errors, since the evidence for judging a step may be scattered across distant instructions, observations, and prior context. Second, failed trajectories often contain multiple local errors with different downstream effects, only some of which remain responsible for the final failure. In this work, we propose TrajDebug, an error-lifecycle tracing framework that addresses long-trajectory error discovery with multi-granularity history compression and evidence-based error identification, and supports critical attribution by tracing each error's resolution status and terminal impact. We further construct TrajErrBench, a benchmark of 486 manually annotated failed trajectories from Tau2Bench and SWE-Bench Pro, covering realistic tool-use and coding scenarios. Experiments across diverse agent benchmarks show that TrajDebug achieves the best overall performance over existing baselines, and application studies further demonstrate that its diagnoses provide actionable feedback for improving downstream agent success. We will release the codes and data to facilitate further research.",
-  "abstract_zh": "基于 LLM 的 agentic systems 在复杂任务中展现出强能力，但仍容易出现级联错误且难以调试。关键错误检测旨在定位失败轨迹中最早导致最终失败的错误步骤。该问题面临两大挑战：其一，长轨迹中的判断证据可能分散在相距很远的指令、观察和历史上下文中，使单步错误识别困难；其二，失败轨迹通常包含多个局部错误，但只有部分错误会持续影响最终结果。本文提出 TrajDebug，一个错误生命周期追踪框架，通过多粒度历史压缩和基于证据的错误识别来发现长轨迹错误，并通过追踪每个错误的解决状态与终局影响来完成关键归因。作者还构建了 TrajErrBench，包含来自 Tau2Bench 和 SWE-Bench Pro 的 486 条人工标注失败轨迹，覆盖真实工具使用与代码任务场景。实验表明，TrajDebug 在多种 agent benchmark 上取得最佳整体性能，应用研究也显示其诊断结果能为提升下游 agent 成功率提供可执行反馈。",
+  "abstract_zh": "基于 LLM 的 agentic systems 在复杂任务中表现突出，但仍容易出现级联错误且难以调试。关键错误检测旨在定位失败轨迹中最早导致最终失败的错误步骤。该问题面临两大挑战：一是长轨迹中判断某一步是否出错所需的证据可能分散在遥远的指令、观察和历史上下文中；二是失败轨迹通常包含多个局部错误，它们对后续结果的影响不同，只有部分错误最终真正导致任务失败。本文提出 TrajDebug，一个错误生命周期追踪框架，通过多粒度历史压缩和基于证据的错误识别来发现长轨迹中的错误，并通过追踪每个错误的解决状态与终局影响来完成关键归因。作者进一步构建 TrajErrBench，包含来自 Tau2Bench 和 SWE-Bench Pro 的 486 条人工标注失败轨迹，覆盖真实工具使用与代码场景。实验表明，TrajDebug 在多种 agent benchmark 上整体优于现有基线；应用研究也显示，其诊断结果能为提升下游 Agent 成功率提供可操作反馈。",
   "key_points_zh": [
-    "提出 TrajDebug，将长程 agent 轨迹调试建模为错误生命周期追踪问题，不仅识别局部错误，还判断其是否最终导致任务失败。",
-    "采用多粒度历史压缩机制，缓解长轨迹中关键信息分散、上下文过长导致的错误定位困难。",
-    "通过基于证据的错误识别与错误状态追踪，区分已被修正的局部错误和仍对终局失败有影响的关键错误。",
-    "构建 TrajErrBench，包含 486 条来自 Tau2Bench 与 SWE-Bench Pro 的人工标注失败轨迹，覆盖工具调用和代码修复等真实场景。",
-    "实验显示 TrajDebug 相比现有 baselines 具有更好的整体关键错误检测性能，其诊断结果还能用于指导改进下游 agent。"
+    "提出 TrajDebug，将失败轨迹中的错误视为具有产生、传播、解决或影响终局等阶段的生命周期问题，而不只做单步错误分类。",
+    "通过多粒度历史压缩应对长程轨迹，使模型能在有限上下文中利用分散于指令、观察和先前行为中的证据。",
+    "引入基于证据的错误识别与关键归因机制，区分局部错误和真正导致最终失败的关键错误。",
+    "构建 TrajErrBench，包含 486 条来自 Tau2Bench 与 SWE-Bench Pro 的人工标注失败轨迹，覆盖工具使用和软件工程代码任务。",
+    "在多种 Agent benchmark 上，TrajDebug 相比现有基线取得最佳整体性能，并能产出有助于改进下游 Agent 的可操作诊断。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.92,
+    "domain_fit": 0.91,
     "novelty": 0.77,
-    "problem_significance": 0.85,
+    "problem_significance": 0.86,
     "potential_impact": 0.82,
-    "paradigm_shift": 0.74,
-    "lasting_value": 0.83,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.84,
     "llm_avg": 0.8019999999999999,
-    "comment": "A valuable agent debugging and trace-evaluation framework that targets critical failure attribution in realistic long-horizon tool-use and coding trajectories.",
-    "comment_zh": "这是一项有价值的智能体调试与轨迹评估工作，面向真实长程工具使用和代码任务中的关键失败归因。"
+    "comment": "A strong agent-debugging contribution with reusable trajectory error tracing and annotated failed-agent data.",
+    "comment_zh": "这是一项较强的智能体调试工作，提供可复用的轨迹错误追踪方法和失败轨迹标注数据。"
   },
   "scores": {
     "topic_relevance": 0.92,

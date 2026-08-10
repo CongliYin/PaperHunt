@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.06091",
   "title": "\"I don't know anything about laptops!\" - User Perception of Digital Product Advisors Adapting to Their Knowledge Levels",
-  "title_zh": "“我对笔记本电脑一无所知！”——适应用户知识水平的数字产品顾问之用户感知研究",
+  "title_zh": "“我完全不懂笔记本电脑！”——适应用户知识水平的数字产品顾问之用户感知研究",
   "authors": [
     "Kevin Schott",
     "Andrea Papenmeier",
@@ -17,33 +17,33 @@
     "project_page": null
   },
   "abstract_en": "Conversational commerce uses digital assistants to support the search process and decision-making in e-commerce. Effective communication in these interactions can be facilitated by assistants adapting their communication style to users and supporting shared understanding. An open challenge in this context is adapting the presentation of complex product information to users with varying levels of domain knowledge. To investigate strategies for such knowledge-level adaptation, we set up a chatbot-assisted laptop search scenario. In a between-subjects experiment (n = 251), we examined novice and expert perceptions of product attribute recommendations presented as technical information only (T), or augmented with performance categories (TC), attribute explanations (TE), or both (TCE). For novices, approaches with explanations (TE, TCE) were perceived as more helpful and led to higher perceived learning than those without. Novices also rated the combined approach (TCE) more appropriate than the baseline (T) and TC in terms of information quantity, indicating that explanations are crucial to understand and benefit from performance categories. Critically, experts showed no significant differences across conditions, suggesting that providing supplementary information beneficial to novices did not detract from their experience. We distill these findings into four concrete design guidelines for inclusive text-based product advisors in technical domains: use TCE by default; keep a single inclusive interface; avoid standalone categories; and support user agency and personalize to the stated use case.",
-  "abstract_zh": "本文研究 Conversational Commerce 场景中，数字产品顾问如何根据用户领域知识水平调整复杂产品信息的呈现方式。作者构建了一个 chatbot 辅助的 laptop 搜索任务，并开展组间实验（n=251），比较 novice 与 expert 用户对四种产品属性推荐呈现方式的感知：仅技术信息（T）、技术信息加性能类别（TC）、技术信息加属性解释（TE）、以及三者结合（TCE）。结果显示，对 novice 而言，包含解释的 TE 与 TCE 更有帮助，并带来更高的感知学习效果；TCE 在信息量适当性上也优于 T 与 TC，说明仅给出性能类别不足以帮助新手理解，属性解释是关键。对 expert 而言，不同条件下体验无显著差异，表明为新手补充解释信息并不会损害专家体验。基于结果，论文提出面向技术领域文本式产品顾问的四条设计建议：默认采用 TCE、保持单一包容性界面、避免单独使用类别标签、支持用户主动性并根据使用场景个性化。",
+  "abstract_zh": "本文研究 conversational commerce 中数字助手如何根据用户领域知识水平调整复杂产品信息的呈现方式。作者构建了一个 chatbot 辅助的 laptop 搜索场景，并开展组间实验（n=251），比较新手与专家用户对四种产品属性推荐呈现方式的感知：仅技术信息（T）、技术信息加性能类别（TC）、技术信息加属性解释（TE）、以及三者结合（TCE）。结果显示，对新手而言，包含解释的 TE 与 TCE 更有帮助，并带来更高的感知学习效果；同时，新手认为 TCE 的信息量比 T 和 TC 更合适，说明属性解释是理解并受益于性能类别的关键。对专家而言，不同条件之间没有显著差异，表明为新手补充解释性信息并不会损害专家体验。基于这些发现，论文提出四条面向技术领域文本型产品顾问的包容性设计准则：默认使用 TCE；保持单一包容界面；避免单独使用性能类别；支持用户主动性并根据其使用场景个性化推荐。",
   "key_points_zh": [
-    "研究聚焦 e-commerce 中的 conversational product advisor，探讨其如何适配 novice 与 expert 的不同知识水平。",
-    "实验比较 T、TC、TE、TCE 四种 laptop 属性推荐呈现方式，评估帮助性、学习感、信息量适当性等用户感知。",
-    "novice 用户明显受益于属性解释：TE 与 TCE 比无解释方案更有帮助，并提升 perceived learning。",
-    "单独加入 performance categories（TC）效果有限；只有与解释结合时，类别信息才更容易被新手理解和利用。",
-    "expert 用户对额外解释和类别信息无显著负面反应，支持采用单一 inclusive interface，而非为不同知识水平维护完全分离的界面。"
+    "研究聚焦电商 conversational commerce 中，chatbot 产品顾问如何向不同知识水平用户呈现复杂技术属性。",
+    "实验比较 T、TC、TE、TCE 四种推荐信息格式，发现新手明显更偏好包含属性解释的 TE 和 TCE。",
+    "性能类别若缺少解释，单独加入并不能充分帮助新手；TCE 被认为信息量更合适。",
+    "专家用户在四种条件下体验无显著差异，说明面向新手的补充解释不会降低专家满意度。",
+    "论文提出设计建议：默认采用技术信息、性能类别与解释结合的 TCE，并通过单一包容界面支持个性化与用户主动选择。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.9,
-    "novelty": 0.62,
-    "problem_significance": 0.78,
-    "potential_impact": 0.74,
-    "paradigm_shift": 0.45,
-    "lasting_value": 0.72,
-    "llm_avg": 0.6619999999999999,
-    "comment": "A well-scoped HCI study for product advisors that offers practical guidance for adapting technical product explanations to user expertise.",
-    "comment_zh": "这是一项面向商品导购助手的扎实 HCI 研究，为按用户知识水平呈现技术商品信息提供了实用设计建议。"
+    "domain_fit": 0.94,
+    "novelty": 0.66,
+    "problem_significance": 0.82,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.48,
+    "lasting_value": 0.74,
+    "llm_avg": 0.692,
+    "comment": "A well-grounded guided-shopping HCI study offering practical design guidance for product advisors adapting explanations to shopper knowledge levels.",
+    "comment_zh": "这是一项扎实的导购型人机交互研究，为根据用户知识水平调整商品解释的产品顾问提供了实用设计建议。"
   },
   "scores": {
-    "topic_relevance": 0.8400000000000001,
+    "topic_relevance": 0.88,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.3233158463485474,
+    "author_reputation": 0.3315497212666585,
     "venue_signal": 0.0,
     "generality": 0.65,
-    "llm_assessment": 0.6619999999999999,
+    "llm_assessment": 0.692,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -53,8 +53,8 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": 2,
-    "first_author_found": true,
+    "first_author_h_index": null,
+    "first_author_found": false,
     "first_author_affiliations": [],
     "last_author_h_index": 3,
     "last_author_found": true,

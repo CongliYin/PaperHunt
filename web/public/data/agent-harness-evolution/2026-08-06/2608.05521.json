@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.05521",
   "title": "Reasoning from Traces: Divergence-Guided Agentic Repair of WebAssembly Discrepancies",
-  "title_zh": "基于执行轨迹推理：用分歧引导的 Agent 自动修复 WebAssembly 差异",
+  "title_zh": "从执行轨迹推理：基于分歧引导的 WebAssembly 差异智能体修复",
   "authors": [
     "Liyan Huang",
     "Kaicheng Wang",
@@ -16,33 +16,33 @@
     "project_page": null
   },
   "abstract_en": "WebAssembly (Wasm) promises seamless reuse of C/C++ codebases as portable, fast, sandboxed binaries. In practice, however, this promise often falls short: recent studies show that cross-compiling the same C/C++ source to Wasm and native binaries frequently leads to runtime discrepancies, owing to library implementation differences or compiler bugs. Since the root causes lie in the platform-level runtime and are hidden beneath the source code, even state-of-the-art LLM-based repair agents often fail to fix these discrepancies. In this paper, we present WasmMend, the first system to automatically repair Native-Wasm functional discrepancies. WasmMend converts the undirected exploration to a focused reasoning task in two stages: First, a novel differential trace analysis approach localizes the function where Wasm and native executions initially diverge; guided by this localization, LLM agents then reason about the root causes and generate patches that eliminate the divergent behavior. Experiments on real-world C/C++ projects show that WasmMend achieves a fix rate of 70.0%, compared to 50.2% for the agentic baseline and 54.5\\% for the approach augmented with repair-time LLM-based instrumentation, demonstrating the value of divergence-guided reasoning for cross-platform repair.",
-  "abstract_zh": "WebAssembly（Wasm）旨在让 C/C++ 代码以可移植、高性能、沙箱化二进制形式复用，但现实中，同一 C/C++ 源码交叉编译为 Wasm 与 native 二进制后常出现运行时行为差异，原因包括库实现差异和编译器缺陷。由于根因位于平台级运行时、隐藏在源码之下，现有基于 LLM 的修复 agent 往往难以定位并修复。本文提出 WasmMend，这是首个自动修复 Native-Wasm 功能差异的系统。WasmMend 将无目标的探索转化为聚焦推理任务：首先通过新的 differential trace analysis 定位 Wasm 与 native 执行首次发生分歧的函数；随后由 LLM agents 基于该定位推理根因并生成补丁，以消除差异行为。在真实 C/C++ 项目上的实验表明，WasmMend 达到 70.0% 的修复率，优于 agentic baseline 的 50.2% 和加入修复期 LLM instrumentation 的 54.5%，验证了分歧引导推理在跨平台修复中的价值。",
+  "abstract_zh": "WebAssembly（Wasm）旨在将 C/C++ 代码库以可移植、高性能、沙箱化二进制形式无缝复用。但实践中，同一 C/C++ 源码交叉编译为 Wasm 与 native 二进制后，常因库实现差异或编译器 bug 出现运行时功能不一致。由于根因隐藏在平台级运行时之下，仅从源代码出发的现有 LLM 修复智能体往往难以定位和修复。本文提出 WasmMend，这是首个自动修复 Native-Wasm 功能差异的系统。WasmMend 将无方向探索转化为聚焦推理任务：首先通过新的差分执行轨迹分析定位 Wasm 与 native 执行首次发生分歧的函数；随后由 LLM agents 基于该定位推理根因并生成补丁，以消除分歧行为。在真实 C/C++ 项目上的实验表明，WasmMend 达到 70.0% 的修复率，高于 agentic baseline 的 50.2% 和加入修复期 LLM instrumentation 的 54.5%，证明了分歧引导推理在跨平台修复中的价值。",
   "key_points_zh": [
-    "问题聚焦于同一 C/C++ 程序在 native 与 WebAssembly 编译运行后产生的功能差异，这类差异通常源自运行时库实现或编译器问题，难以从源码层面直接发现。",
-    "WasmMend 提出 differential trace analysis，通过比较 native 与 Wasm 执行轨迹，定位首次发生行为分歧的函数，将修复任务从开放式搜索收缩为局部化推理。",
-    "在定位结果指导下，LLM agents 进一步分析分歧根因并生成代码补丁，用于消除 Native-Wasm 之间的不一致行为。",
-    "真实 C/C++ 项目实验显示，WasmMend 修复率为 70.0%，显著高于 agentic baseline 的 50.2%，也优于加入修复期 LLM-based instrumentation 的 54.5%。",
-    "核心贡献在于证明：相比让 LLM agent 盲目探索，基于执行轨迹分歧的结构化证据能更有效支撑跨平台程序修复。"
+    "问题聚焦于同一 C/C++ 程序在 native 与 WebAssembly 编译运行后产生的功能差异，根因通常来自运行时库差异或编译器 bug，而非显式源代码错误。",
+    "提出 WasmMend，首个面向 Native-Wasm functional discrepancies 的自动修复系统，将修复过程从盲目搜索转为基于执行分歧的定向推理。",
+    "核心技术是 differential trace analysis：比较 native 与 Wasm 执行轨迹，定位两者首次发生行为分歧的函数，为后续 LLM agents 提供高价值上下文。",
+    "LLM agents 在定位结果引导下分析平台级根因并生成补丁，从而修复由跨平台语义差异导致的错误行为。",
+    "在真实 C/C++ 项目实验中，WasmMend 修复率为 70.0%，显著优于 agentic baseline 的 50.2% 和带 LLM instrumentation 的 54.5%。"
   ],
   "llm_assessment": {
     "domain_fit": 0.82,
-    "novelty": 0.72,
-    "problem_significance": 0.76,
-    "potential_impact": 0.73,
-    "paradigm_shift": 0.64,
-    "lasting_value": 0.7,
-    "llm_avg": 0.71,
-    "comment": "A relevant coding-agent repair system that uses differential execution traces to guide agentic patch generation for Native-Wasm discrepancies.",
-    "comment_zh": "这是一项相关的代码智能体修复系统，利用差分执行轨迹引导智能体生成 Native-Wasm 差异补丁。"
+    "novelty": 0.7,
+    "problem_significance": 0.72,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.64,
+    "llm_avg": 0.6580000000000001,
+    "comment": "A relevant coding-agent repair system that uses differential traces to focus agent reasoning for cross-platform fixes.",
+    "comment_zh": "这是一项相关的代码智能体修复系统，利用差分轨迹引导智能体进行跨平台缺陷修复。"
   },
   "scores": {
     "topic_relevance": 0.36000000000000004,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.4996072807374295,
+    "author_reputation": 0.36228269883744174,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.71,
+    "llm_assessment": 0.6580000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -55,8 +55,8 @@
     "first_author_h_index": 5,
     "first_author_found": true,
     "first_author_affiliations": [],
-    "last_author_h_index": 7,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": [

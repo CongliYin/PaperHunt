@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.05886",
   "title": "CodeGrep: An RL-Trained Retrieval Agent for LLM Coding Agents",
-  "title_zh": "CodeGrep：面向 LLM 编码 Agent 的强化学习检索 Agent",
+  "title_zh": "CodeGrep：面向 LLM 编程 Agent 的强化学习检索 Agent",
   "authors": [
     "Wuya Chen",
     "Yihao yang",
@@ -17,33 +17,33 @@
     "project_page": null
   },
   "abstract_en": "Modern LLM coding agents such as Claude Code and OpenHands share a common inefficiency: they spend much of their token budget finding the file to patch, rather than patching it. On SWE-Bench Verified, a 30B OpenHands agent averages 23 rounds and 631K tokens per resolved issue, with many calls spent on grep, glob, and view_file during repository exploration. We introduce CodeGrep, a 14B retrieval agent trained end-to-end with GRPO to issue multi-turn parallel grep, glob, and read tool calls and return candidate files to a frozen downstream coding agent. On all 500 SWE-Bench Verified instances, CodeGrep preserves resolve rate while substantially improving efficiency: 27.0% versus 25.8% for the no-retrieval baseline, with 15% fewer rounds and 19% fewer tokens on resolved instances. Across retrievers, downstream utility follows a precision threshold: BM25 with precision 0.375 degrades the agent, Jina with precision 0.445 is neutral, and CodeGrep with precision 0.677 crosses the threshold at which retrieval begins to reduce rollout cost. To enable this study, we mine supervision from 67K open-source agent trajectories using CATM and build a Git-worktree environment for multi-turn agent RL. In our setting, applying the efficiency signal at the advantage layer rather than the reward layer reduces KL drift and translates cleanly into downstream efficiency. We will release the model, training pipeline, RL environment, and evaluation harnesses.",
-  "abstract_zh": "现代 LLM 编码 Agent（如 Claude Code 和 OpenHands）存在一个共同低效点：大量 token 预算花在定位需要修改的文件上，而不是实际修复代码。论文提出 CodeGrep，一个 14B 检索 Agent，通过 GRPO 端到端训练，能够多轮并行调用 grep、glob 和 read 工具，并将候选文件返回给冻结的下游编码 Agent。在 SWE-Bench Verified 全部 500 个实例上，CodeGrep 在保持修复率的同时显著提升效率：修复率为 27.0%，略高于无检索 baseline 的 25.8%；在已解决实例上，交互轮数减少 15%，token 使用减少 19%。论文还发现检索器对下游 Agent 的帮助存在 precision 阈值：BM25 precision 为 0.375 会损害性能，Jina precision 为 0.445 基本中性，而 CodeGrep precision 达到 0.677 后开始显著降低 rollout 成本。为支撑研究，作者从 67K 条开源 Agent 轨迹中用 CATM 挖掘监督信号，并构建了支持多轮 Agent RL 的 Git-worktree 环境。此外，在该设置中，将效率信号施加到 advantage 层而非 reward 层，可减少 KL drift，并更稳定地转化为下游效率提升。",
+  "abstract_zh": "现代 LLM 编程 Agent（如 Claude Code 和 OpenHands）存在一个共同低效点：大量 token 预算被用于在代码仓库中定位需要修改的文件，而不是实际修复代码。在 SWE-Bench Verified 上，一个 30B OpenHands Agent 每个成功解决的问题平均需要 23 轮交互和 631K tokens，其中许多调用花在 grep、glob 和 view_file 等仓库探索工具上。本文提出 CodeGrep，一个 14B 检索 Agent，通过 GRPO 进行端到端训练，能够执行多轮并行 grep、glob 和 read 工具调用，并将候选文件返回给冻结的下游编程 Agent。在全部 500 个 SWE-Bench Verified 实例上，CodeGrep 在保持解决率的同时显著提升效率：解决率为 27.0%，相比无检索基线的 25.8% 略有提升；在已解决实例上，交互轮数减少 15%，token 数减少 19%。跨检索器实验显示，下游效用存在 precision 阈值：BM25 的 precision 为 0.375，会损害 Agent 表现；Jina 的 precision 为 0.445，效果基本中性；CodeGrep 的 precision 为 0.677，超过了检索开始降低 rollout 成本的阈值。为支持该研究，作者使用 CATM 从 67K 条开源 Agent 轨迹中挖掘监督信号，并构建了用于多轮 Agent 强化学习的 Git-worktree 环境。在该设定中，将效率信号施加在 advantage 层而非 reward 层，可减少 KL drift，并更稳定地转化为下游效率提升。作者计划发布模型、训练流水线、RL 环境和评测工具。",
   "key_points_zh": [
-    "CodeGrep 将“找文件”从下游编码 Agent 中剥离出来，作为独立 14B 检索 Agent，通过多轮并行 grep、glob、read 调用返回候选文件。",
-    "在 SWE-Bench Verified 500 个任务上，CodeGrep 修复率 27.0%，略高于无检索 baseline 的 25.8%，同时已解决任务的轮数减少 15%、token 减少 19%。",
-    "论文揭示检索 precision 存在下游效用阈值：低精度 BM25 会拖累 Agent，中等精度 Jina 基本持平，高精度 CodeGrep 才能稳定降低 rollout 成本。",
-    "作者从 67K 条开源 Agent trajectories 中使用 CATM 挖掘监督数据，并构建 Git-worktree 多轮强化学习环境，用于训练和评估检索 Agent。",
-    "训练上，论文发现将效率信号作用于 advantage 层而不是 reward 层，可以降低 KL drift，并更好地带来实际下游效率收益。"
+    "CodeGrep 是一个 14B retrieval agent，专门为 LLM coding agents 在大型代码仓库中定位候选补丁文件，减少 grep、glob、read 等探索开销。",
+    "在 SWE-Bench Verified 全量 500 个实例上，CodeGrep 将解决率从无检索基线的 25.8% 提升到 27.0%，同时在已解决任务上减少 15% 交互轮数和 19% tokens。",
+    "实验发现检索器需要达到一定 precision 才能提升下游 Agent 效率：BM25 会拖累性能，Jina 基本持平，而 CodeGrep 的 precision 0.677 足以降低 rollout 成本。",
+    "训练数据来自 67K 条开源 Agent 轨迹，作者使用 CATM 挖掘监督信号，并构建 Git-worktree 多轮 RL 环境支持工具调用式训练。",
+    "方法上，论文强调将效率信号加入 advantage 层而非 reward 层，可降低 KL drift，并更好地转化为实际下游效率收益。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.97,
+    "domain_fit": 0.98,
     "novelty": 0.84,
-    "problem_significance": 0.89,
-    "potential_impact": 0.88,
-    "paradigm_shift": 0.82,
+    "problem_significance": 0.9,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.8,
     "lasting_value": 0.88,
-    "llm_avg": 0.8619999999999999,
-    "comment": "Excellent coding-agent and search-agent work combining mined trajectories, a Git environment, RL training, and an evaluation harness for efficient repository retrieval.",
-    "comment_zh": "这是一篇优秀的代码与搜索智能体论文，结合了轨迹挖掘、Git 环境、强化学习训练和评测框架来提升仓库检索效率。"
+    "llm_avg": 0.8640000000000001,
+    "comment": "Excellent coding-agent infrastructure work combining RL-trained retrieval, trajectory mining, a Git-worktree environment, and evaluation harnesses.",
+    "comment_zh": "这是一篇优秀的代码智能体基础设施论文，结合了强化学习检索、轨迹挖掘、Git 工作树环境和评测框架。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
     "open_source": 0.2,
     "community_heat": 0.0,
-    "author_reputation": 0.2876491876228333,
+    "author_reputation": 0.42394726488792855,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.8619999999999999,
+    "llm_assessment": 0.8640000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -53,11 +53,11 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": null,
-    "first_author_found": false,
+    "first_author_h_index": 10,
+    "first_author_found": true,
     "first_author_affiliations": [],
-    "last_author_h_index": 2,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": [

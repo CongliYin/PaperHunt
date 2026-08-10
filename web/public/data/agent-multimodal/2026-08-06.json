@@ -2,12 +2,12 @@
   "domain": "agent-multimodal",
   "display_name": "Realtime Multimodal Agent",
   "date": "2026-08-06",
-  "generated_at": "2026-08-07T20:59:56Z",
+  "generated_at": "2026-08-10T03:41:30Z",
   "papers": [
     {
       "arxiv_id": "2608.05703",
       "title": "StreamArena: Toward Continuous, Interactive, and Long-Horizon Agentic Streaming Video Understanding",
-      "title_zh": "StreamArena：迈向连续、交互式、长时程的智能体流式视频理解",
+      "title_zh": "StreamArena：面向连续、交互式、长时程智能体流式视频理解",
       "authors": [
         "Xichen Zhang",
         "Guankai Li",
@@ -19,17 +19,18 @@
         "Yuan Lu",
         "Jiaya Jia"
       ],
-      "total_score": 0.6885707656352362,
+      "total_score": 0.7189988050753718,
       "scores": {
         "topic_relevance": 0.92,
-        "llm_assessment": 0.8720000000000001,
-        "domain_fit": 0.97,
-        "other": 0.1965692187841204
+        "llm_assessment": 0.8560000000000001,
+        "domain_fit": 0.96,
+        "other": 0.3139960169179059
       },
       "tags": [
+        "HF Daily ★3",
         "realtime video agent"
       ],
-      "tldr_zh": "小时级流式视频理解新基准与双层智能体",
+      "tldr_zh": "小时级交互流视频理解新基准与架构",
       "detail_file": "agent-multimodal/2026-08-06/2608.05703.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.05703/thumb.webp"
     },
@@ -43,18 +44,18 @@
         "Lai Wei",
         "Chaochao Lu"
       ],
-      "total_score": 0.6699575670951992,
+      "total_score": 0.6591000000000001,
       "scores": {
         "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.7620000000000001,
+        "llm_assessment": 0.7520000000000001,
         "domain_fit": 0.72,
-        "other": 0.3511918903173302
+        "other": 0.325
       },
       "tags": [
         "GitHub",
         "visual tool workflows"
       ],
-      "tldr_zh": "视觉工具常被调用，却未必真正影响答案",
+      "tldr_zh": "视觉工具常被调用，却未真正因果生效",
       "detail_file": "agent-multimodal/2026-08-06/2608.06270.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.06270/thumb.webp"
     }

@@ -78,24 +78,24 @@
     "project_page": null
   },
   "abstract_en": "Most agent benchmarks evaluate tasks independently and cannot measure whether experience from one task helps with later tasks. Existing self-evolution benchmarks do not jointly cover professional workflows, open-ended deliverables, and multi-aspect evaluation. We introduce FinEvo-Bench, a longitudinal benchmark with 120 real-case-grounded tasks, 20 business scenes across six financial domains. Institution-provided professional procedures define the required operations and constraints. Eligible institution-provided and publicly documented cases supply the task facts. Each scene contains six related but substantively distinct cases that share a professional procedure and a manually reviewed rubric for task quality and financial compliance. We compare four self-evolving agent scaffolds using the same Qwen3.7-Max backbone and three independently shuffled, globally interleaved task streams. Paired non-evolving controls estimate each scaffold's self-evolution gain from retained experience, while an independent Claude Code scoring agent backed by Claude Opus 4.6 evaluates all outputs. Letta achieves the highest evolved score (91.65) and fewest compliance issues (0.09 per task); Codex achieves the largest self-evolution gain (+19.37). Across scaffolds, the evolving condition raises scores by 9.33-19.37 points and reduces compliance issues by 0.12-0.44 per task. Paired score gains at within-scene ranks 4-6 exceed those at ranks 1-3 by 6.10-8.70 points. In Claude Code, skill-only evolution produces higher task quality and fewer compliance issues than memory-only and combined memory-skill evolution. Across all four scaffolds, rubric feedback also yields higher scores and fewer compliance issues than reference-answer feedback. FinEvo-Bench measures both professional performance and self-evolution ability: how effectively an agent turns prior experience into later improvement.",
-  "abstract_zh": "本文提出 FinEvo-Bench，一个用于评估自进化 Agent 在专业金融工作流中能否将先前经验转化为后续能力提升的纵向基准。不同于多数只独立评测单任务的 Agent benchmark，FinEvo-Bench 覆盖 6 个金融领域、20 个业务场景、120 个基于真实案例的任务；每个场景包含 6 个相关但实质不同的案例，共享由金融机构提供的专业流程，并配套人工审核的任务质量与金融合规性评分 rubric。作者使用相同的 Qwen3.7-Max backbone，对 4 种自进化 agent scaffolds 进行比较，并构造 3 条独立打乱、全局交错的任务流；同时设置非进化对照组以估计保留经验带来的自进化收益。所有输出由基于 Claude Opus 4.6 的 Claude Code scoring agent 评估。实验显示，Letta 获得最高进化后得分 91.65，且合规问题最少；Codex 获得最大自进化增益 +19.37。总体上，自进化条件带来 9.33–19.37 分提升，并使每任务合规问题减少 0.12–0.44。场景内后半段任务的收益显著高于前半段，说明经验积累确实改善后续表现。",
+  "abstract_zh": "本文提出 FinEvo-Bench，一个用于评估自进化 Agent 是否能将历史任务经验转化为后续任务改进的纵向基准。不同于多数将任务独立评测的 Agent benchmark，FinEvo-Bench 覆盖专业金融工作流、开放式交付物与多维度评估。该基准包含 120 个基于真实案例的任务，覆盖六大金融领域中的 20 个业务场景；每个场景包含 6 个相关但实质不同的案例，共享由机构提供的专业流程与人工审阅的质量、金融合规 rubric。作者在相同 Qwen3.7-Max backbone 下比较四种自进化 Agent scaffold，并使用三组独立打乱、全局交错的任务流进行测试；同时设置非进化对照以估计保留经验带来的自进化收益，所有输出由基于 Claude Opus 4.6 的 Claude Code 评分 Agent 独立评估。结果显示，Letta 获得最高进化后得分 91.65 且合规问题最少，每任务 0.09 个；Codex 获得最大自进化收益 +19.37。总体上，自进化使得分提升 9.33 到 19.37 分，并将每任务合规问题减少 0.12 到 0.44 个。场景内第 4 到 6 个任务的配对得分增益比第 1 到 3 个任务高 6.10 到 8.70 分，表明经验积累带来后续收益。进一步实验表明，在 Claude Code 中，仅技能进化优于仅记忆进化及记忆-技能联合进化；rubric feedback 也比 reference-answer feedback 带来更高得分和更少合规问题。",
   "key_points_zh": [
-    "FinEvo-Bench 强调纵向评测：不只看单次任务表现，而是衡量 Agent 是否能从早期金融任务经验中学习，并在后续相关任务中提升。",
-    "基准包含 120 个真实案例驱动任务，覆盖 6 个金融领域、20 个业务场景；任务事实来自机构提供或公开记录，流程和约束由金融机构专业程序定义。",
-    "评测同时关注任务质量与金融合规性，每个场景都有人工审核的 rubric，并由基于 Claude Opus 4.6 的 Claude Code scoring agent 统一评分。",
-    "在相同 Qwen3.7-Max backbone 下，4 种自进化 scaffold 均显著优于非进化对照，得分提升 9.33–19.37，合规问题也同步减少。",
-    "实验发现 skill-only evolution 优于 memory-only 与 memory-skill combined evolution；rubric feedback 也比 reference-answer feedback 更能提升质量并减少合规风险。"
+    "FinEvo-Bench 是面向金融专业工作流的纵向 benchmark，包含 120 个真实案例任务、20 个业务场景和六大金融领域，专门衡量 Agent 从先前任务中学习并改进后续任务的能力。",
+    "每个场景的任务共享机构提供的专业流程与人工审阅 rubric，评估维度同时覆盖任务质量与金融合规性，适合检验开放式金融交付物中的真实业务约束。",
+    "在相同 Qwen3.7-Max backbone 下，四种自进化 Agent scaffold 均显著优于非进化对照：得分提升 9.33 到 19.37 分，每任务合规问题减少 0.12 到 0.44 个。",
+    "Letta 获得最高进化后得分 91.65 且合规问题最少；Codex 的自进化收益最大，达到 +19.37，说明不同 scaffold 在经验利用方式上差异明显。",
+    "实验显示，后期同场景任务的收益更大；在 Claude Code 中，仅技能进化优于记忆-only 与记忆-技能联合进化，rubric feedback 也优于 reference-answer feedback。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.78,
+    "domain_fit": 0.74,
     "novelty": 0.68,
-    "problem_significance": 0.74,
-    "potential_impact": 0.69,
-    "paradigm_shift": 0.65,
-    "lasting_value": 0.72,
-    "llm_avg": 0.696,
-    "comment": "The benchmark is in scope because it measures longitudinal self-evolution, though its financial vertical focus limits generality.",
-    "comment_zh": "该基准因衡量长期自演化能力而属于本领域，但金融垂直场景限制了其通用性。"
+    "problem_significance": 0.68,
+    "potential_impact": 0.62,
+    "paradigm_shift": 0.6,
+    "lasting_value": 0.7,
+    "llm_avg": 0.656,
+    "comment": "A domain-specific but useful longitudinal benchmark for measuring self-evolving agent memory and skill gains.",
+    "comment_zh": "这是一个偏垂直领域但有用的纵向基准，用于衡量自演化智能体的记忆和技能收益。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
@@ -104,7 +104,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.35,
-    "llm_assessment": 0.696,
+    "llm_assessment": 0.656,
     "domain_multiplier": 1.0
   },
   "enriched": {
