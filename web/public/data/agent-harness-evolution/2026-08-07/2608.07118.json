@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.07118",
   "title": "How Much, Then Where: Credit-Conserving Action-to-Token Allocation for Multi-Turn Agent Reinforcement Learning",
-  "title_zh": "多少、然后到哪：面向多轮 Agent 强化学习的保信用 Action-to-Token 分配",
+  "title_zh": "How Much, Then Where：面向多轮智能体强化学习的信用守恒动作到 Token 分配",
   "authors": [
     "Lichao Ma",
     "Yang Sun",
@@ -25,24 +25,24 @@
     "project_page": null
   },
   "abstract_en": "Credit assignment in multi-turn agent reinforcement learning operates at two levels: assigning trajectory-level credit to actions and distributing each action's credit across its tokens. In this paper, we introduce FACTOR, which separates these decisions. FACTOR uses checkpoint-calibrated TD residuals to assign per-action credits that telescope to the trajectory advantage, and feedback-conditioned teacher-student likelihood gaps to allocate each credit across the realized action tokens. Per-action normalization preserves the action-average coefficient and prevents token-level sign flips. We pair this construction with an action-mean reduction, removing the implicit dependence of an action's scalar surrogate weight on its token length. At the behavior policy and before clipping, each action's inner action-mean surrogate equals its TD credit. FACTOR consistently improves over competitive baselines across ALFWorld, WebShop, and ScienceWorld, with every environment-seed comparison favoring FACTOR and the largest gains emerging on the longest-horizon environment. The same hyperparameters transfer without retuning to a larger backbone and to a different model family. Ablations identify TD action credit as the dominant driver of the improvement, with hindsight token allocation contributing complementary gains.",
-  "abstract_zh": "本文研究多轮 Agent 强化学习中的 credit assignment 问题：既要把轨迹级信用分配给各个 action，也要把每个 action 的信用进一步分配到其生成的 token 上。作者提出 FACTOR，将这两个决策解耦。FACTOR 使用经过 checkpoint 校准的 TD residuals 为每个 action 分配信用，并保证这些 action 信用可望远镜式相加为整体 trajectory advantage；随后利用基于反馈条件的 teacher-student likelihood gaps，将每个 action 的信用分配到实际生成的 action tokens 上。其 per-action normalization 保持 action-average 系数并避免 token 级符号翻转；同时采用 action-mean reduction，消除 action 的标量 surrogate 权重对 token 长度的隐式依赖。在 behavior policy 且 clipping 之前，每个 action 的内部 action-mean surrogate 等于其 TD credit。实验表明，FACTOR 在 ALFWorld、WebShop 和 ScienceWorld 上稳定优于强基线，所有 environment-seed 对比均支持 FACTOR，并且在最长视野任务上收益最大。相同超参数还能无须重新调参迁移到更大的 backbone 和不同模型家族。消融显示，TD action credit 是性能提升的主要来源，而 hindsight token allocation 提供互补增益。",
+  "abstract_zh": "本文研究多轮智能体强化学习中的信用分配问题：一方面需要将轨迹级信用分配给各个动作，另一方面还要把每个动作的信用进一步分配到其生成的 token 上。作者提出 FACTOR，将“每个动作应得多少信用”和“信用应分配到哪些 token”解耦。FACTOR 使用经过 checkpoint 校准的 TD residuals 为每个动作分配信用，并保证这些动作信用可望远镜式累加为轨迹 advantage；随后利用基于反馈条件的 teacher-student likelihood gaps，将动作信用分配到实际生成的动作 token 上。其逐动作归一化保持动作平均系数不变，并避免 token 级符号翻转。同时，FACTOR 采用 action-mean reduction，消除动作标量 surrogate weight 对 token 长度的隐式依赖。在 behavior policy 且 clipping 前，每个动作内部的 action-mean surrogate 等于其 TD credit。实验表明，FACTOR 在 ALFWorld、WebShop 和 ScienceWorld 上稳定优于强基线，所有 environment-seed 对比均偏向 FACTOR，且在最长视野任务中收益最大。相同超参数还能无需重新调参迁移到更大 backbone 和不同模型家族。消融实验显示，TD action credit 是性能提升的主要来源，而 hindsight token allocation 提供互补增益。",
   "key_points_zh": [
-    "提出 FACTOR，将多轮 Agent RL 中的 action-level credit assignment 与 token-level credit allocation 解耦处理。",
-    "使用 checkpoint-calibrated TD residuals 分配 per-action credits，并保证其总和与 trajectory advantage 一致。",
-    "通过 feedback-conditioned teacher-student likelihood gaps 将 action 信用分配到已生成 tokens，同时用 per-action normalization 避免 token 级符号翻转。",
-    "引入 action-mean reduction，去除 surrogate 权重对 action token 长度的隐式依赖，使 behavior policy 下 action-mean surrogate 等于 TD credit。",
-    "在 ALFWorld、WebShop、ScienceWorld 上全面优于强基线；超参数可迁移到更大 backbone 和不同模型家族，消融表明 TD action credit 是主要贡献。"
+    "提出 FACTOR，将多轮智能体 RL 中的信用分配拆成两步：先决定每个动作获得多少 TD credit，再决定该信用如何分摊到动作 token。",
+    "通过 checkpoint-calibrated TD residuals 分配逐动作信用，并保证动作信用总和与轨迹 advantage 一致，实现信用守恒。",
+    "利用 feedback-conditioned teacher-student likelihood gaps 做 hindsight token allocation，同时逐动作归一化以避免 token 级符号翻转。",
+    "采用 action-mean reduction，消除 token 长度对动作 surrogate weight 的隐式影响，使动作级训练信号更稳定。",
+    "在 ALFWorld、WebShop、ScienceWorld 上全面优于竞争基线，并能在更大 backbone 和不同模型家族上无需重新调参迁移。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.96,
+    "domain_fit": 0.95,
     "novelty": 0.82,
-    "problem_significance": 0.89,
-    "potential_impact": 0.85,
-    "paradigm_shift": 0.79,
-    "lasting_value": 0.83,
+    "problem_significance": 0.88,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.84,
     "llm_avg": 0.836,
-    "comment": "FACTOR targets a central bottleneck in multi-turn agent RL by cleanly separating action-level and token-level credit allocation.",
-    "comment_zh": "FACTOR 针对多轮智能体强化学习的核心瓶颈，将动作级与 token 级信用分配清晰分离。"
+    "comment": "A strong multi-turn agent RL contribution that cleanly separates action-level and token-level credit assignment for long-horizon environments.",
+    "comment_zh": "这是一篇较强的多轮智能体强化学习论文，清晰地区分了动作级与 token 级信用分配。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,

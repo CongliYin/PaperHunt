@@ -17,24 +17,24 @@
     "project_page": null
   },
   "abstract_en": "Recent agentic reinforcement learning methods use hindsight to complement sparse outcome rewards. However, a completed rollout can yield many such signals, leaving their appropriate allocation across turns unclear. We introduce TRIAL, a trajectory-relative hindsight distillation framework with a unified turn-aligned scoring protocol. For each decision turn, TRIAL extracts an outcome view of that decision's realized consequence and evaluates the same response under ordinary and hindsight-conditioned contexts. The signed log-probability gap determines the direction and local strength of token-level supervision, while turn-level magnitudes are normalized jointly over the realized trajectory. The resulting allocation multipliers have an eligible-token-weighted mean of one, redistributing dense supervision across turns while fixing its average multiplier. Experiments on WebShop and ALFWorld with different backbones show that TRIAL outperforms GRPO across all eight combinations of backbone, environment, and evaluation metric, while achieving the best or tied-best performance among six methods on six of them. On WebShop with Qwen3-1.7B, TRIAL improves the success rate from 56.4% to 75.2% and the task score from 78.7% to 85.7%. Controlled ablations further show that trajectory-relative turn allocation provides substantial gains beyond those of dense hindsight distillation alone.",
-  "abstract_zh": "近期的 agentic reinforcement learning 方法利用后见信息（hindsight）来补充稀疏的结果奖励，但一次完整 rollout 往往会产生多个后见监督信号，如何将这些信号合理分配到不同决策轮次仍不明确。本文提出 TRIAL，一个轨迹相对的后见蒸馏框架，并设计了统一的、与决策轮次对齐的评分协议。对每个决策轮次，TRIAL 提取该决策实际后果的 outcome view，并在普通上下文与后见条件上下文中评估同一响应；带符号的 log-probability gap 决定 token 级监督的方向与局部强度，而轮次级幅度则在已实现轨迹内联合归一化。由此得到的分配乘子在 eligible-token 加权均值上保持为 1，从而在固定平均监督强度的同时，将稠密监督重新分配到各轮次。实验在 WebShop 和 ALFWorld 上使用不同 backbone，结果显示 TRIAL 在 backbone、环境与评估指标的 8 种组合中均优于 GRPO，并在 6 种方法对比中于其中 6 项取得最佳或并列最佳表现。在 WebShop + Qwen3-1.7B 上，TRIAL 将成功率从 56.4% 提升到 75.2%，任务分数从 78.7% 提升到 85.7%。消融实验进一步表明，轨迹相对的轮次分配相比单纯的稠密后见蒸馏带来了显著额外收益。",
+  "abstract_zh": "近期的智能体强化学习方法利用后见信息（hindsight）来补充稀疏的最终结果奖励，但一次完整 rollout 往往会产生多个后见监督信号，如何将这些信号合理分配到不同决策轮次仍不清晰。本文提出 TRIAL，一个轨迹相对的后见蒸馏框架，并设计了统一的按轮次对齐评分协议。对于每个决策轮次，TRIAL 提取该决策实际后果的 outcome view，并在普通上下文与后见条件上下文下评估同一响应。两者的带符号 log-probability gap 决定 token 级监督的方向与局部强度，同时在整条已实现轨迹上联合归一化轮次级幅度。由此得到的分配乘子在 eligible-token 加权意义下均值为 1，能够在保持平均监督强度不变的同时，在不同轮次间重新分配密集监督。WebShop 与 ALFWorld 上、不同 backbone 的实验表明，TRIAL 在所有 8 种 backbone、环境与评估指标组合中均优于 GRPO，并在 6 种组合上达到六种方法中的最佳或并列最佳表现。在 WebShop + Qwen3-1.7B 上，TRIAL 将成功率从 56.4% 提升到 75.2%，任务得分从 78.7% 提升到 85.7%。受控消融进一步证明，轨迹相对的轮次分配相比单纯密集后见蒸馏带来额外显著收益。",
   "key_points_zh": [
-    "提出 TRIAL：一种 trajectory-relative hindsight distillation 框架，用于解决多轮 agentic RL 中后见监督信号在不同决策轮次间如何分配的问题。",
-    "核心机制是在每个决策轮次对同一响应分别进行普通上下文与 hindsight-conditioned 上下文评估，用 signed log-probability gap 指导 token 级监督方向与强度。",
-    "TRIAL 将轮次级监督幅度在完整 realized trajectory 内联合归一化，使 allocation multipliers 的 eligible-token 加权均值保持为 1，实现“重新分配而非整体放大”监督。",
-    "在 WebShop 和 ALFWorld 上，TRIAL 在 8 个 backbone-环境-指标组合中全部优于 GRPO，并在 6 种方法对比中有 6 项达到最佳或并列最佳。",
-    "在 WebShop + Qwen3-1.7B 上，TRIAL 将 success rate 从 56.4% 提升至 75.2%，task score 从 78.7% 提升至 85.7%，消融验证了轨迹相对轮次分配的独立贡献。"
+    "提出 TRIAL：一种 trajectory-relative hindsight distillation 框架，用于解决稀疏结果奖励下后见信号在多轮决策中的分配问题。",
+    "核心机制是在每个决策轮次比较普通上下文与 hindsight-conditioned context 下同一响应的 log-probability gap，用其确定 token 级监督方向与强度。",
+    "TRIAL 对整条轨迹的轮次级监督幅度进行联合归一化，使分配乘子的 eligible-token 加权均值为 1，从而重分配监督而不改变平均强度。",
+    "在 WebShop 和 ALFWorld 的多种 backbone 与指标组合中，TRIAL 全面优于 GRPO，并在多数设置下达到六种方法中的最佳或并列最佳。",
+    "消融实验显示，trajectory-relative turn allocation 的收益超过单纯 dense hindsight distillation，说明轮次级信用分配是性能提升关键。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.95,
+    "domain_fit": 0.94,
     "novelty": 0.8,
-    "problem_significance": 0.88,
-    "potential_impact": 0.84,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
     "paradigm_shift": 0.78,
     "lasting_value": 0.82,
-    "llm_avg": 0.8240000000000001,
-    "comment": "TRIAL is a strong agentic RL contribution that improves long-horizon trajectory credit assignment through turn-aligned hindsight supervision.",
-    "comment_zh": "TRIAL 是一项较强的智能体强化学习工作，通过按回合对齐的 hindsight 监督改进长程轨迹信用分配。"
+    "llm_avg": 0.8160000000000001,
+    "comment": "A well-aligned agentic RL method that improves long-horizon credit allocation using trajectory-relative hindsight supervision in grounded environments.",
+    "comment_zh": "这是一篇契合度较高的智能体强化学习论文，通过轨迹相对的 hindsight 监督改进长程任务中的信用分配。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
@@ -43,7 +43,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.8240000000000001,
+    "llm_assessment": 0.8160000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {

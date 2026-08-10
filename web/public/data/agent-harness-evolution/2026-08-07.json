@@ -2,8 +2,38 @@
   "domain": "agent-harness-evolution",
   "display_name": "Agent Harness Evolution",
   "date": "2026-08-07",
-  "generated_at": "2026-08-10T06:29:09Z",
+  "generated_at": "2026-08-10T20:53:38Z",
   "papers": [
+    {
+      "arxiv_id": "2608.06714",
+      "title": "The Optimizer Is the Agent: Reasoning-Driven Search across Prompts, Programs, and ML Workflows",
+      "title_zh": "优化器即智能体：跨 Prompt、程序与 ML 工作流的推理驱动搜索",
+      "authors": [
+        "Junbo Li",
+        "Boyi Liu",
+        "Canwen Xu",
+        "Yite Wang",
+        "Yuxiong He",
+        "Zhangyang Wang",
+        "Qiang Liu",
+        "Zhewei Yao"
+      ],
+      "total_score": 0.6937351609567488,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8,
+        "domain_fit": 0.9,
+        "other": 0.3924505365224956
+      },
+      "tags": [
+        "HF Daily ★4",
+        "h=36",
+        "session context memory"
+      ],
+      "tldr_zh": "让智能体自己成为优化搜索器",
+      "detail_file": "agent-harness-evolution/2026-08-07/2608.06714.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.06714/thumb.webp"
+    },
     {
       "arxiv_id": "2608.07147",
       "title": "DiDPO: Diff-in-Diff Policy Optimization for Coding Agent Training",
@@ -16,18 +46,18 @@
         "Xiaofeng Cao",
         "Pengkun Wang"
       ],
-      "total_score": 0.6900000000000002,
+      "total_score": 0.6874145717194442,
       "scores": {
         "topic_relevance": 0.88,
-        "llm_assessment": 0.8600000000000001,
-        "domain_fit": 0.97,
-        "other": 0.2666666666666667
+        "llm_assessment": 0.8720000000000001,
+        "domain_fit": 0.98,
+        "other": 0.24604857239814704
       },
       "tags": [
         "Code soon",
         "agent training and trajectory data"
       ],
-      "tldr_zh": "用代码 diff 做细粒度 RL 信用分配",
+      "tldr_zh": "用代码diff做细粒度RL信用分配",
       "detail_file": "agent-harness-evolution/2026-08-07/2608.07147.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.07147/thumb.webp"
     },
@@ -46,48 +76,19 @@
         "Sirui Han",
         "Yike Guo"
       ],
-      "total_score": 0.670834116756697,
+      "total_score": 0.6798516573755553,
       "scores": {
         "topic_relevance": 0.92,
-        "llm_assessment": 0.808,
-        "domain_fit": 0.94,
-        "other": 0.20144705585565653
+        "llm_assessment": 0.8360000000000001,
+        "domain_fit": 0.95,
+        "other": 0.2035055245851843
       },
       "tags": [
         "skill tool orchestration"
       ],
-      "tldr_zh": "用近端式文本优化提升 Agent 技能",
+      "tldr_zh": "闭环诊断与近端精炼提升Agent技能",
       "detail_file": "agent-harness-evolution/2026-08-07/2608.07449.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.07449/thumb.webp"
-    },
-    {
-      "arxiv_id": "2608.06714",
-      "title": "The Optimizer Is the Agent: Reasoning-Driven Search across Prompts, Programs, and ML Workflows",
-      "title_zh": "优化器即智能体：跨 Prompt、程序与 ML 工作流的推理驱动搜索",
-      "authors": [
-        "Junbo Li",
-        "Boyi Liu",
-        "Canwen Xu",
-        "Yite Wang",
-        "Yuxiong He",
-        "Zhangyang Wang",
-        "Qiang Liu",
-        "Zhewei Yao"
-      ],
-      "total_score": 0.6696572581743253,
-      "scores": {
-        "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.788,
-        "domain_fit": 0.9,
-        "other": 0.32419086058108404
-      },
-      "tags": [
-        "HF Daily ★2",
-        "session context memory"
-      ],
-      "tldr_zh": "用单个推理智能体统一优化搜索",
-      "detail_file": "agent-harness-evolution/2026-08-07/2608.06714.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.06714/thumb.webp"
     },
     {
       "arxiv_id": "2608.07371",
@@ -99,24 +100,24 @@
         "Qing Wang",
         "Wenqiao Zhang"
       ],
-      "total_score": 0.6432000000000001,
+      "total_score": 0.6408000000000001,
       "scores": {
         "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.8240000000000001,
-        "domain_fit": 0.95,
+        "llm_assessment": 0.8160000000000001,
+        "domain_fit": 0.94,
         "other": 0.2
       },
       "tags": [
         "agent training and trajectory data"
       ],
-      "tldr_zh": "TRIAL用轨迹相对后见信号优化多轮智能体RL",
+      "tldr_zh": "TRIAL按轨迹重分配后见监督提升智能体RL",
       "detail_file": "agent-harness-evolution/2026-08-07/2608.07371.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.07371/thumb.webp"
     },
     {
       "arxiv_id": "2608.07118",
       "title": "How Much, Then Where: Credit-Conserving Action-to-Token Allocation for Multi-Turn Agent Reinforcement Learning",
-      "title_zh": "多少、然后到哪：面向多轮 Agent 强化学习的保信用 Action-to-Token 分配",
+      "title_zh": "How Much, Then Where：面向多轮智能体强化学习的信用守恒动作到 Token 分配",
       "authors": [
         "Lichao Ma",
         "Yang Sun",
@@ -135,38 +136,63 @@
       "scores": {
         "topic_relevance": 0.8400000000000001,
         "llm_assessment": 0.836,
-        "domain_fit": 0.96,
+        "domain_fit": 0.95,
         "other": 0.11666666666666668
       },
       "tags": [
         "agent training and trajectory data"
       ],
-      "tldr_zh": "FACTOR解耦动作与token信用分配",
+      "tldr_zh": "FACTOR解耦动作与Token信用分配",
       "detail_file": "agent-harness-evolution/2026-08-07/2608.07118.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.07118/thumb.webp"
     },
     {
       "arxiv_id": "2608.06663",
       "title": "The Horizon Gap: Planning, Memory, Execution, Training, and Evaluation for Long-Horizon LLM Agents",
-      "title_zh": "Horizon Gap：长时程 LLM Agent 的规划、记忆、执行、训练与评测",
+      "title_zh": "Horizon Gap：长程 LLM Agent 的规划、记忆、执行、训练与评估",
       "authors": [
         "Mingguang Chen",
         "Licheng Wang",
         "Bo Qu"
       ],
-      "total_score": 0.5500712024128083,
+      "total_score": 0.5565228597883635,
       "scores": {
         "topic_relevance": 0.7200000000000001,
-        "llm_assessment": 0.658,
+        "llm_assessment": 0.6759999999999999,
         "domain_fit": 0.88,
-        "other": 0.21557067470936045
+        "other": 0.21907619929454475
       },
       "tags": [
         "judge reward verifier"
       ],
-      "tldr_zh": "系统梳理长时程 LLM Agent 的 horizon gap",
+      "tldr_zh": "系统综述长程 LLM Agent 的 horizon gap",
       "detail_file": "agent-harness-evolution/2026-08-07/2608.06663.json",
       "thumb": ""
+    },
+    {
+      "arxiv_id": "2608.07437",
+      "title": "Fisher-R1: Training LLM Agents for Reliable Hypothesis Testing",
+      "title_zh": "Fisher-R1：训练用于可靠假设检验的 LLM Agent",
+      "authors": [
+        "Jiacheng Miao",
+        "Jin Mu",
+        "Guanhua Chen",
+        "James Zou"
+      ],
+      "total_score": 0.4081000000000001,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.652,
+        "domain_fit": 0.72,
+        "other": 0.17500000000000002
+      },
+      "tags": [
+        "Code soon",
+        "general llm agents"
+      ],
+      "tldr_zh": "强化学习提升LLM假设检验可靠性",
+      "detail_file": "agent-harness-evolution/2026-08-07/2608.07437.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.07437/thumb.webp"
     },
     {
       "arxiv_id": "2608.06861",
@@ -178,15 +204,15 @@
         "Shichao Fan",
         "Qingjie Liu"
       ],
-      "total_score": 0.2822,
+      "total_score": 0.28178830625409446,
       "scores": {
         "topic_relevance": 0.0,
         "llm_assessment": 0.8240000000000001,
-        "domain_fit": 0.95,
-        "other": 0.11666666666666668
+        "domain_fit": 0.94,
+        "other": 0.11529435418031482
       },
       "tags": [],
-      "tldr_zh": "用置信门控 Bellman 信用训练 LLM 智能体",
+      "tldr_zh": "用置信门控选择性引入步骤级Bellman信用",
       "detail_file": "agent-harness-evolution/2026-08-07/2608.06861.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.06861/thumb.webp"
     }

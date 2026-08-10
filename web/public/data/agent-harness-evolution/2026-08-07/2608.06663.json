@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.06663",
   "title": "The Horizon Gap: Planning, Memory, Execution, Training, and Evaluation for Long-Horizon LLM Agents",
-  "title_zh": "Horizon Gap：长时程 LLM Agent 的规划、记忆、执行、训练与评测",
+  "title_zh": "Horizon Gap：长程 LLM Agent 的规划、记忆、执行、训练与评估",
   "authors": [
     "Mingguang Chen",
     "Licheng Wang",
@@ -16,33 +16,33 @@
     "project_page": null
   },
   "abstract_en": "Frontier language models solve reasoning problems in a single forward pass that would have been research contributions years ago, yet fail at multi-hour tasks: losing track of earlier decisions, declaring half-finished work done, or drifting from goals. We call this the horizon gap and survey 1,547 arXiv papers (2024-2026) collected via systematic seed harvest with a disclosed 26.8% bleed filter, extended by targeted supplementation. We disambiguate three routinely conflated properties: long-horizon (task property: required steps), long-context (model property: token capacity), and long-term memory (system property: persistence across steps/sessions). We organize the corpus into six categories tracking a long-horizon task's lifecycle -- planning, memory, execution, training, evaluation, and foundations/safety -- crossed with an axis capturing where horizons are carried (within-context, within-task-beyond-context, or cross-task-persistent). Across all categories, we find the same pattern: outcome-only signals grow uninformative as horizons lengthen, and the field's response -- whether process reward models, credit assignment, or trajectory-level diagnostics -- manufactures denser step-level signals. We treat critical and diagnostic literature as first-class threads throughout, arguing that segregating critique from method would routinely split single papers across chapters. We close by naming open measurement problems: decomposing model versus harness capability, managing correlated bias in process-level signals used for both training and evaluation, and whether long-horizon reliability admits general predictive theory.",
-  "abstract_zh": "本文聚焦 frontier language models 在单次推理中表现强劲、却在多小时复杂任务中容易失控的问题：遗忘早期决策、误判未完成任务为已完成、或逐渐偏离目标。作者将其称为“horizon gap”，并系统综述了 2024–2026 年间 1,547 篇 arXiv 论文，覆盖 planning、memory、execution、training、evaluation 以及 foundations/safety 六大方向。论文区分了三个常被混淆的概念：long-horizon 是任务属性，指所需步骤数；long-context 是模型属性，指 token 容量；long-term memory 是系统属性，指跨步骤或跨会话的持久记忆。作者进一步从 horizon 承载位置划分研究：within-context、within-task-beyond-context 与 cross-task-persistent。综述发现，随着任务 horizon 变长，仅依赖最终结果的监督信号会迅速变得稀疏且不可靠，因此领域内各类方法都在转向更密集的 step-level 信号，如 process reward models、credit assignment 与 trajectory-level diagnostics。论文还强调，应将批判性与诊断性研究作为主线，而非与方法研究割裂。最后，作者提出若干开放问题，包括如何区分模型能力与框架能力、如何处理训练和评测共用过程信号带来的相关偏差，以及长时程可靠性是否存在可泛化的预测理论。",
+  "abstract_zh": "本文聚焦 frontier language models 在单次前向推理中表现强劲、却在多小时复杂任务中频繁失效的现象：遗忘早期决策、将未完成工作误判为完成、或逐步偏离目标。作者将其称为 “horizon gap”，并系统调研了 2024–2026 年间 1,547 篇 arXiv 论文，采用系统化 seed harvest、公开的 26.8% bleed filter，并辅以定向补充。论文区分了三个常被混淆的概念：long-horizon 是任务属性，指所需步骤数；long-context 是模型属性，指 token 容量；long-term memory 是系统属性，指跨步骤或跨会话的持久化能力。作者将文献组织为六类：planning、memory、execution、training、evaluation、foundations/safety，并进一步按“horizon 承载位置”划分为 within-context、within-task-beyond-context、cross-task-persistent。论文指出，各方向呈现共同趋势：随着任务 horizon 变长，仅依赖最终结果的信号变得越来越不充分，因此研究社区转向 process reward models、credit assignment、trajectory-level diagnostics 等更密集的步骤级监督与诊断。作者还将批判性与诊断性文献作为主线纳入讨论，并提出若干开放测量问题，包括如何区分模型能力与 harness 能力、如何处理训练与评估共用过程级信号带来的相关偏差，以及长程可靠性是否存在通用预测理论。",
   "key_points_zh": [
-    "提出并系统化“horizon gap”：LLM 在短推理任务中表现强，但在长时程、多步骤、多小时任务中常出现遗忘、目标漂移和过早宣告完成。",
-    "明确区分 long-horizon、long-context 与 long-term memory：三者分别对应任务步骤长度、模型上下文容量和系统级持久记忆，避免概念混用。",
-    "综述 1,547 篇 2024–2026 年 arXiv 论文，按 planning、memory、execution、training、evaluation、foundations/safety 六类组织，并引入 horizon 承载位置维度。",
-    "核心观察是：horizon 越长，outcome-only 信号越不可靠；研究趋势转向构造更密集的 step-level 监督与诊断信号，如 process reward models 和 trajectory diagnostics。",
-    "指出开放测量难题：如何分离模型能力与 agent harness 能力、如何避免过程级信号在训练与评测中产生相关偏差，以及能否建立长时程可靠性的通用预测理论。"
+    "提出并系统化讨论 “horizon gap”：LLM 在短程推理中强大，但在多步骤、多小时任务中容易遗忘、误判完成或偏离目标。",
+    "明确区分 long-horizon、long-context 与 long-term memory：分别对应任务步骤需求、模型上下文容量和系统级持久记忆。",
+    "综述 1,547 篇 2024–2026 年 arXiv 论文，按 planning、memory、execution、training、evaluation、foundations/safety 六类组织。",
+    "指出长程任务中 outcome-only signals 逐渐失效，研究趋势转向 process reward models、credit assignment 和 trajectory-level diagnostics 等步骤级信号。",
+    "提出开放问题：如何分离模型能力与外部 harness 能力、如何避免过程级信号的相关偏差，以及是否存在长程可靠性的通用预测理论。"
   ],
   "llm_assessment": {
     "domain_fit": 0.88,
-    "novelty": 0.45,
+    "novelty": 0.48,
     "problem_significance": 0.86,
-    "potential_impact": 0.72,
-    "paradigm_shift": 0.5,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.58,
     "lasting_value": 0.76,
-    "llm_avg": 0.658,
-    "comment": "As a survey, it is highly relevant to long-horizon agent harness evolution but contributes synthesis and taxonomy rather than a new mechanism.",
-    "comment_zh": "作为综述，它与长程智能体框架演化高度相关，但主要贡献是综合与分类而非新机制。"
+    "llm_avg": 0.6759999999999999,
+    "comment": "As a survey, it is not methodologically novel but is well aligned and potentially durable in organizing long-horizon agent planning, memory, execution, training, and evaluation.",
+    "comment_zh": "作为综述，它方法新颖性有限，但很好地梳理了长程智能体的规划、记忆、执行、训练和评估问题，具有一定持久价值。"
   },
   "scores": {
     "topic_relevance": 0.7200000000000001,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.39342404825616256,
+    "author_reputation": 0.41445719576726825,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.658,
+    "llm_assessment": 0.6759999999999999,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -52,8 +52,8 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": null,
-    "first_author_found": false,
+    "first_author_h_index": 3,
+    "first_author_found": true,
     "first_author_affiliations": [],
     "last_author_h_index": 5,
     "last_author_found": true,

@@ -19,33 +19,33 @@
     "project_page": null
   },
   "abstract_en": "Reinforcement learning with Verifiable Reward (RLVR) has emerged as a powerful paradigm for training coding agents, where the execution feedback from compilation and tests provides objective verification. However, unlike agent tasks, coding agents face a unique and finer-grained credit assignment challenge: at each step, coding actions simultaneously pack varying changes into different regions of a code version, which makes the contribution of independent change indistinguishable. Existing RLVR methods mostly leverage the outcome reward or step-level reward, which fails to dive into a code diff and makes unique properties of coding actions invisible to training. In this paper, we propose Diff-in-Diff Policy Optimization (DiDPO), a critic-free RL method that constructs fine-grained credit units directly from the structure of code diffs. DiDPO organizes multi-turn coding interactions into multiple thought--action steps and discovers code diffs across sampled trajectories. It then selects anchors by aggregating highly similar sub-diffs split from each whole diff by our ``groupability score'', which provides the splitting schema that optimally balances the semantic scope of anchors and the group mass they may form. Finally these anchors form advantage groups and project the diff-level advantage back to individual response tokens. Experiments on long-horizon coding and reasoning benchmarks show that DiDPO significantly outperforms strong agentic RL baselines. On Qwen2.5-7B-Coder, DiDPO exceeds comparable methods by over 10\\% and narrows the gap with far larger models, offering a principled framework for fine-grained credit assignment in coding agent training. We also open-source verl-code, an agentic rl codebase that supports various RL methods and coding benchmarks.",
-  "abstract_zh": "本文关注基于可验证奖励的强化学习（RLVR）在 coding agent 训练中的细粒度信用分配问题。不同于一般 agent 任务，代码智能体的每一步动作往往会在同一代码版本的多个区域同时引入不同修改，使得单个代码变更的贡献难以区分。现有 RLVR 方法多依赖最终结果奖励或 step-level reward，无法深入 code diff 内部建模代码动作的结构特性。为此，论文提出 Diff-in-Diff Policy Optimization（DiDPO），一种无需 critic 的强化学习方法，直接利用 code diff 结构构造细粒度信用单元。DiDPO 将多轮代码交互组织为多个 thought-action 步骤，从采样轨迹中发现 code diffs，并通过 groupability score 将完整 diff 切分为子 diff，选择高相似子 diff 聚合形成 anchors，在语义范围与可聚合规模之间取得平衡。随后，这些 anchors 构成 advantage groups，并将 diff-level advantage 投影回具体 response tokens。实验表明，DiDPO 在长程代码与推理基准上显著优于强 agentic RL baseline；在 Qwen2.5-7B-Coder 上相比可比方法提升超过 10%，缩小了与更大模型的差距。论文还开源了 verl-code，一个支持多种 RL 方法与代码基准的 agentic RL 代码库。",
+  "abstract_zh": "本文提出 Diff-in-Diff Policy Optimization（DiDPO），一种面向 coding agent 的无 critic 强化学习方法，用于解决 RLVR（Reinforcement Learning with Verifiable Reward）在代码任务中的细粒度信用分配问题。与普通 agent 任务不同，代码智能体的每一步 action 往往会同时修改多个代码区域，传统 outcome reward 或 step-level reward 难以判断具体哪个代码变更真正贡献了测试通过或失败。DiDPO 直接利用 code diff 的结构，将多轮交互拆解为 thought-action steps，并在采样轨迹中发现和聚合同类 sub-diffs。方法通过 groupability score 对完整 diff 进行切分，在 anchor 的语义范围与可形成的 group 规模之间取得平衡；随后用这些 anchors 构造 advantage groups，并将 diff-level advantage 投影回 response tokens。实验表明，DiDPO 在长程代码与推理 benchmark 上显著优于强 agentic RL baseline；在 Qwen2.5-7B-Coder 上相比可比方法提升超过 10%，并缩小了与更大模型的差距。作者还开源了 verl-code，一个支持多种 RL 方法和代码 benchmark 的 agentic RL 代码库。",
   "key_points_zh": [
-    "提出 DiDPO，一种 critic-free RL 方法，面向 coding agent 中由 code diff 引发的细粒度信用分配问题。",
-    "核心思想是从多轮 thought-action 轨迹中提取 code diffs，并基于 groupability score 将完整 diff 切分为语义合适、可聚合的 sub-diffs。",
-    "通过聚合高相似 sub-diffs 选择 anchors，形成 advantage groups，再将 diff-level advantage 映射回 response tokens，实现 token-level 训练信号。",
-    "实验覆盖长程代码与推理 benchmark，DiDPO 显著超过强 agentic RL baselines；在 Qwen2.5-7B-Coder 上提升超过 10%。",
-    "论文开源 verl-code，为 agentic RL 在代码任务上的多方法、多基准训练与评测提供基础设施。"
+    "核心问题：coding agent 的单步 action 常包含多个独立代码修改，传统 outcome/step-level reward 无法定位具体 diff 片段的贡献。",
+    "方法亮点：DiDPO 从 code diff 结构中构造细粒度信用单元，无需 critic，通过 sub-diff 聚合形成 anchors 和 advantage groups。",
+    "关键机制：提出 groupability score 来决定 diff 切分方式，平衡 anchor 的语义完整性与可聚合样本规模。",
+    "训练方式：将 diff-level advantage 反投影到 response tokens，使策略优化能够针对真正有效的代码变更进行更新。",
+    "实验结果：在长程代码与推理任务上显著超过 agentic RL baselines；Qwen2.5-7B-Coder 上提升超过 10%，并开源 verl-code。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.97,
+    "domain_fit": 0.98,
     "novelty": 0.86,
     "problem_significance": 0.9,
     "potential_impact": 0.88,
-    "paradigm_shift": 0.8,
-    "lasting_value": 0.86,
-    "llm_avg": 0.8600000000000001,
-    "comment": "DiDPO directly addresses fine-grained credit assignment for coding-agent RL with verifier-backed execution feedback and a reusable training codebase.",
-    "comment_zh": "DiDPO 直接解决了编码智能体强化学习中的细粒度信用分配问题，并结合可验证执行反馈与可复用训练代码库。"
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8720000000000001,
+    "comment": "A very strong coding-agent training paper because it introduces verifier-backed diff-level credit assignment and releases reusable agentic RL infrastructure.",
+    "comment_zh": "这是一篇很强的代码智能体训练论文，提出了基于验证反馈的 diff 级信用分配，并发布了可复用的智能体强化学习基础设施。"
   },
   "scores": {
     "topic_relevance": 0.88,
     "open_source": 0.2,
     "community_heat": 0.0,
-    "author_reputation": 0.3,
+    "author_reputation": 0.1762914343888821,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.8600000000000001,
+    "llm_assessment": 0.8720000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -55,11 +55,11 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": null,
-    "first_author_found": false,
+    "first_author_h_index": 1,
+    "first_author_found": true,
     "first_author_affiliations": [],
-    "last_author_h_index": null,
-    "last_author_found": false,
+    "last_author_h_index": 1,
+    "last_author_found": true,
     "last_author_affiliations": []
   },
   "figures": [

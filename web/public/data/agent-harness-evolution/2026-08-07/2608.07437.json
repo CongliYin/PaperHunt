@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2608.07437",
+  "title": "Fisher-R1: Training LLM Agents for Reliable Hypothesis Testing",
+  "title_zh": "Fisher-R1：训练用于可靠假设检验的 LLM Agent",
+  "authors": [
+    "Jiacheng Miao",
+    "Jin Mu",
+    "Guanhua Chen",
+    "James Zou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-07T17:22:00Z",
+  "abs_url": "https://arxiv.org/abs/2608.07437v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.07437",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Reliable hypothesis testing is the foundation of many empirical scientific claims. Large language model (LLM) agents are increasingly used to automate this process, as they can inspect datasets, generate code, and produce analyses end-to-end. However, we show that they frequently make subtle inferential errors that lead to incorrect conclusions despite correctly executed analyses. Existing benchmarks fail to capture this failure mode, as they rarely assess whether a reported p-value is statistically valid given the assumptions underlying the data. We address this gap by building P-Bench, a benchmark comprising 425 open-ended, realistic hypothesis-testing tasks spanning economics, biology, and medicine. Each task requires an agent to select a statistical method, compute a p-value, and draw a conclusion given only a scientific hypothesis and a dataset. We further introduce Fisher-R1, an open-weight LLM agent trained for rigorous hypothesis testing using synthetic tasks and reinforcement learning. On P-Bench, Fisher-R1-14B substantially improves over its backbone and outperforms strong proprietary and open-source baselines, including GPT-5.4 and DeepSeekV4-Pro, achieving a 21% average relative improvement in single-trial success over DeepSeek-V4-Pro, with gains up to 26% on the most challenging tasks. Our results demonstrate that current LLM agents lack reliable statistical reasoning for hypothesis testing and that reinforcement learning on tasks with verified statistical reward substantially improves reliability.",
+  "abstract_zh": "可靠的假设检验是许多经验科学结论的基础。LLM agent 正被越来越多地用于自动化这一流程，因为它们能够检查数据集、生成代码并端到端地产出分析。然而，论文指出，即使分析代码执行正确，现有 LLM agent 仍经常出现细微的统计推断错误，从而得出错误结论。现有 benchmark 很少评估模型报告的 p-value 是否在数据假设条件下具有统计有效性，因此难以捕捉这一失败模式。为此，作者构建了 P-Bench，一个包含 425 个开放式、真实假设检验任务的 benchmark，覆盖 economics、biology 和 medicine。每个任务要求 agent 仅基于科学假设和数据集，自主选择统计方法、计算 p-value 并给出结论。论文进一步提出 Fisher-R1，一个基于合成任务和强化学习训练的 open-weight LLM agent，旨在提升严格假设检验能力。在 P-Bench 上，Fisher-R1-14B 相比其 backbone 显著提升，并超过包括 GPT-5.4、DeepSeekV4-Pro 在内的强 proprietary 与 open-source baseline；相较 DeepSeek-V4-Pro，其单次成功率平均相对提升 21%，在最难任务上提升最高达 26%。结果表明，当前 LLM agent 在假设检验中的统计推理仍不可靠，而基于可验证统计奖励的强化学习能显著提升可靠性。",
+  "key_points_zh": [
+    "提出 P-Bench：包含 425 个开放式真实假设检验任务，覆盖 economics、biology、medicine，要求模型自主选择统计方法、计算 p-value 并做结论。",
+    "指出现有 LLM agent 的关键缺陷：即便代码执行正确，也可能因统计假设、检验选择或 p-value 有效性判断错误而得出错误科学结论。",
+    "提出 Fisher-R1：一个 open-weight LLM agent，使用合成假设检验任务和 reinforcement learning，并依赖可验证的统计奖励进行训练。",
+    "实验显示 Fisher-R1-14B 在 P-Bench 上超过 GPT-5.4、DeepSeekV4-Pro 等强基线，相比 DeepSeek-V4-Pro 单次成功率平均相对提升 21%。",
+    "论文强调，面向科学分析的 LLM agent benchmark 不应只看代码运行或答案形式，还需检验统计推断本身是否有效。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.72,
+    "novelty": 0.68,
+    "problem_significance": 0.7,
+    "potential_impact": 0.66,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.64,
+    "llm_avg": 0.652,
+    "comment": "The paper fits through verifier-backed agent RL, but its hypothesis-testing focus and partial medical/scientific vertical framing make it less central to agent harness evolution.",
+    "comment_zh": "该论文因使用可验证奖励训练智能体而部分契合，但其假设检验及医学/科学垂直场景使其不属于领域核心。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.652,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.07437/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.657
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.07437/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

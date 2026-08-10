@@ -17,30 +17,30 @@
     "project_page": null
   },
   "abstract_en": "Training large language model agents in long-horizon environments requires assigning credit from sparse terminal outcomes to individual actions. Existing critic-free methods propagate trajectory-level rewards uniformly across steps, while recent approaches construct step-level groups by matching repeated states and compare actions within each group. The former cannot distinguish useful actions in failed trajectories from ineffective actions in successful ones. The latter rely on step credit derived directly from individual trajectory outcomes and fixed-weight fusion with episode-level credit. We propose Gated-BEPO, which derives step-level credit from empirical rollout graphs. For each rollout group, Gated-BEPO constructs an empirical graph and estimates node values through a mean-backup Bellman fixed point that reflects the empirical action distribution of the current policy. We then accumulate these temporal-difference residuals along each sampled trajectory using generalized advantage estimation, yielding step-level Bellman advantages that capture both immediate and downstream effects. To adaptively fuse episode- and step-level credit, a confidence gate incorporates Bellman credit only at states with multiple observed successors and otherwise uses episode-level credit. Experiments on WebShop, ALFWorld, and visual Sokoban show consistent improvements across language and vision-language models, while diagnostic ablations support the effectiveness of Bellman fixed-point value estimation and show that step-level credit should be incorporated selectively rather than uniformly into the final advantage.",
-  "abstract_zh": "在长时程环境中训练 LLM agents，需要将稀疏的终局结果有效分配给具体动作。现有无 critic 方法通常将轨迹级奖励均匀传播到所有步骤，难以区分失败轨迹中的有效动作与成功轨迹中的低效动作；近期方法虽通过匹配重复状态构造步骤级分组并比较组内动作，但其步骤信用仍直接依赖单条轨迹结果，并采用固定权重与 episode-level credit 融合。本文提出 Gated-BEPO：针对每个 rollout group 构建经验图，并通过 mean-backup Bellman fixed point 估计节点价值，以反映当前策略的经验动作分布；随后沿采样轨迹累积 temporal-difference residuals，并使用 generalized advantage estimation 得到步骤级 Bellman advantages，从而同时刻画即时与下游影响。为自适应融合 episode-level 与 step-level credit，方法引入 confidence gate：仅在具有多个观测后继状态的状态处纳入 Bellman credit，否则使用 episode-level credit。实验在 WebShop、ALFWorld 和 visual Sokoban 上验证了该方法在语言模型与视觉-语言模型上的稳定提升，消融也表明 Bellman fixed-point 价值估计有效，且步骤级信用应选择性而非统一地并入最终 advantage。",
+  "abstract_zh": "在长时程环境中训练大语言模型智能体，需要将稀疏的终局结果有效分配到每一步动作。现有无 critic 方法通常将轨迹级奖励均匀传播到所有步骤，难以区分失败轨迹中的有效动作与成功轨迹中的无效动作；近期方法通过匹配重复状态构造步骤级分组，并在组内比较动作，但其步骤信用直接依赖单条轨迹结果，且与 episode 级信用采用固定权重融合。本文提出 Gated-BEPO，从经验 rollout 图中推导步骤级信用：对每个 rollout group 构建经验图，并通过 mean-backup Bellman fixed point 估计节点价值，以反映当前策略的经验动作分布；随后沿采样轨迹累积 temporal-difference residuals，并使用 generalized advantage estimation 得到步骤级 Bellman advantages，从而同时刻画即时与下游影响。为自适应融合 episode 级与 step 级信用，Gated-BEPO 引入 confidence gate，仅在观测到多个后继状态的状态处使用 Bellman 信用，否则回退到 episode 级信用。在 WebShop、ALFWorld 和 visual Sokoban 上，Gated-BEPO 在语言模型与视觉语言模型中均取得稳定提升；诊断消融表明，Bellman fixed-point 价值估计有效，且步骤级信用应选择性而非均匀地并入最终 advantage。",
   "key_points_zh": [
-    "提出 Gated-BEPO，用经验 rollout graph 与 mean-backup Bellman fixed point 为长时程 LLM agents 估计步骤级信用。",
-    "通过 TD residuals 与 generalized advantage estimation 沿轨迹累积，得到能反映即时收益和后续影响的 step-level Bellman advantages。",
-    "设计 confidence gate：仅当状态存在多个观测后继、信用估计更可靠时才融合 Bellman credit，否则退回 episode-level credit。",
-    "在 WebShop、ALFWorld 和 visual Sokoban 上，对 language models 与 vision-language models 均带来一致性能提升。",
-    "消融结果显示，Bellman fixed-point 价值估计是关键，且 step-level credit 需要选择性使用，固定或均匀融合效果较差。"
+    "针对长时程 LLM agents 的稀疏奖励信用分配问题，Gated-BEPO 避免了将轨迹级奖励简单均匀分配到每一步的局限。",
+    "方法基于经验 rollout graph，对每个 rollout group 使用 mean-backup Bellman fixed point 估计节点价值，反映当前 policy 的经验动作分布。",
+    "通过沿轨迹累积 temporal-difference residuals 并结合 generalized advantage estimation，得到能够覆盖即时与长期影响的 step-level Bellman advantages。",
+    "提出 confidence gate：仅在状态具有多个观测后继时融合 Bellman 信用，否则采用 episode-level credit，从而避免不可靠步骤信用污染训练信号。",
+    "在 WebShop、ALFWorld 和 visual Sokoban 上对语言模型与视觉语言模型均带来一致收益，消融实验支持 Bellman 价值估计与选择性融合机制的有效性。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.95,
-    "novelty": 0.81,
+    "domain_fit": 0.94,
+    "novelty": 0.8,
     "problem_significance": 0.88,
     "potential_impact": 0.84,
-    "paradigm_shift": 0.77,
+    "paradigm_shift": 0.78,
     "lasting_value": 0.82,
     "llm_avg": 0.8240000000000001,
-    "comment": "Gated-BEPO is a solid agentic RL method for long-horizon credit assignment using rollout graphs and selective Bellman credit.",
-    "comment_zh": "Gated-BEPO 是一项扎实的智能体强化学习方法，利用 rollout 图和选择性 Bellman 信用解决长程信用分配。"
+    "comment": "A strong agentic RL credit-assignment paper that uses empirical rollout graphs and selective Bellman credit for long-horizon agent training.",
+    "comment_zh": "这是一篇较强的智能体强化学习信用分配论文，利用经验 rollout 图和选择性 Bellman 信用改进长程智能体训练。"
   },
   "scores": {
     "topic_relevance": 0.0,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.3,
+    "author_reputation": 0.29176612508188887,
     "venue_signal": 0.0,
     "generality": 0.4,
     "llm_assessment": 0.8240000000000001,
@@ -53,8 +53,8 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": null,
-    "first_author_found": false,
+    "first_author_h_index": 2,
+    "first_author_found": true,
     "first_author_affiliations": [],
     "last_author_h_index": null,
     "last_author_found": false,
