@@ -98,6 +98,8 @@ New required exclusions cover:
 - recommendation attack/defense work;
 - generic next-item, long-sequence, and OOD recommender methods without sufficient commerce grounding;
 - the JD Item Center, because its primary contribution is item-knowledge infrastructure;
+- brand-impact measurement, generic search-grounding infrastructure, product-information markets, and paid-promotion revenue optimization;
+- advertising-creative preference, federated graph imputation, and entertainment live-stream ranking;
 - e-commerce image generation.
 
 ## Verification
@@ -109,4 +111,3 @@ Acceptance requires:
 - no cross-domain duplicate IDs;
 - replay of August 1–6 removes the identified generic/security/transaction papers while retaining the approved search, recommendation, Agent, model, and RL examples;
 - all domain validation and unit tests pass.
-

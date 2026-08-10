@@ -6,10 +6,10 @@ PaperHunt currently treats each research domain as a broad arXiv category union 
 
 The historical output demonstrates the failure mode: urban mobility, sEMG recognition, and quantum-learning papers entered Agent Harness Evolution; retail banking and marketplace operations entered E-commerce Agent; and offline TTS/ASR datasets entered Realtime Multimodal Agent. The LLM often identified these papers as irrelevant, but its score only affected ordering and never rejected them.
 
-The user approved a V1 gold set containing ten required inclusions and ten required exclusions for each of the three domains. After reviewing the first August 5 output, the user added nine labels, bringing the regression set to 69 papers. The user also fixed these scope rules:
+The user approved an initial gold set containing ten required inclusions and ten required exclusions for each of the three domains. Subsequent Harness and guided-shopping scope reviews expanded the executable regression set to 90 papers. The user also fixed these scope rules:
 
 - every paper has exactly one primary domain;
-- E-commerce Agent covers product search, recommendation, product understanding, and shopping agents, not general commerce operations;
+- E-commerce Agent covers product search and guided-shopping recommendation; Agent, model, and RL methods qualify only through those two business capabilities;
 - Realtime Multimodal Agent requires realtime or streaming interaction;
 - Agent Harness Evolution includes reusable runtime, harness, orchestration engines, memory systems/services, Agent training and RL, Skill evolution, coding Agents, and search Agents.
 - Security research is globally out of scope for all three domains, including attacks, red teaming, prompt injection, phishing, malware, privacy, and cyber defense. This exclusion overrides otherwise positive Agent/RL/coding/search signals.
@@ -29,7 +29,7 @@ The following newly reviewed papers define the revised boundary:
 - Make primary-domain selection deterministic, explainable, and exclusive.
 - Replace single-keyword admission with contextual signal combinations.
 - Use the LLM as a strict semantic relevance gate, not only a ranking signal.
-- Preserve a versioned, executable 69-paper gold set.
+- Preserve a versioned, executable 90-paper gold set.
 - Report historical before/after quality with reproducible metrics.
 - Keep arXiv fetching, enrichment, translation, and figure generation unchanged.
 
@@ -151,7 +151,7 @@ Existing LLM scores are only a historical proxy because they predate `domain_fit
 ## Tests
 
 - Selector unit tests cover grouped matching, exclusions, scoring, and deterministic ties.
-- The 69-paper gold regression test exercises real historical titles and abstracts, including the reviewed August 5 boundary cases.
+- The 90-paper gold regression test exercises real historical titles and abstracts, including the reviewed August boundary cases.
 - Scorer tests require the unified schema and reject missing or invalid `domain_fit`.
 - Pipeline tests verify final domain-fit gating.
 - The full offline test suite runs in GitHub Actions before the daily pipeline.

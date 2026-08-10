@@ -142,6 +142,50 @@ class SelectorUnitTests(unittest.TestCase):
         self.assertEqual(decision.primary_domain, "high")
 
 
+class EcommerceScopeTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.policies = load_selection_policies(DOMAINS_DIR)
+
+    def _primary(self, title: str, abstract: str = "") -> str | None:
+        return choose_primary_domain(
+            {"title": title, "abstract": abstract},
+            self.policies,
+        ).primary_domain
+
+    def test_generic_item_recommendation_is_not_commerce_grounding(self) -> None:
+        primary = self._primary(
+            "Efficient Long-Sequence Recommendation",
+            "A model ranks candidate items from long user histories.",
+        )
+
+        self.assertNotEqual(primary, "agent-e-commerce")
+
+    def test_product_search_rl_method_is_in_scope(self) -> None:
+        primary = self._primary(
+            "Policy Optimization for E-Commerce Product Search",
+            "We train the ranking model with reinforcement learning and GRPO.",
+        )
+
+        self.assertEqual(primary, "agent-e-commerce")
+
+    def test_transaction_agent_without_guidance_is_out_of_scope(self) -> None:
+        primary = self._primary(
+            "Agentic Commerce Transaction Environment",
+            "Buyer and merchant agents execute auditable payments in a catalog.",
+        )
+
+        self.assertNotEqual(primary, "agent-e-commerce")
+
+    def test_recommendation_security_paper_is_out_of_scope(self) -> None:
+        primary = self._primary(
+            "Attacking and Defending Product Recommendation Agents",
+            "We evaluate attacks against an e-commerce recommender system.",
+        )
+
+        self.assertNotEqual(primary, "agent-e-commerce")
+
+
 class GoldSelectionRegressionTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:

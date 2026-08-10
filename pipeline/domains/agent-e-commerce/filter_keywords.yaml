@@ -1,7 +1,6 @@
-# E-commerce Agent gate keywords.
-# Target: e-commerce search/recommendation/product understanding plus LLM or
-# agent workflows for shopping, comparison, consultation, ranking, and
-# domain-specific multi-agent collaboration. Generic multi-agent papers are out.
+# E-commerce Guided Shopping legacy comparison keywords.
+# Target: product search and guided-shopping recommendation. Agent, model, and
+# reinforcement-learning terms describe methods, not independent domain scope.
 
 positive:
   # E-commerce and shopping domain anchors.
@@ -12,7 +11,6 @@ positive:
   - "shopping"
   - "retail"
   - "online retail"
-  - "marketplace"
   - "product search"
   - "product retrieval"
   - "product recommendation"
@@ -24,37 +22,27 @@ positive:
   - "shopping assistant"
   - "purchase intent"
   - "buying intent"
-  - "product attribute"
-  - "product attributes"
-  - "product understanding"
   - "product matching"
   - "product ranking"
   - "product reranking"
   - "product re-ranking"
   - "product comparison"
-  - "item recommendation"
-  - "product catalog"
-  - "e-commerce catalog"
-  - "ecommerce catalog"
-  - "SKU"
-  - "item-to-item"
   - "query-product"
   - "query product"
-  - "review summarization"
-  - "customer review"
-  - "consumer review"
+  - "product advisor"
+  - "product advisors"
+  - "conversational commerce"
+  - "purchase decision support"
 
   # LLM and agent integration for commerce.
   - "LLM shopping"
   - "LLM for e-commerce"
   - "LLM for ecommerce"
   - "large language model for e-commerce"
-  - "commerce agent"
   - "shopping agent"
   - "shopping agents"
   - "recommendation agent"
   - "recommender agent"
-  - "conversational recommender"
   - "conversational recommendation"
   - "conversational search"
   - "conversational product search"
@@ -65,6 +53,8 @@ positive:
   - "decision assistant"
   - "guided shopping"
   - "virtual shopping assistant"
+  - "product advisor"
+  - "digital product advisor"
 
   # E-commerce-specific multi-agent collaboration.
   - "multi-agent shopping"
@@ -77,17 +67,10 @@ positive:
   - "multi agent recommendation"
   - "agentic recommendation"
   - "agentic recommender"
-  - "agentic commerce"
   - "agentic shopping"
-  - "buyer agent"
-  - "seller agent"
-  - "merchant agent"
   - "product search agent"
   - "shopping search agent"
-  - "ranking agent"
   - "recommendation agent"
-  - "evaluation agent"
-  - "product agent"
 
 hard_negative:
   # Generic graph-learning papers often mention e-commerce as one possible TAG
@@ -108,16 +91,9 @@ hard_negative:
   # Generic web/search-agent and LLM-agent training work belongs in the harness
   # domain, not the commerce feed, unless it is explicitly shopping/product work.
   - "search agent benchmarks"
-  - "search agents"
   - "daily search tasks"
   - "Wikipedia entities"
   - "knowledge graph"
-  - "tool-using language model agents"
-  - "language model agents"
-  - "reinforcement learning"
-  - "rollout failures"
-  - "task distribution"
-  - "production LLM agent"
   - "test harness"
   - "regression-locked"
   - "deterministic scaffold"
@@ -150,6 +126,12 @@ negative_strong:
   - "protein"
   - "molecule"
   - "financial trading"
+  - "brand recommendation"
+  - "vendor-agnostic grounding"
+  - "micro-transaction market"
+  - "micro-payment"
+  - "revenue maximization"
+  - "paid promotion"
   - "code generation"
   - "software engineering agent"
   - "math reasoning"
@@ -206,12 +188,11 @@ strong_signals:
   - "product question answering"
   - "product QA"
   - "guided shopping"
+  - "product advisor"
+  - "product advisors"
+  - "conversational commerce"
   - "multi-agent shopping"
   - "multi-agent e-commerce"
-  - "agentic commerce"
   - "agentic shopping"
-  - "buyer agent"
-  - "seller agent"
-  - "merchant agent"
   - "product comparison"
   - "purchase intent"

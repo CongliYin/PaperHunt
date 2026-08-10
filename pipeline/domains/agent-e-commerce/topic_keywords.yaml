@@ -1,7 +1,6 @@
-# E-commerce Agent Topic Relevance - Tiered Keyword Configuration
-# Tier 1 focuses on commerce-native agent/search/recommendation workflows.
-# Generic multi-agent, generic recommendation, or generic RAG should only score
-# well when grounded in e-commerce/product/shopping contexts.
+# E-commerce Guided Shopping Topic Relevance - Tiered Keyword Configuration
+# The two business trunks are product search and guided-shopping recommendation.
+# Agent, model, and RL terms matter only when grounded in one of those trunks.
 
 tiers:
   tier_1:
@@ -10,14 +9,15 @@ tiers:
       commerce_agent_workflows:
         - "shopping agent"
         - "shopping agents"
-        - "commerce agent"
-        - "commerce agents"
         - "virtual shopping assistant"
         - "guided shopping"
         - "decision assistant"
+        - "product advisor"
+        - "product advisors"
+        - "digital product advisor"
+        - "conversational commerce"
         - "personalized shopping"
         - "agentic shopping"
-        - "agentic commerce"
       ecommerce_multi_agent_collaboration:
         - "multi-agent shopping"
         - "multi agent shopping"
@@ -25,14 +25,9 @@ tiers:
         - "multi agent e-commerce"
         - "multi-agent ecommerce"
         - "multi agent ecommerce"
-        - "buyer agent"
-        - "seller agent"
-        - "merchant agent"
-        - "search agent"
-        - "ranking agent"
-        - "recommendation agent"
-        - "evaluation agent"
-        - "product agent"
+        - "product search agent"
+        - "shopping search agent"
+        - "shopping recommendation agent"
       product_search_retrieval:
         - "product search"
         - "conversational product search"
@@ -50,23 +45,17 @@ tiers:
         - "e-commerce recommendation"
         - "ecommerce recommendation"
         - "commerce recommendation"
-        - "item recommendation"
-        - "item-to-item recommendation"
-        - "personalized recommendation"
         - "conversational recommendation"
-        - "conversational recommender"
-      product_understanding_and_qa:
-        - "product understanding"
-        - "product attribute"
-        - "product attributes"
+      guided_shopping_and_product_evidence:
         - "product matching"
         - "product comparison"
+        - "product advisor"
+        - "product discovery"
+        - "purchase decision support"
         - "product question answering"
         - "product QA"
         - "shopping QA"
         - "commerce question answering"
-        - "review summarization"
-        - "customer review"
 
   tier_2:
     coefficient: 0.75
@@ -83,6 +72,13 @@ tiers:
         - "generative recommendation"
         - "agentic recommendation"
         - "agentic recommender"
+      learning_methods_for_commerce:
+        - "reinforcement learning"
+        - "policy optimization"
+        - "GRPO"
+        - "DPO"
+        - "bandit"
+        - "online learning"
       user_intent_and_preference:
         - "purchase intent"
         - "buying intent"
@@ -111,7 +107,6 @@ tiers:
         - "recommendation benchmark"
         - "user simulator"
         - "shopping simulator"
-        - "buyer simulator"
         - "conversion"
         - "click-through rate"
         - "CTR"
@@ -236,3 +231,12 @@ domain_penalties:
       - "open-domain question answering"
       - "general chatbot"
       - "customer service chatbot"
+  non_guided_commerce:
+    multiplier: 0.45
+    keywords:
+      - "brand recommendation"
+      - "vendor-agnostic grounding"
+      - "micro-transaction market"
+      - "micro-payment"
+      - "revenue maximization"
+      - "paid promotion"
