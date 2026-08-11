@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.09025",
+  "title": "Context Is Not Authority: Structured Runtime Governance for Financial Market Agents",
+  "title_zh": "上下文不是权限：面向金融市场智能体的结构化运行时治理",
+  "authors": [
+    "Rui Tang",
+    "Qiangqiang Liu",
+    "Yichi Zhang",
+    "Youwei Wang",
+    "Xi Chen",
+    "Chen Dong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-10T02:26:07Z",
+  "abs_url": "https://arxiv.org/abs/2608.09025v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.09025",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Financial agents can turn correct context into an unauthorized effect: a customer-facing commitment, trade, or deployed policy. We present SAGE-Fin, a finance-specific authority-handoff contract that makes the proposed effect, not merely its text, the object of runtime control. SAGE-Fin compiles proposals into typed, adapter-bound candidates; records missing or stale institutional obligations as coverage debt; contracts authority under current market, account, policy, and dialogue state; and requires an exact-artifact receipt whose nominal type matches the consuming response, execution, or policy adapter. Evidence and workflow progress cannot substitute for effect authority, and prior authorization is rechecked after state changes. Across an authored 616-case catalog, five deterministic specifications yield 3,080 outputs; a label-isolated harness obtains 616/616 binary reference-prototype parity, including 3/3 named response-gate fixtures, while 22 tests cover selected paths. These results establish executable conformance, not independent safety accuracy. Separately, SAGE-Fin's response gate processed real customer-facing production requests at a confidential digital-asset platform. An operational team independent of the implementation team reached a strongly positive post-deployment conclusion on practical usefulness and workflow fit, and end-user feedback was also strongly positive. Disclosure permits only the review's independence, stakeholder classes, assessed dimensions, and directional conclusion, so this is qualitative field corroboration rather than an aggregate effect estimate. Three distinct de-identified predecessor failures, with independently confirmed 0/3 interception, ground repeated-emission drift, stale account evidence, and missing escalation state without estimating prevalence or treatment effect.",
+  "abstract_zh": "本文提出 SAGE-Fin，一个面向金融场景的 authority-handoff contract，用于在运行时治理金融智能体的实际“效果”（effect），而不仅是其生成文本。论文指出，金融智能体可能基于正确上下文产生未授权后果，如客户承诺、交易执行或策略部署。SAGE-Fin 将提案编译为带类型、绑定 adapter 的候选对象；记录缺失或过期的机构义务为 coverage debt；在当前市场、账户、政策与对话状态下收缩权限；并要求 exact-artifact receipt，其名义类型必须匹配后续消费该结果的 response、execution 或 policy adapter。证据与流程进度不能替代效果授权，且状态变化后必须重新检查先前授权。实验方面，作者构建了 616 个案例目录，5 个确定性规范产生 3,080 个输出；在标签隔离的 harness 中实现 616/616 的二元参考原型一致性，并覆盖 3/3 个命名 response-gate fixture，另有 22 个测试覆盖部分路径。这些结果证明的是可执行一致性，而非独立安全准确率。论文还报告 SAGE-Fin 的 response gate 已在一家保密数字资产平台处理真实客户请求，独立运营团队与终端用户均给出强正向反馈，但披露限制使其只能作为定性现场佐证。最后，3 个去标识化前序失败案例表明该方法针对重复输出漂移、账户证据过期与缺失升级状态具有动机基础，但不估计发生率或处理效果。",
+  "key_points_zh": [
+    "核心观点是“context is not authority”：正确上下文、证据或工作流进展，都不能自动授权金融智能体产生客户承诺、交易或政策部署等实际效果。",
+    "SAGE-Fin 将智能体提案编译为 typed、adapter-bound candidates，并要求 exact-artifact receipt 与消费端 adapter 的名义类型一致，从而把运行时控制对象从文本转向可执行效果。",
+    "系统显式记录缺失或过期的机构义务为 coverage debt，并在市场、账户、政策与对话状态变化后重新检查授权，避免 stale evidence 与 prior authorization 失效。",
+    "在 616 个作者构造案例上，参考原型达到 616/616 的二元一致性；这些实验主要证明 executable conformance，而不是证明独立安全准确率或真实风险降低幅度。",
+    "真实部署部分来自一家保密数字资产平台的 customer-facing response gate，独立运营团队和终端用户反馈强正向，但由于披露受限，只能视为定性 field corroboration。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.72,
+    "novelty": 0.7,
+    "problem_significance": 0.78,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.66,
+    "llm_avg": 0.706,
+    "comment": "The paper fits partly as runtime governance and permission infrastructure for agents, but its finance-specific vertical framing limits generality.",
+    "comment_zh": "论文部分契合智能体运行时治理和权限基础设施，但金融垂直场景限制了其通用性。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2695092743915442,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.706,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09025/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09025/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.966
+    }
+  ]
+}

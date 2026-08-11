@@ -17,24 +17,24 @@
     "project_page": null
   },
   "abstract_en": "LLM agents are increasingly equipped with skills to perform complex tasks through multi-step reasoning and tool use. Although skills provide reusable procedural knowledge, agents may still execute them unreliably. Even when an agent has demonstrated the capability to complete tasks under the guidance of a skill, it may fail to do so consistently across similar tasks or repeated runs due to deviations from the skill procedure or incorrect execution of individual steps. Such instability limits the practical reliability of LLM agents. To address this problem, we propose SkillSentry, a skill-oriented runtime assurance framework built upon a new domain-specific language (DSL) for representing runtime guidance for skill execution. SkillSentry initializes the runtime guidance by combining a skill specification extracted from the corresponding skill document with execution experience mined from historical successful and failed traces. It then wraps around the agent execution loop to monitor and guide skill execution under the current guidance, while iteratively refining the guidance using newly collected traces. We evaluate SkillSentry on 15 skills across two LLM agents, each paired with two backbone models, i.e., Claude Code with Claude-Haiku-4.5 and Claude-Opus-4.6, and Codex with GPT-5.2 and GPT-5.4. Our results show that SkillSentry improves the task success rate of LLM agents by 24.1% across skills, on average, while exhibiting lower variability across repeated runs.",
-  "abstract_zh": "LLM agents 越来越多地通过技能（skills）来执行需要多步推理和工具使用的复杂任务。尽管技能能提供可复用的过程性知识，Agent 在实际执行时仍可能不可靠：即使它曾在某个技能指导下完成任务，也可能在相似任务或重复运行中因偏离技能流程、单步执行错误而失败。为解决这一问题，论文提出 SkillSentry，一个面向技能的运行时保障（runtime assurance）框架。SkillSentry 基于新的领域特定语言（DSL）表示技能执行中的运行时指导信息；它从技能文档中提取技能规范，并结合历史成功与失败执行轨迹中的经验来初始化指导规则。随后，SkillSentry 包裹在 Agent 执行循环外部，对当前技能执行进行监控与引导，并利用新收集的轨迹持续迭代优化指导。作者在 15 个技能、两个 LLM agents 及四个 backbone models 上评估，包括 Claude Code 搭配 Claude-Haiku-4.5 和 Claude-Opus-4.6，以及 Codex 搭配 GPT-5.2 和 GPT-5.4。结果显示，SkillSentry 平均将任务成功率提升 24.1%，并降低了多次重复运行之间的结果波动。",
+  "abstract_zh": "LLM Agent 越来越多地配备技能（skills），以通过多步推理和工具调用完成复杂任务。虽然技能提供了可复用的过程性知识，但 Agent 在执行这些技能时仍可能不稳定：即使它曾在某个技能指导下成功完成任务，也可能在相似任务或重复运行中因偏离技能流程、单步执行错误而失败。为解决这一问题，论文提出 SkillSentry，一个面向技能执行的运行时保障（runtime assurance）框架。SkillSentry 基于一种新的领域专用语言（DSL）表示技能执行中的运行时指导信息；它先从技能文档中提取技能规范，并结合历史成功与失败轨迹挖掘执行经验，初始化运行时指导；随后包裹在 Agent 执行循环外，对当前技能执行进行监控与引导，并利用新收集的执行轨迹持续迭代改进指导。作者在 15 个技能、两个 LLM Agent（Claude Code 与 Codex）以及四个骨干模型（Claude-Haiku-4.5、Claude-Opus-4.6、GPT-5.2、GPT-5.4）上评估，结果显示 SkillSentry 平均将任务成功率提升 24.1%，并降低重复运行间的结果波动。",
   "key_points_zh": [
-    "提出 SkillSentry，一个面向 LLM Agent 技能执行的 runtime assurance 框架，用于在执行过程中监控、约束和引导 Agent 遵循技能流程。",
-    "设计新的 DSL 来表示技能执行的运行时指导，将技能文档中的规范与历史成功/失败轨迹中挖掘出的经验结合起来。",
-    "SkillSentry 作为外层 wrapper 集成到 Agent 执行循环中，可在当前任务执行时动态提供指导，并基于新轨迹持续改进规则。",
-    "实验覆盖 15 个技能、Claude Code 与 Codex 两类 Agent，以及 Claude-Haiku-4.5、Claude-Opus-4.6、GPT-5.2、GPT-5.4 四个 backbone models。",
-    "结果表明 SkillSentry 平均提升任务成功率 24.1%，同时降低重复运行之间的性能方差，增强实际部署稳定性。"
+    "问题聚焦于 LLM Agent 的技能执行可靠性：Agent 即使掌握某项技能，也可能在相似任务或重复运行中因流程偏离或步骤错误而失败。",
+    "SkillSentry 提出面向技能的 runtime assurance 框架，使用新的 DSL 表示技能执行过程中的运行时指导与约束。",
+    "框架结合技能文档中抽取的技能规范，以及历史成功/失败执行轨迹中挖掘的经验，初始化并持续更新指导策略。",
+    "SkillSentry 嵌入 Agent 执行循环，对当前运行进行监控、纠偏和引导，从而减少技能执行中的不一致性。",
+    "在 15 个技能、Claude Code 与 Codex 两类 Agent、四个 backbone model 上实验，平均任务成功率提升 24.1%，且重复运行方差更低。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.93,
+    "domain_fit": 0.96,
     "novelty": 0.82,
-    "problem_significance": 0.88,
-    "potential_impact": 0.86,
+    "problem_significance": 0.89,
+    "potential_impact": 0.87,
     "paradigm_shift": 0.8,
-    "lasting_value": 0.87,
-    "llm_avg": 0.8460000000000001,
-    "comment": "SkillSentry is highly relevant because it provides a reusable runtime assurance loop for skill execution using traces and iterative guidance refinement.",
-    "comment_zh": "SkillSentry高度相关，因为它用轨迹和迭代式指导优化构建了可复用的技能执行运行时保障闭环。"
+    "lasting_value": 0.86,
+    "llm_avg": 0.8480000000000001,
+    "comment": "A highly relevant runtime assurance framework for reusable skill execution that closes the loop with trace-mined guidance refinement.",
+    "comment_zh": "这是一项高度相关的技能执行运行时保障框架，通过轨迹挖掘指导并持续优化可复用技能执行。"
   },
   "scores": {
     "topic_relevance": 0.88,
@@ -43,7 +43,7 @@
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.8460000000000001,
+    "llm_assessment": 0.8480000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {

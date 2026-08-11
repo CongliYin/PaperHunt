@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.09072",
   "title": "A Unified Issue Resolution Benchmark for Requirement Clarification, Planning, and Code Generation for Coding Agents",
-  "title_zh": "面向编码智能体需求澄清、规划与代码生成的统一 Issue 解决基准",
+  "title_zh": "SWE-RPG：面向编码智能体的需求澄清、实现规划与代码生成统一 Issue 解决基准",
   "authors": [
     "Xin Zhou",
     "Chun Yong Chong",
@@ -27,33 +27,33 @@
     "project_page": null
   },
   "abstract_en": "Large language model-powered coding agents are increasingly used to modify existing code repositories, for example, by adding features or fixing bugs. Yet existing repository-level benchmarks typically evaluate only whether the final patch passes tests. Satisfying a user request requires a long chain of interdependent reasoning and decisions: an agent must recover explicit and implicit requirements, formulate a repository-grounded implementation plan, and translate it into correct code. A pass/fail outcome cannot characterize how an unsuccessful trajectory diverges from the requirements and implementation process needed for a correct patch. To address this gap, we introduce SWE-RPG, a repository-level benchmark that combines executable patch evaluation with validated ground-truth references (GTs) for (1) Requirement Clarification and (2) Implementation Planning. These intermediate GTs support retrospective, GT-aligned diagnosis of complete coding-agent trajectories across clarification, planning, code generation, and artifact submission. SWE-RPG comprises 163 tasks from 31 Python and Java repositories, including 113 bug fixes and 50 feature additions. We evaluate 3 coding agents, including Claude Code, Codex, and OpenCode, with 6 large language model backends, including Claude-Sonnet-5 and GPT-5.6-Terra. Results show that the evaluated popular coding agents still struggle to implement user requests in existing repositories, achieving an average resolved rate of only 31.5% on SWE-RPG. Intermediate-GT diagnosis further identifies implicit requirement recovery as the main bottleneck, accounting for 24.5%--46.0% of agent runs. This result suggests implicit-requirement recovery as a key candidate direction for improving coding agents. The benchmark data and evaluation code are available at https://github.com/Xin-Zhou-smu/SWE-RPG-Bench.",
-  "abstract_zh": "本文提出 SWE-RPG，一个面向代码仓库级 Issue 解决的统一基准，用于评估 LLM-powered coding agents 在需求澄清（Requirement Clarification）、实现规划（Implementation Planning）和代码生成（Code Generation）全过程中的能力。现有 repository-level benchmarks 通常只依据最终补丁是否通过测试来评估，但这无法解释失败轨迹究竟偏离了哪些需求或实现步骤。SWE-RPG 在可执行补丁评估之外，引入经过验证的中间真值参考（ground-truth references, GTs），覆盖需求澄清与实现规划，从而支持对完整智能体轨迹进行回溯式、GT 对齐的诊断。该基准包含来自 31 个 Python 和 Java 仓库的 163 个任务，其中包括 113 个 bug fix 和 50 个 feature addition。作者评估了 Claude Code、Codex、OpenCode 等 3 个 coding agents，以及 Claude-Sonnet-5、GPT-5.6-Terra 等 6 个 LLM backends。实验显示，主流 coding agents 在 SWE-RPG 上平均解决率仅为 31.5%，其中隐式需求恢复是主要瓶颈，占失败/运行问题的 24.5%–46.0%。",
+  "abstract_zh": "由大语言模型驱动的 coding agents 正越来越多地用于修改既有代码仓库，例如添加功能或修复 bug。然而，现有 repository-level benchmarks 通常只评估最终 patch 是否通过测试，难以刻画失败轨迹究竟在哪个环节偏离了正确实现。为弥补这一缺口，论文提出 SWE-RPG：一个仓库级 benchmark，将可执行 patch 评测与经过验证的 ground-truth references（GTs）结合起来，覆盖两类中间过程：（1）Requirement Clarification（需求澄清），（2）Implementation Planning（实现规划）。这些中间 GT 支持对完整 coding-agent 轨迹进行回溯式、GT 对齐的诊断，分析其在澄清、规划、代码生成和提交产物等阶段的问题。SWE-RPG 包含来自 31 个 Python 和 Java 仓库的 163 个任务，其中 113 个为 bug fix，50 个为 feature addition。作者评估了 Claude Code、Codex、OpenCode 等 3 种 coding agents，以及 Claude-Sonnet-5、GPT-5.6-Terra 等 6 种 LLM 后端。实验显示，当前流行 coding agents 在既有仓库中完成用户请求仍然困难，SWE-RPG 上平均 resolved rate 仅为 31.5%。基于中间 GT 的诊断进一步发现，隐式需求恢复是主要瓶颈，占 agent 运行失败或偏差的 24.5%--46.0%，表明提升 implicit-requirement recovery 是改进 coding agents 的关键方向。",
   "key_points_zh": [
-    "提出 SWE-RPG，一个统一的 repository-level issue resolution benchmark，不只看最终 patch 是否通过测试，还评估需求澄清、实现规划与代码生成全过程。",
-    "基准引入经过验证的中间 GTs，包括 Requirement Clarification 和 Implementation Planning，用于对 coding-agent trajectory 进行细粒度、可解释的失败诊断。",
-    "SWE-RPG 包含 163 个任务，来自 31 个 Python 和 Java repositories，其中 113 个为 bug fixes，50 个为 feature additions。",
-    "评估 Claude Code、Codex、OpenCode 等 3 个 coding agents 和 6 个 LLM backends 后发现，平均 resolved rate 仅为 31.5%，说明现有智能体在真实仓库修改中仍表现有限。",
-    "诊断结果表明 implicit requirement recovery 是主要瓶颈，在 24.5%–46.0% 的智能体运行中造成问题，是改进 coding agents 的关键方向。"
+    "提出 SWE-RPG，一个 repository-level issue resolution benchmark，不仅评估最终 patch 是否通过测试，还提供需求澄清与实现规划的中间 ground-truth references。",
+    "基准包含 163 个任务，覆盖 31 个 Python 和 Java 仓库，其中包括 113 个 bug fixes 和 50 个 feature additions，更贴近真实仓库维护场景。",
+    "SWE-RPG 支持对 coding-agent 完整轨迹进行 retrospective diagnosis，分析需求理解、规划、代码生成和最终提交等阶段的偏差。",
+    "对 Claude Code、Codex、OpenCode 及 6 个 LLM 后端的评测显示，平均 resolved rate 仅为 31.5%，说明当前 coding agents 在复杂仓库任务上仍表现有限。",
+    "诊断结果表明，implicit requirement recovery 是主要瓶颈，占 24.5%--46.0% 的 agent runs，是未来提升编码智能体能力的重要方向。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.95,
+    "domain_fit": 0.94,
     "novelty": 0.72,
-    "problem_significance": 0.86,
-    "potential_impact": 0.82,
-    "paradigm_shift": 0.55,
-    "lasting_value": 0.84,
-    "llm_avg": 0.758,
-    "comment": "A strong coding-agent benchmark that adds intermediate requirement and planning ground truth for trajectory-level diagnosis beyond patch pass rates.",
-    "comment_zh": "这是一个较强的代码智能体基准，通过需求和规划的中间真值支持超越补丁通过率的轨迹诊断。"
+    "problem_significance": 0.87,
+    "potential_impact": 0.83,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.82,
+    "llm_avg": 0.772,
+    "comment": "A strong coding-agent benchmark that adds intermediate requirement and planning references for trajectory-level diagnosis beyond final patch success.",
+    "comment_zh": "这是一项较强的代码智能体基准，通过需求和规划中间标注支持超越最终补丁结果的轨迹诊断。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
     "open_source": 0.5,
     "community_heat": 0.0,
-    "author_reputation": 0.29176612508188887,
+    "author_reputation": 0.3573677457192113,
     "venue_signal": 0.0,
     "generality": 0.35,
-    "llm_assessment": 0.758,
+    "llm_assessment": 0.772,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -66,7 +66,7 @@
     "first_author_h_index": 2,
     "first_author_found": true,
     "first_author_affiliations": [],
-    "last_author_h_index": 0,
+    "last_author_h_index": 4,
     "last_author_found": true,
     "last_author_affiliations": []
   },

@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.09044",
   "title": "Tree-of-Experience: Hierarchical Experience Management for Self-Evolving Agents",
-  "title_zh": "Tree-of-Experience：面向自进化智能体的层次化经验管理",
+  "title_zh": "Tree-of-Experience：面向自进化 Agent 的层次化经验管理",
   "authors": [
     "Zihao Deng",
     "Yining Zhu",
@@ -22,24 +22,24 @@
     "project_page": null
   },
   "abstract_en": "Continual self-evolution requires LLM agents to transform environmental interactions into reliable and reusable experience. Existing methods typically refine individual trajectories or abstract shared knowledge from related trajectories, but their experience representations are often disconnected from the underlying reasoning process. This limits feedback attribution, cross-task transfer, and update and retrieval efficiency, particularly in complex reasoning tasks with outcome-level feedback. To overcome this limitation, we propose \\textbf{T}ree-\\textbf{o}f-\\textbf{E}xperience (ToE), a structured experience-management framework that aligns experience organization with the hierarchical reasoning process of LLM agents. Specifically, ToE organizes the experience into a shared tree of analytical perspectives and reasoning paths, whose reliability is calibrated through environmental outcomes to support systematic updating, transfer, and efficient retrieval. The experimental results on \\textsc{Game of 24} and \\textsc{FinEvolveBench} show that ToE substantially improves both problem-solving performance and efficiency. On \\textsc{Game of 24}, ToE achieves a 31.4\\% relative improvement in accuracy over the experience-free ToT baseline. On \\textsc{FinEvolveBench}, ToE improves tsIC by an average of 41.24\\% over the experience-free pipeline across 12 evaluation settings, whereas conventional experience-management methods often underperform experience-free baselines.",
-  "abstract_zh": "持续自进化要求 LLM agents 能将与环境的交互转化为可靠且可复用的经验。现有方法通常优化单条轨迹，或从相关轨迹中抽象共享知识，但其经验表示往往与底层推理过程脱节，限制了反馈归因、跨任务迁移，以及更新和检索效率，尤其是在仅有结果级反馈的复杂推理任务中。为此，论文提出 Tree-of-Experience（ToE），一种结构化经验管理框架，将经验组织方式与 LLM agents 的层次化推理过程对齐。ToE 将经验组织为由分析视角与推理路径构成的共享树结构，并通过环境结果校准其可靠性，从而支持系统化更新、迁移与高效检索。在 Game of 24 和 FinEvolveBench 上的实验表明，ToE 显著提升了问题求解性能与效率：在 Game of 24 上，相比无经验的 ToT baseline，准确率相对提升 31.4%；在 FinEvolveBench 的 12 个评测设置中，相比无经验 pipeline，tsIC 平均提升 41.24%，而传统经验管理方法常常不如无经验 baseline。",
+  "abstract_zh": "本文提出 Tree-of-Experience（ToE），一种面向 LLM agents 持续自进化的结构化经验管理框架。现有方法多聚焦于优化单条轨迹，或从相关轨迹中抽象共享知识，但其经验表示往往与底层推理过程脱节，导致在复杂推理任务中难以进行反馈归因、跨任务迁移，以及高效更新和检索。ToE 将经验组织为一棵共享树，节点对应分析视角与推理路径，并利用环境结果校准其可靠性，从而支持系统化的经验更新、迁移和高效检索。在 Game of 24 和 FinEvolveBench 上的实验表明，ToE 同时提升了解题性能与效率：在 Game of 24 上，相比无经验的 ToT baseline，准确率相对提升 31.4%；在 FinEvolveBench 的 12 个评测设置中，相比无经验 pipeline，tsIC 平均提升 41.24%，而传统经验管理方法常低于无经验 baseline。",
   "key_points_zh": [
-    "提出 Tree-of-Experience（ToE），将经验管理与 LLM agents 的层次化推理过程显式对齐。",
-    "ToE 用共享树结构组织分析视角和推理路径，并依据环境结果校准各经验节点的可靠性。",
-    "该框架改善了结果级反馈场景下的反馈归因、跨任务迁移，以及经验更新与检索效率。",
-    "在 Game of 24 上，ToE 相比无经验 ToT baseline 获得 31.4% 的准确率相对提升。",
-    "在 FinEvolveBench 的 12 个设置中，ToE 相比无经验 pipeline 的 tsIC 平均提升 41.24%，优于常规经验管理方法。"
+    "ToE 将经验表示与 LLM agents 的层次化推理过程对齐，缓解传统经验管理中经验与推理轨迹脱节的问题。",
+    "框架将分析视角和推理路径组织为共享经验树，并基于环境反馈对节点可靠性进行校准。",
+    "这种树状结构支持更精细的反馈归因、跨任务经验迁移，以及更高效的经验更新与检索。",
+    "在 Game of 24 上，ToE 相比无经验 ToT baseline 实现 31.4% 的准确率相对提升。",
+    "在 FinEvolveBench 上，ToE 在 12 个评测设置中使 tsIC 平均提升 41.24%，显著优于常规经验管理方法。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.86,
-    "novelty": 0.72,
-    "problem_significance": 0.76,
-    "potential_impact": 0.72,
-    "paradigm_shift": 0.75,
-    "lasting_value": 0.76,
-    "llm_avg": 0.742,
-    "comment": "Tree-of-Experience is a relevant agent memory and experience-management framework that supports reusable, outcome-calibrated self-improvement.",
-    "comment_zh": "Tree-of-Experience是相关的智能体记忆与经验管理框架，支持可复用且由环境结果校准的自我改进。"
+    "domain_fit": 0.9,
+    "novelty": 0.78,
+    "problem_significance": 0.82,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.8,
+    "llm_avg": 0.7879999999999999,
+    "comment": "A relevant experience-management and memory framework for self-evolving agents with reusable hierarchical organization and outcome calibration.",
+    "comment_zh": "这是一项相关的自演化智能体经验管理与记忆框架，具有可复用的层次化组织和结果校准机制。"
   },
   "scores": {
     "topic_relevance": 0.36000000000000004,
@@ -48,7 +48,7 @@
     "author_reputation": 0.8265297425653342,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.742,
+    "llm_assessment": 0.7879999999999999,
     "domain_multiplier": 1.0
   },
   "enriched": {

@@ -88,13 +88,13 @@
     "project_page": null
   },
   "abstract_en": "Industrial recommender systems commonly use cascaded retrieval, ranking, and re-ranking pipelines. Although efficient, these pipelines fragment information and objectives across modules, rely on rigid rules, and have limited awareness of real-time intent, leaving session-level shifts among browsing, comparison, and purchase insufficiently addressed. We present DREAM (Developing Recommender Engine with Agentic Methods), an autonomous optimization control architecture that adds a perception-aware, orchestrable, and auditable policy layer atop existing pipelines without replacing them. DREAM has two core components. First, a three-tier Intent Engine fuses on-device signals into structured L0/L1/L2 intent representations; its edge-cloud trigger chain reduces reporting volume to approximately 8.7%. Second, a Meta Engine uses a MetaModel for layered M1-to-M2-to-M3 reasoning: intent summarization, strategy planning informed by Strategy Memory, and parameter translation. It dispatches the resulting parameters through a unified outlet with safety guardrails. A Reward Dual Loop continuously optimizes both components by combining offline simulation for strategy-space exploration with online feedback for outcome calibration, forming a cycle of generation, execution, evaluation, and experience accumulation. Large-scale A/B tests on Taobao's homepage feed show that re-ranking control alone improves IPV by 2.06%, Core IPV by 2.39%, and GMV by 0.88%. Extending control to fine ranking raises these gains to 2.71%, 3.06%, and 1.31%, respectively, while consistently improving PV by more than 1%. These gains require neither replacement of pipeline models nor compromise of serving stability, supporting agentic meta-control as a viable paradigm for industrial recommendation.",
-  "abstract_zh": "工业推荐系统通常采用召回、排序、重排的级联流水线，虽具备效率优势，但模块间信息与目标割裂、依赖固定规则，且对实时意图感知不足，难以充分应对用户在浏览、比较、购买等会话级状态间的动态切换。本文提出 DREAM（Developing Recommender Engine with Agentic Methods），一种自主优化控制架构：它在不替换现有推荐流水线的前提下，在其上方增加可感知、可编排、可审计的策略层。DREAM 包含两个核心组件：其一是三层 Intent Engine，将端侧信号融合为结构化的 L0/L1/L2 意图表示，并通过端云触发链将上报量降至约 8.7%；其二是 Meta Engine，利用 MetaModel 进行 M1-M2-M3 分层推理，包括意图总结、结合 Strategy Memory 的策略规划，以及参数翻译，随后通过统一出口和安全护栏下发控制参数。Reward Dual Loop 通过离线仿真探索策略空间、在线反馈校准效果，持续优化意图引擎与元引擎，形成生成、执行、评估和经验积累闭环。淘宝首页信息流的大规模 A/B 测试显示，仅控制重排即可提升 IPV 2.06%、Core IPV 2.39%、GMV 0.88%；扩展到精排后，收益分别提升至 2.71%、3.06% 和 1.31%，同时 PV 稳定提升超过 1%。结果表明，agentic meta-control 可在不替换底层模型且不牺牲服务稳定性的情况下，有效增强工业推荐系统。",
+  "abstract_zh": "工业推荐系统通常采用级联式 retrieval、ranking 与 re-ranking 流水线。虽然这种架构高效，但不同模块之间的信息与目标被割裂，系统依赖固定规则，对用户实时意图的感知有限，难以充分应对会话级别在浏览、比较与购买之间的动态变化。本文提出 DREAM（Developing Recommender Engine with Agentic Methods），一种自主优化控制架构：它不替换现有推荐流水线，而是在其上增加一个具备感知、编排与可审计能力的策略层。DREAM 包含两个核心组件：其一是三层 Intent Engine，将端侧信号融合为结构化的 L0/L1/L2 意图表示，并通过边云触发链将上报量降至约 8.7%；其二是 Meta Engine，利用 MetaModel 进行 M1-to-M2-to-M3 分层推理，包括意图总结、结合 Strategy Memory 的策略规划，以及参数翻译，并通过统一出口与安全护栏下发控制参数。系统还引入 Reward Dual Loop，通过离线仿真探索策略空间、在线反馈校准效果，持续优化 Intent Engine 与 Meta Engine，形成生成、执行、评估和经验积累的闭环。淘宝首页信息流的大规模 A/B 测试显示，仅控制 re-ranking 即可带来 IPV +2.06%、Core IPV +2.39%、GMV +0.88%；进一步扩展到 fine ranking 后，收益提升至 IPV +2.71%、Core IPV +3.06%、GMV +1.31%，同时 PV 稳定提升超过 1%。这些收益无需替换原有流水线模型，也不牺牲服务稳定性，表明 agentic meta-control 是工业推荐系统中的可行范式。",
   "key_points_zh": [
-    "提出 DREAM，在现有工业推荐召回-排序-重排流水线之上增加策略控制层，而非替换原有模型，强调可感知、可编排、可审计与服务稳定性。",
-    "三层 Intent Engine 将端侧实时信号组织为 L0/L1/L2 意图表示，通过 edge-cloud trigger chain 将信号上报量压缩到约 8.7%，兼顾实时性与通信成本。",
-    "Meta Engine 基于 MetaModel 进行 M1-to-M2-to-M3 分层推理：先总结意图，再结合 Strategy Memory 规划策略，最后翻译为可执行参数，并经统一出口与安全护栏下发。",
-    "Reward Dual Loop 结合离线仿真与在线反馈，持续完成策略生成、执行、评估和经验积累，用于优化意图理解和策略控制。",
-    "淘宝首页 feed 大规模 A/B 测试显示，重排控制带来 IPV、Core IPV、GMV 分别提升 2.06%、2.39%、0.88%；扩展至精排后提升至 2.71%、3.06%、1.31%，PV 也稳定提升超过 1%。"
+    "DREAM 将 agentic meta-control 引入工业推荐系统，在不替换 retrieval、ranking、re-ranking 既有模型的前提下，实现对推荐流水线的上层策略控制。",
+    "三层 Intent Engine 将端侧用户行为信号转化为 L0/L1/L2 结构化意图表示，并通过 edge-cloud trigger chain 将信号上报量压缩到约 8.7%，兼顾实时性与成本。",
+    "Meta Engine 使用 MetaModel 进行 M1-to-M2-to-M3 分层推理：先总结用户意图，再结合 Strategy Memory 制定策略，最后翻译为可执行的推荐参数并经安全护栏下发。",
+    "Reward Dual Loop 结合离线仿真与在线反馈，持续优化意图建模和策略生成，形成生成、执行、评估、经验积累的闭环优化机制。",
+    "淘宝首页信息流 A/B 测试显示，DREAM 在 re-ranking 与 fine ranking 控制场景下均显著提升 IPV、Core IPV、GMV 与 PV，证明其具备工业级部署价值。"
   ],
   "llm_assessment": {
     "domain_fit": 0.97,
@@ -104,14 +104,14 @@
     "paradigm_shift": 0.78,
     "lasting_value": 0.88,
     "llm_avg": 0.8619999999999999,
-    "comment": "A strong industrial recommendation paper showing agentic meta-control improves real Taobao feed ranking and business metrics.",
-    "comment_zh": "这是一篇强工业推荐论文，展示了智能体式元控制对淘宝信息流排序和业务指标的实际提升。"
+    "comment": "A highly relevant industrial recommendation paper showing agentic intent-aware meta-control with large-scale Taobao online gains.",
+    "comment_zh": "这是一篇高度相关的工业推荐论文，展示了具备意图感知的智能体元控制并在淘宝大规模线上取得收益。"
   },
   "scores": {
     "topic_relevance": 0.52,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.4247609509454365,
+    "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
     "llm_assessment": 0.8619999999999999,
@@ -124,11 +124,11 @@
     "has_video_demo": false,
     "hf_listed": false,
     "hf_upvotes": 0,
-    "first_author_h_index": 22,
-    "first_author_found": true,
+    "first_author_h_index": null,
+    "first_author_found": false,
     "first_author_affiliations": [],
-    "last_author_h_index": 1,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": [

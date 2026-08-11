@@ -1,7 +1,7 @@
 {
   "arxiv_id": "2608.09282",
   "title": "ComboShoppingBench: Evaluating LLM Agents for Budget-Constrained Basket Shopping with Coupons",
-  "title_zh": "ComboShoppingBench：评估 LLM Agent 在带优惠券预算约束下的组合购物能力",
+  "title_zh": "ComboShoppingBench：评估 LLM Agent 在含优惠券的预算约束组合购物任务中的能力",
   "authors": [
     "Adrian Li",
     "Kelong Mao",
@@ -23,33 +23,33 @@
     "project_page": null
   },
   "abstract_en": "Real-world shopping often requires constructing a basket of complementary items rather than retrieving a single product. Such combo-shopping tasks arise in device setup, meal preparation, event planning, and group takeout ordering, requiring joint reasoning about item compatibility, availability, store-level requirements, delivery fees, coupons, and budgets. Evaluation is challenging because multiple baskets may satisfy the same request, making exact-match metrics unsuitable, whereas semantic evaluation alone cannot detect infeasible orders, invalid coupon combinations, or incorrect payments. We introduce ComboShoppingBench, an agentic shopping benchmark for open-ended yet verifiable basket construction in a simulated commerce and takeout environment. During task synthesis, an exploration agent constructs a feasible and semantically coherent basket of purchasable products; this witness guides the generation of coupons, budget constraints, user queries, and aligned evaluation rubrics. During evaluation, LLM judges assess semantic satisfaction, response quality, and claim faithfulness, while deterministic validation checks product-ID validity, budget compliance, and coupon optimality. Experiments with diverse LLM agents demonstrate that even strong agents struggle on ComboShoppingBench, highlighting substantial room for improvement in reliable, constraint-aware combo shopping.",
-  "abstract_zh": "现实购物通常不是检索单个商品，而是构建由互补商品组成的购物篮，例如设备配置、备餐、活动策划和多人外卖点单。这类组合购物任务需要联合推理商品兼容性、库存可购性、店铺级要求、配送费、优惠券和预算等因素。由于同一请求可能存在多个满足条件的购物篮，精确匹配指标并不适用；而单纯语义评估又难以发现不可行订单、无效优惠券组合或错误支付金额。本文提出 ComboShoppingBench，一个面向开放式但可验证购物篮构建的 agentic shopping benchmark，覆盖模拟电商与外卖环境。在任务合成阶段，exploration agent 先构造一个可购买且语义一致的可行购物篮，作为 witness 来指导优惠券、预算约束、用户查询和评估 rubrics 的生成。评估阶段结合 LLM judges 与确定性验证：前者评估语义满足度、回复质量和声明忠实性，后者检查 product-ID 有效性、预算合规性与优惠券最优性。实验表明，即使是较强的 LLM agents 在 ComboShoppingBench 上也表现困难，说明可靠的约束感知组合购物仍有很大提升空间。",
+  "abstract_zh": "现实购物通常不是检索单个商品，而是需要构建由互补商品组成的购物篮，例如设备搭建、备餐、活动策划或多人外卖点单。这类 combo-shopping 任务要求模型联合推理商品兼容性、库存可用性、店铺级要求、配送费、优惠券与预算等因素。由于同一需求可能对应多个有效购物篮，精确匹配指标并不适用；而仅依赖语义评估又无法发现不可下单商品、无效优惠券组合或付款金额错误等问题。本文提出 ComboShoppingBench，一个面向开放式但可验证购物篮构建的 agentic shopping benchmark，覆盖模拟电商与外卖环境。在任务合成阶段，exploration agent 先构造一个可购买且语义一致的可行购物篮，并以此作为 witness 来生成优惠券、预算约束、用户查询与对齐的评测准则。评估阶段结合 LLM judges 与确定性验证：前者评估语义满足度、回复质量和声明忠实性，后者检查 product-ID 有效性、预算合规性与优惠券最优性。实验显示，即使是强大的 LLM agents 在 ComboShoppingBench 上也表现不足，说明可靠、约束感知的组合购物仍有显著提升空间。",
   "key_points_zh": [
-    "提出 ComboShoppingBench，面向开放式但可验证的组合购物任务，覆盖模拟电商与外卖场景。",
-    "任务要求 LLM Agent 同时处理商品互补性、可购性、店铺限制、配送费、优惠券使用和预算约束。",
-    "采用 witness-guided synthesis：先由 exploration agent 构造可行购物篮，再生成约束、查询和评估标准。",
-    "评估结合 LLM judges 与确定性校验，既看语义满足和回复质量，也验证 product-ID、预算与优惠券最优性。",
-    "实验显示强 LLM agents 仍难以稳定完成任务，暴露出现有模型在约束推理和可执行购物规划上的不足。"
+    "提出 ComboShoppingBench，聚焦预算约束、优惠券、配送费与商品兼容性共同作用下的多商品购物篮构建任务。",
+    "通过 exploration agent 生成可行购物篮 witness，并据此合成用户查询、预算、优惠券和评测 rubrics，使开放式任务仍可验证。",
+    "评估框架结合 LLM judges 与 deterministic validation，既衡量语义满意度和回复质量，也检查商品 ID、预算合规和优惠券使用是否正确。",
+    "相比单商品检索或纯语义评测，该 benchmark 更能暴露 LLM agents 在真实购物场景中的约束推理与执行可靠性问题。",
+    "实验表明当前强模型仍难以稳定完成此类 combo-shopping 任务，提示可靠的 constraint-aware shopping agent 仍需进一步研究。"
   ],
   "llm_assessment": {
-    "domain_fit": 0.94,
+    "domain_fit": 0.96,
     "novelty": 0.78,
-    "problem_significance": 0.84,
-    "potential_impact": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
     "paradigm_shift": 0.68,
-    "lasting_value": 0.8,
-    "llm_avg": 0.784,
-    "comment": "A well-grounded shopping-agent benchmark that directly evaluates constraint-aware basket construction and purchase feasibility.",
-    "comment_zh": "该基准紧扣购物助手场景，直接评估受约束的组合购篮构建与下单可行性。"
+    "lasting_value": 0.82,
+    "llm_avg": 0.796,
+    "comment": "A strong guided-shopping evaluation benchmark focused on verifiable basket construction under budgets, coupons, and product constraints.",
+    "comment_zh": "这是一项强相关的导购评测基准，聚焦预算、优惠券和商品约束下可验证的购物篮构建。"
   },
   "scores": {
     "topic_relevance": 0.8400000000000001,
     "open_source": 0.0,
     "community_heat": 0.0,
-    "author_reputation": 0.5076750357699304,
+    "author_reputation": 0.4142509875137679,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.784,
+    "llm_assessment": 0.796,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -62,8 +62,8 @@
     "first_author_h_index": 9,
     "first_author_found": true,
     "first_author_affiliations": [],
-    "last_author_h_index": 5,
-    "last_author_found": true,
+    "last_author_h_index": null,
+    "last_author_found": false,
     "last_author_affiliations": []
   },
   "figures": [

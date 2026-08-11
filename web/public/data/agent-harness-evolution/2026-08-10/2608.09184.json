@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.09184",
+  "title": "Agentic Router: An Execution-Grounded Continual Learning Approach With Memory",
+  "title_zh": "Agentic Router：一种带记忆、基于执行反馈的持续学习方法",
+  "authors": [
+    "Yuxuan Chen",
+    "Rongpeng Li",
+    "Zhifeng Zhao",
+    "Yuntao Liu",
+    "Xing Xu",
+    "Honggang Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-10T06:53:24Z",
+  "abs_url": "https://arxiv.org/abs/2608.09184v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.09184",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM) agents provide a promising interface for command-line-based network operations, but a plausible command may still fail or introduce operational risk after execution. Existing approaches mainly focus on command generation or final configuration correctness, and do not use execution-grounded experience to jointly improve candidate coverage and action selection. We propose an execution-grounded dual-path consequence-aware agent for CLI-based SONiC operations, which generates multiple complete actions, predicts their execution consequences, and selects the final action through utility- and risk-aware reranking. The proposal-side path abstracts reusable operational lessons into retrievable guidance to improve feasible-action coverage without modifying the proposal LLM, while the selection-side path adapts the consequence predictor through session-level LoRA updates using real SSH feedback to improve conditional selection quality. Experiments over multi-turn SONiC operation sessions with different Qwen3 proposal models show that the framework improves feasible-action coverage and top-1 execution success, and that the two adaptation paths provide complementary gains over interaction.",
+  "abstract_zh": "本文面向基于命令行界面（CLI）的 SONiC 网络运维场景，提出一种以执行结果为依据、具备后果感知能力的双路径 LLM Agent 框架。现有方法多关注命令生成或最终配置正确性，但一个看似合理的命令在真实执行后仍可能失败或带来运维风险。该方法首先生成多个完整候选操作，再预测其执行后果，并通过同时考虑效用与风险的重排序机制选择最终动作。框架包含两条自适应路径：在 proposal 侧，将可复用的运维经验抽象为可检索指导，以提升可行动作覆盖率，且无需修改 proposal LLM；在 selection 侧，利用真实 SSH 反馈进行会话级 LoRA 更新，持续适配后果预测器，从而提升条件动作选择质量。在多轮 SONiC 运维会话和不同 Qwen3 proposal models 上的实验表明，该框架能够提升可行动作覆盖率与 top-1 执行成功率，两条适应路径在交互过程中提供互补增益。",
+  "key_points_zh": [
+    "提出 execution-grounded dual-path consequence-aware agent，用真实命令执行结果而非仅靠静态预测来改进网络运维决策。",
+    "proposal-side path 将历史执行经验沉淀为可检索的操作指导，提升候选命令的可行性覆盖率，同时不需要微调 proposal LLM。",
+    "selection-side path 基于真实 SSH feedback 对 consequence predictor 进行会话级 LoRA 更新，增强对候选动作后果的判断与选择能力。",
+    "通过 utility- and risk-aware reranking 在多个完整候选操作中选择最终动作，显式权衡任务收益与潜在运维风险。",
+    "在多轮 SONiC operations 和不同 Qwen3 模型实验中，该方法提升 feasible-action coverage 与 top-1 execution success，且两条路径具有互补效果。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.66,
+    "novelty": 0.69,
+    "problem_significance": 0.74,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.63,
+    "lasting_value": 0.65,
+    "llm_avg": 0.6819999999999999,
+    "comment": "The execution-grounded memory and continual adaptation loop is relevant, but the network-operations vertical limits domain centrality.",
+    "comment_zh": "其基于执行反馈的记忆与持续适应闭环具有相关性，但网络运维垂直场景削弱了领域核心契合度。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6819999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09184/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.921
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09184/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

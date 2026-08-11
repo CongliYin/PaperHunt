@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.09168",
+  "title": "From Relevance to Execution Utility: Reward-Aware Dynamic Execution Gating for Skill-Based LLM Agents",
+  "title_zh": "从相关性到执行效用：面向技能型 LLM Agent 的奖励感知动态执行门控",
+  "authors": [
+    "Liang He",
+    "Jingbo Wen",
+    "Hongyu Gu",
+    "Hao Li",
+    "Haoyu Wang",
+    "Yixiong Chen",
+    "Kangning Cui",
+    "Xilu Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-10T06:28:25Z",
+  "abs_url": "https://arxiv.org/abs/2608.09168v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.09168",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent skills are increasingly used to equip large language model (LLM) agents with reusable procedural knowledge. Although recent work has substantially improved skill retrieval due to the increasing skill libraries, retrieving a plausible skill bundle does not guarantee that executing it is worthwhile. Since every skill-conditioned rollout is computationally expensive, deciding whether a retrieved bundle should be executed has become an increasingly important challenge. To this end, we introduce the Reward-Aware Dynamic Execution Gate (RADEG), a lightweight, retriever-agnostic decision layer between skill retrieval and agent execution. RADEG learns a low-cost surrogate model that predicts the execution utility of a query--bundle pair before the expensive rollout is launched. To obtain informative supervision while controlling for task difficulty, we locally perturb each retrieved bundle by deleting, adding, or replacing one skill, producing matched same-query rollouts that isolate the effect of bundle composition on verifier reward. During deployment, RADEG updates only a warm-started logistic head as new verifier feedback becomes available, enabling inexpensive adaptation of the execute/skip boundary without retraining either the retriever or the agent. Under a query-level held-out evaluation on 288 collected rollouts, RADEG substantially reduces unnecessary agent executions while preserving a large fraction of the downstream verifier reward. It consistently outperforms relevance-based and random gating across different execution budgets, demonstrating that execution-aware surrogate modeling provides a practical and cost-effective complement to skill retrieval.",
+  "abstract_zh": "本文关注技能型 LLM Agent 中“检索到技能后是否值得执行”的问题。随着 skill library 扩大，已有方法提升了 skill retrieval 的相关性，但一个看似合理的 skill bundle 并不一定能带来足够收益，而每次基于技能的 rollout 都代价较高。为此，论文提出 Reward-Aware Dynamic Execution Gate（RADEG），在技能检索与 Agent 执行之间加入一个轻量、与 retriever 无关的决策层。RADEG 学习低成本代理模型，在启动昂贵 rollout 前预测 query--bundle 对的执行效用。为获得有效监督并控制任务难度，作者对每个检索到的 bundle 进行局部扰动，包括删除、添加或替换一个 skill，构造同一 query 下的匹配 rollout，从而隔离 bundle 组成对 verifier reward 的影响。部署时，RADEG 仅根据新的 verifier feedback 更新 warm-started logistic head，无需重训练 retriever 或 Agent，即可低成本调整 execute/skip 边界。在 288 个收集 rollout 的 query-level held-out 评估中，RADEG 显著减少不必要的 Agent 执行，同时保留大部分下游 verifier reward，并在不同执行预算下稳定优于基于相关性和随机的 gating 方法。",
+  "key_points_zh": [
+    "提出 RADEG：一个位于 skill retrieval 与 Agent execution 之间的轻量动态执行门控，用于预测检索到的 skill bundle 是否值得执行。",
+    "核心区别是从“检索相关性”转向“执行效用”：RADEG 直接建模 query--bundle 执行后可能获得的 verifier reward，而不是仅判断技能是否匹配查询。",
+    "训练监督来自局部扰动的匹配 rollout：通过删除、添加或替换一个 skill，在同一 query 下比较不同 bundle，减少任务难度差异带来的干扰。",
+    "部署时只更新 warm-started logistic head，利用新增 verifier feedback 低成本自适应 execute/skip 决策边界，无需重训练 retriever 或 LLM Agent。",
+    "在 288 个 rollout 的 query-level held-out 评估中，RADEG 在减少无效执行的同时保留较多 downstream reward，并优于 relevance-based gating 与 random gating。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.82,
+    "novelty": 0.69,
+    "problem_significance": 0.76,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.61,
+    "lasting_value": 0.68,
+    "llm_avg": 0.692,
+    "comment": "A useful skill-agent execution gate that learns from verifier-backed rollouts, though it is narrower than full skill evolution.",
+    "comment_zh": "这是一种有用的技能智能体执行门控方法，利用验证器反馈的运行轨迹学习，但范围窄于完整的技能演化。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.692,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09168/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.938
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09168/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.937
+    }
+  ]
+}
