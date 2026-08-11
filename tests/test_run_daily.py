@@ -69,6 +69,39 @@ class RunDailyTests(unittest.TestCase):
             self.assertIn("arXiv prefetch failed: HTTP 429", stderr.getvalue())
             run_domain.assert_not_called()
 
+    def test_refresh_and_raw_cache_directory_are_forwarded_to_prefetch(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            domains_dir = root / "domains"
+            raw_cache_dir = root / "persistent-arxiv"
+            self._write_domain(domains_dir, "one", ["cs.AI"])
+            argv = [
+                "run_daily.py",
+                "--date",
+                "2026-08-05",
+                "--domains",
+                "one",
+                "--domains-dir",
+                str(domains_dir),
+                "--arxiv-raw-cache-dir",
+                str(raw_cache_dir),
+                "--refresh-arxiv",
+            ]
+
+            with (
+                mock.patch.object(sys, "argv", argv),
+                mock.patch.object(run_daily, "build_arxiv_cache") as build,
+                mock.patch.object(
+                    run_daily,
+                    "run_domain",
+                    return_value=run_daily.DomainResult("one", True, "ok"),
+                ),
+            ):
+                run_daily.main()
+
+            self.assertEqual(build.call_args.kwargs["raw_cache_dir"], raw_cache_dir)
+            self.assertTrue(build.call_args.kwargs["refresh"])
+
     def test_domain_receives_cache_and_stale_phase_files_are_removed(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)

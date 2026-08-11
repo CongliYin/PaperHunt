@@ -13,6 +13,11 @@ on:
         description: "Optional comma-separated domain ids"
         required: false
         type: string
+      refresh_arxiv:
+        description: "Refetch all required arXiv categories instead of reusing the raw metadata cache"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -40,16 +45,24 @@ jobs:
       BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
           cache: pip
           cache-dependency-path: pipeline/requirements.txt
 
+      - name: Restore raw arXiv metadata cache
+        uses: actions/cache/restore@v6
+        with:
+          path: tmp/arxiv-raw
+          key: arxiv-raw-${{ runner.os }}-legacy-submitted-date-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            arxiv-raw-${{ runner.os }}-legacy-submitted-date-v1-
+
       - name: Cache DocLayout-YOLO models
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: |
             pipeline/models
@@ -73,7 +86,17 @@ jobs:
           if [ -n "${{ inputs.domains }}" ]; then
             args+=(--domains "${{ inputs.domains }}")
           fi
+          if [ "${{ inputs.refresh_arxiv }}" = "true" ]; then
+            args+=(--refresh-arxiv)
+          fi
           python pipeline/run_daily.py "${args[@]}"
+
+      - name: Save raw arXiv metadata cache
+        if: always()
+        uses: actions/cache/save@v6
+        with:
+          path: tmp/arxiv-raw
+          key: arxiv-raw-${{ runner.os }}-legacy-submitted-date-v1-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Commit generated data
         run: |

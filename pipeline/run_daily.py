@@ -186,6 +186,17 @@ def main() -> None:
     )
     parser.add_argument("--domains", default=None, help="Comma-separated domain ids")
     parser.add_argument("--domains-dir", default=str(PIPELINE_DIR / "domains"))
+    parser.add_argument(
+        "--arxiv-raw-cache-dir",
+        default=os.getenv("ARXIV_RAW_CACHE_DIR", str(ROOT / "tmp" / "arxiv-raw")),
+        help="Persistent per-category raw arXiv cache directory",
+    )
+    parser.add_argument(
+        "--refresh-arxiv",
+        action="store_true",
+        default=os.getenv("ARXIV_REFRESH", "").lower() in {"1", "true", "yes"},
+        help="Refetch every required arXiv category instead of reusing raw cache entries",
+    )
     parser.add_argument("--storage-backend", choices=["blob", "repo"], default=os.getenv("STORAGE_BACKEND", "blob"))
     parser.add_argument("--skip-figures", action="store_true")
     parser.add_argument("--skip-translation", action="store_true")
@@ -216,6 +227,8 @@ def main() -> None:
             start_date=date,
             end_date=date,
             categories=categories,
+            raw_cache_dir=Path(args.arxiv_raw_cache_dir),
+            refresh=args.refresh_arxiv,
         )
     except (RuntimeError, ValueError) as exc:
         print(f"[daily] arXiv prefetch failed: {exc}", file=sys.stderr)

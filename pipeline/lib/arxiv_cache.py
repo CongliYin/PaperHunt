@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import re
@@ -9,10 +10,21 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Sequence
 
-from .fetcher import ArxivClient, fetch_papers_by_date
+from .fetcher import ARXIV_API_BASE, ArxivClient, fetch_papers_by_date
 
 
 SCHEMA_VERSION = 1
+RAW_CACHE_SCHEMA_VERSION = 1
+RAW_FETCH_PROFILE = "legacy-submitted-date-v1"
+RAW_MAX_RESULTS_PER_PAGE = 200
+RAW_QUERY_SPEC = {
+    "source": ARXIV_API_BASE,
+    "date_field": "submittedDate",
+    "max_results_per_page": RAW_MAX_RESULTS_PER_PAGE,
+    "sort_by": "submittedDate",
+    "sort_order": "ascending",
+    "parser_profile": "atom-metadata-v1",
+}
 
 
 class ArxivCacheError(RuntimeError):
@@ -32,25 +44,16 @@ def build_arxiv_cache(
     end_date: str | None,
     categories: Sequence[str],
     client: ArxivClient | None = None,
+    raw_cache_dir: str | Path | None = None,
+    refresh: bool = False,
     verbose: bool = True,
 ) -> dict[str, Any]:
-    """Build a complete category cache, or reuse an already valid one."""
+    """Build a complete daily bundle from persistent per-category raw caches."""
     target = Path(path)
     resolved_end_date = end_date or start_date
     required_categories = normalize_categories(categories)
     if not required_categories:
         raise ArxivCacheError("at least one arXiv category is required")
-
-    if target.exists():
-        payload = load_arxiv_cache(
-            target,
-            start_date=start_date,
-            end_date=resolved_end_date,
-            required_categories=required_categories,
-        )
-        if verbose:
-            print(f"[arxiv-cache] hit {target} ({len(required_categories)} categories)")
-        return payload
 
     if verbose:
         print(
@@ -58,16 +61,59 @@ def build_arxiv_cache(
             f"categories={', '.join(required_categories)}"
         )
 
-    shared_client = client or ArxivClient()
+    # A stale bundle must never survive a failed rebuild. Completed raw category
+    # files remain independently reusable and are written atomically below.
+    target.unlink(missing_ok=True)
+    raw_root = Path(raw_cache_dir) if raw_cache_dir is not None else target.parent / "raw"
+    shared_client: ArxivClient | None = client
     category_payloads: dict[str, list[dict]] = {}
     for category in required_categories:
-        category_payloads[category] = fetch_papers_by_date(
-            start_date,
-            resolved_end_date,
+        raw_path = raw_category_cache_path(
+            raw_root,
+            start_date=start_date,
+            end_date=resolved_end_date,
             category=category,
-            verbose=verbose,
-            client=shared_client,
         )
+        papers: list[dict] | None = None
+        if refresh:
+            if verbose:
+                print(f"[arxiv-raw] refresh {raw_path}")
+        else:
+            try:
+                papers = load_raw_category_cache(
+                    raw_path,
+                    start_date=start_date,
+                    end_date=resolved_end_date,
+                    category=category,
+                )
+            except ArxivCacheError as exc:
+                if verbose:
+                    print(f"[arxiv-raw] miss {raw_path}: {exc}")
+            else:
+                if verbose:
+                    print(f"[arxiv-raw] hit {raw_path} ({len(papers)} papers)")
+
+        if papers is None:
+            shared_client = shared_client or ArxivClient()
+            papers = fetch_papers_by_date(
+                start_date,
+                resolved_end_date,
+                category=category,
+                max_results_per_page=RAW_MAX_RESULTS_PER_PAGE,
+                verbose=verbose,
+                client=shared_client,
+            )
+            raw_payload = _raw_category_payload(
+                start_date=start_date,
+                end_date=resolved_end_date,
+                category=category,
+                papers=papers,
+            )
+            _write_atomic_json(raw_path, raw_payload)
+            if verbose:
+                print(f"[arxiv-raw] wrote {raw_path} ({len(papers)} papers)")
+
+        category_payloads[category] = papers
 
     payload: dict[str, Any] = {
         "schema_version": SCHEMA_VERSION,
@@ -84,6 +130,122 @@ def build_arxiv_cache(
             f"({len(required_categories)} categories, {total} category entries)"
         )
     return payload
+
+
+def raw_category_cache_path(
+    raw_cache_dir: str | Path,
+    *,
+    start_date: str,
+    end_date: str | None,
+    category: str,
+) -> Path:
+    """Return the versioned cache path for one date range and category."""
+    resolved_end_date = end_date or start_date
+    _validate_iso_date(start_date)
+    _validate_iso_date(resolved_end_date)
+    normalized_category = str(category).strip()
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", normalized_category):
+        raise ArxivCacheError(f"unsafe arXiv category for cache path: {category!r}")
+    return (
+        Path(raw_cache_dir)
+        / RAW_FETCH_PROFILE
+        / f"{start_date}__{resolved_end_date}"
+        / f"{normalized_category}.json"
+    )
+
+
+def load_raw_category_cache(
+    path: str | Path,
+    *,
+    start_date: str,
+    end_date: str | None,
+    category: str,
+) -> list[dict]:
+    """Strictly validate and return one complete raw category cache."""
+    source = Path(path)
+    resolved_end_date = end_date or start_date
+    try:
+        payload = json.loads(source.read_text(encoding="utf-8"))
+    except FileNotFoundError as exc:
+        raise ArxivCacheError("not found") from exc
+    except (OSError, json.JSONDecodeError) as exc:
+        raise ArxivCacheError(f"cannot read cache: {exc}") from exc
+
+    expected_fingerprint = _raw_query_fingerprint(
+        start_date=start_date,
+        end_date=resolved_end_date,
+        category=category,
+    )
+    expected = {
+        "schema_version": RAW_CACHE_SCHEMA_VERSION,
+        "fetch_profile": RAW_FETCH_PROFILE,
+        "query_fingerprint": expected_fingerprint,
+        "start_date": start_date,
+        "end_date": resolved_end_date,
+        "category": category,
+        "complete": True,
+    }
+    if not isinstance(payload, dict):
+        raise ArxivCacheError("root must be an object")
+    for key, value in expected.items():
+        if payload.get(key) != value:
+            raise ArxivCacheError(
+                f"{key} mismatch: expected {value!r}, got {payload.get(key)!r}"
+            )
+
+    papers = payload.get("papers")
+    if not isinstance(papers, list):
+        raise ArxivCacheError("papers must be a list")
+    _validate_papers(papers, context=f"raw category {category}")
+    return papers
+
+
+def _raw_category_payload(
+    *,
+    start_date: str,
+    end_date: str,
+    category: str,
+    papers: list[dict],
+) -> dict[str, Any]:
+    return {
+        "schema_version": RAW_CACHE_SCHEMA_VERSION,
+        "fetch_profile": RAW_FETCH_PROFILE,
+        "query_fingerprint": _raw_query_fingerprint(
+            start_date=start_date,
+            end_date=end_date,
+            category=category,
+        ),
+        "start_date": start_date,
+        "end_date": end_date,
+        "category": category,
+        "complete": True,
+        "generated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+        "papers": papers,
+    }
+
+
+def _raw_query_fingerprint(*, start_date: str, end_date: str, category: str) -> str:
+    query = {
+        **RAW_QUERY_SPEC,
+        "start_date": start_date,
+        "end_date": end_date,
+        "category": category,
+    }
+    encoded = json.dumps(query, ensure_ascii=True, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(encoded.encode("utf-8")).hexdigest()
+
+
+def _validate_iso_date(value: str) -> None:
+    try:
+        datetime.strptime(value, "%Y-%m-%d")
+    except (TypeError, ValueError) as exc:
+        raise ArxivCacheError(f"invalid cache date: {value!r}") from exc
+
+
+def _validate_papers(papers: list[Any], *, context: str) -> None:
+    for index, paper in enumerate(papers):
+        if not isinstance(paper, dict) or not str(paper.get("arxiv_id") or "").strip():
+            raise ArxivCacheError(f"{context} has invalid paper at index {index}")
 
 
 def load_arxiv_cache(

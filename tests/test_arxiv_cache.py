@@ -11,6 +11,7 @@ from pipeline.lib.arxiv_cache import (
     build_arxiv_cache,
     load_arxiv_cache,
     load_papers_from_cache,
+    raw_category_cache_path,
 )
 from pipeline.lib.fetcher import ArxivFetchError
 
@@ -23,6 +24,7 @@ class ArxivCacheTests(unittest.TestCase):
     def test_build_fetches_each_unique_category_once_and_writes_complete_cache(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             target = Path(temp_dir) / "2026-08-05.json"
+            raw_root = Path(temp_dir) / "raw"
 
             with mock.patch(
                 "pipeline.lib.arxiv_cache.fetch_papers_by_date",
@@ -33,6 +35,7 @@ class ArxivCacheTests(unittest.TestCase):
                     start_date="2026-08-05",
                     end_date=None,
                     categories=["cs.CL", "cs.AI", "cs.CL"],
+                    raw_cache_dir=raw_root,
                     verbose=False,
                 )
 
@@ -40,10 +43,19 @@ class ArxivCacheTests(unittest.TestCase):
             self.assertEqual([call.kwargs["category"] for call in fetch.call_args_list], ["cs.AI", "cs.CL"])
             self.assertEqual(sorted(payload["categories"]), ["cs.AI", "cs.CL"])
             self.assertEqual(json.loads(target.read_text())["schema_version"], 1)
+            self.assertTrue(
+                raw_category_cache_path(
+                    raw_root,
+                    start_date="2026-08-05",
+                    end_date=None,
+                    category="cs.AI",
+                ).exists()
+            )
 
-    def test_failure_does_not_publish_partial_cache(self) -> None:
+    def test_failure_keeps_completed_raw_categories_without_publishing_bundle(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             target = Path(temp_dir) / "2026-08-05.json"
+            raw_root = Path(temp_dir) / "raw"
 
             with mock.patch(
                 "pipeline.lib.arxiv_cache.fetch_papers_by_date",
@@ -55,15 +67,32 @@ class ArxivCacheTests(unittest.TestCase):
                         start_date="2026-08-05",
                         end_date="2026-08-05",
                         categories=["cs.AI", "cs.CL"],
+                        raw_cache_dir=raw_root,
                         verbose=False,
                     )
 
             self.assertFalse(target.exists())
-            self.assertEqual(list(Path(temp_dir).iterdir()), [])
+            self.assertTrue(
+                raw_category_cache_path(
+                    raw_root,
+                    start_date="2026-08-05",
+                    end_date="2026-08-05",
+                    category="cs.AI",
+                ).exists()
+            )
+            self.assertFalse(
+                raw_category_cache_path(
+                    raw_root,
+                    start_date="2026-08-05",
+                    end_date="2026-08-05",
+                    category="cs.CL",
+                ).exists()
+            )
 
     def test_valid_existing_cache_is_reused_without_network_calls(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             target = Path(temp_dir) / "2026-08-05.json"
+            raw_root = Path(temp_dir) / "raw"
             with mock.patch(
                 "pipeline.lib.arxiv_cache.fetch_papers_by_date",
                 return_value=[paper("2608.00001")],
@@ -73,6 +102,7 @@ class ArxivCacheTests(unittest.TestCase):
                     start_date="2026-08-05",
                     end_date=None,
                     categories=["cs.AI"],
+                    raw_cache_dir=raw_root,
                     verbose=False,
                 )
                 second = build_arxiv_cache(
@@ -80,11 +110,141 @@ class ArxivCacheTests(unittest.TestCase):
                     start_date="2026-08-05",
                     end_date=None,
                     categories=["cs.AI"],
+                    raw_cache_dir=raw_root,
                     verbose=False,
                 )
 
-            self.assertEqual(first, second)
+            self.assertEqual(first["categories"], second["categories"])
             self.assertEqual(fetch.call_count, 1)
+
+    def test_adding_category_fetches_only_the_missing_category(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            target = Path(temp_dir) / "2026-08-05.json"
+            raw_root = Path(temp_dir) / "raw"
+            with mock.patch(
+                "pipeline.lib.arxiv_cache.fetch_papers_by_date",
+                side_effect=lambda start, end, *, category, **kwargs: [paper(f"{category}-1")],
+            ) as fetch:
+                build_arxiv_cache(
+                    target,
+                    start_date="2026-08-05",
+                    end_date=None,
+                    categories=["cs.AI"],
+                    raw_cache_dir=raw_root,
+                    verbose=False,
+                )
+                fetch.reset_mock()
+
+                payload = build_arxiv_cache(
+                    target,
+                    start_date="2026-08-05",
+                    end_date=None,
+                    categories=["cs.AI", "cs.CL"],
+                    raw_cache_dir=raw_root,
+                    verbose=False,
+                )
+
+            self.assertEqual(fetch.call_count, 1)
+            self.assertEqual(fetch.call_args.kwargs["category"], "cs.CL")
+            self.assertEqual(sorted(payload["categories"]), ["cs.AI", "cs.CL"])
+
+    def test_stale_query_fingerprint_refetches_only_affected_category(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            target = Path(temp_dir) / "2026-08-05.json"
+            raw_root = Path(temp_dir) / "raw"
+            raw_path = raw_category_cache_path(
+                raw_root,
+                start_date="2026-08-05",
+                end_date=None,
+                category="cs.AI",
+            )
+            with mock.patch(
+                "pipeline.lib.arxiv_cache.fetch_papers_by_date",
+                return_value=[paper("2608.00001")],
+            ) as fetch:
+                build_arxiv_cache(
+                    target,
+                    start_date="2026-08-05",
+                    end_date=None,
+                    categories=["cs.AI"],
+                    raw_cache_dir=raw_root,
+                    verbose=False,
+                )
+                stale = json.loads(raw_path.read_text(encoding="utf-8"))
+                stale["query_fingerprint"] = "stale"
+                raw_path.write_text(json.dumps(stale), encoding="utf-8")
+                fetch.reset_mock()
+
+                build_arxiv_cache(
+                    target,
+                    start_date="2026-08-05",
+                    end_date=None,
+                    categories=["cs.AI"],
+                    raw_cache_dir=raw_root,
+                    verbose=False,
+                )
+
+            self.assertEqual(fetch.call_count, 1)
+
+    def test_forced_refresh_refetches_existing_categories(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            target = Path(temp_dir) / "2026-08-05.json"
+            raw_root = Path(temp_dir) / "raw"
+            with mock.patch(
+                "pipeline.lib.arxiv_cache.fetch_papers_by_date",
+                return_value=[paper("2608.00001")],
+            ) as fetch:
+                build_arxiv_cache(
+                    target,
+                    start_date="2026-08-05",
+                    end_date=None,
+                    categories=["cs.AI"],
+                    raw_cache_dir=raw_root,
+                    verbose=False,
+                )
+                fetch.reset_mock()
+
+                build_arxiv_cache(
+                    target,
+                    start_date="2026-08-05",
+                    end_date=None,
+                    categories=["cs.AI"],
+                    raw_cache_dir=raw_root,
+                    refresh=True,
+                    verbose=False,
+                )
+
+            self.assertEqual(fetch.call_count, 1)
+
+    def test_malformed_raw_category_is_repaired_by_refetching(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            target = Path(temp_dir) / "2026-08-05.json"
+            raw_root = Path(temp_dir) / "raw"
+            raw_path = raw_category_cache_path(
+                raw_root,
+                start_date="2026-08-05",
+                end_date=None,
+                category="cs.AI",
+            )
+            raw_path.parent.mkdir(parents=True)
+            raw_path.write_text("not-json", encoding="utf-8")
+
+            with mock.patch(
+                "pipeline.lib.arxiv_cache.fetch_papers_by_date",
+                return_value=[paper("2608.00001")],
+            ) as fetch:
+                payload = build_arxiv_cache(
+                    target,
+                    start_date="2026-08-05",
+                    end_date=None,
+                    categories=["cs.AI"],
+                    raw_cache_dir=raw_root,
+                    verbose=False,
+                )
+
+            self.assertEqual(fetch.call_count, 1)
+            self.assertEqual(payload["categories"]["cs.AI"][0]["arxiv_id"], "2608.00001")
+            self.assertTrue(json.loads(raw_path.read_text(encoding="utf-8"))["complete"])
 
     def test_loading_selected_categories_deduplicates_versioned_ids(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
