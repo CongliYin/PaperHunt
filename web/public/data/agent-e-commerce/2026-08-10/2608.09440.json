@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2608.09440",
+  "title": "MetaStrategy: Generative Ranking with Executable LLM Strategies",
+  "title_zh": "MetaStrategy：使用可执行 LLM 策略的生成式排序",
+  "authors": [
+    "Chengyu Lai",
+    "Jiuning Lin",
+    "Zhibo Xiao",
+    "Xiaodong Zhu",
+    "Ruiquan Lan",
+    "Bin Zhang",
+    "Zihong Huang",
+    "Wendong Zhang",
+    "Chuxin Chen",
+    "Yinjiang Cai",
+    "Shuai Zhong",
+    "Lingqing Zhang",
+    "Dimin Wang",
+    "Jialin Zhu",
+    "Han Zhu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-10T11:16:09Z",
+  "abs_url": "https://arxiv.org/abs/2608.09440v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.09440",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Industrial recommender systems rank heterogeneous content under coupled user, business, commercial, and experience objectives. Existing generative ranking methods typically construct item sequences directly, making them difficult to integrate with mature predictive models, operational rules, and field-level guardrails. We present MetaStrategy, a framework that instead generates a structured, executable ranking strategy. Conditioned on request context, a large language model (LLM) policy emits a typed JSON bundle controlling objective weights, content and category preferences, experience constraints, and position policies. A deterministic validator and compiler instantiate an isolated Generator that competes atomically with incumbents under the list-level Evaluator of the Generator-Evaluator (GE) architecture. We train the policy in a production-path replay environment that re-executes logged requests through the current re-ranking stack without user exposure. The method combines selection, relative-rank, and baseline-lift rewards, a self-competitive curriculum that feeds frequent strategies back as competitors, and Evaluator-routed reward-augmented on-policy distillation that transfers complementary 4B-parameter Teachers into a compact 0.8B-parameter Student. We deploy MetaStrategy in Taobao Homepage Guess You Like through diff-triggered nearline generation; LLM inference remains outside synchronous ranking, with no observable increase in response time (RT). In a seven-day user-randomized online A/B test, MetaStrategy wins 27.93% of treatment-side GE calls and significantly improves click page views (click PV) by 2.11%, item-detail page views (IPV) by 3.12%, and transaction amount by 2.83%.",
+  "abstract_zh": "本文提出 MetaStrategy，用于工业推荐系统中的生成式排序。不同于直接生成 item 序列的既有方法，MetaStrategy 让 LLM 根据请求上下文生成结构化、可执行的 typed JSON 排序策略，包含目标权重、内容与类目偏好、体验约束和位置策略等。随后，确定性的 validator 与 compiler 将该策略实例化为隔离的 Generator，并在 Generator-Evaluator（GE）架构中与现有排序策略进行原子竞争，由 list-level Evaluator 统一评估。训练方面，作者在 production-path replay 环境中重放日志请求，通过当前重排序链路离线执行，避免用户曝光；奖励设计结合 selection、relative-rank 和 baseline-lift，并引入 self-competitive curriculum，将高频策略反馈为竞争者。同时，通过 Evaluator-routed reward-augmented on-policy distillation，将多个互补的 4B-parameter Teacher 蒸馏到紧凑的 0.8B-parameter Student。MetaStrategy 已部署在 Taobao Homepage Guess You Like，通过 diff-triggered nearline generation 将 LLM 推理移出同步排序链路，因此响应时间无可观测增加。7 天用户随机在线 A/B 测试显示，MetaStrategy 在 treatment-side GE 调用中胜出 27.93%，并显著提升 click PV 2.11%、IPV 3.12%、transaction amount 2.83%。",
+  "key_points_zh": [
+    "核心思路从“直接生成排序列表”转为“生成可执行排序策略”，LLM 输出 typed JSON，控制目标权重、内容偏好、体验约束和位置策略，更易接入已有预测模型、业务规则和字段级约束。",
+    "系统采用 Generator-Evaluator（GE）架构：validator 与 compiler 将 LLM 策略转为隔离 Generator，并由 list-level Evaluator 与现有策略进行原子化竞争，降低线上集成风险。",
+    "训练使用 production-path replay 环境重放日志请求，在不影响用户的情况下通过当前重排序链路评估策略；奖励结合 selection、relative-rank 与 baseline-lift，并通过 self-competitive curriculum 持续引入高频策略作为竞争对手。",
+    "通过 Evaluator-routed reward-augmented on-policy distillation，将多个 4B-parameter Teacher 的互补能力迁移到 0.8B-parameter Student，兼顾效果与部署成本。",
+    "线上部署于 Taobao Homepage Guess You Like，采用 diff-triggered nearline generation，使 LLM 推理不进入同步排序路径；A/B 测试中 click PV、IPV 和 transaction amount 分别提升 2.11%、3.12% 和 2.83%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.87,
+    "llm_avg": 0.8640000000000001,
+    "comment": "A highly relevant e-commerce ranking contribution that operationalizes LLM-generated executable strategies with online Taobao gains.",
+    "comment_zh": "该工作高度契合电商排序方向，将LLM生成的可执行策略落地并在淘宝线上取得收益。"
+  },
+  "scores": {
+    "topic_relevance": 0.44000000000000006,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5528393609608848,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8640000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 17,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09440/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09440/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

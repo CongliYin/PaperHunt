@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2608.09629",
+  "title": "Rethinking Self-Evolving Agents: Do We Still Need Prescribed Optimization Pipelines?",
+  "title_zh": "重新思考自进化智能体：我们是否仍需要预设优化流水线？",
+  "authors": [
+    "Hui Xue",
+    "Fan Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-10T14:10:25Z",
+  "abs_url": "https://arxiv.org/abs/2608.09629v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.09629",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Self-evolving agents are usually built around prescribed optimization pipelines: the framework decides how to gather evidence, revise a persistent artifact, select candidates, and stop. We ask whether this task-specific procedure remains necessary when a frontier model acts as the optimizer. We introduce Open-Ended Optimization (OEO), which keeps the objective, permitted interactions, resource budget, data boundary, and evaluation fixed while allowing the optimizer to compose the improvement process online. We compare OEO with two complementary prescribed approaches: SkillOpt, a staged pipeline with bounded edits, and GEPA, a reflective evolutionary search. Across 14 head-to-head comparisons over 8 benchmark-target-model settings, GPT-5.5-driven OEO records 12 wins, 1 tie, and 1 narrow loss of 0.21 percentage points. It uses a median 34.3 percent of SkillOpt's configured target-interaction token budget. A one-shot, zero-interaction control shows that the gains are not explained by a single prior-driven rewrite. However, delegation has a capability boundary: SkillOpt outperforms OEO with a medium optimizer, and a weak optimizer cannot operate through the unchanged OEO interface. In the fully instrumented OEO-SkillOpt pair, trajectory analysis further shows that prescription changes how optimization proceeds more consistently than it changes final behavior. Together, these findings recast prescribed pipelines as capability-dependent scaffolding: essential constraints remain external, but a sufficiently capable optimizer can compose the route from measurable feedback to persistent improvement.",
+  "abstract_zh": "本文研究自进化智能体是否仍必须依赖预设优化流水线。传统框架通常预先规定证据收集、持久化产物修订、候选选择与停止条件等流程。作者提出 Open-Ended Optimization（OEO）：在固定目标、允许交互、资源预算、数据边界与评估方式的前提下，允许优化器在线自主组织改进过程。实验将 OEO 与两类预设方法对比：分阶段且限制编辑的 SkillOpt，以及反思式进化搜索 GEPA。在 8 个 benchmark-target-model 设置上的 14 组正面对比中，由 GPT-5.5 驱动的 OEO 取得 12 胜、1 平、1 次以 0.21 个百分点小幅落败，并且其中位数仅使用 SkillOpt 配置目标交互 token 预算的 34.3%。一次性、零交互控制实验表明，性能提升并非来自单次基于先验的重写。不过，委托式开放优化存在能力边界：当优化器能力中等时 SkillOpt 优于 OEO，而弱优化器无法通过未修改的 OEO 接口有效运行。在完整记录的 OEO-SkillOpt 对比中，轨迹分析显示，预设流程对优化过程的影响比对最终行为的影响更稳定。总体而言，论文将预设流水线重新定义为依赖模型能力的脚手架：外部约束仍然必要，但足够强的优化器可以自行把可测反馈转化为持续改进路径。",
+  "key_points_zh": [
+    "提出 Open-Ended Optimization（OEO），固定目标、预算、数据边界与评估，但让优化器在线自主设计改进流程，而非遵循预设流水线。",
+    "在 14 组 head-to-head 对比中，GPT-5.5 驱动的 OEO 相比 SkillOpt 和 GEPA 取得 12 胜、1 平、1 次小幅失利。",
+    "OEO 的资源效率较高，中位数仅消耗 SkillOpt 配置目标交互 token 预算的 34.3%。",
+    "零交互 one-shot 控制实验显示，OEO 的收益不能简单归因于一次基于先验的重写，而是来自反馈驱动的在线优化。",
+    "能力边界明显：中等优化器下 SkillOpt 更强，弱优化器无法有效使用 OEO，说明预设流水线仍是能力不足时的重要脚手架。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.76,
+    "problem_significance": 0.83,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.78,
+    "llm_avg": 0.8019999999999999,
+    "comment": "OEO is a strong self-evolving-agent contribution that reframes prescribed optimization pipelines as capability-dependent scaffolding under fixed feedback constraints.",
+    "comment_zh": "OEO是较强的自演化智能体工作，它把预设优化流水线重新解释为固定反馈约束下依赖模型能力的脚手架。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8019999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09629/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09629/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.954
+    }
+  ]
+}

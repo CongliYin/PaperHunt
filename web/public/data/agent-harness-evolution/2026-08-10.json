@@ -1,0 +1,232 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-08-10",
+  "generated_at": "2026-08-11T02:52:11Z",
+  "papers": [
+    {
+      "arxiv_id": "2608.09253",
+      "title": "SkillSentry: Reliable Skill Execution for LLM Agents via Runtime Assurance",
+      "title_zh": "SkillSentry：通过运行时保障实现 LLM Agent 的可靠技能执行",
+      "authors": [
+        "You Lu",
+        "Xinyu Huang",
+        "Bihuan Chen",
+        "Xin Peng"
+      ],
+      "total_score": 0.6658000000000002,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8460000000000001,
+        "domain_fit": 0.93,
+        "other": 0.2
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "运行时监控引导技能执行，提升Agent可靠性",
+      "detail_file": "agent-harness-evolution/2026-08-10/2608.09253.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09253/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.09096",
+      "title": "Evo-Bench: Can Language Models Improve Agent Harness?",
+      "title_zh": "Evo-Bench：语言模型能否改进 Agent Harness？",
+      "authors": [
+        "Lisheng Huang",
+        "Chen Yang",
+        "Hao Zhou",
+        "Huatong Song",
+        "Zongchao Chen",
+        "Ran Le",
+        "Yang Song",
+        "Wayne Xin Zhao",
+        "Tao Zhang"
+      ],
+      "total_score": 0.6571883062540946,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8720000000000001,
+        "domain_fit": 0.98,
+        "other": 0.19862768751364818
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "首个评测 LLM 自主优化 agent harness 的基准",
+      "detail_file": "agent-harness-evolution/2026-08-10/2608.09096.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09096/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.09072",
+      "title": "A Unified Issue Resolution Benchmark for Requirement Clarification, Planning, and Code Generation for Coding Agents",
+      "title_zh": "面向编码智能体需求澄清、规划与代码生成的统一 Issue 解决基准",
+      "authors": [
+        "Xin Zhou",
+        "Chun Yong Chong",
+        "Kisub Kim",
+        "Yun Peng",
+        "Rui Shu",
+        "Zihan Wu",
+        "Xu Han",
+        "Guowen Yuan",
+        "Zeyang Zhuang",
+        "Jounghoon Kim",
+        "Jeongjin Ju",
+        "Seongmin Ju",
+        "Taein Yoon",
+        "David Lo"
+      ],
+      "total_score": 0.6454883062540946,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.758,
+        "domain_fit": 0.95,
+        "other": 0.2736276875136482
+      },
+      "tags": [
+        "GitHub",
+        "trace driven evolution"
+      ],
+      "tldr_zh": "SWE-RPG诊断编码智能体全流程瓶颈",
+      "detail_file": "agent-harness-evolution/2026-08-10/2608.09072.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09072/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.09292",
+      "title": "Beyond the Capability Boundary: Zeroth-Order Optimization for Self-Evolving LLM Agents",
+      "title_zh": "超越能力边界：用于自进化 LLM Agent 的零阶优化",
+      "authors": [
+        "Bingzhen Liu",
+        "Xiaomeng Fan",
+        "Yuwei Wu",
+        "Zhi Gao",
+        "Mingyang Gao",
+        "Chuanhao Li",
+        "Yunde Jia"
+      ],
+      "total_score": 0.49998830625409446,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.768,
+        "domain_fit": 0.9,
+        "other": 0.3652943541803149
+      },
+      "tags": [
+        "GitHub",
+        "general llm agents"
+      ],
+      "tldr_zh": "用零阶优化让 LLM Agent 突破能力边界",
+      "detail_file": "agent-harness-evolution/2026-08-10/2608.09292.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09292/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.09044",
+      "title": "Tree-of-Experience: Hierarchical Experience Management for Self-Evolving Agents",
+      "title_zh": "Tree-of-Experience：面向自进化智能体的层次化经验管理",
+      "authors": [
+        "Zihao Deng",
+        "Yining Zhu",
+        "Leiming Wang",
+        "Jingfei Lu",
+        "Junbo Wang",
+        "Chuncheng Ran",
+        "Yu Yang",
+        "Dixuan Yang",
+        "Jikun Shen"
+      ],
+      "total_score": 0.4529264871282667,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.742,
+        "domain_fit": 0.86,
+        "other": 0.2877549570942224
+      },
+      "tags": [
+        "h=36",
+        "general llm agents"
+      ],
+      "tldr_zh": "用树状经验提升自进化智能体推理",
+      "detail_file": "agent-harness-evolution/2026-08-10/2608.09044.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09044/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.09555",
+      "title": "Bidirectional Context Self-Distillation for Reinforcement Learning of Skill-Based LLM Agents",
+      "title_zh": "面向技能型 LLM Agent 强化学习的双向上下文自蒸馏",
+      "authors": [
+        "Tianjun Pan",
+        "Yuan Li",
+        "Hongda Wang",
+        "Linbo Jin",
+        "Mengfei Song",
+        "Lei Gao",
+        "Qiming Shi",
+        "Shaokang Fu",
+        "Jiarong Zhao",
+        "Chengyu Wang",
+        "Chengfu Huo"
+      ],
+      "total_score": 0.44300000000000006,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.7300000000000001,
+        "domain_fit": 0.9,
+        "other": 0.2666666666666667
+      },
+      "tags": [
+        "Code soon",
+        "general llm agents"
+      ],
+      "tldr_zh": "用双向上下文自蒸馏提升LLM技能利用",
+      "detail_file": "agent-harness-evolution/2026-08-10/2608.09555.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09555/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.09268",
+      "title": "Can Coding Agents Solve Repository-Level Issues with Rendered Code? An Exploratory Study of Visual Representations",
+      "title_zh": "编码智能体能否用渲染代码解决仓库级问题？一项关于视觉表示的探索性研究",
+      "authors": [
+        "Weijie Liang",
+        "Yuanfeng Song",
+        "Xing Chen",
+        "Caleb Chen Cao",
+        "Sirui Han",
+        "Yike Guo"
+      ],
+      "total_score": 0.4368,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.45600000000000007,
+        "domain_fit": 0.88,
+        "other": 0.2
+      },
+      "tags": [
+        "production agent platform"
+      ],
+      "tldr_zh": "渲染代码省 token，但收益有条件",
+      "detail_file": "agent-harness-evolution/2026-08-10/2608.09268.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09268/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.09629",
+      "title": "Rethinking Self-Evolving Agents: Do We Still Need Prescribed Optimization Pipelines?",
+      "title_zh": "重新思考自进化智能体：我们是否仍需要预设优化流水线？",
+      "authors": [
+        "Hui Xue",
+        "Fan Yang"
+      ],
+      "total_score": 0.3006,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.8019999999999999,
+        "domain_fit": 0.92,
+        "other": 0.2
+      },
+      "tags": [],
+      "tldr_zh": "强模型可自主组织优化流程",
+      "detail_file": "agent-harness-evolution/2026-08-10/2608.09629.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09629/thumb.webp"
+    }
+  ]
+}

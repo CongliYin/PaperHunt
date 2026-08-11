@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.09268",
+  "title": "Can Coding Agents Solve Repository-Level Issues with Rendered Code? An Exploratory Study of Visual Representations",
+  "title_zh": "编码智能体能否用渲染代码解决仓库级问题？一项关于视觉表示的探索性研究",
+  "authors": [
+    "Weijie Liang",
+    "Yuanfeng Song",
+    "Xing Chen",
+    "Caleb Chen Cao",
+    "Sirui Han",
+    "Yike Guo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-10T08:24:19Z",
+  "abs_url": "https://arxiv.org/abs/2608.09268v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.09268",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Visual modality has recently been explored as a way to compress textual tokens, including rendering code as images for static code understanding. We study whether this representation can serve as operational context for agentic coding, where an agent must navigate repositories, edit source files, and verify executable patches. Using SWE-bench Verified, we evaluate rendered code in repository-level repair workflows and introduce controlled agent settings to separate unguided repository exploration from more structured repair stages. Our results show a mixed picture. Rendered code consistently reduces prompt-token cost, but the savings do not increase linearly with the nominal visual compression ratio. It largely preserves end-to-end repair accuracy, but does not overcome the performance limits of the underlying model or agent architecture, and can become unstable under aggressive compression. Further analysis suggests that visual code is most useful when raw source reading is a major bottleneck; once repository localization is structured, much of the remaining cost comes from patch--test trial-and-error, where visual compression has limited leverage. Overall, our study positions rendered code as a viable but conditional compression mechanism for realistic coding agents.",
+  "abstract_zh": "本文研究将代码渲染为图像这一视觉表示，能否作为 agentic coding 场景中的有效操作上下文。作者基于 SWE-bench Verified，在仓库级程序修复工作流中评估 rendered code，并设计受控的 agent 设置，以区分无引导的仓库探索与更结构化的修复阶段。实验表明，rendered code 能稳定降低 prompt token 成本，但节省幅度并不会随名义视觉压缩率线性增长；它总体上能保持端到端修复准确率，但无法突破底层模型或 agent 架构本身的性能上限，并且在过度压缩时可能变得不稳定。进一步分析显示，视觉代码在原始源码阅读成为主要瓶颈时最有价值；一旦仓库定位被结构化，剩余开销更多来自补丁生成与测试迭代，此时视觉压缩的收益有限。总体而言，本文将 rendered code 定位为一种可行但依赖条件的真实编码智能体压缩机制。",
+  "key_points_zh": [
+    "问题聚焦：评估 rendered code 是否能在 repository-level repair 中替代或补充文本源码上下文，服务于需要浏览仓库、编辑文件、运行测试的 coding agents。",
+    "实验设置：基于 SWE-bench Verified 构建评测，并引入受控 agent 流程，区分无引导仓库探索与结构化修复阶段，从而分析视觉表示在哪些环节真正有效。",
+    "主要发现：rendered code 能持续减少 prompt token 成本，但实际节省不与视觉压缩率线性对应；端到端修复准确率大体可保持，但不会显著提升模型或 agent 架构的能力上限。",
+    "局限与风险：在激进压缩下，视觉代码表示可能不稳定；当主要成本转向 patch-test 反复试错时，视觉压缩对整体效率的杠杆作用明显下降。",
+    "研究意义：该工作表明视觉代码是一种现实可用的上下文压缩方案，但更适合源码阅读成本高、定位尚未结构化的场景，而非通用地提升所有编码智能体表现。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.45,
+    "problem_significance": 0.58,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.25,
+    "lasting_value": 0.5,
+    "llm_avg": 0.45600000000000007,
+    "comment": "This is an in-scope coding-agent study, but rendered-code context is mainly a conditional compression technique rather than a durable harness advance.",
+    "comment_zh": "这是一项领域内的代码智能体研究，但代码渲染上下文主要是条件性的压缩技巧，而不是持久的框架突破。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.45600000000000007,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09268/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.09268/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.943
+    }
+  ]
+}
