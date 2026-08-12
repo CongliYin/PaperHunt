@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
-      RUN_TZ: UTC
+      RUN_TZ: Asia/Shanghai
       RUN_DATE_OFFSET_DAYS: "1"
       RUN_ROLLBACK_WEEKENDS: "1"
       FIGURE_BACKEND: yolo
