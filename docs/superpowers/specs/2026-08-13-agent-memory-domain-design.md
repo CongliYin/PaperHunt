@@ -31,7 +31,7 @@ The domain excludes:
 - medical, financial, or other vertical applications without a reusable Agent-memory method;
 - surveys without a concrete reusable taxonomy, evaluation protocol, dataset, or system contribution.
 
-Research on false-memory promotion, conflict resolution, consolidation correctness, provenance, or verifier-backed memory remains in scope when its primary goal is memory quality rather than attack or security defense.
+Research on false-memory promotion, conflict resolution, consolidation correctness, provenance, or verifier-backed memory remains in scope when its primary goal is memory quality rather than attack or security defense. Governance primitives such as scoped retrieval, tenant isolation, provenance, contradiction handling, and propagation policy also remain in scope when they are supporting parts of a reusable Agent-memory service rather than the paper's primary security contribution.
 
 ## Domain Configuration
 
