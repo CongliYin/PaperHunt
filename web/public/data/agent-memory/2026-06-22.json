@@ -1,0 +1,65 @@
+{
+  "domain": "agent-memory",
+  "display_name": "Agent Memory",
+  "date": "2026-06-22",
+  "generated_at": "2026-08-13T10:58:39Z",
+  "papers": [
+    {
+      "arxiv_id": "2606.22844",
+      "title": "RaMem: Contextual Reinstatement for Long-term Agentic Memory",
+      "title_zh": "RaMem：面向长期智能体记忆的上下文重建",
+      "authors": [
+        "Wei Yang",
+        "Bryce Kan",
+        "Shixuan Li",
+        "Li Li",
+        "Yuehan Qin",
+        "Jiate Li",
+        "Paul Bogdan",
+        "Jesse Thomason"
+      ],
+      "total_score": 0.5766240812087422,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.8440000000000001,
+        "domain_fit": 0.95,
+        "other": 0.22474693736247373
+      },
+      "tags": [
+        "general llm agents",
+        "retrieval and use"
+      ],
+      "tldr_zh": "用上下文验证提升长期记忆检索可靠性",
+      "detail_file": "agent-memory/2026-06-22/2606.22844.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.22844/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.23127",
+      "title": "Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation",
+      "title_zh": "管理 LLM Agent 的程序性记忆：控制、适应与评估",
+      "authors": [
+        "Julia Belikova",
+        "Rauf Parchiev",
+        "Evgeny Egorov",
+        "Grigorii Davydenko",
+        "Gleb Gusev",
+        "Andrey Savchenko",
+        "Maksim Makarenko"
+      ],
+      "total_score": 0.5243,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.786,
+        "domain_fit": 0.9,
+        "other": 0.10833333333333334
+      },
+      "tags": [
+        "session context memory",
+        "retrieval and use"
+      ],
+      "tldr_zh": "AFTER 系统评估 LLM Agent 程序性记忆迁移",
+      "detail_file": "agent-memory/2026-06-22/2606.23127.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23127/thumb.webp"
+    }
+  ]
+}

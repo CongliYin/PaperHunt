@@ -5,35 +5,6 @@
   "generated_at": "2026-06-25T14:43:05Z",
   "papers": [
     {
-      "arxiv_id": "2606.24775",
-      "title": "Are We Ready For An Agent-Native Memory System?",
-      "title_zh": "我们准备好构建 Agent-Native Memory System 了吗？",
-      "authors": [
-        "Wei Zhou",
-        "Xuanhe Zhou",
-        "Shaokun Han",
-        "Hongming Xu",
-        "Guoliang Li",
-        "Zhiyu Li",
-        "Feiyu Xiong",
-        "Fan Wu"
-      ],
-      "total_score": 0.740264478789751,
-      "scores": {
-        "topic_relevance": 0.88,
-        "llm_assessment": 0.772,
-        "other": 0.5222149292991695
-      },
-      "tags": [
-        "HF Daily ★82",
-        "GitHub",
-        "runtime execution engine"
-      ],
-      "tldr_zh": "系统评测 LLM agent memory 架构取舍",
-      "detail_file": "agent-harness-evolution/2026-06-23/2606.24775.json",
-      "thumb": ""
-    },
-    {
       "arxiv_id": "2606.24322",
       "title": "Securing LLM-Agent Long-Term Memory Against Poisoning: Non-Malleable, Origin-Bound Authority with Machine-Checked Guarantees",
       "title_zh": "保护 LLM-Agent 长期记忆免受投毒：具备机器验证保证的不可篡改、来源绑定权限机制",
@@ -51,36 +22,6 @@
       ],
       "tldr_zh": "用来源绑定权限阻断LLM记忆投毒",
       "detail_file": "agent-harness-evolution/2026-06-23/2606.24322.json",
-      "thumb": ""
-    },
-    {
-      "arxiv_id": "2606.24595",
-      "title": "MEMPROBE: Probing Long-Term Agent Memory via Hidden User-State Recovery",
-      "title_zh": "MEMPROBE：通过隐藏用户状态恢复探测长期 Agent 记忆",
-      "authors": [
-        "Enze Ma",
-        "Yufan Zhou",
-        "Wei-Chieh Huang",
-        "Jie Yang",
-        "Huanhuan Ma",
-        "Zixuan Wang",
-        "Chengze Li",
-        "Chunyu Miao",
-        "Philip S. Yu",
-        "Zhen Wang"
-      ],
-      "total_score": 0.68323810092881,
-      "scores": {
-        "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.8240000000000001,
-        "other": 0.33346033642936646
-      },
-      "tags": [
-        "HF Daily ★1",
-        "session context memory"
-      ],
-      "tldr_zh": "直接评测Agent记忆能否恢复用户状态",
-      "detail_file": "agent-harness-evolution/2026-06-23/2606.24595.json",
       "thumb": ""
     },
     {
@@ -145,37 +86,6 @@
       ],
       "tldr_zh": "为长程LLM智能体提供受控执行框架",
       "detail_file": "agent-harness-evolution/2026-06-23/2606.24311.json",
-      "thumb": ""
-    },
-    {
-      "arxiv_id": "2606.24151",
-      "title": "Metis: Bridging Text and Code Memory for Self-Evolving Agents",
-      "title_zh": "Metis：连接文本与代码记忆的自进化智能体",
-      "authors": [
-        "Zijie Dai",
-        "Siuhin He",
-        "Hui Li",
-        "Qihui Zhou",
-        "Jiajun Li",
-        "Mingcong Song",
-        "Guoping Long",
-        "Hongjie Si",
-        "Xin Yao",
-        "Lin Zhang",
-        "James Cheng",
-        "Xiao Yan"
-      ],
-      "total_score": 0.6314000000000002,
-      "scores": {
-        "topic_relevance": 0.8,
-        "llm_assessment": 0.8380000000000001,
-        "other": 0.2
-      },
-      "tags": [
-        "closed loop agent improvement"
-      ],
-      "tldr_zh": "双记忆机制提升自进化智能体效率与准确率",
-      "detail_file": "agent-harness-evolution/2026-06-23/2606.24151.json",
       "thumb": ""
     },
     {
@@ -285,30 +195,6 @@
       ],
       "tldr_zh": "用主动检索诊断超长智能体轨迹故障",
       "detail_file": "agent-harness-evolution/2026-06-23/2606.24626.json",
-      "thumb": ""
-    },
-    {
-      "arxiv_id": "2606.25161",
-      "title": "TRUSTMEM: Learning Trustworthy Memory Consolidation for LLM Agents with Long-Term Memory",
-      "title_zh": "TRUSTMEM：面向具备长期记忆的 LLM Agents 的可信记忆巩固学习",
-      "authors": [
-        "Tianyu Yang",
-        "Sudipta Paul",
-        "Vijay Srinivasan",
-        "Vivek Kulkarni",
-        "Srinivas Chappidi"
-      ],
-      "total_score": 0.4828,
-      "scores": {
-        "topic_relevance": 0.4,
-        "llm_assessment": 0.876,
-        "other": 0.2
-      },
-      "tags": [
-        "general llm agents"
-      ],
-      "tldr_zh": "用偏好强化学习提升长期记忆更新可信度",
-      "detail_file": "agent-harness-evolution/2026-06-23/2606.25161.json",
       "thumb": ""
     },
     {

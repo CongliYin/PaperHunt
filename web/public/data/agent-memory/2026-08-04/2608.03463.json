@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2608.03463",
+  "title": "LeanMem: Simple and Efficient Long-Term Memory for LLM Agents",
+  "title_zh": "LeanMem：面向 LLM Agent 的简单高效长期记忆",
+  "authors": [
+    "Yuxin Liao",
+    "Le Wu",
+    "Min Hou",
+    "Hao Liu",
+    "Han Wu",
+    "Zishu Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T10:59:49Z",
+  "abs_url": "https://arxiv.org/abs/2608.03463v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03463",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-term memory is essential for LLM-based agents to sustain interactions and reliably leverage distant history. However, existing memory systems typically process heterogeneous dialogue content through a uniform summarization and retrieval pipeline, leading to either excessive token consumption or irreversible loss of fine-grained evidence. We argue that historical dialogue content should be handled differently according to its compressibility, temporal dynamics, and fidelity requirements. Based on this insight, we propose LeanMem, a lightweight long-term memory framework. LeanMem first filters out low-value content, then stores informative segments as compact profile memory, temporally structured event memory, or source-grounded record memory, depending on the nature of the information. During maintenance, only dynamically evolving event memories are selectively updated, avoiding redundant consolidation of stable profiles and immutable records. During inference, LeanMem dynamically selects memory types and allocates retrieval budgets according to query-specific evidence demands, assembling relevant evidence on demand. On LoCoMo and LongMemEval-S with GPT-4.1-mini and Qwen3-8B, LeanMem improves accuracy over the strongest memory-based baseline in every setting, by up to 15.1 points, at the lowest or near-lowest construction cost, inference tokens, and latency. The code and datasets are included in the supplementary materials.",
+  "abstract_zh": "长期记忆对于基于 LLM 的 Agent 维持持续交互并可靠利用远距离历史信息至关重要。现有记忆系统通常用统一的摘要与检索流程处理异质对话内容，容易造成过高 token 消耗，或不可逆地丢失细粒度证据。本文认为，历史对话应依据其可压缩性、时间动态性和保真需求进行差异化处理。基于这一观点，作者提出 LeanMem，一个轻量级长期记忆框架。LeanMem 首先过滤低价值内容，再根据不同信息性质，将有用片段存储为紧凑的 profile memory、时间结构化的 event memory，或基于原始来源的 record memory。在维护阶段，LeanMem 仅选择性更新动态变化的 event memory，避免对稳定 profile 和不可变 record 进行冗余整合。在推理阶段，LeanMem 根据查询所需证据动态选择记忆类型并分配检索预算，按需组装相关证据。在 LoCoMo 和 LongMemEval-S 上，结合 GPT-4.1-mini 与 Qwen3-8B，LeanMem 在所有设置中均超过最强记忆基线，最高提升 15.1 个百分点，同时保持最低或接近最低的构建成本、推理 token 消耗和延迟。",
+  "key_points_zh": [
+    "提出 LeanMem，将对话历史按可压缩性、时间动态性和保真需求拆分处理，而非使用统一摘要检索管线。",
+    "设计三类记忆：profile memory 存储稳定用户画像，event memory 维护时间结构化事件，record memory 保留需高保真的源证据。",
+    "维护阶段只更新动态演化的 event memory，避免反复压缩稳定信息和不可变记录，降低长期维护成本。",
+    "推理阶段根据查询的证据需求动态选择记忆类型并分配检索预算，实现按需证据组装。",
+    "在 LoCoMo 和 LongMemEval-S 上，LeanMem 配合 GPT-4.1-mini 与 Qwen3-8B 均优于最强记忆基线，最高准确率提升 15.1 个百分点，并保持较低 token、成本和延迟。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.74,
+    "problem_significance": 0.84,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.64,
+    "lasting_value": 0.78,
+    "llm_avg": 0.764,
+    "comment": "A strong practical long-term memory framework that differentiates memory types, maintenance policies, and retrieval budgets for agent conversations.",
+    "comment_zh": "这是一项实用性很强的长期记忆框架，为 Agent 对话区分记忆类型、维护策略和检索预算。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.764,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03463/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.947
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03463/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.692
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03463/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.591
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03463/fig4.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.96
+    }
+  ]
+}

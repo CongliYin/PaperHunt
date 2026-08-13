@@ -1,0 +1,93 @@
+{
+  "arxiv_id": "2606.23127",
+  "title": "Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation",
+  "title_zh": "管理 LLM Agent 的程序性记忆：控制、适应与评估",
+  "authors": [
+    "Julia Belikova",
+    "Rauf Parchiev",
+    "Evgeny Egorov",
+    "Grigorii Davydenko",
+    "Gleb Gusev",
+    "Andrey Savchenko",
+    "Maksim Makarenko"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-22T10:14:11Z",
+  "abs_url": "https://arxiv.org/abs/2606.23127v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.23127",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Procedural memory is increasingly used to improve LLM agents on recurring workplace tasks, yet its ability to produce reusable skills remains poorly understood. We introduce AFTER, a benchmark of 382 realistic enterprise tasks spanning six professional roles and 22 procedural skills, designed to evaluate how skills transfer across tasks, roles, and model backbones. The benchmark includes controlled evaluation settings for local improvement, cross-task transfer, cross-role transfer, and cross-model generalization. Experiments show that procedural memory delivers consistent gains in industrial workflows: a single refinement round improves aggregate performance by 3.7-6.7 points, while skills evolved from diverse multi-model execution traces achieve 73.1% cross-model test accuracy, outperforming all single-model trace sources. We further find that some skills generalize broadly across tasks and models, whereas others become specialized to role-specific workflows and lose effectiveness under transfer. These results provide practical guidance for building, evaluating, and deploying procedural memory systems in production agent platforms.",
+  "abstract_zh": "程序性记忆（procedural memory）正被越来越多地用于提升 LLM Agent 在重复性办公任务中的表现，但其能否形成可复用技能仍缺乏系统理解。本文提出 AFTER，一个包含 382 个真实企业任务的 benchmark，覆盖 6 类专业角色与 22 种程序性技能，用于评估技能在任务、角色和模型骨干之间的迁移能力。AFTER 提供了局部改进、跨任务迁移、跨角色迁移和跨模型泛化等受控评估设置。实验表明，程序性记忆能在工业工作流中带来稳定收益：单轮 refinement 可使总体性能提升 3.7 到 6.7 个百分点；由多样化多模型执行轨迹演化出的技能在跨模型测试中达到 73.1% 准确率，优于所有单模型轨迹来源。研究还发现，部分技能可在任务和模型间广泛泛化，而另一些技能会专门适配角色特定流程，并在迁移时失效。这些结果为生产级 Agent 平台中程序性记忆系统的构建、评估与部署提供了实践指导。",
+  "key_points_zh": [
+    "提出 AFTER benchmark，包含 382 个真实企业任务，覆盖 6 个职业角色和 22 种程序性技能。",
+    "设计了局部改进、跨任务迁移、跨角色迁移、跨模型泛化等受控评估场景，用于分析程序性记忆的可复用性。",
+    "实验显示程序性记忆能稳定提升工业工作流表现，单轮 refinement 带来 3.7–6.7 个百分点的整体增益。",
+    "由多模型、多样化执行轨迹演化出的技能跨模型测试准确率达到 73.1%，优于单模型轨迹来源。",
+    "研究揭示技能存在泛化与专门化差异：部分技能可跨任务和模型复用，部分则绑定角色流程并在迁移中效果下降。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.76,
+    "problem_significance": 0.82,
+    "potential_impact": 0.83,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.84,
+    "llm_avg": 0.786,
+    "comment": "AFTER is a relevant procedural-memory benchmark that clarifies skill transfer, adaptation, and evaluation for production-oriented LLM agents.",
+    "comment_zh": "AFTER 是一个相关的程序性记忆基准，系统评估了生产型 LLM Agent 中技能迁移、适应和泛化的问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.786,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23127/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23127/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23127/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.23127/fig4.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.965
+    }
+  ],
+  "strategic_category": "retrieval_and_use"
+}

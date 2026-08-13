@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.04746",
+  "title": "Caching for the Future: Scrub Jay Episodic Memory Principles for Agent Memory Systems",
+  "title_zh": "面向未来的缓存：借鉴 Scrub Jay 情景记忆原则的 Agent 记忆系统",
+  "authors": [
+    "Kartikey Singh Bhandari",
+    "Aarya Wadhwani",
+    "Dhruv Kumar",
+    "Pratik Narang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-05T12:12:44Z",
+  "abs_url": "https://arxiv.org/abs/2608.04746v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.04746",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM agents that persist across sessions accumulate stored memories whose validity varies enormously by content type, yet existing memory architectures treat all memories as equally persistent and systematically contaminate retrieved context with outdated facts. We show that per-memory, type-conditioned temporal decay, a property of western scrub jay episodic memory, can be operationalized as an auto-classified coefficient $π_i$ in an external LLM-agent memory store, yielding ScrubJay-MEM: each memory is encoded as a jointly-bound What--Where--When tuple with an estimated perishability $π_i$ and utility horizon $τ_i$, retrieved by query-adaptive scoring, and revised retroactively at $O(1)$ LLM calls per update. We introduce the Temporal Generalization Test (TGT), a benchmark with held-out retention intervals and a Generalization Gap (GenGap) metric. On TGT, ScrubJay-MEM is the only retrieval-based system with substantially positive GenGap ($+0.108$); on MemoryAgentBench EventQA-64k it improves F1 by $+2.66$ over Mem0 and $+3.09$ over Qwen3-Embedding-4B under a llm backbone. A decay ablation collapses GenGap by $5.7\\times$, establishing type-conditioned decay as necessary for the result. Gains narrow under stronger backbones and reverse on fact-consolidation tasks, scoping the contribution to temporal reasoning over perishable facts.",
+  "abstract_zh": "持久运行的 LLM agents 会跨会话积累大量记忆，但不同类型记忆的有效期差异很大。现有记忆架构通常将所有记忆视为同等持久，导致检索上下文被过期事实污染。本文借鉴 western scrub jay 的情景记忆特性，将“按记忆类型调节的时间衰减”实现为外部 LLM-agent 记忆库中的自动分类系数 π_i，提出 ScrubJay-MEM。该方法把每条记忆编码为联合绑定的 What--Where--When 元组，并估计其易腐性（perishability）π_i 与效用时间范围（utility horizon）τ_i；检索时使用查询自适应评分，并能以每次更新 O(1) 次 LLM 调用进行回溯修订。作者还提出 Temporal Generalization Test（TGT）基准，包含留出的保留时间间隔，并设计 Generalization Gap（GenGap）指标。实验显示，ScrubJay-MEM 是 TGT 上唯一取得显著正 GenGap（+0.108）的检索式系统；在 MemoryAgentBench EventQA-64k 上，相比 Mem0 F1 提升 +2.66，相比 Qwen3-Embedding-4B 提升 +3.09。消融实验表明，去除衰减会使 GenGap 下降 5.7 倍，说明类型条件化时间衰减是关键因素。不过，在更强 backbone 下增益缩小，并且在事实整合任务上可能反转，因此其贡献主要适用于易过期事实的时间推理。",
+  "key_points_zh": [
+    "提出 ScrubJay-MEM，将 western scrub jay 的情景记忆原则引入 LLM-agent memory：每条记忆以 What--Where--When 元组表示，并附带易腐性 π_i 与效用时间范围 τ_i。",
+    "核心机制是 per-memory、type-conditioned temporal decay：不同类型记忆拥有不同衰减速度，避免把临时偏好、事件状态等易过期信息长期当作可靠事实。",
+    "提出 Temporal Generalization Test（TGT）与 Generalization Gap（GenGap）指标，用于评估记忆系统能否泛化到未见过的保留时间间隔。",
+    "实验中 ScrubJay-MEM 在 TGT 上获得显著正 GenGap（+0.108），并在 MemoryAgentBench EventQA-64k 上相较 Mem0 与 Qwen3-Embedding-4B 分别提升 F1 +2.66 和 +3.09。",
+    "消融显示去除类型条件化衰减会使 GenGap 下降 5.7 倍；但在更强 LLM backbone 或事实整合任务中优势减弱甚至反转，适用边界主要是易过期事实的时间推理。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.8,
+    "problem_significance": 0.86,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.79,
+    "llm_avg": 0.7860000000000001,
+    "comment": "A well-scoped Agent-memory mechanism introducing type-conditioned temporal decay and a benchmark for temporal generalization of perishable memories.",
+    "comment_zh": "这是一项边界清晰的 Agent Memory 机制，引入按类型条件化的时间衰减以及易逝记忆的时间泛化基准。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7860000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04746/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04746/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.972
+    }
+  ],
+  "strategic_category": "agent_memory_systems"
+}

@@ -5,31 +5,6 @@
   "generated_at": "2026-08-06T13:53:25Z",
   "papers": [
     {
-      "arxiv_id": "2608.03137",
-      "title": "Verifiable Memory: Learning Unified Memory Management with Local and Global Verifiers for Large Language Model Agents",
-      "title_zh": "Verifiable Memory：用局部与全局验证器学习 LLM Agent 的统一记忆管理",
-      "authors": [
-        "Xiaolong Sun",
-        "Qichao Wang",
-        "Hangyu Li",
-        "Liang Chen"
-      ],
-      "total_score": 0.7511691800690525,
-      "scores": {
-        "topic_relevance": 0.9600000000000001,
-        "llm_assessment": 0.852,
-        "domain_fit": 0.94,
-        "other": 0.37189726689684144
-      },
-      "tags": [
-        "GitHub",
-        "session context memory"
-      ],
-      "tldr_zh": "用验证器训练统一记忆管理策略",
-      "detail_file": "agent-harness-evolution/2026-08-04/2608.03137.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03137/thumb.webp"
-    },
-    {
       "arxiv_id": "2608.03223",
       "title": "Agentic Reinforcement Learning with Self-Distilled Reward Shaping",
       "title_zh": "带自蒸馏奖励塑形的 Agentic Reinforcement Learning",
@@ -168,31 +143,6 @@
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03214/thumb.webp"
     },
     {
-      "arxiv_id": "2608.03699",
-      "title": "TARL: Transaction-Aware Reliable Ledgers for Executable Memory Management in Long-Term Agents",
-      "title_zh": "TARL：面向长期智能体可执行记忆管理的事务感知可靠账本",
-      "authors": [
-        "Han Xiao",
-        "Hongjun Xu",
-        "Xin Zhang",
-        "Yidong Chen",
-        "Xiaodong Shi"
-      ],
-      "total_score": 0.6366,
-      "scores": {
-        "topic_relevance": 0.8400000000000001,
-        "llm_assessment": 0.8019999999999999,
-        "domain_fit": 0.89,
-        "other": 0.2
-      },
-      "tags": [
-        "session context memory"
-      ],
-      "tldr_zh": "用五类事务动作提升长期记忆可靠性",
-      "detail_file": "agent-harness-evolution/2026-08-04/2608.03699.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03699/thumb.webp"
-    },
-    {
       "arxiv_id": "2608.03403",
       "title": "Towards Robust Tool Use in Agents via Experience-Driven Adaptive Guidance",
       "title_zh": "通过经验驱动的自适应指导实现 Agent 鲁棒工具使用",
@@ -286,29 +236,6 @@
       "tldr_zh": "提高推理强度未增加未授权工具调用",
       "detail_file": "agent-harness-evolution/2026-08-04/2608.03169.json",
       "thumb": ""
-    },
-    {
-      "arxiv_id": "2608.04278",
-      "title": "EA-Graph: Artifact-Anchored Verification Memory for Coding Agents under Upstream Drift",
-      "title_zh": "EA-Graph：面向上游漂移下编码智能体的工件锚定验证记忆",
-      "authors": [
-        "Hwai-Jung Hsu",
-        "Cheng-Jan Chi",
-        "Hanna Everett"
-      ],
-      "total_score": 0.5896,
-      "scores": {
-        "topic_relevance": 0.8,
-        "llm_assessment": 0.7819999999999999,
-        "domain_fit": 0.86,
-        "other": 0.11666666666666668
-      },
-      "tags": [
-        "session context memory"
-      ],
-      "tldr_zh": "工件锚定记忆提升编码智能体验证可靠性",
-      "detail_file": "agent-harness-evolution/2026-08-04/2608.04278.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04278/thumb.webp"
     },
     {
       "arxiv_id": "2608.03499",
@@ -498,55 +425,6 @@
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04053/thumb.webp"
     },
     {
-      "arxiv_id": "2608.03463",
-      "title": "LeanMem: Simple and Efficient Long-Term Memory for LLM Agents",
-      "title_zh": "LeanMem：面向 LLM Agent 的简单高效长期记忆",
-      "authors": [
-        "Yuxin Liao",
-        "Le Wu",
-        "Min Hou",
-        "Hao Liu",
-        "Han Wu",
-        "Zishu Wang"
-      ],
-      "total_score": 0.42060000000000003,
-      "scores": {
-        "topic_relevance": 0.36000000000000004,
-        "llm_assessment": 0.722,
-        "domain_fit": 0.82,
-        "other": 0.2
-      },
-      "tags": [
-        "general llm agents"
-      ],
-      "tldr_zh": "按信息类型分层存储，低成本提升长期记忆",
-      "detail_file": "agent-harness-evolution/2026-08-04/2608.03463.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03463/thumb.webp"
-    },
-    {
-      "arxiv_id": "2608.03420",
-      "title": "Towards Improving Sequential Decision-Making in LLM Agents via Experience Memory",
-      "title_zh": "通过经验记忆改进 LLM Agent 的序贯决策能力",
-      "authors": [
-        "Jakub Rada",
-        "Viliam Lisý"
-      ],
-      "total_score": 0.4188,
-      "scores": {
-        "topic_relevance": 0.4,
-        "llm_assessment": 0.546,
-        "domain_fit": 0.66,
-        "other": 0.3166666666666667
-      },
-      "tags": [
-        "reflection and self correction",
-        "Accepted"
-      ],
-      "tldr_zh": "用经验记忆提升 LLM 序贯决策",
-      "detail_file": "agent-harness-evolution/2026-08-04/2608.03420.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03420/thumb.webp"
-    },
-    {
       "arxiv_id": "2608.03130",
       "title": "DP-MemView: A Memory Interface for Attribute-Level Transcript Privacy in Long-Term LLM Agents",
       "title_zh": "DP-MemView：面向长期 LLM Agent 属性级对话隐私的记忆接口",
@@ -671,31 +549,6 @@
       "tldr_zh": "用真实金融交付物构建评测规准",
       "detail_file": "agent-harness-evolution/2026-08-04/2608.04077.json",
       "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04077/thumb.webp"
-    },
-    {
-      "arxiv_id": "2608.04095",
-      "title": "FinPerMA: A Theory-Informed, Event-Grounded Personalized-Memory Benchmark for LLM Agents",
-      "title_zh": "FinPerMA：一个理论驱动、事件锚定的 LLM Agent 个性化记忆基准",
-      "authors": [
-        "Ben Wang",
-        "Kang Zhou",
-        "Lifan Guo",
-        "Feng Chen",
-        "Chi Zhang"
-      ],
-      "total_score": 0.39588874303166643,
-      "scores": {
-        "topic_relevance": 0.36000000000000004,
-        "llm_assessment": 0.652,
-        "domain_fit": 0.78,
-        "other": 0.18762914343888823
-      },
-      "tags": [
-        "general llm agents"
-      ],
-      "tldr_zh": "金融个性化记忆基准揭示LLM仍难适应偏好变化",
-      "detail_file": "agent-harness-evolution/2026-08-04/2608.04095.json",
-      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.04095/thumb.webp"
     },
     {
       "arxiv_id": "2608.03700",

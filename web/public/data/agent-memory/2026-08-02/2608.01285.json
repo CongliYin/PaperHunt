@@ -1,0 +1,65 @@
+{
+  "arxiv_id": "2608.01285",
+  "title": "Stop When Memory Suffices: Evidence-Conditioned Progressive Execution for LLM Agents",
+  "title_zh": "记忆足够即停止：面向 LLM Agent 的证据条件化渐进执行",
+  "authors": [
+    "Yidan Lin",
+    "Kaixiang Wang",
+    "Jiong Lou",
+    "Jie Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-02T14:49:24Z",
+  "abs_url": "https://arxiv.org/abs/2608.01285v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01285",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The continued development of LLMs toward persistent and adaptive intelligence increasingly requires long-term memory mechanisms that preserve and reuse information across interactions. Existing memory systems either compress and structure histories for efficient access or perform deep research over broader trajectories. The former lowers online cost but may omit temporal, causal, or cross-step dependencies, while the latter improves evidence coverage at substantial latency and inference cost. This raises a key question: can a memory system achieve strong answer quality while maintaining low online latency? We introduce Router-Mem, an evidence-conditioned progressive execution framework for long-horizon agent memory. Router-Mem first applies a shared low-cost retrieval prefix to obtain evidence. A lightweight sufficiency router then predicts whether the context supports early termination, which enable a single-token decision at inference time. It is trained with evidence-level supervision and rationale-conditioned representation distillation. When evidence is insufficient, Router-Mem reuses retrieval hits to expand memory blocks and perform deeper analysis and aggregation. Experiments on AMA-Bench and BEAM show that Router-Mem achieves 55.17\\% and 38.77\\% score while reducing average inference time by 27.3\\% and 25.5\\% compared with full memory execution.",
+  "abstract_zh": "随着 LLM 向具备持久性与自适应性的智能体发展，能够跨交互保存并复用信息的长期记忆机制变得愈发重要。现有记忆系统通常要么压缩并结构化历史以提升访问效率，要么在更长轨迹上进行深度研究；前者降低在线成本但可能遗漏时间、因果或跨步骤依赖，后者提升证据覆盖但带来高延迟和推理成本。本文提出 Router-Mem，一个用于长程 Agent 记忆的证据条件化渐进执行框架。它先通过共享的低成本检索前缀获取证据，再由轻量级充分性路由器判断当前上下文是否足以提前终止，并在推理时以单 token 决策实现快速分流。该路由器通过证据级监督和基于理由的表示蒸馏进行训练。若证据不足，Router-Mem 会复用已有检索命中，扩展记忆块并执行更深层的分析与聚合。在 AMA-Bench 和 BEAM 上，Router-Mem 分别取得 55.17% 和 38.77% 得分，同时相比完整记忆执行将平均推理时间降低 27.3% 和 25.5%。",
+  "key_points_zh": [
+    "提出 Router-Mem，将长期记忆推理设计为“低成本检索—充分性判断—必要时深度执行”的渐进流程。",
+    "核心是轻量级 sufficiency router，根据检索证据判断是否可提前终止，并用单 token 决策降低在线推理开销。",
+    "训练采用 evidence-level supervision 与 rationale-conditioned representation distillation，使路由器更准确判断证据是否充分。",
+    "当证据不足时，系统复用初始检索结果扩展 memory blocks，再进行更深入的分析与聚合，避免完全重复计算。",
+    "在 AMA-Bench 和 BEAM 上保持较强答案质量，同时相较 full memory execution 平均推理时间分别减少 27.3% 和 25.5%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.63,
+    "problem_significance": 0.7,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.52,
+    "lasting_value": 0.62,
+    "llm_avg": 0.6340000000000001,
+    "comment": "Router-Mem is relevant agent-memory work, but its main contribution is an efficiency-oriented sufficiency router for progressive execution rather than a broad memory lifecycle advance.",
+    "comment_zh": "Router-Mem 属于相关的 Agent Memory 工作，但核心贡献更偏向渐进式执行中的效率路由，而不是广义记忆生命周期突破。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.416947575628934,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6340000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 6,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [],
+  "strategic_category": "agent_context"
+}

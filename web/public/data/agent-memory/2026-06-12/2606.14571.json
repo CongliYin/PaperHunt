@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2606.14571",
+  "title": "StreamMemBench: Streaming Evaluation of Agent Memory for Future-Oriented Assistance",
+  "title_zh": "StreamMemBench：面向未来辅助的智能体记忆流式评测",
+  "authors": [
+    "Guanming Liu",
+    "Yuqi Ren",
+    "Hansu Gu",
+    "Peng Zhang",
+    "Weihang Wang",
+    "Jiahao Liu",
+    "Ning Gu",
+    "Tun Lu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-12T15:48:43Z",
+  "abs_url": "https://arxiv.org/abs/2606.14571v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.14571",
+  "links": {
+    "github": "https://github.com/landian60/StreamMemBench.",
+    "project_page": null
+  },
+  "abstract_en": "A central role of personal-agent memory is to turn stored information and prior interactions into future-oriented assistance. In daily use, useful cues come from what the agent observes and how the user interacts with the agent, and the agent must carry them forward from the current request to similar future tasks. Existing memory benchmarks usually test dialogue recall or task improvement in isolation, leaving the trajectory from streaming observations to later assistance largely untested. We introduce StreamMemBench, a streaming benchmark that constructs a two-step task sequence around each evidence anchor from EgoLife egocentric streams. The initial task tests evidence use, while the follow-up task tests whether feedback and interaction experience are reused. Four metrics diagnose evidence recall, initial evidence use, feedback incorporation, and follow-up reuse. Experiments with eight memory systems across two backbones show that current systems often fail to use observed evidence or turn feedback into reliable follow-up behavior, even when evidence is stored or feedback is incorporated locally. StreamMemBench is publicly available at https://github.com/landian60/StreamMemBench.",
+  "abstract_zh": "个人智能体记忆的核心作用，是将已存储信息与既往交互转化为面向未来的辅助能力。在日常使用中，有价值的线索既来自智能体的观察，也来自用户与智能体的交互；智能体需要把这些线索从当前请求迁移到未来相似任务中。现有记忆基准通常孤立地测试对话回忆或任务改进，较少评估从流式观察到后续辅助的完整轨迹。本文提出 StreamMemBench，这是一个流式基准，基于 EgoLife 第一视角数据流中的证据锚点，为每个锚点构造两步任务序列：初始任务测试证据使用能力，后续任务测试系统是否能复用反馈与交互经验。该基准包含四项指标，用于诊断证据回忆、初始证据使用、反馈纳入以及后续复用。作者在两个 backbone 上评测了八种记忆系统，结果显示：当前系统即使能够存储证据或在局部纳入反馈，也常常无法有效使用观察证据，或将反馈转化为稳定可靠的后续行为。StreamMemBench 已开源。",
+  "key_points_zh": [
+    "提出 StreamMemBench，聚焦个人智能体记忆从流式观察到未来辅助的完整能力链路，而不仅是静态回忆或单次任务提升。",
+    "基于 EgoLife egocentric streams 构造两步任务序列：初始任务评估对观察证据的使用，后续任务评估对用户反馈和交互经验的复用。",
+    "设计四类诊断指标：evidence recall、initial evidence use、feedback incorporation、follow-up reuse，用于细粒度分析记忆系统失效环节。",
+    "在两个 backbone 和八种 memory systems 上的实验表明，现有系统常无法可靠利用已观察证据，也难以将反馈泛化为后续相似任务中的稳定行为。",
+    "该基准强调 future-oriented assistance（面向未来的辅助），为评估长期个人智能体记忆提供了更贴近日常使用场景的测试框架。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8600000000000001,
+    "comment": "A strong benchmark contribution that evaluates whether agent memory supports streaming observations, feedback incorporation, and future-oriented assistance.",
+    "comment_zh": "这是一项很强的基准贡献，评估 Agent 记忆能否支持流式观察、反馈吸收和面向未来的辅助行为。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.8600000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/landian60/StreamMemBench.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14571/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14571/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14571/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.969
+    }
+  ]
+}

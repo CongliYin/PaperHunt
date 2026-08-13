@@ -1,0 +1,110 @@
+{
+  "domain": "agent-memory",
+  "display_name": "Agent Memory",
+  "date": "2026-08-03",
+  "generated_at": "2026-08-13T10:58:39Z",
+  "papers": [
+    {
+      "arxiv_id": "2608.02113",
+      "title": "MemArbiter: Decision-Time Memory Arbitration for Long-Horizon LLM Agents",
+      "title_zh": "MemArbiter：面向长程 LLM Agent 的决策时记忆仲裁",
+      "authors": [
+        "Jiajun Dong",
+        "Yutao Hu",
+        "Fengrui Fan",
+        "Shihan Dou",
+        "Yueming Wu",
+        "Deqing Zou"
+      ],
+      "total_score": 0.5624000000000001,
+      "scores": {
+        "topic_relevance": 0.6800000000000002,
+        "llm_assessment": 0.768,
+        "domain_fit": 0.9,
+        "other": 0.2
+      },
+      "tags": [
+        "session context memory",
+        "retrieval and use"
+      ],
+      "tldr_zh": "用功能感知记忆仲裁提升长程 Agent 决策",
+      "detail_file": "agent-memory/2026-08-03/2608.02113.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02113/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01742",
+      "title": "MemSIF: From Structured Interactions to Dual-Track Fact Memory for LLM Agents",
+      "title_zh": "MemSIF：从结构化交互到面向 LLM Agent 的双轨事实记忆",
+      "authors": [
+        "YuFei Luo",
+        "Xiucheng Xu",
+        "Zhen Yang"
+      ],
+      "total_score": 0.3524,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.808,
+        "domain_fit": 0.96,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "general llm agents"
+      ],
+      "tldr_zh": "结构化交互与双轨事实记忆提升长程记忆",
+      "detail_file": "agent-memory/2026-08-03/2608.01742.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01742/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.02508",
+      "title": "RoMeRL: Balancing Feedback Coverage and the Memory-Reward Trap in Self-Evolving Agent Memory via Reduced-Order Utility States",
+      "title_zh": "RoMeRL：通过降阶效用状态平衡自进化 Agent 记忆中的反馈覆盖与记忆-奖励陷阱",
+      "authors": [
+        "Yi Yang",
+        "Zhennan Chen",
+        "Yihong Zhuang",
+        "Tiehan Fan",
+        "Yinan Chen",
+        "Jian Li",
+        "Jian Yang",
+        "Ying Tai"
+      ],
+      "total_score": 0.3274,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.808,
+        "domain_fit": 0.92,
+        "other": 0.2833333333333334
+      },
+      "tags": [
+        "GitHub",
+        "session context memory"
+      ],
+      "tldr_zh": "用固定降阶效用状态提升 Agent 记忆学习",
+      "detail_file": "agent-memory/2026-08-03/2608.02508.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02508/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.01619",
+      "title": "When Memory Updates but Behavior Does Not: Repairing Implicit Stale Dependencies in Personalized Agent Responses",
+      "title_zh": "当记忆更新而行为不变：修复个性化智能体响应中的隐式陈旧依赖",
+      "authors": [
+        "Haofei Sun",
+        "Lin He"
+      ],
+      "total_score": 0.2842712024128081,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.732,
+        "domain_fit": 0.84,
+        "other": 0.21557067470936045
+      },
+      "tags": [
+        "session context memory"
+      ],
+      "tldr_zh": "StateAuditor 修复智能体陈旧记忆依赖",
+      "detail_file": "agent-memory/2026-08-03/2608.01619.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01619/thumb.webp"
+    }
+  ]
+}

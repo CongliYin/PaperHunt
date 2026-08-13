@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.02508",
+  "title": "RoMeRL: Balancing Feedback Coverage and the Memory-Reward Trap in Self-Evolving Agent Memory via Reduced-Order Utility States",
+  "title_zh": "RoMeRL：通过降阶效用状态平衡自进化 Agent 记忆中的反馈覆盖与记忆-奖励陷阱",
+  "authors": [
+    "Yi Yang",
+    "Zhennan Chen",
+    "Yihong Zhuang",
+    "Tiehan Fan",
+    "Yinan Chen",
+    "Jian Li",
+    "Jian Yang",
+    "Ying Tai"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T17:07:50Z",
+  "abs_url": "https://arxiv.org/abs/2608.02508v2",
+  "pdf_url": "https://arxiv.org/pdf/2608.02508",
+  "links": {
+    "github": "https://github.com/YOUNG-fnxm/RoMeRL",
+    "project_page": null
+  },
+  "abstract_en": "Learning-based memory systems for self-evolving LLM agents face two tightly coupled challenges. First, trajectory-indexed utilities grow with the interaction history, thereby dispersing limited feedback over an ever-expanding state space. Second, because trajectory-level rewards are jointly assigned to co-retrieved memories, irrelevant experiences may receive misleading utility updates and consequently enter the memory-reward trap. To address these challenges, we introduce Reduced-Order Memory Reinforcement Learning (RoMeRL), which represents the growing trajectory-indexed utility space using a fixed-dimensional per-task memory state factorized by outcome polarity and memory dynamics. RoMeRL incorporates new experiences through a fixed set of semantic coordinates whose contents are updated or replaced over time, thereby concentrating feedback over a bounded utility support. Theoretically, we show that this reduced-order parameterization increases the average feedback received by each utility coordinate and characterize the steady-state occupancy of erroneous coordinates under a generic coordinate-transition model. Empirically, across ALFWorld and LifelongAgentBench, RoMeRL improves task performance, reduces the Cold-Q ratio by 80.0%, increases feedback density by approximately 6.0 times, reduces the maintained memory size by 84.4%, and cuts LLM calls by 21.1%. These results show that reduced-order utility states support efficient self-evolving agent memory while limiting persistent reward contamination. Code is available at: https://github.com/YOUNG-fnxm/RoMeRL",
+  "abstract_zh": "面向自进化 LLM agents 的学习型记忆系统面临两个耦合难题：一是基于轨迹索引的效用会随交互历史增长，使有限反馈被分散到不断扩大的状态空间；二是轨迹级奖励会共同分配给被同时检索的记忆，导致无关经验也可能获得误导性效用更新，陷入 memory-reward trap。本文提出 Reduced-Order Memory Reinforcement Learning（RoMeRL），用固定维度的逐任务记忆状态表示不断增长的轨迹索引效用空间，并按结果极性（outcome polarity）与记忆动态（memory dynamics）进行因子分解。RoMeRL 通过一组固定语义坐标纳入新经验，坐标内容可随时间更新或替换，从而将反馈集中在有界效用支撑上。理论上，作者证明该降阶参数化能提高每个效用坐标获得的平均反馈，并在通用坐标转移模型下刻画错误坐标的稳态占据。实验显示，在 ALFWorld 与 LifelongAgentBench 上，RoMeRL 提升任务性能，将 Cold-Q ratio 降低 80.0%，使反馈密度提升约 6.0 倍，维护记忆规模减少 84.4%，LLM 调用减少 21.1%。",
+  "key_points_zh": [
+    "提出 RoMeRL，将不断增长的轨迹级记忆效用空间压缩为固定维度的 per-task memory state，缓解反馈稀疏与状态空间膨胀问题。",
+    "通过 outcome polarity 与 memory dynamics 对记忆状态进行因子分解，并使用固定语义坐标来更新或替换经验，使反馈集中到有界坐标集合。",
+    "针对 memory-reward trap，RoMeRL 降低无关记忆因共同检索而被错误奖励污染的长期风险，并从理论上分析错误坐标的稳态占据。",
+    "在 ALFWorld 和 LifelongAgentBench 上，RoMeRL 提升任务表现，同时将 Cold-Q ratio 降低 80.0%、反馈密度提升约 6 倍。",
+    "系统效率显著提升：维护记忆规模减少 84.4%，LLM calls 减少 21.1%，表明其适合更高效的自进化 Agent 记忆管理。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.8,
+    "llm_avg": 0.808,
+    "comment": "RoMeRL offers a substantive learning-based memory update framework for self-evolving agents by bounding utility states and reducing reward contamination.",
+    "comment_zh": "RoMeRL 为自进化 Agent 提出了有实质性的学习型记忆更新框架，通过有界效用状态减少奖励污染。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.808,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/YOUNG-fnxm/RoMeRL",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02508/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.02508/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.95
+    }
+  ]
+}

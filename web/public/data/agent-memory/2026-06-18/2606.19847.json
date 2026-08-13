@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2606.19847",
+  "title": "AtomMem: Building Simple and Effective Memory System for LLM Agents via Atomic Facts",
+  "title_zh": "AtomMem：通过原子事实为 LLM Agents 构建简单有效的记忆系统",
+  "authors": [
+    "Yanyu Yao",
+    "Shangze Li",
+    "Zhi Zheng",
+    "Hui Zheng",
+    "Qi Liu",
+    "Tong Xu",
+    "Enhong Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-18T06:56:15Z",
+  "abs_url": "https://arxiv.org/abs/2606.19847v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.19847",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) demonstrate strong reasoning and generation abilities, but their fixed context windows limit long-term information accumulation and reuse across multi-session interactions. Existing memory-augmented systems often construct memory in a coarse and unstable manner, relying on inefficient memory representations or unstable unconstrained updates. To address these challenges, we propose AtomMem, a long-term memory system designed for value-dense storage and stable memory evolution. AtomMem introduces a Fact Executor, which selectively extracts high value atomic facts from long form interactions to serve as highly efficient memory representations. Subsequently, AtomMem organizes these facts into hierarchical event structures and temporal profiles, capturing coherent episodic contexts and tracking dynamically evolving user attributes over time. During retrieval, the system activates an associative memory graph to connect fragmented memories. Experiments on the LoCoMo benchmark confirm that AtomMem achieves state-of-the-art performance across various reasoning tasks, offering a scalable and economically viable solution for deploying intelligent personalized agents.",
+  "abstract_zh": "大型语言模型（LLMs）具备强大的推理与生成能力，但固定上下文窗口限制了其在多轮、多会话交互中长期积累和复用信息的能力。现有记忆增强系统通常以粗粒度且不稳定的方式构建记忆，依赖低效的记忆表示或不受约束、易波动的更新机制。为此，论文提出 AtomMem，一个面向长期记忆的系统，强调高价值密度存储与稳定的记忆演化。AtomMem 引入 Fact Executor，从长文本交互中选择性抽取高价值原子事实，作为高效记忆表示；随后将这些事实组织为层次化事件结构与时间画像（temporal profiles），既捕捉连贯的情景上下文，也跟踪用户属性随时间的动态变化。在检索阶段，系统激活关联记忆图，将碎片化记忆连接起来。基于 LoCoMo benchmark 的实验表明，AtomMem 在多类推理任务上达到 state-of-the-art 性能，为部署智能个性化 agents 提供了可扩展且具有经济性的长期记忆方案。",
+  "key_points_zh": [
+    "提出 AtomMem，用“原子事实（atomic facts）”作为长期记忆的核心表示，降低冗余并提升信息密度。",
+    "设计 Fact Executor，从长程交互中选择性抽取高价值事实，避免粗粒度记忆带来的低效与噪声累积。",
+    "将事实组织为层次化事件结构和 temporal profiles，同时建模情景记忆与动态用户属性变化。",
+    "检索时通过关联记忆图连接碎片化信息，支持跨会话、多跳和时间相关推理。",
+    "在 LoCoMo benchmark 上取得 state-of-the-art 表现，显示其适合可扩展、低成本的个性化 LLM agents 部署。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.78,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.82,
+    "llm_avg": 0.804,
+    "comment": "AtomMem is a strong agent-memory system centered on atomic fact extraction, hierarchical organization, temporal profiling, and associative retrieval for persistent personalization.",
+    "comment_zh": "AtomMem 是一项扎实的 Agent Memory 工作，围绕原子事实抽取、层次化组织、时间画像和关联检索来支持长期个性化记忆。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3315497212666585,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.804,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19847/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.19847/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ],
+  "strategic_category": "construction_and_consolidation"
+}

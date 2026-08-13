@@ -1,0 +1,33 @@
+{
+  "domain": "agent-memory",
+  "display_name": "Agent Memory",
+  "date": "2026-08-02",
+  "generated_at": "2026-08-13T10:58:39Z",
+  "papers": [
+    {
+      "arxiv_id": "2608.01285",
+      "title": "Stop When Memory Suffices: Evidence-Conditioned Progressive Execution for LLM Agents",
+      "title_zh": "记忆足够即停止：面向 LLM Agent 的证据条件化渐进执行",
+      "authors": [
+        "Yidan Lin",
+        "Kaixiang Wang",
+        "Jiong Lou",
+        "Jie Li"
+      ],
+      "total_score": 0.41604737878144676,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.6340000000000001,
+        "domain_fit": 0.78,
+        "other": 0.21949126260482232
+      },
+      "tags": [
+        "runtime execution engine",
+        "agent context"
+      ],
+      "tldr_zh": "证据足够即早停，降低长期记忆推理延迟",
+      "detail_file": "agent-memory/2026-08-02/2608.01285.json",
+      "thumb": ""
+    }
+  ]
+}

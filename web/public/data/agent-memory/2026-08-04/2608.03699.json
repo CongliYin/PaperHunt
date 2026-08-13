@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2608.03699",
+  "title": "TARL: Transaction-Aware Reliable Ledgers for Executable Memory Management in Long-Term Agents",
+  "title_zh": "TARL：面向长期智能体可执行记忆管理的事务感知可靠账本",
+  "authors": [
+    "Han Xiao",
+    "Hongjun Xu",
+    "Xin Zhang",
+    "Yidong Chen",
+    "Xiaodong Shi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-04T14:02:55Z",
+  "abs_url": "https://arxiv.org/abs/2608.03699v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.03699",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Persistent memory helps long-term agents retain knowledge, yet a single update error can repeatedly distort future retrieval and reasoning. Most existing systems reduce memory updating to a binary Write/Hold decision, which cannot distinguish whether new information should be added, ignored, used to revise an outdated belief, rejected as unreliable, or deferred for verification. These choices may share the same binary label while producing fundamentally different memory states. We introduce TARL, a memory state update framework that maps each statement to one of five executable actions. TARL identifies the affected memory, resolves its temporal scope, compares source reliability, and updates accepted, pending, and rejected ledgers. It is further trained by comparing the memory states produced by alternative update operations, encouraging the model to select the operation that leads to the correct result. We also introduce TARL-Mem, a benchmark with fine-grained action labels and next-state targets. Across in-domain, cross-source, temporal, counterfactual, and sequential evaluations, TARL improves action prediction and state recovery, reduces memory pollution, preserves conflicting evidence, and limits cumulative corruption. The complete model implementation is provided in the supplementary material.",
+  "abstract_zh": "持久记忆有助于长期智能体保留知识，但单次更新错误可能在后续检索与推理中被反复放大。现有系统多将记忆更新简化为二元 Write/Hold 决策，难以区分新信息应被添加、忽略、用于修正过时信念、因不可靠而拒绝，或暂缓等待验证等不同操作。论文提出 TARL，一个记忆状态更新框架，将每条陈述映射为五类可执行动作。TARL 会识别受影响记忆、解析时间范围、比较来源可靠性，并维护 accepted、pending、rejected 三类账本。模型还通过比较不同更新操作产生的记忆状态进行训练，促使其选择能导向正确状态的操作。作者进一步提出 TARL-Mem 基准，包含细粒度动作标签和下一状态目标。在域内、跨来源、时间、反事实和序列评测中，TARL 提升了动作预测与状态恢复能力，减少记忆污染，保留冲突证据，并限制累积错误传播。",
+  "key_points_zh": [
+    "TARL 将长期智能体的记忆更新从简单 Write/Hold 扩展为五类可执行动作，更细致地区分添加、忽略、修订、拒绝和延迟验证等情况。",
+    "框架显式维护 accepted、pending、rejected ledgers，并结合受影响记忆、时间范围和来源可靠性来决定状态转移。",
+    "训练目标不只预测动作标签，还比较不同更新操作产生的下一记忆状态，鼓励模型选择能恢复正确记忆状态的操作。",
+    "作者提出 TARL-Mem benchmark，提供细粒度动作标注和 next-state targets，用于评估事务级记忆管理能力。",
+    "实验显示 TARL 在域内、跨来源、时间、反事实和序列场景中减少 memory pollution，并降低长期交互中的累积记忆腐化。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.86,
+    "problem_significance": 0.92,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.88,
+    "llm_avg": 0.866,
+    "comment": "A highly relevant memory-update framework that replaces binary write decisions with executable ledger actions and fine-grained state-transition supervision.",
+    "comment_zh": "这是一项高度相关的记忆更新框架，用可执行账本动作和细粒度状态转移监督取代二元写入决策。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.866,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03699/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03699/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.954
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03699/fig3.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.03699/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.96
+    }
+  ],
+  "strategic_category": "evolution_and_maintenance"
+}

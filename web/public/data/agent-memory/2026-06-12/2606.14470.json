@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2606.14470",
+  "title": "GitOfThoughts: Version-Controlled Reasoning and Agent Memory You Can Replay, Diff, and Merge",
+  "title_zh": "GitOfThoughts：可回放、可 Diff、可合并的版本控制式推理与 Agent 记忆",
+  "authors": [
+    "Pavan C Shekar",
+    "Abhishek H S",
+    "Aswanth Krishnan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-06-12T14:02:37Z",
+  "abs_url": "https://arxiv.org/abs/2606.14470v1",
+  "pdf_url": "https://arxiv.org/pdf/2606.14470",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM) reasoning is ephemeral: chains of thought vanish with the context window, pruned search branches leave no record, and memory buffers cannot be diffed, merged, or audited. Every other complex software process (code, infrastructure, data, experiments) is version-controlled; reasoning is not. We introduce GitOfThoughts, which stores an agent's reasoning tree as a git repository: every scored thought is a commit, scores are notes, outcomes are tags, and retrieval is \"git log\" over the agent's own history. This makes reasoning replayable, auditable, and mergeable across agents at near-zero engineering cost. We then ask the harder question: does memory, in any substrate, actually improve accuracy? Across five substrates (none, markdown, vector, graph, git), two benchmarks, two model scales, and pre-registered replications, the answer for novel problems is no. No memory format reliably helps, and a promising early result collapsed under its own pre-registered replication. Memory pays only above what we call the copyability threshold: when the retrieved case is a near-duplicate of the current problem (similarity >~ 0.8), accuracy jumps sharply; below it, nothing. The gain is answer retrieval, not method transfer: a 4.5x larger model doubles the near-duplicate payoff yet still cannot extract a transferable method from a worked example. The only general lever we find is test-time sampling. The case for git-as-substrate is therefore auditability, provenance, and mergeability at accuracy parity. We document a retracted result and a refuted hypothesis to model the evaluation standard we hold ourselves to.",
+  "abstract_zh": "本文提出 GitOfThoughts，将 LLM Agent 的推理树存储为 git repository：每个带评分的 thought 对应一次 commit，score 存为 notes，outcome 存为 tags，检索则通过类似 “git log” 的方式遍历自身历史。该设计让推理过程具备可回放、可审计、可跨 Agent 合并等版本控制能力，且工程成本很低。论文进一步系统评估记忆机制是否真正提升准确率：在 none、markdown、vector、graph、git 五种记忆载体，两个 benchmark、两种模型规模以及预注册复现实验中，结果显示对于新问题，任何记忆格式都不能稳定提升表现。记忆收益只在所谓 copyability threshold 以上出现：当检索案例与当前问题高度近似（similarity 约大于 0.8）时，准确率显著提升；低于该阈值则基本无效。收益主要来自答案检索，而非方法迁移；即使使用大 4.5 倍的模型，也只是增强近重复样本收益，仍难以从 worked example 中抽取可迁移方法。作者认为 git-as-substrate 的价值主要在可审计性、溯源性和可合并性，而非准确率提升。",
+  "key_points_zh": [
+    "GitOfThoughts 将 Agent 推理树映射到 git：thought 是 commit，score 是 notes，outcome 是 tags，从而支持 replay、diff、merge 与 audit。",
+    "系统比较 none、markdown、vector、graph、git 五种记忆载体，发现对 novel problems 没有任何记忆格式能可靠提升准确率。",
+    "提出 copyability threshold：只有当检索案例与当前问题近乎重复（similarity >~ 0.8）时，记忆才显著提升表现。",
+    "实验表明收益主要来自 answer retrieval，而非 method transfer；更大模型也未能稳定学会从示例中迁移解题方法。",
+    "论文强调 git 作为记忆底座的核心价值是 provenance、auditability 与 mergeability，并公开记录了被撤回结果和被证伪假设。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.82,
+    "novelty": 0.82,
+    "problem_significance": 0.76,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.83,
+    "llm_avg": 0.7860000000000001,
+    "comment": "A distinctive memory substrate and evaluation study whose lasting value may lie more in replayable provenance and negative findings than in accuracy gains.",
+    "comment_zh": "这是一项有特色的记忆载体与评估研究，其长期价值可能更多来自可回放溯源和负面发现，而非准确率提升。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7860000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14470/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14470/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14470/fig3.webp",
+      "page": 2,
+      "kind": "table",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.14470/fig4.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.97
+    }
+  ]
+}

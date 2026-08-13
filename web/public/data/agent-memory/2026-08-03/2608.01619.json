@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2608.01619",
+  "title": "When Memory Updates but Behavior Does Not: Repairing Implicit Stale Dependencies in Personalized Agent Responses",
+  "title_zh": "当记忆更新而行为不变：修复个性化智能体响应中的隐式陈旧依赖",
+  "authors": [
+    "Haofei Sun",
+    "Lin He"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-03T02:49:08Z",
+  "abs_url": "https://arxiv.org/abs/2608.01619v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.01619",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Memory-augmented agents can know that a user's stored state is outdated and still plan around the old value. The STALE benchmark calls this the implicit policy adaptation (IPA) gap. We identify one structural contributor: draft-anchored verification checks what a response says, and in an open-ended response the stale dependency is usually unsaid. StateAuditor therefore audits in the opposite direction, from stored state to draft. An LLM proposes candidate old-to-new transitions from timestamped evidence; deterministic code pins each quotation to a single entry, checks that the new evidence really is newer, and lets only these verified transitions trigger repair. What is verified is provenance and chronology - not semantic supersession. On STALE's full protocol (400 scenarios, 50-session histories, one independent response per query), strict single-query VTA scores .736 against .686 for our locked predecessor under the same judge: a +5.0-point paired gain (95% CI [+2.9, +7.2]) coming almost entirely from IPA and premise resistance (PR). The benchmark's own judge, from a third model family, reproduces the gain (.738 vs. .680). On an independent cross-family preference-evolution benchmark (HorizonBench), the full draft-audit-repair pipeline over a gold-derived structured store raises current-preference accuracy (user-clustered p<.01), though a matched control shows most of this external gain is the draft-side audit itself; a harder authored lifecycle set gives no gain, bounding the claim while false invalidation stays controlled. On STALE, by contrast, a matched control (same evidence, adapter, and call budget) scores only .692 (+0.6 over the predecessor, n.s.), attributing the STALE gain to the transition machinery rather than added context or calls. We make no claim about general-purpose agent memory.",
+  "abstract_zh": "本文研究 memory-augmented agents 中的一个关键问题：即使智能体知道用户存储状态已过时，仍可能在规划响应时依赖旧状态。STALE benchmark 将其称为 implicit policy adaptation（IPA）gap。作者指出，一个结构性原因是 draft-anchored verification 只检查草稿“说了什么”，而在开放式回答中，陈旧依赖通常并不会被显式说出。为此，论文提出 StateAuditor：从存储状态反向审计草稿。具体而言，LLM 先基于带时间戳的证据提出候选 old-to-new transitions；确定性代码再将每段引用绑定到唯一条目，验证新证据确实更新，仅允许通过验证的 transition 触发修复。该验证关注 provenance 与 chronology，而非语义上的 supersession。实验显示，在 STALE 完整协议上，StateAuditor 的严格 single-query VTA 得分为 .736，相比同一评测器下锁定的前代方法 .686 提升 5.0 个百分点，增益主要来自 IPA 与 premise resistance（PR）。第三方模型家族的 benchmark judge 也复现了该提升。在 HorizonBench 上，完整 draft-audit-repair 流水线提升了 current-preference accuracy，但对照实验表明外部收益主要来自 draft-side audit；在更难的 authored lifecycle set 上未观察到提升。STALE 上的匹配对照仅得 .692，说明主要增益来自 transition machinery，而非额外上下文或调用预算。作者不声称该方法适用于通用智能体记忆。",
+  "key_points_zh": [
+    "论文聚焦 memory-augmented agents 的 IPA gap：记忆已更新，但个性化响应仍隐式依赖旧用户状态。",
+    "提出 StateAuditor，从 stored state 到 draft 进行反向审计，而不是只检查草稿中显式陈述的内容。",
+    "方法用 LLM 生成候选 old-to-new transitions，并用确定性代码验证引用来源与时间顺序，只有通过验证的 transition 才触发修复。",
+    "在 STALE benchmark 上，严格 single-query VTA 从 .686 提升到 .736，主要改善 IPA 与 premise resistance。",
+    "跨数据集结果更有限：HorizonBench 有提升但多来自 draft-side audit， authored lifecycle set 无明显收益，作者明确不泛化到通用 agent memory。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.84,
+    "novelty": 0.72,
+    "problem_significance": 0.86,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.74,
+    "llm_avg": 0.732,
+    "comment": "StateAuditor addresses an important stale-memory-to-behavior failure with provenance- and chronology-verified repair, but its scope is deliberately narrow.",
+    "comment_zh": "StateAuditor 针对陈旧记忆未能改变行为的重要失败模式，提出基于出处和时间验证的修复方法，但适用范围较窄。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.39342404825616256,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.732,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01619/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01619/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.933
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01619/fig3.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.952
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.01619/fig4.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.98
+    }
+  ]
+}

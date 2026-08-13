@@ -1,0 +1,58 @@
+{
+  "domain": "agent-memory",
+  "display_name": "Agent Memory",
+  "date": "2026-06-11",
+  "generated_at": "2026-08-13T10:58:39Z",
+  "papers": [
+    {
+      "arxiv_id": "2606.13177",
+      "title": "MemRefine: LLM-Guided Compression for Long-Term Agent Memory",
+      "title_zh": "MemRefine：面向长期 Agent 记忆的 LLM 引导压缩",
+      "authors": [
+        "Minjae Kim",
+        "Jinheon Baek",
+        "Soyeong Jeong",
+        "Sung Ju Hwang"
+      ],
+      "total_score": 0.6200000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.7999999999999999,
+        "domain_fit": 0.92,
+        "other": 0.2
+      },
+      "tags": [
+        "session context memory",
+        "agent memory systems"
+      ],
+      "tldr_zh": "用 LLM 判断压缩长期 Agent 记忆",
+      "detail_file": "agent-memory/2026-06-11/2606.13177.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13177/thumb.webp"
+    },
+    {
+      "arxiv_id": "2606.13115",
+      "title": "G-Long: Graph-Enhanced Memory Management for Efficient Long-Term Dialogue Agents",
+      "title_zh": "G-Long：用于高效长期对话智能体的图增强记忆管理",
+      "authors": [
+        "Minjun Choi",
+        "Yoonjin Jang",
+        "Sangwon Youn",
+        "Youngjoong Ko"
+      ],
+      "total_score": 0.5164000000000001,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.6679999999999999,
+        "domain_fit": 0.76,
+        "other": 0.2
+      },
+      "tags": [
+        "session context memory",
+        "retrieval and use"
+      ],
+      "tldr_zh": "用图记忆和小模型提升长期对话效率",
+      "detail_file": "agent-memory/2026-06-11/2606.13115.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2606.13115/thumb.webp"
+    }
+  ]
+}
