@@ -175,7 +175,7 @@ def main() -> None:
     parser.add_argument(
         "--date-offset-days",
         type=int,
-        default=int(os.getenv("RUN_DATE_OFFSET_DAYS", "1")),
+        default=int(os.getenv("RUN_DATE_OFFSET_DAYS", "2")),
         help="Days before today in RUN_TZ to process when --date is empty",
     )
     parser.add_argument(

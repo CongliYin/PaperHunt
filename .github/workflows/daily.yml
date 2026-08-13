@@ -32,7 +32,7 @@ jobs:
     timeout-minutes: 120
     env:
       RUN_TZ: Asia/Shanghai
-      RUN_DATE_OFFSET_DAYS: "1"
+      RUN_DATE_OFFSET_DAYS: "2"
       RUN_ROLLBACK_WEEKENDS: "1"
       FIGURE_BACKEND: yolo
       FIGURE_MAX_COUNT: "2"

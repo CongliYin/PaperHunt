@@ -2,12 +2,15 @@ from __future__ import annotations
 
 import contextlib
 import io
+import os
 import sys
 import tempfile
 import unittest
+from datetime import datetime
 from pathlib import Path
 from types import SimpleNamespace
 from unittest import mock
+from zoneinfo import ZoneInfo
 
 
 PIPELINE_DIR = Path(__file__).resolve().parents[1] / "pipeline"
@@ -36,6 +39,36 @@ class RunDailyTests(unittest.TestCase):
             categories = run_daily.discover_arxiv_categories(domains_dir, ["two", "one"])
 
             self.assertEqual(categories, ["cs.AI", "cs.CL", "cs.LG"])
+
+    def test_default_date_offset_processes_two_days_ago(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            domains_dir = Path(temp_dir)
+            self._write_domain(domains_dir, "one", ["cs.AI"])
+            argv = [
+                "run_daily.py",
+                "--domains",
+                "one",
+                "--domains-dir",
+                str(domains_dir),
+            ]
+            shanghai = ZoneInfo("Asia/Shanghai")
+            frozen_now = datetime(2026, 8, 13, 4, 0, tzinfo=shanghai)
+
+            with (
+                mock.patch.object(sys, "argv", argv),
+                mock.patch.dict(os.environ, {"RUN_TZ": "Asia/Shanghai"}, clear=True),
+                mock.patch.object(run_daily, "datetime") as mocked_datetime,
+                mock.patch.object(run_daily, "build_arxiv_cache"),
+                mock.patch.object(
+                    run_daily,
+                    "run_domain",
+                    return_value=run_daily.DomainResult("one", True, "ok"),
+                ) as run_domain,
+            ):
+                mocked_datetime.now.return_value = frozen_now
+                run_daily.main()
+
+            self.assertEqual(run_domain.call_args.args[2], "2026-08-11")
 
     def test_prefetch_failure_stops_before_any_domain_runs(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
