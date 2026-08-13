@@ -36,6 +36,7 @@ def policy(
     return SelectionPolicy(
         domain=domain,
         priority=priority,
+        primary_score_bonus=0.0,
         minimum_selection_score=minimum_selection_score,
         minimum_llm_domain_fit=0.65,
         standalone_signal_scope=standalone_signal_scope,
@@ -141,6 +142,31 @@ class SelectorUnitTests(unittest.TestCase):
 
         self.assertEqual(decision.primary_domain, "high")
 
+    def test_policy_score_bonus_applies_only_after_qualification(self) -> None:
+        specialized = policy("specialized", priority=2)
+        specialized = SelectionPolicy(
+            **{
+                **specialized.__dict__,
+                "primary_score_bonus": 3.0,
+            }
+        )
+        policies = {
+            "specialized": specialized,
+            "horizontal": policy("horizontal", standalone=("horizontal phrase",)),
+        }
+
+        qualified = choose_primary_domain(
+            {"title": "exact domain phrase horizontal phrase"},
+            policies,
+        )
+        unqualified = choose_primary_domain(
+            {"title": "horizontal phrase"},
+            policies,
+        )
+
+        self.assertEqual(qualified.primary_domain, "specialized")
+        self.assertEqual(unqualified.primary_domain, "horizontal")
+
 
 class EcommerceScopeTests(unittest.TestCase):
     @classmethod
@@ -186,6 +212,74 @@ class EcommerceScopeTests(unittest.TestCase):
         self.assertNotEqual(primary, "agent-e-commerce")
 
 
+class AgentMemoryScopeTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.policies = load_selection_policies(DOMAINS_DIR)
+
+    def _primary(self, title: str, abstract: str = "") -> str | None:
+        return choose_primary_domain(
+            {"title": title, "abstract": abstract},
+            self.policies,
+        ).primary_domain
+
+    def test_memory_centric_coding_agent_routes_to_agent_memory(self) -> None:
+        primary = self._primary(
+            "Artifact-Anchored Verification Memory for Coding Agents",
+            "We persist and update verification claims across sessions.",
+        )
+
+        self.assertEqual(primary, "agent-memory")
+
+    def test_memory_centric_search_agent_routes_to_agent_memory(self) -> None:
+        primary = self._primary(
+            "Evolving Long-Term Memory for Search Agents",
+            "A memory system consolidates retrieved experience between tasks.",
+        )
+
+        self.assertEqual(primary, "agent-memory")
+
+    def test_memory_centric_multimodal_agent_routes_to_agent_memory(self) -> None:
+        primary = self._primary(
+            "Agent Memory System for Realtime Multimodal Assistants",
+            "The contribution is cross-session memory construction and correction.",
+        )
+
+        self.assertEqual(primary, "agent-memory")
+
+    def test_search_agent_that_only_mentions_parametric_memory_stays_harness(self) -> None:
+        primary = self._primary(
+            "Training Search Agents via Evidence-Grounded Reinforcement Learning",
+            "The agent searches beyond static parametric memory using external evidence.",
+        )
+
+        self.assertEqual(primary, "agent-harness-evolution")
+
+    def test_generic_long_context_memory_is_out_of_scope(self) -> None:
+        primary = self._primary(
+            "Hierarchical Memory for Long Sequence Modeling",
+            "A state space model improves long-context language modeling.",
+        )
+
+        self.assertNotEqual(primary, "agent-memory")
+
+    def test_memory_attack_is_out_of_scope(self) -> None:
+        primary = self._primary(
+            "Query-Only Memory Attacks against Audited LLM Agents",
+            "We study factual injection and privacy attacks.",
+        )
+
+        self.assertNotEqual(primary, "agent-memory")
+
+    def test_personalized_agent_memory_is_in_scope(self) -> None:
+        primary = self._primary(
+            "Executable User Memory for Personalized Agents",
+            "The persistent user model is updated across conversations.",
+        )
+
+        self.assertEqual(primary, "agent-memory")
+
+
 class GoldSelectionRegressionTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -194,12 +288,20 @@ class GoldSelectionRegressionTests(unittest.TestCase):
 
     def _history(self, domain: str) -> dict[str, dict]:
         records = {}
-        for detail_path in (DATA_DIR / domain).glob("????-??-??/*.json"):
-            detail = json.loads(detail_path.read_text(encoding="utf-8"))
-            records[detail["arxiv_id"]] = {
-                "title": detail["title"],
-                "abstract": detail["abstract_en"],
-            }
+        history_domains = [domain]
+        if domain == "agent-memory":
+            history_domains = [
+                path.name
+                for path in sorted(DATA_DIR.iterdir())
+                if path.is_dir()
+            ]
+        for history_domain in history_domains:
+            for detail_path in (DATA_DIR / history_domain).glob("????-??-??/*.json"):
+                detail = json.loads(detail_path.read_text(encoding="utf-8"))
+                records[detail["arxiv_id"]] = {
+                    "title": detail["title"],
+                    "abstract": detail["abstract_en"],
+                }
         return records
 
     def test_all_user_approved_gold_labels(self) -> None:

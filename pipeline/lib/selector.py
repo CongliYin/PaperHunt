@@ -28,6 +28,7 @@ class SignalGroup:
 class SelectionPolicy:
     domain: str
     priority: int
+    primary_score_bonus: float
     minimum_selection_score: float
     minimum_llm_domain_fit: float
     standalone_signal_scope: str
@@ -103,6 +104,7 @@ def load_selection_policy(path: str | Path, *, domain: str) -> SelectionPolicy:
         raise SelectionPolicyError(f"Selection policy must be a mapping: {source}")
 
     priority = payload.get("priority", 0)
+    primary_score_bonus = payload.get("primary_score_bonus", 0.0)
     selection_threshold = payload.get("minimum_selection_score", 0.0)
     llm_threshold = payload.get("minimum_llm_domain_fit", 0.65)
     standalone_signal_scope = str(
@@ -111,12 +113,15 @@ def load_selection_policy(path: str | Path, *, domain: str) -> SelectionPolicy:
     required_group_scope = str(payload.get("required_group_scope", "all")).strip().lower()
     try:
         priority = int(priority)
+        primary_score_bonus = float(primary_score_bonus)
         selection_threshold = float(selection_threshold)
         llm_threshold = float(llm_threshold)
     except (TypeError, ValueError) as exc:
         raise SelectionPolicyError(f"Invalid priority or threshold in {source}") from exc
     if not math.isfinite(selection_threshold) or selection_threshold < 0.0:
         raise SelectionPolicyError(f"minimum_selection_score must be non-negative: {source}")
+    if not math.isfinite(primary_score_bonus) or primary_score_bonus < 0.0:
+        raise SelectionPolicyError(f"primary_score_bonus must be non-negative: {source}")
     if not math.isfinite(llm_threshold) or not 0.0 <= llm_threshold <= 1.0:
         raise SelectionPolicyError(f"minimum_llm_domain_fit must be between 0 and 1: {source}")
     if standalone_signal_scope not in {"all", "title"}:
@@ -151,6 +156,7 @@ def load_selection_policy(path: str | Path, *, domain: str) -> SelectionPolicy:
     return SelectionPolicy(
         domain=domain,
         priority=priority,
+        primary_score_bonus=primary_score_bonus,
         minimum_selection_score=selection_threshold,
         minimum_llm_domain_fit=llm_threshold,
         standalone_signal_scope=standalone_signal_scope,
@@ -224,7 +230,7 @@ def choose_primary_domain(
     winner = min(
         qualified,
         key=lambda item: (
-            -item.score,
+            -(item.score + policies[item.domain].primary_score_bonus),
             -policies[item.domain].priority,
             item.domain,
         ),
@@ -258,11 +264,12 @@ def select_papers_for_domain(
             "policy": {
                 "minimum_selection_score": policies[domain].minimum_selection_score,
                 "minimum_llm_domain_fit": policies[domain].minimum_llm_domain_fit,
+                "primary_score_bonus": policies[domain].primary_score_bonus,
                 "standalone_signal_scope": policies[domain].standalone_signal_scope,
                 "required_group_scope": policies[domain].required_group_scope,
             },
             "domain_scores": {
-                candidate: evaluation.score
+                candidate: evaluation.score + policies[candidate].primary_score_bonus
                 for candidate, evaluation in decision.evaluations.items()
                 if evaluation.qualified
             },

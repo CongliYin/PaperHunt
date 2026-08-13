@@ -50,7 +50,7 @@ The deterministic selector uses title-scoped high-precision standalone phrases a
 1. explicit Agent context; and
 2. a concrete memory lifecycle, system, or evaluation contribution.
 
-The policy receives a priority above the existing domains so a genuine cross-domain tie resolves to `agent-memory`. Priority is only a tie breaker: the strict Memory policy must qualify independently.
+The policy receives a priority above the existing domains and a small configurable primary-ownership score bonus. The bonus applies only after the strict Memory policy independently qualifies; it lets three-part contextual Memory evidence outrank broad standalone phrases such as `coding agents` or `search agents`. Priority remains the final deterministic tie breaker.
 
 ## Unique Primary-Domain Ownership
 
@@ -99,13 +99,13 @@ The migration reads currently published list entries from every domain in `web/p
 
 For each published paper, construct the selector input from its title and `abstract_en`, then run all current policies. A paper is a migration candidate only when the new deterministic primary domain is `agent-memory`.
 
-Security-first, generic non-Agent memory, and other rejected papers are not placed in the new domain. If such a paper no longer qualifies for its old domain after the policy split, it is removed from the old published list rather than reassigned incorrectly.
+Security-first, generic non-Agent memory, and other rejected papers are not placed in the new domain. This migration changes only papers whose new primary owner is `agent-memory`; unrelated historical cleanup remains outside its scope so the operation cannot silently rewrite hundreds of older editorial decisions.
 
 ### Re-evaluation
 
 Historical candidates must be scored again with `agent-memory/scoring_criteria.md`. Old Harness `domain_fit`, comments, and generic-dimension scores are not reused. The migration uses the repository's configured `LLM_BASE_URL`, `LLM_API_KEY`, and `LLM_MODEL_SCORING` secrets through the existing scoring client.
 
-Candidates below the new `0.70` domain-fit threshold do not migrate into Agent Memory and are removed from their old domain when they no longer own that primary domain.
+Candidates below the new `0.70` domain-fit threshold do not migrate into Agent Memory and remain in their old historical list. New daily runs apply the new deterministic and LLM gates normally.
 
 Existing titles, Chinese summaries, key points, author/enrichment metadata, links, and figure URLs are reused. The migration does not request arXiv, Hugging Face, Semantic Scholar, PDFs, translation, or Blob uploads.
 
@@ -118,7 +118,7 @@ Add a migration command with two explicit phases:
 
 `apply` fails before touching published data when any candidate assessment is missing or malformed. It also fails if a source detail is missing, an arXiv ID appears in more than one resulting domain, a list points to a missing detail, a detail path disagrees with its domain/date, or the rebuilt index disagrees with the lists.
 
-The migration creates Agent Memory lists only for dates containing accepted papers. It removes migrated papers and obsolete details from their source domains, recalculates list counts, and rebuilds `web/public/data/index.json` from the resulting lists. Unaffected files remain byte-for-byte unchanged.
+The migration creates Agent Memory lists only for dates containing accepted papers. It removes accepted migrated papers and their old details from source domains, resolves existing cross-domain duplicate copies through the current deterministic primary-owner policy, recalculates affected list counts, and rebuilds `web/public/data/index.json` from the resulting lists. Other unrelated historical papers are left untouched. An explicit diagnostic-only option may report or clean broader stale ownership, but the production workflow does not enable it.
 
 ### GitHub Actions execution
 
@@ -133,7 +133,7 @@ Add a manually dispatchable migration workflow. It:
 7. runs the full test suite, quality evaluation, migration invariant checks, and frontend build;
 8. commits generated historical data and pushes to `main` with the same pull/rebase retry discipline as the daily workflow.
 
-The workflow is safe to rerun. With unchanged policies and already migrated data, it produces no duplicate entries or unintended changes.
+The workflow is safe to rerun. With unchanged policies and already migrated data, it skips LLM scoring when the candidate set is empty and produces no duplicate entries or unintended changes.
 
 ## Daily Pipeline Behavior
 

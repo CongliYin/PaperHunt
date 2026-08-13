@@ -45,7 +45,7 @@ tiers:
         - "sandboxed execution"
         - "function calling agent"
         - "API agent"
-      session_context_memory:
+      session_context_state:
         - "session management"
         - "conversation state"
         - "agent state"
@@ -66,13 +66,6 @@ tiers:
         - "shared verified context"
         - "shared agent context"
         - "multi-agent context"
-        - "memory management"
-        - "agent memory"
-        - "persistent memory"
-        - "long-term dialogue agent"
-        - "long-term dialogue agents"
-        - "procedural memory"
-        - "episodic memory"
       harness_multi_agent_orchestration:
         - "multi-agent framework"
         - "multi-agent frameworks"

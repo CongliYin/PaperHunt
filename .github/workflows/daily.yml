@@ -23,7 +23,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: daily-${{ github.ref }}
+  group: paper-data-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:

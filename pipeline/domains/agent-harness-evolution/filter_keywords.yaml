@@ -77,7 +77,8 @@ positive:
   - "agent sandbox"
   - "sandboxed execution"
 
-  # Session, state, context, and memory.
+  # Session, workflow state, and context assembly. Memory-centric systems live
+  # in the separate Agent Memory domain.
   - "session management"
   - "conversation state"
   - "dialogue state"
@@ -103,18 +104,6 @@ positive:
   - "multi-agent context"
   - "prompt assembly"
   - "prompt routing"
-  - "memory management"
-  - "agent memory"
-  - "long-term memory"
-  - "long term memory"
-  - "long-term dialogue agent"
-  - "long-term dialogue agents"
-  - "user memory"
-  - "system memory"
-  - "episodic memory"
-  - "procedural memory"
-  - "persistent memory"
-  - "memory retrieval"
 
   # Planning, workflow, and policy selection inside a harness.
   - "agent planning"
@@ -707,8 +696,6 @@ weak_only_positive:
   - "risk control"
   - "rollout"
   - "rollouts"
-  - "memory management"
-  - "memory retrieval"
   - "context compression"
   - "context retrieval"
   - "knowledge base"
@@ -756,15 +743,12 @@ strong_signals:
   - "sandboxed execution"
   - "agentic self-distillation"
   - "agent self-distillation"
-  - "long-term dialogue agents"
   - "context engineering"
   - "context assembly"
   - "shared context"
   - "shared verified context"
   - "shared agent context"
   - "multi-agent context"
-  - "agent memory"
-  - "persistent memory"
   - "multi-agent framework"
   - "multi-agent frameworks"
   - "multi-agent orchestration"

@@ -83,13 +83,21 @@ def load_history(domain: str) -> dict[str, dict]:
 
 def load_detail_history(domain: str) -> dict[str, dict]:
     """Load the retained detail corpus, including papers excluded from publication."""
-    domain_dir = DATA_DIR / domain
     records: dict[str, dict] = {}
-    for detail_path in sorted(domain_dir.glob("????-??-??/*.json")):
-        record = _history_record(detail_path)
-        arxiv_id = record["arxiv_id"]
-        if arxiv_id:
-            records[arxiv_id] = record
+    history_domains = [domain]
+    if domain == "agent-memory":
+        history_domains = [
+            path.name
+            for path in sorted(DATA_DIR.iterdir())
+            if path.is_dir()
+        ]
+    for history_domain in history_domains:
+        domain_dir = DATA_DIR / history_domain
+        for detail_path in sorted(domain_dir.glob("????-??-??/*.json")):
+            record = _history_record(detail_path)
+            arxiv_id = record["arxiv_id"]
+            if arxiv_id:
+                records[arxiv_id] = record
     return records
 
 

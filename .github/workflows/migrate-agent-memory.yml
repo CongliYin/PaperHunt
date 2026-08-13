@@ -1,0 +1,112 @@
+name: migrate-agent-memory
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paper-data-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+      LLM_MODEL_SCORING: ${{ secrets.LLM_MODEL_SCORING }}
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install pipeline dependencies
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Run pre-migration checks
+        run: |
+          python pipeline/validate_domain.py agent-memory
+          python pipeline/validate_domain.py agent-harness-evolution
+          python -m unittest discover -s tests -p 'test_*.py'
+
+      - name: Prepare deterministic migration input
+        run: |
+          mkdir -p tmp/agent-memory-migration
+          python pipeline/migrate_agent_memory_history.py prepare \
+            --manifest tmp/agent-memory-migration/manifest.json \
+            --phase1-json tmp/agent-memory-migration/phase1.json
+
+      - name: Re-evaluate candidates with Agent Memory rubric
+        run: |
+          if [ "$(jq '.papers | length' tmp/agent-memory-migration/phase1.json)" -eq 0 ]; then
+            echo '{}' > tmp/agent-memory-migration/llm_scores.json
+          else
+            python pipeline/rank_pipeline.py \
+              --score-llm \
+              --phase1-json tmp/agent-memory-migration/phase1.json \
+              --llm-scores tmp/agent-memory-migration/llm_scores.json \
+              --llm-batch-size 8 \
+              --llm-workers 2
+          fi
+
+      - name: Apply atomic historical migration
+        run: |
+          python pipeline/migrate_agent_memory_history.py apply \
+            --manifest tmp/agent-memory-migration/manifest.json \
+            --scores tmp/agent-memory-migration/llm_scores.json
+
+      - name: Verify migrated data
+        run: |
+          python pipeline/migrate_agent_memory_history.py validate
+          python -m unittest discover -s tests -p 'test_*.py'
+          python pipeline/evaluate_selection_quality.py
+
+      - name: Build frontend
+        working-directory: web
+        run: |
+          npm ci
+          npm run build
+
+      - name: Commit migrated historical data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git pull --rebase --autostash origin main
+          python pipeline/migrate_agent_memory_history.py validate
+
+          git add web/public/data
+          if git diff --cached --quiet; then
+            echo "No Agent Memory history changes to commit."
+            exit 0
+          fi
+          git commit -m "data: migrate agent memory history"
+
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push failed, rebasing onto latest origin/main (attempt ${attempt})..."
+            git pull --rebase --autostash origin main
+            python pipeline/migrate_agent_memory_history.py validate
+          done
+
+          echo "Failed to push migrated data after retries."
+          exit 1

@@ -1,0 +1,116 @@
+tiers:
+  tier_1:
+    coefficient: 1.0
+    categories:
+      construction_and_consolidation:
+        - "memory construction"
+        - "memory writing"
+        - "memory consolidation"
+        - "memory extraction"
+        - "memory organization"
+        - "memory compression"
+        - "memory representation"
+        - "atomic facts"
+        - "event-sourced memory"
+      evolution_and_maintenance:
+        - "memory evolution"
+        - "self-evolving memory"
+        - "memory update"
+        - "memory updating"
+        - "memory rewrite"
+        - "memory correction"
+        - "memory forgetting"
+        - "belief revision"
+        - "conflict-aware memory"
+      agent_memory_systems:
+        - "agent memory system"
+        - "agent memory systems"
+        - "agent memory service"
+        - "agent-native memory"
+        - "persistent agent memory"
+        - "long-term agent memory"
+        - "shared agent memory"
+        - "executable memory"
+        - "memory ledger"
+  tier_2:
+    coefficient: 0.8
+    categories:
+      retrieval_and_use:
+        - "memory retrieval"
+        - "memory arbitration"
+        - "contextual reinstatement"
+        - "memory routing"
+        - "evidence-conditioned memory"
+        - "episodic memory"
+        - "procedural memory"
+      evaluation:
+        - "agent memory evaluation"
+        - "agent memory benchmark"
+        - "memory benchmark"
+        - "memory consistency"
+        - "memory recovery"
+        - "memory recall"
+        - "memory-action gap"
+        - "memory verifier"
+      personalization:
+        - "user memory"
+        - "personalized memory"
+        - "personalized-memory"
+        - "persistent user model"
+        - "cross-session memory"
+  tier_3:
+    coefficient: 0.5
+    categories:
+      agent_context:
+        - "LLM agent"
+        - "AI agent"
+        - "language model agent"
+        - "coding agent"
+        - "search agent"
+        - "multi-agent"
+        - "long-horizon agent"
+
+generality:
+  reusable_system:
+    score: 1.0
+    keywords:
+      - "framework"
+      - "system"
+      - "architecture"
+      - "service"
+      - "benchmark"
+      - "dataset"
+      - "protocol"
+      - "open-source"
+  multi_task:
+    score: 0.8
+    keywords:
+      - "multiple benchmarks"
+      - "across benchmarks"
+      - "cross-domain"
+      - "cross-model"
+      - "generalization"
+  narrow_application:
+    score: 0.4
+    keywords:
+      - "case study"
+      - "single domain"
+      - "vertical application"
+
+domain_penalties:
+  narrow_vertical:
+    multiplier: 0.75
+    keywords:
+      - "medical"
+      - "clinical"
+      - "financial advising"
+      - "network operations"
+      - "social simulation"
+  security_first:
+    multiplier: 0.2
+    keywords:
+      - "attack"
+      - "poisoning"
+      - "privacy"
+      - "cryptographic"
+      - "prompt injection"
