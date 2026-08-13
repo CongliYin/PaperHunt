@@ -288,13 +288,13 @@ class GoldSelectionRegressionTests(unittest.TestCase):
 
     def _history(self, domain: str) -> dict[str, dict]:
         records = {}
-        history_domains = [domain]
-        if domain == "agent-memory":
-            history_domains = [
-                path.name
-                for path in sorted(DATA_DIR.iterdir())
-                if path.is_dir()
-            ]
+        # Gold labels describe expected ownership, not where a historical
+        # detail currently lives after duplicate cleanup or migration.
+        history_domains = [
+            path.name
+            for path in sorted(DATA_DIR.iterdir())
+            if path.is_dir()
+        ]
         for history_domain in history_domains:
             for detail_path in (DATA_DIR / history_domain).glob("????-??-??/*.json"):
                 detail = json.loads(detail_path.read_text(encoding="utf-8"))

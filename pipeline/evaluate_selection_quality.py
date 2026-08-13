@@ -82,15 +82,19 @@ def load_history(domain: str) -> dict[str, dict]:
 
 
 def load_detail_history(domain: str) -> dict[str, dict]:
-    """Load the retained detail corpus, including papers excluded from publication."""
+    """Load the global retained detail corpus for domain-label evaluation.
+
+    Gold exclusions are labels, not storage locations. A unique-ownership
+    migration may legitimately remove an old domain copy while retaining the
+    paper under its primary owner, so every domain evaluates against the same
+    checked-in historical corpus.
+    """
     records: dict[str, dict] = {}
-    history_domains = [domain]
-    if domain == "agent-memory":
-        history_domains = [
-            path.name
-            for path in sorted(DATA_DIR.iterdir())
-            if path.is_dir()
-        ]
+    history_domains = [
+        path.name
+        for path in sorted(DATA_DIR.iterdir())
+        if path.is_dir()
+    ]
     for history_domain in history_domains:
         domain_dir = DATA_DIR / history_domain
         for detail_path in sorted(domain_dir.glob("????-??-??/*.json")):
