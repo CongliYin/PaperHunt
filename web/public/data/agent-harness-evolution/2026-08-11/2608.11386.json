@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.11386",
+  "title": "The Devil Is in the Interface: Evaluating How Tool Architecture Shapes Coding Agent Behavior",
+  "title_zh": "关键在接口：评估工具架构如何塑造编码 Agent 行为",
+  "authors": [
+    "Xiangzhe Xu",
+    "Hamidreza Saghir",
+    "Qianhui Wu",
+    "Marc-Alexandre Côté",
+    "Tong Wang",
+    "Kiran Lakkaraju",
+    "Kexin Pei",
+    "Xiangyu Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-11T19:50:56Z",
+  "abs_url": "https://arxiv.org/abs/2608.11386v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.11386",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As large language models continue to improve, agentic systems are becoming increasingly important, and tools are a key design dimension because they determine how agents access information and take action in their environments. Prior work on agent tooling has primarily focused on expanding what agents can do, but has paid less systematic attention to how those capabilities are organized and exposed to the model. We refer to this latter design dimension as tool architecture. We study tool architecture in coding agents through controlled experiments on repository-level issue fixing, comparing six tool architectures that hold the underlying information and actions similar while varying how they are organized and exposed to the model, across three actors and a total of 11,700 trajectories. Our experiments show that, even when tools provide similar capabilities, tool architecture changes agent behavior: Compared to a basic architecture where the agent has only the bash tool, more structured low-level interfaces improve consistency across repeated attempts by up to 4.7 $\\times$; natural-language search broadens repository exploration and increases access to relevant files by more than 11%; and Python CodeAct-style interfaces achieve similar task performance with 41.6% fewer steps and 56.3% lower token usage. By contrast, lightweight text-based cognitive-scaffolding tools, such as tools that let the agent record intermediate reasoning, have limited effect on actor behavior.",
+  "abstract_zh": "随着大语言模型能力提升，Agent 系统变得愈发重要，而工具是其中关键的设计维度，因为它决定了 Agent 如何获取信息并在环境中执行操作。既有关于 Agent 工具的研究多关注扩展 Agent 能做什么，却较少系统研究这些能力应如何组织并暴露给模型。本文将后一维度称为工具架构（tool architecture）。作者在代码 Agent 场景中研究工具架构，通过仓库级 issue 修复任务开展受控实验：在保持底层信息与动作能力相近的前提下，对比 6 种不同工具架构，覆盖 3 类 actor，共计 11,700 条执行轨迹。实验表明，即使工具提供相似能力，工具架构仍会显著改变 Agent 行为：相比仅使用 bash 工具的基础架构，更结构化的低层接口可使重复尝试间的一致性最高提升 4.7 倍；自然语言搜索扩大了仓库探索范围，并使访问相关文件的比例提升超过 11%；Python CodeAct 风格接口在任务性能相近的情况下，将步骤数减少 41.6%、token 使用量降低 56.3%。相对而言，轻量级文本认知脚手架工具，例如允许 Agent 记录中间推理的工具，对 actor 行为影响有限。",
+  "key_points_zh": [
+    "提出并系统研究工具架构（tool architecture）：即工具能力如何被组织并暴露给模型，而不只是 Agent 能使用哪些能力。",
+    "在仓库级 issue 修复任务上，对 6 种工具架构、3 类 actor 进行受控实验，总计收集 11,700 条轨迹。",
+    "结构化低层接口相比仅 bash 的基础架构，可显著提升多次尝试间行为一致性，最高提升 4.7 倍。",
+    "自然语言搜索促使 Agent 更广泛探索代码仓库，并使访问相关文件的比例提升超过 11%。",
+    "Python CodeAct-style 接口在保持相近任务性能的同时，减少 41.6% 步骤数和 56.3% token 使用；而文本式认知脚手架工具效果有限。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.68,
+    "problem_significance": 0.8,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.6,
+    "lasting_value": 0.76,
+    "llm_avg": 0.724,
+    "comment": "This is a strong coding-agent study showing how tool-interface architecture materially changes trajectories, efficiency, and consistency.",
+    "comment_zh": "该论文是较强的编码代理研究，展示了工具接口架构如何显著影响轨迹、效率和一致性。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.724,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.11386/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.858
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.11386/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.418
+    }
+  ]
+}

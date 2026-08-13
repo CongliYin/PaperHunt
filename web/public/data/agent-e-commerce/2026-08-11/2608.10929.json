@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.10929",
+  "title": "FedCGR: Federated Cross-Domain Generative Recommendation",
+  "title_zh": "FedCGR：联邦跨域生成式推荐",
+  "authors": [
+    "Zhuodong Liu",
+    "Hugen Lv",
+    "Xiangyu Li",
+    "Bohan Guo",
+    "Peiyu Hu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-11T13:58:55Z",
+  "abs_url": "https://arxiv.org/abs/2608.10929v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.10929",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Cross-domain recommendation (CDR) transfers preference knowledge across related domains, but federated deployment makes cross-domain alignment difficult because the behavioral anchors that align item spaces, such as overlapping users and shared interaction signals, are often sparse, unavailable, or privacy-sensitive across clients. To address this tension, we revisit federated CDR as generation over a stable semantic item language. By representing items as discrete semantic ID (SID) sequences derived from public item-side metadata, cross-domain item alignment is induced by a shared vocabulary rather than by exchanging private interactions or aligning domain-specific embeddings. Directly federating SID-based generators, however, introduces two design constraints: the SID tokenizer must remain fixed to preserve cross-client token consistency, which creates a semantic-only bottleneck because local collaborative filtering (CF) signals cannot be globally shared or aligned; meanwhile, standard federated averaging can cause negative transfer under domain heterogeneity. To overcome these constraints, we propose FedCGR, a federated generative CDR framework that keeps the item language stable and makes adaptation explicit. FedCGR injects local CF evidence through a reliability-aware semantic interface and trains a prototype-personalized generator that selectively aggregates shared parameters according to domain relatedness while keeping domain-specific quantities local. Experiments on six Amazon cross-domain scenarios show that FedCGR consistently outperforms federated generative baselines and achieves competitive performance against strong sequential and federated CDR methods under both full-ranking and sampled evaluation protocols.",
+  "abstract_zh": "本文研究联邦场景下的跨域推荐（CDR）问题。传统 CDR 依赖重叠用户、共享交互信号等行为锚点来对齐不同领域的物品空间，但在联邦部署中，这些信号往往稀疏、不可用或涉及隐私。FedCGR 将联邦 CDR 重新表述为基于稳定语义物品语言的生成任务：利用公开物品侧元数据构建离散语义 ID（SID）序列，使跨域物品对齐由共享词表诱导，而无需交换私有交互或对齐领域专属 embedding。针对固定 SID tokenizer 带来的语义瓶颈，以及 FedAvg 在领域异质性下可能导致负迁移的问题，FedCGR 通过可靠性感知的语义接口注入本地协同过滤（CF）证据，并训练原型个性化生成器，根据领域相关性选择性聚合共享参数，同时将领域特定信息保留在本地。在六个 Amazon 跨域推荐场景上的实验表明，FedCGR 稳定优于联邦生成式推荐基线，并在 full-ranking 与 sampled evaluation 两种协议下，与强序列推荐和联邦 CDR 方法相比具有竞争力。",
+  "key_points_zh": [
+    "提出 FedCGR，将联邦跨域推荐转化为基于离散语义 ID（SID）序列的生成式推荐，利用公开物品元数据构建跨域共享物品语言。",
+    "避免依赖重叠用户、共享交互等隐私敏感行为锚点，通过共享 SID vocabulary 实现跨客户端、跨领域的语义对齐。",
+    "设计可靠性感知语义接口，将本地协同过滤（CF）信号注入固定 SID 语义表示，缓解纯语义 tokenizer 带来的信息瓶颈。",
+    "引入原型个性化生成器，根据领域相关性选择性聚合共享参数，减少 FedAvg 在领域异质性下的负迁移。",
+    "在六个 Amazon 跨域场景中，FedCGR 优于联邦生成式基线，并在 full-ranking 与 sampled evaluation 下达到强竞争性能。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.78,
+    "problem_significance": 0.82,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.79,
+    "llm_avg": 0.7620000000000001,
+    "comment": "A strong federated cross-domain product recommendation paper grounded in Amazon scenarios with clear serving and privacy relevance.",
+    "comment_zh": "该工作以 Amazon 跨域推荐为核心，兼具联邦隐私部署价值和明确的商品推荐意义。"
+  },
+  "scores": {
+    "topic_relevance": 0.7200000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.40190017513660115,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7620000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 9,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10929/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.935
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10929/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.854
+    }
+  ]
+}

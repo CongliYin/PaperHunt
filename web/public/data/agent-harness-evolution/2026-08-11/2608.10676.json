@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.10676",
+  "title": "Self-Correcting Long-Horizon Search Agents via Tree-Structured Memory",
+  "title_zh": "通过树结构记忆实现自纠正长程搜索智能体",
+  "authors": [
+    "Aijun Yang",
+    "Qianxue Guo",
+    "Ziyi Huang",
+    "Yuxuan Chen",
+    "Shiyou Qian",
+    "Jian Cao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-11T08:56:42Z",
+  "abs_url": "https://arxiv.org/abs/2608.10676v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.10676",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM)-based search agents answer questions through multi-step interactions with external environments. However, providing complete execution trajectories to the LLM causes unbounded context growth and introduces noise. Existing compression methods reduce context at the cost of important details and often replace erroneous facts without repairing downstream reasoning derived from them. To address this problem, we propose ReTree, a self-correcting tree-structured memory mechanism for search agents. ReTree constructs a bounded per-step reasoning context while preserving source-linked evidence. It models search as an evidence tree whose nodes store bounded summaries, evidence, and revision histories. When newly retrieved evidence contradicts an earlier claim, ReTree traces back to the node where the claim was introduced, replaces outdated evidence, regenerates summaries, prunes affected branches, and resumes search. Source-grounded evidence provenance supports reliable conflict localization and keeps final claims traceable to retrieved passages. Experiments on four public question-answering and search benchmarks show that ReTree consistently outperforms Full-Trajectory ReAct, improving answer accuracy by up to 25.6 percentage points (pp); the average maximum per-step reasoning context of Full-Trajectory ReAct is $1.27$--$1.51\\times$ that of ReTree. These results establish ReTree as an effective self-correcting memory abstraction for long-horizon search.",
+  "abstract_zh": "基于大型语言模型（LLM）的搜索智能体通过与外部环境进行多步交互来回答问题，但将完整执行轨迹提供给 LLM 会导致上下文无界增长并引入噪声。现有压缩方法虽然能缩短上下文，却常以丢失关键细节为代价，并且往往只替换错误事实，而未修复由其衍生的后续推理。为此，论文提出 ReTree，一种面向搜索智能体的自纠正树结构记忆机制。ReTree 将搜索过程建模为证据树，每个节点保存有界摘要、证据与修订历史，从而在每一步构造受限的推理上下文，同时保留与来源关联的证据。当新检索证据与早期主张冲突时，ReTree 会回溯到该主张首次引入的节点，替换过时证据，重新生成摘要，剪枝受影响分支，并继续搜索。基于来源的证据溯源支持可靠的冲突定位，并保证最终结论可追溯到检索段落。在四个公开问答与搜索基准上的实验表明，ReTree 持续优于 Full-Trajectory ReAct，答案准确率最高提升 25.6 个百分点；Full-Trajectory ReAct 的平均最大单步推理上下文长度为 ReTree 的 1.27–1.51 倍。结果证明 ReTree 是一种有效的长程搜索自纠正记忆抽象。",
+  "key_points_zh": [
+    "提出 ReTree：一种用于 LLM 搜索智能体的自纠正树结构记忆机制，旨在缓解长程搜索中的上下文膨胀与噪声累积问题。",
+    "将搜索过程建模为 evidence tree，节点保存有界摘要、检索证据和 revision histories，使每一步推理上下文保持可控，同时保留证据来源。",
+    "当新证据与旧主张冲突时，ReTree 可定位主张引入节点，替换过时证据，重生成摘要，剪枝受影响分支，并从修正后的状态继续搜索。",
+    "相比传统压缩方法，ReTree 不只是压缩轨迹，而是显式修复由错误事实引发的下游推理链，提升最终答案的可追溯性与可靠性。",
+    "在四个公开 QA 和搜索基准上，ReTree 相比 Full-Trajectory ReAct 最高提升 25.6 pp 准确率，同时显著降低单步最大推理上下文长度。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.74,
+    "problem_significance": 0.82,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.8,
+    "llm_avg": 0.776,
+    "comment": "ReTree is a strong search-agent memory abstraction that supports bounded context, provenance, contradiction repair, and long-horizon execution reliability.",
+    "comment_zh": "ReTree是较强的搜索代理记忆抽象，支持有界上下文、证据溯源、矛盾修复和长程执行可靠性。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3210331475111057,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.776,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10676/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10676/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.949
+    }
+  ]
+}

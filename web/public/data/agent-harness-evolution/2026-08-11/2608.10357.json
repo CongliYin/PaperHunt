@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2608.10357",
+  "title": "Efficient Reinforcement Learning for Long-Horizon Tool-Use Agentic Tasks",
+  "title_zh": "面向长程工具使用 Agent 任务的高效强化学习",
+  "authors": [
+    "Zelei Cheng",
+    "Amritansh Mishra",
+    "Sambit Sahu",
+    "William Campbell"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-11T01:30:56Z",
+  "abs_url": "https://arxiv.org/abs/2608.10357v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.10357",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-horizon tool-using agents must reason over user goals, domain policies, tool calls, simulator state, and delayed verifiable rewards. Reinforcement learning (RL) is a natural fit for this setting, but multi-turn on-policy rollouts create long contexts, while model-specific attention layers may require custom masks and learned sink normalization. We present SINKFLEX-RL, a modular training system for RL in dual-control tool-use environments. The system combines a Gymnasium-compatible environment wrapper, a VERL-style rollout dataflow, group-relative policy optimization without a separate value model, and a sink-aware FlexAttention path designed to preserve model-specific sink scaling under causal and sliding-window masks. In a preliminary Tau2Bench retail run, validation reward (mean@1) rises from 0.25 early in training to $0.44$ later in the observed training window, while training-score and trajectory-reward proxies also trend upward. In a fixed-configuration memory benchmark, the optimized attention path reduces peak VRAM from 28.06GB to 22.52GB at 4096 tokens, a $19.7\\%$ reduction, and runs the measured 8192-token configuration using $25.53$~GB where the eager baseline runs out of memory. These results illustrate the value of integrating environment interfaces, RL dataflow, and attention-kernel design for memory-feasible long-horizon agent training.",
+  "abstract_zh": "本文提出 SINKFLEX-RL，一个用于双控制（dual-control）工具使用环境中强化学习训练的模块化系统。长程工具使用 Agent 需要同时处理用户目标、领域策略、工具调用、模拟器状态以及延迟且可验证的奖励；强化学习适合该场景，但多轮 on-policy rollout 会带来长上下文开销，且部分模型的注意力层需要定制 mask 与 learned sink normalization。SINKFLEX-RL 结合了 Gymnasium-compatible environment wrapper、VERL-style rollout dataflow、无需独立 value model 的 group-relative policy optimization，以及 sink-aware FlexAttention 路径，以在 causal 和 sliding-window mask 下保持模型特定的 sink scaling。初步 Tau2Bench retail 实验显示，validation reward（mean@1）从训练早期的 0.25 提升至后期的 0.44，训练分数与轨迹奖励代理指标也呈上升趋势。在固定配置内存基准中，优化后的注意力路径在 4096 tokens 下将峰值 VRAM 从 28.06GB 降至 22.52GB，减少 19.7%；在 8192-token 配置下使用 25.53GB 完成运行，而 eager baseline 则发生 OOM。结果表明，将环境接口、RL 数据流与注意力 kernel 设计联合优化，有助于实现内存可承受的长程 Agent 训练。",
+  "key_points_zh": [
+    "提出 SINKFLEX-RL：面向长程工具使用 Agent 的模块化 RL 训练系统，覆盖环境封装、rollout 数据流、策略优化与注意力加速。",
+    "采用 Gymnasium-compatible wrapper 与 VERL-style rollout dataflow，适配双控制工具使用环境中的多轮交互与延迟可验证奖励。",
+    "使用 group-relative policy optimization，避免训练单独的 value model，降低系统复杂度与资源需求。",
+    "设计 sink-aware FlexAttention，在 causal 与 sliding-window masks 下保留模型特定的 learned sink scaling，改善长上下文训练的显存效率。",
+    "Tau2Bench retail 初步实验中 validation reward 从 0.25 升至 0.44；内存基准中 4096 tokens 峰值 VRAM 降低 19.7%，8192 tokens 下避免 eager baseline 的 OOM。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.91,
+    "novelty": 0.74,
+    "problem_significance": 0.84,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.78,
+    "llm_avg": 0.772,
+    "comment": "A modular RL training stack for long-horizon tool-use agents targets an important infrastructure bottleneck in agent training.",
+    "comment_zh": "该工作面向长程工具使用代理的模块化强化学习训练栈，解决了代理训练中的重要基础设施瓶颈。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36560162063732243,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.772,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10357/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10357/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

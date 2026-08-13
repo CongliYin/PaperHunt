@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.10366",
+  "title": "DSAgentBench: Can Agents Automate End-to-End Data-Science Workflows in Real Computer Environments?",
+  "title_zh": "DSAgentBench：智能体能否在真实计算机环境中自动完成端到端数据科学工作流？",
+  "authors": [
+    "Mizanur Rahman",
+    "Mohammed Saidul Islam",
+    "Ridwan Mahbub",
+    "Md Tahmid Rahman Laskar",
+    "Shafiq Joty",
+    "Enamul Hoque Prince"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-11T01:45:56Z",
+  "abs_url": "https://arxiv.org/abs/2608.10366v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.10366",
+  "links": {
+    "github": "https://github.com/vis-nlp/DSAgentBench.",
+    "project_page": null
+  },
+  "abstract_en": "Real-world data science involves long-horizon workflows that span data wrangling, exploration, modeling, visualization, and validation, and require coordinated use of tools such as notebooks, IDEs, terminals, browsers, and databases within real operating environments. Yet existing benchmarks lack real-computer interaction and do not evaluate whether agents can execute complete end-to-end data-science workflows in realistic computing environments, failing to capture the multi-stage, multi-tool nature of data-science practice. We introduce DSAgentBench, the first benchmark to evaluate whether agents can automate full data-science workflows inside real computer environments. DSAgentBench contains 275 diverse tasks covering the entire data-science life-cycle, reflecting the complexity and tool coordination required in practice. Each task requires grounding decisions in intermediate outputs and coordinated tool use, and includes a deterministic evaluator that verifies analytical correctness, visual outputs, and model performance rather than code-only execution. Our extensive experiments with 15 closed- and open-source models show that even the strongest agent, Claude-4.6-Sonnet, achieves only 56.70% task success, while all open-source agents remain below 1%, frequently failing at tool orchestration, OS grounding, and multi-step reasoning. These results reveal a substantial capability gap between current agentic systems and real data-science workflows, positioning DSAgentBench as a foundation for developing grounded, verifiable, autonomous data-science agents. We release DSAgentBench at https://github.com/vis-nlp/DSAgentBench.",
+  "abstract_zh": "真实数据科学任务通常是长程工作流，涵盖数据清洗、探索、建模、可视化与验证，并需要在真实操作系统环境中协同使用 notebooks、IDEs、terminals、browsers 和 databases 等工具。现有基准缺乏真实计算机交互，难以评估智能体是否能在现实计算环境中完成端到端数据科学流程。本文提出 DSAgentBench，这是首个面向真实计算机环境中完整数据科学工作流自动化能力的评测基准。DSAgentBench 包含 275 个多样化任务，覆盖数据科学全生命周期，强调多阶段决策、工具协同和基于中间结果的推理。每个任务配备确定性评测器，不仅检查代码执行，还验证分析正确性、可视化结果和模型性能。对 15 个闭源与开源模型的实验显示，即使最强的 Claude-4.6-Sonnet 任务成功率也仅为 56.70%，而所有开源智能体均低于 1%，主要失败于工具编排、操作系统语境 grounding 和多步推理。结果表明，当前智能体系统与真实数据科学工作流之间仍存在显著能力差距，DSAgentBench 可作为发展可验证、自主、具备环境 grounding 能力的数据科学智能体的重要基础。",
+  "key_points_zh": [
+    "提出 DSAgentBench，首个在真实计算机环境中评测端到端数据科学工作流自动化能力的 benchmark。",
+    "包含 275 个任务，覆盖数据清洗、探索分析、建模、可视化和验证等完整数据科学生命周期。",
+    "任务要求智能体基于中间输出做决策，并协调使用 notebooks、IDEs、terminals、browsers 和 databases 等多种工具。",
+    "采用确定性 evaluator，评估分析正确性、可视化输出与模型性能，而非仅检查代码是否运行。",
+    "实验表明当前智能体能力不足：Claude-4.6-Sonnet 成功率仅 56.70%，开源智能体均低于 1%，瓶颈集中在工具编排、OS grounding 和多步推理。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.72,
+    "novelty": 0.66,
+    "problem_significance": 0.76,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.7,
+    "llm_avg": 0.6779999999999999,
+    "comment": "A realistic end-to-end agent benchmark with deterministic evaluators is in scope, though its data-science and real-computer emphasis makes it somewhat peripheral to core harness evolution.",
+    "comment_zh": "该工作提供了带确定性评估器的端到端真实代理基准，属于相关范围，但数据科学和真实电脑交互使其相对偏外围。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.7568411832040695,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6779999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/vis-nlp/DSAgentBench.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 7,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10366/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10366/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

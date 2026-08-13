@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2608.10504",
+  "title": "MEGA: Self-Evolving Agent Optimization Infrastructure via Wisdom Graph",
+  "title_zh": "MEGA：通过 Wisdom Graph 实现自演化 Agent 优化基础设施",
+  "authors": [
+    "Jung Hwan Lee",
+    "Kyu Ho Lee",
+    "Gwang Hoon Yoo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-11T05:21:16Z",
+  "abs_url": "https://arxiv.org/abs/2608.10504v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.10504",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As coding agents increasingly handle implementation, the central challenge shifts from building individual agents to building an infrastructure that systematically improves them. Current approaches optimize agent systems without accumulating transferable knowledge, accumulate knowledge without compositional reasoning over it, and lack a mechanism for that knowledge to self-evolve through operational evidence. MEGA (Meta Evaluation-Grounded Adaptation) addresses these gaps as a self-evolving infrastructure: each optimization cycle produces durable assets, compositional reasoning over those assets guides subsequent optimization, and operational evidence refines both the accumulated wisdom and the reasoning that governs it. Layer 1 distills reusable wisdom from agent sessions through behavioral-pattern clustering and empirical A/B validation, transforming each process into a durable asset. Layer 2 decomposes these assets into atomic PCR (Primary-Context-Resultant) units within a typed Wisdom Graph and performs deductive, abductive, and inductive reasoning to expand implicit relations; it then assembles context-specific execution plans through compositional retrieval that surfaces bridging knowledge unreachable by embedding similarity alone. Layer 3 performs multi-agent collaborative optimization over heterogeneous agent workflows (code nodes, LLM calls, and tool-using agents), attributing improvement effects to specific strategy changes through controlled evaluation that eliminates data variance. Evidence fed back from Layer 3 drives the self-evolution of both the curation strategies that govern wisdom composition and the optimization trajectories accumulated across runs. The result is an infrastructure in which optimizing an agent system and evolving the knowledge that guides optimization are one and the same process.",
+  "abstract_zh": "随着 coding agents 越来越多地承担实现任务，核心挑战正从构建单个 agent 转向构建能够系统性改进 agent 的基础设施。现有方法往往要么优化 agent system 但无法积累可迁移知识，要么积累知识但缺乏组合式推理能力，也缺少基于运行证据自我演化的机制。MEGA（Meta Evaluation-Grounded Adaptation）提出一种自演化基础设施：每轮优化都会产出持久化资产；围绕这些资产的组合式推理指导后续优化；运行证据进一步修正累积的 wisdom 以及支配其使用的推理机制。其三层架构包括：Layer 1 从 agent session 中通过行为模式聚类和经验性 A/B 验证提炼可复用 wisdom；Layer 2 将这些资产分解为原子 PCR（Primary-Context-Resultant）单元，构建 typed Wisdom Graph，并通过演绎、溯因和归纳推理扩展隐含关系，再以组合式检索生成特定上下文下的执行计划；Layer 3 在异构 agent workflow（code nodes、LLM calls、tool-using agents）上执行多 agent 协同优化，并通过受控评估将性能改进归因到具体策略变化。来自 Layer 3 的证据会反哺 wisdom 组合策略和跨运行优化轨迹，从而使 agent 系统优化与优化知识演化成为同一过程。",
+  "key_points_zh": [
+    "MEGA 将 agent 优化从一次性调参提升为持续积累、推理和自我修正的基础设施问题。",
+    "Layer 1 通过行为模式聚类与 A/B 验证，把 agent session 中的经验转化为可复用、可持久化的 wisdom asset。",
+    "Layer 2 使用 PCR 单元和 typed Wisdom Graph 表示知识，并结合演绎、溯因、归纳推理发现 embedding similarity 难以捕获的桥接知识。",
+    "Layer 3 面向 code nodes、LLM calls、tool-using agents 等异构 workflow 进行多 agent 协同优化，并用受控评估归因策略改进效果。",
+    "系统通过运行证据持续更新 wisdom composition 策略和优化轨迹，使知识积累与 agent 优化形成闭环自演化。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.84,
+    "llm_avg": 0.836,
+    "comment": "This is strongly aligned with agent harness evolution because it proposes reusable self-improving optimization infrastructure with accumulated operational evidence.",
+    "comment_zh": "该论文高度契合代理系统演化方向，因为它提出了可复用的自进化优化基础设施并积累运行证据。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.836,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10504/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10504/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.979
+    }
+  ]
+}

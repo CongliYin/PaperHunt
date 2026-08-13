@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2608.10441",
+  "title": "Detecting an Effect Is Not Learning to Act on It: A Reward-SNR Floor for LLM Acquisition Agents",
+  "title_zh": "检测到效果并不等于学会何时使用：面向 LLM 采集代理的奖励信噪比下界",
+  "authors": [
+    "Ying Yuan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-11T03:46:23Z",
+  "abs_url": "https://arxiv.org/abs/2608.10441v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.10441",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Many pipelines can pay a per-example cost to acquire an auxiliary, model-derived observation -- an LLM's structured reasoning, a slow oracle, an expensive measurement -- and then must decide when the acquired signal is worth using. Our thesis is a distinction that is easy to miss: detecting that such a signal helps on average is not the same as learning to act on it per instance, and a reward-SNR floor governs when the second is even possible. Even when the signal is faithful and an in-sample oracle picking the top-b examples by realized reward shows a sizable apparent gain, no deployable policy can learn when to acquire it: across per-impression, cluster, regime, and uplift-tree granularities, learned routing never beats random, and a matched-moment noise placebo reproduces >=100% of the oracle's apparent gain -- the apparent \"learnable structure\" is order statistics of noise. We explain this with one distinction, detecting a mean effect vs. learning a per-instance acquisition policy, and a reward-SNR detectability floor: routing is estimable offline only if the reward SNR rho clears rho*(N) ~= 2.8/sqrt(N), with a positive control confirming a true low-SNR limit rather than a broken pipeline. As a concrete instantiation we introduce Structured Hypothesis Embeddings (SHE): a frozen LLM turns a user history into ranked, confidence-scored, evidence-grounded intent hypotheses, fused into a recommender. On three public datasets (MIND, REES46, Amazon-Beauty), SHE is faithful and calibratable, yet its value is backbone- and regime-conditional (significant over an ordered GRU, +0.0114, 95% CI [+0.0030, +0.0209], but a global redundancy gap indistinguishable from zero), and learned acquisition collapses at every granularity because all three datasets sit below the floor. The realizable unit is a design-time regime gate, not a per-instance policy. We release code and a one-command reproduction.",
+  "abstract_zh": "本文指出，在需要为每个样本付费获取辅助信号的系统中，例如 LLM 结构化推理、慢速 oracle 或昂贵测量，必须区分“平均而言该信号有帮助”和“能否逐实例学习何时采集该信号”。作者提出奖励信噪比（reward-SNR）下界：只有当奖励信噪比 ρ 超过约 2.8/sqrt(N) 时，离线估计出的路由/采集策略才可能可靠。实验表明，即使信号真实可靠，且样本内 oracle 选择 top-b 样本能显示显著收益，可部署策略在 per-impression、cluster、regime 和 uplift-tree 等粒度上仍无法优于随机；匹配矩噪声安慰剂甚至可复现 oracle 表观收益的 100% 以上，说明所谓“可学习结构”主要来自噪声的顺序统计。作为实例，作者提出 Structured Hypothesis Embeddings (SHE)：用冻结 LLM 将用户历史转化为带排序、置信度和证据支撑的意图假设，并融合到推荐系统中。在 MIND、REES46、Amazon-Beauty 三个公开数据集上，SHE 可校准且较忠实，但其价值依赖 backbone 与 regime；在 ordered GRU 上显著提升 +0.0114，95% CI 为 [+0.0030, +0.0209]，而全局冗余差距接近 0。由于三个数据集均低于奖励-SNR 下界，逐实例采集策略全部失效，实际可行的是设计阶段的 regime gate，而非在线逐实例策略。",
+  "key_points_zh": [
+    "核心区分：检测平均效果与学习逐实例采集策略是两回事；前者显著并不保证后者可部署。",
+    "提出 reward-SNR floor：离线路由策略可估计的必要条件约为 ρ > 2.8/sqrt(N)，否则策略收益会被噪声顺序统计掩盖。",
+    "在多种粒度下，学习到的 acquisition routing 均不优于随机；matched-moment noise placebo 可复现 oracle 表观收益，揭示虚假的“可学习结构”。",
+    "提出 Structured Hypothesis Embeddings (SHE)，用冻结 LLM 生成有置信度和证据支撑的用户意图假设，并接入推荐模型。",
+    "在 MIND、REES46、Amazon-Beauty 上，SHE 信号本身忠实且可校准，但数据集均低于 SNR 下界，因此可行方案是设计阶段 regime gate，而非逐实例 acquisition policy。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.68,
+    "novelty": 0.8,
+    "problem_significance": 0.76,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.73,
+    "llm_avg": 0.73,
+    "comment": "A thoughtful recommender-systems acquisition-policy analysis with e-commerce datasets, though its contribution is broader than shopping recommendation alone.",
+    "comment_zh": "该工作利用电商推荐数据分析信号获取策略，虽不专属购物推荐但具有实际推荐系统价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.4093360343955374,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.73,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10441/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10441/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.95
+    }
+  ]
+}

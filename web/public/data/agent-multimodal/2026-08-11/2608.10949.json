@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.10949",
+  "title": "StreamFlow: Dynamic Memory Flows for Streaming Video Understanding",
+  "title_zh": "StreamFlow：用于流式视频理解的动态记忆流",
+  "authors": [
+    "Muxin Fu",
+    "Yifan Zhang",
+    "Wentao Zhang",
+    "Fangming Guo",
+    "Qian Chen",
+    "Guibin Zhang",
+    "Shuicheng Yan",
+    "Bo An"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-11T14:19:03Z",
+  "abs_url": "https://arxiv.org/abs/2608.10949v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.10949",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Streaming video understanding requires multimodal large language models (MLLMs) to preserve relevant evidence from continuously evolving streams under strict causality and bounded memory. Yet existing paradigms remain limited: model-based methods require intrusive backbone updates, while memory-based methods expend substantial visual-encoding computation on temporally redundant content and rely on rigid access to visual history. To address these limitations, we introduce StreamFlow, an efficient visual memory framework that enables dynamic, on-demand access to historical visual information. StreamFlow combines a lightweight, dynamics-aware mid-term memory that filters temporal redundancy before visual encoding with a latent long-term memory that consolidates historical video content into visual latents accessible to subsequent reasoning. During generation, an attention-guided retrieval mechanism injects relevant visual latents when the model's reliance on visual evidence weakens. StreamFlow achieves state-of-the-art streaming video understanding performance, reaching 67.73% overall accuracy on StreamingBench, while also delivering strong performance on offline long-video benchmarks. Relative to the vanilla setting, it improves the visual attention score (VAS) by 59.1% while reducing end-to-end latency and peak memory by 50.4% and 21.1%, respectively, enabling more visually grounded and efficient reasoning.",
+  "abstract_zh": "流式视频理解要求 multimodal large language models（MLLMs）在严格因果约束和有限记忆条件下，从持续变化的视频流中保留相关视觉证据。现有方法仍存在局限：基于模型的方法需要侵入式修改 backbone，而基于记忆的方法会在时间冗余内容上消耗大量视觉编码计算，并且对视觉历史的访问方式较为僵化。为此，论文提出 StreamFlow，一种高效视觉记忆框架，支持对历史视觉信息进行动态、按需访问。StreamFlow 结合了轻量级、动态感知的中期记忆，在视觉编码前过滤时间冗余；同时引入潜在长期记忆，将历史视频内容整合为可供后续推理访问的视觉 latent。在生成阶段，注意力引导的检索机制会在模型对视觉证据依赖减弱时注入相关视觉 latent。实验显示，StreamFlow 在 StreamingBench 上达到 67.73% 总体准确率，取得流式视频理解的 state-of-the-art 性能，同时在离线长视频 benchmark 上也表现强劲。相比 vanilla 设置，其 visual attention score（VAS）提升 59.1%，端到端延迟和峰值显存分别降低 50.4% 和 21.1%，实现了更具视觉依据且更高效的推理。",
+  "key_points_zh": [
+    "提出 StreamFlow，高效视觉记忆框架，支持在流式视频理解中动态、按需访问历史视觉信息。",
+    "设计动态感知的中期记忆，在视觉编码前过滤时间冗余，减少对重复帧或相似片段的编码开销。",
+    "引入潜在长期记忆，将历史视频内容压缩整合为视觉 latent，供后续推理阶段灵活检索。",
+    "生成时使用 attention-guided retrieval，在模型视觉证据依赖减弱时注入相关历史视觉 latent，增强视觉 grounding。",
+    "在 StreamingBench 上达到 67.73% 总体准确率，并相较 vanilla 设置降低 50.4% 端到端延迟和 21.1% 峰值显存。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.75,
+    "problem_significance": 0.78,
+    "potential_impact": 0.75,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.73,
+    "llm_avg": 0.712,
+    "comment": "A strong streaming video memory paper with clear latency and bounded-memory relevance, though it lacks an explicit closed-loop agent or tool workflow.",
+    "comment_zh": "该工作面向流式视频记忆并关注低延迟与有界内存，但缺少明确的闭环智能体或工具调用流程。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.24680800814443493,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.712,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10949/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10949/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.947
+    }
+  ]
+}

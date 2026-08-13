@@ -1,0 +1,80 @@
+{
+  "domain": "agent-e-commerce",
+  "display_name": "E-commerce Agent",
+  "date": "2026-08-11",
+  "generated_at": "2026-08-13T03:50:16Z",
+  "papers": [
+    {
+      "arxiv_id": "2608.10929",
+      "title": "FedCGR: Federated Cross-Domain Generative Recommendation",
+      "title_zh": "FedCGR：联邦跨域生成式推荐",
+      "authors": [
+        "Zhuodong Liu",
+        "Hugen Lv",
+        "Xiangyu Li",
+        "Bohan Guo",
+        "Peiyu Hu"
+      ],
+      "total_score": 0.5816950087568301,
+      "scores": {
+        "topic_relevance": 0.7200000000000001,
+        "llm_assessment": 0.7620000000000001,
+        "domain_fit": 0.88,
+        "other": 0.2169833625227669
+      },
+      "tags": [
+        "llm for commerce"
+      ],
+      "tldr_zh": "用稳定语义ID实现联邦跨域生成推荐",
+      "detail_file": "agent-e-commerce/2026-08-11/2608.10929.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10929/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.10983",
+      "title": "TimeRoute: Time-Aware Modality Routing and Diffusion for Multi-Modal Recommendation",
+      "title_zh": "TimeRoute：面向多模态推荐的时间感知模态路由与扩散方法",
+      "authors": [
+        "Pengyu Zhang",
+        "Yangqin Jiang",
+        "Klim Zaporojets",
+        "Congfeng Cao",
+        "Paul Groth"
+      ],
+      "total_score": 0.4377575670951991,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.728,
+        "domain_fit": 0.8,
+        "other": 0.2511918903173302
+      },
+      "tags": [
+        "Code soon",
+        "general recommendation"
+      ],
+      "tldr_zh": "用时间感知路由动态融合多模态推荐",
+      "detail_file": "agent-e-commerce/2026-08-11/2608.10983.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10983/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.10441",
+      "title": "Detecting an Effect Is Not Learning to Act on It: A Reward-SNR Floor for LLM Acquisition Agents",
+      "title_zh": "检测到效果并不等于学会何时使用：面向 LLM 采集代理的奖励信噪比下界",
+      "authors": [
+        "Ying Yuan"
+      ],
+      "total_score": 0.2794668017197769,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.73,
+        "domain_fit": 0.68,
+        "other": 0.2015560057325896
+      },
+      "tags": [
+        "Code soon"
+      ],
+      "tldr_zh": "LLM信号有用不代表能学会何时用",
+      "detail_file": "agent-e-commerce/2026-08-11/2608.10441.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10441/thumb.webp"
+    }
+  ]
+}

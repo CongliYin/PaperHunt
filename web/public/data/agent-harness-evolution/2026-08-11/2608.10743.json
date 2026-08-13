@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2608.10743",
+  "title": "Mitigating Context Interference for Reliable and Efficient Search Agents",
+  "title_zh": "缓解上下文干扰：构建可靠且高效的搜索智能体",
+  "authors": [
+    "Boyang Xue",
+    "Bin Wu",
+    "Shuofei Qiao",
+    "Sheng Wang",
+    "Rui Wang",
+    "Yiming Du",
+    "Hongru Wang",
+    "Jeff Z. Pan",
+    "Emine Yilmaz",
+    "Kam-Fai Wong",
+    "Aldo Lipani"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-11T10:00:42Z",
+  "abs_url": "https://arxiv.org/abs/2608.10743v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.10743",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent research empowers Large Language Models (LLMs) as multi-turn search agents to iteratively retrieve and generate outputs until complex tasks are solved. However, the contexts of multi-turn search agents are lengthy and complex. For example, the retrieved set of documents in each turn would inevitably introduce irrelevant information that distracts LLMs, referring to \\textit{context interference}, potentially hindering the reliability and efficiency of search agents. Therefore, we conduct a systematic study on context interference in multi-turn search agents, focusing on investigating i) which parts of the context of search agents will contribute to the context interference, ii) how to refine the contexts of search agents to mitigate the interference, and iii) can incorporating context refinement into search agent training yield further improvements. We reveal that interference primarily arises from the latest retrieved documents. Based on the explored findings, we then introduce a distill-based context refiner to dynamically mitigate context interference for multi-turn search agents. Finally, we validate that incorporating context refinement into RL training pipelines of search agents can significantly enhance both reliability and efficiency. This study highlights the importance of mitigating context interference of search agents, inspiring a novel paradigm of ``refine context and then generate'' for AI agents.",
+  "abstract_zh": "近期研究将 Large Language Models (LLMs) 扩展为多轮搜索智能体，使其能够通过迭代检索与生成来解决复杂任务。然而，多轮搜索智能体的上下文通常很长且复杂；每一轮检索得到的文档集合不可避免地会引入无关信息，从而分散 LLM 注意力，这种现象被称为上下文干扰（context interference），并可能损害智能体的可靠性与效率。本文系统研究了多轮搜索智能体中的上下文干扰，重点探讨：哪些上下文部分会导致干扰、如何精炼上下文以减轻干扰，以及将上下文精炼纳入搜索智能体训练是否能带来进一步提升。研究发现，干扰主要来自最近一轮检索到的文档。基于该发现，作者提出一种基于蒸馏的上下文精炼器（distill-based context refiner），用于动态缓解多轮搜索智能体中的上下文干扰。进一步实验表明，将上下文精炼整合进搜索智能体的 RL 训练流程，可以显著提升可靠性与效率。本文强调了缓解搜索智能体上下文干扰的重要性，并提出“先精炼上下文，再生成”（refine context and then generate）的智能体新范式。",
+  "key_points_zh": [
+    "本文系统分析多轮搜索智能体中的 context interference，指出冗长复杂的检索上下文会降低 LLM 的推理可靠性与搜索效率。",
+    "实验发现，上下文干扰主要来源于最新一轮检索到的 documents，而非所有历史上下文都同等有害。",
+    "作者提出 distill-based context refiner，动态过滤或精炼检索上下文，以减少无关信息对 LLM 生成的干扰。",
+    "将 context refinement 纳入搜索智能体的 RL training pipeline 后，可进一步提升任务可靠性与推理/检索效率。",
+    "论文提出“refine context and then generate”范式，为设计更稳健的 AI search agents 提供了新的方法方向。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.7,
+    "problem_significance": 0.8,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.76,
+    "llm_avg": 0.74,
+    "comment": "This is well aligned with search agents because it identifies context interference and integrates context refinement into search-agent training.",
+    "comment_zh": "该论文与搜索代理高度相关，因为它识别了上下文干扰问题，并将上下文精炼纳入搜索代理训练。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.74,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10743/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.941
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10743/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.96
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "domain": "agent-multimodal",
+  "display_name": "Realtime Multimodal Agent",
+  "date": "2026-08-11",
+  "generated_at": "2026-08-13T03:58:19Z",
+  "papers": [
+    {
+      "arxiv_id": "2608.10878",
+      "title": "X2-Turn: Frame-Synchronous Dual-Head Modeling for Joint Streaming ASR and Turn State Prediction",
+      "title_zh": "X2-Turn：用于联合流式 ASR 与轮次状态预测的帧同步双头建模",
+      "authors": [
+        "Kaiqi Fu",
+        "Rime Wen",
+        "Altman Lin",
+        "Shawn Qin",
+        "Roy Gan",
+        "Hao Wang",
+        "Qian Wang"
+      ],
+      "total_score": 0.6405258286877776,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.7699999999999999,
+        "domain_fit": 0.92,
+        "other": 0.19175276229259217
+      },
+      "tags": [
+        "low latency turn taking"
+      ],
+      "tldr_zh": "帧级联合建模 ASR 与轮次预测",
+      "detail_file": "agent-multimodal/2026-08-11/2608.10878.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10878/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.10949",
+      "title": "StreamFlow: Dynamic Memory Flows for Streaming Video Understanding",
+      "title_zh": "StreamFlow：用于流式视频理解的动态记忆流",
+      "authors": [
+        "Muxin Fu",
+        "Yifan Zhang",
+        "Wentao Zhang",
+        "Fangming Guo",
+        "Qian Chen",
+        "Guibin Zhang",
+        "Shuicheng Yan",
+        "Bo An"
+      ],
+      "total_score": 0.6389404004072218,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.712,
+        "domain_fit": 0.78,
+        "other": 0.19113466802407253
+      },
+      "tags": [
+        "streaming video grounding"
+      ],
+      "tldr_zh": "动态视觉记忆提升流式视频理解效率",
+      "detail_file": "agent-multimodal/2026-08-11/2608.10949.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10949/thumb.webp"
+    }
+  ]
+}

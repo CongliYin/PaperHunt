@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2608.10878",
+  "title": "X2-Turn: Frame-Synchronous Dual-Head Modeling for Joint Streaming ASR and Turn State Prediction",
+  "title_zh": "X2-Turn：用于联合流式 ASR 与轮次状态预测的帧同步双头建模",
+  "authors": [
+    "Kaiqi Fu",
+    "Rime Wen",
+    "Altman Lin",
+    "Shawn Qin",
+    "Roy Gan",
+    "Hao Wang",
+    "Qian Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-11T12:54:52Z",
+  "abs_url": "https://arxiv.org/abs/2608.10878v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.10878",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Accurate and responsive turn-taking is essential for spoken dialogue systems, which must distinguish in real time between user interruptions, backchannels that should be ignored, and the completion of an utterance. Prior modular approaches typically optimize turn state prediction at the utterance or fixed-chunk level, creating a mismatch with the continuous turn state estimate, and often depend on an auxiliary ASR model, which limits responsiveness and increases overall system complexity. Therefore, we present X2-Turn, a frame-synchronous turn state prediction method via delayed-stream modeling. Specifically, building on the pretrained Voxtral Realtime model, we introduce a frame-synchronous turn state head that operates in parallel with the ASR head on shared streaming representations, jointly predicting ASR tokens and fine-grained turn states at the frame level. We evaluate our method on the bilingual Chinese-English Easy-Turn test sets, and the results demonstrate its effectiveness in achieving accurate turn-taking detection while maintaining low latency.",
+  "abstract_zh": "准确且响应迅速的轮次切换（turn-taking）对口语对话系统至关重要，系统需要实时区分用户打断、应忽略的附和反馈（backchannel）以及话语结束。以往模块化方法通常在话语级或固定分块级优化轮次状态预测，与连续的轮次状态估计存在粒度不匹配，并且常依赖额外 ASR 模型，导致响应性受限、系统复杂度增加。本文提出 X2-Turn，一种基于延迟流建模（delayed-stream modeling）的帧同步轮次状态预测方法。该方法以预训练 Voxtral Realtime 为基础，在共享流式表示上并行设置 ASR head 与帧同步 turn state head，联合预测 ASR token 和细粒度帧级轮次状态。作者在中英双语 Easy-Turn 测试集上评估，结果表明 X2-Turn 能在低延迟下实现准确的轮次检测。",
+  "key_points_zh": [
+    "提出 X2-Turn，将流式 ASR 与 turn state prediction 统一到同一模型中，减少对外部辅助 ASR 的依赖。",
+    "在 Voxtral Realtime 共享流式表示上引入双头结构：ASR head 预测语音识别 token，turn state head 同步预测帧级轮次状态。",
+    "采用帧同步建模以缓解传统话语级或固定 chunk 级方法与连续轮次状态估计之间的粒度不匹配问题。",
+    "面向真实对话中的用户打断、backchannel 与话语完成等细粒度场景，提升轮次切换判断的实时性。",
+    "在中英双语 Easy-Turn 测试集上验证，显示该方法在保持低延迟的同时具备较好的轮次检测准确性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.73,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.6,
+    "lasting_value": 0.82,
+    "llm_avg": 0.7699999999999999,
+    "comment": "Highly relevant to realtime voice agents because it directly improves low-latency ASR-coupled turn-taking and interruption handling.",
+    "comment_zh": "该工作直接改进低延迟语音识别联合轮次状态预测与打断处理，非常契合实时语音智能体方向。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7699999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10878/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.949
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10878/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.966
+    }
+  ]
+}

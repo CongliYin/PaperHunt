@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2608.11079",
+  "title": "SkillZip: Evaluation-Free Skill Compression for Self-Evolving Agents by Discovering Reusable Structure",
+  "title_zh": "SkillZip：通过发现可复用结构实现自进化 Agent 的免评测技能压缩",
+  "authors": [
+    "Xiaofan Bai",
+    "Hongqiang Lin",
+    "Chao Liu",
+    "Yantao Zhang",
+    "Xuan Jin",
+    "Xipeng Cao",
+    "Yuhong Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-11T15:41:19Z",
+  "abs_url": "https://arxiv.org/abs/2608.11079v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.11079",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Self-evolving agents accumulate reusable skills by appending successful procedures and failure fixes. Over time, the same requirement is often restated in several branches, examples, and warnings, while common action sequences are copied rather than reused. The resulting skill becomes expensive to inject and difficult to maintain. Generic prompt compression is ill-suited to this setting because a skill is not a flat passage: its name and description define when it applies, its workflow controls execution, its tool and output contracts constrain validity, and rare exceptions may remain essential even when no sampled task activates them. Evaluation-guided compression can test these behaviors, but it introduces rollouts, cost, and dependence on the compression-time evaluation set. We present SkillZip, an evaluation-free method that compresses a skill by finding its shortest faithful structural explanation. The intuition is explain once, reference many: state a repeated rule once at the scope where it applies, factor a repeated action sequence into a shared procedure, and keep only the differences as explicit exceptions. We formalize this intuition as a typed minimum description-length objective over a skill contract and a residual, subject to a hard coverage constraint for every extracted trigger, workflow edge, tool requirement, obligation, and output field. The formulation provides simple sharing thresholds, preserves unique rare rules by construction, and supports efficient local updates. SkillZip has a one-shot mode with one structured extraction call and deterministic optimization, and a continual Zip-on-Write mode that integrates each self-evolution patch without replaying tasks or reparsing the full history. Through comprehensive experimental evaluations, we demonstrate the effectiveness and superiority of SkillZip in compression performance, generalizability, and cost overhead.",
+  "abstract_zh": "自进化 Agent 会通过追加成功流程和失败修复来积累可复用技能，但随着时间推移，相同需求常被分散改写在多个分支、示例和警告中，常见动作序列也往往被复制而非复用，导致技能注入成本上升、维护困难。通用 prompt 压缩不适合该场景，因为技能并非普通文本：其名称和描述决定适用条件，workflow 控制执行，tool 与输出契约约束有效性，罕见异常即使未被采样任务触发也可能至关重要。SkillZip 提出一种免评测压缩方法，通过寻找“最短且忠实”的结构化解释来压缩技能：重复规则只在适用作用域说明一次，重复动作序列被抽取为共享过程，差异部分以显式异常保留。论文将这一思想形式化为带类型的最小描述长度（MDL）目标，在技能契约与残差上优化，并对每个抽取出的 trigger、workflow edge、tool requirement、obligation 和 output field 施加硬覆盖约束。该方法支持一次性模式与持续 Zip-on-Write 模式，后者可在每次自进化补丁写入时增量整合，无需重放任务或重新解析完整历史。实验表明，SkillZip 在压缩率、泛化性和成本开销方面优于对比方法。",
+  "key_points_zh": [
+    "针对自进化 Agent 技能长期累积后出现的规则重复、流程复制和异常分散问题，SkillZip 将技能视为结构化契约，而非普通 prompt 文本。",
+    "核心思想是“解释一次，多处引用”：把重复规则提升到合适作用域，将重复动作序列抽取为共享 procedure，仅保留必要差异和异常。",
+    "方法基于带类型的最小描述长度（MDL）目标，并加入硬覆盖约束，确保 trigger、workflow edge、tool requirement、obligation、output field 等关键信息不丢失。",
+    "SkillZip 不依赖压缩时评测 rollouts，避免 evaluation-guided compression 的额外成本与评测集依赖，同时通过构造保留罕见但重要的规则。",
+    "提供 one-shot 压缩与 continual Zip-on-Write 增量更新两种模式，实验显示其在压缩性能、泛化能力和成本开销上具有优势。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.76,
+    "problem_significance": 0.78,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.8,
+    "llm_avg": 0.764,
+    "comment": "SkillZip squarely targets durable skill evolution by compressing reusable agent skills while preserving execution structure without rollout-dependent evaluation.",
+    "comment_zh": "SkillZip直接面向持久化技能演化，通过在不依赖回放评估的情况下压缩并保持可执行结构来复用代理技能。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.7874232534517753,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.764,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 11,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.11079/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.976
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.11079/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.97
+    }
+  ]
+}

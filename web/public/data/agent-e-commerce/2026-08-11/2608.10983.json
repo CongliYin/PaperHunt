@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.10983",
+  "title": "TimeRoute: Time-Aware Modality Routing and Diffusion for Multi-Modal Recommendation",
+  "title_zh": "TimeRoute：面向多模态推荐的时间感知模态路由与扩散方法",
+  "authors": [
+    "Pengyu Zhang",
+    "Yangqin Jiang",
+    "Klim Zaporojets",
+    "Congfeng Cao",
+    "Paul Groth"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-11T14:36:30Z",
+  "abs_url": "https://arxiv.org/abs/2608.10983v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.10983",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-modal recommenders fuse collaborative signals with item modalities such as text, images, and audio, but the usefulness of each drifts over time and at different rates. For example, chocolate purchases typically guided by textual ingredient cues can shift toward visual packaging and ambient audio around Valentine's Day. This modality time-scale mismatch gives rise to two coupled challenges: (1) users require different modality proportions across temporal contexts, and (2) less relevant modalities are more likely to introduce outdated or misleading signals into the recommender. We address both challenges within a unified diffusion-based recommender, TimeRoute. A temporal-aware modal router maps each user's aggregated behavioral features to a personalized modality distribution, replacing the globally shared fusion weights used in prior work. The diffusion-based graph reconstructor is then conditioned on the same temporal profile through Feature-wise Linear Modulation (FiLM) with dual-stream long- and short-term denoising heads, suppressing outdated modality edges before they enter the propagation graph. Experiments on TikTok, Amazon-Baby, and Amazon-Sports demonstrate consistent improvements of up to 9.8\\% in Recall@K, Precision@K, and NDCG@K over strong baselines across 10-seed paired tests. Code is available at https://anonymous.4open.science/r/TimeRoute.",
+  "abstract_zh": "多模态推荐系统通常融合协同信号与文本、图像、音频等物品模态，但不同模态的有效性会随时间以不同速率漂移。例如，巧克力购买平时可能更依赖文本中的成分信息，而在情人节前后可能转向视觉包装与环境音频线索。这种模态时间尺度不匹配带来两个挑战：用户在不同时间上下文中需要不同的模态配比；相关性较低的模态更容易向推荐器引入过时或误导性信号。论文提出统一的扩散式推荐框架 TimeRoute：首先用 temporal-aware modal router 将用户聚合行为特征映射为个性化模态分布，替代以往全局共享的融合权重；随后，diffusion-based graph reconstructor 通过 Feature-wise Linear Modulation（FiLM）接入同一时间画像，并结合长短期双流去噪头，在进入传播图前抑制过时模态边。实验在 TikTok、Amazon-Baby 和 Amazon-Sports 上进行，10 个随机种子的配对测试显示，相比强基线，Recall@K、Precision@K 与 NDCG@K 最高提升 9.8%。",
+  "key_points_zh": [
+    "核心问题：多模态推荐中，文本、图像、音频等模态的重要性会随时间变化，且变化速率不同，固定融合权重难以适配用户的时序偏好。",
+    "方法亮点：TimeRoute 使用 temporal-aware modal router，为每个用户根据其行为时间画像生成个性化模态分布，而非采用全局共享模态权重。",
+    "扩散建模：通过 diffusion-based graph reconstructor 重构传播图，并用 FiLM 将时间信息注入去噪过程，以减少过时或误导性模态边的影响。",
+    "长短期建模：设计 dual-stream long- and short-term denoising heads，同时捕获长期稳定偏好与短期时序变化。",
+    "实验结果：在 TikTok、Amazon-Baby、Amazon-Sports 上，相比强基线在 Recall@K、Precision@K、NDCG@K 上取得最高 9.8% 的一致提升。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.8,
+    "novelty": 0.76,
+    "problem_significance": 0.78,
+    "potential_impact": 0.77,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.75,
+    "llm_avg": 0.728,
+    "comment": "A commerce-relevant multimodal recommendation method with Amazon evaluations and a concrete mechanism for time-varying product signals.",
+    "comment_zh": "该工作在 Amazon 数据上验证了面向商品推荐的时变多模态建模方法，具备较强领域相关性。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.457151341903981,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.728,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 7,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10983/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10983/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

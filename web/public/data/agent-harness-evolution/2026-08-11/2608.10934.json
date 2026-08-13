@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2608.10934",
+  "title": "Understanding the Architecture of Coding Agents: An Exploratory Study Using a Research Prototype",
+  "title_zh": "理解 Coding Agents 的架构：基于研究原型的探索性研究",
+  "authors": [
+    "Marco Tulio Valente"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-11T14:02:29Z",
+  "abs_url": "https://arxiv.org/abs/2608.10934v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.10934",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents have rapidly emerged as the primary interface for AI-assisted software development. However, despite their growing adoption, relatively little is known about their internal architecture, and no systematic architectural description comparable to those available for compilers or operating systems currently exists. This paper addresses this gap by documenting the main architectural components of coding agents, explaining their responsibilities, interactions, and execution flow. To support this effort, we also present Ark (Agent Research Kit), a minimal open-source coding agent designed for research and education that preserves the essential architectural mechanisms of modern coding agents while emphasizing simplicity and clarity. We also introduce ArkBench, a lightweight benchmark comprising ten representative software maintenance and evolution tasks. Using gpt-5.4-mini, Ark successfully solved 8 of the 10 tasks while requiring modest token consumption. Finally, we compare the architecture of Ark with those of state-of-the-art coding agents using a recently proposed architectural taxonomy. We hope that both Ark and ArkBench provide a practical foundation for teaching, research, and experimentation on coding agents.",
+  "abstract_zh": "Coding agents 正迅速成为 AI 辅助软件开发的主要交互界面，但学界和业界对其内部架构仍缺乏系统性描述，尚未形成类似编译器或操作系统那样清晰的架构模型。本文通过梳理 coding agents 的核心架构组件，说明各组件的职责、交互方式与执行流程，填补这一空白。为支撑研究，作者提出 Ark（Agent Research Kit），一个面向研究与教学的极简开源 coding agent，在保持现代 coding agents 关键架构机制的同时强调简洁性与可理解性。论文还引入 ArkBench，一个包含 10 个代表性软件维护与演化任务的轻量级基准。实验显示，在使用 gpt-5.4-mini 时，Ark 成功完成 10 个任务中的 8 个，且 token 消耗较低。最后，作者基于最新的 coding agent 架构分类法，将 Ark 与前沿 coding agents 进行对比，旨在为 coding agents 的教学、研究与实验提供实用基础。",
+  "key_points_zh": [
+    "论文聚焦 coding agents 的内部架构，系统描述其主要组件、职责分工、组件交互与执行流程。",
+    "提出 Ark（Agent Research Kit），一个极简开源 coding agent，用于保留现代 coding agents 的核心机制，同时便于教学和研究。",
+    "构建 ArkBench，包含 10 个典型软件维护与演化任务，用于轻量评估 coding agent 能力。",
+    "在 gpt-5.4-mini 驱动下，Ark 完成 8/10 个 ArkBench 任务，并保持较低 token 消耗。",
+    "基于近期提出的架构 taxonomy，论文将 Ark 与现有先进 coding agents 进行对比，帮助理解不同系统的设计取舍。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.86,
+    "novelty": 0.55,
+    "problem_significance": 0.72,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.72,
+    "llm_avg": 0.6279999999999999,
+    "comment": "A clear open coding-agent prototype and architectural study is well within scope, though the contribution appears more educational and taxonomic than transformative.",
+    "comment_zh": "该论文提供清晰的开源编码代理原型和架构研究，范围契合度较高，但贡献更偏教学和分类而非范式变革。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6279999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10934/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.10934/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}
