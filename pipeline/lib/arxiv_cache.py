@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Sequence
 
-from .fetcher import ARXIV_API_BASE, ArxivClient, fetch_papers_by_date
+from .fetcher import ARXIV_API_BASE, ArxivClient, fetch_papers_by_date_multi_category
 
 
 SCHEMA_VERSION = 1
@@ -65,8 +65,9 @@ def build_arxiv_cache(
     # files remain independently reusable and are written atomically below.
     target.unlink(missing_ok=True)
     raw_root = Path(raw_cache_dir) if raw_cache_dir is not None else target.parent / "raw"
-    shared_client: ArxivClient | None = client
     category_payloads: dict[str, list[dict]] = {}
+    raw_paths: dict[str, Path] = {}
+    missing_categories: list[str] = []
     for category in required_categories:
         raw_path = raw_category_cache_path(
             raw_root,
@@ -74,6 +75,7 @@ def build_arxiv_cache(
             end_date=resolved_end_date,
             category=category,
         )
+        raw_paths[category] = raw_path
         papers: list[dict] | None = None
         if refresh:
             if verbose:
@@ -94,26 +96,63 @@ def build_arxiv_cache(
                     print(f"[arxiv-raw] hit {raw_path} ({len(papers)} papers)")
 
         if papers is None:
-            shared_client = shared_client or ArxivClient()
-            papers = fetch_papers_by_date(
-                start_date,
-                resolved_end_date,
-                category=category,
-                max_results_per_page=RAW_MAX_RESULTS_PER_PAGE,
-                verbose=verbose,
-                client=shared_client,
-            )
-            raw_payload = _raw_category_payload(
-                start_date=start_date,
-                end_date=resolved_end_date,
-                category=category,
-                papers=papers,
-            )
-            _write_atomic_json(raw_path, raw_payload)
-            if verbose:
-                print(f"[arxiv-raw] wrote {raw_path} ({len(papers)} papers)")
+            missing_categories.append(category)
+        else:
+            category_payloads[category] = papers
 
-        category_payloads[category] = papers
+    # arXiv occasionally answers a valid-looking HTTP 200/Atom feed containing
+    # no entries while the export service is unhealthy. An all-empty cache for
+    # the broad daily category set is therefore not trustworthy and must be
+    # retried rather than silently reused forever.
+    if category_payloads and not _has_any_papers(category_payloads):
+        missing_categories = list(required_categories)
+        category_payloads.clear()
+        if verbose:
+            print("[arxiv-raw] cached categories are all empty; refetching the full set")
+
+    fetched_categories: dict[str, list[dict]] = {}
+    if missing_categories:
+        shared_client = client or ArxivClient()
+        fetched_papers = fetch_papers_by_date_multi_category(
+            start_date,
+            resolved_end_date,
+            categories=missing_categories,
+            max_results_per_page=RAW_MAX_RESULTS_PER_PAGE,
+            verbose=verbose,
+            client=shared_client,
+        )
+        _validate_papers(fetched_papers, context="combined arXiv response")
+        fetched_categories = _partition_papers_by_category(
+            fetched_papers,
+            missing_categories,
+        )
+        category_payloads.update(fetched_categories)
+
+    if not _has_any_papers(category_payloads):
+        raise ArxivCacheError(
+            "arXiv returned zero papers across all required categories; "
+            "source data may not be ready"
+        )
+
+    # Publish newly fetched category files only after the complete result has
+    # passed the all-empty guard. This prevents a transient empty response from
+    # poisoning both raw and bundled caches.
+    for category in missing_categories:
+        papers = fetched_categories[category]
+        raw_path = raw_paths[category]
+        raw_payload = _raw_category_payload(
+            start_date=start_date,
+            end_date=resolved_end_date,
+            category=category,
+            papers=papers,
+        )
+        _write_atomic_json(raw_path, raw_payload)
+        if verbose:
+            print(f"[arxiv-raw] wrote {raw_path} ({len(papers)} papers)")
+
+    for category in required_categories:
+        if category not in category_payloads:
+            raise ArxivCacheError(f"arXiv cache build is missing category {category}")
 
     payload: dict[str, Any] = {
         "schema_version": SCHEMA_VERSION,
@@ -246,6 +285,41 @@ def _validate_papers(papers: list[Any], *, context: str) -> None:
     for index, paper in enumerate(papers):
         if not isinstance(paper, dict) or not str(paper.get("arxiv_id") or "").strip():
             raise ArxivCacheError(f"{context} has invalid paper at index {index}")
+
+
+def _partition_papers_by_category(
+    papers: Sequence[dict],
+    categories: Sequence[str],
+) -> dict[str, list[dict]]:
+    """Partition a combined OR-query response into compatible raw category caches."""
+    normalized_categories = normalize_categories(categories)
+    results: dict[str, list[dict]] = {category: [] for category in normalized_categories}
+    seen_ids: dict[str, set[str]] = {category: set() for category in normalized_categories}
+
+    for paper in papers:
+        paper_categories = {
+            str(category).strip()
+            for category in paper.get("categories", [])
+            if str(category).strip()
+        }
+        primary_category = str(paper.get("primary_category") or "").strip()
+        if primary_category:
+            paper_categories.add(primary_category)
+
+        arxiv_id = _clean_id(paper.get("arxiv_id", ""))
+        for category in normalized_categories:
+            if category not in paper_categories or arxiv_id in seen_ids[category]:
+                continue
+            seen_ids[category].add(arxiv_id)
+            results[category].append(paper)
+
+    for category in normalized_categories:
+        results[category].sort(key=lambda paper: paper.get("published_at", ""))
+    return results
+
+
+def _has_any_papers(category_payloads: dict[str, list[dict]]) -> bool:
+    return any(category_payloads.values())
 
 
 def load_arxiv_cache(

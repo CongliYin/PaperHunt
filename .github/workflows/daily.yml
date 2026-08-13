@@ -38,6 +38,12 @@ jobs:
       FIGURE_MAX_COUNT: "2"
       STORAGE_BACKEND: blob
       ARXIV_USER_AGENT: "PaperHunt/1.0 (+https://github.com/CongliYin/PaperHunt)"
+      ARXIV_MAX_ATTEMPTS: "6"
+      ARXIV_TIMEOUT_SECONDS: "120"
+      ARXIV_429_BACKOFF_SECONDS: "60"
+      ARXIV_TRANSIENT_BACKOFF_SECONDS: "30"
+      ARXIV_MAX_RETRY_DELAY_SECONDS: "900"
+      ARXIV_RETRY_JITTER_SECONDS: "5"
       LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
       LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
       LLM_MODEL_SCORING: ${{ secrets.LLM_MODEL_SCORING }}

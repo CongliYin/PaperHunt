@@ -4,7 +4,12 @@ import unittest
 
 import requests
 
-from pipeline.lib.fetcher import ArxivClient, ArxivFetchError, fetch_papers_by_date
+from pipeline.lib.fetcher import (
+    ArxivClient,
+    ArxivFetchError,
+    fetch_papers_by_date,
+    fetch_papers_by_date_multi_category,
+)
 
 
 EMPTY_FEED = b'<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom"></feed>'
@@ -19,6 +24,7 @@ ONE_PAPER_FEED = b'''<?xml version="1.0"?>
     <author><name>Ada Lovelace</name></author>
     <arxiv:primary_category term="cs.AI" />
     <category term="cs.AI" />
+    <category term="cs.CL" />
   </entry>
 </feed>'''
 
@@ -76,6 +82,10 @@ def make_client(outcomes: list[object], *, max_attempts: int = 4):
         max_attempts=max_attempts,
         timeout_seconds=60,
         user_agent="PaperHunt-Test/1.0",
+        rate_limit_backoff_seconds=60,
+        transient_backoff_seconds=30,
+        max_retry_delay_seconds=900,
+        retry_jitter_seconds=0,
         clock=clock.monotonic,
         sleep=clock.sleep,
     )
@@ -117,7 +127,25 @@ class ArxivClientTests(unittest.TestCase):
         client.fetch_feed(params={}, category="cs.AI", offset=0, verbose=False)
 
         self.assertEqual(len(session.calls), 2)
-        self.assertEqual(clock.sleeps, [7.0])
+        self.assertEqual(clock.sleeps, [60.0])
+
+    def test_429_retry_after_can_raise_but_not_lower_safety_backoff(self) -> None:
+        client, _, clock = make_client(
+            [FakeResponse(429, headers={"Retry-After": "180"}), FakeResponse(200)]
+        )
+
+        client.fetch_feed(params={}, category="cs.AI", offset=0, verbose=False)
+
+        self.assertEqual(clock.sleeps, [180.0])
+
+    def test_zero_retry_after_does_not_bypass_transient_safety_backoff(self) -> None:
+        client, _, clock = make_client(
+            [FakeResponse(503, headers={"Retry-After": "0"}), FakeResponse(200)]
+        )
+
+        client.fetch_feed(params={}, category="cs.AI", offset=0, verbose=False)
+
+        self.assertEqual(clock.sleeps, [30.0])
 
     def test_429_uses_bounded_exponential_backoff(self) -> None:
         client, session, clock = make_client([FakeResponse(429)] * 4)
@@ -126,7 +154,7 @@ class ArxivClientTests(unittest.TestCase):
             client.fetch_feed(params={}, category="cs.AI", offset=0, verbose=False)
 
         self.assertEqual(len(session.calls), 4)
-        self.assertEqual(clock.sleeps, [10.0, 20.0, 40.0])
+        self.assertEqual(clock.sleeps, [60.0, 120.0, 240.0])
 
     def test_timeout_exhaustion_is_fatal(self) -> None:
         client, session, clock = make_client([requests.Timeout("slow")] * 4)
@@ -135,7 +163,7 @@ class ArxivClientTests(unittest.TestCase):
             client.fetch_feed(params={}, category="cs.AI", offset=0, verbose=False)
 
         self.assertEqual(len(session.calls), 4)
-        self.assertEqual(clock.sleeps, [5.0, 10.0, 20.0])
+        self.assertEqual(clock.sleeps, [30.0, 60.0, 120.0])
 
     def test_non_retryable_http_status_fails_immediately(self) -> None:
         client, session, clock = make_client([FakeResponse(400, text="bad query")])
@@ -155,7 +183,7 @@ class ArxivClientTests(unittest.TestCase):
 
         self.assertTrue(root.tag.endswith("feed"))
         self.assertEqual(len(session.calls), 2)
-        self.assertEqual(clock.sleeps, [5.0])
+        self.assertEqual(clock.sleeps, [30.0])
 
     def test_non_atom_success_response_is_retried(self) -> None:
         client, session, clock = make_client(
@@ -165,7 +193,7 @@ class ArxivClientTests(unittest.TestCase):
         client.fetch_feed(params={}, category="cs.AI", offset=0, verbose=False)
 
         self.assertEqual(len(session.calls), 2)
-        self.assertEqual(clock.sleeps, [5.0])
+        self.assertEqual(clock.sleeps, [30.0])
 
     def test_valid_empty_feed_is_a_successful_zero_paper_result(self) -> None:
         client, _, _ = make_client([FakeResponse(200, EMPTY_FEED)])
@@ -178,6 +206,24 @@ class ArxivClientTests(unittest.TestCase):
         )
 
         self.assertEqual(papers, [])
+
+    def test_multi_category_fetch_uses_one_or_query_and_deduplicates_categories(self) -> None:
+        client, session, _ = make_client([FakeResponse(200, ONE_PAPER_FEED)])
+
+        papers = fetch_papers_by_date_multi_category(
+            "2026-08-05",
+            categories=["cs.CL", "cs.AI", "cs.CL"],
+            client=client,
+            verbose=False,
+        )
+
+        self.assertEqual(len(session.calls), 1)
+        self.assertEqual([item["arxiv_id"] for item in papers], ["2608.00001"])
+        self.assertEqual(
+            session.calls[0]["params"]["search_query"],
+            "(cat:cs.AI OR cat:cs.CL) AND "
+            "submittedDate:[202608050000 TO 202608060000]",
+        )
 
 
 if __name__ == "__main__":

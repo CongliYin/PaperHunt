@@ -1,9 +1,10 @@
-"""从 arXiv 官方 API 按日期范围拉取 cs.CV 论文。
+"""从 arXiv 官方 API 按日期范围拉取一个或多个分类的论文。
 
 使用 arXiv 的 Atom API（无需 Python `arxiv` 包，避免依赖问题）。
 查询语法：cat:cs.CV AND submittedDate:[YYYYMMDDHHMM TO YYYYMMDDHHMM]
 """
 import os
+import random
 import re
 import time
 import xml.etree.ElementTree as ET
@@ -15,8 +16,12 @@ import requests
 ARXIV_API_BASE = "https://export.arxiv.org/api/query"
 ARXIV_RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
 DEFAULT_REQUEST_INTERVAL_SECONDS = 3.1
-DEFAULT_MAX_ATTEMPTS = 4
-DEFAULT_TIMEOUT_SECONDS = 60
+DEFAULT_MAX_ATTEMPTS = 6
+DEFAULT_TIMEOUT_SECONDS = 120
+DEFAULT_RATE_LIMIT_BACKOFF_SECONDS = 60.0
+DEFAULT_TRANSIENT_BACKOFF_SECONDS = 30.0
+DEFAULT_MAX_RETRY_DELAY_SECONDS = 900.0
+DEFAULT_RETRY_JITTER_SECONDS = 5.0
 DEFAULT_USER_AGENT = "PaperHunt/1.0 (+https://github.com/CongliYin/PaperHunt)"
 
 # Atom 命名空间
@@ -41,8 +46,13 @@ class ArxivClient:
         max_attempts: int | None = None,
         timeout_seconds: int | None = None,
         user_agent: str | None = None,
+        rate_limit_backoff_seconds: float | None = None,
+        transient_backoff_seconds: float | None = None,
+        max_retry_delay_seconds: float | None = None,
+        retry_jitter_seconds: float | None = None,
         clock: Callable[[], float] = time.monotonic,
         sleep: Callable[[float], None] = time.sleep,
+        random_value: Callable[[], float] = random.random,
     ) -> None:
         self.session = session or requests.Session()
         configured_interval = (
@@ -64,14 +74,43 @@ class ArxivClient:
             else int(timeout_seconds)
         )
         self.user_agent = user_agent or os.getenv("ARXIV_USER_AGENT") or DEFAULT_USER_AGENT
+        self.rate_limit_backoff_seconds = _env_float(
+            "ARXIV_429_BACKOFF_SECONDS",
+            DEFAULT_RATE_LIMIT_BACKOFF_SECONDS,
+            rate_limit_backoff_seconds,
+        )
+        self.transient_backoff_seconds = _env_float(
+            "ARXIV_TRANSIENT_BACKOFF_SECONDS",
+            DEFAULT_TRANSIENT_BACKOFF_SECONDS,
+            transient_backoff_seconds,
+        )
+        self.max_retry_delay_seconds = _env_float(
+            "ARXIV_MAX_RETRY_DELAY_SECONDS",
+            DEFAULT_MAX_RETRY_DELAY_SECONDS,
+            max_retry_delay_seconds,
+        )
+        self.retry_jitter_seconds = _env_float(
+            "ARXIV_RETRY_JITTER_SECONDS",
+            DEFAULT_RETRY_JITTER_SECONDS,
+            retry_jitter_seconds,
+        )
         self._clock = clock
         self._sleep = sleep
+        self._random_value = random_value
         self._last_request_started_at: float | None = None
 
         if self.max_attempts < 1:
             raise ValueError("max_attempts must be at least 1")
         if self.timeout_seconds < 1:
             raise ValueError("timeout_seconds must be at least 1")
+        if self.rate_limit_backoff_seconds < 0:
+            raise ValueError("rate_limit_backoff_seconds must be non-negative")
+        if self.transient_backoff_seconds < 0:
+            raise ValueError("transient_backoff_seconds must be non-negative")
+        if self.max_retry_delay_seconds < 0:
+            raise ValueError("max_retry_delay_seconds must be non-negative")
+        if self.retry_jitter_seconds < 0:
+            raise ValueError("retry_jitter_seconds must be non-negative")
 
     def fetch_feed(
         self,
@@ -155,18 +194,28 @@ class ArxivClient:
                 now = self._clock()
         self._last_request_started_at = now
 
-    @staticmethod
-    def _retry_delay(response, status_code: int | None, attempt: int) -> float:
+    def _retry_delay(self, response, status_code: int | None, attempt: int) -> float:
+        base = (
+            self.rate_limit_backoff_seconds
+            if status_code == 429
+            else self.transient_backoff_seconds
+        )
+        delay = min(base * (2 ** (attempt - 1)), self.max_retry_delay_seconds)
+
         if response is not None:
             raw_retry_after = (getattr(response, "headers", {}) or {}).get("Retry-After")
             if raw_retry_after:
                 try:
-                    return min(max(float(raw_retry_after), 0.0), 300.0)
+                    delay = max(delay, max(float(raw_retry_after), 0.0))
                 except (TypeError, ValueError):
                     pass
 
-        base = 10.0 if status_code == 429 else 5.0
-        return min(base * (2 ** (attempt - 1)), 300.0)
+        jitter = self.retry_jitter_seconds * min(max(self._random_value(), 0.0), 1.0)
+        return delay + jitter
+
+
+def _env_float(name: str, default: float, explicit: float | None) -> float:
+    return float(os.getenv(name, str(default))) if explicit is None else float(explicit)
 
 
 def _response_detail(response) -> str:
@@ -277,7 +326,23 @@ def fetch_papers_by_date(
         min_interval_seconds=max(float(sleep_between_pages), DEFAULT_REQUEST_INTERVAL_SECONDS)
     )
 
-    # 解析日期
+    search_query = _date_search_query(start_date, end_date, [category])
+    return _fetch_papers_for_query(
+        search_query,
+        category_label=category,
+        max_results_per_page=max_results_per_page,
+        hard_limit=hard_limit,
+        verbose=verbose,
+        client=client,
+    )
+
+
+def _date_search_query(
+    start_date: str,
+    end_date: Optional[str],
+    categories: Sequence[str],
+) -> str:
+    """Build one date-bounded query for one or more categories."""
     start_dt = datetime.strptime(start_date, "%Y-%m-%d").replace(tzinfo=timezone.utc)
     if end_date is None:
         end_dt = start_dt + timedelta(days=1)
@@ -290,9 +355,25 @@ def fetch_papers_by_date(
     start_str = start_dt.strftime("%Y%m%d%H%M")
     end_str = end_dt.strftime("%Y%m%d%H%M")
 
-    search_query = (
-        f"cat:{category} AND submittedDate:[{start_str} TO {end_str}]"
-    )
+    normalized_categories = _normalize_categories(categories)
+    if not normalized_categories:
+        normalized_categories = ["cs.CV"]
+    category_query = " OR ".join(f"cat:{category}" for category in normalized_categories)
+    if len(normalized_categories) > 1:
+        category_query = f"({category_query})"
+    return f"{category_query} AND submittedDate:[{start_str} TO {end_str}]"
+
+
+def _fetch_papers_for_query(
+    search_query: str,
+    *,
+    category_label: str,
+    max_results_per_page: int,
+    hard_limit: Optional[int],
+    verbose: bool,
+    client: ArxivClient,
+) -> List[dict]:
+    """Fetch all pages for a prepared arXiv query."""
 
     all_papers: List[dict] = []
     start_idx = 0
@@ -308,7 +389,7 @@ def fetch_papers_by_date(
 
         root = client.fetch_feed(
             params=params,
-            category=category,
+            category=category_label,
             offset=start_idx,
             verbose=verbose,
         )
@@ -359,31 +440,26 @@ def fetch_papers_by_date_multi_category(
         min_interval_seconds=max(float(sleep_between_pages), DEFAULT_REQUEST_INTERVAL_SECONDS)
     )
 
+    normalized_categories = _normalize_categories(categories) or ["cs.CV"]
+    if verbose:
+        print(f"  [arxiv] combined categories={', '.join(normalized_categories)}")
+    papers = _fetch_papers_for_query(
+        _date_search_query(start_date, end_date, normalized_categories),
+        category_label="|".join(normalized_categories),
+        max_results_per_page=max_results_per_page,
+        hard_limit=hard_limit,
+        verbose=verbose,
+        client=client,
+    )
+
     by_id: dict[str, dict] = {}
-    seen_categories: set[str] = set()
-    for category in categories:
-        category = str(category).strip()
-        if not category or category in seen_categories:
-            continue
-        seen_categories.add(category)
-        if verbose:
-            print(f"  [arxiv] category={category}")
-        remaining = None if hard_limit is None else max(hard_limit - len(by_id), 0)
-        if remaining == 0:
-            break
-        papers = fetch_papers_by_date(
-            start_date,
-            end_date,
-            category=category,
-            max_results_per_page=max_results_per_page,
-            hard_limit=remaining,
-            sleep_between_pages=sleep_between_pages,
-            verbose=verbose,
-            client=client,
-        )
-        for paper in papers:
-            arxiv_id = re.sub(r"v\d+$", "", paper.get("arxiv_id", ""))
-            if arxiv_id and arxiv_id not in by_id:
-                by_id[arxiv_id] = paper
+    for paper in papers:
+        arxiv_id = re.sub(r"v\d+$", "", paper.get("arxiv_id", ""))
+        if arxiv_id and arxiv_id not in by_id:
+            by_id[arxiv_id] = paper
 
     return sorted(by_id.values(), key=lambda p: p.get("published_at", ""))
+
+
+def _normalize_categories(categories: Sequence[str]) -> list[str]:
+    return sorted({str(category).strip() for category in categories if str(category).strip()})

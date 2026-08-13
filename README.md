@@ -29,8 +29,12 @@ Non-secret runtime env:
 | `FIGURE_MAX_COUNT` | `4` (`2` in CI) | max detail figures per paper; lower values reduce Blob advanced operations |
 | `STORAGE_BACKEND` | `blob` | `blob` or `repo` |
 | `ARXIV_REQUEST_INTERVAL_SECONDS` | `3.1` | minimum interval between arXiv request starts |
-| `ARXIV_MAX_ATTEMPTS` | `4` | maximum attempts for transient arXiv failures |
-| `ARXIV_TIMEOUT_SECONDS` | `60` | timeout for each arXiv request |
+| `ARXIV_MAX_ATTEMPTS` | `6` | maximum attempts for transient arXiv failures |
+| `ARXIV_TIMEOUT_SECONDS` | `120` | timeout for each arXiv request |
+| `ARXIV_429_BACKOFF_SECONDS` | `60` | initial HTTP 429 retry delay; doubles per attempt |
+| `ARXIV_TRANSIENT_BACKOFF_SECONDS` | `30` | initial timeout, 5xx, or malformed-response retry delay |
+| `ARXIV_MAX_RETRY_DELAY_SECONDS` | `900` | maximum exponential retry delay before jitter |
+| `ARXIV_RETRY_JITTER_SECONDS` | `5` | random delay added to each retry |
 | `ARXIV_USER_AGENT` | PaperHunt repository URL | identifiable user agent sent to arXiv |
 | `ARXIV_RAW_CACHE_DIR` | `tmp/arxiv-raw` | persistent per-date, per-category raw metadata cache |
 | `ARXIV_REFRESH` | unset | set to `1`, `true`, or `yes` to refetch every required category |
@@ -99,8 +103,8 @@ Create a public Vercel Blob store and copy its `BLOB_READ_WRITE_TOKEN` into GitH
 
 ## Notes
 
-- Each complete arXiv category is stored independently by fetch profile and date range. GitHub Actions restores this raw metadata across runs, so same-date reruns do not query arXiv again; adding a category fetches only the missing category. Selection rules, LLM prompts, and ranking changes always rerun downstream processing against the raw snapshot. Use `--refresh-arxiv` or the manual workflow's `refresh_arxiv` input to bypass reusable raw entries.
-- Requests are sequential and start at least 3.1 seconds apart. HTTP 429/5xx responses, timeouts, connection errors, and malformed XML are retried with bounded backoff. If any required category still fails, the whole job exits non-zero before domain processing, so incomplete data is never committed. Categories completed before the failure remain reusable, while the combined daily bundle is written only after every required category is complete. A valid HTTP 200 response with no entries remains a successful zero-paper day.
+- Each complete arXiv category is stored independently by fetch profile and date range. GitHub Actions restores this raw metadata across runs, so same-date reruns do not query arXiv again. Missing categories are fetched together in one OR query and partitioned locally into reusable category files. Selection rules, LLM prompts, and ranking changes always rerun downstream processing against the raw snapshot. Use `--refresh-arxiv` or the manual workflow's `refresh_arxiv` input to bypass reusable raw entries.
+- Requests are sequential and start at least 3.1 seconds apart. HTTP 429/5xx responses, timeouts, connection errors, and malformed XML are retried with minute-scale bounded backoff. If the fetch still fails, the whole job exits non-zero before domain processing, so incomplete data is never committed. An empty individual category is valid when the daily response contains papers elsewhere; an all-category empty response is treated as unreliable and is neither published nor cached.
 - DocLayout-YOLO is AGPL-3.0. This project uses it in an offline CI batch pipeline to generate static images. The Vercel frontend does not serve the model or expose model inference. Re-check licensing before closed-source or commercial use of the pipeline code.
 - `tmp/` and model caches are intentionally ignored. Phase intermediates under `reports/*/*/tmp/` are kept during runs for re-runs and debugging but should not be committed.
 - Blob cleanup is available through `FigureStorage.delete_older_than(days)`, which lists blobs under the configured prefix and deletes older URLs through the Vercel Blob HTTP API.
