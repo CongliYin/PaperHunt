@@ -27,23 +27,24 @@
     "真实生产评估暴露了设计阶段难以发现的问题，包括子租户作用域绕过和近重复过滤与矛盾检测之间的流水线顺序冲突。"
   ],
   "llm_assessment": {
-    "novelty": 0.8,
+    "domain_fit": 0.93,
+    "novelty": 0.78,
     "problem_significance": 0.9,
-    "potential_impact": 0.89,
-    "paradigm_shift": 0.83,
-    "lasting_value": 0.9,
-    "llm_avg": 0.8640000000000001,
-    "comment": "Governed shared memory is highly relevant infrastructure work because it exposes production failure modes and defines reusable governance primitives.",
-    "comment_zh": "受治理的共享记忆是非常相关的基础设施工作，因为它揭示了生产故障模式并定义了可复用的治理原语。"
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.77,
+    "lasting_value": 0.85,
+    "llm_avg": 0.8320000000000001,
+    "comment": "A strong Agent-memory systems paper that treats shared multi-agent memory as a governed lifecycle service with scoped retrieval, supersession, provenance, and propagation primitives.",
+    "comment_zh": "这是一篇很强的 Agent Memory 系统论文，将多智能体共享记忆建模为包含范围检索、时序取代、溯源和传播治理的生命周期服务。"
   },
   "scores": {
-    "topic_relevance": 0.88,
+    "topic_relevance": 0.4,
     "open_source": 0.0,
     "community_heat": 0.0,
     "author_reputation": 0.3,
     "venue_signal": 0.0,
     "generality": 0.9,
-    "llm_assessment": 0.8640000000000001,
+    "llm_assessment": 0.8320000000000001,
     "domain_multiplier": 1.0
   },
   "enriched": {
@@ -60,5 +61,6 @@
     "last_author_found": false,
     "last_author_affiliations": []
   },
-  "figures": []
+  "figures": [],
+  "strategic_category": "agent_context"
 }
