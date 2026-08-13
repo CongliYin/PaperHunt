@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2608.11727",
+  "title": "Harness-IF: Evaluating Instruction Following Across Instruction Surfaces in Coding Agents",
+  "title_zh": "Harness-IF：评估编码智能体在不同指令表面上的指令遵循能力",
+  "authors": [
+    "Zining Huang",
+    "Haoran Que",
+    "Hong Zeng",
+    "Ge Zhang",
+    "Zuo Wang",
+    "Jin Chen",
+    "Haodong Wang",
+    "Zhongfei Hou",
+    "Changxin Pu",
+    "Shen Yan",
+    "Wenhao Huang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-12T07:07:57Z",
+  "abs_url": "https://arxiv.org/abs/2608.11727v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.11727",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "When a coding agent obeys a rule, it may simply have been going to do that anyway. Existing instruction-following benchmarks cannot tell the difference: they concentrate rules in the user turn, while coding-agent benchmarks emphasize final task success. We introduce Harness-IF, which scores operational rules one at a time from execution evidence: 60 realistic multi-turn coding items drawn from a 642-rule library, 256 rules receiving verdicts, placed on the five configurable surfaces a deployed agent reads. To separate compliance from coincidence we introduce Against-Prior Accuracy (AP-Acc), which scores only rules labeled as opposing unprompted defaults, observed by re-running tasks with the rule withheld across nine probe builds and curated otherwise. Across 12 frontier models, accuracy spans 72.1-85.9% and AP-Acc 66.1-78.6%; every model is worse on against-prior rules, by 3.6 to 7.4 points (mean 5.81), and the direction survives a common-support analysis with item-clustered intervals. Aggregate scores therefore overstate compliance by a model-specific margin: prior control leaves the top build unchanged and exchanges three adjacent rank pairs. A counterbalanced conflict pilot on nine separate builds adds a second result: pooled precedence does not follow prompt depth, with system prompts, project files, and user instructions ahead of tool and skill descriptions.",
+  "abstract_zh": "本文指出，编码智能体看似遵循某条规则时，可能只是本来就会这样做；现有指令遵循基准通常把规则集中在用户轮次中，而编码智能体基准更关注最终任务成功，难以区分“真正遵循”与“行为巧合”。为此，作者提出 Harness-IF：一个从执行证据出发、逐条评估操作性规则的基准，包含 60 个真实多轮编码任务，规则来自 642 条规则库，其中 256 条规则获得判定，并被放置在部署智能体可读取的五类可配置指令表面上。为分离合规与先验行为，论文引入 Against-Prior Accuracy（AP-Acc），只评估那些被标注为“与无提示默认行为相反”的规则；这些标签通过在九个探测构建中去除规则后重新运行任务并结合人工整理获得。在 12 个前沿模型上，整体准确率为 72.1% 到 85.9%，AP-Acc 为 66.1% 到 78.6%；所有模型在 against-prior 规则上表现更差，下降 3.6 到 7.4 个百分点，平均下降 5.81 个百分点，且该趋势在 common-support 分析和按 item 聚类的区间估计中仍成立。因此，聚合得分会以模型相关的幅度高估真实指令遵循能力；控制先验后，第一名构建不变，但有三组相邻排名发生交换。另一个在九个独立构建上的 counterbalanced conflict pilot 发现，指令优先级并不简单遵循 prompt 深度：system prompts、project files 和 user instructions 的优先级高于 tool 与 skill descriptions。",
+  "key_points_zh": [
+    "提出 Harness-IF，用 60 个真实多轮编码任务评估编码智能体对操作性规则的逐条遵循，而不只看最终任务成功。",
+    "规则来自 642 条规则库，其中 256 条规则被判定，并覆盖部署智能体会读取的五类 instruction surfaces。",
+    "引入 Against-Prior Accuracy（AP-Acc），专门衡量与模型无提示默认行为相反的规则，从而区分真实遵循与行为巧合。",
+    "在 12 个前沿模型上，整体准确率为 72.1%–85.9%，AP-Acc 为 66.1%–78.6%；所有模型在 against-prior 规则上均下降，平均降幅 5.81 个百分点。",
+    "冲突实验显示指令优先级不完全由 prompt 深度决定：system prompts、project files、user instructions 通常强于 tool 和 skill descriptions。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.78,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.82,
+    "llm_avg": 0.796,
+    "comment": "A strong in-scope coding-agent evaluation harness that isolates operational instruction compliance across deployment surfaces using execution evidence and prior-controlled scoring.",
+    "comment_zh": "这是一篇高度契合领域的代码智能体评测框架论文，通过执行证据和先验控制评分来隔离不同部署表面上的操作指令遵循能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.7200000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.796,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.11727/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.11727/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.575
+    }
+  ]
+}

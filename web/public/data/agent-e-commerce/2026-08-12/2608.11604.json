@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.11604",
+  "title": "Learning from Online User Feedback for Shopping Agents",
+  "title_zh": "从在线用户反馈中学习的购物智能体",
+  "authors": [
+    "Haobo Zhang",
+    "Kelong Mao",
+    "Sulong Xu",
+    "Simiu Gu",
+    "Zhicheng Dou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-12T03:24:44Z",
+  "abs_url": "https://arxiv.org/abs/2608.11604v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.11604",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model-based shopping agents are increasingly deployed in real-world e-commerce platforms, generating massive amounts of user interaction logs that provide valuable supervision for improving these agents. However, existing approaches primarily rely on offline training signals, such as user-item interactions or synthetic preference data, while largely overlooking the rich supervision contained in users' natural conversational feedback. Moreover, the available online feedback is heterogeneous, sparse, and noisy, making it difficult to transform into reliable learning signals automatically. To address these challenges, we propose LOFA, a framework that enables shopping agents to learn directly from real online interaction logs without human annotation. LOFA combines reinforcement learning over verifiable purchase outcomes with feedback-aware on-policy distillation, which identifies users'in-dialogue directives and converts them into dense token-level supervision. These complementary objectives capture both collaborative behavioral patterns and user-specific preferences. Extensive experiments on real-world e-commerce logs demonstrate that LOFA consistently improves recommendation quality, response helpfulness, and user-satisfaction alignment over strong baselines, highlighting the effectiveness of learning shopping agents from real online user feedback.",
+  "abstract_zh": "基于 Large Language Model 的购物智能体正被部署到真实电商平台，并产生大量用户交互日志，这些日志为智能体优化提供了有价值的监督信号。现有方法多依赖离线训练信号，如 user-item 交互或合成偏好数据，却较少利用用户在自然对话中的反馈。同时，在线反馈具有异质、稀疏、噪声大等特点，难以自动转化为可靠学习信号。为此，论文提出 LOFA，一个无需人工标注、可直接从真实在线交互日志中学习的框架。LOFA 结合了基于可验证购买结果的强化学习，以及 feedback-aware on-policy distillation：后者识别用户在对话中的指令性反馈，并将其转化为密集的 token-level 监督。两类目标互补地捕获协同行为模式与用户个性化偏好。真实电商日志上的实验表明，LOFA 相比强基线稳定提升推荐质量、回复有用性和用户满意度对齐能力。",
+  "key_points_zh": [
+    "提出 LOFA 框架，使 LLM-based shopping agents 能直接利用真实在线交互日志学习，无需人工标注。",
+    "将可验证的购买结果作为强化学习信号，学习用户群体层面的协同行为模式。",
+    "设计 feedback-aware on-policy distillation，自动识别对话中的用户指令性反馈，并转化为 token-level 密集监督。",
+    "同时建模长期行为结果与对话内即时反馈，以提升推荐质量、回复有用性和用户满意度对齐。",
+    "在真实世界电商日志上的实验显示，LOFA 相比强基线取得一致改进。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.82,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8560000000000001,
+    "comment": "A highly relevant shopping-agent paper that directly improves e-commerce recommendation and assistance using real online conversational feedback.",
+    "comment_zh": "这是一篇高度契合领域的购物智能体论文，利用真实在线对话反馈直接提升电商推荐与购物辅助。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8560000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.11604/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.11604/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.972
+    }
+  ]
+}

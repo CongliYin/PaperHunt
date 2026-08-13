@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.11949",
+  "title": "ExRole: From Team Trajectories to Executable Roles in Multi-Agent Language Models",
+  "title_zh": "ExRole：从团队轨迹到多智能体语言模型中的可执行角色",
+  "authors": [
+    "Zhou Liu",
+    "Chaoyang Han",
+    "Zewei Pan",
+    "Zeli Su",
+    "Wentao Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-12T11:35:31Z",
+  "abs_url": "https://arxiv.org/abs/2608.11949v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.11949",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Roles provide an interpretable interface for organizing language-model agents, yet most multi-agent systems treat them as hand-written prompt labels disconnected from learned behavior and parameter updates. We argue that a useful role should instead be an executable control variable: it should summarize behavior predictive of future utility, guide subsequent interaction, and identify the trainable capacity responsible for that behavior. We introduce ExRole, a trajectory-to-role framework that learns future-aware role prototypes from prefix-local team traces, resolves them into readable instructions and token-aligned role markers, and optionally routes shared LoRA rank slots with turn-aligned credit. Across MuSiQue and 2WikiMultiHopQA, ExRole improves over single-agent search by 15.0/14.4 and 13.5/16.1 EM/F1 points, respectively. Against the strongest non-ExRole controls, the corresponding gains remain 11.5/11.6 and 7.7/9.7 points. Across both benchmarks, the controlled results consistently favor trajectory-induced role conditioning over role-free, manual, random, and shuffled alternatives. Role-Agent-Turn interventions further show that the induced roles capture transferable behavioral specialization beyond fixed agent identities or turn positions.",
+  "abstract_zh": "本文提出 ExRole，一个将多智能体团队交互轨迹转化为“可执行角色”的框架。与传统多智能体系统中依赖人工编写、与实际行为和参数更新脱节的角色标签不同，ExRole 将角色视为一种可解释的控制变量：它能够概括对未来收益有预测力的行为，指导后续交互，并定位负责该行为的可训练模型容量。具体而言，ExRole 从局部前缀团队轨迹中学习面向未来的角色原型，将其解析为可读指令和 token 对齐的角色标记，并可选地结合按轮次对齐的信用分配来路由共享 LoRA rank slots。在 MuSiQue 和 2WikiMultiHopQA 上，ExRole 相比单智能体搜索分别提升 15.0/14.4 和 13.5/16.1 个 EM/F1 点；相较最强的非 ExRole 对照方法，仍分别提升 11.5/11.6 和 7.7/9.7 个点。实验表明，由轨迹诱导的角色条件化稳定优于无角色、人工角色、随机角色和打乱角色等替代方案。Role-Agent-Turn 干预进一步显示，学习到的角色捕获了可迁移的行为专门化，而不仅仅依赖固定智能体身份或轮次位置。",
+  "key_points_zh": [
+    "提出 ExRole，将角色从人工 prompt 标签升级为可执行控制变量，用于预测未来效用、指导交互并关联可训练参数容量。",
+    "方法从 prefix-local team traces 中学习 future-aware role prototypes，并解析为可读角色指令与 token-aligned role markers。",
+    "支持可选的 LoRA rank slots 路由机制，通过 turn-aligned credit 将角色行为与参数更新更紧密绑定。",
+    "在 MuSiQue 与 2WikiMultiHopQA 多跳问答任务上，ExRole 显著优于单智能体搜索及多种非 ExRole 对照方法。",
+    "Role-Agent-Turn 干预实验表明，诱导角色具有跨智能体身份和轮次位置的可迁移行为专门化能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.76,
+    "novelty": 0.74,
+    "problem_significance": 0.7,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.67,
+    "llm_avg": 0.6900000000000001,
+    "comment": "The trajectory-to-executable-role mechanism is relevant to agent orchestration and training for search-style multi-agent LLM systems, though its evidence is still concentrated on QA benchmarks.",
+    "comment_zh": "其从轨迹学习可执行角色的机制与搜索式多智能体 LLM 系统的编排和训练相关，但实验证据仍主要集中在问答基准上。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6900000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.11949/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.11949/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "arxiv_id": "2608.11552",
+  "title": "Beyond Single-Turn Confidence: Trajectory-Adapted Uncertainty Quantification for LLM Agents",
+  "title_zh": "超越单轮置信度：面向 LLM Agent 的轨迹自适应不确定性量化",
+  "authors": [
+    "Dylan Bouchard",
+    "Mohit Singh Chauhan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-12T01:39:28Z",
+  "abs_url": "https://arxiv.org/abs/2608.11552v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.11552",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Uncertainty quantification (UQ) methods for language models are typically evaluated on single-turn outputs, where uncertainty is attached to one generated answer. For LLM agents, however, the unit of observation is an interactive trajectory, where the model can ask clarifying questions, call tools, update state, and make intermediate decisions whose errors propagate to the final outcome. We study whether three common families of single-turn UQ methods transfer to this setting. Across five LLMs and four multi-turn tool-use datasets from BFCL-v4 and $τ^2$-bench, we evaluate white-box scorers based on action-token probabilities, black-box consistency scorers based on resampled trajectories, and reflexive scorers based on model self-assessment of the trajectory. We find that transfer is often useful but uneven. Token-probability scores are highly sensitive to the choice of aggregator used across turns, reflexive scores provide the strongest low-cost baseline in most evaluated settings, and black-box self-consistency is often the strongest UQ family, with trajectory-equivalence and action-set consistency typically ranking highest among its variants. These results suggest that UQ methods developed for single generations should be revalidated at the trajectory level, with careful attention to the consistency measurement, aggregator choice, and computational budget.",
+  "abstract_zh": "现有语言模型不确定性量化（UQ）方法通常在单轮输出上评估，即为单个生成答案赋予不确定性。然而，对于 LLM agents，观测单位是交互式轨迹：模型可能提出澄清问题、调用工具、更新状态，并做出中间决策，而这些错误会传播到最终结果。本文研究三类常见单轮 UQ 方法是否能迁移到这一设定。作者在来自 BFCL-v4 和 τ²-bench 的四个多轮工具使用数据集上，跨五个 LLM 评估了：基于 action-token 概率的 white-box 评分器、基于重采样轨迹的 black-box 一致性评分器，以及基于模型自我评估轨迹的 reflexive 评分器。实验发现，单轮 UQ 的迁移通常有用但表现不均衡：token 概率分数对跨轮聚合器选择高度敏感；reflexive 分数在多数设置下提供了最强的低成本基线；black-box self-consistency 往往是最强的 UQ 方法族，其中 trajectory-equivalence 和 action-set consistency 通常排名最高。结果表明，面向单次生成开发的 UQ 方法需要在轨迹层面重新验证，并谨慎考虑一致性度量、聚合器选择和计算预算。",
+  "key_points_zh": [
+    "论文将不确定性量化（UQ）的评估对象从单轮回答扩展到 LLM Agent 的多轮交互轨迹，强调工具调用、状态更新和中间决策错误会影响最终结果。",
+    "系统比较三类 UQ 方法：white-box action-token 概率评分、black-box 重采样轨迹一致性评分，以及 reflexive 模型自我评估评分。",
+    "实验覆盖五个 LLM 与 BFCL-v4、τ²-bench 中的四个多轮工具使用数据集，展示单轮 UQ 方法迁移到 agent 轨迹时效果不稳定。",
+    "token-probability 方法对跨轮聚合方式非常敏感；reflexive 方法通常是成本较低且表现较强的基线。",
+    "black-box self-consistency 整体最强，尤其是 trajectory-equivalence 与 action-set consistency 变体，说明轨迹级一致性度量对 agent UQ 至关重要。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.82,
+    "novelty": 0.58,
+    "problem_significance": 0.78,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.7,
+    "llm_avg": 0.666,
+    "comment": "This is a useful trajectory-level evaluation study for tool-use agents, clarifying how uncertainty methods should be adapted to multi-turn agent rollouts.",
+    "comment_zh": "这是一项有价值的工具使用智能体轨迹级评估研究，说明了不确定性方法应如何适配多轮智能体执行轨迹。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.666,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.11552/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.964
+    }
+  ]
+}

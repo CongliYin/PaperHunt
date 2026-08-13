@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2608.11879",
+  "title": "Total Recall at What Cost? Benchmarking the Serving Cost of Agentic Memory Systems",
+  "title_zh": "追求完全召回的代价？Agentic Memory Systems 服务成本基准测试",
+  "authors": [
+    "Natchanon Pollertlam",
+    "Witchayut Kornsuwannawit"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-12T10:05:29Z",
+  "abs_url": "https://arxiv.org/abs/2608.11879v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.11879",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-running conversational agents increasingly rely on a memory system to avoid resending the whole conversation each turn, yet how much that costs to serve has received little systematic benchmarking. We compare three memory systems (Mem0, Hindsight, and Mastra Observational Memory) against two reference strategies -- a fixed-size rolling window and resubmitting the full transcript -- across two backbones and conversations of up to 400 turns, pairing every cost measurement with answer accuracy on 665 LoCoMo questions. First, a memory system's serving cost cannot be predicted from conversation length and message size alone: a regression that tracks the two reference strategies closely misses the memory systems by 18-69%, their cost driven instead by internal memory behavior. Second, a break-even analysis shows that whether -- and when -- a memory system becomes cheaper to serve than the full transcript is highly sensitive to the system and the backbone, from the first tens of turns for the cheapest to never within 400 turns for the most expensive. Third, no system wins on both axes: accuracy spans 21-54%, and the backbone choice drives cost as much as the memory system does.",
+  "abstract_zh": "长程对话智能体越来越依赖 memory system，以避免在每轮对话中重复提交完整上下文，但其在线服务成本此前缺乏系统性评测。本文比较了三种 memory systems：Mem0、Hindsight 和 Mastra Observational Memory，并将其与两种参考策略——固定大小 rolling window 与每轮重提交 full transcript——进行对照。实验覆盖两个 backbone、最长 400 轮对话，并在 665 个 LoCoMo 问题上同时测量服务成本与回答准确率。研究发现：第一，仅凭对话长度和消息大小无法预测 memory system 的服务成本；虽然回归模型能较好拟合两种参考策略，但对 memory systems 的误差达 18–69%，其成本主要由系统内部记忆行为驱动。第二，break-even 分析显示，memory system 何时比 full transcript 更便宜高度依赖具体系统和 backbone：最便宜者在几十轮内即可达到成本优势，最昂贵者在 400 轮内仍无法 break even。第三，没有系统能同时在成本与准确率上胜出；准确率范围为 21–54%，且 backbone 选择对成本的影响不亚于 memory system 本身。",
+  "key_points_zh": [
+    "本文系统评测 Mem0、Hindsight、Mastra Observational Memory 三种 agentic memory systems 的服务成本，并与 rolling window 和 full transcript 两种基线比较。",
+    "实验表明，memory system 的成本不能仅由对话长度和消息大小预测；内部 memory 写入、检索、更新等行为显著影响真实 serving cost。",
+    "不同系统的成本 break-even 点差异很大：有的在几十轮后即比 full transcript 更便宜，有的到 400 轮仍不划算。",
+    "准确率与成本之间不存在单一最优解；各系统在 LoCoMo 上准确率仅为 21–54%，且 backbone 选择同样强烈影响成本。",
+    "论文强调，评估长程对话 agent 的 memory 方案时，必须同时报告 serving cost 与 answer accuracy，而不能只看上下文压缩或召回能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.84,
+    "novelty": 0.55,
+    "problem_significance": 0.74,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.66,
+    "llm_avg": 0.61,
+    "comment": "A useful Agent-memory benchmarking paper focused on serving-cost tradeoffs rather than new memory mechanisms or lifecycle operations.",
+    "comment_zh": "这是一篇有用的 Agent Memory 基准评测论文，重点在服务成本权衡，而不是新的记忆机制或生命周期操作。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.61,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.11879/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.909
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.11879/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.965
+    }
+  ]
+}

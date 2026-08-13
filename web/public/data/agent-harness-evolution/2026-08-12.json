@@ -1,0 +1,86 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-08-12",
+  "generated_at": "2026-08-13T20:53:44Z",
+  "papers": [
+    {
+      "arxiv_id": "2608.11727",
+      "title": "Harness-IF: Evaluating Instruction Following Across Instruction Surfaces in Coding Agents",
+      "title_zh": "Harness-IF：评估编码智能体在不同指令表面上的指令遵循能力",
+      "authors": [
+        "Zining Huang",
+        "Haoran Que",
+        "Hong Zeng",
+        "Ge Zhang",
+        "Zuo Wang",
+        "Jin Chen",
+        "Haodong Wang",
+        "Zhongfei Hou",
+        "Changxin Pu",
+        "Shen Yan",
+        "Wenhao Huang"
+      ],
+      "total_score": 0.5868000000000001,
+      "scores": {
+        "topic_relevance": 0.7200000000000001,
+        "llm_assessment": 0.796,
+        "domain_fit": 0.96,
+        "other": 0.2
+      },
+      "tags": [
+        "production agent platform"
+      ],
+      "tldr_zh": "编码智能体指令遵循被聚合分数高估",
+      "detail_file": "agent-harness-evolution/2026-08-12/2608.11727.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.11727/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.11949",
+      "title": "ExRole: From Team Trajectories to Executable Roles in Multi-Agent Language Models",
+      "title_zh": "ExRole：从团队轨迹到多智能体语言模型中的可执行角色",
+      "authors": [
+        "Zhou Liu",
+        "Chaoyang Han",
+        "Zewei Pan",
+        "Zeli Su",
+        "Wentao Zhang"
+      ],
+      "total_score": 0.41100000000000003,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.6900000000000001,
+        "domain_fit": 0.76,
+        "other": 0.2
+      },
+      "tags": [
+        "multi agent workflows"
+      ],
+      "tldr_zh": "从轨迹学习可执行角色，提升多智能体推理",
+      "detail_file": "agent-harness-evolution/2026-08-12/2608.11949.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.11949/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.11552",
+      "title": "Beyond Single-Turn Confidence: Trajectory-Adapted Uncertainty Quantification for LLM Agents",
+      "title_zh": "超越单轮置信度：面向 LLM Agent 的轨迹自适应不确定性量化",
+      "authors": [
+        "Dylan Bouchard",
+        "Mohit Singh Chauhan"
+      ],
+      "total_score": 0.3788,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.666,
+        "domain_fit": 0.82,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "LLM Agent不确定性需按轨迹重评估",
+      "detail_file": "agent-harness-evolution/2026-08-12/2608.11552.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.11552/thumb.webp"
+    }
+  ]
+}

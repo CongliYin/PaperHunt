@@ -1,0 +1,68 @@
+{
+  "arxiv_id": "2608.11654",
+  "title": "Towards a Formal Definition of Agent Memory: Basis, Span, Optimality, and the Sequential Memory Problem",
+  "title_zh": "迈向 Agent Memory 的形式化定义：基、张成、最优性与序贯记忆问题",
+  "authors": [
+    "Hongyao Tang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-12T04:54:26Z",
+  "abs_url": "https://arxiv.org/abs/2608.11654v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.11654",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Despite the wide deployment of memory in large-model agents, there is no unified formal account of what a memory is or when it is optimal. This paper takes a first step toward this account. The central idea is that memory is a basis, knowledge is its span, and answerability is a coverage problem: an agent stores events extracted from a material; a generation operator turns any event set into the knowledge it entails; and a query is answerable exactly when some single item in the span covers it. The optimal memory is then the capacity-constrained maximizer of expected coverage, and its value traces a utility--capacity frontier, the common yardstick on which memory systems can be compared. Next, we consider noise in the memory and discuss coverage versus precision under it: a memory may store false claims, so the write policy must infer the truth of what it stores. Drawing an analogy with biological memory, which is formed continuously through ongoing experience, we formalize the continual agent-memory problem in a sequential MDP that covers multiple levels, where memory is the state, writing is the action, and the utility settled at query time is the delayed reward that drives learning. To make the framework concrete, we instantiate it on Homer's \\emph{Odyssey}, turning the frontier, the compression zone, and the divergence of coverage from precision into concrete numbers. Finally, we position existing systems within the framework, making ``how good is a memory'' measurable and recasting the open problems of constructing and learning agent memory as concrete research questions.",
+  "abstract_zh": "本文针对大模型智能体中广泛使用但缺乏统一理论定义的 memory，提出一个初步形式化框架。核心观点是：memory 是“基”（basis），knowledge 是其“张成空间”（span），answerability 可被建模为 coverage 问题。智能体从材料中抽取并存储 events，generation operator 将任意 event 集合映射为其蕴含的 knowledge；当 span 中存在某个单一条目能够覆盖 query 时，该 query 即为可回答。由此，最优 memory 被定义为容量约束下最大化期望 coverage 的解，其效用随容量变化形成 utility--capacity frontier，可作为比较不同 memory 系统的统一尺度。论文进一步讨论带噪 memory 中 coverage 与 precision 的权衡：memory 可能存储错误 claims，因此写入策略必须推断写入内容的真实性。受生物记忆连续形成机制启发，作者将 continual agent-memory problem 形式化为一个多层次 sequential MDP，其中 memory 是 state，writing 是 action，query 时确定的 utility 是 delayed reward。为使框架具体化，论文在 Homer's Odyssey 上实例化该理论，量化 frontier、compression zone 以及 coverage 与 precision 的分化。最后，论文将现有 memory 系统放入该框架中，使“memory 有多好”成为可度量问题，并把构建与学习 agent memory 的开放问题转化为明确研究问题。",
+  "key_points_zh": [
+    "提出 memory-as-basis 框架：memory 被视为 basis，knowledge 是由 generation operator 从 memory 张成的 span，query answerability 被定义为 coverage。",
+    "将最优 memory 定义为容量约束下最大化期望 coverage 的解，并用 utility--capacity frontier 作为比较不同 agent memory 系统的统一指标。",
+    "讨论带噪 memory 场景下 coverage 与 precision 的分离，指出写入策略不仅要覆盖更多 query，还需判断存储 claims 的真实性。",
+    "将持续记忆学习建模为 sequential MDP：memory 为 state，writing 为 action，query-time utility 为 delayed reward，从而形式化 continual agent-memory problem。",
+    "在 Homer's Odyssey 上进行实例化，给出 frontier、compression zone 以及 coverage-precision divergence 的具体量化结果，并据此定位现有 memory 系统。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.82,
+    "problem_significance": 0.88,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8160000000000001,
+    "comment": "A strong formal Agent-memory paper that frames memory capacity, coverage, precision, and sequential writing as measurable optimization problems.",
+    "comment_zh": "这是一篇很强的 Agent Memory 形式化工作，将记忆容量、覆盖率、精确性和序贯写入表述为可度量的优化问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2794153127047222,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.8160000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.11654/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}
