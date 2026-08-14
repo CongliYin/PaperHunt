@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2608.12764",
+  "title": "Beyond Outcome Rewards: Step-Level Self-Distilled Policy Optimization for Deep Search Agents",
+  "title_zh": "超越结果奖励：面向深度搜索智能体的步骤级自蒸馏策略优化",
+  "authors": [
+    "Haoze Wu",
+    "Chuqiao Kuang",
+    "Tianyi Zhuang",
+    "Xiaoguang Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-13T03:13:18Z",
+  "abs_url": "https://arxiv.org/abs/2608.12764v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.12764",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Deep search agents operate over trajectories spanning dozens of steps, yet standard reinforcement learning provides only a single outcome reward per trajectory, which is far too sparse for effective credit assignment. On-policy self-distillation (OPSD) addresses this by using the model's own logits as dense token-level teachers, but extending it to search agents introduces a fundamental tension: the teacher, having access to privileged information such as the correct answer, produces a distribution that differs systematically from the student's exploration-based reasoning, and naive distillation causes the student to inherit this information asymmetry rather than learn better search strategies. We resolve this tension through two contributions. First, we construct Evidence Anchors, which are concise, step-level evidence snippets extracted from the web, as privileged information that captures key reasoning steps without revealing the entire answer path. Second, we propose Step-Level Self-Distilled Policy Optimization (SSPO), which converts teacher-student disagreement into step-level advantage weights within GRPO, applied exclusively to incorrect trajectories. This design decouples what to update from how much to update: the outcome reward determines the direction of policy change, while the teacher modulates its magnitude at each step. Correct trajectories are left untouched, preserving their diversity. On Qwen3-8B, SSPO consistently outperforms GRPO across BrowseComp, GAIA, and FRAMES, surpassing or matching GRPO trained with twice as many gradient steps while adding only about 5 percent overhead per step from a single additional forward pass.",
+  "abstract_zh": "深度搜索智能体通常需要执行包含数十个步骤的轨迹，但标准强化学习往往只在整条轨迹结束后提供一个结果奖励，导致信用分配过于稀疏。On-policy self-distillation（OPSD）尝试用模型自身 logits 作为密集的 token 级教师信号，但将其扩展到搜索智能体时会遇到关键矛盾：教师可访问正确答案等特权信息，其分布会系统性偏离学生基于探索的推理过程；朴素蒸馏会让学生继承这种信息不对称，而非真正学习更好的搜索策略。本文提出两项改进：首先构造 Evidence Anchors，即从网页中抽取的简洁步骤级证据片段，作为不暴露完整答案路径的特权信息；其次提出 Step-Level Self-Distilled Policy Optimization（SSPO），在 GRPO 框架内将教师—学生分歧转化为步骤级 advantage 权重，并且仅作用于错误轨迹。该设计将“更新方向”和“更新幅度”解耦：结果奖励决定策略变化方向，教师信号调节每一步更新强度；正确轨迹则不被修改，以保留多样性。在 Qwen3-8B 上，SSPO 在 BrowseComp、GAIA 和 FRAMES 上稳定优于 GRPO，并可达到或超过使用两倍梯度步数训练的 GRPO，同时每步仅因额外一次前向传播带来约 5% 开销。",
+  "key_points_zh": [
+    "针对深度搜索智能体的稀疏结果奖励问题，SSPO 引入步骤级蒸馏信号，改善长轨迹中的信用分配。",
+    "Evidence Anchors 从网页中抽取关键证据片段，提供受控的特权信息，避免直接泄露完整答案路径。",
+    "SSPO 将教师—学生分歧转化为 GRPO 中的步骤级 advantage 权重，仅用于错误轨迹，解耦更新方向与更新幅度。",
+    "正确轨迹不参与蒸馏更新，从而保留成功搜索路径的多样性，避免过度收敛到教师分布。",
+    "在 Qwen3-8B 上，SSPO 在 BrowseComp、GAIA、FRAMES 上持续优于 GRPO，并以约 5% 额外开销达到更高训练效率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.8,
+    "problem_significance": 0.88,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.82,
+    "llm_avg": 0.8240000000000001,
+    "comment": "This is highly relevant search-agent RL work addressing step-level credit assignment with trajectory-grounded evidence.",
+    "comment_zh": "这是一篇高度相关的搜索智能体强化学习论文，解决了基于轨迹证据的步骤级信用分配问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.43732458189998774,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8240000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 7,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.12764/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.12764/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

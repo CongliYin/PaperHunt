@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.12990",
+  "title": "LycheeMemory V2: Efficient Long-Term Memory for LLM Agents via Semantic Segment-Level Consolidation",
+  "title_zh": "LycheeMemory V2：通过语义段级整合实现高效的 LLM Agent 长期记忆",
+  "authors": [
+    "Dongfang Li",
+    "Zixuan Liu",
+    "Junmai Wang",
+    "Jiahe Huang",
+    "Fuhao Li",
+    "Bonian Jia",
+    "Baotian Hu",
+    "Min Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-13T09:13:15Z",
+  "abs_url": "https://arxiv.org/abs/2608.12990v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.12990",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-horizon LLM agents must preserve information from past interactions to support future tasks. Existing memory systems typically rely on eager consolidation, invoking LLMs after each interaction to extract, summarize, or update memories. This design makes memory construction increasingly costly as conversations grow. Coarse summarization can reduce construction cost but risks discarding fine-grained contextual evidence, whereas larger retrieval contexts or multi-hop LLM reasoning shift the overhead to query time. We present LycheeMemory V2, an efficient long-term memory framework that replaces turn-level consolidation with semantic segment-level consolidation. Instead of consolidating every interaction, LycheeMemory batches multiple exchanges into segments and encodes each finalized segment into context-independent typed memory records. Segment-level batching lowers LLM encoding frequency, while semantic boundary detection helps preserve coherent event-level and temporal evidence compared with fixed-window batching. The resulting records are organized with lightweight structured indexes for query-planned evidence retrieval. Experiments using GPT-4.1-Mini show that LycheeMemory achieves state-of-the-art performance, reaching 89.22% on LoCoMo and 92.20% on LongMemEval-S. Compared with A-Mem, it reduces construction tokens by 86.0% on LoCoMo and 75.9% on LongMemEval-S without increasing query-time token usage. More broadly, our results suggest that the accuracy--cost trade-off of long-term agent memory depends not only on what information is retained, but also on the granularity at which it is consolidated.",
+  "abstract_zh": "长周期 LLM Agent 需要保留过往交互信息以支持未来任务。现有记忆系统通常采用即时整合（eager consolidation），在每轮交互后调用 LLM 提取、总结或更新记忆，导致对话越长，记忆构建成本越高。粗粒度摘要虽能降低构建成本，但可能丢失细粒度上下文证据；扩大检索上下文或使用多跳 LLM 推理则会把开销转移到查询阶段。本文提出 LycheeMemory V2，一种高效长期记忆框架，用语义段级整合（semantic segment-level consolidation）替代逐轮整合。它将多轮交互按语义边界批处理为片段，并将已完成片段编码为上下文无关的类型化记忆记录。段级批处理降低了 LLM 编码频率，而语义边界检测相比固定窗口批处理更能保留连贯的事件级与时间证据。生成的记忆记录通过轻量结构化索引组织，用于面向查询规划的证据检索。实验显示，在 GPT-4.1-Mini 上，LycheeMemory 在 LoCoMo 达到 89.22%，在 LongMemEval-S 达到 92.20%，取得 SOTA 表现。相比 A-Mem，它在 LoCoMo 上减少 86.0% 构建 token，在 LongMemEval-S 上减少 75.9%，且不增加查询阶段 token 使用。结果表明，长期 Agent 记忆的精度—成本权衡不仅取决于保留什么信息，也取决于以何种粒度进行整合。",
+  "key_points_zh": [
+    "提出 LycheeMemory V2，将长期记忆构建从逐轮整合改为语义段级整合，减少频繁调用 LLM 的成本。",
+    "通过语义边界检测将多轮交互组成连贯片段，相比固定窗口更好保留事件级和时间相关证据。",
+    "将片段编码为上下文无关的类型化记忆记录，并用轻量结构化索引支持查询规划式证据检索。",
+    "在 GPT-4.1-Mini 实验中，LycheeMemory 在 LoCoMo 达到 89.22%，在 LongMemEval-S 达到 92.20%，实现 SOTA。",
+    "相比 A-Mem，构建 token 在 LoCoMo 减少 86.0%、在 LongMemEval-S 减少 75.9%，且未增加查询时 token 开销。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.78,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.81,
+    "llm_avg": 0.794,
+    "comment": "A clearly in-scope Agent-memory paper that contributes a reusable segment-level consolidation strategy for reducing long-term memory construction cost while preserving evidence quality.",
+    "comment_zh": "这是一篇明确属于 Agent Memory 范畴的工作，提出了可复用的语义分段整合策略，以降低长期记忆构建成本并保持证据质量。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.704560788802713,
+    "author_reputation": 0.3233158463485474,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.794,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 3,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.12990/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.929
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.12990/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.942
+    }
+  ]
+}

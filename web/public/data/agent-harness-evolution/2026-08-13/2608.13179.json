@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.13179",
+  "title": "Teach the Magnitude, Not the Direction: Verifier-Bounded Credit Assignment for Multi-Turn Multi-step LLM Agents",
+  "title_zh": "教幅度而非方向：面向多轮多步 LLM Agent 的验证器有界信用分配",
+  "authors": [
+    "Zechuan Wang",
+    "Siyuan Lu",
+    "Hongxuan Zhang",
+    "Linjian Mo",
+    "Chenyi Zhuang",
+    "Leilei Gan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-13T12:44:37Z",
+  "abs_url": "https://arxiv.org/abs/2608.13179v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.13179",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement learning with verifiable rewards (RLVR) offers a verifier-bounded performance ceiling for training multi-turn tool-use agents, yet its trajectory-level credit assignment conflates heterogeneous per-turn outcomes into a single reward signal. On-policy distillation provides dense per-token supervision but is either teacher-bounded or prone to gradient concentration collapse. We introduce $\\textbf{CrEST}$, a hierarchical credit assignment framework that retains RL's verifier-bounded ceiling while incorporating dense token-level signals from a privileged self-teacher. $\\textbf{CrEST}$ resolves credit at two levels: turn-segmented verified advantages address inter-turn dilution, while entropy-gated self-teacher modulation refines intra-turn token contributions. Experiments on BFCL V3 and WildToolBench show that $\\textbf{CrEST}$ consistently outperforms both RL and distillation baselines across two model scales, with the largest gains on long-trajectory and strict session-level metrics. Our work demonstrates that the teacher's role in policy optimization can be reduced from determining update directions to modulating update magnitudes, unlocking dense credit assignment without sacrificing the verifier-bounded ceiling.",
+  "abstract_zh": "本文关注多轮工具使用 LLM Agent 的强化学习训练。RLVR（Reinforcement Learning with Verifiable Rewards）依赖可验证奖励，能保持由 verifier 决定的性能上限，但传统轨迹级奖励会把不同轮次的好坏结果混成单一信号，导致信用分配粗糙。相比之下，on-policy distillation 能提供稠密的 token 级监督，但往往受 teacher 上限约束，或出现梯度集中塌缩。作者提出 CrEST，一个分层信用分配框架：在轮次层面使用 turn-segmented verified advantages 缓解跨轮奖励稀释；在轮内层面使用 entropy-gated self-teacher modulation，通过特权 self-teacher 调节 token 贡献。实验在 BFCL V3 与 WildToolBench 上验证，CrEST 在两种模型规模下均优于 RL 与蒸馏基线，尤其在长轨迹任务和严格 session-level 指标上提升明显。核心观点是：teacher 不应决定策略更新方向，而应只调节更新幅度，从而兼得稠密信用分配与 verifier-bounded 性能上限。",
+  "key_points_zh": [
+    "问题：RLVR 的轨迹级奖励难以区分多轮多步 Agent 中各轮、各 token 的真实贡献，导致信用分配稀疏且容易被长轨迹稀释。",
+    "方法：CrEST 采用分层信用分配，先用 turn-segmented verified advantages 进行轮次级优势估计，再用 entropy-gated self-teacher modulation 细化轮内 token 级更新强度。",
+    "关键思想：self-teacher 不直接决定梯度方向，而只根据置信度与熵门控来调节更新 magnitude，从而避免 teacher-bounded 或梯度集中塌缩。",
+    "实验：在 BFCL V3 和 WildToolBench 上，CrEST 在两种模型规模下稳定超过 RL 与 distillation baselines，长轨迹任务和严格 session-level 指标收益最大。",
+    "意义：该工作展示了在多轮工具调用 Agent 中，可以通过“验证器定方向、教师调幅度”的方式实现稠密信用分配，同时保持 verifier-bounded ceiling。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.78,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.8,
+    "llm_avg": 0.8,
+    "comment": "This is strong agent-training work on verifier-bounded credit assignment for multi-turn tool-use trajectories.",
+    "comment_zh": "这是一篇较强的智能体训练论文，聚焦多轮工具使用轨迹中的验证器约束信用分配。"
+  },
+  "scores": {
+    "topic_relevance": 0.48000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.13179/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.13179/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.974
+    }
+  ]
+}

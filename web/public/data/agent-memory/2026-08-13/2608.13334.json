@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2608.13334",
+  "title": "RippleMem: From Isolated Retrieval to Associative Recollection for Long-Term Agent Memory",
+  "title_zh": "RippleMem：从孤立检索到联想回忆的长期 Agent 记忆",
+  "authors": [
+    "Jingbo Ji",
+    "Lingyi Li",
+    "Xilong Cheng",
+    "Yuhao Zhou",
+    "Wenji Zhang",
+    "Yuting Tan",
+    "Yunxiao Qin"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-13T15:05:01Z",
+  "abs_url": "https://arxiv.org/abs/2608.13334v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.13334",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM-based agents increasingly rely on external memory to support long-horizon reasoning and interaction. However, the main bottleneck is not simply storing past experience, but recovering the right set of evidence when relevant information is distributed across many interactions. Existing approaches struggle with this access problem. Full-context methods require noisy long-context search, flat retrieval often returns isolated and incomplete records, and graph-based memory systems can be expensive to construct while compressing rich event context. We introduce RippleMem, a long-term memory system that replaces one-shot retrieval with adaptive associative recollection. Inspired by cue-dependent episodic retrieval and associative completion, RippleMem stores interaction history as cue-rich episodic memory units and organizes them in an event-centric memory graph. Given a query, it first recalls relevant memory anchors through hybrid cues, then expands from these anchors along semantic and structural associations to recover missing supporting evidence. In this way, initially recalled memories serve not only as answer context, but also as cues for completing the evidence needed to answer. Experiments on LoCoMo and LongMemEval-S show that RippleMem achieves the best overall performance across evaluated settings, improving LLM-as-a-Judge accuracy by 3.95% on LoCoMo and up to 11.87% on LongMemEval-S, while reducing graph construction cost by about 30x.",
+  "abstract_zh": "LLM-based agents 越来越依赖外部记忆来支持长程推理与交互。本文指出，长期记忆的核心瓶颈并非简单存储历史经验，而是在相关信息分散于多轮交互时，如何恢复完整且正确的证据集合。现有方法存在局限：Full-context 方法需要在噪声较大的长上下文中搜索；flat retrieval 往往只返回孤立且不完整的记录；graph-based memory systems 构建成本高，并可能压缩掉丰富的事件上下文。为此，论文提出 RippleMem，一种将一次性检索替换为自适应联想回忆（adaptive associative recollection）的长期记忆系统。RippleMem 受线索依赖的情景检索（cue-dependent episodic retrieval）和联想补全（associative completion）启发，将交互历史存储为富含线索的情景记忆单元，并组织成以事件为中心的 memory graph。面对查询时，系统先通过混合线索召回相关记忆锚点，再沿语义与结构关联扩展，以补全缺失的支持证据。实验表明，RippleMem 在 LoCoMo 和 LongMemEval-S 上取得最佳整体性能，在 LoCoMo 上将 LLM-as-a-Judge accuracy 提升 3.95%，在 LongMemEval-S 上最高提升 11.87%，同时将图构建成本降低约 30 倍。",
+  "key_points_zh": [
+    "提出 RippleMem，将长期记忆访问从一次性检索转向自适应联想回忆，以解决证据分散在多轮交互中的恢复问题。",
+    "将历史交互编码为 cue-rich episodic memory units，并构建 event-centric memory graph，在保留事件上下文的同时支持关联扩展。",
+    "查询时先通过 hybrid cues 找到 memory anchors，再沿 semantic 和 structural associations 扩散，利用已召回记忆作为线索补全缺失证据。",
+    "相比 full-context、flat retrieval 和传统 graph-based memory，RippleMem 同时缓解长上下文噪声、孤立检索不完整和图构建成本高的问题。",
+    "在 LoCoMo 与 LongMemEval-S 上取得最佳整体结果：LoCoMo 的 LLM-as-a-Judge accuracy 提升 3.95%，LongMemEval-S 最高提升 11.87%，图构建成本约降低 30x。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.8,
+    "problem_significance": 0.87,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.82,
+    "llm_avg": 0.812,
+    "comment": "A strong Agent-memory contribution that reframes retrieval as adaptive associative recollection over episodic units and event-centric memory graphs.",
+    "comment_zh": "这是一项较强的 Agent Memory 工作，将检索重新表述为在情节单元和事件中心记忆图上的自适应联想回忆。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3233158463485474,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.812,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.13334/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.13334/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.849
+    }
+  ]
+}

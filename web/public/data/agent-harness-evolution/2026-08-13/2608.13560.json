@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2608.13560",
+  "title": "AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design",
+  "title_zh": "AutoDesign：面向长程智能体设计的 Meta-Harness 优化",
+  "authors": [
+    "Yaxin Luo",
+    "Haobin Jiang",
+    "Jialv Zou",
+    "Xu Huang",
+    "Wenhao Yan",
+    "Haodong Li",
+    "Zhengrong Yue",
+    "Jing Li",
+    "Xiaofu Chen",
+    "Xiaohan Zhao",
+    "Jiacheng Liu",
+    "Jiacheng Cui",
+    "Zhiqiang Shen",
+    "Xiaotong Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-13T17:59:57Z",
+  "abs_url": "https://arxiv.org/abs/2608.13560v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.13560",
+  "links": {
+    "github": "https://github.com/Yaxin9Luo/AutoDesign",
+    "project_page": null
+  },
+  "abstract_en": "Transforming multimodal sources into condensed and structured media outputs can be fundamentally conceptualized as a long-horizon agentic process centered on a model-harness system. While an ideal harness system should align with human design priors and accumulate reusable experience through empirical exploration to drive recursive self-improvement, existing paradigms remain static and fall short of this capability. In this paper, we present AutoDesign, a framework that aligns with human design priors, where a meta-harness optimizer guides a code agent to recursively improve harness based on rollout feedback. To instantiate and evaluate this framework, we focus on the academic paper-to-poster generation task and introduce PosterBench, comprising a 100-paper Main Track spanning five disciplines and PosterBench-mini, a shared 10-paper subset for controlled evaluation. On the PosterBench Main Track, AutoDesign achieves the highest score of 78.32, surpassing the closed-source commercial system Claude Design by 7.45 points. Across seven controlled code-agent-model configurations, integrating the learned DesignHarness consistently improves performance, increasing the average PosterBench Score from 54.99 to 67.39 (+12.4%). In a fully autonomous long-horizon loop, it executes 253 tool calls and 11 editing turns within 40 minutes for under $3, reaching average conference-poster quality in human evaluation. A system-blind human study further demonstrates that AutoDesign achieves the highest human preference among evaluated systems.",
+  "abstract_zh": "本文将多模态来源转化为精炼、结构化媒体输出的过程，视为围绕 model-harness system 展开的长程智能体流程。理想的 harness system 应能对齐人类设计先验，并通过经验探索积累可复用经验，从而实现递归式自我改进；但现有范式多为静态系统，难以具备这种能力。为此，论文提出 AutoDesign：一个符合人类设计先验的框架，其中 meta-harness optimizer 根据 rollout feedback 指导 code agent 递归改进 harness。作者以学术论文到海报生成任务为实例，构建 PosterBench 基准，包括覆盖五个学科的 100 篇论文 Main Track，以及用于受控评测的 10 篇共享子集 PosterBench-mini。在 PosterBench Main Track 上，AutoDesign 得分 78.32，超过闭源商业系统 Claude Design 7.45 分。在七种受控 code-agent-model 配置中，集成学习得到的 DesignHarness 均稳定提升性能，使平均 PosterBench Score 从 54.99 提升至 67.39（+12.4%）。在完全自主的长程循环中，系统可在 40 分钟内、成本低于 3 美元的条件下执行 253 次工具调用和 11 轮编辑，并在人类评估中达到平均会议海报质量。系统盲测的人类偏好研究进一步表明，AutoDesign 在被评估系统中获得最高偏好。",
+  "key_points_zh": [
+    "提出 AutoDesign，将长程设计任务建模为 model-harness system 的递归优化过程，由 meta-harness optimizer 基于 rollout feedback 指导 code agent 改进 DesignHarness。",
+    "构建 PosterBench 基准用于论文到海报生成评测，包含覆盖五个学科的 100-paper Main Track，以及用于受控实验的 10-paper PosterBench-mini。",
+    "AutoDesign 在 PosterBench Main Track 上取得 78.32 分，较闭源商业系统 Claude Design 高 7.45 分，并在人类偏好盲测中排名最高。",
+    "在七种受控 code-agent-model 配置中，加入学习得到的 DesignHarness 均带来稳定增益，平均分从 54.99 提升到 67.39，提升 12.4%。",
+    "系统展示了低成本长程自主设计能力：40 分钟内完成 253 次工具调用和 11 轮编辑，成本低于 3 美元，并达到平均会议海报质量。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.86,
+    "novelty": 0.76,
+    "problem_significance": 0.8,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.72,
+    "llm_avg": 0.76,
+    "comment": "The paper fits well as meta-harness optimization with rollout feedback and recursive improvement, despite being evaluated on a design task.",
+    "comment_zh": "论文通过反馈驱动的元框架优化和递归改进契合本领域，尽管评测任务是设计生成。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.8614019720067825,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.76,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Yaxin9Luo/AutoDesign",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 31,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.13560/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.13560/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.735
+    }
+  ]
+}

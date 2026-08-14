@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2608.13228",
+  "title": "Capability Sheaves for Compositional Agent-Harness Repair: Controlled Quotients and a Real-Repository Stress Test",
+  "title_zh": "用于组合式 Agent Harness 修复的 Capability Sheaves：受控商空间与真实仓库压力测试",
+  "authors": [
+    "Saveliy Batruin"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-13T13:31:09Z",
+  "abs_url": "https://arxiv.org/abs/2608.13228v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.13228",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent harnesses combine retrieval, routing, state, provenance, and verification, but locally successful components may disagree on shared state. We model this failure with a finite \\emph{capability sheaf}: stalks encode typed behavior signatures, restriction maps retain shared fields, and accepted runs are useful global sections. An exact finite constraint-satisfaction problem (CSP) defines acceptance, while a linearized relative cohomology class provides a diagnostic and search feature. A controlled experiment over 20 task clusters introduces hidden interior mediators whose raw states are nuisance variables. Quotienting their coboundaries reduces the candidate budget from 2,000 to 1,000 per cluster; aligning the hidden state removes the gap. Exact CSP matches the quotient, so the result demonstrates invariance to stale representatives, not superiority over exact reasoning. We then test the method on a discovery split from the SWE-bench Multilingual pool of PatchFuseBench: 160 issues from 20 repositories, 875 real candidate patches, 2,579 source-aware edit atoms, and 153 newly executed patches. A first pool-level construction is constant because $[b-Dx]=[b]$ in $\\operatorname{coker}D$ and therefore cannot rank configurations. A candidate-indexed repair is nontrivial on 848/875 candidates and varies within 120/160 issues. It resolves 118 issues versus 116 for a matched noncohomological selector, but the difference is not supported across repositories (exact sign-flip $p=0.75$). A leave-one-repository-out abstention gate reaches 127/160, tying the strong anchor and exceeding its matched gate by one issue ($p=1.0$). The discovery gate therefore fails and the confirmatory split remains sealed. The study supports the controlled invariance mechanism and an identifiability correction, but not a real-world cohomological advantage.",
+  "abstract_zh": "本文研究 Agent harness 中检索、路由、状态、溯源与验证等组件在局部成功但共享状态不一致时的失效问题。作者用有限 capability sheaf 建模：茎（stalk）表示带类型的行为签名，限制映射保留共享字段，可接受运行对应有用的全局截面。论文以精确有限约束满足问题（CSP）定义接受条件，并用线性化相对上同调类作为诊断与搜索特征。在包含 20 个任务簇的受控实验中，隐藏内部 mediator 的原始状态被视为干扰变量；对其上边界取商后，每簇候选预算从 2,000 降至 1,000，而对齐隐藏状态可消除差距。精确 CSP 与该商构造结果一致，说明该方法体现的是对过期代表元的“不变性”，而非优于精确推理。随后，作者在 PatchFuseBench 的 SWE-bench Multilingual 池中构建 discovery split：覆盖 20 个仓库的 160 个 issue、875 个真实候选补丁、2,579 个 source-aware edit atom，并新执行 153 个补丁。初始 pool-level 构造因在 coker D 中满足 [b-Dx]=[b] 而成为常量，无法排序配置；改用 candidate-indexed repair 后，在 848/875 个候选上非平凡，并在 120/160 个 issue 内产生变化。该方法解决 118 个 issue，略高于匹配的非上同调选择器 116 个，但跨仓库统计不显著（exact sign-flip p=0.75）。leave-one-repository-out abstention gate 达到 127/160，与强 anchor 持平，仅比匹配 gate 多 1 个 issue（p=1.0）。因此 discovery gate 失败，confirmatory split 保持封存。总体上，论文支持受控环境下的不变性机制和可识别性修正，但不支持真实场景中的上同调优势。",
+  "key_points_zh": [
+    "提出 finite capability sheaf 框架，将 Agent harness 的组件行为、共享状态与可接受运行形式化为茎、限制映射和全局截面。",
+    "用精确 CSP 定义接受条件，并引入线性化相对上同调类作为诊断与候选搜索特征。",
+    "受控实验表明，对隐藏 mediator 的 coboundary 取商可减少候选预算，并保持对 stale representatives 的不变性；但结果与精确 CSP 一致，并非证明其推理能力更强。",
+    "在 PatchFuseBench / SWE-bench Multilingual 的真实仓库压力测试中，初始 pool-level 上同调构造退化为常量，需改为 candidate-indexed repair 才具备区分能力。",
+    "真实任务上仅有微弱数值提升且统计不显著；abstention gate 也未通过 discovery split，因此论文结论是支持机制修正而非证明实际上同调优势。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.72,
+    "problem_significance": 0.76,
+    "potential_impact": 0.63,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.67,
+    "llm_avg": 0.6719999999999999,
+    "comment": "The paper is well aligned with harness repair and coding-agent evaluation, though its real-world empirical advantage appears limited.",
+    "comment_zh": "论文与框架修复和代码智能体评估高度相关，但其实证中的现实优势较为有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.6719999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.13228/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.608
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.13228/fig2.webp",
+      "page": 2,
+      "kind": "table",
+      "confidence": 0.977
+    }
+  ]
+}

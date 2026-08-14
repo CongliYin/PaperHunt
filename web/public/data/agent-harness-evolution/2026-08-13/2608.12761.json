@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2608.12761",
+  "title": "Correct Is Not Governed: Provenance Integrity in Agentic Workflows",
+  "title_zh": "正确不等于受治理：Agentic Workflows 中的溯源完整性",
+  "authors": [
+    "Jesus Salas"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-13T03:12:13Z",
+  "abs_url": "https://arxiv.org/abs/2608.12761v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.12761",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic workflows are commonly evaluated by whether they reach the correct outcome. That is insufficient in institutional settings, where a correct action may rely on the wrong authority, an unsupported completion claim, or work made stale by a later change. We define governed execution as work whose decisions, completion, and response to change are supported by inspectable provenance. We present Matrix, a deterministic causal-state layer that records authority and fact dependencies, verifies completion evidence, and selectively invalidates affected work. Across controlled comparisons, governed and direct workflows often reached the same outcomes, but only the governed path consistently preserved governing evidence, refused unsupported closure, and limited recovery to dependent tasks. A role-separated transfer challenge then failed: a deterministically enforced completeness contract severely over-blocked synthetic packets produced outside its authoring context. These results do not establish Matrix as a general accuracy enhancer; they support its primary role as an institutional integrity layer for making agentic work auditable and independently verifiable.",
+  "abstract_zh": "本文指出，Agentic workflows 不能只以是否得到正确结果来评估。在机构场景中，一个看似正确的行动可能依赖错误的授权、缺乏完成证据，或因后续变更而过时。作者提出 governed execution（受治理执行）：其决策、完成状态与变更响应都必须由可检查的 provenance（溯源）支撑。论文介绍 Matrix，一个确定性的 causal-state layer（因果状态层），用于记录 authority 与 fact dependencies，验证完成证据，并选择性地使受影响工作失效。实验显示，governed workflows 与 direct workflows 往往能得到相同结果，但只有 governed 路径能稳定保留治理证据、拒绝无支撑的完成声明，并将恢复范围限制在依赖任务内。不过，在角色分离的 transfer challenge 中，确定性强制的 completeness contract 对脱离原始上下文生成的合成数据包产生了严重过度阻塞。结果表明，Matrix 并非通用准确率增强器，而更适合作为机构完整性层，使 agentic work 可审计、可独立验证。",
+  "key_points_zh": [
+    "论文强调：正确结果并不代表流程受治理；机构场景还需要验证授权来源、完成证据与变更影响。",
+    "Matrix 作为确定性 causal-state layer，记录 authority/fact dependencies，检查 completion evidence，并执行选择性 invalidation。",
+    "受治理流程与直接流程常得到相同输出，但前者能保留可检查 provenance，拒绝 unsupported closure。",
+    "在任务变更后，Matrix 可将恢复范围限制在真正依赖该变更的任务，避免全局重做。",
+    "角色分离 transfer challenge 暴露局限：过强的 completeness contract 会对上下文外生成的合成包过度阻塞。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.7,
+    "problem_significance": 0.82,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.78,
+    "llm_avg": 0.7440000000000001,
+    "comment": "The paper squarely targets agentic workflow provenance, auditability, and state invalidation as reusable governance infrastructure.",
+    "comment_zh": "论文直接面向智能体工作流的溯源、可审计性和状态失效机制，属于可复用治理基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.7440000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.12761/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.12761/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.911
+    }
+  ]
+}
