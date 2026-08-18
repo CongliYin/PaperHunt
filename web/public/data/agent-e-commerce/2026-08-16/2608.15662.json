@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2608.15662",
+  "title": "Sequential Multimodal Evidence Optimization for Product Media Ranking in E-Commerce",
+  "title_zh": "面向电商商品媒体排序的序列多模态证据优化",
+  "authors": [
+    "Prasenjit Dey",
+    "Frank McIntyre",
+    "Arnab Sinha"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-16T10:11:02Z",
+  "abs_url": "https://arxiv.org/abs/2608.15662v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.15662",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "On modern e-commerce stores, customers consume ordered slates of heterogeneous product media, such as images, videos, and 3D renders, before making purchase decisions. Existing media-ranking systems often optimize myopic engagement proxies such as clicks or dwell time, even though product media assets are cooperative informational components of the same item that together help customers find the information they need through sequential interaction. We present Sequential Multimodal Evidence Optimization (SMEO), a two-stage utility-guided framework for customer-oriented media sequencing. SMEO first learns a trajectory utility model from consumed media prefixes to estimate how ordered evidence helps customers reach a purchase decision, while mitigating position-bias and variable-depth imbalance in logged data. Recognizing that customer attention is a limited resource, it then trains an autoregressive ranking policy with survival-weighted reward-to-go that prioritizes the most decision-relevant information early, so customers can find what they need with less effort. By decoupling utility learning from policy optimization, SMEO enables stable offline learning from biased logs and post-hoc media attribution without explicit media-level labels. Evaluated offline on large-scale e-commerce sessions using doubly robust off-policy estimation, SMEO improves estimated conversion by 5.5% and helps customers reach a purchase decision with 15% fewer swipes than existing baselines.",
+  "abstract_zh": "在现代电商平台中，消费者通常会按顺序浏览图片、视频和 3D 渲染等异构商品媒体，随后作出购买决策。现有媒体排序系统往往优化点击率或停留时长等短视的参与度代理指标，却忽略了同一商品的不同媒体是相互协作的信息组件，能够在序列交互中共同帮助消费者找到所需信息。本文提出 Sequential Multimodal Evidence Optimization（SMEO），一种以效用为导向的两阶段消费者中心媒体排序框架。第一阶段，SMEO 基于已浏览的媒体前缀学习轨迹效用模型，估计有序证据如何推动消费者形成购买决策，同时缓解日志数据中的位置偏差与可变浏览深度导致的样本不均衡。第二阶段，考虑到消费者注意力有限，SMEO 使用生存概率加权的未来累计回报（survival-weighted reward-to-go）训练自回归排序策略，优先展示与决策最相关的信息，使消费者以更少操作找到所需内容。通过将效用学习与策略优化解耦，SMEO 可从有偏日志中进行稳定的离线学习，并且无需显式的媒体级标签即可开展事后媒体归因。在大规模电商会话上的离线评估中，基于双重稳健离策略估计（doubly robust off-policy estimation），SMEO 相比现有基线将预估转化率提升 5.5%，并使消费者以减少 15% 的滑动次数完成购买决策。",
+  "key_points_zh": [
+    "将图片、视频和 3D 渲染视为协作式序列证据，而非独立优化点击或停留时长。",
+    "两阶段框架先学习媒体前缀的轨迹效用，再训练自回归排序策略，实现效用建模与策略优化解耦。",
+    "针对日志中的位置偏差和浏览深度不均衡进行校正，支持从有偏交互数据中稳定离线学习。",
+    "引入生存概率加权的未来累计回报，优先呈现决策相关信息，并支持无媒体级标签的事后归因。",
+    "双重稳健离策略评估显示，SMEO 将预估转化率提升 5.5%，同时减少 15% 的滑动次数。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.86,
+    "novelty": 0.78,
+    "problem_significance": 0.82,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.8,
+    "llm_avg": 0.782,
+    "comment": "A strong e-commerce ranking contribution that sequences multimodal product evidence to reduce shopping effort and improve purchase decisions.",
+    "comment_zh": "该工作通过排序多模态商品证据来降低购物决策成本并提升转化，是一项扎实的电商排序贡献。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3313836013810483,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.782,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.15662/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.15662/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

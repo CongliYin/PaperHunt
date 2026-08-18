@@ -1,0 +1,68 @@
+{
+  "arxiv_id": "2608.15678",
+  "title": "Where Accountability Lives: Mapping Human Responsibility to Workflow Artifacts in Agentic Software Development",
+  "title_zh": "责任归属何处：将人类责任映射到智能体软件开发的工作流产物",
+  "authors": [
+    "Sabry E. Farrag"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-16T11:11:04Z",
+  "abs_url": "https://arxiv.org/abs/2608.15678v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.15678",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents author commits, open pull requests, and push code in production repositories. Who is accountable is settled in two places that do not refer to each other: the platform controls that gate what an agent may do, and the provider terms that allocate responsibility for what it produces. We read both against the workflow events that leave artifacts, across four agentic coding tools and eighteen governing policy documents from seven providers, recording at each event who holds authority, who executed and under which identity, who must verify, who bears the consequence, and which artifact survives. The layers disagree. One provider bars the developer who assigned a task from approving the resulting pull request; another documents an agent that approves pull requests below a configured risk threshold and can dismiss reviews. We therefore replace the usual three-way distinction between enforced, advisory and absent verification with a grid separating whether a mechanism compels the check from who performs it. Attribution runs in opposite directions across providers, and no trailer is defined for agent authorship, though one provider repurposes the co-authorship trailer for it. We argue that agentic tooling did not create this gap. A decade of code-review research already recorded that the approval artifact carries less than the terms assume. What changes is that this weakness moved from a property of how people work to a property of what a product does: a vendor now documents a product that stands at the approval event and emits the same artifact with no party capable of forming a judgement present. We do not claim the gap harms anyone. The selection rule is equalised across the four tools, every reported absence is re-tested against a doubled page set with the survival rate reported, and the source collection and its scripts are deposited.",
+  "abstract_zh": "本文研究 Coding agents 在生产代码仓库中提交代码、创建 Pull Request（PR）并推送上线时，责任应如何归属。作者对照分析了四种 agentic coding tools 与七家提供商发布的 18 份政策文档，围绕工作流事件及其产生的 artifacts，记录权限控制者、实际执行者及其身份、验证责任人、后果承担者和最终留存的 artifact。研究发现，平台控制机制与提供商条款之间存在系统性不一致：例如，一家提供商禁止任务指派者批准由该任务产生的 PR；另一家则记录了 agent 可在风险低于阈值时批准 PR，甚至撤销既有审查。为此，作者用“检查是否被强制”与“由谁执行检查”构成的二维网格，替代 enforced、advisory、absent verification 的传统三分法。不同提供商对贡献归属的规定方向相反，且没有统一的 agent authorship trailer；其中一家将 co-authorship trailer 重新用于标记 agent。论文指出，这一责任缺口并非 agentic tooling 首创，过去十年的代码审查研究已表明，approval artifact 所承载的信息少于条款假定的内容。新变化在于，该缺陷从人的工作方式属性转变为产品行为属性：提供商甚至记录了某产品可直接执行批准事件并生成相同 artifact，而现场没有能够形成判断的责任主体。研究未断言该缺口必然造成伤害，并通过统一四种工具的选择规则、对所有缺失结论使用加倍页面集复测并报告存活率来增强稳健性；118 份归档文档和 12 个处理脚本已公开存入 Zenodo。",
+  "key_points_zh": [
+    "平台权限控制与提供商责任条款彼此脱节，导致 agent 执行、验证、归责和 artifact 留存之间存在不一致。",
+    "作者提出二维验证框架，区分检查是否被强制以及实际由谁执行，替代传统的 enforced、advisory、absent 三分法。",
+    "不同提供商对 agent 贡献归属的规定方向相反，且缺乏统一的 agent authorship trailer。",
+    "关键风险在于产品可自动完成批准事件并生成 PR approval artifact，但现场可能没有能够形成判断的人类主体。",
+    "研究覆盖四种工具和七家提供商，分析 118 份归档文档；数据与脚本已通过 Zenodo（doi:10.5281/zenodo.21965182）公开。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.82,
+    "novelty": 0.68,
+    "problem_significance": 0.73,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.56,
+    "lasting_value": 0.67,
+    "llm_avg": 0.6719999999999999,
+    "comment": "This provides a valuable governance and accountability analysis for coding-agent workflows by connecting permissions, identities, verification, and durable artifacts.",
+    "comment_zh": "该工作将权限、身份、验证和持久化工件联系起来，为编码智能体工作流治理与问责提供了有价值的分析。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6719999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.15678/fig1.webp",
+      "page": 2,
+      "kind": "table",
+      "confidence": 0.976
+    }
+  ]
+}

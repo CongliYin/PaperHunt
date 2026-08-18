@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2608.15763",
+  "title": "TaoLive Digital Avatar Agent Technical Report: Training Agents to Evolve with Their Harness",
+  "title_zh": "TaoLive 数字人智能体技术报告：训练与 Harness 协同演化的智能体",
+  "authors": [
+    "TaoLive AIGC LLM Team",
+    "Yuhan Sun",
+    "Wenhao Lin",
+    "Yongdong Luo",
+    "Yibo Hu",
+    "Meiguang Jin",
+    "Junfeng Ma",
+    "Weihang Pan",
+    "Jiaxin Zhao",
+    "Zulong Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-16T14:32:56Z",
+  "abs_url": "https://arxiv.org/abs/2608.15763v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.15763",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "AI-powered digital-avatar streamers in live e-commerce must answer product questions, engage viewers, and execute changing business strategies in real time. This requires low latency, factual and effective replies, and rapid adaptation to updated campaign, compliance, and style requirements. We develop an evolvable Harness that decouples Skills, Hooks, system prompts, and tools from model weights, allowing runtime behavior to change without retraining. However, Harness evolution creates a moving execution environment: compact models fine-tuned on one configuration may memorize names, schemas, and prompt templates rather than follow the Harness currently provided, while stronger zero-shot models are too slow for real-time use. We address this tension with Harness-Aware Training (HAT), which makes Harness states part of the training distribution. HAT applies task-preserving Harness-State Augmentation (HSA) to Skills, tool schemas, prompt structures, and interaction constraints, and comprises three stages: HSA-based supervised fine-tuning, general on-policy distillation to recover general capabilities, and HSA-based agentic reinforcement learning in a production-informed live-room simulator. Across four evaluation sets with more than 4,500 cases, our compact 35B model scores 94.8 on real-world Live-Stream QA, versus 80.3 for the base model and 93.0 for the strongest evaluated general LLM, while scoring 94.6 on Harness-Variant QA and retaining 83.5 on IFEval. By contrast, fixed-Harness SFT reduces IFEval by 7.7 points. In a controlled complete-agent replay on one NVIDIA H20 GPU with MTP enabled, the system achieves 3.407 s P50 and 8.114 s P95 latency. These results show that HAT produces a latency-feasible compact agent that remains effective under evaluated Harness changes without sacrificing general instruction following.",
+  "abstract_zh": "面向直播电商的 AI 数字人需实时回答商品问题、与观众互动，并适应不断变化的营销、合规及风格要求。本文提出可演化的 Harness，将 Skills、Hooks、系统提示词和工具与模型权重解耦，使智能体无需重新训练即可调整运行时行为。针对小模型容易记忆固定 Harness 配置、强大通用模型又难以满足实时延迟的问题，作者提出 Harness-Aware Training（HAT），将不同 Harness 状态纳入训练分布。HAT 包含三个阶段：基于 Harness-State Augmentation（HSA）的监督微调、用于恢复通用能力的通用 on-policy 蒸馏，以及在生产数据驱动的直播间模拟器中进行基于 HSA 的智能体强化学习。在四个合计超过 4,500 个样例的评测集上，35B 紧凑模型在真实 Live-Stream QA 上取得 94.8 分，超过基础模型的 80.3 分和最强通用 LLM 的 93.0 分；在 Harness-Variant QA 和 IFEval 上分别达到 94.6 分和 83.5 分。相比之下，固定 Harness 的 SFT 会使 IFEval 下降 7.7 分。在单张 NVIDIA H20、启用 MTP 的完整智能体回放中，系统延迟为 P50 3.407 秒、P95 8.114 秒，表明 HAT 能兼顾 Harness 变化适应性、通用指令遵循能力与实时部署效率。",
+  "key_points_zh": [
+    "提出可演化 Harness，将 Skills、Hooks、系统提示词和工具从模型权重中解耦，支持无需重训的运行时策略更新。",
+    "提出 Harness-Aware Training（HAT），通过 HSA 扰动 Skills、工具 schema、提示结构和交互约束，降低模型对固定配置的记忆与过拟合。",
+    "训练流程结合 HSA 监督微调、通用 on-policy 蒸馏和生产场景模拟器中的 agentic reinforcement learning。",
+    "35B 模型在 Live-Stream QA 上得分 94.8，在 Harness-Variant QA 上得分 94.6，同时在 IFEval 上保持 83.5。",
+    "单张 NVIDIA H20 启用 MTP 时，完整智能体回放延迟达到 P50 3.407 秒、P95 8.114 秒。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.88,
+    "problem_significance": 0.91,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.89,
+    "llm_avg": 0.8879999999999999,
+    "comment": "This is strong harness-evolution research that couples harness-state augmentation, agent training, reinforcement learning, and production-informed evaluation.",
+    "comment_zh": "该工作将运行时状态增强、智能体训练、强化学习和面向生产的评测结合起来，是较强的智能体Harness演化研究。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8879999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.15763/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.15763/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

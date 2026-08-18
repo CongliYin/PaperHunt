@@ -1,0 +1,69 @@
+{
+  "arxiv_id": "2608.15956",
+  "title": "Navigation-Informed Embeddings: Dense-Retriever Adaptation from Agent Search Traces",
+  "title_zh": "导航信息嵌入：基于智能体搜索轨迹的稠密检索器适配",
+  "authors": [
+    "Shrey Shah",
+    "Levent Ozgur"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-16T23:07:44Z",
+  "abs_url": "https://arxiv.org/abs/2608.15956v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.15956",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic retrieval workflows produce query, retrieval, and stopping traces as a byproduct of answering questions. We study how these traces can adapt a deployed dense retriever to changing workflow distributions without new relevance labels, synthetic queries, or LLM judgments. We introduce Navigation-Informed Embeddings (NIE), a family of trace-derived objectives. NIE-Stop turns the stopping document into a soft positive; NIE-Path additionally uses preceding path documents as hard comparisons and imposes ordinal constraints with geometric decay. A BGE encoder adapted from retained source trajectories improves support Recall@20 on an independent target benchmark from 72.2 to 78.0 overall. NIE-Stop reaches 76.9 overall and 52.3 on long paths; NIE-Path raises long-path performance to 55.4, compared with 46.7 for the unadapted encoder. A shuffled-order control under the full path objective loses 3.2 points. Without public-benchmark training, the same adapter also improves nDCG@10 by 1.9 points on standard BEIR HotpotQA. NIE therefore provides a lightweight adaptation channel for settings where trajectories are already retained, with zero incremental labeling cost.",
+  "abstract_zh": "智能体检索流程在回答问题时会自然产生查询、检索和停止轨迹。本文研究如何利用这些轨迹，在无需新增相关性标注、合成查询或大语言模型评判的情况下，使已部署的稠密检索器适应不断变化的工作流分布。作者提出一族基于轨迹的训练目标，统称 Navigation-Informed Embeddings（NIE）。其中，NIE-Stop 将最终停止检索的文档视为软正样本；NIE-Path 进一步利用路径中此前访问的文档作为困难比较样本，并通过几何衰减施加序数约束。基于保留的源域轨迹适配 BGE encoder 后，在独立目标基准上的支持文档 Recall@20 从 72.2 提升至 78.0。NIE-Stop 的整体表现为 76.9，在长路径上达到 52.3；NIE-Path 则将长路径性能提升至 55.4，而未适配 encoder 仅为 46.7。完整路径目标下的随机打乱顺序对照实验使性能下降 3.2 个百分点，说明搜索顺序包含有效信号。在不使用公开基准训练数据的情况下，该适配器还使标准 BEIR HotpotQA 上的 nDCG@10 提升 1.9 个百分点。总体而言，NIE 为已有检索轨迹的场景提供了一种轻量级适配途径，且无需额外标注成本。",
+  "key_points_zh": [
+    "提出 Navigation-Informed Embeddings（NIE），从智能体检索与停止轨迹中学习检索器适配信号。",
+    "NIE-Stop 将停止文档作为软正样本；NIE-Path 结合路径文档和几何衰减的序数约束，进一步利用检索顺序信息。",
+    "在独立目标基准上，Recall@20 从 72.2 提升至 78.0；NIE-Path 将长路径性能从未适配模型的 46.7 提升至 55.4。",
+    "随机打乱路径顺序会导致性能下降 3.2 个百分点，表明轨迹中的访问顺序具有重要监督价值。",
+    "无需公开基准训练、额外相关性标注或 LLM 评判，NIE 仍能在 BEIR HotpotQA 上将 nDCG@10 提升 1.9 个百分点。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.76,
+    "problem_significance": 0.68,
+    "potential_impact": 0.73,
+    "paradigm_shift": 0.64,
+    "lasting_value": 0.7,
+    "llm_avg": 0.702,
+    "comment": "This is a well-targeted search-agent training method that converts retained navigation trajectories into label-free retriever adaptation and demonstrates transfer across benchmarks.",
+    "comment_zh": "该工作面向搜索智能体训练，将保留的导航轨迹转化为无标签检索器适配信号，并展示了跨基准迁移效果。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.702,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.15956/fig1.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.976
+    }
+  ]
+}
