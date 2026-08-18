@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2608.16055",
+  "title": "Governance at the Boundary: How Agent Decomposition Degrades Policy Compliance",
+  "title_zh": "边界处的治理：Agent 分解如何削弱政策合规性",
+  "authors": [
+    "Bowen Li",
+    "Guojun Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-17T03:31:59Z",
+  "abs_url": "https://arxiv.org/abs/2608.16055v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.16055",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Existing agent benchmarks ask whether the agent finished the task. We ask whether it finished it within policy. We introduce Fiducia-bench, a benchmark for the governability of financial agents---whether they escalate when obligated, abstain when required, and leave an auditable trail---and use it to study a question no prior benchmark addresses: does decomposing an agent into components degrade its governance? It does, and the mechanism is specific. Policy-relevant facts discovered by one component are attenuated at the handoff boundary before reaching the component that must act on them. In a 626-episode experiment across 100 KYC/AML task variants, two models, and three architectures, a 32B open-weights model attenuated 0% of discovered facts under a single-loop baseline, 56% under a fixed pipeline, and 85% under an orchestrator-subagent architecture (all at constraint distance 2). A stronger model (gpt-4.1-mini) attenuated 3-6% under the same conditions, suggesting the governance cost of decomposition is partly a function of model capability. Critically, the same mechanism produces both under-escalation and over-escalation, depending on whether the dropped fact was a risk signal or an exculpating one. The benchmark, all tasks, and the verification harness are open-source",
+  "abstract_zh": "现有 Agent 基准主要评估任务是否完成，而本文关注任务是否在政策约束内完成。作者提出 Fiducia-bench，用于评估金融 Agent 的可治理性（governability），包括是否在必须升级时升级、在要求拒答时拒答，以及是否留下可审计轨迹。基于 626 个实验回合、100 个 KYC/AML 任务变体、两种模型和三种架构，论文研究了 Agent 分解是否会损害治理能力。结果显示，分解确实会造成治理退化，其具体机制是：一个组件发现的政策相关事实，在交接边界处被削弱，因而无法有效传递给负责采取行动的组件。在约束距离为 2 的条件下，32B 开放权重模型在单循环基线中对已发现事实的削弱率为 0%，在固定流水线架构中为 56%，在 orchestrator-subagent 架构中为 85%；更强的 gpt-4.1-mini 在相同条件下的削弱率为 3%至6%，说明分解带来的治理成本部分取决于模型能力。该机制既可能导致风险信号丢失后的过度放行（under-escalation），也可能导致免责事实丢失后的过度升级（over-escalation）。论文同时开源基准、全部任务和验证工具链。",
+  "key_points_zh": [
+    "提出 Fiducia-bench，首次系统评估金融 Agent 的升级、拒答与审计轨迹等治理能力。",
+    "核心发现是组件交接会衰减政策相关事实，且分解程度越高，事实丢失越严重。",
+    "在约束距离为 2 时，32B 模型的事实削弱率从单循环架构的 0%升至固定流水线的 56%和 orchestrator-subagent 的 85%。",
+    "更强的 gpt-4.1-mini 仅出现 3%至6%的削弱，表明治理成本与模型能力相关。",
+    "事实丢失会产生双向风险：丢失风险信号导致 under-escalation，丢失免责事实导致 over-escalation。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.72,
+    "novelty": 0.79,
+    "problem_significance": 0.84,
+    "potential_impact": 0.79,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.76,
+    "llm_avg": 0.776,
+    "comment": "This provides a useful orchestration-focused benchmark and verification harness showing that decomposition can destroy policy-relevant state at handoff boundaries.",
+    "comment_zh": "该工作通过面向编排的基准和验证工具揭示了组件分解会在交接边界丢失关键策略状态，具有较强实践价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3313836013810483,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.776,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16055/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.843
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16055/fig2.webp",
+      "page": 2,
+      "kind": "table",
+      "confidence": 0.98
+    }
+  ]
+}

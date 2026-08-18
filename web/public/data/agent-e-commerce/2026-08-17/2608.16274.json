@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.16274",
+  "title": "Decoupled Temporal Encoding for Generative Recommendation",
+  "title_zh": "用于生成式推荐的解耦时间编码（Decoupled Temporal Encoding）",
+  "authors": [
+    "Pengfei Jia",
+    "Jingjian Wang",
+    "Jingmao Li",
+    "Ge Zhang",
+    "Feng Shi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-17T08:47:21Z",
+  "abs_url": "https://arxiv.org/abs/2608.16274v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.16274",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Positional encoding is a fundamental component of Transformer-based generative recommendation models, where user histories are modeled as autoregressive item sequences. Most positional encoding methods are inherited from natural language processing and mainly represent discrete item order. However, recommendation sequences go beyond ordered lists, as timestamps and temporal effects also shape item relations. Our work is motivated by a real-world food delivery and instant retail recommendation system, where user behavior exhibits multi-level temporal regularities, including recency effects, meal-time peaks, weekday-weekend shifts, and promotion-driven traffic bursts. Existing methods partially address this issue through timestamp features, interval embeddings, decay functions, or attention biases, but they usually inject heterogeneous temporal signals through a unified representation or a single modeling pathway, making it difficult to distinguish broad temporal dynamics from local order cues. To address this limitation, we propose Decoupled Temporal Encoding, a lightweight framework for generative recommendation. DTE separates temporal dynamics from order information through two complementary modules: a personalized macro-temporal module that injects compact temporal primitives into item embeddings, and a time-gated micro-sequential module that introduces relative-order bias only when interactions are temporally dense. DTE is also parameter-efficient and deployment-friendly, allowing easy integration into existing systems.",
+  "abstract_zh": "现有基于Transformer的生成式推荐模型主要借鉴自然语言处理中的位置编码，侧重表示离散的物品顺序，难以充分建模推荐行为中的多层次时间规律。针对外卖与即时零售场景中的近期性、用餐时段、工作日与周末差异及促销流量突发等现象，论文提出轻量级框架Decoupled Temporal Encoding（DTE）。DTE通过两个互补模块解耦时间动态与序列顺序：个性化宏观时间模块将紧凑时间原语注入物品嵌入；时间门控微观序列模块仅在交互时间密集时引入相对顺序偏置。该方法参数高效、易于部署，可便捷集成至现有推荐系统。",
+  "key_points_zh": [
+    "指出传统位置编码主要建模离散物品顺序，难以区分长期时间规律与局部序列关系。",
+    "提出个性化宏观时间模块，将近期性、时段等紧凑时间原语注入物品表示。",
+    "提出时间门控微观序列模块，仅在用户交互时间密集时施加相对顺序偏置。",
+    "DTE采用解耦建模路径，参数开销低且部署友好，适合改造现有生成式推荐系统。",
+    "论文已被CIKM 2026接收，应用背景为外卖与即时零售推荐。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.72,
+    "problem_significance": 0.82,
+    "potential_impact": 0.81,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.74,
+    "llm_avg": 0.734,
+    "comment": "DTE addresses practically important temporal patterns in real-world retail recommendation with a lightweight decomposition, but its lasting value depends on demonstrated serving and ranking improvements.",
+    "comment_zh": "DTE 以轻量解耦机制处理真实零售推荐中的重要时间规律，但其长期价值仍取决于线上服务与排序效果的实证提升。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.734,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16274/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.933
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16274/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.906
+    }
+  ]
+}

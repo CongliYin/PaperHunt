@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.16630",
+  "title": "The Working Set of a Coding Agent: Coherence Debt in Repository-Scale Tasks",
+  "title_zh": "编码代理的工作集：仓库级任务中的一致性债务",
+  "authors": [
+    "Bardia Mohammadi",
+    "Lars Klein",
+    "Aman Chadha",
+    "Akhil Arora",
+    "Laurent Bindschaedler"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-17T14:30:41Z",
+  "abs_url": "https://arxiv.org/abs/2608.16630v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.16630",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Repository-scale coding requires an agent to keep tests, imports, configuration, and migration rules consistent within a bounded context window. We model this as reconstructing a coupled-fact graph: at each edit, a required fact comes from recent context or parametric memory, and the facts covered by neither form coherence debt. We supply and withhold each channel and inject faults across seven models and five harnesses. As expected, no model completes a task on an unseen API with both channels empty, and putting the facts in the prompt restores success. When a rename defeats what models memorized about a real library, all seven fail in the same place, passing and missing the same tests. Availability decides the outcome and distance does not: withholding a fact costs exactly the work it supports, and a supplied fact works as well far from the edit as next to it. Harnesses pay unequal prices for it: configurations that all pass every test differ more than tenfold in tokens consumed because they rebuild the same content at different rates, and spending more recovers nothing when facts are withheld. A missing fact produces wrong work rather than absent work: an agent asked to act acts, fabricating the file or guessing the value, so instruments built on reads look for a hole already filled. How often it says it is blocked instead is a property of the model, from every trial to none. Availability does not settle every edit: where standard and code disagree, agents follow the standard even when it prescribes the worse code, so a stale convention file costs more than no file. Because parametric memory substitutes for reading, on SWE-bench, where models likely know the repositories, reads no longer predict success. Harnesses should keep the facts an edit depends on available when the agent writes, and check that availability against what the agent produces rather than what it reads.",
+  "abstract_zh": "仓库级编码要求代理在有限上下文窗口内保持测试、导入、配置和迁移规则的一致性。本文将其建模为耦合事实图的重建问题：每次编辑所需的事实来自近期上下文或参数化记忆，而两者均未覆盖的事实构成一致性债务（coherence debt）。研究者在七个模型和五个测试框架（harnesses）上分别提供或隐藏这两类信息，并注入多种故障。结果表明：当面对未见过的 API 且两类信息均缺失时，没有模型能够完成任务；将所需事实放入提示词即可恢复成功。当重命名操作违背模型对真实库的记忆时，七个模型均在同一位置失败，并通过和遗漏相同的测试。决定结果的是事实是否可用，而非其与编辑位置的距离：隐藏一个事实会造成与其支持的工作量完全对应的损失，而将事实放在远离编辑处与紧邻编辑处效果相同。不同 harnesses 为事实可用性付出的代价差异很大：即使都通过全部测试，不同配置因以不同速率重建相同内容，消耗的 token 也可相差十倍以上；事实被隐藏时，增加 token 开销无法恢复性能。事实缺失通常产生错误工作而非停止工作：代理会伪造文件或猜测数值，因此仅依据读取行为构建的检测工具可能错过已经被填补的空洞。代理主动声称受阻的频率则取决于模型，从每次试验都报告受阻到从不报告。在标准规范与代码不一致时，可用性也不能决定所有编辑：代理倾向遵循标准，即使标准会导致更差的代码，因此过时的约定文件可能比没有文件造成更大损失。由于参数化记忆可以替代读取，在模型很可能已经熟悉相关仓库的 SWE-bench 上，读取行为不再能预测成功率。测试框架应在代理写入时确保编辑所依赖的事实可用，并根据代理生成的内容而非读取行为检查这种可用性。",
+  "key_points_zh": [
+    "编码代理的关键瓶颈是事实可用性：近期上下文和参数化记忆均未提供所需事实时，会形成一致性债务并导致失败。",
+    "事实距离编辑位置远近不影响效果；隐藏事实造成的损失恰好对应其支持的工作量，增加 token 预算无法弥补信息缺失。",
+    "事实缺失时，代理往往会继续行动并伪造文件或猜测值，而不是明确报告受阻，因此仅监测读取行为会漏检错误。",
+    "标准规范与代码冲突时，代理通常遵循标准；过时的约定文件可能比完全缺失文件造成更严重的错误。",
+    "在模型已具备仓库参数化知识的 SWE-bench 上，读取次数不再能有效预测成功；harnesses 应在写入前验证事实可用性，并检查实际产出。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.82,
+    "novelty": 0.78,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.8,
+    "llm_avg": 0.7959999999999999,
+    "comment": "This offers actionable evidence for coding-agent harness design by linking repository-scale success to working-set fact availability, coherence, and validation rather than superficial read telemetry.",
+    "comment_zh": "该工作表明代码Agent的仓库级成功取决于工作集事实的可用性、一致性和验证，而非表面的读取遥测，为Harness设计提供了实证依据。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.7959999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16630/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.951
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16630/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.978
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.16168",
+  "title": "QUMem: Personalized Memory for Query-Conditioned User-State Inference in LLM Agents",
+  "title_zh": "QUMem：面向查询条件用户状态推断的个性化记忆",
+  "authors": [
+    "Heng Wang",
+    "Yifei Li",
+    "Lingling Zhang",
+    "Pengyu Li",
+    "Xinyu Che",
+    "Xinyu Zhang",
+    "Zesheng Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-17T06:34:24Z",
+  "abs_url": "https://arxiv.org/abs/2608.16168v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.16168",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM) agents increasingly use external memory systems to support personalization by drawing on long and evolving interaction histories, in which user preferences may be distributed across time, change with context, and conflict with earlier evidence. However, existing systems face three limitations: fixed-turn, fixed-token, or session-based boundaries can mix unrelated dialogue or split an event from its causes, decisions, and outcomes; storing multiple pieces of user information from the same interaction as a single memory binds together items that serve different functions and should be independently retrievable; and treating the current task as a single top-$k$ retrieval query can return fragments that are individually relevant but fail to jointly capture preference evolution, temporal validity, and contextual applicability. We introduce \\textsc{QUMem}, a structured memory framework for query-conditioned user-state inference. \\textsc{QUMem} first segments interaction histories into variable-length episodes according to semantic continuity, then decomposes each episode into independently retrievable factual, preference, and transferable insight memories while preserving temporal positions and source evidence. At inference time, three sequential agents identify task-specific information needs, plan multi-query retrieval over the typed memory stores, and jointly infer a temporally and contextually valid user state for downstream response generation. \\textsc{QUMem} achieves state-of-the-art performance on both PersonaMem and KnowU-Bench, demonstrating the effectiveness of query-conditioned user-state inference for long-term personalization.",
+  "abstract_zh": "大型语言模型（LLM）智能体借助外部记忆实现长期个性化，但用户偏好可能跨时间分布、随情境变化并与早期证据冲突。现有方法存在三类问题：固定轮次、固定令牌数或会话边界会混合无关对话，或割裂事件及其原因、决策和结果；将同一交互中的多类用户信息合并为单条记忆，限制了不同功能信息的独立检索；将任务视为单一 top-k 检索，难以共同捕捉偏好演化、时间有效性和情境适用性。为此，论文提出 QUMem，一种面向查询条件用户状态推断的结构化记忆框架。QUMem 首先依据语义连续性，将交互历史划分为可变长度的事件片段；随后将每个片段分解为可独立检索的事实记忆、偏好记忆和可迁移洞见，同时保留时间位置与来源证据。推理阶段由三个顺序协作的智能体识别任务相关信息需求、规划面向不同类型记忆库的多查询检索，并联合推断具有时间有效性和情境适用性的用户状态，以支持下游回复生成。在 PersonaMem 和 KnowU-Bench 上，QUMem 均取得当前最佳性能，验证了查询条件用户状态推断对长期个性化的有效性。",
+  "key_points_zh": [
+    "按语义连续性划分可变长度事件片段，避免固定边界导致上下文割裂或无关信息混杂。",
+    "将记忆拆分为事实、偏好和可迁移洞见三种类型，实现独立检索并保留时间与来源证据。",
+    "通过三个顺序智能体识别信息需求、规划多查询检索，并联合推断时间和情境有效的用户状态。",
+    "在 PersonaMem 与 KnowU-Bench 上取得当前最佳性能，证明其对长期个性化的促进作用。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.85,
+    "problem_significance": 0.88,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.77,
+    "lasting_value": 0.85,
+    "llm_avg": 0.8379999999999999,
+    "comment": "A strong personalized Agent-memory framework that combines semantic episode construction, typed independently retrievable memories, provenance, and query-conditioned temporal user-state inference.",
+    "comment_zh": "这是一项扎实的个性化 Agent Memory 工作，将语义事件构建、类型化独立检索记忆、来源证据与查询条件下的时序用户状态推断结合起来。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36228269883744174,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.8379999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16168/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16168/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.949
+    }
+  ]
+}

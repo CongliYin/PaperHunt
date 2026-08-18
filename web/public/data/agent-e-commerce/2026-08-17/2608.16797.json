@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2608.16797",
+  "title": "UniDot: A Unified Network for Sequence Modeling and Feature Interaction in Large-scale Recommendation",
+  "title_zh": "UniDot：用于大规模推荐中序列建模与特征交互的统一网络",
+  "authors": [
+    "Rongcheng Lin",
+    "Yan Sun",
+    "Jamey Zhang",
+    "Guanglei Xiong",
+    "Ivan Ji",
+    "Xianjie Chen",
+    "Shujian Bu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-17T16:52:56Z",
+  "abs_url": "https://arxiv.org/abs/2608.16797v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.16797",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Industrial recommenders rely on two model families that have evolved largely independently: feature-interaction models over multi-field user/item features, and sequential models over user-behavior histories. Production systems couple them only loosely. To unify the two, we present UniDot, a novel architecture for post-click conversion prediction built from the factorization-machine (FM) point of view: the embedding inner product---which powers collaborative filtering and lets a recommender generalize to unseen user--item pairs---is the same primitive as attention's query dot key scoring, so a single dot-product of tokens can underlie both feature interaction and sequence modeling. UniDot tokenizes non-sequential fields and multi-domain behavioral sequences into one shared token space and stacks a single macro-block in which a token-mixing bus and a sequence-retrieval bus (item tokens cross-attending the histories) run in parallel and exchange state each layer through an MLP-Mixer fusion, while an FM Highway carries explicit per-layer dot-product interactions around the residual stack directly to the classifier. The sequence side is embedded once per forward pass and shared by all consumers, bounding inference latency. Trained with a dual sparse/dense (Adagrad + Muon) optimizer, an auxiliary conversion-delay head, and multi-path mutual learning, UniDot finished as the runner-up on the Industrial track of the TAAC KDD Cup 2026.",
+  "abstract_zh": "工业推荐系统通常分别采用多域用户/物品特征交互模型与用户行为序列模型，二者结合较为松散。UniDot从因子分解机（Factorization Machine, FM）视角出发，指出嵌入向量内积既是协同过滤中泛化未见用户—物品组合的基础，也对应注意力机制中的查询—键点积，因此可用统一的点积运算同时实现特征交互与序列建模。该方法将非序列字段和多域行为序列编码为共享token空间，并堆叠统一宏模块：Token-Mixing总线与序列检索总线并行运行，其中物品token通过交叉注意力检索行为历史；每层利用MLP-Mixer融合交换状态。同时，FM Highway绕过残差堆栈，逐层传递显式点积交互至分类器。序列侧在每次前向传播中仅编码一次，并由多个模块共享，从而控制推理延迟。UniDot结合Adagrad与Muon的稀疏/稠密双优化器、辅助转化延迟预测头及多路径互学习，在TAAC KDD Cup 2026工业赛道获得亚军。",
+  "key_points_zh": [
+    "以FM点积为统一原语，将多字段特征交互与行为序列建模纳入共享token空间。",
+    "通过Token-Mixing总线和序列检索总线并行处理，并用MLP-Mixer逐层融合状态。",
+    "FM Highway显式保留逐层点积交互，直接连接分类器，增强高阶残差网络中的交互建模。",
+    "行为序列仅编码一次并被多个消费者共享，有助于降低工业推荐推理延迟。",
+    "结合Adagrad+Muon、转化延迟辅助任务和多路径互学习，获TAAC KDD Cup 2026工业赛道亚军。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.78,
+    "problem_significance": 0.84,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.67,
+    "lasting_value": 0.76,
+    "llm_avg": 0.774,
+    "comment": "UniDot offers a technically novel and deployment-aware unification of feature interaction and behavioral sequence modeling for industrial conversion prediction, though the abstract provides limited evidence of gains.",
+    "comment_zh": "UniDot 面向工业转化预测，以兼顾部署效率的方式统一特征交互与行为序列建模，但摘要对实际增益的证据较为有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.7200000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.308682335133939,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.774,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16797/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16797/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.953
+    }
+  ]
+}

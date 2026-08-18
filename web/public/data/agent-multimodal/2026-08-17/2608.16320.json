@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2608.16320",
+  "title": "StreamOPD: A Post-Training Recipe with Spatio-Temporal Cue Gating for Streaming Video Understanding",
+  "title_zh": "StreamOPD：结合时空线索门控的流式视频理解后训练方案",
+  "authors": [
+    "Keming Wu",
+    "Baoyi Wang",
+    "Kaichen Zhang",
+    "Xiang An",
+    "Zuhao Yang",
+    "Sudong Wang",
+    "Haowei Zhu",
+    "Tingxuan Huang",
+    "Hongcheng Gao",
+    "Bin Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-17T09:25:36Z",
+  "abs_url": "https://arxiv.org/abs/2608.16320v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.16320",
+  "links": {
+    "github": null,
+    "project_page": "https://unix-ai-lab.github.io/StreamOPD"
+  },
+  "abstract_en": "Streaming video understanding demands direct responses from the causally observed prefix of an unfolding video. Existing systems add inference-time memory, retrieval, and compression, yet a training-free sliding-window baseline already matches them. We therefore fix a memory-free recent-window protocol and ask how far post-training alone can go. Reinforcement learning with verifiable rewards fits this regime poorly, encouraging long ``think-then-answer'' generations, while on-policy distillation (OPD) supplies dense token-level teacher supervision on student trajectories but is stable only when both models train in thinking mode. These observations lead to \\textsc{StreamOPD}, a recipe combining verifiable streaming-video data, thinking-mode OPD, and instruct-mode deployment. It raises StreamingBench from $77.9\\%$ to $83.9\\%$---within $0.3$ points of the 9B teacher---and improves OVO-Bench excluding its hallucination-detection subtask (HLD) by $9.1$ points under unchanged inference. As a teacher-privilege extension, \\emph{Spatio-Temporal CueGate (ST-CueGate)} aggregates cue-versus-no-cue teacher likelihood ratios into a group-relative response score that reweights OPD. It reaches $71.9\\%$ on OVO-Bench (excluding HLD) and $64.9\\%$ on Video-MME, and is the only variant that stays above the base model on all four benchmarks. Replacing the teacher with a frozen copy of the student's initial policy---on-policy self-distillation---retains most of these gains and lifts HLD to $57.0\\%$, above both the untrained student and the 9B teacher, so abstention loss is not intrinsic to the recipe. We provide a transparent and reproducible reference for open-source streaming-video research.",
+  "abstract_zh": "流式视频理解要求模型仅依据因果可见的视频前缀直接作答。论文固定无记忆的近期滑动窗口协议，研究仅通过后训练提升性能的方法。作者发现，带可验证奖励的强化学习容易诱导冗长的“先思考后回答”生成，而在思考模式下进行的On-Policy Distillation（OPD）可为学生轨迹提供稠密的逐Token教师监督。基于此，StreamOPD结合可验证流式视频数据、思考模式OPD与指令模式部署，将StreamingBench从77.9%提升至83.9%，距离9B教师模型仅0.3个百分点；在不改变推理设置的情况下，OVO-Bench（不含HLD）提升9.1个百分点。进一步提出利用时空线索与无线索教师似然比进行分组相对重加权的Spatio-Temporal CueGate（ST-CueGate），在OVO-Bench（不含HLD）和Video-MME上分别达到71.9%和64.9%，且是唯一在四个基准上均超过基础模型的变体。以学生初始策略的冻结副本替代教师进行On-Policy Self-Distillation，仍保留大部分收益，并将HLD提升至57.0%，说明拒答能力损失并非该方案固有问题。",
+  "key_points_zh": [
+    "固定无记忆近期窗口协议，表明后训练本身即可显著提升流式视频理解性能。",
+    "StreamOPD结合可验证数据、思考模式OPD与指令模式部署，使StreamingBench达到83.9%。",
+    "ST-CueGate利用教师在有无线索条件下的似然比重加权OPD，在多个基准上取得稳定收益。",
+    "学生自蒸馏可保留大部分性能提升，并将OVO-Bench的HLD提升至57.0%，缓解幻觉检测能力下降。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.82,
+    "novelty": 0.78,
+    "problem_significance": 0.8,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.78,
+    "llm_avg": 0.756,
+    "comment": "A strong streaming-video learning paper with causal-prefix evaluation, efficient post-training, and reproducible gains, though it does not address tool-mediated agent interaction directly.",
+    "comment_zh": "该工作围绕因果视频前缀、后训练效率和可复现实验取得了有力进展，但尚未直接处理工具驱动的智能体交互。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.6000000000000001,
+    "community_heat": 0.6,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.756,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://unix-ai-lab.github.io/StreamOPD",
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16320/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16320/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.843
+    }
+  ]
+}

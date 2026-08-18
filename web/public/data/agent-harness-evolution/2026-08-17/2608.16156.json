@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.16156",
+  "title": "TRCA: Transition-wise Rubric Credit Assignment for Long-horizon LLM Agents",
+  "title_zh": "TRCA：面向长程 LLM 智能体的逐转移量规信用分配",
+  "authors": [
+    "Huan Zhang",
+    "Mingju Chen",
+    "Dongxu Zhou",
+    "Can Lv",
+    "Heng Chang",
+    "Sen Cui",
+    "Faguo Wu",
+    "Shiji Zhou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-17T06:19:12Z",
+  "abs_url": "https://arxiv.org/abs/2608.16156v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.16156",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-horizon large language model (LLM) agents are typically optimized with sparse terminal outcomes, making fine-grained credit assignment across multi-step interactions difficult. Existing approaches either rely on process evaluators, which incur annotation and inference costs, or derive step-level credit from successful trajectories. However, successful trajectories are extremely scarce during early-stage reinforcement learning, substantially weakening anchor-based methods. We propose Transition-wise Rubric Credit Assignment (TRCA), which derives step-level supervision directly from action-induced transitions without learned evaluators or successful anchors. TRCA evaluates each transition using Evidence, Execution, and Invalidity rubrics to capture task-relevant information acquisition, valid task execution, and invalid or regressive behavior. From these judgments, Foundational Rubric Reward measures local transition quality, while Breakthrough Rubric Reward tracks newly covered Evidence and Execution conditions to reward incremental task progress. Combined with terminal outcomes, these signals produce fine-grained step-level advantages for policy optimization. Experiments on ALFWorld, WebShop, and seven search-augmented question-answering benchmarks show consistent improvements over the evaluated baselines. With Qwen2.5-7B-Instruct, TRCA improves the WebShop score by 6.0%-12.6%; with Qwen2.5-3B-Instruct, it improves the average SearchQA score by 1.9%-18.3%. These results demonstrate the effectiveness of transition-wise rubric credit assignment for long-horizon tasks with sparse successful anchors.",
+  "abstract_zh": "长程大语言模型（LLM）智能体通常依赖稀疏的终局结果进行优化，因此难以在多步交互中实现细粒度信用分配。现有方法要么使用过程评估器，带来额外的标注与推理成本；要么从成功轨迹中推导步骤级信用，但强化学习早期的成功轨迹极其稀缺，显著削弱了依赖成功锚点的方法。本文提出 Transition-wise Rubric Credit Assignment（TRCA），无需学习式评估器或成功轨迹锚点，直接根据动作引起的状态转移生成步骤级监督。TRCA 使用 Evidence、Execution 和 Invalidity 三类量规评估每次转移，分别刻画任务相关信息的获取、有效任务执行，以及无效或退步行为。在此基础上，Foundational Rubric Reward 衡量局部转移质量，Breakthrough Rubric Reward 则追踪新覆盖的 Evidence 与 Execution 条件，以奖励渐进式任务进展。上述信号与终局结果结合，为策略优化提供细粒度的步骤级优势。ALFWorld、WebShop 及七个搜索增强问答基准上的实验表明，TRCA 持续优于所评估的基线：基于 Qwen2.5-7B-Instruct 时，WebShop 得分提升 6.0%–12.6%；基于 Qwen2.5-3B-Instruct 时，SearchQA 平均得分提升 1.9%–18.3%。结果证明，逐转移量规信用分配适用于成功锚点稀缺的长程任务。",
+  "key_points_zh": [
+    "针对长程 LLM 智能体终局奖励稀疏、早期成功轨迹不足导致的步骤级信用分配难题。",
+    "TRCA 直接评估动作引起的状态转移，不依赖学习式过程评估器，也不需要成功轨迹作为锚点。",
+    "通过 Evidence、Execution、Invalidity 三类量规，分别识别有效信息获取、任务执行和无效或退步行为。",
+    "Foundational Rubric Reward 评估局部转移质量，Breakthrough Rubric Reward 奖励新覆盖条件所代表的增量进展。",
+    "在 ALFWorld、WebShop 和七个 SearchQA 基准上稳定提升性能，WebShop 提升 6.0%–12.6%，SearchQA 平均提升 1.9%–18.3%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.86,
+    "problem_significance": 0.91,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.81,
+    "lasting_value": 0.87,
+    "llm_avg": 0.866,
+    "comment": "TRCA addresses a central agent-RL bottleneck by deriving transition-level rewards from action-induced evidence and execution changes without relying on scarce successful trajectories.",
+    "comment_zh": "TRCA无需依赖稀缺成功轨迹，而是从动作引起的证据和执行变化中生成转移级奖励，直接解决Agent强化学习的核心信用分配问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4115964525107618,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.866,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 10,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16156/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16156/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.972
+    }
+  ]
+}

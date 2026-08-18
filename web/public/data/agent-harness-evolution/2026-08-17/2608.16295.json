@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2608.16295",
+  "title": "Executable Code Knowledge: Code as a Native, Validation-Carrying Knowledge Representation for AI Coding Agents",
+  "title_zh": "可执行代码知识：面向 AI 编程代理的原生、携带验证的知识表示",
+  "authors": [
+    "Xueping Gao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-17T09:07:45Z",
+  "abs_url": "https://arxiv.org/abs/2608.16295v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.16295",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "AI coding agents need more than relevant snippets: they need business semantics, validation evidence, relations, and assurance that their context is current. Existing systems usually infer or externalize this knowledge through retrieval, summaries, graphs, rules, or reverse specifications. We investigate a complementary representation in which selected code units directly carry agent-usable knowledge. We introduce Executable Code Knowledge (ECK) and define an Executable Code Knowledge Unit (ECKU) as a source-bound object combining stable identity, semantics, executable behavior, contracts, evidence, relations, provenance, validation state, and a query interface. Our Python prototype supports code-local authoring, manifest export, evidence execution, exact changed-line impact, freshness checking, and agent-facing projections. Across three real Python repositories and 26 controlled patch tasks, direct ECK provides executable test coverage for 11/11 evidence-bearing tasks and exact selectors for 9/11; hiding declared evidence reduces exact recovery to 1/11 (paired exact McNemar p=0.0078). ECK-derived rules recover 11/11 exact selectors, showing that rules are effective delivery artifacts while ECK supplies source binding, validation state, impact, and freshness. Exact changed-line impact matches independently authored labels on all 26 patches (12 unit links; precision, recall, and F1 all 1.000). AST-bounded fingerprints classify 50 positive changes and 17 unrelated same-file controls correctly, whereas static rules snapshots detect none of the 50 stale cases. Model-backed patch-review and cross-layer studies measure projection fidelity rather than independent impact discovery. These results support a hybrid architecture: retrieval for coverage, ECK for source and evidence governance, and projections for delivery.",
+  "abstract_zh": "AI 编程代理不仅需要相关代码片段，还需要业务语义、验证证据、实体关系以及上下文时效性保证。本文提出 Executable Code Knowledge（ECK），将选定代码单元作为直接承载代理可用知识的表示形式，并定义 Executable Code Knowledge Unit（ECKU）：一种与源代码绑定的对象，包含稳定标识、语义、可执行行为、契约、证据、关系、来源、验证状态和查询接口。Python 原型支持代码本地编写、清单导出、证据执行、精确变更行影响分析、新鲜度检查及面向代理的知识投影。在 3 个真实 Python 仓库和 26 个受控补丁任务上，直接使用 ECK 可为 11/11 个含证据任务提供可执行测试覆盖，并为 9/11 个任务恢复精确选择器；隐藏声明证据后，精确恢复率降至 1/11（配对精确 McNemar 检验 p=0.0078）。由 ECK 生成的规则可恢复 11/11 个精确选择器，表明规则适合作为交付产物，而 ECK 负责提供源代码绑定、验证状态、影响范围和新鲜度信息。精确变更行影响分析在全部 26 个补丁上均与独立标注一致（12 个单元链接，precision、recall 和 F1 均为 1.000）。基于 AST 的有界指纹正确分类了 50 个正向变更和 17 个同文件无关对照，而静态规则快照未检测出 50 个过期案例。论文据此支持一种混合架构：用 retrieval 保证覆盖率，用 ECK 管理源代码与证据，用 projections 面向代理交付知识。",
+  "key_points_zh": [
+    "提出 Executable Code Knowledge（ECK）与 Executable Code Knowledge Unit（ECKU），将语义、行为、契约、证据、关系、来源、验证状态和查询接口绑定到源代码。",
+    "ECK 支持证据执行、精确变更影响分析和新鲜度检查；在 26 个补丁上，精确变更行影响的 precision、recall 和 F1 均达到 1.000。",
+    "直接 ECK 在含证据任务上实现 11/11 的可执行测试覆盖和 9/11 的精确选择器恢复；隐藏证据后精确恢复降至 1/11。",
+    "ECK 生成的规则可恢复 11/11 个精确选择器，说明规则适合交付，而 ECK 更适合承担源绑定、验证、影响分析和新鲜度治理。",
+    "论文建议采用混合架构：retrieval 提供覆盖率，ECK 负责知识与证据治理，projections 面向 AI 编程代理交付信息。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.79,
+    "novelty": 0.81,
+    "problem_significance": 0.83,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.77,
+    "llm_avg": 0.7820000000000001,
+    "comment": "Executable Code Knowledge offers coding agents source-bound, validation-carrying context and freshness-aware impact links, although the prototype evidence remains relatively small.",
+    "comment_zh": "Executable Code Knowledge为代码Agent提供了绑定源码、携带验证证据且感知新鲜度的上下文，但原型实验规模仍较有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7820000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16295/fig1.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.728
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16295/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.979
+    }
+  ]
+}

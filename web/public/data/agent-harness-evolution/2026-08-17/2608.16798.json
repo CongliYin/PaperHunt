@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2608.16798",
+  "title": "ClawGym II: Exploring Black-Box RL on Agent Harness",
+  "title_zh": "ClawGym II：探索 Agent Harness 上的黑盒强化学习",
+  "authors": [
+    "Huatong Song",
+    "Fei Bai",
+    "Ming Yang",
+    "Renyuan Li",
+    "Jia Deng",
+    "Jujie He",
+    "Zhange Zhang",
+    "Daixuan Cheng",
+    "Yan Xing",
+    "Qi Yun",
+    "Xuxing Chen",
+    "Danyang Li",
+    "Feng Chang",
+    "Chuan Hao",
+    "Ran Tao",
+    "Jian Yang",
+    "Bryan Dai",
+    "Wayne Xin Zhao",
+    "Mingjie Tang",
+    "Ji-Rong Wen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-17T16:53:03Z",
+  "abs_url": "https://arxiv.org/abs/2608.16798v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.16798",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent harnesses have substantially improved performance on long-horizon tasks by coordinating agent interactions with the environment. However, reinforcement learning through complex harnesses remains largely unexplored, as scaling such training to long-horizon agent tasks introduces fundamental challenges. In this work, we present a unified black-box RL framework for stable and scalable optimization of general agents through complex harnesses. Concretely, we first build a sandbox-based execution infrastructure that isolates task environments and harnesses within temporary sandboxes for large-scale concurrent rollouts. We then decouple policy optimization from opaque harness execution and place a serving proxy at the model boundary to capture model calls. To reconstruct multi-turn trajectories and improve training efficiency, we organize the captured calls into prefix trees and further adapt both critic-based PPO and critic-free GRPO to optimize over the recovered tree structure. Meanwhile, we maintain training-inference consistency throughout the optimization process. Finally, we introduce mix-harness training, allowing a single model to be jointly optimized by heterogeneous harnesses. With Qwen3-30A3B, black-box RL improves Pass@1 on ClawGym-Bench by 9.98 and 14.81 points through OpenClaw and Claude Code, respectively, while remaining stable over 200-400 optimization steps. Moreover, the framework yields consistent gains on more challenging tasks such as JobBench and OfficeQA. Overall, our framework enables effective, stable, and scalable optimization of general agents through black-box harnesses, supporting unified training across heterogeneous execution systems.",
+  "abstract_zh": "本文提出一个统一的黑盒强化学习框架，用于通过复杂的 Agent harness 稳定、可扩展地优化通用智能体。框架构建基于 sandbox 的执行基础设施，将任务环境与 harness 隔离，并支持大规模并发 rollout；在模型边界部署 serving proxy，捕获由不透明 harness 产生的模型调用，从而解耦策略优化与 harness 执行。为重建多轮轨迹并提升训练效率，方法将调用组织为 prefix tree，并改造基于 critic 的 PPO 与无 critic 的 GRPO，使其能够在恢复的树结构上进行优化，同时保持训练与推理的一致性。此外，mix-harness training 支持使用异构 harness 联合优化同一个模型。基于 Qwen3-30A3B，使用 OpenClaw 和 Claude Code 时，黑盒 RL 在 ClawGym-Bench 上分别将 Pass@1 提升 9.98 和 14.81 个百分点，并在 200 至 400 个优化步骤中保持稳定。在更具挑战性的 JobBench 和 OfficeQA 上，框架同样取得持续增益。",
+  "key_points_zh": [
+    "通过 sandbox 隔离任务环境与 Agent harness，支持大规模并发 rollout；利用 serving proxy 在模型边界捕获调用，屏蔽 harness 内部实现。",
+    "将多轮模型调用重建为 prefix tree，并适配 PPO 与 GRPO，在树结构上进行高效策略优化。",
+    "贯穿训练过程保持训练—推理一致性，并通过 mix-harness training 联合利用异构 harness。",
+    "基于 Qwen3-30A3B，在 ClawGym-Bench 上使用 OpenClaw 和 Claude Code 分别提升 Pass@1 9.98 和 14.81 个百分点。",
+    "方法在 200 至 400 个优化步骤中保持稳定，并在 JobBench、OfficeQA 等任务上取得一致增益。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.92,
+    "problem_significance": 0.95,
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.9,
+    "lasting_value": 0.94,
+    "llm_avg": 0.93,
+    "comment": "This is exceptionally strong harness infrastructure that enables scalable black-box RL, trajectory reconstruction, and unified optimization across heterogeneous agent runtimes.",
+    "comment_zh": "这项工作构建了可扩展的黑盒强化学习基础设施，并统一支持异构Agent运行时优化，具有极高的平台价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.8659745638428135,
+    "author_reputation": 0.39154972126665855,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.93,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 33,
+    "first_author_h_index": 7,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16798/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

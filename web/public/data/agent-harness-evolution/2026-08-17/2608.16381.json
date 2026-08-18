@@ -1,0 +1,109 @@
+{
+  "arxiv_id": "2608.16381",
+  "title": "AstronOS: A Unified Execution Model and Runtime for Long-Horizon Agentic Systems",
+  "title_zh": "AstronOS：面向长期智能体系统的统一执行模型与运行时",
+  "authors": [
+    "Zhenhang Nie",
+    "Gui Zheng",
+    "Xudong Sun",
+    "Tailong Zhu",
+    "Bin Zhang"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Zhenhang Nie",
+      "affiliations": [
+        "iFLYTEK Co., Ltd., Hefei, China"
+      ]
+    },
+    {
+      "name": "Gui Zheng",
+      "affiliations": [
+        "iFLYTEK Co., Ltd., Hefei, China"
+      ]
+    },
+    {
+      "name": "Xudong Sun",
+      "affiliations": [
+        "iFLYTEK Co., Ltd., Hefei, China"
+      ]
+    },
+    {
+      "name": "Tailong Zhu",
+      "affiliations": [
+        "iFLYTEK Co., Ltd., Hefei, China"
+      ]
+    },
+    {
+      "name": "Bin Zhang",
+      "affiliations": [
+        "iFLYTEK Co., Ltd., Hefei, China"
+      ]
+    }
+  ],
+  "published_at": "2026-08-17T10:33:28Z",
+  "abs_url": "https://arxiv.org/abs/2608.16381v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.16381",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic systems often organize execution and state around a single conversation, model invocation, or agent instance, even when real work spans many calls and stages. We introduce a unified execution model that maintains a work item's persistent identity and versioned authoritative state across calls. Each step receives input scoped to a specific state version and new material; a result advances state only after validation and recording. We implement selected paths of this model in AstronOS using Cases, Tasks, and Scenario Packs across central and local execution. We compare five complete strategies for carrying an established software-version update plan into a fresh model session: rereading original materials, replaying full history, deterministic text summary, deterministic JSON, and the AstronOS runtime-mediated handoff. Ten controlled tasks are run under all five strategies with three repetitions, yielding 150 included executions. On the single-stage reference family, strategies perform similarly. In the primary three-stage A-C batch, AstronOS passes the frozen scorer in 14 of 15 executions, compared with 0 of 15 for rereading and 2 of 15 for full-history replay; later non-interleaved summary and JSON batches each pass 0 of 15. AstronOS has lower attempt-accounted model-token cost per passing execution, while requiring more execution-window time per attempt. These results associate the complete AstronOS condition with higher end-to-end pass rates across fresh sessions in this benchmark, at a measurable time cost.",
+  "abstract_zh": "现有智能体系统通常围绕单次对话、模型调用或智能体实例组织执行与状态，难以支持跨多次调用和多阶段的长期任务。本文提出统一执行模型：为工作项维护持久身份与版本化权威状态，每一步均基于特定状态版本和新增材料执行，结果只有在验证并记录后才能推进状态。作者在 AstronOS 中通过 Cases、Tasks 和 Scenario Packs 实现该模型，支持集中式与本地执行。论文比较了将既有软件版本更新计划交接至全新模型会话的五种策略：重新阅读原始材料、重放完整历史、确定性文本摘要、确定性 JSON，以及由 AstronOS 运行时介导的交接。在 10 个受控任务、5 种策略和 3 次重复实验中，共纳入 150 次执行。单阶段参考任务上，各策略表现接近；在主要三阶段 A-C 批次中，AstronOS 在 15 次执行中通过 14 次，而重新阅读原始材料和完整历史重放分别为 0 次和 2 次，后续非交错摘要与 JSON 批次均为 0 次。AstronOS 每次通过执行的模型 token 成本更低，但单次尝试需要更长执行窗口时间。结果表明，在该基准中，完整 AstronOS 配置能提升跨新会话的端到端通过率，但存在可量化的时间开销。",
+  "key_points_zh": [
+    "提出以持久工作项身份和版本化权威状态为核心的统一执行模型，确保状态仅在结果验证并记录后推进。",
+    "AstronOS 通过 Cases、Tasks 和 Scenario Packs 支持跨调用、跨阶段及集中式/本地执行。",
+    "在主要三阶段 A-C 批次中，AstronOS 通过率为 14/15，显著高于重新阅读原始材料的 0/15 和完整历史重放的 2/15。",
+    "摘要和 JSON 交接策略在后续非交错批次中均为 0/15，显示简单信息压缩难以维持长期任务状态。",
+    "AstronOS 的通过执行模型 token 成本更低，但需要更长执行窗口；结论仍限于本文受控基准。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.88,
+    "problem_significance": 0.93,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.9,
+    "llm_avg": 0.89,
+    "comment": "AstronOS presents a durable runtime abstraction for persistent identity, versioned workflow state, validated transitions, and reliable cross-session execution.",
+    "comment_zh": "AstronOS为持久身份、版本化工作流状态、经验证的状态转换和跨会话可靠执行提供了具有长期价值的运行时抽象。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.89,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16381/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.94
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16381/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.984
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "arxiv_id": "2608.16022",
+  "title": "OpenHarmony Bench: Evaluating LLMs and Coding Agents on OpenHarmony App Development",
+  "title_zh": "OpenHarmony Bench：评测 LLM 与编码智能体的 OpenHarmony 应用开发能力",
+  "authors": [
+    "Li Li",
+    "Han Hu",
+    "Tianjian Zhang",
+    "Xin Peng",
+    "Fangzhu Mao",
+    "Qingyu Zhang",
+    "Xiaoheng Xie",
+    "Zhongmin Tang",
+    "Zhihao Lin",
+    "Haolin Ruan",
+    "Miaomiao Dong",
+    "Liuchuan Zhu",
+    "Yue Li",
+    "Chi Chen",
+    "Wenkang Zhong",
+    "Mingfei Zhang",
+    "Yang Yu",
+    "Bo Sun",
+    "Chaorui Zhang",
+    "Weixi Zhang",
+    "Wei Han",
+    "Bo Bai",
+    "Kui Liu",
+    "Gang Fan",
+    "Siru Liu",
+    "Jiaqian Zhou",
+    "Jiali Sun",
+    "Yunbiao Dong",
+    "Wenhao Zhong",
+    "Yunhong Xu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-17T02:27:10Z",
+  "abs_url": "https://arxiv.org/abs/2608.16022v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.16022",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We present OPENHARMONY BENCH, an app-level coding benchmark for evaluating LLM-based coding agents on OpenHarmony ArkTS applications. Unlike function-level benchmarks, it evaluates complete app-level changes: each task requires an agent to modify a buildable ArkTS project so that a requested behavior works end to end, involving UI state, data persistence, build configuration, and platform APIs. The benchmark installs and drives the delivered application on a device to check whether the behavior is observable. It covers three input sources: natural-language feature requests (new-feature), structured scenario specifications (spec-driven), and bug descriptions (bug-fix). The benchmark contains 153 top-level tasks and 242 Feature points (F-points), where an F-point is one executable behavior check. The snapshot includes 32 new-feature tasks, 50 spec-driven tasks with 139 F-points, and 71 bug-fix tasks. The main leaderboard is scored over top-level tasks rather than independently weighted F-points. We describe the benchmark construction, statistics, and build-and-test evaluation pipeline, and evaluate DevEco Code with eight LLMs across three independent full-suite runs per configuration. Three findings emerge. First, newer generations complete more tasks than their predecessors within evaluated model-family pairs. Second, buildability is close to saturated while behavioral correctness is not: mean Final Build Success Rate is 94.77% to 100.00%, whereas mean Task Completion is 48.36% to 58.39%. Third, spec-driven tasks have the lowest Task Completion under all-checks task scoring, with no configuration exceeding 35%. The code, data, tasks, reference solutions, tests, evaluation scripts, and leaderboard are released through the official OPENHARMONY BENCH website at https://bench.matrix.openharmony.cn/.",
+  "abstract_zh": "本文提出 OPENHARMONY BENCH，一个面向 OpenHarmony ArkTS 应用的应用级编码基准，用于评测基于 LLM 的编码智能体。不同于函数级基准，每项任务都要求智能体修改可构建的 ArkTS 项目，实现端到端的目标行为，涉及 UI 状态、数据持久化、构建配置和平台 API。评测流水线会将生成的应用安装到设备并自动操作，以验证目标行为是否真实可观测。任务来自三类输入：自然语言功能请求（new-feature）、结构化场景规格（spec-driven）和缺陷描述（bug-fix）。基准共包含 153 个顶层任务和 242 个 Feature points（F-points，即可执行的行为检查），其中包括 32 个 new-feature 任务、50 个含 139 个 F-points 的 spec-driven 任务，以及 71 个 bug-fix 任务；主排行榜按顶层任务计分，而非对 F-points 独立加权。作者使用 DevEco Code 搭配 8 个 LLM，对每种配置进行 3 次独立全量评测。结果表明：同一模型家族中，新一代模型通常能完成更多任务；最终构建成功率已接近饱和，均值为 94.77% 至 100.00%，但任务完成率仅为 48.36% 至 58.39%；在要求全部检查通过的任务级评分下，spec-driven 任务最具挑战，所有配置的完成率均未超过 35%。代码、数据、任务、参考解、测试、评测脚本及排行榜均已公开。",
+  "key_points_zh": [
+    "OPENHARMONY BENCH 直接评测完整 ArkTS 应用修改，而非孤立函数生成，覆盖 UI、持久化、构建配置和平台 API。",
+    "基准包含 153 个顶层任务与 242 个 F-points，覆盖 new-feature、spec-driven 和 bug-fix 三类真实开发场景。",
+    "评测会在设备上安装并驱动应用，通过端到端可观测行为判断任务是否完成，主排行榜按顶层任务计分。",
+    "DevEco Code 搭配 8 个 LLM 的实验显示，构建成功率高达 94.77% 至 100.00%，但任务完成率仅为 48.36% 至 58.39%。",
+    "spec-driven 任务最困难，在全部检查均通过的严格评分下，所有模型配置的完成率都低于 35%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.8,
+    "novelty": 0.72,
+    "problem_significance": 0.8,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.78,
+    "llm_avg": 0.74,
+    "comment": "This is a useful coding-agent benchmark with executable app-level evaluation, reproducible build-and-test infrastructure, and behavior-focused regression signals beyond compilation.",
+    "comment_zh": "该工作提供了具备可执行应用级评测、可复现构建测试基础设施和行为回归信号的代码Agent基准，实用价值较高。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4142509875137679,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.74,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 9,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16022/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.928
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16022/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.972
+    }
+  ]
+}

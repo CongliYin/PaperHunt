@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.16620",
+  "title": "Palmyra x6 Technical Report: An Agentic, Tool-Use Model Post-Trained via Anchored Supervised Fine-Tuning",
+  "title_zh": "Palmyra x6 技术报告：通过锚定监督微调训练的智能体工具调用模型",
+  "authors": [
+    "Peng Du",
+    "Kiran Kamble",
+    "Rakshith Vasudev",
+    "Zhizhuo Yang",
+    "Rohith Nadimpally",
+    "Arjun Krishna",
+    "Waseem Alshikh",
+    "Daniel M. Bikel"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-17T14:21:03Z",
+  "abs_url": "https://arxiv.org/abs/2608.16620v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.16620",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Palmyra x6 is a large language model optimized for use with enterprise-oriented agentic tasks. The model was built by post-training a Mixture-of-Experts base model with Anchored Supervised Fine-Tuning on a compact corpus of verified, synthetic tool-use trajectories, optimized with a Muon + Adam hybrid. The recipe is deliberately conservative and deliberately controlled: 626 trajectories, a single epoch, a low learning rate, and a KL anchor to the frozen base. The model shows substantial gains over the previous default model for Writer Agent, and compares favorably with several recent models on public benchmarks, scoring the highest on BFCL Core at $0.785$ and posts the highest six-benchmark mean of the cohort. Furthermore, the model has shown itself to be competitive or leading relative to comparators in our bias and safety evaluations.",
+  "abstract_zh": "Palmyra x6 是面向企业级智能体任务优化的大语言模型。研究者以 Mixture-of-Experts 基础模型为起点，采用 Anchored Supervised Fine-Tuning，在由 626 条经验证的合成工具调用轨迹组成的小规模语料上进行单轮后训练，并结合 Muon + Adam 混合优化器与冻结基础模型的 KL 锚定约束。该方案强调保守、可控和低成本训练：使用较低学习率、单个 epoch 及较强的基础模型约束。实验显示，Palmyra x6 相比 Writer Agent 的上一代默认模型取得显著提升；在公开基准中，BFCL Core 得分达到 0.785，并在六项基准的平均成绩上领先参评模型。在偏见与安全评测中，该模型也表现出较强竞争力，部分指标达到领先水平。",
+  "key_points_zh": [
+    "核心方法是 Anchored Supervised Fine-Tuning：利用冻结基础模型的 KL 约束，减少后训练过程中的能力漂移。",
+    "训练数据仅包含 626 条经验证的合成工具调用轨迹，采用单轮训练、低学习率及 Muon + Adam 混合优化，突出简洁与可控。",
+    "模型面向企业级 agentic tasks 和工具使用场景，尤其提升了 Writer Agent 的表现。",
+    "Palmyra x6 在 BFCL Core 上取得 0.785 的最高成绩，并获得参评模型中最高的六项基准平均分。",
+    "偏见与安全评测表明，该模型相较对比模型具有竞争力，部分结果达到领先水平。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.84,
+    "novelty": 0.62,
+    "problem_significance": 0.78,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.65,
+    "llm_avg": 0.6679999999999999,
+    "comment": "This is relevant agent training work using verified tool-use trajectories, but its conservative recipe and limited data scale make the methodological advance relatively incremental.",
+    "comment_zh": "该工作利用经过验证的工具使用轨迹训练Agent，方向相关但方法保守、数据规模有限，因此创新性相对有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.6056299107628731,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.6679999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 20,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16620/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.16620/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.977
+    }
+  ]
+}
