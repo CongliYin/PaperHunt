@@ -1,0 +1,70 @@
+{
+  "arxiv_id": "2608.17713",
+  "title": "Cross-View Correspondence Is a Measurement Intervention: Two-Sided Validation for Agent Evaluation and Credit Assignment",
+  "title_zh": "跨视角对应是一种测量干预：面向智能体评估与信用分配的双侧验证",
+  "authors": [
+    "Zhen Zhang",
+    "Ahmad Hafez",
+    "Amr Alanwar"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-18T12:39:21Z",
+  "abs_url": "https://arxiv.org/abs/2608.17713v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.17713",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent evaluations and trace-based learning often compare outputs across transformed views through a post-response correspondence treated as neutral preprocessing. We show that this correspondence is a measurement intervention: omitting it can manufacture sensitivity, an over-aggressive map can manufacture invariance, and multiple optimal correspondences can leave mechanism labels and signed learning credit unidentified. We develop a validity theory and audit with three components: two-sided validation of nuisance removal and response preservation, all-optima identification of downstream conclusions, and uncertainty propagation after validity is established. We characterize the linear feasibility boundary for response-preserving nuisance removal, compute sharp ranges over exact-optimum correspondence sets, and give a distribution-free certificate that retains a credit coordinate only when all exact optima agree on its nonzero sign. Across public code and SQL pipelines, two deterministic optimal tracebacks disagree on temporal localization for 55.9% of 1,586 nonzero trajectory pairs; two frozen 800-rollout tool-use audits, including a task-and-seed-disjoint replication, expose exact-optimum reversals of intended turn-level credit, although a clean public quick-start subset shows none. A pre-registered transport gate failed on natural responses; frozen corrected and held-out controls then show that a map calibrated only on benign examples erases every retained harmful response, while two-sided validation selects response-preserving alternatives. Cross-view correspondence must therefore be declared, validated, and propagated into uncertainty before agent evaluation or credit assignment supports a point conclusion.",
+  "abstract_zh": "智能体评估与基于轨迹的学习通常借助响应后的对应映射，对变换视角下的输出进行比较，并将其视为中性的预处理。本文指出，跨视角对应（cross-view correspondence）实质上是一种测量干预：省略对应可能人为制造敏感性，过于激进的映射可能人为制造不变性，而多个最优对应则可能导致机制标签和带符号学习信用无法识别。作者提出由三部分组成的有效性理论与审计框架：对干扰因素消除和响应保留进行双侧验证；检查所有最优解下游结论的一致性；在有效性成立后传播不确定性。论文刻画了响应保留型干扰消除的线性可行性边界，计算精确最优对应集合上的结论锐界，并给出一种无分布假设的证书：仅当所有精确最优解都认同某个信用坐标的非零符号时，才保留该坐标。在公开代码与 SQL 流水线中，两种确定性的最优回溯对 1,586 个非零轨迹对中的 55.9% 给出了不同的时间定位。两项冻结的 800-rollout 工具使用审计（其中一项为任务与随机种子均不重叠的复现）发现，精确最优解可能反转预期的轮次级信用，尽管一个较干净的公开快速入门子集未出现该问题。预注册的 transport gate 在自然响应上验证失败；随后，冻结的修正对照与留出对照表明，仅以良性样本校准的映射会抹除所有被保留的有害响应，而双侧验证能够选择保留响应的替代方案。因此，在智能体评估或信用分配给出确定性结论之前，必须明确声明、验证跨视角对应，并将其不确定性传播到最终结论中。",
+  "key_points_zh": [
+    "将 cross-view correspondence 重新界定为测量干预，而非中性预处理：缺失、过强或非唯一的映射分别可能制造敏感性、不变性或结论不可识别。",
+    "提出三阶段审计框架：双侧验证干扰因素是否被移除及真实响应是否被保留；检查全部精确最优对应下的结论；通过验证后再传播不确定性。",
+    "给出响应保留型干扰消除的线性可行性边界、精确最优解集合上的锐界，以及仅在所有最优解同意非零符号时保留信用坐标的无分布证书。",
+    "公开代码与 SQL 实验显示，两种确定性最优回溯在 55.9% 的非零轨迹对上产生不同的时间信用定位；冻结的工具使用审计进一步发现轮次级信用可能发生符号反转。",
+    "仅用良性样本校准的映射可能完全抹除有害响应；双侧验证可筛选兼顾干扰消除与响应保留的对应方案。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.86,
+    "novelty": 0.84,
+    "problem_significance": 0.82,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.82,
+    "llm_avg": 0.804,
+    "comment": "The paper provides a rigorous and reusable validity framework for trace-based agent evaluation and trajectory credit assignment.",
+    "comment_zh": "该论文为基于轨迹的智能体评估和轨迹信用分配提供了严谨且可复用的有效性框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.804,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.17713/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.933
+    }
+  ]
+}

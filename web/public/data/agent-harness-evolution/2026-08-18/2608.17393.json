@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2608.17393",
+  "title": "LEGO-RL: Harness-Native Reinforcement Learning for Coding Agents",
+  "title_zh": "LEGO-RL：面向编程智能体原生执行框架的强化学习",
+  "authors": [
+    "Yiming Du",
+    "Yuxin Jiang",
+    "Tao Yuan",
+    "Jianbo Dai",
+    "Shaowei Wang",
+    "Jierun Chen",
+    "Chaofan Tao",
+    "Xianzhi Yu",
+    "Lifeng Shang",
+    "Kam-Fai Wong",
+    "Xiaohui Li",
+    "Haoli Bai"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-18T05:34:35Z",
+  "abs_url": "https://arxiv.org/abs/2608.17393v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.17393",
+  "links": {
+    "github": null,
+    "project_page": "https://lego-rl.pages.dev"
+  },
+  "abstract_en": "Reinforcement learning for coding agents increasingly relies on long-running agent harnesses to manage tool integration, repository contexts, and execution feedback. However, the native execution environments of these harnesses are inherently misaligned with policy-gradient training: environmental crashes and reward hacking corrupt outcome signals, while train-inference discrepancies decouple rollout behavior from policy updates. To address this, we present LEGO-RL, a framework that bridges native coding-agent harnesses with scalable policy-gradient optimization without modifying their internal control flow. LEGO-RL is built upon three pillars: (1) faithful optimization via in-process LLM proxying that captures raw generation streams for token-level alignment and robust trainer-side log-probability recomputation, even under harness-side compaction or re-serialization; (2) reliable execution via scalable sandbox orchestration featuring image caching and stage-wise defenses to mitigate reward hacking; and (3) observable training through an integrated plugin that automates validation and monitoring, paired with a Live UI for granular trajectory diagnostics. We evaluate LEGO-RL by training the sparse MoE model Qwen3.5-35B-A3B with GSPO across three native coding-agent harnesses. LEGO-RL improves Qwen3.5-35B-A3B across OpenHands SDK (64.0% to 70.4%), Claude Code (62.4% to 68.2%), and OpenCode (57.2% to 66.6%) on SWE-bench Verified, while maintaining a rollout-training probability correlation above 0.99.",
+  "abstract_zh": "编程智能体的强化学习日益依赖长时间运行的智能体执行框架（agent harness），以管理工具集成、代码仓库上下文和执行反馈。然而，这类框架的原生执行环境与策略梯度训练天然不匹配：环境崩溃和奖励黑客（reward hacking）会污染结果信号，而训练与推理之间的差异会导致 rollout 行为与策略更新脱节。为此，本文提出 LEGO-RL，一个无需修改框架内部控制流，即可连接原生编程智能体执行框架与可扩展策略梯度优化的框架。LEGO-RL 包含三项核心设计：第一，通过进程内 LLM 代理捕获原始生成流，实现 token 级对齐，并在训练端稳健地重新计算对数概率，即使执行框架进行了上下文压缩或重新序列化，也能保证优化忠实性；第二，通过具备镜像缓存和分阶段防御机制的可扩展沙箱编排，提高执行可靠性并缓解奖励黑客；第三，通过集成插件自动完成验证与监控，并结合 Live UI 对轨迹进行细粒度诊断，实现训练过程的可观测性。实验使用 GSPO，在三个原生编程智能体执行框架上训练稀疏 MoE 模型 Qwen3.5-35B-A3B。在 SWE-bench Verified 上，LEGO-RL 将 OpenHands SDK 的成绩从 64.0% 提升至 70.4%，Claude Code 从 62.4% 提升至 68.2%，OpenCode 从 57.2% 提升至 66.6%，同时将 rollout 与训练概率的相关性维持在 0.99 以上。",
+  "key_points_zh": [
+    "无需修改 OpenHands SDK、Claude Code、OpenCode 等原生执行框架的内部控制流，即可接入可扩展的策略梯度优化。",
+    "通过进程内 LLM 代理捕获原始生成流，实现 token 级对齐和训练端对数概率重计算，缓解训练—推理不一致。",
+    "采用可扩展沙箱编排、镜像缓存及分阶段防御，提高执行稳定性并减少环境崩溃与奖励黑客造成的信号污染。",
+    "集成自动验证、训练监控插件和 Live UI，支持对智能体执行轨迹进行细粒度诊断。",
+    "在 SWE-bench Verified 上，Qwen3.5-35B-A3B 在三个执行框架中均取得显著提升，最高提升 9.4 个百分点，且概率相关性超过 0.99。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.89,
+    "problem_significance": 0.95,
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.87,
+    "lasting_value": 0.93,
+    "llm_avg": 0.916,
+    "comment": "LEGO-RL directly addresses faithful, scalable, and observable RL over native coding-agent harnesses with strong cross-harness results.",
+    "comment_zh": "LEGO-RL直接解决了原生编程智能体框架上强化学习的保真性、可扩展性和可观测性，并取得了扎实的跨框架结果。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.4,
+    "community_heat": 0.6828624646490623,
+    "author_reputation": 0.37796505041928935,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.916,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://lego-rl.pages.dev",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 2,
+    "first_author_h_index": 6,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.17393/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.17393/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.982
+    }
+  ]
+}

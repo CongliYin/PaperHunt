@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2608.17756",
+  "title": "D$^2$ACCI: A Dual-Loop Diagnostic Protocol for Evidence-Preserving Agent Memory",
+  "title_zh": "D²ACCI：面向证据保留型智能体记忆的双循环诊断协议",
+  "authors": [
+    "Xule Liu",
+    "Yijun Liu",
+    "Chao Li",
+    "Shao Kun"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-18T13:18:38Z",
+  "abs_url": "https://arxiv.org/abs/2608.17756v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.17756",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Memory is a key capability of LLM agents. Persistent memory extends this across sessions---enabling recall, revision, and personalization. Yet its multi-stage pipeline (ingestion, retrieval, filtering, generation) makes failures difficult to localize: end-to-end evaluation reveals that an error occurred, but not which stage caused it. Existing evaluations often report aggregate performance without paired statistical comparisons, slice-level non-regression checks, or stage-level diagnostic traces. We propose D$^2$ACCI (Diagnostic-Driven Artifact-based Closed-loop Controlled Iteration), a dual-loop protocol whose outer diagnostic gate promotes, feature-flags, or rejects memory interventions based on paired evidence, protected-slice monitoring, and trace-level localizability. We further introduce DCR, a graded observability metric that measures whether failures remain localizable, and D$^2$ACCI-Eval, a reusable artifact for gate replay. We instantiate the protocol in MemStack and evaluate on three public benchmarks, achieving 93.59% on LoCoMo, 90.93% on LongMemEval, and 57.20% on PersonaMem-V2. Five paired ablations show that supplement extraction, session-memory retrieval, and Forget Guard yield statistically significant gains (+1.9 to +3.7pp, all p $\\le$ .003). In contrast, BM25/RRF is retained as a monitored feature flag---a distinction invisible to aggregate-only evaluation. A diagnostic audit shows enriched traces substantially improve root-cause agreement over result-only relabeling. Diagnostic artifacts reach 98--100% DCR@3 versus 0% for results-only logs. These results establish that robust memory-system iteration demands traceable, statistically grounded, and regression-aware evidence---exactly the gap D$^2$ACCI fills.",
+  "abstract_zh": "记忆是 LLM 智能体的关键能力，持久记忆可进一步支持跨会话的信息回忆、修订与个性化。然而，由于记忆系统包含摄取、检索、过滤和生成等多阶段流程，其故障往往难以定位：端到端评估只能发现错误，却无法判断具体由哪个阶段引起。现有评估通常仅报告汇总性能，缺少配对统计比较、细分切片上的非回归检查以及阶段级诊断轨迹。本文提出 D²ACCI（Diagnostic-Driven Artifact-based Closed-loop Controlled Iteration），一种双循环协议：其外层诊断门依据配对证据、受保护切片监控和轨迹级可定位性，对记忆系统改动执行正式上线、特性开关监控或拒绝。作者还提出分级可观测性指标 DCR，用于衡量故障是否仍可定位，并构建可复用的评估制品 D²ACCI-Eval，以支持诊断门决策回放。该协议在 MemStack 中落地，并在三个公开基准上取得 93.59% 的 LoCoMo、90.93% 的 LongMemEval 和 57.20% 的 PersonaMem-V2 成绩。五组配对消融实验表明，supplement extraction、session-memory retrieval 和 Forget Guard 可带来具有统计显著性的 1.9 至 3.7 个百分点提升，且 p≤0.003。相比之下，BM25/RRF 仅被保留为受监控的特性开关，而这一差异无法通过仅看汇总指标的评估发现。诊断审计显示，相比只依据结果重新标注，增强型轨迹显著提高了根因判断的一致性；诊断制品的 DCR@3 达到 98%–100%，而仅含结果的日志为 0%。研究表明，稳健的记忆系统迭代需要可追踪、具备统计依据且关注回归风险的证据，D²ACCI 正是为填补这一空白而设计。",
+  "key_points_zh": [
+    "D²ACCI 通过双循环诊断门，将记忆系统改动划分为正式上线、特性开关监控或拒绝，避免仅依赖端到端汇总指标。",
+    "提出 DCR 分级可观测性指标与 D²ACCI-Eval 可复用制品，用于衡量故障可定位性并支持诊断决策回放。",
+    "在 MemStack 中落地后，LoCoMo、LongMemEval 和 PersonaMem-V2 分别达到 93.59%、90.93% 和 57.20%。",
+    "配对消融显示 supplement extraction、session-memory retrieval 与 Forget Guard 带来显著提升，但 BM25/RRF 仅适合以受监控特性开关保留。",
+    "增强型诊断轨迹将 DCR@3 提升至 98%–100%，显著优于仅记录最终结果的日志，并提高根因判断一致性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.81,
+    "problem_significance": 0.89,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.73,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8360000000000001,
+    "comment": "A highly relevant Agent-memory evaluation contribution that combines stage-localized diagnostics, statistical promotion gates, protected-slice regression checks, and reusable replay artifacts.",
+    "comment_zh": "这是一项高度契合 Agent Memory 的评测工作，将阶段级故障定位、统计晋级门控、受保护切片回归检查与可复用回放工件结合起来。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.8360000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.17756/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.17756/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}
