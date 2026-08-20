@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2608.18682",
+  "title": "RTPO: Reverse-Turn Policy Optimization for Stabilizing Agentic RL Training",
+  "title_zh": "RTPO：用于稳定智能体强化学习训练的逆序轮次策略优化",
+  "authors": [
+    "Yugu Li",
+    "Jimmy Cao",
+    "Jianglin Qiao",
+    "Siyi Hu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-19T08:33:01Z",
+  "abs_url": "https://arxiv.org/abs/2608.18682v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.18682",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Training multi-turn agentic workflows with reinforcement learning (RL) enables large language models to perform complex reasoning, use external tools, and conduct iterative search beyond single-turn settings. Yet multi-turn RL training remains highly unstable, often causing severe performance degradation as the number of turns increases. Through theoretical analysis, we identify three tightly coupled sources of instability: rollout-training context mismatch, weak turn-level credit assignment under sparse terminal rewards, and asynchronous policy drift when short and long trajectories are optimized under different policy versions. We show that these issues share a common structural origin in flattened trajectory optimization and address them through a unified reverse-turn formulation. We propose Reverse-Turn Policy Optimization (RTPO), which organizes multi-turn rollouts as sparse reverse trees and performs turn-level policy updates in temporal reverse order, aligning each decision with its downstream continuation. RTPO enables causally consistent turn-level credit assignment and on-policy continuation to control asynchronous drift. We provide theoretical guarantees showing that RTPO eliminates context mismatch and asynchronous drift under the proposed turn-level formulation, reduces credit bias, and converges to recursive optimality. Experiments on multi-turn agentic RL benchmarks show that RTPO improves upon trajectory- and turn-level baselines by 21.50% and 10.76%, respectively, highlighting its potential to support more stable training for tool-using agents.",
+  "abstract_zh": "使用强化学习（RL）训练多轮智能体工作流，可使大语言模型完成复杂推理、调用外部工具并进行迭代搜索。然而，多轮 RL 的训练往往极不稳定，且性能会随交互轮数增加而显著下降。本文通过理论分析指出三个紧密耦合的不稳定来源：采样与训练之间的上下文不匹配、稀疏终局奖励下薄弱的轮次级信用分配，以及长短轨迹由不同策略版本优化时产生的异步策略漂移。作者发现，这些问题具有共同根源，即将多轮交互展平为完整轨迹进行优化。为此，本文提出 Reverse-Turn Policy Optimization（RTPO），将多轮采样组织为稀疏逆向树，并按照时间逆序执行轮次级策略更新，使每个决策与其后续过程保持一致。该方法可实现因果一致的轮次级信用分配，并通过同策略后续过程控制异步漂移。理论结果表明，在所提出的轮次级框架下，RTPO 能消除上下文不匹配和异步策略漂移、降低信用分配偏差，并收敛至递归最优。多轮智能体 RL 基准实验显示，RTPO 相比轨迹级和轮次级基线分别提升 21.50% 和 10.76%，展现出稳定训练工具调用智能体的潜力。",
+  "key_points_zh": [
+    "将多轮 RL 的不稳定性归因于上下文不匹配、稀疏奖励下信用分配薄弱，以及异步策略漂移。",
+    "指出三类问题均源于展平轨迹优化，并提出统一的逆序轮次优化视角。",
+    "RTPO 将多轮采样构造成稀疏逆向树，按时间逆序进行轮次级策略更新，使当前决策与后续过程保持一致。",
+    "理论上，RTPO 可消除上下文不匹配与异步漂移、降低信用偏差，并收敛至递归最优。",
+    "实验中，RTPO 相比轨迹级和轮次级基线分别提升 21.50% 和 10.76%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.91,
+    "problem_significance": 0.95,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.89,
+    "lasting_value": 0.92,
+    "llm_avg": 0.916,
+    "comment": "RTPO presents a structurally novel reverse-turn optimization framework for stabilizing credit assignment and policy consistency in agentic RL.",
+    "comment_zh": "RTPO提出了结构新颖的逆轮次优化框架，用于稳定智能体强化学习中的信用分配和策略一致性。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.916,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18682/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18682/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.948
+    }
+  ]
+}

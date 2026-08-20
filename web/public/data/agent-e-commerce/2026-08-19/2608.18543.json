@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2608.18543",
+  "title": "Bridging Search and CRM: Productionizing AI Product Research Agents for Customer Re-Engagement",
+  "title_zh": "连接搜索与 CRM：面向客户再互动的 AI 产品研究智能体生产化实践",
+  "authors": [
+    "Mandar Kulkarni",
+    "Pooja A.",
+    "Samir Shah"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-19T05:01:37Z",
+  "abs_url": "https://arxiv.org/abs/2608.18543v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.18543",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Modern e-commerce platforms often operate search, recommendation, personalization, and CRM systems independently, limiting opportunities for proactive customer re-engagement. This is particularly challenging for exploratory intents such as best smartphones or latest 5G phones, where users may leave the platform for external research before purchasing. We present a scalable, production-deployed framework that bridges search and CRM workflows through AI-powered Product Research Agents. The system identifies users with exploratory purchase intent and low engagement, conducts grounded multi-agent product research using behavioral signals, external knowledge, and enterprise catalog data, and delivers personalized recommendations through WhatsApp. We evaluate the framework in a 23-day production deployment involving approximately 15K WhatsApp notifications for mobile product discovery. The campaign achieved substantial CTR improvements over traditional WhatsApp recommendation campaigns, with evidence of secondary engagement through message forwarding and sharing. The deployment also generated downstream purchases and GMV impact, demonstrating the practical effectiveness of AI Product Research Agents for proactive customer re-engagement and end-to-end customer journey optimization.",
+  "abstract_zh": "现代电商平台通常将搜索、推荐、个性化与客户关系管理（CRM）系统相互独立运行，因而难以主动召回客户。对于“最佳智能手机”或“最新 5G 手机”等探索型购买意图，用户往往会离开平台进行外部调研，之后才可能完成购买。本文提出一个已规模化部署的框架，通过 AI 驱动的 Product Research Agents 打通搜索与 CRM 工作流。该系统首先识别具有探索型购买意图且参与度较低的用户，再结合用户行为信号、外部知识和企业商品目录，开展基于事实依据的多智能体产品研究，最终通过 WhatsApp 推送个性化推荐。作者在移动产品发现业务中进行了为期 23 天的生产环境部署，共发送约 1.5 万条 WhatsApp 通知。与传统 WhatsApp 推荐活动相比，该方案显著提升了点击率（CTR），并通过消息转发与分享带来二次互动。此外，部署还促成了后续购买并提升商品交易总额（GMV），表明 AI Product Research Agents 能够有效支持主动客户再互动与端到端客户旅程优化。",
+  "key_points_zh": [
+    "提出一个连接搜索与 CRM 的生产级框架，面向具有探索型购买意图但参与度较低的用户进行主动再互动。",
+    "采用多智能体 Product Research Agents，融合用户行为信号、外部知识与企业商品目录，生成有依据的个性化产品推荐。",
+    "通过 WhatsApp 将研究结果直接触达用户，把站内搜索意图延伸至站外 CRM 营销链路。",
+    "在为期 23 天、约 1.5 万条通知的真实部署中，相较传统 WhatsApp 推荐活动取得显著 CTR 提升，并观察到转发和分享等二次传播。",
+    "系统进一步带来下游购买与 GMV 增长，验证了其在端到端客户旅程优化中的实际商业价值。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.84,
+    "novelty": 0.7,
+    "problem_significance": 0.81,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.61,
+    "lasting_value": 0.75,
+    "llm_avg": 0.746,
+    "comment": "A strong production study of grounded product-research agents for proactive recommendation, though its CRM and campaign focus partially overlaps with marketing.",
+    "comment_zh": "该工作以生产部署验证了商品研究智能体的主动推荐价值，但其CRM与营销活动导向削弱了领域纯度。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.639025668893485,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.746,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 29,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18543/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18543/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.967
+    }
+  ]
+}

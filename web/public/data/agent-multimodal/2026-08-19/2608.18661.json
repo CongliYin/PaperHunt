@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2608.18661",
+  "title": "X2Streaming-TTS: Causal Token-Level Text-to-Speech from Streaming Text with Speech-State Inheritance",
+  "title_zh": "X2Streaming-TTS：基于语音状态继承的流式文本因果词元级语音合成",
+  "authors": [
+    "Rime Wen",
+    "Zehan Liu",
+    "Shawn Qin",
+    "Lights Shi",
+    "Roy Gan",
+    "Hao Wang",
+    "Qian Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-19T08:05:45Z",
+  "abs_url": "https://arxiv.org/abs/2608.18661v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.18661",
+  "links": {
+    "github": "https://github.com/X-Square-Robot/X2Streaming-TTS",
+    "project_page": null
+  },
+  "abstract_en": "Streaming text-to-speech is essential for low-latency spoken dialogue systems, yet many systems wait for sentence-level text and are therefore only pseudo-streaming. True token-level synthesis must generate speech from uncertain prefixes while maintaining perceptual continuity over an unbounded stream with bounded context. We present X2Streaming-TTS, a causal TTS framework that consumes asynchronously arriving text tokens and emits speech without accessing future input. To handle uncertain prefixes, we introduce causal commitment, which keeps ambiguous expressions provisional through uncertainty-aware buffering and performs capacity-adaptive, punctuation-aware segmentation. To preserve acoustic continuity, we further introduce causal speech-state inheritance, which carries the complete Code2Wav state and selected historical Talker states across segment boundaries. Together with an attention prior constraint, it blocks access to future positions while retaining bounded acoustic context. Experiments show that X2Streaming-TTS outperforms existing pseudo-streaming models on most subjective and objective metrics. Further analysis shows that causal commitment stabilizes online segmentation and reduces failures caused by insufficient context, while speech-state inheritance improves boundary continuity without degrading naturalness or speaker identity. X2Streaming-TTS thus achieves strict token-level synthesis with quality comparable to the evaluated offline baselines, a median time to first audio token (TTFT) of 15.8 ms for a single request, and a median TTFT of 260.8 ms at 128 concurrent requests. Our implementation is publicly available at https://github.com/X-Square-Robot/X2Streaming-TTS .",
+  "abstract_zh": "流式文本转语音（TTS）是低延迟语音对话系统的关键，但许多现有系统仍需等待完整句子，实质上仅为“伪流式”。X2Streaming-TTS 是一种严格因果的 TTS 框架，可异步接收文本 token，并在不访问未来输入的条件下持续生成语音。针对文本前缀语义不确定的问题，论文提出 causal commitment：通过不确定性感知缓冲，将歧义表达暂时保留，并结合系统容量与标点信息进行自适应分段。为保持跨分段的声学连续性，论文进一步提出 causal speech-state inheritance，在分段边界继承完整的 Code2Wav 状态及部分历史 Talker 状态；同时利用 attention prior constraint 阻止模型访问未来位置，并将声学上下文限制在有界范围内。实验表明，该方法在多数主观和客观指标上优于现有伪流式模型，并取得与受评估离线基线相当的合成质量。单请求时首个音频 token 的中位延迟（TTFT）为 15.8 ms，128 路并发时为 260.8 ms。",
+  "key_points_zh": [
+    "实现真正的 token-level 流式合成：仅使用已到达的文本前缀生成语音，不依赖未来输入或完整句子。",
+    "提出 causal commitment，通过不确定性感知缓冲和容量自适应、标点感知分段，降低歧义前缀及上下文不足导致的合成失败。",
+    "提出 causal speech-state inheritance，在分段间继承完整 Code2Wav 状态与部分 Talker 历史状态，改善语音边界连续性。",
+    "结合 attention prior constraint，在禁止访问未来位置的同时保留有界声学上下文，满足严格因果和无限流处理需求。",
+    "质量可比离线基线；单请求中位 TTFT 为 15.8 ms，128 路并发时为 260.8 ms，代码已公开。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.72,
+    "novelty": 0.78,
+    "problem_significance": 0.81,
+    "potential_impact": 0.79,
+    "paradigm_shift": 0.61,
+    "lasting_value": 0.75,
+    "llm_avg": 0.748,
+    "comment": "A strong enabling technology for realtime voice agents, offering genuinely causal token-level TTS with low latency and continuity, though it does not address turn-taking or speech-driven tool use directly.",
+    "comment_zh": "该工作通过低延迟且连贯的真正因果式词元级语音合成，为实时语音智能体提供了有力基础，但未直接涉及轮次控制或语音工具调用。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.748,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/X-Square-Robot/X2Streaming-TTS",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18661/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.842
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18661/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.28
+    }
+  ]
+}

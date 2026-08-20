@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2608.18855",
+  "title": "Think-to-Personalize: Unifying Reasoning and Retrieval for User-Centric Personalized Dense Retrieval",
+  "title_zh": "Think-to-Personalize：统一推理与检索的用户中心个性化稠密检索框架",
+  "authors": [
+    "Angqing Jiang",
+    "Gaoming Zhang",
+    "Jianchun Song",
+    "Kena Qi",
+    "Dayao Chen",
+    "Wei Lin",
+    "Defu Lian"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-19T12:28:20Z",
+  "abs_url": "https://arxiv.org/abs/2608.18855v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.18855",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Dense retrieval has become a cornerstone of modern local-lifestyle e-commerce search by encoding queries and items into semantic embedding spaces. While recent advancements have transitioned from BERT-based embedding models to Large Language Models (LLMs), most approaches still treat LLMs as static text encoders, neglecting their inherent reasoning capabilities. Furthermore, standard dense retrieval models remain query-centric, which is insufficient in e-commerce scenarios where sparse and ambiguous queries create an intent gap that can only be bridged by the rich context of user history. Meanwhile, existing personalized retrieval methods typically rely on implicit embedding interactions, which lack the reasoning capability to effectively disambiguate user intent from noisy historical behaviors. To address these challenges, we propose Think-to-Personalize (TTP), a novel framework that unifies explicit user-centric intent reasoning with dense retrieval. By reasoning over the user's historical purchase sequence, TTP explicitly deduces latent personalized needs and generates an intent-enhanced query, which is then encoded into a unified dense embedding. Specifically, we design a two-stage training paradigm: (1) a Supervised Fine-Tuning (SFT) stage that establishes cold-start capabilities; and (2) a Reinforcement Learning (RL) stage that aligns the reasoning process with retrieval utility using Group Relative Policy Optimization (GRPO). Extensive experiments on both proprietary and public benchmarks demonstrate that TTP significantly outperforms state-of-the-art baselines. Furthermore, in online A/B tests, it achieved a +0.46% lift in order volume, validating its practical effectiveness and establishing a new paradigm for reasoning-driven personalized dense retrieval.",
+  "abstract_zh": "稠密检索通过将查询与商品编码到语义嵌入空间，已成为本地生活电商搜索的核心技术。尽管相关模型已从 BERT 演进至 Large Language Models（LLMs），多数方法仍仅将 LLMs 作为静态文本编码器，未充分利用其推理能力。同时，传统稠密检索以查询为中心，难以借助用户历史弥合稀疏、模糊查询带来的意图鸿沟；现有个性化检索依赖隐式嵌入交互，也难以从含噪历史行为中准确消歧用户意图。为此，论文提出 Think-to-Personalize（TTP），将显式的用户中心意图推理与稠密检索统一起来。TTP 基于用户历史购买序列推断潜在个性化需求，生成意图增强查询，并将其编码为统一的稠密向量。训练采用两阶段范式：首先通过 Supervised Fine-Tuning（SFT）建立冷启动能力，随后利用 Group Relative Policy Optimization（GRPO）进行 Reinforcement Learning（RL），使推理过程与实际检索效用对齐。在私有及公开基准上，TTP 显著优于现有先进基线；在线 A/B 测试中，订单量提升 0.46%，验证了其实际应用价值。",
+  "key_points_zh": [
+    "提出 Think-to-Personalize（TTP），将用户意图推理与个性化稠密检索统一到同一框架中。",
+    "利用用户历史购买序列显式推断潜在需求，生成意图增强查询，以解决稀疏、模糊查询的意图消歧问题。",
+    "采用 SFT 与 RL 两阶段训练：SFT 提供冷启动能力，GRPO 则将推理策略与检索效用对齐。",
+    "在私有和公开基准上显著超越 state-of-the-art 基线，证明推理驱动检索的有效性。",
+    "在线 A/B 测试实现订单量提升 0.46%，体现了该方法在真实电商搜索场景中的业务价值。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.87,
+    "problem_significance": 0.91,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.89,
+    "llm_avg": 0.8779999999999999,
+    "comment": "This directly advances personalized e-commerce retrieval by aligning explicit LLM intent reasoning with retrieval utility and validating order-volume gains online.",
+    "comment_zh": "该工作将LLM显式意图推理与检索效用对齐，并通过线上订单增益直接推动个性化电商检索。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8779999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18855/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18855/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.94
+    }
+  ]
+}

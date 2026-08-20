@@ -1,0 +1,178 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-08-19",
+  "generated_at": "2026-08-20T20:39:19Z",
+  "papers": [
+    {
+      "arxiv_id": "2608.18565",
+      "title": "SemaPLC: A Project-Grounded, Verification-Gated Agent Harness for PLC Code Generation",
+      "title_zh": "SemaPLC：面向 PLC 代码生成的项目上下文驱动与验证门控智能体框架",
+      "authors": [
+        "Yanlun Tu",
+        "Huacan Wang",
+        "Ziyue Zhou",
+        "Jie Zhou",
+        "Ningyan Zhu",
+        "Ge Chen",
+        "Wangyi Chen",
+        "Tengfei Zhou",
+        "Yifan Zhou",
+        "Dasheng Yang",
+        "Xiaofeng Mou",
+        "Hui Zhang",
+        "Yi Xu"
+      ],
+      "total_score": 0.7312835968493445,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.826,
+        "domain_fit": 0.97,
+        "other": 0.5449453228311478
+      },
+      "tags": [
+        "HF Daily ★110",
+        "GitHub",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "以真实编译和运行验证门控，显著提升PLC代码可靠性",
+      "detail_file": "agent-harness-evolution/2026-08-19/2608.18565.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18565/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.18852",
+      "title": "SkillGate: Training In-Policy Skill Selection in Long-Horizon Agents",
+      "title_zh": "SkillGate：训练长程智能体的策略内技能选择",
+      "authors": [
+        "Qingyao Li",
+        "Wenxiang Jiao",
+        "Shuai Shao",
+        "Kangning Zhang",
+        "Yuan Lu",
+        "Yi Guo",
+        "Weiwen Liu",
+        "Weinan Zhang",
+        "Yong Yu"
+      ],
+      "total_score": 0.7039314294865477,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.884,
+        "domain_fit": 0.98,
+        "other": 0.39577143162182526
+      },
+      "tags": [
+        "HF Daily ★2",
+        "GitHub",
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "分离选择与执行信用，显著提升长程智能体技能选择。",
+      "detail_file": "agent-harness-evolution/2026-08-19/2608.18852.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18852/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.18682",
+      "title": "RTPO: Reverse-Turn Policy Optimization for Stabilizing Agentic RL Training",
+      "title_zh": "RTPO：用于稳定智能体强化学习训练的逆序轮次策略优化",
+      "authors": [
+        "Yugu Li",
+        "Jimmy Cao",
+        "Jianglin Qiao",
+        "Siyi Hu"
+      ],
+      "total_score": 0.6611824593811417,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.916,
+        "domain_fit": 0.98,
+        "other": 0.1146081979371389
+      },
+      "tags": [
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "RTPO以逆序轮次更新稳定多轮智能体强化学习",
+      "detail_file": "agent-harness-evolution/2026-08-19/2608.18682.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18682/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.18398",
+      "title": "LEDGER: Claim-to-Evidence Trace Graphs for Auditing LLM Agents",
+      "title_zh": "LEDGER：用于审计 LLM Agent 的主张—证据追踪图",
+      "authors": [
+        "Daehong Kim",
+        "Haichao Miao",
+        "Shusen Liu"
+      ],
+      "total_score": 0.6180000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.74,
+        "domain_fit": 0.9,
+        "other": 0.2
+      },
+      "tags": [
+        "observability governance security"
+      ],
+      "tldr_zh": "用分层追踪图连接主张与证据，提升Agent审计效率。",
+      "detail_file": "agent-harness-evolution/2026-08-19/2608.18398.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18398/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.19047",
+      "title": "Eureka: Task-Conditioned Meta-Agent Orchestration for Scientific Discovery",
+      "title_zh": "Eureka：面向科学发现的任务条件化元智能体编排",
+      "authors": [
+        "Alizer Wong",
+        "Heng Cui",
+        "Yi Tan",
+        "Xiongchao Zhan",
+        "Liang Lin",
+        "Yuxiang Guo",
+        "Zhaorong Dai",
+        "Zixin Zeng",
+        "Wenyuan Li"
+      ],
+      "total_score": 0.5710000000000002,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.85,
+        "domain_fit": 0.94,
+        "other": 0.2
+      },
+      "tags": [
+        "production agent platform"
+      ],
+      "tldr_zh": "Eureka按任务动态编排智能体，兼顾验证、效率与科学发现。",
+      "detail_file": "agent-harness-evolution/2026-08-19/2608.19047.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19047/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.18524",
+      "title": "DART-SD: Diamond-topology Aware Retrieval and Tuning for Self-Distillation of Multi-Turn Tool-Calling Agents",
+      "title_zh": "DART-SD：面向多轮工具调用智能体自蒸馏的菱形拓扑感知检索与调优",
+      "authors": [
+        "Hangrui Xu",
+        "Jiarui Wang",
+        "Yang Yang",
+        "Chuanbo Zhu",
+        "Fangda Chen",
+        "Ziqi Wu",
+        "Jingming Cai",
+        "Yan Song"
+      ],
+      "total_score": 0.47617661250818893,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.89,
+        "domain_fit": 0.98,
+        "other": 0.21725537502729636
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "以拓扑断点局部纠错，提升多轮工具调用自蒸馏。",
+      "detail_file": "agent-harness-evolution/2026-08-19/2608.18524.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18524/thumb.webp"
+    }
+  ]
+}

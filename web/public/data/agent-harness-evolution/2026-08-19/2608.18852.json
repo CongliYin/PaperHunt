@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2608.18852",
+  "title": "SkillGate: Training In-Policy Skill Selection in Long-Horizon Agents",
+  "title_zh": "SkillGate：训练长程智能体的策略内技能选择",
+  "authors": [
+    "Qingyao Li",
+    "Wenxiang Jiao",
+    "Shuai Shao",
+    "Kangning Zhang",
+    "Yuan Lu",
+    "Yi Guo",
+    "Weiwen Liu",
+    "Weinan Zhang",
+    "Yong Yu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-19T12:24:03Z",
+  "abs_url": "https://arxiv.org/abs/2608.18852v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.18852",
+  "links": {
+    "github": "https://github.com/DeepExperience/SkillGate.",
+    "project_page": null
+  },
+  "abstract_en": "Agent frameworks increasingly package procedural knowledge as skills: instruction files an agent reads on demand, while public libraries now hold thousands of them. Which skill to read has thus become a decision the policy itself makes in the middle of an episode, yet no existing signal trains it. We show that the default remedy, outcome-rewarded RL over the candidate slate, cannot teach it, for a structural reason we identify and name selector credit starvation: under a broadcast, sequence-level advantage, the few tokens that name the chosen skill carry a vanishing share of the loss, and the credit they inherit is increasingly wrong-signed as trajectories lengthen. A correct choice is punished whenever the execution after it fails, even though the choice itself is among the most valuable decisions in the trajectory. Auditing a completed run's own training artifacts confirms all three properties, each worsening monotonically with horizon. SkillGate removes the failure by construction: it partitions the token support into two disjoint credit channels, outcome credit reaching only execution tokens, and a separate action-local advantage reaching exactly the skill-naming tokens, positive only when a trajectory's single read is the correct one. On five agentic benchmarks under a 16-candidate slate, SkillGate lifts a 9B policy from 40.8% to 53.2% trial success, well ahead of the identical budget spent on outcome reward alone, while cutting exposure to misleading candidates by two thirds and reading fewer skills.",
+  "abstract_zh": "智能体框架日益将程序性知识封装为技能（skills），即智能体按需读取的指令文件，而公开技能库已包含数千种技能。因此，选择读取哪项技能成为策略在任务执行过程中的关键决策，但现有方法缺乏针对这一决策的有效训练信号。论文指出，默认方案——基于最终结果奖励、在候选技能集合上进行强化学习——存在结构性缺陷，并将其称为“选择器信用饥饿”（selector credit starvation）。在广播式序列级优势下，用于指定所选技能的少量 token 仅承担趋近于零的损失权重；随着轨迹变长，这些 token 获得的信用信号还越来越可能方向错误。例如，即使技能选择正确，只要后续执行失败，该选择仍会受到惩罚，而它本可能是整条轨迹中最有价值的决策之一。对完整训练运行产物的审计验证了上述现象，且问题均随任务时域增长而单调恶化。SkillGate 从机制上将 token 支持集划分为两个互不重叠的信用通道：结果信用仅作用于执行 token；独立的动作局部优势则精确作用于技能命名 token，并且仅当轨迹中的单次读取选择正确技能时给予正向信号。在五个智能体基准、每次提供 16 个候选技能的设置下，SkillGate 将 9B 策略的试验成功率从 40.8% 提升至 53.2%，显著优于将相同训练预算仅用于结果奖励的方法；同时，将误导性候选技能的暴露量减少约三分之二，并降低了技能读取数量。",
+  "key_points_zh": [
+    "提出“选择器信用饥饿”：序列级结果优势使技能选择 token 获得的训练权重趋近于零。",
+    "随着轨迹变长，技能选择更容易继承错误方向的信用，正确选择也可能因后续执行失败而受到惩罚。",
+    "SkillGate 将信用分为两个互斥通道：结果信用训练执行 token，动作局部优势专门训练技能命名 token。",
+    "在五个 agentic benchmarks 和 16 候选技能设置下，9B 模型成功率由 40.8% 提升至 53.2%。",
+    "相比仅使用结果奖励，SkillGate 将误导性候选技能暴露减少约三分之二，并减少不必要的技能读取。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.89,
+    "problem_significance": 0.92,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.89,
+    "llm_avg": 0.884,
+    "comment": "SkillGate addresses a fundamental long-horizon credit-assignment failure with a targeted training mechanism for reusable skill selection.",
+    "comment_zh": "SkillGate通过面向可复用技能选择的定向训练机制，解决了长程轨迹中的关键信用分配失效。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.6828624646490623,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.884,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/DeepExperience/SkillGate.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 2,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18852/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.951
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18852/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.84
+    }
+  ]
+}

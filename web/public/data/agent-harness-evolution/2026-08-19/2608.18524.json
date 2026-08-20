@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.18524",
+  "title": "DART-SD: Diamond-topology Aware Retrieval and Tuning for Self-Distillation of Multi-Turn Tool-Calling Agents",
+  "title_zh": "DART-SD：面向多轮工具调用智能体自蒸馏的菱形拓扑感知检索与调优",
+  "authors": [
+    "Hangrui Xu",
+    "Jiarui Wang",
+    "Yang Yang",
+    "Chuanbo Zhu",
+    "Fangda Chen",
+    "Ziqi Wu",
+    "Jingming Cai",
+    "Yan Song"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-19T04:19:21Z",
+  "abs_url": "https://arxiv.org/abs/2608.18524v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.18524",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Equipping Large Language Models (LLMs) with multi-turn tool-calling capabilities is essential for building autonomous agents. However, progress is fundamentally limited by the reliance on full-length trajectory imitation. For tasks involving multiple order-independent sub-goals, the optimal solution space forms a vast combinatorial diamond lattice. Forcing this rich topology into monolithic trajectories causes a severe topological collapse, indiscriminately penalizing valid alternative explorations and severely degrading policy diversity. To address this, we propose DART-SD (Diamond-topology Aware Retrieval and Tuning for Self-Distillation), a novel framework that shifts the paradigm from global forcing to topology-guided localized correction. DART-SD first models the execution process as a converging Interaction-State Transition Graph (ISTG), faithfully capturing the inherent diamond topology of successful and failed exploratory paths. During autonomous rollouts, the framework identifies the Critical Topological Breakpoint (CTB) and retrieves success-supported recovery references. Finally, we introduce a progressive self-distillation paradigm through CTB-guided localized supervision, ensuring that the training loss is calculated exclusively on the generated recovery steps while strictly protecting the valid reasoning prefix from destructive gradient updates. Experiments on complex multi-turn tool-calling benchmarks demonstrate that DART-SD significantly outperforms traditional full-trajectory baselines.",
+  "abstract_zh": "赋予 Large Language Models（LLMs）多轮工具调用能力，是构建自主智能体的关键。然而，现有方法依赖完整轨迹模仿，限制了进一步发展。对于包含多个顺序无关子目标的任务，其最优解空间会形成庞大的组合式菱形格结构；将这种丰富拓扑强制压缩为单一轨迹会引发严重的“拓扑坍缩”，错误惩罚有效的替代探索路径，并显著降低策略多样性。为此，本文提出 DART-SD（Diamond-topology Aware Retrieval and Tuning for Self-Distillation），将训练范式从全局轨迹强制模仿转向拓扑引导的局部纠错。DART-SD 首先将执行过程建模为收敛的 Interaction-State Transition Graph（ISTG），以刻画成功与失败探索路径中固有的菱形拓扑。在自主 rollout 期间，框架识别 Critical Topological Breakpoint（CTB），并检索由成功路径支持的恢复参考。随后，DART-SD 通过 CTB 引导的局部监督实施渐进式自蒸馏，仅在生成的恢复步骤上计算训练损失，同时避免有效推理前缀受到破坏性梯度更新。复杂多轮工具调用基准上的实验表明，DART-SD 显著优于传统的完整轨迹训练基线。",
+  "key_points_zh": [
+    "指出完整轨迹模仿会将多解任务的菱形解空间压缩为单一路径，导致拓扑坍缩并损害策略多样性。",
+    "提出 DART-SD，以 Interaction-State Transition Graph（ISTG）统一表示成功与失败的多轮探索路径。",
+    "通过 Critical Topological Breakpoint（CTB）定位策略偏离的关键节点，并检索成功路径支持的恢复参考。",
+    "采用 CTB 引导的局部监督，仅对恢复步骤计算损失，保护断点之前的有效推理前缀。",
+    "在复杂多轮工具调用基准上，DART-SD 显著优于传统完整轨迹训练方法。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.9,
+    "problem_significance": 0.91,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.87,
+    "lasting_value": 0.89,
+    "llm_avg": 0.89,
+    "comment": "DART-SD introduces a compelling graph-grounded recovery and localized self-distillation loop that preserves valid prefixes in tool-use trajectories.",
+    "comment_zh": "DART-SD引入了基于图结构的恢复与局部自蒸馏闭环，可在工具调用轨迹中保护有效前缀。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.40353225016377775,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.89,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 8,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18524/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18524/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

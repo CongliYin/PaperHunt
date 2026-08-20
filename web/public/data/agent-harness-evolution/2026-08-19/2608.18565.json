@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2608.18565",
+  "title": "SemaPLC: A Project-Grounded, Verification-Gated Agent Harness for PLC Code Generation",
+  "title_zh": "SemaPLC：面向 PLC 代码生成的项目上下文驱动与验证门控智能体框架",
+  "authors": [
+    "Yanlun Tu",
+    "Huacan Wang",
+    "Ziyue Zhou",
+    "Jie Zhou",
+    "Ningyan Zhu",
+    "Ge Chen",
+    "Wangyi Chen",
+    "Tengfei Zhou",
+    "Yifan Zhou",
+    "Dasheng Yang",
+    "Xiaofeng Mou",
+    "Hui Zhang",
+    "Yi Xu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-19T05:44:29Z",
+  "abs_url": "https://arxiv.org/abs/2608.18565v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.18565",
+  "links": {
+    "github": "https://github.com/midea-ai/SemaPLC.",
+    "project_page": null
+  },
+  "abstract_en": "Programmable logic controllers (PLCs) run industrial plants, and large language models can already generate independent program organization units (POUs) for them. Whether such logic integrates into an existing PLC project and then runs correctly has been checked only in limited tests. We present \\textsc{SemaPLC}, a project-grounded and verification-gated agent harness assembled from conventional tools but governed by a strict completion rule. Rather than stopping when the model judges its own output adequate, \\textsc{SemaPLC} declares a task complete only when logged external checks confirm it. Those checks cover the specification, the compilation, and the behavior on a live runtime. On 117 independent-POU tasks matching existing benchmarks, it attains the highest strict verified pass rate on all seven models (72.6\\% mean). On a project-context track of 65 tasks whose generated logic must compile and run inside a real project, it attains the highest mean on integrated compilation, static behavior, and dynamic behavior. Of the three layers, dynamic behavior is the most revealing. We measure it by deploying the generated and the reference logic to a live PLC runtime and comparing their executed traces. All methods fall within 10 static points of one another, whereas dynamic scores separate them sharply, from 22.4 to 31.4 for the baselines against 52.2 for \\textsc{SemaPLC}. Overall, our verification-gated harness raises the mean at every layer and most sharply at runtime. Execution, not static scoring, is the faithful test of whether generated control logic actually works. \\textsc{SemaPLC} is open-sourced at https://github.com/midea-ai/SemaPLC.",
+  "abstract_zh": "可编程逻辑控制器（PLC）广泛用于工业设施控制，大语言模型已能为其生成独立的程序组织单元（POU），但这些逻辑能否集成到现有 PLC 项目并正确运行，此前仅得到有限验证。本文提出 SemaPLC：一个由常规工具构建、以真实项目为上下文并采用严格验证门控机制的智能体框架。SemaPLC 不依赖模型自我判断任务是否完成，而是仅在日志记录的外部检查全部通过后才宣告完成，检查范围涵盖需求规格、编译结果以及真实运行时行为。在与现有基准一致的 117 个独立 POU 任务上，SemaPLC 在全部 7 个模型中均取得最高的严格验证通过率，平均达到 72.6%。在包含 65 个任务的项目上下文评测中，生成逻辑必须在真实项目内完成编译和运行；SemaPLC 在集成编译、静态行为和动态行为三个层面均获得最高平均成绩。其中，动态行为最具区分力：研究将生成逻辑与参考逻辑部署至真实 PLC 运行时，并比较二者的执行轨迹。各方法的静态得分差距不超过 10 分，但动态得分差异显著，基线方法仅为 22.4 至 31.4，SemaPLC 则达到 52.2。总体而言，验证门控框架提升了所有评测层面的平均表现，尤其显著改善了运行时正确性。研究表明，相比静态评分，实际执行才是检验生成控制逻辑能否正确工作的可靠标准。SemaPLC 已在 GitHub 开源。",
+  "key_points_zh": [
+    "提出 SemaPLC，将现有 PLC 项目上下文引入代码生成流程，并以外部验证结果而非模型自评作为任务完成条件。",
+    "验证流程覆盖需求规格检查、项目集成编译和真实 PLC 运行时行为，形成逐层门控的可靠性保障。",
+    "在 117 个独立 POU 任务和 7 个模型上均取得最高严格验证通过率，平均达到 72.6%。",
+    "在 65 个真实项目上下文任务中，SemaPLC 在集成编译、静态行为和动态行为三个层面均取得最高平均表现。",
+    "动态执行轨迹最能揭示方法差异：基线动态得分为 22.4 至 31.4，SemaPLC 达到 52.2，说明运行验证比静态评分更可靠。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.78,
+    "problem_significance": 0.9,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.86,
+    "llm_avg": 0.826,
+    "comment": "A strong coding-agent harness that makes project integration, compilation, and live execution traces mandatory completion gates.",
+    "comment_zh": "这是一个扎实的编程智能体框架，将项目集成、编译和实时执行轨迹设为强制完成门槛。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.9552147412196178,
+    "author_reputation": 0.41445719576726825,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.826,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/midea-ai/SemaPLC.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 110,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18565/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

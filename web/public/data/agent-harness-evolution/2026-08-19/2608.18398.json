@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2608.18398",
+  "title": "LEDGER: Claim-to-Evidence Trace Graphs for Auditing LLM Agents",
+  "title_zh": "LEDGER：用于审计 LLM Agent 的主张—证据追踪图",
+  "authors": [
+    "Daehong Kim",
+    "Haichao Miao",
+    "Shusen Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-19T00:10:04Z",
+  "abs_url": "https://arxiv.org/abs/2608.18398v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.18398",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM) agents can now carry out long-horizon technical workflows involving complex tool use, code execution, file edits, and generated artifacts. As agents do more work faster, the productivity bottleneck shifts from producing outputs to auditing whether those outputs are correct and trustworthy. Agent observability systems make fine-grained execution events visible, but visibility alone still leaves reviewers to reconstruct which actions, artifacts, and validation steps matter for a particular conclusion. We introduce LEDGER - Layered Evidence and Decision Graphs for Execution Review, a tracing and review system that builds layered trace graphs over observed agent sessions. LEDGER preserves Trace Records while grouping them into Evidence Nodes and Workflow Nodes, representing artifacts as evidence anchors, and adding typed semantic edges that connect claims to supporting actions, artifacts, and checks. Through data-analysis and coding examples, we show how the resulting traces expose workflow decisions, artifact lineage, repair steps, validation coverage, and claim-support paths for evidence-centered audit.",
+  "abstract_zh": "大语言模型（LLM）Agent 已能执行涉及复杂工具调用、代码运行、文件编辑和制品生成的长时程技术工作流。随着 Agent 更快地完成更多任务，生产力瓶颈正从生成输出转向审计这些输出是否正确、可信。现有 Agent 可观测性系统虽能呈现细粒度执行事件，但审查者仍需自行判断哪些操作、制品和验证步骤与特定结论相关。本文提出 LEDGER（Layered Evidence and Decision Graphs for Execution Review），一种面向执行审查的追踪系统，可基于观测到的 Agent 会话构建分层追踪图。LEDGER 在保留 Trace Records 的同时，将其组织为 Evidence Nodes 和 Workflow Nodes，以制品作为证据锚点，并添加带类型的语义边，将主张与相应的支持操作、制品及检查过程连接起来。通过数据分析与编程案例，作者展示了该追踪结构如何揭示工作流决策、制品谱系、修复步骤、验证覆盖范围，以及从主张到支持证据的路径，从而实现以证据为中心的 Agent 审计。",
+  "key_points_zh": [
+    "提出 LEDGER，将 LLM Agent 的细粒度执行记录组织为可审查的分层证据与决策图。",
+    "在保留 Trace Records 的基础上，引入 Evidence Nodes 和 Workflow Nodes，以区分证据单元与工作流结构。",
+    "将代码、文件及其他生成制品建模为证据锚点，并通过带类型的语义边连接主张、操作、制品和验证检查。",
+    "支持审查者追踪工作流决策、制品谱系、错误修复过程、验证覆盖范围及主张—证据路径。",
+    "通过数据分析和编程案例表明，LEDGER 可将 Agent 可观测性转化为面向结论可信度的证据中心审计。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.68,
+    "problem_significance": 0.84,
+    "potential_impact": 0.77,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.76,
+    "llm_avg": 0.74,
+    "comment": "LEDGER offers a useful claim-to-evidence trace abstraction for agent observability, although the abstract provides limited systematic validation.",
+    "comment_zh": "LEDGER为智能体可观测性提供了有用的主张到证据追踪抽象，但摘要中的系统性验证较有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.74,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18398/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.18398/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.942
+    }
+  ]
+}
