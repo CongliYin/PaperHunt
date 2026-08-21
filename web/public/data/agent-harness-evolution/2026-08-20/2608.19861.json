@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2608.19861",
+  "title": "PolicyGuide: From Guarding One Action to Guiding the Whole Workflow for Policy-Compliant LLM Agents",
+  "title_zh": "PolicyGuide：从守护单个动作到引导策略合规的 LLM Agent 完整工作流",
+  "authors": [
+    "Seongjae Kang",
+    "Taehyung Yu",
+    "Sung Ju Hwang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-20T10:13:19Z",
+  "abs_url": "https://arxiv.org/abs/2608.19861v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.19861",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Customer-service LLM agents must follow organizational policy when acting on a user's behalf. Compliance failures arise from either forbidden actions, such as granting an ineligible change, or omitted procedural requirements, such as identification or confirmation. Runtime safeguards can intervene on risky actions, but action-local checks do not guide an agent through a multi-step procedure. Workflow-following systems support prescribed process execution, but primarily target workflow completion rather than safeguarding agent behavior. PolicyGuide instead compiles each domain policy into a workflow graph and invokes a proactive verifier at user-turn boundaries. From persisted graph state, the verifier reconciles open requests and returns step-specific remediation along a policy-compliant path. Across the $τ^2$-bench airline, retail, and telecom domains with a GPT-5.4 agent and verifier, PolicyGuide raises mean $\\mathrm{Pass}^4$ from $0.42$ to $0.62$, with the largest gain on telecom ($0.19$ to $0.61$), the most workflow-structured domain. The same workflows transfer to Claude Sonnet 4.6 and Gemini 2.5 Pro agents. Complementary evaluations find the lowest observed attack-success rate under adversarial users and the strongest procedural compliance in an author-designed workflow-level validation.",
+  "abstract_zh": "客服 LLM Agent 代表用户执行操作时，必须遵守组织策略。合规失败既可能源于执行被禁止的动作，例如批准不符合资格的变更，也可能源于遗漏身份验证、用户确认等必要程序。现有运行时防护通常只检查高风险动作，难以引导 Agent 完成多步骤流程；工作流系统则更关注流程是否完成，而非 Agent 行为是否安全合规。PolicyGuide 将每个领域策略编译为工作流图，并在每轮用户交互边界调用主动验证器。验证器依据持久化的图状态协调尚未完成的请求，并沿策略合规路径提供针对当前步骤的修正建议。在 τ²-bench 的航空、零售和电信领域中，搭配 GPT-5.4 Agent 与验证器后，PolicyGuide 将平均 Pass⁴ 从 0.42 提升至 0.62；其中工作流结构最明显的电信领域提升最大，从 0.19 增至 0.61。相同工作流还可迁移至 Claude Sonnet 4.6 和 Gemini 2.5 Pro Agent。补充实验表明，PolicyGuide 在对抗性用户测试中取得最低的攻击成功率，并在作者设计的工作流级验证中表现出最强的程序合规性。",
+  "key_points_zh": [
+    "将领域策略编译为工作流图，从单动作风险拦截扩展到多步骤流程级合规引导。",
+    "在用户轮次边界主动验证，并利用持久化图状态跟踪未完成请求、识别遗漏步骤并给出针对性修正。",
+    "在 τ²-bench 三个领域中，将 GPT-5.4 Agent 的平均 Pass⁴ 从 0.42 提升至 0.62；电信领域从 0.19 显著提升至 0.61。",
+    "工作流可迁移至 Claude Sonnet 4.6 和 Gemini 2.5 Pro，表明方法具有跨模型泛化能力。",
+    "在对抗攻击与工作流级验证中，PolicyGuide 分别实现最低攻击成功率和最强程序合规性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.8,
+    "problem_significance": 0.89,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.84,
+    "llm_avg": 0.828,
+    "comment": "PolicyGuide combines compiled workflow graphs, persistent state, and proactive verification into a reusable orchestration pattern for procedural compliance.",
+    "comment_zh": "PolicyGuide将编译式工作流图、持久状态和主动验证结合为可复用的程序合规编排模式。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.6828624646490623,
+    "author_reputation": 0.6208857556621958,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.828,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 2,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 19,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19861/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.918
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19861/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.935
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "arxiv_id": "2608.19842",
+  "title": "SAPO: Single-Rollout Autoregressive Policy Optimization for Agentic Reinforcement Learning",
+  "title_zh": "SAPO：面向智能体强化学习的单轨迹自回归策略优化",
+  "authors": [
+    "Dayang Liang",
+    "Lang Feng",
+    "Bo An",
+    "Yunlong Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-20T09:43:47Z",
+  "abs_url": "https://arxiv.org/abs/2608.19842v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.19842",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic reinforcement learning (RL) has become a critical stage in the post-training of large language models. Existing critic-free, group-relative methods estimate policy advantages from multiple rollouts, avoiding the substantial memory overhead of conventional proximal policy optimization (PPO) and achieving strong performance on long-horizon interactive tasks. Despite their success, recent studies revealed three limitations: (1) Lack explicit value generalization and effective temporal credit assignment; (2) Suffer from potential advantage collapse in long-horizon complex tasks; (3) Require a costly trade-off between sampling budget and policy performance. In this work, we propose Single-rollout Autoregressive Policy Optimization (SAPO), a low-memory and compute-efficient framework in which the policy and value functions share a single autoregressive backbone. SAPO exploits the autoregressive structure of LLMs to produce policy and value predictions at distinct causal boundaries with shared parameters, while independently optimizing the PPO objectives and auxiliary on-policy SARSA objectives. To robustly estimate the contribution of each turn, we further introduce a trajectory-level generalized advantage estimator that combines lambda-returns with batch normalization. Experiments across ALFWorld and WebShop with Qwen2.5-1.5B/7B show that SAPO trains stably and outperforms PPO and GRPO by mean +15.1 and +12.1 percentage points, respectively, while eliminating the memory cost of a separate critic model and reducing per-iteration runtime by 33.2% over PPO.",
+  "abstract_zh": "智能体强化学习（Agentic RL）已成为大语言模型后训练的关键阶段。现有无 critic 的组相对方法通过多次 rollout 估计策略优势，虽能避免传统 PPO 的高内存开销，并在长时程交互任务中取得良好表现，但仍存在三项局限：缺乏显式的价值泛化与有效的时序信用分配；在复杂长时程任务中可能发生优势坍缩；需要在采样预算和策略性能之间进行高成本权衡。本文提出 Single-rollout Autoregressive Policy Optimization（SAPO），一种低内存、高计算效率的框架，使策略函数与价值函数共享同一个自回归骨干网络。SAPO 利用 LLM 的自回归结构，在不同因果边界生成策略与价值预测，并分别优化 PPO 目标和辅助的同策略 SARSA 目标。为稳健估计每轮交互的贡献，论文进一步提出轨迹级广义优势估计器，将 λ-return 与批归一化结合。在 ALFWorld 和 WebShop 上，基于 Qwen2.5-1.5B/7B 的实验表明，SAPO 训练稳定，性能较 PPO 和 GRPO 平均分别提升 15.1 和 12.1 个百分点；同时无需独立 critic 模型，并将相较 PPO 的单次迭代运行时间降低 33.2%。",
+  "key_points_zh": [
+    "SAPO 仅使用单次 rollout，缓解多轨迹优势估计带来的高采样成本及优势坍缩问题。",
+    "策略函数与价值函数共享单一自回归骨干，在不同因果边界进行预测，从而免除独立 critic 模型的内存开销。",
+    "训练过程独立优化 PPO 目标与辅助的同策略 SARSA 目标，以增强价值泛化和时序信用分配能力。",
+    "提出轨迹级广义优势估计器，将 λ-return 与批归一化结合，更稳健地评估各轮交互贡献。",
+    "在 ALFWorld 和 WebShop 上，SAPO 较 PPO、GRPO 平均提升 15.1、12.1 个百分点，并比 PPO 减少 33.2% 的单次迭代时间。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.87,
+    "problem_significance": 0.92,
+    "potential_impact": 0.89,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.88,
+    "llm_avg": 0.876,
+    "comment": "SAPO introduces a credible single-backbone actor-critic method that improves temporal credit assignment and efficiency for long-horizon agentic RL.",
+    "comment_zh": "SAPO提出可信的单骨干策略价值联合方法，提升了长程智能体强化学习的时序信用分配与训练效率。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4371584620143775,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.876,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19842/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.959
+    }
+  ]
+}

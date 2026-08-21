@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.19799",
+  "title": "SWE-bench Science: Can Coding Agents Resolve Engineering Tasks in Science?",
+  "title_zh": "SWE-bench Science：编程智能体能否解决科学软件工程任务？",
+  "authors": [
+    "Zhipeng Xu",
+    "Jiahao Lu",
+    "Yining Zheng",
+    "Yuxin Wang",
+    "Xipeng Qiu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-20T08:53:15Z",
+  "abs_url": "https://arxiv.org/abs/2608.19799v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.19799",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Software increasingly functions as part of the scientific instrument itself, making failures in scientific code capable of compromising not only program behavior but also the evidence underlying scientific conclusions. Yet existing evaluations of coding agents largely emphasize aggregate task success, providing limited insight into why agents fail when repairing scientific software. We introduce \\textbf{SWE-bench Science}, a repository-level benchmark for scientific software engineering comprising 119 tasks from 98 GitHub repositories across 20 scientific domains. Each task is organized into one of three paradigms: Issue-driven, Expert-exploratory, and Engineering-integration. Even the best-performing agent, \\textbf{Claude Code with Opus-5 (max), achieves a pass@1 below 50\\%}, highlighting the substantial challenges posed by scientific software engineering. We identify four recurring failure mechanisms: deficits in scientific knowledge or abstraction, misguided exploration or surface-level repair, incomplete repair coverage or system integration, and failures to generalize scientific knowledge beyond observed cases in our analysis. We further conduct a paired ablation that removes explicit scientific guidance while preserving the repository and executable engineering context. The results show that scientific knowledge is not uniformly beneficial: well-grounded information can constrain repair and improve average performance and token efficiency, whereas poorly aligned guidance can induce anchoring and does not necessarily improve exact repair success. Together, SWE-bench Science provides a broad testbed for studying both the capabilities and failure mechanisms of coding agents in scientific software engineering.",
+  "abstract_zh": "软件正日益成为科学仪器本身的一部分，因此，科学代码中的故障不仅会影响程序行为，还可能损害支撑科学结论的证据。然而，现有编程智能体评测主要关注总体任务成功率，难以揭示智能体修复科学软件时失败的具体原因。本文提出 SWE-bench Science，一个面向科学软件工程的仓库级基准，包含来自 98 个 GitHub 仓库、横跨 20 个科学领域的 119 项任务。任务分为三种范式：Issue-driven、Expert-exploratory 和 Engineering-integration。即使表现最佳的 Claude Code with Opus-5 (max)，其 pass@1 仍低于 50%，表明科学软件工程对编程智能体构成显著挑战。研究归纳出四类反复出现的失败机制：科学知识或抽象能力不足；探索方向错误或仅进行表层修复；修复覆盖不完整或系统集成失败；无法将科学知识泛化到已观察案例之外。论文还通过配对消融实验，在保留代码仓库及可执行工程上下文的同时移除显式科学指导。结果表明，科学知识并非总能带来收益：依据充分的信息可以约束修复空间，提高平均性能和 token 效率；但与任务匹配不佳的指导可能引发锚定效应，也不一定能提升精确修复成功率。SWE-bench Science 为研究编程智能体在科学软件工程中的能力与失败机制提供了覆盖广泛的测试平台。",
+  "key_points_zh": [
+    "提出仓库级基准 SWE-bench Science，包含 119 项任务，覆盖 98 个 GitHub 仓库和 20 个科学领域。",
+    "任务被划分为 Issue-driven、Expert-exploratory 与 Engineering-integration 三种范式，以覆盖不同来源和形态的科学软件工程问题。",
+    "最佳智能体 Claude Code with Opus-5 (max) 的 pass@1 仍低于 50%，显示现有编程智能体尚难可靠修复科学软件。",
+    "识别出四类主要失败机制：科学知识或抽象不足、错误探索或表层修复、修复覆盖或系统集成不完整，以及科学知识泛化失败。",
+    "消融实验发现科学指导具有双刃剑效应：高质量知识可提升平均性能和 token 效率，而不匹配的指导可能造成锚定，未必提高精确修复率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.76,
+    "problem_significance": 0.84,
+    "potential_impact": 0.81,
+    "paradigm_shift": 0.57,
+    "lasting_value": 0.84,
+    "llm_avg": 0.764,
+    "comment": "This benchmark extends coding-agent evaluation to diverse scientific repositories and adds useful failure-mechanism analysis, though its methodology is mostly incremental.",
+    "comment_zh": "该基准将编码智能体评估扩展到多样化科学软件仓库并分析失败机制，但整体方法仍偏增量。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.8980212367255738,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.764,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 51,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19799/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.723
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19799/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.965
+    }
+  ]
+}

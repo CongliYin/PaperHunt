@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2608.19701",
+  "title": "Beyond Memory Majority: Latent-Source Reasoning for Multi-Agent Memory Arbitration",
+  "title_zh": "超越记忆多数表决：面向多智能体记忆仲裁的潜在来源推理",
+  "authors": [
+    "Chenchen Lin",
+    "Wenhao Yuan",
+    "Xuehe Wang",
+    "Edith Cheuk Han Ngai"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-20T06:50:23Z",
+  "abs_url": "https://arxiv.org/abs/2608.19701v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.19701",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-term multi-agent systems continuously accumulate the memories produced by different agents. Existing memory methods typically treat retrieved memories as independent evidence and combine them through voting or weighting. However, this independence assumption often fails in multi-agent settings: memories written by different agents may inherit the same upstream source or shared bias, causing correlated evidence to be repeatedly counted and creating a false majority. We term this failure mode \\textit{Memory Correlation Bias}. To address the issue, we propose the \\textbf{C}orrelation-\\textbf{A}ware \\textbf{M}emory \\textbf{A}rbitration (CAMA) framework that jointly decouples retrieved memories and recovers missing independent evidence. We model the retrieved memories as query-conditioned evidence groups and combine neural dependency inference with provenance-based symbolic priors to estimate the effective number of independent evidence sources, thereby preventing correlated memories from forming a false majority. Since critical independent evidence may be absent from the initial retrieval set, \\textsc{CAMA} further learns a sequential recovery policy that actively retrieves alternative evidence or traces upstream sources before making the final decision, aiming to recover sufficient independent evidence for reliable arbitration while minimizing retrieval cost. Experiments on multiple benchmarks demonstrate the superiority of our method over the state-of-the-art baseline methods, suppressing false majorities induced by correlated memories.",
+  "abstract_zh": "长期运行的多智能体系统会持续积累不同智能体生成的记忆。现有记忆方法通常将检索到的记忆视为相互独立的证据，并通过投票或加权进行整合。然而，这一独立性假设在多智能体场景中往往不成立：不同智能体写入的记忆可能源自同一上游信息源或继承共同偏差，导致相关证据被重复计数并形成虚假的多数意见。本文将这一失效模式称为“记忆相关性偏差”（Memory Correlation Bias）。为解决该问题，作者提出相关性感知记忆仲裁框架 CAMA（Correlation-Aware Memory Arbitration），联合实现检索记忆的解耦与缺失独立证据的恢复。CAMA 将检索记忆建模为以查询为条件的证据组，结合神经依赖关系推断与基于来源信息的符号先验，估计有效独立证据源的数量，从而避免相关记忆形成虚假多数。考虑到初始检索结果中可能缺少关键的独立证据，CAMA 进一步学习序列式恢复策略，在最终决策前主动检索替代证据或追溯上游来源，以尽可能低的检索成本恢复足够的独立证据，实现可靠仲裁。多个基准上的实验表明，该方法优于当前先进基线，并能有效抑制由相关记忆导致的虚假多数现象。",
+  "key_points_zh": [
+    "指出多智能体记忆中的 Memory Correlation Bias：同源或共享偏差的记忆会被重复计票，制造虚假多数。",
+    "提出 CAMA 框架，将检索记忆组织为查询条件下的证据组，而非默认每条记忆彼此独立。",
+    "融合神经依赖关系推断与基于来源信息（provenance）的符号先验，估计有效独立证据源数量。",
+    "设计序列式证据恢复策略，主动检索替代证据或追溯上游来源，并兼顾仲裁可靠性与检索成本。",
+    "在多个基准上优于现有先进方法，能够有效抑制相关记忆引发的虚假多数。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.89,
+    "problem_significance": 0.9,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.87,
+    "llm_avg": 0.8719999999999999,
+    "comment": "CAMA introduces a substantive provenance-aware arbitration mechanism that avoids false consensus among correlated multi-agent memories.",
+    "comment_zh": "CAMA 提出了一种实质性的来源感知记忆仲裁机制，可避免相关多智能体记忆形成虚假共识。"
+  },
+  "scores": {
+    "topic_relevance": 0.6800000000000002,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.8719999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19701/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19701/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.984
+    }
+  ]
+}

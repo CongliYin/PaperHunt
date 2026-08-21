@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2608.19741",
+  "title": "One Success Isn't Reliability: Thinkingbox, a Sandbox and Benchmark for Agents in Stateful Business Workflows",
+  "title_zh": "一次成功并不等于可靠：面向有状态业务工作流智能体的沙盒与基准 Thinkingbox",
+  "authors": [
+    "Zhuochun Li",
+    "Youngmin Ko",
+    "Ali Keramati",
+    "Nicola Ferri",
+    "Susana Palmaz Lopez Pelaez",
+    "Liang-Chun Tsai",
+    "Calvin Wang",
+    "Mirco Milletari",
+    "Tuhin Kundu",
+    "Vadim Smolyakov",
+    "Kjartan Olafsson",
+    "Tommy Guy"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-20T07:37:57Z",
+  "abs_url": "https://arxiv.org/abs/2608.19741v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.19741",
+  "links": {
+    "github": "https://github.com/microsoft/thinkingbox",
+    "project_page": null
+  },
+  "abstract_en": "Recent agent benchmarks increasingly ground evaluation in executable environments, from code repair to web navigation, app APIs, and function calling. Yet completing consequential work beyond code requires more than producing a plausible response or valid tool call: agents must gather missing information over multiple turns, follow domain policies, coordinate dependent tools, and realize the correct persistent state transition without collateral effects. In this paper, we introduce Thinkingbox, a sandbox for tool-agent-user interaction that provides isolated MCP-compatible tool sessions, complete execution traces, and outcome evaluation over terminal backend state. Built on this sandbox, Thinkingbox-bench contains 507 policy-conditioned workflows across numerous scenarios, including retail, hospitality, auto insurance, neobank internal IT, and consulting IT/HR support. Each attempt is evaluated by task-specific executable checks that accept valid trajectories while rejecting wrong, missing, or extra effects; designated tasks additionally check required properties of the final response. Across proprietary and open-weight models, the strongest achieves 65.36% pass@1, but only 25.25% pass^20. Moreover, many failed trials show clean termination and valid state-changing actions, showing that response or tool-call-level signals are not clear proxies for end-to-end task completion. Thinkingbox-bench reveals a large gap between occasionally finding a successful trajectory and reliably completing stateful business tasks. We release both Thinkingbox and Thinkingbox-Bench: https://github.com/microsoft/thinkingbox",
+  "abstract_zh": "近期的智能体基准越来越多地在可执行环境中开展评测，涵盖代码修复、网页导航、应用 API 和函数调用等任务。然而，要完成代码之外具有实际影响的工作，仅生成看似合理的回复或有效的工具调用并不足够：智能体还必须在多轮交互中收集缺失信息、遵守领域政策、协调具有依赖关系的工具，并正确完成持久化状态转换，同时避免产生额外副作用。本文提出 Thinkingbox，一个用于工具—智能体—用户交互的沙盒，可提供相互隔离且兼容 MCP 的工具会话、完整执行轨迹，以及基于后端最终状态的结果评估。在此基础上构建的 Thinkingbox-bench 包含 507 个受政策约束的工作流，覆盖零售、酒店、汽车保险、新型银行内部 IT，以及咨询行业的 IT/HR 支持等场景。每次尝试均通过任务专属的可执行检查进行评估：既允许不同的有效执行轨迹，又能拒绝错误、缺失或多余的状态影响；部分指定任务还会检查最终回复必须满足的属性。在闭源模型和开放权重模型中，表现最强者的 pass@1 达到 65.36%，但 pass^20 仅为 25.25%。此外，许多失败试验仍能正常结束并执行有效的状态变更操作，这表明回复质量或工具调用层面的信号无法清晰代表端到端任务是否真正完成。Thinkingbox-bench 揭示了智能体“偶尔找到成功轨迹”与“可靠完成有状态业务任务”之间的巨大差距。作者已开源 Thinkingbox 与 Thinkingbox-Bench：https://github.com/microsoft/thinkingbox",
+  "key_points_zh": [
+    "提出 Thinkingbox：支持隔离 MCP 工具会话、完整执行轨迹和后端终态评估的智能体交互沙盒。",
+    "构建 Thinkingbox-bench，包含 507 个受政策约束的有状态工作流，覆盖零售、酒店、保险、银行及企业 IT/HR 等场景。",
+    "采用任务专属可执行检查，依据最终状态判断正确性，并识别错误、缺失或多余的副作用，而非仅检查回复或工具调用。",
+    "最强模型的 pass@1 为 65.36%，但连续 20 次均成功的 pass^20 仅为 25.25%，暴露出显著的可靠性缺口。",
+    "大量失败轨迹仍能正常终止并执行合法状态变更，说明局部行为有效并不能代表端到端任务完成。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.84,
+    "problem_significance": 0.92,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.91,
+    "llm_avg": 0.8720000000000001,
+    "comment": "Thinkingbox offers a reusable stateful-agent sandbox, executable outcome verifiers, and reliability-focused evaluation that directly address consequential workflow execution.",
+    "comment_zh": "Thinkingbox提供可复用的有状态智能体沙箱、可执行结果验证器和可靠性评估，直接解决关键工作流执行问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.21754098571521813,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.8720000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/microsoft/thinkingbox",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19741/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.934
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19741/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.965
+    }
+  ]
+}

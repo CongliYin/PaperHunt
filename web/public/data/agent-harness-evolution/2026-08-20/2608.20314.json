@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.20314",
+  "title": "MidTool: Mid-training Data Synthesis for Agentic Tool Use",
+  "title_zh": "MidTool：面向智能体工具使用的中期训练数据合成",
+  "authors": [
+    "Fengqing Jiang",
+    "Yite Wang",
+    "Boyi Liu",
+    "Zhaoyang Wang",
+    "Canwen Xu",
+    "Zhewei Yao",
+    "Radha Poovendran",
+    "Yuxiong He"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-20T17:53:59Z",
+  "abs_url": "https://arxiv.org/abs/2608.20314v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.20314",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Mid-training is increasingly recognized as a critical stage for shaping the capabilities of large language models. Recent work has shown that targeted mid-training can strengthen reasoning-intensive abilities such as math and science, and can also improve agentic capabilities in software-engineering settings. In this work, we study the parallel but less explored agentic capability: general tool use. We present MidTool, an open corpus construction pipeline for agentic tool-use mid-training that combines large-scale web, PDF, and code data with synthesized supervision from real-world tool APIs, MCP skills, and document-grounded workflows. MidTool is designed to teach models how to recognize tool affordances, ground arguments from context, compose tool call workflow, and recover from incomplete information. We mid-train Qwen3-4B-Base and Qwen3-8B-Base on MidTool-Mix, and then apply follow-up post-training with both supervised fine-tuning and reinforcement learning. Compared with baselines, MidTool-Mix consistently improves downstream performance under both SFT and RL on BFCL, tau2-Bench, and MCP Universe. These results suggest that general tool use, like other important LLM capabilities, benefits from dedicated mid-training rather than being left entirely to post-training.",
+  "abstract_zh": "中期训练（mid-training）正逐渐被视为塑造大语言模型能力的关键阶段。已有研究表明，针对性的中期训练可以增强数学、科学等推理密集型能力，并改善软件工程场景中的智能体能力。本文研究一个与之对应但较少受到关注的方向：通用工具使用。作者提出 MidTool，一套面向智能体工具使用中期训练的开放语料构建流水线。该方法结合大规模网页、PDF 和代码数据，以及来自真实工具 API、MCP skills 和基于文档工作流的合成监督数据，旨在教会模型识别工具可供性、从上下文中确定调用参数、组合工具调用工作流，并在信息不完整时进行恢复。作者使用 MidTool-Mix 对 Qwen3-4B-Base 和 Qwen3-8B-Base 进行中期训练，随后通过监督微调（SFT）和强化学习（RL）完成后训练。实验显示，相较于基线方法，MidTool-Mix 在 SFT 和 RL 两种设置下均能稳定提升模型在 BFCL、tau2-Bench 和 MCP Universe 上的表现。结果说明，与其他重要的大语言模型能力类似，通用工具使用也能从专门的中期训练中获益，而不应完全依赖后训练阶段。",
+  "key_points_zh": [
+    "提出 MidTool：面向智能体通用工具使用的开放中期训练语料构建流水线。",
+    "MidTool-Mix 融合网页、PDF、代码及真实工具 API、MCP skills 和文档工作流生成的合成监督数据。",
+    "训练目标覆盖工具可供性识别、上下文参数落地、多工具调用流程组合，以及信息缺失时的恢复能力。",
+    "在 Qwen3-4B-Base 和 Qwen3-8B-Base 上先进行中期训练，再结合 SFT 与 RL 后训练。",
+    "在 BFCL、tau2-Bench 和 MCP Universe 上均稳定优于基线，验证了专门开展工具使用中期训练的价值。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8700000000000001,
+    "comment": "MidTool contributes a broadly reusable synthesis pipeline and training corpus for grounding, composing, and recovering tool-use workflows across agent environments.",
+    "comment_zh": "MidTool提供了可广泛复用的数据合成管线与训练语料，用于学习跨环境的工具理解、工作流组合和错误恢复。"
+  },
+  "scores": {
+    "topic_relevance": 0.20000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8700000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.20314/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.20314/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

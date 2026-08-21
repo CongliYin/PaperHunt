@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2608.19760",
+  "title": "Credit Without Ground Truth: Auditing Step-Level Credit Assignment in LLM Agents Against Executed Replay",
+  "title_zh": "没有真实标签的信用分配：基于执行回放审计 LLM Agent 的步骤级信用分配",
+  "authors": [
+    "Haiyue Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-20T08:04:00Z",
+  "abs_url": "https://arxiv.org/abs/2608.19760v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.19760",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Audited against causal ground truth from executed replay in a single-agent tool environment (ALFWorld), none of the step-level credit signals used to train LLM agents -- LLM-judge scores, outcome-conditioned logprob ratios, or the policy's own confidence -- identifies which steps causally matter better than chance. Existing evaluations grade these signals against annotated step *correctness*; we audit them against step *contribution* -- what re-sampling the policy's own alternatives at each decision point and rolling forward actually changes about the outcome -- and the two come apart. The ground truth itself is structured: causal contribution is sparse (30.5% of decision points where ground truth is defined carry measurable effect), and measurability is model-dependent -- the fraction of points with no policy-supported counterfactual differs by a factor of two (13.1% vs. 26.8%) between two similar-scale policies. The failure mode is identifiable: implicit credit echoes the policy's fluency (median rank correlation +0.75, replicating at +0.70 in a second family under a corrected instrument), while conditioning on the outcome adds no causal information (partial correlation -0.004, Qwen). A confidence-only router recovers pivotal steps at chance level, but cuts judge cost by 13.1% per turn (14.0% per trajectory). In a seven-arm pre-registered training experiment, no arm reliably outperforms the untrained policy, and the checkpoints' apparent instrument signature is fully explained by training dose -- sparser credit retains fewer examples, an order-of-magnitude spread in optimizer steps -- not credit content. Comparisons of credit rules must therefore match effective sample size, or they measure dose, not credit.",
+  "abstract_zh": "本文在单 Agent 工具环境 ALFWorld 中，以执行回放（executed replay）得到的因果真实值为基准，审计用于训练 LLM Agent 的步骤级信用信号。结果显示，无论是 LLM-judge 评分、结果条件化的对数概率比，还是策略自身的置信度，在识别真正影响任务结果的步骤时均未优于随机水平。现有评估通常依据人工标注的步骤“正确性”，而本文关注步骤的因果“贡献”：在每个决策点重新采样策略自身支持的替代动作并继续执行，观察最终结果如何变化。实验表明，正确性与因果贡献并不等价。因果贡献具有稀疏性：在可定义真实值的决策点中，仅 30.5% 存在可测量影响；其可测性还依赖具体模型，两种规模相近策略中，不存在策略支持反事实的决策点比例分别为 13.1% 和 26.8%。进一步分析发现，隐式信用信号主要复现策略的语言流畅度，秩相关中位数为 +0.75，并在另一模型家族及修正后的测量工具上复现为 +0.70；对最终结果进行条件化并未增加因果信息，在 Qwen 上的偏相关仅为 -0.004。仅依赖置信度的路由器虽然只能以随机水平识别关键步骤，但可将每轮 LLM-judge 成本降低 13.1%，将每条轨迹成本降低 14.0%。在预注册的七组训练实验中，没有任何方案稳定优于未训练策略。不同检查点呈现出的表面信用信号特征可完全由训练剂量解释：稀疏信用保留的样本更少，导致优化器更新步数相差一个数量级，而非源于信用内容本身。因此，比较信用分配规则时必须匹配有效样本量，否则测得的只是训练剂量差异，而不是信用质量。",
+  "key_points_zh": [
+    "论文用 executed replay 构造步骤级因果真实值，直接衡量重采样某一步动作并继续执行后对最终结果的影响。",
+    "LLM-judge、结果条件化对数概率比和策略置信度均未能以高于随机的水平识别具有因果贡献的步骤。",
+    "步骤正确性不等于步骤贡献；因果贡献较为稀疏，且反事实是否可测明显依赖策略本身。",
+    "隐式信用主要追随策略的语言流畅度，而结果条件化几乎未提供额外因果信息；置信度路由只能用于降低 judge 成本。",
+    "七组预注册训练实验均未稳定超过未训练策略，表面差异主要来自有效样本量和优化步数，而非信用规则的内容。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.91,
+    "problem_significance": 0.95,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.88,
+    "lasting_value": 0.93,
+    "llm_avg": 0.9139999999999999,
+    "comment": "The executed-replay audit provides unusually strong causal evidence that common step-credit signals fail, with important implications for agent training methodology.",
+    "comment_zh": "基于执行回放的审计以罕见的强因果证据揭示常用步骤信用信号失效，对智能体训练方法具有重要意义。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2794153127047222,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.9139999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19760/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19760/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.975
+    }
+  ]
+}

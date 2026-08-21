@@ -1,0 +1,183 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-08-20",
+  "generated_at": "2026-08-21T20:34:44Z",
+  "papers": [
+    {
+      "arxiv_id": "2608.19741",
+      "title": "One Success Isn't Reliability: Thinkingbox, a Sandbox and Benchmark for Agents in Stateful Business Workflows",
+      "title_zh": "一次成功并不等于可靠：面向有状态业务工作流智能体的沙盒与基准 Thinkingbox",
+      "authors": [
+        "Zhuochun Li",
+        "Youngmin Ko",
+        "Ali Keramati",
+        "Nicola Ferri",
+        "Susana Palmaz Lopez Pelaez",
+        "Liang-Chun Tsai",
+        "Calvin Wang",
+        "Mirco Milletari",
+        "Tuhin Kundu",
+        "Vadim Smolyakov",
+        "Kjartan Olafsson",
+        "Tommy Guy"
+      ],
+      "total_score": 0.723977049285761,
+      "scores": {
+        "topic_relevance": 0.9600000000000001,
+        "llm_assessment": 0.8720000000000001,
+        "domain_fit": 0.97,
+        "other": 0.2612568309525364
+      },
+      "tags": [
+        "GitHub",
+        "session context state"
+      ],
+      "tldr_zh": "智能体偶尔成功，远不等于可靠完成业务工作流。",
+      "detail_file": "agent-harness-evolution/2026-08-20/2608.19741.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19741/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.19842",
+      "title": "SAPO: Single-Rollout Autoregressive Policy Optimization for Agentic Reinforcement Learning",
+      "title_zh": "SAPO：面向智能体强化学习的单轨迹自回归策略优化",
+      "authors": [
+        "Dayang Liang",
+        "Lang Feng",
+        "Bo An",
+        "Yunlong Liu"
+      ],
+      "total_score": 0.6656579231007189,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.876,
+        "domain_fit": 0.98,
+        "other": 0.22285974366906297
+      },
+      "tags": [
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "单轨迹共享策略价值骨干，性能更强且训练更省资源。",
+      "detail_file": "agent-harness-evolution/2026-08-20/2608.19842.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19842/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.19760",
+      "title": "Credit Without Ground Truth: Auditing Step-Level Credit Assignment in LLM Agents Against Executed Replay",
+      "title_zh": "没有真实标签的信用分配：基于执行回放审计 LLM Agent 的步骤级信用分配",
+      "authors": [
+        "Haiyue Zhang"
+      ],
+      "total_score": 0.5641707656352362,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.9139999999999999,
+        "domain_fit": 0.98,
+        "other": 0.11323588545078705
+      },
+      "tags": [
+        "judge reward verifier"
+      ],
+      "tldr_zh": "现有步骤级信用信号无法超越随机识别因果关键步骤。",
+      "detail_file": "agent-harness-evolution/2026-08-20/2608.19760.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19760/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.19861",
+      "title": "PolicyGuide: From Guarding One Action to Guiding the Whole Workflow for Policy-Compliant LLM Agents",
+      "title_zh": "PolicyGuide：从守护单个动作到引导策略合规的 LLM Agent 完整工作流",
+      "authors": [
+        "Seongjae Kang",
+        "Taehyung Yu",
+        "Sung Ju Hwang"
+      ],
+      "total_score": 0.5185874110155629,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.828,
+        "domain_fit": 0.9,
+        "other": 0.36729137005187645
+      },
+      "tags": [
+        "HF Daily ★2",
+        "general llm agents"
+      ],
+      "tldr_zh": "用策略工作流图全程引导Agent合规执行",
+      "detail_file": "agent-harness-evolution/2026-08-20/2608.19861.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19861/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.20314",
+      "title": "MidTool: Mid-training Data Synthesis for Agentic Tool Use",
+      "title_zh": "MidTool：面向智能体工具使用的中期训练数据合成",
+      "authors": [
+        "Fengqing Jiang",
+        "Yite Wang",
+        "Boyi Liu",
+        "Zhaoyang Wang",
+        "Canwen Xu",
+        "Zhewei Yao",
+        "Radha Poovendran",
+        "Yuxiong He"
+      ],
+      "total_score": 0.4005883062540945,
+      "scores": {
+        "topic_relevance": 0.20000000000000004,
+        "llm_assessment": 0.8700000000000001,
+        "domain_fit": 0.97,
+        "other": 0.19862768751364818
+      },
+      "tags": [
+        "adjacent model training"
+      ],
+      "tldr_zh": "专门的中期训练可显著增强大模型通用工具使用能力。",
+      "detail_file": "agent-harness-evolution/2026-08-20/2608.20314.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.20314/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.19799",
+      "title": "SWE-bench Science: Can Coding Agents Resolve Engineering Tasks in Science?",
+      "title_zh": "SWE-bench Science：编程智能体能否解决科学软件工程任务？",
+      "authors": [
+        "Zhipeng Xu",
+        "Jiahao Lu",
+        "Yining Zheng",
+        "Yuxin Wang",
+        "Xipeng Qiu"
+      ],
+      "total_score": 0.3341010618362787,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.764,
+        "domain_fit": 0.95,
+        "other": 0.34967020612092903
+      },
+      "tags": [
+        "HF Daily ★51"
+      ],
+      "tldr_zh": "科学代码修复仍困难，最佳智能体成功率不足五成。",
+      "detail_file": "agent-harness-evolution/2026-08-20/2608.19799.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19799/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.20195",
+      "title": "From Agent Behaviour to Agent-Friendly Documentation: An Empirical Study of How Coding Agents Discover, Read, and Write Technical Documentation",
+      "title_zh": "从智能体行为到智能体友好文档：编码智能体发现、阅读与编写技术文档的实证研究",
+      "authors": [
+        "Zhijun Gao",
+        "Jing Chen"
+      ],
+      "total_score": 0.2585258286877776,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.6699999999999999,
+        "domain_fit": 0.82,
+        "other": 0.19175276229259217
+      },
+      "tags": [],
+      "tldr_zh": "编码智能体偏爱指令与笔记，文档友好性假设证据不足。",
+      "detail_file": "agent-harness-evolution/2026-08-20/2608.20195.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.20195/thumb.webp"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.19652",
+  "title": "Can Agent Memory Systems Track Evolving State?",
+  "title_zh": "智能体记忆系统能否追踪持续演化的状态？",
+  "authors": [
+    "Xinyi Fan",
+    "Miri Liu",
+    "Ruozhen Yang",
+    "Siru Ouyang",
+    "Jiawei Han"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-20T05:41:23Z",
+  "abs_url": "https://arxiv.org/abs/2608.19652v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.19652",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As LLM-based agents are deployed for longer and higher-stakes tasks, their memory systems continue to have crucial gaps. While existing memory benchmarks focus largely on recall-shaped tasks, we argue an effective memory system must track the evolving state of the world; as facts, constraints, and decisions are revised over a long interaction, answers must reflect the current state and not a superseded one. We define this capability as state tracking and instantiate it in StateMemBench, a benchmark of 234 multi-session scenarios spanning two conversation-length regimes. Its closed-pool grading scores whether an answer reflects the current state, the superseded state, or fails otherwise, separating state-tracking failures from other errors by construction. Our analysis shows that this task is challenging for existing memory systems, retrieval-augmented baselines, and long-context baselines. We then present StateMem, a state-first memory method that explicitly tracks supersession and relational dependencies, and show it improves current-state accuracy over the strongest same-backbone baseline by 1.8x (0.205 -> 0.363) on DeepSeek-V4-Flash and over the strongest memory system by 1.6x (0.149 -> 0.233) on Qwen-3.5-9B, while remaining competitive with the long-context baselines. Finally, we show the same state approach can be applied as a lightweight single-call wrapper over existing memory systems, lifting current-state accuracy by +32 to +67 points on StateMemBench across six memory and retrieval backends. A length- and cost-matched control attributes +15 to +32 of those points to state structure rather than added context.",
+  "abstract_zh": "随着基于 LLM 的智能体被用于周期更长、风险更高的任务，其记忆系统仍存在关键缺陷。现有记忆基准大多聚焦于信息回忆类任务，但本文认为，有效的记忆系统必须能够追踪世界状态的持续演化：当事实、约束和决策在长期交互中被修订时，回答应反映当前状态，而非已被取代的旧状态。本文将这一能力定义为状态追踪（state tracking），并构建 StateMemBench，其中包含 234 个跨多会话场景，覆盖两种对话长度设置。其封闭候选池评分机制可判断回答反映的是当前状态、已被取代的状态，还是存在其他错误，从而在设计上将状态追踪失败与其他错误区分开来。实验表明，该任务对现有记忆系统、检索增强基线和长上下文基线均具有较大挑战。为此，本文提出 StateMem，一种以状态为核心的记忆方法，可显式追踪信息的替代关系与关系依赖。在 DeepSeek-V4-Flash 上，StateMem 相比采用相同骨干模型的最强基线将当前状态准确率提升 1.8 倍（0.205→0.363）；在 Qwen-3.5-9B 上，相比最强记忆系统提升 1.6 倍（0.149→0.233），同时保持与长上下文基线相当的性能。此外，该状态方法还能作为轻量级单次调用封装器应用于现有记忆系统，使六种记忆与检索后端在 StateMemBench 上的当前状态准确率提升 32 至 67 个百分点。长度与成本匹配的对照实验表明，其中 15 至 32 个百分点的提升来自状态化结构，而非额外上下文。",
+  "key_points_zh": [
+    "提出“状态追踪”能力：智能体应在事实、约束和决策被修订后使用最新状态，而非召回已失效信息。",
+    "构建 StateMemBench，包含 234 个多会话场景和两种对话长度设置，并区分当前状态、旧状态与其他错误。",
+    "现有记忆系统、检索增强方法及长上下文基线在状态追踪任务上均表现有限。",
+    "提出 StateMem，通过显式建模信息替代关系与关系依赖，在 DeepSeek-V4-Flash 和 Qwen-3.5-9B 上分别实现 1.8 倍和 1.6 倍提升。",
+    "作为单次调用封装器时，该方法可使六种后端提升 32 至 67 个百分点；对照实验确认其中 15 至 32 个百分点源于状态结构。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.9,
+    "problem_significance": 0.95,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.87,
+    "lasting_value": 0.94,
+    "llm_avg": 0.9179999999999999,
+    "comment": "StateMemBench and explicit supersession tracking directly address stale-state failures with a reusable benchmark and memory lifecycle mechanism.",
+    "comment_zh": "StateMemBench 与显式替代关系追踪通过可复用基准和记忆生命周期机制直接解决了状态过时问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3233158463485474,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.9179999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19652/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19652/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.973
+    }
+  ]
+}

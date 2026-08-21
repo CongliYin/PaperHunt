@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.19595",
+  "title": "SSR-GRPO: Integrating Supervision and Semantic IDs into Reinforcement Learning for Dense Retrieval in E-commerce",
+  "title_zh": "SSR-GRPO：将监督学习与语义标识符融入电商稠密检索强化学习",
+  "authors": [
+    "Guangxin Song",
+    "Xing Fang",
+    "Mingmin Jin",
+    "Jing Wang",
+    "Bokang Wang",
+    "Zhentao Song",
+    "Junjie Bai",
+    "Jianbo Zhu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-20T03:19:20Z",
+  "abs_url": "https://arxiv.org/abs/2608.19595v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.19595",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Embedding-based retrieval (EBR) is pivotal in e-commerce search but often struggles with complex semantics. While recent methods often fine-tune large language models (LLMs) for representation learning, they typically lack robust mechanisms for handling complex and implicit semantics. While Retrieval-GRPO (R-GRPO) recently introduced reinforcement learning to dense retrieval, it suffers from noisy top-K candidates due to limited batch sampling and biased relevance assessments caused by using similarly trained LLMs as reward models. To tackle these issues, we propose Supervised Retrieval-GRPO with Semantic Identifiers (SSR-GRPO). Specifically, our method first proposes a dual-perspective framework for relevance assessment. It leverages both Semantic Identifiers (SIDs) produced by quantization learning and dense representation vectors to generate more unbiased relevance scores. Furthermore, leveraging the hierarchical similarity relationships of the generated SIDs, we mine a set of hard negative samples that serve two purposes: (1) to design a masking function integrated into R-GRPO, effectively filtering intra-group noisy samples; and (2) to construct a Retrieval-DPO task composed of positive and negative sample pairs, enabling the model to capture fine-grained semantic distinctions from a pair-wise perspective. By integrating these optimization strategies, we propose SSR-GRPO. Extensive offline and online experiments validate SSR-GRPO's effectiveness, and it has been deployed on a large-scale e-commerce platform.",
+  "abstract_zh": "基于嵌入的检索（Embedding-based Retrieval, EBR）是电商搜索的关键技术，但在处理复杂及隐式语义时仍存在不足。近期方法通常微调大语言模型（LLMs）以学习表示，却缺少可靠的复杂语义建模机制。Retrieval-GRPO（R-GRPO）虽将强化学习引入稠密检索，但受限于批内采样，其 Top-K 候选容易包含噪声；同时，使用训练方式相似的 LLM 作为奖励模型，也可能造成相关性评估偏差。为此，本文提出融合语义标识符的监督式 Retrieval-GRPO——SSR-GRPO。该方法首先构建双视角相关性评估框架，联合使用量化学习生成的语义标识符（Semantic Identifiers, SIDs）与稠密表示向量，获得更客观的相关性分数。随后，利用 SIDs 的层次化相似关系挖掘困难负样本，并将其用于两项优化：一是设计集成至 R-GRPO 的掩码函数，过滤组内噪声样本；二是构造由正负样本对组成的 Retrieval-DPO 任务，通过成对偏好学习捕捉细粒度语义差异。离线与在线实验均验证了 SSR-GRPO 的有效性，该方法已部署于大规模电商平台。",
+  "key_points_zh": [
+    "提出 SSR-GRPO，将监督式偏好优化、语义标识符（SIDs）与 R-GRPO 统一到电商稠密检索框架中。",
+    "通过 SIDs 与稠密表示向量构建双视角相关性评估，缓解同类 LLM 奖励模型带来的评估偏差。",
+    "利用 SIDs 的层次化语义结构挖掘困难负样本，并通过掩码函数过滤 R-GRPO 组内的噪声候选。",
+    "构建 Retrieval-DPO 正负样本对任务，以成对学习方式提升模型对细粒度语义差异的辨别能力。",
+    "离线和在线实验均显示方法有效，且已在大型电商平台完成实际部署。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.82,
+    "problem_significance": 0.9,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8440000000000001,
+    "comment": "A strong, production-validated e-commerce retrieval contribution combining semantic identifiers, supervised signals, and reinforcement learning.",
+    "comment_zh": "该工作融合语义标识、监督信号与强化学习，是一项经过生产验证的高价值电商检索研究。"
+  },
+  "scores": {
+    "topic_relevance": 0.7600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8440000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19595/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.19595/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.978
+    }
+  ]
+}
