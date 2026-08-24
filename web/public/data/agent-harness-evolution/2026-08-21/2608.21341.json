@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.21341",
+  "title": "Natural-Language Workflows Are Not Software Yet: Artifact-Driven Compilation for Reliable Agent Execution",
+  "title_zh": "自然语言工作流尚非软件：面向可靠智能体执行的制品驱动编译",
+  "authors": [
+    "Xiangzhe Xu",
+    "Hanxi Guo",
+    "Guangyu Shen",
+    "Siyuan Cheng",
+    "Xiangyu Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-21T17:47:47Z",
+  "abs_url": "https://arxiv.org/abs/2608.21341v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.21341",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Natural-language workflows offer a software-like interface for agents: domain experts can write reusable procedures, and agents can execute them as instructions. This promise is not yet reliable. Workflow descriptions often leave data dependencies implicit, so the executor must infer which prior results a step should use; agents can also fail to follow long or branching instructions under context pressure. We propose Artic, an artifact-driven workflow compiler that transforms a natural-language workflow into an artifact-driven workflow in which each step declares the artifacts it reads and writes, constraints gate produced artifacts, and explicit control transfers route execution. This representation exposes the enforcement burden placed on agent execution, allowing the compiler to identify steps that depend on too much state or contain difficult control logic and refine them through constrained optimization. To validate the LLM-assisted transformation, Artic decomposes faithfulness checking into local obligations and uses scenario-based dry runs to test whether compiled workflow regions conform to the source workflow. We evaluate Artic on 488 problem instances from 11 real-world domain workflows; it improves task resolve rate by 28 percentage points over the original text workflow. We also show that workflows compiled by Artic are 32 and 56 percentage points more consistent in cross-model and repeated-execution setups, respectively.",
+  "abstract_zh": "自然语言工作流为智能体提供了类似软件的接口，使领域专家能够编写可复用流程，并由智能体按指令执行。然而，这种方式目前仍不够可靠：工作流描述常隐含数据依赖，执行器需要自行推断每一步应使用哪些先前结果；在上下文压力下，智能体也可能无法正确遵循冗长或包含分支的指令。本文提出 Artic，一种制品驱动的工作流编译器，可将自然语言工作流转换为制品驱动工作流：每个步骤显式声明其读取和写入的制品（artifact），使用约束检查生成的制品，并通过明确的控制转移引导执行。该表示能够暴露智能体执行所承担的约束落实负担，使编译器识别依赖过多状态或包含复杂控制逻辑的步骤，并通过受约束优化进行改写。为验证 LLM 辅助转换的忠实性，Artic 将一致性检查分解为局部验证义务，并通过基于场景的干运行测试编译后工作流是否符合原始流程。作者在来自 11 个真实领域工作流的 488 个问题实例上进行评测。相比原始文本工作流，Artic 将任务解决率提高了 28 个百分点；在跨模型和重复执行设置下，其一致性分别提高了 32 和 56 个百分点。",
+  "key_points_zh": [
+    "Artic 将隐式的数据依赖转化为显式的制品读写关系，并加入约束门控与控制转移。",
+    "编译表示可识别状态依赖过重或控制逻辑复杂的步骤，再通过受约束优化进行细化。",
+    "通过局部忠实性义务与基于场景的干运行，验证编译后工作流对原始流程的遵循程度。",
+    "在 11 个真实领域工作流的 488 个实例上，任务解决率较原始文本工作流提升 28 个百分点。",
+    "跨模型与重复执行的一致性分别提升 32 和 56 个百分点。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.88,
+    "problem_significance": 0.92,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.85,
+    "lasting_value": 0.91,
+    "llm_avg": 0.8939999999999999,
+    "comment": "Artic offers a strong reusable compilation architecture that makes agent workflow state, dependencies, constraints, and control flow explicit and testable.",
+    "comment_zh": "Artic提出了强大的可复用编译架构，使智能体工作流的状态、依赖、约束和控制流显式化并可测试。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.6803847359753741,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8939999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 21,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 10,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.21341/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.21341/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.923
+    }
+  ]
+}

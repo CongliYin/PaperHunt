@@ -1,0 +1,65 @@
+{
+  "arxiv_id": "2608.21027",
+  "title": "Don't Solve, Just Compare: Tiny Advisors for Runtime Intervention in LLM Agents",
+  "title_zh": "无需求解，只需比较：用于 LLM Agent 运行时干预的微型顾问",
+  "authors": [
+    "Yanze Jiang",
+    "Mingxuan Li",
+    "Yuhao Wang",
+    "Shengfang Zhai",
+    "Jiaheng Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-21T12:20:14Z",
+  "abs_url": "https://arxiv.org/abs/2608.21027v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.21027",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM agents are emerging as an important paradigm for real-world tasks that require reasoning, tool use, and sequential decision-making. As these agents operate over longer horizons, runtime intervention offers a way to improve reliability without retraining the underlying actor. Failure detection alone is insufficient. Effective intervention must also provide a useful direction for recovery. Existing approaches often rely on an expert solver or a critic that generates task-specific corrections, incurring either the cost of another capable solver or the capacity demands of a task-capable critic. We introduce Comparison-Only Tiny Advisor (COTA), a comparison-only framework for constructive runtime intervention. In COTA, a tiny comparator judges whether sampled alternatives lead to better continuations than the actor's proposal, and repeated comparisons determine when intervention is warranted. We train the comparator using pairwise supervision constructed from same-prefix counterfactual branches. Preferred alternatives are returned as non-binding advice, leaving the original actor to replan. Across WebShop, ALFWorld, and tau^3-Retail with three actors, COTA improves all nine evaluation settings and outperforms the compared baselines. These results show that constructive runtime intervention can remain effective even when the auxiliary model has substantially weaker task-solving capability than the actor.",
+  "abstract_zh": "LLM Agent 正逐渐成为处理现实任务的重要范式，这类任务通常涉及推理、工具使用与序列决策。随着 Agent 执行链路变长，运行时干预能够在不重新训练底层执行模型（actor）的情况下提升可靠性。然而，仅检测失败并不足够，有效干预还需要提供有助于恢复的方向。现有方法通常依赖专家求解器，或由 critic 生成任务特定的修正，因此要么需要额外承担一个强大求解器的成本，要么要求 critic 本身具备较强的任务能力。本文提出 Comparison-Only Tiny Advisor（COTA），一种仅通过比较实现建设性运行时干预的框架。COTA 使用小型比较器判断采样得到的候选方案能否比 actor 的原始提议带来更好的后续执行，并通过重复比较决定是否需要干预。比较器采用基于相同前缀反事实分支构造的成对监督数据进行训练。更优候选会作为非强制性建议返回，由原 actor 自行重新规划。在 WebShop、ALFWorld 和 tau^3-Retail 上针对三种 actor 的实验中，COTA 在全部九项评测设置中均带来提升，并优于对比基线。结果表明，即使辅助模型的任务求解能力显著弱于 actor，建设性的运行时干预仍可保持有效。",
+  "key_points_zh": [
+    "提出 COTA：辅助模型无需独立求解任务，只需比较 actor 提议与采样候选的后续质量。",
+    "通过同一执行前缀下的反事实分支构造成对监督数据，训练轻量级比较器。",
+    "采用重复比较判断是否触发干预，并将更优候选作为非强制建议交给原 actor 重新规划。",
+    "在 WebShop、ALFWorld、tau^3-Retail 与三种 actor 组成的九项设置中均取得性能提升，并超过对比基线。",
+    "验证了辅助模型即使远弱于 actor，也能通过比较式判断实现有效且具建设性的运行时干预。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.83,
+    "problem_significance": 0.87,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.85,
+    "llm_avg": 0.8399999999999999,
+    "comment": "COTA introduces a broadly reusable runtime recovery mechanism that derives effective intervention from inexpensive counterfactual comparisons rather than another full solver.",
+    "comment_zh": "COTA以低成本反事实比较替代完整求解器，提供了可广泛复用的智能体运行时恢复机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5031796205502992,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8399999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 12,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

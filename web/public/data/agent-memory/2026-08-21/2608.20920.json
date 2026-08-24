@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2608.20920",
+  "title": "ForeDreamer: A Self-Evolving Dual-Agent Memory Architecture for Future Event Prediction",
+  "title_zh": "ForeDreamer：用于未来事件预测的自演化双智能体记忆架构",
+  "authors": [
+    "Linhao Zhong",
+    "Zongze Du",
+    "Linyu Wu",
+    "Yu Bo",
+    "Hourong Li",
+    "Chenchen Jing",
+    "Hao Chen",
+    "Yuling Xi",
+    "Chunhua Shen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-21T09:38:27Z",
+  "abs_url": "https://arxiv.org/abs/2608.20920v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.20920",
+  "links": {
+    "github": null,
+    "project_page": "https://zhongzero.github.io/ForeDreamer"
+  },
+  "abstract_en": "Open-web future event prediction requires agents to distill reliable signals from noisy, redundant, and incomplete evidence. Existing retrieval/memory mechanisms directly feed retrieved information to agents or rely on simple memory functions such as storing and reusing prior information for prediction, leaving them insufficient for open-web forecasting. We propose to transform raw web evidence into structured memory before prediction, enabling agents to reason over distilled, question-specific evidence rather than noisy retrieval results. This paper presents ForeDreamer, a self-evolving dual-agent framework for managing memory over open-web evidence. ForeDreamer separates factual memory, a question-specific evidence state for the current forecast, from experiential memory, persistent agent experience accumulated across forecasting episodes. It uses a main agent for search and prediction, and a memory-processing subagent to convert search results into factual memory with dedicated tools. ForeDreamer further evolves experiential memory through two tracks, improving both forecasting decisions and factual-memory construction. Experiments on Prophet Arena and FutureX demonstrate the effectiveness of ForeDreamer. Project page: https://zhongzero.github.io/ForeDreamer",
+  "abstract_zh": "开放网络未来事件预测要求智能体从嘈杂、冗余且不完整的证据中提炼可靠信号。现有检索与记忆机制通常直接将检索结果输入智能体，或仅通过存储、复用历史信息等简单方式辅助预测，难以满足开放网络预测的需求。本文提出 ForeDreamer，在预测前将原始网络证据转化为结构化记忆，使智能体能够基于经过提炼且与问题相关的证据进行推理。ForeDreamer 是一个面向开放网络证据管理的自演化双智能体框架，将记忆划分为事实记忆（factual memory）与经验记忆（experiential memory）：前者表示当前预测问题专属的证据状态，后者则持续积累跨预测任务的智能体经验。框架由负责搜索与预测的主智能体，以及使用专用工具将搜索结果转化为事实记忆的记忆处理子智能体组成。此外，ForeDreamer 通过两条演化路径更新经验记忆，同时改进预测决策与事实记忆构建。Prophet Arena 和 FutureX 上的实验验证了该方法的有效性。",
+  "key_points_zh": [
+    "提出 ForeDreamer，将开放网络中的原始检索证据先转化为结构化记忆，再用于未来事件预测。",
+    "区分事实记忆与经验记忆：事实记忆服务于当前问题，经验记忆跨预测任务持续积累。",
+    "采用双智能体协作架构：主智能体负责搜索和预测，记忆处理子智能体负责证据提炼与事实记忆构建。",
+    "通过两条经验记忆演化路径，分别提升预测决策能力和事实记忆构建质量。",
+    "在 Prophet Arena 与 FutureX 数据集上的实验表明，ForeDreamer 能有效改善开放网络预测表现。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.74,
+    "problem_significance": 0.78,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.63,
+    "lasting_value": 0.7,
+    "llm_avg": 0.7140000000000001,
+    "comment": "A clearly memory-centric forecasting architecture that separates structured episode evidence from persistent experience, though its validation and abstractions remain task-specific.",
+    "comment_zh": "这是一种明确以记忆为核心的预测架构，将结构化单次证据与持久经验分离，但其验证和抽象仍较依赖特定任务。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.7140000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://zhongzero.github.io/ForeDreamer",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.20920/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.20920/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2608.20707",
+  "title": "Towards Faithful Simulation of Human Shopping Behavior",
+  "title_zh": "迈向忠实的人类购物行为模拟",
+  "authors": [
+    "Jiakai Tang",
+    "Yan Mi",
+    "Jing Yu",
+    "Yang Zhang",
+    "See-Kiong Ng",
+    "Qi Cao",
+    "Fei Sun",
+    "Xu Chen",
+    "Wen Chen",
+    "Jian Wu",
+    "Han Zhu",
+    "Bo Zheng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-21T03:24:32Z",
+  "abs_url": "https://arxiv.org/abs/2608.20707v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.20707",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Simulating realistic user shopping behavior underpins offline evaluation and reinforcement learning in e-commerce scenarios. While recent LLM- and VLM-based simulators have made encouraging progress, reproducing a real browsing session remains difficult for two reasons. (i) Memory Challenge: a shopping session spans dozens of pages, yet existing agents either discard long-range observation histories, losing the evolving user state, or naively concatenate them, overwhelming the context window and even degrading simulation quality. (ii) Optimization Challenge: current user simulators are typically supervised to match each logged action via imitation or step-level rewards; the resulting sessions often display unrealistic patterns, such as over-exploration or excessive passivity, which per-step supervision can neither detect nor correct. To address the above challenges, we present RecVerse, a GUI-grounded simulation agent that perceives pages through screenshots and produces faithful multi-turn trajectories. For the memory challenge, RecVerse adopts a cognitive-inspired hierarchical memory: Working Memory for short-term focus, Episodic Memory for in-session traces, and Preference Memory for high-level intent, with memory updates treated as actions so that the agent adaptively learns when and what to memorize. For the optimization challenge, RecVerse is optimized with a trajectory-level RL objective that scores entire sessions, aligning both macro-level action-type distributions and micro-level shopping intent with real users. We further release USB (User Simulation Benchmark), an interactive e-commerce GUI trajectory dataset for multi-turn user simulation. Experiments show that RecVerse significantly outperforms existing baselines in both behavioral fidelity and intent consistency.",
+  "abstract_zh": "逼真的用户购物行为模拟是电商场景中离线评估与强化学习的重要基础。尽管近期基于 LLM 和 VLM 的模拟器已取得一定进展，但复现真实浏览会话仍面临两项挑战：其一是记忆挑战。购物会话通常跨越数十个页面，现有智能体要么丢弃长期观察历史，导致不断变化的用户状态缺失；要么简单拼接全部历史，不仅占满上下文窗口，还可能降低模拟质量。其二是优化挑战。当前用户模拟器通常通过模仿学习或逐步奖励拟合日志中的单步动作，生成的会话容易出现过度探索或过于被动等不真实模式，而逐步监督难以发现和纠正这些问题。为此，论文提出 RecVerse：一种基于 GUI 的模拟智能体，通过页面截图感知环境并生成忠实的多轮交互轨迹。针对记忆挑战，RecVerse 引入认知启发式分层记忆，包括维持短期关注的 Working Memory、记录会话内轨迹的 Episodic Memory，以及表示高层意图的 Preference Memory；同时将记忆更新建模为智能体动作，使其能够自适应学习何时记忆以及记忆哪些内容。针对优化挑战，RecVerse 采用轨迹级强化学习目标对完整会话进行评分，同时对齐真实用户的宏观动作类型分布与微观购物意图。论文还发布了 USB（User Simulation Benchmark），这是一个面向多轮用户模拟的交互式电商 GUI 轨迹数据集。实验表明，RecVerse 在行为忠实度和意图一致性方面均显著优于现有基线。",
+  "key_points_zh": [
+    "提出 GUI-grounded 用户模拟智能体 RecVerse，直接通过页面截图感知电商环境并生成多轮购物轨迹。",
+    "设计认知启发式分层记忆，将信息划分为 Working Memory、Episodic Memory 和 Preference Memory，分别建模短期关注、会话经历与高层偏好意图。",
+    "将记忆更新视为可学习动作，使智能体能够自适应决定何时写入记忆以及保留哪些信息，避免历史丢失或上下文过载。",
+    "采用轨迹级强化学习目标评价完整会话，同时对齐宏观动作类型分布和微观购物意图，弥补逐步模仿监督无法纠正整体行为模式的缺陷。",
+    "发布交互式电商 GUI 轨迹数据集 USB；实验显示 RecVerse 在行为忠实度与意图一致性上显著超过现有方法。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.72,
+    "novelty": 0.78,
+    "problem_significance": 0.76,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.67,
+    "lasting_value": 0.73,
+    "llm_avg": 0.736,
+    "comment": "RecVerse offers a novel commerce-grounded user simulator and benchmark that could improve offline evaluation and RL for shopping systems, though it does not directly optimize search or recommendation.",
+    "comment_zh": "RecVerse 提供了新颖的电商用户模拟器与基准，有望改进购物系统的离线评估和强化学习，但并未直接优化搜索或推荐。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.7213913165723016,
+    "author_reputation": 0.767821072468494,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.736,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 4,
+    "first_author_h_index": 9,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 32,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.20707/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.925
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.20707/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

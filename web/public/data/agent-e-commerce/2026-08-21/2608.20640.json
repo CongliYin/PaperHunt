@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2608.20640",
+  "title": "One Hierarchy, Two Systems: Semantic Product IDs for Discovery-Surface Ranking and Search-Page Query Reformulation",
+  "title_zh": "一套层级、两套系统：用于发现页排序与搜索页查询改写的语义商品 ID（Semantic Product IDs）",
+  "authors": [
+    "Steven Xu",
+    "Sanjyot Thete",
+    "Saathvik Dirisala",
+    "Raghav Saboo",
+    "Nimesh Sinha",
+    "Leo Shao",
+    "Elyse Winer",
+    "Sudeep Das",
+    "Martin Wang",
+    "Kyle MacDonald"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-21T00:27:32Z",
+  "abs_url": "https://arxiv.org/abs/2608.20640v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.20640",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-merchant e-commerce catalogs contain equivalent and related products under different merchant-scoped identifiers, fragmenting behavioral evidence across merchants. Expert-defined taxonomies, meanwhile, are often too coarse for fine-grained discovery. We investigate whether a single hierarchical Semantic ID (\\sid{}) representation can support personalized ranking and query reformulation. Learned once from product-content embeddings, the hierarchy defines product concepts at multiple granularities that each application combines with its own behavioral and serving context. For ranking, we aggregate consumer affinity and product performance over \\sid{} prefixes and derive sequence features for candidate products and consumer histories. Controlled ablations show improved offline relevance, while online evaluation of the full ranking treatment shows stronger top-slot add-to-cart engagement and broader exposure for less-popular products. For query reformulation, we ground queries and session transitions in \\sid{} concepts, use the hierarchy for navigation and refinement, and filter suggestions against the merchant's assortment. Offline evaluation shows finer intent preservation than taxonomy and higher-quality suggestions than raw query-string transitions; online evaluation shows reduced search effort and earlier access to purchasable products. These results show that a shared semantic product hierarchy can support both recommendation and search while preserving the task-specific context required by each application.",
+  "abstract_zh": "多商家电商目录中，同类或相关商品往往使用不同的商家级标识，导致用户行为信号分散；而专家制定的分类体系又通常过于粗粒度，难以支持细粒度发现。本文研究一种统一的层级化语义 ID（Semantic ID）表示，能否同时服务个性化排序与查询改写。该层级结构仅基于商品内容嵌入学习一次，通过不同粒度的 Semantic ID 前缀定义商品概念，再由各应用结合自身的行为数据与在线服务上下文。在发现页排序中，方法聚合消费者偏好和商品表现，并为候选商品及用户历史构造序列特征。离线消融实验显示相关性提升；完整排序方案的在线实验进一步表明，顶部位置的加购互动增强，低热度商品获得了更广泛的曝光。在查询改写中，方法将查询和会话转移映射到 Semantic ID 概念，利用层级结构进行导航与意图细化，并依据商家的实际商品集合过滤建议。离线结果显示，其意图保持能力优于传统分类体系，建议质量也高于直接基于原始查询字符串转移的方法；在线实验表明，用户搜索成本降低，并能更早找到可购买商品。结果说明，共享的语义商品层级能够同时支持推荐与搜索，同时保留各任务所需的专属行为和服务上下文。",
+  "key_points_zh": [
+    "以商品内容嵌入一次性学习层级化 Semantic ID，在多个粒度上刻画商品概念，缓解跨商家标识造成的行为信号碎片化。",
+    "发现页排序通过聚合消费者偏好、商品表现及序列特征提升离线相关性；在线上增强顶部加购互动，并扩大低热度商品曝光。",
+    "搜索查询改写将查询和会话转移锚定到 Semantic ID 概念，借助层级结构完成导航、意图细化及基于商家库存的建议过滤。",
+    "查询改写在意图保持和建议质量上优于传统 taxonomy 与原始查询字符串转移，并降低搜索成本、提前触达可购买商品。",
+    "统一语义层级提供共享表示，但排序和搜索仍分别结合任务特定的行为信号与在线服务上下文。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.81,
+    "problem_significance": 0.91,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.89,
+    "llm_avg": 0.86,
+    "comment": "This strong industrial paper unifies semantic product representations across personalized discovery ranking and query reformulation with convincing online shopping gains.",
+    "comment_zh": "这篇优秀的工业论文以统一的商品语义表示同时改进个性化发现排序和查询改写，并取得了有说服力的线上购物收益。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.86,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.20640/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.20640/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.85
+    }
+  ]
+}

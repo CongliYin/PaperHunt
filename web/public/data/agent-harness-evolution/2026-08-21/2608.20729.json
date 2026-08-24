@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2608.20729",
+  "title": "Calibrating Criterion Revision in LLM Agents: Failure Modes and a Trace-Anchored Protocol",
+  "title_zh": "校准 LLM Agent 的标准修订：失败模式与基于轨迹的协议（Calibrating Criterion Revision in LLM Agents: Failure Modes and a Trace-Anchored Protocol）",
+  "authors": [
+    "Guodong Xu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-21T04:21:28Z",
+  "abs_url": "https://arxiv.org/abs/2608.20729v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.20729",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Language-model agents can improve after failure or carry text across episodes without revising what counts as success. We study the narrower attribution problem of criterion revision: when criterion K0 accepts an outcome violating a broader commitment B, what observations justify saying that the system formed and persistently used K1? We require five non-compensatory conditions: criterion-failure detection, a model-emitted proposal, new-episode transfer, intervention sensitivity on the claimed carrier, and preservation. We evaluate CMB-0.1 on twelve cross-domain cases and four arms: stateless inference, append-only history, model-generated but harness-committed state, and evaluator-written oracle state. Seven mechanism fixtures yield 84 deterministic scorer trials; four local quantized artifacts yield 96 calls and 192 model-case-arm trials. No model trial satisfies all five conditions, but this zero does not establish general capability absence. Eleven calls remain invalid after one retry; several commitments disclose the target distinction; the harness performs commits; deletion reuses a stateless call; and conflict changes multiple factors. Qwen2.5-7B answers every transfer and preservation item without revision state, exposing zero-state reconstruction. These failures make CMB-0.1 an instrument-calibration result rather than a model ranking. We derive a prospective, trace-anchored CMB-0.4 protocol requiring concealed transfer, explicit WRITE/NO-WRITE/ESCALATE actions, a separately logged policy-selected commit, matched interventions, repeated hidden items, and a frozen executable oracle. It is a successor design, not a completed confirmatory result. The paper contributes a measurement chain, an empirical diagnosis of its first implementation, and a more discriminating protocol for future tests of criterion revision.",
+  "abstract_zh": "本文研究 LLM Agent 是否会因失败而修订“何为成功”的判断标准，而非仅携带文本或改进表现。作者提出五项不可互相补偿的判据：检测标准失效、由模型提出修订方案、跨新回合迁移、对所声称载体的干预敏感性，以及修订标准的保持性。研究在 12 个跨领域案例上评估 CMB-0.1，比较无状态推理、追加历史、模型生成但由测试框架提交状态，以及评估器写入预言状态四种设置。7 个机制装置产生 84 次确定性评分试验，4 个本地量化模型产生 96 次调用和 192 个模型—案例—设置试验。没有任何模型试验满足全部五项条件，但这一零结果不能证明模型普遍缺乏该能力。实验还发现：部分承诺泄露目标区分，测试框架执行了状态提交，删除操作复用了无状态调用，冲突条件同时改变多个因素；Qwen2.5-7B 在没有修订状态时仍通过全部迁移与保持测试，暴露出“零状态重构”问题。因此，CMB-0.1 更应被视为测量工具校准研究，而非模型能力排名。作者进一步提出前瞻性的 CMB-0.4 协议，要求隐藏迁移项目、明确 WRITE/NO-WRITE/ESCALATE 动作、单独记录由策略选择的提交、使用匹配干预、重复隐藏项目，并冻结可执行预言机。CMB-0.4 是后续设计而非已完成的验证性结果。",
+  "key_points_zh": [
+    "将“标准修订”严格拆分为五项判据：失效检测、模型提案、跨回合迁移、干预敏感性和保持性。",
+    "在 CMB-0.1 的全部模型试验中，没有系统同时满足五项条件；但该零结果不足以证明模型普遍不具备标准修订能力。",
+    "实验揭示测试框架代替模型提交状态、条件冲突混杂，以及 Qwen2.5-7B 通过无状态重构伪装出迁移与保持能力等测量缺陷。",
+    "论文将 CMB-0.1 定位为 instrument-calibration study，而非模型排名或能力确认实验。",
+    "提出 CMB-0.4：通过隐藏迁移、显式 WRITE/NO-WRITE/ESCALATE、独立记录策略提交、匹配干预、重复隐藏项目和冻结 executable oracle 提升辨识力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.84,
+    "novelty": 0.73,
+    "problem_significance": 0.72,
+    "potential_impact": 0.59,
+    "paradigm_shift": 0.67,
+    "lasting_value": 0.7,
+    "llm_avg": 0.682,
+    "comment": "The trace-anchored protocol provides a rigorous foundation for evaluating persistent agent revision, but its current evidence is diagnostic rather than confirmatory.",
+    "comment_zh": "该轨迹锚定协议为评估智能体的持久性准则修订提供了严谨基础，但目前证据主要是诊断性的而非验证性的。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.49491262604822334,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.682,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 6,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 6,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.20729/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.20729/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.986
+    }
+  ]
+}

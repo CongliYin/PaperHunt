@@ -1,0 +1,94 @@
+{
+  "arxiv_id": "2608.20711",
+  "title": "AsmEvo: Agentic Assembly-Level Optimization of AMD GPU Kernels with Functional Equivalence Verification",
+  "title_zh": "AsmEvo：基于功能等价性验证的智能体式 AMD GPU 内核汇编级优化",
+  "authors": [
+    "Ji Liu",
+    "Puyuan Yang",
+    "Rongzhang Zheng",
+    "Fan Wang",
+    "Jinglin Wang",
+    "Muhammad A. Awad",
+    "Mortis Huang",
+    "Andy Chang",
+    "Zekai Li",
+    "Zeping Li",
+    "Zihao An",
+    "Yue Liu",
+    "Yuchen Yang",
+    "Jianghui Wang",
+    "Chushi Chen",
+    "Ziqiong Liu",
+    "Fuwei Yang",
+    "Dong Li",
+    "Wen Heng Chung",
+    "Shengcai Liu",
+    "Emad Barsoum"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-21T03:34:22Z",
+  "abs_url": "https://arxiv.org/abs/2608.20711v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.20711",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "High-performance ML systems increasingly rely on GPU kernels whose editable source is unavailable, generated, or too distant from final machine code to expose remaining optimizations. Existing LLM kernel optimizers and autotuners mainly operate on CUDA, Triton, HIP, or tensor-program source and validate against reference implementations. We study a stricter setting: optimizing an already compiled AMDGPU code object, where the deployed binary is the only behavioral oracle. We present AsmEvo, an agentic assembly-level optimizer for AMD GPU kernels. Given an AMDGPU code object K0, AsmEvo reconstructs a reassemblable representation, proposes low-level edits with a long-horizon agent, rebuilds an ABI-preserving optimized object, and accepts candidates only after differential verification against K0 under identical launches. AsmEvo combines code-object recovery, metadata-aware rebuilding, profiling-guided hot-window editing, correctness-gated timing, and conservative in-place patch fallback. We conduct extensive experiments with AsmEvo on various AMD GPU kernels. On MI308X, AsmEvo improves 29 of 30 selected KernelBench kernels, reaching 1.35x geometric-mean and 3.88x maximum speedup. On MI300X production workloads, it improves all evaluated AITer binaries and vLLM/SGLang Triton assembly kernels, reaching 1.09x/1.31x and 1.18x/1.34x geometric-mean/maximum speedups, respectively, while preserving functional equivalence.",
+  "abstract_zh": "高性能机器学习系统日益依赖 GPU 内核，但这些内核的可编辑源码可能不可用、由工具自动生成，或与最终机器码相距过远，难以揭示潜在优化空间。现有基于 LLM 的内核优化器和自动调优器主要作用于 CUDA、Triton、HIP 或张量程序源码，并借助参考实现验证正确性。本文研究一种更严格的场景：直接优化已编译的 AMDGPU code object，且部署二进制文件是唯一的行为判定依据。为此，作者提出 AsmEvo，一种面向 AMD GPU 内核的智能体式汇编级优化器。给定 AMDGPU code object K0，AsmEvo 首先恢复可重新汇编的表示，再由长程智能体提出底层代码修改，重新构建保持 ABI 兼容的优化对象，并仅在相同启动条件下通过相对于 K0 的差分验证后接受候选版本。AsmEvo 集成了 code object 恢复、元数据感知重建、性能分析引导的热点窗口编辑、正确性门控计时，以及保守的原地补丁回退机制。实验表明，在 MI308X 上，AsmEvo 优化了 30 个选定 KernelBench 内核中的 29 个，几何平均加速比为 1.35×，最高达到 3.88×。在 MI300X 生产工作负载上，它优化了全部受测 AITer 二进制内核以及 vLLM/SGLang 的 Triton 汇编内核：前者的几何平均与最高加速比分别为 1.09× 和 1.31×，后者分别为 1.18× 和 1.34×，同时保持功能等价。",
+  "key_points_zh": [
+    "面向只有已编译 AMDGPU code object、缺少可编辑源码与参考实现的严格优化场景。",
+    "通过长程智能体执行汇编级底层编辑，并重建保持 ABI 与元数据兼容的优化二进制对象。",
+    "采用性能分析引导的热点窗口编辑、正确性门控计时和原地补丁回退，提高优化效率与可靠性。",
+    "以原始二进制 K0 作为唯一行为判定依据，在相同启动条件下进行差分验证，确保功能等价。",
+    "在 KernelBench、AITer 及 vLLM/SGLang 内核上取得稳定加速，最高加速比达到 3.88×。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.9,
+    "problem_significance": 0.86,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.85,
+    "llm_avg": 0.8559999999999999,
+    "comment": "AsmEvo is a compelling coding-agent system combining long-horizon assembly optimization with profiling and functional-equivalence-gated execution.",
+    "comment_zh": "AsmEvo将长程汇编优化、性能分析和功能等价性验证闭环结合，是一项有力的编程智能体工作。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.288057559470771,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8559999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.20711/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.20711/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.952
+    }
+  ]
+}
