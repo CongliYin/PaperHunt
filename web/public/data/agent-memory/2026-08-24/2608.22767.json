@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2608.22767",
+  "title": "The Retriever Should Remember: Experience-Amortized Reranking for Long-Term Agent Memory",
+  "title_zh": "检索器也应记忆：面向长期智能体记忆的经验摊销重排序（EARM）",
+  "authors": [
+    "Qi Feng",
+    "Chris Ding",
+    "Jicong Fan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-24T03:42:03Z",
+  "abs_url": "https://arxiv.org/abs/2608.22767v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.22767",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-term language-model agents accumulate memories across interactions, but their retrievers typically do not accumulate retrieval experience. Semantic retrieval is efficient, but embedding similarity does not always reflect whether a memory contains evidence relevant to the current query. Large language model (LLM) rerankers provide stronger query-conditioned relevance scores, yet stateless reranking repeatedly scores a large candidate pool and discards these scores after each query. We introduce EARM, an experience-amortized reranking framework that treats previously acquired LLM relevance scores as reusable retrieval experience. EARM stores sparse query--memory relevance scores in an online matrix, learns their shared structure through causal matrix completion, and combines a small set of newly observed scores with estimated scores to rerank the remaining candidates. The scoring budget decreases as experience accumulates, changing LLM reranking from a repeated per-query expense into a retrieval capability learned over an agent's lifetime. Experiments on long-term conversational memory show that mixed observed-and-estimated reranking improves answer accuracy over semantic retrieval by up to 6.62% and remains effective when only 17.5% of candidates receive direct LLM relevance scores, thereby substantially reducing the inference overhead of LLM reranking. These results motivate a broader view of agent memory: a long-lived agent should remember not only past content, but also how that content has proved useful for retrieval.",
+  "abstract_zh": "长期语言模型智能体会在多轮交互中积累记忆，但其检索器通常不会积累检索经验。语义检索效率高，却无法始终准确判断某条记忆是否包含与当前查询相关的证据；LLM 重排序器能提供更强的查询条件相关性评分，但无状态重排序需要反复评估大量候选，并在查询结束后丢弃这些评分。本文提出 EARM（Experience-Amortized Reranking），将历史获得的 LLM 相关性评分视为可复用的检索经验。EARM 在线维护稀疏的查询—记忆相关性矩阵，通过因果矩阵补全学习其共享结构，再结合少量新观测评分与估计评分，对其余候选进行重排序。随着经验积累，评分预算逐渐下降，使 LLM 重排序从每次查询的重复开销转变为智能体生命周期内持续学习的检索能力。在长期对话记忆实验中，观测评分与估计评分结合的重排序相比语义检索最多提升 6.62% 的回答准确率；即使仅对 17.5% 的候选进行直接 LLM 评分，仍能保持有效性，并显著降低 LLM 重排序的推理开销。研究表明，长期智能体不仅应记住过去的内容，也应记住这些内容在检索中何时、为何有用。",
+  "key_points_zh": [
+    "提出 EARM，将历史 LLM 相关性评分作为可复用的检索经验，而非每次查询后丢弃。",
+    "通过在线稀疏查询—记忆矩阵与因果矩阵补全，估计未直接评分候选的相关性。",
+    "结合少量新观测评分和历史经验评分进行重排序，评分预算会随经验积累而下降。",
+    "在长期对话记忆任务中，相比语义检索最多提升 6.62% 的回答准确率。",
+    "仅对 17.5% 的候选进行直接 LLM 评分仍保持有效，显著降低重排序推理开销。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.82,
+    "problem_significance": 0.84,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.81,
+    "llm_avg": 0.8019999999999999,
+    "comment": "EARM is a strong Agent-memory retrieval contribution that amortizes relevance judgments across an agent's lifetime through reusable retrieval experience.",
+    "comment_zh": "EARM 是一项扎实的 Agent Memory 检索工作，通过复用相关性判断来摊销智能体全生命周期的重排序成本。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4093360343955374,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.8019999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.22767/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.22767/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.984
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "arxiv_id": "2608.23154",
+  "title": "The Disconnect Between Better Descriptive Reasoning Trace Quality and Recommendation Effectiveness",
+  "title_zh": "更高质量的描述性推理轨迹与推荐效果之间的脱节",
+  "authors": [
+    "Gustavo Penha",
+    "Juan Elenter",
+    "Claudia Hauff",
+    "Hugues Bouchard",
+    "Paul Bennett",
+    "Mounia Lalmas"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-24T11:58:31Z",
+  "abs_url": "https://arxiv.org/abs/2608.23154v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.23154",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent work has focused on improving explicit natural-language descriptive reasoning traces for generative recommendation. This includes systems that augment semantic ID (SID) prediction with chain-of-thought reasoning. However, because SIDs are opaque learned identifiers rather than natural language, they require costly alignment before an LLM can reason over them. This provides a controlled experimental setting in which both item representation (Title vs. SID) and semantic grounding (minimal vs. extensive SID alignment) can be varied independently. We therefore present the first controlled comparison of descriptive reasoning trace quality across semantic IDs and natural-language titles in a 2 x 2 factorial study on three Amazon product domains using a shared Qwen3-1.7B backbone. We find that introducing explicit descriptive reasoning traces reduces traditional offline recommendation effectiveness under standard SFT and RL training, even though natural language titles produce substantially more grounded and interpretable traces. Extensive SID alignment improves descriptive trace quality but not traditional offline recommendation effectiveness, while a richer reward signal partially recovers performance. Overall, our results show that improving descriptive reasoning trace quality is not, by itself, sufficient to consistently improve traditional offline recommendation effectiveness under the training objectives and evaluation protocols studied here.",
+  "abstract_zh": "近期研究尝试通过显式自然语言描述性推理轨迹提升生成式推荐，包括将思维链推理引入语义 ID（Semantic ID，SID）预测。然而，SID 是不透明的学习型标识符，并非自然语言，因此大语言模型需要经过成本较高的语义对齐才能对其进行推理。本文利用这一特点构建受控实验，在三个 Amazon 商品领域中，基于统一的 Qwen3-1.7B 骨干模型开展 2×2 因子研究，独立比较商品表示形式（Title 与 SID）和语义基础程度（最小对齐与充分 SID 对齐）的影响。结果表明，在标准监督微调（SFT）和强化学习（RL）训练下，引入显式描述性推理轨迹反而会降低传统离线推荐效果，尽管自然语言标题能够生成明显更有依据、也更易解释的推理轨迹。充分的 SID 对齐可以改善推理轨迹质量，却无法提升传统离线推荐指标；采用更丰富的奖励信号只能部分恢复性能。研究说明，在本文所考察的训练目标与评估协议下，仅提高描述性推理轨迹质量，并不足以稳定改善传统离线推荐效果。",
+  "key_points_zh": [
+    "首次通过 2×2 因子实验，独立考察商品表示形式（Title/SID）与 SID 语义对齐强度对生成式推荐的影响。",
+    "实验覆盖三个 Amazon 商品领域，并统一使用 Qwen3-1.7B，以减少骨干模型差异带来的干扰。",
+    "自然语言 Title 可生成更有语义依据、更易解释的描述性推理轨迹，但未转化为更好的传统离线推荐效果。",
+    "在标准 SFT 与 RL 设置中，显式描述性推理轨迹总体上会降低推荐性能；充分 SID 对齐虽改善轨迹质量，却不能改善推荐指标。",
+    "更丰富的奖励信号可部分挽回性能，表明推理质量与推荐效果之间的连接依赖训练目标和评价方式，而非自然成立。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.79,
+    "problem_significance": 0.86,
+    "potential_impact": 0.81,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.83,
+    "llm_avg": 0.788,
+    "comment": "This careful Amazon-domain study provides lasting evidence that more interpretable reasoning traces do not necessarily improve generative recommendation effectiveness.",
+    "comment_zh": "这项基于亚马逊商品领域的严谨研究表明，更具可解释性的推理轨迹并不必然提升生成式推荐效果。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.788,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.23154/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.948
+    }
+  ]
+}

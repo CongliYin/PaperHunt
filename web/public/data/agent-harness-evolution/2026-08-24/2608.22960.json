@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.22960",
+  "title": "What Process Evaluation of Coding Agents Actually Measures: Action, Task, and Step Are Three Different Levels",
+  "title_zh": "代码智能体的过程评估究竟测量了什么：动作、任务与步骤是三个不同层级",
+  "authors": [
+    "Jiawei He",
+    "Mengyu Shi",
+    "Jie jia",
+    "Xikai Yang",
+    "Dong Sun"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-24T08:27:33Z",
+  "abs_url": "https://arxiv.org/abs/2608.22960v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.22960",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents are increasingly evaluated not only by whether they solve a task, but also by how they execute it. However, existing process-level evaluations often treat action prediction, task uncertainty, and step attribution as if they were the same problem, which makes it unclear what such evaluations actually measure. In this paper, we introduce a measurement framework for process evaluation in coding agents and instantiate step-level causal attribution with SCAE, a replay-based estimator derived from a structural causal model of agent execution. Our framework combines prefix-conditioned identification, replay/intervention-based estimation, and controlled judge-information manipulation to study process evaluation at the action, task, and step levels. Experiments on 499 file-localization episodes from 12 repositories show that next actions are driven primarily by execution provenance rather than code-graph transitions, execution uncertainty is structured at the task rather than step level, and full-trace judges exhibit systematic collider bias, suggesting that current process evaluation often measures semantic relevance rather than certified causal contribution.",
+  "abstract_zh": "代码智能体的评估正逐渐从“是否完成任务”扩展到“如何执行任务”。然而，现有过程级评估往往将动作预测、任务不确定性与步骤归因视为同一问题，导致其实际测量对象并不明确。本文提出一个面向代码智能体过程评估的测量框架，并基于智能体执行过程的结构因果模型，提出重放式估计器 SCAE，以实现步骤级因果归因。该框架结合前缀条件识别、基于重放与干预的估计，以及对评审模型可见信息的受控操纵，从动作、任务和步骤三个层级研究过程评估。作者在来自 12 个代码仓库的 499 个文件定位任务轨迹上开展实验。结果表明：下一动作主要由执行来源与历史（execution provenance）驱动，而非代码图上的状态转移；执行不确定性主要呈现于任务层级，而不是步骤层级；能够查看完整轨迹的评审模型会产生系统性的碰撞变量偏差（collider bias）。这些发现说明，当前过程评估往往衡量的是步骤的语义相关性，而非经过因果验证的实际贡献。",
+  "key_points_zh": [
+    "提出区分动作、任务与步骤三个层级的代码智能体过程评估框架，指出三者对应不同的测量对象。",
+    "提出 SCAE：基于结构因果模型与轨迹重放、干预的步骤级因果贡献估计方法。",
+    "在 12 个代码仓库的 499 个文件定位任务轨迹上发现，下一动作主要受执行历史与来源影响，而非代码图转移。",
+    "智能体的执行不确定性主要由任务层级决定，缺乏稳定、独立的步骤级不确定性结构。",
+    "完整轨迹会使评审模型产生系统性 collider bias，令过程评分更接近语义相关性判断，而非可靠的因果归因。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.88,
+    "problem_significance": 0.9,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.89,
+    "llm_avg": 0.8699999999999999,
+    "comment": "This provides a valuable replay-based causal framework that clarifies and improves process evaluation for coding-agent trajectories.",
+    "comment_zh": "该论文提出了有价值的回放式因果框架，可澄清并改进编码智能体轨迹的过程评估。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.8386054786678245,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8699999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 20,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 31,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.22960/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.22960/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.888
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2608.23041",
+  "title": "AutoSaddler: Automatic Harness Optimization with Durable Updates from Agent Execution Traces",
+  "title_zh": "AutoSaddler：基于智能体执行轨迹持久更新的自动化 Harness 优化",
+  "authors": [
+    "Sungho Park",
+    "Wonjoong Kim",
+    "Rongyuan Tan",
+    "Jue Zhang",
+    "Wook-Shin Han",
+    "Pengfei Gao",
+    "Chanyoung Park",
+    "Yongqiang Yao",
+    "Rao Fu",
+    "Elsie Nallipogu",
+    "Qingwei Lin",
+    "Saravan Rajmohan",
+    "Dongmei Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-24T09:45:08Z",
+  "abs_url": "https://arxiv.org/abs/2608.23041v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.23041",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM agents remain unreliable on long-horizon tasks, where small local failures can compound over extended interactions and lead to overall task failure. Although external harnesses can substantially improve robustness, harness design remains a manual and expensive process that requires searching over a large space of prompts, tool configurations, and control logic. We propose AutoSaddler, an automatic harness optimization framework that formulates harness improvement as an offline learning problem and iteratively updates the harness using failure signals from mini-batches. AutoSaddler combines failure-trace diagnosis, structured patch generation that treats the harness as code, and validation-based update selection. Experiments on GAIA2, SWE-Bench Pro, and Terminal-Bench 2.0 show that AutoSaddler substantially improves agent performance over the corresponding base harnesses, achieving gains of 9.0, 9.6, and 10.0 percentage points, respectively. Ablation studies further suggest that effective harness optimization benefits from three ingredients: deep debugging rather than shallow reflection, targeted modifications rather than unconstrained editing, and generalization-aware selection rather than trajectory-specific repair. Together, these results suggest that automatic harness optimization is a promising path toward more performant and reliable agent systems.",
+  "abstract_zh": "LLM 智能体在长程任务中仍不可靠：局部的小失误会在持续交互中累积，最终导致任务失败。外部 Harness（智能体运行支撑框架）虽能显著增强鲁棒性，但其设计通常依赖人工，需要在提示词、工具配置和控制逻辑组成的庞大空间中进行高成本搜索。本文提出 AutoSaddler，将 Harness 改进建模为离线学习问题，并利用小批量执行轨迹中的失败信号进行迭代更新。该框架结合三项机制：失败轨迹诊断、将 Harness 视为代码的结构化补丁生成，以及基于验证的更新选择。在 GAIA2、SWE-Bench Pro 和 Terminal-Bench 2.0 上，AutoSaddler 相比对应基础 Harness 的性能分别提升 9.0、9.6 和 10.0 个百分点。消融实验表明，有效的 Harness 优化依赖三个关键因素：以深度调试取代浅层反思、以定向修改取代无约束编辑，以及采用关注泛化能力的更新选择而非针对单条轨迹的修补。结果显示，自动化 Harness 优化有望构建性能更强、可靠性更高的智能体系统。",
+  "key_points_zh": [
+    "将 Harness 优化形式化为离线学习问题，基于小批量失败信号持续迭代更新。",
+    "通过失败轨迹深度诊断定位根因，避免仅依赖智能体的浅层自我反思。",
+    "把 Harness 视为代码并生成结构化、定向补丁，限制无约束修改带来的退化风险。",
+    "利用验证集选择具有泛化能力的更新，避免只修复特定执行轨迹。",
+    "在 GAIA2、SWE-Bench Pro 和 Terminal-Bench 2.0 上分别提升 9.0、9.6 和 10.0 个百分点。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.91,
+    "problem_significance": 0.96,
+    "potential_impact": 0.95,
+    "paradigm_shift": 0.92,
+    "lasting_value": 0.94,
+    "llm_avg": 0.9359999999999999,
+    "comment": "AutoSaddler directly advances trace-driven harness evolution through diagnosis, code-level patching, and validation-aware durable updates.",
+    "comment_zh": "AutoSaddler通过轨迹诊断、代码级修补和验证感知的持久更新，直接推动了智能体框架的自动演化。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5695026640676601,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9359999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 45,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.23041/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.784
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.23041/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2608.23564",
+  "title": "SWE Refactor Bench: Can Coding Agents Complete a Long-Horizon, Whole-Repository Stack Migration?",
+  "title_zh": "SWE Refactor Bench：代码智能体能否完成长周期、全仓库的技术栈迁移？",
+  "authors": [
+    "Deyao Hong",
+    "Yizhe Chi",
+    "Wenyi Li",
+    "Xiaoqiu Wang",
+    "Mingju Gao",
+    "Kaisen Yang",
+    "Bingxiang He",
+    "Youjie Zheng",
+    "Calvin Xiao",
+    "Qinhuai Na"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-24T17:59:04Z",
+  "abs_url": "https://arxiv.org/abs/2608.23564v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.23564",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Modern software systems accumulate technical debt over decades of development, which makes migration expensive and largely manual. As coding agents become increasingly capable at bug fixing, can they autonomously perform such migrations? Existing benchmarks cannot answer this question because they evaluate only behavioural correctness, not whether the migration actually occurred. This leads an easy hack: agents copy the original implementation to make tests pass. We call this Blindness. To address this problem, we introduce SWE Refactor Bench, a benchmark comprising 20 whole-repository migrations, covering 4 kinds of technical debt. A three-stage evaluation protocol measures both migration completeness and behavioural correctness. (1) Migration Audit verifies that the migration occurred. (2) Behavioural Tests measure correctness with a fixed test suite. (3) Agentic Verification uses 6 independent coding agents to generate targeted tests for hidden behavioural differences. Across 520 runs from 8 frontier models and 26 model-effort configurations, only 28 of 520 runs ($5.4\\%$) pass all three stages, 13 of the 20 tasks receive no accepted solution, and the best model (claude-opus-5) scores $47.0/100$. Migration completeness and behavioural correctness are distinct abilities: a few runs preserve behaviour by skipping the migration and are stopped at Migration Audit; most attempt it and break behaviour, and are stopped at Behavioural Tests. Agents cannot deliver a perfect migration: among the 340 runs that pass Migration Audit, $58\\%$ reach $99\\%$ of the fixed checks, yet only $26\\%$ reach $100\\%$. Agent capability differs across migration categories: agents score $31.4$ on build toolchain rewrites but only $5.6$ on language rewrites. Together, these findings position SWE Refactor Bench as a rigorous testbed for developing coding agents for reliable whole-repository migrations.",
+  "abstract_zh": "现代软件系统在数十年的开发中不断积累技术债，使技术迁移成本高昂且高度依赖人工。随着代码智能体在缺陷修复方面能力增强，一个关键问题是：它们能否自主完成全仓库迁移？现有基准主要评估行为正确性，却无法确认迁移是否真正发生，因此智能体可能通过复制原始实现来通过测试，论文将这一缺陷称为“盲区”（Blindness）。为此，作者提出 SWE Refactor Bench，包含 20 个全仓库迁移任务，覆盖 4 类技术债，并采用三阶段评估协议，同时衡量迁移完整性与行为正确性：第一阶段 Migration Audit 检查迁移是否实际完成；第二阶段 Behavioural Tests 使用固定测试套件评估功能正确性；第三阶段 Agentic Verification 由 6 个相互独立的代码智能体生成针对性测试，以发现隐藏的行为差异。研究对 8 个前沿模型、26 种模型—推理投入配置进行了共 520 次运行，仅 28 次（5.4%）通过全部三个阶段；20 个任务中有 13 个没有任何合格解，表现最佳的 claude-opus-5 也仅获得 47.0/100。结果表明，迁移完整性与行为正确性是两种不同能力：少数运行通过跳过迁移来维持原有行为，但在 Migration Audit 阶段被拦截；更多运行尝试迁移却破坏了行为，因而未通过 Behavioural Tests。在通过 Migration Audit 的 340 次运行中，58% 能通过固定检查的 99%，但仅 26% 能达到 100%。不同迁移类别的难度差异明显：智能体在构建工具链重写上的得分为 31.4，而在编程语言重写上仅为 5.6。SWE Refactor Bench 因此为研发能够可靠执行全仓库迁移的代码智能体提供了严格的评测平台。",
+  "key_points_zh": [
+    "提出 SWE Refactor Bench，包含 20 个全仓库迁移任务，覆盖 4 类技术债。",
+    "三阶段协议分别评估迁移完整性、固定测试下的行为正确性，以及由 6 个独立智能体发现的隐藏行为差异。",
+    "520 次运行中仅 28 次（5.4%）完全通过，且 20 个任务中有 13 个没有合格解。",
+    "迁移完整性与行为正确性相互独立：智能体既可能绕过迁移，也可能完成迁移但破坏原有行为。",
+    "模型在构建工具链重写上明显优于编程语言重写，最佳模型 claude-opus-5 也仅得 47.0/100。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.85,
+    "problem_significance": 0.91,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.9,
+    "llm_avg": 0.858,
+    "comment": "This is a strong coding-agent benchmark whose layered verification protocol exposes failures hidden by conventional test-only evaluation.",
+    "comment_zh": "这是一个高质量编码智能体基准，其分层验证协议揭示了传统仅测试评估所掩盖的失败。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.858,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.23564/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.918
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.23564/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

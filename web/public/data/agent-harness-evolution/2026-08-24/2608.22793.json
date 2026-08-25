@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.22793",
+  "title": "TRACE: A Self-Evolving Skill Bank for Consistent, Limit-Aware LLM Agents",
+  "title_zh": "TRACE：面向一致且具边界意识的 LLM Agent 自进化技能库",
+  "authors": [
+    "Wenhao Wu",
+    "Menghao Zhang",
+    "Xin Wang",
+    "Zhi Wang",
+    "Kun Shao",
+    "Jian Luan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-24T04:36:03Z",
+  "abs_url": "https://arxiv.org/abs/2608.22793v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.22793",
+  "links": {
+    "github": null,
+    "project_page": "https://darwin-agent.github.io/Car-bench-TRACE."
+  },
+  "abstract_en": "Reliable deployment of LLM agents in user-facing products depends not on raw task-solving ability but on consistency and limit-awareness: behaving the same way across repeated trials, and recognizing when a request cannot, or cannot yet, be safely fulfilled. CAR-bench exposes this reliability gap in the domain of in-car assistants: an LLM-simulated user issues incomplete or ambiguous requests, requiring the agent to resolve uncertainty through multi-turn dialogue and tool use while strictly adhering to domain policies. Even frontier models show a substantial gap between what they can solve at least once (Pass@3) and what they solve consistently across trials (Pass^k). We bridge this gap with TRACE (TRAjectory-Contrastive Evolution), which iteratively improves a skill-based agent's behavioral knowledge without modifying model weights. This knowledge is organized as a Skill Bank of modular, retrievable skills, each encoding a self-contained set of tool-use rules and behavioral guidelines. TRACE evolves this bank through an agentic self-evolution loop: after each evaluation round, it groups trajectories by the skills invoked and refines each skill by contrasting successful and failed behaviors. The updated bank then guides subsequent rounds, while during deployment the Actor performs state-conditioned skill orchestration at every turn. On GPT-5.5, TRACE improves consistency (Pass^3) by 34.6 points, from 59.9% to 94.5%, while shrinking the gap between potential and reliable performance to just 4.0 points. On the official hidden set, TRACE achieved first place using GPT-5.6-Sol, attaining a Pass^3 score of 70%-a 40% relative improvement over the baseline. These results show that TRACE converts high model potential into stable, consistent performance gain. Project homepage: https://darwin-agent.github.io/Car-bench-TRACE.",
+  "abstract_zh": "面向用户产品可靠部署 LLM Agent，关键不仅是原始任务求解能力，还包括一致性与边界意识：在多次尝试中保持稳定行为，并识别请求何时无法安全完成或暂时不具备完成条件。CAR-bench 在车载助手场景中揭示了这一可靠性缺口：由 LLM 模拟的用户会提出信息不完整或含义模糊的请求，要求 Agent 通过多轮对话和工具调用消除不确定性，同时严格遵守领域策略。即使是前沿模型，其至少成功一次的能力（Pass@3）与跨多次试验稳定成功的能力（Pass^k）之间仍存在明显差距。为此，本文提出 TRACE（TRAjectory-Contrastive Evolution），无需修改模型权重，即可迭代提升基于技能的 Agent 行为知识。相关知识被组织为模块化、可检索的 Skill Bank，其中每项技能均包含自洽的工具使用规则与行为准则。TRACE 通过 Agent 自进化循环更新技能库：每轮评测后，按照轨迹调用的技能进行分组，通过对比成功与失败行为来优化对应技能；更新后的技能库继续指导后续轮次。部署时，Actor 会在每一轮根据当前状态动态编排技能。在 GPT-5.5 上，TRACE 将一致性指标 Pass^3 从 59.9% 提升至 94.5%，提高 34.6 个百分点，并将潜在能力与可靠表现之间的差距缩小至 4.0 个百分点。在官方隐藏测试集上，TRACE 使用 GPT-5.6-Sol 获得第一名，Pass^3 达到 70%，较基线相对提升 40%。结果表明，TRACE 能够将模型的高潜在能力转化为稳定且一致的实际性能增益。",
+  "key_points_zh": [
+    "指出 LLM Agent 的核心可靠性问题：Pass@3 所反映的潜在能力与 Pass^k 所衡量的稳定成功率之间存在显著差距。",
+    "提出 TRACE，通过对比成功与失败轨迹持续优化 Skill Bank，无需微调或修改基础模型权重。",
+    "Skill Bank 由模块化、可检索的技能组成，每项技能封装工具调用规则和行为准则；Actor 在每轮对话中根据状态动态编排技能。",
+    "在 GPT-5.5 上，TRACE 将 Pass^3 从 59.9% 提升至 94.5%，并将潜在能力与可靠表现的差距缩小到 4.0 个百分点。",
+    "在 CAR-bench 官方隐藏集上，搭配 GPT-5.6-Sol 的 TRACE 以 70% Pass^3 获得第一名，较基线相对提升 40%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.86,
+    "problem_significance": 0.89,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8640000000000001,
+    "comment": "Despite its vertical evaluation setting, TRACE is strong Skill-evolution work with trajectory-contrastive refinement and state-conditioned reuse.",
+    "comment_zh": "尽管评测场景较垂直，TRACE仍是扎实的技能演化工作，具备轨迹对比式改进和状态条件化复用机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.36228269883744174,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8640000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://darwin-agent.github.io/Car-bench-TRACE.",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.22793/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.22793/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.445
+    }
+  ]
+}

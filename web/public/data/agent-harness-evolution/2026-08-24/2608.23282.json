@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2608.23282",
+  "title": "From Natural Language Policies to Executable Obligations: A Verification Harness for Dependable In-Car LLM Agents",
+  "title_zh": "从自然语言策略到可执行义务：面向可靠车载 LLM Agent 的验证框架",
+  "authors": [
+    "Radouane Bouchekir",
+    "Damir Safin",
+    "Tomas Bueno Momcilovic"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-24T14:06:21Z",
+  "abs_url": "https://arxiv.org/abs/2608.23282v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.23282",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large Language Models (LLMs) agents deployed in vehicles must satisfy a written operating policy on every turn: a single hallucinated identifier, omitted mandatory side-effect, or premature completion claim fails the task. We present AgentGuardUtil, our entry to CAR-bench Track~1, which treats the AI planer (LLM) as a fallible proposer inside a grounded verify-and-revise loop. Its core novelty is a runtime policy compiler: the natural-language policy shipped with each conversation is compiled, once per policy, into typed machine-checkable rules, a subset of which receive an executable form. A deterministic obligation engine interprets these rules against live tool results and the simulated post-write state of the draft itself, emitting the exact remedial calls with computed arguments rather than natural-language reminders. Around this engine, 25 deterministic gates (identifier provenance, schema and enum validity, gather-before-act, confirmation and future-time protocols) and an LLM critic produce tiered findings that drive a bounded revision loop tuned for the pass k metric.",
+  "abstract_zh": "部署于车辆中的 Large Language Model（LLM）Agent 必须在每轮交互中严格遵守书面运行策略；任何一次标识符幻觉、强制副作用遗漏或过早宣称任务完成，都会导致任务失败。本文提出 AgentGuardUtil，这是作者参加 CAR-bench Track 1 的方案。该方法将 AI 规划器（LLM）视为可能出错的提议者，并将其置于基于事实的“验证—修订”闭环中。其核心创新是运行时策略编译器：针对每段对话附带的自然语言策略，仅需编译一次，即可转换为带类型、可由机器检查的规则，其中部分规则还会被转化为可执行形式。确定性的义务引擎结合实时工具返回结果，以及草案执行写操作后的模拟状态来解释这些规则；当发现违规时，它会直接生成参数已计算完毕的精确补救调用，而非仅给出自然语言提醒。在该引擎外围，系统设置了 25 个确定性门控机制，覆盖标识符来源、Schema 与枚举合法性、先收集后执行、确认协议及未来时间协议等，并结合 LLM critic 生成分级问题报告，驱动一个有界修订循环，以优化 pass k 指标表现。",
+  "key_points_zh": [
+    "将 LLM 定位为可能出错的方案提议者，而不是直接执行决策的可信组件。",
+    "提出运行时策略编译器，把自然语言运行策略转换为带类型、机器可检查且部分可执行的规则。",
+    "确定性义务引擎同时检查实时工具结果与草案执行后的模拟状态，并生成参数完整的补救调用。",
+    "通过 25 个确定性门控机制验证标识符来源、Schema、枚举值、操作顺序、用户确认和未来时间约束。",
+    "结合 LLM critic 与分级问题报告，在有界验证—修订循环中提升 CAR-bench Track 1 的 pass k 表现。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.79,
+    "novelty": 0.82,
+    "problem_significance": 0.83,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.75,
+    "llm_avg": 0.776,
+    "comment": "The policy compiler, executable obligation engine, and bounded verification loop form a credible runtime harness, although the implementation is tightly tied to an in-car benchmark.",
+    "comment_zh": "策略编译器、可执行义务引擎和有界验证闭环构成了可信的运行时框架，但实现与车载基准绑定较紧。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.776,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.23282/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.943
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.23282/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.98
+    }
+  ]
+}

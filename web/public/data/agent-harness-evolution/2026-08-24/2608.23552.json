@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2608.23552",
+  "title": "Prime Agent: A Self-Improving RLM Harness",
+  "title_zh": "Prime Agent：一种可自我改进的 RLM 代理框架",
+  "authors": [
+    "Seth Karten",
+    "Alex L. Zhang",
+    "Kevin Thomas",
+    "Sebastian Müller",
+    "Elie Bakouch",
+    "Daniel Auras",
+    "Mika Senghaas",
+    "Fares Obeid",
+    "Konstantin Dunas",
+    "Johannes Hagemann",
+    "Sami Jaghouar"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-24T17:54:19Z",
+  "abs_url": "https://arxiv.org/abs/2608.23552v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.23552",
+  "links": {
+    "github": "https://github.com/PrimeIntellect-ai/prime-agent",
+    "project_page": null
+  },
+  "abstract_en": "Language models are sequential processors, but long-horizon agency requires external information and computation beyond model weights and active context. Prime Agent is an open-source harness for long-horizon evaluation and coding-agent workflows. A persistent IPython REPL follows the Recursive Language Model abstraction for programmatic context processing and test-time compute, while Continual Harness preserves histories, memories, skills, prompts, and subagent specifications across trajectories. Recursive subagents coordinate through direct agent-to-agent communication, and the Agents View lets humans inspect and manage daemon-backed sessions. Prime Agent standardizes execution, recovery, verification, and resource accounting while leaving strategy construction to the model. This low-friction, expressive membrane prevents harness failures from becoming model failures and pushes measurement toward the model's true maximal underlying capability. Prime Agent raises ARC-AGI-3 RHAE Best@1 from 30% to 95.5% and matches or exceeds native and popular harnesses across long-context coding, GPU-kernel generation, emulator construction, and autonomous nanoGPT speedruns. On Factorio, we find refinement allows for continuous technology progression and dedicated subagents enable parallelized work. Code is available at https://github.com/PrimeIntellect-ai/prime-agent.",
+  "abstract_zh": "语言模型本质上是顺序处理器，但长程智能体需要调用模型权重与当前上下文之外的信息和计算资源。Prime Agent 是一个面向长程评测与编程智能体工作流的开源框架。其持久化 IPython REPL 遵循 Recursive Language Model（RLM，递归语言模型）抽象，支持以编程方式处理上下文并扩展测试时计算；Continual Harness 则可跨任务轨迹保留历史、记忆、技能、提示词和子智能体配置。递归子智能体能够直接进行 agent-to-agent 通信，Agents View 允许用户检查和管理由守护进程支持的会话。Prime Agent 对执行、恢复、验证和资源核算进行标准化，同时将策略构建交给模型，从而减少框架故障对模型能力评估的干扰，更准确地衡量模型的潜在能力上限。实验中，Prime Agent 将 ARC-AGI-3 RHAE Best@1 从 30% 提升至 95.5%，并在长上下文编程、GPU kernel 生成、模拟器构建和自主 nanoGPT speedrun 等任务上达到或超过原生及主流框架。在 Factorio 中，持续迭代可推动技术不断演进，专用子智能体则能实现并行协作。",
+  "key_points_zh": [
+    "通过持久化 IPython REPL 实现 RLM 式上下文处理与测试时计算，支持长程任务中的外部信息和计算调用。",
+    "Continual Harness 可跨轨迹保留历史、记忆、技能、提示词及子智能体配置，形成持续改进机制。",
+    "支持递归子智能体及直接 agent-to-agent 通信，并通过 Agents View 管理守护进程支持的持久会话。",
+    "统一执行、恢复、验证和资源核算，将策略设计留给模型，降低 harness 故障对模型能力测量的影响。",
+    "将 ARC-AGI-3 RHAE Best@1 从 30% 提升至 95.5%，并在编程、GPU kernel、模拟器、nanoGPT 与 Factorio 任务中展现竞争力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.87,
+    "problem_significance": 0.94,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.92,
+    "llm_avg": 0.9040000000000001,
+    "comment": "A highly relevant reusable harness combining persistent execution, recursive orchestration, recovery, verification, and cross-trajectory state for long-horizon agents.",
+    "comment_zh": "这是一项高度相关的可复用智能体框架工作，整合了持久执行、递归编排、恢复验证与跨轨迹状态管理。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.5,
+    "community_heat": 0.8637229140759433,
+    "author_reputation": 0.34373441375821495,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.9040000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/PrimeIntellect-ai/prime-agent",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 32,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.23552/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.23552/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.97
+    }
+  ]
+}

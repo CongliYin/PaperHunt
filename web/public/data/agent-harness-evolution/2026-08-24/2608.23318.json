@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2608.23318",
+  "title": "Agent-G$^2$: Gaussian Guidance for Agentic Reinforcement Learning",
+  "title_zh": "Agent-G²：面向智能体强化学习的高斯引导",
+  "authors": [
+    "Zixuan Wang",
+    "Yanrui Miao",
+    "Zhengxi Lu",
+    "Teng Pan",
+    "Yiwen Qiu",
+    "Hongxing Li",
+    "Peng Qiu",
+    "Ruiqing Zhang",
+    "Yongliang Shen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-24T14:34:34Z",
+  "abs_url": "https://arxiv.org/abs/2608.23318v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.23318",
+  "links": {
+    "github": "https://github.com/ZJU-REAL/Agent-G2",
+    "project_page": "https://zju-real.github.io/Agent-G2"
+  },
+  "abstract_en": "Hint-based reinforcement learning addresses reward sparsity in long-horizon agentic tasks by retaining a prefix of an expert trajectory before each rollout, letting the policy explore from a state closer to success. Its effectiveness hinges on the guidance depth: how much of the trajectory to keep. Existing methods treat this depth as a deterministic scalar. Scheduled approaches share one value across samples and ignore per-task heterogeneity; per-sample probing estimates it separately at the cost of extra rollouts. We find that useful guidance occupies a band of depths whose informativeness profile is approximately Gaussian around the band center, rather than concentrating at a single optimal point. We propose Agent-G$^2$, a Gaussian guidance framework that draws the depth per task from a Gaussian whose center and spread are estimated online from rollouts already collected for policy optimization, requiring no probe rollouts or learned depth predictor. The center combines a global baseline with per-cluster difficulty, and the spread tracks within-cluster variance. We evaluate Agent-G$^2$ on ALFWorld and WebShop on Qwen2.5-1.5B / 7B-Instruct. Agent-G$^2$ outperforms the strongest hint-based, hint-free, and Aux-RL baselines on ALFWorld by 2.3 / 3.9 / 7.4 points at under one-third the rollout cost of per-sample probing.",
+  "abstract_zh": "基于提示的强化学习通过在每次 rollout 前保留专家轨迹的一段前缀，使策略从更接近成功的状态开始探索，从而缓解长时程智能体任务中的奖励稀疏问题。其效果高度依赖引导深度，即保留轨迹的长度。现有方法通常将引导深度视为确定性标量：调度式方法对所有样本使用同一数值，忽略任务间差异；逐样本探测方法则需要额外 rollout 来分别估计。本文发现，有效引导通常分布在一个深度区间内，其信息量以区间中心为峰值，近似呈高斯分布，而非集中于单个最优点。基于此，作者提出 Agent-G²：为每个任务从高斯分布中采样引导深度，并利用策略优化阶段已收集的 rollout 在线估计分布中心与宽度，无需额外探测 rollout 或学习深度预测器。其中，分布中心结合全局基准与每个任务簇的难度，分布宽度则跟踪簇内方差。在 ALFWorld 和 WebShop 上，基于 Qwen2.5-1.5B / 7B-Instruct 的实验表明，Agent-G² 在 ALFWorld 上分别超过最强的提示式、无提示和 Aux-RL 基线 2.3、3.9 和 7.4 个百分点，同时 rollout 成本不足逐样本探测方法的三分之一。",
+  "key_points_zh": [
+    "指出有效引导深度并非单一最优值，而是位于一个信息量近似呈高斯分布的深度区间。",
+    "提出 Agent-G²，按任务从在线估计的高斯分布中采样引导深度，以适应任务异质性。",
+    "高斯中心融合全局基准与任务簇难度，分布宽度通过簇内方差动态调整。",
+    "仅复用策略优化已有的 rollout，无需额外探测 rollout，也不依赖学习式深度预测器。",
+    "在 ALFWorld 和 WebShop 上验证有效性；ALFWorld 中以不足逐样本探测三分之一的 rollout 成本取得更高性能。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.78,
+    "problem_significance": 0.84,
+    "potential_impact": 0.79,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.76,
+    "llm_avg": 0.764,
+    "comment": "The paper offers a novel and rollout-efficient guidance mechanism for reinforcement learning on sparse-reward agent trajectories.",
+    "comment_zh": "该论文为稀疏奖励智能体轨迹强化学习提出了新颖且节省采样成本的引导机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.9,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.764,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/ZJU-REAL/Agent-G2",
+    "project_page_url": "https://zju-real.github.io/Agent-G2",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.23318/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.23318/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

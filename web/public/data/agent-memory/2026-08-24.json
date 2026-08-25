@@ -1,0 +1,31 @@
+{
+  "domain": "agent-memory",
+  "display_name": "Agent Memory",
+  "date": "2026-08-24",
+  "generated_at": "2026-08-25T20:43:57Z",
+  "papers": [
+    {
+      "arxiv_id": "2608.22767",
+      "title": "The Retriever Should Remember: Experience-Amortized Reranking for Long-Term Agent Memory",
+      "title_zh": "检索器也应记忆：面向长期智能体记忆的经验摊销重排序（EARM）",
+      "authors": [
+        "Qi Feng",
+        "Chris Ding",
+        "Jicong Fan"
+      ],
+      "total_score": 0.6310668017197769,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.8019999999999999,
+        "domain_fit": 0.92,
+        "other": 0.2348893390659229
+      },
+      "tags": [
+        "agent memory systems"
+      ],
+      "tldr_zh": "EARM让智能体复用历史评分，降低长期记忆重排序成本",
+      "detail_file": "agent-memory/2026-08-24/2608.22767.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.22767/thumb.webp"
+    }
+  ]
+}

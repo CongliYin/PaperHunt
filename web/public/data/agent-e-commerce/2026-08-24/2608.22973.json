@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.22973",
+  "title": "Cascading Relevance-driven Recommendation Network for CTR Prediction in Trigger-Introduced Recommendation",
+  "title_zh": "面向触发式推荐 CTR 预测的级联相关性驱动推荐网络",
+  "authors": [
+    "Kaixuan Chen",
+    "Wenwen Wang",
+    "Xing Fang",
+    "Yang Huang",
+    "Jing Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-24T08:33:14Z",
+  "abs_url": "https://arxiv.org/abs/2608.22973v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.22973",
+  "links": {
+    "github": "https://github.com/a-little-cabbage/CRRN.",
+    "project_page": null
+  },
+  "abstract_en": "E-commerce has emerged as crucial platforms for people's daily consumption and shopping interests. There is a new recommendation scenario, Trigger-Introduced Recommendation (TIR), where users click interested product, which is defined as the trigger item, containing their instant interest, and in the undertaking page following the relevant target items. Distinguished from traditional search and recommendation scenarios, trigger contains relatively strong instant interest, which is more vague and implicit compared to search terms. Relying on large amounts of labeled data, existing methods lack the exploration of trigger relevance, which affects users' immersive experience. To alleviate this problem, we propose the Cascading Relevance-driven Recommendation Network (CRRN) to emphasize the interaction and relevance between trigger and target, comprising three essential components: 1) the Trigger-Target Interaction layer extracts interaction features of trigger and target based on personalized gating. 2) Cascading Interest Fusion module explicitly estimates users' trigger intention and fuses instant and personalized interests adaptively with cascading attention blocks. 3) Category-assisted Pairwise Loss enhances trigger relevance with the guidance of category association between trigger and target. Extensive experiment results show that CRRN outperforms recent state-of-the-art methods on both industrial and public datasets. Online A/B tests further validate the effectiveness of our method. Our code is available at https://github.com/a-little-cabbage/CRRN.",
+  "abstract_zh": "本文研究触发式推荐（Trigger-Introduced Recommendation，TIR）中的点击率（CTR）预测问题。在该场景中，用户点击的商品被视为触发商品（trigger item），其蕴含用户的即时兴趣，系统随后在承接页推荐相关目标商品。与传统搜索和推荐不同，触发商品表达的即时兴趣较强，但相比搜索词更加模糊和隐式。现有方法主要依赖大量标注数据，未能充分建模触发商品与目标商品之间的相关性，可能影响用户的沉浸式浏览体验。为此，作者提出 Cascading Relevance-driven Recommendation Network（CRRN），通过三个核心组件强化触发商品与目标商品的交互及相关性：Trigger-Target Interaction layer 利用个性化门控提取二者的交互特征；Cascading Interest Fusion module 显式估计用户的触发意图，并通过级联注意力模块自适应融合即时兴趣与个性化兴趣；Category-assisted Pairwise Loss 则借助触发商品和目标商品之间的类别关联增强相关性学习。工业数据集与公开数据集上的实验表明，CRRN 优于近期先进方法，线上 A/B 测试也进一步验证了其有效性。",
+  "key_points_zh": [
+    "聚焦 Trigger-Introduced Recommendation 场景，显式建模 trigger item 所体现的即时兴趣及其与 target item 的相关性。",
+    "Trigger-Target Interaction layer 通过个性化门控机制提取触发商品与目标商品之间的细粒度交互特征。",
+    "Cascading Interest Fusion module 使用级联注意力显式估计触发意图，并自适应融合即时兴趣和长期个性化兴趣。",
+    "Category-assisted Pairwise Loss 利用 trigger-target 的类别关联提供监督，增强推荐结果的触发相关性。",
+    "CRRN 在工业与公开数据集上优于近期先进方法，并通过线上 A/B 测试验证了实际业务效果。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.74,
+    "problem_significance": 0.84,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.57,
+    "lasting_value": 0.81,
+    "llm_avg": 0.768,
+    "comment": "A strongly grounded e-commerce recommendation method with explicit trigger-target relevance modeling and convincing online A/B-test evidence.",
+    "comment_zh": "该工作面向电商触发式推荐，显式建模触发商品与候选商品的相关性，并具有有说服力的线上实验结果。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.36560162063732243,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.768,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/a-little-cabbage/CRRN.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.22973/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.22973/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.941
+    }
+  ]
+}
