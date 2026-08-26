@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.24747",
+  "title": "SkillForge: Evolving Verifiable Skills for Reinforcement Learning Agents",
+  "title_zh": "SkillForge：为强化学习智能体演化可验证技能",
+  "authors": [
+    "Shidong Yang",
+    "Ziyu Ma",
+    "Tongwen Huang",
+    "Xucong Wang",
+    "Renda Li",
+    "Yiming Hu",
+    "Yong Wang",
+    "Xiangxiang Chu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-25T15:52:10Z",
+  "abs_url": "https://arxiv.org/abs/2608.24747v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.24747",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM) agents are trained with reinforcement learning (RL) for complex decision-making tasks. However, most RL-trained agents remain episodic and cannot accumulate reusable knowledge across episodes. Recent skill-based approaches, such as SkillRL, attempt to address this issue by extracting skills from raw trajectories, but treat the skill bank as an append-only repository without verifying whether stored skills remain effective. In this paper, we propose SkillForge, a framework for continuous skill evolution that enables skills to be verified and refined through environment interaction. By making skill usage explicit during agent interaction, RL can directly optimize both environment actions and skill invocation decisions. SkillForge further introduces evidence-based skill verification and multi-pathway skill induction, allowing the skill bank to continuously grow while maintaining its quality. Extensive experiments on ALFWorld, WebShop, and AppWorld show that SkillForge consistently outperforms SkillRL, demonstrating the effectiveness of continuously verified skills in training stronger LLM agents.",
+  "abstract_zh": "大语言模型（LLM）智能体通常通过强化学习（RL）训练，以完成复杂决策任务。然而，大多数经 RL 训练的智能体仍局限于单回合学习，无法跨回合积累可复用知识。SkillRL 等近期技能学习方法尝试从原始轨迹中提取技能，但将技能库视为只增不改的存储库，无法验证已有技能是否持续有效。本文提出 SkillForge，一种支持技能持续演化的框架，使智能体能够通过与环境交互验证并改进技能。SkillForge 在交互过程中显式建模技能使用，使 RL 可以同时优化环境动作与技能调用决策。此外，该框架引入基于证据的技能验证机制和多路径技能归纳方法，在持续扩充技能库的同时维持其质量。在 ALFWorld、WebShop 和 AppWorld 上的大量实验表明，SkillForge 持续优于 SkillRL，验证了持续维护并验证技能对于训练更强 LLM 智能体的有效性。",
+  "key_points_zh": [
+    "突破传统 episodic RL 的限制，使智能体能够跨回合积累、复用并更新技能知识。",
+    "将技能调用显式纳入交互与决策过程，使 RL 联合优化环境动作和技能调用策略。",
+    "提出基于交互证据的技能验证机制，避免技能库只增不改以及失效技能长期留存。",
+    "采用多路径技能归纳，在扩展技能库规模的同时持续维护技能质量。",
+    "在 ALFWorld、WebShop 和 AppWorld 上均稳定优于 SkillRL，证明持续验证技能的有效性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.86,
+    "problem_significance": 0.91,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.9,
+    "llm_avg": 0.882,
+    "comment": "SkillForge directly advances continuous skill evolution by integrating explicit invocation, environment-backed verification, refinement, and RL optimization.",
+    "comment_zh": "SkillForge通过显式技能调用、环境验证、持续精炼和强化学习优化，直接推进了连续技能演化。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3439406220117154,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.882,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24747/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.919
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24747/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.327
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2608.23953",
+  "title": "The Empire, Long Divided, Must Unite: Architectural Convergence in Three LLM Agent Harnesses",
+  "title_zh": "天下大势，分久必合：三种 LLM Agent Harness 的架构趋同",
+  "authors": [
+    "Dai Jiahong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-25T01:26:41Z",
+  "abs_url": "https://arxiv.org/abs/2608.23953v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.23953",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "An agent harness is what turns a language model into an autonomous agent: the surrounding code that builds the model's context, mediates its tools, runs the loop, and persists state across a long-horizon run. This layer, not the model it wraps, is increasingly the binding constraint on agent behaviour. We present a source-level, multi-case study of three open coding-agent harnesses built from deliberately opposing philosophies: LangChain's deepagents (batteries-included), Earendil's pi (radical minimalism), and DeepSeek's dsh (everything-is-a-plugin). Reading each at a pinned commit and following its commit history, we find that the two mature harnesses have travelled in opposite directions (deepagents subtracting authored scaffolding, pi accreting durable infrastructure), yet converged toward one architectural middle form of five recurring elements: a commoditised loop, an append-only replayable session record, model quirks kept as data, progressive disclosure of context, and explicit extension seams. A third harness, read afterward as a held-out check, exhibits all five, and in one seam reuses another's implementation outright. We therefore do not claim independent invention, and decompose the convergence into parallel discovery, diffusion, and literal reuse. Finally, one load-bearing dimension shows no convergence, and indeed no presence: external verifiability, a tamper-evident record an outside party can check without trusting the runtime. We read this absence not as an oversight but as a predictive gap, the next axis on which harnesses for provenance-sensitive domains will differ.",
+  "abstract_zh": "Agent harness（智能体运行框架）是将语言模型转化为自主智能体的关键层：它负责构建模型上下文、协调工具调用、执行循环，并在长时程任务中持久化状态。相较于其封装的模型，这一层正日益成为制约智能体行为的核心瓶颈。本文对三种设计理念截然不同的开源编程智能体框架开展源码级多案例研究：强调功能完备的 LangChain deepagents、奉行极简主义的 Earendil pi，以及主张“一切皆插件”的 DeepSeek dsh。通过分析各项目的固定版本及提交历史，作者发现，两个较成熟的框架沿相反方向演进：deepagents 持续削减预设脚手架，而 pi 不断增添持久化基础设施，但二者最终趋向由五项要素构成的共同架构中间形态：商品化的执行循环、仅追加且可重放的会话记录、以数据形式管理模型差异、上下文的渐进式披露，以及显式扩展接口。随后作为留出检验对象分析的第三个框架同样具备这五项要素，并在一处扩展接口中直接复用了另一框架的实现。因此，本文并不将这种趋同简单归因于独立发明，而是将其分解为并行发现、思想扩散和代码直接复用。最后，研究指出一个关键维度不仅尚未趋同，而且在三者中均告缺失：外部可验证性，即允许外部主体在不信任运行时的前提下检查防篡改记录。作者认为，这并非偶然疏漏，而是一个具有预测意义的架构空白，未来面向来源与审计敏感领域的 Agent harness 或将在这一维度上产生分化。",
+  "key_points_zh": [
+    "研究从源码与提交历史层面比较 LangChain deepagents、Earendil pi 和 DeepSeek dsh，而非仅依据文档或表面 API。",
+    "deepagents 通过减少预设脚手架演进，pi 则通过增加持久化基础设施演进；二者方向相反，却收敛到相似的架构中间形态。",
+    "共同架构包含五项要素：标准化执行循环、仅追加且可重放的会话记录、数据化的模型兼容处理、渐进式上下文披露，以及显式扩展接口。",
+    "DeepSeek dsh 作为留出案例同样呈现全部五项特征；论文将趋同来源区分为并行发现、设计扩散和实现直接复用。",
+    "三种框架均缺乏可由外部独立检查的防篡改记录；外部可验证性可能成为面向审计与来源敏感场景的下一条关键分化轴。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.67,
+    "problem_significance": 0.84,
+    "potential_impact": 0.81,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.85,
+    "llm_avg": 0.7580000000000001,
+    "comment": "This source-level study distills durable architectural principles for coding-agent harnesses, though its contribution is analytical rather than a new runtime implementation.",
+    "comment_zh": "这项源码级研究提炼了编码智能体框架的持久架构原则，但其贡献偏分析性而非新的运行时实现。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2794153127047222,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7580000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.23953/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.23953/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.975
+    }
+  ]
+}

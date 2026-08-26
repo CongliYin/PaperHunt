@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2608.24091",
+  "title": "Native Multimodal Representation Learning for Click-Through Rate Prediction in E-Commerce Scenarios",
+  "title_zh": "面向电商场景点击率预测的原生多模态表征学习",
+  "authors": [
+    "Chao Yi",
+    "Feifan Yang",
+    "Jiawei Feng",
+    "Sishuo Chen",
+    "Zhangming Chan",
+    "Xiang-Rong Sheng",
+    "Han Zhu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-25T05:36:17Z",
+  "abs_url": "https://arxiv.org/abs/2608.24091v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.24091",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multimodal representations have been widely adopted in industrial e-commerce recommendation systems. Due to their strong semantic understanding and generalization capabilities, they enhance the performance of traditional sparse ID-based Click-Through Rate (CTR) prediction models. Current multimodal application frameworks in the CTR prediction task typically follow a two-stage paradigm: first, pre-training a multimodal encoder on data from specific recommendation scenarios; second, extracting items' multimodal representations using this pre-trained multimodal encoder and integrating them into the CTR prediction model. However, the training objectives and data distribution of multimodal pre-training tasks often differ from those of the CTR prediction task, which limits the effectiveness of multimodal representation on downstream tasks. In this paper, we focus on how to learn Native Multimodal Representation for the CTR prediction task. One intuitive solution is to jointly train the multimodal encoder and CTR model end-to-end on the CTR task, with the expectation that the encoder can automatically learn downstream-relevant knowledge. However, we find that the end-to-end training does not bring performance improvements to existing multimodal application paradigms. Our analysis reveals that user behaviors in raw CTR data are driven by both multimodal semantics and non-multimodal factors, leading to ambiguous supervision and inconsistent encoder updates. To address this, we propose a Mine-Then-Train method that mines high-quality, multimodally interpretable training samples from CTR data and uses them to fine-tune the multimodal encoder for better alignment with user click preferences. Offline and online experiments demonstrate the effectiveness of our approach.",
+  "abstract_zh": "多模态表征凭借较强的语义理解与泛化能力，已广泛应用于工业电商推荐系统，以增强传统稀疏 ID 驱动的点击率（CTR）预测模型。现有方法通常采用两阶段范式：首先在特定推荐场景的数据上预训练多模态编码器，随后提取商品的多模态表征并将其融入 CTR 模型。然而，多模态预训练任务与 CTR 任务在训练目标和数据分布上往往存在差异，限制了多模态表征在下游任务中的效果。本文研究如何为 CTR 预测学习原生多模态表征（Native Multimodal Representation）。一种直观方案是在 CTR 任务上端到端联合训练多模态编码器和预测模型，使编码器自动学习与下游任务相关的知识，但实验发现，该方案并未改善现有多模态应用范式。进一步分析表明，原始 CTR 数据中的用户行为同时受多模态语义和非多模态因素驱动，由此产生的模糊监督会导致编码器更新不一致。为此，本文提出 Mine-Then-Train 方法：从 CTR 数据中挖掘高质量、可由多模态信息解释的训练样本，再利用这些样本微调多模态编码器，使其更好地对齐用户点击偏好。离线与在线实验均验证了该方法的有效性。",
+  "key_points_zh": [
+    "指出多模态预训练与 CTR 预测之间存在目标和数据分布偏差，传统两阶段范式难以充分发挥多模态表征的价值。",
+    "发现直接端到端联合训练多模态编码器与 CTR 模型并不能稳定提升性能，原因在于点击行为包含非多模态因素，监督信号存在歧义。",
+    "提出 Mine-Then-Train：先从原始 CTR 数据中筛选高质量、具有多模态可解释性的样本，再据此微调多模态编码器。",
+    "通过对齐多模态表征与真实用户点击偏好，使编码器学习更适合 CTR 下游任务的原生多模态知识。",
+    "离线评测和线上实验均表明该方法能够有效改善电商场景中的 CTR 预测效果。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.78,
+    "problem_significance": 0.87,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.82,
+    "llm_avg": 0.8099999999999999,
+    "comment": "A strong e-commerce recommendation paper that aligns multimodal encoders with CTR objectives through interpretable sample mining and validates gains online.",
+    "comment_zh": "该工作通过挖掘多模态可解释样本使编码器对齐电商CTR目标，并以在线实验验证了实际收益。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5821063833901016,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8099999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 17,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24091/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.93
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24091/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

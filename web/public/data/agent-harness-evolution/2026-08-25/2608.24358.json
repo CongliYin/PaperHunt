@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2608.24358",
+  "title": "The Handoff Tax: Continuing Non-Native Trajectories in LLM Agents",
+  "title_zh": "交接税：LLM 智能体对非原生轨迹的续接",
+  "authors": [
+    "Roy Ganz",
+    "Mor Shpigel Nacson",
+    "Adi Kalyanpur",
+    "Ron Litman"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-25T10:14:30Z",
+  "abs_url": "https://arxiv.org/abs/2608.24358v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.24358",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents perform long-running tasks spanning dozens of model calls, tool uses, and code edits. As these runs unfold, users face a practical cost-quality trade-off: escalating to a stronger model when a cheaper one struggles, or downshifting once the hard reasoning is complete. Each switch requires the receiver to continue a non-native trajectory produced by another model. We study how this handoff affects quality and cost, and how varying the trajectory information inherited by the receiver changes the outcome. Using pairs of low-cost, low-capability (LC) and high-cost, high-capability (HC) models from the Claude and GPT families, we vary handoff direction, timing, and interface, comparing full-trajectory transfer, compaction, and trajectory removal while preserving the repository state. Across both model families, full-trajectory escalation recovers less than half of the LC-to-HC quality gap while incurring a substantial cost premium. We term this cost-quality penalty the handoff tax. By contrast, downshift offers a favorable cost-quality point. Interestingly, the preferred interface also reverses with direction: reducing LC-model trajectory information improves escalation quality, whereas removing the HC-model trajectory reduces downshift quality.",
+  "abstract_zh": "编程智能体通常需要执行跨越数十次模型调用、工具使用与代码修改的长程任务。在执行过程中，用户面临成本与质量之间的权衡：当低成本模型遇到困难时升级到更强模型，或在高难度推理完成后切换到较便宜的模型。每次切换都要求接手模型继续由其他模型生成的“非原生轨迹”。本文研究这种交接如何影响任务质量与成本，以及接手模型继承的轨迹信息量如何改变结果。研究使用 Claude 和 GPT 系列中的低成本、低能力（LC）模型与高成本、高能力（HC）模型组合，系统调整交接方向、时机和接口，并比较完整轨迹传递、轨迹压缩（compaction）及移除轨迹但保留代码仓库状态三种方案。两个模型家族的实验均表明，采用完整轨迹从 LC 升级至 HC，只能弥补不到一半的 LC-HC 质量差距，同时带来显著的额外成本。作者将这种成本—质量惩罚称为“交接税”（handoff tax）。相比之下，从 HC 降级至 LC 能获得更有利的成本—质量平衡。值得注意的是，最佳交接接口会随切换方向反转：升级时减少 LC 模型留下的轨迹信息可提升质量，而降级时移除 HC 模型轨迹则会降低质量。",
+  "key_points_zh": [
+    "提出“交接税”概念：接手模型续接其他模型生成的非原生轨迹时，会产生额外成本与质量损失。",
+    "实验覆盖 Claude 与 GPT 模型家族，并系统比较 LC→HC 升级、HC→LC 降级、不同交接时机及轨迹接口。",
+    "完整轨迹升级只能弥补不到一半的 LC-HC 质量差距，却需支付显著成本溢价。",
+    "HC→LC 降级通常形成更优的成本—质量折中，说明高难度推理完成后切换到廉价模型具有实际价值。",
+    "交接信息策略具有方向性：升级时减少 LC 轨迹有益，降级时保留 HC 轨迹更有利。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.78,
+    "problem_significance": 0.86,
+    "potential_impact": 0.83,
+    "paradigm_shift": 0.64,
+    "lasting_value": 0.84,
+    "llm_avg": 0.79,
+    "comment": "This work characterizes an important model-handoff failure mode in coding-agent trajectories and yields actionable guidance for cost-aware orchestration.",
+    "comment_zh": "该工作刻画了编码智能体轨迹中的重要模型交接失效模式，并为成本感知编排提供了可操作的指导。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.658125673010496,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.79,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 33,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24358/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24358/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

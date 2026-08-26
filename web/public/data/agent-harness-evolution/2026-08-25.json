@@ -1,0 +1,218 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-08-25",
+  "generated_at": "2026-08-26T23:16:10Z",
+  "papers": [
+    {
+      "arxiv_id": "2608.23953",
+      "title": "The Empire, Long Divided, Must Unite: Architectural Convergence in Three LLM Agent Harnesses",
+      "title_zh": "天下大势，分久必合：三种 LLM Agent Harness 的架构趋同",
+      "authors": [
+        "Dai Jiahong"
+      ],
+      "total_score": 0.6543707656352362,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.7580000000000001,
+        "domain_fit": 0.97,
+        "other": 0.1965692187841204
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "三种智能体框架殊途同归，但外部可验证性仍缺席。",
+      "detail_file": "agent-harness-evolution/2026-08-25/2608.23953.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.23953/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.24188",
+      "title": "Paritok-4B: Intent-Conditioned Context Compression for Coding Agents",
+      "title_zh": "Paritok-4B：面向编程智能体的意图条件化上下文压缩",
+      "authors": [
+        "Jiayu Shi",
+        "Luzhuo Chen"
+      ],
+      "total_score": 0.624577049285761,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8140000000000001,
+        "domain_fit": 0.95,
+        "other": 0.0945901642858697
+      },
+      "tags": [
+        "session context state"
+      ],
+      "tldr_zh": "抽取式代码压缩至约四分之一，求解率未显著下降。",
+      "detail_file": "agent-harness-evolution/2026-08-25/2608.24188.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24188/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.24569",
+      "title": "When \"Must\" Becomes \"Maybe\": Constraint Weakening in LLM Agent Workflows",
+      "title_zh": "当“必须”变成“也许”：LLM Agent 工作流中的约束弱化",
+      "authors": [
+        "Yiheng Sun",
+        "Huifei Wang",
+        "Yancheng Zhu",
+        "Zhenyu Li",
+        "Zebin Zhao",
+        "Yifan Yuan"
+      ],
+      "total_score": 0.5758847329801907,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.8039999999999999,
+        "domain_fit": 0.92,
+        "other": 0.26228244326730227
+      },
+      "tags": [
+        "HF Daily ★3",
+        "planning and policy"
+      ],
+      "tldr_zh": "Agent交接会保留信息却弱化其行动约束力。",
+      "detail_file": "agent-harness-evolution/2026-08-25/2608.24569.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24569/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.24588",
+      "title": "IAPO: Influence-Aware Policy Optimization for Credit Assignment in Multi-Turn Service Agents",
+      "title_zh": "IAPO：面向多轮服务智能体信用分配的影响感知策略优化",
+      "authors": [
+        "Bo Ren",
+        "Yirong Mao",
+        "Yi Yang",
+        "Wenhui Que"
+      ],
+      "total_score": 0.5440082880689192,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.8619999999999999,
+        "domain_fit": 0.96,
+        "other": 0.09802762689639768
+      },
+      "tags": [
+        "evaluation operations"
+      ],
+      "tldr_zh": "用影响依赖图重分配优势，改进多轮智能体信用分配。",
+      "detail_file": "agent-harness-evolution/2026-08-25/2608.24588.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24588/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.24024",
+      "title": "Beyond Confidence: Test-Time Scaling for Multi-Turn Search Agents via Retrieval Grounding",
+      "title_zh": "超越置信度：基于检索支撑的多轮搜索智能体测试时扩展",
+      "authors": [
+        "Hyunho Kook",
+        "Junhyuk So",
+        "Tianyu Fu",
+        "Haizhong Zheng",
+        "Beidi Chen"
+      ],
+      "total_score": 0.49336579231742744,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.724,
+        "domain_fit": 0.94,
+        "other": 0.12055264105809127
+      },
+      "tags": [
+        "evaluation operations"
+      ],
+      "tldr_zh": "RGV以答案—文档重叠度替代失真的置信度投票。",
+      "detail_file": "agent-harness-evolution/2026-08-25/2608.24024.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24024/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.24747",
+      "title": "SkillForge: Evolving Verifiable Skills for Reinforcement Learning Agents",
+      "title_zh": "SkillForge：为强化学习智能体演化可验证技能",
+      "authors": [
+        "Shidong Yang",
+        "Ziyu Ma",
+        "Tongwen Huang",
+        "Xucong Wang",
+        "Renda Li",
+        "Yiming Hu",
+        "Yong Wang",
+        "Xiangxiang Chu"
+      ],
+      "total_score": 0.4707970311005858,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.882,
+        "domain_fit": 0.98,
+        "other": 0.2073234370019526
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "让技能在交互中持续验证与演化，增强LLM智能体",
+      "detail_file": "agent-harness-evolution/2026-08-25/2608.24747.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24747/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.24358",
+      "title": "The Handoff Tax: Continuing Non-Native Trajectories in LLM Agents",
+      "title_zh": "交接税：LLM 智能体对非原生轨迹的续接",
+      "authors": [
+        "Roy Ganz",
+        "Mor Shpigel Nacson",
+        "Adi Kalyanpur",
+        "Ron Litman"
+      ],
+      "total_score": 0.4339062836505248,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.79,
+        "domain_fit": 0.96,
+        "other": 0.1763542788350827
+      },
+      "tags": [
+        "h=33",
+        "general llm agents"
+      ],
+      "tldr_zh": "模型切换存在交接税，升级受损，降级更划算",
+      "detail_file": "agent-harness-evolution/2026-08-25/2608.24358.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24358/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.24794",
+      "title": "CAFE: Self-Improving Search Agents Need Co-Evolving Feedback",
+      "title_zh": "CAFE：自我改进的搜索智能体需要协同演化的反馈",
+      "authors": [
+        "Boyang Liu",
+        "Senjie Jin",
+        "Peixin Wang",
+        "Zhangyue Yin",
+        "Yibo Wang",
+        "Yuhao Zhou",
+        "Xinbing Liang",
+        "Shizheng Zhu",
+        "Yuhui Wang",
+        "Jingqi Tong",
+        "Zhiheng Xi",
+        "Jiazheng Zhang",
+        "Clive Bai",
+        "Clarenceai",
+        "Blaze Chen",
+        "Tao Gui",
+        "Qi Zhang",
+        "Xuanjing Huang"
+      ],
+      "total_score": 0.3712295112730896,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.9039999999999999,
+        "domain_fit": 0.98,
+        "other": 0.3334317042436323
+      },
+      "tags": [
+        "HF Daily ★4"
+      ],
+      "tldr_zh": "让搜索智能体与反馈critic协同演化，持续提升检索与纠错能力。",
+      "detail_file": "agent-harness-evolution/2026-08-25/2608.24794.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24794/thumb.webp"
+    }
+  ]
+}

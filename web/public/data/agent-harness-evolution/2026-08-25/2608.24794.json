@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2608.24794",
+  "title": "CAFE: Self-Improving Search Agents Need Co-Evolving Feedback",
+  "title_zh": "CAFE：自我改进的搜索智能体需要协同演化的反馈",
+  "authors": [
+    "Boyang Liu",
+    "Senjie Jin",
+    "Peixin Wang",
+    "Zhangyue Yin",
+    "Yibo Wang",
+    "Yuhao Zhou",
+    "Xinbing Liang",
+    "Shizheng Zhu",
+    "Yuhui Wang",
+    "Jingqi Tong",
+    "Zhiheng Xi",
+    "Jiazheng Zhang",
+    "Clive Bai",
+    "Clarenceai",
+    "Blaze Chen",
+    "Tao Gui",
+    "Qi Zhang",
+    "Xuanjing Huang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-25T16:39:00Z",
+  "abs_url": "https://arxiv.org/abs/2608.24794v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.24794",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Outcome-supervised search agents learn when and how to retrieve evidence, but terminal rewards neither localize intermediate errors nor redirect an ongoing trajectory before those errors compound. Treating corrective feedback as a learned in-trajectory intervention couples the two roles: the agent must decide when to request and use feedback, while the critic must infer useful corrections from outcome-confounded rollouts whose failure patterns shift as the agent improves. We introduce CAFE (Coupled Agent--Feedback Evolution), a framework in which a shared-parameter model alternates between search-agent and critic roles. CAFE initializes feedback-conditioned recovery from trajectories built around the base agent's own failures, then couples online and offline optimization. During online RL, a comparative feedback estimate uses a prompt-level call--skip success gap to shape request returns, while feedback-aware advantage shaping reweights token advantages before and after feedback. Offline, rollout-derived preference optimization learns feedback from matched successful and unsuccessful trajectories. On seven agentic search benchmarks, CAFE outperforms the evaluated RL-based search agents on average, retains its gains across all six out-of-domain benchmarks, and reduces answer-level hallucinations. One-sided ablations show that improving only the agent or only the critic eventually plateaus, whereas alternating the two updates continues to improve performance. These findings suggest that a self-improving search agent needs feedback that co-evolves with the policy it guides.",
+  "abstract_zh": "基于结果监督的搜索智能体能够学习何时以及如何检索证据，但终局奖励既无法定位中间步骤中的错误，也无法在错误累积前及时纠正当前轨迹。CAFE（Coupled Agent–Feedback Evolution）将纠正性反馈建模为轨迹内的可学习干预：智能体负责决定何时请求并使用反馈，critic 则需从受最终结果混杂影响、且失败模式持续变化的 rollout 中推断有效修正。CAFE 使用共享参数模型交替扮演搜索智能体与 critic，并基于基础智能体自身的失败轨迹初始化反馈条件下的恢复能力，随后结合在线与离线优化。在线强化学习阶段，CAFE 根据同一 prompt 下调用与跳过反馈的成功率差异估计反馈价值，以塑造反馈请求的回报；同时通过反馈感知的优势塑形，重新加权反馈前后的 token 优势。离线阶段，模型利用匹配的成功与失败轨迹进行偏好优化，从 rollout 中学习反馈。在七个智能体搜索基准上，CAFE 的平均表现优于所评估的 RL 搜索智能体，并在六个分布外基准上保持增益，同时减少答案级幻觉。单侧消融实验表明，仅优化智能体或仅优化 critic 最终都会进入平台期，而交替更新二者可持续提升性能。",
+  "key_points_zh": [
+    "将纠正性反馈作为可学习的轨迹内干预，使搜索智能体能在错误累积前主动请求并利用反馈。",
+    "采用共享参数模型交替承担搜索智能体和 critic 角色，使策略及其反馈机制随训练协同演化。",
+    "在线 RL 通过调用—跳过反馈的成功率差塑造请求回报，并用反馈感知的优势塑形调整反馈前后的 token 学习信号。",
+    "离线阶段从匹配的成功与失败 rollout 中进行偏好优化，学习更具针对性的纠正反馈。",
+    "CAFE 在七个搜索基准上取得更高平均性能，在六个分布外基准上保持增益，并降低答案级幻觉。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.89,
+    "problem_significance": 0.93,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.88,
+    "lasting_value": 0.91,
+    "llm_avg": 0.9039999999999999,
+    "comment": "CAFE presents a strong closed-loop search-agent training paradigm in which trajectory-grounded corrective feedback co-evolves with the policy it improves.",
+    "comment_zh": "CAFE提出了强有力的闭环搜索智能体训练范式，使基于轨迹的纠正反馈与其所改进的策略共同演化。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.7213913165723016,
+    "author_reputation": 0.3791989088894918,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9039999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 4,
+    "first_author_h_index": 7,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24794/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24794/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.979
+    }
+  ]
+}

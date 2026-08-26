@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.24132",
+  "title": "From Gradient-Boosted Trees to Deep Recommenders: Practical Lessons from Migrating a Production Customer Support Recommender",
+  "title_zh": "从梯度提升树到深度推荐系统：生产级客户支持推荐系统迁移的实践经验",
+  "authors": [
+    "Sonia Sharma",
+    "Jeyendran Balakrishnan",
+    "Shreya Rajpal",
+    "Swapnil Parekh",
+    "Nagaraj Janardhana",
+    "Andrew Mattarella-Micke"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-25T06:50:39Z",
+  "abs_url": "https://arxiv.org/abs/2608.24132v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.24132",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Product catalogs in fast-moving service businesses are shifting from static, independently priced SKUs toward dynamically bundled, discount-coupled offerings--a shift that strains the tree-based classifiers traditionally preferred for sparse and highly imbalanced data. These classifiers assume a fixed, slowly changing label space and struggle to incorporate multimodal signals such as tabular data and transcripts. We present the migration of a live, production conversational recommendation system from a gradient-boosted multiclass model to a pairwise-binary deep recommender. Because this system is critical to ecosystem growth initiatives and downstream features like dynamic pitching--surfacing the most relevant pitch text to a support agent in real time during a live customer conversation--maintaining live recommendation quality was a non-negotiable constraint. We detail the techniques that made this migration successful--reformulating recommendation as pairwise binary prediction to learn jointly from user and item features, and enhancing learned representations via negative sampling and noise injection. To efficiently incorporate long, live conversation context, we apply attention pooling over transcript chunks and benchmark it against TF-IDF and sentence-embedding baselines. Finally, we explore multiple architectures (including two-tower models, DeepFM, and their variants) and loss functions such as contrastive loss. Evaluating against a CatBoost baseline across all conversational stages, we demonstrate that our approach achieves parity at conversation beginning and outperforms at later conversational stages.",
+  "abstract_zh": "在快速变化的服务型业务中，产品目录正从静态、独立定价的 SKU 转向动态组合且折扣相互关联的产品方案，这给传统上适用于稀疏、高度不平衡数据的树模型分类器带来了挑战。此类分类器通常假设标签空间固定且变化缓慢，也难以融合表格数据、对话文本等多模态信号。本文介绍了一个在线生产级对话推荐系统从梯度提升多分类模型迁移至成对二分类深度推荐模型的过程。该系统对生态增长及 dynamic pitching 等下游功能至关重要；后者需要在实时客户对话中向支持人员展示最相关的话术，因此迁移期间必须维持线上推荐质量。成功迁移的关键包括：将推荐任务重新表述为成对二分类预测，以联合学习用户与商品特征；通过负采样和噪声注入增强表示学习。为高效整合较长的实时对话上下文，本文对转录文本分块应用 attention pooling，并与 TF-IDF 和 sentence embedding 基线进行比较。此外，研究还评估了 two-tower、DeepFM 及其变体等多种架构，以及 contrastive loss 等损失函数。与 CatBoost 基线在各个对话阶段的比较表明，该方法在对话开始阶段达到相当性能，并在后续阶段取得更优表现。",
+  "key_points_zh": [
+    "将固定标签空间的梯度提升多分类任务改写为成对二分类预测，使模型能够联合利用用户特征与商品特征，并适应动态变化的产品目录。",
+    "采用负采样与噪声注入改善表示学习，缓解稀疏数据、类别不平衡及推荐候选变化带来的问题。",
+    "通过对对话转录分块执行 attention pooling 融合长文本上下文，并与 TF-IDF、sentence embedding 等方案进行基准比较。",
+    "系统评估 two-tower、DeepFM 及其变体，并探索 contrastive loss 等训练目标。",
+    "相较 CatBoost，深度推荐模型在对话初始阶段达到性能持平，在获得更多对话上下文后的阶段表现更优。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.76,
+    "novelty": 0.58,
+    "problem_significance": 0.78,
+    "potential_impact": 0.77,
+    "paradigm_shift": 0.46,
+    "lasting_value": 0.68,
+    "llm_avg": 0.654,
+    "comment": "This credible production study advances conversational product recommendation, although its main contribution is practical migration guidance rather than a fundamentally new method.",
+    "comment_zh": "这项生产实践直接推进了对话式商品推荐，但核心价值更偏向系统迁移经验而非全新方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.654,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24132/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24132/fig2.webp",
+      "page": 2,
+      "kind": "table",
+      "confidence": 0.969
+    }
+  ]
+}

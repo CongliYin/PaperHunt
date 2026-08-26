@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.24024",
+  "title": "Beyond Confidence: Test-Time Scaling for Multi-Turn Search Agents via Retrieval Grounding",
+  "title_zh": "超越置信度：基于检索支撑的多轮搜索智能体测试时扩展",
+  "authors": [
+    "Hyunho Kook",
+    "Junhyuk So",
+    "Tianyu Fu",
+    "Haizhong Zheng",
+    "Beidi Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-25T03:28:17Z",
+  "abs_url": "https://arxiv.org/abs/2608.24024v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.24024",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Confidence-based voting aggregates parallel LLM rollouts by weighting each with internal signals such as token log probabilities, and has been actively studied for single-turn reasoning. However, modern LLMs increasingly act as multi-turn search agents that retrieve and condition on external documents. In this paper, we show that confidence-based voting transfers poorly to this multi-turn setting, and identify the underlying failure reason as copy inflation: when retrieved documents are appended to an agent's context, tokens copied from those documents receive systematically inflated log probabilities. This flattens confidence scores within each question and weakens the resulting weighted vote. To address this issue, we propose Retrieval-Grounded Voting (RGV), which scores each rollout by the lexical overlap between its final answer and the documents it retrieved. By computing the signal outside the contaminated context, RGV sidesteps both token log probabilities and additional LLM calls. Across four search-agent benchmarks and five LLMs, RGV consistently outperforms confidence-based voting, with gains of up to +5.4% accuracy and +35% on minority-correct questions, where the correct answer appears in only 1-2 of 8 rollouts.",
+  "abstract_zh": "基于置信度的投票利用 token 对数概率等内部信号对多个并行 LLM rollout 进行加权，已广泛应用于单轮推理。然而，现代 LLM 正日益转向多轮搜索智能体，通过检索外部文档并基于其内容作答。本文发现，基于置信度的投票难以有效迁移到这一多轮场景，其根本原因是“复制膨胀”（copy inflation）：当检索文档被加入智能体上下文后，从文档中复制的 token 会获得系统性偏高的对数概率。这会压平同一问题下不同 rollout 的置信度差异，从而削弱加权投票效果。为解决该问题，作者提出 Retrieval-Grounded Voting（RGV），根据最终答案与该 rollout 所检索文档之间的词汇重叠度进行评分。由于评分信号在受污染的上下文之外计算，RGV 无需依赖 token 对数概率，也不需要额外调用 LLM。在四个搜索智能体基准和五种 LLM 上，RGV 均持续优于基于置信度的投票，准确率最高提升 5.4%；对于 8 个 rollout 中仅有 1—2 个给出正确答案的“少数正确”问题，性能最高提升 35%。",
+  "key_points_zh": [
+    "揭示多轮搜索场景中的“复制膨胀”：检索文档中的复制 token 会获得虚高的对数概率。",
+    "复制膨胀会压平不同 rollout 的置信度，使传统置信度加权投票失效。",
+    "提出 Retrieval-Grounded Voting（RGV），以最终答案和所检索文档的词汇重叠度为 rollout 评分。",
+    "RGV 不依赖 token 对数概率，也无需额外调用 LLM，计算开销较低。",
+    "在四个 benchmark、五种 LLM 上，RGV 最高提升 5.4% 准确率，并在少数正确问题上最高提升 35%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.72,
+    "problem_significance": 0.78,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.74,
+    "llm_avg": 0.724,
+    "comment": "The paper exposes a concrete failure of confidence-based scaling in search agents and supplies a simple retrieval-grounded alternative with broad empirical support.",
+    "comment_zh": "该论文揭示了搜索智能体中置信度扩展的具体失效原因，并提出了具有广泛实证支持的简洁检索落地替代方案。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3233158463485474,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.724,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24024/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.438
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24024/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.623
+    }
+  ]
+}

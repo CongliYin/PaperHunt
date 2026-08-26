@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2608.24188",
+  "title": "Paritok-4B: Intent-Conditioned Context Compression for Coding Agents",
+  "title_zh": "Paritok-4B：面向编程智能体的意图条件化上下文压缩",
+  "authors": [
+    "Jiayu Shi",
+    "Luzhuo Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-25T07:53:30Z",
+  "abs_url": "https://arxiv.org/abs/2608.24188v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.24188",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents re-send large file reads and tool outputs to a frontier LLM every turn, and this context dominates their token bill. General-purpose prompt compressors are trained on prose and suit code poorly: they paraphrase identifiers and drop the exact spans an agent needs to edit. We present Paritok-4B, a 4B LoRA compressor for coding-agent trajectories built on two commitments. It is extractive: it selects spans rather than rewriting them, and 96.0% of the identifiers, paths, and numbers it emits already appear in its input, holding at 96.2% on held-out SWE-bench Lite output. It is intent-conditioned: told the agent's current task, it acts chiefly inside a retained segment, selecting which lines survive (retained lines are +0.067 more intent-relevant than removed ones, paired 95% CI [+0.056, +0.078]) rather than changing how much is retained. We distil a gpt-4.1-mini teacher over 67,074 real OpenHands trajectories into 40,606 validated examples and fine-tune Qwen3-4B. On all 300 SWE-bench Lite instances, Paritok-4B compresses agent context to 25.7% of its size, 2.0x harder than a gpt-4.1-mini compressor (50.2%) and 2.4x harder than gpt-5 (61.9%), while retaining 86.5% of uncompressed single-shot solve quality. Fed the cat -n line-numbered input real agents produce, it compresses slightly less (27.8%) and retains more (89.3%); there the paired test is informative, with 30 instances solved only uncompressed and 17 only compressed, an exact McNemar p=0.079, so at this sample size compressing context to roughly a quarter of its size does not significantly reduce the solve rate. The model is a 264 MB adapter that self-hosts on one 24 GB GPU with no per-token compressor fee, which at list prices decides the economics: gpt-5 as a compressor is net-negative, costing more than the downstream tokens it saves. Weights, data, and evaluation scripts are open (Apache 2.0).",
+  "abstract_zh": "编程智能体在每轮交互中会将大量文件内容和工具输出重新发送给前沿 LLM，导致上下文成为主要 token 成本。通用提示压缩器主要基于自然语言训练，并不适合代码场景，容易改写标识符或删除智能体执行编辑所需的精确片段。本文提出 Paritok-4B，一个面向编程智能体轨迹、基于 LoRA 微调的 4B 参数压缩器。该方法遵循两项核心原则：第一，采用抽取式压缩，仅选择原文片段而不进行改写；其输出中的标识符、路径和数字有 96.0% 可在输入中直接找到，在未见过的 SWE-bench Lite 输出上该比例为 96.2%。第二，引入意图条件（intent conditioning），根据智能体当前任务决定保留哪些代码行，而非主要调节整体保留比例；实验中，保留行的意图相关性比删除行高 0.067，配对 95% 置信区间为 [0.056, 0.078]。作者使用 gpt-4.1-mini 作为教师模型，从 67,074 条真实 OpenHands 轨迹中蒸馏出 40,606 个验证样本，并据此微调 Qwen3-4B。在 SWE-bench Lite 全部 300 个实例上，Paritok-4B 将上下文压缩至原始大小的 25.7%，压缩强度分别约为 gpt-4.1-mini 压缩器和 gpt-5 的 2.0 倍与 2.4 倍，同时保留未压缩单次求解质量的 86.5%。对于真实智能体常用的 cat -n 带行号输入，压缩后上下文占 27.8%，质量保留率提升至 89.3%；其中 30 个实例仅未压缩版本求解成功，17 个仅压缩版本成功，精确 McNemar 检验 p=0.079，表明在当前样本规模下，将上下文压缩至约四分之一并未造成统计显著的求解率下降。该模型以 264 MB adapter 形式发布，可在单张 24 GB GPU 上自托管，不产生按 token 计费的压缩成本；相比之下，使用 gpt-5 压缩上下文的成本高于其节省的下游 token 成本。模型权重、数据和评测脚本均以 Apache 2.0 协议开源。",
+  "key_points_zh": [
+    "Paritok-4B 采用抽取式压缩，不改写代码内容；96% 以上的标识符、路径和数字均直接来自输入，降低代码语义与精确引用被破坏的风险。",
+    "方法通过意图条件选择与当前任务更相关的代码行，主要改变保留内容，而不是简单调整压缩比例。",
+    "模型由 gpt-4.1-mini 教师在 67,074 条 OpenHands 真实轨迹上蒸馏，并使用 40,606 个验证样本对 Qwen3-4B 进行 LoRA 微调。",
+    "在 300 个 SWE-bench Lite 实例上，上下文被压缩至 25.7%；使用 cat -n 输入时压缩至 27.8%，并保留 89.3% 的未压缩单次求解质量。",
+    "264 MB adapter 可在单张 24 GB GPU 上自托管；相较按 token 付费的前沿模型压缩器，其经济性更优，且权重、数据和评测脚本均已开源。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.78,
+    "problem_significance": 0.88,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.85,
+    "llm_avg": 0.8140000000000001,
+    "comment": "Intent-conditioned extractive compression trained on real coding-agent trajectories offers a practical and reusable solution to a major context-cost bottleneck.",
+    "comment_zh": "基于真实编码智能体轨迹训练的意图条件抽取式压缩，为关键的上下文成本瓶颈提供了实用且可复用的方案。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.21754098571521813,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.8140000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24188/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.984
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24188/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.98
+    }
+  ]
+}

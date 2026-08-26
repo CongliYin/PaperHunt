@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2608.24588",
+  "title": "IAPO: Influence-Aware Policy Optimization for Credit Assignment in Multi-Turn Service Agents",
+  "title_zh": "IAPO：面向多轮服务智能体信用分配的影响感知策略优化",
+  "authors": [
+    "Bo Ren",
+    "Yirong Mao",
+    "Yi Yang",
+    "Wenhui Que"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-25T14:14:36Z",
+  "abs_url": "https://arxiv.org/abs/2608.24588v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.24588",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large Language Model (LLM) agents increasingly solve long-horizon tasks through multi-turn interactions with users and external tools. In these settings, relevant task information often unfolds over time rather than being fully specified at the initial prompt. Service agents make this challenge especially concrete: users may clarify or revise their goals, while tool responses provide information needed for subsequent decisions. Thus, a final reward alone cannot indicate which actions contributed to resolving the task. Recent methods rely on comparative evidence from other trajectories or resampled continuations, or on separately constructed step-level learning signals, to refine credit. However, a completed rollout already records how information and errors flow between agent actions. We introduce Influence-Aware Policy Optimization (IAPO), which represents each rollout as a typed influence-dependency graph over trainable agent actions, with user and tool observations serving as evidence. IAPO converts support-use and failed-use structure into routing weights that redistribute the same trajectory-level advantage. Experiments with Qwen3-4B and Qwen3-8B demonstrate superior performance over multi-turn reinforcement learning (RL) baselines across three service-agent benchmarks: {τ^2}-Bench, UserBench, and AgentChangeBench. BFCL-v4 Multi-Turn further shows that these gains do not compromise multi-turn function-calling performance. This work advances the understanding of credit assignment in multi-turn user interactions and provides a principled approach to training service agents from sparse outcome feedback.",
+  "abstract_zh": "大语言模型（LLM）智能体越来越多地通过与用户及外部工具进行多轮交互，解决长时程任务。在此类场景中，任务相关信息通常随交互逐步显现，而非在初始提示中完整给出。服务智能体尤其面临这一问题：用户可能澄清或修改目标，工具响应也会提供后续决策所需的信息。因此，仅依靠最终奖励无法判断哪些动作真正促成了任务解决。现有方法通常借助其他轨迹、重采样续写所提供的比较证据，或额外构造步骤级学习信号来细化信用分配。然而，一条完整 rollout 本身已经记录了信息与错误如何在智能体动作之间传播。本文提出 Influence-Aware Policy Optimization（IAPO），将每条 rollout 表示为作用于可训练智能体动作的类型化影响依赖图，并把用户反馈与工具观测作为证据。IAPO 根据成功使用信息的 support-use 结构和未能有效使用信息的 failed-use 结构生成路由权重，从而在不引入新奖励的情况下，重新分配同一轨迹的整体优势值。基于 Qwen3-4B 和 Qwen3-8B 的实验表明，IAPO 在 τ²-Bench、UserBench 和 AgentChangeBench 三个服务智能体基准上优于多轮强化学习基线；BFCL-v4 Multi-Turn 的结果进一步说明，这些收益不会损害模型的多轮函数调用能力。该工作深化了对多轮用户交互中信用分配问题的理解，并为利用稀疏结果反馈训练服务智能体提供了一种原则化方法。",
+  "key_points_zh": [
+    "针对多轮服务任务中最终奖励稀疏、难以识别关键动作贡献的信用分配问题，IAPO 直接挖掘单条完整 rollout 内的信息与错误传播关系。",
+    "将 rollout 建模为类型化影响依赖图：节点对应可训练的智能体动作，用户消息和工具响应则作为判断动作依赖与影响关系的证据。",
+    "利用 support-use 与 failed-use 结构计算路由权重，在保持轨迹级优势总量不变的前提下，将优势重新分配给不同动作，无需额外步骤奖励或对比轨迹。",
+    "在 Qwen3-4B 和 Qwen3-8B 上，IAPO 在 τ²-Bench、UserBench、AgentChangeBench 三个服务智能体基准中优于多轮 RL 基线。",
+    "BFCL-v4 Multi-Turn 实验显示，IAPO 提升服务任务表现的同时，没有牺牲多轮函数调用能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.85,
+    "problem_significance": 0.92,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.79,
+    "lasting_value": 0.87,
+    "llm_avg": 0.8619999999999999,
+    "comment": "IAPO provides a principled trajectory-internal credit-assignment mechanism for training multi-turn tool-using agents from sparse outcome rewards.",
+    "comment_zh": "IAPO为利用稀疏结果奖励训练多轮工具型智能体提供了原则明确的轨迹内部信用分配机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.23816576137838616,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.8619999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24588/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.24588/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}
