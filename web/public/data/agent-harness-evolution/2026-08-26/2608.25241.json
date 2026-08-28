@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.25241",
+  "title": "A Few Pages of Markdown: Committed AI Configuration and Lower Quality Cost after Coding-Agent Adoption",
+  "title_zh": "几页 Markdown：Coding-Agent 采用后的提交式 AI 配置与更低质量成本",
+  "authors": [
+    "Yegor Denisov-Blanch",
+    "Shyam Agarwal",
+    "Pavel Azaletskiy",
+    "Hao He",
+    "Rylan Schaeffer",
+    "Brando Miranda",
+    "Bogdan Vasilescu",
+    "Sanmi Koyejo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-26T00:00:48Z",
+  "abs_url": "https://arxiv.org/abs/2608.25241v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.25241",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents increase development velocity but also technical debt. Prior work reports only average effects across adopters, hiding wide differences between teams. We introduce RAMP (Repository AI Maturity Profile), a four-level cumulative maturity model grounded in version-controlled artifacts that teams commit to configure AI tools. RAMP runs from behavioral rules and coding standards through named agent definitions to multi-agent orchestration, with observed practice concentrated in the first three levels. Across 441 repositories the levels behave as a cumulative scale, and independent human annotation reproduces RAMP's repository-level labels on 97% of a held-out sample. Adoption is cumulative, forward-only, and set-and-forget: 73.8% of artifacts are committed once and never modified. Re-estimating an existing agent-adoption panel within each stratum, agents accelerate development regardless of maturity (28-38% more commits), but quality diverges: among agent-first repositories, where the contrast is identified, those without committed AI configuration show roughly twice the increase in cognitive complexity (+53% versus +27%) and 1.7x the increase in static-analysis warnings. Because maturity is observational, correlated engineering discipline or model capability may explain part of the gap; we present these findings as hypothesis-generating and release RAMP as a reusable instrument.",
+  "abstract_zh": "Coding agents 能提升开发速度，但也可能增加技术债务。既有研究通常只报告采用团队的平均效果，掩盖了团队间的显著差异。本文提出 RAMP（Repository AI Maturity Profile），一种基于团队提交到版本控制系统中的 AI 配置工件、包含四个累积等级的成熟度模型：从行为规则与编码规范，到命名 agent 定义，再到多 agent 编排；实际使用主要集中在前三级。对 441 个 repositories 的分析表明，各等级构成稳定的累积量表；在留出样本中，独立人工标注与 RAMP 的 repository-level 标签有 97% 的一致率。AI 配置采用具有累积、单向推进和 set-and-forget 特征：73.8% 的工件只提交一次且从未修改。在按成熟度分层、重新估计既有 agent-adoption panel 后发现，无论成熟度如何，agents 都能加速开发，提交量增加约 28%–38%。但代码质量出现分化：在 agent-first repositories 中，未提交 AI 配置的仓库认知复杂度增幅约为有配置仓库的两倍（+53% 对 +27%），静态分析警告增幅为 1.7 倍。由于成熟度属于观察性变量，工程纪律或模型能力等相关因素可能部分解释这一差距，因此本文将结果定位为生成假设的发现，并发布 RAMP 作为可复用测量工具。",
+  "key_points_zh": [
+    "提出 RAMP（Repository AI Maturity Profile），用版本控制中的 AI 配置工件衡量团队成熟度，覆盖行为规则、编码规范、命名 agent 与多 agent 编排四个累积等级。",
+    "在 441 个 repositories 中，RAMP 等级表现为稳定的累积尺度；独立人工标注与自动标签在留出样本上的一致率达到 97%。",
+    "Coding agents 无论成熟度如何都能提升开发速度，提交量增加约 28%–38%；AI 配置采用主要呈累积、单向推进且 set-and-forget。",
+    "在 agent-first repositories 中，未提交 AI 配置的仓库认知复杂度增幅更高（+53% 对 +27%），静态分析警告增幅约高 1.7 倍。",
+    "研究结果仍可能受工程纪律、模型能力等混杂因素影响，作者将其视为生成假设的证据，并开源 RAMP 作为可复用研究工具。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.74,
+    "problem_significance": 0.79,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.76,
+    "llm_avg": 0.728,
+    "comment": "This is a useful coding-agent adoption study that contributes a reproducible configuration-maturity instrument and evidence about quality tradeoffs.",
+    "comment_zh": "这是一项有用的Coding-Agent采用研究，提供了可复现的配置成熟度工具以及质量权衡证据。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.34373441375821495,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.728,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25241/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.936
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25241/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

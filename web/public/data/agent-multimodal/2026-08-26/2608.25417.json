@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.25417",
+  "title": "Paint What You See: Benchmarking Dexterous Visual Tool Use in Multimodal Agents",
+  "title_zh": "画出你所见：多模态智能体灵巧视觉工具使用基准",
+  "authors": [
+    "Shudong Liu",
+    "Dongyang Chen",
+    "Enci Zhang",
+    "Jinwei Liang",
+    "Zheng Ma",
+    "Lewei Lu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-26T06:19:28Z",
+  "abs_url": "https://arxiv.org/abs/2608.25417v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.25417",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Evaluation is shifting from static QA toward agentic settings where models act through external tools. We identify a critical yet underexplored capability within this space - dexterous visual tool use: fine-grained, closed-loop parameterized visual action in which models infer tool parameters from visual evidence, and those parameters directly govern the final result. Existing benchmarks cover web navigation, GUI operation, and software engineering, but rarely target this coupling between visual evidence and execution precision. We propose EASEL, a benchmark evaluating a controlled instance of dexterous visual tool use that adopts reference-guided visual reconstruction as its primary proxy task: the agent incrementally paints a canvas to match a reference image. EASEL additionally includes semantic tasks spanning region annotation, handwriting, and path planning. We further provide EASEL-Data, a 440k-sample two-stage curriculum dataset for trajectory supervision, and EASEL-9B to investigate its effect on this capability. Evaluation of 25 models reveals that current multimodal agents systematically struggle on EASEL. Reconstruction similarity bottlenecks at low levels (0.40-0.54), while trajectory diagnostics expose severe closed-loop instability - models typically saturate early or degrade post-peak. Semantic tasks reveal sharp capability boundaries in precision annotation and path planning. EASEL-9B, trained on EASEL-Data, surpasses the base model by a relative 6.3%, ranking third among all evaluated models.",
+  "abstract_zh": "随着模型评测从静态问答转向借助外部工具执行任务，灵巧视觉工具使用成为一个关键但研究不足的能力：模型需要根据视觉证据推断精细的工具参数，并通过闭环交互执行动作，使参数直接决定最终结果。现有基准主要覆盖网页导航、GUI 操作和软件工程，较少评估视觉证据与执行精度之间的耦合。本文提出 EASEL，用参考图像引导的视觉重建作为主要代理任务：智能体逐步在画布上作画，使结果匹配参考图像；同时涵盖区域标注、手写和路径规划等语义任务。作者还构建了包含 44 万条样本的两阶段课程学习轨迹数据集 EASEL-Data，并训练 EASEL-9B 以研究其对该能力的影响。对 25 个模型的评测表明，当前多模态智能体在 EASEL 上普遍表现不佳：重建相似度仅为 0.40–0.54，轨迹诊断显示严重的闭环不稳定性，模型通常过早饱和或在达到峰值后性能下降；语义任务则暴露出模型在精确标注和路径规划方面的明显能力边界。经 EASEL-Data 训练后，EASEL-9B 相对基础模型提升 6.3%，在所有参评模型中排名第三。",
+  "key_points_zh": [
+    "提出 EASEL，系统评测模型依据视觉反馈进行精细、参数化、闭环视觉操作的能力。",
+    "以参考图像引导绘画重建为核心任务，并加入区域标注、手写和路径规划等语义任务。",
+    "EASEL-Data 包含 44 万条两阶段课程学习轨迹，用于监督智能体学习工具操作策略。",
+    "25 个模型的结果显示，当前多模态智能体重建相似度偏低，且存在过早饱和、峰后退化等闭环不稳定问题。",
+    "EASEL-9B 经过训练后相对基础模型提升 6.3%，综合排名第三。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.86,
+    "problem_significance": 0.88,
+    "potential_impact": 0.89,
+    "paradigm_shift": 0.77,
+    "lasting_value": 0.9,
+    "llm_avg": 0.86,
+    "comment": "A strong closed-loop visual tool-use benchmark with precise action grounding, trajectory diagnostics, and reusable training data for multimodal agents.",
+    "comment_zh": "这是一个面向多模态智能体的强闭环视觉工具使用基准，结合了精确动作 grounding、轨迹诊断和可复用训练数据。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.86,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25417/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25417/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

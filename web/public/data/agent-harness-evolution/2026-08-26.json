@@ -1,0 +1,170 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-08-26",
+  "generated_at": "2026-08-28T04:11:50Z",
+  "papers": [
+    {
+      "arxiv_id": "2608.25593",
+      "title": "JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution",
+      "title_zh": "JIT-Agent：通过即时 Harness 演化扩展 Harness 智能",
+      "authors": [
+        "Guibin Zhang",
+        "Leo Lu",
+        "Fangzhou Xie",
+        "Kang Zhu",
+        "Junhao Wang",
+        "Zhifei Xie",
+        "Zhaochen Yu",
+        "Zihang Liu",
+        "Zhongxiang Sun",
+        "Qiankun Li",
+        "Yue Liao",
+        "Heng Chang",
+        "Xiaobin Hu",
+        "Qibing Ren",
+        "Wangchunshu Zhou",
+        "Shuicheng Yan"
+      ],
+      "total_score": 0.7412849762449767,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.924,
+        "domain_fit": 0.97,
+        "other": 0.37361658748325555
+      },
+      "tags": [
+        "HF Daily ★47",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "JIT-Agent让Agent可即时生成并持续演化Harness",
+      "detail_file": "agent-harness-evolution/2026-08-26/2608.25593.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25593/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.25992",
+      "title": "ProgRouter: Online Progress-Guided Orchestration for Multi-Agent LLM Workflows under Quality-Cost Tradeoffs",
+      "title_zh": "ProgRouter：面向质量—成本权衡的多智能体 LLM 工作流在线进度引导编排",
+      "authors": [
+        "Songyuan Li",
+        "Ahmed M. Abdelmoniem",
+        "Shiqiang Wang"
+      ],
+      "total_score": 0.6317258286877777,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.7940000000000002,
+        "domain_fit": 0.88,
+        "other": 0.19175276229259217
+      },
+      "tags": [
+        "session context state"
+      ],
+      "tldr_zh": "按任务进度动态路由，降低多智能体工作流成本",
+      "detail_file": "agent-harness-evolution/2026-08-26/2608.25992.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25992/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.25241",
+      "title": "A Few Pages of Markdown: Committed AI Configuration and Lower Quality Cost after Coding-Agent Adoption",
+      "title_zh": "几页 Markdown：Coding-Agent 采用后的提交式 AI 配置与更低质量成本",
+      "authors": [
+        "Yegor Denisov-Blanch",
+        "Shyam Agarwal",
+        "Pavel Azaletskiy",
+        "Hao He",
+        "Rylan Schaeffer",
+        "Brando Miranda",
+        "Bogdan Vasilescu",
+        "Sanmi Koyejo"
+      ],
+      "total_score": 0.6165867206879108,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.728,
+        "domain_fit": 0.78,
+        "other": 0.20728906895970253
+      },
+      "tags": [
+        "harness multi agent orchestration"
+      ],
+      "tldr_zh": "提交式 AI 配置或能降低 Coding-Agent 的质量成本",
+      "detail_file": "agent-harness-evolution/2026-08-26/2608.25241.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25241/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.26218",
+      "title": "Same Model, Different Harness: Different Coding-Agent Results",
+      "title_zh": "同一模型，不同 Harness：不同的 Coding-Agent 结果",
+      "authors": [
+        "Sydney Lewis"
+      ],
+      "total_score": 0.49150000000000005,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.8300000000000001,
+        "domain_fit": 0.93,
+        "other": 0.275
+      },
+      "tags": [
+        "GitHub",
+        "general tool agents"
+      ],
+      "tldr_zh": "Coding-agent 结果取决于模型与 harness 的组合",
+      "detail_file": "agent-harness-evolution/2026-08-26/2608.26218.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26218/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.25523",
+      "title": "TOPAS: Workflow-Aware Prefix-State Scheduling for Multi-Agent LLM Serving",
+      "title_zh": "TOPAS：面向工作流感知的多智能体 LLM 服务前缀状态调度",
+      "authors": [
+        "Hongqiu Ni",
+        "Han Tian",
+        "Chi Zhang",
+        "Guopeng Li",
+        "Haisheng Tan"
+      ],
+      "total_score": 0.4677706747734205,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.844,
+        "domain_fit": 0.92,
+        "other": 0.23523558257806843
+      },
+      "tags": [
+        "generic verifier reward eval terms"
+      ],
+      "tldr_zh": "TOPAS 联合优化前缀缓存与请求调度，显著降低多智能体工作流 JCT。",
+      "detail_file": "agent-harness-evolution/2026-08-26/2608.25523.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25523/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.26432",
+      "title": "SpeechGym: An Audio-Native Gym for Training Voice Agents via Reinforcement Learning",
+      "title_zh": "SpeechGym：通过强化学习训练语音智能体的原生音频 Gym",
+      "authors": [
+        "Jiajun Fan",
+        "Jingyuan Li",
+        "Prashanth Gurunath Shivakumar",
+        "Jia-Hong Huang",
+        "Qi Luo",
+        "M. Maruf",
+        "Ivan Bulyko",
+        "Ge Liu",
+        "Roger Ren"
+      ],
+      "total_score": 0.27300828806891936,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.812,
+        "domain_fit": 0.76,
+        "other": 0.09802762689639768
+      },
+      "tags": [],
+      "tldr_zh": "SpeechGym用过程奖励训练可迁移的语音智能体",
+      "detail_file": "agent-harness-evolution/2026-08-26/2608.26432.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26432/thumb.webp"
+    }
+  ]
+}

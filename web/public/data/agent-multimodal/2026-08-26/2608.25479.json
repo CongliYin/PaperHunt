@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2608.25479",
+  "title": "4DStreamCtrl: Interactive Video Generation with Online 4D Control",
+  "title_zh": "4DStreamCtrl：基于在线4D控制的交互式视频生成",
+  "authors": [
+    "Shiqian Li",
+    "Chenguo Lin",
+    "Zhiguang Liu",
+    "Yu Tang",
+    "Jiarong Ou",
+    "Rui Chen",
+    "Yixin Zhu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-26T07:49:39Z",
+  "abs_url": "https://arxiv.org/abs/2608.25479v2",
+  "pdf_url": "https://arxiv.org/pdf/2608.25479",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Generative video models now synthesize footage nearly indistinguishable from reality. Their promise as interactive tools hinges on fine-grained control of how objects and the camera move over time, yet each existing approach captures only part of this: camera-parameter methods steer the viewpoint but cannot move objects, 2D-trajectory methods act in the image plane and ignore depth and occlusion, and recent 3D methods add geometry but run only offline at a fixed length. In particular, none combines 3D-consistent control of both camera and objects with real-time, streaming generation. Here we show that camera motion, object trajectories, and depth can be unified into a single 3D point-track representation, from which one model performs joint camera and object control, depth editing, and motion transfer in a single forward pass. To learn this interface at scale, we mine in-the-wild video for 3D motion supervision, yielding OpenVidHD-Motion3D, and encode it with a lightweight Geometric Motion Head that plugs into a pretrained video diffusion model. Because this encoder is temporally separable, we distill the model into a causal streaming student that generates arbitrarily long video in four denoising steps at memory independent of length. This unified design surpasses prior camera-only, 2D, and offline-3D methods in motion-control precision while covering modalities they address only in isolation. 4DStreamCtrl runs at 20 FPS on a single high-end GPU for 480p video and stays temporally coherent over hundreds of frames, enabling, to our knowledge, interactive 4D-controllable streaming generation for the first time. More broadly, grounding generation in explicit 3D geometry with efficient causal inference points toward interactive world models with closed-loop spatiotemporal control, from controllable simulators to real-time visual imagination for embodied agents.",
+  "abstract_zh": "本文提出4DStreamCtrl，将相机运动、物体轨迹与深度统一表示为3D点轨迹，从而在单次前向推理中实现相机与物体的联合控制、深度编辑和运动迁移。作者从真实世界视频中挖掘3D运动监督，构建OpenVidHD-Motion3D数据集，并设计轻量级Geometric Motion Head，将其接入预训练视频扩散模型。借助时间可分离编码器，模型进一步蒸馏为因果流式生成器，仅需4步去噪即可生成任意长度视频，且显存占用与视频长度无关。在单张高端GPU上，4DStreamCtrl可对480p视频以20 FPS运行，并在数百帧范围内保持时间一致性，实现了实时、流式且同时具备相机和物体3D控制能力的视频生成。",
+  "key_points_zh": [
+    "提出统一的3D点轨迹表示，同时控制相机运动、物体运动与深度。",
+    "发布OpenVidHD-Motion3D，从真实世界视频中获得大规模3D运动监督。",
+    "设计Geometric Motion Head，可插入预训练视频扩散模型并支持多种运动控制任务。",
+    "通过因果蒸馏实现任意长度流式生成，4步去噪且显存占用与视频长度无关。",
+    "在480p分辨率下达到20 FPS，并在数百帧视频中保持时间一致性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.71,
+    "novelty": 0.91,
+    "problem_significance": 0.8,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.83,
+    "llm_avg": 0.8399999999999999,
+    "comment": "A highly novel real-time controllable video-generation system with explicit 4D grounding and strong potential for interactive visual-world and embodied-agent infrastructure.",
+    "comment_zh": "这是一个高度新颖的实时可控视频生成系统，具备显式四维 grounding，并对交互式视觉世界和具身智能体基础设施具有较大潜力。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8399999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25479/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25479/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

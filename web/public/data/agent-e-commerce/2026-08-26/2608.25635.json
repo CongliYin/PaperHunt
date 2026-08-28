@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2608.25635",
+  "title": "DCEO: Direct Causal Effect Optimization for Long-Term User Value Modeling in E-commerce Search",
+  "title_zh": "DCEO：面向电商搜索长期用户价值建模的直接因果效应优化",
+  "authors": [
+    "Junzhao Zhang",
+    "Tao Zhang",
+    "Liren Yu",
+    "Feiyi Dong",
+    "Zhixuan Zhang",
+    "Dan Ou",
+    "Haihong Tang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-26T11:02:50Z",
+  "abs_url": "https://arxiv.org/abs/2608.25635v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.25635",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Industrial e-commerce search systems ultimately aim to optimize the user-level long-term objective, such as n-day cumulative purchases or gross merchandise value (GMV) per user. However, such objectives are defined at the user level, whereas search ranking is based on item-level scores within each request. Existing methods typically bridge this granularity gap through manually designed multi-objective fusion, where predictions of multiple item-level objectives, such as clicks, carts, purchases, and transaction value, are combined into a ranking score that serves as a proxy for the ultimate objective. Such hand-crafted fusion schemes rely on a small set of manually tuned weights, limiting fine-grained personalization and leading to suboptimal alignment with the ultimate objective. In this paper, we propose DCEO (Direct Causal Effect Optimization), a data-driven framework for learning item-level proxy scores that are better aligned with the ultimate objective. We first aggregate the item-level proxy scores into a user-level proxy metric and quantify its alignment with the ultimate objective using a relative causal effect. We then develop an actor-critic framework, where the critic estimates the ultimate objective for a given user-level proxy metric, and the actor dynamically generates context-dependent fusion weights over multiple objectives to construct the item-level proxy scores and is trained to directly optimize the relative causal effect. Extensive offline experiments and analyses demonstrate the effectiveness and interpretability of DCEO. In addition, DCEO has been deployed in a large-scale industrial e-commerce search system, outperforming the conventional GMV proxy by 0.36% in GMV in a 41-day online A/B test.",
+  "abstract_zh": "电商搜索的终极目标通常是优化用户级长期指标，如多日累计购买量或每用户GMV，但实际排序依赖请求内的商品级分数，存在粒度不一致问题。现有方法通常手工融合点击、加购、购买和交易价值等商品级目标，依赖少量人工权重，难以实现细粒度个性化并与最终目标充分对齐。本文提出DCEO（Direct Causal Effect Optimization），通过数据驱动方式学习更贴合最终目标的商品级代理分数。该方法首先将商品级代理分数聚合为用户级代理指标，并利用相对因果效应（relative causal effect）衡量其与最终目标的一致性；随后构建Actor-Critic框架，由Critic估计给定用户级代理指标对应的最终目标，Actor根据上下文动态生成多目标融合权重，构造商品级代理分数，并直接优化相对因果效应。离线实验表明DCEO有效且具有可解释性。在大规模工业电商搜索系统的41天线上A/B测试中，DCEO较传统GMV代理指标带来0.36%的GMV提升。",
+  "key_points_zh": [
+    "针对用户级长期目标与商品级排序分数之间的粒度鸿沟，DCEO避免依赖固定的手工融合权重。",
+    "通过聚合商品级代理分数构造用户级代理指标，并以相对因果效应直接衡量其与最终目标的对齐程度。",
+    "采用Actor-Critic架构：Critic评估长期目标，Actor根据用户与上下文动态生成多目标融合权重。",
+    "该方法兼顾个性化、目标对齐与可解释性，能够联合利用点击、加购、购买和交易价值等信号。",
+    "在线41天A/B测试中，DCEO相较传统GMV代理指标实现0.36%的GMV提升。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.84,
+    "problem_significance": 0.96,
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8880000000000001,
+    "comment": "DCEO directly advances industrial e-commerce search by causally aligning item-level ranking with long-term user value and validating gains in a large-scale online A/B test.",
+    "comment_zh": "DCEO通过因果方式将商品级排序与用户长期价值对齐，直接推进了工业电商搜索并在大规模线上实验中验证了收益。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.21754098571521813,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8880000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25635/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25635/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.974
+    }
+  ]
+}

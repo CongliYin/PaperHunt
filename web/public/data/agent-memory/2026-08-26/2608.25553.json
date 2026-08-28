@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2608.25553",
+  "title": "When Stale Constraints Go Unchecked: Budgeted Verification Failures in Inherited Agent Memory",
+  "title_zh": "当过时约束未经核查：继承式智能体记忆中的预算化验证失败",
+  "authors": [
+    "Kazuki Nakayashiki"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-26T09:04:21Z",
+  "abs_url": "https://arxiv.org/abs/2608.25553v2",
+  "pdf_url": "https://arxiv.org/pdf/2608.25553",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "An agent that inherits a consolidated memory may inherit a constraint that was true when written and has since been withdrawn by a newer authoritative record. Under a scarce verification budget, does the agent recover the withdrawal, and if not, is the resulting stale-consistent decision avoidable without spending more? We model supersession explicitly -- provenance is immutable; what changes is which record is current -- and assign by design the memory's form, the world's state and the verification policy at a fixed budget of two records: the agent's own allocation, or the same budget with one slot re-assigned to the critical provenance path or to a random record. With a constraint stated, agents inspected its provenance path in about one episode in five; when that constraint had been superseded, native allocation produced stale-consistent decisions in 77.3%, 74.7% and 74.7% of episodes across a primary run, a fresh-wording replication and a held-out domain. Re-assigning one slot to the critical path raised current-record-consistent decisions by +74.0, +72.7 and +61.3 points, positive in six of six models in each run, and left an already near-ceiling rate unchanged when the record agreed with the memory. The held-out scenario was later found to contain a temporal inconsistency; a robustness replication with one sentence corrected, deposited externally before execution, gave +73.3 points (positive in 5 of six models, the sixth at a native missed-path rate of zero) and is reported alongside the original. The intervention uses knowledge of the critical path and is not a scheduler; it quantifies how much of the stale-consistent decision rate the bundled same-budget policy removes: the effect approaches the native missed-path rate in the primary, replication and corrected held-out runs. Memory systems may need freshness or supersession signals separate from relevance.",
+  "abstract_zh": "本文研究智能体继承已整合记忆后，如何处理已被更新权威记录撤回的旧约束。在仅能核查两条记录的固定预算下，作者显式建模记录的替代关系：来源链（provenance）保持不变，但当前有效记录会变化。实验比较了智能体原生分配预算、将一个名额重分配给关键来源链，以及重分配给随机记录三种策略。原生策略仅约五分之一的情形检查约束来源；当约束已被替代时，原生分配导致与旧记忆一致但与当前记录不一致的决策比例高达77.3%、74.7%和74.7%。将一个核查名额定向分配给关键来源链后，与当前记录一致的决策率分别提升74.0、72.7和61.3个百分点，且在六个模型中均有效。修正存在时间不一致的留出场景后，提升仍达73.3个百分点。结果表明，定向核查几乎可以消除由未检查关键来源链造成的过时决策，但该干预依赖已知关键路径，并非通用调度器。记忆系统可能需要独立于相关性的时效性与替代关系信号。",
+  "key_points_zh": [
+    "继承式记忆可能保留曾经正确、但已被新权威记录撤回的过时约束。",
+    "在两条记录的核查预算下，原生分配仅约五分之一会检查关键来源链；过时约束导致77.3%至74.7%的陈旧一致决策。",
+    "将一个预算名额定向分配给关键来源链，可使当前记录一致率提升61.3至74.0个百分点，效果在多模型、多场景中稳定。",
+    "该干预利用了关键路径信息，主要用于量化可避免的失败比例，并不等同于通用验证调度策略。",
+    "记忆系统应补充独立于相关性的时效性（freshness）和替代关系（supersession）信号。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.91,
+    "novelty": 0.82,
+    "problem_significance": 0.9,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8240000000000001,
+    "comment": "A rigorous Agent-memory evaluation exposing stale supersession failures and quantifying the value of provenance-aware verification under a fixed budget.",
+    "comment_zh": "这是一项严谨的 Agent Memory 评估工作，揭示了过时约束的失效模式，并量化了固定预算下基于来源验证的价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3525828687777642,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8240000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25553/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.953
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25553/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.964
+    }
+  ]
+}

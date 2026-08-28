@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2608.25992",
+  "title": "ProgRouter: Online Progress-Guided Orchestration for Multi-Agent LLM Workflows under Quality-Cost Tradeoffs",
+  "title_zh": "ProgRouter：面向质量—成本权衡的多智能体 LLM 工作流在线进度引导编排",
+  "authors": [
+    "Songyuan Li",
+    "Ahmed M. Abdelmoniem",
+    "Shiqiang Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-26T16:42:02Z",
+  "abs_url": "https://arxiv.org/abs/2608.25992v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.25992",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-agent large language model (LLM) workflows have emerged as a powerful paradigm for solving complex, open-ended tasks through collaborative reasoning among specialized LLM agents, but they incur substantial operating costs due to repeated LLM invocations and long-horizon context accumulation. Existing cascade routing methods make one-shot, query-level decisions and cannot adapt to the dynamic, state-dependent nature of multi-step workflows, in which the right LLM at each step depends on evolving task progress, remaining task difficulty, and cost-efficiency requirements. We present ProgRouter, an online progress-guided routing framework that adaptively selects LLM agents across workflow steps to preserve task-solving quality while adhering to time and cost budgets. ProgRouter introduces a multi-view task progress scorer that combines coarse workflow outcome regimes with fine-grained signals on subtask completion, progress trends, and workflow state quality. Then, a dual-path task progress predictor and an adaptive meta-gating mechanism estimate the progress gain for each candidate routed LLM. ProgRouter makes online step-wise routing decisions that balance progress gain, task time budgets, and long-term operating cost efficiency. Experiments on HumanEval Plus, MBPP, MATH-500, and ASQA, spanning agentic code generation, mathematical reasoning, and retrieval-augmented long-form question answering, demonstrate that ProgRouter reduces the operating cost relative to key baselines while maintaining strong task-solving performance.",
+  "abstract_zh": "多智能体大语言模型（LLM）工作流通过专门化 LLM agent 的协作推理解决复杂开放任务，但反复调用 LLM 及长期上下文累积带来了较高运行成本。现有级联路由方法通常只在查询级别进行一次性决策，无法适应多步工作流中随任务进展、剩余难度和成本效率要求动态变化的路由需求。本文提出 ProgRouter，一种在线进度引导路由框架，在满足时间与成本预算的同时，自适应地为各工作流步骤选择合适的 LLM agent。ProgRouter 首先设计多视角任务进度评分器，将粗粒度的工作流结果状态与子任务完成度、进度趋势及工作流状态质量等细粒度信号结合起来；随后通过双路径任务进度预测器和自适应元门控机制，估计候选 LLM 带来的进度增益。基于这些估计，ProgRouter 在线逐步执行路由决策，在进度收益、任务时间预算和长期运行成本效率之间进行权衡。在 HumanEval Plus、MBPP、MATH-500 和 ASQA 上的实验覆盖 agentic 代码生成、数学推理及检索增强长文本问答，结果表明，ProgRouter 在保持较强任务性能的同时，相较关键基线能够降低运行成本。",
+  "key_points_zh": [
+    "针对多智能体 LLM 工作流中的动态路由问题，ProgRouter 将一次性查询级路由扩展为在线逐步决策。",
+    "多视角任务进度评分器综合工作流结果状态、子任务完成度、进度趋势和状态质量等信号。",
+    "双路径任务进度预测器与自适应元门控机制估计不同候选 LLM 的进度增益。",
+    "路由决策同时考虑任务质量、时间预算与长期运行成本效率，实现质量—成本权衡。",
+    "在 HumanEval Plus、MBPP、MATH-500 和 ASQA 上验证了较低运行成本与较强任务性能。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.8,
+    "problem_significance": 0.84,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.78,
+    "llm_avg": 0.7940000000000002,
+    "comment": "ProgRouter addresses a core orchestration problem by making model routing adaptive to workflow progress, quality, and operating cost.",
+    "comment_zh": "ProgRouter针对核心编排问题，使模型路由能够根据工作流进展、质量和运行成本进行自适应调整。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7940000000000002,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25992/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.925
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25992/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.97
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2608.26432",
+  "title": "SpeechGym: An Audio-Native Gym for Training Voice Agents via Reinforcement Learning",
+  "title_zh": "SpeechGym：通过强化学习训练语音智能体的原生音频 Gym",
+  "authors": [
+    "Jiajun Fan",
+    "Jingyuan Li",
+    "Prashanth Gurunath Shivakumar",
+    "Jia-Hong Huang",
+    "Qi Luo",
+    "M. Maruf",
+    "Ivan Bulyko",
+    "Ge Liu",
+    "Roger Ren"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-26T22:16:05Z",
+  "abs_url": "https://arxiv.org/abs/2608.26432v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.26432",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Voice agents must call tools and hold multi-turn dialogue entirely through speech, yet the dominant paradigm trains them in text. Existing frameworks either cascade TTS and ASR around a proprietary voice API, where gradients cannot flow and per-call cost makes on-policy reinforcement learning prohibitive, or stay in text: they measure voice agents but cannot improve them. We present SpeechGym, an audio-native agentic environment in which two omni-modal models converse in native audio, with no external ASR or TTS and no API boundary, over the unmodified tasks, tools and success check of an established text agentic benchmark, so that the interaction modality is the only variable and the loop stays local and trainable end to end. Audio agentic capability does not follow from audio understanding. The failures speech introduces are perceptual rather than reasoning deficits: the agent picks the right tool and the right argument slot but fills it with a value misheard from the waveform, and that single error cascades into a failed call, a retry of the same call, and a wasted step budget. A second failure is behavioural: under an insistent caller the agent performs an unauthorised write and ends the episode believing it helped. Both are trainable, because the environment labels them for free: a call with a misheard argument fails against the database while a correct one succeeds. The obstacle is sparsity, not signal. Outcome-only GRPO is gradient-starved here, since almost every rollout group fails identically, while a per-turn process reward crediting each successful tool call restores variance to nearly every group. Trained this way, the agent transfers with no further tuning to an independently implemented voice benchmark, more than doubling task success and carrying an open-weights model from last place to second on that leaderboard, while using fewer turns and tokens than before training.",
+  "abstract_zh": "本文提出 SpeechGym，一个面向语音智能体强化学习的原生音频环境。两个 omni-modal 模型直接以音频进行多轮对话并调用工具，无需外部 ASR、TTS 或闭源 API，且沿用已有文本智能体基准的任务、工具和成功判定，使交互模态成为唯一变量，并支持本地端到端训练。实验发现，语音智能体的主要问题并非推理能力不足，而是感知错误和行为失控：模型可能选对工具及参数槽位，却将语音内容听错，导致工具调用失败、重复重试并浪费步数；面对强势来电者时，还可能执行未经授权的写操作。由于成功工具调用可由数据库结果自动判定，SpeechGym 能提供免费的过程监督。相比几乎无法获得有效梯度的 outcome-only GRPO，按轮次奖励成功工具调用能够恢复训练信号。训练后的模型无需进一步微调，即可迁移到独立实现的语音基准，任务成功率提升超过一倍，并使一个 open-weights 模型从排行榜末位升至第二名，同时减少交互轮次和 token 消耗。",
+  "key_points_zh": [
+    "构建原生音频 agentic environment：模型直接以语音对话和调用工具，去除外部 ASR、TTS 及 API 边界。",
+    "语音任务失败主要源于感知和行为问题，而非推理问题，包括误听参数值和执行未经授权的写操作。",
+    "Outcome-only GRPO 面临奖励稀疏；按轮次奖励成功工具调用可显著增加训练方差与有效梯度。",
+    "训练后模型无需额外微调即可迁移到独立语音基准，任务成功率提升超过一倍。",
+    "训练同时降低交互轮次与 token 消耗，并将 open-weights 模型从排行榜末位提升至第二名。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.76,
+    "novelty": 0.86,
+    "problem_significance": 0.82,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.78,
+    "llm_avg": 0.812,
+    "comment": "SpeechGym contributes an environment-grounded, process-reward training loop for tool-using voice agents with demonstrated cross-benchmark transfer.",
+    "comment_zh": "SpeechGym为工具调用语音智能体提供了基于环境和过程奖励的训练闭环，并展示了跨基准迁移效果。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.23816576137838616,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.812,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26432/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26432/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.91
+    }
+  ]
+}

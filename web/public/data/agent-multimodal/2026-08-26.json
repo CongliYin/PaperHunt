@@ -1,0 +1,117 @@
+{
+  "domain": "agent-multimodal",
+  "display_name": "Realtime Multimodal Agent",
+  "date": "2026-08-26",
+  "generated_at": "2026-08-28T04:16:31Z",
+  "papers": [
+    {
+      "arxiv_id": "2608.25417",
+      "title": "Paint What You See: Benchmarking Dexterous Visual Tool Use in Multimodal Agents",
+      "title_zh": "画出你所见：多模态智能体灵巧视觉工具使用基准",
+      "authors": [
+        "Shudong Liu",
+        "Dongyang Chen",
+        "Enci Zhang",
+        "Jinwei Liang",
+        "Zheng Ma",
+        "Lewei Lu"
+      ],
+      "total_score": 0.6695883062540946,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.86,
+        "domain_fit": 0.93,
+        "other": 0.19862768751364818
+      },
+      "tags": [
+        "realtime video agent"
+      ],
+      "tldr_zh": "EASEL 揭示多模态智能体视觉工具使用的闭环精度瓶颈。",
+      "detail_file": "agent-multimodal/2026-08-26/2608.25417.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25417/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.26067",
+      "title": "StreamPI: Streaming Multimodal Temporal Modeling for Vision-Language-Action Models",
+      "title_zh": "StreamPI：面向视觉-语言-动作模型的流式多模态时序建模",
+      "authors": [
+        "Zhe Liu",
+        "Jinghua Hou",
+        "Yuxiang Lu",
+        "Zhenya Yang",
+        "Xianzhe Fan",
+        "Junwei Luo",
+        "Junyi Li",
+        "Ruihua Han",
+        "Zhi Hou",
+        "Hengshuang Zhao"
+      ],
+      "total_score": 0.34368470847207283,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.8099999999999999,
+        "domain_fit": 0.88,
+        "other": 0.33561569490690957
+      },
+      "tags": [
+        "HF Daily ★16"
+      ],
+      "tldr_zh": "StreamPI让单帧VLA具备高效鲁棒的时序推理能力",
+      "detail_file": "agent-multimodal/2026-08-26/2608.26067.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26067/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.25479",
+      "title": "4DStreamCtrl: Interactive Video Generation with Online 4D Control",
+      "title_zh": "4DStreamCtrl：基于在线4D控制的交互式视频生成",
+      "authors": [
+        "Shiqian Li",
+        "Chenguo Lin",
+        "Zhiguang Liu",
+        "Yu Tang",
+        "Jiarong Ou",
+        "Rui Chen",
+        "Yixin Zhu"
+      ],
+      "total_score": 0.31199999999999994,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.8399999999999999,
+        "domain_fit": 0.71,
+        "other": 0.2
+      },
+      "tags": [],
+      "tldr_zh": "统一3D控制与因果流式生成，实现实时交互式4D视频生成",
+      "detail_file": "agent-multimodal/2026-08-26/2608.25479.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25479/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.26336",
+      "title": "StreamAV-Bench: A Comprehensive Benchmark for Streaming Audio-Video Generation",
+      "title_zh": "StreamAV-Bench：面向流式音视频生成的综合基准",
+      "authors": [
+        "Kaiqi Liu",
+        "Haoxuan Zeng",
+        "Jingqi Liu",
+        "Jiacong Fang",
+        "Ziqi Cai",
+        "Yunyao Mao",
+        "Henglin Liu",
+        "Yu Sheng",
+        "Shuchen Weng",
+        "Boxin Shi"
+      ],
+      "total_score": 0.3036,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.812,
+        "domain_fit": 0.76,
+        "other": 0.2
+      },
+      "tags": [],
+      "tldr_zh": "StreamAV-Bench系统评估流式音视频生成能力",
+      "detail_file": "agent-multimodal/2026-08-26/2608.26336.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26336/thumb.webp"
+    }
+  ]
+}

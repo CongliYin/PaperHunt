@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2608.25570",
+  "title": "Beyond Scaling: Self-Evolving LLM Agents for Hardware Kernel Optimization via an Experience-Driven Workflow and Experience Graph Memory",
+  "title_zh": "超越规模扩展：通过经验驱动工作流与 Experience Graph Memory 实现硬件 Kernel Optimization 的自进化 LLM Agents",
+  "authors": [
+    "Siyuan Chen",
+    "Runlin Hou",
+    "Shenxiu Wu",
+    "Yansong Sun",
+    "Junming Cao",
+    "Yiyu Zhang",
+    "Shudi Shao",
+    "Junhao Qiu",
+    "Zhichao Lu",
+    "Qingfu Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-26T09:27:39Z",
+  "abs_url": "https://arxiv.org/abs/2608.25570v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.25570",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Hardware kernel optimization requires repeated compilation, correctness testing, profiling, and revision. LLM agents can automate parts of this process, and stronger foundation models, longer context windows, and longer execution horizons have improved optimization within individual tasks. These advances alone do not enable an agent to learn from completed optimization runs. Existing kernel-optimization agents seldom preserve a decision, its observed execution feedback, and the later decisions that use that evidence. Retaining every prior trajectory is also impractical because an expanding history competes with the current task for context. We present KOPE, an experience-driven framework for hardware kernel optimization. KOPE records optimization trajectories with correctness and performance feedback in Experience Graph Memory, then uses Active Context Management and Injection to retrieve relevant experience under a fixed token budget. The graph retains decision order, observed outcomes, and alternative branches, allowing evidence collected on the target hardware to inform later optimization steps and tasks. Under the same GLM-5.2 setting, the geometric mean of KOPE's per-operator speedups is $1.54\\times$ that of CANNBot, the strongest competing baseline. In a complete 53-operator ablation, Active Context Management and Injection raises pass rate from 60.0\\% to 84.6\\%, increases the evaluator-reported positive-field geometric mean from 0.0382 to 0.0661, and reduces optimization token consumption from 15.9B to 1.113B tokens relative to passive agent-led context construction. Enabling Experience Graph Memory raises full-suite pass rate from 55.2\\% to 84.6\\% and yields a $1.43\\times$ geometric-mean speedup on valid timing comparisons. These results support continual optimization through external experience while the foundation model remains fixed.",
+  "abstract_zh": "硬件 Kernel Optimization 需要反复执行编译、正确性测试、性能分析与修改。现有 LLM Agents 虽能自动化部分流程，但通常无法系统保留优化决策、硬件反馈及后续利用这些证据的决策；完整保留历史轨迹又会挤占当前任务的上下文。论文提出 KOPE，一种经验驱动的硬件 Kernel Optimization 框架。KOPE 利用 Experience Graph Memory 记录包含正确性与性能反馈的优化轨迹，并通过 Active Context Management and Injection 在固定 Token 预算下检索相关经验。该图结构保留决策顺序、观测结果与替代分支，使目标硬件上的历史证据能够指导后续步骤和任务。在相同 GLM-5.2 设置下，KOPE 的算子加速比几何平均值达到 CANNBot 的 1.54 倍。在 53 个算子的完整消融实验中，Active Context Management and Injection 将通过率从 60.0% 提升至 84.6%，评估器报告的 positive-field 几何平均值从 0.0382 提升至 0.0661，并将优化 Token 消耗从 15.9B 降至 1.113B。启用 Experience Graph Memory 后，完整测试集通过率由 55.2% 提升至 84.6%，有效计时比较下的几何平均加速比达到 1.43 倍。结果表明，在基础模型保持固定的情况下，外部经验仍可支持持续优化。",
+  "key_points_zh": [
+    "提出 KOPE，将硬件 Kernel Optimization 轨迹、正确性反馈、性能反馈及决策分支组织为 Experience Graph Memory，弥补传统 Agent 难以跨任务学习的问题。",
+    "提出 Active Context Management and Injection，在固定上下文预算下检索并注入与当前优化任务最相关的历史经验，避免完整历史挤占上下文。",
+    "在相同 GLM-5.2 设置下，KOPE 的算子加速比几何平均值达到 CANNBot 的 1.54 倍，显示经验复用能够超越单纯依赖更大模型或更长上下文的扩展方式。",
+    "在 53 个算子的消融实验中，Active Context Management and Injection 将通过率从 60.0% 提升至 84.6%，同时将优化 Token 消耗从 15.9B 大幅降至 1.113B。",
+    "Experience Graph Memory 将完整测试集通过率从 55.2% 提升至 84.6%，并在有效计时比较中取得 1.43 倍几何平均加速比，支持基础模型固定时的持续优化。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.82,
+    "novelty": 0.84,
+    "problem_significance": 0.78,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.8,
+    "llm_avg": 0.78,
+    "comment": "A meaningful experience-memory architecture for coding agents, though its contribution is specialized to hardware kernel optimization and tightly coupled to that workflow.",
+    "comment_zh": "这是一种有价值的编码 Agent 经验记忆架构，但其贡献较专门化，并与硬件内核优化流程紧密耦合。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3037399110526186,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.78,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 6,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25570/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.976
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25570/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.947
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2608.26336",
+  "title": "StreamAV-Bench: A Comprehensive Benchmark for Streaming Audio-Video Generation",
+  "title_zh": "StreamAV-Bench：面向流式音视频生成的综合基准",
+  "authors": [
+    "Kaiqi Liu",
+    "Haoxuan Zeng",
+    "Jingqi Liu",
+    "Jiacong Fang",
+    "Ziqi Cai",
+    "Yunyao Mao",
+    "Henglin Liu",
+    "Yu Sheng",
+    "Shuchen Weng",
+    "Boxin Shi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-26T19:16:24Z",
+  "abs_url": "https://arxiv.org/abs/2608.26336v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.26336",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent advancements in generative models are pushing video generation toward unbounded streaming audio-video generation for real-time interactive worlds. However, existing benchmarks primarily evaluate completed sequences and struggle to capture streaming properties. To bridge this gap, we introduce StreamAV-Bench, the first comprehensive benchmark tailored for streaming audio-video generation. StreamAV-Bench establishes a unified evaluation framework, including the progressive track for instruction adherence and long-horizon stability, and the interactive track for interactive response and state retention and reuse. With expert-verified evaluation cases across 32 fine-grained dimensions, we conduct an extensive evaluation of 13 representative systems. Our analysis reveals that current models suffer from temporal drift in progressive generation and responsiveness bottlenecks during interactive control. Based on a comprehensive failure analysis, we share insights to advance the development of native joint audio-video streaming models.",
+  "abstract_zh": "随着生成模型发展，视频生成正迈向面向实时交互世界的无限流式音视频生成。然而，现有基准主要评估完整序列，难以刻画流式生成特性。为此，论文提出首个专为流式音视频生成设计的综合基准 StreamAV-Bench，建立统一评测框架：progressive track 评估指令遵循与长时稳定性，interactive track 评估交互响应、状态保持与复用。基准覆盖 32 个细粒度维度，并由专家核验评测案例，系统评估了 13 个代表性系统。结果显示，当前模型在渐进式生成中存在明显时间漂移，在交互控制中面临响应瓶颈。论文进一步通过全面失败分析，为原生联合音视频流式模型的发展提供了启示。",
+  "key_points_zh": [
+    "提出首个面向流式音视频生成的综合基准 StreamAV-Bench，弥补传统完整序列评测的不足。",
+    "设计 progressive track 与 interactive track，分别评估指令遵循、长时稳定性、交互响应及状态保持复用。",
+    "基于 32 个细粒度维度和专家核验案例，全面评估 13 个代表性系统。",
+    "发现现有模型存在渐进式生成中的时间漂移，以及交互控制中的响应瓶颈。",
+    "通过失败分析总结改进方向，推动原生联合音视频流式生成模型发展。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.76,
+    "novelty": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.86,
+    "llm_avg": 0.812,
+    "comment": "A valuable benchmark that directly measures streaming responsiveness, state retention, long-horizon stability, and multimodal interaction quality.",
+    "comment_zh": "这是一个有价值的基准，直接评测流式响应性、状态保留、长时稳定性和多模态交互质量。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.812,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26336/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.945
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26336/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.97
+    }
+  ]
+}

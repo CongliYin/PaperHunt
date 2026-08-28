@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.25523",
+  "title": "TOPAS: Workflow-Aware Prefix-State Scheduling for Multi-Agent LLM Serving",
+  "title_zh": "TOPAS：面向工作流感知的多智能体 LLM 服务前缀状态调度",
+  "authors": [
+    "Hongqiu Ni",
+    "Han Tian",
+    "Chi Zhang",
+    "Guopeng Li",
+    "Haisheng Tan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-26T08:33:10Z",
+  "abs_url": "https://arxiv.org/abs/2608.25523v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.25523",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Prefix caching introduces a fundamental tradeoff in multi-agent large language model (LLM) serving: retaining a long system-prompt key-value (KV) cache for an agent accelerates future calls, yet it reduces the GPU memory available for batching concurrent requests. In multi-stage workflows, existing schedulers tend to prioritize either immediate prefix locality or overall workflow progress. However, under a shared KV cache budget, optimizing either objective in isolation can prolong tasklevel job completion time (JCT) through downstream delays or frequent prefix replacement. To strike a balance, we here propose TOPAS, a Task-Oriented Prefix-Aware Scheduler that jointly decides which agent prefixes to keep in the cache and which requests to schedule for execution. TOPAS scores candidate post-decision states by trading off the expected reduction in each task's longest remaining service path against the near-term benefit of downstream prefix reuse, accounting for the costs of prefix movement and preemption. A task-level aging mechanism is also incorporated to prevent starvation. We implement TOPAS within the SGLang framework and assess its performance on three synthetic DAGs and two MetaGPT software-development workflows. Compared with the best performing baseline for each workload and metric, TOPAS reduces the mean/p99 JCT by up to 39.8%/49.4% on the synthetic workloads, while lowering mean JCT by 9.8% on MetaGPT-SOP and mean/p99 JCT by 22.0%/26.6% on MetaGPT-TL.",
+  "abstract_zh": "前缀缓存为多智能体大语言模型（LLM）服务带来根本性权衡：保留智能体较长的系统提示 KV 缓存可加速后续调用，但会占用 GPU 内存，从而限制并发请求的批处理能力。在多阶段工作流中，现有调度器通常只侧重即时前缀局部性或整体工作流推进；然而在共享 KV 缓存预算下，单独优化任一目标都可能因下游延迟或频繁前缀替换而延长任务级作业完成时间（JCT）。为此，论文提出 TOPAS（Task-Oriented Prefix-Aware Scheduler），联合决定缓存中保留哪些智能体前缀，以及调度哪些请求执行。TOPAS 对决策后的候选状态进行评分，在每个任务最长剩余服务路径的预期缩减量与下游前缀复用的短期收益之间进行权衡，同时考虑前缀迁移和抢占成本。该方法还引入任务级老化机制以避免饥饿。作者在 SGLang 框架中实现 TOPAS，并使用三个合成 DAG 及两个 MetaGPT 软件开发工作流进行评估。相较于各工作负载和指标下表现最佳的基线，TOPAS 在合成工作负载上最多将平均 JCT 和 p99 JCT 分别降低 39.8% 和 49.4%；在 MetaGPT-SOP 上将平均 JCT 降低 9.8%，在 MetaGPT-TL 上将平均和 p99 JCT 分别降低 22.0% 和 26.6%。",
+  "key_points_zh": [
+    "核心问题是共享 KV 缓存预算下，前缀复用、并发批处理与工作流推进之间存在冲突。",
+    "TOPAS 联合选择缓存保留的智能体前缀和待执行请求，而非孤立优化前缀局部性或即时吞吐。",
+    "调度评分同时考虑最长剩余服务路径的缩减、下游前缀复用收益、前缀迁移成本及抢占成本。",
+    "任务级老化机制用于避免低优先级任务长期得不到调度，降低工作流级别的尾部延迟。",
+    "在合成 DAG 和 MetaGPT 工作流上，TOPAS 相较基线最多降低 49.4% 的 p99 JCT。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.84,
+    "problem_significance": 0.87,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.86,
+    "llm_avg": 0.844,
+    "comment": "TOPAS is strong reusable runtime infrastructure that jointly optimizes prefix caching and workflow progress for multi-agent serving.",
+    "comment_zh": "TOPAS是较强的可复用运行时基础设施，联合优化了多智能体服务中的前缀缓存和工作流进度。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5114134954684102,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.844,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 12,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25523/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25523/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.959
+    }
+  ]
+}

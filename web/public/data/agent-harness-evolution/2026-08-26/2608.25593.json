@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2608.25593",
+  "title": "JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution",
+  "title_zh": "JIT-Agent：通过即时 Harness 演化扩展 Harness 智能",
+  "authors": [
+    "Guibin Zhang",
+    "Leo Lu",
+    "Fangzhou Xie",
+    "Kang Zhu",
+    "Junhao Wang",
+    "Zhifei Xie",
+    "Zhaochen Yu",
+    "Zihang Liu",
+    "Zhongxiang Sun",
+    "Qiankun Li",
+    "Yue Liao",
+    "Heng Chang",
+    "Xiaobin Hu",
+    "Qibing Ren",
+    "Wangchunshu Zhou",
+    "Shuicheng Yan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-26T10:05:33Z",
+  "abs_url": "https://arxiv.org/abs/2608.25593v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.25593",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent capability is not determined by the model alone. The agent harness, encompassing memory management, planning strategy, action protocol, and tool/skill orchestration, can dominate the contribution of the underlying foundation model. Yet harness design remains manual, task-specific, and fundamentally unscalable. We present JIT-Agent, a harness intelligence model trained to synthesize task-adaptive agent harnesses on the fly for arbitrary off-the-shelf agentic LLMs. We formalize the agent harness as a composable, machine-generatable artifact governed by a fixed four-module protocol, and train JIT-Agent to customize harnesses for a given task at hand, repair harnesses for stable and reliable execution, and self-evolve by distilling performance signals from an expanding archive of prior harness configurations. Equipped with JIT-Agent as a harness helper, DeepSeek-V4-Flash surpasses GPT-5.6 on DeepSearchQA (+9.1) and OdysseyBench (+4.3), while the already strong GLM-5.2 gains up to +20.2 points. Across controlled evaluations, JIT-Agent-generated harnesses are performance-competitive with mature agent runtimes such as OpenCode and Claude Code and consistently improve multi-scale model families of DeepSeek V4, Mimo-V2.5, and Qwen3.6. To our knowledge, JIT-Agent is the first model purpose-built for just-in-time harness generation, establishing harness intelligence as a trainable, transferable, and compounding dimension of agent capability orthogonal to model scaling.",
+  "abstract_zh": "Agent 的能力不仅取决于基础模型，也高度依赖 Harness，包括记忆管理、规划策略、动作协议以及工具与技能编排。现有 Harness 设计通常依赖人工、面向特定任务，难以扩展。本文提出 JIT-Agent，一种专门用于即时生成 Harness 的 Harness intelligence model，可为任意现成 agentic LLM 动态合成任务自适应 Harness。作者将 Harness 形式化为遵循固定四模块协议、可组合且可机器生成的对象，并训练 JIT-Agent 具备三种能力：针对当前任务定制 Harness、修复 Harness 以实现稳定可靠执行，以及从不断扩展的历史 Harness 配置档案中蒸馏性能信号并自我演化。作为 Harness helper，JIT-Agent 使 DeepSeek-V4-Flash 在 DeepSearchQA 和 OdysseyBench 上分别超过 GPT-5.6 9.1 分和 4.3 分，并使 GLM-5.2 最高提升 20.2 分。受控实验表明，JIT-Agent 生成的 Harness 在性能上可与 OpenCode、Claude Code 等成熟 agent runtime 竞争，并能持续提升 DeepSeek V4、Mimo-V2.5 和 Qwen3.6 等多尺度模型家族。该工作据称首次专门面向即时 Harness 生成，表明 Harness intelligence 是一种独立于模型规模扩展、可训练、可迁移且能够复利增长的 Agent 能力维度。",
+  "key_points_zh": [
+    "将 Agent Harness 统一形式化为遵循固定四模块协议的可组合、可机器生成对象，覆盖记忆、规划、动作和工具编排。",
+    "JIT-Agent 支持任务自适应 Harness 生成、执行过程中的 Harness 修复，以及基于历史配置和性能信号的自我演化。",
+    "在 DeepSearchQA 和 OdysseyBench 上，JIT-Agent 分别让 DeepSeek-V4-Flash 超过 GPT-5.6 9.1 分和 4.3 分；GLM-5.2 最高提升 20.2 分。",
+    "生成的 Harness 可达到 OpenCode、Claude Code 等成熟 agent runtime 的竞争性性能，并稳定增强 DeepSeek V4、Mimo-V2.5 和 Qwen3.6。",
+    "论文提出 Harness intelligence 是区别于基础模型规模扩展的独立能力维度，具备可训练、可迁移和持续积累的特性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.91,
+    "problem_significance": 0.94,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.9,
+    "lasting_value": 0.94,
+    "llm_avg": 0.924,
+    "comment": "This is exceptionally strong agent-platform work that makes harness synthesis, repair, and evolution a trainable and reusable capability.",
+    "comment_zh": "这是一项非常强的智能体平台工作，将Harness生成、修复和演化变成了可训练且可复用的能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.8919840422544882,
+    "author_reputation": 0.4497154826450447,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.924,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 47,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 11,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25593/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25593/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.939
+    }
+  ]
+}

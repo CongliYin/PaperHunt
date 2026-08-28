@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2608.26067",
+  "title": "StreamPI: Streaming Multimodal Temporal Modeling for Vision-Language-Action Models",
+  "title_zh": "StreamPI：面向视觉-语言-动作模型的流式多模态时序建模",
+  "authors": [
+    "Zhe Liu",
+    "Jinghua Hou",
+    "Yuxiang Lu",
+    "Zhenya Yang",
+    "Xianzhe Fan",
+    "Junwei Luo",
+    "Junyi Li",
+    "Ruihua Han",
+    "Zhi Hou",
+    "Hengshuang Zhao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-26T17:33:19Z",
+  "abs_url": "https://arxiv.org/abs/2608.26067v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.26067",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Vision-Language-Action (VLA) models have demonstrated effectiveness in robot manipulation, yet state-of-the-art models such as pi0.5 operate under a single-frame paradigm, limiting their ability to retain past observations and develop precise spatial perception. In this paper, we propose StreamPI, a streaming multimodal temporal modeling framework that equips single-frame VLA with temporal reasoning capability without introducing any additional parameters. One core design is instruction-anchored temporal modeling. It treats each (visual observation, language instruction) pair as an atomic temporal unit: bidirectional attention within each pair enables cross-modal fusion, while causal attention across pairs preserves autoregressive streaming inference. This ensures the language instruction serves as a persistent semantic anchor throughout task execution. To bridge the gap between synchronous training and asynchronous real-robot deployment, we introduce a andom-interval streaming training strategy: a proper inter-frame interval (e.g., every 3 frames) enables faster and smoother action execution. Beyond this, randomizing the interval further improves robustness to frame-timing perturbations, supporting asynchronous deployment in practice. Furthermore, by leveraging the length extrapolation capability of the LLM backbone, StreamPI seamlessly inherits pretrained single-frame weights and supports flexible single-frame and multi-frame inference. Experiments on real-robot tasks spanning memory-dependent and precise perception scenarios, as well as the simulation benchmark LIBERO, demonstrate that StreamPI outperforms pi0.5 across diverse tasks.",
+  "abstract_zh": "现有视觉-语言-动作（Vision-Language-Action，VLA）模型通常采用单帧输入范式，难以保留历史观测并形成精确的空间感知。本文提出 StreamPI，一种无需增加额外参数的流式多模态时序建模框架，使单帧 VLA 具备时序推理能力。其核心是指令锚定的时序建模：将每个“视觉观测-语言指令”对视为原子时序单元，在单元内部采用双向注意力实现跨模态融合，在单元之间采用因果注意力保持自回归流式推理，从而让语言指令在整个任务执行过程中持续发挥语义锚定作用。为缩小同步训练与异步真实机器人部署之间的差距，StreamPI 引入随机间隔流式训练策略，通过设置合适的帧间隔提升动作执行的速度与平滑性，并通过随机化间隔增强对帧时序扰动的鲁棒性。借助 LLM 主干网络的长度外推能力，StreamPI 可无缝继承预训练单帧权重，并灵活支持单帧与多帧推理。在真实机器人任务和 LIBERO 仿真基准上的实验表明，StreamPI 在依赖记忆和精确感知的多类任务中均优于 pi0.5。",
+  "key_points_zh": [
+    "无需增加额外参数，通过指令锚定的时序建模将单帧 VLA 扩展为流式多帧模型。",
+    "每个视觉观测与语言指令对作为原子时序单元，单元内双向注意力融合模态，单元间因果注意力支持流式自回归推理。",
+    "随机间隔流式训练缓解同步训练与异步机器人部署之间的分布差异，并提升对帧时序扰动的鲁棒性。",
+    "利用 LLM 主干的长度外推能力，兼容预训练单帧权重以及单帧、多帧灵活推理。",
+    "在真实机器人任务和 LIBERO 基准上，StreamPI 整体优于 pi0.5，尤其适用于依赖历史记忆和精确空间感知的任务。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.78,
+    "problem_significance": 0.86,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8099999999999999,
+    "comment": "A practical streaming VLA framework that adds temporal memory and asynchronous frame robustness to real-robot closed-loop control without extra parameters.",
+    "comment_zh": "这是一个实用的流式视觉语言行动框架，在不增加参数的情况下为真实机器人闭环控制引入了时序记忆和异步帧鲁棒性。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.813694169441457,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8099999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 16,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26067/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26067/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

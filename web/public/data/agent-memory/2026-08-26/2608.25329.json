@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.25329",
+  "title": "Learning What to Share and What to Personalize: Hierarchical Strategy Co-Evolution for Agent Memory",
+  "title_zh": "学习共享什么与个性化什么：面向智能体记忆的层次化策略协同演化",
+  "authors": [
+    "Yupeng Han",
+    "Shuochen Liu",
+    "Kai Zhang",
+    "Ze Liu",
+    "Zhihong Pan",
+    "Xianquan Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-26T03:24:52Z",
+  "abs_url": "https://arxiv.org/abs/2608.25329v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.25329",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Memory-augmented agents maintain compact user profiles throughout extended conversations, enabling personalized and consistent responses without the need to process the entire dialogue history. The quality of these user profiles relies on the underlying memory management strategy: at each step, the agent must determine what to retain, compress, or discard. However, existing methods typically employ a static, one-size-fits-all strategy established before training. In practice, the optimal memory decision is inherently user-specific and dynamically evolves alongside policy optimization. To address this, we propose \\textbf{HiPS} (\\textbf{Hi}erarchical \\textbf{P}ersonalized \\textbf{S}trategy), a framework that decouples memory management into a globally shared foundation and a user-specific adaptive tier. Specifically, HiPS employs \\textbf{Universal Strategy} to extract shared principles from cross-persona trajectories, alongside \\textbf{Persona Delta Distillation} to generate tailored rules for users whose behaviors diverge from general patterns. \\textbf{Cross-Level Rule Flow} dynamically calibrates their boundary by promoting broadly validated personal rules and demoting contradicted global ones. The architecture establishes a co-evolution loop where a mechanism guarantees that all strategy refinements are anchored to task outcomes. Extensive experiments demonstrate consistent improvements over memory-augmented baselines.",
+  "abstract_zh": "记忆增强智能体通过维护紧凑的用户画像，在长期对话中实现个性化且一致的响应，而无需处理完整对话历史。用户画像的质量取决于记忆管理策略，即智能体在每一步决定保留、压缩或丢弃哪些信息。现有方法通常在训练前设定静态且“一刀切”的策略，但最佳记忆决策往往具有用户特异性，并会随策略优化动态变化。为此，论文提出 HiPS（Hierarchical Personalized Strategy），将记忆管理解耦为全局共享基础层与用户自适应层。HiPS 通过 Universal Strategy 从跨用户轨迹中提取共享原则，并利用 Persona Delta Distillation 为偏离一般模式的用户生成定制规则。Cross-Level Rule Flow 动态校准两层策略边界：提升获得广泛验证的个性化规则，降低与事实或任务结果相矛盾的全局规则。该架构形成以任务结果为约束的策略协同演化闭环。实验表明，HiPS 相比多种记忆增强基线取得了稳定提升。",
+  "key_points_zh": [
+    "指出静态、统一的记忆管理策略难以适应不同用户及其动态变化。",
+    "提出 HiPS，将策略分为跨用户共享的 Universal Strategy 与用户特定的自适应层。",
+    "通过 Persona Delta Distillation 学习偏离通用模式用户的个性化记忆规则。",
+    "利用 Cross-Level Rule Flow 在全局规则与个性化规则之间动态升降级，依据任务结果持续校准。",
+    "实验显示 HiPS 相比记忆增强基线能够稳定提升智能体表现。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.88,
+    "problem_significance": 0.86,
+    "potential_impact": 0.83,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.85,
+    "llm_avg": 0.844,
+    "comment": "A strong Agent-memory contribution that models memory management as a co-evolving hierarchy of shared and personalized retention strategies.",
+    "comment_zh": "这是一项扎实的 Agent Memory 工作，将记忆管理建模为共享策略与个性化策略协同演化的分层机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3866347681484281,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.844,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25329/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.25329/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}
