@@ -1,0 +1,93 @@
+{
+  "arxiv_id": "2608.27017",
+  "title": "ProRetrieval: Learning to Orchestrate Hybrid Search via Executable Program Synthesis",
+  "title_zh": "ProRetrieval：通过可执行程序合成学习混合搜索编排",
+  "authors": [
+    "Chengsong You",
+    "Zhen Sun",
+    "Yunhai Hu",
+    "Junwei Zhou",
+    "Xiaoyu Cao",
+    "Binyu Li",
+    "Ziyan Zhao",
+    "Weiyao Wang",
+    "Liren Lu",
+    "Zhijie Ye",
+    "Yumo Cao",
+    "Yitao Long",
+    "Yiwei Xu",
+    "Qiyi Jiang",
+    "Xuanyi Fu",
+    "Yufan Chen",
+    "Yilun Li",
+    "Rongkang Xiong",
+    "Yiran Zou",
+    "Nan Du"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-27T12:03:30Z",
+  "abs_url": "https://arxiv.org/abs/2608.27017v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.27017",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Real-world retrieval often composes structured constraints with semantic intents over text and images through arbitrary Boolean logic. Existing hybrid pipelines such as reciprocal rank fusion or self-querying retrievers admit only a fixed form of composition, while recent reinforcement-learning retrievers train the language model as a query generator for a single backend, leaving the orchestration of heterogeneous retrieval paths outside its action space. We propose ProRetrieval, which recasts the language model as a retrieval orchestrator: given a natural-language query, it synthesizes an executable program in a hybrid DSL interleaving SQL operators over structured fields with vector-retrieval primitives over text and images, with SQL itself providing the logical algebra that fuses heterogeneous candidate sets. We train Qwen3-4B with GRPO and DAPO under a hierarchical four-term reward, and evaluate on two new benchmarks built from Amazon products and Enron email. Our 4B model surpasses GPT-5.5 (Hit@1 0.81 vs. 0.69 on e-commerce; 0.91 vs. 0.86 on email) and Claude Opus 4.7 and a comprehensive suite of retrieval, LLM-augmented, structured-query, and graph-based baselines. Code: https://anonymous.4open.science/r/ProRetrieval/; data: https://huggingface.co/datasets/anonymous-7219/ProRetrieval.",
+  "abstract_zh": "现实检索任务通常需要在文本与图像上联合处理结构化约束和语义意图，并支持任意布尔逻辑。现有混合检索方法（如 reciprocal rank fusion 和 self-querying retriever）只能进行固定形式的组合；近期基于强化学习的检索器则主要将语言模型训练为单一后端的查询生成器，无法将异构检索路径的编排纳入动作空间。ProRetrieval 将语言模型重新定义为检索编排器：给定自然语言查询，模型合成可执行的混合 DSL 程序，在结构化字段上交替使用 SQL 操作，并调用面向文本和图像的向量检索原语；其中 SQL 充当融合异构候选集的逻辑代数。作者使用 GRPO 和 DAPO，基于包含四项奖励的层级式奖励函数训练 Qwen3-4B，并在基于 Amazon products 和 Enron email 构建的两个新基准上进行评估。结果显示，4B 模型在电商和邮件任务上的 Hit@1 分别达到 0.81 和 0.91，超过 GPT-5.5 的 0.69 和 0.86，同时优于 Claude Opus 4.7 及多类检索、LLM 增强、结构化查询和图检索基线。",
+  "key_points_zh": [
+    "核心思想是让语言模型生成可执行检索程序，而非仅生成单一后端查询；程序通过混合 DSL 组合 SQL、文本向量检索和图像向量检索。",
+    "SQL 被用作异构候选集融合的逻辑代数，从而支持结构化约束、语义意图及任意布尔逻辑的组合。",
+    "模型采用 Qwen3-4B，并结合 GRPO、DAPO 和四项奖励组成的层级式奖励函数进行训练。",
+    "作者构建了基于 Amazon products 和 Enron email 的两个新基准；Qwen3-4B 的 Hit@1 在两项任务上分别为 0.81 和 0.91。",
+    "实验表明 ProRetrieval 超过 GPT-5.5、Claude Opus 4.7，以及检索、LLM 增强、结构化查询和图检索等多类基线。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.91,
+    "novelty": 0.88,
+    "problem_significance": 0.9,
+    "potential_impact": 0.89,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8620000000000001,
+    "comment": "A strong product-search contribution that turns LLM retrieval orchestration into executable hybrid programs and demonstrates substantial gains on an Amazon product benchmark.",
+    "comment_zh": "该工作将大模型检索编排转化为可执行的混合程序，并在亚马逊商品基准上取得显著提升，具有很强的商品搜索价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.8620000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27017/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27017/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.889
+    }
+  ]
+}

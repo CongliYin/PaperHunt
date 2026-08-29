@@ -1,0 +1,133 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-08-27",
+  "generated_at": "2026-08-29T02:51:26Z",
+  "papers": [
+    {
+      "arxiv_id": "2608.26563",
+      "title": "SPT: Skills as Pre-Training Data for Agentic Language Models",
+      "title_zh": "SPT：将 Skills 作为 Agentic Language Models 的预训练数据",
+      "authors": [
+        "Yufei Sun",
+        "Yudong Li",
+        "Yiming Cheng"
+      ],
+      "total_score": 0.6028000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.826,
+        "domain_fit": 0.94,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "SPT利用公开Skills预训练，提升智能体工具使用能力。",
+      "detail_file": "agent-harness-evolution/2026-08-27/2608.26563.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26563/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.26546",
+      "title": "DuMateBench: Evaluating Autonomous Agents in Complex Real-World Workflows",
+      "title_zh": "DuMateBench：复杂真实世界工作流中的自主智能体评测",
+      "authors": [
+        "Zechun Niu",
+        "Yukun Zhao",
+        "Jiaxin Zhang",
+        "Xu Shen",
+        "Jinhua Si",
+        "Han Tian",
+        "Can Xu",
+        "Yunfan Song",
+        "Jiaxin Mao",
+        "Yansong Gao",
+        "Yuchen Li",
+        "Jianmin Wu",
+        "Lingyong Yan",
+        "Shuaiqiang Wang",
+        "Dawei Yin"
+      ],
+      "total_score": 0.5840000000000001,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.8400000000000001,
+        "domain_fit": 0.91,
+        "other": 0.2
+      },
+      "tags": [
+        "production agent platform"
+      ],
+      "tldr_zh": "基于真实会话评测智能体复杂工作流能力与鲁棒性",
+      "detail_file": "agent-harness-evolution/2026-08-27/2608.26546.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26546/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.26623",
+      "title": "AgentJudgeBench: A Multi-Difficulty Benchmark for Evaluating LLM Judges on Agentic Tool-Calling",
+      "title_zh": "AgentJudgeBench：评估智能体工具调用中 LLM 评审器的多难度基准",
+      "authors": [
+        "Abhigya Verma",
+        "Amit Kumar Saha",
+        "Seganrasan Subramanian",
+        "Sai Harshitha Aluru"
+      ],
+      "total_score": 0.5624000000000001,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.7680000000000001,
+        "domain_fit": 0.88,
+        "other": 0.2
+      },
+      "tags": [
+        "judge reward verifier"
+      ],
+      "tldr_zh": "AgentJudgeBench揭示LLM评审存在难度驱动的可靠性上限",
+      "detail_file": "agent-harness-evolution/2026-08-27/2608.26623.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26623/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.27427",
+      "title": "Persona-Execution Separation: An Architecture Pattern for Evolving LLM Agents under Execution Audit",
+      "title_zh": "Persona-Execution Separation：执行审计下演化 LLM Agent 的架构模式",
+      "authors": [
+        "Yisen Xi"
+      ],
+      "total_score": 0.4026,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.662,
+        "domain_fit": 0.7,
+        "other": 0.2
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "用跨信任域架构隔离可演化人格与可审计执行",
+      "detail_file": "agent-harness-evolution/2026-08-27/2608.27427.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27427/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.27148",
+      "title": "AgentDV: Closed-Loop Agentic AI for Hardware Design Verification",
+      "title_zh": "AgentDV：用于硬件设计验证的闭环智能体 AI",
+      "authors": [
+        "Navya Goli",
+        "Junzhe Liu",
+        "Zhenge Jia",
+        "Umamaheswara Rao Tida"
+      ],
+      "total_score": 0.2668516573755553,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.6859999999999999,
+        "domain_fit": 0.73,
+        "other": 0.2035055245851843
+      },
+      "tags": [],
+      "tldr_zh": "AgentDV 以闭环迭代提升 LLM 生成 RTL 验证环境的可运行性与覆盖率",
+      "detail_file": "agent-harness-evolution/2026-08-27/2608.27148.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27148/thumb.webp"
+    }
+  ]
+}

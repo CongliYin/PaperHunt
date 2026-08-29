@@ -1,0 +1,68 @@
+{
+  "arxiv_id": "2608.27427",
+  "title": "Persona-Execution Separation: An Architecture Pattern for Evolving LLM Agents under Execution Audit",
+  "title_zh": "Persona-Execution Separation：执行审计下演化 LLM Agent 的架构模式",
+  "authors": [
+    "Yisen Xi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-27T17:50:07Z",
+  "abs_url": "https://arxiv.org/abs/2608.27427v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.27427",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM) agents in governed organizations must let the persona (instructions, tone, self-presentation) evolve freely, while keeping execution (stateful, audited work) traceable. A single trust domain does not satisfy both cheaply. We present Persona-Execution Separation (PES): persona and execution reside in different trust domains, connected by a governed contract bridge. The persona is singly-homed and may drift; execution is faceless and audited. Status summaries may return; data bodies remain in the restrictive domain except a graded data-loss-prevention (DLP) exception; identity stays continuous. An approval matrix, DLP, and audit enforce the crossing. PES follows from three goals---free drift, execution traceability, and decoupling. Under LLM representational indistinguishability, any single-domain mechanism that meets all three must re-introduce typed change objects, an external gate, and a stable audit anchor: PES rebuilt at higher coupling cost. A development/pilot case in a regulated digital-employee platform records five decisions over one month, each with a rejected alternative. A mechanism check on the shipped implementation found no execution-side re-validation under persona perturbation (five model configurations) and no persona fingerprint on hard-asserted fields. A probe of a recovered pre-separation build found the governed execution path decoupled from the persona by omission, not by construction; a later wiring change could reverse that isolation, which PES makes an audited architectural rule. The pattern applies when multi-user deployment, execution audit, and expected persona churn hold jointly.",
+  "abstract_zh": "论文提出 Persona-Execution Separation（PES），将 LLM Agent 的 persona（指令、语气与自我呈现）和 execution（有状态、可审计的工作）置于不同信任域，并通过受治理的契约桥接连接。Persona 可自由漂移，execution 保持无身份表征且可追溯；状态摘要可以返回，但数据主体原则上留在限制域内，仅允许分级 Data Loss Prevention（DLP）例外。审批矩阵、DLP 与审计机制共同约束跨域交互。作者指出，在 LLM 表征不可区分性条件下，任何单一信任域方案若同时追求 persona 自由演化、执行可追溯与二者解耦，最终都必须重新引入类型化变更对象、外部门控和稳定审计锚点，本质上重建 PES 且耦合成本更高。一个受监管数字员工平台的开发与试点记录了一个月内的五项架构决策及其被拒方案。对已部署实现的机制检查显示，五种模型配置下 persona 扰动不会触发执行侧重新验证，硬断言字段也没有 persona 指纹。对早期版本的探测发现，执行路径与 persona 的隔离只是由遗漏造成，而非架构性保证；后续接线变化可能逆转该隔离，而 PES 将其提升为可审计的架构规则。",
+  "key_points_zh": [
+    "PES 将 persona 与 execution 分置于不同信任域，通过受治理的契约桥接实现交互。",
+    "该模式同时满足 persona 自由漂移、执行可追溯和二者解耦三个目标。",
+    "状态摘要可跨域返回，但数据主体默认留在限制域内，并受审批矩阵与分级 DLP 约束。",
+    "在 LLM 表征不可区分性下，单域方案最终仍需引入变更对象、外部门控和稳定审计锚点，等价于更高耦合地重建 PES。",
+    "案例表明，偶然形成的 persona-execution 隔离可能被后续接线破坏；PES 将隔离固化为可审计的架构规则。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.7,
+    "novelty": 0.7,
+    "problem_significance": 0.72,
+    "potential_impact": 0.64,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.6,
+    "llm_avg": 0.662,
+    "comment": "PES proposes a reusable separation pattern for persona evolution and auditable execution, though its evidence is limited to a small regulated-platform pilot.",
+    "comment_zh": "PES提出了分离人格演化与可审计执行的可复用架构模式，但证据仍局限于小规模受监管平台试点。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.662,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27427/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.973
+    }
+  ]
+}

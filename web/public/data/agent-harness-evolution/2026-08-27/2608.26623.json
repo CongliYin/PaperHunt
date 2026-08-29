@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2608.26623",
+  "title": "AgentJudgeBench: A Multi-Difficulty Benchmark for Evaluating LLM Judges on Agentic Tool-Calling",
+  "title_zh": "AgentJudgeBench：评估智能体工具调用中 LLM 评审器的多难度基准",
+  "authors": [
+    "Abhigya Verma",
+    "Amit Kumar Saha",
+    "Seganrasan Subramanian",
+    "Sai Harshitha Aluru"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-27T05:20:22Z",
+  "abs_url": "https://arxiv.org/abs/2608.26623v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.26623",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM judges are widely used to evaluate agentic tool-calling systems, yet their reliability on structured, dependency-driven workflows remains largely unexamined. We present AgentJudgeBench, the first benchmark to systematically study LLM-as-a-judge reliability for agentic tool-calling over workflow DAGs, as distinct from the broader LLM-as-a-judge task of open-ended text or preference evaluation. The benchmark comprises 3,808 instances spanning six DAG topologies and three difficulty tiers, evaluated with five generators (3B-70B open-weight models and GPT-5.4) and six judges (20B to frontier scale) under paired with- and without-ground-truth conditions. Judge alignment degrades monotonically with task difficulty, 1.5x faster without ground truth, and on hard queries without ground truth all six judges converge to a narrow 77-82% band regardless of scale, revealing a structural ceiling driven primarily by task difficulty, though its height is partly prompt-dependent for weaker generators, that model capacity alone cannot overcome. Ground-truth exposure is not uniformly beneficial: it reduces alignment for GPT-5.4 (1.5 pp) and Gemini-2.5-Pro (3.9 pp), consistent with over-anchoring. Among mitigation strategies, chain-of-thought reasoning and judge temperature both have negligible effect, while structured evaluation rubrics improve alignment by up to 6.5 pp but do not generalize uniformly across judge-generator pairs. With ground truth, QwQ-32B best matches the programmatic reference, while a human validation study identifies GPT-OSS-120B as the most human-aligned judge; without it, frontier judges lead only marginally within the shared ceiling. These results expose fundamental limitations of current LLM judges and yield practical guidelines for reliable evaluation in agentic systems.",
+  "abstract_zh": "LLM 评审器（LLM judges）已广泛用于评估智能体工具调用系统，但其在结构化、依赖驱动工作流中的可靠性仍缺乏系统研究。本文提出 AgentJudgeBench，这是首个针对基于工作流 DAG 的智能体工具调用、系统研究 LLM-as-a-judge 可靠性的基准，区别于开放式文本或偏好评估。该基准包含 3,808 个实例，覆盖 6 种 DAG 拓扑和 3 个难度等级，并在有无真实答案两种条件下，使用 5 个生成模型（3B–70B 开源模型及 GPT-5.4）和 6 个评审模型（20B 至前沿规模）进行评测。结果显示，评审器与程序化参考答案的一致性会随任务难度单调下降；在无真实答案时，下降速度快 1.5 倍。对于无真实答案的困难查询，6 个评审器无论规模大小都集中在 77%–82% 的狭窄区间，表明存在主要由任务难度造成的结构性上限，单纯增加模型容量无法突破该上限。提供真实答案并非总是有益：其使 GPT-5.4 和 Gemini-2.5-Pro 的一致性分别下降 1.5 和 3.9 个百分点，可能源于过度锚定。链式思考和评审温度几乎没有影响；结构化评估量规最多可提升 6.5 个百分点的一致性，但无法在所有评审器—生成器组合间稳定泛化。在有真实答案时，QwQ-32B 最接近程序化参考；人工验证则显示 GPT-OSS-120B 与人类判断最一致。无真实答案时，前沿评审器仅在这一共同上限内取得边际优势。研究揭示了当前 LLM 评审器的根本局限，并给出了面向智能体系统可靠评估的实践建议。",
+  "key_points_zh": [
+    "AgentJudgeBench 包含 3,808 个实例，覆盖 6 种工作流 DAG 拓扑、3 个难度等级，以及有无真实答案两种评估条件。",
+    "评审一致性随任务难度下降；无真实答案的困难任务中，各模型稳定落在 77%–82% 区间，模型规模难以突破结构性上限。",
+    "真实答案并非总能提升可靠性，GPT-5.4 和 Gemini-2.5-Pro 反而因过度锚定而分别下降 1.5 和 3.9 个百分点。",
+    "链式思考与评审温度作用有限；结构化评估量规最多提升 6.5 个百分点，但跨模型组合泛化不稳定。",
+    "有真实答案时 QwQ-32B 最接近程序化参考、GPT-OSS-120B 最符合人类判断；无真实答案时前沿模型优势仅为边际提升。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.78,
+    "problem_significance": 0.79,
+    "potential_impact": 0.79,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.8,
+    "llm_avg": 0.7680000000000001,
+    "comment": "This benchmark exposes structural weaknesses in LLM judging of dependency-driven tool workflows and offers actionable guidance for agent evaluation pipelines.",
+    "comment_zh": "该基准揭示了LLM评判器在依赖驱动工具工作流中的结构性缺陷，并为Agent评测流程提供了可操作指导。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7680000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26623/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26623/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.974
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2608.27148",
+  "title": "AgentDV: Closed-Loop Agentic AI for Hardware Design Verification",
+  "title_zh": "AgentDV：用于硬件设计验证的闭环智能体 AI",
+  "authors": [
+    "Navya Goli",
+    "Junzhe Liu",
+    "Zhenge Jia",
+    "Umamaheswara Rao Tida"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-27T14:00:16Z",
+  "abs_url": "https://arxiv.org/abs/2608.27148v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.27148",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Register-transfer level (RTL) verification consumes a major part of modern system-on-chip (SoC) development effort. Yet, recent LLM-based verification-code generation often fails to produce runnable, design-consistent, and coverage-producing testbenches. We present AgentDV, a closed-loop agentic AI framework for automated RTL verification environment generation. AgentDV transforms single-shot LLM testbench generation into a tool-grounded verification pipeline by combining LLM-guided analysis, testbench construction, simulation, coverage measurement, and iterative refinement. The framework introduces three key ideas: 1) runnability filtering to reject invalid generated environments, 2) CSR-grounded checking to reduce hallucinated signals and incorrect expected behavior, and 3) coverage-guided iteration to regenerate tests based on measured verification gaps. We evaluate AgentDV using three LLMs on challenge DUTs and public OpenTitan peripheral and security IP blocks. From our analysis, we observed that direct single-shot prompting fails to produce a valid coverage-producing environment on benchmarks. AgentDV achieves 100% pass rate on four DUTs and an average of 80.9% pass rate on all DUTs using Claude Sonnet 4.6. Similarly, an average of 58.7% and 60.6% pass rate is achieved for Llama and Qwen models, respectively. In addition, an average of 74.5%, 69.1%, and 64.9% of line coverage and 88.4%, 82.3%, and 76.7% of branch coverage for the benchmarks under consideration for Claude Sonnet 4.6, Llama, and Qwen models, respectively.",
+  "abstract_zh": "RTL 验证占据现代 SoC 开发的大量工作，但现有基于 LLM 的一次性验证代码生成方法常无法产生可运行、与设计一致且能提升覆盖率的测试平台。本文提出 AgentDV，一个用于自动生成 RTL 验证环境的闭环智能体 AI 框架。AgentDV 将一次性生成转变为由工具支撑的验证流程，结合 LLM 引导的分析、测试平台构建、仿真、覆盖率测量与迭代优化。其核心机制包括：通过可运行性过滤拒绝无效验证环境；利用 CSR 约束检查减少虚构信号和错误预期行为；基于覆盖率引导迭代，针对已测得的验证缺口重新生成测试。作者在多个挑战性 DUT 以及公开的 OpenTitan 外设和安全 IP 模块上，使用三种 LLM 进行评估。实验表明，一次性提示在基准测试上无法稳定生成有效且能产生覆盖率的验证环境；使用 Claude Sonnet 4.6 时，AgentDV 在四个 DUT 上达到 100% 通过率，在全部 DUT 上平均通过率为 80.9%；Llama 和 Qwen 的平均通过率分别为 58.7% 和 60.6%。在覆盖率方面，Claude Sonnet 4.6、Llama 和 Qwen 的平均行覆盖率分别为 74.5%、69.1% 和 64.9%，平均分支覆盖率分别为 88.4%、82.3% 和 76.7%。",
+  "key_points_zh": [
+    "将 LLM 驱动的 RTL 测试平台生成扩展为包含分析、构建、仿真、覆盖率评估和迭代优化的闭环流程。",
+    "通过可运行性过滤、CSR-grounded checking 和 coverage-guided iteration，分别缓解生成环境不可运行、信号或预期行为幻觉以及验证覆盖缺口问题。",
+    "一次性 prompting 在基准测试上无法稳定生成有效且能产生覆盖率的验证环境，说明闭环工具调用对硬件验证十分关键。",
+    "Claude Sonnet 4.6 表现最佳，在全部 DUT 上平均通过率达到 80.9%，平均行覆盖率为 74.5%，平均分支覆盖率为 88.4%。",
+    "AgentDV 同样支持 Llama 和 Qwen，但模型间性能差异明显，表明底层 LLM 能力仍显著影响自动化验证效果。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.73,
+    "novelty": 0.75,
+    "problem_significance": 0.72,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.67,
+    "lasting_value": 0.61,
+    "llm_avg": 0.6859999999999999,
+    "comment": "AgentDV demonstrates a useful closed-loop coding-agent pattern that combines execution, coverage feedback, and iterative refinement, despite its hardware-verification specialization.",
+    "comment_zh": "AgentDV展示了结合执行、覆盖率反馈和迭代改进的有用闭环编码Agent模式，但其应用仍专注于硬件验证。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3210331475111057,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6859999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27148/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27148/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.944
+    }
+  ]
+}

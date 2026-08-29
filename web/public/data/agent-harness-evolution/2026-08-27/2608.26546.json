@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2608.26546",
+  "title": "DuMateBench: Evaluating Autonomous Agents in Complex Real-World Workflows",
+  "title_zh": "DuMateBench：复杂真实世界工作流中的自主智能体评测",
+  "authors": [
+    "Zechun Niu",
+    "Yukun Zhao",
+    "Jiaxin Zhang",
+    "Xu Shen",
+    "Jinhua Si",
+    "Han Tian",
+    "Can Xu",
+    "Yunfan Song",
+    "Jiaxin Mao",
+    "Yansong Gao",
+    "Yuchen Li",
+    "Jianmin Wu",
+    "Lingyong Yan",
+    "Shuaiqiang Wang",
+    "Dawei Yin"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-27T02:36:23Z",
+  "abs_url": "https://arxiv.org/abs/2608.26546v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.26546",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Autonomous agents are increasingly adopted to complete complex, multi-tool workflows in real-world settings. However, existing benchmarks typically separate tasks by application or capability and evaluate agents in environments that are cleaner and more stable than those encountered in practice. We introduce DuMateBench, a real-session benchmark reconstructed from anonymized and privacy-screened user sessions collected from a large-scale production agent platform. Each task preserves the relevant pre-solution interaction history, persistent configurations, and workspace state, and is then validated through human verification. The resulting benchmark comprises 200 tasks spanning 8 broad scenarios and 17 fine-grained capability categories, with most tasks requiring multiple capability coordination. We execute these tasks in isolated Docker containers injected with three forms of real-world environmental complexity: Insufficient, Unstable, and Noisy, and assess performance using a hybrid deterministic and LLM-as-Judge evaluation protocol. Experiments across five representative autonomous-agent frameworks paired with four state-of-the-art LLMs reveal substantial gaps in strict task completion. Complementary robustness, efficiency, and diagnostic analyses further show that performance under environmental perturbations is jointly shaped by the capabilities of the LLM and the surrounding agent framework. The code and data are publicly available at https://dumatebench.com/.",
+  "abstract_zh": "自主智能体正被广泛用于完成真实场景中的复杂、多工具工作流，但现有基准通常按应用或能力拆分任务，且测试环境比实际环境更干净、稳定。本文提出 DuMateBench：一个从大规模生产级智能体平台的匿名化、隐私筛查用户会话中重建的真实会话基准。每项任务均保留求解前的相关交互历史、持久化配置和工作区状态，并经过人工验证。该基准包含 200 项任务，覆盖 8 类宏观场景与 17 类细粒度能力，其中多数任务要求多种能力协同。任务运行于隔离的 Docker 容器中，并注入三类真实环境复杂性：信息不足（Insufficient）、环境不稳定（Unstable）和噪声干扰（Noisy）。评测采用确定性指标与 LLM-as-Judge 相结合的混合协议。对 5 种代表性自主智能体框架和 4 个先进 LLM 的实验表明，各系统在严格任务完成率上仍存在显著不足；鲁棒性、效率和诊断分析进一步显示，环境扰动下的表现由 LLM 能力与智能体框架共同决定。",
+  "key_points_zh": [
+    "基准任务源自生产级智能体平台的真实用户会话，并经过匿名化、隐私筛查和人工验证。",
+    "包含 200 项任务，覆盖 8 类场景和 17 类细粒度能力，多数任务需要多能力协同与多工具操作。",
+    "完整保留交互历史、持久化配置和工作区状态，更贴近真实任务执行上下文。",
+    "在 Docker 隔离环境中引入 Insufficient、Unstable 和 Noisy 三类现实复杂性，并采用确定性评测与 LLM-as-Judge 混合协议。",
+    "对 5 种智能体框架与 4 个先进 LLM 的评测显示，严格任务完成仍有明显差距，鲁棒性同时受底层 LLM 和智能体框架影响。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.91,
+    "novelty": 0.82,
+    "problem_significance": 0.88,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.77,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8400000000000001,
+    "comment": "DuMateBench provides a realistic, publicly released evaluation harness that preserves workflow state and tests agent robustness under environmental complexity.",
+    "comment_zh": "DuMateBench提供了公开发布的真实评测框架，保留工作流状态并检验Agent在复杂环境下的鲁棒性。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8400000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26546/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26546/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.937
+    }
+  ]
+}

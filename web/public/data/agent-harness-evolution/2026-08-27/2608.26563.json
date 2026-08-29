@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2608.26563",
+  "title": "SPT: Skills as Pre-Training Data for Agentic Language Models",
+  "title_zh": "SPT：将 Skills 作为 Agentic Language Models 的预训练数据",
+  "authors": [
+    "Yufei Sun",
+    "Yudong Li",
+    "Yiming Cheng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-27T03:08:31Z",
+  "abs_url": "https://arxiv.org/abs/2608.26563v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.26563",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic (tool-using) language models are mainly trained on tool-call traces and agent trajectories during post-training. These data provide direct behavioral supervision, but producing them requires task environments, execution, and verification, making broad tool and task coverage expensive. Publicly available skills offer another source of training data: they encode reusable tool semantics and workflows but are typically used only as inference-time context. We introduce Skill Pre-Training (SPT), a mid-training method that applies causal language modeling to SkillCorpus, a collection of public multi-file skill packages, optionally mixed with general data. To preserve relations among files within each package, we also introduce Reference Insert, a reference-aware assembly strategy that places supporting files near their mentions in the primary instruction. Experiments across multiple model scales and post-training recipes show that SPT consistently improves agentic performance over mid-training on general or trajectory data, while largely preserving general performance. Data mixture experiments show additional benefits from combining skill data with general annealing corpora. These results indicate that skill packages are a valuable data source for pre-training agentic language models.",
+  "abstract_zh": "现有 Agentic（工具调用型）语言模型主要在后训练阶段使用工具调用轨迹和智能体轨迹进行训练，但这类数据依赖任务环境、执行与验证，扩展工具和任务覆盖的成本较高。论文提出 Skill Pre-Training（SPT），一种中期训练方法：对由公开多文件 skill packages 构成的 SkillCorpus 进行因果语言建模，并可与通用数据混合训练。为保留同一 skill package 内文件之间的关系，论文提出 Reference Insert：根据主指令中的引用，将支持文件放置在相关提及附近。多种模型规模和后训练配置下的实验表明，相比仅使用通用数据或轨迹数据进行中期训练，SPT 能稳定提升 Agentic 性能，同时基本保持通用能力；将 skill 数据与通用退火语料结合还能带来额外收益。结果说明，公开 skill packages 是预训练 Agentic Language Models 的有效数据来源。",
+  "key_points_zh": [
+    "提出 Skill Pre-Training（SPT），利用公开多文件 skill packages 进行中期因果语言建模。",
+    "提出 Reference Insert，将被主指令引用的支持文件放置在相关位置，以保留 package 内的跨文件关系。",
+    "在多种模型规模和后训练方案中，SPT 相比通用数据或轨迹数据中期训练，能稳定提升 Agentic 性能。",
+    "SPT 基本不损害通用能力；与通用 annealing corpora 混合可进一步提升效果。",
+    "研究表明，Skills 不仅适合作为推理时上下文，也可作为 Agentic Language Models 的预训练数据。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.84,
+    "problem_significance": 0.85,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.83,
+    "llm_avg": 0.826,
+    "comment": "SPT turns reusable skill packages into a broadly applicable training resource and introduces a useful structure-aware data assembly method for agentic models.",
+    "comment_zh": "SPT将可复用技能包转化为广泛适用的训练资源，并提出了有价值的结构感知数据组装方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.826,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26563/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.948
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26563/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.825
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.27006",
+  "title": "Conversational Recommendation over Live E-Commerce Catalogues with Self-Refreshing Retrieval",
+  "title_zh": "基于自刷新检索的实时电商目录对话式推荐",
+  "authors": [
+    "Ante Kapetanovic",
+    "Tomislav Duricic",
+    "Dionizije Fa",
+    "Andro Mercep",
+    "Emanuel Lacic"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-27T11:50:15Z",
+  "abs_url": "https://arxiv.org/abs/2608.27006v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.27006",
+  "links": {
+    "github": "https://github.com/infobip/infobip-agentic-crs.",
+    "project_page": null
+  },
+  "abstract_en": "Conversational recommender systems based on large language models (LLMs) are usually evaluated on static, pre-indexed item collections, yet e-commerce catalogues change continuously as products are added or removed, repriced, and restocked. We present a merchant-agnostic, multi-turn conversational shopping assistant that operates over such live catalogues. Its central component is a self-refreshing retriever that ingests a merchant product feed, enriches the records, and synchronizes them into a vector index. On each run, per-item hashes identify which products are new, changed, deleted, or unchanged, so only the delta is processed rather than rebuilding the whole catalogue. A controller-based dialogue layer consumes this index, using an LLM only for intent classification and preference elicitation while retrieval, reranking, and diversity selection run as dedicated functions. Our demonstration is a WhatsApp shopping assistant in which catalogue changes reach the recommendations after the next successful sync. A live chatbot, documentation, and a recorded walkthrough are available at https://github.com/infobip/infobip-agentic-crs.",
+  "abstract_zh": "现有基于大语言模型（LLM）的对话式推荐系统通常在静态、预先建立索引的商品集合上评估，难以适应商品持续上架、下架、调价和补货的实时电商目录。本文提出一种与商家无关、支持多轮对话的购物助手，能够直接运行于动态商品目录之上。其核心是自刷新检索器（self-refreshing retriever）：接收商家商品 Feed，对商品记录进行增强，并同步至向量索引。系统为每件商品计算哈希值，以识别新增、变更、删除和未变化商品，仅处理目录增量，避免全量重建索引。对话层采用控制器架构，仅使用 LLM 进行意图分类和偏好 elicitation，检索、重排序与多样性选择则由专用函数完成。作者实现了一个基于 WhatsApp 的购物助手，目录变更可在下一次成功同步后反映到推荐结果中，并提供了在线聊天机器人、文档和演示视频。",
+  "key_points_zh": [
+    "提出面向动态电商目录的 merchant-agnostic 多轮对话式购物助手。",
+    "通过 per-item hash 检测新增、修改、删除和未变化商品，仅同步目录增量。",
+    "自刷新检索器将商品 Feed 增强后同步到向量索引，避免全量重建。",
+    "采用 controller-based dialogue，将 LLM 限定用于意图分类和偏好 elicitation。",
+    "检索、重排序和多样性选择由专用函数执行，并在 WhatsApp 场景中完成演示。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.8,
+    "problem_significance": 0.88,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8140000000000001,
+    "comment": "A strongly commerce-grounded conversational shopping system that addresses the practical challenge of keeping retrieval and recommendations synchronized with continuously changing product catalogues.",
+    "comment_zh": "该工作高度聚焦电商购物助手，解决了检索与推荐如何持续同步动态商品目录这一重要实际问题。"
+  },
+  "scores": {
+    "topic_relevance": 1.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.6112158586794452,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.8140000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/infobip/infobip-agentic-crs.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 6,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 14,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27006/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27006/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.934
+    }
+  ]
+}

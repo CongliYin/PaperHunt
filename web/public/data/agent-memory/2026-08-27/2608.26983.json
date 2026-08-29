@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.26983",
+  "title": "GraphMemix: Query-Aware Evidence Forests for Long-Term Multimodal Agent Memory",
+  "title_zh": "GraphMemix：面向查询的证据森林长时多模态智能体记忆",
+  "authors": [
+    "Geng Li",
+    "Yuhao Wang",
+    "Dong Li",
+    "Jianye Hao",
+    "Yuxin Peng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-27T11:28:49Z",
+  "abs_url": "https://arxiv.org/abs/2608.26983v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.26983",
+  "links": {
+    "github": "https://github.com/ligeng0197/graphmemix",
+    "project_page": null
+  },
+  "abstract_en": "Organizing long-term memory for multimodal agents remains challenging because existing methods either suffer from expensive question-agnostic offline summaries or naive embedding similarity matching that introduces incomplete and redundant context. To address these issues, we propose GraphMemix, a combinatorial-optimization graph memory framework that models memory organization as query-aware evidence-forest construction. Specifically, our method consists of three key components:(1) candidate graph construction, which expands multi-view seed memories through schema and semantic relations to acquire query-aware original context; (2) evidence utility and activation costs, which decouples direct memory support from anchor-conditioned relation verification to suppress redundant or conflicting information; and (3) forest optimization, which jointly selects a forest-format memory context under a maximum evidence budget and its reliable relational structure. By organizing memory into a query-relevant subgraph, the method avoids substantial lifecycle cost and recovers low-similarity complementary evidence. Experimental results across four long-term multimodal memory benchmarks demonstrate significant improvements with different foundation models and establish a new Pareto frontier between accuracy and lifecycle cost.",
+  "abstract_zh": "长时多模态智能体的记忆组织面临两类问题：离线摘要成本高且与问题无关，单纯依赖嵌入相似度匹配又容易产生不完整和冗余上下文。为此，GraphMemix 提出一种基于组合优化的图记忆框架，将记忆组织建模为面向查询的证据森林构建问题。该方法包含三个核心组件：首先，通过模式关系和语义关系扩展多视角种子记忆，构建候选图并获取与查询相关的原始上下文；其次，设计证据效用与激活成本，将直接记忆支持与锚点条件下的关系验证解耦，从而抑制冗余或冲突信息；最后，在最大证据预算约束下，联合选择森林形式的记忆上下文及其可靠关系结构。通过组织查询相关子图，GraphMemix 降低了记忆生命周期成本，并能够找回低相似度但具有互补价值的证据。在四个长时多模态记忆基准上的实验表明，该方法在不同基础模型上均取得显著提升，并在准确率与生命周期成本之间建立了新的 Pareto 前沿。",
+  "key_points_zh": [
+    "将长时记忆组织建模为查询感知的证据森林构建，而非依赖离线摘要或单一嵌入相似度匹配。",
+    "通过模式关系和语义关系扩展多视角种子记忆，构建包含原始上下文的候选图。",
+    "将直接证据支持与锚点条件下的关系验证分离，并利用激活成本抑制冗余和冲突信息。",
+    "在证据预算约束下联合优化记忆证据及其关系结构，能够召回低相似度的互补证据。",
+    "在四个长时多模态记忆基准上提升准确率，并改善准确率与记忆生命周期成本之间的权衡。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.87,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.86,
+    "llm_avg": 0.842,
+    "comment": "A strong Agent-memory contribution that formulates query-aware long-term evidence organization as an optimized relational forest rather than simple similarity retrieval.",
+    "comment_zh": "这是一项扎实的 Agent Memory 工作，将查询感知的长期证据组织建模为优化的关系森林，而非简单的相似度检索。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.842,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/ligeng0197/graphmemix",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26983/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26983/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.985
+    }
+  ]
+}

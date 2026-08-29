@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2608.27328",
+  "title": "R2M-Bench: Evaluating Revisit Memory via Relative Consistency in Interactive Video World Models",
+  "title_zh": "R2M-Bench：通过相对一致性评估交互式视频世界模型的重访记忆",
+  "authors": [
+    "Qiwen Gu",
+    "Bingjie Gao",
+    "Rui Chen",
+    "Geng Li",
+    "Jifan Li",
+    "Qishuai Wen",
+    "Li Niu",
+    "Jing Tang",
+    "Xiangxiang Chu",
+    "Junqiao Zhao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-27T16:26:29Z",
+  "abs_url": "https://arxiv.org/abs/2608.27328v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.27328",
+  "links": {
+    "github": "https://github.com/AMAP-ML/R2MBench",
+    "project_page": null
+  },
+  "abstract_en": "High similarity between first-visit and return frames does not necessarily show that a video world model remembered the scene; the intervening rollout may simply have changed very little. This ambiguity makes absolute revisit scores sensitive to rendering stability, repetitive content, and failed motion. We introduce \\emph{R2M-Bench} (\\textbf{R}elative \\textbf{R}evisit \\textbf{M}emory Benchmark), a benchmark of observable revisit-selective consistency. For every detected return, R2M-Bench compares the revisit pair with two controls from the same rollout: a gap-matched non-revisit pair that measures generic temporal stability and a short-range pair that estimates short-horizon consistency. These comparisons produce \\emph{MemoryGain} (MG), the revisit advantage over the temporal baseline, and the \\emph{Normalized Memory Ratio} (NMR), which normalizes this advantage by the short-to-baseline dynamic range. R2M-Bench combines 100 reference scenes with three leave-and-return trajectories to form 300 instances and evaluates appearance fidelity, scene and object identity, local geometry, and persistent state. Across seven action-conditioned video world models, Overall NMR correlates with human consistency judgments at Spearman's $ρ=0.547$ (95\\% CI $[0.45,0.63]$). Its within-model correlation magnitude with generated motion is $0.072$, compared with $0.207$ for raw revisit similarity, indicating that relative calibration substantially reduces the slow-motion shortcut. DreamX-World-Memo achieves the highest Overall NMR among the evaluated video models. Together, these results support same-rollout relative calibration as a practical way to distinguish revisit-specific consistency from generic temporal stability.",
+  "abstract_zh": "首次访问帧与返回帧高度相似，并不一定意味着视频世界模型记住了场景，因为中间 rollout 可能几乎没有发生变化。为解决绝对重访相似度易受渲染稳定性、重复内容和运动失败影响的问题，论文提出 R2M-Bench（Relative Revisit Memory Benchmark），评估可观测的重访选择性一致性。对于每次检测到的返回事件，R2M-Bench 在同一 rollout 中引入两个对照：用于衡量一般时间稳定性的间隔匹配非重访帧对，以及估计短期一致性的短距离帧对。由此定义 MemoryGain（MG），即相对于时间基线的重访优势；以及 Normalized Memory Ratio（NMR），即用短期一致性与时间基线之间的动态范围对该优势进行归一化。基准包含 100 个参考场景和 3 条离开—返回轨迹，共 300 个实例，评估外观保真度、场景与物体身份、局部几何结构及持久状态。在 7 个动作条件视频世界模型上，Overall NMR 与人工一致性判断的 Spearman 相关系数为 0.547（95% CI：[0.45, 0.63]）。在模型内部，Overall NMR 与生成运动的相关性幅值为 0.072，而原始重访相似度为 0.207，表明相对校准能显著减弱慢运动捷径。DreamX-World-Memo 在评测模型中取得最高 Overall NMR。结果支持使用同一 rollout 内的相对校准，区分真正的重访特定一致性与一般时间稳定性。",
+  "key_points_zh": [
+    "指出绝对重访相似度存在歧义：高相似度可能源于中间 rollout 变化很小，而非模型记住了场景。",
+    "提出同一 rollout 内的两个对照，并据此构建 MemoryGain（MG）和 Normalized Memory Ratio（NMR），以分离重访记忆与一般时间稳定性。",
+    "基准包含 100 个场景、3 条离开—返回轨迹和 300 个实例，覆盖外观、场景与物体身份、局部几何及持久状态。",
+    "在 7 个视频世界模型上，Overall NMR 与人工一致性判断的 Spearman ρ 为 0.547；其与生成运动的相关性低于原始重访相似度，说明能缓解慢运动捷径。",
+    "DreamX-World-Memo 获得最高 Overall NMR；代码地址为 https://github.com/AMAP-ML/R2MBench。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.66,
+    "novelty": 0.78,
+    "problem_significance": 0.79,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.61,
+    "lasting_value": 0.78,
+    "llm_avg": 0.744,
+    "comment": "A valuable benchmark for evaluating persistent visual memory in interactive video world models, with clear relevance to closed-loop visual agents despite limited direct tool-use evaluation.",
+    "comment_zh": "该工作为交互式视频世界模型中的持久视觉记忆提供了有价值的评测基准，与闭环视觉智能体高度相关，但对直接工具调用的评估仍有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.744,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/AMAP-ML/R2MBench",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27328/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27328/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.944
+    }
+  ]
+}

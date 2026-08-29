@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.26658",
+  "title": "PailitaoGR: Latent Think-with-Images for Generative Image Retrieval",
+  "title_zh": "PailitaoGR：用于生成式图像检索的潜在图像思考",
+  "authors": [
+    "Xiaomeng Fan",
+    "Yueran Liu",
+    "Shengyu Zhou",
+    "Chenghan Fu",
+    "Wanxian Guan",
+    "Feng Li",
+    "Chuan Yu",
+    "Jian Xu",
+    "Bo Zheng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-27T06:12:32Z",
+  "abs_url": "https://arxiv.org/abs/2608.26658v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.26658",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Generative retrieval has demonstrated strong performance by directly generating product semantic identifiers (SIDs). Extending this paradigm to image search, however, is nontrivial because real-world query images contain diverse information, including the search target, useful auxiliary evidence, and irrelevant visual content. This requires the model to identify and focus on the search target while selectively utilizing auxiliary evidence. In this paper, we propose \\textbf{PailitaoGR}, a \\emph{Latent Think-with-Images} method for generative image retrieval, which internalizes target-focused perception and selective auxiliary-evidence utilization into a the generative retrieval model, enabling \\textit{Zooming without Cropping} and \\textit{Reading without OCR}. Specifically, we design a target-focused perception mechanism that identifies and enhances visual tokens of the search target, consisting of a target Enhancer and a learning strategy based on on-policy distillation and attention guidance loss, enabling the model to focus on search-target regions. We also design a selective auxiliary-evidence utilization mechanism that identifies and enhances visual tokens of auxiliary evidence, including an auxiliary enhancer and an in-capacity incremental contrastive distillation strategy, enabling the model to exploit auxiliary evidence. We construct training and validation sets sampled from real-world online image-search logs. Experiments show that our method outperforms existing baselines by an average of 13.8\\%, validating its effectiveness.",
+  "abstract_zh": "生成式检索通过直接生成商品语义标识符（Semantic Identifiers, SIDs）取得了良好效果，但将其扩展到图像搜索面临挑战：真实查询图像同时包含搜索目标、辅助证据和无关视觉内容。为此，论文提出 PailitaoGR，一种“潜在图像思考”（Latent Think-with-Images）方法，将目标聚焦感知与辅助证据选择性利用内化到生成式检索模型中，实现“无需裁剪的缩放”（Zooming without Cropping）和“无需 OCR 的阅读”（Reading without OCR）。具体而言，方法设计了目标聚焦感知机制，通过目标增强器（target Enhancer）、基于策略内蒸馏（on-policy distillation）的学习策略以及注意力引导损失，识别并增强搜索目标对应的视觉 token，使模型聚焦目标区域。同时，方法设计了选择性辅助证据利用机制，通过辅助增强器和容量内增量对比蒸馏（in-capacity incremental contrastive distillation），识别并增强辅助证据视觉 token，从而有效利用补充信息。论文基于真实在线图像搜索日志构建训练集和验证集。实验结果表明，PailitaoGR 相比现有基线平均提升 13.8%，验证了其有效性。",
+  "key_points_zh": [
+    "提出 PailitaoGR，将 Latent Think-with-Images 引入生成式图像检索，处理查询图像中目标、辅助证据与无关内容并存的问题。",
+    "通过 target Enhancer、on-policy distillation 和 attention guidance loss，实现目标聚焦感知，即无需裁剪即可强化搜索目标区域。",
+    "通过 auxiliary enhancer 与 in-capacity incremental contrastive distillation，选择性提取并利用辅助视觉证据，实现无需 OCR 的信息读取。",
+    "基于真实在线图像搜索日志构建训练与验证数据，实验显示相较现有基线平均性能提升 13.8%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.89,
+    "problem_significance": 0.88,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.87,
+    "llm_avg": 0.868,
+    "comment": "A highly relevant multimodal product-search method that improves generative image retrieval by focusing on targets and selectively exploiting auxiliary visual evidence from real online search logs.",
+    "comment_zh": "该工作基于真实在线搜索日志，通过聚焦目标区域并选择性利用辅助视觉证据，有效推进了多模态商品图像搜索。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.604086658710279,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.868,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 32,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26658/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.26658/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}
