@@ -1,0 +1,279 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-08-28",
+  "generated_at": "2026-08-31T23:44:33Z",
+  "papers": [
+    {
+      "arxiv_id": "2608.28158",
+      "title": "HARTS: Efficient Agentic Reinforcement Learning for Hybrid-Attention Models over Arbitrary Rollout Trees",
+      "title_zh": "HARTS：面向任意 rollout 树的混合注意力模型高效智能体强化学习",
+      "authors": [
+        "Boyuan Meng",
+        "Peihua Bao",
+        "Hong Liu",
+        "Xiaowei Zhu",
+        "Chao Wang",
+        "Gen Li",
+        "Zhenxuan Pan"
+      ],
+      "total_score": 0.6987883062540946,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.9040000000000001,
+        "domain_fit": 0.98,
+        "other": 0.19862768751364818
+      },
+      "tags": [
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "HARTS利用前缀共享将混合注意力RL加速近5倍",
+      "detail_file": "agent-harness-evolution/2026-08-28/2608.28158.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.28158/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.28128",
+      "title": "VICT: Verifier-Instrumented Credit Tracing for Long-Horizon LLM Agent Reinforcement Learning",
+      "title_zh": "VICT：面向长时程 LLM Agent 强化学习的验证器增强信用追踪",
+      "authors": [
+        "Pengcheng Li",
+        "Zhengyang Zhang",
+        "Dongxu Zhang",
+        "Sui Huang",
+        "Shaohua Ma"
+      ],
+      "total_score": 0.6938000000000001,
+      "scores": {
+        "topic_relevance": 0.9600000000000001,
+        "llm_assessment": 0.916,
+        "domain_fit": 0.97,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "利用 verifier 内部证据沿依赖边精准分配信用",
+      "detail_file": "agent-harness-evolution/2026-08-28/2608.28128.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.28128/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.27969",
+      "title": "openJiuwen: Beyond Static Harnesses for Long-Horizon Coding Agents",
+      "title_zh": "openJiuwen：超越静态框架的长时程编程智能体系统",
+      "authors": [
+        "openJiuwen Team",
+        "Tao Yu",
+        "Xinyu Zhang",
+        "Qianqian Chen",
+        "Xiaoneng Xiang",
+        "Chia Kwangyang",
+        "Xingchen Huang",
+        "Ran Chen",
+        "Yangkai Ding",
+        "Zheng Wang",
+        "Yeo Boon Hong",
+        "Bingzheng Gan",
+        "Enrui Hu",
+        "Shuo Cheng",
+        "Deyang Li",
+        "Ruifeng Shi",
+        "Hongbo Wang",
+        "Qi Ye",
+        "Xuefeng Jin",
+        "Zhangchun Zhao"
+      ],
+      "total_score": 0.6896000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.9119999999999999,
+        "domain_fit": 0.99,
+        "other": 0.2666666666666667
+      },
+      "tags": [
+        "Code soon",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "兼具可组合性与运行时适应性的高性能编程智能体框架",
+      "detail_file": "agent-harness-evolution/2026-08-28/2608.27969.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27969/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.27796",
+      "title": "ReToolSQL: Agentic Reinforcement Learning for Robust Text-to-SQL",
+      "title_zh": "ReToolSQL：面向鲁棒 Text-to-SQL 的智能体强化学习",
+      "authors": [
+        "Pratik Kakkar",
+        "Chandra Dhir",
+        "Ravi Shankar",
+        "Pareekshit Reddy Gaddam",
+        "Anup Shirgaonkar"
+      ],
+      "total_score": 0.6662529497829102,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.7639999999999999,
+        "domain_fit": 0.86,
+        "other": 0.23017649927636716
+      },
+      "tags": [
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "SFT扩大覆盖，RFT用工具反馈提升Text-to-SQL鲁棒性",
+      "detail_file": "agent-harness-evolution/2026-08-28/2608.27796.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27796/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.28553",
+      "title": "Logos: An Agent Harness on a Cross-Process Bus",
+      "title_zh": "Logos：基于跨进程总线的智能体运行框架",
+      "authors": [
+        "Hanzhang Jia",
+        "Liheng Zeng",
+        "Hao Cheng",
+        "Yi Gao",
+        "Bo Ma"
+      ],
+      "total_score": 0.6440000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.8800000000000001,
+        "domain_fit": 0.98,
+        "other": 0.2
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "Logos用跨进程插件和追加式记录实现故障隔离与无重复恢复。",
+      "detail_file": "agent-harness-evolution/2026-08-28/2608.28553.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.28553/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.28363",
+      "title": "EvoUndo: Recoverability-Constrained Self-Evolution for LLM Agent Harnesses",
+      "title_zh": "EvoUndo：面向 LLM Agent Harness 的可恢复性约束自进化",
+      "authors": [
+        "Tanmay Sah",
+        "Dolly Sah",
+        "Harshul Jain",
+        "Tanya Sah"
+      ],
+      "total_score": 0.5381396023336626,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.9400000000000001,
+        "domain_fit": 0.99,
+        "other": 0.32046534111220876
+      },
+      "tags": [
+        "HF Daily ★5",
+        "general llm agents"
+      ],
+      "tldr_zh": "可靠的 Agent 自进化需联合设计验证与恢复机制",
+      "detail_file": "agent-harness-evolution/2026-08-28/2608.28363.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.28363/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.28476",
+      "title": "ContextPilot: Teaching Agents for Proactive Context Management via Fine-grained RL",
+      "title_zh": "ContextPilot：通过细粒度强化学习教会智能体主动管理上下文",
+      "authors": [
+        "Zhuoshi Pan",
+        "Qizhi Pei",
+        "Junru Lu",
+        "Honglin Lin",
+        "H. Vicky Zhao",
+        "Di Yin",
+        "Xing Sun"
+      ],
+      "total_score": 0.48073913165723015,
+      "scores": {
+        "topic_relevance": 0.16000000000000003,
+        "llm_assessment": 0.882,
+        "domain_fit": 0.9,
+        "other": 0.5071304388574339
+      },
+      "tags": [
+        "HF Daily ★24",
+        "GitHub",
+        "adjacent rag and prompting"
+      ],
+      "tldr_zh": "ContextPilot用细粒度强化学习实现主动上下文管理",
+      "detail_file": "agent-harness-evolution/2026-08-28/2608.28476.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.28476/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.28062",
+      "title": "WeAgent-MMSearch: Native Text-Vision Interaction for Multimodal Search Agents",
+      "title_zh": "WeAgent-MMSearch：面向多模态搜索智能体的原生文本-视觉交互",
+      "authors": [
+        "Zongkai Liu",
+        "Hui Zhang",
+        "Liqiang Niu",
+        "Zhen Cao",
+        "Han Li",
+        "Juntao Liu",
+        "Wenchao Chen",
+        "Chengduo Zhao",
+        "Chao Yu",
+        "Fandong Meng"
+      ],
+      "total_score": 0.3536770492857609,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.9259999999999999,
+        "domain_fit": 0.99,
+        "other": 0.2529234976192031
+      },
+      "tags": [
+        "Code soon"
+      ],
+      "tldr_zh": "原生视觉交互与失败恢复显著提升多模态搜索智能体",
+      "detail_file": "agent-harness-evolution/2026-08-28/2608.28062.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.28062/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.27790",
+      "title": "Credo: Reusable Declarative Primitives for Agentic Workflows",
+      "title_zh": "Credo：面向智能体工作流的可复用声明式原语",
+      "authors": [
+        "Duo Lu",
+        "Andrew Crotty",
+        "Uğur Çetintemel"
+      ],
+      "total_score": 0.34051254937568837,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.916,
+        "domain_fit": 0.99,
+        "other": 0.2190418312522947
+      },
+      "tags": [],
+      "tldr_zh": "Credo 将搜索得到的 harness 转化为可复用的声明式原语。",
+      "detail_file": "agent-harness-evolution/2026-08-28/2608.27790.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27790/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.27831",
+      "title": "RealSWE: A Compositional Evaluation of Coding Agents under Realistic User Requests",
+      "title_zh": "RealSWE：面向真实用户请求的编程代理组合式评测",
+      "authors": [
+        "Gyuhyeong Kim",
+        "Hyojung Gwon",
+        "Jeonghyeon Kim",
+        "Kyuhong Shim",
+        "Sunjae Lee"
+      ],
+      "total_score": 0.27666579231742744,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.8100000000000002,
+        "domain_fit": 0.97,
+        "other": 0.1122193077247579
+      },
+      "tags": [],
+      "tldr_zh": "真实请求显著降低编程代理表现，明确期望与动机最有效。",
+      "detail_file": "agent-harness-evolution/2026-08-28/2608.27831.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27831/thumb.webp"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "arxiv_id": "2608.28363",
+  "title": "EvoUndo: Recoverability-Constrained Self-Evolution for LLM Agent Harnesses",
+  "title_zh": "EvoUndo：面向 LLM Agent Harness 的可恢复性约束自进化",
+  "authors": [
+    "Tanmay Sah",
+    "Dolly Sah",
+    "Harshul Jain",
+    "Tanya Sah"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-28T14:15:36Z",
+  "abs_url": "https://arxiv.org/abs/2608.28363v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.28363",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM agents increasingly modify their own prompts, tools, middleware, resources, and execution harnesses at runtime. Such self-evolution can improve capability, but a successful mutation may leave persistent effects that cannot be safely reversed in states different from the one in which it was created. We introduce EvoUndo, a framework for representing, synthesizing, diagnosing, and independently verifying recoverability of model-generated self-modifications across counterfactual states. Across 600 unseen one-shot self-evolution tasks, we identify 197 capability-improving mutations that fail recoverability verification. Under the original recovery representation, conventional repair strategies recover 0/197 of these natural failures. Deterministic oracle analysis recovers 48/197 under the original recovery language L0, while the extended recovery calculus increases empirical oracle recovery to 191/197. A protocol-locked 2x2 grounding-by-expressivity intervention then separates two bottlenecks: exact state-address grounding increases successful recovery from 0/48 to 38/48 (79.2%) when the original language is sufficient, while extending the recovery language enables recovery on 142/143 (99.3%) failures in the oracle-defined S1 stratum. On the primary gpt-oss-120b backbone, adding exact-address diagnostics to the richer language reduces recovery to 133/143 (93.0%); a Qwen3.8-27B replication preserves the grounding and expressivity effects but not this negative interaction, indicating that the latter is model-dependent. These results indicate that reliable agent self-evolution requires co-designing verification, state grounding, witness semantics, and recovery-language expressivity rather than relying on iterative prompting alone.",
+  "abstract_zh": "LLM agents 可在运行时修改自身的 prompts、tools、middleware、resources 与 execution harness，从而提升能力，但这些修改可能在不同于创建时的反事实状态下产生无法安全撤销的持久影响。论文提出 EvoUndo，用于表示、合成、诊断并独立验证模型生成的自修改操作在不同状态下的可恢复性。在 600 个未见过的一次性自进化任务中，发现 197 个能力提升型 mutation 未通过可恢复性验证；在原始 recovery 表示下，常规修复策略对这些失败案例的恢复率为 0/197。确定性 oracle 分析在原始恢复语言 L0 下恢复 48/197，而扩展 recovery calculus 将 oracle 恢复数提升至 191/197。受协议约束的 2×2 grounding-by-expressivity 实验表明：当原始语言足够表达时，精确的 state-address grounding 可将成功恢复率从 0/48 提升至 38/48（79.2%）；扩展 recovery language 则可在 oracle 定义的 S1 分层中恢复 142/143（99.3%）的失败案例。在主要的 gpt-oss-120b backbone 上，为更丰富的语言加入精确地址诊断后，恢复率反而降至 133/143（93.0%）；Qwen3.8-27B 复现实验保留了 grounding 与 expressivity 的影响，但未复现这一负交互，说明该现象具有模型依赖性。总体而言，可靠的 agent 自进化需要协同设计 verification、state grounding、witness semantics 与 recovery-language expressivity，而不能仅依赖迭代式 prompting。",
+  "key_points_zh": [
+    "EvoUndo 将 LLM agent 自修改的可恢复性形式化，并支持跨反事实状态的生成、诊断与独立验证。",
+    "在 600 个自进化任务中发现 197 个能力提升但不可恢复的 mutation；原始恢复表示下常规修复对其恢复率为 0/197。",
+    "实验区分了两类瓶颈：精确 state-address grounding 解决“定位错误”，扩展 recovery language 解决“表达能力不足”。",
+    "扩展 recovery calculus 在 oracle 分析中将恢复数提升至 191/197；在 S1 分层中达到 142/143（99.3%）。",
+    "grounding 与 expressivity 的收益具有普适性，但精确地址诊断与丰富语言的负交互依赖具体模型。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.94,
+    "problem_significance": 0.95,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.94,
+    "lasting_value": 0.95,
+    "llm_avg": 0.9400000000000001,
+    "comment": "EvoUndo establishes recoverability as a verifiable constraint on harness self-evolution and contributes durable representations, diagnostics, and recovery semantics.",
+    "comment_zh": "EvoUndo将可恢复性确立为智能体框架自我演化的可验证约束，并提供了具有持久价值的表示、诊断和恢复语义。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.7351428590504188,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9400000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 5,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.28363/fig1.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.985
+    }
+  ]
+}

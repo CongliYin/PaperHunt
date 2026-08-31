@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.28128",
+  "title": "VICT: Verifier-Instrumented Credit Tracing for Long-Horizon LLM Agent Reinforcement Learning",
+  "title_zh": "VICT：面向长时程 LLM Agent 强化学习的验证器增强信用追踪",
+  "authors": [
+    "Pengcheng Li",
+    "Zhengyang Zhang",
+    "Dongxu Zhang",
+    "Sui Huang",
+    "Shaohua Ma"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-28T09:43:54Z",
+  "abs_url": "https://arxiv.org/abs/2608.28128v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.28128",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Fine-grained credit assignment is a central challenge in reinforcement learning for long horizon LLM agents. Standard objectives often train from programmatically verifiable terminal rewards by broadcasting each sparse outcome to every action in a trajectory. Existing methods typically seek finer credit from the rollout side, constructing auxiliary trajectory signals or additional comparisons to estimate action importance. Although useful, these approaches still treat the verifier that judged success as a scalar reward, discarding its internal task structure. Our key insight is that many verifiable tasks already encode the relevant checks inside their terminal verifier. We propose VICT (VerifierInstrumented Credit Tracing), a training-time interface that exposes executable or evidence backed atoms and traces them back to actions through dependency-valid proof edges. VICT redistributes group-relative advantage only along those edges, shifting credit assignment from rollout-side inference to verifierside tracing. It preserves the original terminal reward, abstains when evidence is incomplete or ambiguous, and changes only the training-time advantage tensor, requiring no learned critic, process labels, branch rollouts, or inference-time verifier access. On ALFWorld and WebShop, VICT improves substantially over outcome-only training and achieves strong performance alongside recent fine-grained credit methods; ablations rule out dense atom rewards, final-commit credit, temporal proximity, and sparsity as sufficient explanations.",
+  "abstract_zh": "长时程 LLM Agent 强化学习的核心难题之一是细粒度信用分配。标准方法通常依据可程序验证的终止奖励，将稀疏结果广播到轨迹中的所有动作。现有方法主要从 rollout 侧构造辅助轨迹信号或额外比较，以估计动作重要性，但仍将判定成功与否的 verifier 简化为标量奖励，忽略其内部任务结构。VICT（Verifier-Instrumented Credit Tracing）提出一种训练阶段接口，暴露 verifier 中可执行或有证据支持的原子检查项，并通过满足依赖关系的证明边将这些检查项追溯至相关动作。VICT 仅沿这些证明边重新分配 group-relative advantage，将信用分配从 rollout 侧推断转向 verifier 侧追踪。该方法保留原始终止奖励，在证据不完整或存在歧义时主动放弃分配；同时只修改训练阶段的 advantage tensor，无需学习 critic、过程标签、分支 rollout 或推理时访问 verifier。在 ALFWorld 和 WebShop 上，VICT 显著优于仅使用结果奖励的训练，并取得与近期细粒度信用分配方法相当或更强的性能。消融实验表明，密集原子奖励、最终提交动作信用、时间邻近性和稀疏性本身都不足以解释其收益。",
+  "key_points_zh": [
+    "核心 insight：可验证任务的 terminal verifier 已包含细粒度任务结构，不应仅被压缩为标量奖励。",
+    "VICT 从 verifier 暴露 executable 或 evidence-backed atoms，并通过 dependency-valid proof edges 将其信用追溯到相关动作。",
+    "方法只在训练阶段修改 advantage tensor，保留原始终止奖励，不需要 learned critic、过程标签、branch rollouts 或推理时 verifier。",
+    "在 ALFWorld 和 WebShop 上，相比 outcome-only training 获得显著提升，并与近期细粒度信用方法表现出竞争力。",
+    "消融结果排除了 dense atom rewards、final-commit credit、temporal proximity 和 sparsity 作为主要收益来源。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.92,
+    "problem_significance": 0.94,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.9,
+    "lasting_value": 0.92,
+    "llm_avg": 0.916,
+    "comment": "VICT offers a compelling verifier-backed credit-assignment interface that exploits executable task structure rather than treating terminal verification as a scalar.",
+    "comment_zh": "VICT提出了有说服力的验证器驱动信用分配接口，利用可执行任务结构而非仅将终局验证视为标量奖励。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.916,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.28128/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.935
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.28128/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

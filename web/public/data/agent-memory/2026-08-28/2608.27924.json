@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.27924",
+  "title": "What Makes Agent Memory Useful for Reliable Unanswerable Question Handling?",
+  "title_zh": "是什么让 Agent Memory 对可靠处理不可回答问题有用？",
+  "authors": [
+    "Chuanyuan Tan",
+    "Junjie Yu",
+    "Yuxin Wang",
+    "Yining Zheng",
+    "Xipeng Qiu",
+    "Wenliang Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-28T05:00:28Z",
+  "abs_url": "https://arxiv.org/abs/2608.27924v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.27924",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Reliable handling of unanswerable questions (UAQs) is critical for trustworthy LLM-based agents. Although memory is widely used in agent systems, its role in reliable UAQ handling remains unclear. We present a systematic study of agent memory for UAQ handling under a unified agentic RAG framework, evaluating four representative memory methods across three UAQ-related datasets and two base models. We find that memory can improve UAQ performance in some settings, but such gains are selective rather than universal and remain fragile under dataset shift. Interestingly, cross-model memory reuse is often more feasible than cross-dataset transfer, suggesting that shifts in answerability patterns pose a greater challenge to memory reuse than changes in the base model itself. We further find that UAQ gains are more strongly preserved through decision guidance than through trajectory shaping, and that memory effectiveness depends strongly on representation. In particular, procedural and rule-based memories often provide the most reliable support for UAQ handling, while memory composition is most effective when procedural guidance is combined with complementary behavioral signals. Overall, our findings suggest that reliable UAQ memory depends less on storing larger amounts of experience and more on preserving transferable behavioral guidance.",
+  "abstract_zh": "本文在统一的 agentic RAG 框架下，系统研究 Agent Memory 对不可回答问题（Unanswerable Questions, UAQs）可靠处理的作用，覆盖 4 种代表性记忆方法、3 个 UAQ 相关数据集和 2 个基础模型。结果表明，Memory 在部分设置下能够提升 UAQ 处理性能，但增益具有选择性，并且在数据集迁移下较为脆弱。跨模型复用 Memory 通常比跨数据集迁移更可行，说明可回答性模式的变化比基础模型变化更阻碍记忆复用。相比轨迹塑造，通过决策引导保留 UAQ 增益的效果更好；同时，Memory 的有效性高度依赖表示方式。具体而言，程序性记忆和基于规则的记忆通常能提供更可靠的支持，而将程序性引导与互补的行为信号结合，是最有效的记忆组合方式之一。总体上，可靠的 UAQ Memory 并不主要依赖存储更多经验，而依赖保留可迁移的行为指导。",
+  "key_points_zh": [
+    "Memory 对 UAQ 处理的提升并非普适，在数据集分布变化下尤其脆弱。",
+    "跨模型复用通常优于跨数据集迁移，表明可回答性模式变化是主要挑战。",
+    "决策引导比轨迹塑造更能稳定保留 UAQ 处理增益。",
+    "程序性记忆和规则记忆通常最可靠，记忆表示方式对效果影响显著。",
+    "最佳记忆组合倾向于将程序性指导与互补的行为信号结合，而非单纯扩大经验规模。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.74,
+    "problem_significance": 0.79,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.6,
+    "lasting_value": 0.78,
+    "llm_avg": 0.734,
+    "comment": "A focused empirical study showing how memory representation and behavioral guidance affect reliable agent handling of unanswerable questions across models and datasets.",
+    "comment_zh": "这是一项聚焦的实证研究，揭示了记忆表示与行为指导如何影响 Agent 在不同模型和数据集上可靠处理不可回答问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3674641493844868,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.734,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 6,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27924/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27924/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

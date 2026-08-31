@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.27831",
+  "title": "RealSWE: A Compositional Evaluation of Coding Agents under Realistic User Requests",
+  "title_zh": "RealSWE：面向真实用户请求的编程代理组合式评测",
+  "authors": [
+    "Gyuhyeong Kim",
+    "Hyojung Gwon",
+    "Jeonghyeon Kim",
+    "Kyuhong Shim",
+    "Sunjae Lee"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-28T01:57:58Z",
+  "abs_url": "https://arxiv.org/abs/2608.27831v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.27831",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents are now commonly evaluated on the SWE-bench family of benchmarks, whose tasks are built from curated GitHub issues--long, structured, and information-rich. Real user requests, however, are typically far shorter and less structured. To characterize this gap, we define a six-category information taxonomy and four dimensions of linguistic style, and apply them to real user prompts from SWE-chat and problem statements from SWE-bench Verified and Pro. We find that requests carrying only a problem statement, alone or with limited additional context, account for 88% of real prompts but just 7% of benchmark problems. Furthermore, 87% of real prompts are casually written whereas 94% of benchmark problems are formal. Guided by these observations, we introduce sys, 381 multi-variant task families derived from SWE-bench Verified and Pro. Variants within each family share the same underlying task and gold patch while differing only in information composition and linguistic style. Evaluating seven contemporary LLMs with sys, we find that i) realistic inputs reduce resolution rates by 6.4 pp on average and can change model rankings. Controlled analysis further shows that ii) including Desired Behavior and Motivation significantly affects performance, whereas Environment Information and Reproduction Steps merely add tokens without measurable benefit; iii) linguistic style has only small, model-dependent effects. These findings provide actionable guidance for users and agents: explicitly stating the desired behavior and motivation--which most real prompts omit--substantially improves the LLM's software engineering performance.",
+  "abstract_zh": "现有 Coding Agent 通常在 SWE-bench 系列基准上评测，但其中任务源自经过整理的 GitHub issues，内容较长、结构清晰且信息丰富，与真实用户通常简短、非结构化的请求存在显著差异。本文构建了包含六类信息和四个语言风格维度的分类体系，并将其应用于 SWE-chat 中的真实用户提示，以及 SWE-bench Verified 和 Pro 的问题描述。研究发现，仅包含问题陈述或仅附带少量上下文的请求占真实提示的 88%，却仅占基准任务的 7%；此外，87%的真实提示采用非正式表达，而 94%的基准问题使用正式表达。基于此，作者提出 RealSWE，包含 381 个由 SWE-bench Verified 和 Pro 衍生的多变体任务族。同一任务族中的变体共享底层任务和 gold patch，仅在信息构成与语言风格上有所不同。对七个当代 LLM 的评测显示：真实风格输入使任务解决率平均下降 6.4 个百分点，并可能改变模型排名；加入 Desired Behavior 和 Motivation 会显著影响性能，而 Environment Information 和 Reproduction Steps 主要增加 token 数量，却未带来可测量收益；语言风格的影响较小且依赖模型。研究表明，用户和 Coding Agent 应明确说明期望行为与问题动机，因为这两类信息在真实请求中通常缺失，却能显著提升 LLM 的软件工程表现。",
+  "key_points_zh": [
+    "SWE-bench 与真实请求存在明显分布差异：真实提示通常短且非结构化，88%仅含问题陈述或少量上下文，而基准任务中仅占7%。",
+    "RealSWE 构建了381个多变体任务族，在保持底层任务和 gold patch 不变的情况下，系统控制信息构成与语言风格。",
+    "与标准基准输入相比，真实风格输入使七个 LLM 的平均解决率下降6.4个百分点，并可能改变模型排名。",
+    "Desired Behavior 和 Motivation 对性能提升最关键；Environment Information 与 Reproduction Steps 虽增加输入长度，但未显示出明显收益。",
+    "语言风格整体影响较小且具有模型依赖性；用户应明确描述期望行为和问题动机，以提升 Coding Agent 的软件工程能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.79,
+    "problem_significance": 0.89,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8100000000000002,
+    "comment": "RealSWE is a valuable coding-agent evaluation contribution that isolates how realistic request composition affects resolution rates and model rankings.",
+    "comment_zh": "RealSWE是一项有价值的编程智能体评估工作，系统刻画了真实请求的信息构成如何影响任务解决率和模型排序。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3233158463485474,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.8100000000000002,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27831/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.931
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27831/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.941
+    }
+  ]
+}

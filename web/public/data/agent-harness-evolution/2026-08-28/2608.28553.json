@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.28553",
+  "title": "Logos: An Agent Harness on a Cross-Process Bus",
+  "title_zh": "Logos：基于跨进程总线的智能体运行框架",
+  "authors": [
+    "Hanzhang Jia",
+    "Liheng Zeng",
+    "Hao Cheng",
+    "Yi Gao",
+    "Bo Ma"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-28T17:30:10Z",
+  "abs_url": "https://arxiv.org/abs/2608.28553v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.28553",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Modern agent systems assemble capabilities at runtime, and this dynamic composition has recently received a complete formal treat ment in the spatiotemporal-composability calculus, in which a capability is a component carrying a tracked inverse, and agents are assembled as plugins. This plugin form is carried by a single process sharing one context, a carrier that places all components in one physical failure domain, a fault suspends every component at once, and process death interrupts every session the process hosts. This paper shows that neither the modeling nor the calculus binds an agent to one process, the statelessness of the language model keeps all cross-step state outside the model, and the soundness invariant is defined on the state space alone. These observations condense into four lemmas whose premises are the hypotheses of the calculus and the statelessness of language-model inference. On these lemmas this paper constructs Logos, a ROS-like cross process agent harness in which a plugin is a process and the only shared state is an append-only transcript. Eighty sessions resume with no repeated effect after kills placed at the four boundaries of the tool-call cycle, and a same-fault comparison with a single process reference configuration shows one fault interrupting every co-resident session while under the peer-process construction one fault ends at one node.",
+  "abstract_zh": "现代智能体系统会在运行时动态组合多种能力。现有形式化处理通常将插件置于单一进程和共享上下文中，使所有组件处于同一物理故障域：一次故障可能同时挂起所有组件，进程终止也会中断其承载的全部会话。本文指出，相关建模与时空可组合性演算（spatiotemporal-composability calculus）并未要求智能体必须运行在单一进程内；由于语言模型推理是无状态的，跨步骤状态可完全置于模型外部，且正确性不变量仅依赖状态空间。基于这四个引理，本文构建了 Logos：一个类似 ROS 的跨进程智能体运行框架，其中每个插件对应一个独立进程，唯一共享状态是追加式会话记录（append-only transcript）。在 80 次会话实验中，研究者分别在工具调用周期的四个边界注入进程终止故障，系统均能恢复且不重复执行副作用。与单进程参考配置的同故障对比表明，单进程故障会中断所有共驻会话，而跨进程架构可将故障隔离在单个节点内。",
+  "key_points_zh": [
+    "重新审视单进程插件模型，指出智能体的形式化建模和正确性不变量并不依赖单一进程。",
+    "利用语言模型推理的无状态性，将跨步骤状态移至模型外部，并以 append-only transcript 作为唯一共享状态。",
+    "构建 ROS-like 的 Logos 跨进程 agent harness，使每个插件运行在独立进程中。",
+    "在工具调用周期四个故障边界进行 80 次会话测试，恢复后均未产生重复副作用。",
+    "对比实验显示，单进程故障会影响所有共驻会话，而跨进程设计可将故障限制在单个节点。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.88,
+    "problem_significance": 0.91,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8800000000000001,
+    "comment": "Logos provides a principled cross-process harness architecture with transcript-based recovery and strong fault-isolation semantics.",
+    "comment_zh": "Logos提供了具有转录记录恢复机制和强故障隔离语义的原则性跨进程智能体框架架构。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8800000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.28553/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.918
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.28553/fig2.webp",
+      "page": 2,
+      "kind": "table",
+      "confidence": 0.975
+    }
+  ]
+}

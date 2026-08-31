@@ -1,0 +1,123 @@
+{
+  "arxiv_id": "2608.28158",
+  "title": "HARTS: Efficient Agentic Reinforcement Learning for Hybrid-Attention Models over Arbitrary Rollout Trees",
+  "title_zh": "HARTS：面向任意 rollout 树的混合注意力模型高效智能体强化学习",
+  "authors": [
+    "Boyuan Meng",
+    "Peihua Bao",
+    "Hong Liu",
+    "Xiaowei Zhu",
+    "Chao Wang",
+    "Gen Li",
+    "Zhenxuan Pan"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Boyuan Meng",
+      "affiliations": [
+        "Ant Group, China"
+      ]
+    },
+    {
+      "name": "Peihua Bao",
+      "affiliations": [
+        "Ant Group, China"
+      ]
+    },
+    {
+      "name": "Hong Liu",
+      "affiliations": [
+        "Ant Group, China"
+      ]
+    },
+    {
+      "name": "Xiaowei Zhu",
+      "affiliations": [
+        "Ant Group, China"
+      ]
+    },
+    {
+      "name": "Chao Wang",
+      "affiliations": [
+        "Ant Group, China"
+      ]
+    },
+    {
+      "name": "Gen Li",
+      "affiliations": [
+        "Ant Group, China"
+      ]
+    },
+    {
+      "name": "Zhenxuan Pan",
+      "affiliations": [
+        "Ant Group, China"
+      ]
+    }
+  ],
+  "published_at": "2026-08-28T10:18:54Z",
+  "abs_url": "https://arxiv.org/abs/2608.28158v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.28158",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic reinforcement learning (RL) often produces irregular rollout trees with shared histories. Training root-to-leaf trajectories independently recomputes these shared prefixes. Existing systems primarily target full-attention models and lack dense, differentiable hybrid-attention execution compatible with activation recomputation. We present HARTS (Hybrid-Attention RL over Tree Structures). HARTS jointly plans microbatches, data-parallel (DP) replica assignments, and microbatch-slot schedules using non-replay compact-token work after prefix compression. For chunkwise linear attention, a linear-time algorithm coordinates chunk-boundary state recovery and replay and produces the minimum number of sequential linear-attention calls under our packed execution model. HARTS preserves the chunkwise state partitioning of trajectory-wise training: it does not repeat projections, MLP/MoE computation, or final outputs, and performs only bounded state replay for numerical alignment. Per round, HARTS batches all branches into one packed call, propagates gradients through differentiable state handoffs, supports activation recomputation, and restores per-token log-probabilities. For deterministic, no-token-drop top-$k$ MoE routing, semantic multiplicities restore MoE-objective token weights and load statistics. Existing RL objectives retain their interface. To our knowledge, HARTS is the first system to demonstrate arbitrary-rollout-tree prefix-sharing speedups on a real hybrid-attention model. On an Agentic RL workload generated from SWE-bench tasks, HARTS achieves $4.81$--$4.87\\times$ forward/backward/gradient speedup with activation recomputation across multiple parallel configurations. Its numerical differences are comparable to baseline self-rerun variation, and its reward trend is similar to the baseline over the first 120 steps of $τ^3$-Bench training.",
+  "abstract_zh": "智能体强化学习（Agentic RL）产生的 rollout 往往是不规则树结构，并包含大量共享历史；若独立训练根到叶轨迹，会重复计算共享前缀。HARTS（Hybrid-Attention RL over Tree Structures）通过前缀压缩后的紧凑 token 工作，同时联合规划 microbatch、数据并行（DP）副本分配与 microbatch 槽位调度。针对 chunkwise linear attention，HARTS 提出线性时间算法，协调 chunk 边界状态恢复与 replay，在其 packed execution 模型下达到最少的串行线性注意力调用次数。该方法保持 trajectory-wise training 的 chunkwise 状态划分，不重复 projection、MLP/MoE 或最终输出，仅执行有界的状态 replay 以实现数值对齐。每轮训练将所有分支打包为一次调用，通过可微状态传递传播梯度，支持 activation recomputation，并恢复逐 token 的 log-probability。对于确定性且不丢 token 的 top-k MoE 路由，HARTS 使用语义 multiplicity 恢复 MoE 目标中的 token 权重与负载统计，同时保持现有 RL objective 接口不变。在基于 SWE-bench 任务生成的 Agentic RL 工作负载上，HARTS 在多种并行配置和 activation recomputation 下实现 4.81--4.87 倍的前向、反向与梯度计算加速；数值差异与 baseline 自重复运行的波动相当，并且在 τ^3-Bench 前 120 个训练步骤中的 reward 趋势与 baseline 相近。",
+  "key_points_zh": [
+    "针对具有共享历史的任意 rollout 树，HARTS 通过前缀压缩与 packed execution 避免重复计算共享前缀。",
+    "方法联合优化 microbatch、DP 副本和槽位调度，并为 chunkwise linear attention 设计线性时间的状态恢复与 replay 算法。",
+    "训练过程中不重复 projection、MLP/MoE 和最终输出，仅进行有界状态 replay，同时支持 activation recomputation、可微状态传递和逐 token log-probability 恢复。",
+    "对于确定性 no-token-drop top-k MoE，semantic multiplicity 可恢复目标函数中的 token 权重及负载统计，且无需修改现有 RL objective 接口。",
+    "在 SWE-bench 驱动的 Agentic RL 实验中，HARTS 获得 4.81--4.87 倍前向/反向/梯度加速，数值与 reward 趋势均接近 baseline。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.91,
+    "problem_significance": 0.92,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.92,
+    "llm_avg": 0.9040000000000001,
+    "comment": "HARTS addresses a fundamental agentic-RL systems bottleneck with reusable prefix-sharing infrastructure for irregular rollout trees and hybrid-attention models.",
+    "comment_zh": "HARTS通过面向不规则展开树和混合注意力模型的可复用前缀共享基础设施，解决了智能体强化学习中的核心系统瓶颈。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9040000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.28158/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.388
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.28158/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.575
+    }
+  ]
+}

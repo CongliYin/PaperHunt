@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2608.27796",
+  "title": "ReToolSQL: Agentic Reinforcement Learning for Robust Text-to-SQL",
+  "title_zh": "ReToolSQL：面向鲁棒 Text-to-SQL 的智能体强化学习",
+  "authors": [
+    "Pratik Kakkar",
+    "Chandra Dhir",
+    "Ravi Shankar",
+    "Pareekshit Reddy Gaddam",
+    "Anup Shirgaonkar"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-28T00:23:31Z",
+  "abs_url": "https://arxiv.org/abs/2608.27796v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.27796",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent work has shown that reinforcement learning from execution feedback can substantially improve text-to-SQL performance, often enabling smaller models to match or exceed much larger systems. However, most existing approaches treat SQL generation as a single-turn task, limiting the model's ability to recover from errors through iterative refinement. We present ReToolSQL, a two-stage training framework for text-to-SQL that combines (i) a supervised warm-start on rejection-sampled reasoning traces with (ii) agentic reinforcement fine-tuning (RFT) over multi-turn tool-use trajectories. The key insight is that the two stages act on complementary axes, the supervised fine-tuning (SFT) on verified privileged-teacher traces expands the set of solvable questions (raising pass@k coverage on the hardest cases), while RFT converts that expanded capability into higher single-pass accuracy by teaching the model when to verify, what evidence to retrieve, and how to repair faulty SQL from execution feedback. Applied to Gemma 4 instruction-tuned (31B), RFT alone achieves 73.66% execution accuracy (EX) on the BIRD-SQL development benchmark (74.12% EX with self-consistency). Initializing RFT from the SFT checkpoint (SFT$\\to$RFT) yields our strongest model at 74.32% EX single-pass and 74.77% EX with self-consistency. At the time of writing, this ranked first on the BIRD single-model development-set leaderboard. The approach uses composite rewards anchored on execution correctness, requires no human annotation beyond the benchmark itself, and operates within a single dense 31B model, showing that a properly designed SFT$\\to$RFT pipeline over tool-use trajectories is a practical path toward robust enterprise-grade text-to-SQL.",
+  "abstract_zh": "ReToolSQL 提出一种两阶段 Text-to-SQL 训练框架：首先基于拒绝采样的推理轨迹进行监督微调（SFT），再在多轮工具使用轨迹上进行智能体强化微调（RFT）。SFT 利用经验证的特权教师轨迹扩大模型可解决问题的覆盖范围，尤其提升困难样本的 pass@k；RFT 则训练模型学习何时验证、检索哪些证据，以及如何依据 SQL 执行反馈修复错误，从而将潜在能力转化为更高的单次执行准确率。在 Gemma 4 instruction-tuned 31B 上，单独 RFT 在 BIRD-SQL 开发集达到 73.66% 执行准确率（EX），结合 self-consistency 后为 74.12%；SFT→RFT 达到 74.32% 单次 EX，结合 self-consistency 后为 74.77%，当时位列 BIRD 单模型开发集排行榜第一。该方法采用以执行正确性为核心的复合奖励，不需要额外人工标注，仅依赖基准数据，并在单个 dense 31B 模型上实现了鲁棒、可迭代的 Text-to-SQL。",
+  "key_points_zh": [
+    "提出 SFT→RFT 两阶段框架：先用拒绝采样推理轨迹进行监督微调，再基于多轮工具使用轨迹进行智能体强化微调。",
+    "SFT 主要扩大可解决问题集合，提升困难样本的 pass@k 覆盖；RFT 主要提升单次预测准确率，学习验证、证据检索与 SQL 修复策略。",
+    "在 Gemma 4 instruction-tuned 31B 与 BIRD-SQL 开发集上，SFT→RFT 达到 74.32% 单次 EX，self-consistency 下达到 74.77%。",
+    "奖励函数以 SQL 执行正确性为核心，结合工具反馈进行训练，无需超出基准数据之外的人工标注。",
+    "结果表明，多轮 tool-use trajectories 上的 SFT→RFT 流程能够在单个 dense 31B 模型中实现更实用的企业级 Text-to-SQL 鲁棒性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.86,
+    "novelty": 0.75,
+    "problem_significance": 0.82,
+    "potential_impact": 0.79,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.76,
+    "llm_avg": 0.7639999999999999,
+    "comment": "A strong agent-training contribution that combines verified trace warm-starting with execution-grounded multi-turn reinforcement learning for iterative SQL repair.",
+    "comment_zh": "这是一项较强的智能体训练工作，将验证轨迹预热与基于执行反馈的多轮强化学习结合起来以实现迭代式SQL修复。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4810589956582027,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7639999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 7,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27796/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27796/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.843
+    }
+  ]
+}

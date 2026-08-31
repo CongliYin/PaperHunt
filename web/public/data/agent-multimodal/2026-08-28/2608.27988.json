@@ -1,0 +1,71 @@
+{
+  "arxiv_id": "2608.27988",
+  "title": "Predicting Turn-Taking Outcomes in Multi-Party Conversation: Interpretable Modelling of Speech and Gaze Dynamics with Interpersonal Closeness",
+  "title_zh": "多方对话中的轮次接替结果预测：结合人际亲密度的语音与注视动态可解释建模",
+  "authors": [
+    "Mark Dourado",
+    "Karim Haddad",
+    "Henrik G. Hassager",
+    "Stefania Serafin"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-28T06:57:54Z",
+  "abs_url": "https://arxiv.org/abs/2608.27988v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.27988",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Smooth speaker transitions are fundamental to effective conversation and rely on an interlocutor's ability to predict when to enter the conversation. This ability depends on accurately interpreting and expressing the verbal and non-verbal cues that signal when a speaker wishes to take or relinquish the floor. The process becomes even more complex in noisy, natural, multi-party settings, with multiple interlocutors available. This study models how gaze and speech, together with perceived interpersonal closeness, signal conversational floor changes in free four-person dialogue. Using the GaMMA corpus, we trained logistic regression models using interpretable, behaviourally motivated features extracted before each turn-taking event to classify floor-transfer outcomes as gaps or overlaps. Predictors included gaze features such as transition motifs and behavioural contrasts, entropy, gaze-based addressee identity, and mutual gaze, alongside speech features derived from speaker loudness, as well as perceived interpersonal closeness (IOS) between speakers. Results show that gaze features capture predictive structure, and that combining them with loudness improves performance (ROC AUC = 0.76 +- 0.04). Loudness reflected speaker control, while gaze dispersion and addressing indexed listener readiness and competitive entry. Performance remained robust across noise conditions, indicating that gaze provides a complementary, noise-resilient cue to turn-taking dynamics.",
+  "abstract_zh": "流畅的说话者转换是有效对话的基础，参与者需要根据语言和非语言线索预测何时进入对话。在嘈杂、自然的多方交流中，多个潜在接话者使这一过程更加复杂。本研究基于四人自由对话，使用 GaMMA corpus，建模注视、语音及感知人际亲密度如何提示对话话轮变化。研究者从每次话轮转换事件之前提取具有行为解释性的特征，并训练 logistic regression 模型，将结果分类为停顿（gaps）或重叠（overlaps）。特征包括注视转换模式、行为对比、熵、基于注视的受话者身份、相互注视，以及说话者响度和人际亲密度（IOS）。结果表明，注视特征包含显著的预测结构；结合响度后，模型性能达到 ROC AUC = 0.76 ± 0.04。响度反映说话者对话轮的控制程度，而注视分散度和受话者指向性分别反映听者准备度与竞争性接话倾向。在不同噪声条件下，模型性能仍保持稳健，说明注视能够提供互补且抗噪的轮次转换线索。本研究属于 GN Group 与 Aalborg University 的产业博士合作项目。",
+  "key_points_zh": [
+    "使用 GaMMA corpus 的四人自然对话数据，预测话轮转换是形成停顿还是发生重叠。",
+    "采用可解释的 logistic regression，并围绕注视、语音响度和人际亲密度设计行为驱动特征。",
+    "注视转换模式、注视分散度、受话者指向性和相互注视能够捕捉听者准备度及竞争性接话结构。",
+    "融合注视与响度后取得 ROC AUC = 0.76 ± 0.04；响度主要反映当前说话者的对话控制。",
+    "预测性能在不同噪声条件下保持稳健，表明注视是抗噪且互补的轮次转换信号。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.67,
+    "novelty": 0.64,
+    "problem_significance": 0.86,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.34,
+    "lasting_value": 0.75,
+    "llm_avg": 0.6699999999999999,
+    "comment": "This work addresses a central realtime voice-agent bottleneck by modeling multimodal turn-taking cues, though it does not demonstrate speech-driven tool use or an end-to-end interactive agent.",
+    "comment_zh": "该工作研究了实时语音代理的核心轮次控制问题，但尚未展示语音工具调用或端到端交互代理系统。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.6699999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27988/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

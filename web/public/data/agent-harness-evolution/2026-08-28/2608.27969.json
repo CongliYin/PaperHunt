@@ -1,0 +1,93 @@
+{
+  "arxiv_id": "2608.27969",
+  "title": "openJiuwen: Beyond Static Harnesses for Long-Horizon Coding Agents",
+  "title_zh": "openJiuwen：超越静态框架的长时程编程智能体系统",
+  "authors": [
+    "openJiuwen Team",
+    "Tao Yu",
+    "Xinyu Zhang",
+    "Qianqian Chen",
+    "Xiaoneng Xiang",
+    "Chia Kwangyang",
+    "Xingchen Huang",
+    "Ran Chen",
+    "Yangkai Ding",
+    "Zheng Wang",
+    "Yeo Boon Hong",
+    "Bingzheng Gan",
+    "Enrui Hu",
+    "Shuo Cheng",
+    "Deyang Li",
+    "Ruifeng Shi",
+    "Hongbo Wang",
+    "Qi Ye",
+    "Xuefeng Jin",
+    "Zhangchun Zhao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-28T06:31:38Z",
+  "abs_url": "https://arxiv.org/abs/2608.27969v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.27969",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-horizon coding agents operate over evolving repository states while increasingly relying on heterogeneous capabilities, delegated agents, and multi-agent coordination. These trends pose two complementary challenges for the agent harness. First, developers need to compose capabilities, reconfigure execution logic, and scale increasingly complex agent systems without repeatedly rebuilding orchestration. Second, complex coding tasks continuously produce new evidence---such as semantic diagnostics, execution outcomes, task progress, and changing context relevance---that should dynamically influence subsequent runtime decisions. We characterize these challenges as Structural Composability and Runtime Adaptivity. We present openJiuwen, an open-source harness designed for both developer composability and adaptive task execution. openJiuwen provides a shared execution substrate and Rail-based capability composition across single agents, delegated sub-agents, and Swarm Flow, enabling developers to construct sophisticated agent harnesses under common execution semantics. It further adapts framework-controlled runtime decisions around a fixed model policy, allowing evolving evidence to dynamically affect context, feedback, and task control toward successful completion. We systematically evaluate openJiuwen on SWE-bench Verified and Terminal-Bench 2.1, where it achieves 82.6% and 87.19%, respectively, exceeding the strongest selected official-leaderboard point estimates by 3.4 and 3.39 percentage points. These results show that openJiuwen achieves strong performance on complex coding tasks while providing a composable and adaptive harness design.",
+  "abstract_zh": "长时程编程智能体需要在持续演化的代码仓库状态上运行，并日益依赖异构能力、委派式智能体和多智能体协作，这给智能体框架带来两项互补挑战。其一，开发者需要灵活组合能力、重构执行逻辑并扩展复杂智能体系统，而无需反复重建编排机制；其二，复杂编程任务会持续产生语义诊断、执行结果、任务进度和上下文相关性变化等新证据，这些信息应动态影响后续运行决策。论文将二者分别概括为结构可组合性（Structural Composability）与运行时适应性（Runtime Adaptivity），并提出开源框架 openJiuwen。该框架通过共享执行底座和基于 Rail 的能力组合机制，为单智能体、委派子智能体及 Swarm Flow 提供统一执行语义，支持构建复杂智能体系统。同时，openJiuwen 在保持模型策略固定的前提下，自适应调整框架控制的运行时决策，使不断变化的证据能够动态影响上下文、反馈和任务控制。实验表明，openJiuwen 在 SWE-bench Verified 和 Terminal-Bench 2.1 上分别取得 82.6% 和 87.19% 的成绩，较所选官方排行榜最强点估计分别高出 3.4 和 3.39 个百分点。",
+  "key_points_zh": [
+    "提出结构可组合性与运行时适应性两个核心维度，用于刻画长时程编程智能体框架的关键需求。",
+    "通过共享执行底座与 Rail 机制，统一组合单智能体、委派子智能体和 Swarm Flow 的异构能力。",
+    "在模型策略固定的情况下，根据语义诊断、执行结果、任务进度等动态证据调整上下文、反馈与任务控制。",
+    "在 SWE-bench Verified 上达到 82.6%，超过所选官方排行榜最强点估计 3.4 个百分点。",
+    "在 Terminal-Bench 2.1 上达到 87.19%，超过所选官方排行榜最强点估计 3.39 个百分点。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.86,
+    "problem_significance": 0.95,
+    "potential_impact": 0.95,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.94,
+    "llm_avg": 0.9119999999999999,
+    "comment": "openJiuwen is highly relevant harness infrastructure that unifies composable coding-agent orchestration with evidence-driven runtime adaptation.",
+    "comment_zh": "openJiuwen是高度相关的智能体框架基础设施，将可组合的编程智能体编排与证据驱动的运行时自适应统一起来。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9119999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27969/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.949
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27969/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

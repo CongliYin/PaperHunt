@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.28393",
+  "title": "Timing-Aware Repurchase Prediction for Web-Scale E-Commerce: Survival Models for Multi-Surface Grocery Recommendation",
+  "title_zh": "面向 Web-scale 电商的时间感知复购预测：多场景 Grocery Recommendation 的 Survival Models",
+  "authors": [
+    "Akshay Kekuda",
+    "Shreeranjani Srirangamsridharan",
+    "Ishan Bhatt",
+    "Yanan Cao",
+    "Sinduja Subramaniam",
+    "Evren Korpeoglu",
+    "Kaushiki Nag",
+    "Kannan Achan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-28T14:49:03Z",
+  "abs_url": "https://arxiv.org/abs/2608.28393v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.28393",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Repurchase recommenders in e-commerce are commonly framed as a binary question asking \"will this customer buy this item within W days\", a formulation that requires a separately trained model for every horizon of interest. We replace this stack with survival models that predict time-to-repurchase directly, and evaluate them on millions of customers from a major grocery e-commerce platform across more than thirty ablation configurations. Our study makes three contributions. First, an empirical hazard analysis reveals a slightly decreasing marginal hazard (k ~ 0.9), differing from the common intuition that grocery items become more likely to be repurchased the longer since the last purchase (increasing hazard, k > 1). Log-Normal achieves the best marginal fit (R^2 = 0.998) and the best ranking, despite Weibull providing the best conditional residual fit, revealing an apparent discrepancy we analyze in detail. Second, a single Accelerated Failure Time (AFT) model replaces three per-horizon binary classifiers, matching or exceeding each at its own horizon while using roughly 3x fewer total trees. Feature importance reshuffles under the survival objective: channel-cadence and recency signals rise while aggregate frequency counts fall. Third, a 4-parameter parametric calibration maps raw survival CDFs to per-horizon probabilities with zero cross-horizon monotonicity violations. Calibration quality varies by an order of magnitude across the AFT family: Exponential AFT (Weibull k=1) achieves expected calibration error (ECE) ~1e-4, roughly 10x lower than Log-Normal, while ranking metrics agree within 0.3% relative. We adopt Exponential AFT for probability-consuming surfaces and Log-Normal for pure ranking, exposing a principled calibration-ranking trade-off within a single AFT family.",
+  "abstract_zh": "论文将电商复购预测从“客户是否会在 W 天内购买某商品”的多时间窗口二分类问题，改写为直接预测复购时间的 Survival Models，从而用单一模型覆盖多个预测期限。基于大型 Grocery e-commerce 平台数百万客户和 30 余组消融实验，研究发现：复购边际风险呈轻微递减趋势（k≈0.9），而非通常假设的随时间递增；Log-Normal 在边际分布拟合（R²=0.998）和排序方面最佳，但 Weibull 在条件残差拟合方面更优。单个 Accelerated Failure Time（AFT）模型可替代三个按时间窗口训练的二分类器，在各自时间窗口达到相当或更佳效果，同时总树数量约减少 3 倍。相较二分类目标，Survival objective 使 channel-cadence 和 recency 特征重要性上升，而聚合频次特征下降。研究还提出一个 4 参数的参数化校准方法，将原始 survival CDF 映射为各时间窗口概率，并保证跨窗口概率单调性。不同 AFT 分布在校准与排序之间存在明显权衡：Exponential AFT（Weibull k=1）的 ECE 约为 1e-4，比 Log-Normal 低约 10 倍，而排序指标相对差异不超过 0.3%。因此，论文建议在需要概率输入的推荐场景采用 Exponential AFT，在仅关注排序的场景采用 Log-Normal。",
+  "key_points_zh": [
+    "将多个时间窗口的复购二分类器统一为单个 Survival-based AFT 模型，模型树数量约减少 3 倍，且性能不降反升。",
+    "真实 Grocery e-commerce 数据显示，复购边际风险略呈递减（k≈0.9）；Log-Normal 最适合边际拟合与排序，Weibull 更适合条件残差拟合。",
+    "Survival objective 改变特征重要性：channel-cadence 与 recency 信号增强，聚合频次统计的重要性下降。",
+    "提出 4 参数参数化校准，将 survival CDF 转换为各预测期限的复购概率，并实现零跨期限单调性违规。",
+    "Exponential AFT 校准最佳（ECE≈1e-4），Log-Normal 排序最佳；概率消费型场景选 Exponential AFT，纯排序场景选 Log-Normal。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.78,
+    "problem_significance": 0.84,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.8,
+    "llm_avg": 0.772,
+    "comment": "This is a strong industrially grounded e-commerce recommendation study that directly improves timing-aware repurchase prediction, calibration, and multi-surface serving efficiency.",
+    "comment_zh": "该工作具有较强的工业电商背景，直接提升了时间感知的复购预测、校准能力与多场景服务效率。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.772,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.28393/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.952
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.28393/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.952
+    }
+  ]
+}

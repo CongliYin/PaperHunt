@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2608.28062",
+  "title": "WeAgent-MMSearch: Native Text-Vision Interaction for Multimodal Search Agents",
+  "title_zh": "WeAgent-MMSearch：面向多模态搜索智能体的原生文本-视觉交互",
+  "authors": [
+    "Zongkai Liu",
+    "Hui Zhang",
+    "Liqiang Niu",
+    "Zhen Cao",
+    "Han Li",
+    "Juntao Liu",
+    "Wenchao Chen",
+    "Chengduo Zhao",
+    "Chao Yu",
+    "Fandong Meng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-28T08:28:43Z",
+  "abs_url": "https://arxiv.org/abs/2608.28062v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.28062",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multimodal search agents extend parametric knowledge with newly emerging and long-tail evidence from the open web. Yet many existing agentic search environments often expose retrieved evidence only as text and omit tool-returned images from subsequent context, reducing visually grounded trajectories to text-only reasoning. Long-horizon interaction also compounds tool-call, response-length, timeout, and budget failures, which can discard salvageable trajectories, waste rollout computation, and disturb policy updates. To address these issues, we introduce WeAgent-Harness, a multimodal agentic harness that supports native text-vision interaction and runtime recovery. Retrieved images receive persistent disk references, allowing the model to inspect, process, and cite them throughout the trajectory. Based on this harness, we develop WeAgent-MMSearch, an integrated system spanning data construction, agentic post-training, and multimodal rollout. For data construction, a strong MLLM uses WeAgent-Harness to discover, synthesize, and verify MMSearch-style tasks and collect expert trajectories. During post-training, our Failure-Aware GSPO (FA-GSPO) recovers salvageable abnormal rollouts and filters invalid ones to improve bounded multimodal planning and search.We also introduce VisTarget-Bench, a 150-task human-verified benchmark that pairs each question with a held-out target image, distinguishing image-retrieval failures from visual-perception failures. Evaluation on VisTarget-Bench and seven public benchmarks shows that agentic post-training improves the average score by 19.22 points, enabling our model to outperform similarly sized open-source models and rival models with roughly ten times its parameter count.",
+  "abstract_zh": "现有多模态搜索智能体通常仅将检索证据以文本形式传入后续上下文，忽略工具返回的图像，导致视觉依据无法持续参与推理；同时，长时程交互中的工具调用、响应长度、超时和预算错误会丢弃可挽救轨迹并浪费训练计算。为此，论文提出支持原生文本-视觉交互与运行时恢复的多模态智能体框架 WeAgent-Harness：为检索图像保留持久化磁盘引用，使模型能够在整个轨迹中检查、处理和引用图像。在此基础上，提出覆盖数据构建、智能体后训练和多模态 rollout 的 WeAgent-MMSearch。数据构建阶段使用强 MLLM 发现、合成并验证 MMSearch 任务，收集专家轨迹；后训练阶段提出 Failure-Aware GSPO（FA-GSPO），恢复可挽救的异常 rollout 并过滤无效轨迹，从而提升受限场景下的多模态规划与搜索能力。论文还发布包含 150 个经人工验证任务的 VisTarget-Bench，每道题配有留出的目标图像，可区分图像检索失败与视觉感知失败。在 VisTarget-Bench 及 7 个公开基准上，智能体后训练使平均得分提升 19.22 分；模型不仅超过同规模开源模型，还可媲美参数量约为其 10 倍的模型。",
+  "key_points_zh": [
+    "WeAgent-Harness 为检索图像保留持久化引用，支持模型在完整交互轨迹中持续查看、处理和引用图像。",
+    "WeAgent-MMSearch 打通 MMSearch 数据构建、智能体后训练与多模态 rollout，形成一体化搜索系统。",
+    "Failure-Aware GSPO（FA-GSPO）恢复可挽救的异常轨迹并过滤无效轨迹，降低长时程工具调用失败带来的训练浪费。",
+    "VisTarget-Bench 包含 150 个配有留出目标图像的人工验证任务，可区分图像检索失败和视觉感知失败。",
+    "在 VisTarget-Bench 与 7 个公开基准上，后训练平均提升 19.22 分，性能超过同规模开源模型并接近参数量约 10 倍的模型。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.92,
+    "problem_significance": 0.94,
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.9,
+    "lasting_value": 0.93,
+    "llm_avg": 0.9259999999999999,
+    "comment": "WeAgent-MMSearch tightly integrates a multimodal search harness, trajectory synthesis, failure-aware post-training, and a diagnostic benchmark.",
+    "comment_zh": "WeAgent-MMSearch紧密整合了多模态搜索框架、轨迹合成、故障感知后训练和诊断性基准。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.21754098571521813,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9259999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.28062/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.28062/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.957
+    }
+  ]
+}

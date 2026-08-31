@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2608.27790",
+  "title": "Credo: Reusable Declarative Primitives for Agentic Workflows",
+  "title_zh": "Credo：面向智能体工作流的可复用声明式原语",
+  "authors": [
+    "Duo Lu",
+    "Andrew Crotty",
+    "Uğur Çetintemel"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-28T00:06:36Z",
+  "abs_url": "https://arxiv.org/abs/2608.27790v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.27790",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "An LLM application depends on both a model and a harness: the program that determines what each call sees, how many calls to make, and which answers to trust. Coding agents can now discover strong harnesses by searching over candidate programs, but the resulting artifact is an opaque block of imperative code whose logical steps, runtime signals, physical execution decisions, and prompt strategies remain implicit and task-specific, forcing subsequent tasks to start the harness search process from scratch. The potential for reuse, however, is substantial. A searched harness encodes significant knowledge, such as the logical steps that work, the signals that matter, the physical operator decisions that adapt execution, and the prompt strategies that are effective, yet this knowledge is buried in imperative code with no inspectable or reusable structure, nor does it carry any provenance or metadata. Credo addresses this problem by recovering a structured declarative description of a searched harness, tagging each extracted primitive with relevant metadata, and cataloguing all of it with provenance. A compiler can then bind stored primitives to generate harnesses for new tasks without having to start the search over from scratch. This paper provides preliminary results demonstrating the potential of our approach and lays out a related research agenda that the database community is well-positioned to tackle, including cost-based compilation over declarative catalogs and catalog maintenance under model and workload drift.",
+  "abstract_zh": "一个 LLM 应用不仅依赖模型，还依赖 harness：它决定每次调用能够看到什么、需要调用多少次，以及应当信任哪些答案。如今，Coding agents 可以通过搜索候选程序发现高性能 harness，但最终产物通常是不透明的命令式代码，其中的逻辑步骤、运行时信号、物理执行决策和提示策略都被隐式编码且与任务绑定，导致后续任务必须从头开始搜索。实际上，已搜索得到的 harness 蕴含大量可复用知识，包括有效的逻辑步骤、关键运行时信号、可自适应执行的物理算子决策以及有效的提示策略。然而，这些知识被埋藏在缺乏可检查、可复用结构的命令式代码中，也没有来源追踪和元数据。Credo 通过恢复已搜索 harness 的结构化声明式描述，为提取出的每个原语标注相关元数据，并结合来源信息进行目录化，解决了这一问题。随后，编译器可以将已存储的原语绑定起来，为新任务生成 harness，而无需重新执行完整搜索。论文给出了展示该方法潜力的初步结果，并提出了数据库领域适合进一步研究的方向，包括面向声明式目录的基于代价的编译，以及模型和工作负载发生漂移时的目录维护。",
+  "key_points_zh": [
+    "现有 Coding agents 虽能搜索出高性能 harness，但结果是任务特定且不透明的命令式代码，难以复用。",
+    "Credo 从 harness 中恢复逻辑步骤、运行时信号、物理执行决策和提示策略等结构化原语。",
+    "系统为原语附加元数据与 provenance，并通过目录化保存可复用知识。",
+    "编译器可将目录中的原语绑定生成新任务的 harness，避免从头开始搜索。",
+    "论文提出后续研究方向，包括面向声明式目录的基于代价的编译，以及模型和工作负载漂移下的目录维护。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.93,
+    "problem_significance": 0.92,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.93,
+    "lasting_value": 0.92,
+    "llm_avg": 0.916,
+    "comment": "Credo proposes a promising declarative abstraction for extracting, cataloging, compiling, and reusing discovered harness structures, although its evidence is preliminary.",
+    "comment_zh": "Credo提出了一个很有前景的声明式抽象，用于提取、编目、编译和复用搜索得到的框架结构，但目前实证仍较初步。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4142509875137679,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.916,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 9,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27790/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.27790/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}
