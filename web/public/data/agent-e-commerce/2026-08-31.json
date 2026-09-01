@@ -1,0 +1,87 @@
+{
+  "domain": "agent-e-commerce",
+  "display_name": "E-commerce Agent",
+  "date": "2026-08-31",
+  "generated_at": "2026-09-01T22:32:30Z",
+  "papers": [
+    {
+      "arxiv_id": "2608.30753",
+      "title": "Learning from What You Retrieve: Online RL Fine-Tuning for Semantic Retrieval",
+      "title_zh": "从检索结果中学习：面向语义检索的在线强化学习微调",
+      "authors": [
+        "Shaowei Wei",
+        "Chong Huang",
+        "Songtao Fang",
+        "Jin Zhang",
+        "Zhuojun Wang",
+        "Chengfu Huo"
+      ],
+      "total_score": 0.5722000000000002,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.8540000000000001,
+        "domain_fit": 0.95,
+        "other": 0.2
+      },
+      "tags": [
+        "learning methods for commerce"
+      ],
+      "tldr_zh": "PAO仅学习正优势样本，稳定提升语义检索。",
+      "detail_file": "agent-e-commerce/2026-08-31/2608.30753.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30753/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.30606",
+      "title": "Generative Retrieval for E-commerce: Jointly Learning Embedding and Codebook with Same Product Cluster",
+      "title_zh": "面向电子商务的生成式检索：结合相同商品簇联合学习 Embedding 与 Codebook",
+      "authors": [
+        "Songtao Fang",
+        "Zihao Xu",
+        "Shaowei Wei",
+        "Jin Zhang",
+        "Zhuojun Wang"
+      ],
+      "total_score": 0.4364883062540944,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.818,
+        "domain_fit": 0.95,
+        "other": 0.1569610208469815
+      },
+      "tags": [
+        "general retrieval ranking"
+      ],
+      "tldr_zh": "联合学习Embedding与Codebook，提升生成式检索",
+      "detail_file": "agent-e-commerce/2026-08-31/2608.30606.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30606/thumb.webp"
+    },
+    {
+      "arxiv_id": "2608.30333",
+      "title": "Beyond Ranking Accuracy: Evaluating LLM-Cited Feature Rationales for Next Basket Repurchase Recommendation",
+      "title_zh": "超越排序准确率：评估下一购物篮复购推荐中由 LLM 引用特征生成的理由",
+      "authors": [
+        "Yanan Cao",
+        "Anay Dombe",
+        "Murali Mohana Krishna Dandu",
+        "Shreeranjani Srirangamsridharan",
+        "Sinduja Subramaniam",
+        "Yogananth Mahalingam",
+        "Evren Korpeoglu",
+        "Kannan Achan"
+      ],
+      "total_score": 0.41638830625409445,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.6559999999999999,
+        "domain_fit": 0.9,
+        "other": 0.19862768751364818
+      },
+      "tags": [
+        "general retrieval ranking"
+      ],
+      "tldr_zh": "LLM不宜独立排序，更适合作为经验证的推荐解释组件。",
+      "detail_file": "agent-e-commerce/2026-08-31/2608.30333.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30333/thumb.webp"
+    }
+  ]
+}

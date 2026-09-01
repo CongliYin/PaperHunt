@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2608.30659",
+  "title": "LLM-based Hardware Development with Hierarchical IRs and End-to-End Multi-Agent Workflow",
+  "title_zh": "基于层次化 IR 与端到端多智能体工作流的 LLM 硬件开发",
+  "authors": [
+    "Chenyang Yin",
+    "Agasthi Haputhanthri",
+    "Aditya Anirudh Jonnalagadda",
+    "Zhenyu Bai",
+    "Yuanming Song",
+    "Saranyu Chattopadhyay",
+    "Mohammad Fadiheh",
+    "Tom Zelazny",
+    "Subhasish Mitra",
+    "Tulika Mitra"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-31T11:57:37Z",
+  "abs_url": "https://arxiv.org/abs/2608.30659v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.30659",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) are increasingly used in software development, but their use in complex hardware design remains limited. This gap stems from both the scarcity of public hardware training data and the fundamentally different methodologies used in hardware design. In particular, applying LLMs to hardware requires more than direct RTL generation: the model must understand module boundaries, inter-module connections, and verification requirements. In this paper, we present an LLM-based hardware development framework with hierarchical intermediate representations (IRs) and an end-to-end multi-agent workflow. The core idea is to provide an abstraction of hardware design to LLMs through two structured IRs: Architectural Sketch, which captures module topology and interconnection, and Operational Specification, which defines per-module functionality and interfaces. Our framework uses these IRs to decompose a complex design into sub-modules, specify the per-block functionality, and derive how each module should be tested and verified. We incorporate a multi-agent debug loop in the framework, allowing agents to get the error feedback and control the debug details such as the signals to be probed for simulation. We evaluate our framework on Verilog-Eval benchmark, achieving a pass@5 rate of 95.5%, which surpasses current state-of-the-art LLM generation frameworks. To better assess performance on complex, realistic designs, we introduce a new case study spanning applications from general-purpose processors to digital signal processing systems. Experimental results indicate that such complex designs exceed the capabilities of existing approaches, whereas our framework is the only one capable of producing functional end-to-end design. Our generated RTL follows all industry-standard design rules, is lint-clean, functionally correct and fully synthesizable.",
+  "abstract_zh": "大语言模型（LLM）已广泛用于软件开发，但在复杂硬件设计中的应用仍受限于公开训练数据稀缺，以及软硬件开发方法的根本差异。硬件开发不仅要求生成 RTL，还需理解模块边界、模块间连接与验证需求。本文提出一种结合层次化中间表示（IR）和端到端多智能体工作流的 LLM 硬件开发框架。该框架通过两类结构化 IR 向 LLM 提供硬件设计抽象：Architectural Sketch 描述模块拓扑及互连关系，Operational Specification 定义各模块的功能与接口。基于这些 IR，框架可将复杂设计拆分为子模块，明确各模块功能，并推导相应的测试与验证方案。此外，框架引入多智能体调试循环，使智能体能够利用错误反馈，并控制仿真中待探测信号等调试细节。在 Verilog-Eval 上，该框架取得 95.5% 的 pass@5，超过现有 LLM 代码生成框架。作者还通过涵盖通用处理器与数字信号处理系统的案例研究评估复杂真实设计。结果表明，现有方法难以完成此类任务，而该框架能够生成端到端可运行的设计；其 RTL 符合行业设计规范，通过 lint 检查，功能正确且可完全综合。",
+  "key_points_zh": [
+    "提出 Architectural Sketch 与 Operational Specification 两级结构化 IR，分别建模硬件模块拓扑、互连关系以及模块功能与接口。",
+    "构建端到端多智能体工作流，覆盖复杂设计分解、RTL 生成、测试规划、验证与反馈驱动调试。",
+    "多智能体调试循环可依据错误信息主动控制仿真细节，包括选择需要探测的内部信号。",
+    "在 Verilog-Eval 上达到 95.5% 的 pass@5，优于现有 LLM 硬件生成框架。",
+    "在处理器和数字信号处理等复杂案例中生成 lint-clean、功能正确、符合设计规则且完全可综合的 RTL。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.79,
+    "novelty": 0.77,
+    "problem_significance": 0.78,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.71,
+    "llm_avg": 0.732,
+    "comment": "The hierarchical IRs, verifier feedback, and multi-agent debugging loop form a credible coding-agent workflow despite its hardware-specific setting.",
+    "comment_zh": "分层中间表示、验证反馈和多智能体调试闭环构成了可信的编码智能体工作流，尽管其场景偏向硬件开发。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.692666120964878,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.732,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 44,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30659/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30659/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.953
+    }
+  ]
+}

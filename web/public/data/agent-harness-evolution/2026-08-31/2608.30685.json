@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2608.30685",
+  "title": "ATLAS: Dual-Horizon Diagnostic Evaluation for Industrial Tool-Use Agents",
+  "title_zh": "ATLAS：面向工业工具使用智能体的双时间跨度诊断评估",
+  "authors": [
+    "Wei Chen",
+    "Peilun Zhou",
+    "Zhaoyu Hu",
+    "Jiajun Chai",
+    "Zhongni Hou",
+    "Yufei Zhang",
+    "Derong Xu",
+    "Guojun Yin",
+    "Wei Lin",
+    "Zhi Zheng",
+    "Tong Xu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-31T12:25:24Z",
+  "abs_url": "https://arxiv.org/abs/2608.30685v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.30685",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM) agents are increasingly deployed in user-facing services that require iterative tool use under dynamic business conditions. Reliable evaluation is essential for sustained improvement: it must reveal capability deficiencies, inform priorities, and assess interventions. Yet industrial agent service unfolds both through the iterative trajectory of a current request and through continued user interaction. Final-outcome assessment can therefore obscure where deficiencies arise and whether later service remains aligned with context from earlier exchanges. We propose ATLAS, a dual-horizon diagnostic evaluation framework for industrial tool-use agents. At the request horizon, trajectory-wise diagnostic signals relate deficiencies to execution locations and capability concerns. At the interaction horizon, user-wise signals assess whether service remains responsive across continued interaction. Together, these views provide structured diagnostic evidence for analyzing execution deficiencies and sustained service behavior. ATLAS instantiates them as executable signals with explicit evidence scopes and decision boundaries. LLM judge interfaces are calibrated against high-confidence references from real business logs; when needed, their decision behavior is distilled into efficient diagnostic models for lower-latency, lower-cost evaluation. The resulting feedback supports policy optimization. We evaluate ATLAS on Meituan Xiaotuan production traffic. Offline experiments assess diagnostic-signal fidelity and replay-based policy improvement, while online A/B experiments show concurrent gains in user engagement, downstream business outcomes, and sampled human-audit quality.",
+  "abstract_zh": "大型语言模型（LLM）智能体正逐渐部署于需要在动态业务环境中迭代调用工具的用户服务中。可靠评估不仅要衡量最终结果，还应揭示能力缺陷、确定改进优先级并评估干预效果。工业智能体服务同时跨越当前请求的迭代执行过程与持续用户交互两个层面，单纯评估最终结果可能掩盖缺陷发生位置，以及后续服务是否仍与历史上下文保持一致。本文提出 ATLAS，一种面向工业工具使用智能体的双时间跨度诊断评估框架。在请求时间跨度上，ATLAS 通过轨迹级诊断信号将缺陷关联到具体执行位置与能力问题；在交互时间跨度上，通过用户级信号评估智能体在持续交互中的响应性与服务一致性。两类视角共同提供结构化诊断证据，用于分析执行缺陷和持续服务行为。ATLAS 将这些信号实例化为具有明确证据范围与决策边界的可执行评估指标，并使用真实业务日志中的高置信度参考样本校准 LLM judge 接口；在需要时，将其决策行为蒸馏为更高效的诊断模型，以降低评估延迟与成本。诊断反馈进一步用于策略优化。基于 Meituan Xiaotuan 生产流量的实验表明：离线实验验证了诊断信号的准确性及基于回放的策略改进效果；在线 A/B 实验显示，用户参与度、下游业务结果和抽样人工审核质量均得到提升。",
+  "key_points_zh": [
+    "提出 ATLAS 双时间跨度评估框架，同时分析单次请求的执行轨迹与跨轮用户交互。",
+    "请求级轨迹诊断定位缺陷发生位置及相关能力问题，交互级用户诊断评估持续服务的响应性与上下文一致性。",
+    "通过明确证据范围和决策边界构建可执行诊断信号，并利用真实业务日志校准 LLM judge。",
+    "将评估决策蒸馏为高效诊断模型，降低大规模工业评估的延迟与成本，并支持策略优化。",
+    "在 Meituan Xiaotuan 生产流量上的离线与在线实验显示，用户参与度、业务结果和人工审核质量同步提升。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.82,
+    "problem_significance": 0.93,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8800000000000001,
+    "comment": "ATLAS provides a production-grounded diagnostic harness that connects trajectory-level evidence, longitudinal interaction quality, replay, and policy optimization.",
+    "comment_zh": "ATLAS提供了生产环境驱动的诊断框架，将轨迹证据、长期交互质量、回放和策略优化连接起来。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8800000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30685/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.743
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30685/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.965
+    }
+  ]
+}

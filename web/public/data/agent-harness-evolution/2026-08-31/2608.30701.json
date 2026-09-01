@@ -1,0 +1,63 @@
+{
+  "arxiv_id": "2608.30701",
+  "title": "A Phased Workflow for Operating LLM-Based Coding Agents",
+  "title_zh": "运行基于 LLM 的编码智能体：一种分阶段工作流",
+  "authors": [
+    "Ante Kapetanovic",
+    "Tomislav Duricic",
+    "Andro Mercep",
+    "Emanuel Lacic"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-31T12:39:26Z",
+  "abs_url": "https://arxiv.org/abs/2608.30701v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.30701",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM-based coding agents combine a foundation model with a harness that shapes agent behavior. For non-trivial tasks, how practitioners structure their work with the coding agents determines whether reliable results follow. We report on a phased workflow for operating coding agents developed by the AI research team at Infobip. The workflow structures agent-assisted development into four phases where human effort is front-loaded and delegation increases as artifacts mature. Context management is the central concern, addressed through four strategies applied at each phase to counter known failure modes. From practitioner experience, we observe that upstream errors in research and planning can compound across later phases, while correcting generated code can introduce bloat and fragility. This motivates front-loading human review. We identify two open problems: the absence of metrics for workflow effectiveness and the gap between formalized context management components and the workflow-level patterns that practitioners need.",
+  "abstract_zh": "基于 LLM 的编码智能体由基础模型和用于塑造智能体行为的运行框架组成。对于复杂任务，实践者如何组织与编码智能体的协作，决定了能否获得可靠结果。本文介绍 Infobip AI 研究团队提出的一种分阶段编码智能体工作流。该工作流将智能体辅助开发划分为四个阶段：在人类投入前置的基础上，随着产物逐渐成熟，逐步增加任务委派。上下文管理是核心问题，工作流在每个阶段采用四类策略，以应对已知的失败模式。根据实践经验，研究与规划阶段的上游错误可能在后续阶段不断累积，而修正智能体生成的代码则可能引入代码膨胀与脆弱性。因此，工作流强调前置的人类审查。本文指出两个开放问题：目前缺乏衡量工作流有效性的指标；形式化的上下文管理组件与实践者实际需要的工作流层面模式之间仍存在鸿沟。",
+  "key_points_zh": [
+    "提出四阶段编码智能体工作流：人类工作前置，随产物成熟逐步增加任务委派。",
+    "将上下文管理作为核心，通过四类策略在各阶段缓解智能体已知失败模式。",
+    "研究与规划阶段的错误会向后续阶段累积，生成代码的人工修正还可能造成代码膨胀和脆弱性。",
+    "工作流有效性尚缺乏统一评估指标，现有上下文管理组件与实践所需的工作流模式之间存在差距。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.87,
+    "novelty": 0.42,
+    "problem_significance": 0.72,
+    "potential_impact": 0.57,
+    "paradigm_shift": 0.41,
+    "lasting_value": 0.55,
+    "llm_avg": 0.534,
+    "comment": "The phased coding-agent workflow addresses practical context and governance concerns, but it remains experience-driven and lacks quantitative validation.",
+    "comment_zh": "该分阶段编码智能体工作流关注实际的上下文与治理问题，但主要基于经验且缺乏定量验证。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5332508082601557,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.534,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 14,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

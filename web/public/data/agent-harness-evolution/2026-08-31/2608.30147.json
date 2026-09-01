@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2608.30147",
+  "title": "CAST: Critique-Aware Supervision for Training Reliable Long-Horizon Tool-Calling Agents",
+  "title_zh": "CAST：面向可靠长程工具调用智能体训练的批评感知监督",
+  "authors": [
+    "Amir Saeidi",
+    "Zehua Zhang",
+    "Rishitosh Singh",
+    "Naman Ahuja",
+    "Vivek Gupta",
+    "Ali Payani",
+    "Gaowen Liu",
+    "Jayanth Srinivasa",
+    "Chitta Baral"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Chitta Baral",
+      "affiliations": [
+        "Arizona State University"
+      ]
+    }
+  ],
+  "published_at": "2026-08-31T01:59:51Z",
+  "abs_url": "https://arxiv.org/abs/2608.30147v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.30147",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM) agents are increasingly deployed in long-horizon, interactive, and stateful environments. In these settings, a single wrong action, such as refunding the wrong purchase, can cause irreversible task failure and must be intercepted before execution. Such failures may not appear in every single run, but can emerge across repeated trials, making reliability across steps and trials critical. However, ensuring agentic reliability is challenging: even frontier LLMs struggle to explain why an action may be wrong, especially in long, intertwined trajectories governed by domain-specific policies. Much recent work relies on prompt-based critique agents, while optimization-based methods lack a systematic way to produce rich verification rationales for training. We address this gap with CAST, a critique-aware training framework that converts sparse task outcomes into action-level supervision for critique learning and policy optimization. CAST analyzes agent trajectories to synthesize structured rationales explaining action validity under partial observability. The resulting critique model is used to construct critique-aware training data for optimizing the policy model. Fine-tuning Qwen3-family models on dynamic tool-calling benchmarks, CAST improves reliability across domains, outperforming GPT-OSS-120B by over 10% pass^4 on Retail tasks and yielding an additional 9% improvement on Telehealth in an out-of-domain setting. These results demonstrate that critique-aware training improves the robustness of LLM agents in realistic dynamic environments.",
+  "abstract_zh": "大语言模型（LLM）智能体正日益应用于长程、交互式且有状态的环境。在此类场景中，一次错误操作（例如为错误订单退款）就可能造成不可逆的任务失败，因此必须在执行前予以拦截。这类错误未必在单次运行中出现，却可能在多次试验中暴露，使跨步骤、跨试验的可靠性尤为关键。然而，保障智能体可靠性并不容易：即使是前沿 LLM，也难以解释某个动作为何错误，尤其是在由领域特定策略约束、轨迹漫长且相互交织的任务中。近期许多工作依赖基于提示的批评智能体，而基于优化的方法则缺乏系统生成丰富验证推理依据的机制。为弥补这一缺口，本文提出 CAST，一种批评感知训练框架，可将稀疏的任务结果转化为动作级监督，用于批评学习与策略优化。CAST 分析智能体轨迹，在部分可观测条件下合成解释动作有效性的结构化推理依据；随后利用所得批评模型构建批评感知训练数据，以优化策略模型。在动态工具调用基准上微调 Qwen3 系列模型后，CAST 提升了多个领域的可靠性：在 Retail 任务上的 pass^4 指标超过 GPT-OSS-120B 逾 10%，并在域外 Telehealth 场景中进一步提升 9%。结果表明，批评感知训练能够增强 LLM 智能体在真实动态环境中的稳健性。",
+  "key_points_zh": [
+    "聚焦长程、动态工具调用中的不可逆错误，以及跨步骤和重复试验的一致可靠性问题。",
+    "CAST 将稀疏任务成败信号转化为动作级监督，联合支持批评模型学习与策略模型优化。",
+    "通过分析完整轨迹，CAST 在部分可观测条件下合成结构化验证推理，解释每个动作是否符合领域策略。",
+    "基于批评模型构建 critique-aware 训练数据，并用于微调 Qwen3 系列策略模型。",
+    "实验中，Retail 任务的 pass^4 超过 GPT-OSS-120B 逾 10%，域外 Telehealth 场景额外提升 9%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.86,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.9,
+    "llm_avg": 0.884,
+    "comment": "CAST strongly fits agent training by converting sparse trajectory outcomes into action-level critique supervision and policy-improvement signals.",
+    "comment_zh": "CAST将稀疏轨迹结果转化为动作级批评监督和策略优化信号，高度契合智能体训练方向。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.746769622549761,
+    "author_reputation": 0.692666120964878,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.884,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 6,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 44,
+    "last_author_found": true,
+    "last_author_affiliations": [
+      "Arizona State University"
+    ]
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30147/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30147/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.962
+    }
+  ]
+}

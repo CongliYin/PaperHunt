@@ -1,0 +1,38 @@
+{
+  "domain": "agent-multimodal",
+  "display_name": "Realtime Multimodal Agent",
+  "date": "2026-08-31",
+  "generated_at": "2026-09-01T22:39:40Z",
+  "papers": [
+    {
+      "arxiv_id": "2608.30294",
+      "title": "Dynamic Hub-and-Spoke Memory for Streaming Video Understanding",
+      "title_zh": "用于流式视频理解的动态中心—辐射式记忆",
+      "authors": [
+        "Xinru Jiang",
+        "Lin Zhao",
+        "Xi Xiao",
+        "Yunbei Zhang",
+        "Janet Wang",
+        "Chenrui Ma",
+        "Haolin Li",
+        "Yanzhi Wang",
+        "Yifan Gong",
+        "Octavia Camps"
+      ],
+      "total_score": 0.6244000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.708,
+        "domain_fit": 0.68,
+        "other": 0.2
+      },
+      "tags": [
+        "streaming video grounding"
+      ],
+      "tldr_zh": "用实体结构化文本记忆压缩历史，结合近期视觉帧提升流式视频问答。",
+      "detail_file": "agent-multimodal/2026-08-31/2608.30294.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30294/thumb.webp"
+    }
+  ]
+}

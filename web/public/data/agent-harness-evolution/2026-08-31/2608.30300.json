@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2608.30300",
+  "title": "Update from Hell: Can Coding Agents Survive Hidden Breakage in Dependency Upgrades?",
+  "title_zh": "来自地狱的更新：Coding Agents 能否应对依赖升级中的隐藏破坏？",
+  "authors": [
+    "Zijian Luo",
+    "Runzhi He",
+    "Pengfei Gao",
+    "Yu Kang",
+    "Zeqi Lin",
+    "Minghua Ma",
+    "Qingwei Lin",
+    "Saravan Rajmohan",
+    "Yongqiang Tian"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-31T06:13:51Z",
+  "abs_url": "https://arxiv.org/abs/2608.30300v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.30300",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Modern software systems rely heavily on third-party dependencies, but upgrading those dependencies remains a costly maintenance activity. Dependency upgrades do not always preserve the function signatures, type systems, APIs, or runtime semantics assumed by existing code. Consequently, developers often need to perform source code adaptations to accommodate dependency-induced changes. However, such code-level changes are often not explicitly communicated to project maintainers, posing a significant challenge to software reliability. Meanwhile, coding agents have emerged as a new form of software development tool and are increasingly adopted by developers due to their automation capabilities. In this paper, we introduce DEPBENCH, a benchmark consisting of 203 real-world dependency-upgrade tasks across five package ecosystems spanning five language communities, each involving hidden code-level changes that require source code adaptation. We evaluate mainstream coding agents on DEPBENCH. The best completed configuration solves only 104/203 tasks (51.2%), with substantial variation across agent harnesses, models, and ecosystems, highlighting an important gap between current agent capabilities and real-world software maintenance needs.",
+  "abstract_zh": "现代软件系统高度依赖第三方依赖，但依赖升级可能破坏现有代码所依赖的函数签名、类型系统、API 或运行时语义，因此通常需要进行源代码适配。此类由依赖变更引发的代码级影响往往未被明确传达给项目维护者，给软件可靠性带来挑战。本文提出 DEPBENCH，这是一个涵盖五种包生态系统和五类语言社区的基准，包含 203 个真实世界依赖升级任务，每项任务都包含需要源代码适配的隐藏代码级变更。作者使用 DEPBENCH 评估主流 Coding Agents，最佳配置仅完成 104/203 个任务（51.2%）。不同 Agent harness、模型和生态系统之间表现差异显著，表明当前 Coding Agents 的能力与真实软件维护需求之间仍存在重要差距。",
+  "key_points_zh": [
+    "依赖升级可能改变函数签名、类型系统、API 或运行时语义，迫使开发者修改源代码。",
+    "论文提出 DEPBENCH，包含跨五种包生态系统和五类语言社区的 203 个真实依赖升级任务。",
+    "这些任务的核心难点是依赖升级引发的隐藏代码级变更，项目维护者未必能从升级信息中直接获知。",
+    "主流 Coding Agents 的最佳配置仅完成 104/203 个任务，成功率为 51.2%。",
+    "Agent harness、模型与软件生态系统之间存在显著性能差异，反映出现有智能编程工具在软件维护场景中的局限。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.69,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.52,
+    "lasting_value": 0.81,
+    "llm_avg": 0.74,
+    "comment": "DEPBENCH supplies a realistic, ecosystem-diverse coding-agent benchmark for a consequential maintenance task with hidden semantic breakage.",
+    "comment_zh": "DEPBENCH针对具有隐藏语义破坏的重要维护任务，提供了现实且跨生态的编码智能体基准。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3315497212666585,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.74,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30300/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.937
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30300/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.962
+    }
+  ]
+}

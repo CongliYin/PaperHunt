@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2608.30785",
+  "title": "SkillZip Pro: Execution-Aware Dynamic Compression of Progressively Loaded Skills for Self-Evolving Agents",
+  "title_zh": "SkillZip Pro：面向自进化智能体渐进加载技能的执行感知动态压缩",
+  "authors": [
+    "Xiaofan Bai",
+    "Chao Liu",
+    "Hongqiang Lin",
+    "Di Wu",
+    "Mingli Song",
+    "Xuan Jin",
+    "Xipeng Cao",
+    "Yuhong Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-31T13:41:16Z",
+  "abs_url": "https://arxiv.org/abs/2608.30785v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.30785",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Production agent skills are directory bundles, not isolated prompts. The root is loaded at activation; references, schemas, scripts, assets, and nested subskills are loaded only when an execution path needs them. Compressing only the root misses most deployment cost and may move branch-specific details into the always-loaded context. Flattening instead destroys progressive-loading boundaries. We introduce \\method, an evaluation-free compressor for complete, progressively loaded skill bundles. It leaves the agent harness unchanged and emits an ordinary directory. The method combines two safeguards. First, it compresses \\emph{across files}, removing content from a reference or subskill when the root or a declared environment contract already provides it. Second, it preserves routing, so every required file and directly callable entry remains reachable after rewriting. Users can configure \\method along two independent axes. \\emph{One-Shot} mode rebuilds the full bundle; \\emph{Continual} mode reuses state and applies Zip-on-Write after each evolution patch. \\emph{Persistent} compression rewrites the shipped bundle to reduce storage and runtime context. \\emph{Transient} compression keeps that bundle byte-identical and builds a task-specific view, reducing only per-run context after build cost. Entry contracts mark private, public, and conditional resources; a multi-entry audit preserves standalone public subskills. On a production content-moderation skill evaluated by our industrial multi-round harness, \\method removes \\hl{38\\%} of skill bundle tokens and \\hl{10.4\\%} of end-to-end per-run tokens with no quality loss, while an unprotected 71\\% configuration loses up to 26 accuracy points to one-sided false positives. On a multi-entry bundle, \\method effeciently reduces token cost while near-perfectly preserving every route and public entry.",
+  "abstract_zh": "生产环境中的智能体技能通常是目录式资源包，而非孤立的提示词：根文件在技能激活时加载，引用文档、模式（schemas）、脚本、资产及嵌套子技能则仅在执行路径需要时加载。仅压缩根文件会遗漏大部分部署成本，还可能将分支专属细节移入始终加载的上下文；直接展平目录又会破坏渐进加载边界。本文提出 SkillZip Pro，一种无需评测（evaluation-free）、面向完整渐进加载技能包的压缩方法。它无需修改智能体运行框架，并输出普通目录。该方法包含两项保障机制：第一，执行跨文件压缩，当根文件或声明的环境契约已提供相关信息时，从引用文件或子技能中删除冗余内容；第二，保留路由结构，确保重写后所有必需文件和可直接调用入口仍然可达。SkillZip Pro 支持两个相互独立的配置维度：One-Shot 模式重建完整技能包，Continual 模式复用已有状态，并在每次演化补丁后执行 Zip-on-Write；Persistent 压缩直接重写发布的技能包，以降低存储和运行时上下文成本，Transient 压缩则保持原始技能包字节级不变，仅构建任务特定视图，在承担构建成本后降低单次运行的上下文开销。入口契约用于标记私有、公开及条件资源，多入口审计则保障公开子技能可独立运行。在工业级多轮评测框架中的生产内容审核技能上，SkillZip Pro 在不损失质量的前提下减少了 38% 的技能包 token 和 10.4% 的端到端单次运行 token；相比之下，缺少保护机制的 71% 高压缩配置因单侧假阳性导致准确率最多下降 26 个百分点。在多入口技能包上，该方法也能有效降低 token 成本，同时近乎完整地保留全部路由与公开入口。",
+  "key_points_zh": [
+    "面向完整目录式技能包进行跨文件压缩，而非只处理根提示词或展平所有资源。",
+    "通过跨文件去冗余与路由保护，兼顾 token 压缩、渐进加载边界和资源可达性。",
+    "支持 One-Shot／Continual 与 Persistent／Transient 两组独立模式，适配静态发布和持续演化场景。",
+    "入口契约和多入口审计可保护公开子技能的独立可调用性及条件资源访问。",
+    "生产内容审核实验中，技能包 token 减少 38%，端到端单次运行 token 减少 10.4%，且质量无损。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.84,
+    "problem_significance": 0.82,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8099999999999999,
+    "comment": "SkillZip Pro offers a reusable, execution-aware mechanism for compressing evolving skill bundles while preserving routing and deployment contracts.",
+    "comment_zh": "SkillZip Pro提供了可复用的执行感知技能包压缩机制，同时保留路由关系和部署契约。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36560162063732243,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8099999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30785/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

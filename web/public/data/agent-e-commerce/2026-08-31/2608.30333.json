@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2608.30333",
+  "title": "Beyond Ranking Accuracy: Evaluating LLM-Cited Feature Rationales for Next Basket Repurchase Recommendation",
+  "title_zh": "超越排序准确率：评估下一购物篮复购推荐中由 LLM 引用特征生成的理由",
+  "authors": [
+    "Yanan Cao",
+    "Anay Dombe",
+    "Murali Mohana Krishna Dandu",
+    "Shreeranjani Srirangamsridharan",
+    "Sinduja Subramaniam",
+    "Yogananth Mahalingam",
+    "Evren Korpeoglu",
+    "Kannan Achan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-31T06:48:32Z",
+  "abs_url": "https://arxiv.org/abs/2608.30333v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.30333",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Next-basket repurchase recommendation is commonly formulated as a ranking task: given a customer's purchase history, the system ranks previously purchased items that may be needed again. In production settings, however, ranking accuracy is only one component of recommendation quality. Customers may also benefit from concise evidence about why an item is recommended now. Large language models (LLMs) offer a potential way to surface such evidence through feature-based, human-readable rationales grounded in interpretable behavioral signals. We construct repurchase features spanning cadence, frequency, recency, user behavior, and item popularity, and evaluate LLMs on two public grocery datasets and one proprietary retail dataset. We investigate (1) whether off-the-shelf LLMs can use these features as next-basket scorers relative to heuristic and supervised rankers, and (2) whether LLM-cited features carry outcome-grounded ranking signal. For the latter, we compare LLM-cited features with model-specific attribution methods under a cross-model feature-masking protocol that measures ranking degradation after masking selected features. Our results show that LLM scores are not competitive with supervised rankers, suggesting that off-the-shelf LLMs should not be used as standalone repurchase recommenders. However, changes in prompt and evidence representation can improve outcome-grounded feature-masking results in some settings even when ranking performance does not improve; the effect is dataset-dependent and does not consistently match attribution baselines. These findings suggest a practical role for LLMs as validated explanation components rather than primary rankers, with rationale quality evaluated separately from ranking accuracy.",
+  "abstract_zh": "下一购物篮复购推荐通常被建模为排序任务，即根据用户的购买历史，对其可能再次需要的商品进行排序。但在实际应用中，排序准确率并非衡量推荐质量的唯一标准，用户还可能需要简洁、可信的推荐依据。本文构建了涵盖购买周期、频率、近期性、用户行为和商品流行度的可解释复购特征，并在两个公开杂货数据集及一个专有零售数据集上评估 LLM。研究考察两个问题：其一，未经专门训练的 LLM 能否基于这些特征完成下一购物篮评分，并与启发式及监督式排序器竞争；其二，LLM 在推荐理由中引用的特征是否包含与真实结果相关的排序信号。为评估后者，作者提出跨模型特征遮蔽协议，通过遮蔽所选特征后排序性能的下降程度，比较 LLM 引用特征与模型专属归因方法。实验表明，LLM 的评分能力不及监督式排序器，不适合作为独立的复购推荐模型。调整提示词和证据表示虽然未必提升排序性能，却能在部分场景中改善基于结果的特征遮蔽表现；但该效果依赖数据集，且并不稳定优于归因基线。研究因此建议将 LLM 用作经过验证的解释组件，而非主要排序器，并将理由质量与排序准确率分开评估。",
+  "key_points_zh": [
+    "研究将复购推荐质量拆分为排序准确率与推荐理由质量，强调二者需要独立评估。",
+    "作者构建购买周期、频率、近期性、用户行为和商品流行度等可解释特征，并在三个零售数据集上开展实验。",
+    "未经专门训练的 LLM 作为下一购物篮评分器时明显弱于监督式排序器，因此不适合直接充当主要推荐模型。",
+    "论文采用跨模型特征遮蔽协议，以遮蔽 LLM 引用特征后的排序性能下降衡量理由是否具有真实结果支撑。",
+    "提示词与证据表示可在部分数据集上提升理由的结果相关性，但效果不稳定，也未持续超过传统归因方法。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.68,
+    "problem_significance": 0.75,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.46,
+    "lasting_value": 0.69,
+    "llm_avg": 0.6559999999999999,
+    "comment": "A useful commerce-recommendation evaluation study showing how LLM rationales can support repurchase decisions without replacing supervised ranking.",
+    "comment_zh": "该工作是有价值的电商推荐评估研究，表明LLM理由可辅助复购决策但不能取代监督式排序。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6559999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30333/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30333/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.974
+    }
+  ]
+}

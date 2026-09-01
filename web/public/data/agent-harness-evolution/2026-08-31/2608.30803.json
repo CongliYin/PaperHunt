@@ -1,0 +1,95 @@
+{
+  "arxiv_id": "2608.30803",
+  "title": "Schwarz: Solver-Aware Agentic Program Verification",
+  "title_zh": "Schwarz：求解器感知的智能体程序验证",
+  "authors": [
+    "Jingyu Ke",
+    "Ling-I Wu",
+    "Guoqiang Li"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Jingyu Ke",
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ]
+    },
+    {
+      "name": "Ling-I Wu",
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ]
+    },
+    {
+      "name": "Guoqiang Li",
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ]
+    }
+  ],
+  "published_at": "2026-08-31T13:54:48Z",
+  "abs_url": "https://arxiv.org/abs/2608.30803v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.30803",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic verification systems can often generate source-level specifications that look plausible, but plausibility is not enough: the verifier must still turn those specifications into SMT obligations that the solver can prove. When this step fails, current LLM-driven loops usually expose only a coarse verifier error, timeout, or unknown solver result. The model cannot tell whether the specification is wrong, a helper lemma is missing, the proof context contains irrelevant facts, or the obligation needs a different theory view. This paper presents Schwarz, an agentic verification harness that makes SMT-backed proof failure local, checkable, and repairable. Schwarz turns failed verification into obligation-local repair tasks: program-point snapshots expose checked facts at a boundary, local lemmas let the agent propose missing proof steps, and theory-aware solver policies guide the agent toward solver-friendly formulations for numeric, quantified, memory, and floating-point obligations. We implement Schwarz for C and Rust/Verus and evaluate it on 1,475 tasks. On 475 benchmarks from recent agentic verification tools, Schwarz solves 95.2% of the tasks. On 1,000 tasks from the SV-COMP 2026 ReachSafety track, averaging 1,427 LOC, Schwarz solves 91.5% of the tasks, compared with 60.1% for CPAchecker. Ablations and comparison with a pure-agent baseline show that solver-aware repair is effective and scalable.",
+  "abstract_zh": "智能体程序验证系统通常能够生成看似合理的源码级规约，但仅有合理性并不足够：验证器还必须将这些规约转换为 SMT 证明义务，并使求解器成功完成证明。当这一过程失败时，现有 LLM 驱动的迭代流程通常只能获得粗粒度的验证器错误、超时或 unknown 结果，因而难以判断究竟是规约错误、缺少辅助引理、证明上下文包含无关事实，还是证明义务需要采用不同的理论表示。本文提出 Schwarz，一种面向智能体的验证框架，旨在使基于 SMT 的证明失败能够被局部定位、检查和修复。Schwarz 将验证失败转化为证明义务局部的修复任务：程序点快照用于暴露边界处已检查的事实，局部引理允许智能体补充缺失的证明步骤，而理论感知的求解器策略则针对数值、量词、内存和浮点证明义务，引导智能体生成更适合求解器处理的表达。作者为 C 和 Rust/Verus 实现了 Schwarz，并在 1,475 个任务上进行评测。在来自近期智能体程序验证工具的 475 个基准上，Schwarz 的解决率达到 95.2%；在 SV-COMP 2026 ReachSafety 赛道的 1,000 个任务上，程序平均规模为 1,427 LOC，Schwarz 解决了 91.5% 的任务，而 CPAchecker 为 60.1%。消融实验及与纯智能体基线的比较表明，求解器感知修复具有良好的有效性与可扩展性。",
+  "key_points_zh": [
+    "将 SMT 验证失败拆分为证明义务局部的、可检查且可修复的智能体任务。",
+    "通过程序点快照和局部引理，帮助智能体识别缺失事实并补充关键证明步骤。",
+    "针对数值、量词、内存和浮点问题采用理论感知的求解器策略，生成更易证明的规约与义务。",
+    "支持 C 与 Rust/Verus；在 475 个近期智能体验证基准上取得 95.2% 的解决率。",
+    "在 1,000 个 SV-COMP 2026 ReachSafety 任务上达到 91.5%，显著超过 CPAchecker 的 60.1%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.87,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8779999999999999,
+    "comment": "Schwarz is a strong coding-agent harness that turns opaque solver failures into localized, checkable, and repairable verification tasks.",
+    "comment_zh": "Schwarz是一个较强的编码智能体框架，能够将不透明的求解器失败转化为局部、可检查且可修复的验证任务。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36560162063732243,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8779999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30803/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.976
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30803/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.891
+    }
+  ]
+}

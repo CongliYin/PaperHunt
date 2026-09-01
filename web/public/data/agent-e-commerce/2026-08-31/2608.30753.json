@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2608.30753",
+  "title": "Learning from What You Retrieve: Online RL Fine-Tuning for Semantic Retrieval",
+  "title_zh": "从检索结果中学习：面向语义检索的在线强化学习微调",
+  "authors": [
+    "Shaowei Wei",
+    "Chong Huang",
+    "Songtao Fang",
+    "Jin Zhang",
+    "Zhuojun Wang",
+    "Chengfu Huo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-31T13:21:47Z",
+  "abs_url": "https://arxiv.org/abs/2608.30753v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.30753",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "In large-scale e-commerce retrieval, dual-encoder retrievers are op- timized for contrastive similarity, whereas downstream rerankers capture finer-grained relevance preferences; this objective mis- match limits end-to-end retrieval quality. Reinforcement Learning offers a way to use reward-model feedback for retriever adaptation, but we observe that standard policy-gradient updates can degrade embedding geometry, especially when the document index must remain frozen due to industrial constraints. To address this, we propose PAO (Positive-Advantage-Only), a selective RL optimization method. Our analysis reveals that in- discriminate penalization of negative samples (pushing away) in a frozen high-dimensional space disrupts pre-trained semantic man- ifolds. PAO selectively applies gradient updates only to retrieved items with positive advantages, effectively pulling query embed- dings toward high-reward regions while preserving global topo- logical stability. Experiments on both a massive industrial dataset and public benchmarks demonstrate that PAO significantly outper- forms standard RL and distillation baselines.",
+  "abstract_zh": "在大规模电商检索中，双编码器（dual-encoder）检索器通常基于对比相似度进行优化，而下游重排器能够刻画更细粒度的相关性偏好。两者之间的目标错配限制了端到端检索质量。强化学习（RL）可利用奖励模型的反馈调整检索器，但作者发现，当工业约束要求文档索引保持冻结时，标准策略梯度更新可能破坏嵌入空间的几何结构。为此，论文提出 PAO（Positive-Advantage-Only），一种选择性 RL 优化方法。研究表明，在冻结的高维空间中，不加区分地惩罚负样本、将其推远，会扰乱预训练形成的语义流形。PAO 仅对具有正优势值的已检索条目执行梯度更新，将查询嵌入拉向高奖励区域，同时维持全局拓扑稳定性。在大规模工业数据集和公开基准上的实验显示，PAO 显著优于标准 RL 方法及知识蒸馏基线。",
+  "key_points_zh": [
+    "指出双编码器的对比学习目标与下游重排器的细粒度相关性目标存在错配，制约端到端检索效果。",
+    "发现当文档索引冻结时，标准策略梯度对负样本的推远操作会破坏预训练嵌入空间的语义流形与几何结构。",
+    "提出 PAO（Positive-Advantage-Only），仅对具有正优势值的检索结果进行更新，将查询嵌入拉向高奖励区域。",
+    "PAO 无需更新文档索引，并能在适应奖励模型反馈的同时保持全局嵌入拓扑稳定。",
+    "在大规模工业数据集和公开基准上，PAO 显著优于标准 RL 与知识蒸馏基线。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.84,
+    "problem_significance": 0.91,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.87,
+    "llm_avg": 0.8540000000000001,
+    "comment": "A well-motivated e-commerce retrieval method that directly addresses end-to-end relevance optimization under frozen-index constraints.",
+    "comment_zh": "该工作针对索引冻结约束下的端到端相关性优化，直接解决了电商检索中的重要问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8540000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30753/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.794
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30753/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.649
+    }
+  ]
+}

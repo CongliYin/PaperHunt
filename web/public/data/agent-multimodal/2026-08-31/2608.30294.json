@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2608.30294",
+  "title": "Dynamic Hub-and-Spoke Memory for Streaming Video Understanding",
+  "title_zh": "用于流式视频理解的动态中心—辐射式记忆",
+  "authors": [
+    "Xinru Jiang",
+    "Lin Zhao",
+    "Xi Xiao",
+    "Yunbei Zhang",
+    "Janet Wang",
+    "Chenrui Ma",
+    "Haolin Li",
+    "Yanzhi Wang",
+    "Yifan Gong",
+    "Octavia Camps"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-08-31T06:02:28Z",
+  "abs_url": "https://arxiv.org/abs/2608.30294v1",
+  "pdf_url": "https://arxiv.org/pdf/2608.30294",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Streaming video understanding requires answering questions at arbitrary times over a continuously growing visual stream. The central challenge is to compactly remember long-range history while effectively retrieving question-relevant evidence. We propose Dynamic Hub-and-Spoke Memory (D-HSM), a training-free framework that represents distant history as structured textual memory while preserving the recent frames as visual tokens for fine-grained perception. Specifically, D-HSM turns selected historical video chunks into typed textual observations and stores them in an entity-centered hub-and-spoke memory, with entities as hubs and related evidence as spokes. When answering a question, D-HSM dynamically retrieves a compact question-aware memory subset, expands it through hub-and-spoke links, and combines it with the recent visual window for frozen-VLM answer prediction. Extensive experiments on both streaming and long video benchmarks show that D-HSM consistently and substantially improves VLM backbones and outperforms other state-of-the-art online and offline video understanding baselines.",
+  "abstract_zh": "流式视频理解要求系统能够在持续增长的视觉流中，于任意时刻回答问题。其核心挑战在于：既要紧凑地记忆长时历史，又要有效检索与问题相关的证据。本文提出无需训练的 Dynamic Hub-and-Spoke Memory（D-HSM）框架：将远距离历史表示为结构化文本记忆，同时保留近期帧的视觉 token，以支持细粒度感知。具体而言，D-HSM 将选定的历史视频片段转换为带类型的文本观察结果，并以实体为中心构建 hub-and-spoke 记忆结构，其中实体作为 hubs，相关证据作为 spokes。回答问题时，D-HSM 动态检索紧凑且面向问题的记忆子集，通过 hub-and-spoke 链接扩展相关信息，再将其与近期视觉窗口结合，交由冻结的 VLM 预测答案。在流式视频和长视频基准上的大量实验表明，D-HSM 能够稳定且显著地提升多种 VLM backbone 的性能，并优于其他先进的在线与离线视频理解基线。",
+  "key_points_zh": [
+    "提出无需训练的 Dynamic Hub-and-Spoke Memory（D-HSM），面向持续增长的视频流进行长时记忆与问答。",
+    "将历史视频片段转化为带类型的文本观察，并构建以实体为 hubs、证据为 spokes 的结构化记忆。",
+    "根据当前问题动态检索并扩展相关记忆，同时保留近期帧视觉 token，以兼顾长程语义与细粒度感知。",
+    "D-HSM 可直接增强冻结的 VLM backbone，在流式视频和长视频基准上显著优于现有在线及离线方法。",
+    "论文发表于 Findings of EMNLP 2026，研究方向为计算机视觉（cs.CV）。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.68,
+    "novelty": 0.78,
+    "problem_significance": 0.75,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.56,
+    "lasting_value": 0.73,
+    "llm_avg": 0.708,
+    "comment": "A strong streaming-video memory contribution that improves long-horizon visual evidence retrieval, although it lacks an explicit tool-using or closed-loop agent interaction.",
+    "comment_zh": "该工作有效解决了流式视频中的长期视觉证据检索问题，但缺乏明确的工具调用或闭环智能体交互。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.708,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30294/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.939
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2608.30294/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}
