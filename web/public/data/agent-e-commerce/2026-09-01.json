@@ -1,0 +1,56 @@
+{
+  "domain": "agent-e-commerce",
+  "display_name": "E-commerce Agent",
+  "date": "2026-09-01",
+  "generated_at": "2026-09-02T22:32:13Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.00913",
+      "title": "SwapRec: Warming Up Cold Items Through Training-Time Swaps",
+      "title_zh": "SwapRec：通过训练时交换唤醒冷门物品",
+      "authors": [
+        "Marta Moscati",
+        "Jan Malte Lichtenberg",
+        "Davide Abbattista",
+        "Antonio De Candia",
+        "Laura Boggia",
+        "Matteo Ruffini"
+      ],
+      "total_score": 0.6001486884761411,
+      "scores": {
+        "topic_relevance": 0.7600000000000001,
+        "llm_assessment": 0.798,
+        "domain_fit": 0.95,
+        "other": 0.1891622949204702
+      },
+      "tags": [
+        "user intent and preference"
+      ],
+      "tldr_zh": "训练时模拟冷物品交换，提升冷启动推荐效果",
+      "detail_file": "agent-e-commerce/2026-09-01/2609.00913.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.00913/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.01456",
+      "title": "AutoConcept: Training-Free Concept-Guided Reranking for Metadata-Available Composed Image Retrieval",
+      "title_zh": "AutoConcept：面向元数据可用组合图像检索的免训练概念引导重排序",
+      "authors": [
+        "Tianyu Wang",
+        "Tianjiao Wu"
+      ],
+      "total_score": 0.4364774860633329,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.748,
+        "domain_fit": 0.87,
+        "other": 0.17359162021110977
+      },
+      "tags": [
+        "general retrieval ranking"
+      ],
+      "tldr_zh": "用可解释概念记忆免训练提升CIR重排序",
+      "detail_file": "agent-e-commerce/2026-09-01/2609.01456.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01456/thumb.webp"
+    }
+  ]
+}

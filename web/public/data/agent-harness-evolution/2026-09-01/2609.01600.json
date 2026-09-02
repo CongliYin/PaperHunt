@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2609.01600",
+  "title": "CordisBench: Can Language Models Reason About Component Lifecycles in Dynamic Agent Harnesses?",
+  "title_zh": "CordisBench：语言模型能否推理动态 Agent Harness 中的组件生命周期？",
+  "authors": [
+    "Damien Sileo",
+    "Dimitri Kachler"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-01T17:59:13Z",
+  "abs_url": "https://arxiv.org/abs/2609.01600v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.01600",
+  "links": {
+    "github": "https://github.com/sileod/cordis-bench",
+    "project_page": null
+  },
+  "abstract_en": "Dynamic agent harnesses let language models change the software that shapes their own execution. This flexibility brings a new reasoning burden: a local plugin change can propagate through dependencies and cleanup. We introduce CordisBench, a 1,200-question benchmark of this lifecycle reasoning. It combines a controlled formal setting with programs executed against Cordis, a runtime that manages component dependencies and cleanup, and asks models to identify affected components, predict state after a specified teardown order, determine which conditions hold under all or some orders, and choose reconfigurations that succeed when executed. Across these tasks, we evaluate three efficiency-oriented models at low reasoning effort with 2, 4, 8, 16, 24, or 32 relevant interactions, using deterministic task-specific scoring. Models usually handle small systems well but grow less reliable as more interactions become relevant, especially when predicting final state and when reasoning across teardown orders. Additional inference effort recovers marked gains for some models. The cost is nontrivial: on our 16-interaction subset, GPT-5.6 Luna uses nearly 3,000 reasoning tokens per question at medium effort. For these controlled instances, that cost is avoidable: an independent finite reference semantics agrees with Cordis execution on every observation and action outcome used for scoring across all 528 executable questions.",
+  "abstract_zh": "动态 Agent Harness 允许语言模型修改塑造自身执行过程的软件，由此引入新的生命周期推理负担：局部插件变更可能沿依赖关系传播，并影响后续清理。论文提出 CordisBench，一个包含 1,200 道题目的基准，用于评估模型在组件依赖与清理运行时 Cordis 中的生命周期推理能力。任务包括识别受影响组件、预测指定拆除顺序后的状态、判断某条件在所有或部分拆除顺序下是否成立，以及选择能够成功执行的重新配置方案。实验在 2、4、8、16、24 或 32 个相关交互规模下，以较低推理强度评估三种偏效率模型。结果显示，模型在小规模系统上表现较好，但随着相关交互增多，可靠性下降，尤其是在最终状态预测和跨拆除顺序推理方面。提高推理强度可显著改善部分模型的表现，但代价较高：在 16 交互子集上，GPT-5.6 Luna 以中等强度回答每道题平均使用近 3,000 个推理 token。对于这些受控实例，该成本并非必要，因为独立的有限参考语义与 Cordis 执行结果在全部 528 道可执行题目的所有评分观测和动作结果上完全一致。",
+  "key_points_zh": [
+    "CordisBench包含1,200道题，系统评估模型对组件依赖、拆除顺序、最终状态和动态重新配置的推理能力。",
+    "模型在小规模系统上表现较好，但随着相关交互数量增加，尤其在最终状态预测和跨拆除顺序推理上明显退化。",
+    "提高推理强度能改善部分模型，但计算成本显著；GPT-5.6 Luna在16交互题上每题平均消耗近3,000个推理token。",
+    "独立有限参考语义与 Cordis 在全部528道可执行题目的评分相关观测和动作结果上完全一致，说明该基准具有可靠的形式化执行基础。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.8,
+    "problem_significance": 0.78,
+    "potential_impact": 0.75,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.76,
+    "llm_avg": 0.758,
+    "comment": "CordisBench offers a reusable benchmark and reference semantics for reasoning about dynamic harness component lifecycles, dependencies, teardown, and reconfiguration.",
+    "comment_zh": "CordisBench 提供了可复用的基准和参考语义，用于评估动态智能体框架中的组件生命周期、依赖、拆卸与重配置推理。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.758,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/sileod/cordis-bench",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01600/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01600/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

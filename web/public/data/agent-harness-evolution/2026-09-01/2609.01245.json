@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.01245",
+  "title": "Explore More, Drift Less: Outcome-Only Reinforcement Learning Can Suffice for Long-Horizon Interactive Agents",
+  "title_zh": "探索更多，漂移更少：仅依赖结果的强化学习足以训练长时程交互智能体",
+  "authors": [
+    "Liming Pu",
+    "Xiaoxia Li",
+    "Yifu Liu",
+    "Teng Cao",
+    "Bin Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-01T13:44:40Z",
+  "abs_url": "https://arxiv.org/abs/2609.01245v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.01245",
+  "links": {
+    "github": "https://github.com/AlibabaResearch/SignalCoverageRL.",
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement learning is a natural way to post-train LLM agents for long-horizon interactive tasks judged only by end-of-task verification, yet a shared belief holds that outcome-only RL soon hits a ceiling on small open models. Recent work therefore compensates around the training with denser rewards, SFT priors, skill libraries, curated memory, or multi-agent orchestration. We argue the ceiling is an artifact of two failures of common practice. Signal starvation: group-relative RL with sparse outcome-only rewards yields a gradient only when a task's rollout group mixes successes and failures, so under-scaled exploration silences exactly the hardest, most instructive tasks. Policy drift: squeezing many updates out of a small task pool degrades the policy itself, as an unanchored objective lets the sampling distribution collapse exactly when saturation has already made informative groups rare. We present CANOPY (Coverage-ANchored On-PolicY RL), a minimalist protocol attacking both directly: scale same-task exploration until the natural signal reappears, keep every update on-policy, KL-anchored, and confined to the agent's own action tokens, then cash in an enlarged interaction budget at test time. On AppWorld, a long-horizon interactive coding benchmark, a Qwen3-14B policy trained with CANOPY through environment interaction alone--without task-specific supervision, auxiliary credit signals, or elaborate agent scaffolding--topped the public leaderboard (Feb. 2026; Test-Normal TGC 86.9, Test-Challenge 67.6), and the same design principles lift Qwen3.5-9B on SWE-bench Verified by 16.6 points. Agentic RL alone thus internalizes long-horizon capability directly into a small open model; we plan to release the complete training stack at https://github.com/AlibabaResearch/SignalCoverageRL.",
+  "abstract_zh": "强化学习是为长时程交互任务后训练大语言模型智能体的自然方法，尤其适用于仅通过任务结束验证进行评测的场景。然而，业界普遍认为，在小型开放模型上，仅依赖结果的强化学习很快会遇到性能上限，因此通常引入更密集的奖励、SFT 先验、技能库、精心整理的记忆或多智能体编排。本文认为，该上限源于两类实践缺陷。其一是信号饥饿：在稀疏结果奖励下，group-relative RL 只有在同一任务的 rollout 组同时包含成功与失败时才能产生梯度；探索不足会使最困难、最有训练价值的任务反而没有学习信号。其二是策略漂移：在有限任务池上进行过多更新会损害策略本身；缺乏锚定的目标会导致采样分布塌缩，而此时信息丰富的混合结果组已经变得稀少。为此，本文提出 CANOPY（Coverage-ANchored On-PolicY RL），一种极简训练协议：扩大同任务探索规模，使自然学习信号重新出现；确保每次更新均为 on-policy，并通过 KL 约束锚定策略，且只作用于智能体自身生成的动作 token；测试时则利用更大的交互预算。在长时程交互编码基准 AppWorld 上，仅通过环境交互训练、无需任务特定监督、辅助信用分配信号或复杂智能体框架，采用 CANOPY 训练的 Qwen3-14B 在 2026 年 2 月登上公开榜单首位，Test-Normal TGC 达 86.9，Test-Challenge 达 67.6。同样的设计原则使 Qwen3.5-9B 在 SWE-bench Verified 上提升 16.6 个百分点。结果表明，仅依靠 Agentic RL，也能将长时程能力直接内化到小型开放模型中。",
+  "key_points_zh": [
+    "仅依赖任务最终结果的 group-relative RL，关键瓶颈是信号饥饿与策略漂移，而非结果奖励本身不足。",
+    "CANOPY 通过扩大同任务 rollout 数量，提升成功与失败共存的概率，从而恢复稀疏奖励下的有效梯度。",
+    "训练过程坚持 on-policy、KL 锚定，并将更新限制在智能体自身生成的动作 token 上，以抑制策略偏移。",
+    "在 AppWorld 上，CANOPY 训练的 Qwen3-14B 无需任务特定监督或复杂脚手架，取得 Test-Normal TGC 86.9、Test-Challenge 67.6。",
+    "该方法还使 Qwen3.5-9B 在 SWE-bench Verified 上提升 16.6 个百分点，说明 Agentic RL 可直接内化长时程能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.9,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.88,
+    "lasting_value": 0.9,
+    "llm_avg": 0.9,
+    "comment": "This is strong Agent RL work that addresses sparse-reward exploration and policy drift with a simple, reusable outcome-only training protocol validated on interactive coding tasks.",
+    "comment_zh": "这项工作通过可复用的纯结果奖励训练协议解决稀疏奖励探索和策略漂移问题，并在交互式编码任务上得到验证，具有较高价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.6171883561017395,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/AlibabaResearch/SignalCoverageRL.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 25,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01245/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.907
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01245/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.957
+    }
+  ]
+}

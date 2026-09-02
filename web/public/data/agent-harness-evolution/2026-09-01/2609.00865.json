@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2609.00865",
+  "title": "MemoryWalker: Stop Training Agents on Contexts They Never Saw",
+  "title_zh": "MemoryWalker：停止在智能体从未见过的上下文上训练",
+  "authors": [
+    "Zinco J",
+    "Xunjie Zhu",
+    "Shen Huang",
+    "Zhenyi Wang",
+    "Pengjun Xie",
+    "Jieping Ye"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-01T08:01:27Z",
+  "abs_url": "https://arxiv.org/abs/2609.00865v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.00865",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Production agent harnesses such as Claude Code and Qwen-Agent compress context during rollout, but training under compression creates a conditioning problem: every eviction branches the effective history, so the learning object is a tree rather than a sequence. Existing linearizations either retain the rightmost path, causing time-travel leakage, or replay a depth-first traversal, causing train-inference mismatch. We introduce two exact, gradient-equivalent corrections: LogitTree, a segmented K-forward traversal, and a packed 4D attention mask. LogitTree requires K+1 backward passes; the 4D mask requires a custom kernel and white-box eviction records. We also propose SDCC (Self-Distillation for Conditioning Consistency), a single-backward-pass variational relaxation. At each eviction, it minimizes forward KL between the compressed student and a stop-gradient teacher on the reconstructed pre-eviction prefix. A residual per-junction KL of epsilon_KL gives an O(sqrt(epsilon_KL)) bound on the train-deployment total-variation gap. SDCC also applies to black-box harnesses. On seven web-search benchmarks with TC-RAG, AgentFold, MemexRL, Claude Code, and OpenCode, naive training inflates the train-rollout log-probability gap, especially on eviction-heavy batches. The exact methods stay at the no-compression floor, and SDCC substantially closes the gap, with lower logit drift and higher rollout rewards.",
+  "abstract_zh": "生产环境中的智能体框架（如 Claude Code 和 Qwen-Agent）会在 rollout 过程中压缩上下文，但若直接在压缩后的上下文上训练，将产生严重的条件分布不一致问题：每次信息驱逐都会使有效历史分叉，因此学习对象实际上是一棵树，而非单一序列。现有线性化方法要么只保留最右路径，导致“时间穿越”信息泄漏；要么回放深度优先遍历，造成训练与推理不匹配。本文提出两种精确且梯度等价的修正方法：LogitTree，通过分段的 K-forward 遍历恢复正确条件关系；以及 packed 4D attention mask，通过定制内核实现树结构注意力。LogitTree 需要 K+1 次反向传播，而 4D mask 需要白盒式驱逐记录和定制内核。本文还提出单次反向传播的变分松弛方法 SDCC（Self-Distillation for Conditioning Consistency）。在每次驱逐处，SDCC 让压缩后的 student 在重建的驱逐前缀上匹配停止梯度的 teacher，并最小化 forward KL。若每个分叉点的残余 KL 为 epsilon_KL，则可得到训练与部署总变差距离为 O(sqrt(epsilon_KL)) 的上界。SDCC 同样适用于黑盒 harness。在七个 web-search 基准上，结合 TC-RAG、AgentFold、MemexRL、Claude Code 和 OpenCode 的实验表明，朴素训练会扩大训练 rollout 与部署 rollout 的 log-probability 差距，且在驱逐频繁的 batch 上尤为明显。两种精确方法均能达到无压缩训练基线，SDCC 也能显著缩小差距、降低 logit 漂移并提升 rollout reward。",
+  "key_points_zh": [
+    "上下文压缩使有效历史形成树结构；简单线性化会引入时间穿越泄漏或训练—推理分布错配。",
+    "LogitTree 和 packed 4D attention mask 是两种精确、梯度等价的修正方案，分别通过分段遍历和树结构注意力恢复正确条件关系。",
+    "SDCC 以自蒸馏形式近似条件一致性，仅需一次反向传播，并可用于黑盒 agent harness。",
+    "理论上，分叉点残余 KL 为 epsilon_KL 时，训练与部署的总变差差距受 O(sqrt(epsilon_KL)) 控制。",
+    "在七个 web-search 基准上，精确方法恢复无压缩基线，SDCC 降低 logit 漂移并提升 rollout reward。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.88,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.88,
+    "llm_avg": 0.876,
+    "comment": "This paper tackles a fundamental train-inference mismatch caused by context compression and contributes exact and approximate methods directly applicable to agent training pipelines.",
+    "comment_zh": "本文解决了上下文压缩导致的训练与推理不一致这一基础问题，并提出了可直接用于智能体训练流程的精确和近似方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.876,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.00865/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.771
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.00865/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.931
+    }
+  ]
+}

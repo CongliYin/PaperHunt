@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2609.01058",
+  "title": "ARISE-RL: Agentic Rubric-Grounded Iterative Self-Evolution with Reinforcement Learning",
+  "title_zh": "ARISE-RL：基于智能体量规的迭代式自进化强化学习",
+  "authors": [
+    "Fanrui Zhang",
+    "Ruixue Ding",
+    "Qiang Zhang",
+    "Xi Chen",
+    "Boli Chen",
+    "Shihang Wang",
+    "Qiuchen Wang",
+    "Hongmin Zhan",
+    "Jinxin Bian",
+    "Li xingchao",
+    "Peijin Zheng",
+    "Hao cheng",
+    "Pengjun Xie",
+    "Kaipeng Zhang",
+    "Jiawei Liu",
+    "Zheng-Jun Zha"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-01T10:54:13Z",
+  "abs_url": "https://arxiv.org/abs/2609.01058v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.01058",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Training open-ended agents via reinforcement learning (RL) is hindered by the lack of verifiable gold answers and scalable rubrics. Moreover, even near the model's capability boundary, long-horizon open-ended agentic tasks often yield brittle and unstable rewards, resulting in weak or noisy rollout contrast that obscures fine-grained optimization signals for group-based policy learning. To address these challenges, we propose ARISE-RL, a novel full-cycle self-evolution framework that couples a task/rubric Generator and a reasoning Solver through rubric-mediated co-evolution. The Generator grounds tool-related rubric criteria in real tool observations and is rewarded for producing valid, intermediate-difficulty tasks aligned with the Solver's evolving capability boundary. The Solver, in turn, learns from fine-grained rubric satisfaction signals through multi-step reasoning and tool use. We further introduce Reward-Gated Self-Evolution Distillation (RG-SED), which selectively distills a memory-augmented variant of the same policy back into itself only when the memory yields empirical reward improvement, thereby reducing distribution mismatch and avoiding blind imitation of noisy guidance. Finally, to support rigorous evaluation, we present ECR-Bench, an expert-calibrated rubric benchmark suite covering single-tool deep research and multi-tool travel planning. Extensive experiments demonstrate that ARISE-RL consistently achieves robust and stable overall state-of-the-art performance across all evaluated benchmarks.",
+  "abstract_zh": "开放式智能体的强化学习训练面临两大挑战：缺乏可验证的标准答案与可扩展的评价量规；同时，接近模型能力边界的长程开放任务通常产生脆弱且不稳定的奖励，导致轨迹对比信号弱、噪声大，难以支持基于群组的策略优化。为此，论文提出 ARISE-RL，一种全流程自进化框架，通过量规介导的协同进化耦合任务/量规生成器（Generator）与推理求解器（Solver）。Generator 基于真实工具观测构造与工具使用相关的量规标准，并根据 Solver 不断变化的能力边界生成有效且难度适中的任务；Solver 则通过多步推理和工具调用，利用细粒度的量规满足度信号进行学习。论文进一步提出奖励门控自进化蒸馏（Reward-Gated Self-Evolution Distillation, RG-SED）：仅当带记忆版本的同一策略在实证上带来奖励提升时，才将其知识蒸馏回原策略，从而降低分布偏移并避免盲目模仿噪声指导。为支持严格评测，论文构建了专家校准量规基准套件 ECR-Bench，覆盖单工具深度研究与多工具旅行规划任务。大量实验表明，ARISE-RL 在所有评测基准上均取得稳健、稳定且整体领先的性能。",
+  "key_points_zh": [
+    "提出 ARISE-RL，通过 Generator 与 Solver 的量规介导协同进化，缓解开放式任务缺乏标准答案和可扩展评价的问题。",
+    "Generator 利用真实工具观测生成有效、难度适中的任务与工具相关量规，使训练任务贴合 Solver 的能力边界。",
+    "Solver 从细粒度量规满足度信号中学习多步推理与工具使用，增强长程任务中的奖励可辨识性和优化稳定性。",
+    "提出 RG-SED，仅在记忆增强策略确实提升奖励时进行自蒸馏，以减少分布偏移并避免传播噪声指导。",
+    "发布 ECR-Bench，覆盖单工具深度研究和多工具旅行规划；实验显示 ARISE-RL 在各基准上取得稳健的整体领先性能。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.88,
+    "problem_significance": 0.91,
+    "potential_impact": 0.89,
+    "paradigm_shift": 0.85,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8860000000000001,
+    "comment": "This is strong agent-evolution work that combines rubric-grounded trajectory feedback, tool-use reinforcement learning, adaptive task generation, and reward-gated self-distillation in a reusable evaluation loop.",
+    "comment_zh": "这是一项较强的智能体演化研究，将基于标准的轨迹反馈、工具使用强化学习、自适应任务生成和奖励门控自蒸馏结合成可复用的评估闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.34373441375821495,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8860000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01058/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01058/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.965
+    }
+  ]
+}

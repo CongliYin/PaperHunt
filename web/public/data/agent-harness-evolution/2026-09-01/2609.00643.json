@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.00643",
+  "title": "REVISE: Validity-Guided Recovery for Online Revisions in Agent Workflows",
+  "title_zh": "REVISE：面向 Agent 工作流在线修订的有效性引导恢复",
+  "authors": [
+    "Ruoling Qi",
+    "Xuaner Wu",
+    "Penghang Liu",
+    "Jian Chen",
+    "Yirui Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-01T03:22:18Z",
+  "abs_url": "https://arxiv.org/abs/2609.00643v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.00643",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent revisions expose a fundamental correctness--efficiency trade-off during concurrent execution. Discarding ongoing work preserves latest-version correctness but wastes progress that may remain valid, whereas reusing prior work preserves efficiency but risks propagating stale state into outputs and tool effects. Existing recovery strategies resolve this trade-off in an imbalanced way with coarse-grained policies: they either favor efficiency by allowing potentially stale work to continue, or favor correctness by restarting the workflow or recomputing a linear suffix from the earliest conflict, thereby discarding unaffected progress. We present \\textsc{Revise}, a validity-guided runtime for fine-grained recovery in structured agent workflows. When a revision arrives, \\textsc{Revise} first intersects its delta with recorded data and control dependencies and propagates the resulting impact through the partially executed DAG to identify affected work. It then stops invalid work, preserves validity-established progress beyond the earliest conflict, and recomputes only the affected region. Incomplete provenance conservatively expands recovery, while reused results are revalidated before commit. Analysis of real coding-agent traces show online recovery opportunities: 118 sessions retain observable work before a queued later message is delivered; across 167 overlapping assistant responses, enqueue-to-completion overlap reaches 56.55~s at p95. Across 300 challenging revision/commit executions, \\textsc{Revise} matches a latest-version oracle with no stale outputs or effects. On unmodified LangGraph and LLMCompiler applications using Qwen3-14B, it reduces model calls by 40.6--56.0\\% relative to full restart and by 31.3--43.6\\% relative to suffix recomputation. Under serving pressure, it further reduces revision-to-correct-completion tokens by 13.26\\% and improves SLO goodput by 3.07--5.43\\%.",
+  "abstract_zh": "Agent 在线修订在并发执行期间带来了正确性与效率之间的根本权衡：丢弃正在进行的工作可以保证最新版本正确性，但会浪费仍可能有效的进展；复用已有工作虽然高效，却可能将过时状态传播到输出和工具副作用中。现有恢复策略通常采用粗粒度方案，或允许潜在过时的工作继续以追求效率，或重启整个工作流、从最早冲突处重新计算线性后缀以追求正确性，从而丢弃未受影响的进展。本文提出 REVISE，一种面向结构化 Agent 工作流的细粒度、有效性引导运行时系统。收到修订后，REVISE 首先将修订增量与已记录的数据依赖和控制依赖求交，并在部分执行的 DAG 中传播影响，以识别受影响的工作；随后停止无效工作，保留冲突点之后已被证明有效的进展，仅重新计算受影响区域。对于不完整的溯源信息，系统会采取保守策略扩大恢复范围；复用的结果则在提交前重新验证。对真实 coding-agent 轨迹的分析表明，在线恢复具有实际机会：在排队的后续消息送达前，118 个会话仍保留可观测工作；在 167 个存在重叠的 assistant 响应中，入队到完成的重叠时间 p95 达到 56.55 秒。在 300 次具有挑战性的修订/提交执行中，REVISE 与最新版本 oracle 结果一致，且没有产生过时输出或副作用。在未经修改的 LangGraph 和 LLMCompiler 应用上，使用 Qwen3-14B 时，相比完全重启减少 40.6%--56.0% 的模型调用，相比后缀重计算减少 31.3%--43.6%。在服务压力下，REVISE 进一步将从修订到正确完成所需的 token 数降低 13.26%，并将 SLO goodput 提升 3.07%--5.43%。",
+  "key_points_zh": [
+    "REVISE 通过数据依赖、控制依赖和 DAG 影响传播，定位在线修订真正影响的执行区域。",
+    "系统停止无效工作，保留已验证有效的进展，仅重算受影响部分；溯源不完整时采取保守恢复，并在提交前重新验证复用结果。",
+    "在 300 次修订/提交执行中，REVISE 达到最新版本 oracle 的正确性，没有产生过时输出或工具副作用。",
+    "在 LangGraph 和 LLMCompiler 上，相比完全重启减少 40.6%--56.0% 的模型调用，相比后缀重计算减少 31.3%--43.6%。",
+    "在服务压力下，修订到正确完成的 token 数降低 13.26%，SLO goodput 提升 3.07%--5.43%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.9,
+    "problem_significance": 0.94,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.88,
+    "lasting_value": 0.92,
+    "llm_avg": 0.914,
+    "comment": "REVISE delivers a broadly reusable workflow runtime for dependency-aware revision recovery, preserving valid progress while providing strong correctness and efficiency evidence on coding-agent workloads.",
+    "comment_zh": "REVISE 提供了可广泛复用的依赖感知工作流恢复运行时，在编码智能体任务上兼顾了有效进度保留、正确性和效率。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.914,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.00643/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.863
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.00643/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

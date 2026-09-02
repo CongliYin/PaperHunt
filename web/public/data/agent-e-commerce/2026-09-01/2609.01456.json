@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2609.01456",
+  "title": "AutoConcept: Training-Free Concept-Guided Reranking for Metadata-Available Composed Image Retrieval",
+  "title_zh": "AutoConcept：面向元数据可用组合图像检索的免训练概念引导重排序",
+  "authors": [
+    "Tianyu Wang",
+    "Tianjiao Wu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-01T16:00:25Z",
+  "abs_url": "https://arxiv.org/abs/2609.01456v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.01456",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Composed image retrieval (CIR) retrieves a target image from a reference image and a text modification. This paper studies metadata-available CIR reranking, where a fixed CIR model first returns a candidate pool and gallery metadata is then used for second-stage concept-guided scoring. We introduce AutoConcept, a training-free reranker that converts concept evidence into an interpretable memory. AutoConcept filters noisy concepts, activates query-relevant positive constraints with an auxiliary negative penalty, and combines base retrieval scores with metadata-based concept-candidate alignment through inference-time calibration. On FashionIQ, AutoConcept yields significant early-rank improvements over WeiMoCIR and consistent plug-in gains on LinCIR candidate pools. Metadata-aware controls show that structured concept memory adds signal beyond direct query-text and extracted-attribute matching, while a query-only variant further supports the effectiveness of concept-level reranking. A supplementary real-human concept-label study indicates that the same memory interface can consume participant-provided evidence. These results position AutoConcept as an interpretable concept-memory reranker for product-style CIR galleries with available metadata.",
+  "abstract_zh": "本文研究元数据可用的组合图像检索（Composed Image Retrieval, CIR）重排序问题：固定的CIR模型首先生成候选池，随后利用图库元数据进行第二阶段的概念引导打分。作者提出AutoConcept，一种免训练重排序器，将概念证据转化为可解释的概念记忆。该方法过滤噪声概念，激活与查询相关的正向约束，并通过辅助负向惩罚抑制不匹配候选；同时在推理阶段校准基础检索分数与基于元数据的概念—候选对齐分数。在FashionIQ上，AutoConcept相较WeiMoCIR取得显著的早期排名提升，并能稳定提升LinCIR候选池的检索效果。元数据感知对照实验表明，结构化概念记忆能够提供超越直接查询文本匹配和属性抽取匹配的额外信息；仅使用查询的变体也进一步验证了概念级重排序的有效性。补充的真实用户概念标注实验表明，该记忆接口同样能够接收参与者提供的概念证据。总体而言，AutoConcept是一种适用于具有元数据的商品图像图库、兼具可解释性与即插即用能力的概念记忆重排序方法。",
+  "key_points_zh": [
+    "提出AutoConcept：无需额外训练，将查询与图库元数据中的概念证据组织为可解释的概念记忆。",
+    "通过噪声概念过滤、查询相关正向约束和辅助负向惩罚，增强候选图像的概念级匹配。",
+    "在推理阶段融合基础CIR分数与元数据概念—候选对齐分数，支持对现有候选池的即插即用重排序。",
+    "在FashionIQ和LinCIR候选池上取得早期排名和整体检索效果提升，且增益超越直接文本或属性匹配。",
+    "查询专用变体与真实用户概念标注实验进一步验证了概念级记忆接口的有效性和可扩展性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.87,
+    "novelty": 0.79,
+    "problem_significance": 0.76,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.64,
+    "lasting_value": 0.77,
+    "llm_avg": 0.748,
+    "comment": "An interpretable training-free reranker that directly improves metadata-aware product-style image retrieval and composed shopping discovery.",
+    "comment_zh": "该工作提出可解释且无需训练的重排序方法，直接提升了利用元数据的商品图像检索与组合式购物发现。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.39154972126665855,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.748,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 7,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01456/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01456/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.973
+    }
+  ]
+}

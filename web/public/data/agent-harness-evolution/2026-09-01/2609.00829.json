@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.00829",
+  "title": "HarnessEvolve: Learning from Reference Trajectories for Reliable Agent Self-Evolution",
+  "title_zh": "HarnessEvolve：从参考轨迹中学习，实现可靠的智能体自进化",
+  "authors": [
+    "Wen Jiang",
+    "Mingmin Chu",
+    "Yimeng Tian",
+    "Qianxin Zhang",
+    "Haofei Yang",
+    "Rui Yang",
+    "Yang Liu",
+    "Tao Lv",
+    "Fangming Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-01T07:31:18Z",
+  "abs_url": "https://arxiv.org/abs/2609.00829v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.00829",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Self-evolving agents advance toward autonomy by optimizing their harness---prompts, skills, tools, and execution logic---based on environmental feedback. This paradigm, however, is hampered by three challenges: \\textit{credit assignment failure}, where terminal success/failure feedback makes it ambiguous which step caused the error; \\textit{shortcut learning}, where agents memorize task-specific patterns rather than acquire generalizable capabilities; and \\textit{catastrophic forgetting}, where unguarded updates degrade previously acquired competence. In this paper, we introduce HarnessEvolve, a self-evolving framework that learns from reference trajectories to achieve reliable agent self-evolution. HarnessEvolve decouples the execution agent from the evolutionary pipeline, assigning execution, evaluation, optimization, and gating to independent agent modules, enabling generalizable and stable harness improvements. Specifically, HarnessEvolve overcomes credit assignment failure by generating reference trajectories (execution paths produced when given the ground-truth answers) and aligning failed executions against them to extract error signals, which are clustered to reveal systematic failure patterns. To prevent shortcut learning and catastrophic forgetting, candidate harness updates must pass two gates: a quality gate that filters data leakage and prompt bloat, and a performance gate that accepts each update if it improves on the current batch without degrading recent batches, with epoch-end validation on a held-out set selecting the best-performing accepted agent snapshot. We conduct extensive experiments on several benchmarks spanning open-domain and enterprise scenarios, using different models and agent frameworks. Results demonstrate that HarnessEvolve consistently outperforms state-of-the-art baselines across all benchmarks and settings, confirming reliability across task domains.",
+  "abstract_zh": "本文提出 HarnessEvolve，一种利用参考轨迹实现可靠智能体自进化的框架。针对终端反馈导致的信用分配失败、依赖任务模式的捷径学习，以及更新过程中能力退化的灾难性遗忘，HarnessEvolve 将执行智能体与进化流程解耦，由独立模块分别负责执行、评估、优化和门控。框架通过使用真实答案生成参考轨迹，并将失败执行与参考轨迹对齐，从而提取错误信号、聚类系统性失败模式。在更新筛选阶段，质量门控用于过滤数据泄漏和提示词膨胀，性能门控要求更新提升当前批次表现且不损害近期批次表现；每轮结束时再基于留出集选择最佳智能体快照。涵盖开放域与企业场景、不同模型和智能体框架的实验表明，HarnessEvolve 在所有基准和设置下均持续优于现有先进基线，展现出跨任务领域的可靠性。",
+  "key_points_zh": [
+    "将执行、评估、优化和门控解耦，降低智能体自进化过程中的相互干扰，提升更新稳定性与泛化能力。",
+    "通过真实答案生成参考轨迹，并将失败执行与其对齐，定位具体错误来源，缓解仅依赖终端反馈造成的信用分配失败。",
+    "对错误信号进行聚类以发现系统性失败模式，帮助智能体学习可迁移能力，而非记忆任务特定捷径。",
+    "采用质量门控和性能门控：前者过滤数据泄漏与提示词膨胀，后者防止新更新损害近期已获得的能力。",
+    "在多种开放域和企业基准、模型及智能体框架上，HarnessEvolve 均优于现有先进基线。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.9,
+    "problem_significance": 0.93,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.88,
+    "lasting_value": 0.9,
+    "llm_avg": 0.906,
+    "comment": "HarnessEvolve presents a strong closed-loop framework for trajectory-informed harness self-improvement with explicit quality, regression, and anti-forgetting gates.",
+    "comment_zh": "HarnessEvolve 提出了强有力的闭环框架，利用轨迹改进智能体框架，并设置了明确的质量、回归和防遗忘门控机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36560162063732243,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.906,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.00829/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.972
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "arxiv_id": "2609.01466",
+  "title": "Parsing the Stream: A Live Trace Model for Long-Horizon Agents and Their Observers",
+  "title_zh": "解析信息流：面向长时程智能体及其观察者的实时轨迹模型",
+  "authors": [
+    "Egor Pakhomov",
+    "Erik Nijkamp"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-01T16:03:54Z",
+  "abs_url": "https://arxiv.org/abs/2609.01466v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.01466",
+  "links": {
+    "github": "https://github.com/SalesforceAIResearch/tracelab",
+    "project_page": null
+  },
+  "abstract_en": "A long-horizon agent's trace outgrows both of its consumers: the human observer monitoring the run, and the agent itself, whose bounded context the trace must be folded back into. We present a live trace model, an append-only event ledger folded incrementally into typed run state and compiled into per-consumer views, and evaluate it for both consumers against deterministic ground truth. For the observer side, evaluated with an LLM reader as proxy, the compiled view answers monitoring questions using approximately 14x and 15x fewer input tokens (by reader) and at 5-7x lower cost than a budget-capped single-call reading of the raw trace, with higher accuracy (0.85-0.87 versus 0.48). Because the questions were co-designed with the view schema, we treat the token and cost reduction, conditional on schema coverage, as the transferable result. For the agent, on 120-link sequential-dependency tasks, mechanisms that maintain the task's running statistic in per-step state succeed where full-context prompting fails (30/30 versus 8/30 under a clean protocol, n=30, labeled descriptive owing to benchmark-system co-development); a prompt-level scratchpad matches the fold's accuracy at lower cost, and a two-arm decomposition attributes the fold's accuracy to its deterministic aggregate and its cost advantage to its compactness. The fold's remaining value over cheaper alternatives is deterministic auditability and serving the observer from the same state. We derive eleven candidate requirements for trace folding from observed failures and delimit them with an order-sensitive task family on which the fold ceases to help. Code, benchmarks, a regenerable synthetic corpus, and all workbench traces are released.",
+  "abstract_zh": "论文提出一种面向长时程智能体的实时轨迹模型（live trace model）：将只追加的事件账本（append-only event ledger）增量折叠为类型化运行状态（typed run state），再为不同消费者编译专属视图。对于观察者，基于视图的LLM阅读器在监控问题上仅需原始轨迹约1/14至1/15的输入token，成本降低5至7倍，准确率由0.48提升至0.85至0.87；该收益依赖于视图模式对问题的覆盖。对于智能体，在120步顺序依赖任务中，维护任务运行统计量的逐步状态使成功率达到30/30，而完整上下文提示仅为8/30。实验表明，提示级scratchpad可达到相近准确率且成本更低；显式折叠的主要额外价值在于确定性可审计性，以及从同一状态同时服务智能体和观察者。论文进一步从失败案例中归纳出11项轨迹折叠候选要求，并构造顺序敏感任务以界定该方法失效的边界，同时发布代码、基准、可再生合成语料库及工作台轨迹。",
+  "key_points_zh": [
+    "核心架构是“事件账本→类型化运行状态→消费者专属视图”，支持增量更新、压缩与多方复用。",
+    "观察者侧视图将输入token减少约14至15倍、成本降低5至7倍，并将监控准确率从0.48提升至0.85至0.87。",
+    "智能体侧在120步顺序依赖任务中，运行统计量状态折叠达到30/30成功，而完整上下文提示仅8/30。",
+    "Prompt-level scratchpad可获得相近准确率且成本更低；显式fold的核心剩余优势是确定性审计与状态共享。",
+    "论文提出11项轨迹折叠要求，并通过顺序敏感任务展示方法并非普适有效。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.84,
+    "problem_significance": 0.86,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.88,
+    "llm_avg": 0.852,
+    "comment": "This paper presents a reusable trace, state-folding, and observer-view infrastructure that improves long-horizon agent observability, context efficiency, and deterministic auditability.",
+    "comment_zh": "本文提出了可复用的轨迹、状态折叠和观察者视图基础设施，提升了长程智能体的可观测性、上下文效率与确定性审计能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.852,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/SalesforceAIResearch/tracelab",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01466/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

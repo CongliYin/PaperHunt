@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2609.01603",
+  "title": "Efficient SWE Agent Benchmarking via Trajectory-Aware Evaluation",
+  "title_zh": "基于轨迹感知评估的高效软件工程智能体基准测试",
+  "authors": [
+    "Kefeng Duan",
+    "Dewu Zheng",
+    "Yanlin Wang",
+    "Xiwen Wang",
+    "Ensheng Shi",
+    "Xilin Liu",
+    "Yuchi Ma",
+    "Jiachi Chen",
+    "Mingwei Liu",
+    "Zibin Zheng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-01T17:59:46Z",
+  "abs_url": "https://arxiv.org/abs/2609.01603v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.01603",
+  "links": {
+    "github": "https://github.com/DeepSoftwareAnalytics/PTA-IRT.",
+    "project_page": null
+  },
+  "abstract_en": "Evaluating software engineering agents on realistic benchmarks is costly, since each task may require multi-step code exploration, modification, and test execution. Existing efficient evaluation methods select representative subsets to estimate full-benchmark performance, but are largely result-only: they fit historical pass/fail response matrices or static task semantics, discarding how agents solve problems. We propose PTA-IRT, a Privileged Trajectory-Aware Item Response Theory framework that fuses process and outcome signals. Historical execution trajectories supply process-level evidence beyond pass/fail, such as explored context, attempted edits, and solving paths, which PTA-IRT uses as privileged information for calibration subset selection and ability estimation. Under low calibration budgets, PTA-IRT consistently outperforms prior IRT baselines on score and ranking recovery across four SWE benchmarks. Code and data are publicly available at https://github.com/DeepSoftwareAnalytics/PTA-IRT.",
+  "abstract_zh": "在真实基准上评估软件工程智能体（SWE Agent）成本高昂，因为每项任务通常涉及多步代码探索、修改与测试执行。现有高效评估方法主要通过选择代表性任务子集来估计完整基准性能，但大多仅关注最终结果：利用历史通过/失败响应矩阵或静态任务语义建模，忽略智能体的实际解题过程。本文提出 PTA-IRT，一种引入特权轨迹信息的项目反应理论框架（Privileged Trajectory-Aware Item Response Theory），用于融合过程信号与结果信号。该方法从历史执行轨迹中提取已探索上下文、尝试过的代码修改和求解路径等超越通过/失败标签的过程证据，并将其作为特权信息，用于选择校准任务子集和估计智能体能力。在低校准预算下，PTA-IRT 在四个 SWE 基准上的分数恢复与排名恢复任务中均持续优于已有 IRT 基线。代码与数据已公开。",
+  "key_points_zh": [
+    "指出现有高效 SWE Agent 评估方法偏重最终通过/失败结果，忽略代码探索、编辑尝试和求解路径等过程信息。",
+    "提出 PTA-IRT，将历史执行轨迹作为特权信息，与最终结果共同用于项目反应理论建模。",
+    "轨迹信息同时服务于代表性校准子集选择和智能体能力估计，从而降低完整基准测试成本。",
+    "在四个 SWE benchmarks 上，PTA-IRT 在低校准预算下的分数恢复和排名恢复均优于已有 IRT baselines。",
+    "代码与数据公开于 https://github.com/DeepSoftwareAnalytics/PTA-IRT。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.78,
+    "problem_significance": 0.8,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.8,
+    "llm_avg": 0.764,
+    "comment": "PTA-IRT is a practical coding-agent evaluation infrastructure that uses privileged execution trajectories to reduce calibration cost and improve benchmark score and ranking recovery.",
+    "comment_zh": "PTA-IRT 是一种实用的编码智能体评估基础设施，利用执行轨迹这一特权信息降低校准成本并提升分数与排名恢复效果。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.764,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/DeepSoftwareAnalytics/PTA-IRT.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01603/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01603/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.96
+    }
+  ]
+}

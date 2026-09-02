@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.00833",
+  "title": "Dense Process Supervision for Search Agents via Fact Utility Estimation",
+  "title_zh": "通过事实效用估计为搜索智能体提供密集过程监督",
+  "authors": [
+    "Rongzhi Zhu",
+    "Xiangyu Liu",
+    "Yi Liu",
+    "Shuo Zhang",
+    "Ruirui Zhang",
+    "Rui Wu",
+    "Tao Jiang",
+    "Zequn Sun",
+    "Wenhao Xu",
+    "Wei Hu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-01T07:34:33Z",
+  "abs_url": "https://arxiv.org/abs/2609.00833v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.00833",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement learning (RL) for search agents typically relies on outcome rewards. However, it often fails to achieve effective credit assignment, due to the unclear value of intermediate steps. It is hard to separate their contributions from the final result. In this paper, we propose a dense process supervision method based on fact utility estimation, which models the reasoning process as the accumulation of discrete evidence facts. We first extract structured facts from raw observations and organize them into an explicit fact store. To support credit assignment, we then cluster semantically equivalent facts and infer the posterior utility of each fact cluster using Bayesian estimation over group rollouts. Finally, we convert the estimated fact utilities into dense step-level rewards to guide RL training. Experiments on seven single-hop and multi-hop QA benchmarks show that our method consistently outperforms existing baselines. Ablation studies validate clear relative improvements on multi-hop QA compared to outcome reward-only training.",
+  "abstract_zh": "针对搜索智能体强化学习通常依赖结果奖励、难以对中间步骤进行有效信用分配的问题，本文提出一种基于事实效用估计的密集过程监督方法。该方法将推理过程建模为离散证据事实的累积：首先从原始观测中抽取结构化事实并构建显式事实存储；随后聚类语义等价事实，并基于多组轨迹采样通过 Bayesian estimation 推断各事实簇的后验效用；最后将事实效用转化为逐步密集奖励，以指导 RL 训练。在七个单跳与多跳 QA 基准上的实验表明，该方法 consistently 优于现有基线；消融实验进一步证明，相比仅使用结果奖励，在多跳 QA 上具有明显提升。",
+  "key_points_zh": [
+    "将搜索智能体的推理过程表示为离散证据事实的累积，缓解中间步骤价值不清导致的信用分配困难。",
+    "从原始观测中抽取结构化事实并建立显式 fact store，为过程监督提供可解释的中间表示。",
+    "聚类语义等价事实，并利用 group rollouts 与 Bayesian estimation 推断事实簇的后验效用。",
+    "将事实效用转换为逐步密集奖励，用于指导 RL 训练，增强对关键推理步骤的反馈。",
+    "在七个单跳和多跳 QA 基准上 consistently 超越基线，且在多跳 QA 中较 outcome reward-only 训练获得显著提升。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.82,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.82,
+    "llm_avg": 0.8320000000000001,
+    "comment": "The fact-utility approach provides trajectory-grounded dense rewards for search-agent RL and directly addresses intermediate-step credit assignment across multi-hop tasks.",
+    "comment_zh": "事实效用方法为搜索智能体强化学习提供了基于轨迹的稠密奖励，直接解决了多跳任务中的中间步骤信用分配问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8320000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.00833/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}

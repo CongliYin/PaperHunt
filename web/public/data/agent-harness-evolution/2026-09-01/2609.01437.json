@@ -1,0 +1,92 @@
+{
+  "arxiv_id": "2609.01437",
+  "title": "HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?",
+  "title_zh": "HarnessDev：LLM 能否创建并演化自己的 Agent Harness？",
+  "authors": [
+    "Yuhao Wu",
+    "Jingyuan Zhang",
+    "Jiajun Shi",
+    "Xinping Lei",
+    "Qingshui Gu",
+    "Yuxuan Zhang",
+    "Zexuan Wang",
+    "Chen He",
+    "Chen Huang",
+    "Maojia Song",
+    "Zhiyuan Zeng",
+    "Shaowen Wang",
+    "Jinkai Liu",
+    "Yunfeng Shi",
+    "Jiaheng Liu",
+    "Shen Yan",
+    "Wenhao Huang",
+    "Ge Zhang",
+    "Wenxuan Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-01T15:45:33Z",
+  "abs_url": "https://arxiv.org/abs/2609.01437v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.01437",
+  "links": {
+    "github": null,
+    "project_page": "https://self-developing-agents.github.io/"
+  },
+  "abstract_en": "As agents move from research prototypes to deployed tools, their capability increasingly depends on model-external execution infrastructure, commonly termed the agent harness. Changing this harness while holding model weights fixed can substantially alter task performance. Current agent evaluations typically report downstream performance under a chosen harness, leaving a model's ability to develop the harness itself comparatively underexplored. We introduce HarnessDev, a benchmark that shifts the unit of evaluation from task outputs to runnable infrastructure. HarnessDev covers two stages. In Creation, the agent starts from a minimal seed and a small number of cases, then builds a complete execution system. In Evolution, it starts from its own created harness and iteratively revises it using downstream execution feedback, with the goal of improving benchmark performance. We then evaluate each constructed harness on capability (task success on held-out benchmarks) and efficiency (execution-token cost). The reported Creation results cover six creator LLMs, four domains, and five downstream benchmarks totaling 2,207 unique downstream instances, with hidden evaluation tasks withheld from development. We find that generated harnesses remain substantially behind mature human-engineered references on code and on search and research, while matching or exceeding the selected references on writing and machine-learning experimentation, with large variation in execution cost. Evolution produces some performance gains, but they are unstable and transfer only partially to held-out tasks. Experiments with a fixed runtime model further show that the gains depend strongly on the model executing the harness, indicating limited transfer across models.",
+  "abstract_zh": "随着 Agent 从研究原型走向实际部署，其能力越来越依赖模型外部的执行基础设施，即 Agent Harness。在模型权重固定时，仅改变 Harness 就可能显著影响任务表现。HarnessDev 将评测对象从任务输出转向可运行的基础设施，包含两个阶段：Creation 从最小种子和少量案例出发构建完整执行系统；Evolution 基于下游执行反馈，迭代修改自身创建的 Harness，以提升基准性能。研究从能力和效率两方面评估生成的 Harness，前者衡量留出基准上的任务成功率，后者衡量执行 token 成本。Creation 覆盖 6 个 creator LLM、4 个领域和 5 个下游基准，共 2,207 个独立实例，并保留隐藏测试任务。结果显示，生成的 Harness 在代码、搜索与研究任务上明显落后于成熟的人工作品；在写作和机器学习实验任务上则可达到或超过选定参考系统，但执行成本差异很大。Evolution 能带来部分性能提升，但提升不稳定，且仅能有限迁移到留出任务。固定 runtime model 的实验进一步表明，收益高度依赖实际执行 Harness 的模型，说明 Harness 的跨模型迁移能力有限。",
+  "key_points_zh": [
+    "HarnessDev 将评测重点从 Agent 的任务结果转向可运行的 Agent Harness，分别考察其创建与演化能力。",
+    "生成的 Harness 在代码、搜索和研究领域落后于人类工程参考系统，但在写作和机器学习实验中表现相当或更优。",
+    "Harness 的执行效率差异显著，能力提升不能仅用任务成功率衡量，还需关注 execution-token 成本。",
+    "Evolution 可通过执行反馈带来性能增益，但增益不稳定，对隐藏任务的迁移有限。",
+    "Harness 的改进效果强烈依赖 runtime model，表明自动构建的执行基础设施存在明显的跨模型泛化问题。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.86,
+    "problem_significance": 0.84,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8400000000000001,
+    "comment": "HarnessDev establishes a directly relevant benchmark for agents that create and evolve reusable execution infrastructure, with broad coding, search, and workflow evaluation.",
+    "comment_zh": "HarnessDev 建立了一个直接面向智能体创建和演化可复用执行基础设施的基准，覆盖编码、搜索和工作流等多类任务。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8400000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://self-developing-agents.github.io/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01437/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01437/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

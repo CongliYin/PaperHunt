@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2609.00913",
+  "title": "SwapRec: Warming Up Cold Items Through Training-Time Swaps",
+  "title_zh": "SwapRec：通过训练时交换唤醒冷门物品",
+  "authors": [
+    "Marta Moscati",
+    "Jan Malte Lichtenberg",
+    "Davide Abbattista",
+    "Antonio De Candia",
+    "Laura Boggia",
+    "Matteo Ruffini"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-01T08:41:58Z",
+  "abs_url": "https://arxiv.org/abs/2609.00913v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.00913",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Interactions with cold items negatively impact real-time personalization of ID-based recommender systems. This is because the use of such interactions degrades user preference estimates, whereas excluding cold items from the user profile prevents real-time recommendation updates. In industrial scenarios, one heuristic often applied to address this shortcoming at inference time is to replace, i.e., \"swap\", cold-start items by their most similar \"warm\" neighbor, where similarity is inferred from the items' side information. In this paper, we demonstrate that sequential models, most often used for real-time personalization, are not robust to such swaps, and propose SwapRec, an approach to address this issue. SwapRec relies on using the same swap heuristics already at training time. We apply SwapRec to state-of-the-art models for sequential recommendation and analyze its impact by means of quantitative experiments in three recommendation domains (online shopping, movie, music). The experimental results show that, irrespective of the underlying sequential architecture, our easy-to-implement SwapRec approach allows for substantially more accurate recommendations when in presence of interactions with cold items, simultaneously leading to a larger percentage of cold items in the recommendation lists.",
+  "abstract_zh": "ID-based 推荐系统中的冷门物品交互会损害实时个性化：纳入这些交互可能降低用户偏好估计质量，而将其排除又会阻碍用户画像的实时更新。工业界常在推理阶段利用物品侧信息，将冷启动物品替换为最相似的暖物品。然而，论文发现常用于实时个性化的序列推荐模型对这种交换并不鲁棒。为此，作者提出 SwapRec，在训练阶段复现推理时使用的交换启发式，使模型适应冷物品被替换的情况。作者将 SwapRec 应用于多种先进序列推荐模型，并在 online shopping、movie 和 music 三个领域进行实验。结果表明，无论底层序列架构如何，SwapRec 都能以较低实现成本显著提升包含冷物品交互时的推荐准确率，同时提高推荐列表中冷物品的占比。",
+  "key_points_zh": [
+    "指出序列推荐模型对推理阶段的冷物品交换缺乏鲁棒性，直接替换可能导致推荐质量下降。",
+    "提出 SwapRec：在训练阶段使用与推理阶段相同的冷物品—暖物品交换启发式。",
+    "该方法可直接应用于多种 state-of-the-art 序列推荐架构，改动简单且具有较强通用性。",
+    "在 online shopping、movie 和 music 三个推荐领域的实验显示，SwapRec 能显著提升冷物品交互场景下的推荐准确率。",
+    "SwapRec 不仅改善整体推荐效果，还能提高推荐列表中冷物品的比例，有助于冷物品曝光与实时个性化。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.78,
+    "problem_significance": 0.88,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.84,
+    "llm_avg": 0.798,
+    "comment": "A practical and well-motivated sequential recommendation method that directly improves cold-item personalization in online shopping with strong industrial applicability.",
+    "comment_zh": "该工作针对在线购物中的冷启动商品个性化推荐提出了实用方法，并具有较强的工业应用价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.7600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4849737695228211,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.798,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 7,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.00913/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.00913/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.94
+    }
+  ]
+}

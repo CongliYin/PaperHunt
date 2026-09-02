@@ -1,0 +1,317 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-09-01",
+  "generated_at": "2026-09-02T22:34:34Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.01245",
+      "title": "Explore More, Drift Less: Outcome-Only Reinforcement Learning Can Suffice for Long-Horizon Interactive Agents",
+      "title_zh": "探索更多，漂移更少：仅依赖结果的强化学习足以训练长时程交互智能体",
+      "authors": [
+        "Liming Pu",
+        "Xiaoxia Li",
+        "Yifu Liu",
+        "Teng Cao",
+        "Bin Yang"
+      ],
+      "total_score": 0.7798594178050872,
+      "scores": {
+        "topic_relevance": 0.9600000000000001,
+        "llm_assessment": 0.9,
+        "domain_fit": 0.96,
+        "other": 0.4195313926836233
+      },
+      "tags": [
+        "GitHub",
+        "harness multi agent orchestration"
+      ],
+      "tldr_zh": "扩大探索并抑制策略漂移，结果奖励也能训练长程智能体",
+      "detail_file": "agent-harness-evolution/2026-09-01/2609.01245.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01245/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.01466",
+      "title": "Parsing the Stream: A Live Trace Model for Long-Horizon Agents and Their Observers",
+      "title_zh": "解析信息流：面向长时程智能体及其观察者的实时轨迹模型",
+      "authors": [
+        "Egor Pakhomov",
+        "Erik Nijkamp"
+      ],
+      "total_score": 0.6856000000000002,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.852,
+        "domain_fit": 0.94,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "用可审计状态折叠长轨迹，降低监控成本并提升智能体表现",
+      "detail_file": "agent-harness-evolution/2026-09-01/2609.01466.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01466/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.01437",
+      "title": "HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?",
+      "title_zh": "HarnessDev：LLM 能否创建并演化自己的 Agent Harness？",
+      "authors": [
+        "Yuhao Wu",
+        "Jingyuan Zhang",
+        "Jiajun Shi",
+        "Xinping Lei",
+        "Qingshui Gu",
+        "Yuxuan Zhang",
+        "Zexuan Wang",
+        "Chen He",
+        "Chen Huang",
+        "Maojia Song",
+        "Zhiyuan Zeng",
+        "Shaowen Wang",
+        "Jinkai Liu",
+        "Yunfeng Shi",
+        "Jiaheng Liu",
+        "Shen Yan",
+        "Wenhao Huang",
+        "Ge Zhang",
+        "Wenxuan Zhang"
+      ],
+      "total_score": 0.6715883062540946,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.8400000000000001,
+        "domain_fit": 0.93,
+        "other": 0.33196102084698154
+      },
+      "tags": [
+        "Project Page",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "LLM能构建并改进Harness，但性能不稳且难跨模型迁移",
+      "detail_file": "agent-harness-evolution/2026-09-01/2609.01437.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01437/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.00643",
+      "title": "REVISE: Validity-Guided Recovery for Online Revisions in Agent Workflows",
+      "title_zh": "REVISE：面向 Agent 工作流在线修订的有效性引导恢复",
+      "authors": [
+        "Ruoling Qi",
+        "Xuaner Wu",
+        "Penghang Liu",
+        "Jian Chen",
+        "Yirui Liu"
+      ],
+      "total_score": 0.5864887430316665,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.914,
+        "domain_fit": 0.98,
+        "other": 0.18762914343888823
+      },
+      "tags": [
+        "planning and policy"
+      ],
+      "tldr_zh": "用依赖感知的细粒度恢复兼顾修订正确性与执行效率",
+      "detail_file": "agent-harness-evolution/2026-09-01/2609.00643.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.00643/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.00865",
+      "title": "MemoryWalker: Stop Training Agents on Contexts They Never Saw",
+      "title_zh": "MemoryWalker：停止在智能体从未见过的上下文上训练",
+      "authors": [
+        "Zinco J",
+        "Xunjie Zhu",
+        "Shen Huang",
+        "Zhenyi Wang",
+        "Pengjun Xie",
+        "Jieping Ye"
+      ],
+      "total_score": 0.5538000000000001,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.876,
+        "domain_fit": 0.9,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "production agent platform"
+      ],
+      "tldr_zh": "修正上下文压缩造成的训练—推理不一致",
+      "detail_file": "agent-harness-evolution/2026-09-01/2609.00865.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.00865/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.00833",
+      "title": "Dense Process Supervision for Search Agents via Fact Utility Estimation",
+      "title_zh": "通过事实效用估计为搜索智能体提供密集过程监督",
+      "authors": [
+        "Rongzhi Zhu",
+        "Xiangyu Liu",
+        "Yi Liu",
+        "Shuo Zhang",
+        "Ruirui Zhang",
+        "Rui Wu",
+        "Tao Jiang",
+        "Zequn Sun",
+        "Wenhao Xu",
+        "Wei Hu"
+      ],
+      "total_score": 0.5246000000000001,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.8320000000000001,
+        "domain_fit": 0.94,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "judge reward verifier"
+      ],
+      "tldr_zh": "用事实效用估计实现搜索智能体的密集奖励",
+      "detail_file": "agent-harness-evolution/2026-09-01/2609.00833.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.00833/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.00823",
+      "title": "Polished but Unresolved: Identifying Late-Stage Pressure States in Long-Horizon Tool-Use Agents",
+      "title_zh": "表面完善但问题未解：识别长程工具使用智能体的后期压力状态",
+      "authors": [
+        "Haoyang Chen",
+        "Yi Liu",
+        "Jianzhi Shao",
+        "Xiaozhou Xu",
+        "Zhe Sun",
+        "Wei Hu"
+      ],
+      "total_score": 0.4037867206879108,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.742,
+        "domain_fit": 0.83,
+        "other": 0.12395573562636916
+      },
+      "tags": [
+        "general tool agents"
+      ],
+      "tldr_zh": "用隐藏状态识别并缓解智能体的后期提交压力",
+      "detail_file": "agent-harness-evolution/2026-09-01/2609.00823.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.00823/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.01603",
+      "title": "Efficient SWE Agent Benchmarking via Trajectory-Aware Evaluation",
+      "title_zh": "基于轨迹感知评估的高效软件工程智能体基准测试",
+      "authors": [
+        "Kefeng Duan",
+        "Dewu Zheng",
+        "Yanlin Wang",
+        "Xiwen Wang",
+        "Ensheng Shi",
+        "Xilin Liu",
+        "Yuchi Ma",
+        "Jiachi Chen",
+        "Mingwei Liu",
+        "Zibin Zheng"
+      ],
+      "total_score": 0.3392,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.764,
+        "domain_fit": 0.9,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub"
+      ],
+      "tldr_zh": "利用执行轨迹提升低预算SWE智能体评估精度",
+      "detail_file": "agent-harness-evolution/2026-09-01/2609.01603.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01603/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.01600",
+      "title": "CordisBench: Can Language Models Reason About Component Lifecycles in Dynamic Agent Harnesses?",
+      "title_zh": "CordisBench：语言模型能否推理动态 Agent Harness 中的组件生命周期？",
+      "authors": [
+        "Damien Sileo",
+        "Dimitri Kachler"
+      ],
+      "total_score": 0.3374,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.758,
+        "domain_fit": 0.88,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub"
+      ],
+      "tldr_zh": "CordisBench揭示模型难以推理复杂组件生命周期",
+      "detail_file": "agent-harness-evolution/2026-09-01/2609.01600.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01600/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.00829",
+      "title": "HarnessEvolve: Learning from Reference Trajectories for Reliable Agent Self-Evolution",
+      "title_zh": "HarnessEvolve：从参考轨迹中学习，实现可靠的智能体自进化",
+      "authors": [
+        "Wen Jiang",
+        "Mingmin Chu",
+        "Yimeng Tian",
+        "Qianxin Zhang",
+        "Haofei Yang",
+        "Rui Yang",
+        "Yang Liu",
+        "Tao Lv",
+        "Fangming Li"
+      ],
+      "total_score": 0.3350800810318661,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.906,
+        "domain_fit": 0.97,
+        "other": 0.21093360343955375
+      },
+      "tags": [],
+      "tldr_zh": "利用参考轨迹和双重门控实现可靠的智能体自进化",
+      "detail_file": "agent-harness-evolution/2026-09-01/2609.00829.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.00829/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.01058",
+      "title": "ARISE-RL: Agentic Rubric-Grounded Iterative Self-Evolution with Reinforcement Learning",
+      "title_zh": "ARISE-RL：基于智能体量规的迭代式自进化强化学习",
+      "authors": [
+        "Fanrui Zhang",
+        "Ruixue Ding",
+        "Qiang Zhang",
+        "Xi Chen",
+        "Boli Chen",
+        "Shihang Wang",
+        "Qiuchen Wang",
+        "Hongmin Zhan",
+        "Jinxin Bian",
+        "Li xingchao",
+        "Peijin Zheng",
+        "Hao cheng",
+        "Pengjun Xie",
+        "Kaipeng Zhang",
+        "Jiawei Liu",
+        "Zheng-Jun Zha"
+      ],
+      "total_score": 0.3279867206879108,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.8860000000000001,
+        "domain_fit": 0.96,
+        "other": 0.20728906895970253
+      },
+      "tags": [],
+      "tldr_zh": "用量规协同进化提升开放式智能体强化学习",
+      "detail_file": "agent-harness-evolution/2026-09-01/2609.01058.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.01058/thumb.webp"
+    }
+  ]
+}

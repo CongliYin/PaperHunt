@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2609.00823",
+  "title": "Polished but Unresolved: Identifying Late-Stage Pressure States in Long-Horizon Tool-Use Agents",
+  "title_zh": "表面完善但问题未解：识别长程工具使用智能体的后期压力状态",
+  "authors": [
+    "Haoyang Chen",
+    "Yi Liu",
+    "Jianzhi Shao",
+    "Xiaozhou Xu",
+    "Zhe Sun",
+    "Wei Hu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-01T07:24:53Z",
+  "abs_url": "https://arxiv.org/abs/2609.00823v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.00823",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-horizon tool-use agents need not only to search and plan, but also to decide when to finalize. We study late-stage pressure states, in which an agent is biased toward submitting a final answer that appears complete and polished while key constraints remain unresolved. We first train a linear probe to show that this pressure state is identifiable from the agent's hidden states. Then, we use activation interventions along this pressure direction and find that shifting the hidden states changes both the pressure score and whether the agent continues tool use or submits early. Through controlled context manipulations, we further see that the pressure is mitigated by constraint clarity and action mapping. Based on these findings, we propose Probe-Sensed Pressure Relief (PSPR), a plugin that applies lightweight pressure relief direction under moderate pressure and moves to structured organization under high pressure risk. Experiments on multiple long-horizon benchmarks show that our method consistently strengthens existing agent methods.",
+  "abstract_zh": "长程工具使用智能体不仅需要搜索与规划，还必须判断何时提交最终答案。本文研究一种后期压力状态：当关键约束尚未解决时，智能体仍倾向于提交看似完整且 polished 的答案。作者首先训练线性探针，证明该压力状态可从智能体隐藏状态中识别。随后，沿压力方向进行激活干预，发现隐藏状态的变化会同时影响压力分数，以及智能体继续使用工具还是提前提交。通过受控上下文操纵，研究进一步发现，约束清晰度和行动映射能够缓解这种压力。基于上述发现，作者提出 Probe-Sensed Pressure Relief（PSPR），一种插件式方法：在中等压力下施加轻量级压力缓解方向；当高压力风险出现时，则转向结构化组织。多个长程基准上的实验表明，PSPR 能够稳定增强现有智能体方法的性能。",
+  "key_points_zh": [
+    "定义并识别后期压力状态：智能体在关键约束未解决时，偏向提交表面完整的最终答案。",
+    "线性探针和激活干预表明，该压力状态可由隐藏状态表征，并会影响压力分数及是否继续调用工具。",
+    "约束清晰度与行动映射能够降低后期压力，说明上下文结构对智能体决策具有重要作用。",
+    "提出 Probe-Sensed Pressure Relief（PSPR），根据压力程度分别执行轻量级方向干预或结构化组织。",
+    "在多个长程工具使用基准上，PSPR 能够稳定提升现有智能体方法的表现。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.83,
+    "novelty": 0.8,
+    "problem_significance": 0.82,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.68,
+    "llm_avg": 0.742,
+    "comment": "This work introduces a hidden-state diagnostic and intervention loop for reducing premature termination in long-horizon tool-use agents, though its generality beyond the tested pressure signal remains uncertain.",
+    "comment_zh": "本文提出通过隐状态诊断和干预减少长程工具使用智能体过早终止，但该压力信号在测试范围之外的普适性仍不确定。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.34373441375821495,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.742,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.00823/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.00823/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.972
+    }
+  ]
+}
