@@ -1,0 +1,77 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-09-02",
+  "generated_at": "2026-09-03T22:31:38Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.02246",
+      "title": "LLM-as-a-Judge Is Not an Oracle: Why Self-Improving Agents Need Deterministic Guardrails",
+      "title_zh": "LLM-as-a-Judge 并非神谕：自我改进智能体为何需要确定性护栏",
+      "authors": [
+        "Vansh Wahi"
+      ],
+      "total_score": 0.6990000000000001,
+      "scores": {
+        "topic_relevance": 0.9600000000000001,
+        "llm_assessment": 0.85,
+        "domain_fit": 0.93,
+        "other": 0.2
+      },
+      "tags": [
+        "closed loop agent improvement"
+      ],
+      "tldr_zh": "LLM评审应是顾问，而非自我改进系统的神谕",
+      "detail_file": "agent-harness-evolution/2026-09-02/2609.02246.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.02246/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.02417",
+      "title": "Coverage, Not Targeting: A Structural Regime in Multi-Turn Agent Credit Assignment",
+      "title_zh": "覆盖，而非定位：多轮智能体信用分配中的结构性机制",
+      "authors": [
+        "Chenyu Zhou",
+        "Qiliang Jiang",
+        "Shuning Wu",
+        "Xu Zhou"
+      ],
+      "total_score": 0.6658000000000001,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.876,
+        "domain_fit": 0.95,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "低验证信息密度下，奖励覆盖比信用定位更重要",
+      "detail_file": "agent-harness-evolution/2026-09-02/2609.02417.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.02417/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.02217",
+      "title": "SkillGLoW: Procedural-Family Skill Consolidation for Self-Improving Agents on Long-Horizon Task Streams",
+      "title_zh": "SkillGLoW：面向长时域任务流的程序族技能整合与自我改进智能体",
+      "authors": [
+        "Ao Yan",
+        "Xin Zhang",
+        "Jiawei Du",
+        "Joey Tianyi Zhou"
+      ],
+      "total_score": 0.43938245938114173,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.8700000000000001,
+        "domain_fit": 0.96,
+        "other": 0.1146081979371389
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "SkillGLoW以程序族为单位实现紧凑且可验证的技能迁移",
+      "detail_file": "agent-harness-evolution/2026-09-02/2609.02217.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.02217/thumb.webp"
+    }
+  ]
+}

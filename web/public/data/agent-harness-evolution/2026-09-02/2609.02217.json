@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.02217",
+  "title": "SkillGLoW: Procedural-Family Skill Consolidation for Self-Improving Agents on Long-Horizon Task Streams",
+  "title_zh": "SkillGLoW：面向长时域任务流的程序族技能整合与自我改进智能体",
+  "authors": [
+    "Ao Yan",
+    "Xin Zhang",
+    "Jiawei Du",
+    "Joey Tianyi Zhou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-02T07:31:18Z",
+  "abs_url": "https://arxiv.org/abs/2609.02217v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.02217",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM agents increasingly self-improve by writing and reusing textual skills, kept either as one global document or as a flat pool of per-task entries, though most of the evidence comes from domains with structurally similar tasks. On long-horizon workloads where each task demands a different solution, the two forms fail in opposite ways: the document collapses into generic discipline, while the pool inflates and its entries stay bound to the instance that wrote them. We argue the missing unit of reuse is the solving procedure shared by a cluster of related tasks, and build SkillGLoW (Global-Local Weave) around it: the local skills a task writes from its own execution are aggregated into procedural families and compressed into de-instantiated global priors, while the instance detail they hold is regenerated per task rather than stored; a commit gate admits a prior only when real execution shows it does not degrade the deployed library. Across four benchmarks (mathematical reasoning, terminal automation, software repair, and embodied control) and three models, the priors gain 17.2 points (hard) over the no-skill baseline on average, with positive gains in all 12 continual-improvement runs, and 18.0 with local regeneration, while the library holds one prior per procedural family, 3.6x more compact than the per-task pool. Under the same protocol GLoW leads a published single-document optimizer on 15 of 21 cells. Unmodified, the library lifts success on unseen ALFWorld tasks from 73.9% to 83.9%, evidence that what transfers is procedure rather than task memory.",
+  "abstract_zh": "现有 LLM 智能体通常通过编写和复用文本技能实现自我改进，技能多以单一全局文档或按任务组织的扁平条目池保存。然而，在每个长时域任务都需要不同解法的场景中，前者容易退化为泛化的行为规范，后者则不断膨胀且与产生它的具体任务绑定。SkillGLoW（Global-Local Weave）提出以相关任务共享的求解程序为技能复用单元：将任务执行产生的局部技能聚合为程序族，并压缩为去实例化的全局先验；具体任务细节不再持久化，而是在每个新任务中重新生成。同时，commit gate 仅在真实执行验证先验不会降低已部署技能库性能时才接纳它。实验覆盖 mathematical reasoning、terminal automation、software repair 和 embodied control 四个基准、三种模型。在 12 次持续改进实验中，困难任务相较 no-skill baseline 平均提升 17.2 个百分点，结合局部重生成后提升 18.0 个百分点；技能库每个程序族仅保留一个先验，相比按任务技能池紧凑 3.6 倍。在相同协议下，GLoW 在 21 个评测单元中的 15 个优于已发表的 single-document optimizer。未经修改的技能库还将未见过的 ALFWorld 任务成功率从 73.9% 提升至 83.9%，表明真正可迁移的是求解程序，而非任务记忆。",
+  "key_points_zh": [
+    "指出全局文档与按任务技能池在长时域异构任务中的互补性缺陷：前者过度泛化，后者规模膨胀且难以迁移。",
+    "以程序族作为技能复用的核心单位，将局部执行经验聚合并压缩为去实例化的全局先验，同时按新任务重新生成实例细节。",
+    "引入 commit gate，通过真实执行验证先验不会损害现有技能库后再提交，降低错误技能持续传播的风险。",
+    "在四类基准和三种模型上，相较 no-skill baseline 困难任务平均提升 17.2 个百分点；结合局部重生成后提升 18.0 个百分点，12 次持续改进均获得正收益。",
+    "技能库仅保留每个程序族一个先验，较按任务技能池紧凑 3.6 倍，并将未见 ALFWorld 任务成功率由 73.9% 提升至 83.9%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.88,
+    "problem_significance": 0.86,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.83,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8700000000000001,
+    "comment": "This is a strong Skill-evolution contribution that discovers reusable procedural abstractions, controls consolidation through execution-based commits, and improves long-horizon transfer.",
+    "comment_zh": "这是一项优秀的技能进化工作，通过执行验证的提交机制发现可复用的程序抽象并提升长程任务迁移能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8700000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.02217/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.02217/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.93
+    }
+  ]
+}

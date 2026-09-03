@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.02152",
+  "title": "Beyond Modality Harmony: Orthogonal Purification and Topology-Guided MoE for Conflict-Aware Multimodal Recommendation",
+  "title_zh": "超越模态和谐：面向冲突感知多模态推荐的正交净化与拓扑引导混合专家",
+  "authors": [
+    "Jialin Liu",
+    "Zhaorui Zhang",
+    "Ray C. C. Cheung"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-02T06:06:30Z",
+  "abs_url": "https://arxiv.org/abs/2609.02152v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.02152",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multimodal Recommender Systems (MRSs) typically rely on a flawed \"modality harmony\" assumption, presuming that multimodal features are inherently beneficial and strictly aligned with users' collaborative interaction patterns. However, modality-topology conflicts are ubiquitous in real-world scenarios due to deceptive visual clickbaits and mismatched semantics. Blindly integrating these noisy modalities inevitably pollutes the pristine collaborative space, causing severe representation distortion. To address this, we propose Orthogonal purification and topology-guided MoE for conflict-aware multimodal Recommendation (OrthoRec). At its core, OrthoRec introduces Collaborative-Guided Orthogonal Purification (CGOP), which geometrically decouples multimodal features into directions parallel and orthogonal to a pure collaborative anchor. By adaptively truncating the orthogonal noise with an energy-preserving normalization, CGOP rectifies deceptive semantic directions while preserving the modality's intrinsic representation capacity. Furthermore, we design a Topology-Aware Routing Mixture-of-Experts (TAR-MoE). Guided by the collaborative topology, TAR-MoE employs decoupled sigmoid gating to break the zero-sum bottleneck of traditional softmax attention, autonomously determining the injection scale for each purified modality. Finally, a safe-SSL objective is introduced to dynamically penalize the forced contrastive alignment of contradictory pairs. Experiments on three real-world Amazon datasets show that OrthoRec consistently outperforms competitive recent baselines and exhibits improved robustness under modality noise and item sparsity.",
+  "abstract_zh": "现有多模态推荐系统（MRSs）通常假设不同模态天然有益，且与用户协同交互模式严格一致。然而，视觉诱导点击、语义错配等现象会造成模态与协同拓扑之间的冲突，直接融合噪声模态可能污染纯净的协同表示空间。为此，论文提出 OrthoRec，其核心包括协同引导正交净化（Collaborative-Guided Orthogonal Purification, CGOP）和拓扑感知路由混合专家（Topology-Aware Routing Mixture-of-Experts, TAR-MoE）。CGOP以协同表示为锚点，将多模态特征分解为平行与正交方向，并通过保持能量的归一化自适应截断正交噪声，在保留模态表达能力的同时修正欺骗性语义方向。TAR-MoE利用协同拓扑进行路由，通过解耦的 sigmoid 门控突破传统 softmax 注意力的零和约束，自主决定各净化模态的注入强度。此外，论文设计 safe-SSL 目标，对矛盾样本对被强制进行对比对齐的情况施加动态惩罚。在三个真实 Amazon 数据集上的实验表明，OrthoRec consistently 优于近期强基线，并在模态噪声和物品稀疏场景下表现出更强的鲁棒性。",
+  "key_points_zh": [
+    "指出多模态推荐中的“模态和谐”假设并不可靠，视觉诱导内容和语义错配会导致模态特征与协同拓扑冲突。",
+    "CGOP以纯协同表示为锚点，将模态特征分解为平行方向与正交方向，并自适应削弱正交噪声，同时保留有效表达能力。",
+    "TAR-MoE基于协同拓扑进行专家路由，采用解耦 sigmoid 门控，灵活控制不同净化模态的融合强度。",
+    "safe-SSL动态惩罚矛盾样本对之间的强制对比对齐，降低冲突模态对表示学习的负面影响。",
+    "在三个真实 Amazon 数据集上，OrthoRec优于近期基线，并在模态噪声与物品稀疏条件下展现更强鲁棒性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.84,
+    "problem_significance": 0.86,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.81,
+    "llm_avg": 0.808,
+    "comment": "A strong Amazon-grounded multimodal recommendation method that directly improves robustness to noisy product modalities and sparse interactions.",
+    "comment_zh": "该工作基于亚马逊数据，直接提升了多模态商品推荐在模态噪声和物品稀疏条件下的鲁棒性。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.37796505041928935,
+    "venue_signal": 0.7,
+    "generality": 0.65,
+    "llm_assessment": 0.808,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 6,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.02152/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.02152/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.934
+    }
+  ]
+}

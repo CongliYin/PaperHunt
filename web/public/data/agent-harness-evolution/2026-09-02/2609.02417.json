@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.02417",
+  "title": "Coverage, Not Targeting: A Structural Regime in Multi-Turn Agent Credit Assignment",
+  "title_zh": "覆盖，而非定位：多轮智能体信用分配中的结构性机制",
+  "authors": [
+    "Chenyu Zhou",
+    "Qiliang Jiang",
+    "Shuning Wu",
+    "Xu Zhou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-02T10:37:12Z",
+  "abs_url": "https://arxiv.org/abs/2609.02417v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.02417",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-turn agentic RL increasingly treats credit assignment as a targeting problem: given a terminal verifiable reward, per-turn methods localize credit onto the turns that mattered. We identify the structural quantity that predicts when this is the right move, the verifier information density V_d = k/C (the fraction of an agent's C-step causal chain whose per-turn correctness the verifier exposes), and show that terminal-state verifiers sit deep in a low-V_d regime where targeting is the wrong axis. In controlled shared-rollout comparisons on tau^2-bench that separate reward density from credit geometry, a continuous dense reward spread uniformly beats the sparse binary outcome reward (net-harmful on 4/5 seeds), while concentrating the same advantage on progress turns or on random turns is equally harmful: targeting is second-order. The mechanism is coverage: terminal-state verification collapses the observable signal to a single final-write turn (k=1 in 98% of rollouts) while success requires a 5-8 step chain of prerequisite tool calls. A synthetic phase boundary places the crossover at V_d* ~ 0.8, whereas measured V_d is ~0.15 on tau^2-bench and ~0.4 on BFCL V3; uniform also wins on BFCL, where a matched-concentration shuffled control is negative on 8/8 seeds. The effect reproduces across model families on ToolACE-2-8B (Delta = -0.048 over 32 pre-registered seeds; an independent 20-seed replication is itself significant), and a pre-registered matched-budget breadth sweep traces a monotone dose-response whose deficit vanishes only at full chain coverage, with a reward-to-go arm reaching full-coverage parity. Uniform redistribution is the zero-information coverage default that per-turn schemes must beat; we contribute the matched-concentration shuffled control that any targeting claim should clear.",
+  "abstract_zh": "多轮智能体强化学习通常将信用分配视为定位问题：在终端可验证奖励下，把信用局部归因于真正起作用的步骤。本文提出决定这一策略是否有效的结构量——验证器信息密度 V_d = k/C，即验证器能够暴露其逐步正确性的因果链步骤数 k 占智能体 C 步因果链的比例。研究表明，终端状态验证器处于低 V_d 区域，此时定位并非正确方向。在 tau^2-bench 的受控共享轨迹实验中，连续且均匀分布的稠密奖励显著优于稀疏二值结果奖励；将同等奖励优势集中到进展步骤或随机步骤上同样有害，说明定位只是次要因素。其机制在于覆盖：终端验证通常只暴露最后一次写入操作，而任务成功依赖由 5–8 步前置工具调用组成的链条。合成实验显示相变点约为 V_d* ≈ 0.8，而 tau^2-bench 和 BFCL V3 中实测 V_d 分别约为 0.15 和 0.4；在两者上均观察到均匀分配优势。该现象在 ToolACE-2-8B 等不同模型家族上复现，并通过预注册的奖励预算宽度实验发现单调剂量—响应关系：只有覆盖完整因果链时性能差距才消失，reward-to-go 方法可达到完整覆盖水平。本文提出，均匀奖励重分配是无额外信息时的覆盖默认方案，任何逐步定位方法都应超越这一基线；同时提出 matched-concentration shuffled control，作为评估定位主张的必要对照。",
+  "key_points_zh": [
+    "提出验证器信息密度 V_d = k/C，用于判断逐步信用定位是否适合；低 V_d 时覆盖是主导因素。",
+    "在 tau^2-bench 和 BFCL V3 上，均匀稠密奖励优于稀疏终端奖励；将奖励集中到进展步骤或随机步骤同样有害。",
+    "终端验证通常只暴露最后一次写入操作，但任务成功依赖 5–8 步前置工具调用，因此定位无法覆盖完整因果链。",
+    "合成实验显示定位与覆盖的相变点约为 V_d* ≈ 0.8，而实测 V_d 远低于该阈值；ToolACE-2-8B 上也得到跨模型复现。",
+    "提出 matched-concentration shuffled control，并指出均匀奖励重分配应作为逐步信用方法必须超越的零信息覆盖基线。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.86,
+    "problem_significance": 0.91,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.89,
+    "llm_avg": 0.876,
+    "comment": "The paper identifies a general credit-assignment failure mode in agentic RL and provides carefully controlled evidence for coverage-based reward design.",
+    "comment_zh": "该论文揭示了智能体强化学习中具有普适性的信用分配失效模式，并为基于覆盖度的奖励设计提供了严谨证据。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.876,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.02417/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.02417/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.911
+    }
+  ]
+}

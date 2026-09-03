@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2609.02468",
+  "title": "DeepAffinity: Long-Term Aspect Preference Prediction in eCommerce using Small Language Models",
+  "title_zh": "DeepAffinity：利用小型语言模型预测电商用户的长期方面偏好",
+  "authors": [
+    "Yotam Eshel",
+    "Guy Hadad",
+    "Guy Feigenblat",
+    "Yuri M. Brovman",
+    "Matt Gearhart",
+    "Bracha Shapira"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-02T11:38:19Z",
+  "abs_url": "https://arxiv.org/abs/2609.02468v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.02468",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We explore predicting eCommerce user preferences for product aspects such as brand, size, and color - a task we define as Aspect Affinity. Solving this task improves customer understanding and enables fine-grained personalization in recommendation, search, and marketing. We frame Aspect Affinity as a temporal prediction task: forecasting a users future aspect choices from their time-ordered interaction history, capturing long-term preferences that evolve beyond the current session. To this end, we propose DeepAffinity, which leverages Small Language Models (SLMs) with structured prompts and specialized prediction heads fine-tuned for this task. We show DeepAffinity outperforms standard generative fine-tuning methods, while general-purpose open-source LLMs perform poorly without task-specific tuning, highlighting their limits in modeling nuanced behavior. Finally, DeepAffinity enhances recommendation quality on a large-scale multinational eCommerce platform.",
+  "abstract_zh": "本文研究电商用户对商品具体方面（如品牌、尺码和颜色）的偏好预测问题，并将其定义为方面偏好（Aspect Affinity）。该任务能够加深对用户的理解，并支持推荐、搜索和营销中的细粒度个性化。作者将方面偏好建模为时间序列预测任务：基于用户按时间排序的交互历史，预测其未来在不同商品方面上的选择，从而捕捉超越当前会话、持续演化的长期偏好。为此，提出DeepAffinity，采用带结构化提示（structured prompts）的小型语言模型（Small Language Models, SLMs），并结合针对该任务微调的专用预测头。在大规模跨国电商平台上的实验表明，DeepAffinity优于标准生成式微调方法；通用开源大语言模型若缺乏任务特定调优，表现较差，说明其在建模细粒度用户行为方面存在局限。最终，DeepAffinity能够提升推荐质量。",
+  "key_points_zh": [
+    "将品牌、尺码、颜色等商品属性偏好定义为Aspect Affinity，并建模为基于历史交互的时间序列预测任务。",
+    "提出DeepAffinity，结合结构化提示与专用预测头，针对长期、持续演化的用户偏好进行任务特定建模。",
+    "DeepAffinity优于标准生成式微调方法，表明专门的预测架构对该任务十分关键。",
+    "通用开源LLM在未经任务特定调优时表现不佳，难以捕捉细粒度电商行为模式。",
+    "在大规模跨国电商平台上，DeepAffinity进一步提升了推荐质量。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.76,
+    "problem_significance": 0.88,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.8,
+    "llm_avg": 0.7780000000000001,
+    "comment": "A highly relevant industrial e-commerce study that models evolving product-aspect preferences and demonstrates gains in recommendation quality.",
+    "comment_zh": "该工作面向真实电商场景建模持续演化的商品属性偏好，并展示了对推荐质量的实际提升。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.34373441375821495,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7780000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.02468/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.02468/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.959
+    }
+  ]
+}

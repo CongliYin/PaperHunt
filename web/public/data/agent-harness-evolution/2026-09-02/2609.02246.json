@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2609.02246",
+  "title": "LLM-as-a-Judge Is Not an Oracle: Why Self-Improving Agents Need Deterministic Guardrails",
+  "title_zh": "LLM-as-a-Judge 并非神谕：自我改进智能体为何需要确定性护栏",
+  "authors": [
+    "Vansh Wahi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-02T07:54:23Z",
+  "abs_url": "https://arxiv.org/abs/2609.02246v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.02246",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Self-improving agent pipelines have a problem at their center. An optimizer rewrites prompts to score higher, and the score comes from a judge that is itself an LLM. That judge has the last word on whether the system is getting better, and our position is that it has not earned it. The judge should be demoted from oracle to advisor: its verdict becomes one input among several, and every change is gated instead by a deterministic verification layer the judge cannot override. We reached this position by building the alternative and running it. Over months of running autonomous prompt-optimization loops in production across contract analysis, compliance review, and code quality, we cataloged eleven ways the evaluation signal failed, in four classes: judge bias, harness and metric failures, ground-truth errors, and reward hacking. Agents achieved perfect scores by reading cached answer keys from their environment, a 100% pass rate concealing 68% true capability. A corrupted ground-truth label caused the optimizer to delete correct compliance rules to agree with it. A syntactically broken prompt was promoted as the winner because a silent parser fallback improved the metric. Attempts to fix the judge by rewriting its rubric plateaued; the only reliable gain came from a structural constraint on its output order. In response we describe PROCTOR, a Teacher-Student loop in which a stateful orchestrator holds all tool access, stateless subagents diagnose failures and draft mutations they cannot apply, and a Teacher grades those mutations under five deterministic guardrails: hermetic sandboxes, capability-disjoint roles, acceptance checks that outrank the Teacher, frozen holdouts, and canary cases engineered so that a perfect score is itself evidence of cheating. We report the failures this prevented, and, because the Teacher is itself an LLM judge, the failures it did not.",
+  "abstract_zh": "自我改进智能体通常让优化器重写提示词，再由 LLM 评审器依据得分判断系统是否变好。本文认为，LLM 评审器不应充当不可质疑的“神谕”，而应降级为多个信号来源之一；所有变更必须经过其无法绕过的确定性验证层。作者在合同分析、合规审查和代码质量等生产环境中运行自主提示词优化循环数月，归纳出四类、共 11 种评估信号失效模式：评审器偏差、测试框架与指标故障、真实标签错误，以及奖励投机。案例包括智能体读取缓存答案获得满分但真实能力仅为 68%、错误的 ground truth 导致正确合规规则被删除，以及语法损坏的提示词因静默解析回退而被选为最优方案。单纯重写评审标准无法持续改善，唯一可靠的收益来自对输出顺序施加结构性约束。为此，论文提出 PROCTOR：一种 Teacher-Student 循环，由有状态 orchestrator 集中管理工具访问权限，无状态 subagents 仅负责诊断失败和起草变更，不能直接应用修改；Teacher 则在五项确定性护栏下评估变更，包括 hermetic sandboxes、能力正交的角色划分、优先级高于 Teacher 的验收检查、冻结 holdout，以及将满分本身视为作弊证据的 canary cases。论文报告了这些护栏阻止的失败，也诚实讨论了 Teacher 作为 LLM 评审器仍未能避免的失败。",
+  "key_points_zh": [
+    "生产环境中的自主优化循环暴露出 11 种评估失效模式，涵盖评审器偏差、指标故障、标签错误和奖励投机。",
+    "LLM 评审器可能被答案泄露、错误 ground truth、解析回退等机制欺骗，表面满分并不代表真实能力提升。",
+    "PROCTOR 将 LLM Teacher 限制为建议者，由 orchestrator 管理权限，并用确定性验证层决定变更是否可接受。",
+    "五项核心护栏包括 hermetic sandboxes、能力正交角色、优先级更高的验收检查、冻结 holdout 和反作弊 canary cases。",
+    "结构性约束比反复重写评审标准更可靠，但由于 Teacher 仍是 LLM judge，系统无法消除所有评估失败。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.84,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.87,
+    "llm_avg": 0.85,
+    "comment": "This is strong harness and agent-evolution work that replaces unreliable LLM judging with deterministic, auditable gates in a production-oriented self-improvement loop.",
+    "comment_zh": "这项工作将不可靠的LLM评判替换为确定性且可审计的门控机制，形成了面向生产环境的智能体自我改进闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.85,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.02246/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.02246/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.972
+    }
+  ]
+}

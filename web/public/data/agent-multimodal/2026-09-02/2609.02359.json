@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.02359",
+  "title": "TempoGround: State-Aware Streaming Visual Grounding with Vision-Language Models",
+  "title_zh": "TempoGround：基于状态感知的视觉语言模型流式视觉定位",
+  "authors": [
+    "Leqian Ding",
+    "Junning Qiu",
+    "Manwen Yang",
+    "Yu Guo",
+    "Fei Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-02T09:30:08Z",
+  "abs_url": "https://arxiv.org/abs/2609.02359v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.02359",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Visual grounding maps language referents to spatial targets and is central to open-vocabulary perception with vision-language models. Existing methods have made substantial progress on single-frame and video-based visual grounding, yet under streaming inputs they still suffer from identity drift, cross-frame inconsistency, and fragile localization under partial occlusion. To address these issues, we present TempoGround, a VLM-native framework that detects cross-frame object correspondence and explicitly models object presence states, thereby enabling accurate and consistent visual grounding under streaming inputs. The key is a curriculum prediction mechanism guided by state-aware cross-frame correspondence: TempoGround resolves 2D instance association, predicts whether each object newly enters, continues in, or leaves the view, decodes the 2D box, and then lifts it to a camera-frame 3D box. As token-level supervision alone cannot capture the geometric objectives of streaming grounding, we further introduce Streaming Grounding Reinforcement (SGR), which optimizes TempoGround with verifiable Grounding, Identity, and Consistency rewards, jointly reinforcing persistent localization and temporally consistent predictions. We carefully design a three-stage training strategy and train TempoGround on large-scale data. We evaluate visual grounding under causally streaming inputs on multiple challenging benchmarks: TempoGround improves F1_2D@0.5 and F1_2D@0.95 by 4.4 and 0.5 on average, and F1_3D@0.25 and AP_3D by 6.2 and 7.5, respectively. These results demonstrate that TempoGround provides a practical foundation for visual grounding under streaming inputs.",
+  "abstract_zh": "视觉定位旨在将语言指代映射到空间目标，是视觉语言模型实现开放词汇感知的关键能力。现有单帧和视频视觉定位方法在流式输入下仍面临目标身份漂移、跨帧不一致，以及部分遮挡导致定位脆弱等问题。为此，论文提出 TempoGround，一种原生基于视觉语言模型的框架，通过检测跨帧目标对应关系并显式建模目标存在状态，实现流式输入下准确且一致的视觉定位。其核心是由状态感知的跨帧对应关系引导的课程式预测机制：TempoGround 首先完成二维实例关联，判断目标是新进入、持续存在还是离开视野，随后解码二维边界框，并将其提升为相机坐标系下的三维边界框。针对仅依赖 token 级监督难以刻画流式定位几何目标的问题，论文进一步提出 Streaming Grounding Reinforcement（SGR），利用可验证的 Grounding、Identity 和 Consistency 奖励进行优化，联合增强持续定位能力与时间一致性。作者设计了三阶段训练策略，并基于大规模数据训练 TempoGround。在多个具有挑战性的因果流式视觉定位基准上，TempoGround 平均提升 F1_2D@0.5 和 F1_2D@0.95 分别 4.4 和 0.5 个百分点，提升 F1_3D@0.25 和 AP_3D 分别 6.2 和 7.5 个百分点，表明其可作为流式视觉定位的实用基础框架。",
+  "key_points_zh": [
+    "提出 TempoGround，通过跨帧目标对应关系和显式存在状态建模，缓解身份漂移、跨帧不一致与遮挡下定位失败。",
+    "采用课程式预测流程，依次完成二维实例关联、目标状态判断、二维框解码和相机坐标系三维框预测。",
+    "提出 Streaming Grounding Reinforcement（SGR），利用 Grounding、Identity 和 Consistency 奖励优化定位精度与时间一致性。",
+    "设计三阶段训练策略，并在多个因果流式视觉定位基准上验证有效性。",
+    "平均提升 F1_2D@0.5、F1_2D@0.95、F1_3D@0.25 和 AP_3D，增幅分别为 4.4、0.5、6.2 和 7.5 个百分点。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.72,
+    "novelty": 0.82,
+    "problem_significance": 0.78,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.76,
+    "llm_avg": 0.742,
+    "comment": "A strong streaming visual-grounding contribution that addresses identity persistence, occlusion, and causal temporal consistency, though it lacks an explicit tool-using agent loop.",
+    "comment_zh": "该工作有效解决了流式视觉定位中的身份持续性、遮挡和因果时序一致性问题，但尚未形成明确的工具调用智能体闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5610732358789958,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.742,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 17,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.02359/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.943
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.02359/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.972
+    }
+  ]
+}

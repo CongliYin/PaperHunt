@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2609.02812",
+  "title": "VibeVoice-ASR-Streaming Technical Report",
+  "title_zh": "VibeVoice-ASR-Streaming 技术报告",
+  "authors": [
+    "Yujie Tu",
+    "Zhiliang Peng",
+    "Jianwei Yu",
+    "Li Dong",
+    "Songchen Xu",
+    "Yaoyao Chang",
+    "Wenhui Wang",
+    "Zilong Wang",
+    "Zehua Wang",
+    "Yan Xia",
+    "Jiajun Zhang",
+    "Xie Chen",
+    "Furu Wei"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-02T16:52:55Z",
+  "abs_url": "https://arxiv.org/abs/2609.02812v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.02812",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Traditional speaker-attributed ASR systems treated ASR and speaker diarization as two separate tasks. Recently, end-to-end models such as VibeVoice-ASR have unified the two tasks within a single model. However, existing unified models still mainly support offline recognition, making it difficult to meet the low-latency requirements of real-time voice assistants and agents. To tackle this issue, we present VibeVoice-ASR-Streaming, one of the first LLM-based end-to-end approaches to streaming speaker-attributed ASR. It interleaves fixed-size audio chunks, a small amount of lookahead audio and previous text. This allows the model to produce ''who said what'' as speech arrives, without a separate diarization stage. For transcription accuracy, our 7B model achieves the lowest average WER/CER across five evaluation sets. For speaker attribution, it achieves the best or tied-best on 12 of 13 evaluation settings. We release the 1.5B and 7B model weights together with inference code.",
+  "abstract_zh": "传统的带说话人标注自动语音识别（ASR）系统通常将语音识别与说话人分离视为两个独立任务。近期的端到端模型（如 VibeVoice-ASR）尝试在单一模型中统一这两项任务，但现有方法主要面向离线识别，难以满足实时语音助手和智能代理的低延迟需求。为此，本文提出 VibeVoice-ASR-Streaming，这是较早基于大语言模型（LLM）的端到端流式带说话人标注 ASR 方法之一。该方法交错输入固定大小的音频块、少量前瞻音频（lookahead audio）和历史文本，使模型能够随着语音到来直接输出“谁说了什么”，无需独立的说话人分离阶段。在识别准确率方面，7B 模型在五个评测集上取得最低的平均 WER/CER；在说话人归属方面，其在 13 个评测设置中的 12 个取得最佳或并列最佳结果。作者同时发布了 1.5B 和 7B 模型权重及推理代码。",
+  "key_points_zh": [
+    "将 ASR 与说话人分离统一到单一端到端 LLM 中，流式输出“谁说了什么”。",
+    "通过固定大小音频块、少量前瞻音频和历史文本实现低延迟在线识别。",
+    "7B 模型在五个评测集上取得最低平均 WER/CER，转录准确率领先。",
+    "说话人归属在 13 个评测设置中的 12 个达到最佳或并列最佳。",
+    "公开 1.5B 与 7B 模型权重及推理代码，便于研究和部署。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.78,
+    "problem_significance": 0.88,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.48,
+    "lasting_value": 0.84,
+    "llm_avg": 0.776,
+    "comment": "A highly relevant streaming speech infrastructure paper that directly improves low-latency speaker-attributed perception for realtime voice assistants and agents.",
+    "comment_zh": "该工作直接提升了实时语音助手和智能体所需的低延迟说话人归属识别能力，具有很强的领域相关性和基础设施价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.7808604494268809,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.776,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 10,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.02812/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.915
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.02812/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.955
+    }
+  ]
+}
