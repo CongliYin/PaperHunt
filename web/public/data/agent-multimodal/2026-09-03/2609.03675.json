@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.03675",
+  "title": "CoFiE: Coarse-to-Fine Evidence Selection for Efficient Streaming Video Understanding",
+  "title_zh": "CoFiE：面向高效流式视频理解的由粗到细证据选择",
+  "authors": [
+    "Jing Jiang",
+    "Yiran Ling",
+    "Ruonan Li",
+    "Dimitrios Stamoulis",
+    "Jie Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-03T11:14:21Z",
+  "abs_url": "https://arxiv.org/abs/2609.03675v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.03675",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Streaming video understanding requires Vision Language Models (VLLMs) to process growing video streams and answer user questions under tight latency constraints. Existing methods improve efficiency through token pruning and memory-bank schemes, but mainly reduce visual tokens after visual encoding. Consequently, downstream token pruning alone cannot substantially reduce end-to-end latency because the expensive frame encoding cost has already been incurred. We propose CoFiE, a Coarse-to-Fine Evidence Selection framework that decouples evidence selection into a coarse, query-agnostic filtering stage before the vision encoder and a fine, query-specific refinement stage during LLM prefill. CoFiE introduces Novelty-Guided Frame Filtering to retain visually distinctive candidate frames and Query-Specific Evidence Refinement to select the frames most relevant to the user query. This design removes substantial redundancy before frame encoding while preserving query-specific refinement once semantic information becomes available. Experiments show that CoFiE establishes a new state-of-the-art accuracy-efficiency trade-off across multiple video understanding benchmarks, reaching 78.86% accuracy on StreamingBench and 68.72% on OvO-Bench, with improvements of up to 3.15% over prior methods. Even with up to 80% evidence-frame filtering, CoFiE outperforms strong open-source multimodal models while improving end-to-end inference latency by up to 2.54 times.",
+  "abstract_zh": "流式视频理解要求 Vision Language Models（VLLMs）持续处理不断增长的视频流，并在严格延迟约束下回答用户问题。现有方法主要通过 token pruning 和 memory bank 在视觉编码后压缩视觉 token，因此昂贵的帧编码开销已经产生，难以显著降低端到端延迟。本文提出 CoFiE（Coarse-to-Fine Evidence Selection），将证据选择解耦为两个阶段：在 vision encoder 之前进行与查询无关的粗粒度筛选，以及在 LLM prefill 阶段进行与查询相关的细粒度精炼。CoFiE 通过 Novelty-Guided Frame Filtering 保留视觉上具有区分度的候选帧，并利用 Query-Specific Evidence Refinement 选择与用户查询最相关的帧。该设计在语义信息产生前移除大量冗余，同时保留查询相关的精确筛选能力。在多个视频理解基准上，CoFiE 实现了新的准确率—效率权衡：在 StreamingBench 和 OvO-Bench 上分别达到 78.86% 和 68.72% 的准确率，较先前方法最高提升 3.15%。即使过滤掉最多 80% 的证据帧，CoFiE 仍优于强大的开源多模态模型，并将端到端推理延迟最高降低至原来的 1/2.54。",
+  "key_points_zh": [
+    "将证据选择前移至 vision encoder 之前，避免对大量冗余帧进行昂贵编码。",
+    "Novelty-Guided Frame Filtering 以视觉新颖性进行查询无关的候选帧筛选。",
+    "Query-Specific Evidence Refinement 在 LLM prefill 阶段根据用户问题选择相关证据帧。",
+    "在 StreamingBench 和 OvO-Bench 上分别达到 78.86% 和 68.72% 准确率，最高提升 3.15%。",
+    "最多过滤 80% 证据帧时仍保持竞争力，端到端推理速度最高提升 2.54 倍。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.79,
+    "novelty": 0.82,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.83,
+    "llm_avg": 0.8220000000000001,
+    "comment": "A practically important streaming-video efficiency method that reduces pre-encoding redundancy and improves end-to-end latency, with limited direct emphasis on agentic action.",
+    "comment_zh": "该工作通过减少视觉编码前的冗余显著改善流式视频推理延迟，具有很强的系统价值，但对代理行动的直接关注有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8220000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03675/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03675/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}

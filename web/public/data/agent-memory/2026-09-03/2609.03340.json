@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.03340",
+  "title": "Fresh Memory, Stale Plans: Dependency-Scoped Validation for Distributed LLM-Agent Memory",
+  "title_zh": "新鲜记忆，陈旧计划：面向分布式 LLM-Agent 记忆的依赖范围验证",
+  "authors": [
+    "Evan Chen",
+    "Shiqiang Wang",
+    "Christopher G. Brinton"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-03T03:56:15Z",
+  "abs_url": "https://arxiv.org/abs/2609.03340v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.03340",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Distributed LLM-agent teams can read the latest shared facts and still act on an obsolete plan. A planner may derive an action from requirement $r_3$, another agent may commit $r_4$, and an executor may receive $r_4$ without replacing the plan derived from $r_3$. We call this \\emph{stale-plan execution}: state freshness does not establish that the plan authorizing an action remains valid. We introduce PlanFence, a dependency-scoped action-validation protocol. Plans cite the exact public records they used, and an executor validates only the records that can affect the pending external action, replanning once or blocking when validation is incomplete. In 30 controlled live workflows with a post-plan revision, a freshness-only executor acts on the obsolete plan in every task, whereas PlanFence completes all tasks without an invalid action. Controlled replay reveals two conditional boundaries: proactive synchronization yields lower coordination stall at low churn, while PlanFence avoids repeated update-path coordination as churn grows and avoids validating unrelated state as the shared keyspace grows. These are controlled safety and systems-cost results, not general task-accuracy gains.",
+  "abstract_zh": "分布式 LLM-Agent 团队即使读取了最新共享事实，也可能执行基于过时计划的动作。论文将其定义为“陈旧计划执行”：计划所依据的需求或记录已被修改，但执行器仅接收了更新后的状态，却未替换原计划。为此，论文提出 PlanFence，一种依赖范围动作验证协议。计划需声明其使用的精确公共记录，执行器只验证那些可能影响待执行外部动作的记录；若验证不完整，则重新规划一次或阻止执行。在 30 个包含计划后修订的受控实时工作流中，仅依赖状态新鲜度的执行器在所有任务中都执行了过时计划，而 PlanFence 在不产生无效动作的情况下完成了全部任务。受控回放显示两个边界条件：低变更率下，主动同步具有更低的协调停顿；随着变更率升高，PlanFence 可避免反复协调更新路径，并在共享键空间扩大时避免验证无关状态。论文结果主要证明了受控安全性与系统成本优势，并非普遍的任务准确率提升。",
+  "key_points_zh": [
+    "核心问题是状态新鲜度不等于计划有效性：Agent可能读到最新事实，却继续执行基于旧需求生成的计划。",
+    "PlanFence要求计划记录其依赖的精确公共记录，并仅验证会影响当前外部动作的相关记录。",
+    "验证不完整时，执行器执行一次重新规划或直接阻止动作，从而避免陈旧计划导致的无效外部操作。",
+    "在30个受控实时工作流中，freshness-only执行器每次都执行了过时计划；PlanFence完成全部任务且无无效动作。",
+    "系统代价存在条件边界：低变更率时主动同步更高效，高变更率或共享键空间较大时，PlanFence更能减少协调与无关验证。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.86,
+    "problem_significance": 0.91,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.89,
+    "llm_avg": 0.8639999999999999,
+    "comment": "PlanFence makes dependency-scoped validation a first-class lifecycle operation for shared Agent memory, directly addressing stale-plan execution in distributed workflows.",
+    "comment_zh": "PlanFence 将依赖范围验证提升为共享 Agent Memory 的核心生命周期操作，直接解决分布式工作流中的计划过时执行问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3233158463485474,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.8639999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03340/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03340/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.951
+    }
+  ]
+}

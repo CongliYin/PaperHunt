@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.04094",
+  "title": "DRACO: Fine-Grained Credit Assignment with Dynamic Rubrics for Long-Horizon Agent Training",
+  "title_zh": "DRACO：利用动态评分标准进行长时程智能体训练的细粒度信用分配",
+  "authors": [
+    "Shubham Gandhi",
+    "Saurabh Goyal",
+    "Kiran Kate",
+    "Yara Rizk"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-03T17:02:20Z",
+  "abs_url": "https://arxiv.org/abs/2609.04094v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.04094",
+  "links": {
+    "github": "https://github.com/IBM/draco.",
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement Learning from Verifiable Rewards works well when a task has a programmatic checker, but most long-horizon agent domains have none. We work in the outcome-blind setting, where ground-truth success signals are not available. Multi-criteria rubrics are a popular way to supply such a reward; they are scored once per trajectory, but a single scalar is a poor signal across tens of steps. We propose DRACO: Distributing Rubric-based Advantage for Credit Optimization. It generates rubrics dynamically during training to track the policy's evolving capability, scores those rubrics once per completed trajectory, and redistributes that judgment over the steps responsible for annotated rubrics to produce differentiated per-step advantages in GRPO. The redistribution is closed-form and does not introduce any trained attribution module. On AppWorld, DRACO gains 15.9 points over the base model and 5.3 points over GRPO trained with a sparse ground-truth reward, despite not using any verifiers itself. On out-of-domain Tau-Bench, it gains 5.3 points over the base model even without a frontier judge, beating both ground-truth-reward training and other rubric-based training settings. The code for DRACO is available at https://github.com/IBM/draco.",
+  "abstract_zh": "在具有程序化检查器的任务中，基于可验证奖励的强化学习效果良好，但多数长时程智能体任务缺乏此类检查器。针对无法获得真实成功信号的 outcome-blind 场景，本文提出 DRACO（Distributing Rubric-based Advantage for Credit Optimization）。该方法在训练过程中动态生成多标准评分标准，以跟踪策略能力变化；在轨迹完成后对评分标准进行一次性评估，并将评估结果重新分配给负责实现相应评分项的步骤，从而在 GRPO 中产生差异化的逐步优势。该信用重分配过程具有闭式解，无需训练额外的归因模块。在 AppWorld 上，DRACO 相比基础模型提升 15.9 个百分点，相比使用稀疏真实奖励训练的 GRPO 提升 5.3 个百分点，且自身不使用验证器。在分布外的 Tau-Bench 上，即使不使用 frontier judge，DRACO 仍比基础模型提升 5.3 个百分点，并优于真实奖励训练及其他评分标准训练设置。",
+  "key_points_zh": [
+    "针对缺乏程序化验证器和真实成功信号的 outcome-blind 长时程智能体任务，使用多标准评分标准提供训练反馈。",
+    "训练期间动态生成评分标准，并根据策略能力演化持续更新，避免固定评分标准与当前能力脱节。",
+    "将完整轨迹级评分重新分配至负责相应评分项的步骤，在 GRPO 中形成差异化逐步优势。",
+    "信用分配采用闭式计算，无需训练额外的归因模型或使用验证器。",
+    "在 AppWorld 和 Tau-Bench 上均显著优于基础模型、稀疏真实奖励 GRPO 及其他评分标准训练方案。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.88,
+    "problem_significance": 0.91,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8859999999999999,
+    "comment": "Strong agent-training work that introduces dynamic rubric generation and step-level credit assignment for long-horizon agents without requiring verifiers.",
+    "comment_zh": "这项工作通过动态生成评价标准并进行步骤级信用分配，改进了无需验证器的长程智能体训练，具有较高的基础价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.8180053236994811,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8859999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/IBM/draco.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 17,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04094/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04094/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.943
+    }
+  ]
+}

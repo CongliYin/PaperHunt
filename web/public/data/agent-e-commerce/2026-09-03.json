@@ -1,0 +1,59 @@
+{
+  "domain": "agent-e-commerce",
+  "display_name": "E-commerce Agent",
+  "date": "2026-09-03",
+  "generated_at": "2026-09-04T22:18:56Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.03674",
+      "title": "LLM4AIGQ: LLM-based AI Guidance Query Generation Framework for Multi Interest Mining",
+      "title_zh": "LLM4AIGQ：基于大语言模型的多兴趣挖掘 AI 引导查询生成框架",
+      "authors": [
+        "Xiangchen Pan",
+        "Jiayi Xu",
+        "Jing Wang",
+        "Xing Fang",
+        "Lingyun Zhu"
+      ],
+      "total_score": 0.6034145717194442,
+      "scores": {
+        "topic_relevance": 0.7200000000000001,
+        "llm_assessment": 0.8720000000000001,
+        "domain_fit": 0.98,
+        "other": 0.17938190573148036
+      },
+      "tags": [
+        "learning methods for commerce"
+      ],
+      "tldr_zh": "LLM4AIGQ通过多兴趣推理生成更匹配消费意图的引导查询",
+      "detail_file": "agent-e-commerce/2026-09-03/2609.03674.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03674/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.03522",
+      "title": "EPIC: Explicit Posterior Item Conditioning for Semantic ID Diffusion Recommendation",
+      "title_zh": "EPIC：面向 Semantic ID Diffusion Recommendation 的显式后验物品条件化",
+      "authors": [
+        "Tuan-Binh Tran",
+        "Thanh Tam Nguyen",
+        "Quoc Viet Hung Nguyen",
+        "Dung D. Le",
+        "Tung Kieu",
+        "Thanh Trung Huynh"
+      ],
+      "total_score": 0.5481887430316665,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.828,
+        "domain_fit": 0.94,
+        "other": 0.14596247677222157
+      },
+      "tags": [
+        "llm for commerce"
+      ],
+      "tldr_zh": "EPIC以物品级后验引导SID扩散去噪，提升推荐效果",
+      "detail_file": "agent-e-commerce/2026-09-03/2609.03522.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03522/thumb.webp"
+    }
+  ]
+}

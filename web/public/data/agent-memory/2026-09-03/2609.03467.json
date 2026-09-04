@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2609.03467",
+  "title": "When Users Don't Ask: Benchmarking Context-Driven Memory Retrieval in Conversational Agents",
+  "title_zh": "当用户不主动提问：对话代理中上下文驱动记忆检索的基准评测",
+  "authors": [
+    "Wen-Yu Chang",
+    "Yun-Nung Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-03T07:24:33Z",
+  "abs_url": "https://arxiv.org/abs/2609.03467v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.03467",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) are increas- ingly deployed as long-horizon conversational agents, motivating growing interest in mem- ory systems. However, existing benchmarks primarily evaluate memory through QA-style probing rather than in-situ conversational usage. We introduce LOCOMO-CONV, a conversa- tional memory benchmark derived from Lo- CoMo with four query styles: dialog, implicit, counterfactual, and composed. Across five rep- resentative memory systems, we evaluate both retrieval recall and end-to-end response qual- ity. Our experiments show that conversational framing exposes substantial retrieval gaps over- looked by QA benchmarks, especially on im- plicit and composed queries, which multi-facet query rewriting narrows for raw-turn mem- ory but not abstractive memory. We further find that strong retrieval does not fully trans- late into response quality, and that implicit queries exhibit silent grounding, where mem- ory improves contextual grounding without ex- plicitly surfacing the gold fact. These results point to reasoning-based memory elaboration as a promising direction, and we release aux- iliary supportive_memory annotations captur- ing conversationally useful context beyond the original gold evidence.",
+  "abstract_zh": "随着 Large Language Models（LLMs）被广泛部署为长程对话代理，记忆系统的重要性日益提升。然而，现有基准主要通过问答式探测评估记忆，难以反映记忆在真实对话中的使用情况。本文提出 LOCOMO-CONV，这是基于 LoCoMo 构建的对话记忆基准，包含 dialog、implicit、counterfactual 和 composed 四类查询。作者在五种代表性记忆系统上同时评估检索召回率与端到端响应质量。实验表明，对话式评测能够揭示传统 QA 基准忽略的显著检索缺陷，尤其体现在 implicit 和 composed 查询上。多面向查询改写可改善 raw-turn memory 的检索效果，但对 abstractive memory 的帮助有限。此外，较强的检索能力并不一定转化为更高的响应质量；implicit 查询还表现出“静默 grounding”现象，即记忆能够增强上下文 grounding，却不显式呈现对应的关键事实。研究结果表明，基于推理的记忆扩展是值得探索的方向。作者同时发布 supportive_memory 标注，用于记录原始 gold evidence 之外、对对话有帮助的上下文信息。",
+  "key_points_zh": [
+    "提出 LOCOMO-CONV，以 dialog、implicit、counterfactual 和 composed 四类查询评估对话中的记忆使用，而非仅进行 QA 式记忆探测。",
+    "对五种记忆系统的实验显示，对话式场景，尤其是 implicit 与 composed 查询，会暴露传统基准未发现的检索缺口。",
+    "多面向查询改写能够改善 raw-turn memory，但对 abstractive memory 的提升不明显。",
+    "高检索召回率并不必然带来高响应质量；implicit 查询中存在“静默 grounding”，记忆增强了上下文理解却未显式输出目标事实。",
+    "发布 supportive_memory 标注，并指出基于推理的记忆扩展可能是提升对话记忆系统的下一步方向。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.84,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.87,
+    "llm_avg": 0.8300000000000001,
+    "comment": "A strong Agent-memory benchmark that evaluates implicit, composed, and context-driven retrieval in realistic conversational use rather than isolated question answering.",
+    "comment_zh": "这是一项扎实的 Agent Memory 基准研究，将评估重点从孤立问答推进到真实对话中的隐式、组合式和上下文驱动检索。"
+  },
+  "scores": {
+    "topic_relevance": 0.6800000000000002,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5527084553941624,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.8300000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 38,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03467/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.948
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03467/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.894
+    }
+  ]
+}

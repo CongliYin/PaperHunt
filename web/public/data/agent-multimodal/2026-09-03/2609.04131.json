@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2609.04131",
+  "title": "Beyond Retrieval: Progressive Latent Memory Evolution for Streaming Video Understanding",
+  "title_zh": "超越检索：面向流式视频理解的渐进式潜记忆演化",
+  "authors": [
+    "Hongyu Qu",
+    "Guangming Yao",
+    "Ling Xing",
+    "Xiaobin Hu",
+    "Rongxing Ding",
+    "Guibin Zhang",
+    "Fan Zhang",
+    "Yi Yuan",
+    "Xiangbo Shu",
+    "Shuicheng Yan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-03T17:28:14Z",
+  "abs_url": "https://arxiv.org/abs/2609.04131v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.04131",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Streaming video understanding requires multimodal large language models (MLLMs) to process continuous visual inputs and respond to user queries under strict causality and bounded memory. Existing approaches typically compress historical observations into an external memory bank and retrieve query-relevant evidence as additional visual context. Though effective, this store-and-retrieve paradigm keeps historical evidence as external visual context, preventing it from being internalized into a compact, evolving latent memory that can continuously guide streaming reasoning. To bridge this gap, we introduce LatentStream, a progressive latent working memory framework that shifts streaming memory from store-and-retrieve to retrieve-and-internalize. Specifically, LatentStream comprises three coordinated components. First, Query-agnostic Hierarchical Streaming Memory organizes visual history into short-, mid-, and long-term levels under a fixed memory budget through Jenks-guided adaptive consolidation. Once a query arrives, Hierarchical Latent Memory Evolution equips groups of latent memory tokens with progressively expanding memory receptive fields, enabling them to iteratively retrieve historical evidence from their corresponding scopes and internalize it into a compact, fixed-length latent memory. Finally, Progressive Confidence-guided Latent Memory Optimization constructs a hierarchical progression reward from group-wise predictive entropy and jointly refines the latent memory tokens and retrieved evidence, encouraging increasingly confident streaming reasoning. Extensive experiments demonstrate that LatentStream achieves new state-of-the-art results on existing online and offline video benchmarks.",
+  "abstract_zh": "流式视频理解要求多模态大语言模型（MLLM）在严格因果约束和有限内存下持续处理视觉输入并回答查询。现有方法通常将历史观测压缩到外部记忆库中，并检索与查询相关的证据作为额外视觉上下文，但历史信息始终停留在外部上下文中，难以形成紧凑且持续演化的内部记忆。为此，论文提出 LatentStream，将流式记忆机制从“存储并检索”转变为“检索并内化”。该框架包含三个部分：Query-agnostic Hierarchical Streaming Memory 在固定内存预算下，通过 Jenks-guided adaptive consolidation 将视觉历史组织为短期、中期和长期层级；Hierarchical Latent Memory Evolution 为不同潜记忆令牌组逐步扩大的记忆感受野，使其从对应范围检索历史证据并将其内化为固定长度的潜记忆；Progressive Confidence-guided Latent Memory Optimization 根据分组预测熵构建层级渐进式奖励，联合优化潜记忆令牌与检索证据，从而提升流式推理的置信度。大量实验表明，LatentStream 在现有在线和离线视频基准上取得了新的最先进性能。",
+  "key_points_zh": [
+    "提出 LatentStream，将流式视频记忆从外部存储检索转向检索后内化，形成紧凑、固定长度且可持续演化的潜记忆。",
+    "通过 Query-agnostic Hierarchical Streaming Memory 将历史视觉信息划分为短期、中期和长期层级，并利用 Jenks-guided adaptive consolidation 适配固定内存预算。",
+    "Hierarchical Latent Memory Evolution 为潜记忆令牌组配置渐进扩大的记忆感受野，使其分层检索历史证据并迭代内化。",
+    "Progressive Confidence-guided Latent Memory Optimization 依据分组预测熵构造层级奖励，联合优化记忆令牌和检索证据。",
+    "在多个在线与离线视频理解基准上取得新的 state-of-the-art 结果。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.7,
+    "novelty": 0.87,
+    "problem_significance": 0.84,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.78,
+    "llm_avg": 0.8220000000000001,
+    "comment": "An innovative streaming-video memory architecture that internalizes historical evidence into evolving latent state, although it lacks explicit tool use or closed-loop agency.",
+    "comment_zh": "该工作以演化式潜在状态内化历史证据，创新性地推进流式视频记忆，但缺少显式工具调用或闭环代理机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.8364936031616323,
+    "author_reputation": 0.49919890888949187,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8220000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 22,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 11,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04131/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.95
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04131/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

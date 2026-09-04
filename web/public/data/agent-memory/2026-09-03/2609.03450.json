@@ -1,0 +1,68 @@
+{
+  "arxiv_id": "2609.03450",
+  "title": "Plan Pointers and Record-Directive Form in Budgeted Verification of Inherited Agent Memory",
+  "title_zh": "预算验证中的继承式智能体记忆：计划指针与记录指令形式",
+  "authors": [
+    "Kazuki Nakayashiki"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-03T07:05:38Z",
+  "abs_url": "https://arxiv.org/abs/2609.03450v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.03450",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "An agent that inherits six one-line memories may pull at most one archived source record before acting; a directive written into the store can steer that choice: a pointer to the record, a criterion that identifies it, or both. Across twelve registered studies on one instrument lineage (14,760 attempts) we measured where the request goes under each form. On six direct-provider models a length-matched criterion exceeded a bare id by +35.0 points [+31.2, +38.8] (Study D); the contrast failed its registered superiority rule on a nine-model OpenRouter-served panel (Study E). Appending the id cancelled the criterion on three Claude models (Opus 5: 40/40 to 0/40; Study F-x); six byte-matched edits gave each exact string its own effect (Study G), and a re-run at eighty runs per cell left fifteen of thirty replication contrasts within the margin, fifteen unresolved and none beyond (Study G'). A ratification line (+96.0 points on Opus 5) and a budget of two credits restored the target on all three (Study J); across five criterion strings the suffix's cancellation held for four of the five wordings on Opus 5 and all five wordings on Fable 5.1 (Study H2); in a second store every model followed the criterion (Study H1). Continued into a decision, the criterion moved the choice toward the current record (+100.0 points, Opus 5) and away from it on Fable 5.1 (Study I). A one-character plan pointer's effect (+78.0 points; Study B, after a correction of its first repository report) returned the same verdict under a prospectively registered re-run (+81.7 points; Study B'). All results are descriptive effects of exact edits on fixed panels with registered intervals and no mechanism claim.",
+  "abstract_zh": "论文研究一种受预算约束的智能体记忆检索场景：智能体继承六条单行记忆，行动前最多读取一条归档源记录；存储中的指令可通过记录指针、识别记录的判据，或二者组合来影响检索选择。基于同一 instrument lineage 的 12 项预注册研究和 14,760 次尝试，结果显示，在 6 个 direct-provider models 上，长度匹配的判据相较裸 ID 提升目标记录命中率 35.0 个百分点（Study D）；但在由 OpenRouter 提供的 9 模型面板上，该优势未通过预注册的优越性判定规则（Study E）。在 3 个 Claude 模型上，附加 ID 会抵消判据效果（Opus 5 在 Study F-x 中由 40/40 降至 0/40）。Study G 表明，即使仅进行字节匹配的微小编辑，不同精确字符串也可能产生独立效应；Study G' 的复现实验中，30 个对比有 15 个处于容差范围内、15 个未决，且没有超出范围的结果。加入 ratification line 后，Opus 5 的目标命中率提升 96.0 个百分点；将预算提高到 2 credits 后，3 个模型均恢复目标选择（Study J）。在 Opus 5 上，后缀抵消效应在 5 种判据表述中的 4 种成立，在 Fable 5.1 上则对全部 5 种成立（Study H2）；换用第二个存储系统后，所有模型均遵循判据（Study H1）。当检索结果继续影响决策时，判据使 Opus 5 的选择向当前记录移动 100.0 个百分点，但使 Fable 5.1 的选择远离当前记录（Study I）。单字符计划指针的效果在修正首次仓库报告后为 78.0 个百分点（Study B），并在前瞻性预注册复现实验中保持为 81.7 个百分点（Study B'）。论文强调这些是固定面板上精确编辑的描述性效应，带有预注册区间，但不对底层机制作出主张。",
+  "key_points_zh": [
+    "长度匹配的判据通常比裸记录 ID 更能引导目标记录检索，但该优势依赖模型面板与实验条件。",
+    "附加 ID、后缀、字节级编辑和存储系统变化均可能显著改变指令效果，表明精确字符串形式非常关键。",
+    "增加 ratification line 或将预算提高到 2 credits，可在部分模型上恢复判据引导的目标选择。",
+    "指令影响不仅体现在检索阶段，还会延伸至后续决策，且不同模型可能呈现相反方向的行为。",
+    "研究结果均为预注册实验中的描述性效应，不声称揭示具体机制；全部材料和分析代码已存档于 Zenodo。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.84,
+    "novelty": 0.68,
+    "problem_significance": 0.67,
+    "potential_impact": 0.5,
+    "paradigm_shift": 0.42,
+    "lasting_value": 0.57,
+    "llm_avg": 0.568,
+    "comment": "This is a relevant empirical study of directive-guided inherited-memory verification, although its narrow model- and wording-dependent effects limit generality and architectural impact.",
+    "comment_zh": "这是一项与继承记忆验证相关的实证研究，但其效果高度依赖模型和措辞，因而限制了泛化性与架构影响力。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3525828687777642,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.568,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03450/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.956
+    }
+  ]
+}

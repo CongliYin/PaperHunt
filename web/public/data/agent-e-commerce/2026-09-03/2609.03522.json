@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2609.03522",
+  "title": "EPIC: Explicit Posterior Item Conditioning for Semantic ID Diffusion Recommendation",
+  "title_zh": "EPIC：面向 Semantic ID Diffusion Recommendation 的显式后验物品条件化",
+  "authors": [
+    "Tuan-Binh Tran",
+    "Thanh Tam Nguyen",
+    "Quoc Viet Hung Nguyen",
+    "Dung D. Le",
+    "Tung Kieu",
+    "Thanh Trung Huynh"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-03T08:21:50Z",
+  "abs_url": "https://arxiv.org/abs/2609.03522v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.03522",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Semantic ID (SID) generative recommendation predicts the next item by generating a short tuple of discrete tokens. Recent masked-diffusion methods improve this process through bidirectional context and flexible decoding, yet recommendation ultimately requires selecting among complete catalog items. At each denoising step, a partial SID can correspond to multiple feasible items, while existing methods primarily reason through position-wise token predictions. We propose Explicit Posterior Item Conditioning (EPIC), which introduces explicit item-level competition into SID denoising. EPIC constructs a personalized posterior over feasible candidate items using the current generation context and the user's recent interactions, then projects this distribution back to unresolved SID positions to guide subsequent token decisions. The pretrained backbone remains frozen and requires no additional decoder forward pass. Experiments on four Amazon benchmarks show consistent improvements over strong baselines, while diagnostic analyses indicate that the gains primarily arise from personalized transition evidence that preserves promising item hypotheses during denoising.",
+  "abstract_zh": "Semantic ID（SID）生成式推荐通过生成短离散 token 元组来预测下一个物品。现有 masked-diffusion 方法利用双向上下文和灵活解码提升了生成效果，但推荐最终仍需从完整物品目录中选择具体物品。在去噪过程中，一个部分 SID 可能对应多个可行物品，而现有方法主要依赖逐位置 token 预测，缺乏显式的物品级竞争建模。本文提出 Explicit Posterior Item Conditioning（EPIC），利用当前生成上下文和用户近期交互，为可行候选物品构建个性化后验分布，并将该分布投影回尚未解析的 SID 位置，以指导后续 token 决策。EPIC 冻结预训练 backbone，且无需额外的 decoder 前向传播。在四个 Amazon 基准数据集上的实验表明，EPIC 相较强基线取得一致提升；诊断分析显示，主要增益来自个性化转移证据，其能够在去噪过程中保留更有潜力的物品假设。",
+  "key_points_zh": [
+    "针对 SID 扩散推荐中部分 SID 对应多个候选物品、逐位置 token 预测缺乏物品级竞争的问题，EPIC 显式建模候选物品后验。",
+    "EPIC 融合当前生成上下文与用户近期交互，构建个性化候选分布，并将其投影至未解析的 SID 位置。",
+    "方法无需额外 decoder 前向传播，且可冻结预训练 backbone，具有较低的额外计算与训练改动成本。",
+    "在四个 Amazon 基准数据集上，EPIC 相较强基线取得一致性能提升。",
+    "分析表明，性能增益主要源于个性化转移证据，能够在去噪过程中保留更有潜力的物品假设。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.83,
+    "problem_significance": 0.88,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.84,
+    "llm_avg": 0.828,
+    "comment": "A technically focused generative recommendation advance that introduces item-level posterior competition into semantic-ID diffusion and demonstrates consistent gains on multiple Amazon benchmarks.",
+    "comment_zh": "该工作将商品级后验竞争引入语义ID扩散推荐，并在多个Amazon基准上取得稳定提升，具有明确的推荐价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.828,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03522/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03522/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.934
+    }
+  ]
+}

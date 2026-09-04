@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2609.03321",
+  "title": "Decoupling Turn-Taking from Semantics: A Decoupled Data Approach for Finite-State-Machine-Based Full-Duplex Dialogue",
+  "title_zh": "将轮流发言与语义解耦：面向基于有限状态机的全双工对话的解耦数据方法",
+  "authors": [
+    "Yihang Li",
+    "Chenhui Chu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-03T03:17:07Z",
+  "abs_url": "https://arxiv.org/abs/2609.03321v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.03321",
+  "links": {
+    "github": "https://github.com/Liyht/def-fsm.",
+    "project_page": null
+  },
+  "abstract_en": "The Neural Finite State Machine (NFSM) framework offers a pragmatic path to full-duplex dialogue by serializing turn-taking control and response generation onto a single causal tape under the standard next-token prediction objective, thereby preserving semantic prowess at a low fine-tuning cost. However, its reliance on synthetic text data fundamentally limits turn-taking naturalness, as Large Language Models (LLMs) cannot faithfully simulate the fine-grained acoustic temporal dynamics of real human dialogues. In this work, we propose a decoupled data approach that learns turn-taking from real Human-Human (HH) spoken dialogues while shaping semantic behavior through configurable Human-Agent (HA) text dialogues. To operationalize this approach, we introduce a rule-based event-guided data transformation method that serializes HH spoken dialogues into FSM tapes by classifying turn-taking events and applying deterministic mapping rules, enabling scalable supervision without LLM-generated annotations. We further propose a Source-Aware Calibrated (SAC) Loss that jointly calibrates the long-tailed distribution of state transition tokens and channels each data source toward the capability it best supervises. Experiments show that our approach substantially improves turn-taking proficiency while recovering the foundation LLM's semantic capability. Our code and model are available at https://github.com/Liyht/def-fsm.",
+  "abstract_zh": "Neural Finite State Machine（NFSM）框架通过在单一因果序列上串行化轮流发言控制与响应生成，并采用标准的 next-token prediction 目标，为低微调成本实现全双工对话提供了实用路径，同时保留较强的语义能力。然而，NFSM 依赖合成文本数据，难以学习自然的轮流发言行为，因为 Large Language Models（LLMs）无法忠实模拟真实人类对话中的细粒度声学时间动态。本文提出一种解耦数据方法：从真实 Human-Human（HH）语音对话中学习轮流发言行为，并通过可配置的 Human-Agent（HA）文本对话塑造语义行为。为实现该方法，本文设计了基于规则的事件引导数据转换方法，通过识别轮流发言事件并应用确定性映射规则，将 HH 语音对话序列化为 FSM tapes，从而无需 LLM 生成标注即可规模化构造监督信号。此外，本文提出 Source-Aware Calibrated（SAC）Loss，用于联合校准状态转移 token 的长尾分布，并使不同数据源专注监督其最擅长的能力。实验表明，该方法显著提升了模型的轮流发言能力，同时恢复了基础 LLM 的语义能力。代码与模型已公开于 https://github.com/Liyht/def-fsm。",
+  "key_points_zh": [
+    "核心思想是将轮流发言控制与语义建模解耦：HH 语音数据负责学习时序交互，HA 文本数据负责塑造语义行为。",
+    "提出基于规则的事件引导数据转换方法，将真实 HH 对话中的轮流发言事件映射为 FSM tapes，避免依赖 LLM 生成标注。",
+    "提出 Source-Aware Calibrated（SAC）Loss，同时缓解状态转移 token 的长尾分布问题，并匹配不同数据源与其最适合监督的能力。",
+    "实验显示，该方法显著提升 NFSM 的 turn-taking proficiency，并较好恢复基础 LLM 的语义能力。",
+    "方法面向基于有限状态机的全双工对话，兼顾较低微调成本与更自然的交互时序。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.86,
+    "problem_significance": 0.91,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.88,
+    "llm_avg": 0.866,
+    "comment": "A strong full-duplex voice-agent contribution that directly addresses natural turn-taking through real conversational supervision and a reusable FSM training design.",
+    "comment_zh": "该工作利用真实对话监督和可复用的有限状态机训练设计，直接解决全双工语音代理中的自然轮次控制问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.34373441375821495,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.866,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Liyht/def-fsm.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03321/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03321/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

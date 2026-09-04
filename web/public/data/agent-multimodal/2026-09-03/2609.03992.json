@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2609.03992",
+  "title": "Alignment-Free Text-Audiobox for Voice Dubbing and Full-Duplex Dialogue Synthesis",
+  "title_zh": "无需对齐的 Text-Audiobox：用于语音配音与全双工对话合成",
+  "authors": [
+    "Sanyuan Chen",
+    "Min-Jae Hwang",
+    "Sho Inoue",
+    "Anna Sun",
+    "Bokai Yu",
+    "David Kant",
+    "Dongmin Hyun",
+    "Dorian Desblancs",
+    "Gregory Antonovsky",
+    "Oleg Repin",
+    "Peng-Jen Chen",
+    "Xutai Ma",
+    "Zehai Tu",
+    "Juan Pino",
+    "Wei-Ning Hsu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-03T15:30:22Z",
+  "abs_url": "https://arxiv.org/abs/2609.03992v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.03992",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We present Alignment-Free Text-Audiobox (Text-AB), a unified framework for high-quality voice dubbing and full-duplex dialogue synthesis. Building on a Diffusion Transformer trained with a flow-matching objective, Text-AB departs from the Audiobox system along three dimensions. First, it operates in a latent diffusion framework using DAC-VAE features that encode 48 kHz waveforms into a 25 Hz latent sequence, giving over 10x higher compression than previous EnCodec representations while improving resynthesis quality. Second, Text-AB is alignment-free: it consumes raw text via an off-the-shelf text encoder and learns text-speech alignment through cross-attention, removing the need for forced alignment and explicit duration prediction. Third, we scale model and data substantially, pretraining a 3B-parameter model on 480k hours of monolingual speech, followed by supervised fine-tuning on three downstream tasks: cross-lingual voice dubbing, full-duplex dialogue synthesis, and emotional full-duplex dialogue synthesis. At inference, Text-AB supports one-shot generation for up to ~1 min of speech and arbitrarily long-form generation via a multi-diffusion scheme, plus a multi-stage reranking strategy that enhances quality based on automated metrics. On a real-world dubbing benchmark, Text-AB delivers a step-change improvement over the latest internal dubbing system, with large gains in prosody similarity, voice similarity, naturalness, and shareability. For full-duplex dialogue synthesis, it approaches human recordings on short-form conversations and substantially outperforms the latest internal model on long-form human-likeness and expressivity, while natively modeling turn-taking, back-channeling, and emotional dynamics. For emotional dialogue synthesis, emotion conditioning significantly improves emotion alignment and emotional interaction quality over the unconditioned baseline.",
+  "abstract_zh": "本文提出统一框架 Text-Audiobox（Text-AB），面向高质量跨语言语音配音、全双工对话合成和情感对话合成。Text-AB 基于采用 flow-matching 目标训练的 Diffusion Transformer，并在三个方面改进 Audiobox：一是使用 DAC-VAE 将 48 kHz 波形压缩为 25 Hz latent 序列，相比 EnCodec 具有超过 10 倍的压缩率，同时提升重合成质量；二是采用 alignment-free 设计，直接输入原始文本，通过 cross-attention 学习文本与语音的对齐关系，无需 forced alignment 和显式时长预测；三是扩大模型与数据规模，使用 480,000 小时单语语音预训练 3B 参数模型，再针对跨语言语音配音、全双工对话合成和情感全双工对话合成进行 supervised fine-tuning。推理时，模型支持最长约 1 分钟语音的 one-shot generation，并通过 multi-diffusion 实现任意长度生成；结合基于自动指标的多阶段 reranking，可进一步提升生成质量。在真实配音基准上，Text-AB 在韵律相似度、音色相似度、自然度和可分享性方面均显著优于最新内部系统。在全双工对话合成中，模型在短对话上接近人类录音，在长对话的人类感、表现力方面显著领先，并能原生建模轮次切换、back-channeling 和情绪动态。情感条件控制还显著提升了情绪一致性与情感互动质量。",
+  "key_points_zh": [
+    "采用 DAC-VAE latent diffusion，将 48 kHz 音频编码为 25 Hz latent 序列，在高压缩率下提升重合成质量。",
+    "直接处理原始文本，通过 cross-attention 学习文本—语音对齐，免除 forced alignment 和显式时长预测。",
+    "基于 480,000 小时语音预训练 3B 参数 Diffusion Transformer，并覆盖配音、全双工及情感对话三类任务。",
+    "支持约 1 分钟语音的 one-shot generation、基于 multi-diffusion 的长文本生成，以及多阶段 reranking。",
+    "在配音和长篇全双工对话基准上显著提升相似度、自然度、人类感与表现力，并能建模轮次切换和情绪互动。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.65,
+    "novelty": 0.84,
+    "problem_significance": 0.75,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.71,
+    "lasting_value": 0.72,
+    "llm_avg": 0.768,
+    "comment": "A technically substantial speech-generation system with meaningful full-duplex dialogue synthesis, but its primary contribution is dubbing and offline generation rather than interactive agent operation.",
+    "comment_zh": "该工作在语音生成和全双工对话合成方面技术贡献突出，但主要聚焦配音与离线生成，而非交互式代理运行。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.768,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03992/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03992/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.96
+    }
+  ]
+}

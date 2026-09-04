@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.03236",
+  "title": "Speculative Macro Commit for Faster Tool-Using Agents",
+  "title_zh": "用于加速工具调用智能体的推测式宏提交（Speculative Macro Commit, SMC）",
+  "authors": [
+    "Zeyu Liu",
+    "Souvik Kundu",
+    "Peter A. Beerel"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-03T00:31:43Z",
+  "abs_url": "https://arxiv.org/abs/2609.03236v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.03236",
+  "links": {
+    "github": "https://github.com/zeyuliu1037/speculative-macro-commit",
+    "project_page": null
+  },
+  "abstract_en": "Tool-using LLM agents spend wall-clock time not only on model inference but also in serial action--observation turns, where each tool call, environment transition, and observation can delay subsequent decisions. We introduce \\textbf{Speculative Macro Commit} (SMC), a runtime mechanism for a two-tier agent system: a large authoritative actor model produces the official trajectory, while a faster speculative drafter model continuously predicts and executes future action chains on an isolated environment snapshot. SMC mines recurring multi-action skeletons from training traces and stores them in a macro library used to match against action chains predicted by the drafter at runtime. When the actor's next tool call matches the first drafted action, SMC commits the remaining pre-executed draft steps, together with their observations, to the official trajectory. Using Qwen3.5-27B INT4 as the authoritative actor model and Qwen3.5-4B as the speculative drafter model, SMC matches the sequential agent's overall accuracy while reducing latency by 10.23\\% over the Speculative Actions (SA) baseline and 18.59\\% over sequential execution on the $τ^2$-Bench Telecom subset. On AppWorld, SMC reduces wall time by 7.7\\% over SA baseline and 44.9\\% over sequential execution, with a small reduction in task completion. Overall, SMC provides a practical way to reuse multi-step speculative execution and reduce agent latency beyond single-step speculative actions. Our code is publicly available \\href{https://github.com/zeyuliu1037/speculative-macro-commit}{\\textcolor{magenta}{here}}.",
+  "abstract_zh": "工具调用型大语言模型智能体的耗时不仅来自模型推理，还来自串行的“动作—观察”交互：每次工具调用、环境转移和结果观察都会延迟后续决策。论文提出推测式宏提交（Speculative Macro Commit, SMC），一种面向双层智能体系统的运行时机制。大型权威执行模型负责生成正式轨迹，快速推测模型则在隔离的环境快照中持续预测并执行未来的动作链。SMC 从训练轨迹中挖掘重复出现的多动作结构，并将其存入宏动作库；运行时，系统将宏库与推测模型预测的动作链进行匹配。当权威模型的下一次工具调用与推测链的首个动作一致时，SMC 将其余已预执行的动作及对应观察结果一次性提交到正式轨迹中。实验采用 Qwen3.5-27B INT4 作为权威执行模型、Qwen3.5-4B 作为推测模型。在 τ²-Bench Telecom 子集上，相比 Speculative Actions（SA）基线，SMC 在保持与串行智能体相当准确率的同时，将延迟降低 10.23%；相比串行执行降低 18.59%。在 AppWorld 上，SMC 相比 SA 将墙钟时间降低 7.7%，相比串行执行降低 44.9%，但任务完成率略有下降。结果表明，SMC 能够复用多步推测执行，在单步推测动作之外进一步降低工具调用智能体的延迟。",
+  "key_points_zh": [
+    "提出双层运行时机制：权威模型生成正式轨迹，快速推测模型在隔离环境中预执行未来动作链。",
+    "通过宏动作库匹配训练轨迹中的重复多动作结构，并在首个动作确认后提交后续动作及观察结果。",
+    "在τ²-Bench Telecom上，相比SA延迟降低10.23%，相比串行执行降低18.59%，且准确率基本保持不变。",
+    "在AppWorld上，相比SA墙钟时间降低7.7%，相比串行执行降低44.9%，但任务完成率略有下降。",
+    "SMC将多步推测执行引入智能体运行时，为单步Speculative Actions之外的延迟优化提供了实用方案。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.87,
+    "problem_significance": 0.86,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.84,
+    "llm_avg": 0.844,
+    "comment": "A strong runtime contribution that combines speculative execution, isolated environment snapshots, and reusable macro trajectories to reduce tool-agent latency.",
+    "comment_zh": "这项工作结合推测执行、隔离环境快照和可复用宏轨迹，有效降低了工具型智能体延迟，具有较强的运行时价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.7105825102705401,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.844,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/zeyuliu1037/speculative-macro-commit",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 35,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03236/fig1.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.787
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03236/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.898
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.03674",
+  "title": "LLM4AIGQ: LLM-based AI Guidance Query Generation Framework for Multi Interest Mining",
+  "title_zh": "LLM4AIGQ：基于大语言模型的多兴趣挖掘 AI 引导查询生成框架",
+  "authors": [
+    "Xiangchen Pan",
+    "Jiayi Xu",
+    "Jing Wang",
+    "Xing Fang",
+    "Lingyun Zhu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-03T11:13:01Z",
+  "abs_url": "https://arxiv.org/abs/2609.03674v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.03674",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Guidance queries stimulate user consumption by extracting preferences to provide search queries with guidance value, playing a crucial role in the e-commerce field. Traditional AI-generated queries (AIGQ) generation primarily relies on a two-stage \"Query-to-AI-Generated-Query\" (Q2AIGQ) association paradigm, first recalling user primary search queries from user profiles, historical behavior sequences, item-side information, and the current query through multi-path retrieval, then generalizing AIGQ via rule-based methods. This approach suffers from semantic drift due to information cascade loss; additionally, primary search query derivation heavily depends on \"user-item\" co-occurrence relationships, lacking exploration of user multi-interests, resulting in guidance queries with low value and mismatched purchase intent. To address the expressive limitations of traditional co-occurrence-based retrieval, we propose LLM4AIGQ, an LLM-based solution for generating AI guidance queries tailored to users' multi-interests. This approach segments user interests by integrating user profiles and historical interaction sequences, infers specific consumption intents for each sub-interest, and subsequently generates corresponding AIGQ. In terms of model training, we employ a post-training pipeline comprising Supervised Fine-Tuning (SFT), Reinforcement Learning (RL), and Direct Preference Optimization (DPO) to enhance the model's capability in generating AIGQ. We also introduce a multi-level reward design to satisfy the requirements of multi-objective optimization and long-chain reasoning in practical applications. Regarding deployment, we adopt a nearline-generation and online-read architecture to meet latency constraints. Extensive experimental analyses demonstrate that our model achieves robust performance in both offline evaluations and online A/B tests.",
+  "abstract_zh": "AI 引导查询通过挖掘用户偏好并生成具有引导价值的搜索词，能够促进电商消费。传统 AI-generated query 生成主要采用“Query-to-AI-Generated-Query（Q2AIGQ）”两阶段范式：先从用户画像、历史行为序列、商品信息和当前查询中多路召回主要搜索词，再通过规则方法泛化生成 AIGQ。这种信息级联方式容易造成语义漂移，且过度依赖 user-item 共现关系，难以探索用户的多重兴趣，导致生成查询价值较低并与购买意图不匹配。为此，论文提出 LLM4AIGQ：利用 LLM 融合用户画像与历史交互序列，划分用户子兴趣，推断各子兴趣对应的具体消费意图，并生成相应的 AIGQ。在训练方面，采用由 Supervised Fine-Tuning（SFT）、Reinforcement Learning（RL）和 Direct Preference Optimization（DPO）组成的后训练流程，并设计多层级奖励机制，以满足多目标优化和长链推理需求。在部署方面，采用近线生成、在线读取架构以满足延迟约束。离线实验和线上 A/B 测试均表明，该方法具有稳定且显著的性能提升。",
+  "key_points_zh": [
+    "指出传统 Q2AIGQ 范式存在信息级联损失、语义漂移和过度依赖 user-item 共现的问题。",
+    "通过融合用户画像与历史交互序列，显式划分多重兴趣并为每个子兴趣推断消费意图。",
+    "采用 SFT、RL、DPO 组成的后训练流程，并引入多层级奖励支持多目标优化与长链推理。",
+    "使用近线生成与在线读取架构满足实际业务的低延迟部署需求。",
+    "离线评估和线上 A/B 测试均验证了 LLM4AIGQ 的稳健效果。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.86,
+    "problem_significance": 0.91,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8720000000000001,
+    "comment": "A strongly commerce-grounded LLM framework that directly improves multi-interest query generation, shopping intent alignment, and deployable guided search with online validation.",
+    "comment_zh": "该工作深度面向电商，通过在线验证的多兴趣查询生成直接提升购物意图对齐与引导式搜索能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.7200000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8720000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03674/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03674/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "domain": "agent-multimodal",
+  "display_name": "Realtime Multimodal Agent",
+  "date": "2026-09-03",
+  "generated_at": "2026-09-04T22:24:24Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.03321",
+      "title": "Decoupling Turn-Taking from Semantics: A Decoupled Data Approach for Finite-State-Machine-Based Full-Duplex Dialogue",
+      "title_zh": "将轮流发言与语义解耦：面向基于有限状态机的全双工对话的解耦数据方法",
+      "authors": [
+        "Yihang Li",
+        "Chenhui Chu"
+      ],
+      "total_score": 0.7079867206879109,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.866,
+        "domain_fit": 0.96,
+        "other": 0.3739557356263692
+      },
+      "tags": [
+        "GitHub",
+        "realtime voice agent"
+      ],
+      "tldr_zh": "用真实语音学习轮流发言，用文本对话保持语义能力",
+      "detail_file": "agent-multimodal/2026-09-03/2609.03321.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03321/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.04131",
+      "title": "Beyond Retrieval: Progressive Latent Memory Evolution for Streaming Video Understanding",
+      "title_zh": "超越检索：面向流式视频理解的渐进式潜记忆演化",
+      "authors": [
+        "Hongyu Qu",
+        "Guangming Yao",
+        "Ling Xing",
+        "Xiaobin Hu",
+        "Rongxing Ding",
+        "Guibin Zhang",
+        "Fan Zhang",
+        "Yi Yuan",
+        "Xiangbo Shu",
+        "Shuicheng Yan"
+      ],
+      "total_score": 0.6943846256025563,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8220000000000001,
+        "domain_fit": 0.7,
+        "other": 0.37261541867518744
+      },
+      "tags": [
+        "HF Daily ★22",
+        "streaming video grounding"
+      ],
+      "tldr_zh": "将视频历史检索证据逐步内化为可演化潜记忆",
+      "detail_file": "agent-multimodal/2026-09-03/2609.04131.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04131/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.03423",
+      "title": "DuplexSpeechBench-IFEval: Evaluating Implicit Instruction Following in Full-Duplex Voice Agents",
+      "title_zh": "DuplexSpeechBench-IFEval：评估全双工语音代理中的隐式指令遵循",
+      "authors": [
+        "Puneet Mathur",
+        "Dinesh Manocha"
+      ],
+      "total_score": 0.6855853373546803,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8859999999999999,
+        "domain_fit": 0.99,
+        "other": 0.2259511245156008
+      },
+      "tags": [
+        "realtime voice agent"
+      ],
+      "tldr_zh": "全双工语音代理难以从人格推断并执行隐含对话行为",
+      "detail_file": "agent-multimodal/2026-09-03/2609.03423.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03423/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.03675",
+      "title": "CoFiE: Coarse-to-Fine Evidence Selection for Efficient Streaming Video Understanding",
+      "title_zh": "CoFiE：面向高效流式视频理解的由粗到细证据选择",
+      "authors": [
+        "Jing Jiang",
+        "Yiran Ling",
+        "Ruonan Li",
+        "Dimitrios Stamoulis",
+        "Jie Liu"
+      ],
+      "total_score": 0.6786000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8220000000000001,
+        "domain_fit": 0.79,
+        "other": 0.2666666666666667
+      },
+      "tags": [
+        "Code soon",
+        "streaming video grounding"
+      ],
+      "tldr_zh": "CoFiE先粗筛帧再按查询精炼，兼顾准确率与低延迟。",
+      "detail_file": "agent-multimodal/2026-09-03/2609.03675.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03675/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.03992",
+      "title": "Alignment-Free Text-Audiobox for Voice Dubbing and Full-Duplex Dialogue Synthesis",
+      "title_zh": "无需对齐的 Text-Audiobox：用于语音配音与全双工对话合成",
+      "authors": [
+        "Sanyuan Chen",
+        "Min-Jae Hwang",
+        "Sho Inoue",
+        "Anna Sun",
+        "Bokai Yu",
+        "David Kant",
+        "Dongmin Hyun",
+        "Dorian Desblancs",
+        "Gregory Antonovsky",
+        "Oleg Repin",
+        "Peng-Jen Chen",
+        "Xutai Ma",
+        "Zehai Tu",
+        "Juan Pino",
+        "Wei-Ning Hsu"
+      ],
+      "total_score": 0.6226887430316665,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.768,
+        "domain_fit": 0.65,
+        "other": 0.18762914343888823
+      },
+      "tags": [
+        "realtime voice agent"
+      ],
+      "tldr_zh": "Text-AB实现无需对齐的高质量配音与全双工对话合成",
+      "detail_file": "agent-multimodal/2026-09-03/2609.03992.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03992/thumb.webp"
+    }
+  ]
+}

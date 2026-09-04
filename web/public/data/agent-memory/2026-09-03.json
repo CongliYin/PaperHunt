@@ -1,0 +1,73 @@
+{
+  "domain": "agent-memory",
+  "display_name": "Agent Memory",
+  "date": "2026-09-03",
+  "generated_at": "2026-09-04T22:22:28Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.03467",
+      "title": "When Users Don't Ask: Benchmarking Context-Driven Memory Retrieval in Conversational Agents",
+      "title_zh": "当用户不主动提问：对话代理中上下文驱动记忆检索的基准评测",
+      "authors": [
+        "Wen-Yu Chang",
+        "Yun-Nung Chen"
+      ],
+      "total_score": 0.5986354227697083,
+      "scores": {
+        "topic_relevance": 0.6800000000000002,
+        "llm_assessment": 0.8300000000000001,
+        "domain_fit": 0.96,
+        "other": 0.2587847425656938
+      },
+      "tags": [
+        "h=38",
+        "retrieval and use"
+      ],
+      "tldr_zh": "真实对话暴露记忆检索缺陷，推理式记忆扩展或是关键。",
+      "detail_file": "agent-memory/2026-09-03/2609.03467.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03467/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.03340",
+      "title": "Fresh Memory, Stale Plans: Dependency-Scoped Validation for Distributed LLM-Agent Memory",
+      "title_zh": "新鲜记忆，陈旧计划：面向分布式 LLM-Agent 记忆的依赖范围验证",
+      "authors": [
+        "Evan Chen",
+        "Shiqiang Wang",
+        "Christopher G. Brinton"
+      ],
+      "total_score": 0.4853657923174273,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.8639999999999999,
+        "domain_fit": 0.94,
+        "other": 0.22055264105809128
+      },
+      "tags": [
+        "agent context"
+      ],
+      "tldr_zh": "PlanFence用依赖验证阻止分布式Agent执行陈旧计划",
+      "detail_file": "agent-memory/2026-09-03/2609.03340.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03340/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.03450",
+      "title": "Plan Pointers and Record-Directive Form in Budgeted Verification of Inherited Agent Memory",
+      "title_zh": "预算验证中的继承式智能体记忆：计划指针与记录指令形式",
+      "authors": [
+        "Kazuki Nakayashiki"
+      ],
+      "total_score": 0.20802914343888818,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.568,
+        "domain_fit": 0.84,
+        "other": 0.12543047812962738
+      },
+      "tags": [],
+      "tldr_zh": "微小指令编辑会显著改变智能体的记忆检索与决策。",
+      "detail_file": "agent-memory/2026-09-03/2609.03450.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.03450/thumb.webp"
+    }
+  ]
+}
