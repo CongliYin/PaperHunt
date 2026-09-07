@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.04898",
+  "title": "RefactorPlatform: An Open-Source Harness for Controlled Evaluation of Repository-Scale Refactoring Agents",
+  "title_zh": "RefactorPlatform：用于受控评估仓库级重构智能体的开源测试框架",
+  "authors": [
+    "Aziz Ben Amor",
+    "Drish Mali",
+    "Mann Acharya",
+    "Vijayasri Iyer",
+    "Sébastien Bratières"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-04T08:58:10Z",
+  "abs_url": "https://arxiv.org/abs/2609.04898v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.04898",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Repository-scale refactoring requires coding agents to propagate a single change across many interdependent files without altering program behavior, yet to our knowledge no existing harness isolates the design choices that determine agent success on this task. We present RefactorPlatform, an open-source evaluation harness that holds the environment fixed and varies each design axis explicitly: model backbone (via OpenRouter and GitHub Copilot CLI), execution regime (baseline, retrieval-augmented, and multi-agent), and prompt specificity. Each run executes in an isolated workspace with live terminal streaming, per-task logging of tokens, diffs, and transcripts, AST-based verification, and exportable telemetry for audit and reproduction. Demonstrating the platform on 100 multi-file RefactorBench tasks across four model families, we illustrate the analyses it supports: AST-aware chunking outperforms naive token-window chunking by 25-30% across prompt modes, whereas naive retrieval falls below the retrieval-free baseline; a lean retrieval-augmented single agent (86%) beats the sub-agent configuration we evaluated (66%) on matched tasks with no task passing under delegation that fails under retrieval; and retrieval's accuracy gains absorb its token overhead, leaving cost per successful refactoring unchanged. RefactorPlatform is open-sourced to make refactoring-agent evaluation reproducible and auditable.",
+  "abstract_zh": "仓库级重构要求 coding agents 在不改变程序行为的前提下，将单一变更传播至多个相互依赖的文件。RefactorPlatform 提供一个开源评测框架，在固定环境的基础上显式控制并比较模型骨干、执行机制和提示词具体程度等设计因素。平台支持通过 OpenRouter 和 GitHub Copilot CLI 接入模型，涵盖基线、检索增强和多智能体执行模式；每次运行均在隔离工作区中执行，并记录实时终端输出、token 数、代码差异和对话轨迹，同时结合基于 AST 的验证与可导出的遥测数据，提升审计性和可复现性。在 100 个 RefactorBench 多文件任务和四类模型上的实验表明：AST-aware chunking 相比朴素 token-window chunking 在不同提示模式下提升 25%–30%；朴素检索效果低于无检索基线；精简的检索增强单智能体达到 86% 成功率，优于所评估的 sub-agent 配置（66%）；检索带来的准确率提升抵消了额外 token 开销，使单次成功重构成本基本不变。",
+  "key_points_zh": [
+    "RefactorPlatform 固定评测环境，系统控制模型骨干、执行模式和提示词具体程度，支持可审计、可复现的仓库级重构评估。",
+    "平台集成 OpenRouter 与 GitHub Copilot CLI，并提供隔离工作区、实时终端流、token／diff／transcript 记录、AST 验证和遥测导出。",
+    "在 100 个 RefactorBench 任务上，AST-aware chunking 比朴素 token-window chunking 提升 25%–30%，而朴素检索反而低于无检索基线。",
+    "检索增强单智能体成功率为 86%，显著高于所评估的 sub-agent 配置（66%）；未发现委派模式独有的成功任务。",
+    "检索提升的准确率抵消了 token 成本开销，因此每次成功重构的成本基本保持不变。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.82,
+    "problem_significance": 0.9,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.91,
+    "llm_avg": 0.866,
+    "comment": "RefactorPlatform is a highly reusable coding-agent evaluation harness with controlled environments, audit telemetry, verification, and reproducible comparisons.",
+    "comment_zh": "RefactorPlatform 提供了高度可复用的编码 Agent 评估基础设施，结合了受控环境、审计遥测、验证和可复现比较。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.866,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04898/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.936
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04898/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}

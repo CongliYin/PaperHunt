@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.05403",
+  "title": "RegionFed: Federated Learning for Personalized Query Understanding in Heterogeneous Retail Environments",
+  "title_zh": "RegionFed：面向异构零售环境个性化查询理解的联邦学习",
+  "authors": [
+    "Quoc H. Nguyen",
+    "Ali Lafzi",
+    "Abhijeet Phatak",
+    "Siddharth Pratap Singh",
+    "Rohit Upadhyay",
+    "Yogananda Domlur Seetharama",
+    "Chittaranjan Tripathy"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-04T17:50:10Z",
+  "abs_url": "https://arxiv.org/abs/2609.05403v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.05403",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Retail search systems serve diverse geographic regions with distinct query patterns, vocabularies, and product preferences, creating significant data heterogeneity that challenges both privacy-preserving training and model personalization. Federated learning offers a natural solution for privacy, but standard FL methods produce global models that sacrifice regional performance, while existing personalized FL approaches operate at the parameter level and catastrophically collapse on modern transformers (below 10\\% accuracy on T5) due to tied embeddings and LayerNorm interactions. We introduce RegionFed, an \\textit{architecture-robust} federated learning framework that sidesteps this failure by operating entirely at the gradient level. RegionFed uses the $\\ell_2$ conflict between regional and global gradients as a unified signal that (i) diagnoses heterogeneity, (ii) routes each region to the cheapest sufficient personalization strategy, and (iii) adaptively controls personalization strength. Because it treats models as differentiable black boxes, RegionFed deploys on T5-Small, T5-3B, RoBERTa, and CNN with zero code changes, providing large gains on transformers (where parameter-level methods collapse) and consistent improvements on CNNs. Across three public datasets (Amazon ESCI, Amazon Reviews, LEAF-FEMNIST) and four architectures, RegionFed-Meta achieves 92.27\\%, closing the gap to the privacy-violating centralized upper bound (Centralized + Regional Weighting: 92.04\\%, $Δ$=0.23pp, within 1$σ$) while providing $(ε{\\approx}0.60)$-differential privacy and $\\mathcal{O}(1/\\sqrt{T})$ convergence.",
+  "abstract_zh": "零售搜索面向不同地理区域，各地区在查询模式、词汇和商品偏好上存在显著差异，给隐私保护训练与模型个性化带来挑战。标准联邦学习通常仅生成全局模型，牺牲区域性能；现有个性化联邦学习方法则主要在参数层面操作，在受权重绑定和 LayerNorm 交互影响的现代 Transformer（如 T5）上可能发生灾难性崩溃。本文提出 RegionFed，一种架构鲁棒的联邦学习框架，完全在梯度层面进行个性化。该方法以区域梯度与全局梯度之间的 ℓ2 冲突作为统一信号，用于诊断数据异质性、为各区域选择成本最低且足够有效的个性化策略，并自适应控制个性化强度。由于将模型视为可微黑盒，RegionFed 无需修改代码即可部署于 T5-Small、T5-3B、RoBERTa 和 CNN。在 Amazon ESCI、Amazon Reviews、LEAF-FEMNIST 三个公开数据集和四种架构上的实验表明，RegionFed-Meta 达到 92.27% 的性能，接近隐私受限的集中式上界 92.04%，同时提供 ε≈0.60 的差分隐私保证，并具有 O(1/√T) 的收敛率。",
+  "key_points_zh": [
+    "针对零售搜索中的区域数据异质性，RegionFed不在参数层面操作，而是完全基于梯度进行个性化，从而规避T5等Transformer因权重绑定与LayerNorm交互导致的崩溃。",
+    "区域梯度与全局梯度的ℓ2冲突同时承担异质性诊断、个性化策略路由和个性化强度控制三项功能。",
+    "该方法将模型视为可微黑盒，可零代码修改部署于T5-Small、T5-3B、RoBERTa和CNN，具有较好的架构鲁棒性。",
+    "在Amazon ESCI、Amazon Reviews和LEAF-FEMNIST上，RegionFed-Meta达到92.27%，接近集中式参考性能92.04%，并在Transformer和CNN上均取得稳定改进。",
+    "RegionFed提供约ε=0.60的差分隐私保证，并具备O(1/√T)收敛率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.84,
+    "novelty": 0.85,
+    "problem_significance": 0.87,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.77,
+    "lasting_value": 0.82,
+    "llm_avg": 0.8300000000000001,
+    "comment": "RegionFed makes a concrete contribution to privacy-preserving regional personalization for retail query understanding, although its evaluation is partly generic and lacks online search outcomes.",
+    "comment_zh": "RegionFed为零售查询理解中的隐私保护区域个性化作出了具体贡献，但评估部分偏通用且缺少线上搜索结果。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.39154972126665855,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8300000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 7,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.05403/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.05403/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.394
+    }
+  ]
+}

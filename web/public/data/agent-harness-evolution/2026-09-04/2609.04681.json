@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2609.04681",
+  "title": "Beyond Code Generation: Reliability, Verification, and Cost Economics in the Agentic Software Development Lifecycle",
+  "title_zh": "超越代码生成：Agentic Software Development Lifecycle 中的可靠性、验证与成本经济学",
+  "authors": [
+    "Happy Bhati"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-04T03:16:30Z",
+  "abs_url": "https://arxiv.org/abs/2609.04681v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.04681",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "AI coding systems are moving from autocomplete and chat toward agents that can inspect repositories, edit multiple files, run tools, write tests, open pull requests, and work for long periods with limited supervision. This capability changes the bottleneck in software delivery. Recent field studies show meaningful gains in coding activity, but newer evidence also shows that those gains attenuate sharply between writing code and shipping reliable software. Review, integration, testing, security, deployment, and production operations remain constraining stages, while the economics are shifting from predictable per-seat licensing toward variable token, tool, sandbox, CI, and rework costs. This paper synthesizes peer-reviewed software-engineering research, university studies, benchmark audits, production reports from major technology companies, developer telemetry, and cost-management evidence released primarily from 2024 through September 2026. No new model experiment is claimed; numerical findings remain attributed to their original studies. The synthesis proposes four engineering concepts: the Agentic SDLC Throughput Paradox, Production-Qualified Change (PQC), the Verification Tax, and an Agentic SDLC Control Plane that allocates autonomy subject to cost, reliability, and human-attention budgets. An evidence-based horizon then maps today's supervised agents to future policy-bounded software factories. The central research question shifts from how much code an agent can generate to how much production-qualified value an engineering system can deliver per dollar, per reviewer-hour, and per unit of operational risk.",
+  "abstract_zh": "AI 编程系统正从自动补全和聊天工具发展为能够检查代码仓库、修改多文件、调用工具、编写测试、提交 Pull Request，并在较少监督下长期工作的智能体。该变化使软件交付的瓶颈从代码编写转向代码审查、集成、测试、安全、部署和生产运维。现有研究表明，Agent 能显著提升编码活动，但从“写出代码”到“交付可靠软件”的收益会明显衰减。同时，软件开发成本正由可预测的按席位授权，转向 Token、工具调用、沙箱、CI 以及返工等可变成本。本文综合 2024 年至 2026 年 9 月前的同行评审研究、大学研究、基准测试审计、科技公司生产报告、开发者遥测数据和成本管理证据；不提出新的模型实验，所有数值均归因于原始研究。文章提出四个工程概念：Agentic SDLC Throughput Paradox、Production-Qualified Change（PQC）、Verification Tax，以及 Agentic SDLC Control Plane。其核心思想是，在成本、可靠性和人类注意力预算约束下分配 Agent 自主权，并将研究问题从“Agent 能生成多少代码”转向“每美元、每位审查者小时以及每单位运营风险能够交付多少具备生产资格的工程价值”。",
+  "key_points_zh": [
+    "Agent 提升编码产出并不等于提升软件交付产出；审查、集成、测试、安全、部署和运维仍是主要瓶颈。",
+    "软件开发成本从稳定的按席位授权转向 Token、工具、沙箱、CI、返工等可变成本，成本治理成为核心工程问题。",
+    "Production-Qualified Change（PQC）强调以通过验证、可集成、可部署并满足生产要求的变更衡量 Agent 价值，而非仅统计生成代码量。",
+    "Verification Tax 指 Agent 生成内容带来的额外审查、测试、调试和风险控制成本，可能抵消部分编码效率收益。",
+    "Agentic SDLC Control Plane 应依据成本、可靠性和人类注意力预算动态分配自主权，推动软件开发从监督式 Agent 走向受策略约束的软件工厂。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.82,
+    "novelty": 0.58,
+    "problem_significance": 0.88,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.7,
+    "llm_avg": 0.7120000000000001,
+    "comment": "This synthesis frames important operational gates and cost-reliability tradeoffs for coding-agent deployment, but it contributes no new experimental harness or method.",
+    "comment_zh": "该综述为编码 Agent 部署提出了重要的运营门槛与成本可靠性权衡，但没有提供新的实验性基础设施或方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7120000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04681/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.388
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04681/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.266
+    }
+  ]
+}

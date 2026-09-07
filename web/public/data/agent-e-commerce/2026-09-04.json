@@ -1,0 +1,134 @@
+{
+  "domain": "agent-e-commerce",
+  "display_name": "E-commerce Agent",
+  "date": "2026-09-04",
+  "generated_at": "2026-09-07T22:45:14Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.05063",
+      "title": "Beyond Co-purchase Relation: Evolution of Complementary Recommendations at Allegro",
+      "title_zh": "超越共购关系：Allegro 互补商品推荐的演进",
+      "authors": [
+        "Aleksandra Osowska-Kurczab",
+        "Klaudia Nazarko",
+        "Eliška Kosturová",
+        "Lidia Wojciechowska",
+        "Michał Bień"
+      ],
+      "total_score": 0.6628000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.836,
+        "domain_fit": 0.98,
+        "other": 0.2
+      },
+      "tags": [
+        "product recommendation"
+      ],
+      "tldr_zh": "以类别约束和多源映射提升互补商品推荐",
+      "detail_file": "agent-e-commerce/2026-09-04/2609.05063.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.05063/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.04961",
+      "title": "SAM-D2Q: Aligning Multimodal Doc2Query with Search Demand and Conversion for E-commerce",
+      "title_zh": "SAM-D2Q：面向电商搜索需求与转化的多模态 Doc2Query 对齐方法",
+      "authors": [
+        "Hui Zhou",
+        "Jian Hui Ji",
+        "Lei Ma",
+        "Rong Xiao",
+        "Xiaoyi Zeng"
+      ],
+      "total_score": 0.6011867206879108,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.89,
+        "domain_fit": 1.0,
+        "other": 0.20728906895970253
+      },
+      "tags": [
+        "learning methods for commerce"
+      ],
+      "tldr_zh": "SAM-D2Q以多模态对齐提升电商搜索与转化",
+      "detail_file": "agent-e-commerce/2026-09-04/2609.04961.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04961/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.04813",
+      "title": "Inventory-Grounded Policy-Level Optimization for Training-Free AI Search",
+      "title_zh": "面向免训练 AI 搜索的库存驱动策略级优化",
+      "authors": [
+        "Wei Zhou",
+        "Tiandeng Wu",
+        "Jiandong Ding",
+        "Zhufeng Fan",
+        "Yi Cao"
+      ],
+      "total_score": 0.5946145717194442,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.8960000000000001,
+        "domain_fit": 0.97,
+        "other": 0.17938190573148036
+      },
+      "tags": [
+        "learning methods for commerce"
+      ],
+      "tldr_zh": "IGPO以库存证据优化搜索策略，无需训练即可提升效果",
+      "detail_file": "agent-e-commerce/2026-09-04/2609.04813.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04813/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.05363",
+      "title": "Distill Globally, Adapt Locally: Reasoning Distillation and Product-Type Test-Time Training for Scalable Trade-Up Recommendation",
+      "title_zh": "全局蒸馏、局部适配：面向可扩展升级推荐的推理蒸馏与产品类型测试时训练",
+      "authors": [
+        "Siliang Liu",
+        "Mohammad Ghasemi",
+        "Sapan Patel",
+        "Amin Banitalebi-Dehkordi"
+      ],
+      "total_score": 0.5811883062540946,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.8320000000000001,
+        "domain_fit": 0.94,
+        "other": 0.19862768751364818
+      },
+      "tags": [
+        "user intent and preference"
+      ],
+      "tldr_zh": "蒸馏LLM推理并按产品类型适配，实现高效升级推荐。",
+      "detail_file": "agent-e-commerce/2026-09-04/2609.05363.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.05363/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.05403",
+      "title": "RegionFed: Federated Learning for Personalized Query Understanding in Heterogeneous Retail Environments",
+      "title_zh": "RegionFed：面向异构零售环境个性化查询理解的联邦学习",
+      "authors": [
+        "Quoc H. Nguyen",
+        "Ali Lafzi",
+        "Abhijeet Phatak",
+        "Siddharth Pratap Singh",
+        "Rohit Upadhyay",
+        "Yogananda Domlur Seetharama",
+        "Chittaranjan Tripathy"
+      ],
+      "total_score": 0.4575774860633329,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.8300000000000001,
+        "domain_fit": 0.84,
+        "other": 0.21525828687777648
+      },
+      "tags": [
+        "general retrieval ranking"
+      ],
+      "tldr_zh": "RegionFed以梯度冲突实现架构鲁棒的联邦个性化",
+      "detail_file": "agent-e-commerce/2026-09-04/2609.05403.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.05403/thumb.webp"
+    }
+  ]
+}

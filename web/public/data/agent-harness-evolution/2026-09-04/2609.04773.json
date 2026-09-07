@@ -1,0 +1,102 @@
+{
+  "arxiv_id": "2609.04773",
+  "title": "Persistent Teacher Anchoring for Tool-Using Agents",
+  "title_zh": "面向工具使用智能体的持久教师锚定",
+  "authors": [
+    "Hyun Bin Park",
+    "Kyungho Song",
+    "Sangmin Lee",
+    "Du-Seong Chang"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Hyun Bin Park",
+      "affiliations": [
+        "Sogang University"
+      ]
+    },
+    {
+      "name": "Kyungho Song",
+      "affiliations": [
+        "University of Michigan, Ann Arbor"
+      ]
+    },
+    {
+      "name": "Sangmin Lee",
+      "affiliations": [
+        "Sogang University"
+      ]
+    },
+    {
+      "name": "Du-Seong Chang",
+      "affiliations": [
+        "Sogang University"
+      ]
+    }
+  ],
+  "published_at": "2026-09-04T06:09:50Z",
+  "abs_url": "https://arxiv.org/abs/2609.04773v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.04773",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Distillation is common in LLM post-training, where on-policy knowledge distillation (OPKD) uses student-generated trajectories to prepare the student for downstream RL. At each state, the student matches a next-token distribution supplied by the teacher. As the rollout enters states the teacher would not visit, the teacher-student distribution gap can accumulate. In tool use, this gap becomes consequential because student-written calls execute before supervision and their observations shape later prefixes. Proposer-verifier generation addresses this drift by letting the teacher decide which student-proposed text is retained during generation. Existing formulations govern text but leave tool execution outside their scope. We propose Persistent Teacher Anchoring (PTA), a student-induced but teacher-committed rollout construction. PTA retains chunk-level verification and adds turn-level commitment, allowing a call to reach the environment only after the teacher has verified the entire turn. Treating verified chunks as atomic generation units, we introduce persistent lookahead, which fills idle rollout capacity by advancing future samples and carrying unfinished ones across student updates under the fixed verifier. Across Search-R1-style retrieval and DeepEyes-style perception RL, applying PTA before downstream RL improves macro best@4 by 2.5 and 2.8 points over OPKD under the same downstream RL budget, while lookahead improves throughput by 24%.",
+  "abstract_zh": "本文研究工具使用场景下在线策略知识蒸馏（OPKD）的分布漂移问题。由于学生生成的工具调用会在教师监督前执行，其产生的环境观测将改变后续上下文，导致教师与学生的分布差距持续累积。为此，本文提出 Persistent Teacher Anchoring（PTA）：在学生诱导的轨迹中引入教师承诺机制，只有当教师验证完整轮次后，工具调用才会真正执行。PTA保留块级验证，并进一步加入轮级承诺，将已验证块视为原子生成单元；同时提出 persistent lookahead，通过提前推进未来样本并跨学生更新保留未完成样本，提高采样资源利用率。在 Search-R1 风格检索和 DeepEyes 风格感知强化学习实验中，相比相同下游 RL 预算下的 OPKD，PTA 分别将 macro best@4 提升 2.5 和 2.8 个百分点；persistent lookahead 使吞吐量提升 24%。",
+  "key_points_zh": [
+    "工具调用会在监督前执行，其环境反馈会改变后续上下文，使 OPKD 中的教师—学生分布差距不断累积。",
+    "Persistent Teacher Anchoring（PTA）要求教师验证完整轮次后才允许调用到达环境，结合块级验证与轮级承诺。",
+    "PTA将已验证块视为原子生成单元，并通过 persistent lookahead 跨学生更新保留未完成样本、填充空闲采样容量。",
+    "在 Search-R1 风格检索和 DeepEyes 风格感知 RL 中，PTA 相比 OPKD 将 macro best@4 分别提升 2.5 和 2.8 个百分点。",
+    "persistent lookahead 在保持方法效果的同时，将 rollout 吞吐量提升 24%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.88,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8720000000000001,
+    "comment": "PTA offers a substantial verifier-backed rollout and training improvement by preventing unverified tool calls from contaminating student trajectories.",
+    "comment_zh": "PTA 通过阻止未经验证的工具调用污染学生轨迹，显著改进了基于验证器的 rollout 与 Agent 训练。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5152983752456666,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8720000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 26,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04773/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04773/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

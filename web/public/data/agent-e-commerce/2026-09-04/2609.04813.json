@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.04813",
+  "title": "Inventory-Grounded Policy-Level Optimization for Training-Free AI Search",
+  "title_zh": "面向免训练 AI 搜索的库存驱动策略级优化",
+  "authors": [
+    "Wei Zhou",
+    "Tiandeng Wu",
+    "Jiandong Ding",
+    "Zhufeng Fan",
+    "Yi Cao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-04T07:10:41Z",
+  "abs_url": "https://arxiv.org/abs/2609.04813v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.04813",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Early in deployment, an AI search system typically operates over a frequently updated product catalog, so the available items and their properties cannot be treated as stable knowledge that can be encoded in fixed prompts or strategies. Fine-tuning, reinforcement learning, and static prompt patches fit poorly: labels are scarce, rewards drift with inventory, model releases are costly, and prompt fixes quickly stale. We present Inventory-Grounded Policy-Level Optimization (IGPO), a training-free approach for fixed AI search pipelines. IGPO separates policy from environment facts: it learns Policy Guidelines for acting on runtime inventory evidence rather than memorizing available items. Online, IGPO grounds each query by probing the inventory and constructing an inventory portrait, then injects relevant Policy Guidelines into the retrieval and selection prompts. Offline, stochastic rollouts are grouped by query -- mixed outcome groups directly yield contrastive signal, and an inventory-guided exploration loop distinguishes missed retrieval routes from cases where no matching support is found under the observed inventory evidence. Since May 2026, IGPO has been deployed in a commercial smart-assistant AI search system. A 14-day online A/B test of the complete IGPO treatment shows a 3.17% relative CTR lift and a 38.9% reduction in audited bad cases.",
+  "abstract_zh": "AI 搜索系统在部署初期通常需要处理频繁更新的商品目录，因此可用商品及其属性无法被视为稳定知识，也不适合固化在提示词或搜索策略中。微调、强化学习和静态提示词补丁均存在局限：监督标签稀缺、奖励随库存变化而漂移、模型发布成本高，且提示词修复容易过时。本文提出 Inventory-Grounded Policy-Level Optimization（IGPO），一种适用于固定 AI 搜索流水线的免训练方法。IGPO 将策略与环境事实分离，学习基于运行时库存证据采取行动的 Policy Guidelines，而非记忆具体可用商品。在线阶段，IGPO 通过探测库存为查询构建 inventory portrait（库存画像），并将相关 Policy Guidelines 注入检索与选择提示词。离线阶段，方法按查询对随机 rollout 分组，利用结果混合的分组生成对比信号；同时借助库存引导的探索循环，区分“遗漏了有效检索路径”和“当前库存证据下不存在匹配商品”两类情况。该方法自 2026 年 5 月起部署于商业智能助手 AI 搜索系统。为期 14 天的在线 A/B 测试显示，完整 IGPO 方案带来 3.17% 的相对 CTR 提升，并使人工审计的不良案例减少 38.9%。",
+  "key_points_zh": [
+    "提出 IGPO，在不微调模型的前提下，对固定 AI 搜索流水线进行策略级优化。",
+    "将可复用的 Policy Guidelines 与动态库存事实解耦，避免策略记忆具体商品后因库存变化而失效。",
+    "在线构建 inventory portrait，并将与查询相关的策略准则动态注入检索和候选选择提示词。",
+    "离线利用按查询分组的随机 rollout 构造对比信号，并通过库存引导探索识别检索路径遗漏与库存无匹配两种失败原因。",
+    "商业系统 14 天 A/B 测试中，相对 CTR 提升 3.17%，人工审计不良案例减少 38.9%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.88,
+    "problem_significance": 0.92,
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8960000000000001,
+    "comment": "IGPO presents a compelling inventory-grounded optimization paradigm for adaptive product search, supported by meaningful CTR and quality improvements in commercial deployment.",
+    "comment_zh": "IGPO提出了面向动态库存的自适应商品搜索优化范式，并在商业部署中取得了有意义的点击率与质量提升。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8960000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04813/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04813/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.983
+    }
+  ]
+}

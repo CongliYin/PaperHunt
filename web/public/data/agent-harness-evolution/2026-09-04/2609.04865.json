@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.04865",
+  "title": "CoSkill: Joint Reinforcement Learning of Reasoning and Meta-Skill Agents for Hierarchical Skill Evolution",
+  "title_zh": "CoSkill：面向层级技能演化的推理与元技能智能体联合强化学习",
+  "authors": [
+    "Jinyuan Feng",
+    "Dongmin Li",
+    "Yiqun Chen",
+    "Yang Gao",
+    "Xing Chen",
+    "Huimu Wang",
+    "Zhiqiang Pu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-04T08:25:30Z",
+  "abs_url": "https://arxiv.org/abs/2609.04865v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.04865",
+  "links": {
+    "github": "https://github.com/jinyuan-cookie/CoSkill.",
+    "project_page": null
+  },
+  "abstract_en": "Skill libraries improve the sample efficiency of agentic reinforcement learning (RL) by enabling large language model (LLM) agents to reuse procedural knowledge. Yet existing paradigms exhibit structural shortcomings: they either decouple skill evolution from policy optimization or instantiate meta-skills as fixed workflows. Both treat skills as passive objects to be managed, limiting the flexible evolution of skills and their co-adaptation with the reasoning agent. To address the limitations, we propose CoSkill, a unified multi-agent RL framework that recasts the static meta-skill workflow as a learnable Meta-Skill Agent and jointly trains it with a Reasoning Agent over a hierarchical skill library. By modeling the Reasoning and Meta-Skill Agents as a cooperative team sharing a single backbone, CoSkill enables end-to-end co-adaptation: the Reasoning Agent conditions its actions on a retrieved task skill and step skills selected from its child set, while its task performance guides the Meta-Skill Agent in refining those step skills. Experiments on ALFWorld and WebShop show that CoSkill substantially outperforms prior skill-based and RL baselines, achieving success rates of 98.4% and 90.6%, respectively (+3.5 and +6.2 pp). As shown in Figure 1, CoSkill achieves superior early-stage sample efficiency, asymptotic performance, and wall-clock efficiency. Our code is available at https://github.com/jinyuan-cookie/CoSkill.",
+  "abstract_zh": "技能库能够通过复用程序性知识提升基于大语言模型（LLM）的智能体强化学习样本效率，但现有方法通常将技能演化与策略优化解耦，或把元技能固定为不可学习的工作流，因而限制了技能的灵活演化及其与推理智能体的协同适应。CoSkill提出统一的多智能体强化学习框架，将静态元技能工作流重新建模为可学习的Meta-Skill Agent，并在层级技能库上与Reasoning Agent联合训练。两个智能体共享同一主干网络并组成协作团队：Reasoning Agent根据检索到的任务技能及其子集中选出的步骤技能生成动作，而任务执行表现反过来指导Meta-Skill Agent优化步骤技能。ALFWorld和WebShop实验表明，CoSkill分别取得98.4%和90.6%的成功率，相比既有技能方法和强化学习基线提升3.5和6.2个百分点，并在早期样本效率、最终性能及实际运行时间效率方面表现更优。",
+  "key_points_zh": [
+    "将固定的元技能工作流转化为可学习的Meta-Skill Agent，突破技能管理与策略优化相互割裂的范式。",
+    "通过共享主干网络联合训练Reasoning Agent与Meta-Skill Agent，实现任务推理、步骤技能选择和技能演化的端到端协同适应。",
+    "Reasoning Agent使用检索到的任务技能及其子技能执行任务，任务表现则作为反馈指导Meta-Skill Agent持续改进步骤技能。",
+    "在ALFWorld和WebShop上分别达到98.4%和90.6%的成功率，较基线提升3.5和6.2个百分点。",
+    "CoSkill同时改善早期样本效率、渐近性能和wall-clock效率，体现出层级技能联合进化的优势。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.88,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.9,
+    "llm_avg": 0.884,
+    "comment": "CoSkill directly advances Skill evolution by jointly learning reasoning and meta-skill policies in a reusable hierarchical agent-RL framework.",
+    "comment_zh": "CoSkill 通过在可复用的层次化 Agent-RL 框架中联合学习推理策略与元技能策略，直接推进了技能演化研究。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.884,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/jinyuan-cookie/CoSkill.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04865/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04865/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.941
+    }
+  ]
+}

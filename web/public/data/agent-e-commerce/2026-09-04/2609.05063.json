@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.05063",
+  "title": "Beyond Co-purchase Relation: Evolution of Complementary Recommendations at Allegro",
+  "title_zh": "超越共购关系：Allegro 互补商品推荐的演进",
+  "authors": [
+    "Aleksandra Osowska-Kurczab",
+    "Klaudia Nazarko",
+    "Eliška Kosturová",
+    "Lidia Wojciechowska",
+    "Michał Bień"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-04T12:25:56Z",
+  "abs_url": "https://arxiv.org/abs/2609.05063v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.05063",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "When a customer adds a professional camera to their cart, should the system suggest a matching lens, a generic tripod, or another camera body? Complementary Product Recommendation is vital for comprehensive basket building, yet standard models often fail to distinguish between items that are merely bought together and those that truly work together. In this paper, we present AlleCompanion: a production-scale retrieval framework deployed at Allegro.com that transforms noisy behavioural signals into precise semantic compatibility. We mitigate the intrinsic noise in large-scale co-purchase traffic by combining data-level filtering heuristics with a category-constrained Two Tower architecture. Within this framework, the Category Adapter guides the model in the embedding space, constraining candidates within logically complementary boundaries. Since modelling authentic user behaviour at scale is inherently difficult, we introduce ComCat, a multi-source Complementary Categories Mapping. ComCat acts as a translational layer that distils meaningful patterns from noisy traffic into a maintainable and controllable solution, integrating expert rules, human-in-the-loop feedback, LLM-based reasoning, and statistical mining. Our experimental results demonstrate that combining explicit category-level constraints with neural architectures effectively filters out co-purchase noise to surface recommendations that satisfy real-world user needs. Serving over 20 million active users monthly, the framework delivers significant uplifts in attributed GMV for organic discovery and drives substantial revenue growth in sponsored placements.",
+  "abstract_zh": "当用户将专业相机加入购物车时，系统应该推荐匹配的镜头、通用三脚架，还是另一台相机机身？互补商品推荐（Complementary Product Recommendation）对于构建完整购物篮至关重要，但标准模型往往无法区分“仅仅被一起购买”的商品与“真正能够搭配使用”的商品。本文提出 AlleCompanion，这是一个已部署于 Allegro.com 的生产级检索框架，旨在将含噪的用户行为信号转化为精确的语义兼容关系。该框架结合数据层过滤启发式方法与类别约束的 Two Tower 架构，以缓解大规模共购流量中的固有噪声。其中，Category Adapter 在嵌入空间中引导模型，将候选商品限制在逻辑上互补的类别边界内。考虑到大规模真实用户行为难以建模，作者进一步提出多源互补类别映射 ComCat。ComCat 作为转换层，从含噪流量中提炼有意义的模式，并通过整合专家规则、human-in-the-loop 反馈、基于 LLM 的推理和统计挖掘，形成可维护、可控制的解决方案。实验结果表明，将显式的类别级约束与神经网络架构结合，可以有效过滤共购噪声，筛选出满足真实用户需求的推荐。该框架每月服务超过 2000 万活跃用户，在自然发现流量中显著提升归因 GMV，并推动赞助推荐位的收入增长。",
+  "key_points_zh": [
+    "提出并在 Allegro.com 部署生产级检索框架 AlleCompanion，将含噪共购行为转化为语义兼容的互补商品关系。",
+    "结合数据层过滤启发式方法与类别约束的 Two Tower 架构，减少“共同购买但并不互补”的训练与检索噪声。",
+    "设计 Category Adapter，在嵌入空间中施加互补类别边界，引导模型从逻辑合理的商品类别中检索候选。",
+    "提出多源互补类别映射 ComCat，融合专家规则、human-in-the-loop 反馈、LLM 推理和统计挖掘，增强系统的可维护性与可控性。",
+    "系统每月服务超过 2000 万活跃用户，在自然推荐中提升归因 GMV，并为赞助推荐位带来显著收入增长。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.78,
+    "problem_significance": 0.91,
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.87,
+    "llm_avg": 0.836,
+    "comment": "A strong production-scale complementary-product recommendation framework that converts noisy co-purchase behavior into controllable, semantically compatible suggestions with demonstrated commercial gains.",
+    "comment_zh": "该工作以生产级框架将嘈杂的共购行为转化为可控且语义兼容的互补商品推荐，并取得了显著商业收益。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.836,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.05063/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.05063/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.96
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.05363",
+  "title": "Distill Globally, Adapt Locally: Reasoning Distillation and Product-Type Test-Time Training for Scalable Trade-Up Recommendation",
+  "title_zh": "全局蒸馏、局部适配：面向可扩展升级推荐的推理蒸馏与产品类型测试时训练",
+  "authors": [
+    "Siliang Liu",
+    "Mohammad Ghasemi",
+    "Sapan Patel",
+    "Amin Banitalebi-Dehkordi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-04T17:08:50Z",
+  "abs_url": "https://arxiv.org/abs/2609.05363v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.05363",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Trade-up recommendation identifies higher-quality alternatives that preserve a customer's purchase intent while offering upgraded benefits. Large language models (LLMs) can reason about such distinctions, but applying them directly to hundreds of millions of product pairs is operationally impractical. We introduce a two-level framework that distills LLM reasoning into an efficient non-generative student and adapts its decision boundary to product-type-specific trade-up criteria. At Level 1, a retrieval-augmented few-shot LLM teacher generates structured relation labels and natural-language rationales. These rationales supervise a compact embedding-pair classifier through alignment and contrastive objectives; at inference, the student uses only two precomputed 768-dimensional product embeddings, with no LLM calls or text generation. On a fixed human-annotated benchmark of 8,352 pairs, a 15.5M-parameter four-class reasoning-distilled student achieves AUC 0.924 (95% CI [0.918, 0.929]), compared with 0.912 for the four-class label-only student. At Level 2, product-type test-time training (PT-TTT) uses few-shot demonstrations to optimize lightweight category-specific adapters over the frozen student. PT-TTT improves AUC from 0.924 to 0.941 and average precision from 0.920 to 0.940. On a 100K-pair proxy catalog, the distilled student on a single eight-GPU machine is approximately 5,000x faster and 10,000x lower in estimated cost than direct LLM inference.",
+  "abstract_zh": "论文提出两级升级推荐框架，将 Large Language Model（LLM）的推理能力蒸馏为高效的非生成式学生模型，并针对不同产品类型适配决策边界。Level 1 通过检索增强的少样本 LLM 教师生成结构化关系标签与自然语言解释，再利用对齐损失和对比学习目标训练紧凑的 embedding-pair 分类器。推理时仅需两个预计算的 768 维产品 embedding，无需调用 LLM 或生成文本。在包含 8,352 对人工标注样本的固定基准上，15.5M 参数的四分类推理蒸馏学生模型达到 AUC 0.924，高于仅使用标签监督的 0.912。Level 2 的 product-type test-time training（PT-TTT）利用少量示例，在冻结学生模型上优化轻量级类别适配器，使 AUC 从 0.924 提升至 0.941，average precision 从 0.920 提升至 0.940。在 100K 对代理目录上，单台八 GPU 机器运行蒸馏学生模型，相比直接 LLM 推理速度约提升 5,000 倍，预估成本降低 10,000 倍。",
+  "key_points_zh": [
+    "提出两级框架：先将 LLM 推理蒸馏为非生成式 embedding-pair 分类器，再通过 PT-TTT 进行产品类型特化适配。",
+    "推理阶段只使用两个预计算的 768 维产品 embedding，无需 LLM 调用、检索或文本生成，适合大规模部署。",
+    "在 8,352 对人工标注数据上，推理蒸馏模型 AUC 达到 0.924，优于标签蒸馏模型的 0.912。",
+    "PT-TTT 将 AUC 从 0.924 提升至 0.941，将 average precision 从 0.920 提升至 0.940。",
+    "在 100K 对代理目录上，相比直接 LLM 推理，速度约提升 5,000 倍，预估成本降低 10,000 倍。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.84,
+    "problem_significance": 0.86,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8320000000000001,
+    "comment": "The paper offers a scalable and technically substantive approach to trade-up recommendation by distilling LLM reasoning and adapting decisions to product-specific upgrade criteria.",
+    "comment_zh": "该论文通过蒸馏LLM推理并针对不同商品类型调整升级判定，为可扩展的升档推荐提供了扎实方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8320000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.05363/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.05363/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.903
+    }
+  ]
+}

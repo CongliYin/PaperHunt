@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2609.05232",
+  "title": "Substrate-Aware AI Agents: Execution Context as a First-Class Input",
+  "title_zh": "具备基底感知能力的 AI Agents：将执行上下文作为一等输入",
+  "authors": [
+    "Manu Agrawal"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-04T14:57:17Z",
+  "abs_url": "https://arxiv.org/abs/2609.05232v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.05232",
+  "links": {
+    "github": "https://github.com/manu2/Context-Aware-Agent-Experiment",
+    "project_page": null
+  },
+  "abstract_en": "Autonomous AI agents increasingly select actions in environments whose memory, execution-time, runtime, compute, and operational constraints determine what counts as a suitable plan. We call the absence of this execution context from an agent's planning state substrate blindness. We test this general proposition through numerical code generation, where selected implementation choices and operational consequences are directly observable. Three frontier model configurations--Anthropic Claude Opus 5, OpenAI GPT-5.6-Sol, and Google Gemini 3.7 Flash--generate code for a high-dimensional pairwise Euclidean-distance task either from the task alone or with a 128 MB RAM and 10.0 s wall-time contract. Contract disclosure reduced measured peak process memory in 13 of 14 executable index-aligned task-only versus contract-disclosed comparisons and reduced mean wall time in all three cohorts, making execution up to 3.1x faster. Across the audited corpus, disclosure produced structural code changes including bounded blocking, float32 retention, upper-triangle traversal, and in-place or memory-mapped buffers. At a tighter 96 MB contract, independently sampled contract-disclosed cohorts achieved correct-and-within-budget outcomes of 4/5 for Claude Opus 5, 5/5 for GPT-5.6-Sol, and 3/5 for Gemini 3.7 Flash, compared with task-only outcomes of 0/5, 1/5, and 0/5; cohort mean MaxRSS and wall time were 49-74% and 35-64% lower than their task-only references. These results establish a controlled proof of concept for substrate-aware agent planning: a minimal execution contract induces proactive structural adaptation in generated programs, shifting computation away from unconstrained allocations and substantially improving observed resource-time profiles before execution.",
+  "abstract_zh": "自主 AI agents 通常需要在受内存、执行时间、运行时、算力和运维约束的环境中选择行动；若规划状态不包含这些执行上下文，就会产生“基底盲”（substrate blindness）。论文以数值代码生成作为可观测测试场景，比较 Anthropic Claude Opus 5、OpenAI GPT-5.6-Sol 和 Google Gemini 3.7 Flash 在仅给出任务与额外提供 128 MB RAM、10.0 s wall-time contract 两种条件下，为高维成对欧氏距离任务生成代码的表现。披露执行契约后，14 组可执行的索引对比中有 13 组的峰值进程内存下降，三个模型组的平均 wall time 均下降，最高加速达 3.1 倍。代码结构也出现主动适配，包括有界分块、保留 float32、仅遍历上三角，以及使用原地或 memory-mapped 缓冲区。在更严格的 96 MB contract 下，Claude Opus 5、GPT-5.6-Sol 和 Gemini 3.7 Flash 达到“正确且不超预算”的比例分别为 4/5、5/5 和 3/5，而仅任务条件下分别为 0/5、1/5 和 0/5；各模型组的平均 MaxRSS 和 wall time 相比任务条件参考值分别降低 49–74% 和 35–64%。结果为 substrate-aware agent planning 提供了受控概念验证：最小化的执行契约即可诱导生成程序进行前置结构适配，减少无约束内存分配，并在执行前显著改善资源与时间表现。",
+  "key_points_zh": [
+    "论文提出 substrate blindness：agent 规划若忽略内存、时间和运行时等执行上下文，就难以选择合适方案。",
+    "在高维成对欧氏距离代码生成任务中，加入 128 MB RAM 和 10.0 s wall-time contract 后，峰值内存多数下降，所有模型组平均 wall time 均降低，最高加速 3.1 倍。",
+    "执行契约诱导了有界分块、float32 保留、上三角遍历、原地缓冲区和 memory-mapped 缓冲区等结构性代码变化。",
+    "在 96 MB contract 下，三个模型的正确且不超预算比例为 4/5、5/5 和 3/5，显著优于仅任务条件下的 0/5、1/5 和 0/5。",
+    "研究说明，将最小执行契约作为规划输入，可在执行前促使 agent 进行资源—时间联合优化。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.86,
+    "novelty": 0.72,
+    "problem_significance": 0.8,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.72,
+    "llm_avg": 0.74,
+    "comment": "The paper identifies execution constraints as a first-class input for coding-agent planning and provides useful empirical evidence for substrate-aware runtime behavior.",
+    "comment_zh": "该论文将执行约束提升为编码 Agent 规划的一等输入，并为面向运行环境的行为适配提供了有用实证。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.74,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/manu2/Context-Aware-Agent-Experiment",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.05232/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.942
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.05232/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.946
+    }
+  ]
+}

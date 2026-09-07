@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.04961",
+  "title": "SAM-D2Q: Aligning Multimodal Doc2Query with Search Demand and Conversion for E-commerce",
+  "title_zh": "SAM-D2Q：面向电商搜索需求与转化的多模态 Doc2Query 对齐方法",
+  "authors": [
+    "Hui Zhou",
+    "Jian Hui Ji",
+    "Lei Ma",
+    "Rong Xiao",
+    "Xiaoyi Zeng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-04T10:09:04Z",
+  "abs_url": "https://arxiv.org/abs/2609.04961v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.04961",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "E-commerce search often suffers from vocabulary mismatch between user queries and merchant-authored product titles, since short titles cannot fully cover diverse user expressions or visual product attributes. Although Doc2Query alleviates this issue by generating pseudo-queries for document expansion, traditional methods are text-only and not optimized for e-commerce business objectives. As a result, they may produce semantically plausible but commercially ineffective expansions and miss key attributes present in product images. To this end, we propose E-commerce Search-Aligned Multimodal Doc2Query (SAM-D2Q), a business-aligned multimodal document expansion framework for e-commerce search under Boolean retrieval constraints. SAM-D2Q consists of three stages: (1) task-adapted multimodal supervised fine-tuning to enhance vision-language understanding of product titles, images, and user queries; (2) multimodal data augmentation to improve perception of key visual attributes and expansion coverage; and (3) reinforcement-learning-based preference alignment toward search business objectives, encouraging the model to generate pseudo-queries that better match user intent and commercial value. Offline experiments show that SAM-D2Q substantially improves retrieval performance over traditional Doc2Query methods. Deployed in the AliExpress production search system, SAM-D2Q improves online business metrics, increasing GMV by +3.38% and Pay Count by +2.27%.",
+  "abstract_zh": "电商搜索中，用户查询与商家商品标题常存在词汇不匹配，短标题难以覆盖多样化的用户表达及商品视觉属性。传统 Doc2Query 虽可通过生成伪查询扩展文档，但通常仅利用文本，且未针对电商业务目标优化，容易生成语义合理但商业效果有限的扩展，并遗漏商品图片中的关键信息。为此，论文提出 E-commerce Search-Aligned Multimodal Doc2Query（SAM-D2Q），一种适用于布尔检索约束、面向业务对齐的多模态文档扩展框架。SAM-D2Q 包含三个阶段：任务适配的多模态监督微调，以增强模型对商品标题、图片和用户查询的视觉语言理解；多模态数据增强，以提升关键视觉属性感知能力和扩展覆盖率；基于强化学习的偏好对齐，以搜索业务目标为导向，生成更符合用户意图和商业价值的伪查询。离线实验表明，SAM-D2Q 显著优于传统 Doc2Query 方法。在 AliExpress 生产搜索系统中的在线部署显示，GMV 提升 3.38%，Pay Count 提升 2.27%。",
+  "key_points_zh": [
+    "针对商品标题与用户查询的词汇鸿沟，利用图片中的视觉属性进行多模态文档扩展。",
+    "通过任务适配的多模态监督微调，增强商品标题、商品图片与用户查询之间的跨模态理解。",
+    "采用多模态数据增强，提高关键视觉属性感知能力与伪查询生成覆盖率。",
+    "引入基于强化学习的偏好对齐，使生成结果更符合用户搜索意图及电商商业目标。",
+    "在 AliExpress 线上系统中实现 GMV 提升 3.38%、Pay Count 提升 2.27%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 1.0,
+    "novelty": 0.86,
+    "problem_significance": 0.94,
+    "potential_impact": 0.96,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.91,
+    "llm_avg": 0.89,
+    "comment": "This directly advances e-commerce retrieval through multimodal, business-aligned query expansion and validates substantial production gains in GMV and purchases.",
+    "comment_zh": "该工作通过多模态且面向业务目标的查询扩展直接提升电商检索，并以显著的GMV和支付量线上增益完成验证。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.34373441375821495,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.89,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04961/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.04961/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.974
+    }
+  ]
+}
