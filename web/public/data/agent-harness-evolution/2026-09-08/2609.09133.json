@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2609.09133",
+  "title": "ExecCritic: Learn to Test, Test to Improve for Coding Agents",
+  "title_zh": "ExecCritic：让编程智能体在学习测试中进步，在测试反馈中改进",
+  "authors": [
+    "Leitian Tao",
+    "Baolin Peng",
+    "Haorui Wang",
+    "Hang Wang",
+    "Hao Cheng",
+    "Wenlin Yao",
+    "Qianhui Wu",
+    "Tao Ge",
+    "Sharon Li",
+    "Jianfeng Gao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-08T17:53:37Z",
+  "abs_url": "https://arxiv.org/abs/2609.09133v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.09133",
+  "links": {
+    "github": "https://github.com/MSR-Orchard/execcritic.",
+    "project_page": null
+  },
+  "abstract_en": "Execution feedback can guide coding agents toward correct repository repairs, but only when the tests capture the behavior requested by the issue. Agent-generated tests can encode incomplete or incorrect behavioral targets; when the same trajectory writes both the patch and the test, their errors can agree and create false confidence. We introduce ExecCritic, combining a test--verify--revise scaffold with a role-specific reinforcement learning recipe for training agents within it. The scaffold separates test construction from source-code repair: a Test agent independently generates repository-native tests, a fail-closed harness qualifies and freezes them, and a Repair agent revises source code from their execution feedback without changing the tests. Both roles use Qwen-3.5-35B-A3B as the backbone and are trained separately. In Learn to Test, the Test agent learns to produce behaviorally valid tests that distinguish correct from incorrect patches. In Test to Improve, the Repair agent learns both direct task resolution and feedback-guided revision. On SWE-bench Verified, test quality determines whether feedback helps: holding the base Repair agent fixed, tests from the base Test agent reduce resolved rate from a no-test baseline of 61.2% to 57.3%, whereas tests from GPT-5.6-sol raise it to 65.3%. Role-specific post-training raises the Qwen Test agent's Base-to-Gold success from 22.2% to 62.2%; composing the two post-trained Qwen agents reaches 72.6%, an 11.4-point gain over the original no-test baseline without stronger-model or Oracle feedback at evaluation time. Code is publicly available at https://github.com/MSR-Orchard/execcritic.",
+  "abstract_zh": "执行反馈可以引导编程智能体正确修复代码仓库，但前提是测试能够准确覆盖问题描述所要求的行为。智能体生成的测试可能包含不完整或错误的行为目标；当同一条推理轨迹同时编写补丁和测试时，二者的错误还可能相互吻合，造成虚假的正确性信心。本文提出 ExecCritic，将“测试—验证—修订”（test–verify–revise）流程框架与面向不同角色的强化学习训练方案相结合。该框架将测试构建与源代码修复解耦：Test agent 独立生成符合代码仓库原生风格的测试；采用失败即拒绝（fail-closed）的执行框架筛选并冻结合格测试；Repair agent 根据测试执行反馈修改源代码，但不能更改测试。两个角色均以 Qwen-3.5-35B-A3B 为骨干模型，并分别训练。在 Learn to Test 阶段，Test agent 学习生成行为有效、能够区分正确与错误补丁的测试；在 Test to Improve 阶段，Repair agent 同时学习直接解决任务以及基于反馈迭代修订。在 SWE-bench Verified 上，测试质量决定了执行反馈是否有效：固定基础 Repair agent 时，基础 Test agent 生成的测试使解决率从无测试基线的 61.2% 降至 57.3%，而 GPT-5.6-sol 生成的测试可将其提升至 65.3%。针对角色的后训练使 Qwen Test agent 的 Base-to-Gold 成功率由 22.2% 提升至 62.2%；组合两个后训练 Qwen agents 后，解决率达到 72.6%，较原始无测试基线提高 11.4 个百分点，且评测阶段无需更强模型或 Oracle 反馈。代码已公开于 https://github.com/MSR-Orchard/execcritic。",
+  "key_points_zh": [
+    "ExecCritic 将测试生成与代码修复拆分为独立的 Test agent 和 Repair agent，避免补丁与测试共享错误而产生虚假通过。",
+    "系统通过 fail-closed harness 筛选并冻结测试，Repair agent 只能依据执行反馈修改源代码，不能篡改测试。",
+    "提出 Learn to Test 与 Test to Improve 两阶段角色专项强化学习，分别提升测试判别能力和反馈驱动的修复能力。",
+    "实验表明低质量测试会使 SWE-bench Verified 解决率从 61.2% 降至 57.3%，说明执行反馈的收益高度依赖测试质量。",
+    "两个后训练 Qwen-3.5-35B-A3B agents 组合后达到 72.6% 解决率，较无测试基线提升 11.4 个百分点，评测时不依赖更强模型或 Oracle 反馈。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.91,
+    "problem_significance": 0.95,
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.9,
+    "lasting_value": 0.94,
+    "llm_avg": 0.9279999999999999,
+    "comment": "ExecCritic combines fail-closed test qualification, role-separated execution feedback, and agent-specific RL into a compelling coding-agent improvement harness.",
+    "comment_zh": "ExecCritic将故障闭锁式测试验证、角色分离的执行反馈和智能体强化学习结合为极具价值的编程智能体改进框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.9279999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/MSR-Orchard/execcritic.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.09133/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.09133/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2609.08919",
+  "title": "Experience Funnel: A State-Policy Alternating Loop for Self-Evolving Agents",
+  "title_zh": "Experience Funnel：用于自进化智能体的状态—策略交替循环",
+  "authors": [
+    "Wenbo Gao",
+    "Zhaomou Song",
+    "Zhiyuan Ji",
+    "Renxi Liu",
+    "Xing Li",
+    "Xianzhi Yu",
+    "Xiaoguang Li",
+    "James Chung-wai Cheung",
+    "Weizhe Lin",
+    "Yaoyuan Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-08T15:48:11Z",
+  "abs_url": "https://arxiv.org/abs/2609.08919v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.08919",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Autonomous agents powered by large language models (LLMs) continuously accumulate experience through interaction, creating an opportunity to improve future behavior through self-evolution. A fundamental challenge is how to transform abundant, task-specific interaction experience into reusable model competence without sacrificing the ability to adapt rapidly to newly observed evidence. Explicit textual states, such as skills and agent harnesses, provide fast, human-readable and editable adaptation, but incur persistent dependence on external context; parametric policies provide compact and reusable competence, but are substantially slower to update. We present \\textit{Experience Funnel}, a self-evolving framework that couples fast state adaptation with slow policy consolidation in an alternating loop. Interaction trajectories are first distilled into an explicit textual state, where newly acquired experience can be rapidly incorporated and validated. The framework then selectively identifies state-enabled behavior that remains useful across state revisions and consolidates it into the policy through transition-aware distillation. The updated state--policy pair subsequently generates new rollouts, providing fresh evidence for the next round of state adaptation and policy consolidation. Experiments across diverse agent benchmarks show that \\textit{Experience Funnel} consistently improves agent capability over state-only evolution and policy-internalization approaches, while progressively converting useful explicit experience into autonomous policy competence.",
+  "abstract_zh": "大型语言模型（LLM）智能体可通过交互持续积累经验，但如何将任务特定经验转化为可复用能力，同时保持对新证据的快速适应，仍是核心挑战。论文提出 Experience Funnel，通过“快速状态适应—慢速策略固化”的交替循环解决这一问题：首先将交互轨迹提炼为显式文本状态，以便快速整合和验证新经验；随后筛选在状态更新后仍具普适价值的行为，并通过具备状态转移感知的蒸馏，将其固化到参数化策略中。更新后的状态—策略组合继续生成新的交互轨迹，为下一轮适应与固化提供证据。在多个智能体基准上的实验表明，该方法优于仅依赖状态演化或仅进行策略内化的方法，并能逐步将显式经验转化为自主策略能力。",
+  "key_points_zh": [
+    "提出 Experience Funnel，将显式文本状态的快速适应与参数化策略的慢速固化结合起来。",
+    "先从交互轨迹提炼可编辑状态，再筛选跨状态修订仍有效的行为进行策略蒸馏。",
+    "通过状态—策略交替更新持续产生新轨迹，形成经验积累、验证与能力内化的闭环。",
+    "在多项智能体基准上持续优于 state-only evolution 和 policy-internalization 方法。",
+    "核心价值是逐步降低对外部上下文的依赖，将任务经验转化为可复用的自主策略能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.9,
+    "problem_significance": 0.91,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.89,
+    "lasting_value": 0.91,
+    "llm_avg": 0.9019999999999999,
+    "comment": "Experience Funnel presents a strong closed loop that alternates rapid textual-state evolution with durable policy consolidation.",
+    "comment_zh": "Experience Funnel构建了在快速文本状态演化与持久策略固化之间交替运行的强闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9019999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08919/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08919/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.962
+    }
+  ]
+}

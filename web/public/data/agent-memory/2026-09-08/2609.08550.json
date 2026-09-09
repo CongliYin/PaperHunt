@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.08550",
+  "title": "CreaMem: A Scene-Aware Memory Architecture for Personalized Agents",
+  "title_zh": "CreaMem：面向个性化智能体的场景感知记忆架构",
+  "authors": [
+    "Qixuan Sun",
+    "Yue Que",
+    "Bowei He",
+    "Jin Guo",
+    "Dihang Yang",
+    "Wenchang Situ",
+    "Chen Ma"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-08T10:33:05Z",
+  "abs_url": "https://arxiv.org/abs/2609.08550v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.08550",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-term memory is a core capability for personalized LLM agents. To support it, existing memory systems organize information using various criteria such as topic segments or summary hierarchies. However, we identify two major limitations in these designs. First, they lack scene awareness: memories from unrelated life scenes share the same retrieval space, which inflates the search space and introduces cross-scene interference. Second, they encode each memory from a single perspective, making it difficult to retrieve complementary views of the same event. In this paper, we propose the CreaMem architecture, which enables scene-aware memory organization by partitioning memory into several Life Scene Memories to reduce cross-scene interference at retrieval. To go beyond the single perspective and achieve cross-memory synergy, entries are dual-coded from both episodic and trait-based perspectives within each memory. We further devise a permemory balanced sampling strategy at retrieval time. Extensive experiments on two long-term memory benchmarks show that CreaMem improves QA accuracy across all evaluation metrics, with particularly large gains on multi-hop reasoning performance, validating scene-aware partitioning and cross-memory synergy. To enhance reproducibility, we release our code in a public GitHub repository.",
+  "abstract_zh": "长期记忆是个性化 LLM 智能体的核心能力。现有记忆系统通常依据主题片段或摘要层级等标准组织信息，但存在两项主要局限：其一，缺乏场景感知能力，不相关生活场景中的记忆共享同一检索空间，导致搜索空间膨胀与跨场景干扰；其二，每条记忆仅从单一视角编码，难以检索同一事件的互补信息。本文提出 CreaMem 架构，通过将记忆划分为多个 Life Scene Memories，实现面向场景的记忆组织，降低检索阶段的跨场景干扰。为突破单一视角限制并实现跨记忆协同，CreaMem 在每个记忆单元内分别从情景记忆（episodic）和特质记忆（trait-based）两个视角进行双重编码。此外，本文设计了检索阶段的 permemory balanced sampling 策略。在两个长期记忆基准上的大量实验表明，CreaMem 在所有评测指标上均提升了问答准确率，尤其显著改善了多跳推理性能，验证了场景感知划分与跨记忆协同的有效性。作者同时发布了公开 GitHub 代码以增强研究可复现性。该工作被 EMNLP'26 Findings 接收。",
+  "key_points_zh": [
+    "将长期记忆划分为多个 Life Scene Memories，隔离不同生活场景，减少检索空间膨胀和跨场景干扰。",
+    "对每条记忆进行 episodic 与 trait-based 双视角编码，以检索同一事件的互补信息并促进跨记忆协同。",
+    "提出 permemory balanced sampling，在检索阶段平衡不同记忆来源，提升记忆利用效率。",
+    "在两个长期记忆基准上全面提升 QA 表现，多跳推理收益尤其显著。",
+    "代码已公开发布；论文被 EMNLP'26 Findings 接收。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.89,
+    "novelty": 0.8,
+    "problem_significance": 0.82,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.8,
+    "llm_avg": 0.78,
+    "comment": "CreaMem presents a meaningful personalized-agent memory architecture by combining scene-aware partitioning with dual episodic and trait representations.",
+    "comment_zh": "CreaMem 通过场景感知分区以及情景与特征双重表示，提出了有意义的个性化 Agent Memory 架构。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.78,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08550/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08550/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.957
+    }
+  ]
+}

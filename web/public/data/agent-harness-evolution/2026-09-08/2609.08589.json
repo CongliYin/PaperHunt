@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.08589",
+  "title": "The Unreliable Progress Bar: Can LLM Agents Reliably Report Task Progress Throughout Execution?",
+  "title_zh": "不可靠的进度条：LLM Agents 能否在整个执行过程中可靠地报告任务进度？",
+  "authors": [
+    "Boyang Wang",
+    "Yunhan Wang",
+    "Yalun Wu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-08T11:25:31Z",
+  "abs_url": "https://arxiv.org/abs/2609.08589v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.08589",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent large language models can emit task-progress signals that agent frameworks use to decide whether a task should continue or stop, yet whether a model can reliably report its task progress at every stage of a task, and where and how its reports fail, has not been studied systematically. We evaluate this ability on the public benchmark $τ^2$-bench and on StageIF, a controlled testbed in which reporting checkpoints are placed across the task's lifecycle. Both settings require reports at multiple task stages. We find that reporting reliability depends on the stage a task has reached, and that almost every deployed model we test is reliable at some stages and unreliable at others. Where reporting breaks down is not the same everywhere. Most deployed models lose accuracy once work is under way and recover once the task is done. The newest generation closes that mid-task drop and instead grows conservative at the finish line. Our study exposes a capability gap in task-progress reporting and provides an evaluation protocol that spans the whole course of task execution for this ability on which agent operation depends. The findings indicate that agent frameworks should not control task flow on the strength of the model's state reports alone.",
+  "abstract_zh": "大型语言模型能够输出任务进度信号，Agent 框架据此决定任务是继续还是停止。然而，模型能否在任务各阶段可靠地报告进度，以及报告在何处、以何种方式失效，尚未得到系统研究。本文在公开基准 τ²-bench 和受控测试平台 StageIF 上评估该能力；StageIF 将报告检查点布置于任务生命周期的不同阶段，两个环境都要求模型在多个阶段进行报告。实验发现，报告可靠性取决于任务所处阶段，几乎所有测试模型都在某些阶段可靠、在另一些阶段不可靠。不同模型的失效位置并不一致：多数已部署模型在任务进行中准确率下降，任务完成后恢复；最新一代模型缩小了这种中途下降，但在任务结束时变得更加保守。研究揭示了任务进度报告能力与 Agent 可靠运行需求之间的差距，并提出覆盖完整任务执行过程的评测协议。结果表明，Agent 框架不应仅凭模型的状态报告来控制任务流程。",
+  "key_points_zh": [
+    "在 τ²-bench 和 StageIF 上进行多阶段任务进度报告评测，覆盖任务执行的完整生命周期。",
+    "几乎所有测试模型都存在阶段性可靠性差异：同一模型可能在某些阶段可靠、在另一些阶段失效。",
+    "多数已部署模型在任务进行中出现报告准确率下降，并在任务完成后恢复；新一代模型则更倾向于在终点保守报告。",
+    "论文提出覆盖全流程的任务进度报告评测协议，揭示该能力仍存在显著可靠性缺口。",
+    "Agent 框架不应仅依赖 LLM 的进度或状态报告来决定任务继续、停止等流程控制。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.85,
+    "novelty": 0.69,
+    "problem_significance": 0.82,
+    "potential_impact": 0.75,
+    "paradigm_shift": 0.6,
+    "lasting_value": 0.76,
+    "llm_avg": 0.724,
+    "comment": "The paper provides a useful lifecycle-wide evaluation protocol showing why harnesses should not trust model-reported progress alone.",
+    "comment_zh": "该论文提供了覆盖任务全生命周期的实用评估协议，说明框架不应仅依赖模型自报进度。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.724,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08589/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08589/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.962
+    }
+  ]
+}

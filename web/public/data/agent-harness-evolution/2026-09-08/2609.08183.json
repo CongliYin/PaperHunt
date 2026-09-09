@@ -1,0 +1,110 @@
+{
+  "arxiv_id": "2609.08183",
+  "title": "NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness",
+  "title_zh": "NeoHorse-1：通过带路由 Harness 的智能体后训练探索递归自我改进",
+  "authors": [
+    "NeoHorse Team",
+    "Guoliang Cao",
+    "Guohao Dai",
+    "Tianyu Guo",
+    "Kai Han",
+    "Hailin Hu",
+    "Zihan Jiang",
+    "Xiang Kuang",
+    "Boxun Li",
+    "Yulong Li",
+    "Zehua Pei",
+    "Yuchuan Tian",
+    "Jiamin Wang",
+    "Yu Wang",
+    "Yunhe Wang",
+    "Yihong Wu",
+    "Haiyang Xu",
+    "Shuo Zhang",
+    "Hang Zhou",
+    "Siyang Cheng",
+    "Jiayu Fan",
+    "Wei He",
+    "Qingrui Jiao",
+    "Hongguang Li",
+    "Zhiyuan Li",
+    "Runke Liu",
+    "Xi Liu",
+    "Xinchen Liu",
+    "Sinno Jialin Pan",
+    "Yi Ren",
+    "Liuyang Song",
+    "Chenyu Wang",
+    "Bei Yu",
+    "Quanlu Zhang",
+    "Xiangyu Zhang",
+    "Mengyu Zheng",
+    "Yingjie Zong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-08T03:14:54Z",
+  "abs_url": "https://arxiv.org/abs/2609.08183v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.08183",
+  "links": {
+    "github": "https://github.com/TokenRhythm/NeoHorse",
+    "project_page": null
+  },
+  "abstract_en": "Recursive self-improvement (RSI) requires a concrete mechanism through which an AI system observes its capabilities and converts that evidence into the next round of learning. We present NeoHorse-1, a family of agent-native models developed to explore this path through agentic post-training. Our system combines a heterogeneous model pool with intelligent routing, recording the predicted capability demand, selected service tier, and subsequent interaction for each user turn. These records are converted into training examples that preserve interleaved reasoning, tool calls, and harness context, and are admitted through structural validation, six-dimensional semantic evaluation, and subscene-level labeling. Routing signals organize supervised fine-tuning into a three-stage curriculum and extend to routing-guided on-policy distillation, where a teacher supervises student-generated responses under the same progression. Capability-guided allocation then converts evaluation feedback into the next training mixture, closing an evaluation-selection-update loop in which what the system learns to do shapes what it learns from next. Across eleven benchmarks covering harness-based agents, tool use, coding, and instruction following, post-training raises the macro-average from 58.94 to 64.87 at 4B and from 65.60 to 69.04 at 9B, substantially narrowing the aggregate gap between the post-trained 4B model and the 9B base model. NeoHorse-1 provides an initial prototype of this feedback-driven process and a path toward harness-mediated RSI across successive iterations.",
+  "abstract_zh": "递归自我改进（Recursive Self-Improvement, RSI）需要一种具体机制，使 AI 系统能够观察自身能力，并将这些证据转化为下一轮学习。本文提出 NeoHorse-1，一组面向智能体的模型，通过 agentic post-training 探索这一方向。系统结合异构模型池与智能路由，为每个用户请求记录预测的能力需求、选择的服务层级及后续交互；这些记录被转化为保留交错式推理、工具调用和 harness 上下文的训练样本，并经过结构验证、六维语义评估及子场景级标注后纳入训练。路由信号将监督微调组织为三阶段课程学习，并进一步用于 routing-guided on-policy distillation，使教师模型按照相同进阶过程监督学生生成的响应。能力引导的数据分配则将评估反馈转化为下一轮训练混合比例，从而形成“评估—选择—更新”闭环：系统当前学会做什么，会影响下一步学习什么。在覆盖 harness-based agents、工具使用、代码和指令遵循的 11 个基准上，后训练使 4B 模型宏平均得分从 58.94 提升至 64.87，使 9B 模型从 65.60 提升至 69.04，并显著缩小了后训练 4B 模型与 9B base model 之间的整体差距。NeoHorse-1 展示了反馈驱动训练流程的初步原型，并为通过 harness 实现多轮 RSI 提供了路径。",
+  "key_points_zh": [
+    "核心机制是异构模型池加智能路由：记录能力需求、服务层级与交互结果，并将其转化为带推理、工具调用和 harness 上下文的训练数据。",
+    "数据进入训练前需经过结构验证、六维语义评估和子场景级标注，以提升样本质量与场景粒度。",
+    "路由信号同时用于三阶段监督微调和 routing-guided on-policy distillation，使训练难度与教师监督过程逐步递进。",
+    "能力评估结果会决定下一轮训练数据配比，形成评估—选择—更新闭环，实现面向能力的持续改进。",
+    "在 11 个涵盖智能体、工具使用、代码和指令遵循的基准上，4B 宏平均从 58.94 提升至 64.87，9B 从 65.60 提升至 69.04。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.89,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.87,
+    "llm_avg": 0.8719999999999999,
+    "comment": "NeoHorse-1 tightly couples routing, harness traces, validation, curriculum training, and evaluation-driven data allocation into an agentic post-training loop.",
+    "comment_zh": "NeoHorse-1将路由、框架轨迹、验证、课程训练和评估驱动的数据分配紧密结合为智能体后训练闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.16000000000000003,
+    "open_source": 0.5,
+    "community_heat": 1.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8719999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/TokenRhythm/NeoHorse",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 371,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08183/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08183/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.962
+    }
+  ]
+}

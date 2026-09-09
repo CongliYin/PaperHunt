@@ -1,0 +1,277 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-09-08",
+  "generated_at": "2026-09-09T22:29:05Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.08944",
+      "title": "SkillAdam: Stable and Efficient Skill Evolution for Agents",
+      "title_zh": "SkillAdam：面向智能体的稳定高效技能演化",
+      "authors": [
+        "Gaoyuan Li",
+        "Meihao Fan",
+        "Yizhe Liu",
+        "Shaolei Zhang",
+        "Ju Fan",
+        "Siyi Wang",
+        "Jiaheng Hou",
+        "Xudong Weng",
+        "Honghan Tian",
+        "Zang Li"
+      ],
+      "total_score": 0.6874000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.858,
+        "domain_fit": 0.98,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "借鉴Adam机制，稳定且低成本地优化智能体技能。",
+      "detail_file": "agent-harness-evolution/2026-09-08/2609.08944.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08944/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.08919",
+      "title": "Experience Funnel: A State-Policy Alternating Loop for Self-Evolving Agents",
+      "title_zh": "Experience Funnel：用于自进化智能体的状态—策略交替循环",
+      "authors": [
+        "Wenbo Gao",
+        "Zhaomou Song",
+        "Zhiyuan Ji",
+        "Renxi Liu",
+        "Xing Li",
+        "Xianzhi Yu",
+        "Xiaoguang Li",
+        "James Chung-wai Cheung",
+        "Weizhe Lin",
+        "Yaoyuan Wang"
+      ],
+      "total_score": 0.6788887430316666,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.9019999999999999,
+        "domain_fit": 0.97,
+        "other": 0.18762914343888823
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "用状态快速学习、用策略沉淀通用能力",
+      "detail_file": "agent-harness-evolution/2026-09-08/2609.08919.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08919/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.08318",
+      "title": "AttnCompress: Dynamic Attention-Guided Trajectory Compression for Software Engineering Agents",
+      "title_zh": "AttnCompress：面向软件工程智能体的动态注意力引导轨迹压缩",
+      "authors": [
+        "Zhengran Zeng",
+        "Yixin Li",
+        "Rui Xie",
+        "Wei Ye",
+        "Shikun Zhang"
+      ],
+      "total_score": 0.6417867206879109,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8119999999999999,
+        "domain_fit": 0.94,
+        "other": 0.20728906895970253
+      },
+      "tags": [
+        "session context state"
+      ],
+      "tldr_zh": "动态注意力压缩轨迹，提升智能体效率与任务通过率",
+      "detail_file": "agent-harness-evolution/2026-09-08/2609.08318.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08318/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.08404",
+      "title": "Environments as Scaffold: Enriching Feedback to Bootstrap Self-Evolving Agents in Long-Horizon Tasks",
+      "title_zh": "环境即支架：通过丰富反馈引导长时程任务中的自进化智能体冷启动",
+      "authors": [
+        "Hongbang Yuan",
+        "Zhuoran Jin",
+        "Yixin Cao"
+      ],
+      "total_score": 0.5254336546996008,
+      "scores": {
+        "topic_relevance": 0.44000000000000006,
+        "llm_assessment": 0.892,
+        "domain_fit": 0.96,
+        "other": 0.2727788489986693
+      },
+      "tags": [
+        "HF Daily ★21",
+        "general llm agents"
+      ],
+      "tldr_zh": "用反馈丰富环境引导智能体高效自进化",
+      "detail_file": "agent-harness-evolution/2026-09-08/2609.08404.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08404/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.09153",
+      "title": "Procedural Graphs: Self-Evolving Execution Structures for LLM Agents",
+      "title_zh": "Procedural Graphs：面向 LLM Agents 的自演化执行结构",
+      "authors": [
+        "Yuxing Lu",
+        "Yicheng Chen",
+        "Shanchan Wu",
+        "Sercan Ö. Arık"
+      ],
+      "total_score": 0.5140246801580816,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.8939999999999999,
+        "domain_fit": 0.98,
+        "other": 0.3394156005269388
+      },
+      "tags": [
+        "HF Daily ★22",
+        "general llm agents"
+      ],
+      "tldr_zh": "用可自演化程序图引导并改进 LLM Agent 执行",
+      "detail_file": "agent-harness-evolution/2026-09-08/2609.09153.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.09153/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.08183",
+      "title": "NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness",
+      "title_zh": "NeoHorse-1：通过带路由 Harness 的智能体后训练探索递归自我改进",
+      "authors": [
+        "NeoHorse Team",
+        "Guoliang Cao",
+        "Guohao Dai",
+        "Tianyu Guo",
+        "Kai Han",
+        "Hailin Hu",
+        "Zihan Jiang",
+        "Xiang Kuang",
+        "Boxun Li",
+        "Yulong Li",
+        "Zehua Pei",
+        "Yuchuan Tian",
+        "Jiamin Wang",
+        "Yu Wang",
+        "Yunhe Wang",
+        "Yihong Wu",
+        "Haiyang Xu",
+        "Shuo Zhang",
+        "Hang Zhou",
+        "Siyang Cheng",
+        "Jiayu Fan",
+        "Wei He",
+        "Qingrui Jiao",
+        "Hongguang Li",
+        "Zhiyuan Li",
+        "Runke Liu",
+        "Xi Liu",
+        "Xinchen Liu",
+        "Sinno Jialin Pan",
+        "Yi Ren",
+        "Liuyang Song",
+        "Chenyu Wang",
+        "Bei Yu",
+        "Quanlu Zhang",
+        "Xiangyu Zhang",
+        "Mengyu Zheng",
+        "Yingjie Zong"
+      ],
+      "total_score": 0.4855999999999999,
+      "scores": {
+        "topic_relevance": 0.16000000000000003,
+        "llm_assessment": 0.8719999999999999,
+        "domain_fit": 0.96,
+        "other": 0.5333333333333333
+      },
+      "tags": [
+        "HF Daily ★371",
+        "GitHub",
+        "adjacent model training"
+      ],
+      "tldr_zh": "用路由驱动后训练闭环探索智能体递归自我改进",
+      "detail_file": "agent-harness-evolution/2026-09-08/2609.08183.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08183/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.08589",
+      "title": "The Unreliable Progress Bar: Can LLM Agents Reliably Report Task Progress Throughout Execution?",
+      "title_zh": "不可靠的进度条：LLM Agents 能否在整个执行过程中可靠地报告任务进度？",
+      "authors": [
+        "Boyang Wang",
+        "Yunhan Wang",
+        "Yalun Wu"
+      ],
+      "total_score": 0.3937,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.724,
+        "domain_fit": 0.85,
+        "other": 0.10833333333333334
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "LLM 的进度报告随任务阶段波动，不能单独用于控制 Agent 流程。",
+      "detail_file": "agent-harness-evolution/2026-09-08/2609.08589.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08589/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.09133",
+      "title": "ExecCritic: Learn to Test, Test to Improve for Coding Agents",
+      "title_zh": "ExecCritic：让编程智能体在学习测试中进步，在测试反馈中改进",
+      "authors": [
+        "Leitian Tao",
+        "Baolin Peng",
+        "Haorui Wang",
+        "Hang Wang",
+        "Hao Cheng",
+        "Wenlin Yao",
+        "Qianhui Wu",
+        "Tao Ge",
+        "Sharon Li",
+        "Jianfeng Gao"
+      ],
+      "total_score": 0.3627824593811417,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.9279999999999999,
+        "domain_fit": 0.99,
+        "other": 0.28127486460380563
+      },
+      "tags": [
+        "GitHub"
+      ],
+      "tldr_zh": "分离测试与修复并专项训练，显著提升代码修复率。",
+      "detail_file": "agent-harness-evolution/2026-09-08/2609.09133.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.09133/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.08094",
+      "title": "CIVI: A Framework for Diagnosing Search Agent Failures in Civic Information",
+      "title_zh": "CIVI：诊断公民信息搜索智能体失败的框架",
+      "authors": [
+        "Dingying Liu",
+        "Yunshun Zhong",
+        "Wentao Zhang",
+        "Yiyuan Li"
+      ],
+      "total_score": 0.2742,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.7140000000000001,
+        "domain_fit": 0.88,
+        "other": 0.2
+      },
+      "tags": [],
+      "tldr_zh": "CIVI发现搜索失败主要源于检索，而非知识缺失",
+      "detail_file": "agent-harness-evolution/2026-09-08/2609.08094.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08094/thumb.webp"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.08404",
+  "title": "Environments as Scaffold: Enriching Feedback to Bootstrap Self-Evolving Agents in Long-Horizon Tasks",
+  "title_zh": "环境即支架：通过丰富反馈引导长时程任务中的自进化智能体冷启动",
+  "authors": [
+    "Hongbang Yuan",
+    "Zhuoran Jin",
+    "Yixin Cao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-08T08:14:25Z",
+  "abs_url": "https://arxiv.org/abs/2609.08404v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.08404",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large Language Models demonstrate remarkable proficiency in static reasoning, yet training them as autonomous agents through Reinforcement Learning (RL) for long-horizon tasks is often hindered by severe reward sparsity. While conventional \\textit{agent-side warming} up via supervised fine-tuning (SFT) can alleviate this, it is frequently limited by data scarcity and constrained exploration. To address this, we propose a paradigm shift to \\textit{environment-side adaptation} by constructing \\textbf{F}eedback-\\textbf{E}nriched \\textbf{E}nvironments (\\textbf{FEEs}). Through a pilot study, we establish a feedback design strategy that reformulates environments by transitioning from action guidance to observation enrichment during the later stages of both intra-episode exploration and inter-episode evolution. Large-scale experiments on SciWorld and BFCL benchmarks using various Qwen3 model scales and RL algorithms such as GRPO, GSPO, and DAPO demonstrate that FEEs consistently yield performance improvements over standard settings. Furthermore, our analysis reveals that training with FEEs \\textbf{(1)} stabilizes training dynamics by reducing entropy volatility, \\textbf{(2)} facilitates proactive state-space exploration in difficult tasks, \\textbf{(3) }ensures the internalization of environmental guidance into policy weights rather than acting as a mere inference-time prior, and \\textbf{(4) }identifies intra-group feedback consistency as a critical boundary for stable optimization.",
+  "abstract_zh": "大型语言模型在静态推理中表现出色，但通过强化学习（RL）训练其执行长时程自主任务时，常受到严重奖励稀疏问题的限制。传统的“智能体侧预热”（agent-side warming）通常借助监督微调（SFT）缓解该问题，却容易受数据稀缺和探索受限影响。本文提出转向“环境侧适应”（environment-side adaptation），构建反馈丰富环境（Feedback-Enriched Environments，FEEs）。作者通过先导实验提出反馈设计策略：在单回合探索和跨回合演化的后期阶段，将环境反馈从动作引导逐步转变为观测增强。在SciWorld和BFCL基准上，使用不同规模的Qwen3模型以及GRPO、GSPO、DAPO等RL算法的大规模实验表明，FEEs相较标准环境能够稳定提升性能。进一步分析发现，FEEs能够降低熵波动、稳定训练动态；促进困难任务中的主动状态空间探索；使环境引导被内化到策略权重中，而非仅作为推理时先验；同时揭示了组内反馈一致性是实现稳定优化的关键边界。",
+  "key_points_zh": [
+    "提出FEEs，通过环境侧适应丰富观测反馈，替代单纯依赖SFT进行智能体预热。",
+    "在SciWorld和BFCL上，FEEs结合Qwen3、GRPO、GSPO和DAPO均带来稳定性能提升。",
+    "反馈丰富环境可降低训练熵波动，稳定RL优化过程，并促进困难长时程任务中的主动探索。",
+    "环境反馈能够被策略权重真正内化，而不是仅在推理阶段充当外部先验。",
+    "组内反馈一致性是稳定训练的重要边界，反馈不一致可能破坏优化过程。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.87,
+    "problem_significance": 0.92,
+    "potential_impact": 0.89,
+    "paradigm_shift": 0.9,
+    "lasting_value": 0.88,
+    "llm_avg": 0.892,
+    "comment": "Feedback-enriched environments offer a broadly useful environment-side approach to stabilizing long-horizon agent reinforcement learning.",
+    "comment_zh": "反馈增强环境为稳定长程智能体强化学习提供了具有广泛价值的环境侧方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.44000000000000006,
+    "open_source": 0.0,
+    "community_heat": 0.8331408438282375,
+    "author_reputation": 0.40353225016377775,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.892,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 21,
+    "first_author_h_index": 8,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08404/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08404/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.965
+    }
+  ]
+}

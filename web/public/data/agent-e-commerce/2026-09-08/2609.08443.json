@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2609.08443",
+  "title": "SequenceO1: End-to-End Ultra-Long (100K) Sequence Modeling in Recommendation with Low-Rank Caching",
+  "title_zh": "SequenceO1：基于低秩缓存的端到端超长（100K）序列推荐建模",
+  "authors": [
+    "Lin Guan",
+    "Jia-Qi Yang",
+    "Zhishan Zhao",
+    "Jiaqi Huang",
+    "Hangyu Wang",
+    "Longbin Li",
+    "Beichuan Zhang",
+    "Haonan Jiang",
+    "Jinan Ni",
+    "Xiangyu Fan",
+    "Xiaowen Li",
+    "Ziyao Ren",
+    "Yuhang Qi",
+    "Xiaolong Zhu",
+    "Xuanyuan Luo",
+    "Qiwei Chen",
+    "Yi Cheng",
+    "Lele Yu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-08T08:49:44Z",
+  "abs_url": "https://arxiv.org/abs/2609.08443v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.08443",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Modeling long-term user behavior is central to sequential recommendation and billion-scale industrial recommender systems, yet production ranking models operate under strict latency, memory, communication, and training-throughput constraints. At the 100K scale, the challenge extends beyond attention complexity: raw sequence features must be stored, transferred, and repeatedly processed during training and online serving. Existing approaches based on history truncation, multi-stage behavior retrieval, compressed lifelong histories, or train-short/infer-long extrapolation either weaken end-to-end optimization or retain substantial length-dependent cost. We present SequenceO1, an end-to-end framework for ultra-long user behavior sequence modeling, deployed at full traffic on Douyin with histories of up to 100K interactions. SequenceO1 follows a compress-then-reason design. Its Sketch Attention (SA) uses learnable prototypes and prototype-wise normalization to compress the raw history into a fixed-size, target-agnostic user representation. Target-conditioned Stacked Target-to-History Cross Attention (STCA) then models complementary time scales: a recent 10K suffix for short-term interests and the compact sketch for long-term preferences. To make training and inference practical, SequenceO1 combines low-rank user representation caching, multi-request user-level batching, pipeline lift, and a fused FlashSA kernel to amortize feature storage, communication, and computation across targets, training instances, and consecutive requests. Production experiments show consistent offline and online gains, while the compact cached sketch retains most of the benefit of directly scaling end-to-end sequence ranking to 100K. These results provide a practical model-system approach to efficient attention, sequence compression, and scalable long-sequence and long-context recommendation systems.",
+  "abstract_zh": "长期用户行为建模是序列推荐和十亿规模工业推荐系统的核心，但线上排序模型受到延迟、内存、通信和训练吞吐量的严格约束。当序列长度达到 100K 时，瓶颈不仅来自注意力计算，还包括原始序列特征的存储、传输及训练与推理中的重复处理。为此，论文提出 SequenceO1，一种已在 Douyin 全流量部署的端到端超长用户行为序列建模框架。该框架采用“先压缩、后推理”设计：Sketch Attention（SA）通过可学习原型和原型级归一化，将原始历史压缩为固定大小、与目标无关的用户表示；Stacked Target-to-History Cross Attention（STCA）则结合最近 10K 行为后缀与压缩后的 sketch，分别建模短期兴趣和长期偏好。系统层面，SequenceO1 引入低秩用户表示缓存、多请求用户级批处理、pipeline lift 和融合 FlashSA kernel，在多个目标、训练样本及连续请求之间分摊特征存储、通信和计算成本。生产实验表明，该方法在线下与线上均获得稳定收益，紧凑的缓存 sketch 保留了将端到端排序序列扩展至 100K 时的大部分效果。",
+  "key_points_zh": [
+    "提出 SequenceO1，实现最长 100K 用户行为历史的端到端建模，并已在 Douyin 全流量部署。",
+    "Sketch Attention（SA）利用可学习原型压缩完整历史，生成固定大小且与候选目标无关的长期用户表示。",
+    "Stacked Target-to-History Cross Attention（STCA）联合最近 10K 行为与历史 sketch，互补建模短期兴趣和长期偏好。",
+    "通过低秩用户表示缓存、多请求用户级批处理、pipeline lift 与 FlashSA kernel，显著分摊存储、通信和计算开销。",
+    "生产实验取得稳定的离线与在线提升，缓存后的紧凑 sketch 保留了直接扩展至 100K 序列的大部分收益。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.84,
+    "problem_significance": 0.92,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8539999999999999,
+    "comment": "A strong production-scale recommender-system contribution that directly advances long-term behavior modeling, ranking efficiency, and scalable industrial recommendation.",
+    "comment_zh": "该工作面向真实工业推荐系统，直接推进了长期行为建模、排序效率和大规模推荐服务能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.52,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8539999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08443/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.946
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08443/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.973
+    }
+  ]
+}

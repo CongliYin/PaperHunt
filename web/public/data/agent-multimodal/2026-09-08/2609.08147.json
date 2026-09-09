@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.08147",
+  "title": "ConversationalVoice: Full-Duplex Speech Data from Real Conversations through Source-Faithful Reconstruction and Conversation-Grounded Expansion",
+  "title_zh": "ConversationalVoice：通过源保真重构与对话约束扩展，从真实对话构建全双工语音数据",
+  "authors": [
+    "Richard Yucheng He",
+    "Baodong Cao",
+    "Chen Xu",
+    "Yihang Liu",
+    "Tairan Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-08T02:28:43Z",
+  "abs_url": "https://arxiv.org/abs/2609.08147v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.08147",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Full-duplex speech models require training data that preserves turn-taking, overlap, interruption, and backchannel behavior, yet these signals are entangled across speakers in noisy real-world recordings. We present Conversational Voice, a pipeline that converts real two-speaker excerpts into three complementary training-data artifacts. (1) Separation recovers speaker-specific tracks with stable speaker assignments, a canonical transcript, and naturally observed interaction timing. (2) Reconstruction generates speech in matched voices from a fixed source transcript, reconstructs the source turn order, pauses, and overlaps, and adds word-level alignment and delivery instructions. (3) Expansion generates new dialogue constrained by the source context, speakers, and observed interaction pattern. Automatic speaker-verification metrics remain strong across stages, with same-speaker similarity of 0.983-0.991 and positive discrimination margins of 0.199-0.209. Predicted speech quality (NISQA MOS) is 3.56 for separation, 4.41 for reconstruction, and 4.61 for expansion. A Gemini-based automatic evaluator assigns expansion mean scores of 4.94/5 for contextual coherence and 4.80/5 for dialogue naturalness. Expansion and reconstruction exhibit broadly similar interaction profiles; expansion's turn, overlap-event, backchannel, and interruption rates are 4.6%, 8.0%, 13.2%, and 16.0% lower, respectively. We evaluate data properties only; downstream gains in full-duplex model training remain for future work.",
+  "abstract_zh": "全双工语音模型需要保留轮替发言、重叠、打断和附和等互动行为的训练数据，但真实嘈杂录音中不同说话人的信号相互纠缠。论文提出 ConversationalVoice 流程，将真实双人对话片段转换为三类互补数据产物：其一，Separation 分离出说话人专属音轨，保持稳定的说话人对应关系，并保留规范转录与自然互动时序；其二，Reconstruction 基于固定源转录，在匹配的说话人音色中重建原始轮次、停顿与重叠，并加入词级对齐和表达指令；其三，Expansion 受源上下文、说话人及观察到的互动模式约束，生成新的对话。各阶段的说话人验证指标均较强，同说话人相似度为 0.983–0.991，正判别间隔为 0.199–0.209；NISQA MOS 分别为 3.56、4.41 和 4.61。基于 Gemini 的自动评估显示，Expansion 的上下文连贯性和对话自然度均较高，平均得分分别为 4.94/5 和 4.80/5。Expansion 与 Reconstruction 的互动特征总体相近，但其轮次、重叠事件、附和和打断率分别低 4.6%、8.0%、13.2% 和 16.0%。本文仅评估数据属性，数据对全双工模型训练的下游收益留待未来研究验证。",
+  "key_points_zh": [
+    "提出 ConversationalVoice 三阶段流程：Separation、Reconstruction 和 Expansion，分别实现说话人分离、源保真重构与上下文约束的对话扩展。",
+    "Reconstruction 保留真实对话中的轮次顺序、停顿、重叠和说话人音色，并提供词级对齐及表达指令。",
+    "Expansion 生成的新对话具有较高质量与自然度，Gemini 评估的上下文连贯性为 4.94/5、对话自然度为 4.80/5。",
+    "各阶段说话人身份保持良好，同说话人相似度达到 0.983–0.991；语音质量 NISQA MOS 从 Separation 的 3.56 提升至 Expansion 的 4.61。",
+    "论文目前只验证数据质量和互动属性，尚未证明其能提升全双工语音模型的下游训练效果。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.77,
+    "problem_significance": 0.86,
+    "potential_impact": 0.81,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.79,
+    "llm_avg": 0.776,
+    "comment": "The pipeline provides potentially reusable full-duplex training data with realistic overlap and interruption patterns, though downstream model benefits remain unverified.",
+    "comment_zh": "该流程提供了包含真实重叠与打断模式的可复用全双工训练数据，但其对下游模型的增益尚未得到验证。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.776,
+    "domain_multiplier": 0.85
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08147/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.936
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08147/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.975
+    }
+  ]
+}

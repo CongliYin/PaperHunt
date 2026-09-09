@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2609.08944",
+  "title": "SkillAdam: Stable and Efficient Skill Evolution for Agents",
+  "title_zh": "SkillAdam：面向智能体的稳定高效技能演化",
+  "authors": [
+    "Gaoyuan Li",
+    "Meihao Fan",
+    "Yizhe Liu",
+    "Shaolei Zhang",
+    "Ju Fan",
+    "Siyi Wang",
+    "Jiaheng Hou",
+    "Xudong Weng",
+    "Honghan Tian",
+    "Zang Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-08T16:04:45Z",
+  "abs_url": "https://arxiv.org/abs/2609.08944v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.08944",
+  "links": {
+    "github": "https://github.com/ruc-datalab/SkillAdam",
+    "project_page": null
+  },
+  "abstract_en": "Agent skills provide a lightweight way to equip frozen language-model agents with domain knowledge and procedural guidance, yet obtaining high-quality skills remains costly and difficult to scale. Expert-written skills require substantial human effort. Recent skill self-evolution methods automate an iterative loop that uses execution feedback to revise skills, but their heuristic update strategies often yield unstable optimization and low iteration efficiency. We identify two challenges in realizing stable and efficient skill self-evolution. Direction Stability requires effective corrections to accumulate rather than be overwritten by iteration-local feedback. Update Adaptivity requires the scope of each revision to reflect the consistency of recent case-level improvements. We introduce SkillAdam, an Adam-inspired framework for optimizing discrete and non-differentiable skill documents. As a functional analogue of Adam's first moment, an optimization memory records identified problems and the outcomes of prior solution attempts to stabilize the update direction. As a functional analogue of Adam's second moment, a volatility-driven edit budget tracks the history-weighted variation of recent case-level improvements and adaptively controls the update magnitude. Across seven benchmarks that span short- and long-horizon tasks, SkillAdam achieves state-of-the-art performance with more stable optimization dynamics. It also obtains stronger skills with substantially fewer optimization iterations and lower cost than prior methods. Code repository: https://github.com/ruc-datalab/SkillAdam",
+  "abstract_zh": "智能体技能（agent skills）能够以轻量方式为冻结的语言模型智能体注入领域知识与流程指导，但高质量技能的获取成本高昂且难以规模化。专家编写技能需要大量人工投入；近期的技能自演化方法通过执行反馈迭代修订技能，但启发式更新策略往往导致优化不稳定、迭代效率低。本文指出稳定高效的技能自演化面临两项挑战：方向稳定性（Direction Stability），即有效修正应持续积累，而非被单轮反馈覆盖；更新自适应性（Update Adaptivity），即每次修订的范围应取决于近期样例级改进的一致性。为此，作者提出 SkillAdam，一种受 Adam 启发、用于优化离散且不可微技能文档的框架。作为 Adam 一阶矩的功能类比，优化记忆（optimization memory）记录已发现的问题及历史解决尝试的结果，以稳定更新方向；作为二阶矩的功能类比，波动性驱动的编辑预算（volatility-driven edit budget）根据近期样例级改进的历史加权变化，自适应控制更新幅度。在覆盖短程与长程任务的七个基准上，SkillAdam 取得了当前最佳性能，并展现出更稳定的优化动态。相比以往方法，它还能以显著更少的优化迭代次数和更低成本获得更强的技能。",
+  "key_points_zh": [
+    "将技能自演化中的核心瓶颈归纳为方向稳定性与更新自适应性，避免有效修正被局部反馈覆盖或更新幅度失控。",
+    "提出 SkillAdam，将 Adam 的优化思想功能性迁移至离散、不可微的技能文档优化。",
+    "通过优化记忆记录问题及历史解决尝试，类比 Adam 的一阶矩，持续积累有效经验并稳定更新方向。",
+    "通过波动性驱动的编辑预算刻画样例级改进的历史变化，类比 Adam 的二阶矩，自适应调节每轮修订规模。",
+    "在七个短程和长程任务基准上达到 state-of-the-art，并以更少迭代和更低成本获得更强技能。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.86,
+    "problem_significance": 0.87,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.88,
+    "llm_avg": 0.858,
+    "comment": "SkillAdam offers a novel, reusable optimization mechanism for stable and efficient feedback-driven skill evolution.",
+    "comment_zh": "SkillAdam为稳定高效的反馈驱动技能演化提供了新颖且可复用的优化机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.858,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/ruc-datalab/SkillAdam",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08944/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08944/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.08094",
+  "title": "CIVI: A Framework for Diagnosing Search Agent Failures in Civic Information",
+  "title_zh": "CIVI：诊断公民信息搜索智能体失败的框架",
+  "authors": [
+    "Dingying Liu",
+    "Yunshun Zhong",
+    "Wentao Zhang",
+    "Yiyuan Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-08T01:09:40Z",
+  "abs_url": "https://arxiv.org/abs/2609.08094v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.08094",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large Language Models are increasingly deployed in public-sector settings, where incorrect guidance can cause irreversible harm. We introduce CIVI, the first framework for diagnosing search agent failures in civic information. Its benchmark instantiation jointly spans cross-national, interjurisdictional government contexts (federal, state, and local) and functional categories from an internationally adopted United Nations standard. We evaluate ten frontier search agents and find that none matches an attentive human baseline. Alongside accuracy, CIVI measures search invocation rate, selective no-search accuracy, and how often agents cite authoritative government sources. To perform this diagnosis, we introduce ARISE, which decomposes agentic search failures into four mutually exclusive modes, isolated via source-injection ablation. ARISE attributes 72.1% of all observed failures to retrieval-bound causes rather than to gaps in the models' parametric knowledge.",
+  "abstract_zh": "大型语言模型正 increasingly 被部署于公共部门，但错误指导可能造成不可逆伤害。论文提出 CIVI，这是首个用于诊断公民信息搜索智能体失败的框架。其基准覆盖跨国、跨辖区的政府场景（联邦、州和地方），并结合联合国采用的功能分类标准。对十个前沿搜索智能体的评测显示，没有任何系统达到谨慎人类基线。除准确率外，CIVI还衡量搜索调用率、选择性不搜索准确率，以及引用权威政府来源的频率。为定位失败原因，论文提出 ARISE，通过源注入消融将智能体搜索失败分解为四种互斥模式。结果表明，72.1%的观测失败源于检索相关因素，而非模型参数化知识缺失。",
+  "key_points_zh": [
+    "CIVI面向公民信息场景，覆盖跨国及联邦、州、地方等多层级政府环境。",
+    "十个前沿搜索智能体均未达到谨慎人类基线，说明公共部门部署仍存在显著风险。",
+    "除准确率外，CIVI还评估搜索调用率、选择性不搜索准确率和权威政府来源引用率。",
+    "ARISE利用源注入消融，将搜索失败分解为四种互斥模式，实现更细粒度诊断。",
+    "72.1%的失败归因于检索相关问题，而不是模型参数化知识不足。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.74,
+    "problem_significance": 0.81,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.6,
+    "lasting_value": 0.72,
+    "llm_avg": 0.7140000000000001,
+    "comment": "CIVI contributes an in-scope search-agent benchmark and failure-isolation methodology, though its evidence is concentrated in a civic-information vertical.",
+    "comment_zh": "CIVI提供了符合范围的搜索智能体基准与故障隔离方法，但其实证主要集中于政务信息垂直领域。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7140000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08094/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.954
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08094/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.08310",
+  "title": "Exploring Bottom-Up Clustering for Creating Semantic IDs",
+  "title_zh": "探索用于创建 Semantic IDs 的自底向上聚类",
+  "authors": [
+    "Leah Woldemariam",
+    "Sudhanshu Garg",
+    "Taha Belkhouja",
+    "Charles Kim-Yip",
+    "Ali Sahami"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-08T06:32:57Z",
+  "abs_url": "https://arxiv.org/abs/2609.08310v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.08310",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The success of generative retrieval has largely been attributed to the use of Semantic IDs, which improve over arbitrary item-level identifiers such as hashes by capturing the semantics of items. The main challenges faced when constructing Semantic IDs, however, is in mapping each identifier to a unique product and capturing information valuable to downstream tasks. Past works have appended additional codewords to de-duplicate item identifiers and utilized residual quantization to create hierarchical clusters. In this work, we present an algorithm for generating Semantic IDs that ensure the identifiers are both unique and preserve the structure of the original embedding. Key to our work is the use of bottom-up clustering to preserve local structure in the embedding space, improving the clustering quality of the resulting Semantic IDs and their utility for downstream generative retrieval.",
+  "abstract_zh": "生成式检索的成功很大程度上得益于 Semantic IDs。相比哈希等任意的商品级标识符，Semantic IDs 能编码商品语义，但其构建面临两项核心挑战：确保每个标识符唯一对应一个商品，并保留对下游任务有价值的信息。已有方法通常通过追加额外 codeword 消除标识符冲突，或使用 residual quantization 构建层次化聚类。本文提出一种基于自底向上聚类的 Semantic IDs 生成算法，在保证标识符唯一性的同时保留原始 embedding 的结构。该方法更好地维护 embedding 空间中的局部结构，从而提升聚类质量及 Semantic IDs 对下游生成式检索的实用性。",
+  "key_points_zh": [
+    "Semantic IDs 相比哈希等任意标识符能够编码商品语义，是生成式检索的重要基础。",
+    "Semantic IDs 的构建需要同时解决标识符唯一性和语义信息保留问题。",
+    "本文采用自底向上聚类，以保留 embedding 空间中的局部结构。",
+    "所生成的 Semantic IDs 兼具唯一性与原始 embedding 结构信息。",
+    "更高质量的聚类表示可提升 Semantic IDs 在下游生成式检索中的效果与实用性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.68,
+    "novelty": 0.7,
+    "problem_significance": 0.73,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.6,
+    "lasting_value": 0.68,
+    "llm_avg": 0.686,
+    "comment": "A relevant product-retrieval contribution improving semantic identifiers for generative retrieval, although its commerce-specific evaluation and end-user shopping impact are limited in the abstract.",
+    "comment_zh": "该工作通过改进生成式检索的商品语义标识与检索基础具有相关性，但摘要中体现的电商评估和购物端影响仍较有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.23816576137838616,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.686,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08310/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.886
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08310/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.826
+    }
+  ]
+}

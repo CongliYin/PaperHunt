@@ -1,0 +1,113 @@
+{
+  "domain": "agent-memory",
+  "display_name": "Agent Memory",
+  "date": "2026-09-08",
+  "generated_at": "2026-09-09T22:35:41Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.08273",
+      "title": "MemForest: Efficient Agent Memory Management via EventTree Partitioning and Progressive Merging",
+      "title_zh": "MemForest：通过EventTree划分与渐进式合并实现高效的Agent记忆管理",
+      "authors": [
+        "Junxi Wang",
+        "Te Sun",
+        "Jiayi Zhu",
+        "Chen Zhang",
+        "Siyuan Li",
+        "Xuyang Liu",
+        "Zichen Wen",
+        "Xiaobing Tu",
+        "Jinkui Ren",
+        "Xiantao Zhang",
+        "Ziqi Yuan",
+        "Linfeng Zhang"
+      ],
+      "total_score": 0.7123774860633332,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.866,
+        "domain_fit": 0.96,
+        "other": 0.38859162021110977
+      },
+      "tags": [
+        "GitHub",
+        "construction and consolidation"
+      ],
+      "tldr_zh": "用EventTree压缩Agent记忆，兼顾效率与性能",
+      "detail_file": "agent-memory/2026-09-08/2609.08273.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08273/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.08258",
+      "title": "Revoked but Still Authoritative: An Empirical Study of Revocation Enforcement in Agent-Memory Systems",
+      "title_zh": "已撤销却仍具权威：Agent-Memory Systems 中撤销执行的实证研究",
+      "authors": [
+        "Yi Ting Shen",
+        "Kentaroh Toyoda",
+        "Alex Leung"
+      ],
+      "total_score": 0.6696000000000002,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.782,
+        "domain_fit": 0.82,
+        "other": 0.38333333333333336
+      },
+      "tags": [
+        "GitHub",
+        "agent memory systems"
+      ],
+      "tldr_zh": "软撤销未被真正执行，导致Agent重用危险旧记忆。",
+      "detail_file": "agent-memory/2026-09-08/2609.08258.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08258/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.08279",
+      "title": "What Eviction Destroys: A Restore-Counterfactual Audit of Forgetting in Agent Memory",
+      "title_zh": "驱逐会摧毁什么：对智能体记忆遗忘的恢复反事实审计",
+      "authors": [
+        "Chen Shen"
+      ],
+      "total_score": 0.6677561029899164,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.8700000000000001,
+        "domain_fit": 0.94,
+        "other": 0.28918700996638774
+      },
+      "tags": [
+        "agent memory systems"
+      ],
+      "tldr_zh": "恢复反事实区分记忆驱逐造成的不可逆遗忘",
+      "detail_file": "agent-memory/2026-09-08/2609.08279.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08279/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.08550",
+      "title": "CreaMem: A Scene-Aware Memory Architecture for Personalized Agents",
+      "title_zh": "CreaMem：面向个性化智能体的场景感知记忆架构",
+      "authors": [
+        "Qixuan Sun",
+        "Yue Que",
+        "Bowei He",
+        "Jin Guo",
+        "Dihang Yang",
+        "Wenchang Situ",
+        "Chen Ma"
+      ],
+      "total_score": 0.6185883062540946,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.78,
+        "domain_fit": 0.89,
+        "other": 0.21529435418031484
+      },
+      "tags": [
+        "construction and consolidation"
+      ],
+      "tldr_zh": "CreaMem以场景划分和双视角编码增强长期记忆检索。",
+      "detail_file": "agent-memory/2026-09-08/2609.08550.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08550/thumb.webp"
+    }
+  ]
+}

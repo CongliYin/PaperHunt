@@ -1,0 +1,71 @@
+{
+  "domain": "agent-e-commerce",
+  "display_name": "E-commerce Agent",
+  "date": "2026-09-08",
+  "generated_at": "2026-09-09T22:26:22Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.08443",
+      "title": "SequenceO1: End-to-End Ultra-Long (100K) Sequence Modeling in Recommendation with Low-Rank Caching",
+      "title_zh": "SequenceO1：基于低秩缓存的端到端超长（100K）序列推荐建模",
+      "authors": [
+        "Lin Guan",
+        "Jia-Qi Yang",
+        "Zhishan Zhao",
+        "Jiaqi Huang",
+        "Hangyu Wang",
+        "Longbin Li",
+        "Beichuan Zhang",
+        "Haonan Jiang",
+        "Jinan Ni",
+        "Xiangyu Fan",
+        "Xiaowen Li",
+        "Ziyao Ren",
+        "Yuhang Qi",
+        "Xiaolong Zhu",
+        "Xuanyuan Luo",
+        "Qiwei Chen",
+        "Yi Cheng",
+        "Lele Yu"
+      ],
+      "total_score": 0.5217258286877776,
+      "scores": {
+        "topic_relevance": 0.52,
+        "llm_assessment": 0.8539999999999999,
+        "domain_fit": 0.96,
+        "other": 0.19175276229259217
+      },
+      "tags": [
+        "general retrieval ranking"
+      ],
+      "tldr_zh": "压缩历史并缓存低秩表示，实现100K序列推荐",
+      "detail_file": "agent-e-commerce/2026-09-08/2609.08443.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08443/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.08310",
+      "title": "Exploring Bottom-Up Clustering for Creating Semantic IDs",
+      "title_zh": "探索用于创建 Semantic IDs 的自底向上聚类",
+      "authors": [
+        "Leah Woldemariam",
+        "Sudhanshu Garg",
+        "Taha Belkhouja",
+        "Charles Kim-Yip",
+        "Ali Sahami"
+      ],
+      "total_score": 0.3942082880689193,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.686,
+        "domain_fit": 0.68,
+        "other": 0.1480276268963977
+      },
+      "tags": [
+        "general retrieval ranking"
+      ],
+      "tldr_zh": "用自底向上聚类生成兼具唯一性与语义结构的 Semantic IDs",
+      "detail_file": "agent-e-commerce/2026-09-08/2609.08310.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08310/thumb.webp"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.09153",
+  "title": "Procedural Graphs: Self-Evolving Execution Structures for LLM Agents",
+  "title_zh": "Procedural Graphs：面向 LLM Agents 的自演化执行结构",
+  "authors": [
+    "Yuxing Lu",
+    "Yicheng Chen",
+    "Shanchan Wu",
+    "Sercan Ö. Arık"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-08T17:59:41Z",
+  "abs_url": "https://arxiv.org/abs/2609.09153v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.09153",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models are increasingly deployed as agents that plan over long horizons and act through external tools. Most agents select actions through unconstrained generation over an accumulating history, leaving implicit the procedural knowledge of what to do, in what order, and under which conditions. As trajectories lengthen, agents can lose track of their objectives, invoke tools out of order, and repeat unproductive actions. We introduce the Procedural Graph: just as a knowledge graph organizes factual knowledge into (entity, relation, entity) triplets for what-is questions, a Procedural Graph organizes procedural knowledge into (procedure, relation, procedure) triplets for what-to-do questions. At each decision step, the framework localizes the agent's active node, and a guidance model translates the surrounding subgraph into step-level situational guidance that biases the solver's next action without dictating it. The graph is self-evolving: an LLM refiner contrasts failed trajectories with successful ones and edits the graph's topology and attributes, committing edits that preserve or improve held-out validation performance while retaining rejected ones to discourage repetition. Starting from a minimal skeleton, the loop builds graphs that match or surpass hand-designed ones. It can also repair a flawed expert prior. Across multiple datasets, task types, and LLMs, the Procedural Graph delivers consistent gains over memory-based baselines, and self-evolution further improves performance without manual engineering.",
+  "abstract_zh": "针对长时程工具调用中目标遗忘、工具顺序错误和无效重复等问题，论文提出 Procedural Graph，将程序性知识组织为“procedure-relation-procedure”三元组。每一步决策时，系统定位 Agent 当前节点，并由 guidance model 将局部子图转换为情境化的步骤指导，在不强制规定动作的前提下影响 solver 的下一步选择。该图结构可自演化：LLM refiner 对比失败与成功轨迹，修改图的拓扑和属性，并仅提交能保持或提升留出验证集性能的编辑，同时保留被拒绝的编辑以抑制重复失败。实验表明，从最小骨架出发构建的 Procedural Graph 可达到或超过人工设计图，也能修复有缺陷的专家先验；在多数据集、任务类型和 LLM 上均优于基于记忆的基线，且自演化机制带来额外性能提升。",
+  "key_points_zh": [
+    "将程序性知识显式表示为 Procedural Graph，建模“做什么、按何顺序做、何时做”。",
+    "通过当前节点定位和局部子图指导，为 Agent 提供步骤级情境提示，而非直接规定下一动作。",
+    "利用 LLM refiner 对比成功与失败轨迹，迭代修改图结构和属性，并以验证集性能筛选编辑。",
+    "保留被拒绝的编辑以抑制重复失败，使图结构能够持续自我改进。",
+    "在多数据集、任务类型和 LLM 上稳定优于 memory-based baselines，并可修复 flawed expert prior。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.9,
+    "problem_significance": 0.9,
+    "potential_impact": 0.89,
+    "paradigm_shift": 0.87,
+    "lasting_value": 0.91,
+    "llm_avg": 0.8939999999999999,
+    "comment": "Procedural Graphs introduce a durable self-evolving execution structure with validation-gated updates for long-horizon agents.",
+    "comment_zh": "Procedural Graphs为长程智能体引入了具有验证门控更新机制的持久自演化执行结构。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.8364936031616323,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8939999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 22,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.09153/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.09153/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.972
+    }
+  ]
+}

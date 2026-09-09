@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.08318",
+  "title": "AttnCompress: Dynamic Attention-Guided Trajectory Compression for Software Engineering Agents",
+  "title_zh": "AttnCompress：面向软件工程智能体的动态注意力引导轨迹压缩",
+  "authors": [
+    "Zhengran Zeng",
+    "Yixin Li",
+    "Rui Xie",
+    "Wei Ye",
+    "Shikun Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-08T06:42:24Z",
+  "abs_url": "https://arxiv.org/abs/2609.08318v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.08318",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The transition from human-centric assistance to Autonomous Software Engineering (ASE) agents has enabled the resolution of complex real-world SE tasks. However, the trial-and-error nature of these agents generates lengthy interaction trajectories, creating severe bottlenecks in terms of context window limits and cost. While context compression offers a potential remedy, prior approaches suffer from static pruning strategies and granularity mismatches, often failing to preserve the semantic dependencies and syntactic details crucial for SE tasks. To strictly preserve critical task evidence while reducing context length, we introduce AttnCompress, a dynamic attention-guided trajectory compression framework. Unlike existing approaches, AttnCompress bridges the gap between semantic integrity and dynamic adaptability through three key mechanisms: (1) structure-aware segmentation via perplexity (PPL) spikes to preserve the syntactic structure of code and logs; (2) relevance estimation using proxy attention weights to quantify the precise relevance of historical blocks to the agent's current reasoning; and (3) a dynamic rolling window to re-evaluate and recall historical context as the task evolves. Extensive evaluation on SWE-Bench-Verified and Multi-SWE-Bench demonstrates that AttnCompress achieves a pass rate of 53.17%, outperforming prior state-of-the-art baselines while reducing token consumption by 21.6% and total costs by 33.6%. The framework proves to be model-agnostic and generalizes effectively across diverse programming languages.",
+  "abstract_zh": "自主软件工程（Autonomous Software Engineering, ASE）智能体通过反复试错解决复杂任务，但会产生冗长交互轨迹，导致上下文窗口受限与成本高昂。现有压缩方法通常采用静态裁剪，且粒度不匹配，容易丢失软件工程任务所需的语义依赖与代码、日志中的语法细节。论文提出 AttnCompress，一种动态注意力引导的轨迹压缩框架：利用困惑度（Perplexity, PPL）突增进行结构感知分段，以保留代码和日志结构；通过代理注意力权重估计历史区块与当前推理的相关性；借助动态滚动窗口随任务进展重新评估并召回历史上下文。在 SWE-Bench-Verified 和 Multi-SWE-Bench 上，AttnCompress 的通过率达到 53.17%，优于此前最佳基线，同时减少 21.6% 的 token 消耗和 33.6% 的总成本。该方法与模型无关，并能有效泛化至多种编程语言。",
+  "key_points_zh": [
+    "针对软件工程智能体试错轨迹过长导致的上下文限制和高成本问题，提出 AttnCompress 动态压缩框架。",
+    "通过 PPL 突增进行结构感知分段，尽量保留代码与日志的语法结构及关键任务证据。",
+    "利用代理注意力权重评估历史区块相关性，并通过动态滚动窗口实现上下文的持续重评估与召回。",
+    "在 SWE-Bench-Verified 和 Multi-SWE-Bench 上达到 53.17% 通过率，token 消耗降低 21.6%，总成本降低 33.6%。",
+    "方法具备模型无关性，并可泛化到不同编程语言。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.79,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.83,
+    "llm_avg": 0.8119999999999999,
+    "comment": "AttnCompress addresses a core coding-agent context bottleneck through dynamic, structure-aware trajectory compression and recall.",
+    "comment_zh": "AttnCompress通过动态、结构感知的轨迹压缩与召回解决了编程智能体的核心上下文瓶颈。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.34373441375821495,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8119999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08318/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.926
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08318/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.08258",
+  "title": "Revoked but Still Authoritative: An Empirical Study of Revocation Enforcement in Agent-Memory Systems",
+  "title_zh": "已撤销却仍具权威：Agent-Memory Systems 中撤销执行的实证研究",
+  "authors": [
+    "Yi Ting Shen",
+    "Kentaroh Toyoda",
+    "Alex Leung"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-08T05:03:09Z",
+  "abs_url": "https://arxiv.org/abs/2609.08258v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.08258",
+  "links": {
+    "github": "https://github.com/VulcanLab/Memory-Rebirth-Attack",
+    "project_page": null
+  },
+  "abstract_en": "Long-running language-model agents depend on persistent memory. Many agent-memory systems preserve history through soft revocation: a contradicted fact is marked invalid and retained rather than deleted. However, whether that mark is enforced at retrieval time is unexamined. In this paper, we measure five such systems: we load each with a revoked policy and its replacement, track whether the revoked fact is returned at retrieval and whether the agent then acts on it across nine policy scenarios and nine models, and score every trial under six defense conditions. We find that no system enforces revocation by default: the revoked fact is returned wherever the revocation label is visible to the retrieval layer, outranks its replacement, and leads agents to the unsafe action. Based on these findings, we develop a guard that sits between the agent and any memory backend and withholds records that are revoked or conflict with their replacement.",
+  "abstract_zh": "长期运行的 language-model agents 依赖持久化记忆。许多 agent-memory systems 采用软撤销：将被否定的事实标记为无效但不删除。然而，这类撤销标记是否会在检索时真正生效，尚未得到系统研究。本文评估了五个系统：为每个系统加载一条已撤销策略及其替代策略，并在九类策略场景、九个模型和六种防御条件下，测量检索是否返回已撤销事实，以及 agent 是否据此采取行动。结果显示，所有系统默认都无法执行撤销：只要撤销标签对检索层可见且已撤销事实的排序高于替代事实，系统就会返回该事实，并导致 agent 执行不安全操作。基于此，作者提出一个位于 agent 与任意 memory backend 之间的 guard，用于拦截已撤销或与替代事实冲突的记录。",
+  "key_points_zh": [
+    "评估五个 agent-memory systems、九类策略场景和九个模型，系统研究撤销在检索与行动阶段的实际效果。",
+    "所有受测系统默认都不能可靠执行 revocation；被标记为无效的旧事实仍可能被检索。",
+    "当已撤销事实在排序上超过替代事实时，agent 会依据旧事实采取不安全行动。",
+    "撤销标签暴露给 retrieval layer 并不能保证安全，软撤销机制本身不足以阻断过时记忆。",
+    "作者提出跨 memory backend 的 guard，在 agent 与记忆后端之间拦截已撤销或与替代记录冲突的内容。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.82,
+    "novelty": 0.76,
+    "problem_significance": 0.91,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.84,
+    "llm_avg": 0.782,
+    "comment": "This is a valuable empirical study of revocation and contradiction handling in persistent memory, although its guard mechanism has a defense-oriented framing.",
+    "comment_zh": "这是一项有价值的持久记忆撤销与冲突处理实证研究，但其防护模块带有较明显的安全防御导向。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.782,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/VulcanLab/Memory-Rebirth-Attack",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08258/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08258/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.982
+    }
+  ]
+}

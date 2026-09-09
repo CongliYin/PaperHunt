@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2609.08672",
+  "title": "X2Streaming-ASR: wait when uncertain, emit when ready for streaming ASR",
+  "title_zh": "X2Streaming-ASR：不确定时等待，准备好时输出——面向流式 ASR 的自适应提交策略",
+  "authors": [
+    "Zhiwei Lin",
+    "Kaiqi Fu",
+    "Rime Wen",
+    "Zehan Liu",
+    "Shawn Qin",
+    "Roy Gan",
+    "Hao Wang",
+    "Qian Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-08T12:39:06Z",
+  "abs_url": "https://arxiv.org/abs/2609.08672v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.08672",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Streaming automatic speech recognition (ASR) for real-time voice agents and full-duplex dialogue must provide accurate partial transcripts with low commit latency. Existing systems commonly use a fixed chunk size, look-ahead, or target delay, or encourage emissions near estimated acoustic boundaries. These approaches do not directly optimize how much additional context to use at each output position under a single-pass, hard-commit constraint. We propose X2Streaming-ASR, which decomposes streaming recognition into when to commit and what to commit. Its three-stage training procedure first establishes streaming recognition ability, then warm-starts the commit policy with automatically probed trajectories, and finally refines the policy using character-level, segment-assigned group-relative rewards for recognition accuracy and latency. Across AISHELL-1/2/3 and WenetSpeech, X2Streaming-ASR achieves a mean character-level commit latency of 27-84 ms relative to forced-aligned character endpoints, compared with 409-585 ms for the evaluated streaming baselines. It achieves the best streaming CER among the evaluated systems on AISHELL-1 and AISHELL-3 with substantially lower latency.",
+  "abstract_zh": "针对实时语音智能体和全双工对话中流式 ASR 需要兼顾准确率与提交延迟的问题，X2Streaming-ASR 将流式识别拆分为“何时提交”和“提交什么”两个决策。该方法采用三阶段训练：首先建立流式识别能力；随后利用自动探测的提交轨迹初始化提交策略；最后通过基于字符、按片段分配的组相对奖励，同时优化识别准确率与延迟。在 AISHELL-1/2/3 和 WenetSpeech 上，X2Streaming-ASR 相对于强制对齐字符端点的平均字符级提交延迟为 27–84 ms，显著低于流式基线的 409–585 ms；同时在 AISHELL-1 和 AISHELL-3 上取得最佳流式 CER。",
+  "key_points_zh": [
+    "将流式 ASR 分解为“何时提交”与“提交什么”，直接学习单次前向、硬提交约束下的上下文使用量。",
+    "提出三阶段训练流程：流式能力预训练、基于自动探测轨迹的提交策略热启动，以及结合字符级准确率和延迟奖励的策略优化。",
+    "采用按字符、按片段分配的组相对奖励，使提交策略能够在识别准确率与提交延迟之间进行细粒度权衡。",
+    "在 AISHELL-1/2/3 和 WenetSpeech 上实现 27–84 ms 的平均字符级提交延迟，相比基线的 409–585 ms 大幅降低。",
+    "在 AISHELL-1 和 AISHELL-3 上取得评测系统中的最佳流式 CER，体现出低延迟与高准确率的兼顾能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.82,
+    "novelty": 0.78,
+    "problem_significance": 0.87,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.8,
+    "llm_avg": 0.79,
+    "comment": "The learned hard-commit policy directly addresses partial-transcript latency and stability, a critical bottleneck for responsive full-duplex voice agents.",
+    "comment_zh": "该工作通过学习式硬提交策略直接改善部分转写的延迟与稳定性，解决了全双工语音智能体的关键瓶颈。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.79,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08672/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08672/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.953
+    }
+  ]
+}

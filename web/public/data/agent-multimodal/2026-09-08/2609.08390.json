@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.08390",
+  "title": "Noise Adaptive Streaming Audio-Visual Speech Token Enhancement for Robust Full-Duplex Spoken Dialogue Models",
+  "title_zh": "面向鲁棒全双工语音对话模型的噪声自适应流式视听语音Token增强",
+  "authors": [
+    "Bella Godiva",
+    "Yeonju Kim",
+    "Yong Man Ro"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-08T07:59:13Z",
+  "abs_url": "https://arxiv.org/abs/2609.08390v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.08390",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Full-duplex spoken dialogue systems enable simultaneous listening and speaking, but their audio-only perception often fails under background noise and overlapping speech, leading to incoherent responses. Recent audio-visual dialogue approaches show that incorporating visual cues such as lip movements improve robustness under audio corruption. However, existing approaches often adapt the large speech dialogue model itself to process visual input, requiring costly multimodal training. We propose AV-STE, a modular streaming audio-visual front-end that restores corrupted semantic speech tokens from noisy audio and lip video before they reach the speech LLM. The downstream dialogue model remains entirely frozen, preserving its pretrained conversational capabilities. When integrated with frozen Moshi, AV-STE improves average GPT-4o-judged response coherence from 1.42 to 1.91 under same-dataset speaker interference while largely preserving turn-taking behavior. Gains also transfer to out-of-domain Seamless Interaction.",
+  "abstract_zh": "全双工语音对话系统支持同时聆听与说话，但仅依赖音频的感知模块在背景噪声和多人重叠说话场景下容易失效，导致响应不连贯。近期的视听对话方法表明，融合唇部运动等视觉线索能够提升音频受损时的鲁棒性。然而，现有方法通常需要改造大型语音对话模型以处理视觉输入，因而成本高昂。本文提出AV-STE，一种模块化的流式视听前端，在语音Token输入语音大语言模型之前，利用噪声音频与唇部视频恢复受损的语义语音Token。下游对话模型保持完全冻结，从而保留其预训练对话能力。与冻结的Moshi集成后，在同数据集说话人干扰场景下，AV-STE将GPT-4o评估的平均响应连贯性从1.42提升至1.91，同时基本保持原有的轮次交互行为。该方法的收益还可迁移至域外的Seamless Interaction场景。",
+  "key_points_zh": [
+    "提出AV-STE模块化流式视听前端，在不修改下游语音对话模型的情况下恢复受噪声污染的语义语音Token。",
+    "通过融合唇部运动与音频信息，增强模型在背景噪声和说话人重叠场景下的语音感知与响应连贯性。",
+    "下游模型保持完全冻结，避免对大型多模态语音模型进行高成本训练，同时保留其原有对话能力与轮次交互行为。",
+    "集成冻结的Moshi后，在同数据集说话人干扰条件下，GPT-4o评估的平均响应连贯性由1.42提升至1.91。",
+    "性能提升能够迁移到域外的Seamless Interaction，表明方法具有一定的跨域鲁棒性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.82,
+    "problem_significance": 0.88,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.84,
+    "llm_avg": 0.826,
+    "comment": "This modular streaming audio-visual front end improves noisy full-duplex dialogue while preserving a frozen speech model and its turn-taking behavior.",
+    "comment_zh": "该模块化流式音视频前端在保持语音模型冻结及其轮次行为的同时，提升了噪声环境下的全双工对话能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.826,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08390/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.792
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08390/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.386
+    }
+  ]
+}

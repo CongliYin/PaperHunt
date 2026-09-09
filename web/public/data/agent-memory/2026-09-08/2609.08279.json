@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2609.08279",
+  "title": "What Eviction Destroys: A Restore-Counterfactual Audit of Forgetting in Agent Memory",
+  "title_zh": "驱逐会摧毁什么：对智能体记忆遗忘的恢复反事实审计",
+  "authors": [
+    "Chen Shen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-08T05:48:10Z",
+  "abs_url": "https://arxiv.org/abs/2609.08279v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.08279",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent memory systems must discard stored information when their history exceeds a fixed token budget. Existing budget-accuracy frontiers quantify the resulting loss in accuracy, but do not distinguish irreversible losses caused by eviction from recoverable retrieval failures. We introduce the restore counterfactual, a per-question paired intervention that reinstates the question's gold evidence in the read-time context and reruns the same reader. Combining the change in correctness with whether the evidence was retained after eviction classifies each oracle-answerable error as recoverable, irreversible, or residual; in the residual case, the answer remains incorrect after restoration. We evaluate FIFO, random, redundancy-aware, and LLM-importance eviction on LongMemEval-S at three budgets and under two retrieval regimes, using GPT-4o-mini as the primary reader and judge and GPT-5.4-mini as a robustness reader. Under top-k retrieval at an 80k-token budget, the irreversible share among errors corrected by restoration is 0.67-0.73 for FIFO, random, and redundancy-aware eviction, compared with 0.60 for LLM-importance. At 8k tokens, it reaches 1.00 for all four policies. Recoverable errors occur under top-k retrieval at 80k tokens but are absent under forced-gold injection by construction, so budget-accuracy results are not directly comparable unless the retrieval regime is reported. An exploratory matched-accuracy analysis detects no difference in irreversible rate among accuracy-matched policy pairs at a resolution of 1.2-6 percentage points. The same analysis detects the deliberately destructive control. To our knowledge, this is the first per-item, per-question restore-counterfactual audit of eviction for external agent-memory stores on a standard conversational benchmark.",
+  "abstract_zh": "智能体记忆系统在历史超过固定 token 预算时必须丢弃信息。既有预算—准确率曲线只能衡量总体性能损失，无法区分由驱逐造成的不可逆损失与可通过检索修复的失败。本文提出“恢复反事实”（restore counterfactual）：针对每个问题，将其金标准证据重新注入读取时上下文，并使用同一 reader 重新作答。结合答案正确性变化与证据是否在驱逐后保留，将可由 oracle 作答的问题错误划分为可恢复、不可逆和残余错误。作者在 LongMemEval-S 上评估 FIFO、random、redundancy-aware 和 LLM-importance 四种驱逐策略，覆盖三种预算与两种检索机制，并以 GPT-4o-mini 作为主要 reader/judge、GPT-5.4-mini 进行稳健性验证。在 top-k retrieval、80k token 预算下，被恢复修正的错误中，不可逆错误占比为：FIFO、random、redundancy-aware 的 0.67–0.73，LLM-importance 为 0.60；在 8k 预算下，四种策略均达到 1.00。可恢复错误只出现在 top-k retrieval 的 80k 设置中，在 forced-gold injection 下按构造不存在，因此不报告检索机制时，预算—准确率结果不可直接比较。探索性的准确率匹配分析未发现策略对之间不可逆率存在差异，同时能够检测出人为设计的破坏性控制。该工作据称首次在标准对话基准上，对外部智能体记忆存储中的驱逐进行逐样本、逐问题的恢复反事实审计。",
+  "key_points_zh": [
+    "提出 restore counterfactual：恢复问题的 gold evidence 后，用同一 reader 重跑，以隔离驱逐造成的真实损失。",
+    "将 oracle-answerable 错误划分为 recoverable、irreversible 和 residual，区分检索失败、不可逆遗忘与模型自身错误。",
+    "在 LongMemEval-S 上，80k token 的 top-k retrieval 中，恢复修正错误的不可逆占比为 0.60–0.73；8k 预算下四种策略均为 1.00。",
+    "FIFO、random、redundancy-aware 与 LLM-importance 的不可逆率在准确率匹配比较中未显示明显差异，但该方法能识别故意破坏的控制条件。",
+    "预算—准确率结果高度依赖检索机制；forced-gold injection 不产生 recoverable errors，因而不能与普通 top-k retrieval 直接比较。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.88,
+    "problem_significance": 0.9,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.79,
+    "lasting_value": 0.92,
+    "llm_avg": 0.8700000000000001,
+    "comment": "The restore-counterfactual protocol offers a rigorous and broadly reusable way to separate irreversible forgetting from retrieval failures in Agent memory.",
+    "comment_zh": "恢复反事实评估协议为区分 Agent Memory 中不可逆遗忘与可恢复检索失败提供了严谨且通用的方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.7351220597983265,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.8700000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 17,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 17,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08279/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.08279/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.982
+    }
+  ]
+}
