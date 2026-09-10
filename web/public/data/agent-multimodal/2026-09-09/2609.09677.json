@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2609.09677",
+  "title": "X2-NativeCursor: Native-Token Text Progress Tracking for Incremental-Text Streaming Codec TTS",
+  "title_zh": "X2-NativeCursor：面向增量文本流式 Codec TTS 的原生 Token 文本进度追踪",
+  "authors": [
+    "Zehan Liu",
+    "Carl Chen",
+    "Rime Wen",
+    "Kaiqi Fu",
+    "Altman Lin",
+    "Shawn Qin",
+    "Lights Shi",
+    "Roy Gan",
+    "Hao Wang",
+    "Qian Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-09T03:46:14Z",
+  "abs_url": "https://arxiv.org/abs/2609.09677v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.09677",
+  "links": {
+    "github": "https://github.com/X-Square-Robot/X2Streaming-TTS.",
+    "project_page": null
+  },
+  "abstract_en": "Incremental-text streaming text-to-speech (TTS) needs online text progress tracking for synchronized highlighting, interruption handling, and dialogue-history updates. Input text arrives before it is spoken, so text arrival alone cannot indicate speech progress. Existing waveform-based alignment requires complete audio or adds acoustic processing during streaming. We propose X2-NativeCursor, a lightweight observer that tracks progress from native speech tokens before waveform decoding without changing the TTS generator. Its normalization plan links spoken labels to their original-text spans. Text and native-token encoders feed a local matcher that estimates the current label position. A separate output rule converts revisable position estimates into a cursor that never moves backward. Mean absolute error against an automatic reference is 0.151 Chinese characters with 80-ms lookahead, versus 1.253 characters with 320-ms lookahead for an online waveform baseline. Alignment real-time factor also decreases from 0.3598 to 0.0180 relative to this baseline. Lower tracking error is retained under a second automatic alignment reference. We evaluate X2-NativeCursor on Qwen3-TTS and validate its adaptation to CosyVoice2 by training a separate observer for each backbone. Code is publicly available at https://github.com/X-Square-Robot/X2Streaming-TTS.",
+  "abstract_zh": "增量文本流式文本转语音（TTS）需要在线追踪文本朗读进度，以支持同步高亮、打断处理和对话历史更新。由于输入文本通常早于语音播放，仅依据文本到达状态无法判断实际语音进度；现有基于波形的对齐方法则依赖完整音频，或在流式过程中引入额外声学处理。本文提出 X2-NativeCursor，一种轻量级观察器，可在波形解码前直接利用原生语音 Token 追踪朗读进度，且无需修改 TTS 生成器。该方法通过规范化方案将口语化标签映射回原始文本区间，并使用文本编码器、原生 Token 编码器及局部匹配器估计当前标签位置；随后通过独立输出规则，将可修正的位置估计转换为单调不回退的文本游标。在 80 ms 前瞻条件下，其相对自动参考对齐的平均绝对误差为 0.151 个中文字符；在线波形基线在 320 ms 前瞻下的误差为 1.253 个字符。相较该基线，对齐实时因子（RTF）也由 0.3598 降至 0.0180。使用另一种自动对齐参考时，模型仍保持较低追踪误差。实验基于 Qwen3-TTS，并通过为不同骨干分别训练观察器，验证了其对 CosyVoice2 的适配能力。",
+  "key_points_zh": [
+    "在波形解码前直接利用原生语音 Token 进行在线进度追踪，无需修改现有 TTS 生成器。",
+    "通过文本规范化映射，将实际朗读标签关联至原始文本区间，从而支持字符级游标定位。",
+    "采用文本与原生 Token 双编码器及局部匹配器估计位置，并以单调输出规则确保游标不后退。",
+    "在 80 ms 前瞻下实现 0.151 个中文字符的平均绝对误差，优于波形基线在 320 ms 前瞻下的 1.253 个字符。",
+    "对齐 RTF 从波形基线的 0.3598 降至 0.0180，并在 Qwen3-TTS 与 CosyVoice2 上验证可适配性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.82,
+    "novelty": 0.78,
+    "problem_significance": 0.81,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.78,
+    "llm_avg": 0.7620000000000001,
+    "comment": "Native-token speech-progress tracking directly supports responsive highlighting, interruption handling, and state synchronization in low-latency voice agents.",
+    "comment_zh": "基于原生语音令牌的进度跟踪可直接支持低延迟语音智能体的高亮、打断处理与状态同步。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7620000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/X-Square-Robot/X2Streaming-TTS.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.09677/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.09677/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

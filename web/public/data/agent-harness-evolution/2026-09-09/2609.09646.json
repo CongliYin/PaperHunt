@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2609.09646",
+  "title": "RobustSGPO: Search-Space Control for Agent Harness Evolution",
+  "title_zh": "RobustSGPO：面向智能体框架演化的搜索空间控制",
+  "authors": [
+    "Zibo Zhao",
+    "Jijun Shi",
+    "Mo Zhou",
+    "Zhongyuan Wang",
+    "Shifu Bie",
+    "Yunfei Zhang",
+    "Xuanting Zhou",
+    "Xiangyu Wu",
+    "Bin Liu",
+    "Ruiming Tang",
+    "Wenwu Ou",
+    "Kun Gai"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-09T03:00:03Z",
+  "abs_url": "https://arxiv.org/abs/2609.09646v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.09646",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Semantic-gradient-based prompt optimization (SGPO) improves agent harnesses using execution feedback, but its local update rule leaves the choice of edit scope and operation unresolved. We introduce RobustSGPO, which specifies the requested edit, constructs and checks the patch, and continues search from either the incumbent or retained snapshots. We evaluate permission scheduling, cumulative controls, and task-family transfer in the AgentX brainstorming workflow using 120 tasks, 95 runs, and 7,350 candidate attempts. Periodic $1\\to2\\to3$ scheduling exceeds fixed maximum permission by 0.28 test-score points. RobustSGPO increases completion on 30 held-out tasks from 60.0% to 80.0% and improves test quality from 3.77 to 4.14 under a 20-million-token budget. Category retention reduces source-task degradation after a shift, whereas random retention reaches a higher destination endpoint. Search-space control benefits quality through executable edits and alternative starting points, with measurable retention overhead.",
+  "abstract_zh": "基于语义梯度的提示优化（Semantic-Gradient-Based Prompt Optimization，SGPO）利用执行反馈改进智能体框架（agent harness），但其局部更新规则并未明确编辑范围与操作方式。本文提出 RobustSGPO：显式指定所需编辑，构建并检查补丁，并选择从当前最优方案或保留的历史快照继续搜索。作者在 AgentX brainstorming 工作流上，基于 120 个任务、95 次运行和 7,350 次候选尝试，评估了权限调度、累积控制与任务族迁移。实验表明，周期性的 1→2→3 权限调度相比固定最大权限，测试得分提高 0.28 分。在 2,000 万 token 预算下，RobustSGPO 将 30 个留出任务的完成率从 60.0% 提升至 80.0%，测试质量得分从 3.77 提升至 4.14。任务类别导向的快照保留可减少分布迁移后源任务的性能退化，而随机保留能在目标任务上达到更高的最终性能。总体而言，搜索空间控制通过确保编辑可执行并提供替代搜索起点提升质量，但快照保留会带来可测量的额外开销。",
+  "key_points_zh": [
+    "RobustSGPO 将 SGPO 中隐式的编辑决策显式化，统一控制编辑请求、补丁构建、可执行性检查与后续搜索起点。",
+    "周期性 1→2→3 权限调度优于始终开放最大编辑权限，测试得分提高 0.28 分。",
+    "在 2,000 万 token 预算下，30 个留出任务的完成率由 60.0% 提升至 80.0%，质量得分由 3.77 提升至 4.14。",
+    "任务类别导向的快照保留更有利于维持源任务能力，而随机快照保留在目标任务上取得更高的最终性能。",
+    "搜索空间控制的主要收益来自可执行编辑和多样化起点，但历史快照保留会引入额外计算与存储开销。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.84,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.82,
+    "llm_avg": 0.8280000000000001,
+    "comment": "This is strong harness-evolution work that couples executable patch control, permission scheduling, snapshot retention, and transfer-aware search.",
+    "comment_zh": "这项工作将可执行补丁控制、权限调度、快照保留和迁移感知搜索结合起来，属于较强的 Harness 演化研究。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2695092743915442,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8280000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.09646/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.918
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.09646/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

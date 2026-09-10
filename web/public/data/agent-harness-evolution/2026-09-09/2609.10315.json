@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.10315",
+  "title": "TRACE: Training Reasoning Agents for Causal Exploration with Synthesized Rewards",
+  "title_zh": "TRACE：利用合成奖励训练面向因果探索的推理智能体",
+  "authors": [
+    "Rui Sun",
+    "Zhan Shi",
+    "Bing He"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-09T15:21:47Z",
+  "abs_url": "https://arxiv.org/abs/2609.10315v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.10315",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement learning with verifiable rewards (RLVR) has advanced language-model reasoning in domains such as mathematics and code, where objective answers are inexpensive to check. Diagnostic reasoning over complex data lacks this advantage: establishing the true cause of an anomaly often requires costly expert investigation and may remain ambiguous after the fact. We ask whether this asymmetry of verification can instead be engineered. We sample an intervention, inject it into a controlled simulator, and generate the observations it would produce. The hidden intervention provides an oracle label and objective reward, while the agent must still investigate noisy, confounded, and distributed evidence. We instantiate this approach in TRACE, a digital-advertising diagnostic environment with 12 root causes and fine-grained segment attribution. Agents investigate each episode using Python and SQL and must identify both the root cause and, when applicable, the affected segment assignment. On a held-out 235-episode test set, the strongest prompted baseline, Claude Opus 5, reaches 0.686 FullAttr@1. Supervised fine-tuning raises Qwen3.5-35B-A3B from 0.159 to 0.637, and subsequent RL with synthesized rewards reaches 0.757, outperforming all evaluated prompted baselines, including frontier closed-source models and a prompted Qwen3.5-122B-A10B model. The resulting policy also uses substantially fewer tool calls than the prompted 35B base. These results provide evidence that access to a scalable, objective training signal can be a more important constraint than model scale alone. More broadly, simulation-based verification can make otherwise ambiguous diagnostic reasoning tasks amenable to scalable reinforcement learning.",
+  "abstract_zh": "可验证奖励强化学习（RLVR）已显著提升语言模型在数学和代码等答案易于客观验证的领域中的推理能力。然而，在复杂数据上的诊断推理中，异常的真实原因通常需要专家进行高成本调查，事后也可能仍存在歧义。本文提出通过受控模拟器主动构造可验证性：采样一个干预，将其注入模拟器并生成相应观测；隐藏干预作为预言机标签与客观奖励，而智能体仍需从含噪声、混杂因素且分散的证据中展开调查。作者据此构建数字广告诊断环境 TRACE，涵盖 12 类根因及细粒度受影响分群归因。智能体使用 Python 和 SQL 调查每个案例，并识别根因及适用情况下的受影响分群。在包含 235 个留出案例的测试集上，最强提示基线 Claude Opus 5 的 FullAttr@1 为 0.686；监督微调将 Qwen3.5-35B-A3B 从 0.159 提升至 0.637，进一步采用合成奖励进行强化学习后达到 0.757，超过所有参评提示基线，包括前沿闭源模型和提示驱动的 Qwen3.5-122B-A10B。训练所得策略还比提示驱动的 35B 基础模型使用显著更少的工具调用。结果表明，可扩展且客观的训练信号可能比单纯扩大模型规模更为关键；基于模拟的验证也能使原本模糊的诊断推理任务适用于可扩展强化学习。",
+  "key_points_zh": [
+    "核心方法是先采样并注入隐藏干预，再由受控模拟器生成观测，从而获得可客观验证的根因标签与 RL 奖励。",
+    "TRACE 面向数字广告诊断，包含 12 类根因和细粒度分群归因，要求智能体通过 Python 与 SQL 调查含噪、混杂且分散的证据。",
+    "Qwen3.5-35B-A3B 的 FullAttr@1 经监督微调由 0.159 提升至 0.637，再经合成奖励强化学习提升至 0.757。",
+    "强化学习后的 35B 模型超过 Claude Opus 5（0.686）等前沿提示基线，以及规模更大的 Qwen3.5-122B-A10B 提示模型。",
+    "训练后策略减少了工具调用，说明高质量、可扩展的客观训练信号可能比模型规模本身更关键。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.8,
+    "novelty": 0.84,
+    "problem_significance": 0.82,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.8,
+    "llm_avg": 0.8160000000000001,
+    "comment": "TRACE presents a reusable agent-RL pattern in which simulator-generated interventions provide objective rewards for tool-using diagnostic trajectories.",
+    "comment_zh": "TRACE 提出了一种可复用的 Agent RL 范式，通过模拟器生成干预并为工具使用诊断轨迹提供客观奖励。"
+  },
+  "scores": {
+    "topic_relevance": 0.16000000000000003,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8160000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.10315/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.10315/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.962
+    }
+  ]
+}

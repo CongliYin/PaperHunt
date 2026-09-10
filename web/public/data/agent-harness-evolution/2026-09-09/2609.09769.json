@@ -1,0 +1,72 @@
+{
+  "arxiv_id": "2609.09769",
+  "title": "XAgent: eXecution-guided Agentic AI for Effective Localization and Resolution of GitHub Issues",
+  "title_zh": "XAgent：基于执行引导的智能体 AI，实现 GitHub Issue 的有效定位与修复",
+  "authors": [
+    "Hieu Huynh",
+    "Patanamon Thongtanunam",
+    "Michael Fu",
+    "Bach Le",
+    "Kla Tantithamthavorn"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-09T06:16:36Z",
+  "abs_url": "https://arxiv.org/abs/2609.09769v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.09769",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic AI has enabled capabilities in leveraging Large Language Models (LLMs) to autonomously resolve repository-level GitHub issues. However, due to the reliance on limited static description of issues, existing agentic approaches suffer from incorrect localization and incomplete validation. Solely relying on this information can bias LLM reasoning toward the narrow scope of the issue description, leading to incomplete patches that fail to address the underlying issue. In this paper, we present XAgent, an execution-guided agentic framework that analyzes dynamic behavior and additional program context to localize and validate issues. The experimental results on the SWE-bench-lite dataset demonstrate that XAgent outperforms other existing approaches, achieving a resolve rate of 62.0% and a function localization accuracy of 72.8%, while maintaining cost efficiency. Our analysis further shows that XAgent successfully resolves 7 additional issues that the top existing baselines fail to address. This work highlights a shift from static, description-oriented patch generation toward dynamic execution-guided issue resolution, opening new opportunities for LLM-based coding agents to achieve more robust and generalizable software maintenance.",
+  "abstract_zh": "智能体 AI（Agentic AI）已能够利用 Large Language Models（LLMs）自主解决代码仓库级 GitHub Issue。然而，现有智能体方法依赖有限且静态的 Issue 描述，容易出现定位错误与验证不完整等问题。仅依靠这些信息会使 LLM 的推理局限于 Issue 描述的狭窄范围，进而生成无法解决根本问题的不完整补丁。本文提出 XAgent，一种执行引导的智能体框架，通过分析程序的动态行为和额外上下文来定位并验证问题。在 SWE-bench-lite 数据集上的实验表明，XAgent 的 Issue 修复率达到 62.0%，函数定位准确率达到 72.8%，优于现有方法，同时保持了较高的成本效率。进一步分析显示，XAgent 还成功修复了当前最佳基线均未能解决的 7 个 Issue。该研究推动代码修复从面向静态描述的补丁生成转向动态执行引导的问题解决，为构建更鲁棒、泛化能力更强的 LLM 编程智能体提供了新方向。",
+  "key_points_zh": [
+    "针对现有方法过度依赖静态 Issue 描述、易产生错误定位和不完整补丁的问题，XAgent 引入动态执行信息辅助推理。",
+    "XAgent 结合程序动态行为与额外代码上下文，对问题进行定位、补丁生成和有效性验证。",
+    "在 SWE-bench-lite 上取得 62.0% 的修复率和 72.8% 的函数定位准确率，并保持成本效率。",
+    "XAgent 成功解决了最佳现有基线均未修复的 7 个额外 Issue，体现出更强的鲁棒性与问题覆盖能力。",
+    "研究表明，LLM 编程智能体应从静态描述驱动转向执行引导的软件维护范式。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.78,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8400000000000001,
+    "comment": "XAgent is a highly relevant coding-agent framework that uses execution-guided localization and validation to close the loop from issue understanding to reliable patching.",
+    "comment_zh": "XAgent 是高度相关的编码代理框架，通过执行引导的定位与验证闭合从问题理解到可靠修复的反馈环。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3210331475111057,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8400000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.09769/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.948
+    }
+  ]
+}

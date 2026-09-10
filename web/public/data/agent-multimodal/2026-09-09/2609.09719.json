@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2609.09719",
+  "title": "StreamAlign: Streaming Text-Aligned Speech Tokenization",
+  "title_zh": "StreamAlign：流式文本对齐语音分词",
+  "authors": [
+    "Kang-wook Kim",
+    "Jinyoung Park",
+    "Jinsoo Kim",
+    "Sehun Lee",
+    "Sang Hoon Woo",
+    "Gunhee Kim"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-09T05:03:12Z",
+  "abs_url": "https://arxiv.org/abs/2609.09719v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.09719",
+  "links": {
+    "github": null,
+    "project_page": "https://ishlove77.github.io/StreamAlign/"
+  },
+  "abstract_en": "Text-aligned speech tokenization methods have emerged to better align speech tokens with LLM token spaces, enabling more effective utilization of pretrained LLMs. However, they rely on offline automatic speech recognition (ASR), leading to two key limitations: (i) the need for complete utterances before tokenization, precluding real-time streaming, and (ii) vocabulary mismatch between ASR and LLMs, which reduces acoustic granularity from the subword to the word level. We introduce StreamAlign, a text-aligned speech tokenization framework that enables streaming tokenization for real-time speech-text joint modeling. StreamAlign performs online speech-text alignment by combining character-level RNN-Transducer alignment with word-level ASR guidance, mitigating ASR-LLM vocabulary mismatch while preserving recognition accuracy. A proactive word boundary classifier anticipates word completion at chunk boundaries, reducing tokenization latency from 560 ms to 270 ms. On LibriSpeech, StreamAlign achieves the lowest WER and highest UTMOS among evaluated tokenizers. Furthermore, StreamAlign-SLM, a spoken language model trained on StreamAlign units, outperforms other end-to-end spoken language models in speech continuation while achieving the strongest overall consistency on SALMon and spoken StoryCloze.",
+  "abstract_zh": "文本对齐语音分词旨在将语音 token 与 LLM 的 token 空间对齐，从而更充分地利用预训练 LLM。然而，现有方法依赖离线自动语音识别（ASR），不仅需要等待完整话语才能分词，无法支持实时流式处理，还会因 ASR 与 LLM 的词表不匹配，将声学粒度从子词级降低到词级。本文提出 StreamAlign，一种面向实时语音—文本联合建模的流式文本对齐语音分词框架。该方法结合字符级 RNN-Transducer 对齐与词级 ASR 引导，实现在线语音—文本对齐，在保持识别准确率的同时缓解 ASR—LLM 词表不匹配问题。此外，主动式词边界分类器可在音频块边界预测单词是否即将结束，将分词延迟从 560 ms 降至 270 ms。在 LibriSpeech 上，StreamAlign 在参评分词器中取得最低词错误率（WER）和最高 UTMOS。基于其离散单元训练的 StreamAlign-SLM 在语音续写任务中优于其他端到端口语语言模型，并在 SALMon 与 spoken StoryCloze 上展现出最强的综合一致性。",
+  "key_points_zh": [
+    "提出 StreamAlign，实现无需等待完整话语的流式文本对齐语音分词，适用于实时语音—文本联合建模。",
+    "融合字符级 RNN-Transducer 对齐与词级 ASR 引导，缓解 ASR 和 LLM 词表不匹配，同时保留子词级声学粒度与识别准确率。",
+    "设计主动式词边界分类器，在音频块边界提前判断单词完成状态，将分词延迟由 560 ms 降至 270 ms。",
+    "在 LibriSpeech 上，StreamAlign 在对比分词器中获得最低 WER 和最高 UTMOS。",
+    "StreamAlign-SLM 在语音续写上超越其他端到端口语语言模型，并在 SALMon 和 spoken StoryCloze 上取得最佳综合一致性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.68,
+    "novelty": 0.76,
+    "problem_significance": 0.78,
+    "potential_impact": 0.77,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.74,
+    "llm_avg": 0.742,
+    "comment": "Streaming text-aligned speech tokenization addresses an important latency bottleneck for realtime spoken models, though agent interaction and tool use are not evaluated.",
+    "comment_zh": "流式文本对齐语音令牌化缓解了实时语音模型的重要延迟瓶颈，但尚未评测智能体交互或工具使用。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.3173245818999878,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.742,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://ishlove77.github.io/StreamAlign/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 7,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.09719/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.951
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.09719/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}
