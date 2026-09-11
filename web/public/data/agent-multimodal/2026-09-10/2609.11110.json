@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.11110",
+  "title": "Low-Latency State Space Voice Activity Detection with Robust Onset Time Evaluation",
+  "title_zh": "基于鲁棒起始时间评估的低延迟状态空间语音活动检测",
+  "authors": [
+    "Elad Cohen",
+    "Arnon Netzer",
+    "Hai Victor Habi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-10T05:37:55Z",
+  "abs_url": "https://arxiv.org/abs/2609.11110v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.11110",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Voice Activity Detection (VAD) systems are commonly evaluated using metrics such as the area under the receiver operating characteristic curve (AUROC), but these metrics do not account for temporal responsiveness. For low-latency applications, however, accurately measuring speech onset delay is essential. This is particularly challenging because onset latency evaluation is affected by noise and systematic misalignment in annotation timestamps. In this work, we introduce a probabilistic framework for evaluating VAD onset time under noisy temporal labels. We model annotated onset times as noisy observations of latent acoustic onsets and estimate the resulting discrepancy distribution from data. We show that this approach provides a more stable and robust estimate of algorithmic latency. In addition, we introduce S4VAD, the first state-space-model-based (SSM-based) VAD architecture. S4VAD supports efficient streaming inference while directly controlling the decay of past acoustic evidence, enabling fast and responsive speech-onset detection. We evaluate VAD onset latency across several low-latency architectures, including CNN, Transformer, and RNN models. Our proposed VAD achieves the lowest latency while maintaining a competitive AUROC.",
+  "abstract_zh": "语音活动检测（Voice Activity Detection, VAD）通常采用接收者操作特征曲线下面积（AUROC）等指标进行评估，但这类指标无法反映系统的时间响应能力。对于低延迟应用，准确测量语音起始检测延迟至关重要；然而，标注时间戳中的噪声与系统性偏移会显著干扰评估。本文提出一种面向噪声时间标签的概率评估框架：将标注的语音起始时间建模为潜在声学起始时刻的噪声观测，并从数据中估计两者的偏差分布，从而更稳定、鲁棒地估算算法本身的延迟。此外，本文提出 S4VAD，这是首个基于状态空间模型（State Space Model, SSM）的 VAD 架构。S4VAD 支持高效流式推理，并可直接控制历史声学证据的衰减，以实现快速、灵敏的语音起始检测。实验比较了 CNN、Transformer、RNN 等多种低延迟架构；S4VAD 在保持有竞争力 AUROC 的同时取得了最低的起始检测延迟。",
+  "key_points_zh": [
+    "指出 AUROC 无法衡量 VAD 的时间响应能力，低延迟场景需单独评估语音起始检测延迟。",
+    "提出概率评估框架，将标注起始时间视为潜在声学起始时刻的噪声观测，并从数据中估计偏差分布。",
+    "新评估方法可缓解标注噪声及系统性时间错位的影响，更稳定地估计算法延迟。",
+    "提出首个基于状态空间模型的 VAD 架构 S4VAD，支持高效流式推理并可控制历史声学证据的衰减。",
+    "与 CNN、Transformer 和 RNN 等低延迟架构相比，S4VAD 在维持竞争力 AUROC 的同时实现最低起始延迟。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.72,
+    "novelty": 0.78,
+    "problem_significance": 0.75,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.35,
+    "lasting_value": 0.72,
+    "llm_avg": 0.672,
+    "comment": "A strong low-latency VAD contribution addressing speech endpoint responsiveness and robust onset evaluation, though it lacks explicit agent or tool-calling experiments.",
+    "comment_zh": "该工作针对语音端点响应和稳健起始时间评估提出了有价值的低延迟VAD方案，但缺少明确的智能体或工具调用实验。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4290907069818766,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.672,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 7,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.11110/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.943
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.11110/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}

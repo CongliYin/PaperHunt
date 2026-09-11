@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.11042",
+  "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
+  "title_zh": "T1：面向长程任务的终端智能体强化学习",
+  "authors": [
+    "Junyao Yang",
+    "Yucheng Shi",
+    "Zhongzhi Li",
+    "Ruhan Wang",
+    "Zongxia Li",
+    "Haitao Mi",
+    "Leowei Liang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-10T03:42:01Z",
+  "abs_url": "https://arxiv.org/abs/2609.11042v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.11042",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent usage is shifting toward long-horizon tasks such as coding and scientific discovery, among which terminal tasks are especially important. We introduce T1, a Mixture-of-Experts model of 122B total trained with reinforcement learning, operating a real shell in a cloud sandbox for up to 300+ tool-call turns per task, rewarded by executing each task's own verifier. We provide a comprehensive recipe: First, an aggressively warm-started to stabilize actor-critic training, with a dense process reward scoring trajectories by the absolute number of passing verifiers. Second, stable optimization through TITO construction, training on the exact sampled token identifiers with drift repair at turn boundaries, and rollout routing replay, recording the sampler's per-token expert choices at every MoE layer and replaying them during training. Third, fully out-of-distribution training corpus: isolated seeds and synthesized tasks disjoint from Terminal-Bench 2.1 ensures gains reflect genuine capability transfer over benchmark overfitting. Together, TITO and R3 cut the training-to-inference log-probability difference from 0.021 to 0.013, with exactly aligned zero token drift in the loss region. On Terminal-Bench 2.1, our post-train pipeline raises initial base model from 43.8% to T1 with 64.0% resolved. On Long-Horizon Terminal Bench, T1 reaches 27.9% and surpasses GPT-5.4 and GLM-5.1.",
+  "abstract_zh": "智能体正逐步转向编程、科学发现等长程任务，其中终端任务尤为重要。本文提出 T1：一个总参数量为 122B、经强化学习训练的 Mixture-of-Experts（MoE）模型。T1 可在云端沙箱的真实 Shell 中运行，每项任务支持超过 300 轮工具调用，并通过执行任务自带的验证器获得奖励。论文给出了一套完整训练方案：首先，采用激进的热启动来稳定 actor-critic 训练，并设计稠密过程奖励，根据通过验证器的绝对数量对轨迹评分。其次，通过 TITO 构造实现稳定优化：使用采样时的精确 token ID 进行训练，并在轮次边界修复漂移；同时引入 rollout routing replay（R3），记录采样器在每个 MoE 层对每个 token 的专家路由选择，并在训练时重放。最后，训练语料完全位于评测分布之外：通过使用隔离的种子与合成任务，并确保其与 Terminal-Bench 2.1 不重叠，使性能提升能够反映真实的能力迁移，而非对基准的过拟合。TITO 与 R3 将训练和推理之间的对数概率差异从 0.021 降至 0.013，并在损失计算区域实现 token 漂移严格为零。该后训练流程使初始基础模型在 Terminal-Bench 2.1 上的任务解决率由 43.8% 提升至 64.0%；在 Long-Horizon Terminal Bench 上，T1 达到 27.9%，超过 GPT-5.4 和 GLM-5.1。",
+  "key_points_zh": [
+    "T1 是总参数量 122B 的 MoE 终端智能体，可在真实 Shell 云端沙箱中执行单任务 300 轮以上的工具调用。",
+    "采用激进热启动、actor-critic 训练与基于通过验证器数量的稠密过程奖励，改善长轨迹强化学习的稳定性。",
+    "TITO 使用采样阶段的精确 token ID 训练并修复轮次边界漂移；R3 重放各 MoE 层逐 token 的专家路由选择。",
+    "TITO 与 R3 将训练—推理对数概率差异从 0.021 降至 0.013，并使损失区域内的 token 漂移降为零。",
+    "在与评测集不重叠的分布外任务上训练后，T1 在 Terminal-Bench 2.1 达到 64.0%，在 Long-Horizon Terminal Bench 达到 27.9%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.91,
+    "problem_significance": 0.95,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.89,
+    "lasting_value": 0.93,
+    "llm_avg": 0.922,
+    "comment": "T1 makes a strong foundational contribution to long-horizon agent RL through verifier-backed terminal rollouts, stable MoE training alignment, and out-of-distribution task synthesis.",
+    "comment_zh": "T1通过验证器驱动的终端轨迹、稳定的MoE训练对齐和分布外任务合成，为长程智能体强化学习提供了坚实基础。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.8903960959030848,
+    "author_reputation": 0.34373441375821495,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.922,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 46,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.11042/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.905
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.11042/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.314
+    }
+  ]
+}

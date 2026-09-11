@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2609.11060",
+  "title": "Grounding Agent Memory: Environment-Probing Curation for Enterprise Agents",
+  "title_zh": "扎根智能体记忆：面向企业智能体的环境探测式整理",
+  "authors": [
+    "Susheel Suresh",
+    "Hazel Mak",
+    "Sahil Bhatnagar",
+    "Chhaya Methani",
+    "Alejandro Gutierrez Munoz"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Susheel Suresh",
+      "affiliations": [
+        "Purdue University"
+      ]
+    }
+  ],
+  "published_at": "2026-09-10T04:06:16Z",
+  "abs_url": "https://arxiv.org/abs/2609.11060v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.11060",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Persistent memory is entering production-oriented agent platforms to help long-horizon agents accumulate experience across sessions. Yet a post-task curator agent restricted to completed trajectories can preserve errors, overgeneralize partial evidence, or retain stale knowledge. We introduce environment-probing curation, a deployment-compatible extension that gives an existing asynchronous curator agent least-privilege, read-only world tools to check, scope, and refresh candidate memories. It requires no model retraining and leaves the task agent, retriever, memory representation, and production write authority unchanged. In a production-like GitHub Copilot (GHCP) harness built on its SDK, we compare stateless execution, full in-context learning, GHCP + Mem, and GHCP + Mem (w/ Env Probing) on CLBench database exploration and 90 adapted APEX management-consulting tasks. On CLBench, probing raises pass rate from 39% to 73% and pass-discounted reward from 8.60 to 22.60 while reducing queries from 8.8 to 4.7 per question and task-agent cost from \\$3.38 to \\$1.68. Across six APEX worlds, all 18 memory-versus-baseline mean reward comparisons are positive and task-agent tool calls fall by 16--75%; probing gives the best task-agent reward gain per dollar in five worlds. Probing also attains higher mean reward than GHCP + Mem on both Sonnet 4.6 and Opus 4.7 without schema drift. Environment probing therefore turns existing agent-memory curation into an environment-informed, auditable process while preserving a compact task-time interface.",
+  "abstract_zh": "持久化记忆可帮助长时程智能体跨会话积累经验，但仅依据已完成轨迹工作的事后整理器可能保留错误、过度泛化局部证据或存储过时知识。本文提出环境探测式整理（environment-probing curation）：为现有异步整理器提供最小权限、只读的环境工具，用于核验、限定范围并刷新候选记忆。该方法无需重新训练模型，也不改变任务智能体、检索器、记忆表示或生产写入权限。在基于 GitHub Copilot（GHCP）SDK 的生产近似测试环境中，作者比较了无状态执行、完整上下文学习、GHCP + Mem 和 GHCP + Mem（w/ Env Probing）。在 CLBench 数据库探索任务上，环境探测将通过率从 39% 提升至 73%，折算通过奖励从 8.60 提升至 22.60，同时将每题查询次数从 8.8 降至 4.7，任务智能体成本从 3.38 美元降至 1.68 美元。在六个 APEX 管理咨询任务环境中，记忆方案相较基线的 18 组平均奖励比较全部为正，任务智能体工具调用减少 16%—75%；环境探测在五个环境中实现了最佳的单位成本任务奖励增益。在 Sonnet 4.6 和 Opus 4.7 上，环境探测的平均奖励均高于 GHCP + Mem，且未出现 schema drift。结果表明，环境探测能将智能体记忆整理转化为受环境信息约束、可审计的过程，同时保持紧凑的任务时接口。",
+  "key_points_zh": [
+    "提出 environment-probing curation，让异步记忆整理器通过最小权限、只读环境工具核验和刷新候选记忆。",
+    "方法无需模型再训练，不改变任务智能体、retriever、memory representation 或生产写入权限，便于部署到现有企业智能体平台。",
+    "在 CLBench 上通过率由 39% 提升至 73%，任务智能体成本降低约 50%，查询次数几乎减半。",
+    "在六个 APEX 环境中，记忆方案均优于无记忆基线；环境探测在五个环境中取得最佳的单位成本奖励增益。",
+    "在 Sonnet 4.6 与 Opus 4.7 上均优于 GHCP + Mem，且保持 schema 稳定，体现出较好的可审计性与泛化能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.8,
+    "problem_significance": 0.9,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8300000000000001,
+    "comment": "This work makes persistent memory curation environment-grounded and auditable, directly addressing stale, erroneous, and overgeneralized agent memories with a reusable deployment-compatible mechanism.",
+    "comment_zh": "该工作通过可复用且兼容部署的环境探测机制，使持久记忆整理具备事实依据和可审计性，并直接缓解陈旧、错误及过度泛化的智能体记忆。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.39383242010410024,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8300000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [
+      "Purdue University"
+    ],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.11060/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.954
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.11060/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.726
+    }
+  ]
+}

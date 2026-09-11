@@ -1,0 +1,121 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-09-10",
+  "generated_at": "2026-09-11T22:26:04Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.11042",
+      "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
+      "title_zh": "T1：面向长程任务的终端智能体强化学习",
+      "authors": [
+        "Junyao Yang",
+        "Yucheng Shi",
+        "Zhongzhi Li",
+        "Ruhan Wang",
+        "Zongxia Li",
+        "Haitao Mi",
+        "Leowei Liang"
+      ],
+      "total_score": 0.7673065254830651,
+      "scores": {
+        "topic_relevance": 0.9600000000000001,
+        "llm_assessment": 0.922,
+        "domain_fit": 0.99,
+        "other": 0.35568841827688336
+      },
+      "tags": [
+        "HF Daily ★46",
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "T1以稳定强化学习显著提升长程终端任务能力",
+      "detail_file": "agent-harness-evolution/2026-09-10/2609.11042.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.11042/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.11677",
+      "title": "Ecdysis: Efficient and Effective Training of Runtime Harnesses for LLM Agents",
+      "title_zh": "Ecdysis：面向 LLM Agent 运行时 Harness 的高效训练方法",
+      "authors": [
+        "Ruiqing Yue",
+        "Yu Cui",
+        "Zhuoyu Sun",
+        "Sicheng Pan",
+        "Xianhong Xue",
+        "Tingyu Li",
+        "Ting Li",
+        "Wenzhuo Zhu",
+        "Yi Chen",
+        "Yifei Liu",
+        "Baohan Huang",
+        "Zhe Cui",
+        "Haibin Zhang",
+        "Cong Zuo"
+      ],
+      "total_score": 0.6814,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.898,
+        "domain_fit": 0.99,
+        "other": 0.2
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "聚合跨任务失败，高效演化更具泛化性的LLM运行时Harness",
+      "detail_file": "agent-harness-evolution/2026-09-10/2609.11677.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.11677/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.10964",
+      "title": "Decoupling Readiness from Release for Tail-Aware Scheduling of Agentic LLM Workflows",
+      "title_zh": "解耦就绪与释放：面向尾延迟的 Agentic LLM 工作流调度",
+      "authors": [
+        "Bochao Feng",
+        "Jianjiang Li",
+        "Haojie Wang",
+        "Lin Qiao",
+        "Yinghui Li",
+        "Yukun Yan",
+        "Jidong Zhai"
+      ],
+      "total_score": 0.6421178864705548,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.794,
+        "domain_fit": 0.95,
+        "other": 0.22639295490184894
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "以CVaR动态控制轮次释放，显著降低工作流尾延迟。",
+      "detail_file": "agent-harness-evolution/2026-09-10/2609.10964.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.10964/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.10969",
+      "title": "Engineering Reliable Commit Gates for Agentic AI: Cost-Aware Verification Portfolios under Common-Mode Data Failures",
+      "title_zh": "面向 Agentic AI 的可靠提交门控工程：共同模式数据故障下的成本感知验证组合",
+      "authors": [
+        "Zihao Zheng",
+        "Baichuan Li",
+        "Junyi Yao",
+        "Jiayu Long"
+      ],
+      "total_score": 0.48097076563523616,
+      "scores": {
+        "topic_relevance": 0.44000000000000006,
+        "llm_assessment": 0.8200000000000001,
+        "domain_fit": 0.93,
+        "other": 0.1965692187841204
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "独立证据源与原子提交防护比增加验证模型更可靠",
+      "detail_file": "agent-harness-evolution/2026-09-10/2609.10969.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.10969/thumb.webp"
+    }
+  ]
+}

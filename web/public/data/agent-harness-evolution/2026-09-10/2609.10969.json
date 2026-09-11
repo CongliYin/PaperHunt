@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.10969",
+  "title": "Engineering Reliable Commit Gates for Agentic AI: Cost-Aware Verification Portfolios under Common-Mode Data Failures",
+  "title_zh": "面向 Agentic AI 的可靠提交门控工程：共同模式数据故障下的成本感知验证组合",
+  "authors": [
+    "Zihao Zheng",
+    "Baichuan Li",
+    "Junyi Yao",
+    "Jiayu Long"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-10T01:42:40Z",
+  "abs_url": "https://arxiv.org/abs/2609.10969v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.10969",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic systems commit state-changing actions, but additional verifiers can inherit the same upstream fault. We present VP-CONTROL, a runtime-assurance design and deterministic benchmark for cost-aware commit gates. Its 48 task templates yield 2,880 scenarios across six fault regimes. A fixed-call 2 x 2 experiment separates verifier-model diversity from evidence-source diversity. On frozen proposals from two local actor families, a cross-model vote over shared evidence approves 62.9% of unsafe proposals, versus 22.9% with an independent source. The source effect is 40.9 percentage points, compared with 11.3 for model diversity. A portfolio controller selects verification plans using only deployment-observable metadata. Approximate cluster-adjusted calibration at a nominal 5% per-task target yields 1.9% unsafe execution and 38.2% automated safe coverage on the locked test. Matched-budget portfolios also improve on fixed verification policies. Transfer remains conditional: unseen fault families yield 16-26% risk, and a FinQA check fails to reproduce the source effect with the tested small verifiers. A preregistered live HTTP/SQLite study tests concurrent writes and lost responses. After-check races defeat verifier-only gates; transactional partial guards prevent only covered failures, while a full atomic guard records no unsafe effects across 216 episodes. Idempotent request identifiers prevent duplicate effects after lost responses. The results motivate explicit evidence lineage, cost-aware selection, and commit-time enforcement, while exposing the limits of approximate calibration and local-tool generalization.",
+  "abstract_zh": "Agentic 系统会执行改变状态的操作，但新增验证器可能继承相同的上游故障。本文提出 VP-CONTROL，一种用于成本感知提交门控的运行时保障设计与确定性基准。该基准包含 48 个任务模板，在六类故障机制下生成 2,880 个场景，并通过固定调用次数的 2×2 实验区分验证器模型多样性与证据来源多样性的作用。在两个本地执行模型家族产生的冻结提案上，共享证据的跨模型投票仍批准了 62.9% 的不安全提案，而使用独立证据源时该比例降至 22.9%；证据源多样性带来 40.9 个百分点的改善，显著高于模型多样性的 11.3 个百分点。VP-CONTROL 的组合控制器仅依据部署时可观测的元数据选择验证方案。以每任务 5% 风险为名义目标进行近似聚类校准后，其在锁定测试集上实现了 1.9% 的不安全执行率和 38.2% 的自动化安全覆盖率，并在相同预算下优于固定验证策略。但迁移能力仍有限：面对未见故障家族时风险升至 16%–26%，且使用小型验证器的 FinQA 实验未能复现证据源效应。预注册的 HTTP/SQLite 在线实验进一步表明，事后检查存在竞态问题，单纯依赖验证器无法阻止危险提交；事务型局部防护只能覆盖部分故障，而完整原子防护在 216 次实验中未产生不安全影响。对于响应丢失，幂等请求标识符可避免重复执行。研究强调，应显式追踪证据谱系、进行成本感知的验证策略选择，并在提交时实施原子化约束，同时谨慎看待近似校准与本地工具实验的泛化能力。",
+  "key_points_zh": [
+    "VP-CONTROL 提供面向 Agentic AI 提交门控的运行时保障框架，并构建覆盖六类故障、共 2,880 个场景的确定性基准。",
+    "证据来源多样性比模型多样性更关键：独立证据源将不安全提案批准率从 62.9% 降至 22.9%，其效果为 40.9 个百分点。",
+    "成本感知组合控制器仅使用部署可观测元数据选取验证计划；近似校准后取得 1.9% 的不安全执行率和 38.2% 的自动化安全覆盖率。",
+    "方法对未见故障家族和不同任务的迁移有限：未见故障下风险达到 16%–26%，FinQA 实验也未复现证据源效应。",
+    "在线 HTTP/SQLite 实验显示，验证器无法解决提交后的竞态；完整原子防护与幂等请求标识符分别用于阻止并发不安全写入和响应丢失导致的重复操作。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.78,
+    "problem_significance": 0.9,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.73,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8200000000000001,
+    "comment": "VP-CONTROL provides a valuable runtime commit-gate methodology combining evidence diversity, cost-aware verification portfolios, and atomic enforcement for reliable state-changing agents.",
+    "comment_zh": "VP-CONTROL结合证据多样性、成本感知验证组合和原子化执行，为具有状态变更能力的智能体提供了有价值的运行时提交门控方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.44000000000000006,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2794153127047222,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8200000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.10969/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.948
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.10969/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

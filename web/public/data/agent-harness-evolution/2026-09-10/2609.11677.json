@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2609.11677",
+  "title": "Ecdysis: Efficient and Effective Training of Runtime Harnesses for LLM Agents",
+  "title_zh": "Ecdysis：面向 LLM Agent 运行时 Harness 的高效训练方法",
+  "authors": [
+    "Ruiqing Yue",
+    "Yu Cui",
+    "Zhuoyu Sun",
+    "Sicheng Pan",
+    "Xianhong Xue",
+    "Tingyu Li",
+    "Ting Li",
+    "Wenzhuo Zhu",
+    "Yi Chen",
+    "Yifei Liu",
+    "Baohan Huang",
+    "Zhe Cui",
+    "Haibin Zhang",
+    "Cong Zuo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-10T15:09:08Z",
+  "abs_url": "https://arxiv.org/abs/2609.11677v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.11677",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Self-evolving runtime harnesses can substantially improve the capabilities of large language model (LLM) agents and provide a promising paradigm for optimizing agent execution. Existing harness evolution methods typically rely on iterative search, repeatedly evaluating and revising candidate harnesses based on execution feedback from task instances. While this paradigm enables continuous harness optimization, it incurs substantial time overhead due to repeated agent executions and code modifications, and may overfit to observed tasks and specific failure patterns, resulting in degraded generalization to unseen tasks. We identify the lack of principled failure diagnosis as a key bottleneck in harness evolution: an observed failure can reflect either model-specific deficiencies or systematic harness deficiencies, and directly optimizing against individual failures can lead to unnecessary model-specific accommodation. We therefore propose Ecdysis, an efficient and effective framework that distinguishes model-specific accommodation from harness-level repair and biases adaptation toward systematic harness deficiencies by identifying recurring cross-task failure patterns. Ecdysis adopts a batch-level cross-instance failure aggregation paradigm to jointly analyze failure evidence from multiple task instances and further introduces Failure-Driven Collaborative Refinement to diagnose failure causes and iteratively refine harness modification specifications. By combining cross-instance failure analysis with multi-role diagnosis, Ecdysis enables more effective harness evolution with lower training time. Experiments show that Ecdysis achieves up to a 1.84x speedup in harness training compared with existing harness evolution methods, while improving the reasoning accuracy of the resulting harnesses by 18.56%.",
+  "abstract_zh": "自演化运行时 Harness 能显著提升大语言模型（LLM）Agent 的能力，是优化 Agent 执行流程的一种重要范式。现有 Harness 演化方法通常依赖迭代搜索，根据任务实例的执行反馈反复评估和修改候选 Harness，但多次执行 Agent 和修改代码会带来较高时间开销，并可能过拟合已观察任务及特定失败模式，降低对未见任务的泛化能力。本文指出，缺乏系统化的失败诊断是 Harness 演化的关键瓶颈：一次失败既可能源于模型自身能力缺陷，也可能来自 Harness 的系统性不足；若直接针对单个失败进行优化，容易产生不必要的模型特定适配。为此，作者提出 Ecdysis，通过识别跨任务反复出现的失败模式，区分模型特定适配与 Harness 层修复，并优先处理系统性 Harness 缺陷。Ecdysis 采用批次级跨实例失败聚合范式，联合分析多个任务实例的失败证据；同时引入 Failure-Driven Collaborative Refinement，通过多角色协作诊断失败原因，并迭代完善 Harness 修改规范。实验表明，与现有 Harness 演化方法相比，Ecdysis 的训练速度最高提升 1.84 倍，所得 Harness 的推理准确率提升 18.56%。",
+  "key_points_zh": [
+    "指出现有方法逐实例迭代优化，存在训练开销高、易过拟合特定任务与失败模式的问题。",
+    "核心思想是区分模型特定缺陷与系统性 Harness 缺陷，避免针对偶发失败进行不必要的模型适配。",
+    "采用批次级跨实例失败聚合，从多个任务中识别重复出现的失败模式并指导 Harness 修复。",
+    "提出 Failure-Driven Collaborative Refinement，利用多角色协作诊断失败原因并迭代细化修改规范。",
+    "实验中实现最高 1.84 倍训练加速，同时将最终 Harness 的推理准确率提升 18.56%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.88,
+    "problem_significance": 0.92,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.87,
+    "lasting_value": 0.91,
+    "llm_avg": 0.898,
+    "comment": "Ecdysis directly advances self-evolving agent harnesses by converting cross-task failure diagnosis into faster and more generalizable runtime refinement.",
+    "comment_zh": "Ecdysis将跨任务故障诊断转化为更高效且更具泛化性的运行时改进，直接推动了智能体框架的自我演化。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.898,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.11677/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.497
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.10964",
+  "title": "Decoupling Readiness from Release for Tail-Aware Scheduling of Agentic LLM Workflows",
+  "title_zh": "解耦就绪与释放：面向尾延迟的 Agentic LLM 工作流调度",
+  "authors": [
+    "Bochao Feng",
+    "Jianjiang Li",
+    "Haojie Wang",
+    "Lin Qiao",
+    "Yinghui Li",
+    "Yukun Yan",
+    "Jidong Zhai"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-10T01:35:10Z",
+  "abs_url": "https://arxiv.org/abs/2609.10964v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.10964",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic LLM workflows consist of sequences of model turns interleaved with tool interactions, so their end-to-end completion time depends not only on inference speed but also on when ready turns are released. Most runtimes release each turn immediately upon readiness. Under contention, this eager release policy can accumulate released but unfinished work; once submitted, those turns can no longer be reordered by the workflow-level policy, increasing tail latency. We present a tail-risk-aware turn release scheduling method that jointly decides which ready turn to release next and how much released but unfinished work to maintain. The method uses a mean--Conditional Value-at-Risk (CVaR) objective to capture the evolving tail risk of unfinished workflows, incorporates online estimates of turn work when prioritizing ready turns, and adapts the released work budget to observed queue pressure. We evaluate the method using real agent execution traces from software engineering tasks across multiple LLMs and workflow arrival rates. The method performs comparably to eager release under light load and substantially reduces the P95 of workflow flow time under contention, achieving up to a \\(3.50\\times\\) speedup.",
+  "abstract_zh": "Agentic LLM 工作流由多轮模型推理与工具交互交替组成，其端到端完成时间不仅取决于推理速度，还取决于就绪轮次何时被释放。多数运行时采用轮次一旦就绪便立即释放的策略；在资源竞争下，这种急切释放（eager release）会积累大量已释放但尚未完成的任务，而已提交的轮次无法再由工作流级策略重新排序，从而增大尾延迟。本文提出一种尾部风险感知的轮次释放调度方法，联合决定下一步释放哪个就绪轮次，以及应维持多少已释放但未完成的工作量。该方法采用均值–条件风险价值（mean–Conditional Value-at-Risk, CVaR）目标刻画未完成工作流持续变化的尾部风险，在确定就绪轮次优先级时融入对轮次工作量的在线估计，并根据观测到的队列压力动态调整已释放工作量预算。作者使用多个 LLM 在软件工程任务上的真实 Agent 执行轨迹，并在不同工作流到达率下进行评估。结果表明，该方法在轻负载下与 eager release 表现相当，在资源竞争时可显著降低工作流流转时间的 P95，最高实现 3.50 倍加速。",
+  "key_points_zh": [
+    "指出“轮次就绪”不应等同于“立即释放”：竞争环境下，过早提交会积压不可重排的未完成工作，恶化尾延迟。",
+    "提出尾部风险感知调度器，联合优化就绪轮次的释放顺序与系统中已释放但未完成的工作量。",
+    "使用 mean-CVaR 目标衡量未完成工作流的平均代价和尾部风险，并结合在线估计的轮次工作量进行优先级排序。",
+    "依据实时队列压力自适应调整释放工作量预算，在吞吐与尾延迟之间动态权衡。",
+    "基于多个 LLM 的真实软件工程 Agent 轨迹评测：轻负载下性能接近 eager release，竞争时显著降低 P95 流转时间，最高加速 3.50 倍。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.79,
+    "problem_significance": 0.85,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.81,
+    "llm_avg": 0.794,
+    "comment": "The paper introduces a reusable workflow-runtime scheduling policy that materially reduces tail latency for contended agentic executions using real coding-agent traces.",
+    "comment_zh": "该论文提出了可复用的智能体工作流运行时调度策略，并利用真实编程智能体轨迹显著降低高负载下的尾延迟。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.45835772941109343,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.794,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 7,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.10964/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.10964/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.804
+    }
+  ]
+}
