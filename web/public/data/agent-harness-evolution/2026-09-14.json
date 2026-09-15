@@ -1,0 +1,174 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-09-14",
+  "generated_at": "2026-09-15T22:51:32Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.15397",
+      "title": "When Tool Calls Succeed but Workflows Fail: Anomalies at the Agent-Tool Boundary",
+      "title_zh": "工具调用成功但工作流失败：Agent-Tool 边界的异常（When Tool Calls Succeed but Workflows Fail: Anomalies at the Agent-Tool Boundary）",
+      "authors": [
+        "Artem Trofimov",
+        "Boris Novikov"
+      ],
+      "total_score": 0.7392000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.924,
+        "domain_fit": 0.98,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "黑盒工具接口无法为复杂 agent 工作流提供事务一致性保证。",
+      "detail_file": "agent-harness-evolution/2026-09-14/2609.15397.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15397/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.15983",
+      "title": "Stellar Colosseum: A Many-Agent Harness for Long-Horizon Research in Mathematics and Theoretical Computer Science",
+      "title_zh": "Stellar Colosseum：面向数学与理论计算机科学长程研究的多智能体框架",
+      "authors": [
+        "Honghao Lin",
+        "David P. Woodruff",
+        "Yuan Deng",
+        "Jieming Mao",
+        "Song Zuo",
+        "Vahab Mirrokni"
+      ],
+      "total_score": 0.6841774860633331,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.892,
+        "domain_fit": 0.9,
+        "other": 0.21525828687777648
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "多智能体协作提升长程数学与理论计算机研究能力",
+      "detail_file": "agent-harness-evolution/2026-09-14/2609.15983.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15983/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.15396",
+      "title": "SkillLift: Learning Dense Rubrics from Sparse Oracles for Efficient Skill Evolution",
+      "title_zh": "SkillLift：从稀疏裁判信号中学习稠密评估准则，实现高效技能演化",
+      "authors": [
+        "Haoxiang Kang",
+        "Ming Wen"
+      ],
+      "total_score": 0.5817657923174274,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.852,
+        "domain_fit": 0.93,
+        "other": 0.28721930772475796
+      },
+      "tags": [
+        "GitHub",
+        "training and rollout loops"
+      ],
+      "tldr_zh": "用稠密排序准则降低技能演化的裁判成本",
+      "detail_file": "agent-harness-evolution/2026-09-14/2609.15396.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15396/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.15779",
+      "title": "EvoOntology: A Self-Evolving Ontology Layer for Data Agents",
+      "title_zh": "EvoOntology：面向数据智能体的自演化本体层",
+      "authors": [
+        "Meiduo Chong",
+        "Shaolei Zhang",
+        "Ju Fan",
+        "Xiaoyong Du"
+      ],
+      "total_score": 0.5648000000000001,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.716,
+        "domain_fit": 0.67,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub",
+        "evaluation operations"
+      ],
+      "tldr_zh": "EvoOntology让数据智能体拥有可自演化的本体层",
+      "detail_file": "agent-harness-evolution/2026-09-14/2609.15779.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15779/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.15820",
+      "title": "AlgoEvo: Self-Evolving Agentic Search for Automated Algorithm Discovery",
+      "title_zh": "AlgoEvo：用于自动化算法发现的自进化智能体搜索",
+      "authors": [
+        "Junhao Qiu",
+        "Qinglong Hu",
+        "Xialiang Tong",
+        "Mingxuan Yuan",
+        "Liyong Lin",
+        "Qingfu Zhang"
+      ],
+      "total_score": 0.4553824593811417,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.8400000000000001,
+        "domain_fit": 0.9,
+        "other": 0.19794153127047226
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "AlgoEvo以自进化智能体实现高效算法发现与跨任务迁移",
+      "detail_file": "agent-harness-evolution/2026-09-14/2609.15820.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15820/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.15066",
+      "title": "Salesforce Koa: An Enterprise Language Model for Agentic Tool Use",
+      "title_zh": "Salesforce Koa：面向智能体工具调用的企业级语言模型",
+      "authors": [
+        "Zixiang Chen",
+        "Sufeng Niu",
+        "Yingchi Liu",
+        "Wenting Zhao",
+        "Akshara Prabhakar",
+        "Shubham Mehrotra",
+        "Bin Bi",
+        "Zhujun Lan",
+        "Katherine Tan",
+        "Mohammad Ramezanali",
+        "Tulika Manoj Awalgaonkar",
+        "Monojit Banerjee",
+        "Jielin Qiu",
+        "Shiva Kumar Pentyala",
+        "Zhepeng Cen",
+        "Anupam Tripathi",
+        "Ali Ziaei",
+        "Regunathan Radhakrishnan",
+        "Darvish Lee Shadravan",
+        "Shelby Heinecke",
+        "Sitaram Asur",
+        "Silvio Savarese",
+        "James Zhu",
+        "Phil Mui",
+        "Huan Wang"
+      ],
+      "total_score": 0.30476579231742734,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.812,
+        "domain_fit": 0.88,
+        "other": 0.20388597439142458
+      },
+      "tags": [],
+      "tldr_zh": "用规范驱动强化学习打造企业级工具调用模型",
+      "detail_file": "agent-harness-evolution/2026-09-14/2609.15066.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15066/thumb.webp"
+    }
+  ]
+}

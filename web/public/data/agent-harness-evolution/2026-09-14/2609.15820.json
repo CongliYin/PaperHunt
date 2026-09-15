@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.15820",
+  "title": "AlgoEvo: Self-Evolving Agentic Search for Automated Algorithm Discovery",
+  "title_zh": "AlgoEvo：用于自动化算法发现的自进化智能体搜索",
+  "authors": [
+    "Junhao Qiu",
+    "Qinglong Hu",
+    "Xialiang Tong",
+    "Mingxuan Yuan",
+    "Liyong Lin",
+    "Qingfu Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-14T16:24:27Z",
+  "abs_url": "https://arxiv.org/abs/2609.15820v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.15820",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models have advanced automated algorithm discovery by synthesizing executable code, but existing frameworks trap them in rigid search pipelines with pre-defined control flows. This limitation restricts adaptive reasoning, blocks cross-paradigm transfer, and discards valuable execution feedback. We propose AlgoEvo, a unified agentic framework that transforms automated algorithm discovery into an interactive, knowledge-accumulating process. An autonomous agent dynamically inspects, diagnoses, and edits code based on runtime feedback. A design skill hub decouples paradigm-specific knowledge from the core discovery engine, allowing a single workflow to seamlessly handle single-objective, multi-objective, and multi-component design. Meanwhile, a hierarchical experience mechanism organizes search trajectories into a task-level tree to guide exploration and consolidates cross-task patterns into reusable skills. Across six representative benchmark tasks, AlgoEvo matches or surpasses specialized methods with substantially fewer evaluations and reduced token consumption, demonstrating strong intra-task accumulation, cross-task transfer, and the ability to reproduce or exceed existing state-of-the-art performance through flexible skill activation.",
+  "abstract_zh": "现有基于大语言模型的自动化算法发现方法通常依赖预定义控制流和固定搜索流程，难以进行自适应推理、跨范式迁移，并且无法充分利用代码执行反馈。论文提出 AlgoEvo，一个统一的智能体式算法发现框架，将算法搜索转化为交互式、持续积累知识的过程。自主智能体能够根据运行时反馈动态检查、诊断并修改代码；设计技能中心（design skill hub）将范式相关知识与核心发现引擎解耦，使同一工作流能够处理单目标、多目标和多组件设计任务。此外，分层经验机制将搜索轨迹组织为任务级树结构以引导探索，并将跨任务模式提炼为可复用技能。在六个代表性基准任务上，AlgoEvo 以显著更少的评估次数和更低的 token 消耗达到或超过专用方法，展现出任务内经验积累、跨任务迁移，以及通过灵活激活技能复现或超越现有 state-of-the-art 性能的能力。",
+  "key_points_zh": [
+    "将自动化算法发现从固定搜索流水线转变为基于运行时反馈的交互式智能体过程。",
+    "通过 design skill hub 解耦范式知识与核心引擎，统一支持单目标、多目标和多组件算法设计。",
+    "利用任务级搜索树和跨任务技能库积累经验，增强任务内探索与跨任务知识迁移。",
+    "在六项基准任务上，以更少评估次数和更低 token 消耗达到或超过专用方法及现有 state-of-the-art。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.86,
+    "problem_significance": 0.85,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.81,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8400000000000001,
+    "comment": "AlgoEvo combines execution-grounded coding search, trajectory-based experience organization, and reusable skill transfer into a strong self-evolving discovery harness.",
+    "comment_zh": "AlgoEvo 将执行反馈驱动的代码搜索、基于轨迹的经验组织和可复用技能迁移结合成了较强的自演化发现框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8400000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15820/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15820/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

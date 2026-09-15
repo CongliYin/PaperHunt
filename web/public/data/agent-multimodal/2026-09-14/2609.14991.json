@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.14991",
+  "title": "Typhoon ASR Streaming: Steerable Low-Latency Thai Speech Recognition with Real-Time Shallow Fusion",
+  "title_zh": "Typhoon ASR Streaming：支持实时浅层融合与可控词表的低延迟泰语语音识别",
+  "authors": [
+    "Warit Sirichotedumrong",
+    "Tanawin Samutsin",
+    "Shah Faisal Wani",
+    "Sittipong Sripaisarnmongkol",
+    "Kunat Pipatanakul"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-14T03:53:52Z",
+  "abs_url": "https://arxiv.org/abs/2609.14991v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.14991",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Open Thai automatic speech recognition (ASR) is dominated by offline, Whisper-based models that read the whole utterance before transcribing, ruling out low-latency uses such as live captioning and voice agents. We present a deployable system for streaming Thai ASR that lets a user steer its vocabulary at decode time, without retraining. A widely used open Thai model, trained with full context, collapses when run as a true stream; we restore streaming with a cache-aware encoder, by converting it or adapting a natively streaming one, and add a shallow-fusion layer that re-ranks candidates inside the streaming decoder with a GPU n-gram language model and phrase boosting. Across two Thai benchmarks and two model sizes, the streaming models stay usable where the full-context model fails, cutting character error rate 4.3-4.5x at a one-second look-ahead while running faster than real time. Decode-time steering then lifts keyword recall from 16.6% to 20.7% at no accuracy cost and negligible overhead; most of the gain comes from an n-gram over ordinary training transcripts, which resolves the written form of code-switched words the model hears but spells inconsistently, with phrase boosting adding targeted control over rare domain terms.",
+  "abstract_zh": "现有开源泰语自动语音识别（ASR）主要依赖 Whisper 类离线模型，需要读取完整语句后才能转写，难以用于实时字幕和语音智能体等低延迟场景。本文提出一套可部署的流式泰语 ASR 系统，并允许用户在解码阶段引导词表，无需重新训练。针对广泛使用的全上下文泰语模型在真实流式推理中性能严重下降的问题，作者引入支持缓存的编码器（cache-aware encoder），通过转换全上下文模型或适配原生流式模型恢复流式识别能力。此外，系统在流式解码器中加入浅层融合（shallow fusion），利用 GPU n-gram 语言模型和短语增强（phrase boosting）对候选结果重新排序。在两个泰语基准、两种模型规模上的实验表明，当预读时间为 1 秒时，流式模型相较失效的全上下文模型将字符错误率降低 4.3–4.5 倍，并可实现快于实时的推理。解码时引导将关键词召回率从 16.6% 提升至 20.7%，且不损害整体准确率，额外开销可忽略。主要收益来自基于普通训练转写文本构建的 n-gram 模型，它能改善模型已听出但拼写不稳定的语码转换词；短语增强则进一步支持对罕见领域术语的定向控制。",
+  "key_points_zh": [
+    "通过 cache-aware encoder 将全上下文模型转换为流式模型，或适配原生流式模型，解决泰语 ASR 在真实流式输入下性能崩溃的问题。",
+    "在流式解码器内集成实时 shallow fusion，结合 GPU n-gram 语言模型与 phrase boosting，无需重新训练即可控制识别词表。",
+    "在 1 秒预读条件下，流式模型将字符错误率降低 4.3–4.5 倍，同时保持快于实时的推理速度。",
+    "解码时词表引导将关键词召回率由 16.6% 提升至 20.7%，且不降低整体准确率，计算开销可忽略。",
+    "n-gram 主要改善语码转换词的书写形式一致性，phrase boosting 则适合定向增强罕见领域术语。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.68,
+    "novelty": 0.72,
+    "problem_significance": 0.78,
+    "potential_impact": 0.75,
+    "paradigm_shift": 0.42,
+    "lasting_value": 0.69,
+    "llm_avg": 0.6719999999999999,
+    "comment": "A practical streaming ASR contribution that addresses latency and vocabulary control relevant to voice-agent infrastructure, though it lacks direct speech-agent or tool-use experiments.",
+    "comment_zh": "该工作解决了语音代理基础设施所需的低延迟识别和词汇控制问题，但缺少直接的语音代理或工具调用实验。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.1,
+    "community_heat": 0.0,
+    "author_reputation": 0.43279927259299455,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6719999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": true,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 11,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.14991/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.14991/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

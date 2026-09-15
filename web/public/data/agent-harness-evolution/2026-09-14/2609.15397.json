@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2609.15397",
+  "title": "When Tool Calls Succeed but Workflows Fail: Anomalies at the Agent-Tool Boundary",
+  "title_zh": "工具调用成功但工作流失败：Agent-Tool 边界的异常（When Tool Calls Succeed but Workflows Fail: Anomalies at the Agent-Tool Boundary）",
+  "authors": [
+    "Artem Trofimov",
+    "Boris Novikov"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-14T11:31:06Z",
+  "abs_url": "https://arxiv.org/abs/2609.15397v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.15397",
+  "links": {
+    "github": "https://github.com/flame-stream/mcp-annotation-census",
+    "project_page": null
+  },
+  "abstract_en": "AI agents increasingly execute long-running workflows that externalize effects through independently supplied tools. Under retries, speculative execution, concurrency, and partial failures, the resulting external state may be inconsistent with the workflow's intended resolution: required effects may be missing or duplicated, aborted effects may survive, and committed effects may depend on provisional state that is later withdrawn. Advanced transaction models address related failures, but assume that lower-level operations expose the semantics they depend on: whether an effect occurred, whether it can be compensated, staged, or safely reordered. Shared agent-tool interfaces usually do not. We contribute an effect-history model that separates events in the external world from the runtime's observations of them, and a catalog of eight recurring external-effect anomalies. From the catalog we derive the boundary capabilities required to exclude each anomaly in general, and four points where black-box tool invocation alone cannot provide a general guarantee. We then ask how much of this is expressible in a widely used shared tool interface, measuring the use of the standard annotation vocabulary across 98,291 tools exposed by registered Model Context Protocol (MCP) servers. The fields are widely emitted but provide only coarse call-level hints, and none of the required capabilities is fully expressible. These results motivate reusable transactional contracts at the tool boundary.",
+  "abstract_zh": "本文研究 AI agent 在重试、推测执行、并发和部分失败下，通过外部工具产生的状态不一致问题。作者提出 effect-history model，将外部世界中的真实事件与运行时对事件的观测分离，并系统归纳八类外部效果异常，包括必需效果缺失或重复、已中止效果残留，以及依赖随后被撤销的临时状态等。论文进一步推导出排除这些异常所需的边界能力，并指出仅依赖黑盒工具调用无法提供四类一般性保证。针对广泛使用的 Model Context Protocol（MCP），作者统计了 98,291 个工具的标准注释字段使用情况，发现这些字段虽被广泛提供，却主要是粗粒度的调用级提示，无法完整表达任何一项所需能力。因此，论文主张在 agent-tool 边界引入可复用的事务契约（transactional contracts）。",
+  "key_points_zh": [
+    "提出 effect-history model，区分外部真实效果与运行时观测，避免将“调用返回成功”误认为“外部效果已正确提交”。",
+    "归纳八类 agent-tool 外部效果异常，覆盖缺失、重复、残留、错误排序及依赖临时状态等情况。",
+    "推导排除各类异常所需的边界能力，包括效果可见性、补偿性、暂存能力和安全重排等；黑盒调用本身在四个方面无法提供一般保证。",
+    "对 98,291 个 Model Context Protocol（MCP）工具进行注释普查，发现标准字段虽普遍存在，但仅提供粗粒度调用级语义，无法完整表达任何必需能力。",
+    "研究结果支持在工具边界设计可复用的事务契约，以协调重试、并发、推测执行和部分失败。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.9,
+    "problem_significance": 0.95,
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.88,
+    "lasting_value": 0.95,
+    "llm_avg": 0.924,
+    "comment": "This is strong reusable runtime research that formalizes agent-tool effect anomalies and motivates transactional contracts for reliable long-running workflows.",
+    "comment_zh": "该工作形式化了智能体工具边界的外部效果异常，并提出事务契约方向，对可靠长流程运行时具有很强的可复用价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.924,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/flame-stream/mcp-annotation-census",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15397/fig1.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.985
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15397/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.977
+    }
+  ]
+}

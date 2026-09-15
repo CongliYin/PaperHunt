@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2609.15983",
+  "title": "Stellar Colosseum: A Many-Agent Harness for Long-Horizon Research in Mathematics and Theoretical Computer Science",
+  "title_zh": "Stellar Colosseum：面向数学与理论计算机科学长程研究的多智能体框架",
+  "authors": [
+    "Honghao Lin",
+    "David P. Woodruff",
+    "Yuan Deng",
+    "Jieming Mao",
+    "Song Zuo",
+    "Vahab Mirrokni"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-14T17:58:55Z",
+  "abs_url": "https://arxiv.org/abs/2609.15983v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.15983",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Language models can produce plausible short proofs, but may still be unreliable on long-horizon research problems, where progress depends on a sequence of uncertain and interdependent decisions. We introduce Stellar Colosseum, a model-agnostic harness for allocating inference across research in mathematics and theoretical computer science. Colosseum explores alternative strategies before proof construction, uses a readiness gate to decide when a route is mature enough to decompose, represents the proof plan as interdependent section-level subproblems, and routes verifier findings back to the affected part of the argument. Across these stages, it generates candidates in parallel, attacks them with targeted falsification, and combines candidates and their critiques into a single research artifact through overlapping random-sample tree aggregation. The Colosseum workflow has also been integrated into Google Antigravity's Teamwork framework as the Long Proof pattern. We demonstrate the capabilities of Colosseum through open-ended research and evaluations on theorem-proving and competitive programming benchmarks. Using Colosseum with Gemini 3.1 Pro, we obtain several new results that address open problems arising from papers published at top venues such as FOCS and JMLR. On TCS-Bench, a benchmark of research-level theorem-proving tasks drawn from papers published at FOCS, STOC, and SODA, Colosseum achieves 71.0% accuracy using Gemini 3.1 Pro and Gemini 3.7 Flash. In a separate Codeforces evaluation using Gemini 3.1 Pro, the proof-oriented pipeline with execution feedback solves 218 of 222 problems.",
+  "abstract_zh": "语言模型虽能生成看似合理的短证明，但在数学与理论计算机科学中的长程研究问题上仍不可靠，因为解决过程依赖一系列不确定且相互关联的决策。论文提出 Stellar Colosseum，一种与模型无关的推理资源分配框架。该框架先探索多种策略，再通过 readiness gate 判断路线是否成熟；随后将证明计划表示为相互依赖的章节级子问题，并把验证器发现的问题反馈至论证中的对应部分。整个流程并行生成候选方案，利用定向反驳进行攻击，并通过 overlapping random-sample tree aggregation 融合候选及批评意见，形成统一研究成果。该工作还被集成进 Google Antigravity 的 Teamwork framework，形成 Long Proof pattern。在 Gemini 3.1 Pro 上，Colosseum 针对来自 FOCS、JMLR 等顶会论文的开放问题取得了若干新结果；在 TCS-Bench 上，结合 Gemini 3.1 Pro 与 Gemini 3.7 Flash 达到 71.0% 准确率；在独立的 Codeforces 评测中，结合执行反馈的面向证明流水线解决了 222 道题中的 218 道。",
+  "key_points_zh": [
+    "提出模型无关的 Stellar Colosseum，通过策略探索、成熟度门控、分解证明与验证反馈，管理长程研究中的不确定决策。",
+    "采用并行候选生成、定向反驳和 overlapping random-sample tree aggregation，将多条推理路线及其批评整合为统一研究成果。",
+    "在 TCS-Bench 上结合 Gemini 3.1 Pro 与 Gemini 3.7 Flash 达到 71.0% 准确率，并解决来自 FOCS、STOC、SODA 论文的研究级定理证明任务。",
+    "在 Codeforces 评测中，结合执行反馈的证明导向流水线使用 Gemini 3.1 Pro 解决了 222 道题中的 218 道。",
+    "工作已集成至 Google Antigravity 的 Teamwork framework，形成面向长证明任务的 Long Proof pattern。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.9,
+    "problem_significance": 0.91,
+    "potential_impact": 0.89,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.9,
+    "llm_avg": 0.892,
+    "comment": "This presents a substantial model-agnostic harness for long-horizon research and coding tasks, combining readiness gates, decomposition, falsification, verifier feedback, and aggregation.",
+    "comment_zh": "该工作构建了面向长程研究与编程任务的模型无关智能体框架，结合了就绪门控、分解、反驳、验证反馈和聚合机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.39154972126665855,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.892,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 7,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15983/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.825
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15983/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.275
+    }
+  ]
+}

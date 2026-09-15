@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2609.15683",
+  "title": "V-ICAL Bench: Evaluating Video In-Context Learning for Multimodal Agents in Interactive Environments",
+  "title_zh": "V-ICAL Bench：评估交互环境中多模态智能体的视频上下文学习",
+  "authors": [
+    "Ziqian Fan",
+    "Shibo Xu",
+    "Junjie Li",
+    "Xiangyu Zhao",
+    "Shengyuan Ding",
+    "Yifan Yang",
+    "Zhenjie Yang",
+    "Haodong Duan",
+    "Yue Zhou",
+    "Zhihang Zhong",
+    "Xue Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-14T14:55:03Z",
+  "abs_url": "https://arxiv.org/abs/2609.15683v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.15683",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "While In-Context Learning (ICL) enables models to adapt from exemplars without parameter updates, multimodal ICL remains largely underexplored, particularly regarding video demonstrations in interactive environments. For multimodal agents, learning from videos presents unique challenges: they must translate in-context demonstrations into executable policies, ground these policies in novel visual states, and iteratively refine actions based on environmental feedback. We introduce V-ICAL, a novel benchmark designed to evaluate video-based ICL for multimodal agents. Comprising 342 interactive tasks across 37 environments, V-ICAL utilizes human-curated demonstration videos as task-specific behavioral exemplars, evaluating agents through sustained interaction from a target initialization. The benchmark seamlessly connects in-context knowledge induction with core agentic capabilities, including state grounding, temporal memory, planning, and adaptation in dynamic environments. Extensive evaluations across 19 state-of-the-art multimodal agents reveal significant limitations: the best-performing model, Seed-2.1-Pro, achieves a score of only 54.4/100, while other leading models (e.g., Gemini-3.1-Pro, GPT-5.6) fail to surpass 50, far below the human baseline of 83.6. Controlled comparisons further demonstrate that current agents struggle to reliably translate video exemplars into effective policies, failing to yield consistent performance gains. Ultimately, V-ICAL exposes a critical gap in the ICL capabilities of multimodal agents, underscoring an urgent need for future research.",
+  "abstract_zh": "上下文学习（In-Context Learning, ICL）使模型无需更新参数即可通过示例实现适应，但多模态 ICL，尤其是交互环境中的视频示范学习，仍缺乏系统研究。对于多模态智能体而言，从视频中学习需要将示范行为转化为可执行策略，将策略 grounding 到新的视觉状态，并依据环境反馈迭代调整动作。本文提出 V-ICAL，一个用于评估多模态智能体视频上下文学习能力的新基准。V-ICAL 包含来自 37 个环境的 342 个交互任务，以人工整理的示范视频作为任务相关的行为范例，并要求智能体从指定初始状态出发进行持续交互。该基准将上下文知识诱导与状态 grounding、时间记忆、规划和动态环境适应等核心智能体能力相结合。对 19 个先进多模态智能体的广泛评测显示，当前模型存在显著局限：表现最好的 Seed-2.1-Pro 仅获得 54.4/100 分，Gemini-3.1-Pro、GPT-5.6 等其他领先模型均未超过 50 分，远低于 83.6 分的人类基线。受控实验进一步表明，现有智能体难以可靠地将视频示范转化为有效策略，视频示范也未能带来稳定的性能提升。总体而言，V-ICAL 揭示了多模态智能体在 ICL 方面的关键能力鸿沟，凸显了进一步研究的迫切需求。",
+  "key_points_zh": [
+    "提出 V-ICAL 基准，系统评估交互环境中的视频上下文学习能力，涵盖 37 个环境和 342 个任务。",
+    "任务要求智能体从人类示范视频中诱导行为策略，并结合视觉状态 grounding、时间记忆、规划与反馈适应完成持续交互。",
+    "对 19 个多模态智能体的评测显示，最佳模型 Seed-2.1-Pro 仅得 54.4/100，显著低于 83.6 分的人类基线。",
+    "Gemini-3.1-Pro、GPT-5.6 等领先模型均未超过 50 分，说明当前模型难以将视频示范稳定转化为可执行策略。",
+    "受控实验表明，视频示范尚未带来一致的性能增益，反映出多模态智能体 ICL 能力仍存在明显鸿沟。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.84,
+    "problem_significance": 0.89,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8360000000000001,
+    "comment": "A highly relevant interactive video-agent benchmark that evaluates whether agents can convert demonstrations into grounded, adaptive action policies through sustained environmental feedback.",
+    "comment_zh": "这是高度契合领域的交互式视频代理基准，评估模型能否通过持续环境反馈将示范转化为具备视觉 grounding 和适应性的行动策略。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8360000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15683/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15683/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2609.15759",
+  "title": "Enabling Streaming User Transcription in Full-Duplex Speech-to-Speech Models",
+  "title_zh": "在全双工语音到语音模型中实现流式用户语音转写",
+  "authors": [
+    "Ke Hu",
+    "Nourchene Ferchichi",
+    "Edresson Casanova",
+    "Ankita Pasad",
+    "Elena Rastorgueva",
+    "Chen Chen",
+    "Nithin Rao Koluguri",
+    "Piotr Zelasko",
+    "Yifan Peng",
+    "Hainan Xu",
+    "Zhehuai Chen",
+    "Boris Ginsburg"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-14T15:44:18Z",
+  "abs_url": "https://arxiv.org/abs/2609.15759v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.15759",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Full-duplex speech-to-speech (S2S) models enable natural conversational AI by allowing simultaneous listening and speaking. However, these models typically lack inherent user speech transcription, which is essential for applications such as conversation logging, accessibility features, and quality monitoring. In this work, we propose an efficient method to add streaming ASR capabilities to an existing duplex S2S model by introducing a lightweight ASR head in parallel to the agent text head. Our approach requires minimal additional parameters and no significant architectural changes to the base S2S model, enabling real-time user transcription while preserving full-duplex conversational capabilities including turn-taking and barge-in handling. Experimental results demonstrate that our method achieves streaming average WER of 10.21% on the HuggingFace Open ASR Leaderboard within the duplex S2S framework. Additionally, we show that the same architecture trained as a standalone streaming ASR model achieves competitive results (7.73% WER) compared to current SOTA models. We will open-source our training and inference code to facilitate further research in joint streaming ASR and S2S modeling.",
+  "abstract_zh": "全双工语音到语音（S2S）模型能够同时聆听和说话，从而支持更自然的对话交互，但通常缺少用户语音转写能力。本文提出一种高效方案：在现有全双工S2S模型的agent text head旁并行加入轻量级ASR head，以较少新增参数和极小架构改动，实现实时用户语音转写，同时保留turn-taking与barge-in handling等全双工能力。在HuggingFace Open ASR Leaderboard上，该方法在全双工S2S框架中取得10.21%的streaming average WER；将相同架构作为独立流式ASR模型训练时，取得7.73% WER，具备与当前SOTA模型竞争的性能。作者将开源训练与推理代码，以促进流式ASR和S2S联合建模研究。",
+  "key_points_zh": [
+    "在agent text head旁增加轻量级ASR head，无需显著改动基础S2S架构。",
+    "支持实时用户语音转写，同时保留全双工对话中的turn-taking和barge-in handling能力。",
+    "在全双工S2S框架中取得10.21%的streaming average WER。",
+    "作为独立streaming ASR模型时达到7.73% WER，具备竞争力。",
+    "计划开源训练和推理代码，推动联合streaming ASR与S2S建模研究。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.91,
+    "novelty": 0.74,
+    "problem_significance": 0.86,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.8,
+    "llm_avg": 0.782,
+    "comment": "A strong realtime speech-agent systems paper that integrates streaming transcription with full-duplex interaction, turn-taking, and barge-in handling using a lightweight architectural addition.",
+    "comment_zh": "该工作以轻量架构改动将流式转录融入全双工语音交互，并覆盖轮次控制与打断处理，具有较强的实时语音代理价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.782,
+    "domain_multiplier": 0.9
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15759/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15759/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.969
+    }
+  ]
+}

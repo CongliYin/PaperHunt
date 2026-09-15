@@ -1,0 +1,92 @@
+{
+  "arxiv_id": "2609.15066",
+  "title": "Salesforce Koa: An Enterprise Language Model for Agentic Tool Use",
+  "title_zh": "Salesforce Koa：面向智能体工具调用的企业级语言模型",
+  "authors": [
+    "Zixiang Chen",
+    "Sufeng Niu",
+    "Yingchi Liu",
+    "Wenting Zhao",
+    "Akshara Prabhakar",
+    "Shubham Mehrotra",
+    "Bin Bi",
+    "Zhujun Lan",
+    "Katherine Tan",
+    "Mohammad Ramezanali",
+    "Tulika Manoj Awalgaonkar",
+    "Monojit Banerjee",
+    "Jielin Qiu",
+    "Shiva Kumar Pentyala",
+    "Zhepeng Cen",
+    "Anupam Tripathi",
+    "Ali Ziaei",
+    "Regunathan Radhakrishnan",
+    "Darvish Lee Shadravan",
+    "Shelby Heinecke",
+    "Sitaram Asur",
+    "Silvio Savarese",
+    "James Zhu",
+    "Phil Mui",
+    "Huan Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-14T05:30:28Z",
+  "abs_url": "https://arxiv.org/abs/2609.15066v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.15066",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We present Salesforce Koa, an enterprise language model built by post-training the open-weight Nemotron-3-Super-120B foundation model with reinforcement learning using Group Relative Policy Optimization (GRPO). Salesforce Koa is trained on public and synthetically generated data, with no customer data, to improve tool use and agentic capabilities while preserving strong general-purpose performance. Its distinctive component is a simulation-to-reward pipeline that expands workflow specifications into persona-conditioned multi-turn tasks with task-resolution rewards grounded in successful tool use for data-dependent requests. For enterprise domains, these specifications are written in Agent Script, Salesforce's declarative language for building Agentforce agents; for public tool-use domains, we synthesize the workflow structure directly. The same simulation and grounded-reward machinery drives GRPO across both. Across public tool-use, agentic-reasoning, and enterprise Customer Relationship Management (CRM) benchmarks, Salesforce Koa improves over its open-weight base, with the clearest gains on multi-turn tool use, and surpasses a strong proprietary baseline while remaining below the strongest frontier models. These results show that specification-driven reinforcement learning is a practical path to specializing open-weight foundation models for enterprise agentic tasks.",
+  "abstract_zh": "本文提出 Salesforce Koa：基于开放权重基础模型 Nemotron-3-Super-120B，通过强化学习方法 Group Relative Policy Optimization（GRPO）进行后训练得到的企业级语言模型。模型仅使用公开数据和合成数据，不涉及客户数据，旨在提升工具调用与智能体能力，同时保持较强的通用性能。其核心是 simulation-to-reward 流程：将工作流规范扩展为带有 persona 条件的多轮任务，并依据数据依赖型请求中的成功工具调用构造任务完成奖励。企业场景中的工作流规范采用 Salesforce 用于构建 Agentforce 智能体的声明式语言 Agent Script；公共工具调用场景则直接合成工作流结构。统一的模拟与 grounded-reward 机制驱动两个领域的 GRPO 训练。在公共工具调用、智能体推理和企业 Customer Relationship Management（CRM）基准上，Salesforce Koa 均优于开放权重基座模型，尤其在多轮工具调用方面提升明显；其性能超过一个强大的专有基线，但仍低于最强前沿模型。研究表明，基于规范驱动的强化学习是面向企业智能体任务专项定制开放权重基础模型的一条实用途径。",
+  "key_points_zh": [
+    "Salesforce Koa 基于 Nemotron-3-Super-120B，并通过 GRPO 后训练提升工具调用和智能体能力。",
+    "核心 simulation-to-reward 流程将工作流规范转化为 persona 条件的多轮任务，并以成功工具调用构造 grounded reward。",
+    "企业工作流使用 Agent Script 描述，公共工具调用场景则直接合成工作流结构，采用统一训练机制。",
+    "在公共工具调用、智能体推理和 CRM 基准上，模型整体优于开放权重基座，尤其擅长多轮工具调用。",
+    "模型超过强专有基线但仍落后于最强前沿模型，说明规范驱动强化学习适合企业智能体定制。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.78,
+    "problem_significance": 0.86,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.73,
+    "lasting_value": 0.82,
+    "llm_avg": 0.812,
+    "comment": "This is valuable agent-training work that grounds GRPO rewards in simulated multi-turn tool-use workflows and declarative enterprise specifications.",
+    "comment_zh": "该工作将 GRPO 奖励建立在模拟的多轮工具使用流程和声明式企业规范之上，对智能体训练具有较高价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3233158463485474,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.812,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15066/fig1.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.983
+    }
+  ]
+}

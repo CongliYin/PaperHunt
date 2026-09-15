@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2609.15396",
+  "title": "SkillLift: Learning Dense Rubrics from Sparse Oracles for Efficient Skill Evolution",
+  "title_zh": "SkillLift：从稀疏裁判信号中学习稠密评估准则，实现高效技能演化",
+  "authors": [
+    "Haoxiang Kang",
+    "Ming Wen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-14T11:30:23Z",
+  "abs_url": "https://arxiv.org/abs/2609.15396v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.15396",
+  "links": {
+    "github": "https://github.com/WalteR-MittY-pro/SkillLift.",
+    "project_page": null
+  },
+  "abstract_en": "LLM-based agents increasingly rely on persistent skills, i.e., reusable procedural prompts, to adapt without weight updates. Existing skill self-evolution methods directly revise skill text based on execution feedback, but each oracle evaluation requires a full agent rollout, creating a supervision bottleneck that confines search to failure-patching updates. Our key insight is that ranking is a smoother supervision target than absolute outcome regression: identifying which skill is better requires fewer oracle evaluations than predicting exact scores. Building on this insight, we propose SkillLift, which decouples skill search from oracle cost by learning an oracle-aligned rubric as a structured evaluation space. We formalize this as a bilevel optimization problem solved via alternating optimization: an inner loop uses the frozen rubric as a cheap surrogate to guide skill revision at no oracle cost, while an outer loop invokes a small number of oracle rollouts to re-align the rubric via rank correlation, amortizing oracle cost and stabilizing text-space updates. Experiments on complex agent task benchmarks show that our method outperforms existing auto-skill methods with 40--70\\% less token cost compared to frontier evolving methods. Codes are available at https://github.com/WalteR-MittY-pro/SkillLift.",
+  "abstract_zh": "基于 LLM 的智能体通常依赖可复用的程序化提示（skills）实现持续适应，但现有技能自演化方法需要每次通过完整智能体执行获取 oracle 反馈，导致监督成本高，并使搜索局限于针对失败案例的局部修补。SkillLift 的核心观察是：相比预测绝对结果分数，判断两个技能哪个更优所需的 oracle 评估更少。为此，方法学习一个与 oracle 对齐的结构化评估空间，将技能搜索与 oracle 成本解耦。具体而言，SkillLift 将问题形式化为双层优化：内循环冻结 rubric，利用低成本替代评估指导技能修订；外循环仅调用少量 oracle rollout，通过排序相关性重新对齐 rubric，从而摊销 oracle 成本并稳定文本空间中的更新。在复杂智能体任务基准上，SkillLift 超越现有自动技能演化方法，相比前沿演化方法减少 40%–70% 的 token 成本。",
+  "key_points_zh": [
+    "将技能优劣排序作为比绝对分数回归更高效、更平滑的监督目标，减少昂贵的 oracle rollout。",
+    "学习与 oracle 对齐的结构化 rubric：内循环用冻结 rubric 低成本指导技能修改，外循环用少量 oracle 反馈校准 rubric。",
+    "通过双层交替优化，将技能搜索与 oracle 成本解耦，并提升文本空间更新的稳定性。",
+    "在复杂智能体任务基准上优于现有 auto-skill 方法，相比前沿演化方法节省 40%–70% token 成本。",
+    "代码已公开于 GitHub：WalteR-MittY-pro/SkillLift。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.87,
+    "problem_significance": 0.86,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.85,
+    "llm_avg": 0.852,
+    "comment": "SkillLift directly advances skill evolution by amortizing expensive oracle rollouts through a learned rubric that guides iterative skill revision.",
+    "comment_zh": "SkillLift 通过学习评估规则来摊销昂贵的智能体执行反馈成本，直接推进了技能迭代与演化。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3233158463485474,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.852,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/WalteR-MittY-pro/SkillLift.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15396/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.882
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15396/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.931
+    }
+  ]
+}

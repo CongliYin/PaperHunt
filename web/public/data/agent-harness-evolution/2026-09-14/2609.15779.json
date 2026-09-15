@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.15779",
+  "title": "EvoOntology: A Self-Evolving Ontology Layer for Data Agents",
+  "title_zh": "EvoOntology：面向数据智能体的自演化本体层",
+  "authors": [
+    "Meiduo Chong",
+    "Shaolei Zhang",
+    "Ju Fan",
+    "Xiaoyong Du"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-14T15:59:24Z",
+  "abs_url": "https://arxiv.org/abs/2609.15779v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.15779",
+  "links": {
+    "github": "https://github.com/ruc-datalab/EvoOntology",
+    "project_page": null
+  },
+  "abstract_en": "Data agents aim to fulfill natural-language instructions over heterogeneous data, including tables, files, and databases. However, data agents face a challenging agent-data gap: heterogeneous data resides outside the agent, while the agent can access it (e.g., column names and file paths) only through generic tools. Existing approaches either let agents directly explore raw data sources or inject manually constructed semantic layers into prompts. However, neither scales well to large heterogeneous data sources nor adapts to different agent behaviors. In this paper, we introduce EvoOntology, a self-evolving ontology layer for data agents. EvoOntology encapsulates the ontology as an MCP server comprising a schema layer, a content layer, and a tool layer, enabling agents to actively query and interact with the ontology at runtime. To this end, we introduce a builder agent for autonomous ontology construction and a self-evolution loop that continuously refines the ontology through attribution-guided typed edits that are accepted only after a backbone-conditional paired evaluation. Experiments on three well-adopted data-agent benchmarks with four LLM backbones demonstrate that EvoOntology consistently outperforms strong baselines and existing semantic-layer approaches, effectively bridging the agent-data gap and enabling more effective interaction with heterogeneous data. Code: https://github.com/ruc-datalab/EvoOntology",
+  "abstract_zh": "数据智能体需要在表格、文件和数据库等异构数据上执行自然语言指令，但数据通常位于智能体之外，智能体只能通过通用工具访问列名、文件路径等有限信息，形成“智能体—数据鸿沟”。现有方法要么直接探索原始数据源，难以扩展到大规模异构数据；要么将人工构建的语义层注入提示词，难以适应不同智能体行为。本文提出 EvoOntology，一种面向数据智能体的自演化本体层，将本体封装为 MCP server，包含 schema layer、content layer 和 tool layer，使智能体能够在运行时主动查询和交互。方法设计了用于自主构建本体的 builder agent，以及通过归因引导的类型化编辑持续完善本体的 self-evolution loop；每次修改只有在基于具体 backbone 的成对评估中通过后才会被接受。在三个主流数据智能体基准和四种 LLM backbone 上的实验表明，EvoOntology 稳定优于强基线及现有语义层方法，能够有效弥合智能体—数据鸿沟，并提升智能体与异构数据的交互效果。",
+  "key_points_zh": [
+    "针对异构数据位于智能体外部、通用工具难以提供丰富语义信息的问题，提出 EvoOntology 以弥合 agent-data gap。",
+    "将本体实现为 MCP server，由 schema layer、content layer 和 tool layer 组成，支持智能体运行时主动查询与交互。",
+    "通过 builder agent 自动构建本体，并利用 attribution-guided typed edits 和 backbone-conditional paired evaluation 驱动安全演化。",
+    "在三个数据智能体基准、四种 LLM backbone 上，EvoOntology consistently 优于强基线和现有 semantic-layer 方法。",
+    "代码已开源：https://github.com/ruc-datalab/EvoOntology"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.67,
+    "novelty": 0.82,
+    "problem_significance": 0.74,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.64,
+    "llm_avg": 0.716,
+    "comment": "The paper provides a runtime-queryable and self-evolving context layer for data agents, though its value is partly constrained by the narrow data-agent setting.",
+    "comment_zh": "该论文为数据智能体提供了可运行时查询和自演化的上下文层，但其价值部分受限于较窄的数据智能体场景。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.716,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/ruc-datalab/EvoOntology",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15779/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.15779/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.941
+    }
+  ]
+}
