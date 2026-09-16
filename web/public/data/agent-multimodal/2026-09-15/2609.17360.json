@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2609.17360",
+  "title": "ECHO: A Matched-Contrast Benchmark for Context-Sensitive Turn-Taking in Full-Duplex Dialogue",
+  "title_zh": "ECHO：面向全双工对话中上下文敏感轮次交接的匹配对比基准",
+  "authors": [
+    "Shuofeng Zhao",
+    "Hongwei Cai",
+    "Wenke Fan",
+    "Qingxiang Guo",
+    "Dawei Yang",
+    "Zhou Wang",
+    "Zhiyang Zhou",
+    "Yingxin Shang",
+    "Weixu Wang",
+    "Lin Yang",
+    "Shuran Zhou",
+    "Yang Song"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-15T15:58:48Z",
+  "abs_url": "https://arxiv.org/abs/2609.17360v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.17360",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Full-duplex spoken dialogue systems must distinguish interruptions that require yielding the floor from backchannels that permit continued speaking. Existing benchmarks typically evaluate events independently and may therefore reward fixed action preferences rather than context-sensitive decisions. We introduce ECHO, a paired diagnostic benchmark for Chinese full-duplex turn-taking. ECHO pairs examples with the same overlap transcript but contrasting preceding multi-turn dialogue contexts, with one requiring Yield and the other Keep. It additionally includes off-talk examples for diagnosing unnecessary yielding. We introduce pair accuracy, which requires correct decisions on both members of a pair and assigns no credit to constant-action policies. Experiments on multiple full-duplex systems show that most exhibit a pronounced bias toward \\textsc{Yield}, performing substantially better on interruptions than on backchannels, while another system remains comparatively balanced. These findings demonstrate that interruption-only evaluation can overestimate practical turn-taking reliability. ECHO and its metadata will be publicly released.",
+  "abstract_zh": "全双工语音对话系统必须区分两类重叠话语：需要让出话轮的打断（interruption），以及允许系统继续说话的反馈语（backchannel）。现有基准通常独立评估各个事件，因而可能错误奖励固定动作偏好，而非真正依赖上下文的决策能力。本文提出 ECHO，一个面向中文全双工话轮交接的配对诊断基准。ECHO 为具有相同重叠话语转写、但前置多轮对话上下文不同的样本构造配对，其中一个样本要求 Yield（让出话轮），另一个要求 Keep（继续说话）。此外，ECHO 还包含 off-talk（非对话性旁白）样本，用于诊断不必要的让步行为。论文提出 pair accuracy（配对准确率）：仅当模型对一对样本均判断正确时才计分，因此固定选择同一动作的策略无法得分。对多个全双工系统的实验表明，大多数系统存在明显的 Yield 偏置：其处理打断的表现显著优于处理反馈语；另一个系统则相对均衡。结果说明，仅以打断事件进行评测会高估系统在实际话轮交接中的可靠性。ECHO 及其元数据将公开发布。",
+  "key_points_zh": [
+    "ECHO 是面向中文全双工对话话轮交接的匹配对比诊断基准，重点评估系统能否依据多轮上下文区分 Yield 与 Keep。",
+    "每组样本具有相同的重叠话语转写，但前置对话上下文不同，且要求相反决策，从而排除依赖表面文本或固定动作偏好的策略。",
+    "基准额外纳入 off-talk 样本，用于检测系统是否会因非对话性旁白而不必要地让出话轮。",
+    "论文提出 pair accuracy，只有成对样本全部预测正确才计分，固定选择 Yield 或 Keep 的策略无法获得配对分数。",
+    "实验发现多数全双工系统明显偏向 Yield，对打断的识别远好于对反馈语的处理，说明仅评测打断会高估真实场景中的话轮交接可靠性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.84,
+    "problem_significance": 0.91,
+    "potential_impact": 0.89,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8540000000000001,
+    "comment": "ECHO offers a well-designed paired benchmark that exposes context-insensitive turn-taking policies and should materially improve full-duplex voice-agent evaluation.",
+    "comment_zh": "ECHO通过成对对照评测揭示上下文不敏感的轮次决策，有望显著提升全双工语音智能体的评估质量。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.28206629502221137,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8540000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.17360/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.937
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.17360/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.974
+    }
+  ]
+}

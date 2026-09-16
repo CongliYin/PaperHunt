@@ -1,0 +1,62 @@
+{
+  "domain": "agent-multimodal",
+  "display_name": "Realtime Multimodal Agent",
+  "date": "2026-09-15",
+  "generated_at": "2026-09-16T22:53:59Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.17360",
+      "title": "ECHO: A Matched-Contrast Benchmark for Context-Sensitive Turn-Taking in Full-Duplex Dialogue",
+      "title_zh": "ECHO：面向全双工对话中上下文敏感轮次交接的匹配对比基准",
+      "authors": [
+        "Shuofeng Zhao",
+        "Hongwei Cai",
+        "Wenke Fan",
+        "Qingxiang Guo",
+        "Dawei Yang",
+        "Zhou Wang",
+        "Zhiyang Zhou",
+        "Yingxin Shang",
+        "Weixu Wang",
+        "Lin Yang",
+        "Shuran Zhou",
+        "Yang Song"
+      ],
+      "total_score": 0.6513033147511107,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8540000000000001,
+        "domain_fit": 0.96,
+        "other": 0.19701104917036857
+      },
+      "tags": [
+        "realtime voice agent"
+      ],
+      "tldr_zh": "ECHO以配对对比揭示全双工话轮决策偏差",
+      "detail_file": "agent-multimodal/2026-09-15/2609.17360.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.17360/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.17056",
+      "title": "Audio-Visual Turn-taking Prediction in Cocktail Party Scenarios",
+      "title_zh": "鸡尾酒会场景中的音视听轮次转换预测",
+      "authors": [
+        "Long-Vu Hoang",
+        "Naomi Harte"
+      ],
+      "total_score": 0.5863082880689194,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.6980000000000001,
+        "domain_fit": 0.82,
+        "other": 0.1896942935630644
+      },
+      "tags": [
+        "low latency turn taking"
+      ],
+      "tldr_zh": "噪声使轮次预测显著退化，领域微调可提升鲁棒性。",
+      "detail_file": "agent-multimodal/2026-09-15/2609.17056.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.17056/thumb.webp"
+    }
+  ]
+}

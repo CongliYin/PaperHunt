@@ -1,0 +1,80 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-09-15",
+  "generated_at": "2026-09-16T22:51:32Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.17394",
+      "title": "Coding Agents Have Converged: Why the SWE-bench Leaderboard Can No Longer Order Its Top Entries, and What to Measure Instead",
+      "title_zh": "编程智能体已趋同：为何 SWE-bench 排行榜无法再区分头部条目，以及应改为衡量什么",
+      "authors": [
+        "Fengshuo Liu",
+        "Ying Liu",
+        "Ruize Sun",
+        "Lie Luo",
+        "Siyuan Guo"
+      ],
+      "total_score": 0.522,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.7699999999999999,
+        "domain_fit": 0.94,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "evaluation operations"
+      ],
+      "tldr_zh": "SWE-bench头部已难排序，应报告统计分辨力与配置来源",
+      "detail_file": "agent-harness-evolution/2026-09-15/2609.17394.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.17394/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.16461",
+      "title": "Protocol-Preserving Context Trimming for Agentic Workflows: Benefits, Failure Regimes, and Budget Guardrails",
+      "title_zh": "面向智能体工作流的协议保持型上下文裁剪：收益、失效区间与预算护栏",
+      "authors": [
+        "Harish Gaggar"
+      ],
+      "total_score": 0.43560000000000004,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.772,
+        "domain_fit": 0.96,
+        "other": 0.2
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "保留协议关键状态并动态控预算，可兼顾压缩与可靠性。",
+      "detail_file": "agent-harness-evolution/2026-09-15/2609.16461.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.16461/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.16936",
+      "title": "RepoAtlas: Guiding Coding Agents via Evolving Multimodal Repository Views",
+      "title_zh": "RepoAtlas：通过动态演化的多模态仓库视图引导编程智能体",
+      "authors": [
+        "Yunxiang Zhang",
+        "Haiquan Wang",
+        "JiaWei Guo",
+        "Hanyang Xia",
+        "Yan Chen",
+        "Tong Chen",
+        "Zhang Zhiwei",
+        "Junchen Ye"
+      ],
+      "total_score": 0.2718516573755553,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.7859999999999999,
+        "domain_fit": 0.95,
+        "other": 0.12017219125185097
+      },
+      "tags": [],
+      "tldr_zh": "动态多模态仓库视图提升修复率并降低开销",
+      "detail_file": "agent-harness-evolution/2026-09-15/2609.16936.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.16936/thumb.webp"
+    }
+  ]
+}

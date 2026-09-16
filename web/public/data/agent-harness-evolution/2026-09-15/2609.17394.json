@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.17394",
+  "title": "Coding Agents Have Converged: Why the SWE-bench Leaderboard Can No Longer Order Its Top Entries, and What to Measure Instead",
+  "title_zh": "编程智能体已趋同：为何 SWE-bench 排行榜无法再区分头部条目，以及应改为衡量什么",
+  "authors": [
+    "Fengshuo Liu",
+    "Ying Liu",
+    "Ruize Sun",
+    "Lie Luo",
+    "Siyuan Guo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-15T16:29:12Z",
+  "abs_url": "https://arxiv.org/abs/2609.17394v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.17394",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Small differences on coding-agent leaderboards are often read as an ordering of systems. We audit whether the published verdicts support this reading, using 254 SWE-bench submissions across four splits without running models. On Verified, the leading two entries each resolve 396 of 500 instances. The top ten share 285 successes and 51 failures, leaving 164 instances that distinguish their outcomes. Frontier solution sets have median nesting 0.935 against a score-implied baseline of 0.774, indicating strongly shared successes. Scores also depend on the evaluated model-scaffold pair: observed within-model scaffold ranges reach 29.8 percentage points, compared with the 8.8-point spread of the top thirty. Six of nine cell-mean interaction tests remain significant after Holm correction, although this observational design does not identify causal scaffold effects. Exact paired McNemar tests separate none of the 29 adjacent Verified top-thirty pairs at alpha=0.05, while the larger Test split separates 14 of 23. A stated leader-based rule yields three descriptive tiers, or two after Holm correction; non-rejection does not establish equivalence. We release the partition and a five-step audit protocol that profiles shared outcomes, tests paired differences, reports grouping sensitivity, and estimates the instance budget needed for resolution. The results motivate reporting comparison-set-specific resolution and model-scaffold provenance instead of interpreting small aggregate gaps as established rank differences.",
+  "abstract_zh": "编程智能体排行榜上的微小分差常被解读为系统间的明确排序。本文在不重新运行模型的情况下，审计了 SWE-bench 四个数据划分上的 254 次提交，以检验公开结果是否支持这一解读。在 Verified 划分中，排名前两位的条目均解决了 500 个实例中的 396 个；前十名共同成功解决 285 个实例、共同失败 51 个实例，真正区分其结果的仅有 164 个。前沿系统解集的中位嵌套度为 0.935，显著高于由分数推导出的基线 0.774，表明头部系统的成功案例高度重合。分数还取决于被评估的模型—脚手架（model-scaffold）组合：同一模型采用不同 scaffold 时，分数跨度最高达 29.8 个百分点，而前三十名总体分差仅为 8.8 个百分点。经过 Holm 多重比较校正后，9 项单元均值交互检验中仍有 6 项显著，但由于研究采用观察性设计，不能据此识别 scaffold 的因果效应。在显著性水平 α=0.05 下，精确配对 McNemar 检验无法区分 Verified 前三十名中任何一对相邻条目；样本更大的 Test 划分则可区分 23 对中的 14 对。基于预先声明的领先者规则，可得到三个描述性层级，经 Holm 校正后变为两个；但未拒绝差异假设并不意味着系统等价。本文发布了相应分组结果及一套五步审计协议，用于分析共享成败、检验配对差异、报告分组敏感性，并估计获得足够区分能力所需的实例数量。研究建议，不应将微小的总分差距直接解释为确定的排名差异，而应报告针对具体比较集合的分辨能力，以及模型—scaffold 组合的来源信息。",
+  "key_points_zh": [
+    "SWE-bench Verified 的头部系统表现高度趋同：前两名同为 396/500，前十名的大量成功与失败实例完全重合。",
+    "排行榜分数受模型—scaffold 组合显著影响；同一模型的 scaffold 分差最高达 29.8 个百分点，远超前三十名之间的 8.8 个百分点。",
+    "精确配对 McNemar 检验无法区分 Verified 前三十名的任何相邻条目，说明微小分差不足以支持稳定的名次排序。",
+    "更大的 Test 划分具有更强统计分辨力，可区分 23 对相邻条目中的 14 对，表明实例预算直接影响排行榜的区分能力。",
+    "作者提出五步审计协议，建议改为报告共享结果、配对显著性、分组敏感性、所需实例预算及模型—scaffold provenance，而非只看总分排名。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.71,
+    "problem_significance": 0.87,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.61,
+    "lasting_value": 0.84,
+    "llm_avg": 0.7699999999999999,
+    "comment": "This rigorous SWE-bench audit offers a reusable statistical protocol for replacing unreliable leaderboard rankings with resolution-aware coding-agent evaluation.",
+    "comment_zh": "这项严谨的SWE-bench审计提出了可复用的统计协议，以分辨率感知评估取代不可靠的编码智能体排行榜排序。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.7699999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.17394/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.17394/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.858
+    }
+  ]
+}

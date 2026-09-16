@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2609.16452",
+  "title": "PCap: Personalized Retrieval-Stage Diversity Capping in Facebook Marketplace",
+  "title_zh": "PCap：Facebook Marketplace 检索阶段的个性化多样性封顶",
+  "authors": [
+    "Guangchao Yuan",
+    "Janis Fuh",
+    "Christopher Choate",
+    "Xun Tang",
+    "Wenqi Zhu",
+    "Chengyi Zhang",
+    "Pavan Kumar Paalya Chandrashekar",
+    "Jiang Han",
+    "Jiangyuan Li",
+    "Hongyan Wang",
+    "Shuting Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-15T00:16:43Z",
+  "abs_url": "https://arxiv.org/abs/2609.16452v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.16452",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We propose a personalized capping framework (PCap) to improve the diversity in Facebook Marketplace by introducing user-level diversity constraints at the retrieval stage. PCap models individual diversity preferences using Shannon entropy-based scoring, segments users into diversity buckets, and applies personalized category caps during multi-source candidate retrieval. To navigate the high-dimensional parameter space of per-bucket caps, we leverage an automated online optimization method called Parameter Tuning Sequence. Large-scale online experiments demonstrate that PCap significantly improves users' browsing experience shown in engagement metrics. This work provides practical insights into integrating personalized diversity into industrial retrieval systems.",
+  "abstract_zh": "本文提出个性化封顶框架 PCap，通过在检索阶段引入用户级多样性约束，提升 Facebook Marketplace 的候选内容多样性。PCap 基于 Shannon entropy（香农熵）评分建模用户的个体多样性偏好，将用户划分至不同的多样性分桶，并在多来源候选检索过程中应用个性化类别上限。针对各分桶上限构成的高维参数空间，作者采用名为 Parameter Tuning Sequence 的自动化在线优化方法进行参数搜索。大规模在线实验表明，PCap 能够显著改善用户浏览体验及相关互动指标。该工作为工业级检索系统集成个性化多样性机制提供了实用经验。",
+  "key_points_zh": [
+    "在候选检索阶段引入用户级多样性约束，而非仅依赖排序阶段调整。",
+    "使用基于 Shannon entropy 的评分刻画个体多样性偏好，并据此对用户进行分桶。",
+    "在多来源候选检索中，为不同用户分桶设置个性化类别上限。",
+    "利用 Parameter Tuning Sequence 自动优化高维的分桶上限参数。",
+    "Facebook Marketplace 的大规模在线实验显示，PCap 显著提升浏览体验与互动指标。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.62,
+    "problem_significance": 0.82,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.76,
+    "llm_avg": 0.7040000000000001,
+    "comment": "PCap directly improves personalized product retrieval diversity in a large-scale marketplace and validates its value through online engagement gains.",
+    "comment_zh": "PCap直接提升大型电商市场中的个性化商品检索多样性，并通过在线实验验证了用户互动收益。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3210331475111057,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7040000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.16452/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.16452/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.926
+    }
+  ]
+}

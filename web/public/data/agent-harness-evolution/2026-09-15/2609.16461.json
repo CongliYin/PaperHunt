@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2609.16461",
+  "title": "Protocol-Preserving Context Trimming for Agentic Workflows: Benefits, Failure Regimes, and Budget Guardrails",
+  "title_zh": "面向智能体工作流的协议保持型上下文裁剪：收益、失效区间与预算护栏",
+  "authors": [
+    "Harish Gaggar"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-15T00:27:37Z",
+  "abs_url": "https://arxiv.org/abs/2609.16461v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.16461",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic large language model (LLM) systems rely on long interaction histories to preserve instructions, tool states, intermediate decisions, and unresolved dependencies, but unrestricted context growth increases computational cost and can reduce efficiency. This study evaluates protocol-preserving context trimming as a reliability-constrained approach for multi-step agentic workflows. Five trimming strategies - recency-based, relevance-based, summarization, protocol-aware trimming, and adaptive budget guardrails - were compared across retained-context levels and workflow-complexity classes using task success, protocol adherence, valid tool calls, token savings, latency reduction, cascading failures, and critical context thresholds. Conventional strategies achieved about 60% mean token savings but lower task success (66.6-77.3%) and protocol adherence (85.5-88.6%). Protocol-aware trimming improved task success to 92.2%, while adaptive guardrails achieved 96.0% task success, 96.3% protocol adherence, and 1.0% cascading failure with 56.0% mean token savings. Retained-context budgets of 25% or less increased failure odds 10.92-fold relative to budgets of 50% or more (p < 0.001). Protocol-aware trimming produced 5.24-fold greater odds of successful completion than conventional methods under aggressive budgets, while adaptive guardrails further increased success odds 2.11-fold versus fixed protocol-aware trimming (p < 0.001). Critical context thresholds also increased with workflow complexity. These findings indicate that reliable context reduction depends more on preserving protocol-critical state than on maximizing token removal, and that adaptive guardrails can improve efficiency, scalability, and reliability in long-horizon agentic systems.",
+  "abstract_zh": "智能体大语言模型（LLM）系统依赖较长的交互历史来保留指令、工具状态、中间决策和尚未解决的依赖关系，但上下文无限增长会增加计算成本并降低运行效率。本研究将协议保持型上下文裁剪（protocol-preserving context trimming）作为一种受可靠性约束的方法，用于多步骤智能体工作流。研究在不同上下文保留比例和工作流复杂度下，对比了五种裁剪策略：基于时近性的裁剪、基于相关性的裁剪、摘要化、协议感知裁剪（protocol-aware trimming）以及自适应预算护栏（adaptive budget guardrails）；评估指标包括任务成功率、协议遵循率、有效工具调用率、Token 节省、延迟降低、级联失败和临界上下文阈值。传统策略平均节省约 60% Token，但任务成功率仅为 66.6%–77.3%，协议遵循率为 85.5%–88.6%。协议感知裁剪将任务成功率提升至 92.2%；自适应预算护栏则在平均节省 56.0% Token 的同时，实现了 96.0% 的任务成功率、96.3% 的协议遵循率，并将级联失败率控制在 1.0%。与保留至少 50% 上下文相比，保留不超过 25% 上下文会使失败几率增至 10.92 倍（p < 0.001）。在激进预算下，协议感知裁剪成功完成任务的几率是传统方法的 5.24 倍；相较固定式协议感知裁剪，自适应预算护栏又将成功几率提高至 2.11 倍（p < 0.001）。此外，工作流越复杂，其临界上下文阈值越高。结果表明，可靠的上下文压缩关键不在于最大化 Token 删除量，而在于保留协议关键状态；自适应预算护栏能够同时提升长时程智能体系统的效率、可扩展性与可靠性。",
+  "key_points_zh": [
+    "传统裁剪虽平均节省约 60% Token，但任务成功率仅为 66.6%–77.3%，容易损害智能体工作流可靠性。",
+    "协议感知裁剪通过保留指令、工具状态和未解决依赖等协议关键状态，将任务成功率提升至 92.2%。",
+    "自适应预算护栏表现最佳：任务成功率 96.0%、协议遵循率 96.3%、级联失败率 1.0%，同时平均节省 56.0% Token。",
+    "上下文保留比例不超过 25% 时，失败几率相较保留至少 50% 增加 10.92 倍，说明激进裁剪存在明显失效区间。",
+    "临界上下文阈值随工作流复杂度提高，固定裁剪预算不适用于所有任务，应根据协议状态和任务复杂度动态调整。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.68,
+    "problem_significance": 0.88,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.81,
+    "llm_avg": 0.772,
+    "comment": "Protocol-aware trimming and adaptive budget guardrails directly address efficient, reliable context-state management in long-horizon agent workflows.",
+    "comment_zh": "协议感知裁剪与自适应预算护栏直接解决了长程智能体工作流中上下文状态管理的效率与可靠性问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.772,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.16461/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.943
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.16461/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}
