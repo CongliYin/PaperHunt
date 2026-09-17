@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.18126",
+  "title": "Designing Agentic AI Workflow Portfolios under Imperfect Selection and Compute Cost",
+  "title_zh": "不完美选择与计算成本约束下的智能体 AI 工作流组合设计",
+  "authors": [
+    "Mojtaba Abdolmaleki",
+    "Stefanus Jasin",
+    "Boyu Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-16T05:02:11Z",
+  "abs_url": "https://arxiv.org/abs/2609.18126v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.18126",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic AI systems often approach the same task through multiple workflows that differ in reasoning strategy, verification structure, and compute cost. A natural deployment policy is to use the workflow with the highest average performance, but this can be suboptimal because different workflows may succeed on different instances. We study a portfolio-and-selector paradigm in which a firm runs multiple workflow executions and selects the final answer after observing their outputs. Additional executions may uncover correct answers that the best standalone workflow misses, but they consume compute and introduce plausible distractors that complicate final selection. We formulate this as a workflow portfolio problem in which the firm jointly chooses run size and allocation across workflow types. We summarize selector quality through an odds-lift index and derive sharp bounds on the value of workflow variety. For finite workflow pools, we develop exact formulations, linear programming relaxations, randomized rounding procedures, and computable performance certificates. For large implicit workflow classes, we derive a finite-dimensional dual and an ellipsoid method using a pricing oracle to identify workflows with high weighted accuracy net of recurring compute cost. Under a weak condition, the method obtains a near-optimal solution to the relaxation with polynomially many oracle calls. We evaluate the framework on three datasets: ABCD, Schema-Guided Dialogue, and HotpotQA. Relative to the best standalone workflow, portfolio optimization improves held-out selector accuracy by 3.1, 7.5, and 0.9 percentage points, respectively. Dual-guided workflow generation adds 3.5 points on ABCD and 24.1 on HotpotQA, with no additional gain on Schema-Guided Dialogue.",
+  "abstract_zh": "Agentic AI 系统通常会使用推理策略、验证结构和计算成本各异的多种工作流处理同一任务。仅部署平均性能最高的工作流可能并非最优，因为不同工作流可能在不同样本上成功。本文研究“工作流组合—选择器”范式：企业运行多个工作流实例，在观察其输出后选择最终答案。增加执行次数虽能发现最佳单一工作流遗漏的正确答案，但也会增加计算成本，并引入干扰选择的高可信错误答案。作者将其建模为工作流组合优化问题，联合决定执行规模及不同工作流类型间的资源分配；以 odds-lift index 概括选择器质量，并推导工作流多样性价值的紧确界。对于有限工作流池，论文提出精确优化模型、线性规划松弛、随机舍入算法及可计算的性能证书；对于大规模隐式工作流类，则构造有限维对偶问题，并利用定价预言机（pricing oracle）和椭球法，寻找加权准确率扣除重复计算成本后收益较高的工作流。在一个较弱条件下，该方法仅需多项式次数的预言机调用，即可获得松弛问题的近似最优解。实验覆盖 ABCD、Schema-Guided Dialogue 和 HotpotQA。相较最佳单一工作流，组合优化使留出集选择准确率分别提升 3.1、7.5 和 0.9 个百分点；对偶引导的工作流生成又在 ABCD 和 HotpotQA 上分别提升 3.5 和 24.1 个百分点，但在 Schema-Guided Dialogue 上未带来额外收益。",
+  "key_points_zh": [
+    "提出工作流组合—选择器范式，利用不同 Agentic AI 工作流在样本层面的互补性，而非只部署平均性能最优的单一工作流。",
+    "联合优化执行总量、工作流类型分配与计算成本，并用 odds-lift index 刻画不完美选择器的质量，给出工作流多样性价值的紧确界。",
+    "针对有限工作流池，提供精确模型、线性规划松弛、随机舍入方法和可计算的性能证书。",
+    "针对大规模隐式工作流空间，基于有限维对偶、椭球法与 pricing oracle，以多项式次调用获得松弛问题的近似最优解。",
+    "在 ABCD、Schema-Guided Dialogue、HotpotQA 上，组合优化较最佳单一工作流分别提升 3.1、7.5、0.9 个百分点；对偶引导生成在 HotpotQA 上额外提升 24.1 个百分点。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.67,
+    "novelty": 0.69,
+    "problem_significance": 0.7,
+    "potential_impact": 0.66,
+    "paradigm_shift": 0.51,
+    "lasting_value": 0.62,
+    "llm_avg": 0.6359999999999999,
+    "comment": "The workflow portfolio formulation offers a principled compute-aware orchestration and selection method, but it lacks a deeper execution-state or trajectory-learning harness.",
+    "comment_zh": "该工作流组合模型提供了原则明确的计算感知编排与选择方法，但缺少更深入的执行状态或轨迹学习框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36228269883744174,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6359999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.18126/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.18126/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.915
+    }
+  ]
+}

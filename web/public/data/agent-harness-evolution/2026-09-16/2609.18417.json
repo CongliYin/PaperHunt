@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.18417",
+  "title": "Dependency-Aware Trajectory Refinement for Efficient Multi-Turn Agent Fine-Tuning",
+  "title_zh": "面向高效多轮智能体微调的依赖感知轨迹精炼",
+  "authors": [
+    "Zhuo Chen",
+    "Zhen Zhang",
+    "Xinyu Wang",
+    "Kewei Tu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-16T10:11:58Z",
+  "abs_url": "https://arxiv.org/abs/2609.18417v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.18417",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-turn agent trajectories often contain redundant rounds (failed tool calls, parallel sub-queries, verification-only steps) that inflate both training and inference cost. We propose viewing each trajectory as a \\emph{round-level dependency DAG} that exposes which rounds are globally load-bearing for the final answer, and fine-tune agents on trajectories refined through this DAG. Given an LLM-annotated DAG, these edits are deterministic and interpretable, with optional rephrasing. Models trained on these refined trajectories consistently outperform those trained on the original trajectories at lower inference cost. Specifically, across four multi-modal QA benchmarks, our refinements improve downstream accuracy by up to $1.7$\\,pp over vanilla SFT (and $5.7$\\,pp over an LLM-deletion baseline) while reducing per-sample inference messages by up to approximately $40\\%$ and inference tokens by up to approximately $48\\%$, translating to substantial savings in compute and serving cost. Code is available.",
+  "abstract_zh": "多轮智能体轨迹通常包含失败的工具调用、并行子查询和仅用于验证的步骤等冗余轮次，从而增加训练与推理成本。本文将每条轨迹建模为轮次级依赖有向无环图（round-level dependency DAG），以识别对最终答案具有全局关键作用的轮次，并使用经该 DAG 精炼后的轨迹对智能体进行微调。给定由 LLM 标注的依赖 DAG，轨迹编辑过程具有确定性和可解释性，同时可选择对内容进行改写。在四个多模态问答基准上，基于精炼轨迹训练的模型以更低的推理成本持续优于使用原始轨迹训练的模型。相较于标准监督微调（vanilla SFT），该方法最高提升 1.7 个百分点的下游准确率；相较于基于 LLM 的轮次删除基线，最高提升 5.7 个百分点。同时，每个样本的推理消息数最多减少约 40%，推理 token 数最多减少约 48%，显著降低计算与部署服务成本。代码已公开。",
+  "key_points_zh": [
+    "将多轮智能体轨迹表示为轮次级 dependency DAG，显式刻画各轮次对最终答案的依赖关系。",
+    "依据 LLM 标注的 DAG 确定性地删除冗余轮次，并支持可选改写，兼具可解释性与可复现性。",
+    "在四个多模态 QA benchmark 上，相比 vanilla SFT，准确率最高提升 1.7 个百分点。",
+    "相比 LLM-deletion baseline，准确率最高提升 5.7 个百分点，表明结构化依赖分析优于直接让 LLM 删除步骤。",
+    "推理消息数最多减少约 40%，token 数最多减少约 48%，可显著节省计算与服务成本。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.76,
+    "problem_significance": 0.82,
+    "potential_impact": 0.83,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.78,
+    "llm_avg": 0.774,
+    "comment": "Dependency-DAG refinement is a reusable and interpretable trajectory-processing method that improves agent fine-tuning while reducing execution cost.",
+    "comment_zh": "基于依赖DAG的精炼是一种可复用且可解释的轨迹处理方法，能提升智能体微调效果并降低执行成本。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.774,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.18417/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.95
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.18417/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.957
+    }
+  ]
+}

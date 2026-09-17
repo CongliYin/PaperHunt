@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2609.18135",
+  "title": "DualSQL: Text-to-SQL with Multi-Agent Reinforcement Learning",
+  "title_zh": "DualSQL：基于多智能体强化学习的 Text-to-SQL",
+  "authors": [
+    "Shijie Chen",
+    "Yu Gan",
+    "Yeounoh Chung",
+    "Jiani Zhang",
+    "Quannan Li",
+    "Sravan Babu Bodapati",
+    "Cody J. Greer",
+    "Yu Su",
+    "Fatma Ozcan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-16T05:16:37Z",
+  "abs_url": "https://arxiv.org/abs/2609.18135v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.18135",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "State-of-the-art Text-to-SQL systems are typically multi-agent pipelines centered around two fundamental tasks: schema linking and SQL generation. However, existing work trains separate models for each task, failing to leverage the synergy between these interrelated tasks. In this work, we propose DualSQL, a new Text-to-SQL system consisting of two agents powered by a single model backbone. The agents share the same model weights and agentic scaffold, enabling joint optimization through a robust multi-agent reinforcement learning (RL) framework. We design three database access tools to facilitate effective multi-step reasoning grounded to interactions with the databases. To improve training and avoid model collapse, we introduce a set of rollout guardrail mechanisms that stabilizes multi-agent RL training, supporting DualSQL to keep improving during training. We also introduce a new SQL correctness metric, robust execution match (REX), to more accurately judge SQL correctness and assign reward signals. Being trained on only 3755 examples, DualSQL-4B achieves an impressive 68.0% execution accuracy on the BIRD development set, matching previous 7B models. DualSQL-8B further improves to 71.1%, outperforming previous state-of-the-art single-model solutions with 32B parameters. These results demonstrate the strength of joint multi-agent reinforcement learning for building high performance Text-to-SQL pipelines.",
+  "abstract_zh": "当前先进的 Text-to-SQL 系统通常采用多智能体流水线，核心任务包括模式链接（schema linking）与 SQL 生成，但现有方法往往分别训练不同模型，未能充分利用两项任务之间的协同关系。本文提出 DualSQL：两个智能体共享同一模型主干、模型权重与智能体框架，并通过多智能体强化学习（RL）进行联合优化。DualSQL 设计了三种数据库访问工具，使智能体能够通过数据库交互开展有依据的多步推理。为避免模型崩溃并稳定训练，作者引入一组 rollout 保护机制，使系统在强化学习过程中持续改进。此外，论文提出更稳健的 SQL 正确性指标 robust execution match（REX），用于更准确地判断 SQL 是否正确并分配奖励。DualSQL 仅使用 3755 个样本训练，其中 DualSQL-4B 在 BIRD 开发集上取得 68.0% 的执行准确率，与已有 7B 模型相当；DualSQL-8B 达到 71.1%，超过此前参数量为 32B 的先进单模型方案，体现了联合多智能体强化学习在高性能 Text-to-SQL 流水线中的潜力。",
+  "key_points_zh": [
+    "DualSQL 使用两个共享模型权重与智能体框架的智能体，联合完成 schema linking 和 SQL generation。",
+    "通过多智能体强化学习联合优化相关任务，替代分别训练独立模型的传统方案。",
+    "设计三种数据库访问工具，支持以真实数据库交互为依据的多步推理。",
+    "引入 rollout 保护机制以缓解模型崩溃，并提出 REX 指标以更可靠地评估 SQL 正确性和生成奖励。",
+    "仅用 3755 个训练样本，DualSQL-4B 在 BIRD 开发集达到 68.0%，DualSQL-8B 达到 71.1%，超过已有 32B 单模型方案。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.89,
+    "novelty": 0.75,
+    "problem_significance": 0.79,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.72,
+    "llm_avg": 0.7380000000000001,
+    "comment": "The paper makes a strong agent-RL contribution through shared-backbone joint training, database-grounded rollouts, training guardrails, and an execution-based verifier.",
+    "comment_zh": "该论文通过共享骨干联合训练、数据库交互轨迹、训练护栏和执行验证器，对智能体强化学习作出了较强贡献。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.40353225016377775,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7380000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 8,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.18135/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.18135/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.975
+    }
+  ]
+}

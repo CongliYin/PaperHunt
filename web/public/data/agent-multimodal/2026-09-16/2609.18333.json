@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2609.18333",
+  "title": "Look Less, Hear Better: Jointly Rewarded GRPO for Streaming ASR",
+  "title_zh": "少看未来，听得更准：联合奖励 GRPO 优化流式 ASR",
+  "authors": [
+    "Xiuwen Zheng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-16T08:55:40Z",
+  "abs_url": "https://arxiv.org/abs/2609.18333v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.18333",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Streaming automatic speech recognition (ASR) must be judged jointly on what it transcribes and on how quickly it commits each word. Delayed streams modeling (DSM) has become the dominant paradigm for streaming large audio-language models, exposing a structural delay $τ$ that bounds the decoder's lookahead. We show that $τ$ is a poor proxy for user-perceived latency, and that the alignment-based supervision of DSM leaves latency on the table: the same forced-aligned transcript is used at every $τ$, forcing the model to withhold words it could already commit. We introduce AWED, a word-level emission-delay metric defined relative to the acoustic end of each word, and post-train a DSM recognizer with GRPO under a reward that scores transcription accuracy and measured delay jointly. Trained at a single operating point ($τ=6$ frames), our model dominates both its supervised fine-tuning initialization and the Voxtral Realtime backbone across all evaluated lookahead budgets: it cuts WER by 30.8\\% relative at an 80\\,ms structural delay, and by 5.7\\% relative at 480\\,ms while lowering median AWED from 1.17\\,s to 1.04\\,s. Latency-rewarded post-training thus advances the accuracy--latency Pareto frontier of streaming ASR without architectural change.",
+  "abstract_zh": "流式自动语音识别（ASR）需要同时评估转录内容是否准确，以及系统能多快确认并输出每个词。延迟流建模（Delayed Streams Modeling，DSM）已成为流式大型音频语言模型的主流范式，其中结构延迟 τ 用于限制解码器的前瞻范围。本文指出，τ 并不能准确反映用户感知的实际延迟；此外，DSM 基于对齐结果的监督方式仍有较大的延迟优化空间：无论 τ 如何变化，训练始终采用同一份强制对齐转录，迫使模型推迟输出原本已经可以确认的词。为此，作者提出 AWED，一种相对于每个词声学结束时刻定义的词级输出延迟指标，并使用 GRPO 对 DSM 识别器进行后训练，通过联合奖励同时优化转录准确率与实测延迟。模型仅在 τ=6 帧这一工作点训练，却在所有评测前瞻预算下均优于其监督微调初始化模型和 Voxtral Realtime 骨干模型：在 80 ms 结构延迟下，WER 相对降低 30.8%；在 480 ms 下，WER 相对降低 5.7%，同时将 AWED 中位数从 1.17 秒降至 1.04 秒。结果表明，无需修改模型架构，延迟奖励后训练即可推进流式 ASR 的准确率—延迟 Pareto 前沿。",
+  "key_points_zh": [
+    "指出 DSM 的结构延迟 τ 并非用户感知延迟的可靠代理，单纯限制前瞻范围无法充分衡量词语实际输出速度。",
+    "揭示 DSM 对齐监督的局限：不同 τ 共用同一强制对齐转录，会让模型不必要地延迟已可确认词语的输出。",
+    "提出词级延迟指标 AWED，以每个词的声学结束时刻为基准，更直接地衡量真实输出延迟。",
+    "采用 GRPO 进行后训练，通过联合奖励同时优化 WER 与 AWED，且无需改动模型架构。",
+    "仅在 τ=6 帧训练即可跨多种前瞻预算泛化；80 ms 下 WER 相对降低 30.8%，480 ms 下相对降低 5.7%，AWED 中位数由 1.17 秒降至 1.04 秒。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.67,
+    "novelty": 0.72,
+    "problem_significance": 0.83,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.59,
+    "lasting_value": 0.73,
+    "llm_avg": 0.73,
+    "comment": "Although focused on ASR rather than complete agents, its latency-aware metric and joint accuracy-delay optimization directly address a major bottleneck in realtime voice interaction.",
+    "comment_zh": "尽管该工作聚焦于ASR而非完整智能体，但其延迟感知指标和准确率—延迟联合优化直接缓解了实时语音交互的关键瓶颈。"
+  },
+  "scores": {
+    "topic_relevance": 0.44000000000000006,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.73,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.18333/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.18333/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.945
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2609.18540",
+  "title": "SVMemAgent: A Streaming Video Memory Agent for Query-Agnostic Online Frame Selection",
+  "title_zh": "SVMemAgent：面向查询无关在线帧选择的流式视频记忆智能体",
+  "authors": [
+    "Dohwan Ko",
+    "Ji Soo Lee",
+    "Pierce Chuang",
+    "Debojeet Chatterjee",
+    "Ashish Shenoy",
+    "Yichao Lu",
+    "Seungwhan Moon",
+    "Xin Luna Dong",
+    "Vikas Bhardwaj",
+    "Hyunwoo J. Kim"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-16T12:04:53Z",
+  "abs_url": "https://arxiv.org/abs/2609.18540v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.18540",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Most keyframe selection studies focus on offline settings, assuming access to the full video and query in advance. In contrast, real-world streaming scenarios require online frame selection under unknown video duration, without access to either the query or future frames during selection. To address this, we introduce Streaming Video Memory (SVMem), a compact and representative memory of previously observed content, updated continuously as the video stream unfolds. Building on this setting, we propose the Streaming Video Memory Agent (SVMemAgent), which dynamically maintains a memory by deciding at each timestep whether to replace an existing memory frame with the incoming frame or discard it. SVMemAgent is trained using Group Relative Policy Optimization (GRPO) with task-driven rewards derived from diverse question-answer pairs, implicitly exposing the policy to a distribution of queries during training so that SVMem retains generally informative frames at inference, when queries are unavailable. Experiments on both online and offline video benchmarks show that SVMemAgent consistently outperforms online frame selection baselines and achieves competitive performance with offline methods that assume access to the full video and query. Through task-driven rewards, SVMemAgent learns an emergent keyframe selection policy that prefers frames containing textual information, which may benefit downstream VideoQA tasks.",
+  "abstract_zh": "现有关键帧选择研究多采用离线设定，默认可提前获取完整视频与查询。然而，真实流媒体场景要求在视频时长未知、无法访问未来帧和查询的条件下在线选择帧。为此，论文提出 Streaming Video Memory（SVMem），通过持续更新构建紧凑且具有代表性的历史内容记忆。在此基础上，Streaming Video Memory Agent（SVMemAgent）会在每个时间步决定以当前输入帧替换某个记忆帧，或直接丢弃该帧。SVMemAgent 使用 Group Relative Policy Optimization（GRPO）训练，并从多样化问答对中获得任务驱动奖励，使策略在训练阶段隐式接触查询分布，从而在推理时没有查询的情况下仍能保留普遍有用的帧。在线与离线视频基准实验表明，该方法持续优于在线帧选择基线，并可与能够访问完整视频和查询的离线方法竞争。任务驱动奖励还促使模型自发形成偏好文本信息帧的关键帧选择策略，有利于下游 VideoQA 任务。",
+  "key_points_zh": [
+    "提出 SVMem，以固定容量持续保存紧凑且有代表性的历史视频帧。",
+    "SVMemAgent 在线决定替换记忆帧或丢弃新帧，无需查询、未来帧或已知视频时长。",
+    "采用 GRPO 与基于多样化问答对的任务驱动奖励训练，使策略学习查询无关的通用选帧能力。",
+    "在在线和离线视频基准上优于在线基线，并达到可与查询感知离线方法竞争的表现。",
+    "模型涌现出对含文本信息帧的偏好，可能进一步提升下游 VideoQA 性能。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.82,
+    "novelty": 0.79,
+    "problem_significance": 0.84,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.8,
+    "llm_avg": 0.7859999999999999,
+    "comment": "A strong streaming-video contribution whose query-agnostic online memory and learned frame selection could provide reusable perception infrastructure for realtime visual agents.",
+    "comment_zh": "该工作通过查询无关的在线记忆与学习式帧选择，为实时视觉智能体提供了较强且可复用的感知基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.48592089733189275,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7859999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 10,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.18540/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.18540/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.965
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.18820",
+  "title": "Compositional Policy Violations: When Step-Level Compliance Fails In Agentic AI Workflows",
+  "title_zh": "组合式策略违规：Agentic AI 工作流中单步合规为何失效",
+  "authors": [
+    "Ashwini Kurady",
+    "Sri Sai Charith Grandhi",
+    "Rajesh Gupta",
+    "Sumit Mamoria"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-16T15:27:33Z",
+  "abs_url": "https://arxiv.org/abs/2609.18820v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.18820",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic workflows now make consequential decisions in regulated settings, and the governance placed around them is almost entirely step-scoped: input-output classifiers, per turn rails, and span-level evaluators. The policies organizations actually hold, such as referral thresholds, authority limits, and review requirements, are properties of the whole execution rather than of any one step. This mismatch admits a failure mode we call a Compositional Policy Violation (CPV): every individual step passes its own check while the composed execution violates the governing policy. A predicate over a single step cannot evaluate a property that step does not determine, so no improvement in the accuracy of the step-scoped monitors detects this class. We define CPVs as the failure of step-level compliance to compose, and present a taxonomy of four types: Authority Creep, Threshold Laundering, Cumulative Sum Violation, and Context Collapse. We show that the correct repair for each class is dictated by where the guarded quantity mutates. We then introduce a provenance-aware runtime architecture that evaluates policies over complete execution traces, recomputing guarded quantities from raw provenance rather than the pipeline's derived representation.",
+  "abstract_zh": "Agentic AI 工作流正日益用于受监管场景中的关键决策，但现有治理机制大多局限于单步检查，例如输入输出分类器、逐轮护栏和文本片段级评估器。然而，组织真正需要执行的策略——如转介阈值、权限边界和人工复核要求——通常是完整执行过程的全局属性，而非任一单步的局部属性。论文将“每个步骤均通过检查，但组合后的整体执行违反治理策略”这一失效模式定义为组合式策略违规（Compositional Policy Violation, CPV）。由于单步谓词无法判断该步骤本身不能决定的全局属性，单纯提高局部监控器的准确率无法识别此类问题。作者提出四类 CPV：权限蔓延（Authority Creep）、阈值洗白（Threshold Laundering）、累计总和违规（Cumulative Sum Violation）和上下文坍缩（Context Collapse），并指出修复方式取决于受策略保护的量在何处发生变化。为此，论文提出一种具备溯源感知能力的运行时架构：基于完整执行轨迹评估策略，并从原始溯源信息重新计算受保护量，而非依赖工作流内部生成的派生表示。",
+  "key_points_zh": [
+    "定义 Compositional Policy Violation（CPV）：所有步骤分别合规，但组合后的完整执行仍违反全局策略。",
+    "指出局部监控存在结构性盲区：若策略属性不能由单一步骤决定，提高步骤级分类器或评估器的准确率也无法解决。",
+    "归纳四类 CPV：Authority Creep、Threshold Laundering、Cumulative Sum Violation 和 Context Collapse。",
+    "提出“修复位置由受保护量的变更位置决定”，治理机制必须跟踪权限、阈值、累计值及上下文在工作流中的演化。",
+    "设计 provenance-aware runtime，面向完整执行轨迹执行策略，并依据原始 provenance 重新计算关键量，避免依赖可能失真的派生表示。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.83,
+    "novelty": 0.78,
+    "problem_significance": 0.88,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.73,
+    "lasting_value": 0.82,
+    "llm_avg": 0.8099999999999999,
+    "comment": "Its trace-level policy model and provenance-aware runtime address a fundamental governance failure that step-scoped agent monitors cannot detect.",
+    "comment_zh": "其轨迹级策略模型和来源感知运行时解决了逐步骤智能体监控无法发现的一类根本性治理故障。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8099999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.18820/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.18820/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.952
+    }
+  ]
+}

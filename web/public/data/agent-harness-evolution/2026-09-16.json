@@ -1,0 +1,131 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-09-16",
+  "generated_at": "2026-09-17T22:49:11Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.18417",
+      "title": "Dependency-Aware Trajectory Refinement for Efficient Multi-Turn Agent Fine-Tuning",
+      "title_zh": "面向高效多轮智能体微调的依赖感知轨迹精炼",
+      "authors": [
+        "Zhuo Chen",
+        "Zhen Zhang",
+        "Xinyu Wang",
+        "Kewei Tu"
+      ],
+      "total_score": 0.6392000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.774,
+        "domain_fit": 0.9,
+        "other": 0.18333333333333338
+      },
+      "tags": [
+        "Code soon",
+        "trace driven evolution"
+      ],
+      "tldr_zh": "用依赖DAG精炼轨迹，实现更准、更省的智能体微调。",
+      "detail_file": "agent-harness-evolution/2026-09-16/2609.18417.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.18417/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.18820",
+      "title": "Compositional Policy Violations: When Step-Level Compliance Fails In Agentic AI Workflows",
+      "title_zh": "组合式策略违规：Agentic AI 工作流中单步合规为何失效",
+      "authors": [
+        "Ashwini Kurady",
+        "Sri Sai Charith Grandhi",
+        "Rajesh Gupta",
+        "Sumit Mamoria"
+      ],
+      "total_score": 0.6230000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.8099999999999999,
+        "domain_fit": 0.83,
+        "other": 0.2
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "单步合规不等于全流程合规，需基于溯源审计执行轨迹。",
+      "detail_file": "agent-harness-evolution/2026-09-16/2609.18820.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.18820/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.18135",
+      "title": "DualSQL: Text-to-SQL with Multi-Agent Reinforcement Learning",
+      "title_zh": "DualSQL：基于多智能体强化学习的 Text-to-SQL",
+      "authors": [
+        "Shijie Chen",
+        "Yu Gan",
+        "Yeounoh Chung",
+        "Jiani Zhang",
+        "Quannan Li",
+        "Sravan Babu Bodapati",
+        "Cody J. Greer",
+        "Yu Su",
+        "Fatma Ozcan"
+      ],
+      "total_score": 0.6225766125081891,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.7380000000000001,
+        "domain_fit": 0.89,
+        "other": 0.21725537502729636
+      },
+      "tags": [
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "共享模型的双智能体强化学习显著提升SQL生成",
+      "detail_file": "agent-harness-evolution/2026-09-16/2609.18135.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.18135/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.17985",
+      "title": "RideWay: Benchmarking Efficient Task Completion for Tool-Using Language Agents",
+      "title_zh": "RideWay：面向工具调用语言智能体的高效任务完成基准",
+      "authors": [
+        "Qingnuan Han",
+        "Boli Fang",
+        "Mingzhi Hou",
+        "Claire Liu"
+      ],
+      "total_score": 0.40768874303166647,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.638,
+        "domain_fit": 0.79,
+        "other": 0.18762914343888823
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "RideWay量化智能体成功之外的交互效率",
+      "detail_file": "agent-harness-evolution/2026-09-16/2609.17985.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.17985/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.18126",
+      "title": "Designing Agentic AI Workflow Portfolios under Imperfect Selection and Compute Cost",
+      "title_zh": "不完美选择与计算成本约束下的智能体 AI 工作流组合设计",
+      "authors": [
+        "Mojtaba Abdolmaleki",
+        "Stefanus Jasin",
+        "Boyu Wang"
+      ],
+      "total_score": 0.25391413494187204,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.6359999999999999,
+        "domain_fit": 0.67,
+        "other": 0.21038044980624032
+      },
+      "tags": [],
+      "tldr_zh": "联合优化工作流组合与选择，在成本约束下提升准确率。",
+      "detail_file": "agent-harness-evolution/2026-09-16/2609.18126.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.18126/thumb.webp"
+    }
+  ]
+}

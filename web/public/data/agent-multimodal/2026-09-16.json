@@ -1,0 +1,59 @@
+{
+  "domain": "agent-multimodal",
+  "display_name": "Realtime Multimodal Agent",
+  "date": "2026-09-16",
+  "generated_at": "2026-09-17T22:52:46Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.18540",
+      "title": "SVMemAgent: A Streaming Video Memory Agent for Query-Agnostic Online Frame Selection",
+      "title_zh": "SVMemAgent：面向查询无关在线帧选择的流式视频记忆智能体",
+      "authors": [
+        "Dohwan Ko",
+        "Ji Soo Lee",
+        "Pierce Chuang",
+        "Debojeet Chatterjee",
+        "Ashish Shenoy",
+        "Yichao Lu",
+        "Seungwhan Moon",
+        "Xin Luna Dong",
+        "Vikas Bhardwaj",
+        "Hyunwoo J. Kim"
+      ],
+      "total_score": 0.6250960448665948,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.7859999999999999,
+        "domain_fit": 0.82,
+        "other": 0.23098681622198217
+      },
+      "tags": [
+        "streaming video grounding"
+      ],
+      "tldr_zh": "无查询在线维护视频记忆，性能媲美离线选帧",
+      "detail_file": "agent-multimodal/2026-09-16/2609.18540.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.18540/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.18333",
+      "title": "Look Less, Hear Better: Jointly Rewarded GRPO for Streaming ASR",
+      "title_zh": "少看未来，听得更准：联合奖励 GRPO 优化流式 ASR",
+      "authors": [
+        "Xiuwen Zheng"
+      ],
+      "total_score": 0.455,
+      "scores": {
+        "topic_relevance": 0.44000000000000006,
+        "llm_assessment": 0.73,
+        "domain_fit": 0.67,
+        "other": 0.2
+      },
+      "tags": [
+        "general speech systems"
+      ],
+      "tldr_zh": "联合奖励GRPO无需改架构，同时提升流式ASR准确率并降低延迟。",
+      "detail_file": "agent-multimodal/2026-09-16/2609.18333.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.18333/thumb.webp"
+    }
+  ]
+}
