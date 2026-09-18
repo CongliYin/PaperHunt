@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.20050",
+  "title": "The Missing Complement: State-Conditioned Minimal Sufficient Evidence for Coding Agents",
+  "title_zh": "缺失的补集：面向编码智能体的状态条件最小充分证据",
+  "authors": [
+    "Zhexi Feng",
+    "Ruiyi Zhang",
+    "Yongbo Yang",
+    "Pengtao Xie"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-17T10:56:47Z",
+  "abs_url": "https://arxiv.org/abs/2609.20050v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.20050",
+  "links": {
+    "github": "https://github.com/LordTARN1SHED/SERBench",
+    "project_page": null
+  },
+  "abstract_en": "A coding agent halfway through an issue has already read much of what a retriever ranks highest. Relevance is scored per passage, but sufficiency belongs to the set: a ranker can fill its budget with variants of one required fact and leave the decision unsupported. We formulate state-conditioned minimal sufficient evidence recovery: given a captured agent state, recover a compact evidence combination that supplies the support its next decision still lacks. SERBench measures this on 500 held-out states from 45 repositories, recording what the agent has seen and crediting only sets that cover every fact the current decision was annotated to require. MSS-Complement treats acquisition as set construction, not ranking. Three semantic calls propose a jointly sufficient set, search for what it lacks, and return 4-8 intact source units within 6,144 tokens. One configuration, fixed on calibration data, recovers a complete set for 73.0% of those states at five items and 80.6% at eight, against 61.4% and 72.4% for Qwen3 embedding with reranking. A matched control ranking by similarity alone reaches 66.6%, placing the gain in the set-level policy, not the computation. From frozen repository source with no gold-derived pool, the lead is 5.0 points. On AMA-Bench it answers from a 76.2% smaller answer prompt, with accuracy 2.08 points above that benchmark's own memory agent. Removing one required group from an otherwise complete set costs 12.3 and 11.1 points of repair-localization precision under two executors. Retrieval for agents is better posed as recovering what a decision lacks than re-ranking what an issue resembles.",
+  "abstract_zh": "本文指出，编码智能体在处理问题的中途通常已读过检索器排名靠前的大量内容，此时继续按单段落相关性排序，可能反复提供同一事实，却遗漏支撑下一步决策所需的其他事实。为此，论文提出“状态条件最小充分证据恢复”（state-conditioned minimal sufficient evidence recovery）：根据智能体当前状态，恢复一个紧凑的证据组合，覆盖当前决策尚缺的全部必要事实。作者构建SERBench，包含45个代码仓库中的500个留出状态，并仅对覆盖决策所需全部事实的证据集合计分。MSS-Complement将检索建模为集合构造，而非单纯排序，通过三次语义调用分别提出联合充分集合、搜索其缺失内容，并在6144个token内返回4至8个完整源代码单元。在5个和8个证据项预算下，该方法的完整集合恢复率分别为73.0%和80.6%，优于Qwen3 embedding重排的61.4%和72.4%；相似度单独排序的匹配对照仅为66.6%，说明收益主要来自集合级策略。无需使用金标准候选池时，领先幅度仍为5.0个百分点。在AMA-Bench上，该方法将答案提示长度减少76.2%，准确率比该基准自带的记忆智能体高2.08个百分点。移除一个必要事实组会使修复定位精度下降12.3和11.1个百分点，表明证据完整性直接影响代码决策质量。",
+  "key_points_zh": [
+    "将代理检索从“哪些内容最相关”重新定义为“当前决策还缺哪些必要事实”，强调集合级充分性而非单段落相关性。",
+    "提出MSS-Complement：先生成联合充分证据集合，再定位缺失事实，最后返回4至8个完整源代码单元。",
+    "在SERBench上，5项和8项预算下的完整集合恢复率分别达到73.0%和80.6%，显著超过Qwen3 embedding重排及相似度单独排序。",
+    "在AMA-Bench上，答案提示减少76.2%，准确率较基准记忆智能体提升2.08个百分点，显示更紧凑证据也能支持更好决策。",
+    "移除任一必要事实组会显著降低修复定位精度，验证了证据集合完整性对编码智能体推理与修复的重要性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.76,
+    "novelty": 0.84,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.8,
+    "llm_avg": 0.8160000000000001,
+    "comment": "This is a well-motivated context-assembly method for coding agents that replaces passage ranking with state-conditioned recovery of jointly sufficient evidence.",
+    "comment_zh": "这是一种针对编码代理、动机充分的上下文组装方法，用状态条件下的联合充分证据恢复取代了单纯的段落排序。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.8160000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/LordTARN1SHED/SERBench",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.20050/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.20050/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

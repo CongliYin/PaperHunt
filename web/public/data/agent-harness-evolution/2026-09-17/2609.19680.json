@@ -1,0 +1,101 @@
+{
+  "arxiv_id": "2609.19680",
+  "title": "FINSKILLOPS: A Self-Evolving Multi-Agent System for SEC Filing QA",
+  "title_zh": "FINSKILLOPS：面向 SEC 申报文件问答的自进化多智能体系统",
+  "authors": [
+    "Yanzhang Ma",
+    "Zhenghan Tai",
+    "Hanwei Wu",
+    "Sizhe Guan",
+    "Jianliang Lei",
+    "Hailin He",
+    "Chaolong Jiang",
+    "Jijun Chi",
+    "Tung Sum Thomas Kwok",
+    "Bohuai Xiao",
+    "Jingrui Tian",
+    "Xinlu Wu",
+    "Xingao Zhan",
+    "Peng Lu",
+    "Muzhi Li",
+    "Yihong Wu",
+    "Liheng Ma",
+    "Sicheng Lyu",
+    "Tianshuo Yan",
+    "Junhao Zhu",
+    "Yaqian Xu",
+    "Lei Ding",
+    "Yufei Cui",
+    "Ziquan Liu",
+    "Boyu Han",
+    "Hengli Liu",
+    "Ling Zhou",
+    "Xinyu Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-17T04:25:17Z",
+  "abs_url": "https://arxiv.org/abs/2609.19680v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.19680",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Financial QA systems are typically improved before deployment through better retrieval, prompting, or agent coordination, leaving their reliability behavior fixed thereafter. In practice, new SEC-filing questions repeatedly expose heterogeneous errors in period, entity, evidence use, and calculation. Existing self-improvement methods can turn failures into new behaviors, but offer limited control over where a correction should apply or which previously correct answers it may break. We therefore frame post-deployment improvement as controlled behavioral maintenance: recurring failures should become scoped skill patches, and each patch should earn deployment with- out introducing regressions. We instantiate this view in FINSKILLOPS, a multi-agent system for SEC filing QA. FINSKILLOPS derives reusable skills from evidence-grounded, typed failure diagnoses and governs them through targeted validation, protected-case regression checks, negative controls, and versioned replacement or retirement. Across six financial QA benchmarks, a single frozen skill registry achieves the highest verdict-weighted correctness and reference consistency among the evaluated systems. Evolved skills raise correctness from 3.70 to 4.55 on our enhanced benchmark. In a separate 12-round operational study, only six of 33 proposed skills are promoted, while the monitoring non-correct rate falls from 20.0% to 12.5%. These results establish controlled skill scope, admission, and lifecycle management as the foundation for reliable self-improvement.",
+  "abstract_zh": "金融问答系统通常通过优化检索、提示词或智能体协作在部署前获得改进，但部署后的可靠性行为基本固定。实际应用中，新的 SEC 申报文件问题会持续暴露财务期间、实体识别、证据使用和数值计算等多种错误。现有自改进方法虽能将失败转化为新行为，却难以控制修正的适用范围，也无法充分避免对既有正确答案造成破坏。本文将部署后改进定义为“受控行为维护”：把重复出现的失败转化为作用范围明确的技能补丁，并要求每个补丁在不引入回归的前提下通过部署审核。基于这一理念，作者提出面向 SEC filing QA 的多智能体系统 FINSKILLOPS。该系统从基于证据且带类型标注的失败诊断中提炼可复用技能，并通过定向验证、受保护案例回归测试、负向对照，以及带版本管理的替换与退役机制治理技能生命周期。在六个金融问答基准上，单一冻结的技能注册表在参评系统中取得最高的判定加权正确性与参考答案一致性。进化后的技能将增强基准上的正确性评分从 3.70 提升至 4.55。在另一项持续 12 轮的运行研究中，33 个候选技能仅有 6 个获准上线，同时监控集的非正确率从 20.0% 降至 12.5%。结果表明，对技能作用范围、准入机制和生命周期进行控制，是实现可靠自改进的基础。",
+  "key_points_zh": [
+    "将部署后自改进重新定义为受控行为维护，把重复失败转化为适用范围明确的技能补丁。",
+    "FINSKILLOPS 通过多智能体协作，从证据支撑、类型化的失败诊断中提炼可复用技能。",
+    "技能治理包含定向验证、受保护案例回归检查、负向对照，以及版本化替换和退役机制。",
+    "在六个金融 QA 基准上，冻结的统一技能注册表取得最高的判定加权正确性与参考一致性，增强基准正确性由 3.70 提升至 4.55。",
+    "12 轮运行研究中仅批准 33 个候选技能中的 6 个上线，监控集非正确率由 20.0% 降至 12.5%，体现严格准入对抑制回归的重要性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.86,
+    "problem_significance": 0.83,
+    "potential_impact": 0.79,
+    "paradigm_shift": 0.81,
+    "lasting_value": 0.82,
+    "llm_avg": 0.8220000000000001,
+    "comment": "Despite its financial-QA setting, the paper contributes a transferable skill-evolution lifecycle with scoped patches, regression gates, promotion, replacement, and retirement.",
+    "comment_zh": "尽管应用于金融问答，该论文提出了可迁移的技能演化生命周期，包括范围化补丁、回归门控、晋升、替换和退役。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5233625775926507,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8220000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 32,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.19680/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.19680/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.945
+    }
+  ]
+}

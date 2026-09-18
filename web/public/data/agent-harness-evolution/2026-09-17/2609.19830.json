@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2609.19830",
+  "title": "Dual-Axis Policy Optimization for LLM Agents: Bayesian Feedback Attribution and Trajectory Mass Normalization",
+  "title_zh": "面向 LLM Agent 的双轴策略优化：Bayesian Feedback Attribution 与 Trajectory Mass Normalization",
+  "authors": [
+    "Yingxuan Zhuang",
+    "Binhe Yu",
+    "Jingxiao Yang",
+    "Ruopei Sun",
+    "Ziting Li",
+    "Cheng Tan",
+    "Xuhong Zhang",
+    "Jianwei Yin",
+    "Jintao Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-17T07:35:02Z",
+  "abs_url": "https://arxiv.org/abs/2609.19830v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.19830",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement learning for LLM agents involves two distinct optimization di- mensions: how environment feedback is exploited within a trajectory, and how complete trajectories are aggregated across a batch. We formulate these dimen- sions as Intra-Trajectory Feedback Attribution and Inter-Trajectory Objec- tive Aggregation, and introduce BATON (Bayesian Attribution and Trajectory Objective Normalization), a dual-axis policy optimization framework. BATON instantiates the first axis with Bayesian Feedback Attribution, which constructs a feedback-conditioned posterior over sampled actions, and the second with Trajec- tory Mass Normalization (TMN), which assigns equal optimization mass to com- plete trajectories. Experiments with GRPO and GiGPO on ALFWorld, WebShop, and SearchQA show that both axes provide independent gains and that their combi- nation consistently achieves the strongest overall performance across model scales.",
+  "abstract_zh": "本文指出，LLM Agent 的强化学习包含两个相互独立的优化维度：一是如何在单条轨迹内利用环境反馈并归因到各动作，二是如何在批次中聚合完整轨迹的优化目标。为此，作者提出 BATON（Bayesian Attribution and Trajectory Objective Normalization）双轴策略优化框架。第一轴采用 Bayesian Feedback Attribution，基于反馈构建采样动作的后验分布；第二轴采用 Trajectory Mass Normalization（TMN），为每条完整轨迹分配相等的优化权重。在 ALFWorld、WebShop 和 SearchQA 上结合 GRPO 与 GiGPO 的实验表明，两条优化轴均能独立带来性能提升，联合使用后在不同模型规模上 consistently 达到最佳整体表现。",
+  "key_points_zh": [
+    "将 LLM Agent 强化学习拆分为轨迹内反馈归因和轨迹间目标聚合两个优化维度。",
+    "Bayesian Feedback Attribution 根据环境反馈建立采样动作后验，更细致地分配动作级学习信号。",
+    "Trajectory Mass Normalization（TMN）为完整轨迹赋予相等优化质量，避免长轨迹或高频轨迹主导训练。",
+    "在 ALFWorld、WebShop 和 SearchQA 上，两个优化轴均带来独立收益，组合后表现最强。",
+    "BATON 可与 GRPO、GiGPO 配合，并在不同模型规模下保持稳定优势。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.91,
+    "novelty": 0.79,
+    "problem_significance": 0.84,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.78,
+    "llm_avg": 0.79,
+    "comment": "BATON addresses two important agent-RL credit-assignment and trajectory-aggregation problems with a broadly reusable optimization framework validated across interactive environments.",
+    "comment_zh": "BATON 以可复用的优化框架处理代理强化学习中的轨迹内信用分配和轨迹间聚合问题，并在多个交互环境中验证。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.23816576137838616,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.79,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.19830/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.933
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.19830/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

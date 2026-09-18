@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2609.20804",
+  "title": "An Empirical Study of Harness Design for Coding Agents",
+  "title_zh": "面向编程智能体的 Harness 设计实证研究",
+  "authors": [
+    "Run-Ze Fan",
+    "Zihao Zhang",
+    "Simin Ma",
+    "Yebowen Hu",
+    "Shouju Wang",
+    "Kaiqiang Song",
+    "Fei Liu",
+    "Hamed Zamani",
+    "Xiaoyang Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-17T17:58:07Z",
+  "abs_url": "https://arxiv.org/abs/2609.20804v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.20804",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding harnesses shape how autonomous coding agents translate model capabilities into long-horizon software-engineering performance, yet existing work typically evaluates harnesses as monolithic systems, leaving the effectiveness of individual components unclear. To enable component-level comparisons, we study this question with a lightweight coding harness whose execution loop is fixed while three components are varied: planning, action space, and context management. Across four models evaluated on SWE-Bench Verified and Terminal-Bench 2.1, we evaluate 176 matched settings spanning five context-management strategies, four context-window budgets, and targeted ablations of planning and action space. We find that: (1) Context management becomes increasingly valuable as the context-window budget tightens, with most of its benefit coming from preventing context-overflow failures. (2) Staging rule-based elision before LLM-based summarization provides the strongest overall efficiency among the context-management strategies, whereas making elided content recoverable adds machinery that models rarely use and yields no accuracy gain. (3) Planning shifts from an accuracy scaffold for weaker models to a cost saver for stronger models, with little change in accuracy. (4) Predefined tools improve performance for models with weaker bash proficiency, whereas bash-capable models can operate effectively with a bash-only interface and achieve substantially lower cost, especially on command-line-centric tasks. Trajectory-level analysis explains these effects: context management extends execution trajectories without substantially altering agent behavior, planning changes where trajectories stop, and the action space changes the granularity at which code is written. These findings inform model- and budget-aware harness design and provide a modular framework for evaluating future harness components.",
+  "abstract_zh": "编程 Harness 决定自主编程智能体如何将模型能力转化为长程软件工程表现，但既有研究通常将其作为整体评估，难以辨析各组件的实际作用。本文构建了一个执行循环固定的轻量级编程 Harness，分别考察规划（planning）、动作空间（action space）和上下文管理（context management）三个组件。在 SWE-Bench Verified 与 Terminal-Bench 2.1 上，作者使用四种模型评估了 176 组匹配设置，覆盖五种上下文管理策略、四档上下文窗口预算，以及针对规划和动作空间的消融实验。结果表明：上下文窗口越紧张，上下文管理越重要，其收益主要来自避免上下文溢出；先采用基于规则的省略，再进行基于 LLM 的摘要，可获得最佳综合效率，而允许恢复被省略内容并未提升准确率；规划对较弱模型主要提供准确率支撑，对较强模型则更多用于降低成本，且基本不影响准确率；预定义工具有助于 bash 能力较弱的模型，而擅长 bash 的模型仅依赖 bash 接口也能有效工作，并在命令行任务上显著降低成本。轨迹分析进一步显示，上下文管理主要延长执行轨迹而不明显改变行为，规划影响轨迹终止位置，动作空间则改变代码编写的粒度。研究为模型与预算感知的 Harness 设计提供了实证依据和模块化评估框架。",
+  "key_points_zh": [
+    "在四种模型、两个基准和 176 组匹配设置上，对规划、动作空间及上下文管理进行组件级评估。",
+    "上下文预算越小，上下文管理收益越明显；“规则省略后再由 LLM 摘要”具有最佳整体效率。",
+    "可恢复省略内容增加了系统复杂度，但模型很少主动使用，也未带来准确率提升。",
+    "规划对弱模型是准确率支架，对强模型主要用于节省成本，整体准确率变化较小。",
+    "预定义工具更适合 bash 能力较弱的模型；bash 能力强的模型使用 bash-only 接口可显著降本。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.82,
+    "problem_significance": 0.9,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8560000000000001,
+    "comment": "This rigorous component-level study provides durable, actionable evidence for designing coding-agent harnesses under varying model capabilities, context budgets, and cost constraints.",
+    "comment_zh": "该严谨的组件级研究为在不同模型能力、上下文预算和成本约束下设计编码代理框架提供了持久且可操作的证据。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.8743637201925607,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8560000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 37,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.20804/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.20804/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

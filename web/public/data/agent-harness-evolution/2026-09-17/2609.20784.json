@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2609.20784",
+  "title": "RetireOPD: Self-Retiring On-Policy Distillation for Agentic Reinforcement Learning",
+  "title_zh": "RetireOPD：面向智能体强化学习的自退化在策略蒸馏",
+  "authors": [
+    "Yan Yu",
+    "Zhengxi Lu",
+    "Yizhou Liu",
+    "Yichen Pan",
+    "Aozhe Wang",
+    "Qipeng Chen",
+    "Hua Yang",
+    "Wenqi Zhang",
+    "Weiming Lu",
+    "Qianglong Chen",
+    "Yongliang Shen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-17T17:52:08Z",
+  "abs_url": "https://arxiv.org/abs/2609.20784v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.20784",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-turn agents trained with reinforcement learning (RL) receive a single scalar reward per trajectory, which motivates self on-policy distillation (OPD) to supply dense token-level supervision from a self-teacher with privileged task skills, letting a skill-free student internalize them. This recipe, however, is undermined by two findings in agentic tasks: privileged information alone does not always make a teacher reliable, and the benefit of teacher supervision is stage-dependent. We therefore propose RetireOPD (Self-Retiring On-Policy Distillation), which first optimizes a decoupled, skill-conditioned teacher with environment rewards and then trains a skill-free student jointly with RL and OPD. Rather than following a predefined distillation schedule, RetireOPD adopts Adaptive Retirement: the student drops the teacher on its own once their discrepancy stops shrinking and it reaches a target fraction of the teacher's success rate, after which training proceeds with RL alone. Across Qwen2.5 models from 1.5B to 7B, RetireOPD improves ALFWorld success rate over RL baseline by 14.1% to 18.8% and WebShop accuracy by 11.8% to 19.0%, and surpasses its own skill-conditioned teacher in every setting.",
+  "abstract_zh": "多轮智能体通过强化学习训练时，通常每条轨迹仅获得一个标量奖励，因此研究者引入自在策略蒸馏（On-Policy Distillation, OPD），利用具备特权任务技能的自教师提供稠密的令牌级监督，使无技能学生内化这些能力。然而，在智能体任务中，特权信息并不总能保证教师可靠，且教师监督的收益具有阶段依赖性。为此，本文提出 RetireOPD（Self-Retiring On-Policy Distillation）：先利用环境奖励优化解耦的技能条件教师，再联合强化学习与 OPD 训练无技能学生。RetireOPD 不采用预设蒸馏计划，而是引入自适应退役（Adaptive Retirement）机制：当学生与教师的差异不再缩小，且学生成功率达到教师目标比例后，学生自动停止依赖教师，后续仅通过强化学习训练。在 Qwen2.5 1.5B 至 7B 模型上，RetireOPD 相比强化学习基线将 ALFWorld 成功率提升 14.1% 至 18.8%，将 WebShop 准确率提升 11.8% 至 19.0%，并在所有设置下超过其技能条件教师。",
+  "key_points_zh": [
+    "指出 OPD 的两个问题：特权信息不保证教师可靠，且教师监督收益具有阶段依赖性。",
+    "先用环境奖励训练技能条件教师，再让无技能学生联合 RL 与 OPD 学习。",
+    "Adaptive Retirement 根据师生差异和学生相对成功率，自动决定何时停止教师监督。",
+    "在 Qwen2.5 1.5B–7B 上，ALFWorld 提升 14.1%–18.8%，WebShop 提升 11.8%–19.0%。",
+    "RetireOPD 在所有实验设置中均超过自身的 skill-conditioned teacher。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.86,
+    "problem_significance": 0.89,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.87,
+    "llm_avg": 0.8639999999999999,
+    "comment": "RetireOPD offers a useful agent-RL training mechanism by adaptively retiring privileged teacher supervision when on-policy learning becomes sufficient.",
+    "comment_zh": "RetireOPD 提出了一种有用的代理强化学习训练机制，在策略学习足够后自适应地退出特权教师监督。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.8091215776054259,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8639999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 15,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.20784/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.20784/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.962
+    }
+  ]
+}

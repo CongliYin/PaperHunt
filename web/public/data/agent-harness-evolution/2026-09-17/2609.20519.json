@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2609.20519",
+  "title": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness",
+  "title_zh": "SoL-Pi：递归扩展自动研究循环，实现高效 Agent Harness",
+  "authors": [
+    "Haozhe Liu",
+    "Tian Ye",
+    "Sensen Gao",
+    "Qihang Cao",
+    "Yitong Li",
+    "Mingchen Zhuge",
+    "Duomin Wang",
+    "Ruihua Zhang",
+    "Ping Luo",
+    "Jiawang Bian",
+    "Lei Zhu",
+    "Ligeng Zhu",
+    "Enze Xie",
+    "Song Han"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-17T14:58:29Z",
+  "abs_url": "https://arxiv.org/abs/2609.20519v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.20519",
+  "links": {
+    "github": "https://github.com/NVlabs/SoL-Pi",
+    "project_page": "https://nvlabs.github.io/SoL-Pi/"
+  },
+  "abstract_en": "As coding agents move from supervised code completion to unattended, around-the-clock exploration, their work expands from isolated predictions into long trajectories of reasoning, tool use, and feedback. Token efficiency therefore becomes important for scaling recursive self-improvement. We take an RSI-inspired approach at the harness layer, scaling auto-research loops across increasingly numerous and diverse environments for harness rollouts. At this scale, the process yields reusable improvements that transfer beyond their development setting, moving automated harness discovery toward production-level outcomes. Four mechanisms survive selection and form SoL-Pi, spanning action execution, context compaction, observation handling, and delegated reading. On the 51-task EdgeBench evaluation, SoL-Pi achieves performance comparable to Pi across GPT-5.6 Sol and Opus 5 while reducing recorded token traffic by 44.7-49.0% and API cost by about one third. In other words, estimated hourly savings are \\$8.75-\\$13.50 relative to native Codex and Claude Code harnesses, and \\$4.36-\\$5.71 relative to Pi.",
+  "abstract_zh": "随着 coding agents 从监督式代码补全发展到全天候自主探索，其工作逐渐包含长程推理、工具调用与反馈，token 效率成为递归自我改进的关键。本文在 harness 层引入受递归自我改进（RSI）启发的自动研究循环，并在大量、多样化环境中扩展 harness rollout，以发现可迁移且面向生产的改进。最终形成 SoL-Pi 的四项机制，分别覆盖动作执行、上下文压缩、观测处理和委托式阅读。在 51 项 EdgeBench 任务上，SoL-Pi 在 GPT-5.6 Sol 和 Opus 5 上达到与 Pi 相当的性能，同时将记录的 token 流量降低 44.7%–49.0%，API 成本降低约三分之一。相较原生 Codex 和 Claude Code harness，每小时预计节省 8.75–13.50 美元；相较 Pi，每小时节省 4.36–5.71 美元。",
+  "key_points_zh": [
+    "将自动研究循环扩展到 harness 层，通过跨多环境的 rollout 递归发现可复用改进。",
+    "SoL-Pi 包含四项核心机制：动作执行、上下文压缩、观测处理和委托式阅读。",
+    "在 51 项 EdgeBench 任务上，性能与 Pi 相当，并将记录 token 流量降低 44.7%–49.0%。",
+    "API 成本约降低三分之一，相较原生 Codex、Claude Code 和 Pi 均可显著节省运行费用。",
+    "改进能够迁移到开发环境之外，推动 automated harness discovery 走向生产级应用。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.88,
+    "problem_significance": 0.91,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.91,
+    "llm_avg": 0.892,
+    "comment": "A strong coding-agent harness paper that uses recursive auto-research to discover transferable execution, context, observation, and delegation improvements with substantial cost savings.",
+    "comment_zh": "这是一篇很强的编码代理框架论文，通过递归自动研究发现可迁移的执行、上下文、观测和委派改进，并显著降低成本。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.9,
+    "community_heat": 0.8903960959030848,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.892,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/NVlabs/SoL-Pi",
+    "project_page_url": "https://nvlabs.github.io/SoL-Pi/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 46,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.20519/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.942
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.20519/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.687
+    }
+  ]
+}

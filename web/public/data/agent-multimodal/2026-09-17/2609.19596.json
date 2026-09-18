@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.19596",
+  "title": "Full-Duplex Speech Models Take the Floor When Asked, Not When Needed",
+  "title_zh": "全双工语音模型：被要求时才发言，而非必要时主动介入",
+  "authors": [
+    "Linkai Peng",
+    "Baorian Nuchged",
+    "Kaiqi Fu",
+    "Yuyang Yao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-17T02:21:39Z",
+  "abs_url": "https://arxiv.org/abs/2609.19596v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.19596",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Full-duplex speech models listen and speak at once, promising always-on assistants. Yet they must also decide when they should speak. Human listeners speak when addressed or when the speaker stops, but also self-select to correct a false claim, supply a missing word, or warn of danger. We ask whether full-duplex models do the same. To separate the reason to speak from the opportunity, we construct context-matched English monologues in which only the trigger utterance varies within a topic, define 10 conditions from turn-allocation rules, and compress inter-word pauses to limit opportunities created by silence. Across five model families, being addressed and silence are far more reliable triggers than false facts or hazards. Frame-level text-token probabilities in Moshi and PersonaPlex are lower for false facts than for Neutral when averaged over the first 2\\,s after trigger end. Pauses or permission to interrupt do not close this gap either. Given the floor, Moshi and PersonaPlex answer most direct questions, yet the proportion of non-empty false-fact replies that challenge the claim is only .14--.15, and the proportion of hazard replies that warn of danger is .04--.07. This paper thus identifies a gap in both speech initiation and response content. Closing it requires genuine content understanding and intervention decisions grounded in it.",
+  "abstract_zh": "全双工语音模型能够同时聆听和说话，为常驻式智能助手带来可能，但它们还必须判断何时应该发言。人类听者不仅会在被点名或说话者停顿时接话，也会主动纠正错误陈述、补充遗漏词语或发出危险警告。本文研究全双工模型是否具备类似能力。为区分“发言理由”与“发言机会”，作者构建了上下文匹配的英文独白：同一主题下仅改变触发语句，并依据话轮分配规则设计10种条件，同时压缩词间停顿，以减少沉默带来的发言机会。对五个模型家族的实验表明，相较于错误事实或危险情境，被直接提问和出现沉默是更可靠的发言触发因素。在触发语句结束后的前2秒内，Moshi 和 PersonaPlex 对错误事实条件给出的帧级文本 token 概率平均低于 Neutral 条件；增加停顿或明确允许打断也未能弥合这一差距。即使获得发言权，Moshi 和 PersonaPlex 虽能回答大多数直接问题，但在非空的错误事实回复中，真正质疑错误说法的比例仅为0.14–0.15；在危险情境回复中，发出警告的比例仅为0.04–0.07。研究揭示了全双工语音模型在主动发言启动与回复内容两方面的缺陷；要弥补这一差距，模型需要真正理解内容，并据此作出是否介入的决策。",
+  "key_points_zh": [
+    "构建上下文匹配的英文独白基准，设置10种话轮触发条件，并压缩词间停顿，以分离“为何发言”与“何时有机会发言”。",
+    "五个模型家族普遍更容易被直接提问或沉默触发，而对错误事实和危险信息缺乏主动介入倾向。",
+    "Moshi 与 PersonaPlex 在错误事实条件下的帧级文本 token 概率甚至低于 Neutral 条件；增加停顿或允许打断仍无法消除差距。",
+    "即使模型已经获得发言权，纠正错误事实的比例仅为0.14–0.15，针对危险发出警告的比例仅为0.04–0.07。",
+    "全双工语音模型的问题不仅在于不会主动开口，也在于开口后缺乏恰当干预；改进需要基于内容理解的介入决策机制。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.82,
+    "problem_significance": 0.88,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.85,
+    "llm_avg": 0.836,
+    "comment": "A strong realtime voice-agent study that exposes fundamental failures in content-aware turn initiation and safety intervention.",
+    "comment_zh": "该工作系统揭示了实时语音代理在内容感知的发言时机与安全干预方面的根本缺陷。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4470645003275555,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.836,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 8,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.19596/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.19596/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.954
+    }
+  ]
+}

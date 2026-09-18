@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2609.20089",
+  "title": "UnifiedPlayers: Enhance Tool-Integrated Reasoning in Agentic Reinforcement Learning",
+  "title_zh": "UnifiedPlayers：增强智能体强化学习中的工具集成推理",
+  "authors": [
+    "Wenjie Liao",
+    "Liangjie Zhao",
+    "Zehong Cao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-17T11:49:31Z",
+  "abs_url": "https://arxiv.org/abs/2609.20089v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.20089",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Self-evolving methods reduce the need for human-annotated trajectories by allowing tool-using agents to generate their own training data. Yet existing methods typically separate trajectory generation from evaluation, relying on static verifiers that cannot adapt to emerging failure modes or self-consistency signals that may reinforce errors shared across trajectories. Jointly adapting planning, execution, and evaluation offers a promising alternative, but introduces a fundamental coordination challenge: each component continuously changes the data or feedback used to train the others. We address this challenge with \\textbf{UnifiedPlayers}, a cooperative framework comprising a Planning Player that generates tasks, an Execution Player that produces multi-turn trajectories with Python tool calls, and an Evaluation Player that constructs executable verifiers. We design role-specific rewards that coordinate the three players toward a shared learning objective under GRPO. Across two model backbones and twelve reasoning benchmarks, UnifiedPlayers outperforms the strongest prior baseline by at least 3.5\\% on mathematical reasoning and 3.9\\% on general reasoning tasks. Moreover, the learned verifier achieves 84.2\\% adversarial detection accuracy, while its reward signal exhibits 2.03$\\times$ higher per-question variance than a self-consistency baseline, providing more discriminative verifications. These results highlight cooperation among specialized players as a promising path toward self-enhanced tool-integrated agents.",
+  "abstract_zh": "自演化方法允许工具使用智能体自行生成训练数据，从而减少对人工标注轨迹的依赖。然而，现有方法通常将轨迹生成与评估分离，并依赖无法适应新兴失败模式的静态验证器，或依赖可能强化跨轨迹共同错误的自一致性信号。联合适应规划、执行与评估是更有潜力的方案，但也带来了协调难题：三个组件持续改变彼此用于训练的数据或反馈。为此，论文提出UnifiedPlayers，一个协作式框架，由负责生成任务的Planning Player、负责通过Python工具调用生成多轮轨迹的Execution Player，以及负责构建可执行验证器的Evaluation Player组成。作者在GRPO下设计角色特定奖励，使三者围绕共同学习目标协同优化。在两个模型骨干和12个推理基准上，UnifiedPlayers相较最强既有基线，在数学推理任务上至少提升3.5%，在通用推理任务上至少提升3.9%。此外，学习得到的验证器达到84.2%的对抗性检测准确率，其奖励信号的逐题方差是自一致性基线的2.03倍，能够提供更具区分性的验证反馈。结果表明，专门化玩家之间的协作是自增强工具集成智能体的一条有前景路径。",
+  "key_points_zh": [
+    "提出UnifiedPlayers，将任务规划、轨迹执行和结果评估统一为三个协作式玩家，并通过角色特定奖励在GRPO下联合优化。",
+    "Execution Player利用Python工具调用生成多轮交互轨迹，Evaluation Player构建可执行验证器，避免依赖静态验证规则。",
+    "在两个模型骨干和12个推理基准上，相比最强基线，数学推理至少提升3.5%，通用推理至少提升3.9%。",
+    "学习得到的验证器对对抗性错误的检测准确率达到84.2%，奖励信号逐题方差达到自一致性基线的2.03倍，具有更强的判别性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.88,
+    "problem_significance": 0.9,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.89,
+    "llm_avg": 0.8859999999999999,
+    "comment": "UnifiedPlayers presents a meaningful agent-RL self-improvement loop that jointly generates trajectories, adapts executable verifiers, and coordinates learning signals.",
+    "comment_zh": "UnifiedPlayers 构建了有意义的代理强化学习自我改进闭环，联合生成轨迹、适应可执行验证器并协调学习信号。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36560162063732243,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8859999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.20089/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.20089/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.859
+    }
+  ]
+}
