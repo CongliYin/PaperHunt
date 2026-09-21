@@ -1,0 +1,96 @@
+{
+  "arxiv_id": "2609.21187",
+  "title": "When Better Turns Do Not Make Better Agents: Diagnosing the Gap Between Next-Turn Metrics and Workflow Success",
+  "title_zh": "更好的单轮决策并不造就更好的智能体：诊断下一轮指标与工作流成功之间的鸿沟",
+  "authors": [
+    "Md Tahmid Rahman Laskar",
+    "Xue-Yong Fu",
+    "Gundeep Singh",
+    "Karol Chang",
+    "Kevin Sanders",
+    "Shi Zong",
+    "Tania Habib",
+    "Julien Bouvier Tremblay",
+    "Shayna Gardiner",
+    "Harsh Saini",
+    "Matthias Lee",
+    "Elena Khasanova",
+    "Quinten McNamara",
+    "Shashi Bhushan TN"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Md Tahmid Rahman Laskar",
+      "affiliations": [
+        "York University"
+      ]
+    }
+  ],
+  "published_at": "2026-09-18T01:11:55Z",
+  "abs_url": "https://arxiv.org/abs/2609.21187v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.21187",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent models are frequently evaluated one decision at a time, where the model predicts the next action based on the gold interaction history, which is scored against a reference. We investigate whether improvement under this protocol is predictive of improved autonomous workflow execution. We study pre-SFT and supervised fine-tuned (SFT) Qwen3 models at 4B and 14B parameters and Gemma 3 models at 4B and 12B parameters on multi-turn customer-support workflows. We find that SFT consistently improves text-turn success, and that overall next-turn success increases for every model under gold-history evaluation. However, these improvements do not transfer to autonomous workflow execution. Tool-specific gains also vary across metrics and models. None of the four SFT models succeeds under holistic workflow evaluation, with strict trajectory completion reaching at most 10.4% workflow success. Our results show that next-turn evaluation is not a reliable proxy for workflow success, motivating separate reporting of text quality, local action correctness, tool execution, and end-to-end task completion.",
+  "abstract_zh": "智能体模型通常采用逐次决策方式评估：模型基于标准交互历史（gold interaction history）预测下一步动作，并与参考答案比较。本文研究该评估协议下的性能提升能否预示自主工作流执行能力的改善。实验覆盖参数规模为 4B 和 14B 的 SFT 前后 Qwen3，以及参数规模为 4B 和 12B 的 SFT 前后 Gemma 3，并在多轮客户支持工作流上进行测试。结果表明，监督微调（SFT）能够持续提升文本轮次成功率，且所有模型在标准历史评估中的整体下一轮成功率均有所提高，但这些增益未能迁移到自主工作流执行中。不同模型及指标下，与工具调用相关的增益也不一致。在整体工作流评估中，四个 SFT 模型均未实现稳定成功；即使采用严格轨迹完成指标，最高工作流成功率也仅为 10.4%。研究说明，下一轮评估并非工作流成功的可靠代理指标，建议分别报告文本质量、局部动作正确性、工具执行效果和端到端任务完成情况。",
+  "key_points_zh": [
+    "比较 Qwen3 4B/14B 与 Gemma 3 4B/12B 在 SFT 前后的多轮客户支持工作流表现。",
+    "SFT 持续改善文本轮次成功率，并提升标准历史条件下的整体下一轮成功率。",
+    "单轮评估增益未能迁移到自主执行，工具调用收益也因模型和指标而异。",
+    "四个 SFT 模型在整体工作流评估中均表现不佳，严格轨迹完成率最高仅为 10.4%。",
+    "应拆分报告文本质量、局部动作正确性、工具执行和端到端任务完成，避免以单一下一轮指标替代整体能力评估。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.82,
+    "novelty": 0.59,
+    "problem_significance": 0.83,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.71,
+    "llm_avg": 0.6799999999999999,
+    "comment": "The paper provides useful evidence that local next-turn metrics can misrepresent autonomous workflow reliability, though its evaluation setting and contribution are relatively narrow.",
+    "comment_zh": "该论文有力揭示了局部下一轮指标无法代表自主工作流可靠性，但评测场景和方法贡献相对有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.48476756126932063,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6799999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 19,
+    "first_author_found": true,
+    "first_author_affiliations": [
+      "York University"
+    ],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.21187/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.21187/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.977
+    }
+  ]
+}

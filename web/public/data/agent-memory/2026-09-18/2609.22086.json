@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.22086",
+  "title": "Designer-RSI: Evolving Procedural Memory from User Traffic for Agentic Graphic Design",
+  "title_zh": "Designer-RSI：从用户流量中演化面向智能体图形设计的程序化记忆",
+  "authors": [
+    "Hongyang Du",
+    "Lan Yan",
+    "Christian Flores",
+    "Asim Kadav"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-18T17:59:56Z",
+  "abs_url": "https://arxiv.org/abs/2609.22086v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.22086",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Professional graphic design is a long-horizon agentic task in which structured, editable artifacts emerge from many interdependent actions, yet outcomes admit no reliable programmatic oracle. We introduce a continual adaptation framework in which a frozen frontier model operates professional design software through more than 230 tools, while an external procedural memory of natural-language skills accumulates and refines reusable design procedures from experience. The memory widens by acquiring procedures for recurring uncovered subtasks and deepens by revising existing procedures against their own successful and failed executions, while a matched replay gate admits only changes that repair failures without regressing observed successes. Five rounds over 1,406 real user briefs and 1,869 automatically graded trajectories, with no weight updates and no human labels, grow the bank from 76 documentation-derived skills to 139 and raise GenEval2 execution success on Claude-Sonnet-4 from 72.7% to 99.3% (+11.99 points in generation quality), with 61.8% and 67.6% win rates against the no-skill agent across four specialized design benchmarks on Claude-Sonnet-4 and Claude-Opus-4.6. We further show the two mechanisms are effective in combination: on 200 held-out briefs from user-traffic benchmark, widening or deepening alone reaches a 49.4% / 48.6% win rate over the no-skill agent, while their combination reaches 58.5% (p = 0.025). Procedural memory offers a practical route to continual adaptation of agents under noisy, unverifiable feedback.",
+  "abstract_zh": "专业图形设计是一项长时程智能体任务：结构化且可编辑的设计产物由大量相互依赖的操作逐步形成，但其结果缺乏可靠的程序化评判标准。本文提出一种持续适应框架：冻结的 frontier model 通过 230 多种工具操作专业设计软件，同时由外部自然语言程序化记忆持续积累和优化可复用的设计流程。该记忆通过“扩展”获取尚未覆盖的重复性子任务流程，并通过“深化”基于既有流程的成功与失败执行结果进行修订；匹配式 replay gate 仅接受能够修复失败且不导致已观测成功退化的更新。经过 5 轮、覆盖 1,406 条真实用户需求和 1,869 条自动评分轨迹的迭代，在不更新模型权重、不使用人工标注的情况下，技能库从 76 个文档衍生技能增长至 139 个。Claude-Sonnet-4 上的 GenEval2 执行成功率由 72.7% 提升至 99.3%，生成质量提升 11.99 个百分点。在 4 个专业设计基准上，相比无技能智能体，Claude-Sonnet-4 和 Claude-Opus-4.6 的胜率分别达到 61.8% 和 67.6%。进一步实验表明，两种机制结合效果更佳：在用户流量基准的 200 条留出需求上，仅扩展或仅深化相对无技能智能体的胜率分别为 49.4% 和 48.6%，二者结合后提升至 58.5%（p = 0.025）。程序化记忆为在噪声大且难以验证的反馈环境中持续适应智能体提供了一条实用途径。",
+  "key_points_zh": [
+    "提出 Designer-RSI，通过外部自然语言程序化记忆实现无需更新权重的持续适应。",
+    "记忆包含两种互补机制：扩展未覆盖子任务流程，深化并修订已有流程；matched replay gate 防止修复失败时引发成功回归。",
+    "经过 5 轮迭代，技能库由 76 个增长至 139 个，Claude-Sonnet-4 的 GenEval2 执行成功率由 72.7% 提升至 99.3%。",
+    "在 4 个专业设计基准上，Designer-RSI 相比无技能智能体取得 61.8% 至 67.6% 的胜率。",
+    "扩展与深化联合使用优于单独使用，在留出用户需求上的胜率达到 58.5%，证明二者具有协同效应。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.87,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.79,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8480000000000001,
+    "comment": "A strong Agent-memory contribution that evolves reusable procedural skills through widening, revision, and replay-gated validation without model updates.",
+    "comment_zh": "这是一项扎实的 Agent Memory 工作，通过扩展、修订和回放门控验证，在无需更新模型参数的情况下持续演化可复用的程序性技能。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.8364936031616323,
+    "author_reputation": 0.3313836013810483,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.8480000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 22,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.22086/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.974
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.22086/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

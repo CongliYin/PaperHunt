@@ -1,0 +1,134 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-09-18",
+  "generated_at": "2026-09-21T23:10:43Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.21378",
+      "title": "ArenaFlow: From Trajectory Ranking to Hierarchical Credit Propagation for Open-Ended Agent RL",
+      "title_zh": "ArenaFlow：从轨迹排序到层次化信用传播的开放式智能体强化学习",
+      "authors": [
+        "Qiang Zhang",
+        "Ruixue Ding",
+        "Fanrui Zhang",
+        "Xi Chen",
+        "Boli Chen",
+        "Shihang Wang",
+        "Yinfeng Huang",
+        "Yi Zheng",
+        "Pengjun Xie",
+        "Kaipeng Zhang",
+        "Jiawei Liu",
+        "Zheng-Jun Zha"
+      ],
+      "total_score": 0.6732400264763407,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8699999999999999,
+        "domain_fit": 0.96,
+        "other": 0.2541334215878024
+      },
+      "tags": [
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "以锦标赛排序和技能记忆实现层次化信用传播",
+      "detail_file": "agent-harness-evolution/2026-09-18/2609.21378.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.21378/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.21423",
+      "title": "DENSE: Distilling Agent Trajectories into Evidence-Grounded Shortcut Trees for Self-Refinement",
+      "title_zh": "DENSE：将智能体轨迹蒸馏为证据驱动的捷径树以实现自我改进",
+      "authors": [
+        "Siyuan Liu",
+        "Fan Yu",
+        "Dongyu Ru",
+        "Yizhu Liu",
+        "Yifan Yang",
+        "Xuezhi Cao",
+        "Xunliang Cai",
+        "Yixin Cao"
+      ],
+      "total_score": 0.6421707656352361,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8539999999999999,
+        "domain_fit": 0.95,
+        "other": 0.11323588545078705
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "DENSE复用轨迹证据，提升通过率并降低重试开销。",
+      "detail_file": "agent-harness-evolution/2026-09-18/2609.21423.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.21423/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.21187",
+      "title": "When Better Turns Do Not Make Better Agents: Diagnosing the Gap Between Next-Turn Metrics and Workflow Success",
+      "title_zh": "更好的单轮决策并不造就更好的智能体：诊断下一轮指标与工作流成功之间的鸿沟",
+      "authors": [
+        "Md Tahmid Rahman Laskar",
+        "Xue-Yong Fu",
+        "Gundeep Singh",
+        "Karol Chang",
+        "Kevin Sanders",
+        "Shi Zong",
+        "Tania Habib",
+        "Julien Bouvier Tremblay",
+        "Shayna Gardiner",
+        "Harsh Saini",
+        "Matthias Lee",
+        "Elena Khasanova",
+        "Quinten McNamara",
+        "Shashi Bhushan TN"
+      ],
+      "total_score": 0.433238378063466,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.6799999999999999,
+        "domain_fit": 0.82,
+        "other": 0.23079459354488682
+      },
+      "tags": [
+        "generic verifier reward eval terms"
+      ],
+      "tldr_zh": "单轮指标提升无法可靠预测智能体工作流成功",
+      "detail_file": "agent-harness-evolution/2026-09-18/2609.21187.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.21187/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.21562",
+      "title": "GameLogicBench: Evaluating Coding Agents on Runtime Game Logic with Tick-Level State Assertions",
+      "title_zh": "GameLogicBench：基于逐 Tick 状态断言评估运行时游戏逻辑编码智能体",
+      "authors": [
+        "Xinyu Che",
+        "Yunfei Ge",
+        "Shihao Li",
+        "Yanchen Liu",
+        "Hang Yan",
+        "Xinping Lei",
+        "Yanghai Wang",
+        "Zixuan Dong",
+        "Yifan Yao",
+        "Qianqian Xie",
+        "Letian Zhu",
+        "Jiaheng Liu"
+      ],
+      "total_score": 0.3540516573755553,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.8099999999999999,
+        "domain_fit": 0.94,
+        "other": 0.370172191251851
+      },
+      "tags": [
+        "GitHub"
+      ],
+      "tldr_zh": "逐Tick验证游戏逻辑，最佳智能体仅完成52.78%任务",
+      "detail_file": "agent-harness-evolution/2026-09-18/2609.21562.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.21562/thumb.webp"
+    }
+  ]
+}

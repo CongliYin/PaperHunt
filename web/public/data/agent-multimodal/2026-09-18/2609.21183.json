@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.21183",
+  "title": "I'll Keep an Ear Out: Teaching AudioLLMs Proactive Audio Assistance",
+  "title_zh": "我会留意：教会 AudioLLMs 提供主动式音频辅助",
+  "authors": [
+    "Amit Kumar Singh Yadav",
+    "Ritvik Shrivastava",
+    "Xuan Zhang",
+    "Seungwhan Moon",
+    "Shashank Jain",
+    "Pinar Donmez",
+    "Babak Damavandi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-18T01:04:53Z",
+  "abs_url": "https://arxiv.org/abs/2609.21183v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.21183",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Audio large language models (AudioLLMs) operate reactively, responding only when queried. We introduce proactive audio assistance, where an AudioLLM monitors an audio stream and autonomously decides when to alert the user from a single natural-language intent, motivated by wearable applications for Deaf and Hard of Hearing users. We propose Interrupt and Silent Modeling (ISM), a model-agnostic paradigm that embeds proactive decisions into LLM decoding via two special tokens: \\texttt{<interrupt>} and \\texttt{<silent>}, capturing four states: onset detection, sustained-relevance triggering, irrelevance suppression, and de-duplication. Applied to Qwen2-Audio-7B, ISM achieves 99.6\\% interrupt F1 and perfect de-duplication recall on ESC-50. On noisy Epic-Sounds kitchen audio, ISM achieves the highest interrupt F1 without domain-specific training, the only method maintaining strong onset detection without over-triggering or over-suppression. Streaming evaluation confirms real-time viability with 3.5-second average latency.",
+  "abstract_zh": "现有 AudioLLMs 通常仅在用户提问后被动响应。本文提出主动式音频辅助：AudioLLM 持续监听音频流，仅依据一条自然语言意图自主决定何时提醒用户，面向聋人和听力障碍者的可穿戴应用。作者提出与模型无关的 Interrupt and Silent Modeling（ISM）范式，通过在 LLM 解码中引入 <interrupt> 和 <silent> 两个特殊 token，统一建模四种状态：事件开始检测、持续相关性触发、无关事件抑制和重复提醒去重。在 Qwen2-Audio-7B 上，ISM 在 ESC-50 达到 99.6% 的 interrupt F1，并实现完美去重召回率。在含噪的 Epic-Sounds 厨房音频上，ISM 无需领域专门训练即可取得最高 interrupt F1，同时保持较强的开始检测能力，避免过度触发和过度抑制。流式评测显示其具备实时应用可行性，平均延迟为 3.5 秒。",
+  "key_points_zh": [
+    "将 AudioLLM 从被动问答扩展为主动式音频辅助，仅凭自然语言意图自主决定是否打断用户。",
+    "ISM 通过 <interrupt> 与 <silent> token 统一处理开始检测、持续触发、无关抑制和重复去重四类决策。",
+    "在 Qwen2-Audio-7B 与 ESC-50 上取得 99.6% interrupt F1，并实现完美去重召回率。",
+    "在含噪 Epic-Sounds 厨房音频上无需领域专门训练，仍能兼顾检测能力与较低误触发率。",
+    "流式评测平均延迟 3.5 秒，表明该方法具备实时可穿戴音频辅助的应用潜力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.83,
+    "problem_significance": 0.86,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.84,
+    "llm_avg": 0.826,
+    "comment": "A strong proactive streaming-audio agent contribution that formalizes when to interrupt or remain silent and evaluates latency, relevance, and alert suppression.",
+    "comment_zh": "该工作系统刻画流式音频代理何时提醒或保持静默，并评测延迟、相关性和重复告警抑制，具有较强价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.826,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.21183/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.826
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.21183/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

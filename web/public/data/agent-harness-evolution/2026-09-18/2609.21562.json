@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2609.21562",
+  "title": "GameLogicBench: Evaluating Coding Agents on Runtime Game Logic with Tick-Level State Assertions",
+  "title_zh": "GameLogicBench：基于逐 Tick 状态断言评估运行时游戏逻辑编码智能体",
+  "authors": [
+    "Xinyu Che",
+    "Yunfei Ge",
+    "Shihao Li",
+    "Yanchen Liu",
+    "Hang Yan",
+    "Xinping Lei",
+    "Yanghai Wang",
+    "Zixuan Dong",
+    "Yifan Yao",
+    "Qianqian Xie",
+    "Letian Zhu",
+    "Jiaheng Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-18T09:51:41Z",
+  "abs_url": "https://arxiv.org/abs/2609.21562v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.21562",
+  "links": {
+    "github": "https://github.com/NJU-LINK/GameLogicBench",
+    "project_page": null
+  },
+  "abstract_en": "Coding agents can modify and test code across large software projects. Game development is a domain where agents must implement gameplay rules. A game can end in a valid state even after violating its rules during the run. Current game-development benchmarks replay fixed examples, score videos, or ask another model to judge the result. However, no existing benchmark checks game rules throughout execution across varied evaluator-selected scenarios while ensuring exactly reproducible verdicts. We introduce GameLogicBench, a benchmark of 72 gameplay-logic tasks in Godot projects. An automated evaluator checks each game's rules at every simulation tick. Across 403 hand-designed scenarios, seeded parameter variations produce 1,451 test cases. To ensure that the evaluator measures behavior rather than implementation choice, it must accept different correct implementations for each task while rejecting mutants, implementations with one required capability removed. The tasks span isolated mechanics, multi-system interactions, and repository-scale features. Across 20 combinations of language models and scaffolds, the best observed run solves 52.78% of tasks. Under Claude Code, all twelve models solve fewer tasks as task scope expands from isolated mechanics, through interacting systems, to repository-scale features. Agents inspect code more often and make more tool calls on repository-scale tasks than on isolated-mechanic tasks. Most unsuccessful submissions are runnable, but implement some required game behavior incorrectly. We compared versions of our benchmark evaluator built with and without validation using mutants. Without this validation, incorrect agent submissions passed. A separate analysis finds agents copying code from public repositories when network access is open. Reliable evaluation thus depends both on what the tests reject and on what external code agents can access.",
+  "abstract_zh": "编码智能体能够在大型软件项目中修改并测试代码，但游戏开发要求智能体准确实现运行时玩法规则：即使游戏最终状态合法，执行过程中也可能已经违反规则。现有游戏开发基准主要依赖固定样例回放、视频评分或其他模型裁判，无法在评测器选定的多样化场景中持续检查执行规则，同时保证判定完全可复现。本文提出 GameLogicBench，包含 Godot 项目中的 72 项游戏逻辑任务，其自动评测器在每个 simulation tick 检查游戏规则。基准设计了 403 个场景，并通过带随机种子的参数变化生成 1,451 个测试用例。为确保评测关注外部行为而非具体实现，作者使用 mutants（移除某项必要能力的缺陷实现）验证评测器，使其既能接受不同的正确实现，又能拒绝行为不完整的实现。任务覆盖独立机制、多系统交互和仓库级功能。在 20 种语言模型与 scaffold 组合中，最佳结果仅解决 52.78% 的任务。在 Claude Code 下，全部 12 个模型的表现均随任务范围扩大而下降；面对仓库级任务，智能体会检查更多代码并发起更多工具调用。多数失败提交可以正常运行，但未正确实现全部必要行为。实验还表明，未经 mutants 验证的评测器会放过错误提交；开放网络访问时，智能体也可能复制公共代码仓库中的实现。因此，可靠评测不仅取决于测试能够拒绝哪些错误，还取决于智能体可访问的外部代码资源。",
+  "key_points_zh": [
+    "提出 GameLogicBench：包含 72 个 Godot 游戏逻辑任务，覆盖独立机制、多系统交互与仓库级功能。",
+    "评测器在每个 simulation tick 执行状态断言；403 个手工场景经种子化参数变化扩展为 1,451 个可复现测试用例。",
+    "使用 mutants 验证测试有效性，使评测器能够兼容不同正确实现，同时拒绝缺失必要能力的实现。",
+    "20 种模型与 scaffold 组合中的最佳任务通过率仅为 52.78%；任务范围越大，模型表现越差且工具调用更多。",
+    "多数失败方案能够运行但行为不完整；评测器验证不足和开放网络导致的公共代码复制都会削弱评测可信度。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.81,
+    "problem_significance": 0.85,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.85,
+    "llm_avg": 0.8099999999999999,
+    "comment": "GameLogicBench is a strong coding-agent benchmark whose deterministic tick-level assertions and mutant-validated evaluator provide a durable model for execution-grounded assessment.",
+    "comment_zh": "GameLogicBench通过确定性的逐帧状态断言和变异体验证评测器，为基于真实执行的编码智能体评估提供了可持续复用的范式。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3210331475111057,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8099999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/NJU-LINK/GameLogicBench",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.21562/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.21562/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

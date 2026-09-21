@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2609.21378",
+  "title": "ArenaFlow: From Trajectory Ranking to Hierarchical Credit Propagation for Open-Ended Agent RL",
+  "title_zh": "ArenaFlow：从轨迹排序到层次化信用传播的开放式智能体强化学习",
+  "authors": [
+    "Qiang Zhang",
+    "Ruixue Ding",
+    "Fanrui Zhang",
+    "Xi Chen",
+    "Boli Chen",
+    "Shihang Wang",
+    "Yinfeng Huang",
+    "Yi Zheng",
+    "Pengjun Xie",
+    "Kaipeng Zhang",
+    "Jiawei Liu",
+    "Zheng-Jun Zha"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-18T06:44:44Z",
+  "abs_url": "https://arxiv.org/abs/2609.21378v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.21378",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement learning has substantially improved large language model (LLM) agents in verifiable domains, but remains difficult to apply to open-ended agent tasks, where solutions are diverse and reliable scalar rewards are hard to obtain. Recent pairwise evaluation methods alleviate reward discrimination collapse by replacing pointwise scoring with relative preferences. However, they still compress rich comparative feedback into a single trajectory-level reward, obscuring decisive intermediate steps and preventing successful behaviors from being consolidated into reusable skills. We propose ArenaFlow, a hierarchical credit propagation framework for open-ended agent reinforcement learning. ArenaFlow leverages tournament-based relative ranking to derive trajectory-level reward signals. Each comparison is further equipped with structured reflective evaluation, which reveals three types of supervision: pivotal success steps, reusable strategy skills, and usage attribution of retrieved skills. At the step level, ArenaFlow propagates trajectory-level advantages to high-confidence pivotal steps according to tournament survival depth, enabling more targeted optimization of local reasoning behaviors. At the skill level, ArenaFlow estimates skill utility from group-level usage attribution and maintains a global skill memory through utility-aware updating, pruning, and retrieval. The resulting high-utility skills further serve as policy priors for future exploration. Extensive experiments validate ArenaFlow's effectiveness on open-ended agent tasks.",
+  "abstract_zh": "强化学习显著提升了大语言模型（LLM）智能体在可验证领域中的表现，但在开放式智能体任务中仍难以应用，因为此类任务的解法多样，且难以获得可靠的标量奖励。近期的成对评估方法以相对偏好取代逐点评分，缓解了奖励区分度坍塌问题，但仍将丰富的比较反馈压缩为单一的轨迹级奖励，从而掩盖起决定作用的中间步骤，也无法将成功行为沉淀为可复用技能。本文提出 ArenaFlow，一种面向开放式智能体强化学习的层次化信用传播框架。ArenaFlow 通过基于锦标赛的相对排序获得轨迹级奖励信号，并为每次比较引入结构化反思评估，从中提取三类监督信息：关键成功步骤、可复用策略技能，以及检索技能的使用归因。在步骤层面，ArenaFlow 根据轨迹在锦标赛中的存活深度，将轨迹级优势传播至高置信度的关键步骤，以更有针对性地优化局部推理行为。在技能层面，ArenaFlow 根据群组级使用归因估计技能效用，并通过效用感知的更新、剪枝与检索机制维护全局技能记忆。高效用技能还会作为策略先验，引导后续探索。大量实验验证了 ArenaFlow 在开放式智能体任务中的有效性。",
+  "key_points_zh": [
+    "采用基于锦标赛的相对排序生成轨迹级奖励，减少开放式任务中绝对标量奖励不可靠的问题。",
+    "通过结构化反思评估提取关键成功步骤、可复用策略技能和检索技能使用归因三类监督信号。",
+    "依据锦标赛存活深度，将轨迹级优势定向传播至高置信度关键步骤，从而精细优化局部推理行为。",
+    "基于群组级使用归因估计技能效用，并通过效用感知的更新、剪枝与检索维护全局技能记忆。",
+    "将高效用技能作为后续探索的策略先验，促进成功经验的复用与持续积累。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.86,
+    "problem_significance": 0.91,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8699999999999999,
+    "comment": "ArenaFlow tightly fits agent RL by combining comparative trajectory rewards, step-level credit assignment, and evolving reusable skills for open-ended tasks.",
+    "comment_zh": "ArenaFlow将轨迹比较奖励、步骤级信用分配与可复用技能演化结合起来，属于高度契合的开放式智能体强化学习工作。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.6248005295268143,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8699999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 7,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 14,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.21378/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.21378/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.959
+    }
+  ]
+}
