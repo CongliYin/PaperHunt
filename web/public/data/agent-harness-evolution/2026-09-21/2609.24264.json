@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.24264",
+  "title": "Canonical Procedural Actions: An Auditable Annotation Protocol for Tool-Use Agent Traces",
+  "title_zh": "Canonical Procedural Actions：一种可审计的工具使用智能体轨迹标注协议",
+  "authors": [
+    "Songqi Li",
+    "Dongqing Li",
+    "Zheqiao Cheng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-21T08:26:07Z",
+  "abs_url": "https://arxiv.org/abs/2609.24264v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.24264",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Tool-use agent traces identify messages and API calls, but procedural analyses also need explicit units of action and inspectable links to their evidence. We present Canonical Procedural Actions (CPAs), an annotation protocol that records a procedural function, its first agent-event anchor, the agent events that realize it, and separate contextual evidence. Multiple actions may share a message anchor without an inferred within-message order. A retail case study produces a versioned 24-entry codebook through open induction, recorded consolidation, and successive application audits. Two isolated LLM contexts annotate 32 trajectories disjoint from development at the trajectory level, producing 499 and 491 occurrences with anchor-label overlap A=0.982. Requiring identical context-event references reduces overlap to 0.798. These are structural repeatability measures, not semantic accuracy: 16 of 26 task IDs also occur in development, and historical tool payloads were truncated to 110 characters. Retrospective controls show that collapsing all labels raises overlap to 0.986, while simple endpoint rules reproduce the tool-anchored portion with 0.997 overlap. Assistant-message actions have 0.971 overlap, with a per-label minimum of 0.816. Applying the frozen codebook to 244 further trajectories yields 4,058 records, including eight diagnostic outcomes. The contribution is an explicit, auditable annotation instrument and a case study of its construction and measurement limits; human-reference validity and downstream utility remain to be established.",
+  "abstract_zh": "本文提出 Canonical Procedural Actions（CPAs），一种面向工具使用智能体轨迹的可审计标注协议。CPA 为每个程序性动作记录其功能、首次智能体事件锚点、实现该动作的智能体事件，以及独立的上下文证据；多个动作可以共享同一消息锚点，但不推断消息内部顺序。作者以零售场景为案例，通过开放式归纳、记录化整合和多轮应用审计，构建了包含24项条目的版本化代码本。两个相互隔离的 LLM 上下文在开发集之外、按轨迹划分的32条轨迹上进行标注，分别产生499和491条动作记录，锚点—标签重叠率 A=0.982；若要求上下文事件引用完全一致，重叠率降至0.798。作者强调，这些指标反映结构可重复性，而非语义正确性：26个任务ID中有16个也出现在开发集，且历史工具负载被截断至110个字符。回溯控制显示，将所有标签合并后重叠率升至0.986；简单的端点规则可复现工具锚定部分，重叠率达0.997。助手消息动作的重叠率为0.971，单标签最低为0.816。将冻结后的代码本应用于额外244条轨迹，得到4,058条记录和8类诊断结果。本文的主要贡献是一个明确、可审计的标注工具及其构建和测量局限案例；人类参考有效性与下游应用价值仍有待验证。",
+  "key_points_zh": [
+    "Canonical Procedural Actions（CPAs）将程序性动作拆分为功能、首次事件锚点、实现事件和上下文证据，避免臆测消息内部顺序。",
+    "研究通过开放归纳、记录化整合和应用审计构建24项版本化代码本，并在额外244条轨迹上生成4,058条标注记录。",
+    "两个隔离 LLM 上下文的锚点—标签重叠率为0.982，但要求事件引用完全一致时降至0.798，表明结构一致性与证据定位一致性不同。",
+    "回溯控制显示，合并标签或使用简单端点规则即可获得极高重叠率，说明重复性指标不能直接等同于语义准确性。",
+    "研究尚未验证人类参考有效性和下游效用；开发集任务ID重叠及工具负载截断也构成重要测量限制。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.73,
+    "novelty": 0.68,
+    "problem_significance": 0.64,
+    "potential_impact": 0.67,
+    "paradigm_shift": 0.56,
+    "lasting_value": 0.66,
+    "llm_avg": 0.6420000000000001,
+    "comment": "The CPA protocol offers a potentially useful auditable schema for analyzing tool-use trajectories, but its semantic validity and downstream utility remain weakly established.",
+    "comment_zh": "CPA协议为工具使用轨迹分析提供了潜在有用的可审计模式，但语义有效性和下游效用尚未得到充分验证。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.6420000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24264/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24264/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.965
+    }
+  ]
+}

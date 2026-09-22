@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.24974",
+  "title": "Harness-Zero: Harness Distillation via Agent-as-Harness",
+  "title_zh": "Harness-Zero：通过 Agent-as-Harness 实现智能体支架蒸馏",
+  "authors": [
+    "Haoran Ye",
+    "Yuxing Lu",
+    "Haonan Dong",
+    "Zhaochen Su",
+    "Guojie Song"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-21T17:55:20Z",
+  "abs_url": "https://arxiv.org/abs/2609.24974v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.24974",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent harnesses, the external systems that mediate model-environment interaction, can substantially improve agent performance, but their gains remain tied to the harness at deployment. Because the best harness varies across domains, instances, and models, a general-purpose agent must either settle for a suboptimal shared harness or route among an ever-growing set of specialized ones. We therefore study agent harness distillation: using a domain- or instance-optimized harness as training-time guidance and transferring the behaviors it induces into model weights, so that its gains survive under a single fixed target harness. The challenge is that the two harnesses differ in action space and available information, so guidance from the optimized harness cannot serve directly as supervision for the target one. We introduce Harness-Zero, which enables harness distillation through agent-as-harness. Guided by the optimized harness, a harnessing agent corrects student responses before execution in the target harness's action space, turning harness guidance into training demonstrations. Fine-tuning on the resulting trajectories internalizes harness-induced behavior into the model, so the specialized harness can be removed at deployment. Our experiments spanning knowledge work, tool use, and science domains show that: (1) For frontier LLMs using the same evolved harness, agent-as-harness outperforms code-as-harness. (2) With the specialized harness removed at deployment, Harness-Zero improves the base model's macro-average task success from 23.3% to 44.3%, even exceeding the 41.7% it reaches with that harness still attached. (3) Harness-Zero recovers harness-induced behaviors absent from the base model, with 82.3% average recovery across 28 patterns in the three domains.",
+  "abstract_zh": "智能体支架（agent harness）是协调模型与环境交互的外部系统，能够显著提升智能体性能，但其收益通常依赖部署时继续使用同一支架。由于最佳支架会随领域、任务实例和模型而变化，通用智能体不得不采用次优的共享支架，或在不断增加的专用支架之间进行路由。本文研究智能体支架蒸馏（agent harness distillation）：在训练阶段利用针对领域或实例优化的支架提供指导，将其诱导出的行为迁移到模型权重中，使模型在统一、固定的目标支架下仍能保留性能增益。其核心难点在于，优化支架与目标支架的动作空间和可用信息不同，前者的指导无法直接作为后者的监督信号。为此，作者提出 Harness-Zero，通过 Agent-as-Harness 完成支架蒸馏：一个受优化支架指导的支架智能体，在执行前于目标支架的动作空间内修正学生模型响应，从而将支架指导转化为训练示范；随后利用生成的轨迹进行微调，把支架诱导的行为内化到模型中，使部署时可以移除专用支架。覆盖知识工作、工具使用和科学任务的实验表明，Agent-as-Harness 优于 code-as-harness；移除专用支架后，Harness-Zero 将基础模型的宏平均任务成功率从 23.3% 提升至 44.3%，甚至超过保留该支架时的 41.7%；在三个领域的 28 种行为模式上，平均恢复率达到 82.3%。",
+  "key_points_zh": [
+    "提出智能体支架蒸馏：将优化 harness 在训练阶段诱导出的行为迁移至模型权重，使其收益不再依赖部署时挂载专用支架。",
+    "Harness-Zero 采用 Agent-as-Harness，由支架智能体在目标动作空间中修正学生响应，解决不同 harness 之间动作空间与可用信息不一致的问题。",
+    "在相同 evolved harness 条件下，面向 frontier LLMs 的 Agent-as-Harness 效果优于 code-as-harness。",
+    "移除专用 harness 后，基础模型的宏平均任务成功率由 23.3% 提升至 44.3%，超过保留该 harness 时的 41.7%。",
+    "在知识工作、工具使用和科学领域的 28 种行为模式上，Harness-Zero 对基础模型原本缺失的支架诱导行为实现了 82.3% 的平均恢复率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.91,
+    "problem_significance": 0.91,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.9,
+    "lasting_value": 0.91,
+    "llm_avg": 0.9099999999999999,
+    "comment": "Harness-Zero presents a compelling agent-training paradigm that transfers specialized harness behavior into model weights and removes deployment dependence on the original harness.",
+    "comment_zh": "Harness-Zero提出了有力的Agent训练范式，将专用Harness行为迁移到模型权重中，从而摆脱部署时对原Harness的依赖。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.7934604479228607,
+    "author_reputation": 0.21754098571521813,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.9099999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 12,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24974/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24974/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.308
+    }
+  ]
+}

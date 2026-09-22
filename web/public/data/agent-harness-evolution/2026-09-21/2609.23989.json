@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2609.23989",
+  "title": "ACLArena: Agent Continue Learning in Multi-stage Post-training",
+  "title_zh": "ACLArena：多阶段后训练中的 Agent 持续学习",
+  "authors": [
+    "Haixin Wang",
+    "Xiaoxuan Wang",
+    "Junkai Zhang",
+    "Han Zhang",
+    "Renliang Sun",
+    "Alexander K Taylor",
+    "Yidan Shi",
+    "Haoran Deng",
+    "Chenguang Wang",
+    "Jason Cong",
+    "Yizhou Sun",
+    "Wei Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-21T01:48:37Z",
+  "abs_url": "https://arxiv.org/abs/2609.23989v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.23989",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Building general-purpose agents for industrial deployment requires integrating multiple capabilities, each typically acquired at a distinct stage of training. Yet there is currently no well-established recipe for Agent Continual Learning (ACL), with little understanding of the trade-offs among existing integration paradigms. To address this gap, we introduce ACLArena, a framework for comprehensively studying, analyzing, and evaluating ACL. We first build a sequential training pipeline and conduct an in-depth analysis that explains the mechanisms of forgetting and generalization from two complementary perspectives, the model level and the token level. Guided by these analyses, we systematically compare multi-teacher on-policy distillation, self-distilled fine-tuning, and model merging to assess their ability to recover previously learned capabilities while preserving newly acquired ones. Through extensive experiments, we develop a detailed understanding of how capabilities transfer across stages. Finally, we propose a new ACL recipe that combines offline replay over high-quality trajectories with a routed network of multiple LoRA experts each specialized via RL, substantially improving the agent's ability to learn across multiple domains. Comprehensive experiments on four reasoning and agentic tasks, evaluated under both in-domain and out-of-domain settings, demonstrate the value of our analysis and the effectiveness of our approach.",
+  "abstract_zh": "面向工业部署构建通用 Agent，通常需要在不同训练阶段逐步获得多种能力，但目前缺乏成熟的 Agent Continual Learning（ACL）方法，也不清楚不同能力整合范式之间的权衡。本文提出 ACLArena，用于系统研究、分析和评测 ACL。作者构建了序列训练流程，并从模型级和 token 级两个互补视角分析遗忘与泛化机制。在此基础上，系统比较多教师 on-policy 蒸馏、自蒸馏微调和模型合并在恢复既有能力、保留新能力方面的表现。实验揭示了不同阶段间的能力迁移规律，并提出一种新的 ACL 配方：结合高质量轨迹的离线回放，以及由多个 LoRA 专家组成、分别通过强化学习专门化的路由网络。该方法在四项推理与 Agent 任务上进行域内和域外评测，显著提升了 Agent 跨多个领域持续学习的能力。",
+  "key_points_zh": [
+    "提出 ACLArena，建立用于研究和评测 Agent Continual Learning 的序列训练框架。",
+    "从模型级与 token 级分析持续学习中的遗忘、泛化及跨阶段能力迁移机制。",
+    "系统比较多教师 on-policy 蒸馏、自蒸馏微调和模型合并三类能力整合范式。",
+    "提出结合高质量轨迹离线回放与多 LoRA 专家路由网络的新 ACL 配方。",
+    "在四项推理和 Agent 任务的域内、域外设置下验证了方法的有效性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.89,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.88,
+    "llm_avg": 0.866,
+    "comment": "ACLArena combines agent continual-learning analysis, trajectory replay, and routed RL specialists into a substantial framework for retaining capabilities across post-training stages.",
+    "comment_zh": "ACLArena将Agent持续学习分析、轨迹回放和路由式RL专家结合起来，为跨阶段保持能力提供了重要框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.7568411832040695,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.866,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 7,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.23989/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.23989/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.292
+    }
+  ]
+}

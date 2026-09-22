@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.24362",
+  "title": "VLM-in-Sandbox: Visual Workspaces for Agentic Visual Reasoning",
+  "title_zh": "VLM-in-Sandbox：面向智能体视觉推理的视觉工作空间",
+  "authors": [
+    "Hexiong Yang",
+    "Mingrui Chen",
+    "Jie Cao",
+    "Ran He"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-21T09:52:48Z",
+  "abs_url": "https://arxiv.org/abs/2609.24362v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.24362",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Sandboxed computer environments support multi-step reasoning with tools, executable programs, and persistent files, yet their extension from language models to vision-language models (VLMs) introduces a distinct state-management problem. Visual reasoning produces intermediate image-valued evidence---crops, masks, overlays, zoomed regions, and analytic renderings---that must remain addressable without accumulating unboundedly in multimodal context. We introduce VLM-in-Sandbox, a training-free framework for agentic multimodal reasoning in controlled computer environments. Its Visual Workspace registers generated artifacts in an image ledger, maintains a bounded active visual context, and lets the model explicitly promote selected evidence for subsequent inspection. This separates visual evidence generation, performed by sandbox tools, from visual evidence management. Across seven benchmarks and four base VLMs, VLM-in-Sandbox achieves the highest sample-weighted average accuracy among Vanilla VLM, Append-only Sandbox, and the proposed method. A compiler-matched $2\\times2$ study on 1,260 examples further separates model-directed visibility from bounded retention: VLM-in-Sandbox reaches 66.27% accuracy with 18.6% fewer total tokens than the automatic, retain-all control. Over all 6,350 submitted GPT-4.1-mini examples, it produces 302 rescues and 142 regressions relative to Original Append-only. A local vLLM study with prefix caching confirms that the smaller request workload also reduces uncached tokens, time to first token, and end-to-end latency. These results identify explicit visual evidence state as a central abstraction for sandboxed VLM agents.",
+  "abstract_zh": "沙盒计算机环境通过工具、可执行程序和持久化文件支持多步推理，但将其从语言模型扩展到视觉语言模型（VLM）时，会引入独特的状态管理问题。视觉推理会产生裁剪图、掩码、叠加图、放大区域和分析性渲染等图像中间证据；这些证据需要保持可访问，同时又不能无限累积在多模态上下文中。本文提出无需训练的 VLM-in-Sandbox，用于受控计算机环境中的智能体多模态推理。其 Visual Workspace 将生成的视觉产物登记到图像账本（image ledger）中，维护有界的活动视觉上下文，并允许模型显式提升选定证据以供后续检查。该框架将视觉证据生成与视觉证据管理解耦，前者由沙盒工具执行。在七个基准和四个基础 VLM 上，VLM-in-Sandbox 相比 Vanilla VLM 和 Append-only Sandbox，取得最高的样本加权平均准确率。在包含 1,260 个样例、编译器匹配的 2×2 实验中，该方法以少 18.6% 总 token 的代价达到 66.27% 准确率，进一步区分了模型引导的可见性与有界保留机制。针对全部 6,350 个 GPT-4.1-mini 提交样例，相较于 Original Append-only，VLM-in-Sandbox 带来 302 次挽救和 142 次退化。使用 vLLM 和前缀缓存的本地实验进一步表明，更小的请求负载还能减少未缓存 token、首 token 延迟和端到端延迟。结果表明，显式的视觉证据状态是沙盒 VLM 智能体的核心抽象。",
+  "key_points_zh": [
+    "提出无需训练的 VLM-in-Sandbox，通过 Visual Workspace 和 image ledger 管理图像中间证据。",
+    "维护有界活动视觉上下文，并让模型显式提升关键证据，避免多模态上下文无限膨胀。",
+    "在七个基准和四个基础 VLM 上取得最高样本加权平均准确率。",
+    "在 1,260 个样例上达到 66.27% 准确率，同时比自动保留全部证据少使用 18.6% 总 token。",
+    "显式视觉证据状态不仅提升推理效果，还能降低未缓存 token、首 token 延迟和端到端延迟。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.8,
+    "problem_significance": 0.76,
+    "potential_impact": 0.77,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.75,
+    "llm_avg": 0.76,
+    "comment": "The explicit visual workspace and bounded evidence-state management provide a useful runtime abstraction for multimodal sandbox agents, though the scope is specifically visual reasoning.",
+    "comment_zh": "显式视觉工作区和有界证据状态管理为多模态Sandbox Agent提供了有用的运行时抽象，但适用范围主要限于视觉推理。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.76,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24362/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24362/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

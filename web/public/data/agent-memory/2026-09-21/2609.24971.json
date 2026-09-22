@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.24971",
+  "title": "DolphinBench: Mapping the Pareto Frontier of Agent Memory",
+  "title_zh": "DolphinBench：绘制智能体记忆的 Pareto 前沿",
+  "authors": [
+    "Soumil Rathi",
+    "Deshraj Yadav",
+    "Taranjeet Singh"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-21T17:54:35Z",
+  "abs_url": "https://arxiv.org/abs/2609.24971v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.24971",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agents today often take real-world actions that depend on long-term memory and context recall over time. However, most current memory benchmarks are built for a conversational question-answer format, where the question itself signals that some fact must be retrieved, and often which one. Moreover, benchmarks rarely require anything beyond accuracy from submissions, allowing memory systems to make unreasonable cost/time tradeoffs to achieve higher scores. We present DolphinBench, a benchmark that evaluates memory directly through an agent's task completion. DolphinBench includes three knowledge-work personas with roughly 500k tokens of user messages per persona and evaluates agents on tasks that depend on information from that history. We verify all 200 tasks per persona by running an agent with and without the relevant history, requiring success with it and failure without it. Finally, we require all evaluations to report total cost and latency alongside accuracy, which enables us to evaluate agent memory systems holistically. No existing memory benchmark combines all three. The dataset and evaluation code are available at https://dolphinbench.ai.",
+  "abstract_zh": "现有智能体记忆基准多采用对话式问答，问题通常会提示需要检索的事实，且往往只关注准确率，无法反映真实任务中的成本与延迟权衡。本文提出 DolphinBench，通过智能体任务完成情况直接评估记忆能力。基准包含三类知识工作者 persona，每类约含 50 万 tokens 的用户历史消息，并设计依赖这些历史信息的任务。每类 persona 包含 200 个任务，作者分别在有无相关历史的条件下运行智能体进行验证，要求智能体在有历史时成功、无历史时失败，从而确认任务确实依赖记忆。评测同时报告准确率、总成本和延迟，使研究者能够全面分析记忆系统的 Pareto 前沿。DolphinBench 的数据集与评测代码已公开。",
+  "key_points_zh": [
+    "将记忆评测从显式问答检索转向真实知识工作任务中的任务完成。",
+    "包含三类知识工作者 persona，每类约 50 万 tokens 历史消息和 200 个记忆依赖任务。",
+    "通过有无相关历史的对照运行，验证任务成功确实依赖长期记忆，而非一般能力。",
+    "同时评估准确率、总成本与延迟，支持对智能体记忆系统进行整体分析和 Pareto 前沿比较。",
+    "公开数据集与评测代码，弥补现有基准未同时覆盖任务性、记忆依赖性和资源权衡的不足。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.87,
+    "problem_significance": 0.91,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.95,
+    "llm_avg": 0.8800000000000001,
+    "comment": "A highly valuable agent-memory benchmark that evaluates task-grounded usefulness together with cost and latency rather than relying on recall accuracy alone.",
+    "comment_zh": "这是一个高度有价值的 Agent Memory 基准，将任务实际完成度、成本和延迟纳入评估，而不再只依赖记忆召回准确率。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.8800000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24971/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24971/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.934
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-09-21",
+  "generated_at": "2026-09-22T22:55:07Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.24972",
+      "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses",
+      "title_zh": "RRSI：Agent Harness 的正则化递归自我改进",
+      "authors": [
+        "Peng Xia",
+        "Rujun Han",
+        "Zifeng Wang",
+        "Yanfei Chen",
+        "Yufan Zhang",
+        "Yoonho Lee",
+        "Chengsong Huang",
+        "Han Yu",
+        "Zhongying CuiZhu",
+        "Yifei Ming",
+        "Huaxiu Yao",
+        "Burak Gokturk",
+        "Tomas Pfister",
+        "Chen-Yu Lee"
+      ],
+      "total_score": 0.7764109185666289,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.916,
+        "domain_fit": 0.98,
+        "other": 0.5520363952220961
+      },
+      "tags": [
+        "HF Daily ★152",
+        "GitHub",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "RRSI 以正则化提升 Agent Harness 的泛化并降低成本",
+      "detail_file": "agent-harness-evolution/2026-09-21/2609.24972.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24972/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.24928",
+      "title": "Trajectory-Aware Benchmark Subset Selection for Cost-Efficient Software Engineering Agent Regression Testing",
+      "title_zh": "面向轨迹感知的高性价比软件工程智能体回归测试基准子集选择",
+      "authors": [
+        "Mahmoud Ayyad",
+        "Zehao Wang",
+        "Jiho Shin",
+        "Ying Zou",
+        "Bram Adams"
+      ],
+      "total_score": 0.6835258286877778,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.86,
+        "domain_fit": 0.97,
+        "other": 0.19175276229259217
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "用轨迹嵌入选10%子集，成本降90%且误差低于5%",
+      "detail_file": "agent-harness-evolution/2026-09-21/2609.24928.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24928/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.24974",
+      "title": "Harness-Zero: Harness Distillation via Agent-as-Harness",
+      "title_zh": "Harness-Zero：通过 Agent-as-Harness 实现智能体支架蒸馏",
+      "authors": [
+        "Haoran Ye",
+        "Yuxing Lu",
+        "Haonan Dong",
+        "Zhaochen Su",
+        "Guojie Song"
+      ],
+      "total_score": 0.6635500716819039,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.9099999999999999,
+        "domain_fit": 0.98,
+        "other": 0.23516690560634648
+      },
+      "tags": [
+        "HF Daily ★12",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "将专用支架行为蒸馏进模型，移除支架后性能反而更高。",
+      "detail_file": "agent-harness-evolution/2026-09-21/2609.24974.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24974/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.24362",
+      "title": "VLM-in-Sandbox: Visual Workspaces for Agentic Visual Reasoning",
+      "title_zh": "VLM-in-Sandbox：面向智能体视觉推理的视觉工作空间",
+      "authors": [
+        "Hexiong Yang",
+        "Mingrui Chen",
+        "Jie Cao",
+        "Ran He"
+      ],
+      "total_score": 0.6215258286877777,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.76,
+        "domain_fit": 0.78,
+        "other": 0.19175276229259217
+      },
+      "tags": [
+        "session context state"
+      ],
+      "tldr_zh": "用有界视觉工作空间管理证据，提升沙盒VLM推理效率",
+      "detail_file": "agent-harness-evolution/2026-09-21/2609.24362.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24362/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.24115",
+      "title": "EDGEGEN: Improving Tool-Calling Agents Beyond Happy Paths with Synthetic Edge Case Generation",
+      "title_zh": "EDGEGEN：通过合成边界案例生成提升超越“Happy Paths”的工具调用智能体",
+      "authors": [
+        "Harshavardhan Abichandani",
+        "Penny Chong",
+        "Jiyuan Shen",
+        "Gunraj Singh",
+        "Ashutosh Hathidara",
+        "Marcus Duigan Xing Yu",
+        "Jane Lo",
+        "Atin Ghosh",
+        "Yipeng Li",
+        "Daniel Dahlmeier"
+      ],
+      "total_score": 0.49307243430476455,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.79,
+        "domain_fit": 0.83,
+        "other": 0.3735747810158818
+      },
+      "tags": [
+        "HF Daily ★1",
+        "general llm agents"
+      ],
+      "tldr_zh": "用数据库驱动的边界案例自动改进工具调用智能体",
+      "detail_file": "agent-harness-evolution/2026-09-21/2609.24115.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24115/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.24130",
+      "title": "Self-Healing Harness for Runtime Oversight of Agent Self-Modification",
+      "title_zh": "用于智能体自修改运行时监督的 Self-Healing Harness",
+      "authors": [
+        "Sina Tayebati",
+        "Divake Kumar",
+        "Nastaran Darabi",
+        "Ranganath Krishnan",
+        "Amit Ranjan Trivedi"
+      ],
+      "total_score": 0.48663568503554117,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.924,
+        "domain_fit": 0.99,
+        "other": 0.2181189501184705
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "外部准入控制让智能体自修改更安全可逆",
+      "detail_file": "agent-harness-evolution/2026-09-21/2609.24130.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24130/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.24264",
+      "title": "Canonical Procedural Actions: An Auditable Annotation Protocol for Tool-Use Agent Traces",
+      "title_zh": "Canonical Procedural Actions：一种可审计的工具使用智能体轨迹标注协议",
+      "authors": [
+        "Songqi Li",
+        "Dongqing Li",
+        "Zheqiao Cheng"
+      ],
+      "total_score": 0.36291457171944413,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.6420000000000001,
+        "domain_fit": 0.73,
+        "other": 0.08771523906481368
+      },
+      "tags": [
+        "general tool agents"
+      ],
+      "tldr_zh": "提出可审计的工具使用动作标注协议CPA",
+      "detail_file": "agent-harness-evolution/2026-09-21/2609.24264.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24264/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.23989",
+      "title": "ACLArena: Agent Continue Learning in Multi-stage Post-training",
+      "title_zh": "ACLArena：多阶段后训练中的 Agent 持续学习",
+      "authors": [
+        "Haixin Wang",
+        "Xiaoxuan Wang",
+        "Junkai Zhang",
+        "Han Zhang",
+        "Renliang Sun",
+        "Alexander K Taylor",
+        "Yidan Shi",
+        "Haoran Deng",
+        "Chenguang Wang",
+        "Jason Cong",
+        "Yizhou Sun",
+        "Wei Wang"
+      ],
+      "total_score": 0.3576420591602035,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.866,
+        "domain_fit": 0.95,
+        "other": 0.3261401972006783
+      },
+      "tags": [
+        "HF Daily ★7"
+      ],
+      "tldr_zh": "ACLArena系统研究Agent持续学习并提出有效训练配方",
+      "detail_file": "agent-harness-evolution/2026-09-21/2609.23989.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.23989/thumb.webp"
+    }
+  ]
+}

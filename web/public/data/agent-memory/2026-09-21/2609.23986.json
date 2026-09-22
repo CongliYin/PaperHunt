@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.23986",
+  "title": "Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents",
+  "title_zh": "Jev-Mem：由 System-One 控制的高效 AI Agent 记忆架构",
+  "authors": [
+    "Dongming Jiang",
+    "Yi Li",
+    "Bingzhe Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-21T01:43:12Z",
+  "abs_url": "https://arxiv.org/abs/2609.23986v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.23986",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic memory is becoming essential for long-horizon AI agents, yet many existing systems rely on autoregressive LLMs to control how memories are organized, retrieved, and used, placing expensive generation on the critical path of memory operations. We introduce \\textbf{\\method}, a new agentic memory architecture inspired by System-One/System-Two cognition. System One captures fast, lightweight decision-making, whereas System Two performs slower, deliberative reasoning. Jev-Mem brings this division of labor to agentic memory through a dedicated System-One control plane, a structured multi-relational memory plane, and a System-Two reasoning plane. The System-One controller governs memory typing and relational organization during construction, and dynamically performs query routing, retrieval-budget allocation, graph traversal, candidate scoring, and adaptive stopping during retrieval. System Two is invoked only for complex reasoning and answer synthesis. This design improves both memory effectiveness and system efficiency: on LoCoMo Jev-Mem achieves an overall LLM-as-a-Judge score of 0.777, an 11.0\\% relative improvement over the strongest baseline, while reducing memory construction time to 158\\,s, a 6.6$\\times$ speedup over the fastest competing memory system, and lowering average query latency to 0.93\\,s, a 36.7\\% reduction.",
+  "abstract_zh": "针对长时程 AI Agent 中记忆构建、检索和使用依赖自回归 LLM、导致高昂生成开销的问题，论文提出 Jev-Mem，一种受 System-One/System-Two 认知理论启发的 Agentic Memory 架构。Jev-Mem 包含 System-One 控制平面、结构化多关系记忆平面和 System-Two 推理平面：System-One 负责记忆类型划分、关系组织、查询路由、检索预算分配、图遍历、候选评分与自适应停止；System-Two 仅在复杂推理和答案合成阶段调用。在 LoCoMo 上，Jev-Mem 的 LLM-as-a-Judge 总分达到 0.777，较最强基线相对提升 11.0%；记忆构建耗时降至 158 秒，相比最快竞品提速 6.6 倍；平均查询延迟为 0.93 秒，降低 36.7%。",
+  "key_points_zh": [
+    "提出 Jev-Mem，将 Agentic Memory 分为 System-One 控制、记忆存储与 System-Two 推理三层。",
+    "System-One 在无需频繁调用 LLM 的情况下，完成记忆组织、检索路由、预算分配、图遍历、评分和停止决策。",
+    "System-Two 仅处理复杂推理与答案合成，减少昂贵的自回归生成处于记忆操作关键路径中的情况。",
+    "在 LoCoMo 上取得 0.777 的 LLM-as-a-Judge 得分，较最强基线相对提升 11.0%。",
+    "记忆构建速度提升 6.6 倍，平均查询延迟降低 36.7%，体现出显著的系统效率优势。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.86,
+    "problem_significance": 0.87,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.79,
+    "lasting_value": 0.85,
+    "llm_avg": 0.8459999999999999,
+    "comment": "A strong reusable agent-memory architecture that separates fast control from deliberative reasoning to improve memory organization, retrieval efficiency, and latency.",
+    "comment_zh": "这是一种具有较强复用性的 Agent Memory 架构，通过分离快速控制与审慎推理来提升记忆组织、检索效率和响应延迟。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.7874232534517753,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.8459999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 11,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.23986/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.23986/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

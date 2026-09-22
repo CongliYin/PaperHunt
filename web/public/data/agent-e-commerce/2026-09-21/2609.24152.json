@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2609.24152",
+  "title": "Graded-Relevance Composed Multimodal Retrieval for E-commerce Visual Search at Scale",
+  "title_zh": "面向大规模电商视觉搜索的分级相关性组合多模态检索",
+  "authors": [
+    "Anubhav Gupta",
+    "Hrushikesh Mohapatra",
+    "Prijith Chandra",
+    "Asish Mohapatra",
+    "Anuj Garg",
+    "Arvind Maan",
+    "Sudip Datta",
+    "Venkat Bulusu",
+    "Sitesh Kumar Jalan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-21T06:09:52Z",
+  "abs_url": "https://arxiv.org/abs/2609.24152v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.24152",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Visual search on large e-commerce catalogs must serve both \"similarity\" queries that ask for items resembling an uploaded image and \"modifier\" queries that comprise an image and text describing a desired modification (e.g. a color change or style swap). The latter is the setting known as composed image retrieval (CIR). Existing CIR methods, however, treat relevance as binary and train on triplets with a single positive target - a poor fit for real catalogs where many candidates partially satisfy a user query and ranking across that partial-match spectrum drives the customer experience. We propose a methodology for training CIR retrievers on graded relevance, consisting of: (i) a VLM to curate training data, generating both queries (object detection + modifier synthesis) and 4-level relevance labels without manual annotation, (ii) an iterative relevance-feedback loop that expands the training set by mining hard negatives from the in-training retriever, and (iii) a hierarchy-aware angular objective to train the retriever directly on the graded labels rather than collapsing them to a binary split. We call this methodology GradCIR and instantiate it on a PaliGemma2 bi-encoder trained on 3.5M graded pairs curated from raw Walmart catalog data. A controlled graded-vs-binary ablation isolates the supervision granularity and shows lift of 4.9%-5.9% in NDCG@10. The same recipe applied to other multimodal encoders lifts early-fusion backbones by up to 8.5% NDCG@10. On the public FashionIQ benchmark, GradCIR (applied to PaliGemma2) reaches 0.6703 average recall when fine-tuned, slightly ahead of the strongest peer-reviewed supervised baseline we compare against, and matching or exceeding all published CLIP-L-class zero-shot CIR methods. The system is deployed in production at Walmart, where it's serving live visual-search user traffic.",
+  "abstract_zh": "大规模电商目录中的视觉搜索既包括根据上传图片寻找相似商品的“相似性”查询，也包括图片加文本修改描述的“修改器”查询，即组合图像检索（Composed Image Retrieval, CIR）。现有 CIR 方法通常将相关性视为二元标签，并使用仅含一个正样本的三元组训练，难以适应真实目录中大量仅部分满足查询的候选商品，以及由部分匹配程度决定的排序需求。本文提出 GradCIR，一套基于分级相关性训练 CIR 检索器的方法：首先利用视觉语言模型（VLM）自动生成查询和四级相关性标签，无需人工标注；随后通过相关性反馈迭代，从训练中的检索器挖掘困难负样本以扩充训练集；最后提出层次感知角度目标函数，直接利用分级标签训练检索器，而不是将其压缩为二元监督。作者基于 Walmart 原始商品目录构建了包含 350 万个分级样本对的数据集，并在 PaliGemma2 双编码器上实例化 GradCIR。受控实验表明，相比二元监督，分级监督使 NDCG@10 提升 4.9%–5.9%；将相同方案应用于其他多模态编码器时，早期融合骨干网络最高提升 8.5% NDCG@10。在公开 FashionIQ 基准上，经过微调的 GradCIR（基于 PaliGemma2）平均召回率达到 0.6703，略高于对比的最强同行评审监督基线，并达到或超过所有已发表的 CLIP-L 级零样本 CIR 方法。该系统已部署于 Walmart，服务真实视觉搜索流量。",
+  "key_points_zh": [
+    "针对真实电商目录中的部分匹配现象，将 CIR 相关性从二元标签扩展为四级分级标签。",
+    "利用 VLM 自动生成查询与相关性标注，并通过迭代相关性反馈挖掘困难负样本，降低人工数据构建成本。",
+    "提出层次感知角度目标函数，直接建模分级相关性，避免将不同程度的匹配粗略二值化。",
+    "在 Walmart 350 万分级样本上训练后，NDCG@10 相比二元监督提升 4.9%–5.9%；其他早期融合骨干最高提升 8.5%。",
+    "在 FashionIQ 上平均召回率达到 0.6703，并已部署至 Walmart 生产环境服务真实用户流量。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.88,
+    "llm_avg": 0.85,
+    "comment": "A strong production-grounded e-commerce visual-search paper that introduces graded relevance supervision and demonstrates substantial retrieval gains at Walmart scale.",
+    "comment_zh": "这是一篇具有强生产落地背景的电商视觉搜索论文，通过 graded relevance 监督在沃尔玛规模上显著提升了检索效果。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.85,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24152/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24152/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.852
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.24130",
+  "title": "Self-Healing Harness for Runtime Oversight of Agent Self-Modification",
+  "title_zh": "用于智能体自修改运行时监督的 Self-Healing Harness",
+  "authors": [
+    "Sina Tayebati",
+    "Divake Kumar",
+    "Nastaran Darabi",
+    "Ranganath Krishnan",
+    "Amit Ranjan Trivedi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-21T05:36:56Z",
+  "abs_url": "https://arxiv.org/abs/2609.24130v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.24130",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM agents can change their own future behavior, raising a basic control question of which self-generated changes should be allowed to persist. We formulate this as admission control for self-modification. The agent may propose changes to its operating instructions, while an external runtime gate controls persistence. We implement this principle as a model-agnostic self-healing harness that runs a Detect, Notice, Heal, Validate loop around an otherwise unmodified agent. The agent authors candidate behavioral rules in an external workspace, where they receive provisional execution authority during evaluation and acquire persistent cross-episode authority only after measured improvement on the triggering failure without regression beyond a fixed margin on protected cases. Replay provides matched evidence when available, forward trials provide a weaker fallback, and a corpus-level guard re-tests the accumulated active rule set. Across 16 matched Baseline and Harness runs spanning AppWorld, Terminal-Bench, and $τ^2$-Bench, the gate rejected 383 replay-decided proposals. Of these, 211 (55%) improved their triggering failure while degrading a case that previously worked. This shows that locally beneficial self-modifications can introduce collateral regressions often enough to materially affect gate decisions, providing direct empirical motivation for external admission control. Task-completion score is higher under the Harness in all 16 pairs, with two paired bootstrap intervals excluding zero, while repeated-trial reliability is higher in 12 pairs, tied in 4, and lower in none. Because adaptation modifies the policy-inducing context while leaving model weights fixed, admitted changes remain inspectable, reversible, and compatible with closed-weight models.",
+  "abstract_zh": "LLM 智能体能够改变自身未来行为，因此需要决定哪些自生成修改可以持续生效。本文将其形式化为自修改的准入控制问题：智能体可提出对运行指令的修改，但由外部运行时门控决定其是否持久化。作者提出与模型无关的 Self-Healing Harness，在未经修改的智能体外运行 Detect、Notice、Heal、Validate 循环。智能体先在外部工作区编写候选行为规则，并在评估期间获得临时执行权限；只有当规则改善触发该修改的失败案例，且在受保护案例上的性能退化不超过固定阈值时，才获得跨回合持久权限。系统优先使用 Replay 提供匹配证据，缺失时退化为较弱的 forward trials，并通过语料级防护重新测试累积的活动规则集。在覆盖 AppWorld、Terminal-Bench 和 τ^2-Bench 的 16 组 Baseline-Harness 匹配实验中，门控拒绝了 383 个由 Replay 判定的候选修改，其中 211 个（55%）虽改善触发失败，却损害了此前正常工作的案例。结果表明，局部有益的自修改经常引入附带回归，外部准入控制具有直接实证必要性。Harness 在全部 16 组配对中提升任务完成分数，其中 2 组的配对 bootstrap 区间排除零；重复试验可靠性在 12 组提升、4 组持平、没有下降。由于适应过程只修改诱导策略的上下文而不改变模型权重，被准入的修改仍然可检查、可撤销，并兼容闭权重模型。",
+  "key_points_zh": [
+    "将智能体自修改建模为外部运行时准入控制，而非允许所有自生成规则永久生效。",
+    "Self-Healing Harness 通过 Detect、Notice、Heal、Validate 循环评估候选规则，并区分临时执行权限与持久权限。",
+    "持久化要求改善触发失败，同时在受保护案例上的性能退化不超过固定阈值，并辅以语料级回归测试。",
+    "383 个被拒绝的候选中有 211 个（55%）造成既有能力回归，证明局部收益并不代表整体安全。",
+    "在 AppWorld、Terminal-Bench 和 τ^2-Bench 的 16 组实验中，Harness 始终提升任务完成分数，且未降低重复试验可靠性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.9,
+    "problem_significance": 0.94,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.91,
+    "lasting_value": 0.94,
+    "llm_avg": 0.924,
+    "comment": "The external admission-control loop, replay-based validation, and regression guards form a highly reusable foundation for safe and inspectable agent self-improvement.",
+    "comment_zh": "外部准入控制、基于回放的验证和回归防护共同构成了可复用且可审计的Agent自我改进基础。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.40871370071082286,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.924,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 6,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24130/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.952
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.24130/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}
