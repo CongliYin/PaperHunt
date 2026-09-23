@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2609.25647",
+  "title": "Testing-Driven Reliability Audit of Trajectory-Based Early Outcome Prediction for LLM Agents: Target-Specific Calibration Transfer Persists Within a Single Benchmark",
+  "title_zh": "基于测试的 LLM Agent 轨迹早期结果预测可靠性审计：单一基准内仍存在目标特异的校准迁移误差",
+  "authors": [
+    "YanZe Cao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-22T03:57:30Z",
+  "abs_url": "https://arxiv.org/abs/2609.25647v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.25647",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Predicting early outcomes based on trajectory can decrease the expenses associated with agent evaluation by terminating a run once the outcome becomes sufficiently predictable, assuming that the predictor's confidence is properly calibrated. Calibration is at risk when a predictor is applied to an agent on which it was never trained, but it is not known whether such transfer failures are broad across agent systems or concentrated in specific target agent/head combinations. Using public SWE-bench Verified trajectories and a frozen dual-head early-outcome prediction pipeline, we ran a leave-one-agent-out calibration audit, a shared-predictor leave-two-agents-out control, oracle prior correction, and a robustness battery over training cohorts, task resampling, task halves, jackknife, and thresholds. Fixed-scaffold TerminalBench analysis served as a pre-registered boundary test. Broad same-predictor pairwise heterogeneity was not supported; the median pairwise corrected-gap differences were 0.0180 (SUCCESS head, 45 pairs) and 0.0385 (FAILURE head, 35 pairs), and the pre-registered heterogeneity criterion was not met on either head. Two specific combinations, gpt-5-mini/SUCCESS and claude-opus-4.6/FAILURE, showed persistent calibration-transfer errors (median corrected gaps 0.1377 and 0.1107) without a sign reversal under any frozen control. TerminalBench did not establish cross-benchmark replication: the success target produced zero decisions (INDETERMINATE), and the failure target did not satisfy the pre-registered persistence criterion. Therefore, a strong target-specific calibration-transfer error can exist within one frozen environment, but the evidence does not establish that the error is intrinsic to the model or general across benchmarks.",
+  "abstract_zh": "基于执行轨迹提前预测 Agent 结果，并在结果足够可预测时终止运行，可以降低 Agent 评测成本，但前提是预测置信度得到正确校准。当预测器应用于训练阶段未见过的 Agent 时，校准可能失效；目前尚不清楚此类迁移问题是普遍存在于不同 Agent 系统中，还是集中于特定目标 Agent 与预测头的组合。本文使用公开的 SWE-bench Verified 轨迹和冻结的双头早期结果预测流程，开展留一 Agent 校准审计、共享预测器的留二 Agent 对照、oracle 先验修正，以及覆盖训练队列、任务重采样、任务分半、jackknife 和阈值变化的稳健性测试，并以固定脚手架的 TerminalBench 分析作为预注册边界测试。结果不支持同一预测器下广泛存在的成对异质性：SUCCESS 头在 45 个配对上的校正差异中位数为 0.0180，FAILURE 头在 35 个配对上的中位数为 0.0385，二者均未达到预注册异质性标准。然而，gpt-5-mini/SUCCESS 与 claude-opus-4.6/FAILURE 两个特定组合持续表现出校准迁移误差，校正差距中位数分别为 0.1377 和 0.1107，且在所有冻结对照中均未发生符号反转。TerminalBench 未能证明该现象可跨基准复现：成功目标未产生任何决策，结果为 INDETERMINATE；失败目标则未满足预注册的持续性标准。因此，在单一冻结环境中可能存在显著的目标特异校准迁移误差，但现有证据不足以说明该误差是模型固有属性，或可泛化至其他基准。",
+  "key_points_zh": [
+    "通过 SWE-bench Verified 上的留一 Agent 审计，系统评估早期结果预测器迁移到未见 Agent 时的校准可靠性。",
+    "未发现广泛的同预测器成对异质性：SUCCESS 与 FAILURE 头均未达到预注册异质性标准。",
+    "gpt-5-mini/SUCCESS 和 claude-opus-4.6/FAILURE 出现持续且稳健的目标特异校准误差。",
+    "多种训练队列、任务重采样、任务分半、jackknife 与阈值对照均未使上述误差发生符号反转。",
+    "TerminalBench 未能实现跨基准复现，因此不能断言误差是模型固有属性或具有普遍泛化性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.78,
+    "problem_significance": 0.8,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.81,
+    "llm_avg": 0.778,
+    "comment": "This is a valuable trajectory-evaluation audit that identifies target-specific calibration failures relevant to reliable early termination of agent rollouts.",
+    "comment_zh": "该论文对轨迹评估进行了有价值的审计，揭示了与可靠提前终止智能体运行密切相关的目标特定校准失败。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2794153127047222,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.778,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.25647/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.272
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.25647/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.491
+    }
+  ]
+}

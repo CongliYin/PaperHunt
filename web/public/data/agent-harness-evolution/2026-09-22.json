@@ -1,0 +1,151 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-09-22",
+  "generated_at": "2026-09-23T22:54:13Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.26760",
+      "title": "Grow the Harness, Not the Context: From Strategy-Free Scaffolds to Reusable Specialist Agents",
+      "title_zh": "扩展执行框架，而非上下文：从无策略脚手架到可复用专家智能体",
+      "authors": [
+        "Laizhen Li",
+        "Jiarui Li",
+        "Juanjuan Zhao",
+        "Kejiang Ye",
+        "Ye Li",
+        "Cheng-zhong Xu",
+        "Xitong Gao"
+      ],
+      "total_score": 0.666877486063333,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.9359999999999999,
+        "domain_fit": 0.99,
+        "other": 0.11359162021110976
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "让执行框架持续写代码，以更低成本复用智能体控制能力。",
+      "detail_file": "agent-harness-evolution/2026-09-22/2609.26760.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.26760/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.26048",
+      "title": "FIRE: Failure-Informed Runtime Engineering for Reliable Language-Model Agents",
+      "title_zh": "FIRE：面向可靠语言模型智能体的失败感知运行时工程",
+      "authors": [
+        "Nikita Agarwal",
+        "Nivedit Jain"
+      ],
+      "total_score": 0.6390887430316665,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.876,
+        "domain_fit": 0.95,
+        "other": 0.18762914343888823
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "运行时失败干预将可行能力转化为稳定交付",
+      "detail_file": "agent-harness-evolution/2026-09-22/2609.26048.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.26048/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.25806",
+      "title": "When Are Aggregate Agent Traces Diagnosable? Traffic-Governed Interpretation and Calibrated Abstention",
+      "title_zh": "何时可以诊断聚合智能体轨迹？流量约束的解释与校准式弃答",
+      "authors": [
+        "Peiying Zhu",
+        "Sidi Chang"
+      ],
+      "total_score": 0.6080000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.76,
+        "domain_fit": 0.76,
+        "other": 0.2
+      },
+      "tags": [
+        "observability governance security"
+      ],
+      "tldr_zh": "先确认故障暴露，再解释变化；证据不足就弃答。",
+      "detail_file": "agent-harness-evolution/2026-09-22/2609.25806.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.25806/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.25647",
+      "title": "Testing-Driven Reliability Audit of Trajectory-Based Early Outcome Prediction for LLM Agents: Target-Specific Calibration Transfer Persists Within a Single Benchmark",
+      "title_zh": "基于测试的 LLM Agent 轨迹早期结果预测可靠性审计：单一基准内仍存在目标特异的校准迁移误差",
+      "authors": [
+        "YanZe Cao"
+      ],
+      "total_score": 0.5483707656352362,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.778,
+        "domain_fit": 0.88,
+        "other": 0.1965692187841204
+      },
+      "tags": [
+        "evaluation operations"
+      ],
+      "tldr_zh": "校准迁移误差集中于特定Agent与预测头组合",
+      "detail_file": "agent-harness-evolution/2026-09-22/2609.25647.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.25647/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.26667",
+      "title": "MAGIC: Mixed-Granularity Agent Graphs via Incremental Construction with Dense-Reward Reinforcement Learning",
+      "title_zh": "MAGIC：通过增量构建与密集奖励强化学习生成混合粒度智能体图",
+      "authors": [
+        "Kairui Yang",
+        "Ziheng Yi",
+        "Xunkai Li",
+        "Minghao An",
+        "Zhanke Liu",
+        "Zekai Chen",
+        "Rong-Hua Li"
+      ],
+      "total_score": 0.4369883062540944,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.7779999999999999,
+        "domain_fit": 0.84,
+        "other": 0.19862768751364818
+      },
+      "tags": [
+        "multi agent workflows"
+      ],
+      "tldr_zh": "MAGIC用密集奖励学习混合粒度多智能体协作图。",
+      "detail_file": "agent-harness-evolution/2026-09-22/2609.26667.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.26667/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.26779",
+      "title": "CliffCompaction: Cost-Efficient Compaction for Long-Horizon Coding Agents",
+      "title_zh": "CliffCompaction：面向长时程编码智能体的高性价比上下文压缩",
+      "authors": [
+        "Trang Nguyen",
+        "Eulrang Cho",
+        "Bingqing Chen",
+        "Tim Dettmers"
+      ],
+      "total_score": 0.32260000000000005,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.892,
+        "domain_fit": 0.95,
+        "other": 0.18333333333333338
+      },
+      "tags": [
+        "Code soon"
+      ],
+      "tldr_zh": "仅截断原始内容，低成本实现长时程智能体压缩",
+      "detail_file": "agent-harness-evolution/2026-09-22/2609.26779.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.26779/thumb.webp"
+    }
+  ]
+}

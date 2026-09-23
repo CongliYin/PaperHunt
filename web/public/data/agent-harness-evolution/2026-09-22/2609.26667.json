@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.26667",
+  "title": "MAGIC: Mixed-Granularity Agent Graphs via Incremental Construction with Dense-Reward Reinforcement Learning",
+  "title_zh": "MAGIC：通过增量构建与密集奖励强化学习生成混合粒度智能体图",
+  "authors": [
+    "Kairui Yang",
+    "Ziheng Yi",
+    "Xunkai Li",
+    "Minghao An",
+    "Zhanke Liu",
+    "Zekai Chen",
+    "Rong-Hua Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-22T16:27:46Z",
+  "abs_url": "https://arxiv.org/abs/2609.26667v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.26667",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Collaboration topology shapes both the performance and execution cost of LLM-based multi-agent systems. Because tasks differ in complexity and required capabilities, recent approaches generate task-specific collaboration graphs that specify agent participation and information flow. However, representative topology generators use either individual agents or predefined groups throughout an organization, overlooking differing collaboration needs across subtasks. Our key insight is to select granularity locally for each functional role, combining fine-grained control with reusable collaboration patterns within one organization. Learning such organizations requires exploring a combinatorial construction space with limited intermediate feedback from final-answer rewards. Therefore, we propose MAGIC, a dense-reward reinforcement learning framework for mixed-granularity graph generation. Specifically, MAGIC constructs a mixed-granularity agent graph by sequentially selecting a functional role, instantiating it as a single agent or reusable group, and connecting it to existing units. We directly optimize the construction policy using returns from trajectories sampled under the current policy and use potential-based reward shaping to provide intermediate feedback from probe-based utility and structural signals while preserving the cumulative task reward. MAGIC outperforms state-of-the-art baselines across eight benchmarks and demonstrates strong inference efficiency in our efficiency study.",
+  "abstract_zh": "多智能体协作拓扑同时影响基于 LLM 的多智能体系统的性能与执行成本。现有方法通常在组织范围内始终使用单个智能体或预定义群组，难以适应不同子任务的协作需求。MAGIC 提出一种混合粒度图生成框架：针对每个功能角色，局部选择将其实例化为单个智能体或可复用群组，并将其连接至已有单元，从而兼顾细粒度控制与协作模式复用。为应对图构建空间的组合爆炸及最终答案奖励稀疏问题，MAGIC 使用基于当前策略采样轨迹回报的强化学习直接优化构建策略，并通过基于势函数的奖励塑形，利用探针效用和结构信号提供中间反馈，同时保持累计任务奖励不变。在八个基准数据集上，MAGIC 超越现有最优基线，并展现出较高的推理效率。",
+  "key_points_zh": [
+    "提出混合粒度智能体图：每个功能角色可选择单个智能体或可复用群组。",
+    "采用增量式图构建流程，依次选择角色、实例化协作单元并建立连接。",
+    "通过基于势函数的奖励塑形，引入探针效用与结构信号，缓解最终奖励稀疏问题。",
+    "直接以当前策略采样轨迹的回报优化图构建策略，适应组合式搜索空间。",
+    "在八个基准上超过现有方法，并在效率实验中表现出较强的推理效率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.84,
+    "novelty": 0.82,
+    "problem_significance": 0.79,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.76,
+    "llm_avg": 0.7779999999999999,
+    "comment": "MAGIC makes a meaningful orchestration contribution by learning mixed-granularity collaboration graphs with dense trajectory-based reinforcement signals.",
+    "comment_zh": "MAGIC通过利用基于轨迹的稠密强化信号学习混合粒度协作图，对智能体编排作出了有意义的贡献。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7779999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.26667/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.26667/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.939
+    }
+  ]
+}

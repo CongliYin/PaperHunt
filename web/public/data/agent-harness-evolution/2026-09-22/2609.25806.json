@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2609.25806",
+  "title": "When Are Aggregate Agent Traces Diagnosable? Traffic-Governed Interpretation and Calibrated Abstention",
+  "title_zh": "何时可以诊断聚合智能体轨迹？流量约束的解释与校准式弃答",
+  "authors": [
+    "Peiying Zhu",
+    "Sidi Chang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-22T07:37:48Z",
+  "abs_url": "https://arxiv.org/abs/2609.25806v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.25806",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Runtime traces can appear transparent, but a closed-loop policy determines which states are visited and which failures become visible. We study a simulated hotel-pricing agent mapping time, inventory, and market state to discrete price actions under varying demand regimes. A fault may leave no aggregate trace when the policy rarely visits affected cells. We treat entry into aggregate-only fault interpretation as a diagnosability decision preceding scoring or localization. A reference-map gate requires repeated clean-policy support; a matched runtime gate then requires joint support in clean and current streams. Signal analysis occurs only after both pass. We calibrate false admission on a disjoint clean stream at the physical-component level and model detection by affected clean traffic rather than nominal cell coverage. In a frozen one-shot heldout, 55/72 (76.4%) regime-component units were reference-admitted, representing 20 physical components; 54/55 passed matched runtime admission, while the rejected unit abstained. Stable false admission was 0/20, with a one-sided exact 95% upper bound of 0.1391, meeting the frozen 0.20 criterion. Across 540 repeated unit-arm rows nested in those 20 clusters, affected clean traffic reduced negative log likelihood by 29.3% relative to cell coverage, a gain of 0.1264 nats per row (cluster-bootstrap 95% interval [0.0593, 0.1918]). Adding mask family and its interaction improved log loss by 0.0015 nats per row (one-sided upper bound 0.0066), below the frozen 0.01 practical-sufficiency margin. A development audit found that exact minimum hitting set and greedy selection chose identical supports in 12/12 scenarios because singleton evidence had resolved the conflicts. The result is a bounded rule for interpreting aggregate agent behavior: first establish exposure, then score change, and abstain when the trace cannot support the claim.",
+  "abstract_zh": "本文研究聚合运行轨迹何时足以支持对智能体故障的解释。作者构建了一个模拟酒店定价智能体，将时间、库存和市场状态映射为离散价格动作；由于闭环策略决定实际访问哪些状态，某些故障可能不会留下可观测的聚合痕迹。论文将进入仅依赖聚合轨迹的故障解释视为先于评分或定位的可诊断性决策，并提出两阶段准入机制：首先通过 reference-map gate 要求干净策略对相关状态单元具有重复支持，再通过 matched runtime gate 要求干净流与当前流均具备联合支持；只有两者通过后才进行信号分析。作者在独立干净流上按物理组件校准误准入率，并以受故障影响的干净流量而非名义状态覆盖率建模检测能力。冻结的一次性留出实验中，72 个 regime-component 单元有 55 个获准入，覆盖 20 个物理组件；其中 54 个通过运行时准入，1 个因证据不足而弃答。稳定误准入率为 0/20，单侧精确 95% 上界为 0.1391，满足预设的 0.20 标准。在嵌套于 20 个组件簇的 540 条重复实验记录中，受影响干净流量相较状态单元覆盖率使负对数似然降低 29.3%，每行提升 0.1264 nats；加入 mask family 及其交互项仅额外改善 0.0015 nats，低于 0.01 的实用性阈值。开发审计还发现，精确最小 hitting set 与贪心选择在 12/12 个场景中得到相同支持集。总体而言，论文给出了一条有界的聚合行为解释规则：先确认暴露，再评估变化；当轨迹不足以支撑结论时主动弃答。",
+  "key_points_zh": [
+    "闭环策略决定状态访问分布；若故障影响区域很少被访问，聚合轨迹可能无法诊断故障。",
+    "提出 reference-map gate 与 matched runtime gate 两阶段准入，仅在干净流和当前流均有足够联合支持时进行信号分析。",
+    "以受影响的干净流量替代名义状态覆盖率建模检测能力，使负对数似然降低 29.3%，每行改善 0.1264 nats。",
+    "在 20 个物理组件上观测到 0/20 的稳定误准入，单侧精确 95% 上界为 0.1391，满足预设校准标准。",
+    "方法强调校准式 abstention：无法由轨迹支撑的解释应主动弃答；精确与贪心 hitting set 在 12/12 场景中选择一致。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.76,
+    "novelty": 0.82,
+    "problem_significance": 0.78,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.76,
+    "llm_avg": 0.76,
+    "comment": "The paper offers a reusable, exposure-aware protocol for deciding when aggregate agent traces support diagnosis and when the system should abstain.",
+    "comment_zh": "该论文提出了一个可复用且关注暴露度的协议，用于判断聚合智能体轨迹是否足以支持诊断并在必要时拒答。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.76,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.25806/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.978
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.25806/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.92
+    }
+  ]
+}

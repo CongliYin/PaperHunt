@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.26779",
+  "title": "CliffCompaction: Cost-Efficient Compaction for Long-Horizon Coding Agents",
+  "title_zh": "CliffCompaction：面向长时程编码智能体的高性价比上下文压缩",
+  "authors": [
+    "Trang Nguyen",
+    "Eulrang Cho",
+    "Bingqing Chen",
+    "Tim Dettmers"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-22T17:55:59Z",
+  "abs_url": "https://arxiv.org/abs/2609.26779v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.26779",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agents often work on complex problems that require millions of tokens of context, which necessitates compacting across sessions due to limited context windows. We develop CliffCompaction, an autocompaction technique that reduces cost by up to 50% under a bounded context while maintaining or improving performance on Terminal-Bench and achieving new levels of efficiency for test-time scaling and state-of-the-art results on KernelBench. The per-rollout savings of CliffCompaction make the performance--cost trade-off of test-time scaling more efficient, adding over 10 percentage points on Terminal-Bench for less than the cost of two full-context runs. Under parallel test-time scaling, CliffCompaction lets Kimi K2.6 match Opus 4.7, and exceed Opus 4.6 and GPT-5.3 Codex at lower cost. The key to CliffCompaction's effectiveness is that it keeps compacted information faithful by only truncating or dropping content, never rephrasing or rewriting it. We never compact a compaction---each pass operates only on original content, and prior compacted output is discarded, preventing context drift from accumulating. These properties sustain continual learning over sessions exceeding a million tokens: on KernelBench, CliffCompaction reaches CUDA kernel speedups of $2.23\\times$ after 200 steps and $3.58\\times$ after 400 steps, surpassing specialized search algorithms and trained agents despite being a general-purpose compaction technique. We open-source a scaffold-agnostic API-proxy implementation of CliffCompaction usable with Claude Code, Codex and other harnesses.",
+  "abstract_zh": "针对复杂任务需要数百万Token上下文、但受限于上下文窗口的问题，论文提出CliffCompaction，一种自动上下文压缩技术。在有界上下文下，该方法最多可降低50%的成本，同时在Terminal-Bench上保持或提升性能，并在测试时扩展（test-time scaling）和KernelBench上实现更高效率及领先结果。CliffCompaction通过仅截断或丢弃内容来保持信息忠实性，从不改写或重述文本；每次压缩只处理原始内容，且丢弃此前的压缩结果，避免上下文漂移累积。该方法支持跨越百万Token的持续学习：在KernelBench上运行200步和400步后，CUDA kernel加速分别达到2.23倍和3.58倍，超过专用搜索算法和训练型智能体。作者还开源了与具体脚手架无关的API代理实现，可用于Claude Code、Codex等开发环境。",
+  "key_points_zh": [
+    "CliffCompaction在有限上下文下最多节省50%成本，并改善测试时扩展的性能—成本权衡。",
+    "方法只截断或丢弃原始内容，不进行改写；每轮不压缩此前的压缩结果，从机制上抑制信息失真与上下文漂移。",
+    "在Terminal-Bench上，较低成本即可获得超过10个百分点的性能提升；并行测试时，Kimi K2.6可匹配Opus 4.7，同时以更低成本超过Opus 4.6和GPT-5.3 Codex。",
+    "在KernelBench持续运行200步和400步后，CUDA kernel加速分别达到2.23倍和3.58倍，超过专用搜索算法与训练型智能体。",
+    "作者开源了与脚手架无关的API代理实现，兼容Claude Code、Codex等编码智能体框架。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.88,
+    "problem_significance": 0.92,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.83,
+    "lasting_value": 0.9,
+    "llm_avg": 0.892,
+    "comment": "This is strong context and workflow-state infrastructure for coding agents, with a simple faithful compaction invariant, major cost savings, and broad harness portability.",
+    "comment_zh": "该论文为编码智能体提供了强大的上下文与工作流状态基础设施，兼具保持忠实的压缩不变量、显著成本节省和广泛框架兼容性。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.892,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.26779/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.26779/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}

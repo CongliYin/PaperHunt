@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2609.26048",
+  "title": "FIRE: Failure-Informed Runtime Engineering for Reliable Language-Model Agents",
+  "title_zh": "FIRE：面向可靠语言模型智能体的失败感知运行时工程",
+  "authors": [
+    "Nikita Agarwal",
+    "Nivedit Jain"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-22T11:50:35Z",
+  "abs_url": "https://arxiv.org/abs/2609.26048v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.26048",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Language-model agents often reach a working solution and then fail to consistently deliver it. We study runtime policies: targeted natural-language instructions and action denials applied by the agent harness at states that preceded observed failures, without changing model weights or the user prompt. With this, keeping capability constant, we observe a meaningful unlock in delivered reliability. Across the complete 87-task Terminal-Bench 2.1 suite, with two attempts per task, policies increase repeated success (pass^2) in all three GPT-5.6 tiers: 50.6% to 54.0% for Luna, 55.2% to 60.9% for Terra, and 64.4% to 73.6% for Sol. Sol's best-of-two success changes by 1.2 points while repeated success rises by 9.2, showing that policies chiefly convert reachable solutions into dependable delivery. We further cover 14 tasks under Terra's frozen portfolio. Policy-guided Terra reaches 71.4%, compared with 64.3% for unassisted Sol, at about half the cost, demonstrating how engineering around models could unlock dependability for a use case. To isolate the mechanism we run a randomized five-arm experiment: real policies reach 61% on eligible tasks, versus 39% without a policy, 36% with a timing-matched sham, and 39 to 43% with generic verification or reconsideration. The intended corrective behavior appears in 22 of 24 coded policy attempts, against at most 14 in any other arm. Runtime policies are therefore a practical reliability layer: they make capabilities an agent already possesses substantially more repeatable.",
+  "abstract_zh": "语言模型智能体常能找到可行解，却无法稳定交付。本文研究一种运行时策略：由智能体框架在曾导致失败的状态处，动态施加定向自然语言指令或拒绝特定动作；该方法不改变模型权重和用户提示，因此保持模型能力不变。实验覆盖完整的 87 项 Terminal-Bench 2.1 任务，每项尝试两次。在 GPT-5.6 的 Luna、Terra 和 Sol 三个层级上，重复成功率（pass^2）分别由 50.6% 提升至 54.0%、55.2% 提升至 60.9%、64.4% 提升至 73.6%。Sol 的两次最佳成功率仅提升 1.2 个百分点，而重复成功率提升 9.2 个百分点，说明运行时策略主要将“可达成的解”转化为“可稳定交付的解”。在 Terra 的 14 项固定任务组合上，策略增强的 Terra 达到 71.4%，超过无辅助 Sol 的 64.3%，且成本约为其一半。随机五组对照实验进一步表明，真实策略在符合条件的任务上达到 61%，显著高于无策略的 39%、时间匹配的伪策略的 36%，以及通用验证或重新思考策略的 39%至43%。编码分析显示，24 次策略干预中有 22 次出现了预期纠正行为，而其他组最多仅有 14 次。结果表明，运行时策略是一种实用的可靠性增强层，能够显著提高智能体既有能力的重复兑现率。",
+  "key_points_zh": [
+    "FIRE 不修改模型权重或用户提示，而是在历史失败状态触发定向指令与动作拒绝。",
+    "在完整 Terminal-Bench 2.1 上，Sol 的重复成功率由 64.4% 提升至 73.6%，增幅达 9.2 个百分点。",
+    "策略主要改善多次尝试下的稳定交付，而非单次最佳成功率。",
+    "策略增强的 Terra 以约一半成本达到 71.4%，超过无辅助 Sol 的 64.3%。",
+    "随机对照实验显示，真实运行时策略明显优于无策略、伪策略及通用验证方法，验证了失败针对性干预的作用。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.83,
+    "problem_significance": 0.92,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.88,
+    "llm_avg": 0.876,
+    "comment": "This is strong coding-agent runtime engineering showing that failure-informed interventions can convert latent capability into substantially more reliable execution.",
+    "comment_zh": "该论文展示了基于失败信息的运行时干预如何将潜在能力转化为更可靠的编码智能体执行，价值很高。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.876,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.26048/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.26048/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.963
+    }
+  ]
+}
