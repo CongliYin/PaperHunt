@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2609.27372",
+  "title": "Neither Silence nor Overlap Is Failure: Intent-Conditioned Evaluation of Turn-Taking in Full-Duplex Spoken Dialogue Models",
+  "title_zh": "既非沉默也非重叠是失败：全双工语音对话模型的意图条件化轮替评估",
+  "authors": [
+    "Kian Shamsaie",
+    "Iman Modarressi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-23T05:21:10Z",
+  "abs_url": "https://arxiv.org/abs/2609.27372v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.27372",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Benchmarks for full-duplex spoken dialogue models score turn-taking with binary fixed-window rules that reward immediate response or silence by completeness of the prior turn. We argue that the appropriateness of a response offset, whether delayed silence or anticipatory overlap, is conditional on the speaker's latent intent, identifiable only from that speaker's behavior. We introduce TACT, a benchmark of 9,728 episodes and 73.2 hours from five dyadic corpora; each episode carries dialogue history, a per-speaker memory profile, and an annotator-derived posterior over six intent classes. Scoring replaces binary windows with a strictly proper threshold-weighted continuous ranked probability score whose weights are intent-conditioned timing kernels fitted to human floor-transfer-offset distributions, proving boundedness, consistency, and binary reduction. Across eleven systems the best model reaches 0.47 against a human topline of 0.86, is nearly invariant to speaker profiles, and TACT agrees with human judgments at Spearman 0.81 versus 0.46 for binary metrics.",
+  "abstract_zh": "现有全双工语音对话模型基准通常采用固定时间窗的二元规则评估轮替：要么奖励立即响应，要么根据前一发言是否完整来奖励保持沉默。本文指出，响应偏移的适切性取决于说话者的潜在意图，而该意图只能从说话者自身的行为中识别。为此，本文提出 TACT 基准，包含来自五个双人对话语料库的 9,728 个片段、共 73.2 小时数据；每个片段均提供对话历史、逐说话者记忆画像，以及由标注者推断的六类意图后验分布。TACT 使用严格适当的、带阈值加权的连续概率排名评分（CRPS）替代二元时间窗，其中权重是根据人类 floor-transfer-offset 分布拟合的意图条件化时间核。作者证明了该评分的有界性、一致性和二元规则退化性质。在 11 个系统的评测中，最佳模型得分为 0.47，而人类上限为 0.86；模型性能几乎不受说话者画像影响。与二元指标相比，TACT 与人类判断的一致性更高，Spearman 相关系数达到 0.81，而二元指标仅为 0.46。",
+  "key_points_zh": [
+    "固定窗口二元指标将沉默或重叠简单视为成功或失败，无法反映响应时机对说话者意图的依赖。",
+    "TACT 汇集五个双人对话语料库的 9,728 个片段和 73.2 小时数据，并建模六类说话者意图。",
+    "其核心评分是意图条件化时间核加权的连续概率排名评分（CRPS），兼具严格适当性，并可退化为二元规则。",
+    "最佳系统得分仅为 0.47，显著低于人类上限 0.86，说明全双工轮替建模仍有较大提升空间。",
+    "TACT 与人类判断的 Spearman 相关为 0.81，明显优于二元指标的 0.46。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.88,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.91,
+    "llm_avg": 0.874,
+    "comment": "This is a highly relevant realtime spoken-agent evaluation paper that replaces simplistic turn-taking rules with intent-conditioned metrics grounded in human interaction behavior.",
+    "comment_zh": "该工作高度契合实时语音智能体，通过基于意图和人类交互行为的指标改进了过于简单的轮次评估规则。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.21754098571521813,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.874,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.27372/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.27372/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.306
+    }
+  ]
+}

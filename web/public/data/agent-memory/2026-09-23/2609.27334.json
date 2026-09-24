@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.27334",
+  "title": "Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents",
+  "title_zh": "即时记忆：学习为 LLM Agents 整理任务自适应记忆",
+  "authors": [
+    "Yefan Zhou",
+    "Yang Li",
+    "Zeyu Leo Liu",
+    "Semih Yavuz",
+    "Shafiq Joty"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-23T04:14:53Z",
+  "abs_url": "https://arxiv.org/abs/2609.27334v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.27334",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic memory systems reuse past experience to improve future performance, yet most existing designs curate memory at write time: once a task is completed, its trajectory is distilled into a fixed artifact, such as a reflection, workflow, skill, or reasoning strategy, that is later retrieved by similarity. This forces the system to decide what is worth remembering before the future query is known, irreversibly discarding information and producing a query-independent summary that must serve many possible downstream tasks. Learning such a write-time curator is also difficult because the value of a storage decision may only become apparent when a relevant query arrives, potentially many tasks later, creating a long-horizon credit-assignment problem. We instead retain raw trajectories and defer curation until read time, when the current task is known. Given the retrieved traces and the new task, a memory curator synthesizes a compact, task-adaptive payload tailored to the immediate need. Because this payload is consumed on the same task, the curator can be trained directly from immediate task success, avoiding delayed utility signals and the need to artificially group related tasks. Across ALFWorld, WebShop, and $τ^2$-bench, our Just-in-Time Memory (JitMem) consistently outperforms no-memory agents as well as heuristic and learned write-time memory methods, improving over the strongest baseline by 16.2, 16.3, and 3.9 absolute success-rate points, respectively. Notably, even an untrained curator is already competitive with or surpasses these baselines, showing that task-adaptive read-time curation itself is a major source of the gain; training the curator further compounds the improvement.",
+  "abstract_zh": "现有 Agentic Memory 通常在任务完成时进行写时整理，将轨迹压缩为 reflection、workflow、skill 或 reasoning strategy 等固定记忆，再依据相似度检索。这种做法在未来查询尚未知晓时就决定保留哪些信息，容易造成不可逆的信息丢失，并面临长期信用分配问题。本文提出 Just-in-Time Memory（JitMem）：保留原始任务轨迹，直到读取时结合当前任务进行整理。Memory Curator 根据检索到的轨迹和新任务，生成紧凑且任务自适应的记忆载荷，并在同一任务中直接依据任务成功率训练，从而避免延迟效用信号和人为构造相关任务组。在 ALFWorld、WebShop 和 τ²-bench 上，JitMem 稳定优于无记忆 Agent、启发式写时记忆方法和学习式写时记忆方法，相比最强基线分别提升 16.2、16.3 和 3.9 个绝对成功率百分点。实验还表明，即使不训练 Curator，仅依靠任务自适应的读时整理也已具有竞争力；进一步训练可带来额外收益。",
+  "key_points_zh": [
+    "核心范式从写时整理转向读时整理：保留原始轨迹，待当前任务明确后再生成任务自适应记忆。",
+    "读时 Curator 将检索轨迹与新任务联合处理，输出面向当前决策的紧凑记忆载荷，减少查询无关摘要造成的信息损失。",
+    "由于记忆载荷在当前任务中立即使用，Curator 可直接依据任务成功率训练，避免写时记忆中的长期信用分配难题。",
+    "在 ALFWorld、WebShop 和 τ²-bench 上，相比最强基线分别提升 16.2、16.3 和 3.9 个绝对成功率百分点。",
+    "未训练的 Curator 已能媲美或超过多种基线，说明任务自适应的读时整理本身就是性能提升的重要来源。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.91,
+    "problem_significance": 0.92,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.9,
+    "lasting_value": 0.91,
+    "llm_avg": 0.9099999999999999,
+    "comment": "A highly significant memory contribution that reverses the usual write-time curation paradigm by retaining raw experience and performing task-adaptive consolidation at read time.",
+    "comment_zh": "这项工作通过保留原始经验并在读取时进行任务自适应整合，改变了传统的写入时记忆整理范式。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.8659745638428135,
+    "author_reputation": 0.7637344137582149,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.9099999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 33,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 65,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.27334/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.947
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.27334/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.379
+    }
+  ]
+}

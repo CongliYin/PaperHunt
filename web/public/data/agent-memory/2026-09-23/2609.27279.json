@@ -1,0 +1,73 @@
+{
+  "arxiv_id": "2609.27279",
+  "title": "EnSIMem: Entity-Structured Indexing for Long-Term Agent Memory",
+  "title_zh": "EnSIMem：面向长期智能体记忆的实体结构化索引",
+  "authors": [
+    "Xuanyu Meng",
+    "Xing Fan",
+    "Xinyi Fan",
+    "Chenlei Guo",
+    "Yixuan Xie",
+    "Jiawei Han"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-23T03:09:15Z",
+  "abs_url": "https://arxiv.org/abs/2609.27279v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.27279",
+  "links": {
+    "github": "https://github.com/RamonMeng/EnSIMem.",
+    "project_page": null
+  },
+  "abstract_en": "An agent that interacts with users over long periods must recall facts, preferences, events, and changes from a continuously growing interaction history. Existing memory systems often compress interactions into generic summaries or retrieve anonymous text chunks, making it difficult for an agent to identify the correct entity, property, and supporting evidence. We present EnSIMem, an entity-structured long-term memory architecture for an agent. During offline construction, the system organizes interactions into theme-coherent episodes and builds dialogue-grounded index entries of the form [entity][entity type][property:value]. Each entry preserves its source turns, temporal information, and available multimodal fields. During online interaction, the agent's request is decomposed into evidence requirements whose properties are aligned with the memory index. Entity-property lookup and adaptive retrieval then collect the evidence needed for point, temporal, compositional, and aggregation reasoning. The agent generates its response from the preserved source evidence rather than from lossy memory summaries. On long-term agent-memory benchmarks, EnSIMem achieves high answer accuracy while maintaining compact contexts and favorable online efficiency. These results show that entity-structured indexing and episode-level provenance provide a reliable foundation for long-term memory in agents. The code of our model is available at https://github.com/RamonMeng/EnSIMem.",
+  "abstract_zh": "长期与用户交互的智能体需要从持续增长的历史中回忆事实、偏好、事件及其变化。现有记忆系统通常将交互压缩为通用摘要，或检索缺乏实体标识的文本片段，导致智能体难以确定正确的实体、属性及其证据。本文提出 EnSIMem，一种面向智能体的实体结构化长期记忆架构。在线下构建阶段，系统将交互组织为主题一致的事件片段（episodes），并建立基于对话的索引条目，形式为 [实体][实体类型][属性:值]。每条索引保留来源对话轮次、时间信息和可用的多模态字段。在线交互阶段，系统将用户请求分解为证据需求，并将相关属性与记忆索引对齐；随后通过实体-属性查找和自适应检索，收集点查询、时间推理、组合推理和聚合推理所需的证据。智能体基于保留的原始证据生成回答，而非依赖有损的记忆摘要。在长期智能体记忆基准上，EnSIMem 在保持紧凑上下文和较高在线效率的同时取得了较高回答准确率。结果表明，实体结构化索引与事件级溯源能够为智能体长期记忆提供可靠基础。",
+  "key_points_zh": [
+    "提出 EnSIMem，将长期交互组织为主题一致的 episodes，并以 [实体][类型][属性:值] 形式构建结构化索引。",
+    "索引条目保留来源对话轮次、时间信息和多模态字段，支持基于证据的可追溯记忆。",
+    "在线阶段将请求分解为证据需求，通过实体-属性查找与自适应检索支持点、时间、组合和聚合推理。",
+    "回答直接基于原始来源证据生成，避免通用摘要造成的信息损失。",
+    "在长期智能体记忆基准上实现较高准确率，同时保持紧凑上下文与良好在线效率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.89,
+    "llm_avg": 0.858,
+    "comment": "A strong reusable long-term memory architecture that combines entity-property indexing, provenance preservation, temporal structure, and evidence-grounded retrieval.",
+    "comment_zh": "这是一种具有较强复用价值的长期记忆架构，将实体属性索引、溯源保存、时间结构与基于证据的检索结合起来。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.4058149490012195,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.858,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/RamonMeng/EnSIMem.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 8,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.27279/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.953
+    }
+  ]
+}

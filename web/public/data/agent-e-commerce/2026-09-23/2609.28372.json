@@ -1,0 +1,62 @@
+{
+  "arxiv_id": "2609.28372",
+  "title": "Shopping by algorithm: How agentic AI deploys human heuristics as a surrogate consumer",
+  "title_zh": "算法购物：Agentic AI 如何部署人类启发式作为替代消费者",
+  "authors": [
+    "Davood Wadi",
+    "Yu Ma"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-23T16:47:52Z",
+  "abs_url": "https://arxiv.org/abs/2609.28372v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.28372",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Consumers increasingly delegate purchasing decisions to Large Language Models (LLMs) acting as surrogate consumers. Using \"Tool-Lab,\" an adaptation of information-board process tracing that places product attributes behind costly tool calls, we examine how marketing pricing cues (i.e., just-below pricing and promotional framing) influence AI shopping agents. Across eight commercially deployed LLMs from three providers, we trace pre-choice information acquisition. Under zero cost, pricing cues rarely mislead. Imposing acquisition costs under a vague goal prompt leads LLMs to omit diagnostic attributes required to compute unit price and choose suboptimal choices resembling human heuristics. Relative to a specific goal prompt that mainly preserves diagnostic search and choice optimality, a vague goal prompt under constraints creates a search-mediated vulnerability. This research demonstrates that marketing heuristics in delegated AI shopping are governed by storefront information architecture, not necessarily immutable LLM flaws.",
+  "abstract_zh": "本文研究消费者将购买决策委托给充当替代消费者的 Large Language Models（LLMs）后，营销定价线索如何影响 AI 购物代理。作者提出 Tool-Lab：一种改造版信息板过程追踪方法，将产品属性置于具有成本的工具调用之后，以追踪模型在做出选择前如何获取信息。研究覆盖来自三家供应商、八个商业部署的 LLMs。结果表明，在信息获取零成本时，略低定价（just-below pricing）和促销框架（promotional framing）很少误导模型；但当信息获取存在成本，且用户仅给出模糊目标时，LLMs 会省略计算单位价格所需的诊断性属性，并作出次优选择，其行为类似于人类启发式。相比之下，具体目标提示词主要能够保留诊断性搜索和选择最优性。由此，模糊目标与信息获取约束共同造成一种由搜索过程介导的脆弱性。研究说明，委托式 AI 购物中的营销启发式，主要受商店信息架构支配，而不一定源于 LLMs 固有且不可改变的缺陷。",
+  "key_points_zh": [
+    "Tool-Lab 通过对产品属性设置工具调用成本，追踪 LLMs 在选择前的信息获取过程。",
+    "零成本条件下，略低定价和促销框架通常难以误导八个商业 LLMs。",
+    "在模糊目标和搜索成本约束下，LLMs 会忽略计算单位价格所需的诊断性属性，产生类似人类启发式的次优选择。",
+    "具体目标提示词能够较好保留诊断性搜索与选择最优性，表明提示词明确性可降低脆弱性。",
+    "AI 购物代理的行为弱点与 storefront information architecture 密切相关，不应简单归因于 LLMs 的固有缺陷。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.84,
+    "problem_significance": 0.86,
+    "potential_impact": 0.83,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.84,
+    "llm_avg": 0.818,
+    "comment": "This is a strong guided-shopping paper showing how prompt specificity, tool costs, and storefront information architecture shape agentic product search and purchase decisions.",
+    "comment_zh": "该工作有力地揭示了提示具体性、工具调用成本和店铺信息架构如何影响智能购物代理的商品搜索与购买决策。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.818,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

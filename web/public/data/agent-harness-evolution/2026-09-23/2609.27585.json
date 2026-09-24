@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.27585",
+  "title": "Unity Insight: A Production Code--Asset Index for LLM Coding Agents in Unity Projects",
+  "title_zh": "Unity Insight：面向 Unity 项目 LLM 编程代理的生产级代码—资源索引",
+  "authors": [
+    "Shenhua Gu",
+    "Hongqiang Zhu",
+    "Fan Zhang",
+    "Jinming Zhang",
+    "Hao Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-23T09:04:27Z",
+  "abs_url": "https://arxiv.org/abs/2609.27585v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.27585",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM coding agents increasingly operate inside game-engine repositories, where application logic is inseparable from serialized assets: a single gameplay change may span C\\# scripts, prefabs, scenes, and ScriptableObjects wired together by Unity GUIDs. The retrieval tools agents carry today---shell utilities and code-only indexes---cannot answer basic cross-file questions, because these relationships live in \\texttt{.meta} files and YAML assets rather than in code. We present Unity Insight, to our knowledge the first persistent, LLM-facing, agent-integrated cross-file code--asset index for Unity projects, shipping in production with Tuanjie Codely, the agent CLI of Tuanjie Engine, since its public launch on 2026-07-28. In a paired experiment---28 project-specific questions on two Unity games, same model and harness, one run per arm per question---the index-backed agent spent 53\\% fewer tokens and 52\\% less wall-clock time than a general-purpose exploration agent (exact paired sign tests, $p{<}0.004$), using only its typed index-query tools.",
+  "abstract_zh": "LLM 编程代理逐渐进入游戏引擎代码仓库，但游戏逻辑与序列化资源密不可分：一次玩法修改可能同时涉及 C# 脚本、预制体、场景和由 Unity GUID 关联的 ScriptableObjects。现有的 shell 工具与仅面向代码的索引无法回答基本的跨文件问题，因为这些关系主要存储在 .meta 文件和 YAML 资源中。本文提出 Unity Insight，据作者所知，这是首个面向 LLM、可持久化、集成于代理的 Unity 项目代码—资源跨文件索引。该系统已随团结引擎的代理 CLI——Tuanjie Codely——投入生产，并于 2026 年 7 月 28 日公开发布。在一项配对实验中，研究者针对两款 Unity 游戏提出 28 个项目特定问题，在相同模型与测试框架下，每个问题分别运行一次。使用类型化索引查询工具的索引增强代理，相比通用探索代理减少 53% 的 token 消耗和 52% 的实际耗时；精确配对符号检验显示 p<0.004。",
+  "key_points_zh": [
+    "Unity 项目中的代码逻辑与预制体、场景、ScriptableObjects 等序列化资源通过 Unity GUID 跨文件关联。",
+    "Unity Insight 构建了面向 LLM 编程代理的持久化代码—资源索引，解析 .meta 文件与 YAML 资源中的关系。",
+    "该系统已集成至 Tuanjie Engine 的代理 CLI Tuanjie Codely，并用于生产环境。",
+    "在两款 Unity 游戏、28 个项目问题的配对实验中，索引增强代理减少 53% 的 token 消耗和 52% 的实际耗时。",
+    "实验结果具有统计显著性（精确配对符号检验，p<0.004），表明类型化索引查询能提升代理探索效率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.84,
+    "novelty": 0.76,
+    "problem_significance": 0.78,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.57,
+    "lasting_value": 0.7,
+    "llm_avg": 0.71,
+    "comment": "Unity Insight makes a concrete contribution to coding-agent context assembly by indexing code-asset dependencies, though its narrow engine scope and small evaluation limit generality.",
+    "comment_zh": "Unity Insight通过索引代码与资产依赖，为编码Agent上下文组装作出了具体贡献，但引擎范围狭窄且评测规模较小。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.416947575628934,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.71,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 6,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.27585/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.863
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.27585/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

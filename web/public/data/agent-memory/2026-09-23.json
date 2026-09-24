@@ -1,0 +1,85 @@
+{
+  "domain": "agent-memory",
+  "display_name": "Agent Memory",
+  "date": "2026-09-23",
+  "generated_at": "2026-09-24T23:15:38Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.27279",
+      "title": "EnSIMem: Entity-Structured Indexing for Long-Term Agent Memory",
+      "title_zh": "EnSIMem：面向长期智能体记忆的实体结构化索引",
+      "authors": [
+        "Xuanyu Meng",
+        "Xing Fan",
+        "Xinyi Fan",
+        "Chenlei Guo",
+        "Yixuan Xie",
+        "Jiawei Han"
+      ],
+      "total_score": 0.7136907474500611,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.858,
+        "domain_fit": 0.96,
+        "other": 0.40096915816686995
+      },
+      "tags": [
+        "GitHub",
+        "agent memory systems"
+      ],
+      "tldr_zh": "用实体索引和证据溯源提升智能体长期记忆",
+      "detail_file": "agent-memory/2026-09-23/2609.27279.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.27279/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.27334",
+      "title": "Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents",
+      "title_zh": "即时记忆：学习为 LLM Agents 整理任务自适应记忆",
+      "authors": [
+        "Yefan Zhou",
+        "Yang Li",
+        "Zeyu Leo Liu",
+        "Semih Yavuz",
+        "Shafiq Joty"
+      ],
+      "total_score": 0.4044854488800514,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.9099999999999999,
+        "domain_fit": 0.97,
+        "other": 0.43828482960017145
+      },
+      "tags": [
+        "HF Daily ★33",
+        "h=65"
+      ],
+      "tldr_zh": "JitMem将记忆整理延迟到读取时，按任务动态提炼轨迹。",
+      "detail_file": "agent-memory/2026-09-23/2609.27334.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.27334/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.28003",
+      "title": "Learning from Failures: Heterogeneous Graph Memory for Small Language Model Tool-Using Agents",
+      "title_zh": "从失败中学习：面向小型语言模型工具使用智能体的异构图记忆（Heterogeneous Graph Memory）",
+      "authors": [
+        "Jiaxing Li",
+        "Lei Song",
+        "Rui Dong",
+        "Youyong Kong"
+      ],
+      "total_score": 0.3278145717194441,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.8300000000000001,
+        "domain_fit": 0.9,
+        "other": 0.26271523906481375
+      },
+      "tags": [
+        "Code soon"
+      ],
+      "tldr_zh": "用异构图记忆让小模型从失败中学习并安全调用工具",
+      "detail_file": "agent-memory/2026-09-23/2609.28003.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.28003/thumb.webp"
+    }
+  ]
+}

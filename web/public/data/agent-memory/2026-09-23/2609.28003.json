@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.28003",
+  "title": "Learning from Failures: Heterogeneous Graph Memory for Small Language Model Tool-Using Agents",
+  "title_zh": "从失败中学习：面向小型语言模型工具使用智能体的异构图记忆（Heterogeneous Graph Memory）",
+  "authors": [
+    "Jiaxing Li",
+    "Lei Song",
+    "Rui Dong",
+    "Youyong Kong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-23T12:31:39Z",
+  "abs_url": "https://arxiv.org/abs/2609.28003v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.28003",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Small and medium-sized language models offer cost-effective executors for tool-using agents, making them attractive for local and large-scale deployment. However, in long-horizon and stateful environments, they often make structural errors such as missing required observations, performing premature writes, repeating failed calls, and violating action preconditions. These errors can lead to incorrect state updates, policy violations, and costly or irreversible consequences, making reliable tool execution a critical deployment challenge. Existing fine-tuning approaches require substantial data and computation, while flat memory may retrieve failed actions without preserving their causal context or safety conditions. In this paper, we propose FRESH, a Failure-aware Retrieval framework over Experience-Structured Heterogeneous graphs, which transforms historical successes and failures into structured external experience for tool-using agents. By explicitly modeling the dependencies among tasks, actions, errors, repairs, and execution conditions, FRESH helps frozen language models reuse reliable strategies, avoid recurring failures, and make safer decisions in stateful tool interactions. Experiments on $τ$-Bench and AppWorld with multiple open-source models show that FRESH consistently improves task success and tool-use reliability over no-memory agents and representative memory-based baselines.",
+  "abstract_zh": "小型和中型语言模型可作为低成本的工具使用智能体执行器，适合本地及大规模部署。但在长时程、有状态环境中，它们容易出现结构性错误，例如遗漏必要观测、过早写入、重复失败调用以及违反动作前置条件，进而导致状态更新错误、策略违规和高昂甚至不可逆的后果。现有微调方法通常需要大量数据与计算资源，而扁平记忆难以同时保留失败动作的因果上下文和安全条件。本文提出 FRESH（Failure-aware Retrieval framework over Experience-Structured Heterogeneous graphs），将历史成功与失败转化为结构化外部经验，并显式建模任务、动作、错误、修复方案及执行条件之间的依赖关系。FRESH 使冻结的语言模型能够复用可靠策略、避免重复失败，并在有状态工具交互中做出更安全的决策。在 τ-Bench 和 AppWorld 上使用多个开源模型的实验表明，相比无记忆智能体及代表性记忆基线，FRESH 能稳定提升任务成功率和工具使用可靠性。",
+  "key_points_zh": [
+    "针对小型语言模型在长时程、有状态工具交互中的结构性错误，提出 FRESH。",
+    "通过异构图显式关联任务、动作、错误、修复方案与执行条件，保留失败的因果和安全上下文。",
+    "无需重新微调模型，利用结构化外部经验帮助冻结模型复用成功策略并规避重复失败。",
+    "在 τ-Bench 和 AppWorld、多个开源模型上验证了任务成功率与工具使用可靠性的稳定提升。",
+    "相比无记忆方法和代表性记忆基线，FRESH 更适合对安全性和状态一致性要求较高的工具调用场景。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.82,
+    "problem_significance": 0.9,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.83,
+    "llm_avg": 0.8300000000000001,
+    "comment": "A solid agent-memory system that structures successes and failures with causal execution context to support reliable reuse by small tool-using models.",
+    "comment_zh": "这是一项扎实的 Agent Memory 工作，通过保留因果执行上下文来组织成功与失败经验，从而支持小型工具使用模型的可靠复用。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.8300000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.28003/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.912
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.28003/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}
