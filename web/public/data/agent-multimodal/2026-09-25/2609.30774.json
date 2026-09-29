@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.30774",
+  "title": "Dialogue-Based Streaming Audio-Visual Target Speaker Extraction with Predictive Dialogue Information",
+  "title_zh": "基于预测性对话信息的对话式流式视听目标说话人提取",
+  "authors": [
+    "Shuhan Zhang",
+    "Wenxuan Wu",
+    "Haizhou Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-25T03:56:44Z",
+  "abs_url": "https://arxiv.org/abs/2609.30774v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.30774",
+  "links": {
+    "github": null,
+    "project_page": "https://jjjjiaozi.github.io/TS-VAP/."
+  },
+  "abstract_en": "In face-to-face, real-time communication, a talking agent must track the target speaker through natural pauses, turn-taking, and backchannels, often amid background cross-talk. Most target speaker extraction (TSE) studies, however, rely on simulated mixtures with full or sparse overlap and ignore the turn-taking of real conversations. We therefore introduce, to our knowledge, the first benchmark for online audio-visual TSE (AV-TSE), built from intact dyadic interactions with independent third-party interference. Observing that anticipating upcoming activity from semantic, acoustic, and facial cues benefits online AV-TSE, we propose an LLM-based target-speaker voice activity projection (TS-VAP) module. Unlike conventional VAP with separated speaker channels, it forecasts the future activity of the target and conversational partner directly from the overlapping mixture, drawing on the linguistic and conversational knowledge of a speech-LLM, and uses this prediction to guide a low-latency separator. We further combine this predictive context with historical and synchronous speaker context. Experiments show that TS-VAP consistently improves streaming extraction across multiple AV-TSE backbones, and that further combining historical, synchronous, and predictive context yields nearly 1 dB gain on real AV conversations. Project page: https://jjjjiaozi.github.io/TS-VAP/.",
+  "abstract_zh": "本文提出首个面向在线音视频目标说话人提取（AV-TSE）的真实对话基准。该基准由完整的双人互动构成，并加入独立第三方干扰，更贴近自然交流中的停顿、轮替、附和语和交叉谈话。针对在线AV-TSE中提前预测未来说话活动的重要性，作者提出基于大语言模型（LLM）的目标说话人语音活动预测模块（TS-VAP）。与依赖分离说话人通道的传统VAP不同，TS-VAP直接从重叠混合信号中预测目标说话人与对话伙伴的未来活动，并利用Speech-LLM的语言与对话知识指导低延迟分离器。该方法进一步融合历史、同步和预测性说话人上下文。在多个AV-TSE骨干网络上，TS-VAP均能稳定提升流式提取性能；结合三类上下文后，在真实音视频对话上可获得接近1 dB的增益。",
+  "key_points_zh": [
+    "构建首个基于真实完整双人互动、含第三方干扰的在线AV-TSE基准，弥补模拟混合数据忽略自然轮替的问题。",
+    "提出TS-VAP模块，直接从重叠混合音频中预测目标说话人与对话伙伴的未来活动。",
+    "利用Speech-LLM的语言和对话知识，将预测性对话信息用于指导低延迟目标说话人分离。",
+    "融合历史、同步与预测性说话人上下文，在多个AV-TSE骨干网络上持续提升性能。",
+    "在真实音视频对话中，联合三类上下文可带来接近1 dB的性能增益。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.72,
+    "novelty": 0.82,
+    "problem_significance": 0.7,
+    "potential_impact": 0.75,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.7,
+    "llm_avg": 0.7040000000000001,
+    "comment": "The work advances low-latency audiovisual interaction by introducing dialogue-grounded online target-speaker extraction with predictive turn-taking cues.",
+    "comment_zh": "该工作利用对话驱动的预测性轮次线索推进了低延迟视听交互中的在线目标说话人提取。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.24680800814443493,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7040000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://jjjjiaozi.github.io/TS-VAP/.",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.30774/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.30774/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

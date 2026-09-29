@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2609.30725",
+  "title": "Analyzing and Mitigating Cost-Inefficient Behaviors in Coding Agents",
+  "title_zh": "分析与缓解 Coding Agents 的成本低效行为",
+  "authors": [
+    "Yiran Hu",
+    "Nan Jiang",
+    "Shanchao Liang",
+    "Anik Dey",
+    "Yi Wu",
+    "Lin Tan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-25T02:54:18Z",
+  "abs_url": "https://arxiv.org/abs/2609.30725v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.30725",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Although effective, coding agents often incur substantial monetary costs. Their recurring cost-inefficient behaviors remain underexplored. We conduct the first study of behavioral cost inefficiencies in coding agents, analyzing 1,200 trajectories from Claude Code and Mini-SWE-Agent across four configurations on SWE-bench Verified. We identify three cost-inefficient behaviors: subsumed retrieval, similar script generation, and test re-execution. We then evaluate three mitigation strategies: structure-aware retrieval, agent-synthesized skills, and developer-designed skills, over 10k trajectories on held-out SWE-bench Verified and Pro tasks. Our main findings are: (1) The three behaviors affect 79.00\\%--98.00\\% of coding tasks and account for up to 22.75\\% of task cost. (2) Structure-aware retrieval can introduce retrieval overhead and alter agent delegation, causing inconsistent improvements in retrieval efficiency and cost increases of up to 28.14\\%. (3) Agent-synthesized skills tend to produce low-level, trace-specific guidance, limiting their effectiveness and generality. (4) In contrast, developer-designed skills provide high-level, trace-agnostic guidance, reducing cost by up to 41.73\\%, roughly twice the maximum gain from agent-synthesized skills.",
+  "abstract_zh": "本文首次系统研究 Coding Agents 的行为成本低效问题，分析了 Claude Code 和 Mini-SWE-Agent 在 SWE-bench Verified 四种配置下的 1,200 条轨迹，并在留出的 SWE-bench Verified 与 Pro 任务上评估超过 10,000 条轨迹。研究发现三类低效行为：被包含式检索（subsumed retrieval）、相似脚本生成（similar script generation）和测试重复执行（test re-execution）。这些行为影响 79.00%–98.00% 的任务，最多占任务成本的 22.75%。作者进一步评估了结构感知检索（structure-aware retrieval）、Agent 合成技能（agent-synthesized skills）和开发者设计技能（developer-designed skills）三种缓解策略。结构感知检索可能引入额外检索开销并改变 Agent 委派行为，效果不稳定，甚至使成本增加 28.14%；Agent 合成技能通常是低层次、依赖具体轨迹的指导，泛化能力有限；相比之下，开发者设计技能提供高层次且与轨迹无关的指导，最多可降低 41.73% 的成本，约为 Agent 合成技能最大收益的两倍。",
+  "key_points_zh": [
+    "识别出三类成本低效行为：被包含式检索、相似脚本生成和测试重复执行。",
+    "三类行为影响 79.00%–98.00% 的 Coding Agent 任务，最多占任务成本的 22.75%。",
+    "结构感知检索可能增加额外开销并改变 Agent 委派，最坏情况下使成本上升 28.14%。",
+    "Agent 合成技能往往过于低层次且依赖具体轨迹，导致效果和泛化能力受限。",
+    "开发者设计技能提供高层次、轨迹无关的指导，最多降低成本 41.73%，显著优于 Agent 合成技能。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.76,
+    "problem_significance": 0.84,
+    "potential_impact": 0.83,
+    "paradigm_shift": 0.64,
+    "lasting_value": 0.8,
+    "llm_avg": 0.774,
+    "comment": "This substantial coding-Agent study identifies recurring cost failures and provides actionable evidence that high-level developer-designed skills can improve operational efficiency.",
+    "comment_zh": "该研究系统识别了编码智能体的重复成本问题，并证明高层次开发者设计技能能够切实提升运行效率。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.21754098571521813,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.774,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.30725/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.30725/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.952
+    }
+  ]
+}

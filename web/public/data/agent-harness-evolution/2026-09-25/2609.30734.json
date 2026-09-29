@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.30734",
+  "title": "Learning What to Skip: Counterfactual Credit Assignment for Efficient Multi-Agent LLM Workflows",
+  "title_zh": "学习该跳过什么：面向高效多智能体 LLM 工作流的反事实信用分配",
+  "authors": [
+    "Jinfeng Xu",
+    "Zheyu Chen",
+    "Ziyue Peng",
+    "Zheng Lin",
+    "Shuo Yang",
+    "Jinze Li",
+    "Zheng Xing",
+    "Mengran Li",
+    "Victor C. M. Leung"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-25T03:02:57Z",
+  "abs_url": "https://arxiv.org/abs/2609.30734v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.30734",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-agent LLM workflows use planning, execution, verification, and summarization to improve task performance, yet the value of each component depends on the state already produced. Executing every component can waste computation or overwrite a correct intermediate answer. We formulate component omission as counterfactual credit assignment: full-workflow logs reveal the executed trajectory's reward, while controlled skip interventions reveal the consequences of omitting a future step. We introduce Learning What to Skip (LW2S), which learns action-specific safety models from these interventions and combines held-out calibration with domain-native guards to select skips. When an early skip is rejected, the controller can continue execution and reconsider a later component. Across mathematical reasoning, multiple-choice QA, and code generation with two instruction-model families, LW2S reduces recorded token cost while matching or improving aggregate full-workflow accuracy in the evaluated settings. Scale-up and second-topology experiments further examine component redundancy, while shared-error cases reveal why agreement alone is insufficient for skip selection. These findings connect efficient workflow execution to learning the conditional utility of individual components.",
+  "abstract_zh": "多智能体 LLM 工作流通常结合规划、执行、验证和总结模块来提升任务性能，但每个模块的价值取决于当前已生成的中间状态。无差别执行所有模块不仅浪费计算资源，还可能覆盖原本正确的答案。本文将组件省略形式化为反事实信用分配问题：完整工作流日志提供实际执行轨迹的奖励，而受控跳过干预则揭示省略未来步骤的后果。作者提出 Learning What to Skip（LW2S），利用这些干预学习面向具体动作的安全模型，并结合留出校准与领域原生防护规则来决定是否跳过组件。当较早组件不适合跳过时，控制器可继续执行并重新评估后续组件。在数学推理、选择题问答和代码生成任务上，使用两类 instruction model 的实验表明，LW2S 在保持或提升完整工作流总体准确率的同时，降低了记录到的 token 成本。扩展规模和第二种工作流拓扑实验进一步分析了组件冗余；共享错误案例则说明，仅凭组件间一致性不足以可靠决定跳过。研究将高效工作流执行与学习单个组件的条件效用联系起来。",
+  "key_points_zh": [
+    "将多智能体工作流中的组件省略建模为反事实信用分配：比较完整执行与受控跳过后的结果差异。",
+    "Learning What to Skip（LW2S）学习动作特定的安全模型，并结合留出校准和领域规则提升跳过决策的可靠性。",
+    "控制器支持动态重评估：早期组件不能跳过时继续执行，并在后续步骤重新寻找可安全跳过的组件。",
+    "在数学推理、选择题问答和代码生成任务中，LW2S 降低 token 成本，同时保持或提升完整工作流准确率。",
+    "实验表明组件一致性并不等价于正确性；共享错误会使单纯依赖 agreement 的跳过策略失效。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.84,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.84,
+    "llm_avg": 0.836,
+    "comment": "LW2S provides a strong trace-driven orchestration method that uses counterfactual interventions and calibrated guards to reduce unnecessary workflow execution.",
+    "comment_zh": "LW2S通过反事实干预和校准防护机制学习减少不必要执行，是一种较强的轨迹驱动工作流编排方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3573677457192113,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.836,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.30734/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.96
+    }
+  ]
+}

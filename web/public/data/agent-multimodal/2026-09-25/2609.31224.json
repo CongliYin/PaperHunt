@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.31224",
+  "title": "Acoustic-to-Text KV Compression for Full-Duplex Speech Models",
+  "title_zh": "面向全双工语音模型的声学到文本 KV 压缩",
+  "authors": [
+    "Yejin Lee",
+    "Seungbeom Kim",
+    "Yongha Lee",
+    "Kyuhong Shim"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-25T13:04:09Z",
+  "abs_url": "https://arxiv.org/abs/2609.31224v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.31224",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Full-duplex speech language models continuously accumulate acoustic key-value (KV) states, making long-running interactions memory-intensive. During listening, the model can finish processing an audio unit before the next arrives; we term the remaining interval listening-time slack. We propose acoustic-to-text KV compression, which introduces a transcription side channel to convert incoming speech into compact textual memory within this interval. When the cache exceeds a target budget during inference, older acoustic states are evicted while transcripts and recent acoustic context remain. We train the side channel with LoRA using cross-entropy on transcription segments. To preserve listening and speaking behavior, we apply knowledge distillation to the original model's token-level output distributions at native prediction positions. On ten-minute LongSpeech sessions, our MiniCPM-o 4.5 implementation reduces peak streaming KV-cache size by 64.6% compared with the same model without eviction. The proposed method also improves transcription, temporal question answering, and summarization over the baseline. Full-Duplex-Bench evaluations further show comparable pause-handling, turn-taking, and interruption performance.",
+  "abstract_zh": "全双工语音语言模型会持续累积声学 KV 状态，导致长时间交互中的显存占用不断增加。论文利用模型在连续音频单元之间的 listening-time slack，引入 transcription side channel，将输入语音转换为紧凑文本记忆。当 KV cache 超过目标预算时，淘汰较早的声学状态，仅保留转录文本和近期声学上下文。该 side channel 使用 LoRA，并通过转录片段的交叉熵训练；同时在模型原生预测位置上进行知识蒸馏，以保持听取和发言行为。在十分钟 LongSpeech 会话中，基于 MiniCPM-o 4.5 的实现将峰值流式 KV-cache 大小降低 64.6%，并在转录、时序问答和摘要任务上优于无淘汰基线。Full-Duplex-Bench 结果表明，该方法在停顿处理、轮次交接和打断响应方面保持了相近性能。",
+  "key_points_zh": [
+    "提出 acoustic-to-text KV compression，通过 transcription side channel 将历史语音压缩为文本记忆。",
+    "利用 listening-time slack 在实时推理间隙完成转录，并在超出预算时淘汰旧 acoustic KV states。",
+    "采用 LoRA 训练转录通道，并用 token-level knowledge distillation 保持原模型的听说行为。",
+    "在十分钟 LongSpeech 会话中，MiniCPM-o 4.5 的峰值流式 KV-cache 降低 64.6%。",
+    "该方法提升 transcription、temporal question answering 和 summarization，同时保持 Full-Duplex-Bench 中的交互能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.83,
+    "problem_significance": 0.84,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.82,
+    "llm_avg": 0.806,
+    "comment": "Acoustic-to-text KV compression addresses a central scalability bottleneck for long-running full-duplex speech agents while preserving interruption and turn-taking behavior.",
+    "comment_zh": "声学到文本的KV压缩解决了长时全双工语音智能体的关键扩展性瓶颈，同时保持了打断处理和轮次交互能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.47768702241378164,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.806,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 10,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.31224/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.31224/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.982
+    }
+  ]
+}

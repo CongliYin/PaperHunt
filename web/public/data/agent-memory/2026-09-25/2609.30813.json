@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.30813",
+  "title": "A Benchmark and Diagnostic Study of Epistemic Admission in Shared Agent Memory",
+  "title_zh": "共享智能体记忆中的认知接纳：基准与诊断研究",
+  "authors": [
+    "Xiaoyang Li",
+    "Yiqi Wang",
+    "Chencheng Zhu",
+    "KE XU",
+    "Wencheng Yang",
+    "Zequn Sun",
+    "Pingan Song",
+    "Yiqun Duan",
+    "Taotao Cai"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-25T04:48:31Z",
+  "abs_url": "https://arxiv.org/abs/2609.30813v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.30813",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Evaluating claim admission in shared agent memory is challenging because repeated claims may be mistaken for independent evidence. An agent may copy or paraphrase a retrieved belief, while admitting a false claim exposes subsequent agents to it. To study this problem, we introduce the Correlated Promotion Benchmark (CPB), which evaluates whether candidate claims should be admitted to shared memory.CPB-Static constructs a frozen test split from publicly annotated sources with fixed gold actions. CPB-Live runs multi-agent teams over a shared store, records all writes and retrievals, and tracks source lineage defined by each scenario. A separate consumer answers from the store alone. We evaluate eight admission policies across four agent families. Our results show that policies which deduplicate sources reject many true claims alongside false ones, whereas policies preserving answer coverage admit nearly as many false claims as unrestricted sharing. Gating on declared source type reduces false adoption to 0.06--0.09, compared with 0.22--0.47 for other answering policies. Once an uncontested false belief enters memory, the consumer asserts it in 0.97--0.99 of probes across all families. No non-oracle policy consistently rejects false claims across verbatim copies, paraphrases, and paraphrases declared authoritative. These findings reveal the limitations of admission policies without access to source lineage.",
+  "abstract_zh": "评估共享智能体记忆中的主张接纳十分困难，因为重复主张可能被误认为独立证据。智能体可能复制或改写检索到的信念，而一旦接纳错误主张，后续智能体也会接触到该错误。为研究这一问题，论文提出 Correlated Promotion Benchmark（CPB），用于评估候选主张是否应写入共享记忆。CPB-Static 基于公开标注来源构建冻结测试集，并固定标准操作；CPB-Live 则让多智能体团队在共享存储中运行，记录全部写入与检索操作，并根据场景定义追踪来源谱系。另有独立消费者仅依据共享存储作答。论文在四类智能体上评估八种接纳策略。结果显示，去重来源的策略会连同大量真实主张一起拒绝错误主张；而保持答案覆盖率的策略，接纳错误主张的数量几乎与无限制共享相当。依据声明的来源类型进行门控，可将错误采纳率降至 0.06--0.09，而其他作答策略为 0.22--0.47。一旦一个无人质疑的错误信念进入记忆，消费者在各类智能体的 0.97--0.99 次探测中都会断言该信念。除 Oracle 策略外，没有任何策略能在逐字复制、改写以及声称权威的改写场景下持续拒绝错误主张。研究揭示了缺乏来源谱系信息的记忆接纳策略的根本局限。",
+  "key_points_zh": [
+    "提出 Correlated Promotion Benchmark（CPB），结合静态测试与多智能体在线共享记忆评估。",
+    "来源去重会误拒真实主张；追求答案覆盖率则几乎无法降低错误主张接纳。",
+    "依据声明的来源类型进行门控，可将错误采纳率降至 0.06--0.09。",
+    "错误信念一旦进入共享记忆，后续消费者几乎必然复述，比例达 0.97--0.99。",
+    "除 Oracle 外，现有策略无法同时应对逐字复制、改写及声称权威的改写。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.86,
+    "problem_significance": 0.92,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.91,
+    "llm_avg": 0.8700000000000001,
+    "comment": "A highly relevant benchmark that exposes correlated-evidence failures in shared-memory admission and establishes source lineage as a crucial evaluation primitive.",
+    "comment_zh": "这是一项高度相关的基准工作，揭示了共享记忆准入中的关联证据失效，并确立了来源谱系这一关键评估要素。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3210331475111057,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.8700000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.30813/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

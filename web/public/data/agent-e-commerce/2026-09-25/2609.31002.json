@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.31002",
+  "title": "ZooWork-ShopRanker: An Open, Preference-Aligned E-Commerce Reranker",
+  "title_zh": "ZooWork-ShopRanker：一种开放的、偏好对齐的电商重排序模型",
+  "authors": [
+    "Siqiao Xue",
+    "Shuxuan Liu",
+    "Ning Hu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-25T08:47:19Z",
+  "abs_url": "https://arxiv.org/abs/2609.31002v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.31002",
+  "links": {
+    "github": null,
+    "project_page": "https://serendipityoneinc.github.io/look-bench-page/shoprank-bench.html"
+  },
+  "abstract_en": "Open rerankers trained for general web retrieval transfer imperfectly to e-commerce, where ranking decisions depend not only on topical relevance but also on user preferences, product constraints, and comparative product fit. These preference signals are difficult to supervise at scale: real search traffic provides authentic queries and candidates but no clean pairwise labels. We present ZooWork-ShopRanker, a family of e-commerce rerankers (0.6B, 4B, and 8B) aligned to judge-labeled shopping preference. Training pairs are labeled by a panel of reasoning large language models (LLMs) from different families acting as a preference oracle, with position-debiased judgments and agreement tiers, and the rerankers are trained on these labels. The aligned 8B flagship then serves as a distillation teacher for the efficient 4B and 0.6B models, which are fit to its scores and sharpened on judged pairs. To measure progress, we introduce ShopRank-Bench, a contamination-limited benchmark of ~10,000 private-traffic preference pairs in both text formats, tiered by how many judge families committed to each label. ZooWork-ShopRanker-8B and -4B significantly outperform the strongest open reranker baseline, every model significantly beats its own un-aligned base, and ZooWork-ShopRanker-0.6B beats its size peer; the gains hold in both formats and extend to common MTEB benchmarks. We release the models and the dual-format ShopRank-Bench to facilitate further research.",
+  "abstract_zh": "面向通用网页检索训练的开放式重排序模型，在电商场景中的迁移效果有限，因为排序不仅取决于主题相关性，还依赖用户偏好、商品约束与商品间匹配度。针对真实搜索流量具有真实查询和候选商品、却缺乏高质量成对标签的问题，本文提出 ZooWork-ShopRanker 系列电商重排序模型，包括 0.6B、4B 和 8B 规模。作者利用来自不同模型家族的推理型大语言模型（LLM）组成偏好评审委员会，作为偏好预言机，对训练样本进行位置去偏判断，并按评审一致性划分等级。在此基础上训练重排序模型；随后使用对齐后的 8B 模型作为蒸馏教师，通过拟合其分数并在评审成对样本上进一步训练高效的 4B 和 0.6B 模型。为评估性能，作者提出 ShopRank-Bench，这是一个污染受限的基准，包含约 10,000 个来自私有流量的偏好成对样本，并提供两种文本格式，同时依据多个评审模型家族对标签的一致程度进行分层。实验表明，ZooWork-ShopRanker-8B 和 -4B 显著优于最强开放式重排序基线；所有模型均显著优于各自未对齐的基础模型；0.6B 模型也超过同规模模型。性能提升在两种格式及常用 MTEB 基准上均保持稳定。作者同时发布模型和双格式 ShopRank-Bench，以促进后续研究。",
+  "key_points_zh": [
+    "针对电商排序中的用户偏好、商品约束和相对匹配度，提出 ZooWork-ShopRanker 系列模型，覆盖 0.6B、4B 和 8B。",
+    "使用不同家族推理型 LLM 作为偏好预言机，结合位置去偏与一致性分层，构建更可靠的成对训练标签。",
+    "以对齐后的 8B 模型为教师进行知识蒸馏，并通过评审样本强化训练 4B 和 0.6B 模型，兼顾效果与效率。",
+    "提出约 10,000 个私有流量偏好对的双格式基准 ShopRank-Bench，并按评审家族一致性分层。",
+    "8B、4B 显著超过最强开放基线，所有模型优于未对齐版本，且收益扩展至 MTEB 等通用检索评测。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.8,
+    "problem_significance": 0.89,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8219999999999998,
+    "comment": "This work directly advances preference-aligned product reranking through judge-supervised data, distillation, and an open commerce-specific benchmark.",
+    "comment_zh": "该工作通过评审模型监督、蒸馏和开放的电商专用基准，直接推动了偏好对齐的商品重排序研究。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.4,
+    "community_heat": 0.6828624646490623,
+    "author_reputation": 0.3315497212666585,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8219999999999998,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://serendipityoneinc.github.io/look-bench-page/shoprank-bench.html",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 2,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.31002/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.585
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.31002/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.944
+    }
+  ]
+}

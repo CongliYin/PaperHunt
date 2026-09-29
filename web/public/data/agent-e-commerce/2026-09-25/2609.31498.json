@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.31498",
+  "title": "Retail Product Search: A Practical Approach at Target",
+  "title_zh": "Target 的零售商品搜索：一种实用方法",
+  "authors": [
+    "Darshan Sonagara",
+    "Qujiaheng Zhang",
+    "Ankit Singh",
+    "Alex Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-25T16:36:48Z",
+  "abs_url": "https://arxiv.org/abs/2609.31498v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.31498",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Search is one of the most important features in e-commerce, directly driving customer engagement and business growth. A good product search system must show both relevant and desirable results. However, retail search presents unique challenges. User intent can range from exact matches to open-ended discovery. Search systems must also balance multiple goals, such as relevance, revenue, and profit, while keeping response times low. Traditional keyword-based methods often fall short in handling natural language or semantic queries. Vector search helps alleviate these issues, but it can miss key intent signals or return low-precision results. In this paper, we present the design of a hybrid search system at Target that combines lexical and vector search. We describe our approach to data processing, embedding training, precision control for the final result set, multi-channel result fusion (where we compared fusion strategies and adopted weighted interleaving), and the performance optimizations used to maintain low latency for production deployment. Our method improves offline evaluation metrics, and in online A/B testing it raised click-through rate by 0.97%, order conversion by 0.98%, and demand per visitor by 1.10% over lexical-only search, while roughly halving zero-result searches. The resulting system is deployed at scale and serves millions of guests daily.",
+  "abstract_zh": "搜索是电商平台最重要的功能之一，直接影响用户参与度与业务增长。优秀的商品搜索系统不仅要返回相关结果，还应保证结果符合用户偏好。然而，零售搜索具有独特挑战：用户意图既可能是精确匹配，也可能是开放式探索；系统还需在相关性、营收和利润等多重目标之间取得平衡，同时维持较低响应延迟。传统关键词方法难以有效处理自然语言或语义查询。向量搜索虽能缓解这些问题，却可能遗漏关键意图信号，或返回精度较低的结果。本文介绍 Target 的混合搜索系统设计，该系统结合词法搜索（lexical search）与向量搜索（vector search），涵盖数据处理、嵌入训练、最终结果集的精度控制、多通道结果融合，以及面向生产部署的低延迟优化。作者比较多种融合策略后采用加权交错（weighted interleaving）。该方法提升了离线评估指标；在线 A/B 测试显示，相比纯词法搜索，点击率提升 0.97%，订单转化率提升 0.98%，单访客需求额提升 1.10%，零结果搜索量约减少一半。该系统已完成大规模部署，每日服务数百万用户。",
+  "key_points_zh": [
+    "构建结合 lexical search 与 vector search 的混合架构，兼顾关键词精确匹配和自然语言语义理解。",
+    "通过数据处理、embedding 训练及最终结果集精度控制，降低向量检索遗漏关键意图和低精度召回的风险。",
+    "比较多种多通道融合策略后采用 weighted interleaving，在不同检索通道之间平衡结果质量。",
+    "针对生产环境实施性能优化，在大规模服务中保持较低搜索延迟。",
+    "在线 A/B 测试中，点击率、订单转化率和单访客需求额分别提升 0.97%、0.98% 和 1.10%，零结果搜索量约减半。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.68,
+    "problem_significance": 0.92,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.86,
+    "llm_avg": 0.794,
+    "comment": "A strong production e-commerce search paper with hybrid retrieval, latency-aware fusion, and substantial online gains at Target scale.",
+    "comment_zh": "该论文面向真实电商生产环境，结合混合检索、低延迟融合与大规模在线实验，显著提升了搜索效果。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.43732458189998774,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.794,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 7,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.31498/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.31498/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

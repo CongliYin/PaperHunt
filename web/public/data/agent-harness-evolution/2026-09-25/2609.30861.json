@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2609.30861",
+  "title": "SkillEvoReg: Regularizing Agent Skill Evolution Against Overfitting",
+  "title_zh": "SkillEvoReg：防止智能体技能演化过拟合的正则化方法",
+  "authors": [
+    "Guanyu Nie",
+    "Fangzhou Zhu",
+    "Shixiong Kai",
+    "Xiongwei Han",
+    "Tao Zhong",
+    "Mingxuan Yuan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-25T06:11:26Z",
+  "abs_url": "https://arxiv.org/abs/2609.30861v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.30861",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Language-model agents increasingly improve by converting execution experience into reusable external skills. Yet repeated skill updates form a learning process of their own: locally useful edits can accumulate into redundant or task-specific instructions, while new updates can disrupt behavior that previously worked. We study this problem as skill-evolution overfitting and introduce SkillEvoReg, a general regularization framework for skill evolution inspired by anti-overfitting techniques in neural-network training. SkillEvoReg combines training-time skill dropout, which perturbs update generation, and complexity-aware local regularization, which controls unnecessary structural growth, with causal counterexample validation (CCV), which provides targeted behavioral validation of candidate-specific regressions. We instantiate the framework across heterogeneous skill-evolution systems while retaining each system's native skill evolver and task evaluator. Across SkillOpt, SkillEvolBench, and ContinualSkillBench, SkillEvoReg consistently controls skill-state growth while preserving competitive downstream capability, improves several transfer and later-stage evolution outcomes, and identifies update-level regressions that structural metrics alone cannot reveal. These results suggest that explicit regularization is a useful complement to increasingly capable skill updaters.",
+  "abstract_zh": "语言模型智能体可将执行经验转化为可复用的外部技能，并通过持续更新不断改进。然而，反复更新可能导致技能指令冗余、过度任务特化，或破坏原本有效的行为，形成“技能演化过拟合”。论文提出通用正则化框架 SkillEvoReg，借鉴神经网络训练中的抗过拟合方法，结合训练时技能丢弃（skill dropout）、复杂度感知的局部正则化（complexity-aware local regularization）以及因果反例验证（causal counterexample validation, CCV），分别扰动更新生成、抑制不必要的结构增长，并针对候选更新验证回归行为。作者在 SkillOpt、SkillEvolBench 和 ContinualSkillBench 上进行实例化评估，同时保留各系统原有的技能演化器与任务评估器。结果表明，SkillEvoReg 能控制技能状态规模，在保持竞争性下游能力的同时，改善迁移效果与后期演化表现，并发现仅靠结构指标无法识别的更新级回归。",
+  "key_points_zh": [
+    "将持续技能更新视为独立的学习过程，并定义技能演化过拟合问题。",
+    "SkillEvoReg 结合 skill dropout、复杂度感知局部正则化和 CCV，分别控制更新扰动、结构膨胀与行为回归。",
+    "该框架可嵌入不同技能演化系统，无需替换其原生技能演化器和任务评估器。",
+    "在 SkillOpt、SkillEvolBench 和 ContinualSkillBench 上，方法有效控制技能状态增长，同时保持较强下游能力。",
+    "CCV 能识别结构指标难以发现的候选更新级行为回归，并改善迁移与后期演化结果。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.88,
+    "problem_significance": 0.86,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.81,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8640000000000001,
+    "comment": "A strong Skill-evolution contribution that introduces regularization, counterexample validation, and cross-system evidence for preventing regressions and overfitting.",
+    "comment_zh": "这是一项很强的技能演化研究，通过正则化、反例验证和跨系统实验防止技能回归与过拟合。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4810589956582027,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8640000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 7,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.30861/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.30861/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.934
+    }
+  ]
+}

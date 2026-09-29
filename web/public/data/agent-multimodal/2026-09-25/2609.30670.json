@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.30670",
+  "title": "TRACE: Temporal Audit and Condition-aware Evaluation of Streaming Video Understanding",
+  "title_zh": "TRACE：流式视频理解的时序审计与条件感知评测",
+  "authors": [
+    "Yibo Ma",
+    "Qianqian Zhang",
+    "Peng Liu",
+    "Tiancheng Zhao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-25T01:21:25Z",
+  "abs_url": "https://arxiv.org/abs/2609.30670v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.30670",
+  "links": {
+    "github": "https://github.com/om-ai-lab/trace-bench",
+    "project_page": null
+  },
+  "abstract_en": "Streaming video understanding requires models to interpret evidence as it arrives, yet current evaluations often report task scores without specifying when evidence becomes valid, how visual history is maintained, or how responses are triggered. As a result, similar scores may correspond to different workloads, failure modes, and operational behavior. We introduce TRACE (Temporal Audit and Condition-aware Evaluation), a condition-aware benchmark and evaluation framework that makes these factors explicit. TRACE combines temporally audited visual tasks with evidence timing and instruction-dependent trigger annotations, a unified causal Core--Adapter protocol that controls information availability while recording actual history processing and response events, and multidimensional reporting of answer quality, timeliness, response-selection behavior, workload, completion, and reliability. On 1,240 records from 517 videos, we evaluate eight publicly available models or systems in eight configurations. We find that nearly identical QA accuracy can mask substantial differences in completion, answer validity, and generation workload, while proactive performance separates into response quality, response delay, false alarms (responses emitted while no target window is currently valid and a later one remains), and missed target windows. These results show that streaming-video performance should be interpreted as execution-conditioned system behavior rather than a single score. Our benchmark and code can be accessed at \\href{https://github.com/om-ai-lab/trace-bench}{https://github.com/om-ai-lab/trace-bench}.",
+  "abstract_zh": "流式视频理解要求模型随着证据到达持续解释视频，但现有评测通常只报告任务分数，未明确证据何时有效、视觉历史如何维护，以及模型何时触发响应。因此，相近的分数可能对应不同的工作负载、失效模式和实际运行行为。本文提出 TRACE（Temporal Audit and Condition-aware Evaluation），一个将上述因素显式化的条件感知基准与评测框架。TRACE结合经过时序审计的视觉任务、证据时间标注和依赖指令的触发标注，设计统一的因果 Core--Adapter 协议，在控制信息可用性的同时记录实际历史处理过程与响应事件，并从回答质量、及时性、响应选择行为、工作负载、完成度和可靠性等多个维度进行报告。基于来自517个视频的1,240条记录，作者在8种配置下评测了8个公开模型或系统。结果表明，几乎相同的问答准确率可能掩盖完成度、回答有效性和生成工作负载方面的显著差异。主动式性能还应分别考察响应质量、响应延迟、误报以及漏检目标时间窗口。研究说明，流式视频性能应被理解为受执行过程影响的系统行为，而非单一分数。基准与代码已发布于 https://github.com/om-ai-lab/trace-bench。",
+  "key_points_zh": [
+    "提出 TRACE 条件感知评测框架，显式标注证据有效时间、视觉历史和响应触发条件。",
+    "通过因果 Core--Adapter 协议控制信息可用性，并记录历史处理、响应事件与实际工作负载。",
+    "多维度评估回答质量、及时性、响应选择、完成度、可靠性和生成成本，避免单一分数掩盖系统差异。",
+    "实验发现，相近的 QA 准确率可能对应显著不同的回答有效性、任务完成度和生成工作负载。",
+    "主动式系统应区分响应质量、延迟、误报与漏检目标窗口，以刻画真实运行行为。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.84,
+    "problem_significance": 0.88,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.88,
+    "llm_avg": 0.834,
+    "comment": "TRACE makes streaming-video evaluation execution-aware by jointly measuring evidence timing, response triggering, workload, reliability, and proactive behavior.",
+    "comment_zh": "TRACE 将流式视频评测从单一准确率扩展为联合衡量证据时序、响应触发、工作负载、可靠性和主动行为的执行感知框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.704560788802713,
+    "author_reputation": 0.34993188646027507,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.834,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/om-ai-lab/trace-bench",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 3,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.30670/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.864
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.30670/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.778
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2609.31301",
+  "title": "Beyond Approved Actions: Runtime Validation of Persistent Outcomes in Agent Workflows",
+  "title_zh": "超越已批准操作：Agent 工作流中持久化结果的运行时验证",
+  "authors": [
+    "Haoran Zhang",
+    "Hengtong Zhang",
+    "Zhiyu Liang",
+    "Yu Yan",
+    "Decheng Zuo",
+    "Hongzhi Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-25T14:11:14Z",
+  "abs_url": "https://arxiv.org/abs/2609.31301v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.31301",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model agents increasingly act on software systems, no longer merely generating text but also changing databases and online services. However, an approved database update may succeed yet leave an unapproved notification because execution can produce persistent effects beyond the requested change. Current safeguards can approve an action or record its aftermath, but without checking the persistent result before continuation, an unapproved outcome can be accepted as success and propagated to later steps. We present EffectMatch, a runtime that collects persistent changes within a controlled execution boundary and compares them with what the application approved for the current state and execution. The comparison governs commit and dependent execution. In comparative evaluation on 206 public business tasks, EffectMatch preserved all clean executions and prevented all tested incorrect commits. Six 20-run ablations exposed the failure caused by each removed mechanism, while 80 task-topology cases preserved truthful handoffs and blocked invalid continuation. Together, these results show that EffectMatch blocks the silent acceptance and downstream propagation of persistent outcomes inconsistent with application approval.",
+  "abstract_zh": "随着 Large Language Model agents 开始操作数据库和在线服务，单纯批准某个操作已不足以保证系统结果合规：一次数据库更新可能成功，却同时产生未经批准的通知等额外持久化影响。现有防护机制通常只批准操作或记录执行后果，未在继续执行前验证持久化结果，因而可能将不合规结果误判为成功，并传播至后续步骤。本文提出 EffectMatch：在受控执行边界内收集持久化变更，并将其与应用针对当前状态和本次执行所批准的结果进行比较；比较结果决定是否提交变更以及是否执行依赖步骤。在包含 206 个公开业务任务的对比评估中，EffectMatch 保留了全部正确执行，并阻止了所有测试到的错误提交。六组、每组 20 次运行的消融实验揭示了移除各机制后的失败模式；80 个任务拓扑案例表明，该方法能够维持真实的步骤交接并阻止无效延续。结果说明，EffectMatch 可以阻断与应用批准不一致的持久化结果被静默接受及向下游传播。",
+  "key_points_zh": [
+    "核心问题是：已批准操作可能产生额外且未经批准的持久化副作用，导致错误结果被当作成功。",
+    "EffectMatch在受控执行边界内收集持久化变更，并将实际结果与应用批准的结果进行匹配。",
+    "匹配结果同时控制变更提交和依赖步骤执行，避免不合规结果进入后续工作流。",
+    "在206个公开业务任务中，EffectMatch保留全部正确执行，并阻止所有测试到的错误提交。",
+    "消融实验与80个任务拓扑案例验证了各机制的必要性，以及对错误交接和无效延续的阻断能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.82,
+    "novelty": 0.84,
+    "problem_significance": 0.88,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.83,
+    "llm_avg": 0.834,
+    "comment": "EffectMatch presents a reusable execution-control pattern that validates persistent workflow outcomes before commit and downstream propagation.",
+    "comment_zh": "EffectMatch提出了可复用的执行控制机制，在提交和下游传播前验证工作流的持久化结果。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.43798072314003966,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.834,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 6,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.31301/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.31301/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.96
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2609.31587",
+  "title": "Compact Documentation for Coding Agents: A Benchmark, an Optimizer, and Why It Does Not Transfer",
+  "title_zh": "面向编码智能体的紧凑文档：基准、优化器及其无法迁移的原因",
+  "authors": [
+    "Md Shohel Arman",
+    "Igor Molybog"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-25T17:42:22Z",
+  "abs_url": "https://arxiv.org/abs/2609.31587v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.31587",
+  "links": {
+    "github": "https://github.com/haw-ai-i/roundtrip",
+    "project_page": null
+  },
+  "abstract_en": "We investigate whether natural-language documentation helps coding agents resolve software issues, and we build the tools to construct and evaluate it. We introduce a roundtrip benchmark that scores code descriptions by whether code regenerated from them passes the original tests, and show that completeness, not length, drives a description's fidelity. Using the benchmark as an optimization signal, we discover a description-writing prompt that reaches full fidelity and generalizes to unseen files. We then test the hypothesis that motivated the work: that better documentation helps an agent resolve real repository issues. Across two model families and ten repositories, and against a positive control confirming that our evaluation can detect a genuine improvement, we find that it does not. When the source is present, neither static compact documentation nor retrieved context beats the issue alone. We report this negative result together with the benchmark and the optimizer, and we characterize the boundary at which documentation helps.",
+  "abstract_zh": "本文研究自然语言文档能否帮助编码智能体解决软件问题，并构建了相应的文档生成与评测工具。作者提出 roundtrip benchmark：根据从代码描述重新生成的代码能否通过原始测试，评估描述对代码语义的保真度。实验表明，决定保真度的是信息完整性，而非描述长度。以该基准作为优化信号，作者发现了一种描述生成 prompt，可实现完全保真，并泛化到未见过的文件。随后，论文检验其核心假设：更高质量的文档是否有助于智能体解决真实代码仓库中的 issue。作者在两个模型家族和十个代码仓库上开展实验，并通过 positive control 验证评测流程能够检测到真实改进。结果显示，当源代码可用时，无论是静态紧凑文档还是检索得到的上下文，都无法优于仅提供 issue 的设置。论文报告了这一负面结果，同时发布 benchmark 与 optimizer，并分析文档能够发挥作用的条件边界。",
+  "key_points_zh": [
+    "提出 roundtrip benchmark，以描述重生成代码通过原始测试的情况衡量文档保真度。",
+    "发现文档保真度主要取决于信息完整性，而非文本长度；紧凑描述也可实现完全保真。",
+    "基于 benchmark 的优化信号自动发现高质量描述生成 prompt，并能泛化到未见文件。",
+    "在两个模型家族和十个代码仓库上的实验表明，源代码可用时，静态文档与检索上下文均未优于仅输入 issue。",
+    "通过 positive control 排除评测不敏感的可能，并进一步刻画文档对编码智能体有效的适用边界。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.77,
+    "problem_significance": 0.73,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.57,
+    "lasting_value": 0.75,
+    "llm_avg": 0.704,
+    "comment": "This is a valuable coding-Agent benchmark and negative result showing that documentation fidelity does not necessarily improve repository-level issue resolution.",
+    "comment_zh": "这是一项有价值的编码智能体基准与负面结果研究，表明文档保真度并不必然提升仓库级问题解决能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.36560162063732243,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.704,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/haw-ai-i/roundtrip",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.31587/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.31587/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.953
+    }
+  ]
+}

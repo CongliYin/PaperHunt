@@ -1,0 +1,133 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-09-25",
+  "generated_at": "2026-09-29T00:23:34Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.30861",
+      "title": "SkillEvoReg: Regularizing Agent Skill Evolution Against Overfitting",
+      "title_zh": "SkillEvoReg：防止智能体技能演化过拟合的正则化方法",
+      "authors": [
+        "Guanyu Nie",
+        "Fangzhou Zhu",
+        "Shixiong Kai",
+        "Xiongwei Han",
+        "Tao Zhong",
+        "Mingxuan Yuan"
+      ],
+      "total_score": 0.6642529497829104,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8640000000000001,
+        "domain_fit": 0.97,
+        "other": 0.23017649927636716
+      },
+      "tags": [
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "用正则化抑制智能体技能演化过拟合",
+      "detail_file": "agent-harness-evolution/2026-09-25/2609.30861.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.30861/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.31301",
+      "title": "Beyond Approved Actions: Runtime Validation of Persistent Outcomes in Agent Workflows",
+      "title_zh": "超越已批准操作：Agent 工作流中持久化结果的运行时验证",
+      "authors": [
+        "Haoran Zhang",
+        "Hengtong Zhang",
+        "Zhiyu Liang",
+        "Yu Yan",
+        "Decheng Zuo",
+        "Hongzhi Wang"
+      ],
+      "total_score": 0.5570990361570021,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.834,
+        "domain_fit": 0.82,
+        "other": 0.22299678719000665
+      },
+      "tags": [
+        "planning and policy"
+      ],
+      "tldr_zh": "EffectMatch在运行时验证持久化结果，阻断错误提交与传播。",
+      "detail_file": "agent-harness-evolution/2026-09-25/2609.31301.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.31301/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.30734",
+      "title": "Learning What to Skip: Counterfactual Credit Assignment for Efficient Multi-Agent LLM Workflows",
+      "title_zh": "学习该跳过什么：面向高效多智能体 LLM 工作流的反事实信用分配",
+      "authors": [
+        "Jinfeng Xu",
+        "Zheyu Chen",
+        "Ziyue Peng",
+        "Zheng Lin",
+        "Shuo Yang",
+        "Jinze Li",
+        "Zheng Xing",
+        "Mengran Li",
+        "Victor C. M. Leung"
+      ],
+      "total_score": 0.3136683872859605,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.836,
+        "domain_fit": 0.93,
+        "other": 0.20956129095320192
+      },
+      "tags": [],
+      "tldr_zh": "用反事实干预学习安全跳过组件，降低成本且保持准确率",
+      "detail_file": "agent-harness-evolution/2026-09-25/2609.30734.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.30734/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.31587",
+      "title": "Compact Documentation for Coding Agents: A Benchmark, an Optimizer, and Why It Does Not Transfer",
+      "title_zh": "面向编码智能体的紧凑文档：基准、优化器及其无法迁移的原因",
+      "authors": [
+        "Md Shohel Arman",
+        "Igor Molybog"
+      ],
+      "total_score": 0.2969800810318661,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.704,
+        "domain_fit": 0.88,
+        "other": 0.28593360343955376
+      },
+      "tags": [
+        "GitHub"
+      ],
+      "tldr_zh": "文档可完整描述代码，却未能提升真实修复能力。",
+      "detail_file": "agent-harness-evolution/2026-09-25/2609.31587.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.31587/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.30725",
+      "title": "Analyzing and Mitigating Cost-Inefficient Behaviors in Coding Agents",
+      "title_zh": "分析与缓解 Coding Agents 的成本低效行为",
+      "authors": [
+        "Yiran Hu",
+        "Nan Jiang",
+        "Shanchao Liang",
+        "Anik Dey",
+        "Yi Wu",
+        "Lin Tan"
+      ],
+      "total_score": 0.2630770492857609,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.774,
+        "domain_fit": 0.92,
+        "other": 0.10292349761920304
+      },
+      "tags": [],
+      "tldr_zh": "开发者设计技能最有效，可降低编码代理成本41.73%",
+      "detail_file": "agent-harness-evolution/2026-09-25/2609.30725.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.30725/thumb.webp"
+    }
+  ]
+}

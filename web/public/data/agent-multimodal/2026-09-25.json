@@ -1,0 +1,106 @@
+{
+  "domain": "agent-multimodal",
+  "display_name": "Realtime Multimodal Agent",
+  "date": "2026-09-25",
+  "generated_at": "2026-09-29T00:28:14Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.30670",
+      "title": "TRACE: Temporal Audit and Condition-aware Evaluation of Streaming Video Understanding",
+      "title_zh": "TRACE：流式视频理解的时序审计与条件感知评测",
+      "authors": [
+        "Yibo Ma",
+        "Qianqian Zhang",
+        "Peng Liu",
+        "Tiancheng Zhao"
+      ],
+      "total_score": 0.7339246337631495,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.834,
+        "domain_fit": 0.9,
+        "other": 0.4924154458771648
+      },
+      "tags": [
+        "HF Daily ★3",
+        "GitHub",
+        "streaming video grounding"
+      ],
+      "tldr_zh": "TRACE揭示流式视频性能不应只看单一准确率。",
+      "detail_file": "agent-multimodal/2026-09-25/2609.30670.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.30670/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.30798",
+      "title": "Evaluating Real-Time Voice Agents: From Component Quality to Grounded Outcomes",
+      "title_zh": "评估实时语音代理：从组件质量到有依据的结果",
+      "authors": [
+        "Shivam Negi",
+        "Arpit Rawat",
+        "Rashi Jain"
+      ],
+      "total_score": 0.6786887430316666,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.7879999999999999,
+        "domain_fit": 0.95,
+        "other": 0.3542958101055549
+      },
+      "tags": [
+        "GitHub",
+        "realtime voice agent"
+      ],
+      "tldr_zh": "用时序、恢复与状态验证统一评估实时语音代理",
+      "detail_file": "agent-multimodal/2026-09-25/2609.30798.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.30798/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.31224",
+      "title": "Acoustic-to-Text KV Compression for Full-Duplex Speech Models",
+      "title_zh": "面向全双工语音模型的声学到文本 KV 压缩",
+      "authors": [
+        "Yejin Lee",
+        "Seungbeom Kim",
+        "Yongha Lee",
+        "Kyuhong Shim"
+      ],
+      "total_score": 0.6466843511206892,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.806,
+        "domain_fit": 0.88,
+        "other": 0.22961450373563028
+      },
+      "tags": [
+        "realtime voice agent"
+      ],
+      "tldr_zh": "用转录文本替代旧声学状态，KV缓存降低64.6%",
+      "detail_file": "agent-multimodal/2026-09-25/2609.31224.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.31224/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.30774",
+      "title": "Dialogue-Based Streaming Audio-Visual Target Speaker Extraction with Predictive Dialogue Information",
+      "title_zh": "基于预测性对话信息的对话式流式视听目标说话人提取",
+      "authors": [
+        "Shuhan Zhang",
+        "Wenxuan Wu",
+        "Haizhou Li"
+      ],
+      "total_score": 0.6285404004072219,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.7040000000000001,
+        "domain_fit": 0.72,
+        "other": 0.32446800135740583
+      },
+      "tags": [
+        "Project Page",
+        "low latency turn taking"
+      ],
+      "tldr_zh": "用LLM预测对话轮替，提升流式目标说话人提取",
+      "detail_file": "agent-multimodal/2026-09-25/2609.30774.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.30774/thumb.webp"
+    }
+  ]
+}
