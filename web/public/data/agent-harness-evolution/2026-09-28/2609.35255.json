@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2609.35255",
+  "title": "Towards Reliable AI Data Scientists: Data Agents with Workflow Harnesses",
+  "title_zh": "迈向可靠的 AI 数据科学家：配备 Workflow Harnesses 的 Data Agents",
+  "authors": [
+    "Huachi Zhou",
+    "Yujing Zhang",
+    "Jiahe Du",
+    "Jiacheng Cai",
+    "Zijin Hong",
+    "Chuang Zhou",
+    "Zheng Yuan",
+    "Qinggang Zhang",
+    "Qing Li",
+    "Xiao Huang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T14:19:30Z",
+  "abs_url": "https://arxiv.org/abs/2609.35255v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.35255",
+  "links": {
+    "github": "https://github.com/DEEP-PolyU/Awesome-Data-Agents.",
+    "project_page": null
+  },
+  "abstract_en": "Large language model agents are increasingly deployed for data-intensive work, yet reliable data analysis requires more than general-purpose reasoning and ad hoc tool augmentation. Data Agents, equipped with workflow harnesses, offer a promising paradigm for automating the end-to-end data science lifecycle. This paper examines Data Agents from a harness-centric perspective. First, we introduce a taxonomy of Data Agents and associated data environments, organizing the literature around five functional stages: perception, planning, execution, verification, and repair. Second, we analyze the key technical routes within each stage, identifying 15 distinct approaches ranging from data structure probing to data state reconstruction. Third, we identify four open reliability problems: inactive semantic calibration, missing clarification, missing experience transfer, and the missing verification-repair repository. These problems explain why silent failures can persist even when individual components function correctly, highlighting the need for rigorous workflow harnesses and shared reliability resources. Finally, we summarize the horizontal task families of Data Agents, examine their vertical application settings, and benchmarks for evaluation, while maintaining a companion repository at https://github.com/DEEP-PolyU/Awesome-Data-Agents.",
+  "abstract_zh": "随着 Large Language Model agents 被用于数据密集型任务，可靠的数据分析不仅需要通用推理能力和临时工具增强，还需要系统化的工作流支持。本文从 workflow harnesses 视角研究 Data Agents，提出涵盖感知（perception）、规划（planning）、执行（execution）、验证（verification）和修复（repair）五个阶段的分类体系，并梳理相关数据环境。作者进一步分析各阶段的关键技术路线，归纳出从数据结构探测到数据状态重建在内的 15 类方法。同时，论文指出四项开放的可靠性问题：语义校准不活跃、澄清机制缺失、经验迁移缺失，以及验证—修复资源库缺失。这些问题解释了为何即使单个组件运行正常，系统仍可能持续产生静默失败。论文强调需要严格的 workflow harnesses 和共享可靠性资源，并总结 Data Agents 的横向任务类型、纵向应用场景及评测基准，同时维护配套资源库 Awesome-Data-Agents。",
+  "key_points_zh": [
+    "提出以 workflow harnesses 为核心的 Data Agents 研究框架，覆盖感知、规划、执行、验证和修复五个功能阶段。",
+    "围绕五个阶段总结 15 类技术路线，包括数据结构探测、工作流执行、结果验证和数据状态重建等。",
+    "识别四项关键可靠性缺口：语义校准不活跃、缺少澄清、缺少经验迁移，以及缺少验证—修复资源库。",
+    "指出组件级正确并不等于工作流级可靠，静默失败可能在端到端流程中持续存在。",
+    "系统梳理 Data Agents 的横向任务、纵向应用与评测基准，并提供 Awesome-Data-Agents 资源库。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.67,
+    "novelty": 0.48,
+    "problem_significance": 0.75,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.47,
+    "lasting_value": 0.65,
+    "llm_avg": 0.606,
+    "comment": "This harness-centric survey organizes workflow reliability, verification, and repair issues for data agents, though it offers limited new technical mechanisms.",
+    "comment_zh": "该论文以Harness为中心梳理数据Agent的工作流可靠性、验证与修复问题，但新的技术机制较为有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.606,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/DEEP-PolyU/Awesome-Data-Agents.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35255/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35255/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.874
+    }
+  ]
+}

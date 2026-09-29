@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2609.35728",
+  "title": "FlowAct-R2: Beyond Talking Avatar via Streaming Multimodal References and Proactive Agent Planning",
+  "title_zh": "FlowAct-R2：通过流式多模态参考与主动式智能体规划，超越会说话的数字人",
+  "authors": [
+    "Ziyao Huang",
+    "Zhengkun Rong",
+    "Shiyang Qin",
+    "Shuang Liang",
+    "Wentao Hu",
+    "Yuxuan Luo",
+    "Yuan Zhang",
+    "Mingyuan Gao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T17:50:47Z",
+  "abs_url": "https://arxiv.org/abs/2609.35728v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.35728",
+  "links": {
+    "github": null,
+    "project_page": "https://bone-11.github.io/Flowact-R2"
+  },
+  "abstract_en": "We present FlowAct-R2, a framework for interactive humanoid video generation that combines continuous multimodal control with proactive agent planning. Our method consists of two coupled components. First, a Streaming Multimodal Reference Diffusion Transformer adapts the pretrained Seedance 2.0 Mini reference-to-video backbone to accept rolling action prompts, streaming audio, and dynamically updated image, audio, and video references. Video-driven rotary positional embeddings align reference chunks with the generation timeline, while reference-plus-image conditioning and partially noised historical motion frames preserve appearance and avoid accumulated drift. Second, a Proactive Interaction Agent separates pre-online planning from online scheduling and response: it prepares a persona, a long-horizon agenda, and reusable multimodal skills in advance, then autonomously schedules behaviors, responds to audience input, and handles interruptions during a live session. FlowAct-R2 supports real-time 720p generation and hour-scale streaming across entertainment streaming, live shopping, video chatting, and live vlogging.",
+  "abstract_zh": "本文提出 FlowAct-R2，一种用于交互式人形视频生成的框架，将连续多模态控制与主动式智能体规划相结合。系统由两个耦合组件构成：其一是流式多模态参考扩散 Transformer（Streaming Multimodal Reference Diffusion Transformer），在预训练的 Seedance 2.0 Mini reference-to-video backbone 基础上，接收滚动动作提示、流式音频，以及动态更新的图像、音频和视频参考。该组件通过视频驱动的旋转位置嵌入对齐参考片段与生成时间线，并结合参考加图像条件和部分加噪的历史运动帧，以保持外观一致性、降低长期生成中的累积漂移。其二是主动式交互智能体（Proactive Interaction Agent），将在线前规划与在线调度、响应过程分离，预先构建角色设定、长时程议程和可复用多模态技能，并在直播过程中自主安排行为、响应观众输入及处理打断。FlowAct-R2 支持实时 720p 视频生成和小时级连续流式运行，适用于娱乐直播、直播带货、视频聊天和直播 vlog 等场景。",
+  "key_points_zh": [
+    "提出 Streaming Multimodal Reference Diffusion Transformer，统一处理滚动动作提示、流式音频及动态多模态参考。",
+    "利用视频驱动旋转位置嵌入和历史运动帧条件，提升参考时序对齐能力并抑制长时间生成漂移。",
+    "设计 Proactive Interaction Agent，提前规划角色、长期议程和多模态技能，在线自主调度并响应打断。",
+    "系统支持实时 720p 生成与小时级流式运行，覆盖娱乐直播、直播带货、视频聊天和直播 vlog。",
+    "整体目标从被动生成会说话的数字人，扩展到具备持续互动和主动行为规划的虚拟人系统。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.87,
+    "problem_significance": 0.84,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.84,
+    "llm_avg": 0.85,
+    "comment": "FlowAct-R2 strongly fits realtime multimodal agency through streaming control, proactive planning, interruption handling, and sustained live interaction.",
+    "comment_zh": "FlowAct-R2通过流式多模态控制、主动规划、中断处理和持续直播交互展现了很强的实时智能体价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.5212808967678367,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.85,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://bone-11.github.io/Flowact-R2",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 20,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35728/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35728/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.954
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2609.34422",
+  "title": "Coding Agent Memory Post-training: Unlocking the Memory Potential of Pre-trained File Operations for Long-Horizon Tasks via Reinforcement Learning",
+  "title_zh": "代码智能体记忆后训练：通过强化学习释放预训练文件操作在长时程任务中的记忆潜力",
+  "authors": [
+    "Lirui Luo",
+    "Kelong Mao",
+    "Heming Xia",
+    "Rongqing Li",
+    "Xinwei Yang",
+    "Luyu Chen",
+    "Kieran Wong",
+    "Yudong Guo",
+    "Xinrui Wang",
+    "Jiayin Zhu",
+    "Simiu Gu",
+    "Sulong Xu",
+    "Cong Fang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T06:40:28Z",
+  "abs_url": "https://arxiv.org/abs/2609.34422v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.34422",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Language-model agents increasingly tackle long-horizon tasks whose interaction histories exceed the model's active context. Recent work has begun to use reinforcement learning to make memory control part of the policy, often relying on predefined memory tools within domain-specific training environments of relatively short horizons. This setup ties learned memory behavior to environment-specific interfaces that lie outside the base model's pre-training and must be learned from scratch, so even after post-training, agents struggle to use memory in long-horizon tasks. To address these limitations, we introduce Coding Agent Memory Gym (CAMG), a suite of long-horizon agentic-RL environments spanning Shop, Coding, DeepResearch, and AutoResearch. Alongside each environment's native task interface, CAMG provides executable shell access and an episode-persistent workspace, enabling agents to create, revise, search, and reuse files as memory throughout an episode. We also introduce CAMG-RL, which trains a single policy jointly across all four environments with fully asynchronous PPO, learning this file-based memory behavior directly from downstream task reward, and we train CAMG-RL-4B and CAMG-RL-9B from Qwen3.5 models of matching size. On SWE-bench Verified and MLE-bench Lite, CAMG-RL-4B and CAMG-RL-9B are competitive with Qwen3.5-35B-A3B and Qwen3.5-122B-A10B, respectively.",
+  "abstract_zh": "语言模型智能体日益用于解决交互历史超出模型有效上下文的长时程任务。近期研究开始借助强化学习，将记忆控制纳入策略，但通常依赖领域特定、时程较短的训练环境所提供的预定义记忆工具。这使得智能体学到的记忆行为绑定于基础模型预训练之外的环境专用接口，需要从零学习；因此，即使经过后训练，智能体仍难以在长时程任务中有效使用记忆。为解决这些问题，本文提出 Coding Agent Memory Gym（CAMG），一套涵盖 Shop、Coding、DeepResearch 和 AutoResearch 的长时程智能体强化学习环境。除各环境的原生任务接口外，CAMG 还提供可执行的 shell 访问和在单个 episode 内持续存在的工作区，使智能体能够通过创建、修改、搜索和复用文件，将文件作为贯穿任务过程的记忆。本文进一步提出 CAMG-RL，采用全异步 PPO 在四种环境上联合训练单一策略，仅依靠下游任务奖励学习基于文件的记忆行为，并基于对应规模的 Qwen3.5 模型训练 CAMG-RL-4B 和 CAMG-RL-9B。在 SWE-bench Verified 和 MLE-bench Lite 上，两者分别展现出可与 Qwen3.5-35B-A3B 和 Qwen3.5-122B-A10B 竞争的性能。",
+  "key_points_zh": [
+    "提出 CAMG，覆盖 Shop、Coding、DeepResearch 和 AutoResearch 四类长时程智能体任务。",
+    "利用模型预训练阶段已具备的 shell 与文件操作能力，将 episode 持久化工作区转化为外部记忆。",
+    "提出 CAMG-RL，通过全异步 PPO 在四种环境中联合训练单一策略，并直接从下游任务奖励学习记忆行为。",
+    "CAMG-RL 避免依赖环境专用的预定义记忆接口，支持动态创建、修改、搜索与复用记忆文件。",
+    "CAMG-RL-4B 与 CAMG-RL-9B 在 SWE-bench Verified 和 MLE-bench Lite 上分别可竞争于更大规模的 Qwen3.5-35B-A3B 与 Qwen3.5-122B-A10B。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.76,
+    "novelty": 0.8,
+    "problem_significance": 0.81,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.77,
+    "llm_avg": 0.776,
+    "comment": "A meaningful memory-training contribution that teaches agents to create and reuse persistent file-based state, but its centrality is partly intertwined with broad agent reinforcement learning and task performance.",
+    "comment_zh": "这是一项有意义的记忆训练工作，教会 Agent 创建和复用持久化文件状态，但其核心贡献部分仍与通用 Agent 强化学习和任务性能交织。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.776,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34422/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34422/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

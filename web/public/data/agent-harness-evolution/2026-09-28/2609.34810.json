@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.34810",
+  "title": "UniOPSD: Unifying Outcome and Hindsight Feedback for Agentic Reinforcement Learning",
+  "title_zh": "UniOPSD：统一面向结果与回溯反馈的智能体强化学习",
+  "authors": [
+    "Zenghuang Fu",
+    "Zhaoyang Li",
+    "Qiuyuan Ai",
+    "Xiaofeng Han",
+    "Zelong Zheng",
+    "Haoyu Wu",
+    "Tianyu Fu",
+    "Chenxu Zhao",
+    "Minghui Wu",
+    "Guannan He",
+    "Changwei Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T10:13:29Z",
+  "abs_url": "https://arxiv.org/abs/2609.34810v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.34810",
+  "links": {
+    "github": "https://github.com/Zenghuang-Fu/Uniopsd",
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement learning has become an effective approach to training language model agents, but sparse and delayed outcome rewards provide limited guidance for credit assignment across long interaction sequences. Recent work on on-policy self-distillation (OPSD) offers complementary supervision by evaluating a policy's sampled responses under privileged training-time context. However, our diagnostics show that positive average agreement between outcome and hindsight feedback coexists with substantial local disagreement, raising the question of how to allocate influence between them at each decision. We introduce UniOPSD (Unified On-Policy Self-Distillation), which unifies these feedback sources through adaptive local credit arbitration. UniOPSD constructs comparable credit estimates from environmental returns and successful-peer hindsight at shared interaction anchors. Historical agreement determines the global mixing level, while current signal availability and relative precision adjust each source's influence at individual decisions. The episode-level outcome contribution is retained, and bounded token modulation refines the fused step credit for policy optimization. With Qwen2.5-3B-Instruct and Qwen2.5-7B-Instruct, UniOPSD achieves ALFWorld success rates of $82.8\\%$ and $83.6\\%$, WebShop success rates of $75.0\\%$ and $82.0\\%$, and Search-QA aggregate accuracies of $45.3\\%$ and $49.8\\%$, respectively. On 3B WebShop, UniOPSD improves over SDAR by $7.0$ percentage points. Our code is available at https://github.com/Zenghuang-Fu/Uniopsd",
+  "abstract_zh": "语言模型智能体的强化学习通常依赖稀疏且延迟的结果奖励，难以为长交互序列提供精细的信用分配。On-policy self-distillation（OPSD）利用训练时特权上下文对策略采样结果进行评估，可提供回溯反馈，但结果反馈与回溯反馈在局部决策上仍可能存在明显分歧。本文提出 UniOPSD（Unified On-Policy Self-Distillation），通过自适应局部信用仲裁统一两类反馈：在共享交互锚点构造环境回报与成功样本回溯的可比信用估计，以历史一致性决定全局混合强度，并依据当前信号可用性与相对精度动态调整各决策点的反馈权重。同时保留回合级结果贡献，并通过有界 token 调制细化融合后的步级信用。在 Qwen2.5-3B-Instruct 和 Qwen2.5-7B-Instruct 上，UniOPSD 在 ALFWorld、WebShop 和 Search-QA 上分别取得 82.8%/83.6%、75.0%/82.0% 和 45.3%/49.8% 的成绩；在 3B WebShop 上较 SDAR 提升 7.0 个百分点。",
+  "key_points_zh": [
+    "指出结果奖励与回溯反馈虽平均一致，但在局部决策上存在显著冲突，需要动态分配影响力。",
+    "提出 UniOPSD，通过历史一致性确定全局混合比例，并结合信号可用性与相对精度进行局部信用仲裁。",
+    "在共享交互锚点对环境回报和成功样本回溯构造可比信用估计，并利用有界 token 调制优化步级信用。",
+    "在 ALFWorld、WebShop 和 Search-QA 上均取得较强表现；3B WebShop 相比 SDAR 提升 7.0 个百分点。",
+    "实验覆盖 Qwen2.5-3B-Instruct 与 Qwen2.5-7B-Instruct，验证了方法对不同模型规模的有效性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.78,
+    "llm_avg": 0.8,
+    "comment": "UniOPSD offers a well-motivated trajectory-level credit assignment method that adaptively combines environmental outcomes with hindsight feedback for agent RL.",
+    "comment_zh": "UniOPSD 提出了一种合理的轨迹信用分配方法，自适应融合环境结果与事后反馈以训练智能体强化学习策略。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Zenghuang-Fu/Uniopsd",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34810/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

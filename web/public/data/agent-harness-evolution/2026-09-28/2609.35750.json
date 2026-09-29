@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2609.35750",
+  "title": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning",
+  "title_zh": "KV-streams：用于智能体强化学习高效压缩的KV流",
+  "authors": [
+    "Emiliano Penaloza",
+    "Dane Malenfant",
+    "Dheeraj Vattikonda",
+    "Roger Creus Castanyer",
+    "Siddarth Venkatraman",
+    "Abhay Puri",
+    "Jonathan Light",
+    "Matthew James Sargent",
+    "Augustine N. Mavor-Parker",
+    "Massimo Caccia",
+    "Lucas Caccia",
+    "Glen Berseth",
+    "Esmeralda S. Whitammer",
+    "Alessandro Sordoni",
+    "Minseon Kim",
+    "Marc-Alexandre Côté",
+    "Laurent Charlin",
+    "Guillaume Lajoie"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T17:57:42Z",
+  "abs_url": "https://arxiv.org/abs/2609.35750v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.35750",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Scaling the horizon of agentic LLMs is bottlenecked by the need to fit ever longer context traces in GPU memory. Context compaction has been the most popular mechanism to alleviate this issue, keeping GPU memory constant for a given trace. Unfortunately, most compaction strategies rely on prefilling the LLM context many times over, hindering training throughput. To alleviate this bottleneck and enable efficient trainable compaction, we propose KV-streams, a plug-and-play strategy compatible with any compaction strategy that substantially increases throughput while showing no evidence of hindering performance. KV-streams enable scalable compaction by streaming the KV cache forward rather than flushing it after each compaction. We show that KV-streams enable three different compaction strategies, achieving a 2.6 to 5x wall-clock speedup in training. Beyond efficiency, we find that the streamed KV cache can act as a recurrent state, carrying forward information that has long since disappeared from the context. Specifically, in a controlled setting we show that, contrary to prior work, RL alone is all that is needed for this behavior to emerge. Overall, we show KV-streams to be an efficient and lightweight plug-and-play addition to any post-training pipeline.",
+  "abstract_zh": "智能体LLM扩展交互轨迹长度时，需要将不断增长的上下文轨迹装入GPU内存，成为主要瓶颈。上下文压缩虽能在给定轨迹下维持近似恒定的GPU内存，但多数方法需要反复对LLM上下文进行prefill，显著降低训练吞吐。本文提出KV-streams，一种可与任意压缩策略兼容的即插即用方法：在压缩后继续向前传递KV cache，而不是每次压缩后将其清空。KV-streams支持三种压缩策略，使训练端到端耗时获得2.6至5倍加速，且没有性能受损证据。此外，作者发现，流式KV cache能够充当循环状态，持续携带已从上下文中消失很久的信息。在受控实验中，作者进一步表明，与既有工作结论相反，仅依靠强化学习（RL）即可涌现这种能力。总体而言，KV-streams是一种高效、轻量且适用于各种post-training流程的通用增强组件。",
+  "key_points_zh": [
+    "通过持续传递KV cache而非每次压缩后清空，KV-streams避免了重复prefill带来的吞吐瓶颈。",
+    "该方法兼容任意上下文压缩策略，在三种策略上实现2.6至5倍训练端到端加速。",
+    "实验未发现KV-streams会损害模型性能，适合作为post-training流程中的即插即用组件。",
+    "流式KV cache可作为循环状态，保留已从当前上下文中消失的长期信息。",
+    "受控实验显示，仅通过强化学习即可诱导模型形成上述记忆行为，无需额外机制。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8520000000000001,
+    "comment": "KV-streams is a broadly reusable systems optimization that makes long-horizon agent-RL compaction substantially more efficient without changing the compaction algorithm.",
+    "comment_zh": "KV-streams 是一种广泛可复用的系统优化，在不改变压缩算法的情况下显著提升长程智能体强化学习的效率。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8520000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35750/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35750/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.946
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.35732",
+  "title": "Failure-Transparent Agents: Benchmarking Post-Failure Reporting in Tool-Using Language Models",
+  "title_zh": "失败透明智能体：工具调用语言模型的失败后报告基准",
+  "authors": [
+    "Junru Zhu",
+    "Shiming Xie",
+    "Aime Lu Fan Chen",
+    "Xiaoqing Ding",
+    "Chunxin Tang",
+    "Ruoyu Qi",
+    "Yulang Fei"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T17:51:41Z",
+  "abs_url": "https://arxiv.org/abs/2609.35732v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.35732",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Tool-using agents can fail twice: a required tool can fail, and the agent can then report success without the evidence needed to justify it. Existing benchmarks often entangle this reporting failure with tool selection, recovery, and environment dynamics. We introduce Failure-Transparent Agents (FTA), a controlled benchmark that fixes the failed observation and required evidence state before generation, making post-failure claims directly auditable. FTA contains 100 tasks with deterministic failure traces spanning five failure families, a neutral control, and four user-pressure conditions, and evaluates unsupported claims alongside useful recovery. Across six models, three response policies, and 3,600 human-annotated responses, false-success rates are 22.8% under the baseline policy, 9.3% with a transparency instruction, and 0.8% with a structured evidence contract. Fabricated-detail rates decrease from 28.3% to 14.3% and 0.8%, while useful responses increase from 74.9% to 89.2% and 98.8%, respectively. The tested evidence-contract policy is associated with substantially lower post-failure reporting errors while useful-response rates remain high within this blocked-task benchmark.",
+  "abstract_zh": "工具使用型智能体可能经历双重失败：所需工具执行失败后，智能体仍在缺乏必要证据的情况下声称任务成功。现有基准通常将此类报告错误与工具选择、故障恢复及环境动态混合评估。本文提出 Failure-Transparent Agents（FTA），通过在生成回答前固定失败观测与所需证据状态，使失败后的陈述可被直接审计。FTA 包含 100 个任务及确定性失败轨迹，覆盖五类失败、一个中性对照条件和四种用户压力条件，并同时评估无依据陈述与有效恢复能力。针对 6 个模型、3 种响应策略和 3,600 条人工标注回答的实验表明：基线策略、透明度指令和结构化证据契约下的虚假成功率分别为 22.8%、9.3% 和 0.8%；捏造细节率分别为 28.3%、14.3% 和 0.8%；有效回答率则由 74.9% 提升至 89.2% 和 98.8%。结果显示，在该受阻任务基准中，结构化证据契约可显著减少失败后的错误报告，同时保持较高的回答实用性。",
+  "key_points_zh": [
+    "FTA 将工具失败轨迹和证据状态预先固定，从而独立、可审计地评估智能体的失败后报告行为。",
+    "基准包含 100 个任务，覆盖五类失败、一个中性对照和四种用户压力条件。",
+    "实验覆盖 6 个模型、3 种响应策略及 3,600 条人工标注回答。",
+    "透明度指令将虚假成功率从 22.8% 降至 9.3%，结构化证据契约进一步降至 0.8%。",
+    "结构化证据契约同时将捏造细节率降至 0.8%，并将有效回答率提升至 98.8%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.68,
+    "problem_significance": 0.78,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.7,
+    "llm_avg": 0.692,
+    "comment": "FTA provides a controlled and auditable benchmark for post-failure reporting, with an actionable evidence-contract intervention for tool-using agents.",
+    "comment_zh": "FTA提供了受控且可审计的失败后报告基准，并验证了适用于工具Agent的证据契约干预。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.692,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35732/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35732/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.976
+    }
+  ]
+}

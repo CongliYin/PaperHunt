@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.34151",
+  "title": "Self-Evolving Agents via Likelihood-Guided Tool-Space Optimization",
+  "title_zh": "通过似然引导的工具空间优化实现自演化智能体",
+  "authors": [
+    "Xuanqi Zhang",
+    "Ruinan Jin",
+    "Running Yang",
+    "Yuxuan Zhang",
+    "Minghui Chen",
+    "Wenlong Deng",
+    "Xiaoxiao Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T02:32:05Z",
+  "abs_url": "https://arxiv.org/abs/2609.34151v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.34151",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Self-evolving agents can continually improve their behavior, while tools define the executable action space through which they interact with the environment. However, exposing the full tool library to model introduces substantial irrelevant context and can impair tool-use decisions. We study tool-space self-evolution, where each recurring task type maintains a persistent tool space which is constructed from accumulated output experience. We identify three limitations of existing methods: (1) output-unaware selection: they rely primarily on tool descriptions or model priors rather than observed tool outputs; (2) statelessness across request: they select tools independently for each request without consolidating prior output experience into persistent task-specific state; (3) inference cost: they repeatedly search, rank, or reason over candidate tools for subsequent requests of the same task. We address these limitations through output-aware tool scoring, persistent task-specific tool spaces, amortized tool selection, and reusable configurations across models. We introduce LOTS (Likelihood-Only Tool Scoring), which evolves an agent's tool space from accumulated output experience while keeping model parameters fixed. After each request, LOTS holds the model's generated answer and estimates each tool's contribution by measuring how much the answer likelihood changes when its observed output is removed. These contributions are aggregated within each recurring task to rank tools and update its persistent space. Across three benchmarks, LOTS improves task performance while substantially reducing tool context. More importantly, sequential experiments demonstrate that task-specific spaces persist and continue to improve over time, while cross-model experiments show that learned configurations transfer across different models.",
+  "abstract_zh": "本文研究工具空间自演化问题：针对重复出现的任务类型，智能体根据历史输出经验维护持久化、任务专属的工具空间。现有方法存在三项局限：主要依赖工具描述或模型先验，忽略实际工具输出；每次请求独立选取工具，无法积累任务状态；后续请求需要反复搜索、排序或推理候选工具，推理成本较高。为此，本文提出 LOTS（Likelihood-Only Tool Scoring），在冻结模型参数的前提下，通过输出感知的工具评分、持久化任务工具空间、摊销式工具选择和跨模型可复用配置实现工具空间演化。每次请求后，LOTS 保留模型生成的答案，并通过移除某工具观测输出后答案似然的变化，估计该工具对答案的贡献；随后在同一任务内聚合贡献、排序工具并更新持久化工具空间。在三个基准数据集上的实验表明，LOTS 在显著减少工具上下文的同时提升了任务性能。序列实验进一步显示，任务专属工具空间能够随时间持续改进；跨模型实验则证明，学习到的工具配置可以迁移到不同模型。",
+  "key_points_zh": [
+    "以工具输出而非仅工具描述或模型先验为依据，通过移除输出前后的答案似然变化衡量工具贡献。",
+    "为每类重复任务维护持久化工具空间，聚合历史经验，避免每次请求重新选择工具。",
+    "采用摊销式工具选择，减少候选工具搜索、排序和推理带来的推理成本与上下文负担。",
+    "LOTS在三个基准数据集上同时提升任务性能并显著压缩工具上下文。",
+    "任务专属工具配置可持续演化，并能在不同模型之间迁移复用。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.8,
+    "problem_significance": 0.76,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.72,
+    "llm_avg": 0.748,
+    "comment": "LOTS offers a practical tool-space evolution mechanism using output-grounded attribution, persistent task-specific configurations, and amortized selection.",
+    "comment_zh": "LOTS 利用基于输出的归因、持久化任务专属配置和摊销式选择，提出了实用的工具空间演化机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3037399110526186,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.748,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 6,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34151/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.977
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34151/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.829
+    }
+  ]
+}

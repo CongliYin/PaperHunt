@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2609.34973",
+  "title": "APEX-Voice: Can Voice Agents Complete Professional Workflows Through Full-Duplex Interaction",
+  "title_zh": "APEX-Voice：语音智能体能否通过全双工交互完成专业工作流？",
+  "authors": [
+    "Puneet Mathur",
+    "Dinesh Manocha"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T11:53:07Z",
+  "abs_url": "https://arxiv.org/abs/2609.34973v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.34973",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Full-duplex voice agents can now listen, speak, use tools, and act during spoken interactions, but fluent dialogue does not guarantee correct completion of delegated professional workflows. We introduce APEX-Voice, a benchmark of 120 interactive professional workflows spanning ten work archetypes such as form completion, corporate negotiation, coordination, consulting, and interviewing. Each workflow executes in a stateful Voice Workbench environment with task-specific knowledge, typed tools, gold-annotated final work artifact, authorization constraints, and a user simulation policy backed by validated, pre-compiled speech realizations. We evaluate both artifact field accuracy and end-to-end workflow success, which requires the correct terminal state, valid process, completed actions, and a valid final artifact. Across five frontier real-time voice agents-GPT-Live-1, Gemini-3.8-Live, Grok-Voice-Think-2.0, Step-Audio3, and GPT-realtime-2.1, none exceeds 25% Pass@1, and the best Reliable@3 is only 10.8%. Moreover, stateful coordination is the dominant failure point across systems, while success decreases further on workflows requiring greater knowledge retrieval and mid-speech corrections. Overall, APEX-Voice is the first benchmark for evaluating whether voice agents can translate conversational competence into dependable professional work.",
+  "abstract_zh": "全双工语音智能体如今能够在语音交互过程中同时进行聆听、表达、工具调用与操作执行，但流畅对话并不意味着它们可以正确完成受委托的专业工作流。本文提出 APEX-Voice，包含 120 个交互式专业工作流，覆盖表单填写、企业谈判、协同协调、咨询和面试等十类工作范式。每个工作流均运行于有状态的 Voice Workbench 环境中，配备任务专属知识、类型化工具、经过标准答案标注的最终工作成果、授权约束，以及由经过验证和预编译的语音表达支持的用户模拟策略。评测同时考察成果字段准确率和端到端工作流成功率；后者要求智能体达到正确的终止状态、遵循有效流程、完成规定操作，并生成有效的最终成果。对 GPT-Live-1、Gemini-3.8-Live、Grok-Voice-Think-2.0、Step-Audio3 和 GPT-realtime-2.1 五种前沿实时语音智能体的测试显示，所有系统的 Pass@1 均未超过 25%，最佳 Reliable@3 也仅为 10.8%。此外，有状态协同是各系统最主要的失败环节；当工作流需要更多知识检索或在说话过程中进行纠正时，成功率还会进一步下降。总体而言，APEX-Voice 是首个评估语音智能体能否将对话能力转化为可靠专业工作能力的基准。",
+  "key_points_zh": [
+    "APEX-Voice 收录 120 个交互式专业工作流，覆盖十类工作范式，包括表单填写、企业谈判、协调、咨询和面试。",
+    "Voice Workbench 提供有状态环境、任务知识、类型化工具、授权约束、标准成果标注及预编译语音用户模拟。",
+    "评测不仅关注最终成果的字段准确率，还要求终止状态、执行流程、操作行为和最终成果均有效。",
+    "五种前沿实时语音智能体的 Pass@1 均未超过 25%，最佳 Reliable@3 仅为 10.8%。",
+    "有状态协同是最主要的失败来源；知识检索需求增加及对话中的即时纠正会进一步降低成功率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.86,
+    "problem_significance": 0.96,
+    "potential_impact": 0.95,
+    "paradigm_shift": 0.81,
+    "lasting_value": 0.94,
+    "llm_avg": 0.9039999999999999,
+    "comment": "APEX-Voice provides an unusually comprehensive and reusable benchmark for stateful, tool-using voice agents executing realistic professional workflows.",
+    "comment_zh": "APEX-Voice为使用工具并执行真实专业流程的有状态语音智能体提供了全面且可复用的评测基准。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4278843194747642,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9039999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34973/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34973/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.965
+    }
+  ]
+}

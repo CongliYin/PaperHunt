@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2609.34385",
+  "title": "Just-In-Time Agent Memory with Runtime Agentic Research",
+  "title_zh": "基于运行时智能体研究的即时智能体记忆",
+  "authors": [
+    "Bingyu Yan",
+    "Chaofan Li",
+    "Hongjin Qian",
+    "Shuqi Lu",
+    "Chaozhuo Li",
+    "Zheng Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T06:01:09Z",
+  "abs_url": "https://arxiv.org/abs/2609.34385v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.34385",
+  "links": {
+    "github": "https://github.com/VectorSpaceLab/general-agentic-memory.",
+    "project_page": null
+  },
+  "abstract_en": "Memory is critical for AI agents. Many existing agent-memory systems follow an Ahead-of-Time (AOT) design, constructing memory before a specific request arrives. While this reduces online serving cost, such request-agnostic memory construction can discard fine-grained information that later becomes important. To address this limitation, we propose Just-In-Time Agent Memory (JAM), a trainable framework for query-conditioned context construction at runtime. A Memorizer preserves complete raw histories in a hierarchical page-store with compact navigational summaries, while a Researcher iteratively retrieves, inspects, and integrates evidence for each request. To train these memory-use behaviors, we introduce Memory-Gym, an evidence-grounded data synthesis pipeline covering nine task types across six domains, and optimize the Researcher through verified-trajectory supervised fine-tuning followed by Hint-guided Group Relative Policy Optimization. We demonstrate the effectiveness of JAM across a variety of benchmarks on agent memory and long-context processing, where it achieves stronger task performance than AOT-style memory systems while remaining substantially more efficient than prior trained agentic memory approaches. To support reproducibility and future research, we release our anonymized source code at https://github.com/VectorSpaceLab/general-agentic-memory.",
+  "abstract_zh": "记忆对 AI Agent 至关重要。现有许多智能体记忆系统采用 Ahead-of-Time（AOT，预先构建）范式，即在具体请求到达前建立记忆。该设计虽能降低在线服务成本，但与请求无关的记忆构建可能丢弃后续任务所需的细粒度信息。为解决这一问题，本文提出 Just-In-Time Agent Memory（JAM），一个在运行时根据查询动态构建上下文的可训练框架。JAM 中的 Memorizer 使用带有紧凑导航摘要的分层页面存储，保留完整原始历史；Researcher 则针对每个请求迭代地检索、检查并整合证据。为训练上述记忆使用行为，作者进一步提出 Memory-Gym，这是一套基于证据的数据合成流程，涵盖六个领域中的九类任务。Researcher 首先通过经过验证的轨迹进行监督微调，随后采用 Hint-guided Group Relative Policy Optimization 优化。实验表明，在多项智能体记忆与长上下文处理基准上，JAM 的任务性能优于 AOT 式记忆系统，同时相比以往经过训练的智能体式记忆方法具有更高效率。作者还公开了匿名源代码，以支持结果复现与后续研究。",
+  "key_points_zh": [
+    "提出 Just-In-Time Agent Memory（JAM），将静态的 AOT 记忆构建改为查询条件化的运行时上下文构建。",
+    "Memorizer 通过分层页面存储保留完整原始历史，并利用紧凑导航摘要支持高效定位，减少细粒度信息丢失。",
+    "Researcher 针对当前请求迭代执行证据检索、检查与整合，以智能体式研究过程生成任务相关上下文。",
+    "提出 Memory-Gym 数据合成流程，覆盖六个领域、九类任务，并结合 verified-trajectory supervised fine-tuning 与 Hint-guided Group Relative Policy Optimization 训练 Researcher。",
+    "在智能体记忆和长上下文基准上，JAM 优于 AOT 式记忆系统，且比既有可训练智能体记忆方法更高效。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.9,
+    "problem_significance": 0.92,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.91,
+    "llm_avg": 0.9,
+    "comment": "A strong and reusable Agent-memory framework that combines raw-history preservation, query-conditioned runtime research, trainable memory use, and a broad synthesis benchmark.",
+    "comment_zh": "这是一项强且可复用的 Agent Memory 工作，结合了原始历史保留、查询条件化运行时研究、可训练记忆使用和广泛的数据合成基准。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.9,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/VectorSpaceLab/general-agentic-memory.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34385/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34385/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.96
+    }
+  ]
+}

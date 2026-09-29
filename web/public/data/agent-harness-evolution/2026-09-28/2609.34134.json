@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2609.34134",
+  "title": "StateGuard: Analytical-State Management with Validity-Aware Intervention for Long-Horizon Data Agents",
+  "title_zh": "StateGuard：面向长程数据智能体的分析状态管理与有效性感知干预",
+  "authors": [
+    "Wenle Liao",
+    "Zhao Wang",
+    "Jingchao Zhang",
+    "Jiajie Jin",
+    "Yimeng Xu",
+    "Zhicheng Dou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T02:14:20Z",
+  "abs_url": "https://arxiv.org/abs/2609.34134v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.34134",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM-based agents have shown strong capabilities in automated data analysis and are increasingly moving toward long-horizon, multi-stage analytical workflows. However, as the analytical process evolves, constraints, variables, and conclusions remain implicitly embedded in interaction histories, making it difficult for agents to track which analytical artifacts remain valid over increasingly long horizons and changing dependencies. Consequently, stale artifacts may be silently inherited, propagating errors to downstream stages. To address this challenge, we propose StateGuard, an analytical-state validity management framework for long-horizon data agents. StateGuard externalizes evolving analytical progress into a state graph containing constraints, versioned variables, intermediate conclusions, and cross-state relations, treating each state as an executable, verifiable, and traceable object rather than textual memory alone. StateGuard maintains state validity through evidence-grounded verification and hierarchical intervention. To equip StateGuard with these capabilities, we first introduce Manager-Oriented Counterfactual Supervision, which constructs 3K state-centric trajectories through counterfactual runtime synthesis to fine-tune StateGuard for state maintenance, verification, and repair. We then apply Validity-Guided Policy Optimization, using runtime validity evidence to provide fine-grained learning signals for protocol correctness, state grounding, and intervention quality. Experiments on three diverse long-horizon data-analysis benchmarks show that StateGuard consistently improves data-agent performance while reducing dependency-induced downstream error propagation, demonstrating the advantages of explicit analytical-state management for reliable long-horizon data analysis.",
+  "abstract_zh": "针对基于大语言模型的数据智能体在长程、多阶段分析中难以追踪分析产物有效性的问题，论文提出 StateGuard。该框架将不断演化的分析进展外化为状态图，显式管理约束、带版本变量、中间结论及跨状态关系，并将每个状态建模为可执行、可验证、可追溯的对象。StateGuard 通过基于证据的验证与分层干预维护状态有效性，避免过时分析产物被静默继承并向下游传播错误。为训练相关能力，论文提出 Manager-Oriented Counterfactual Supervision，通过反事实运行时合成构造 3K 条状态中心轨迹；同时提出 Validity-Guided Policy Optimization，利用运行时有效性证据对协议正确性、状态依据性和干预质量提供细粒度学习信号。在三个长程数据分析基准上的实验表明，StateGuard 能稳定提升数据智能体性能，并减少由依赖关系引发的下游错误传播。",
+  "key_points_zh": [
+    "将约束、版本化变量、中间结论和跨状态关系组织为分析状态图，替代仅依赖交互历史的隐式记忆。",
+    "通过证据驱动的有效性验证与分层干预，识别、修复并阻断过时状态向下游传播。",
+    "提出 Manager-Oriented Counterfactual Supervision，利用反事实运行时合成构造 3K 条状态中心训练轨迹。",
+    "提出 Validity-Guided Policy Optimization，以运行时有效性证据优化状态维护、验证和干预策略。",
+    "在三个长程数据分析基准上提升智能体表现，并降低依赖诱发的下游错误传播。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.86,
+    "problem_significance": 0.88,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.8,
+    "llm_avg": 0.8240000000000001,
+    "comment": "StateGuard treats evolving analytical workflow state as executable and verifiable infrastructure, although its evaluation is centered on a narrow data-analysis domain.",
+    "comment_zh": "StateGuard 将演化中的分析工作流状态建模为可执行、可验证的基础设施，但评估主要集中于较窄的数据分析领域。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.6440294242813257,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8240000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 30,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34134/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34134/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.938
+    }
+  ]
+}

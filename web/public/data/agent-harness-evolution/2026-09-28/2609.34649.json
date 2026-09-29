@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.34649",
+  "title": "Beyond Skill Evolution: Self-Evolving Context Management Policies for Long-Horizon Agent Harnesses",
+  "title_zh": "超越技能演化：面向长时程智能体框架的自演化上下文管理策略",
+  "authors": [
+    "Weiyuan Li",
+    "Jinghan Xu",
+    "Aili Chen",
+    "Xintao Wang",
+    "Shuang Liang",
+    "Jiaqing Liang",
+    "Deqing Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T08:57:52Z",
+  "abs_url": "https://arxiv.org/abs/2609.34649v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.34649",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Harness evolution improves LLM agents by learning from execution trajectories, but existing experience- and skill-based methods are less effective on long-horizon tasks. As interactions grow, useful evidence can be buried by redundant or outdated context, making context management itself a key bottleneck. We introduce ContextEvo, a framework that learns a context policy from long-horizon trajectories. ContextEvo reconstructs the model-visible context at key decision points, identifies context-related failures, and applies targeted policy updates. Starting from the open-source Pi-agent harness, ContextEvo improves performance across three long-horizon task benchmarks, achieving results comparable to or better than several prominent agent harnesses, including Codex, OpenCode, and OpenClaw. Additional analyses show that fixed or locally evolved context strategies can fall short under long-horizon information pressure, while our methods adapt to the information demands of each environment.",
+  "abstract_zh": "现有智能体框架演化方法主要通过经验或技能学习来提升 LLM agents，但在长时程任务中效果有限。随着交互持续推进，有用证据可能被冗余或过时上下文掩盖，使上下文管理成为关键瓶颈。论文提出 ContextEvo：从长时程执行轨迹中学习上下文策略，在关键决策点重建模型可见上下文，识别与上下文相关的失败，并进行针对性的策略更新。以开源 Pi-agent harness 为起点，ContextEvo 在三个长时程任务基准上提升了性能，达到或超过 Codex、OpenCode 和 OpenClaw 等代表性 agent harness。进一步分析表明，固定上下文策略或局部演化策略难以应对长时程信息压力，而 ContextEvo 能够根据不同环境的信息需求进行自适应调整。",
+  "key_points_zh": [
+    "核心问题不是单纯积累技能，而是长时程交互中的上下文冗余、过时信息与关键信息埋没。",
+    "ContextEvo在关键决策点重建模型可见上下文，定位上下文导致的失败，并针对性更新上下文管理策略。",
+    "该方法从长时程执行轨迹中学习，能够根据不同环境的信息压力与需求自适应调整。",
+    "基于 Pi-agent harness，ContextEvo 在三个长时程任务基准上取得显著提升，性能可媲美或超过 Codex、OpenCode 和 OpenClaw。",
+    "实验表明，固定策略和局部演化策略在长时程场景下存在局限，上下文管理本身应成为 agent harness 演化的核心对象。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.86,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8720000000000001,
+    "comment": "ContextEvo makes context assembly an explicitly learnable harness policy and closes the loop from long-horizon failures to execution-time context updates.",
+    "comment_zh": "ContextEvo 将上下文组装变为可学习的 harness 策略，并建立了从长程失败到运行时上下文更新的闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8720000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34649/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34649/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

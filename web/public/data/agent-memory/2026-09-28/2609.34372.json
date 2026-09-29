@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.34372",
+  "title": "PersMem: Internalizing Personality into Dual-Pathway Memory for LLM Agents",
+  "title_zh": "PersMem：将人格内化到大语言模型智能体的双通路记忆中",
+  "authors": [
+    "Hanzhong Zhang",
+    "Ziwei Xiang",
+    "Weicheng Xie",
+    "Shizhe Liu",
+    "Siyang Song"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T05:46:20Z",
+  "abs_url": "https://arxiv.org/abs/2609.34372v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.34372",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The profile of a role-playing agent usually depends on the pre-defined personality in a system prompt, whereas its memory processing pipeline, including prioritisation of stored memories and subsequent retrieval, remains independent of this personality. This separation causes the agent's memory processing to be inconsistent with the pre-defined personality, and makes it difficult to validate whether agent behaviours follow this personality. In this paper, we propose Personality-Integrated Memory (PersMem), which integrates personality into the agent's memory processing pipeline, making it consistently personality-dependent. PersMem processes memory using four steps, where the personality is mapped to operation-specific parameters controlling: (i) affective appraisal annotating emotion states of the user input; (ii) retention of previously stored memories along with the current input; (iii) passive affect-driven memory retrieval exploring memories similar to user input in semantics and personality-guided emotions; and (iv) active goal-driven memory retrieval that refines and selects passively retrieved memories for the reply. Consequently, consistency with the pre-defined personality can be examined by inspecting memory-processing traces during human-agent interactions. We evaluate these personality-dependent differences in attachment and Big Five settings. PersMem exceeds the chance baseline for four-way attachment classification by 23.1 percentage points. In Big Five dialogue comparisons, PersMem achieves 67.5% accuracy, 6.7 percentage points above a baseline using uniformly sampled memories. On CoSER, PersMem achieves an average score of 66.13, with scores of 69.33 for Character Fidelity and 84.33 for Storyline Quality. Together, these results show that PersMem produces distinguishable personality-related memory-processing patterns.",
+  "abstract_zh": "角色扮演智能体通常仅在系统提示词中预定义人格，而记忆优先级与检索流程却与人格无关，导致记忆处理和行为表现不一致，也难以验证智能体是否遵循既定人格。本文提出 Personality-Integrated Memory（PersMem），将人格整合进记忆处理流水线，使其始终受人格影响。PersMem包含四个步骤：将人格映射为操作参数，对用户输入进行情感评估；结合当前输入保留已有记忆；通过语义相似性与人格引导的情绪进行被动情感驱动检索；再通过主动目标驱动检索，对候选记忆进行细化和筛选以生成回复。该设计允许研究者通过检查人机交互中的记忆处理轨迹，验证行为与预设人格的一致性。在依恋风格和 Big Five 人格设置上的实验表明，PersMem 在四分类依恋风格识别中较随机基线高出 23.1 个百分点；在 Big Five 对话比较中达到 67.5% 准确率，较均匀采样记忆的基线高 6.7 个百分点；在 CoSER 上平均得分为 66.13，其中 Character Fidelity 得分 69.33、Storyline Quality 得分 84.33。结果表明，PersMem能够产生可区分且与人格相关的记忆处理模式。",
+  "key_points_zh": [
+    "现有角色扮演智能体的人格通常只存在于系统提示词中，记忆存储与检索流程未受人格约束，容易造成行为不一致。",
+    "PersMem将人格映射为记忆操作参数，构建包含情感评估、记忆保留、被动检索和主动检索的四步处理流程。",
+    "被动检索同时利用输入语义相似性与人格引导的情绪信息，主动检索则根据回复目标进一步筛选记忆。",
+    "PersMem在依恋风格四分类中较随机基线提升23.1个百分点，在 Big Five 对话比较中达到67.5%准确率。",
+    "在 CoSER 上，PersMem平均得分为66.13，并取得69.33的 Character Fidelity和84.33的 Storyline Quality，显示出可解释且可区分的人格相关记忆模式。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.84,
+    "novelty": 0.79,
+    "problem_significance": 0.68,
+    "potential_impact": 0.65,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.7,
+    "llm_avg": 0.6960000000000001,
+    "comment": "A legitimate Agent-memory contribution that makes appraisal, retention, and retrieval personality-conditioned, though its role-playing focus limits generality and impact.",
+    "comment_zh": "这是一项合格的 Agent Memory 工作，将评估、保留和检索实现人格条件化，但其角色扮演场景限制了通用性和影响力。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5610900657968689,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.6960000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 18,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34372/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34372/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.974
+    }
+  ]
+}

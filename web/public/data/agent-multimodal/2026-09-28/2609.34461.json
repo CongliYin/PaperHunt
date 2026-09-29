@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.34461",
+  "title": "CharDuplex: Building Character-Consistent Full-Duplex Spoken Dialogue Models",
+  "title_zh": "CharDuplex：构建角色一致的全双工语音对话模型",
+  "authors": [
+    "Donghang Wu",
+    "Yisi Liu",
+    "Chen Chen",
+    "Hexin Liu",
+    "Eng Siong Chng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T07:18:57Z",
+  "abs_url": "https://arxiv.org/abs/2609.34461v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.34461",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Full-duplex speech models are moving voice interaction beyond conventional turn-taking, yet natural conversation is shaped not only by when an agent speaks, but also by how it behaves as a conversational character. We present CharDuplex, a character-driven full-duplex speech model that combines real-time spoken interaction with persona-conditioned behavior. We first adapt GLM-4-Voice to an always-on dual-stream architecture and train the model for full-duplex conversation. Then a fully automated pipeline constructs character-conditioned dialogue data from open-source character descriptions for character-conditioned supervised fine-tuning. The model is further refined with the proposed FDGym, where an LLM-simulated user dynamically interacts with the model, enabling reinforcement learning over evolving multi-turn interactions. On SpeechRole-Eval, CharDuplex achieves the highest average score among the evaluated open-source models, while remaining competitive with closed-source systems. It also demonstrates competitive general speech intelligence and strong full-duplex interaction capabilities. CharDuplex demonstrates a practical training recipe for building full-duplex voice assistants that are not only interactive, but also character-consistent.",
+  "abstract_zh": "全双工语音模型正在推动语音交互突破传统的轮流对话模式，但自然对话不仅取决于智能体何时说话，也取决于其如何以特定角色进行交流。本文提出 CharDuplex，一种角色驱动的全双工语音模型，将实时口语交互与角色设定条件行为相结合。研究首先将 GLM-4-Voice 改造为持续运行的双流架构，并针对全双工对话进行训练；随后设计全自动数据构建流水线，基于开源角色描述生成角色条件对话数据，用于监督微调。模型还通过所提出的 FDGym 进一步优化：由 LLM 模拟用户与模型动态交互，从而在持续演化的多轮对话中开展强化学习。在 SpeechRole-Eval 上，CharDuplex 在参评开源模型中取得最高平均分，并展现出与闭源系统相当的竞争力。此外，该模型还具备有竞争力的通用语音智能和较强的全双工交互能力。CharDuplex 为构建兼具实时交互能力与角色一致性的全双工语音助手提供了一套实用训练方案。",
+  "key_points_zh": [
+    "将 GLM-4-Voice 改造为持续在线的双流架构，使模型能够支持实时、可重叠的全双工语音交互。",
+    "通过全自动流水线从开源角色描述中构建角色条件对话数据，并用于角色条件监督微调。",
+    "提出 FDGym，由 LLM 模拟用户开展动态多轮交互，在不断演化的对话过程中进行强化学习。",
+    "在 SpeechRole-Eval 上取得参评开源模型最高平均分，并保持与闭源系统相当的竞争力。",
+    "除角色一致性外，CharDuplex 还展现出较强的通用语音智能与全双工交互能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.78,
+    "problem_significance": 0.81,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.69,
+    "lasting_value": 0.82,
+    "llm_avg": 0.788,
+    "comment": "A practical full-duplex voice-agent training recipe whose interactive simulator and reinforcement-learning infrastructure are especially reusable.",
+    "comment_zh": "这是一套实用的全双工语音智能体训练方案，其中交互模拟器和强化学习基础设施具有较高复用价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.788,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34461/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34461/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

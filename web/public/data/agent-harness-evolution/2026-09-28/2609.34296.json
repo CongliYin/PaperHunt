@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2609.34296",
+  "title": "Dr.Credit: Rubric-Grounded Process Credit Assignment for Deep Research Agents",
+  "title_zh": "Dr.Credit：基于评分标准的深度研究智能体过程信用分配",
+  "authors": [
+    "Yingjian Zhu",
+    "Zhenyi Wang",
+    "Jiaxin Guo",
+    "Kun Ding",
+    "Ying Wang",
+    "Shen Huang",
+    "Xunjie Zhu",
+    "Pengjun Xie",
+    "Shiming Xiang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T04:43:12Z",
+  "abs_url": "https://arxiv.org/abs/2609.34296v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.34296",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Rubric-based tasks are increasingly addressed through reinforcement learning (RL), with rubric scores used as training rewards. However, these rewards typically supervise final answers without distinguishing the contributions of intermediate decisions. Many existing credit assignment methods rely on ground-truth answers to define process rewards, limiting their applicability to open-ended tasks without canonical solutions. To address this limitation, the proposed rubric-grounded credit uses task requirements as a shared reference for final answer evaluation and process supervision. The information returned by tools is assessed for the additional support it provides toward satisfying each rubric relative to that rubric's history of accepted support. By referencing these histories, credit distinguishes new support from evidence already present in the trajectory while recognizing partial support for each rubric. Dr.Credit uses rubric-grounded credit to supervise intermediate tool turns in an RL framework for deep research agents. The resulting process advantages are combined with GRPO outcome advantages to guide research decisions while retaining supervision of final-report quality. Evaluations on four in-domain and out-of-domain benchmarks show that Dr.Credit outperforms the evaluated open deep research baselines on every primary metric and submetric. Meanwhile, with an 8B-parameter backbone, the trained agent achieves average performance competitive with the evaluated frontier proprietary models. Further analyses suggest more efficient evidence acquisition and higher-quality reports under limited research-turn budgets, motivating the extension of rubric-grounded process supervision to a broader range of rubric-based tasks.",
+  "abstract_zh": "针对强化学习中仅以最终答案评分作为奖励、难以区分中间决策贡献的问题，Dr.Credit提出基于任务评分标准（rubric）的过程信用分配方法。该方法将任务要求同时作为最终答案评估和过程监督的共享依据，并根据工具返回信息相对于各评分标准历史已接受证据的新增支持程度进行信用分配，从而区分新证据与轨迹中已有证据，同时刻画对不同评分标准的部分支持。Dr.Credit在深度研究智能体的强化学习框架中监督中间工具交互，并将过程优势与GRPO结果优势结合，以同时优化研究决策和最终报告质量。在四个域内与域外基准上的实验表明，Dr.Credit在所有主要指标及子指标上均优于对比的开放式深度研究基线。基于8B参数骨干模型训练的智能体，其平均性能可与所评估的前沿闭源模型竞争。进一步分析显示，该方法能够在有限研究轮次预算下更高效地获取证据并生成更高质量的报告，说明基于评分标准的过程监督具有推广到更广泛评分标准任务的潜力。",
+  "key_points_zh": [
+    "以任务评分标准作为最终答案评估与过程信用分配的统一参照，无需依赖标准答案，适用于开放式任务。",
+    "比较工具返回信息与各评分标准历史已接受证据，识别新增支持、避免重复计分，并支持部分满足不同标准的情况。",
+    "将rubric-grounded process advantages与GRPO outcome advantages结合，联合优化中间研究决策和最终报告质量。",
+    "在四个域内与域外基准上全面优于评估的开放式深度研究基线；8B模型平均性能接近所评估的前沿闭源模型。",
+    "在有限研究轮次下，Dr.Credit能够更高效地获取证据并生成更高质量的研究报告。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.87,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.89,
+    "llm_avg": 0.884,
+    "comment": "This is strong search-Agent RL work that introduces rubric-grounded process credit for tool-use trajectories without requiring canonical answers.",
+    "comment_zh": "这项工作面向搜索Agent强化学习，引入了无需标准答案的基于评分标准的工具轨迹过程信用分配。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.884,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34296/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34296/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

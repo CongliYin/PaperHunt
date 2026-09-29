@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.34397",
+  "title": "SkillFocus: Evolving Agent Skills via Capability Decomposition",
+  "title_zh": "SkillFocus：通过能力分解实现智能体技能演化",
+  "authors": [
+    "Ning Wang",
+    "Zhiren Gong",
+    "Bingdong Li",
+    "Peng Yang",
+    "Aimin Zhou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T06:11:08Z",
+  "abs_url": "https://arxiv.org/abs/2609.34397v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.34397",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent skill evolution seeks to improve reusable procedural guidance for large language model (LLM) agents through iterative revision. Existing methods base each revision mainly on execution trajectories or feedback, leaving recurring behavioral requirements across tasks implicit and tying revision to the behavior of the current skill. We introduce SkillFocus, which decomposes recurring task requirements into a capability space that remains fixed as the skill evolves, separating what tasks require from how the current skill behaves. SkillFocus maps current task outcomes to this space to identify the capability that leaves the most tasks unresolved, then uses that capability to determine what to revise and which evidence to use. Across four benchmarks spanning heterogeneous tasks, SkillFocus achieves the best held-out accuracy on all four, outperforming the strongest competing result by 5.7 points on average while using 24\\% fewer evolution tokens on average than the closest iterative baseline. Controlled studies further show that capabilities derived from recurring task requirements outperform task-semantic and execution-derived alternatives, while randomizing task--capability assignments reduces final accuracy by up to 20.2 points. Matching evidence to the selected capability increases candidate gain by 4.4 points under prioritized revision.",
+  "abstract_zh": "智能体技能演化旨在通过迭代修订，改进面向大语言模型（LLM）智能体的可复用流程指导。现有方法主要依据执行轨迹或反馈进行每轮修订，未显式建模不同任务中反复出现的行为要求，并使修订过程受当前技能行为的限制。本文提出 SkillFocus，将重复出现的任务要求分解为一个在技能演化过程中保持固定的能力空间，从而区分“任务需要什么”与“当前技能如何行动”。SkillFocus 将当前任务结果映射到该空间，识别导致最多任务尚未解决的能力，并以此决定修订内容及所采用的证据。在涵盖异构任务的四个基准上，SkillFocus 均取得最佳留出集准确率，平均比最强对比结果高 5.7 个百分点；与最接近的迭代基线相比，平均减少 24% 的演化 token。受控实验表明，基于重复任务要求构建的能力优于基于任务语义或执行过程构建的替代方案；随机打乱任务与能力的对应关系会使最终准确率最多下降 20.2 个百分点。在优先修订设定下，将证据与所选能力匹配可使候选技能的性能增益提高 4.4 个百分点。",
+  "key_points_zh": [
+    "提出 SkillFocus，通过能力分解显式建模跨任务反复出现的行为要求。",
+    "构建随技能演化保持固定的能力空间，解耦任务需求与当前技能行为。",
+    "优先修订导致最多任务未解决的能力，并选择与该能力匹配的证据。",
+    "在四个异构任务基准上均获最佳留出集准确率，平均领先最强结果 5.7 个百分点。",
+    "相比最接近的迭代基线，平均减少 24% 的演化 token；消融实验验证了任务—能力映射和证据匹配的重要性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.84,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.84,
+    "llm_avg": 0.828,
+    "comment": "SkillFocus provides a reusable capability-decomposition loop that focuses skill revision on persistent unmet requirements across tasks.",
+    "comment_zh": "SkillFocus 提供了可复用的能力分解闭环，使技能修订聚焦于跨任务持续未满足的需求。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.828,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34397/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34397/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.316
+    }
+  ]
+}

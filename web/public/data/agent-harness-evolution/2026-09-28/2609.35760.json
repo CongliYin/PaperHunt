@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2609.35760",
+  "title": "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
+  "title_zh": "TokenCast：预测 LLM Agent 执行期间的 Token 消耗",
+  "authors": [
+    "Chaoqian Ouyang",
+    "Ling Yue",
+    "Libin Zheng",
+    "Huanghui Guo",
+    "Shengxiang Xu",
+    "YiShu Wang",
+    "Ran Li",
+    "Jian Yin",
+    "Shaowu Pan",
+    "Shimin Di"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T17:59:09Z",
+  "abs_url": "https://arxiv.org/abs/2609.35760v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.35760",
+  "links": {
+    "github": "https://github.com/DEFENSE-SEU/TokenCast.",
+    "project_page": null
+  },
+  "abstract_en": "When a large language model (LLM) agent executes the same task, token consumption can vary by over an order of magnitude across runs. The agent chooses its next steps based on tool feedback and intermediate results, while the growing context steadily inflates the input size of every subsequent call. The total consumption of a task is therefore hard to predict before execution and the prediction must be revised as the run unfolds. In this paper, we propose TokenCast, which learns a composable cost representation for each execution segment, recording its own consumption and the context growth it introduces. Composing adjacent segments yields a cumulative estimate that captures the extra input cost incurred when context from earlier segments is re-read by every later call. As execution unfolds, newly observed evidence refreshes the forecast, requiring no additional LLM calls and incurring a mean cumulative prediction time of 32.8 ms per run on SWE-bench Verified. Across 4 task suites and 6 agent models, TokenCast's mean absolute error reduction against the strongest comparator averages 14.5% over 96 evaluated combinations. In offline budget-control replay, TokenCast uses 21.3% fewer tokens on average than a fixed-budget policy at matched trace completion. The code is available at https://github.com/DEFENSE-SEU/TokenCast.",
+  "abstract_zh": "在执行相同任务时，LLM Agent 的 Token 消耗可能因工具反馈、中间结果和执行路径差异而相差一个数量级以上。随着上下文不断增长，后续每次调用都会重复读取此前内容，使任务总消耗难以在执行前准确预测，并需要随运行进展持续更新。本文提出 TokenCast，为每个执行片段学习一种可组合的成本表示，同时记录片段自身的消耗及其引入的上下文增长。通过组合相邻片段，TokenCast 能估计累计成本，并显式捕捉早期上下文在后续调用中被重复读取所产生的额外输入开销。执行过程中，TokenCast 利用新观测证据刷新预测，无需额外调用 LLM。在 SWE-bench Verified 上，其每次运行的平均累计预测时间为 32.8 ms；在 4 个任务套件和 6 个 Agent 模型的 96 组评测中，相比最强对比方法，平均绝对误差平均降低 14.5%。在离线预算控制回放中，在任务轨迹完成率相当的条件下，TokenCast 平均比固定预算策略少使用 21.3% 的 Token。代码已开源于 https://github.com/DEFENSE-SEU/TokenCast。",
+  "key_points_zh": [
+    "将每个执行片段表示为可组合成本，联合建模自身Token消耗与上下文增长。",
+    "通过组合片段估计累计成本，显式计入历史上下文在后续调用中的重复读取开销。",
+    "执行过程中基于新观测动态更新预测，无需额外LLM调用；SWE-bench Verified上的平均预测耗时仅32.8 ms。",
+    "覆盖4个任务套件、6个Agent模型的96组实验中，相比最强基线平均绝对误差降低14.5%。",
+    "在匹配轨迹完成率的离线预算控制回放中，平均比固定预算策略节省21.3%的Token。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.87,
+    "novelty": 0.8,
+    "problem_significance": 0.82,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.78,
+    "llm_avg": 0.772,
+    "comment": "TokenCast provides a lightweight, execution-aware cost forecasting and budget-control primitive for coding-agent harnesses.",
+    "comment_zh": "TokenCast 为编码智能体 harness 提供了轻量、感知执行过程的成本预测与预算控制基础组件。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.772,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/DEFENSE-SEU/TokenCast.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35760/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35760/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

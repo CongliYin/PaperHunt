@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.34661",
+  "title": "Codoku: Renewable Program-Reasoning Challenges for Frontier Coding Agents",
+  "title_zh": "Codoku：面向前沿编码智能体的可持续程序推理挑战",
+  "authors": [
+    "Cong Li",
+    "Hao Sun",
+    "Zenan Li",
+    "Zhendong Su"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T09:01:56Z",
+  "abs_url": "https://arxiv.org/abs/2609.34661v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.34661",
+  "links": {
+    "github": "https://github.com/connglli/Codoku.",
+    "project_page": null
+  },
+  "abstract_en": "Existing program-reasoning benchmarks ask large language models to predict a program's behavior on a given input. Coding agents break two assumptions on which these benchmarks rest: an agent can recover the answer by executing the program instead of reasoning about it, and fixed task sets drawn from existing programs are increasingly exposed to contamination, yet costly to renew. We introduce Codoku (code sudoku), a renewable benchmark in which a solver fills typed cells in a partial program to satisfy global static and dynamic constraints, such as a prescribed control-flow graph and execution path. Because a partial program cannot be executed and valid fillings are sparse in an exponentially large space of interdependent choices, neither tool use nor enumeration can substitute for program reasoning. Puzzles are synthesized from scratch via semantic reification, so fresh puzzles of controllable complexity can be generated on demand, each with a witness that guarantees solvability. We evaluate five frontier models on 300 puzzles through a coding agent free to use any tool within a fixed budget. Small puzzles already challenge open-weight models, whereas even proprietary models solve only about half of the large ones. Codoku thus offers a renewable testbed for program reasoning that can keep pace with rapidly improving coding agents. GitHub: https://github.com/connglli/Codoku.",
+  "abstract_zh": "现有程序推理基准通常要求大语言模型预测程序在给定输入下的行为，但编码智能体打破了其中两个关键假设：智能体可以直接执行程序而非进行推理；从已有程序中抽取的固定任务集容易受到数据污染，且更新成本高昂。本文提出 Codoku（code sudoku），一种可持续更新的程序推理基准。求解器需要为部分程序中的带类型单元格填入内容，使其同时满足全局静态与动态约束，例如指定的控制流图和执行路径。由于部分程序无法直接执行，且在指数规模、选择相互依赖的空间中有效填充极其稀疏，工具调用和枚举都无法替代真正的程序推理。Codoku 通过语义具象化（semantic reification）从头合成题目，可按需生成具有可控复杂度的新谜题，并为每道题提供保证可解性的见证。作者让一个可在固定预算内自由使用工具的编码智能体评测五个前沿模型，共测试 300 道题。结果显示，小型题目已能挑战开放权重模型；即使是专有模型，在大型题目上的成功率也仅约为一半。Codoku 为程序推理提供了能够伴随编码智能体快速进步而持续更新的测试平台。",
+  "key_points_zh": [
+    "Codoku要求求解器补全带类型的部分程序，同时满足控制流图、执行路径等静态与动态全局约束。",
+    "部分程序不可直接执行，且有效填充在指数级组合空间中极其稀疏，因此工具调用和穷举难以替代程序推理。",
+    "题目通过semantic reification从头合成，可按需生成不同复杂度的新题，并提供保证可解性的witness，降低数据污染风险。",
+    "在300道题、五个前沿模型的评测中，小型题目已对开放权重模型构成挑战；大型题目上专有模型也仅解决约一半。",
+    "Codoku为快速发展的coding agents提供了可持续更新、专门衡量程序推理能力的基准。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.86,
+    "problem_significance": 0.83,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8320000000000001,
+    "comment": "Codoku is a renewable, contamination-resistant benchmark specifically designed to measure genuine reasoning in coding agents.",
+    "comment_zh": "Codoku是一个可持续生成且抗污染的基准，专门用于衡量编码Agent的真实程序推理能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.8320000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/connglli/Codoku.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34661/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.569
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34661/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.928
+    }
+  ]
+}

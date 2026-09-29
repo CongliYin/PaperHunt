@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2609.34247",
+  "title": "SALMONN-duo: Adaptive Dual-System Coordination for Full-Duplex Voice Agents",
+  "title_zh": "SALMONN-duo：面向全双工语音智能体的自适应双系统协同",
+  "authors": [
+    "Wenyi Yu",
+    "Siyin Wang",
+    "Terumi Chiba",
+    "Xianzhao Chen",
+    "Xiaohai Tian",
+    "Jun Zhang",
+    "Lu Lu",
+    "Chao Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T03:53:05Z",
+  "abs_url": "https://arxiv.org/abs/2609.34247v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.34247",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Full-duplex speech large language models (LLMs) enable low-latency, natural voice interaction. However, real-world agents must also use tools and perform deliberative reasoning-operations whose variable latency and computational cost conflict with the stringent timing requirements of real-time conversation. To reconcile these demands, we propose SALMONN-duo, an adaptive dual-system voice agent inspired by dual-process theories of cognition. SALMONN-duo separates real-time interaction from deliberative computation by pairing an always-on, fast-thinking full-duplex speech LLM (system 1) with a powerful asynchronous slow-thinking LLM agent (system 2). Beyond handling real-time interaction, system 1 learns when to answer directly and when to delegate, remaining responsive during backend execution and seamlessly integrating returned information into the ongoing dialogue without exposing tool traces or losing conversational context. Evaluations on single-turn spoken question answering (QA) and multi-turn conversations demonstrate that adaptive delegation substantially improves accuracy on knowledge-intensive and multi-hop reasoning questions, while knowledge-boundary-aware training avoids unnecessary system 2 invocations. On a customized version of $τ$-Voice, SALMONN-duo further demonstrates its ability to complete environment-grounded, policy-constrained tasks through multi-turn interactions in realistic business scenarios. Finally, cost-aware reinforcement learning further enhances the trade-off between task performance and backend usage across the QA and conversation tasks, while improving task success and response safety on $τ$-Voice with an acceptable increase in the delegation rate.",
+  "abstract_zh": "全双工语音大语言模型（LLM）能够实现低延迟、自然的语音交互，但现实中的智能体还需要调用工具并进行审慎推理，而这些操作的延迟与计算成本具有不确定性，难以满足实时对话的严格时序要求。为协调二者，本文提出 SALMONN-duo：一种受认知双加工理论启发的自适应双系统语音智能体。该方法将实时交互与审慎计算分离，由持续在线、快速思考的全双工语音 LLM（system 1）和能力更强、异步运行的慢思考 LLM agent（system 2）协同工作。system 1 不仅负责实时交互，还会学习何时直接回答、何时将任务委派给 system 2；在后端执行期间保持及时响应，并将返回的信息无缝融入当前对话，同时避免暴露工具调用轨迹或丢失上下文。单轮语音问答与多轮对话实验表明，自适应委派可显著提高知识密集型及多跳推理问题的准确率，而知识边界感知训练能够减少不必要的 system 2 调用。在定制版 τ-Voice 上，SALMONN-duo 还可通过多轮交互完成真实商业场景中基于环境、受策略约束的任务。最后，成本感知强化学习进一步改善了任务性能与后端使用成本之间的权衡，并在委派率仅适度增加的情况下，提高了 τ-Voice 上的任务成功率和响应安全性。",
+  "key_points_zh": [
+    "提出 SALMONN-duo，将全双工语音 LLM 作为快速响应的 system 1，将异步 LLM agent 作为负责工具调用与复杂推理的 system 2。",
+    "system 1 可自适应判断直接回答或委派任务，并在后端运行期间维持自然对话，将结果无缝整合且不暴露工具调用轨迹。",
+    "知识边界感知训练在提升知识密集型、多跳推理问答准确率的同时，减少不必要的 system 2 调用。",
+    "在定制版 τ-Voice 上，该方法能够完成环境驱动、策略约束的多轮商业任务。",
+    "成本感知强化学习优化任务性能与后端使用之间的权衡，并提升任务成功率和响应安全性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.88,
+    "problem_significance": 0.94,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.92,
+    "llm_avg": 0.906,
+    "comment": "A highly relevant dual-system architecture that reconciles full-duplex responsiveness with asynchronous reasoning, tool use, and cost-aware delegation.",
+    "comment_zh": "该工作以双系统架构协调全双工响应、异步推理、工具调用和成本感知委派，领域相关性极高。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4409423303122735,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.906,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 12,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34247/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34247/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

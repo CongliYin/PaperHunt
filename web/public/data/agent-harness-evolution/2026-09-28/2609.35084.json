@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.35084",
+  "title": "GraphHCA: Closed-Form Hindsight Credit Assignment for Long-Horizon LLM Agents",
+  "title_zh": "GraphHCA：面向长时域 LLM Agent 的闭式事后信用分配",
+  "authors": [
+    "Haodong Zhu",
+    "Yangyang Ren",
+    "Changbai Li",
+    "Sheng Xu",
+    "Linlin Yang",
+    "haiguang liu",
+    "Baochang Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T13:03:13Z",
+  "abs_url": "https://arxiv.org/abs/2609.35084v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.35084",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Group-based reinforcement learning (RL) has advanced large language models (LLMs) and is increasingly extending to agentic tasks, where sparse terminal rewards make step-level credit assignment essential. Existing methods assign credit from what follows an action in sampled rollouts, but do not explicitly capture its retrospective relation to the realized outcome. Hindsight credit assignment (HCA) instead attributes credit through the ratio of hindsight to behavior-policy probabilities, but estimating the hindsight distribution requires an auxiliary model or an extra pass. To address this estimation bottleneck, we propose GraphHCA, a model-free realization of HCA that eliminates explicit hindsight-distribution estimation. For terminal-goal tasks with deterministic transitions, Bayes' rule reduces the hindsight ratio to a ratio of behavior-policy success probabilities at consecutive states. Taking logs yields a state-wise success potential, whose increment across a transition provides step-level credit. GraphHCA estimates this potential from pooled rollouts through a discounted recursion on the induced transition graph, which admits a unique fixed point on any directed graph. The resulting step-level signal is combined with the trajectory-level advantage, requiring neither a learned hindsight model nor an extra forward pass and recovering GRPO when the step-level weight is zero. Among all compared baselines, GraphHCA achieves state-of-the-art results on ALFWorld and WebShop at both LLM scales, and on Sokoban with a vision-language agent. For example, on ALFWorld it improves overall success rate by up to 24.6 points over GRPO and by up to 4.7 points over the strongest step-level baseline.",
+  "abstract_zh": "针对长时域 Agent 任务中终局奖励稀疏、难以进行步骤级信用分配的问题，论文提出 GraphHCA，一种无需模型、无需额外前向传播的事后信用分配方法。在确定性状态转移和终局目标任务下，作者利用 Bayes 规则将事后分布与行为策略的概率比，化为相邻状态行为策略成功概率之比；取对数后得到状态级成功势能，其在状态转移中的增量即可作为步骤级信用信号。GraphHCA 从汇总轨迹构建转移图，并通过折扣递推估计该势能，该递推在任意有向图上具有唯一不动点。最终，步骤级信号与轨迹级 advantage 结合；当步骤级权重为零时可退化为 GRPO。在 ALFWorld、WebShop 以及搭载视觉语言 Agent 的 Sokoban 上，GraphHCA 均取得领先结果；其中 ALFWorld 的总体成功率相比 GRPO 最高提升 24.6 个百分点，相比最强步骤级基线最高提升 4.7 个百分点。",
+  "key_points_zh": [
+    "提出无需辅助 hindsight 模型和额外前向传播的 model-free HCA，实现闭式步骤级信用分配。",
+    "通过 Bayes 规则将 hindsight 概率比转化为相邻状态的行为策略成功概率比，并定义状态级成功势能。",
+    "在汇总 rollout 诱导的转移图上采用折扣递推估计势能；该递推在任意有向图上存在唯一不动点。",
+    "将势能增量与轨迹级 advantage 融合，步骤级权重设为零时可恢复 GRPO。",
+    "在 ALFWorld、WebShop 和 Sokoban 上达到 state-of-the-art，ALFWorld 相比 GRPO 最高提升 24.6 个百分点。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.88,
+    "problem_significance": 0.91,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8859999999999999,
+    "comment": "GraphHCA offers a principled, model-free step-credit mechanism for long-horizon agent RL and demonstrates broad gains across interactive environments.",
+    "comment_zh": "GraphHCA为长程Agent强化学习提供了有原则且无需额外模型的步骤信用机制，并在多个交互环境中取得广泛提升。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8859999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35084/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.896
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35084/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.948
+    }
+  ]
+}

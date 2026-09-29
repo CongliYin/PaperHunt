@@ -1,0 +1,69 @@
+{
+  "arxiv_id": "2609.34227",
+  "title": "When Does Selection Replace Extraction? A Pre-Registered Test of Agent Memory with a Typed Decision Model",
+  "title_zh": "何时选择可以替代抽取？基于类型化决策模型的智能体记忆预注册检验",
+  "authors": [
+    "Rishabh Sharma",
+    "Rishika Lall"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T03:34:07Z",
+  "abs_url": "https://arxiv.org/abs/2609.34227v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.34227",
+  "links": {
+    "github": "https://github.com/ris3abh/Engram",
+    "project_page": null
+  },
+  "abstract_en": "Does conversational memory need LLM-extracted facts, or is selecting the right raw turns enough? Published results disagree. Extraction-based systems report gains from distilled facts. Recent studies find raw history with good ranking does as well, but disagree about whether ranking matters. We ran a pre-registered study on held-out LoCoMo conversations and LongMemEval. At a tight budget on LoCoMo, raw turns selected by a single call to Jev, a typed decision model, are non-inferior to an LLM-extraction memory (one-sided 95% bound -3.0 points against a -5-point margin). Blind human grading narrows the margin but does not change the result. Raw turns cost 3,061 times less to write, and the result holds with a second answer model. Within this study, reranking's gain shrinks as the budget grows. It adds 17.4 points on LoCoMo and 9.1 on LongMemEval when three of 30 candidates are kept. At generous budgets it adds 1.5 and 1.1, and extraction systems are more accurate. This suggests why published results disagree. At matched context, Jev selects as accurately as an LLM reranker (non-inferiority bound -2.0) at a third of the latency, and more accurately than a multi-call graph traversal. Reranking lowers correct abstention. Plans, code and graded answers are released.",
+  "abstract_zh": "本文通过预注册实验研究对话记忆是否必须依赖 LLM 抽取事实，还是仅选择相关原始对话轮次即可。在 LoCoMo 和 LongMemEval 上，紧预算下，Jev（typed decision model）选择的原始轮次与 LLM-extraction memory 效果不劣；其写入成本低 3,061 倍，且结果可迁移至另一答案模型。重排序在仅保留少量候选时收益显著，但预算充足时收益大幅下降，此差异可能解释既有研究结论不一致。在相同上下文条件下，Jev 的选择准确率不劣于 LLM reranker，延迟约为其三分之一，并优于多轮图遍历；但重排序会降低正确拒答率。",
+  "key_points_zh": [
+    "在 LoCoMo 紧预算实验中，Jev 选择的原始对话轮次相对 LLM-extraction memory 达到非劣效应，单侧 95% 置信界为 -3.0 分，高于预设 -5 分界限。",
+    "原始轮次记忆的写入成本低 3,061 倍；盲人人工评测和第二个答案模型均未改变主要结论。",
+    "重排序收益强烈依赖上下文预算：保留 30 个候选中的 3 个时，LoCoMo 和 LongMemEval 分别提升 17.4 和 9.1 分；预算充足时仅提升 1.5 和 1.1 分。",
+    "在匹配上下文规模下，Jev 的选择准确率不劣于 LLM reranker，延迟约低至三分之一，并优于多调用图遍历；但重排序会降低正确拒答率。",
+    "研究结果表明，既有工作对抽取与选择优劣的分歧，可能主要源于候选预算和重排序设置不同。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.83,
+    "problem_significance": 0.87,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.69,
+    "lasting_value": 0.88,
+    "llm_avg": 0.826,
+    "comment": "A valuable pre-registered evaluation that clarifies when raw-turn selection can replace extraction and provides practical evidence about memory budgets, ranking, cost, and latency.",
+    "comment_zh": "这是一项有价值的预注册评估，厘清了原始对话选择何时可以替代抽取，并提供了关于记忆预算、排序、成本和延迟的实证证据。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.826,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/ris3abh/Engram",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34227/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.957
+    }
+  ]
+}

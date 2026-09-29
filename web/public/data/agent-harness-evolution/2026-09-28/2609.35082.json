@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2609.35082",
+  "title": "Cross-Rollout Bellman Closure for Long-Horizon Agentic Reinforcement Learning",
+  "title_zh": "面向长时程智能体强化学习的跨轨迹 Bellman 闭包",
+  "authors": [
+    "Yangyang Ren",
+    "Haodong Zhu",
+    "Linlin Yang",
+    "Sheng Xu",
+    "Peichao Lai",
+    "Baochang Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T13:02:10Z",
+  "abs_url": "https://arxiv.org/abs/2609.35082v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.35082",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Group-based reinforcement learning such as GRPO trains LLM agents by comparing rollouts sampled for each task, without a learned critic. In long-horizon settings, these rollouts revisit shared anchor states, offering cross-rollout evidence for step-level credit. Ideally, step-level credit should incorporate evidence beyond the realized suffixes observed at an anchor while aggregating alternative continuations according to their empirical frequencies. Visit-local averaging pools realized suffix returns at shared anchors and respects observed frequencies, but does not recursively propagate evidence across rollouts, whereas shortest-path estimators have global reach but allow a rarely observed route to dominate an anchor's value. We introduce Cross-Rollout Bellman Closure (CRBC), which merges each rollout group into a finite empirical process with absorbing success and failure boundaries and evaluates its behavior-policy Bellman fixed point with one linear solve. This fixed point uses the same empirical action and transition frequencies to propagate evidence through shared anchors and aggregate alternative continuations. Backing up the resulting state values through observed transitions yields action values, whose gain over the corresponding state value provides step-level credit. A corresponding finite-depth family recovers visit-local return averaging at zero depth and converges to the exact closure as depth increases. The normalized closure credit is combined with the trajectory-level group advantage for policy optimization, without additional environment rollouts. Across ALFWorld, WebShop, and Sokoban benchmarks with multiple model scales, CRBC consistently improves final performance and learning efficiency. For example, CRBC outperforms the strongest evaluated baseline by 5.59 percentage points on ALFWorld with Qwen2.5-1.5B-Instruct.",
+  "abstract_zh": "GRPO 等基于组的强化学习方法无需学习 critic，而是通过比较同一任务采样得到的多条 rollout 来训练 LLM 智能体。在长时程任务中，不同 rollout 往往会重复访问共享的锚点状态，从而为步骤级信用分配提供跨 rollout 证据。理想的步骤级信用不仅应利用某一锚点之后实际出现的后缀，还应依据经验频率聚合其他可能的后续路径。访问局部平均（visit-local averaging）能够汇总共享锚点处观测到的后缀回报，并保留其经验频率，但无法在不同 rollout 间递归传播证据；最短路径估计虽具备全局传播能力，却可能使极少出现的路径主导锚点价值。本文提出 Cross-Rollout Bellman Closure（CRBC）：将每组 rollout 合并为一个带有成功和失败吸收边界的有限经验过程，并通过一次线性方程求解得到行为策略下的 Bellman 不动点。该不动点使用相同的经验动作频率与状态转移频率，在共享锚点之间传播证据并聚合不同后续路径。随后，CRBC 沿观测转移对状态价值进行回传以获得动作价值，并以动作价值相对对应状态价值的增益作为步骤级信用。论文还提出有限深度版本：深度为零时退化为访问局部回报平均，随着深度增加逐渐收敛到精确闭包。最终，归一化后的闭包信用与轨迹级组优势结合，用于策略优化，且不需要额外的环境 rollout。实验覆盖 ALFWorld、WebShop 和 Sokoban，并采用多种模型规模；结果表明，CRBC 能持续提升最终性能和学习效率。例如，在 Qwen2.5-1.5B-Instruct 上，CRBC 在 ALFWorld 中比最强基线高出 5.59 个百分点。",
+  "key_points_zh": [
+    "利用不同 rollout 重复访问的共享锚点状态，实现比单轨迹后缀回报更充分的步骤级信用分配。",
+    "将 rollout 组构造成带成功与失败吸收边界的有限经验过程，并通过一次线性求解获得行为策略的 Bellman 不动点。",
+    "按照经验动作与转移频率聚合替代路径，兼顾全局证据传播与数据分布保真，避免罕见最短路径主导价值估计。",
+    "有限深度 CRBC 在零深度时等价于访问局部回报平均，并随深度增加收敛至精确 Bellman 闭包。",
+    "无需额外环境 rollout，即可在 ALFWorld、WebShop 和 Sokoban 上稳定提高性能与样本效率；在 ALFWorld 的 Qwen2.5-1.5B-Instruct 实验中领先最强基线 5.59 个百分点。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.88,
+    "problem_significance": 0.92,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.9,
+    "llm_avg": 0.884,
+    "comment": "CRBC introduces a principled, rollout-reusing Bellman closure for long-horizon agent-RL credit assignment without requiring additional environment interaction.",
+    "comment_zh": "CRBC 提出了一种有原则的轨迹复用 Bellman 闭包方法，在无需额外交互的情况下改进长程智能体强化学习的信用分配。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.884,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35082/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35082/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.946
+    }
+  ]
+}

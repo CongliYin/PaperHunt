@@ -1,0 +1,563 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-09-28",
+  "generated_at": "2026-09-29T23:38:35Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.35532",
+      "title": "ARISE: Adapting to Evolving Capability Gaps in Agentic Reinforcement Learning",
+      "title_zh": "ARISE：适应智能体强化学习中不断演化的能力差距",
+      "authors": [
+        "Kun Feng",
+        "Yuchen Fang",
+        "Yiyang Tan",
+        "Shuqi Gu",
+        "Yongxiang Zhao",
+        "Yu Liu",
+        "Xingyu Lu",
+        "Lintao Ma",
+        "Kan Ren"
+      ],
+      "total_score": 0.7356000000000001,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.892,
+        "domain_fit": 0.96,
+        "other": 0.33333333333333337
+      },
+      "tags": [
+        "Project Page",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "ARISE协同演化评测与技能，持续攻克智能体新弱点",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.35532.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35532/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.35158",
+      "title": "PEARL: Adaptive Prefill-Decode Execution with Elasticity for Agentic Reinforcement Learning",
+      "title_zh": "PEARL：面向智能体强化学习、具备弹性伸缩的自适应 Prefill-Decode 执行系统",
+      "authors": [
+        "Jiaan Zhu",
+        "Wei Gao",
+        "Youhui Bai",
+        "Zewen Jin",
+        "Ju Huang",
+        "Siran Yang",
+        "Jiamang Wang",
+        "Lin Qu",
+        "Cheng Li"
+      ],
+      "total_score": 0.7018473787814469,
+      "scores": {
+        "topic_relevance": 0.9600000000000001,
+        "llm_assessment": 0.8400000000000001,
+        "domain_fit": 0.94,
+        "other": 0.21949126260482232
+      },
+      "tags": [
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "联合弹性GPU与自适应PD配置，大幅提升智能体RL吞吐量。",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.35158.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35158/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.34649",
+      "title": "Beyond Skill Evolution: Self-Evolving Context Management Policies for Long-Horizon Agent Harnesses",
+      "title_zh": "超越技能演化：面向长时程智能体框架的自演化上下文管理策略",
+      "authors": [
+        "Weiyuan Li",
+        "Jinghan Xu",
+        "Aili Chen",
+        "Xintao Wang",
+        "Shuang Liang",
+        "Jiaqing Liang",
+        "Deqing Yang"
+      ],
+      "total_score": 0.6936000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8720000000000001,
+        "domain_fit": 0.93,
+        "other": 0.2666666666666667
+      },
+      "tags": [
+        "Code soon",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "ContextEvo通过自演化上下文策略提升长时程智能体性能。",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.34649.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34649/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.34810",
+      "title": "UniOPSD: Unifying Outcome and Hindsight Feedback for Agentic Reinforcement Learning",
+      "title_zh": "UniOPSD：统一面向结果与回溯反馈的智能体强化学习",
+      "authors": [
+        "Zenghuang Fu",
+        "Zhaoyang Li",
+        "Qiuyuan Ai",
+        "Xiaofeng Han",
+        "Zelong Zheng",
+        "Haoyu Wu",
+        "Tianyu Fu",
+        "Chenxu Zhao",
+        "Minghui Wu",
+        "Guannan He",
+        "Changwei Wang"
+      ],
+      "total_score": 0.6610000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8,
+        "domain_fit": 0.88,
+        "other": 0.2833333333333334
+      },
+      "tags": [
+        "GitHub",
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "自适应融合结果与回溯反馈，提升智能体强化学习性能",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.34810.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34810/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.34701",
+      "title": "ResonAct: Streaming Metrics for Runtime Diagnosis and Self-Healing in Multi-Agent Systems",
+      "title_zh": "ResonAct：用于多智能体系统运行时诊断与自愈的流式指标框架",
+      "authors": [
+        "Tarun Chintada",
+        "Neelamadhav Gantayat",
+        "Ishaan Romil",
+        "Renuka Sindhgatta",
+        "Soujanya Soni",
+        "Sameep Mehta"
+      ],
+      "total_score": 0.6544000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.808,
+        "domain_fit": 0.9,
+        "other": 0.2
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "以流式指标实现多智能体运行时诊断与自愈",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.34701.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34701/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.35760",
+      "title": "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
+      "title_zh": "TokenCast：预测 LLM Agent 执行期间的 Token 消耗",
+      "authors": [
+        "Chaoqian Ouyang",
+        "Ling Yue",
+        "Libin Zheng",
+        "Huanghui Guo",
+        "Shengxiang Xu",
+        "YiShu Wang",
+        "Ran Li",
+        "Jian Yin",
+        "Shaowu Pan",
+        "Shimin Di"
+      ],
+      "total_score": 0.6526000000000002,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.772,
+        "domain_fit": 0.87,
+        "other": 0.2833333333333334
+      },
+      "tags": [
+        "GitHub",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "TokenCast在线预测Agent的Token消耗并降低预算浪费",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.35760.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35760/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.35082",
+      "title": "Cross-Rollout Bellman Closure for Long-Horizon Agentic Reinforcement Learning",
+      "title_zh": "面向长时程智能体强化学习的跨轨迹 Bellman 闭包",
+      "authors": [
+        "Yangyang Ren",
+        "Haodong Zhu",
+        "Linlin Yang",
+        "Sheng Xu",
+        "Peichao Lai",
+        "Baochang Zhang"
+      ],
+      "total_score": 0.6522,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.884,
+        "domain_fit": 0.94,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "CRBC借共享状态递归传播跨轨迹信用，提升长时程智能体训练。",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.35082.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35082/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.35750",
+      "title": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning",
+      "title_zh": "KV-streams：用于智能体强化学习高效压缩的KV流",
+      "authors": [
+        "Emiliano Penaloza",
+        "Dane Malenfant",
+        "Dheeraj Vattikonda",
+        "Roger Creus Castanyer",
+        "Siddarth Venkatraman",
+        "Abhay Puri",
+        "Jonathan Light",
+        "Matthew James Sargent",
+        "Augustine N. Mavor-Parker",
+        "Massimo Caccia",
+        "Lucas Caccia",
+        "Glen Berseth",
+        "Esmeralda S. Whitammer",
+        "Alessandro Sordoni",
+        "Minseon Kim",
+        "Marc-Alexandre Côté",
+        "Laurent Charlin",
+        "Guillaume Lajoie"
+      ],
+      "total_score": 0.6516000000000002,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8520000000000001,
+        "domain_fit": 0.92,
+        "other": 0.2
+      },
+      "tags": [
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "KV-streams让上下文压缩提速2.6至5倍",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.35750.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35750/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.34988",
+      "title": "The Right Lesson at the Right Step: Deriving Control Updates for Self-Evolving Agents",
+      "title_zh": "在正确步骤传递正确经验：为自进化智能体推导控制更新",
+      "authors": [
+        "Yunhe Su",
+        "ZiYi Dong",
+        "Tong Yu",
+        "Weijian Deng",
+        "Hao Li",
+        "Bowen Jiang",
+        "Pengxu Wei"
+      ],
+      "total_score": 0.6488000000000002,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.8960000000000001,
+        "domain_fit": 0.96,
+        "other": 0.2
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "EvoCUE将经验精准注入智能体控制流，提升长流程任务执行。",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.34988.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34988/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.34134",
+      "title": "StateGuard: Analytical-State Management with Validity-Aware Intervention for Long-Horizon Data Agents",
+      "title_zh": "StateGuard：面向长程数据智能体的分析状态管理与有效性感知干预",
+      "authors": [
+        "Wenle Liao",
+        "Zhao Wang",
+        "Jingchao Zhang",
+        "Jiajie Jin",
+        "Yimeng Xu",
+        "Zhicheng Dou"
+      ],
+      "total_score": 0.6444014712140663,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.8240000000000001,
+        "domain_fit": 0.78,
+        "other": 0.257338237380221
+      },
+      "tags": [
+        "h=30",
+        "session context state"
+      ],
+      "tldr_zh": "用显式状态图提升长程数据智能体可靠性",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.34134.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34134/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.34397",
+      "title": "SkillFocus: Evolving Agent Skills via Capability Decomposition",
+      "title_zh": "SkillFocus：通过能力分解实现智能体技能演化",
+      "authors": [
+        "Ning Wang",
+        "Zhiren Gong",
+        "Bingdong Li",
+        "Peng Yang",
+        "Aimin Zhou"
+      ],
+      "total_score": 0.6194000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.828,
+        "domain_fit": 0.94,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "以固定能力空间聚焦技能修订，提效且节省演化成本。",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.34397.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34397/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.34151",
+      "title": "Self-Evolving Agents via Likelihood-Guided Tool-Space Optimization",
+      "title_zh": "通过似然引导的工具空间优化实现自演化智能体",
+      "authors": [
+        "Xuanqi Zhang",
+        "Ruinan Jin",
+        "Running Yang",
+        "Yuxuan Zhang",
+        "Minghui Chen",
+        "Wenlong Deng",
+        "Xiaoxiao Li"
+      ],
+      "total_score": 0.5795869955526309,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.748,
+        "domain_fit": 0.78,
+        "other": 0.11728998517543644
+      },
+      "tags": [
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "LOTS用答案似然学习可迁移的任务专属工具空间",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.34151.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34151/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.34296",
+      "title": "Dr.Credit: Rubric-Grounded Process Credit Assignment for Deep Research Agents",
+      "title_zh": "Dr.Credit：基于评分标准的深度研究智能体过程信用分配",
+      "authors": [
+        "Yingjian Zhu",
+        "Zhenyi Wang",
+        "Jiaxin Guo",
+        "Kun Ding",
+        "Ying Wang",
+        "Shen Huang",
+        "Xunjie Zhu",
+        "Pengjun Xie",
+        "Shiming Xiang"
+      ],
+      "total_score": 0.5627258286877778,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.884,
+        "domain_fit": 0.96,
+        "other": 0.19175276229259217
+      },
+      "tags": [
+        "judge reward verifier"
+      ],
+      "tldr_zh": "用评分标准监督研究过程，提升证据获取与报告质量",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.34296.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34296/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.34661",
+      "title": "Codoku: Renewable Program-Reasoning Challenges for Frontier Coding Agents",
+      "title_zh": "Codoku：面向前沿编码智能体的可持续程序推理挑战",
+      "authors": [
+        "Cong Li",
+        "Hao Sun",
+        "Zenan Li",
+        "Zhendong Su"
+      ],
+      "total_score": 0.47568830625409453,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.8320000000000001,
+        "domain_fit": 0.94,
+        "other": 0.2736276875136482
+      },
+      "tags": [
+        "GitHub",
+        "general tool agents"
+      ],
+      "tldr_zh": "Codoku以可持续谜题评测编码智能体的程序推理能力",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.34661.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34661/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.35084",
+      "title": "GraphHCA: Closed-Form Hindsight Credit Assignment for Long-Horizon LLM Agents",
+      "title_zh": "GraphHCA：面向长时域 LLM Agent 的闭式事后信用分配",
+      "authors": [
+        "Haodong Zhu",
+        "Yangyang Ren",
+        "Changbai Li",
+        "Sheng Xu",
+        "Linlin Yang",
+        "haiguang liu",
+        "Baochang Zhang"
+      ],
+      "total_score": 0.4603883062540945,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.8859999999999999,
+        "domain_fit": 0.94,
+        "other": 0.11529435418031482
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "GraphHCA以转移图递推实现无模型事后信用分配",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.35084.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35084/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.34313",
+      "title": "ControlScope: Workflow Revision and Reliability in LLM Agents",
+      "title_zh": "ControlScope：LLM 智能体中的工作流修订与可靠性",
+      "authors": [
+        "Jingjie Ning",
+        "Xueqi Li",
+        "Yibo Kong",
+        "Dongting Li"
+      ],
+      "total_score": 0.4512,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.8240000000000001,
+        "domain_fit": 0.91,
+        "other": 0.2
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "修订权限扩大未必提升智能体可靠性",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.34313.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34313/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.35732",
+      "title": "Failure-Transparent Agents: Benchmarking Post-Failure Reporting in Tool-Using Language Models",
+      "title_zh": "失败透明智能体：工具调用语言模型的失败后报告基准",
+      "authors": [
+        "Junru Zhu",
+        "Shiming Xie",
+        "Aime Lu Fan Chen",
+        "Xiaoqing Ding",
+        "Chunxin Tang",
+        "Ruoyu Qi",
+        "Yulang Fei"
+      ],
+      "total_score": 0.38410000000000005,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.692,
+        "domain_fit": 0.78,
+        "other": 0.10833333333333334
+      },
+      "tags": [
+        "general tool agents"
+      ],
+      "tldr_zh": "结构化证据契约显著抑制智能体失败后的虚假成功报告。",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.35732.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35732/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.35357",
+      "title": "Do Coding Agents Reuse Existing Code or Reinvent the Wheel?",
+      "title_zh": "编码代理会复用现有代码，还是重复造轮子？",
+      "authors": [
+        "Dongsheng Ma",
+        "Sizhe Wang",
+        "Xinyi Huang",
+        "Zhengren Wang",
+        "Yuhan Wang",
+        "Luyang Si",
+        "Xincheng Wei",
+        "Wentao Zhang"
+      ],
+      "total_score": 0.3006,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.8019999999999999,
+        "domain_fit": 0.93,
+        "other": 0.2
+      },
+      "tags": [],
+      "tldr_zh": "通过率不变，编码代理却持续制造代码冗余。",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.35357.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35357/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.35255",
+      "title": "Towards Reliable AI Data Scientists: Data Agents with Workflow Harnesses",
+      "title_zh": "迈向可靠的 AI 数据科学家：配备 Workflow Harnesses 的 Data Agents",
+      "authors": [
+        "Huachi Zhou",
+        "Yujing Zhang",
+        "Jiahe Du",
+        "Jiacheng Cai",
+        "Zijin Hong",
+        "Chuang Zhou",
+        "Zheng Yuan",
+        "Qinggang Zhang",
+        "Qing Li",
+        "Xiao Huang"
+      ],
+      "total_score": 0.2918,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.606,
+        "domain_fit": 0.67,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub"
+      ],
+      "tldr_zh": "Workflow Harnesses 是提升 Data Agents 可靠性的关键。",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.35255.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35255/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.34069",
+      "title": "Towards Certificate-Driven Software Porting: A Self-Improving Agentic Harness for Scientific Program Optimization",
+      "title_zh": "迈向证书驱动的软件移植：用于科学程序优化的自改进智能体框架",
+      "authors": [
+        "Piyush Jha",
+        "Aishik Ghosh",
+        "Vijay Ganesh"
+      ],
+      "total_score": 0.2846,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.8320000000000001,
+        "domain_fit": 0.86,
+        "other": 0.11666666666666668
+      },
+      "tags": [],
+      "tldr_zh": "CDES用失败证书约束搜索，实现可靠且高效的科学代码GPU移植。",
+      "detail_file": "agent-harness-evolution/2026-09-28/2609.34069.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34069/thumb.webp"
+    }
+  ]
+}

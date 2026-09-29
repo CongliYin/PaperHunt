@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2609.34160",
+  "title": "RoutePrism: Tracing Construction Order Effects in Agent Memory",
+  "title_zh": "RoutePrism：追踪智能体记忆中的构建顺序效应",
+  "authors": [
+    "Dong Xu",
+    "Zhangfan Yang",
+    "Jiantao Wu",
+    "Shipeng Zhang",
+    "Zexuan Zhu",
+    "Jiangqiang Li",
+    "Jun Zhang",
+    "Junkai Ji"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T02:37:57Z",
+  "abs_url": "https://arxiv.org/abs/2609.34160v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.34160",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Processing the same records in a different order can discard different evidence, yet endpoint accuracy alone cannot reveal what changed or whether it mattered. We introduce RoutePrism, a diagnostic protocol that builds memory twice from the same source pool in two processing orders, then traces which sources, compiled contexts, and answers differ. Because record content, timestamps, policy, and the answer model all stay fixed, any observed difference is localized to the memory construction step. A matched four-condition intervention tests whether a record displaced by reordering actually carried task-relevant evidence: restoring that single record recovers over 60 percentage points of lost accuracy, while substituting a non-supporting record of equal length does not. We evaluate the protocol on PersonaMem-32K (63 primary queries, 29 users) and 470 LongMemEval-S questions with histories spanning 38 to 62 sessions, replicating the core intervention across five answer models. Survivor selection, defined as the choice of which record a cluster retains, drives most source-level changes, while different memory policies (compaction, bounded recency, MemoChat-style summarization, A-MEM) produce distinct failure signatures at the source, context, and metadata layers.",
+  "abstract_zh": "相同记录以不同顺序处理时，可能丢失不同证据；但仅观察最终准确率，无法判断发生了什么变化及其是否重要。本文提出 RoutePrism，一种诊断协议：使用同一来源记录池，以两种处理顺序分别构建记忆，并追踪来源记录、编译上下文与最终答案的差异。由于记录内容、时间戳、策略和答案模型均保持不变，观测到的差异可定位到记忆构建步骤。一个匹配的四条件干预实验检验被重排序挤出的记录是否包含任务相关证据：恢复该条记录可使损失的准确率恢复超过 60 个百分点，而替换为等长度但不提供支持的记录则无法恢复。实验覆盖 PersonaMem-32K（63 个主要查询、29 名用户）以及包含 38 至 62 个会话历史的 470 个 LongMemEval-S 问题，并在五个答案模型上复现核心干预结果。结果表明，生存者选择（即决定一个簇保留哪条记录）驱动了大多数来源级变化；不同记忆策略，包括压缩、有限近期记忆、MemoChat-style summarization 和 A-MEM，在来源、上下文与元数据层面呈现出不同的失效特征。",
+  "key_points_zh": [
+    "RoutePrism通过固定记录、时间戳、策略和答案模型，仅改变处理顺序，从而将性能差异归因于记忆构建过程。",
+    "四条件干预表明，被重排序挤出的单条记录往往包含关键证据；恢复该记录可挽回超过60个百分点的准确率损失。",
+    "生存者选择，即记忆簇决定保留哪条记录，是造成大多数来源级变化的主要机制。",
+    "不同记忆策略（包括压缩、bounded recency、MemoChat-style summarization 和 A-MEM）具有不同的来源、上下文与元数据失效模式。",
+    "方法在 PersonaMem-32K 和 LongMemEval-S 上验证，并跨五个答案模型复现核心发现。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.87,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.9,
+    "llm_avg": 0.85,
+    "comment": "A rigorous and broadly useful diagnostic protocol that isolates construction-order effects and identifies survivor selection as a major source of Agent-memory failure.",
+    "comment_zh": "这是一套严谨且广泛有用的诊断协议，能够隔离构建顺序影响并揭示幸存者选择是 Agent Memory 失败的重要来源。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.457151341903981,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.85,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 7,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34160/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34160/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.951
+    }
+  ]
+}

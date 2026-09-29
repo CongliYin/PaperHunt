@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2609.34701",
+  "title": "ResonAct: Streaming Metrics for Runtime Diagnosis and Self-Healing in Multi-Agent Systems",
+  "title_zh": "ResonAct：用于多智能体系统运行时诊断与自愈的流式指标框架",
+  "authors": [
+    "Tarun Chintada",
+    "Neelamadhav Gantayat",
+    "Ishaan Romil",
+    "Renuka Sindhgatta",
+    "Soujanya Soni",
+    "Sameep Mehta"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T09:18:24Z",
+  "abs_url": "https://arxiv.org/abs/2609.34701v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.34701",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-agent systems (MAS) are increasingly used to automate enterprise workflows involving multiple specialized agents, external tools, and long-running task execution. Failures may arise from tool degradation, context propagation errors, coordination breakdowns, or repeated agent interactions that prevent task completion. While existing observability frameworks provide traces and logs, diagnosis and remediation are largely performed after execution completes, limiting opportunities for recovery during runtime. We present ResonAct, a runtime self-healing framework that enables continuous monitoring, diagnosis, and remediation of multi-agent systems through streaming operational metrics. ResonAct ingests execution traces, agent interactions, and tool invocations into a streaming analytics layer that continuously derives task progress, context health, and tool reliability metrics. These metrics serve as runtime control signals for detecting anomalous execution patterns and localizing root causes using a structured failure model. Based on the diagnosed failure, ResonAct dynamically selects remediation policies and performs actions. The framework operates as an external control plane, enabling intervention without modifying application agents or orchestration logic. We evaluate ResonAct across enterprise workflow scenarios and AppWorld benchmarks. The results show that the streaming metric-based analysis identifies execution degradations and localizes faults. Furthermore, policy-driven remediation improves task completion rates by up to 10.00 percentage points, with detection precision ranging from 70.59% to 82.91%, recall from 63.09% to 100%, recovery rates from 10.48% to 46.67%, and runtime overhead ranging from $-0.25%$ to 14.12% across the evaluated configurations.",
+  "abstract_zh": "多智能体系统（Multi-Agent Systems, MAS）正越来越多地用于自动化企业工作流，这类工作流通常涉及多个专业化智能体、外部工具及长时间运行的任务。系统故障可能源于工具性能退化、上下文传递错误、协作失效，或智能体间的重复交互导致任务无法完成。现有可观测性框架虽然能够提供追踪记录与日志，但诊断和修复大多在执行结束后进行，因而难以在运行期间及时恢复。本文提出 ResonAct，一种通过流式运行指标持续监控、诊断并修复多智能体系统的运行时自愈框架。ResonAct 将执行轨迹、智能体交互和工具调用接入流式分析层，持续计算任务进度、上下文健康度和工具可靠性等指标。这些指标作为运行时控制信号，用于检测异常执行模式，并基于结构化故障模型定位根因。针对诊断出的故障，ResonAct 可动态选择修复策略并执行干预。该框架作为外部控制平面运行，无需修改应用智能体或编排逻辑。研究在企业工作流场景和 AppWorld 基准上进行了评估。结果表明，基于流式指标的分析能够识别执行性能退化并定位故障；策略驱动的修复可将任务完成率最高提升 10.00 个百分点。不同配置下，检测精确率为 70.59%–82.91%，召回率为 63.09%–100%，恢复率为 10.48%–46.67%，运行时开销为 -0.25%–14.12%。",
+  "key_points_zh": [
+    "提出 ResonAct，通过持续分析执行轨迹、智能体交互和工具调用，实现多智能体系统的在线监控、诊断与修复。",
+    "构建任务进度、上下文健康度和工具可靠性等流式指标，并将其作为检测异常和定位根因的运行时控制信号。",
+    "基于结构化故障模型动态选择修复策略，可在任务执行过程中直接介入，而非等待执行结束后处理。",
+    "采用外部控制平面设计，无需修改现有应用智能体或工作流编排逻辑，便于集成到已有系统。",
+    "在企业工作流和 AppWorld 上，任务完成率最高提升 10.00 个百分点，检测精确率达 70.59%–82.91%，但不同配置下恢复率差异较大。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.8,
+    "problem_significance": 0.88,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.82,
+    "llm_avg": 0.808,
+    "comment": "ResonAct contributes a reusable runtime control plane that turns streaming traces into diagnosis and online remediation for long-running agent workflows.",
+    "comment_zh": "ResonAct 提出了可复用的运行时控制平面，将流式轨迹转化为长程智能体工作流的诊断与在线修复。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.808,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34701/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.976
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34701/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.952
+    }
+  ]
+}

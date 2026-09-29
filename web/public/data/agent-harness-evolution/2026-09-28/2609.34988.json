@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.34988",
+  "title": "The Right Lesson at the Right Step: Deriving Control Updates for Self-Evolving Agents",
+  "title_zh": "在正确步骤传递正确经验：为自进化智能体推导控制更新",
+  "authors": [
+    "Yunhe Su",
+    "ZiYi Dong",
+    "Tong Yu",
+    "Weijian Deng",
+    "Hao Li",
+    "Bowen Jiang",
+    "Pengxu Wei"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T11:59:22Z",
+  "abs_url": "https://arxiv.org/abs/2609.34988v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.34988",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Self-evolving agents improve future behavior by reusing past experience, typically as global prompts, memories, or reflections. Yet these mechanisms rarely control where experience takes effect. In long tool-use workflows, the same lesson may correct one decision but distract another, making experience reuse a problem of localized control rather than memory alone. We introduce EvoCUE (Evolution through Control Updates from Evidence), a framework for learning reusable control-program updates from completed agent executions. EvoCUE represents the agent as an explicit state-machine controller, whose nodes perform model or tool calls and whose edges define where control passes next. This makes the workflow editable at precise locations, so each learned update can specify what to add, where it acts, and when it applies. From completed trajectories, EvoCUE uses residual goals and observed execution traces to propose localized instruction or skill edits. Each candidate is evaluated at the point where it would act by resuming the parent and edited controllers from the same checkpoint and comparing their final outcomes. Accepted edits are compiled with applicability rules, confirmed on held-out tasks, and inherited by later executions. We evaluate EvoCUE on long tool-use environments where learned conventions must reach the right execution step. From a minimal AppWorld controller without benchmark-specific onboarding instructions, EvoCUE learns the missing task-completion convention and substantially improves success on Test-Normal and Test-Challenge. On PAST-Bench office workflows, EvoCUE transfers organizational requirements from prior episodes to later tasks, improving task-execution quality. These results show that self-evolving agents should place experience inside the control flow, rather than only store it as text.",
+  "abstract_zh": "现有自进化智能体通常将经验保存为全局提示、记忆或反思，但难以控制经验具体作用于工作流中的哪个步骤。论文提出 EvoCUE（Evolution through Control Updates from Evidence），将智能体表示为显式状态机控制器：节点执行模型或工具调用，边定义控制流转移。基于已完成轨迹中的残余目标与执行记录，EvoCUE 生成局部指令或技能修改，并在其实际作用位置，通过从同一检查点分别恢复原控制器和修改后控制器来比较最终结果。有效修改会被编译为带适用条件的控制更新，在留出任务上确认后继承至后续执行。在 AppWorld 和 PAST-Bench 上，EvoCUE 能学习任务完成规范及组织要求，显著提升任务成功率与执行质量。结果表明，自进化智能体应将经验嵌入控制流，而不只是以文本形式存储。",
+  "key_points_zh": [
+    "核心问题不是能否记忆经验，而是如何让经验只在正确的决策步骤生效，避免全局提示对其他步骤造成干扰。",
+    "EvoCUE以显式状态机表示智能体，使每条经验更新都能指定修改内容、作用位置与适用时机。",
+    "方法通过相同检查点对比原控制器与编辑后控制器的最终结果，评估局部更新是否真正有效。",
+    "有效更新会附带适用规则，在留出任务上验证后被编译并继承到后续执行中。",
+    "在 AppWorld 与 PAST-Bench 上，EvoCUE分别学习任务完成规范和组织要求，提升任务成功率及执行质量。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.9,
+    "problem_significance": 0.9,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.88,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8960000000000001,
+    "comment": "EvoCUE advances self-evolving agents by compiling trajectory-derived lessons into localized, evaluated control-flow updates rather than undirected textual memory.",
+    "comment_zh": "EvoCUE 将轨迹中提取的经验编译为经过评估的局部控制流更新，而非无方向的文本记忆，从而推进了自演化智能体。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8960000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34988/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.34988/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2609.35532",
+  "title": "ARISE: Adapting to Evolving Capability Gaps in Agentic Reinforcement Learning",
+  "title_zh": "ARISE：适应智能体强化学习中不断演化的能力差距",
+  "authors": [
+    "Kun Feng",
+    "Yuchen Fang",
+    "Yiyang Tan",
+    "Shuqi Gu",
+    "Yongxiang Zhao",
+    "Yu Liu",
+    "Xingyu Lu",
+    "Lintao Ma",
+    "Kan Ren"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-28T16:14:07Z",
+  "abs_url": "https://arxiv.org/abs/2609.35532v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.35532",
+  "links": {
+    "github": null,
+    "project_page": "https://foundation-model-research.github.io/ARISE"
+  },
+  "abstract_en": "As a long-horizon agent improves through experience, previously observed weaknesses may recede while new limitations emerge, continually changing what it still needs to learn. Yet the learning process often remains tied to a static view of these needs: fixed behavioral criteria and training priorities can become misaligned with evolving agent capabilities, while sparse task-level feedback makes such misalignment more difficult to detect. Even when capability gaps are identified, rollouts from the current policy may repeatedly reproduce the same failures rather than explore better alternatives. To address this, we introduce Adaptive Rubric-Skill Co-Evolution (ARISE), a reinforcement learning framework that uses rollout evidence to continually adapt evaluation criteria, exploration guidance, and training priorities. Rubrics evolve to reward partial behavioral progress, while their paired skills are refined and selectively activated to guide exploration toward unresolved weaknesses. Alongside this co-evolution, capability-based adaptive sampling prioritizes tasks that target behaviors needing further improvement. Experiments on two challenging long-horizon agent benchmarks, SkillsBench and Terminal-Bench, demonstrate that ARISE successfully enhances both overall task performance and training efficiency. The project page is at https://foundation-model-research.github.io/ARISE .",
+  "abstract_zh": "长时程智能体通过经验持续提升时，原有弱点可能消退，新的能力限制则不断出现，使静态评测标准与训练优先级逐渐失配。为此，论文提出 Adaptive Rubric-Skill Co-Evolution（ARISE），利用 rollout 证据持续协同调整评测准则、探索引导与训练重点。ARISE 通过演化 Rubrics 奖励部分行为进展，并同步优化和选择性激活配套 Skills，引导策略探索尚未解决的弱点；同时采用基于能力的自适应采样，优先训练需要改进的任务。在 SkillsBench 和 Terminal-Bench 两个长时程智能体基准上的实验表明，ARISE 能同时提升任务性能与训练效率。",
+  "key_points_zh": [
+    "核心问题是智能体能力持续变化，导致固定 Rubrics、训练优先级与实际能力缺口不匹配。",
+    "ARISE 让 Rubrics 根据 rollout 证据演化，以奖励部分行为进展，而非仅关注任务成败。",
+    "与 Rubrics 配对的 Skills 会被持续改进并选择性激活，引导探索避开重复失败、聚焦未解决弱点。",
+    "能力驱动的自适应采样机制优先选择针对当前薄弱行为的任务，提高训练资源利用率。",
+    "在 SkillsBench 和 Terminal-Bench 上，ARISE 同时改善整体任务表现与训练效率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.88,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.9,
+    "llm_avg": 0.892,
+    "comment": "ARISE presents a strong closed-loop agent-RL method that co-evolves rubrics, skills, exploration, and task sampling from rollout evidence.",
+    "comment_zh": "ARISE 提出了一个强有力的智能体强化学习闭环方法，利用轨迹证据共同进化评估标准、技能、探索策略和任务采样。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.892,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://foundation-model-research.github.io/ARISE",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35532/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.35532/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.927
+    }
+  ]
+}
