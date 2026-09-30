@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2609.37183",
+  "title": "HELIX: Purified and Unified - Rethinking Feature Interaction and Sequence Modeling for Large-Scale Recommendation",
+  "title_zh": "HELIX：纯化与统一——重新思考大规模推荐中的特征交互与序列建模",
+  "authors": [
+    "Yuntao Zheng",
+    "Miao Zhang",
+    "Yadong Ding",
+    "Yanchuan Tang",
+    "Lixiyu Chen",
+    "Hao Wang",
+    "Quan Li",
+    "Shiying Cai",
+    "Yue Lin",
+    "Jiayu Li",
+    "Yu Feng",
+    "Wentao Yang",
+    "Rongkun Xing",
+    "Jiekai Wang",
+    "Mingge Zhang",
+    "Feiling Gong",
+    "Xiang Gao",
+    "Jinyu Dong",
+    "Yajing Zhang",
+    "Pengfei Ren",
+    "Yinzhou Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T10:06:26Z",
+  "abs_url": "https://arxiv.org/abs/2609.37183v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.37183",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Industrial recommendation ranking models typically scale along two modeling axes: feature interaction over heterogeneous user, item, context, and cross features, and sequence modeling over long, informative, and multi-type user behavior histories. We find that scaling either capability in isolation is insufficient, as each exhibits a limited scaling ceiling and a suboptimal scaling-law slope. We conjecture that achieving a more favorable scaling-law slope requires jointly scaling both axes. To support this, we present HELIX, a purified and unified architecture for large-scale recommendation. HELIX interleaves sequence retrieval and feature interaction while enforcing one-way information flow from reusable sequence states to candidate-conditioned mix-tokens. This design preserves cross-depth communication between the two modeling axes while keeping user-side sequence computation amortizable, enabling flexible and asymmetric scaling of sequence modeling and feature interaction. Deployed in TikTok's e-commerce recommendation system, HELIX consistently improves offline CTR AUC, CVR AUC, and other ranking metrics. In online A/B tests, it achieves an approximately 6% increase in e-commerce video GMV per user.",
+  "abstract_zh": "工业推荐排序模型通常沿两条轴扩展：对异构用户、物品、上下文及交叉特征进行特征交互，以及对长序列、多类型且信息丰富的用户行为历史进行序列建模。论文发现，单独扩展任一能力都存在性能上限和不理想的 scaling-law 斜率。为获得更优的扩展规律，作者提出 HELIX，一种面向大规模推荐的纯化统一架构。HELIX 交替执行序列检索与特征交互，并约束信息仅从可复用的序列状态流向候选条件化的 mix-tokens，从而在保持两条建模轴跨深度通信的同时，使用户侧序列计算可摊销，并支持序列建模与特征交互的灵活、非对称扩展。HELIX 已部署于 TikTok 电商推荐系统，在线下持续提升 CTR AUC、CVR AUC 等排序指标；在线 A/B 测试中，使电商视频人均 GMV 提升约 6%。",
+  "key_points_zh": [
+    "论文指出，单独扩大特征交互或序列建模能力均存在 scaling ceiling，且 scaling-law 斜率不理想；联合扩展两者可能带来更优收益。",
+    "HELIX 将 sequence retrieval 与 feature interaction 交替堆叠，通过 reusable sequence states 向 candidate-conditioned mix-tokens 的单向信息流实现架构统一。",
+    "该设计保留序列建模与特征交互之间的跨深度通信，同时支持用户侧序列计算摊销，降低重复计算成本。",
+    "HELIX 支持序列建模和特征交互的灵活、非对称扩展，适合大规模工业推荐系统的计算与容量配置。",
+    "在 TikTok 电商推荐系统中，HELIX 提升离线 CTR AUC、CVR AUC 等指标，并在在线 A/B 测试中带来约 6% 的电商视频人均 GMV 增长。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.86,
+    "problem_significance": 0.93,
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8700000000000001,
+    "comment": "A strong industrial e-commerce recommendation paper that unifies sequence modeling and feature interaction with substantial online GMV gains.",
+    "comment_zh": "该工作面向工业电商推荐统一建模用户行为序列与特征交互，并取得显著的线上GMV提升。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3210331475111057,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8700000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37183/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.36892",
+  "title": "Harness Evolution as Learning: Approximation, Generalization, and Optimization Limits of Self-Improving Personal Agents",
+  "title_zh": "将 Harness 演化视为学习：自我改进个人智能体的近似、泛化与优化极限",
+  "authors": [
+    "Zeyu Gan",
+    "Zixuan Gong",
+    "Yong Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T07:21:50Z",
+  "abs_url": "https://arxiv.org/abs/2609.36892v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.36892",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As the capabilities of large language models (LLMs) continue to advance, increasing attention is turning to how to translate their abilities into useful behavior. Personal agents bring this question into everyday settings, where models are expected to serve individual users and continually adapt to their preferences. With the underlying model held fixed, such adaptation relies on harness engineering: designing and evolving the surrounding layer that manages context, memory, tools, and execution. Despite rapid progress, the factors governing effective harness evolution remain insufficiently understood. To narrow this gap, we investigate three central questions concerning harness architecture, harness scale, and self-evolution algorithms through complementary empirical and theoretical analyses. Empirically, we introduce a preference-oriented benchmark and systematically characterize the capabilities and limitations of personal agents associated with these three dimensions. Theoretically, we formulate harness evolution as a learning problem and explain these phenomena through approximation, generalization, and optimization errors. Analyses of reachable policies, capacity under finite interaction evidence, and biased update dynamics provide theoretical accounts of the observed phenomena. Together, these results offer a unified perspective on the limits of personalization through harness evolution and inform future harness design.",
+  "abstract_zh": "随着大语言模型（LLM）能力提升，如何将其转化为有用行为成为关键问题。个人智能体要求模型服务特定用户，并持续适应其偏好；在底层模型固定时，这种适应主要依赖 Harness Engineering，即演化管理上下文、记忆、工具与执行流程的外围系统。本文围绕 Harness 架构、规模与自演化算法三个维度，结合实证和理论分析研究其有效演化的决定因素。作者提出一个面向偏好的基准，系统刻画不同设计下个人智能体的能力与局限；同时将 Harness 演化形式化为学习问题，并从近似误差、泛化误差和优化误差解释相关现象。对可达策略、有限交互证据下的容量以及带偏更新动力学的分析，为实证结果提供理论解释。研究最终给出个性化能力边界的统一视角，并为未来 Harness 设计提供指导。",
+  "key_points_zh": [
+    "将个人智能体的 Harness 演化统一建模为学习问题，分析近似、泛化与优化三类误差。",
+    "从 Harness 架构、规模和自演化算法三个维度，系统研究个性化能力及其限制。",
+    "提出面向用户偏好的基准，用于实证评估个人智能体的适应与自我改进能力。",
+    "理论分析表明，可达策略空间、有限交互证据带来的容量限制，以及有偏更新动力学共同决定演化效果。",
+    "研究为理解 Harness Engineering 的个性化上限及设计更有效的自我改进机制提供统一框架。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.8,
+    "novelty": 0.84,
+    "problem_significance": 0.83,
+    "potential_impact": 0.79,
+    "paradigm_shift": 0.81,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8220000000000001,
+    "comment": "It offers a valuable theoretical and empirical framework for understanding and improving self-evolving agent harnesses, though its personal-agent emphasis includes memory-related scope.",
+    "comment_zh": "该工作为理解和改进自演化Agent Harness提供了有价值的理论与实证框架，但其个人Agent重点也包含一定的记忆领域内容。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8220000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36892/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.949
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36892/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

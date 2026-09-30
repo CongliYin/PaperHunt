@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2609.37834",
+  "title": "Mixture of Self-Improving Branches For Agent Harness Optimization",
+  "title_zh": "用于 Agent Harness 优化的自我改进分支混合",
+  "authors": [
+    "Haoyu Dong",
+    "Yuhang Zhou",
+    "Zihao Lin",
+    "Yifan Wu",
+    "Bo Peng",
+    "Mingyi Wang",
+    "Xiangjun Fan",
+    "Lizhu Zhang",
+    "Zhuokai Zhao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T15:37:38Z",
+  "abs_url": "https://arxiv.org/abs/2609.37834v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.37834",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Harness optimization provides a practical setting for recursive self-improvement (RSI), where agent-generated modifications inform subsequent changes through execution feedback. Recent work such as Meta-Harness implements this process through iterative code generation and evaluation, but retains a fixed development set and proposal policy. These constraints channel evolution along a single search trajectory, increasing the risk of converging to a local optimum. We make the improvement process itself adaptive by organizing search into branches with evolving development subsets and proposal policies. Each branch retains development cases solved by more of its leading harnesses than by those of other branches, drops cases solved by every leading harness across all branches, and revises its proposal policy using its own search history. To deploy the resulting complementary harnesses, we propose a router to select one development-selected branch head for each new input before execution. Across mathematical reasoning and agentic coding benchmarks, our system achieves relative improvements over Meta-Harness of 34.8% on Olympiad-level mathematical reasoning, 11.6% on Terminal-Bench 2.0, and 3.8% on SWE-bench Lite, with harness selection and router configuration based solely on development data. These results show that evolving branch objectives and proposal policies can yield complementary harnesses whose strengths a router combines without access to test outcomes.",
+  "abstract_zh": "Harness 优化为递归自我改进（Recursive Self-Improvement, RSI）提供了实用场景：智能体生成的修改通过执行反馈指导后续改进。现有方法如 Meta-Harness 采用迭代式代码生成与评估，但使用固定开发集和固定提议策略，使演化被限制在单一搜索轨迹上，容易收敛于局部最优。本文通过构建具有动态开发子集和提议策略的多分支搜索，使改进过程本身具备自适应性。每个分支保留那些被本分支领先 Harness 解决得更多、而非其他分支领先 Harness 解决得更多的开发样例；同时丢弃所有分支领先 Harness 都能解决的样例，并依据自身搜索历史更新提议策略。为部署互补的 Harness，本文提出一个路由器，在执行新输入前，依据开发集选择一个分支头。实验覆盖数学推理和智能体编程基准。在仅使用开发数据进行 Harness 选择与路由器配置的条件下，相比 Meta-Harness，系统在 Olympiad-level mathematical reasoning、Terminal-Bench 2.0 和 SWE-bench Lite 上分别取得 34.8%、11.6% 和 3.8% 的相对提升。结果表明，动态演化分支目标与提议策略能够产生互补 Harness，并由路由器组合其优势，而无需访问测试结果。",
+  "key_points_zh": [
+    "针对 Meta-Harness 固定开发集与固定提议策略导致的单轨迹搜索和局部最优问题，提出 Mixture of Self-Improving Branches。",
+    "每个分支动态维护差异化开发子集，并依据自身搜索历史更新 proposal policy，从而探索不同改进方向。",
+    "通过路由器在新输入执行前选择合适的分支头，组合多个互补 Harness 的能力。",
+    "仅基于开发数据配置 Harness 选择与路由器，在 Olympiad-level mathematical reasoning、Terminal-Bench 2.0 和 SWE-bench Lite 上相对 Meta-Harness 分别提升 34.8%、11.6% 和 3.8%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.88,
+    "problem_significance": 0.86,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.88,
+    "llm_avg": 0.868,
+    "comment": "Branching harness search with adaptive objectives and routing offers a substantive improvement over single-trajectory recursive harness optimization.",
+    "comment_zh": "通过自适应目标和路由进行分支式 harness 搜索，相比单轨迹递归优化实现了实质性改进。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.868,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37834/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37834/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.588
+    }
+  ]
+}

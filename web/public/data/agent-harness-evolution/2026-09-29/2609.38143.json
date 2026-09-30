@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.38143",
+  "title": "Learning Meta-Skills for Agent Harness Design in Test-Time AI4AI",
+  "title_zh": "在 Test-Time AI4AI 中学习用于 Agent Harness 设计的元技能",
+  "authors": [
+    "Cheng Qian",
+    "Kunlun Zhu",
+    "Beibin Li",
+    "Zhenhailong Wang",
+    "Heng Ji"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T17:55:56Z",
+  "abs_url": "https://arxiv.org/abs/2609.38143v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.38143",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent performance depends on both reasoning ability and the environment in which it acts. We study test-time AI-for-AI, asking how a Builder can learn to construct better execution environments for a Target while both models' weights remain fixed. To make the Builder's experience reusable, we introduce Meta-Skill: principles specifying when support is needed and what resources to provide. The Builder learns these principles from Target's execution feedback on the development set, then uses the frozen skill bank to construct harnesses for unseen tasks. Across Harness-Bench and NewtonBench, full-bank meta-skills improve macro-average performance by 8.95 percentage points over no-skill construction, and 12.02 points over direct delivery of the same bank to the Target. These results highlight the value of translating experience into executable support. Gains when the same model serves both roles further suggest a path to system level self-improvement through learning to build better environments.",
+  "abstract_zh": "Agent 的性能不仅取决于推理能力，也取决于其执行所处的环境。本文研究 Test-Time AI-for-AI：在 Builder 与 Target 模型权重均冻结的条件下，Builder 如何学习为 Target 构建更优的执行环境。为使 Builder 的经验能够复用，作者提出 Meta-Skill，即规定何时需要支持以及应提供何种资源的原则。Builder 根据 Target 在开发集上的执行反馈学习这些原则，再利用冻结的技能库为未见任务构建 harness。在 Harness-Bench 和 NewtonBench 上，使用完整 Meta-Skill 库相比不使用技能构建，宏平均性能提升 8.95 个百分点；相比将同一技能库直接交给 Target，提升 12.02 个百分点。结果表明，将经验转化为可执行支持能够有效提升 Agent 性能。当同一模型同时担任 Builder 和 Target 时仍能获得增益，进一步说明了通过学习构建更优环境实现系统级自我改进的潜力。",
+  "key_points_zh": [
+    "研究 Test-Time AI4AI：冻结 Builder 与 Target 的模型权重，由 Builder 学习构建适合 Target 的执行环境。",
+    "提出 Meta-Skill，用原则化方式描述何时需要支持以及应提供哪些资源，使经验能够跨任务复用。",
+    "在 Harness-Bench 和 NewtonBench 上，完整技能库较无技能构建提升 8.95 个百分点，较直接向 Target 提供同一技能库提升 12.02 个百分点。",
+    "实验表明，将经验转化为可执行的环境支持，比直接交付资源更有效。",
+    "Builder 与 Target 使用同一模型时仍有性能增益，显示了通过环境构建实现系统级自我改进的可能性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.91,
+    "novelty": 0.82,
+    "problem_significance": 0.78,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.8,
+    "llm_avg": 0.8,
+    "comment": "The work introduces reusable meta-skills that improve how a Builder constructs execution environments for a frozen Target agent.",
+    "comment_zh": "该工作提出了可复用的元技能，用于改进 Builder 为冻结的 Target 智能体构建执行环境的方式。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38143/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38143/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.989
+    }
+  ]
+}

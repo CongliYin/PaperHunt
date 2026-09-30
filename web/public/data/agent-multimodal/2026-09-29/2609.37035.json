@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2609.37035",
+  "title": "Watch-Think-Interact: Bootstrapping Long-Horizon Multi-Turn Streaming Video Reasoning with Reinforcement Learning",
+  "title_zh": "Watch-Think-Interact：通过强化学习引导长时程多轮流式视频推理",
+  "authors": [
+    "Ziheng Huang",
+    "Yicheng Bao",
+    "Xueheng Li",
+    "Zhenkun Gao",
+    "Bangwei Liu",
+    "Kunquan Li",
+    "Yuxiang Shen",
+    "Bangyan Li",
+    "Xuejiao Wang",
+    "Changbo Wang",
+    "Gaoqi He"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T08:46:25Z",
+  "abs_url": "https://arxiv.org/abs/2609.37035v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.37035",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Streaming video assistance requires models to answer asynchronous questions from an observed prefix under a fixed context budget. Existing approaches model response timing or compress history, but an online state formed before future questions are known can omit visual details before later questions reveal their relevance; the retained state alone cannot recover them. We introduce Watch-Think-Interact (WTI), a closed-loop framework for multi-question streaming video reasoning. WTI maintains compact natural-language memory entries tagged with source-video time ranges; these entries support direct reasoning when sufficient and otherwise anchor selective recall of finer visual evidence. For each question, WTI answers when current context and memory suffice, continues watching when required evidence has not appeared, or recalls a relevant past interval and decides again after incorporating the returned chunks, without replaying the full observed history. To train this behavior, we construct WTI-82K, comprising 82,335 timed questions across 4,812 causally aligned trajectories, and develop Stream-GDPO to optimize complete multi-question streaming rollouts using trajectory-level feedback for response timing, source-video recall, and memory updates. WTI achieves state-of-the-art aggregate performance among the compared open-source streaming baselines, reaching 83.3% on StreamingBench and 73.6% weighted overall accuracy on OVO-Bench.",
+  "abstract_zh": "本文提出 Watch-Think-Interact（WTI），用于固定上下文预算下的多问题流式视频推理。WTI维护带有源视频时间范围标记的紧凑自然语言记忆：当当前上下文和记忆足够时直接回答；当证据尚未出现时继续观看；当需要历史细节时，选择性召回相关视频片段并重新决策，无需重放全部历史。为训练这一闭环行为，作者构建包含82,335个定时问题、4,812条因果对齐轨迹的 WTI-82K，并提出 Stream-GDPO，利用轨迹级反馈联合优化回答时机、源视频召回和记忆更新。WTI在 StreamingBench 和 OVO-Bench 上分别达到83.3%和73.6%的加权总体准确率，优于对比的开源流式视频基线。",
+  "key_points_zh": [
+    "提出闭环流式推理框架 WTI，统一观看、回答、继续观看和历史召回决策。",
+    "通过带源视频时间范围的自然语言记忆保存紧凑状态，并支持按需恢复细粒度视觉证据。",
+    "构建 WTI-82K：含82,335个定时问题和4,812条因果对齐多问题轨迹。",
+    "提出 Stream-GDPO，以轨迹级反馈优化回答时机、视频召回和记忆更新。",
+    "在 StreamingBench 和 OVO-Bench 上取得当前对比开源基线中的最佳综合表现。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.9,
+    "problem_significance": 0.94,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.91,
+    "llm_avg": 0.908,
+    "comment": "WTI presents a genuine closed-loop streaming visual agent that decides when to answer, continue watching, or recall evidence and trains this behavior with trajectory-level reinforcement learning.",
+    "comment_zh": "WTI构建了真正的闭环流式视觉智能体，使模型决定何时回答、继续观察或召回证据，并用轨迹级强化学习训练这些行为。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.24680800814443493,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.908,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37035/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37035/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.972
+    }
+  ]
+}

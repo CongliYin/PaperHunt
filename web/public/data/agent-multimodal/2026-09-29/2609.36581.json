@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.36581",
+  "title": "MemEvo: Automatic Discovery of Streaming Video Memory Mechanisms",
+  "title_zh": "MemEvo：自动发现流式视频记忆机制",
+  "authors": [
+    "Guohong Liu",
+    "Jialei Ye",
+    "Shanhui Zhao",
+    "Yunxin Liu",
+    "Yuanchun Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T02:59:42Z",
+  "abs_url": "https://arxiv.org/abs/2609.36581v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.36581",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Query-agnostic streaming video understanding requires vision-language models to continuously compress an indefinitely growing visual stream into a bounded memory before future queries are known. The performance depends critically on the memory mechanism--what observations to preserve, how to represent and consolidate them, and what information to retrieve when a query eventually arrives. Rather than designing a single memory architecture by hand, we formulate memory design as a search problem over executable memory programs. We introduce a lightweight domain-specific language that expresses memory mechanisms through structured primitives for representation, admission, retention, consolidation, budgeting, and retrieval, while enforcing causal and bounded-memory constraints. Although structured, the derived program space remains large and contains heterogeneous, conditionally dependent design choices whose effects can only be assessed via downstream execution. We therefore propose MemEvo, an LLM-driven auto-research framework that uses pretrained LLM as a semantics-aware proposal model to iteratively generate and refine candidate memory programs based on accumulated experimental feedback. At runtime, a deterministic evaluation pipeline validates and evaluates each candidate, while the underlying vision-language model remains frozen throughout discovery. We finally produce a training-free, bounded-memory mechanism. Extensive experiments on StreamingBench and OVO-Bench demonstrate strong streaming video understanding performance together with substantial context and inference efficiency.",
+  "abstract_zh": "面向未知查询的流式视频理解要求视觉语言模型将无限增长的视频流持续压缩为有界记忆，但未来查询尚不可知，因此记忆机制必须决定保留哪些观测、如何表示与整合信息，以及查询到来后检索哪些内容。MemEvo不再手工设计单一记忆架构，而是将记忆设计形式化为可执行记忆程序的搜索问题。论文提出一种轻量级领域专用语言，通过表示、接纳、保留、整合、预算分配和检索等结构化原语描述记忆机制，并保证因果性与有界内存约束。针对程序空间庞大、设计选择异质且相互依赖、效果必须通过下游执行评估等问题，MemEvo构建了由大语言模型驱动的自动研究框架：利用预训练LLM作为具备语义理解能力的候选生成器，根据累积实验反馈迭代生成和改进记忆程序。运行时，确定性评估流程负责验证和评测候选程序，底层视觉语言模型在整个发现过程中保持冻结。最终得到一种无需训练且内存有界的记忆机制。在StreamingBench和OVO-Bench上的大量实验表明，该方法在流式视频理解性能、上下文效率和推理效率方面均表现突出。",
+  "key_points_zh": [
+    "将流式视频记忆机制建模为可执行记忆程序的自动搜索问题，而非依赖人工设计固定架构。",
+    "提出轻量级领域专用语言，以表示、接纳、保留、整合、预算和检索原语描述记忆策略，并约束因果性与有界内存。",
+    "MemEvo利用预训练LLM结合实验反馈迭代提出和优化候选程序，底层视觉语言模型全程冻结。",
+    "通过确定性运行时流程验证和评估候选机制，最终获得无需训练、内存受限的流式视频记忆方案。",
+    "在StreamingBench和OVO-Bench上实现较强理解性能，同时显著提升上下文利用率和推理效率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.86,
+    "problem_significance": 0.87,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8320000000000001,
+    "comment": "Automatically searching executable bounded-memory programs is a novel and potentially reusable approach to query-agnostic streaming video agents.",
+    "comment_zh": "通过自动搜索可执行的有界记忆程序，该工作为查询无关的流式视频智能体提供了新颖且可复用的方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4371584620143775,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8320000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36581/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.976
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36581/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.946
+    }
+  ]
+}

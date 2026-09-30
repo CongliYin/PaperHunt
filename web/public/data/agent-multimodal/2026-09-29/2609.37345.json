@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.37345",
+  "title": "When to Retrieve, When to Stay: Uncertainty-Aware Temporal Evidence Allocation for Streaming Video-LLMs",
+  "title_zh": "何时检索，何时停留：面向流式 Video-LLM 的不确定性感知时序证据分配",
+  "authors": [
+    "Xiang Hu",
+    "Jiazuo Yu",
+    "Lu Zhang",
+    "Yunzhi Zhuge",
+    "Huchuan Lu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T12:13:56Z",
+  "abs_url": "https://arxiv.org/abs/2609.37345v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.37345",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Streaming video understanding requires Video Large Language Models (Video-LLMs) to reason over continuous visual streams under causal constraints. As the visual history grows, a bounded visual?processing budget requires evidence selection that balances temporal recency with query relevance. Recent-only selection excludes potentially relevant historical evidence, whereas Semantic-only retrieval can displace useful recent context when relevance scores are ambiguous. We introduce WRWS (When to Retrieve, When to Stay), a training-free framework for uncertainty-adaptive evidence allocation. A lightweight external vision-language encoder scores query relevance across the observed history, while an adaptive allocation module uses the normalized entropy of the similarity distribution as a proxy for retrieval uncertainty. WRWS favors semantic retrieval when relevance cues are reliable and strengthens the recency prior under uncertainty. Following a retrieve-first, encode-later pipeline, WRWS selects evidence before target-model visual encoding, such that only the selected observations are processed by the costly target Video-LLM. Experiments across four Video-LLM families and multiple model scales demonstrate competitive accuracy on StreamingBench and OVO-Bench. In our efficiency evaluation, WRWS reduces average vision-to-answer time to 47.93% of the state-of-the-art method. Code will be released.",
+  "abstract_zh": "流式视频理解要求 Video-LLM 在因果约束下持续处理视觉流，并在有限视觉处理预算内选择证据。仅保留近期内容可能遗漏历史相关信息，而仅依赖语义检索则可能在相关性不明确时牺牲有用的近期上下文。本文提出无需训练的 WRWS（When to Retrieve, When to Stay）框架，通过轻量级外部视觉语言编码器评估历史观测与查询的相关性，并利用相似度分布的归一化熵估计检索不确定性。当相关性线索可靠时，WRWS 偏向语义检索；当不确定性较高时，则增强时间新近性先验。该方法采用“先检索、后编码”流程，在目标模型进行视觉编码前完成证据选择，从而仅处理被选中的观测。跨四类 Video-LLM 及多种模型规模的实验表明，WRWS 在 StreamingBench 和 OVO-Bench 上取得有竞争力的准确率；效率评估中，其平均从视觉输入到答案的耗时仅为当前最优方法的 47.93%。代码将公开。",
+  "key_points_zh": [
+    "提出无需训练的 WRWS，根据检索相关性分布熵动态决定“检索”还是“保留近期证据”。",
+    "相关性线索可靠时优先选择历史语义证据，不确定时强化时间新近性先验，缓解两类证据选择策略的局限。",
+    "采用先检索后编码，仅对选中观测执行昂贵的目标 Video-LLM 视觉编码，降低推理成本。",
+    "在四类 Video-LLM、多个模型规模及 StreamingBench、OVO-Bench 上验证了具有竞争力的准确率。",
+    "平均视觉到答案延迟降至当前最优方法的 47.93%，体现出显著效率优势。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.78,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.63,
+    "lasting_value": 0.82,
+    "llm_avg": 0.7939999999999999,
+    "comment": "A strong streaming Video-LLM systems contribution that adaptively balances recency and retrieval uncertainty to reduce visual latency under bounded budgets.",
+    "comment_zh": "该工作面向受限预算下的流式视频智能体，自适应平衡时间新近性与检索不确定性并显著降低视觉延迟。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.7117661250818889,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7939999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 110,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37345/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.919
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37345/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.973
+    }
+  ]
+}

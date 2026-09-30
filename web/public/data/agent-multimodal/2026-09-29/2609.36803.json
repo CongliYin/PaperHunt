@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2609.36803",
+  "title": "EGSD: Event-Grounded Self-Distillation for Streaming Video Understanding",
+  "title_zh": "EGSD：面向流式视频理解的事件锚定自蒸馏",
+  "authors": [
+    "Yuwei Miao",
+    "Xuesheng Zhang",
+    "Wenhao Zou",
+    "Jixia Zhang",
+    "Jianwei Lv",
+    "Bo Yuan",
+    "Junfeng Wang",
+    "Shiao Xie"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T06:15:16Z",
+  "abs_url": "https://arxiv.org/abs/2609.36803v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.36803",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Real-time video understanding requires incrementally maintaining a memory of streaming content, and optimizing this requires dense process signals. On-Policy Self-Distillation (OPSD), which lets one model serve as both teacher and student with the teacher receiving additional privileged information such as the question and ground-truth (GT) answer, can supply such token-level signals. However, applying it directly to streaming video raises two problems. (1) The student cannot be optimized end-to-end, where memory is written before the question arrives, yet the teacher scores it with the question-and-GT privilege, misaligning their preferences. (2) Effective-entity memory collapses, where the question-and-GT privilege makes the teacher favor only question-relevant entities, and token-mean averaging over a memory renders its signal invariant to how many entities that memory covers, both driving memory against the streaming need for diversity. To address these issues, we propose Event-Grounded Self-Distillation (EGSD), which characterizes streaming memory as an incremental update over verifiable Events (key visual entities, actions, and details) and targets the two problems on this basis. For problem (1), we adapt the OPSD signal into a multiplicative weight combined with the outcome reward; for problem (2), we re-weight the teacher with Events as privileged information to counter its question-relevance bias, and add an entity-coverage reward to supply the coverage preference the token-mean teacher lacks. Extensive experiments on mainstream online and offline benchmarks show EGSD achieves strong performance, reaching 79.8% on StreamingBench and 73.4% on the OVO-Bench Real-Time track, while memory analysis shows effective-entity recall rises 17.4% at only 6.8% more memory length.",
+  "abstract_zh": "实时视频理解需要持续维护流式内容记忆，并利用密集过程信号进行优化。On-Policy Self-Distillation（OPSD）让同一模型兼任教师与学生，其中教师可获得问题和真实答案（GT）等特权信息，从而提供token级训练信号。然而，直接将OPSD应用于流式视频会产生两项问题：其一，记忆写入发生在问题到来之前，学生无法端到端优化，而教师却依据问题和GT评估记忆，导致二者偏好不一致；其二，教师的特权信息使其偏向问题相关实体，且对记忆进行token均值聚合会忽略记忆覆盖的实体数量，造成有效实体记忆坍缩，不利于流式场景所需的多样性。为此，本文提出Event-Grounded Self-Distillation（EGSD），将流式记忆建模为由可验证事件构成的增量更新，事件包括关键视觉实体、动作和细节。针对第一个问题，EGSD将OPSD信号转化为与结果奖励相乘的权重；针对第二个问题，利用事件作为额外特权信息重新加权教师，以缓解其问题相关性偏置，并引入实体覆盖奖励，弥补token均值教师缺失的覆盖偏好。在主流在线与离线基准上的实验表明，EGSD取得了较强性能：在StreamingBench上达到79.8%，在OVO-Bench Real-Time赛道达到73.4%；记忆分析显示，仅增加6.8%的记忆长度，有效实体召回率即可提升17.4%。",
+  "key_points_zh": [
+    "指出直接应用OPSD会产生训练时序错配，以及教师偏好问题相关实体、导致记忆覆盖不足的问题。",
+    "将流式记忆表示为关键视觉实体、动作和细节组成的可验证事件增量更新。",
+    "以结果奖励调制OPSD信号，使教师评价与问题到来前的记忆写入过程更一致。",
+    "引入事件特权信息与实体覆盖奖励，缓解问题相关性偏置并提升记忆多样性。",
+    "在StreamingBench和OVO-Bench Real-Time上分别达到79.8%和73.4%，有效实体召回率提升17.4%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.8,
+    "problem_significance": 0.86,
+    "potential_impact": 0.83,
+    "paradigm_shift": 0.67,
+    "lasting_value": 0.81,
+    "llm_avg": 0.794,
+    "comment": "Event-grounded self-distillation directly addresses memory coverage and training-signal mismatch in streaming video reasoning.",
+    "comment_zh": "事件级自蒸馏直接解决了流式视频推理中的记忆覆盖不足与训练信号错配问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4058149490012195,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.794,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 8,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36803/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36803/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.955
+    }
+  ]
+}

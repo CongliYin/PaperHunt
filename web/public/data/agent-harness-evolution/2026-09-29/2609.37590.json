@@ -1,0 +1,72 @@
+{
+  "arxiv_id": "2609.37590",
+  "title": "FOCUS: Training-Free Decision-Preserving Context Compression for LLM Agents",
+  "title_zh": "FOCUS：面向 LLM Agents 的免训练决策保持型上下文压缩",
+  "authors": [
+    "Shantanu Dixit",
+    "Anson Bastos",
+    "Xuchao Zhang",
+    "Chetan Bansal",
+    "Saravan Rajmohan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T13:45:34Z",
+  "abs_url": "https://arxiv.org/abs/2609.37590v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.37590",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM agents accumulate interaction histories that grow linearly with task length, causing quadratic inference cost scaling and performance degradation from attention dilution. Existing context-compression methods learn what to discard offline: by contrastively optimizing guidelines, distilling compressors, or training compression policies. This incurs a substantial cost. Further, the compression policy is learned a priori and is not dynamically conditioned on the evolving test-time trajectories. In this paper we ask a complementary question: Which past interactions causally shape the agent's future decisions? We recast context compression as a causal decision preservation problem over discrete interaction units and introduce FOCUS, a training-free context compression framework that operates entirely at test time. Our method requires no offline data collection or fine-tuning, and is architecture-agnostic, attaching to any closed-API frontier model as a modular compression layer. We evaluate FOCUS on diverse agentic benchmarks including API and tool-calling, QA, web domain and multi-turn dialogue. Our method establishes new state of the art performance, cutting peak context by up to 48% and dependency by 73% while improving task success by up to 8.9 percentage points over uncompressed execution.",
+  "abstract_zh": "LLM Agents 的交互历史会随任务长度线性增长，导致推理成本呈二次扩展，并因注意力稀释造成性能下降。现有上下文压缩方法通常依赖离线训练，通过对比学习、压缩器蒸馏或压缩策略学习来决定丢弃内容，成本较高，且难以根据测试时不断演化的轨迹动态调整。本文将上下文压缩重新定义为离散交互单元上的因果决策保持问题，提出免训练的 FOCUS 框架，仅在测试时识别真正影响 Agent 后续决策的历史交互。FOCUS 无需离线数据收集或微调，与模型架构无关，可作为模块化压缩层接入任意闭源 API 前沿模型。在 API 与工具调用、问答、网页领域和多轮对话等多类 Agent 基准上，FOCUS 达到新的 state-of-the-art：最多减少 48% 的峰值上下文、降低 73% 的依赖量，并较未压缩执行将任务成功率提升最多 8.9 个百分点。",
+  "key_points_zh": [
+    "将上下文压缩形式化为因果决策保持问题，核心目标是保留会影响 Agent 后续行为的交互历史。",
+    "FOCUS 完全在测试时运行，无需离线数据、微调或压缩策略训练，并可兼容任意闭源 API 模型。",
+    "方法以离散交互单元为压缩对象，能够根据当前不断演化的任务轨迹动态决定保留与丢弃内容。",
+    "在 API 与工具调用、QA、网页和多轮对话基准上取得 state-of-the-art，峰值上下文最多减少 48%。",
+    "相较未压缩执行，FOCUS 最多降低 73% 的依赖量，并将任务成功率提升 8.9 个百分点。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.8,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.8,
+    "llm_avg": 0.8039999999999999,
+    "comment": "FOCUS is a broadly deployable runtime context-management method that preserves agent decisions while reducing long-horizon inference costs.",
+    "comment_zh": "FOCUS 是一种可广泛部署的运行时上下文管理方法，能够在降低长程推理成本的同时保持智能体决策。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8039999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37590/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

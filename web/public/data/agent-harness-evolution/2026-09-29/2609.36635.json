@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.36635",
+  "title": "WitnessGym: Benchmarking Coding Agents on the Construction of Bug Witnesses",
+  "title_zh": "WitnessGym：基准测试编码智能体构造缺陷见证的能力",
+  "authors": [
+    "Haomin Qi",
+    "Xiangzhe Xu",
+    "Yiming Huang",
+    "Jingbo Shang",
+    "Chengpeng Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T03:43:13Z",
+  "abs_url": "https://arxiv.org/abs/2609.36635v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.36635",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Bug validation asks a coding agent to produce an executable witness for a reported bug. The witness combines a concrete input with a testing harness and exposes faulty behavior during execution. Such evidence makes audit findings actionable, yet benchmark evaluation is difficult when cases reuse public historical bugs and witnesses or require manual construction. We present WitnessGym, an automated framework for constructing bug-validation benchmarks through bug injection. It injects bugs into test-reached paths of real projects, rebuilds each project, and retains cases exposed by a construction-time witness. Bug specifications and execution adapters allow extension to additional bug types and languages. Bug-preserving transformations vary the surrounding structure while preserving the witness behavior. Based on real-world Java projects with test suites, WitnessGym automatically constructs 1,300 benchmark cases. The injected patches resemble historical bug patches and are difficult for the two evaluated models to distinguish in blinded comparisons. We evaluate four coding agent frameworks in six framework/model pairings across bug types, execution contexts, and transformation depths. Witness construction remains difficult even when the bug pattern is known. Our framework, benchmark cases, and evaluation scripts are available.",
+  "abstract_zh": "缺陷验证要求编码智能体生成可执行的缺陷见证（bug witness），即结合具体输入与测试驱动程序，在执行过程中暴露错误行为的证据。此类证据能将审计发现转化为可操作结果，但若复用公开历史缺陷及其见证，或依赖人工构造，基准评测会面临困难。本文提出 WitnessGym：一种通过注入缺陷自动构造缺陷验证基准的框架。该框架将缺陷注入真实项目中由测试覆盖的路径，重新构建项目，并保留能被构造阶段见证暴露的案例。通过缺陷规格与执行适配器，WitnessGym 可扩展至更多缺陷类型和编程语言；通过保持缺陷行为的变换，框架还能改变周围代码结构。基于带测试套件的真实 Java 项目，WitnessGym 自动构造了 1,300 个基准案例。注入补丁与历史真实缺陷补丁相似，在盲测比较中，两个被评估模型难以区分二者。作者进一步在不同缺陷类型、执行上下文和变换深度下，评估了四种编码智能体框架形成的六种框架—模型组合。结果表明，即使已知缺陷模式，构造可执行见证仍然困难。框架、基准案例及评测脚本均已公开。",
+  "key_points_zh": [
+    "提出 WitnessGym，通过向真实 Java 项目测试可达路径注入缺陷，自动筛选能被见证暴露的案例。",
+    "利用缺陷规格、执行适配器和缺陷保持变换，支持扩展缺陷类型、编程语言及代码结构变化。",
+    "从真实项目中自动构造 1,300 个基准案例，且注入补丁在盲测中难以与历史真实补丁区分。",
+    "在四种编码智能体框架的六种框架—模型组合上开展评测，覆盖缺陷类型、执行上下文和变换深度。",
+    "实验显示，即使编码智能体已知缺陷模式，生成可执行缺陷见证仍然具有较高难度。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.84,
+    "problem_significance": 0.86,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8320000000000001,
+    "comment": "WitnessGym is a valuable coding-agent benchmark infrastructure for executable bug validation with scalable construction and realistic project contexts.",
+    "comment_zh": "WitnessGym 是面向 coding agent 的有价值基准基础设施，支持在真实项目环境中规模化构造可执行的缺陷验证任务。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5482035961693346,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8320000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 10,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36635/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36635/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

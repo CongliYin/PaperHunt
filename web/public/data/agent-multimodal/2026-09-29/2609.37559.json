@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2609.37559",
+  "title": "APM-Bench: Benchmarking Cross-session Persistent Memory for Egocentric Streaming Video Assistants",
+  "title_zh": "APM-Bench：面向第一视角流式视频助手的跨会话持久记忆基准",
+  "authors": [
+    "Jianguo Huang",
+    "Jinming Liu",
+    "Qiyao Wang",
+    "Liang Xu",
+    "Jianhang Li",
+    "Zhimian Wen",
+    "Mingda Li",
+    "Shule Lu",
+    "Zhicheng Wang",
+    "Yuhan Guo",
+    "Xin Jin",
+    "Wenjun Zeng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T13:32:06Z",
+  "abs_url": "https://arxiv.org/abs/2609.37559v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.37559",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "To serve as real-world personal assistants, streaming video models need persistent memory that retains past experiences for later use. Yet existing streaming benchmarks and methods often focus on individual continuous videos or short clips, overlooking that real-world interactions are often intermittent and require memory to persist across interruptions. To fill this gap, we introduce APM-Bench, which reformulates real-world streaming interaction as multi-session life trajectories. It contains 549 sessions, 104 trajectories, and 2,719 candidates, spanning both objective and open-ended questions. Each session is a video with fine-grained annotations, and sessions within a trajectory revolve around related activities. Models then use persistent memory to answer questions about past sessions and provide proactive responses while maintaining real-time interaction. This raises challenges: persistent memory must be storable, selectively retain information, be injected at the right time, and remain efficient. Moreover, finite storage may leave required evidence unavailable, so assistants should recognize missing evidence. Therefore, we systematically evaluate general video models under different memory protocols and diverse specialized streaming memory systems, and test whether models acknowledge insufficient evidence. Our evaluation reveals a clear utility--latency--storage trade-off: existing methods still struggle to simultaneously achieve reliable long-term recall, low overhead, and effective proactive assistance across sessions. APM-Bench provides a comprehensive testbed for developing and comparing persistent memory systems under realistic streaming conditions. We hope it encourages future work that jointly considers utility, latency, and storage toward more practical persistent memory for real-world streaming assistants.",
+  "abstract_zh": "现实中的个人助手需要从间歇性的多次交互中保留过往经历，并在后续会话中调用这些记忆。现有流式视频基准和方法主要关注单段连续视频或短片段，忽略了跨中断、跨会话的长期记忆需求。为此，论文提出 APM-Bench，将真实世界的流式交互重新建模为多会话生活轨迹。该基准包含 549 个会话、104 条轨迹和 2,719 个候选样本，覆盖客观问题与开放式问题。每个会话对应一段带细粒度标注的视频，同一轨迹中的会话围绕相关活动展开。模型需要借助持久记忆回答历史会话问题，并在实时交互中主动提供信息。APM-Bench 系统评估了通用视频模型在不同记忆协议下的表现，以及多种专门设计的流式记忆系统，并检验模型能否识别证据缺失。实验揭示了效用、延迟与存储之间的明显权衡：现有方法尚难同时实现可靠的长期回忆、低运行开销和跨会话的有效主动辅助。该基准为在真实流式环境中开发和比较持久记忆系统提供了综合测试平台。",
+  "key_points_zh": [
+    "提出 APM-Bench，将第一视角流式交互建模为包含多个相关会话的生活轨迹，填补跨中断长期记忆评测的空白。",
+    "基准包含 549 个会话、104 条轨迹和 2,719 个候选样本，覆盖客观问答、开放式问答及主动辅助任务。",
+    "评测重点包括记忆存储、选择性保留、适时注入、计算效率，以及在证据不可用时承认信息缺失的能力。",
+    "实验表明，现有方法在长期回忆可靠性、延迟和存储成本之间存在显著权衡，难以三者兼顾。",
+    "论文倡导联合优化 utility、latency 和 storage，以推动更实用的真实世界流式视频持久记忆系统。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.87,
+    "problem_significance": 0.94,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.92,
+    "llm_avg": 0.8859999999999999,
+    "comment": "APM-Bench is a highly relevant reusable benchmark for persistent memory, proactive assistance, evidence absence, and utility-latency-storage trade-offs in streaming video assistants.",
+    "comment_zh": "APM-Bench高度契合流式视频助手，系统评估持久记忆、主动协助、证据缺失以及效用—延迟—存储权衡。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.8565341756227205,
+    "author_reputation": 0.36560162063732243,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8859999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 29,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37559/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.669
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37559/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.36805",
+  "title": "UpliftMem: Learning Set-Level Uplift for Agent Memory Retrieval",
+  "title_zh": "UpliftMem：学习集合级增益以进行智能体记忆检索",
+  "authors": [
+    "Mengkun Liang",
+    "Haoran Qiang",
+    "Guannan Liu",
+    "Junjie Wu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T06:17:15Z",
+  "abs_url": "https://arxiv.org/abs/2609.36805v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.36805",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM) agents reuse external memory to guide new tasks, but effective retrieval requires learning which memory sets improve execution. Such learning relies on costly outcome feedback: ordinary retrieval observes only executed sets, while evaluating alternatives requires additional rollouts. We introduce \\textsc{UpliftMem}, which learns memory retrieval from set-level execution uplift relative to the same executor without memory. A theoretical analysis of how retrieval preferences restrict feedback coverage motivates targeted probing of alternative memory sets. Probe selection follows an expected value of sample information (EVSI) criterion, derived in closed form under a correlated Gaussian model, to allocate limited training rollouts according to their expected improvement in local retrieval decisions. The shared scorer is trained with a frozen executor and selects memory sets without test-time probes. Across ALFWorld, WebShop, and BigCodeBench, \\textsc{UpliftMem} achieves the best success rates among evaluated baselines on the main evaluation sets. Controlled fixed-store and matched probe budget evaluations further demonstrate improved memory-use decisions and more effective use of execution feedback.",
+  "abstract_zh": "LLM 智能体会复用外部记忆辅助新任务，但有效检索需要判断哪些记忆集合能够提升执行效果。传统方法只能观察已执行的记忆集合，评估候选集合则需要额外 rollout，反馈成本较高。UpliftMem 以同一执行器在无记忆条件下的表现为基准，学习记忆集合带来的执行增益。论文从理论上分析检索偏好对反馈覆盖范围的限制，并据此主动探测替代记忆集合。探测选择采用期望样本信息价值（EVSI）准则，在相关高斯模型下推导出闭式解，根据其对局部检索决策的预期改进分配有限训练 rollout。训练时使用冻结的执行器优化共享评分器，测试时无需探测即可选择记忆集合。在 ALFWorld、WebShop 和 BigCodeBench 上，UpliftMem 在主要评测集上取得被比较方法中的最佳成功率；固定记忆库和匹配探测预算实验进一步表明，该方法能改善记忆使用决策，并更有效地利用执行反馈。",
+  "key_points_zh": [
+    "以无记忆执行结果为基线，学习记忆集合对任务执行带来的 set-level uplift，而非仅拟合已执行集合的结果。",
+    "通过理论分析识别反馈覆盖不足问题，并利用 EVSI 主动选择最值得评估的替代记忆集合。",
+    "在相关高斯模型下推导 EVSI 闭式解，以有限 rollout 预算优先支持预期能改善局部检索决策的探测。",
+    "训练阶段冻结执行器，仅学习共享记忆评分器；测试阶段无需额外 probe，即可直接检索记忆集合。",
+    "在 ALFWorld、WebShop 和 BigCodeBench 上取得最佳成功率，并在固定记忆库与匹配探测预算实验中验证反馈利用效率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.86,
+    "problem_significance": 0.89,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.77,
+    "lasting_value": 0.86,
+    "llm_avg": 0.852,
+    "comment": "A rigorous and reusable memory-retrieval framework that learns set-level utility under limited rollout feedback.",
+    "comment_zh": "这是一种严谨且可复用的记忆检索框架，能够在有限 rollout 反馈下学习记忆集合的整体效用。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2794153127047222,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.852,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36805/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36805/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.899
+    }
+  ]
+}

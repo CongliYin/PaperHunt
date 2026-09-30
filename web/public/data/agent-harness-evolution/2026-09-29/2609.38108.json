@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.38108",
+  "title": "Do LLM Agents Execute the Plans They Declare? From Planning-Mode Declaration to Pattern-Specific Execution",
+  "title_zh": "LLM Agents 会执行其声明的计划吗？从规划模式声明到模式特定执行",
+  "authors": [
+    "Subba Reddy Oota",
+    "Francisco Herrera",
+    "Jordi Cabot Sagrera",
+    "Marcos López de Prado",
+    "Shadab Khan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T17:47:18Z",
+  "abs_url": "https://arxiv.org/abs/2609.38108v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.38108",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) enable agents to solve long-horizon tasks by generating a plan and then executing it in an environment. However, successful planning requires two distinct capabilities: selecting an appropriate plan for the task and executing it faithfully. Existing planner--executor systems can fail at either stage, while final task success alone cannot distinguish selection from execution failures. We therefore study the Plan Declaration--Execution Gap and introduce Planning-as-Routing, where an LLM declares one of four planning modes: Predefined, Sequential, Hierarchical, or Search, and a deterministic router dispatches the task to the corresponding pattern-specific executor. Across four benchmarks and three LLMs, we find three consistent patterns. First, generic Plan+ReAct often fails to preserve declared planning structure, especially for longer plans: across three benchmarks, only (22)--(45%) of trajectories preserve it, whereas pattern-specific executors enforce the intended structure. Second, planning-mode effectiveness varies across environments and models: Search performs best on ALFWorld, Hierarchical on SWE-bench, and the strongest pattern can vary across models within the same benchmark. Third, the largest gains come from execution: pattern-specific executors improve task success from (0.48) to (0.92) on ALFWorld and from (0.36) to (0.44) on SWE-bench Verified over Plan+ReAct. Current LLMs, however, do not reliably select the strongest mode for each task, although few-shot examples improve selection in some benchmark--model combinations. Overall, reliable agent planning requires both effective mode selection and faithful execution: routing substantially closes the execution gap, while task-specific mode selection remains open.",
+  "abstract_zh": "本文研究 LLM agent 在长时程任务中的“计划声明—执行鸿沟”（Plan Declaration–Execution Gap）。作者提出 Planning-as-Routing：由 LLM 声明四种规划模式之一——Predefined、Sequential、Hierarchical 或 Search——再由确定性路由器将任务分配给对应的模式特定执行器。跨越四个基准和三个 LLM，实验发现：首先，通用 Plan+ReAct 往往无法忠实保持已声明的规划结构，尤其在计划较长时，三个基准中仅有 22%–45% 的轨迹遵循该结构，而模式特定执行器能够有效约束执行过程。其次，不同规划模式的效果依赖环境和模型：Search 在 ALFWorld 上最佳，Hierarchical 在 SWE-bench 上最佳，且同一基准中最优模式也可能随模型变化。最后，性能提升主要来自执行阶段：相较 Plan+ReAct，模式特定执行器将 ALFWorld 的任务成功率从 0.48 提升至 0.92，并将 SWE-bench Verified 从 0.36 提升至 0.44。当前 LLM 尚不能可靠地为每个任务选择最优模式，尽管 few-shot 示例在部分基准—模型组合中能改善选择。可靠的 agent planning 需要同时具备有效的模式选择与忠实执行；路由机制显著缩小了执行鸿沟，但任务特定的模式选择仍是开放问题。",
+  "key_points_zh": [
+    "提出 Planning-as-Routing，将 LLM 的规划模式声明与 Predefined、Sequential、Hierarchical、Search 四类专用执行器连接起来。",
+    "通用 Plan+ReAct 经常偏离自己声明的规划结构；在三个基准上，仅 22%–45% 的轨迹能够保持该结构。",
+    "规划模式存在明显的环境与模型依赖：Search 最适合 ALFWorld，Hierarchical 最适合 SWE-bench，但最优模式并不固定。",
+    "执行器改进是主要性能来源：ALFWorld 成功率由 0.48 提升至 0.92，SWE-bench Verified 由 0.36 提升至 0.44。",
+    "LLM 尚不能稳定选择任务的最优规划模式；few-shot 能在部分基准与模型组合中改善模式选择。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.8,
+    "problem_significance": 0.84,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.8,
+    "llm_avg": 0.808,
+    "comment": "Planning-as-Routing exposes and mitigates the plan-execution gap through explicit modes and deterministic pattern-specific executors.",
+    "comment_zh": "Planning-as-Routing 通过显式规划模式和确定性的模式专用执行器揭示并缓解了规划执行鸿沟。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.808,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38108/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38108/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.98
+    }
+  ]
+}

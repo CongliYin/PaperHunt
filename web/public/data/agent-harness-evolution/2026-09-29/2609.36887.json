@@ -1,0 +1,93 @@
+{
+  "arxiv_id": "2609.36887",
+  "title": "WEFT: Scaling Tool-Use Post-Training for General-Purpose Agents",
+  "title_zh": "WEFT：面向通用智能体的工具使用后训练扩展",
+  "authors": [
+    "Bo Mao",
+    "Hang He",
+    "Linting Wang",
+    "Lizhi Lin",
+    "Maosen Zhou",
+    "Guanming Liu",
+    "Jinxiu Liu",
+    "Tianyu Huai",
+    "Chaoyun Zhang",
+    "Bingxuan Li",
+    "Kepeng Lei",
+    "Guanting Dong",
+    "Zhou Shao",
+    "Rui Zheng",
+    "Hang Yan",
+    "Jie Zhou",
+    "Chengcheng Wan",
+    "Tao Gui",
+    "Liang He",
+    "Xipeng Qiu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T07:14:53Z",
+  "abs_url": "https://arxiv.org/abs/2609.36887v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.36887",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent efforts to scale tool-use post-training have largely centered on the synthesis of executable environments, which constitute only one component of a broader agentic interaction system comprising the environment, task, agent harness, and evaluator. Scaling environments in isolation, however, does not guarantee commensurate gains in model performance, because reliable learning signals depend on coherent interactions among all components of the agentic interaction system. To address this problem, we introduce WEFT (Whole-system Evolution For Tool-use Post-training), which couples scalable agentic interaction system construction, execution-driven self-evolution, and stable post-training. WEFT scales agentic interaction system construction across environment breadth, task complexity, and interaction diversity. Execution-driven self-evolution iteratively uses execution traces and state evidence to attribute failures and revise the responsible components, with fresh rollouts evaluating the changes and providing evidence for subsequent evolution rounds. For stable post-training at scale, WEFT addresses both optimization and execution reliability: prefix-preserving sampling retains verified progress and atomic-turn credit assignment localizes learning signals, while MegaMCP maintains isolated, recoverable state across concurrent rollouts over shared tool services. Extensive experiments across various models and benchmarks demonstrate the effectiveness of WEFT for tool-use post-training. WEFT-8B and WEFT-14B outperform all evaluated matched-size environment-scaling baselines on BFCL V4, $τ^2$-Bench, and Claw-Eval. In particular, WEFT-14B improves over Agent-World-14B by 6.41, 2.23, and 12.27 percentage points. WEFT-35B-A3B further extends these gains to more challenging long-horizon workflow benchmarks, including Toolathlon-Verified and AutomationBench.",
+  "abstract_zh": "现有工具使用后训练主要扩展可执行环境，但环境只是智能体交互系统的一部分，系统还包括任务、智能体执行框架与评估器。WEFT（Whole-system Evolution For Tool-use Post-training）通过协同扩展交互系统构建、执行驱动的自进化与稳定后训练，解决单独扩展环境带来的学习信号不足问题。该方法从环境覆盖、任务复杂度和交互多样性扩展系统；利用执行轨迹与状态证据定位失败并迭代修改责任组件；通过 prefix-preserving sampling、atomic-turn credit assignment 和 MegaMCP 提升训练稳定性及并发工具执行可靠性。在 BFCL V4、τ²-Bench 和 Claw-Eval 上，WEFT-8B 与 WEFT-14B 超越同规模环境扩展基线，其中 WEFT-14B 相比 Agent-World-14B 分别提升 6.41、2.23 和 12.27 个百分点；WEFT-35B-A3B 进一步在 Toolathlon-Verified 和 AutomationBench 等长程工作流基准上取得优势。",
+  "key_points_zh": [
+    "核心观点：工具使用后训练不能只扩展环境，环境、任务、智能体执行框架和评估器必须协同演化，才能产生可靠学习信号。",
+    "系统构建：WEFT从环境广度、任务复杂度和交互多样性三个维度扩展agentic interaction system。",
+    "执行驱动自进化：通过执行轨迹和状态证据归因失败，修改对应组件，并用新rollout验证改动、驱动后续迭代。",
+    "稳定后训练：prefix-preserving sampling保留已验证进展，atomic-turn credit assignment细化归因；MegaMCP为共享工具服务上的并发rollout提供隔离且可恢复的状态。",
+    "实验结果：WEFT-8B和WEFT-14B在BFCL V4、τ²-Bench、Claw-Eval上优于同规模环境扩展基线，WEFT-35B-A3B在更具挑战性的长程工作流基准上继续领先。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.92,
+    "problem_significance": 0.96,
+    "potential_impact": 0.96,
+    "paradigm_shift": 0.93,
+    "lasting_value": 0.95,
+    "llm_avg": 0.944,
+    "comment": "WEFT addresses the full tool-use training stack through executable system evolution, trace-driven feedback, rollout reliability, and scalable post-training.",
+    "comment_zh": "WEFT 通过可执行系统演化、轨迹反馈、rollout 可靠性和规模化后训练，系统性解决了工具使用训练栈问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.39342404825616256,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.944,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36887/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.939
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36887/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

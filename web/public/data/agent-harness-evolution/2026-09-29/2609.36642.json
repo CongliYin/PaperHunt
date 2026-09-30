@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.36642",
+  "title": "PR-OPD: Privileged Representation On-policy Self-Distillation for Agentic Reinforcement Learning",
+  "title_zh": "PR-OPD：面向智能体强化学习的特权表征在线策略自蒸馏",
+  "authors": [
+    "Muyang Li",
+    "Jie Yang",
+    "Zhengyu Fang",
+    "Junchao Zhu",
+    "Zhengkun Xiao",
+    "Ruining Deng",
+    "Zhe Jiang",
+    "Shigang Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T03:46:52Z",
+  "abs_url": "https://arxiv.org/abs/2609.36642v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.36642",
+  "links": {
+    "github": "https://github.com/balibata/PR-OPD.",
+    "project_page": null
+  },
+  "abstract_en": "Language-model agents are usually trained by reinforcement learning from one reward per episode, and privileged self-distillation enriches it by letting the same policy, given a skill, teach its skill-free self through token probabilities. However, we identify two phenomena that question this channel. Invisible Advantage: a skill in context lifts WebShop success from 42.2% to 56.2%, yet changes the probabilities of fewer than a quarter of the sampled tokens. Much to Align: a skill changes the hidden states of over 80% of response tokens, in a way that linear probes can trace back to the specific skill. To exploit this, we propose Privileged Representation On-policy Self-Distillation (PR-OPD). After a GRPO warm start, the policy writes a hindsight skill for each trajectory, re-reads its own responses with that skill as a stop-gradient teacher, and aligns its projected hidden states to the teacher's at every layer alongside the reward objective, with no external skill library, separate teacher, or inference overhead. On ALFWorld and WebShop with two backbones, PR-OPD achieves the best overall results in every setting, improving over GRPO by up to 4.7 points in ALFWorld success and 14.0 points in WebShop accuracy. Code is available at https://github.com/balibata/PR-OPD.",
+  "abstract_zh": "现有语言模型智能体通常通过每条轨迹一个奖励进行强化学习；特权自蒸馏则让带有技能信息的同一策略，通过 token 概率指导无技能策略。论文发现，技能带来的收益主要并不体现在少数 token 概率变化上：在 WebShop 中，加入技能可将成功率从 42.2% 提升至 56.2%，但受影响的采样 token 不到四分之一；与此同时，超过 80% 的响应 token 隐状态发生变化，且线性探针能从中识别具体技能。基于此，作者提出 Privileged Representation On-policy Self-Distillation（PR-OPD）：在 GRPO 预热后，策略为每条轨迹生成事后技能，将带技能重读响应的隐状态作为停止梯度教师，并在每一层对齐投影后的隐状态，同时优化奖励目标。该方法无需外部技能库、独立教师模型或额外推理开销。在 ALFWorld 和 WebShop 的两种 backbone 上，PR-OPD 在所有设置中取得最佳总体结果，相比 GRPO 的 ALFWorld 成功率最高提升 4.7 个百分点，WebShop 准确率最高提升 14.0 个百分点。",
+  "key_points_zh": [
+    "技能信息主要改变响应隐状态，而非大量 token 概率；超过 80% 的响应 token 隐状态受到影响。",
+    "PR-OPD 使用策略自身生成的 hindsight skill 作为教师，通过逐层隐状态对齐实现在线策略自蒸馏。",
+    "该方法无需外部技能库、独立教师模型，也不增加推理阶段开销。",
+    "在 ALFWorld 和 WebShop、两种 backbone 上均优于其他方法；相较 GRPO，最高提升 4.7 个百分点的 ALFWorld 成功率和 14.0 个百分点的 WebShop 准确率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.84,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.8,
+    "llm_avg": 0.82,
+    "comment": "PR-OPD provides a novel trajectory-grounded representation distillation method for training tool-using agents without external teachers or inference overhead.",
+    "comment_zh": "PR-OPD 提出了一种新颖的基于轨迹表示蒸馏的方法，可在无需外部教师和推理开销的情况下训练工具使用智能体。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.82,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/balibata/PR-OPD.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36642/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.937
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36642/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.943
+    }
+  ]
+}

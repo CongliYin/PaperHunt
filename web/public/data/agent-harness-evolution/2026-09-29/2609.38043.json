@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2609.38043",
+  "title": "UserProxyBench: Evaluating LLM User Simulators for Agent Benchmarks and Training",
+  "title_zh": "UserProxyBench：评估智能体基准与训练中的大语言模型用户模拟器",
+  "authors": [
+    "Ashish Jain",
+    "Armaan Sandhu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T17:17:24Z",
+  "abs_url": "https://arxiv.org/abs/2609.38043v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.38043",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Interactive agent benchmarks and multi-turn reinforcement learning increasingly place a second language model in the role of the user. This simulated user controls what information the agent receives and when, yet current benchmarks score only the agent and do not directly measure whether the user correctly executed its assigned role. We introduce UserProxyBench, an evaluation layer over the tau-bench family, and the User Fidelity Score (UFS), which measures adherence to the benchmark's private user instructions using task-grounded rubric criteria scored independently of agent success. Holding the agent fixed at GPT-5.5 and varying only the user proxy across 375 enterprise tasks changes mean task reward by 15.2 points, while 24.4% of successful episodes contain a user-specification violation. The dominant failure is premature disclosure: users provide information before it is requested. This behavior has little effect on task reward, yet among successful episodes it causes the agent to make 1.06 fewer tool calls on average, changing the interaction being evaluated while preserving the reward. Finally, across seven proxies we identify an empirical cost-fidelity frontier, enabling practitioners to select the least expensive simulator that satisfies a required fidelity level.",
+  "abstract_zh": "交互式智能体基准和多轮强化学习日益使用第二个语言模型模拟用户，但现有评测通常只给智能体打分，无法直接衡量模拟用户是否正确执行了预设角色。本文提出 UserProxyBench：一个构建于 tau-bench 系列之上的评测层，以及 User Fidelity Score（UFS），通过与任务相关的评分标准，独立评估模拟用户对私有用户指令的遵循程度，而不依赖智能体是否成功。在固定智能体为 GPT-5.5、仅更换用户代理的条件下，375 个企业任务的平均任务奖励相差 15.2 分；其中 24.4% 的成功轨迹仍存在用户规范违规。最主要的失败模式是过早披露，即用户在智能体请求前主动提供信息。该行为对任务奖励影响很小，但会使成功轨迹中的智能体平均少调用 1.06 次工具，从而改变被评估的交互过程。作者进一步在七种用户代理间发现成本—保真度前沿，为选择满足目标保真度要求的最低成本模拟器提供依据。",
+  "key_points_zh": [
+    "提出 UserProxyBench 和 User Fidelity Score（UFS），首次独立评估用户模拟器是否遵循私有角色指令。",
+    "固定 GPT-5.5 智能体、仅更换用户代理时，375 个企业任务的平均奖励差异达到 15.2 分。",
+    "24.4% 的成功轨迹仍包含用户规范违规，最常见问题是智能体请求前过早披露信息。",
+    "过早披露虽几乎不影响奖励，却使成功轨迹平均减少 1.06 次工具调用，改变了实际交互过程。",
+    "七种用户代理呈现成本—保真度前沿，可据此选择满足保真度要求的最低成本模拟器。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.73,
+    "novelty": 0.7,
+    "problem_significance": 0.72,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.56,
+    "lasting_value": 0.68,
+    "llm_avg": 0.6759999999999999,
+    "comment": "UserProxyBench supplies a useful evaluator-fidelity layer for interactive agent benchmarks, though it is less central to harness evolution than execution-focused infrastructure.",
+    "comment_zh": "UserProxyBench 为交互式智能体基准提供了有用的用户模拟器保真度评估层，但其与 harness 演化的关联弱于执行基础设施研究。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 1.0,
+    "generality": 0.35,
+    "llm_assessment": 0.6759999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38043/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38043/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.954
+    }
+  ]
+}

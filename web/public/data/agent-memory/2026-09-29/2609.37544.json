@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.37544",
+  "title": "How Can Recommendation Feedback Evolve Agent Memory?",
+  "title_zh": "推荐反馈如何推动智能体记忆演化？",
+  "authors": [
+    "Shanwen Mao",
+    "Mingming Li",
+    "Hao Zhang",
+    "Zhiheng Li",
+    "Yige Wang",
+    "Penghua Yu",
+    "Junxiong Zhu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T13:22:20Z",
+  "abs_url": "https://arxiv.org/abs/2609.37544v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.37544",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Content-generation agents continuously receive impressions, clicks, conversions, and negative feedback from recommendation systems, providing real-world outcome signals for memory evolution. However, these signals are delayed and noisy, confounded by audience composition, placement, and recommendation policies, and may result from the combined influence of multiple memories, making accurate attribution difficult. Existing methods rely primarily on immediate feedback or semantic retrieval and therefore struggle to reliably translate recommendation outcomes into memory fitness. To address this challenge, we propose TIDE (Trajectory-Informed Directed Memory Evolution), an external memory evolution framework driven by delayed recommendation feedback. We further introduce Memory Evolution Gain (MEG), which measures the utility improvement of evolved memory over a no memory baseline on strictly future tasks. TIDE treats memory as a capacity-constrained population of experiences: temporal and semantic credit assignment estimates contextual fitness, while responsibility credit distributes outcome signals according to the memories referenced during generation. These signals are then used to reinforce, crossover, mutate, or evict memories. On an e-commerce membership marketing content-generation agent, TIDE achieves a +7.75-percentage-point MEG in offline temporal replay and significantly improves both unique click-through rate (UCTR) and activation rate in an online A/B test. On a delayed-label benchmark, TIDE achieves the lowest mean absolute error (MAE) and root mean squared error (RMSE) and the highest MEG among the compared methods, demonstrating its effectiveness.",
+  "abstract_zh": "内容生成智能体持续接收推荐系统产生的曝光、点击、转化和负反馈，这些真实世界结果信号可用于更新外部记忆，但它们通常存在延迟、噪声，并受到受众构成、展示位置和推荐策略的混杂影响；同时，一个结果可能由多个记忆共同促成，导致准确归因困难。针对这一问题，论文提出 TIDE（Trajectory-Informed Directed Memory Evolution），一种由延迟推荐反馈驱动的外部记忆演化框架，并提出 Memory Evolution Gain（MEG），用于衡量演化后记忆相对于无记忆基线在严格未来任务上的效用提升。TIDE 将记忆建模为容量受限的经验群体，通过时间与语义信用分配估计上下文适应度，再依据生成过程中实际引用的记忆分配责任信用，进而执行记忆强化、交叉、变异与淘汰。在电商会员营销内容生成智能体上，TIDE 在离线时间回放中取得 7.75 个百分点的 MEG，并在线 A/B 测试中显著提升独特点击率（UCTR）和激活率。在延迟标签基准上，TIDE 获得最低的 MAE 和 RMSE，以及最高的 MEG，表明其能够更有效地将延迟推荐结果转化为可靠的记忆适应度。",
+  "key_points_zh": [
+    "推荐反馈具有延迟、噪声和多记忆共同作用等特征，难以直接用于评估记忆质量。",
+    "TIDE通过时间、语义和责任信用分配，将推荐结果归因到生成过程中引用的具体记忆。",
+    "框架将记忆视为容量受限的经验群体，并通过强化、交叉、变异和淘汰实现定向演化。",
+    "Memory Evolution Gain（MEG）以严格未来任务和无记忆基线衡量记忆演化带来的实际效用提升。",
+    "TIDE在离线回放、在线A/B测试和延迟标签基准上均优于对比方法，提升UCTR、激活率并降低MAE与RMSE。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.9,
+    "problem_significance": 0.91,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.87,
+    "lasting_value": 0.91,
+    "llm_avg": 0.8939999999999999,
+    "comment": "A strong Agent-memory contribution that uses delayed outcome attribution and evolutionary operations to maintain capacity-constrained long-term memory.",
+    "comment_zh": "这是一项突出的 Agent Memory 工作，通过延迟结果归因与进化操作维护容量受限的长期记忆。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3439406220117154,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.8939999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37544/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37544/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.97
+    }
+  ]
+}

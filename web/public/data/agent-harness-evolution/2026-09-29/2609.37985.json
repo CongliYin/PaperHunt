@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.37985",
+  "title": "Merged, Not Measured: An Empirical Study of Performance Issues Fixed by Coding Agents",
+  "title_zh": "合并≠实测：Coding Agents 修复性能问题的实证研究",
+  "authors": [
+    "Zhenyu Qi",
+    "Haotang Li",
+    "Jinfu Chen",
+    "Huashan Chen",
+    "Yutong Zhao",
+    "Derui Zhu",
+    "Tomas Cerny",
+    "Bo Liu",
+    "Sen He"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T16:48:55Z",
+  "abs_url": "https://arxiv.org/abs/2609.37985v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.37985",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents open pull requests (PRs) that claim to speed up software, but studies of human performance fixes say little about how maintainers respond to such a fix or whether its claim holds. From the 71,677 agent PRs of AIDev v4, a text filter and codebook coding by language models and by the authors select 1,262 performance issues fixed by six agents in 582 repositories. We code each issue and its tests and re-execute 23 rejected and 30 merged fixes. (1) 57% of closed fixes are merged, 61% of rejections give no stated reason, and only 6 of the 23 re-executed rejected claims held under our three-run pilot on mostly agent-built workloads. (2) Acceptance rises with the agent's track record in the repository (31-37% to 70%) and with the repository's pre-opening merge rate on its other agent PRs (33% to 84%). Merged fixes delete a larger share of the lines they change (0.26 versus 0.15), a difference that holds within agent and within repository, with no such difference detected in the coded content, description, tests or measurements. (3) Repeated computation and redundant data processing cause 44% of the issues, and 46% of fixes are architectural-level. (4) Agents change tests in 37% of fixes and 11% carry a performance test or benchmark; of the 30 merged fixes, 18 met our delivery criterion, 3 fell short of the claim, 9 showed no significant gain or regressed, and 14 change behavior on untested inputs. The outcome tracks the repository's history with the agent rather than the coded content of the fix, and a merge does not show that the fix delivers what it claims.",
+  "abstract_zh": "论文研究 Coding Agents 提交的性能优化 PR 是否真正兑现其加速声明，以及维护者如何处理这类修复。作者从 AIDev v4 的 71,677 个 agent PR 中筛选出 1,262 个性能问题修复，涉及 6 个 agents 和 582 个 repositories，并对问题、测试进行编码，重新执行了 23 个被拒绝和 30 个已合并的修复。结果表明：已关闭的性能修复中 57% 被合并，61% 的拒绝没有说明原因；在三次运行的试验中，23 个被拒绝修复仅有 6 个兑现了性能声明。接受率与 agent 在该 repository 中的历史表现，以及 repository 过去合并其他 agent PR 的比例显著相关，分别可由 31%–37% 升至 70%、由 33% 升至 84%。已合并修复删除其修改代码的比例更高（0.26 对 0.15），但在修复内容、描述、测试和测量结果上未发现相应差异。重复计算和冗余数据处理占问题的 44%，46% 的修复涉及架构层面。37% 的修复修改了测试，仅 11% 携带性能测试或 benchmark。在 30 个已合并修复中，18 个达到作者设定的交付标准，3 个低于声明，9 个没有显著收益或导致性能退化，且 14 个会改变未测试输入上的行为。总体而言，修复能否被合并更多反映 repository 与 agent 的合作历史，而非修复代码本身；被合并也不能证明其实现了所声称的性能提升。",
+  "key_points_zh": [
+    "性能修复的合并结果强烈依赖 agent 与 repository 的历史合作表现，而非可直接观察的修复内容。",
+    "被拒绝的修复中，仅 6/23 在重新执行试验中兑现了性能声明；合并本身不是有效性证明。",
+    "重复计算和冗余数据处理是最常见根因，占 44%；46% 的修复达到架构层面。",
+    "测试保障不足：仅 11% 的修复包含性能测试或 benchmark，且 37% 修改了测试。",
+    "已合并修复中仍有性能无提升、退化或未达到声明的案例，并可能改变未测试输入上的程序行为。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.78,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.83,
+    "llm_avg": 0.8019999999999999,
+    "comment": "This provides important empirical evidence about coding-agent performance claims, repository acceptance dynamics, and the need for execution-based regression gates.",
+    "comment_zh": "该研究揭示了编码Agent性能声明、仓库接受机制及基于执行的回归门控需求，具有重要实证价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.8019999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37985/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.94
+    }
+  ]
+}

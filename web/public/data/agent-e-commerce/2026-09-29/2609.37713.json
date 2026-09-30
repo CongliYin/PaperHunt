@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.37713",
+  "title": "Billiger.de Products: A Bilingual Entity Matching Benchmark",
+  "title_zh": "Billiger.de Products：双语实体匹配基准",
+  "authors": [
+    "Aaron Steiner",
+    "Ksenia Elagin",
+    "Ralph Peeters",
+    "Johannes Knopp",
+    "Christian Bizer"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T14:44:02Z",
+  "abs_url": "https://arxiv.org/abs/2609.37713v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.37713",
+  "links": {
+    "github": "https://github.com/wbsg-uni-mannheim/billiger-de-products",
+    "project_page": null
+  },
+  "abstract_en": "Existing product matching benchmarks primarily contain English-language product data and are often dominated by a single product category, such as electronics. This paper introduces Billiger.de Products, a bilingual German and English entity matching benchmark covering thirteen consumer product categories, including difficult-to-handle categories such as clothing and furniture. The benchmark data originates from the German price comparison platform billiger.de. Following the design of WDC Products, the benchmark offers multiple variants that differ in the fraction of corner cases, the size of the development set, and the fraction of entities unseen during training. An aligned English translation of every offer keeps all pairs, splits, and labels fixed, while cross-language test sets combine German and English records within individual pairs. We validate the benchmark using six supervised matchers and zero-shot GPT-5.2 on both language versions and the cross-language test sets. The validation shows the difficulty of the benchmark. The comparison of the results on the English version of the benchmark to the results on the German version shows that most matchers score on average higher on the English version. The difference is largest for RoBERTa and HierGAT, while the zero-shot LLM runs are largely insensitive to the language. Comparing the F1 scores achieved by PLM-based matchers on the English version of Billiger.de Products with their performance on existing English-language benchmarks, such as WDC Products and Abt-Buy, shows that Billiger.de Products is more difficult than these benchmarks.",
+  "abstract_zh": "本文提出 Billiger.de Products，一个覆盖德语和英语的双语实体匹配基准。数据来自德国比价平台 billiger.de，涵盖包括服装、家具在内的 13 个消费品类别，弥补现有基准以英语和电子产品为主的局限。基准参考 WDC Products，提供不同困难程度、开发集规模和训练未见实体比例的变体。每条德语商品记录均配有对齐的英语翻译，并构建德英跨语言测试集。通过 6 个有监督匹配器和 zero-shot GPT-5.2 的实验表明，该基准具有较高难度；多数匹配器在英语数据上的表现优于德语数据，RoBERTa 和 HierGAT 的语言差异最明显，而 zero-shot LLM 对语言不太敏感。与 WDC Products、Abt-Buy 等英语基准相比，Billiger.de Products 更具挑战性。",
+  "key_points_zh": [
+    "覆盖德语和英语、13 个消费品类别，特别纳入服装和家具等高难度类别。",
+    "提供多种基准变体，并构建保持配对、划分和标签一致的英语版本及德英跨语言测试集。",
+    "实验涵盖 6 个有监督匹配器和 zero-shot GPT-5.2，验证了基准的整体挑战性。",
+    "多数匹配器在英语版本上的得分高于德语版本，RoBERTa 和 HierGAT 的差异最大。",
+    "相较 WDC Products 和 Abt-Buy，Billiger.de Products 对 PLM-based 匹配器更具挑战。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.78,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.82,
+    "llm_avg": 0.736,
+    "comment": "A valuable bilingual product-matching benchmark grounded in a real price-comparison platform and covering challenging categories and cross-lingual cases.",
+    "comment_zh": "该工作基于真实比价平台构建双语商品匹配基准，覆盖困难品类与跨语言场景，具有较高实用价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.37796505041928935,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.736,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/wbsg-uni-mannheim/billiger-de-products",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 6,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37713/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.35
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37713/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

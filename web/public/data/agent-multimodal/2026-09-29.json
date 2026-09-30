@@ -1,0 +1,180 @@
+{
+  "domain": "agent-multimodal",
+  "display_name": "Realtime Multimodal Agent",
+  "date": "2026-09-29",
+  "generated_at": "2026-09-30T23:55:23Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.37345",
+      "title": "When to Retrieve, When to Stay: Uncertainty-Aware Temporal Evidence Allocation for Streaming Video-LLMs",
+      "title_zh": "何时检索，何时停留：面向流式 Video-LLM 的不确定性感知时序证据分配",
+      "authors": [
+        "Xiang Hu",
+        "Jiazuo Yu",
+        "Lu Zhang",
+        "Yunzhi Zhuge",
+        "Huchuan Lu"
+      ],
+      "total_score": 0.7067883062540946,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.7939999999999999,
+        "domain_fit": 0.9,
+        "other": 0.3352943541803149
+      },
+      "tags": [
+        "Code soon",
+        "h=110",
+        "streaming video grounding"
+      ],
+      "tldr_zh": "用不确定性自适应平衡语义检索与时间新近性",
+      "detail_file": "agent-multimodal/2026-09-29/2609.37345.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37345/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.36581",
+      "title": "MemEvo: Automatic Discovery of Streaming Video Memory Mechanisms",
+      "title_zh": "MemEvo：自动发现流式视频记忆机制",
+      "authors": [
+        "Guohong Liu",
+        "Jialei Ye",
+        "Shanhui Zhao",
+        "Yunxin Liu",
+        "Yuanchun Li"
+      ],
+      "total_score": 0.700457923100719,
+      "scores": {
+        "topic_relevance": 0.9600000000000001,
+        "llm_assessment": 0.8320000000000001,
+        "domain_fit": 0.88,
+        "other": 0.22285974366906297
+      },
+      "tags": [
+        "streaming video grounding"
+      ],
+      "tldr_zh": "用LLM自动搜索高效的有界视频记忆程序",
+      "detail_file": "agent-multimodal/2026-09-29/2609.36581.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36581/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.36903",
+      "title": "MultiTalk: Scaling Full-Duplex Speech Models to Long, Multi-Party, Bilingual Conversation",
+      "title_zh": "MultiTalk：扩展全双工语音模型，实现长时、多方双语对话",
+      "authors": [
+        "Ke Wang",
+        "Houxing Ren",
+        "Zimu Lu",
+        "Yunqiao Yang",
+        "Zhuofan Zong",
+        "Mingjie Zhan",
+        "Hongsheng Li"
+      ],
+      "total_score": 0.6733824593811418,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.86,
+        "domain_fit": 0.9,
+        "other": 0.2646081979371389
+      },
+      "tags": [
+        "Code soon",
+        "realtime voice agent"
+      ],
+      "tldr_zh": "MultiTalk让语音模型支持长时多方双语全双工对话",
+      "detail_file": "agent-multimodal/2026-09-29/2609.36903.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36903/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.36803",
+      "title": "EGSD: Event-Grounded Self-Distillation for Streaming Video Understanding",
+      "title_zh": "EGSD：面向流式视频理解的事件锚定自蒸馏",
+      "authors": [
+        "Yuwei Miao",
+        "Xuesheng Zhang",
+        "Wenhao Zou",
+        "Jixia Zhang",
+        "Jianwei Lv",
+        "Bo Yuan",
+        "Junfeng Wang",
+        "Shiao Xie"
+      ],
+      "total_score": 0.6714907474500611,
+      "scores": {
+        "topic_relevance": 0.92,
+        "llm_assessment": 0.794,
+        "domain_fit": 0.88,
+        "other": 0.21763582483353663
+      },
+      "tags": [
+        "streaming video grounding"
+      ],
+      "tldr_zh": "EGSD用事件奖励提升流式视频记忆的覆盖与性能",
+      "detail_file": "agent-multimodal/2026-09-29/2609.36803.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36803/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.37035",
+      "title": "Watch-Think-Interact: Bootstrapping Long-Horizon Multi-Turn Streaming Video Reasoning with Reinforcement Learning",
+      "title_zh": "Watch-Think-Interact：通过强化学习引导长时程多轮流式视频推理",
+      "authors": [
+        "Ziheng Huang",
+        "Yicheng Bao",
+        "Xueheng Li",
+        "Zhenkun Gao",
+        "Bangwei Liu",
+        "Kunquan Li",
+        "Yuxiang Shen",
+        "Bangyan Li",
+        "Xuejiao Wang",
+        "Changbo Wang",
+        "Gaoqi He"
+      ],
+      "total_score": 0.5897404004072218,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.908,
+        "domain_fit": 0.96,
+        "other": 0.25780133469073924
+      },
+      "tags": [
+        "Code soon",
+        "evaluation benchmarks"
+      ],
+      "tldr_zh": "WTI用记忆、召回与强化学习提升流式视频推理",
+      "detail_file": "agent-multimodal/2026-09-29/2609.37035.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37035/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.37559",
+      "title": "APM-Bench: Benchmarking Cross-session Persistent Memory for Egocentric Streaming Video Assistants",
+      "title_zh": "APM-Bench：面向第一视角流式视频助手的跨会话持久记忆基准",
+      "authors": [
+        "Jianguo Huang",
+        "Jinming Liu",
+        "Qiyao Wang",
+        "Liang Xu",
+        "Jianhang Li",
+        "Zhimian Wen",
+        "Mingda Li",
+        "Shule Lu",
+        "Zhicheng Wang",
+        "Yuhan Guo",
+        "Xin Jin",
+        "Wenjun Zeng"
+      ],
+      "total_score": 0.3719067898130021,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.8859999999999999,
+        "domain_fit": 0.95,
+        "other": 0.3536892993766738
+      },
+      "tags": [
+        "HF Daily ★29"
+      ],
+      "tldr_zh": "APM-Bench评测流式视频助手的跨会话持久记忆能力",
+      "detail_file": "agent-multimodal/2026-09-29/2609.37559.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37559/thumb.webp"
+    }
+  ]
+}

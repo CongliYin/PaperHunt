@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.37968",
+  "title": "SelfSearch: Reward-Free Search for Self-Improving Agents",
+  "title_zh": "SelfSearch：面向自我改进智能体的无奖励搜索",
+  "authors": [
+    "Jungwoo Yang",
+    "In Jin Kong",
+    "Yohan Jo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T16:36:24Z",
+  "abs_url": "https://arxiv.org/abs/2609.37968v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.37968",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Advances in the coding capabilities of LLM agents allow them to inspect and modify their own instructions, tools, and execution procedures. Existing approaches use this ability to search for improved agents through repeated downstream evaluation, which incurs substantial costs and ties the search to the evaluated tasks. We introduce \\textbf{SelfSearch}, a reward-free search procedure in which agents modify themselves using records of previous self-improvement episodes. These records capture the reasoning, tool actions, and outcomes of earlier modification attempts, providing concrete experience for improving both task solving and self-modification. Without downstream reward signals during search, SelfSearch improves population-mean success over the initial agent in all six model--benchmark settings, with individual agents gaining up to 11.2 percentage points on Terminal-Bench 2.1. On SWE-bench Multilingual, an agent improves success by \\textbf{5.0} percentage points while reducing execution cost by \\textbf{38.5}\\% on tasks solved by both the initial and evolved agents. SelfSearch achieves competitive task success with evaluation-guided search baselines at lower search cost. With only \\textbf{\\$4.03} in search cost, it produces a harness that solves \\textbf{82.0}\\% of Terminal-Bench 2.1 tasks with DeepSeek V4 Flash under the settings of a public nine-harness comparison, matching the top-scoring harness, Codex. These results suggest that experience gained through self-modification can improve agents' downstream capabilities and efficiency.",
+  "abstract_zh": "随着 LLM 智能体的编程能力提升，它们能够检查并修改自身指令、工具和执行流程。现有方法通过反复进行下游任务评测来搜索更优智能体，成本高昂且使搜索过程绑定于特定评测任务。本文提出 SelfSearch，一种无奖励搜索方法：智能体利用既往自我改进过程的记录来修改自身。这些记录包含先前修改尝试中的推理、工具操作及结果，为任务求解和自我修改提供具体经验。在搜索阶段无需下游奖励信号的情况下，SelfSearch 在全部六个模型—基准测试设置中都提升了群体平均成功率；在 Terminal-Bench 2.1 上，单个智能体最高提升 11.2 个百分点。在 SWE-bench Multilingual 上，智能体成功率提升 5.0 个百分点；对于初始智能体和进化后智能体均能解决的任务，执行成本降低 38.5%。SelfSearch 以更低搜索成本取得了与评测引导式搜索基线相当的任务成功率。在公开的九种 harness 对比设置下，仅花费 4.03 美元搜索成本，SelfSearch 便为 DeepSeek V4 Flash 生成了可解决 Terminal-Bench 2.1 中 82.0% 任务的 harness，与得分最高的 Codex 持平。结果表明，自我修改过程中积累的经验能够提升智能体的下游能力与效率。",
+  "key_points_zh": [
+    "提出 SelfSearch：利用历史自我改进记录进行搜索，无需下游奖励或反复任务评测。",
+    "历史记录同时包含推理、工具操作和结果，可用于改进任务求解能力与自我修改策略。",
+    "在六个模型—基准测试设置中均提升群体平均成功率；Terminal-Bench 2.1 单体最高提升 11.2 个百分点。",
+    "在 SWE-bench Multilingual 上成功率提升 5.0 个百分点，并在共同解决任务上降低 38.5% 执行成本。",
+    "搜索成本仅 4.03 美元时，生成的 harness 在 Terminal-Bench 2.1 上达到 82.0% 成功率，与 Codex 持平。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.92,
+    "problem_significance": 0.9,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.91,
+    "lasting_value": 0.9,
+    "llm_avg": 0.9100000000000001,
+    "comment": "This is a strong Skill-evolution and coding-agent contribution that turns self-modification experience into a low-cost, reward-free harness improvement loop.",
+    "comment_zh": "这项工作将自修改经验转化为低成本、无奖励搜索的Harness改进闭环，是技能演化和编码Agent方向的强贡献。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.9100000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37968/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37968/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.957
+    }
+  ]
+}

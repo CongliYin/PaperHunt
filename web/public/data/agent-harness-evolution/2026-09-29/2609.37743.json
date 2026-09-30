@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.37743",
+  "title": "ContextRender: From Execution Dependencies to Agent Context",
+  "title_zh": "ContextRender：从执行依赖到智能体上下文",
+  "authors": [
+    "Savini Kashmira",
+    "Jayanaka L. Dantanarayana",
+    "Lingjia Tang",
+    "Jason Mars"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T14:57:00Z",
+  "abs_url": "https://arxiv.org/abs/2609.37743v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.37743",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM agents performing long-horizon tasks accumulate tool results that later steps may need. Passing the full history to every invocation is costly even when it fits within the context window, while reducing it risks omitting needed information. Existing context management methods can overlook how earlier tool results are used in subsequent execution, leaving needed information out of context. We introduce ContextRender, which manages context through a persistent graph of execution dependencies. We develop Tool-Flow Analysis to track how later operations reuse information from earlier tool results, providing a signal called observed reuse. A renderer combines this signal with recency and semantic relevance to select results within a fixed history budget, retaining omitted results for later use. Across AppWorld and 8-objective QA with three execution models, ContextRender outperforms the evaluated context management baselines using a 6K history budget, well below the models' maximum context windows. Within this budget, it achieves task performance close to or above that of passing the full history while reducing mean inference cost by 10.2%-32.2% relative to Full history. Ablations show that observed reuse improves task performance and retention of results reused later.",
+  "abstract_zh": "长程任务中的 LLM agents 会不断累积工具调用结果。将完整历史传给每次调用成本高，而盲目压缩又可能丢失后续步骤所需信息。ContextRender 通过持久化执行依赖图管理上下文，并提出 Tool-Flow Analysis，追踪后续操作如何复用早期工具结果，得到“observed reuse”信号。其 renderer 结合结果的新近性、语义相关性与 observed reuse，在固定历史预算内选择上下文，并保留被省略结果以便后续恢复。实验覆盖 AppWorld、8-objective QA 及三种执行模型；在 6K 历史预算下，ContextRender 优于对比方法，性能接近或超过传递完整历史，同时相较 Full history 将平均推理成本降低 10.2%–32.2%。消融实验表明，observed reuse 能提升任务性能，并增强对后续会被复用结果的保留能力。",
+  "key_points_zh": [
+    "以持久化执行依赖图替代单纯按时间或语义压缩历史上下文。",
+    "Tool-Flow Analysis 识别工具结果在后续操作中的实际复用，形成 observed reuse 信号。",
+    "renderer 联合 observed reuse、新近性和语义相关性，在 6K 历史预算内选择上下文。",
+    "在 AppWorld 和 8-objective QA 上优于评测基线，性能接近或超过 Full history。",
+    "相较 Full history，平均推理成本降低 10.2%–32.2%，且能更好保留后续复用的信息。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.84,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.87,
+    "llm_avg": 0.842,
+    "comment": "Strong agent-runtime work that uses execution dependencies to create a reusable, cost-efficient context management loop for long-horizon tasks.",
+    "comment_zh": "这项工作通过执行依赖构建可复用且高效的上下文管理闭环，对长程Agent运行时具有较高价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.842,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37743/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37743/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}

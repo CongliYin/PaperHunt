@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.37539",
+  "title": "SkillGym: Training Skill-Use Agents with Automatic Verifiable Environment Generation",
+  "title_zh": "SkillGym：通过自动可验证环境生成训练技能使用智能体",
+  "authors": [
+    "Renxi Wang",
+    "Mingshan Hee",
+    "Fajri Koto",
+    "Timothy Baldwin",
+    "Haonan Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T13:21:38Z",
+  "abs_url": "https://arxiv.org/abs/2609.37539v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.37539",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Skills equip LLM agents with professional knowledge and guidance to complete long-horizon and complex tasks. Although skills have been widely adopted in recent agent paradigms and harnesses, how to synthesize reliable training data and how to train agents for skill use remain underexplored. In this work, we propose SkillGym, an automatic pipeline to build verifiable environments, collect trajectories, and train skill-use agents. SkillGym first crawls a large volume of skills from the internet, then keeps those whose workflows can run reproducibly offline. A builder-reviewer pipeline is used to construct difficulty-controlled tasks, spanning four task types, each with a reference solution and an executable verifier. With this pipeline, we build 6.8k environments and collect 19k verified successful trajectories for supervised finetuning. Finetuning on these trajectories improves LLMs of different families and sizes, from 2B to 122B parameters across four skill-use benchmarks; Our Qwen3.5-9B SFT model outperforms the 397B untrained model on two of them. Further analysis shows that training teaches agents to invoke skills, raising the rate of reading the relevant skill from 28% to 96%, and that the gains hold across reasoning structures, extending to task types that form a minority of the training data and to skills held out from training",
+  "abstract_zh": "技能（skills）为大语言模型智能体提供专业知识与操作指引，是完成长程复杂任务的重要组成部分，但可靠训练数据合成与技能使用训练仍缺乏系统研究。本文提出 SkillGym，一套自动化流程：从互联网抓取技能，筛选出可离线、可复现执行的技能；通过 builder-reviewer 流程构建难度可控的任务，并为每个任务提供参考解与可执行验证器。该流程构建了 6.8k 个环境，并收集 19k 条经验证的成功轨迹，用于监督微调（SFT）。在四个技能使用基准上，基于这些轨迹微调能够提升不同系列、2B 至 122B 参数规模的 LLM 表现；其中，Qwen3.5-9B SFT 模型在两个基准上超过了未训练的 397B 模型。分析表明，训练主要提升了智能体调用技能的能力，使其阅读相关技能的比例从 28% 提升至 96%；收益还可泛化至不同推理结构、训练数据中占比较低的任务类型，以及训练时未见过的技能。",
+  "key_points_zh": [
+    "提出 SkillGym 自动化管线，涵盖技能抓取、可复现筛选、环境构建、轨迹采集与智能体训练。",
+    "通过 builder-reviewer 流程生成四类难度可控任务，并配备参考解和可执行 verifier，构建 6.8k 个环境与 19k 条成功轨迹。",
+    "在四个技能使用基准上，SFT 普遍提升 2B 至 122B 多种 LLM；Qwen3.5-9B SFT 在两个基准上超过未训练的 397B 模型。",
+    "训练显著增强技能调用行为，相关技能阅读率由 28% 提升至 96%。",
+    "性能收益可迁移至少数训练任务类型、不同推理结构及训练阶段未见的技能，显示出较强泛化性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.86,
+    "problem_significance": 0.88,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8720000000000001,
+    "comment": "SkillGym offers a reusable pipeline for verified skill-environment generation, trajectory collection, and skill-use post-training.",
+    "comment_zh": "SkillGym 提供了一个可复用的流水线，用于可验证技能环境生成、轨迹收集和技能使用后训练。"
+  },
+  "scores": {
+    "topic_relevance": 0.44000000000000006,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8720000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37539/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37539/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.881
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2609.36746",
+  "title": "EASE: Behavior-Adaptive Skill Curation for Self-Evolving Agents",
+  "title_zh": "EASE：面向行为自适应的自进化智能体技能整理",
+  "authors": [
+    "Zhen Xiong",
+    "Qiaoyu Tan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T05:18:24Z",
+  "abs_url": "https://arxiv.org/abs/2609.36746v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.36746",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent skills provide a lightweight mechanism for self-evolving agents to accumulate reusable procedural knowledge without updating model parameters. However, existing learned skill curators typically optimize curation without explicitly modeling downstream executor behavior. We show that this can cause systematic cross-executor degradation: curators trained with different executors perform best when paired with their own training executor, indicating that effective skill curation is executor-dependent. We formulate behavior-adaptive skill curation and introduce EASE, a framework that learns a single curator that adapts its decisions to different executor behaviors. EASE maintains an online behavioral profile of recent execution patterns and conditions the curator on this profile, the current trajectory, and retrieved skills to add, modify, or remove skills from an evolving repository. We train the shared curator jointly across multiple frozen executors with reinforcement learning, using retrieval-aware and behavior-aware temporal attribution to focus optimization on curation actions with observable downstream influence. Across ALFWorld, ScienceWorld, and WebShop, with executors ranging from Qwen3-8B/32B and GPT-OSS-120B to unseen Kimi K2.6, DeepSeek V4 Flash, and Gemini 3.5 Flash, EASE outperforms strong skill- and memory-based baselines without per-executor finetuning. EASE also maintains 34.5--41.0% fewer skills, improves skill retrieval by 36.3--38.7% and measured edit utility by 51.8--60.0%, and reduces deployment-time inference tokens by 9.1--14.5%. These results establish behavior-adaptive skill curation as an effective principle for building self-evolving agents.",
+  "abstract_zh": "技能（skill）使自进化智能体无需更新模型参数即可积累可复用的程序性知识。然而，现有技能整理器通常未显式建模下游执行器（executor）的行为，导致跨执行器性能系统性下降：使用不同执行器训练的整理器，往往只在其对应训练执行器上表现最佳。为此，论文提出行为自适应技能整理问题，并设计 EASE 框架，使单一整理器能够适配不同执行器的行为。EASE 在线维护近期执行模式的行为画像，并结合该画像、当前轨迹与检索到的技能，对技能库执行新增、修改或删除操作。训练阶段，EASE 在多个冻结执行器上通过强化学习联合训练共享整理器，并利用检索感知与行为感知的时间归因，将优化重点放在具有可观测下游影响的整理行为上。在 ALFWorld、ScienceWorld 和 WebShop 上，面对 Qwen3-8B/32B、GPT-OSS-120B，以及未参与训练的 Kimi K2.6、DeepSeek V4 Flash 和 Gemini 3.5 Flash 等执行器，EASE 无需针对单个执行器微调，即可优于强大的技能与记忆基线。同时，EASE 将技能数量减少 34.5%—41.0%，使技能检索效果提升 36.3%—38.7%，测得的编辑效用提升 51.8%—60.0%，并将部署时推理 token 减少 9.1%—14.5%。结果表明，行为自适应技能整理是构建自进化智能体的有效原则。",
+  "key_points_zh": [
+    "发现技能整理具有执行器依赖性：整理器通常只适配其训练时使用的执行器，跨执行器迁移会出现系统性性能下降。",
+    "EASE通过在线行为画像，将执行器近期行为、当前轨迹和检索技能共同输入共享整理器，自适应执行技能新增、修改与删除。",
+    "EASE在多个冻结执行器上联合强化学习训练，并采用检索感知、行为感知的时间归因，强化真正影响下游执行的整理决策。",
+    "在 ALFWorld、ScienceWorld 和 WebShop 上，EASE无需逐执行器微调，即可优于技能型和记忆型基线，并泛化至未见过的执行器。",
+    "EASE减少34.5%—41.0%的技能数量，同时提升技能检索与编辑效用，并降低9.1%—14.5%的部署时推理 token 消耗。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.86,
+    "problem_significance": 0.84,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8480000000000001,
+    "comment": "EASE makes skill evolution executor-aware and closes a meaningful feedback loop between curation decisions and downstream agent behavior.",
+    "comment_zh": "EASE 使技能演化能够适应执行器行为，并建立了策划决策与下游智能体表现之间的重要反馈闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.45588306254094446,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8480000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 16,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36746/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36746/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.916
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.36903",
+  "title": "MultiTalk: Scaling Full-Duplex Speech Models to Long, Multi-Party, Bilingual Conversation",
+  "title_zh": "MultiTalk：扩展全双工语音模型，实现长时、多方双语对话",
+  "authors": [
+    "Ke Wang",
+    "Houxing Ren",
+    "Zimu Lu",
+    "Yunqiao Yang",
+    "Zhuofan Zong",
+    "Mingjie Zhan",
+    "Hongsheng Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T07:25:29Z",
+  "abs_url": "https://arxiv.org/abs/2609.36903v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.36903",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "End-to-end full-duplex speech models have brought open-source machine conversation closer to human-like interaction, yet existing systems remain limited in two intertwined dimensions: long-context robustness and multi-party interaction. Real-world scenarios such as meetings, group lessons, and social-robot reception require a single model to track, contextualize, and respond to multiple speakers over extended durations. Progress is constrained by both data and evaluation: open multi-party speech corpora remain small and are not designed for codec-frame-level full-duplex modeling, while existing long-audio benchmarks focus on passive listening and speech-to-speech benchmarks are mostly short and dyadic. We extend the Moshi paradigm jointly along the long-horizon and multi-party axes in English and Chinese. First, we release 57.6k hours of synthetic training data ($\\href{https://huggingface.co/datasets/MultiTalk/MultiTalkPT}{MultiTalkPT}$ and $\\href{https://huggingface.co/datasets/MultiTalk/MultiTalkFT}{MultiTalkFT}$) for long-form, multi-party, English-Chinese full-duplex dialogue, with controllable length, participant count, turn-taking, overlap, backchannels, interruptions, addressee shifts, and long-range coreference. Second, we introduce $\\href{https://huggingface.co/datasets/MultiTalk/MultiTalkBench}{MultiTalkBench}$, built from real human recordings, for evaluating long-form, multi-party, bilingual full-duplex dialogue. Conversations average 32.6 minutes and include probes for long-range entity tracking, topic coherence, and addressee selection. Third, we train a bilingual Moshi-style model that sustains coherent multi-party English-Chinese conversations over extended durations and substantially outperforms open-source baselines including Moshi, MiniCPM-o-4.5, and Qwen3-Omni-30B-A3B-Instruct on MultiTalkBench.",
+  "abstract_zh": "本文针对全双工语音模型在长上下文和多方交互上的局限，沿长时程与多参与者两个维度扩展 Moshi 范式，覆盖英语和中文。作者发布了 57.6k 小时的合成长时多方双语全双工对话数据集 MultiTalkPT 与 MultiTalkFT，支持可控的对话长度、参与者数量、轮次切换、语音重叠、附和语、打断、指向对象变化及长程共指。同时提出基于真实人类录音的评测集 MultiTalkBench，平均对话时长为 32.6 分钟，涵盖长程实体跟踪、主题连贯性和应答对象选择等任务。训练得到的双语 Moshi 风格模型能够维持长时间、多方英语—中文对话，并在 MultiTalkBench 上显著优于 Moshi、MiniCPM-o-4.5 和 Qwen3-Omni-30B-A3B-Instruct 等开源基线。",
+  "key_points_zh": [
+    "面向长上下文鲁棒性与多方交互，扩展 Moshi 全双工语音模型范式。",
+    "发布 57.6k 小时合成数据 MultiTalkPT 和 MultiTalkFT，覆盖多种可控对话行为。",
+    "提出真实录音评测集 MultiTalkBench，平均对话时长达 32.6 分钟。",
+    "评测关注长程实体跟踪、主题连贯性和应答对象选择等能力。",
+    "双语模型在 MultiTalkBench 上显著优于 Moshi、MiniCPM-o-4.5 和 Qwen3-Omni-30B-A3B-Instruct。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.88,
+    "llm_avg": 0.86,
+    "comment": "This is a high-value realtime speech-agent contribution combining long-horizon full-duplex interaction, multi-party turn taking, bilingual data, and a reusable benchmark.",
+    "comment_zh": "该工作结合了长时全双工交互、多方轮次控制、双语数据和可复用基准，对实时语音智能体具有很高价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.86,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36903/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.884
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36903/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.974
+    }
+  ]
+}

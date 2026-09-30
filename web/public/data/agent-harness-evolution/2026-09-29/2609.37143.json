@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2609.37143",
+  "title": "LoLBench: Evaluating Coding Agents with Long-Horizon Proposals on Large Software Systems",
+  "title_zh": "LoLBench：通过大型软件系统中的长程提案评测编码智能体",
+  "authors": [
+    "Yun Peng",
+    "Zihan Wu",
+    "Zeyang Zhuang",
+    "Xin Zhou",
+    "Rui Shu",
+    "Xu Han",
+    "Chun Yong Chong",
+    "Yuan Wang",
+    "Jiakun Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T09:41:33Z",
+  "abs_url": "https://arxiv.org/abs/2609.37143v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.37143",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Modern coding agents can deliver increasingly large repository-level changes, and recent benchmarks reflect this by emphasizing long-horizon tasks with large reference implementations. Many benchmarks evaluate coding agents' implementation capability to produce correct code edits from detailed specifications. However, practical modular development tasks also require the perception capability of grounding user intent and high-level design to derive a specification. We introduce LoLBench to evaluate both capabilities through the entire proposal-to-implementation process on large software systems. It is a multilingual benchmark of 100 tasks across 29 software systems in five domains. Each task provides a human-written enhancement proposal with user intent and high-level design. On average, proposals contain about 5,000 words, software systems contain 2.4 million source lines of code (LoC), and implementation pull requests (PRs) change approximately 5,500 LoC. Across 28 agents we evaluated, the best agent resolves only 14% of tasks and achieves a 52.7% Fail-to-Pass (F2P) pass rate. Failure analysis identifies incomplete code localization as a major bottleneck, while providing reference-derived file trees alongside API specifications improves resolved rates by 16--22 percentage points (2.4--17$\\times$), reaching at most 34%. These results show that both perception and implementation remain central challenges for coding agents in practical modular development on large software systems. LoLBench is available at https://huggingface.co/datasets/lolbench26/LoLBench.",
+  "abstract_zh": "现代编码智能体能够在仓库级别完成越来越大规模的代码修改，但现有基准通常侧重于根据详细规格实现正确代码，较少评估智能体从用户意图和高层设计中理解需求并形成具体规格的能力。本文提出 LoLBench，覆盖从提案理解到代码实现的完整流程，用于同时评估编码智能体的感知能力与实现能力。该多语言基准包含来自五个领域、29 个软件系统的 100 个任务。每个任务提供由人工撰写的增强提案，平均约 5,000 词；涉及的软件系统平均包含 240 万行源代码，参考实现对应的 Pull Request 平均修改约 5,500 行代码。在评测的 28 个智能体中，最佳智能体仅能解决 14% 的任务，Fail-to-Pass（F2P）通过率为 52.7%。失败分析表明，不完整的代码定位是主要瓶颈；在提供从参考实现中提取的文件树和 API 规格后，任务解决率提升 16—22 个百分点，最高达到 34%。结果表明，在大型软件系统的实际模块化开发中，需求感知与代码实现仍是编码智能体面临的核心挑战。LoLBench 数据集已发布于 Hugging Face。",
+  "key_points_zh": [
+    "LoLBench覆盖五个领域、29个软件系统和100个多语言长程任务，评估从增强提案理解到 Pull Request 实现的完整流程。",
+    "任务规模显著：提案平均约5,000词，软件系统平均240万行代码，参考实现平均修改约5,500行代码。",
+    "28个编码智能体中，最佳智能体仅解决14%的任务，F2P通过率为52.7%，表明长程仓库级开发仍十分困难。",
+    "失败分析指出，不完整的代码定位是主要瓶颈；补充参考文件树与 API 规格后，解决率提升16—22个百分点，最高达34%。",
+    "研究强调编码智能体不仅需要代码生成能力，还必须具备从用户意图和高层设计中准确构建实现规格的感知能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.79,
+    "problem_significance": 0.87,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.85,
+    "llm_avg": 0.8099999999999999,
+    "comment": "LoLBench is a broadly useful coding-agent benchmark that evaluates the full proposal-to-implementation workflow on large real software systems.",
+    "comment_zh": "LoLBench在大型真实软件系统上评测从需求提案到实现的完整流程，是具有广泛用途的编码Agent基准。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.8099999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37143/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37143/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.97
+    }
+  ]
+}

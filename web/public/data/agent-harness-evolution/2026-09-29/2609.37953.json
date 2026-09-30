@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.37953",
+  "title": "Topological Coherence for Self-evolving Multi-agent Systems",
+  "title_zh": "面向自演化多智能体系统的拓扑一致性",
+  "authors": [
+    "Sen Zhao",
+    "Ruiqi Kong",
+    "Zuyu Zhang",
+    "Lifeng Shen",
+    "Xinyu He",
+    "Xu Zhang",
+    "Qinghua Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T16:27:14Z",
+  "abs_url": "https://arxiv.org/abs/2609.37953v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.37953",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Complex tasks inherently couple workflow structure, agent responsibility, collaboration, and memory access: task regions delimit responsibility and tool scope, cross-region dependencies give rise to handoffs, and ownership boundaries delimit private and selectively shared memory. Existing methods can jointly optimize agent and communication structures, yet such optimization does not by itself require responsibility, handoff, and memory boundaries to remain consistent with task dependencies. We term this requirement topological coherence. We introduce TOCOMAS, a Topology-Coherent Multi-Agent System. TOCOMAS grounds a task graph in tool interfaces, organizes compatible task nodes into reusable responsibility domains, and derives dependency-induced and profile-conditioned collaboration together with boundary-regulated memory visibility. During online self-evolution, TOCOMAS proposes coupled changes to agent, collaboration, and memory policies, retaining for subsequent tasks only candidates that satisfy structural constraints and improve evaluated reward. Across BBEH, WorkBench, SWE-Bench-Verified, and CoMemBench, TOCOMAS improves task success over baselines across backbones. CoMemBench also shows gains over the self-evolving baseline in verified progress, handoffs, and memory isolation.",
+  "abstract_zh": "复杂任务中的工作流结构、智能体职责、协作关系与记忆访问彼此耦合：任务区域界定职责和工具范围，跨区域依赖产生交接，所有权边界则限定私有及选择性共享记忆。现有方法虽能联合优化智能体与通信结构，但无法保证职责、交接和记忆边界与任务依赖保持一致。论文将这一要求定义为拓扑一致性（topological coherence），并提出 TOCOMAS（Topology-Coherent Multi-Agent System）。该方法将任务图映射到工具接口，把兼容任务节点组织为可复用的职责域，并据此推导依赖驱动及画像条件化的协作关系，以及受边界约束的记忆可见性。在在线自演化过程中，TOCOMAS 联动提出智能体、协作和记忆策略变更，仅保留满足结构约束且能提升评估奖励的候选方案用于后续任务。在 BBEH、WorkBench、SWE-Bench-Verified 和 CoMemBench 上，TOCOMAS 相比基线在不同 backbone 上均提升任务成功率；在 CoMemBench 上，它还较自演化基线提升了验证进度、交接效率和记忆隔离效果。",
+  "key_points_zh": [
+    "提出拓扑一致性概念，要求智能体职责、任务交接与记忆边界服从任务依赖结构。",
+    "TOCOMAS将任务图接入工具接口，构建可复用职责域，并生成依赖驱动、画像条件化的协作关系。",
+    "通过边界约束控制记忆可见性，区分私有记忆与选择性共享记忆，增强记忆隔离。",
+    "在线自演化时联合调整智能体、协作和记忆策略，仅保留满足结构约束且提升奖励的候选变更。",
+    "在 BBEH、WorkBench、SWE-Bench-Verified 和 CoMemBench 上取得稳定收益，并改善验证进度与交接表现。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.8,
+    "problem_significance": 0.76,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.72,
+    "llm_avg": 0.748,
+    "comment": "TOCOMAS contributes a structured orchestration and self-evolution framework, although its memory-boundary component overlaps with the separate Agent Memory domain.",
+    "comment_zh": "TOCOMAS 提出了结构化编排与自我演化框架，但其记忆边界部分与独立的 Agent Memory 领域存在重叠。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.748,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37953/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37953/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.962
+    }
+  ]
+}

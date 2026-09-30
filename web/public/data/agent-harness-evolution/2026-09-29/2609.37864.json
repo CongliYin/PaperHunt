@@ -1,0 +1,116 @@
+{
+  "arxiv_id": "2609.37864",
+  "title": "AgentBug-Smith: Automatically Reproducing Real-World Harness Bugs in Agentic Systems",
+  "title_zh": "AgentBug-Smith：自动复现 Agentic Systems 中真实世界的 Harness Bugs",
+  "authors": [
+    "Yiming Cheng",
+    "Alfin Wijaya Rahardja",
+    "Mengshi Zhang",
+    "Zihao Chen",
+    "Zhenpeng Chen",
+    "Yiling Lou"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Yiming Cheng",
+      "affiliations": [
+        "The University of Chicago"
+      ]
+    },
+    {
+      "name": "Alfin Wijaya Rahardja",
+      "affiliations": [
+        "Fudan University"
+      ]
+    },
+    {
+      "name": "Mengshi Zhang",
+      "affiliations": [
+        "TensorBlock, Inc"
+      ]
+    },
+    {
+      "name": "Zihao Chen",
+      "affiliations": [
+        "TensorBlock, Inc"
+      ]
+    },
+    {
+      "name": "Zhenpeng Chen",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "name": "Yiling Lou",
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ]
+    }
+  ],
+  "published_at": "2026-09-29T15:46:04Z",
+  "abs_url": "https://arxiv.org/abs/2609.37864v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.37864",
+  "links": {
+    "github": "https://github.com/EaminC/AgentBug-Smith",
+    "project_page": null
+  },
+  "abstract_en": "Agent harness bugs exhibit unique characteristics and remain challenging for state-of-the-art software agents to repair. Progress in this area is further hindered by existing benchmarks, which contain only a small and fixed number of executable harness bugs while requiring hundreds of human hours to construct. This work presents AgentBug-Smith, an automated harness bug reproduction approach that continuously discovers and reproduces real-world harness bugs from open-source agentic systems. Across different backbone LLMs, AgentBug-Smith consistently outperforms existing bug reproduction techniques designed for general software, achieving 10.67% - 27.56% higher success rates of reproducing harness bugs. By applying AgentBug-Smith to open-source agentic systems in the wild, we construct Live-Harness-Bench, a live and extensible benchmark that currently contains 200 reproducible harness bugs. We further demonstrate the utility of Live-Harness-Bench through two downstream applications. First, we use Live-Harness-Bench as the evaluation benchmark to systematically evaluate state-of-the-art software agents, revealing their limited capabilities in repairing real-world harness bugs. Second, we use Live-Harness-Bench as a knowledge base of real-world harness bug fixes, from which reusable repair skills can be distilled to improve existing software agents, increasing their harness-bug repair rates by 6.32%. Together, AgentBug-Smith and Live-Harness-Bench establish a scalable foundation for continuously evaluating and improving software agents on harness bug repair, turning real-world agent failures into executable evaluation instances and reusable knowledge for harness improvement, thus contributing to the ultimate goal of recursively self-improving agents.",
+  "abstract_zh": "Agent Harness Bugs 具有独特特征，对现有软件 Agent 而言难以修复。现有基准仅包含少量且固定的可执行 Harness Bugs，构建过程还需耗费数百小时人工成本。本文提出 AgentBug-Smith，一种自动化的 Harness Bug 复现方法，可持续从开源 Agentic Systems 中发现并复现真实世界的 Harness Bugs。在不同骨干 LLM 上，AgentBug-Smith 相较面向通用软件的现有 Bug 复现方法，复现成功率 consistently 提升 10.67%–27.56%。作者进一步将其应用于真实开源 Agentic Systems，构建了持续更新、可扩展的 Live-Harness-Bench，目前包含 200 个可复现 Harness Bugs。该基准支持两类下游应用：一是系统评测先进软件 Agent，揭示其修复真实世界 Harness Bugs 的能力仍然有限；二是作为真实修复方案知识库，提炼可复用的修复技能，使现有软件 Agent 的 Harness Bug 修复率提升 6.32%。总体而言，AgentBug-Smith 与 Live-Harness-Bench 为持续评估和改进软件 Agent 的 Harness Bug 修复能力提供了可扩展基础，将真实 Agent 失败转化为可执行评测实例和可复用知识，推动 Agent 的递归自我改进。",
+  "key_points_zh": [
+    "提出 AgentBug-Smith，可从真实开源 Agentic Systems 中自动发现并复现 Harness Bugs。",
+    "在不同骨干 LLM 上，复现成功率较通用软件 Bug 复现方法提升 10.67%–27.56%。",
+    "构建 Live-Harness-Bench，当前包含 200 个可复现、可持续扩展的真实 Harness Bugs。",
+    "评测显示，现有软件 Agent 修复真实世界 Harness Bugs 的能力仍较弱。",
+    "从基准中的修复案例提炼可复用技能，使 Harness Bug 修复率提升 6.32%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.88,
+    "problem_significance": 0.9,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.93,
+    "llm_avg": 0.898,
+    "comment": "This is strong coding-agent infrastructure that turns real harness failures into executable benchmarks and reusable repair knowledge.",
+    "comment_zh": "这项工作将真实 harness 故障转化为可执行基准和可复用修复知识，是很强的 coding-agent 基础设施研究。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.898,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/EaminC/AgentBug-Smith",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37864/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.37864/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

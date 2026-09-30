@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2609.36595",
+  "title": "Simple Agentic Memory for Generalist Robot Policies",
+  "title_zh": "面向通用机器人策略的简单智能体记忆",
+  "authors": [
+    "Yuyou Zhang",
+    "Yunbei Zhang",
+    "Miao Li",
+    "Janet Wang",
+    "Zijian Jin",
+    "Shilong Liu",
+    "Ding Zhao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T03:16:27Z",
+  "abs_url": "https://arxiv.org/abs/2609.36595v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.36595",
+  "links": {
+    "github": null,
+    "project_page": "https://simplearm.github.io/"
+  },
+  "abstract_en": "Visual-memory systems commonly retain or compress past observations. Robot control additionally requires interaction-derived state that no individual frame may explicitly represent, such as persistent identity relations, accumulated progress, or ordered procedures. We introduce Simple Agentic Robot Memory (SimpleARM), a training-free memory layer for frozen generalist robot policies. From the task instruction, SimpleARM specifies what to monitor; frozen perceptual tools maintain compact typed state online; structured access retrieves that state only when a proposed subgoal depends on history; and current-view grounding resolves recalled entities before execution. We evaluate SimpleARM on RoboMME, a benchmark of memory-dependent robot manipulation tasks that require history information no longer available in the current observation. Across all 16 tasks and three policy seeds, SimpleARM achieves 67.17% mean success, compared with 44.51% for the strongest non-oracle baseline. Matched ablations show mechanism specificity: removing relation, reference, progress, or route state produces large losses where the affected state is retrieved for control, while largely sparing other tasks. These results support a state-based view of robot memory: effective memory for control is not simply retained visual history, but compact task-relevant state derived from the interaction history.",
+  "abstract_zh": "视觉记忆系统通常保留或压缩过去的观测，但机器人控制还需要从交互过程中获得、且单帧观测无法明确表示的状态，例如持久的身份关系、累积进度和有序操作流程。本文提出 Simple Agentic Robot Memory（SimpleARM），一种面向冻结通用机器人策略、无需训练的记忆层。SimpleARM 根据任务指令确定需要监控的内容；利用冻结的感知工具在线维护紧凑的类型化状态；仅当候选子目标依赖历史信息时，才通过结构化访问检索相关状态；执行前再通过当前视图对被回忆的实体进行定位与确认。作者在 RoboMME 上进行评估，该基准包含依赖记忆的机器人操作任务，要求使用当前观测中已不可见的历史信息。在全部 16 个任务和 3 个策略随机种子上，SimpleARM 达到 67.17% 的平均成功率，高于最强非 Oracle 基线的 44.51%。配对消融实验表明其机制具有针对性：移除关系、指代、进度或路径状态后，在控制实际检索相应状态的任务上性能显著下降，而其他任务基本不受影响。结果支持一种面向控制的机器人记忆观：有效记忆并非简单保存视觉历史，而是从交互历史中提取紧凑、与任务相关的状态。",
+  "key_points_zh": [
+    "提出无需训练的 SimpleARM 记忆层，可直接服务于冻结的通用机器人策略。",
+    "记忆内容不是原始视觉帧，而是关系、实体指代、任务进度和操作路径等类型化任务状态。",
+    "系统依据任务指令决定监控内容，仅在子目标依赖历史时检索记忆，并结合当前视图完成实体 grounding。",
+    "在 RoboMME 的 16 个任务和 3 个策略种子上，平均成功率达到 67.17%，相比最强非 Oracle 基线的 44.51% 有明显提升。",
+    "针对关系、指代、进度和路径状态的消融结果显示，不同记忆机制会选择性影响依赖对应状态的任务。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.86,
+    "novelty": 0.8,
+    "problem_significance": 0.84,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.81,
+    "llm_avg": 0.794,
+    "comment": "A meaningful robot-agent memory system that replaces raw visual retention with compact, typed, task-relevant interaction state.",
+    "comment_zh": "这是一项有价值的机器人 Agent Memory 工作，以紧凑、类型化且任务相关的交互状态取代原始视觉历史保存。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.3573677457192113,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.794,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://simplearm.github.io/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36595/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

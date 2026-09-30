@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.36829",
+  "title": "The Default Trap: Rethinking Plan Evaluation in Tool-Using LLM Agents",
+  "title_zh": "默认陷阱：重新思考工具调用型 LLM Agent 的计划评估",
+  "authors": [
+    "Xueqi Li",
+    "Jingjie Ning",
+    "Yibo Kong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-29T06:38:13Z",
+  "abs_url": "https://arxiv.org/abs/2609.36829v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.36829",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "An executor can respond strongly to a change in a supplied plan's priority while showing a small change in the same information-selection probability when a default-aligned whole plan is removed. We call the risk of interpreting the latter as weak responsiveness to alternative priorities the default trap. We compare paired plans that prioritize different information targets with a shared no-plan reference. An accounting identity relates these distinct behavioral contrasts. Across 3,200 decision windows on 160 selected Retail, Airline, and AgentDojo tasks, switching priorities strongly redirects two models' choices, while the two plan-versus-default contrasts differ. In 2,160 additional windows, reversing account-list order shifts default target selection by 63.3-98.3 percentage points; priority-switching effects remain 96.7-100.0 points in either order. A separate 3,240-window component study finds strong control under single priority sentences, with effects of additional text varying by group and direction. Finally, 1,080 full-task episodes yield observed success differences of -19.4 to +8.3 points relative to no plan. All Retail and Airline success intervals include zero; AgentDojo results describe four fixed application worlds. These findings support joint reporting of priority responsiveness, presentation-dependent defaults, and task success and cost.",
+  "abstract_zh": "本文指出，评估工具调用型 LLM Agent 的计划遵循能力时，容易陷入“默认陷阱”（default trap）：当移除一个与默认选择一致的完整计划后，模型行为变化较小，并不代表模型对替代优先级缺乏响应。作者比较了优先选择不同信息目标的成对计划及共享的无计划基线，并用会计恒等式关联不同的行为对比。在 Retail、Airline 和 AgentDojo 任务的 3,200 个决策窗口中，两个模型在切换优先级时会显著改变选择，但计划相对默认行为的差异并不等价。额外 2,160 个窗口显示，反转账户列表顺序可使默认目标选择率变化 63.3–98.3 个百分点，而优先级切换效应在两种顺序下仍为 96.7–100.0 个百分点。组件研究表明，单句优先级指令即可产生较强控制，但额外文本的影响因组别和方向而异。1,080 个完整任务回合中，相对无计划基线的成功率差异为 -19.4 至 +8.3 个百分点。结果表明，计划评估应联合报告优先级响应性、依赖呈现方式的默认偏好、任务成功率与成本。",
+  "key_points_zh": [
+    "“默认陷阱”说明：移除默认一致的完整计划后行为变化小，不能直接推断 Agent 缺乏对替代优先级的响应。",
+    "在 Retail、Airline 和 AgentDojo 任务中，切换计划优先级能强烈重定向模型选择，但计划—默认对比可能给出不同结论。",
+    "反转账户列表顺序会显著改变默认目标选择率（63.3–98.3 个百分点），而优先级切换效应仍保持在 96.7–100.0 个百分点。",
+    "单句优先级指令已能实现较强控制；额外文本的影响取决于实验组别与文本方向。",
+    "完整任务中的成功率相对无计划基线变化为 -19.4 至 +8.3 个百分点，因此应同时评估响应性、默认偏好、成功率和成本。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.76,
+    "problem_significance": 0.72,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.7,
+    "llm_avg": 0.6960000000000001,
+    "comment": "The paper provides a useful evaluation protocol for separating plan responsiveness, default bias, and actual tool-agent task success.",
+    "comment_zh": "该论文提出了有用的评估协议，用于区分规划响应性、默认偏置和工具智能体的实际任务成功率。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3439406220117154,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.6960000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36829/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.935
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.36829/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.537
+    }
+  ]
+}
