@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2609.40221",
+  "title": "PhantomEnvironments: Training LLM Agents in Fictional Worlds",
+  "title_zh": "PhantomEnvironments：在虚构世界中训练 LLM Agent",
+  "authors": [
+    "Anmol Kabra",
+    "Swathi Saravana Selvam",
+    "Albert Gong",
+    "Chao Wan",
+    "Christian Belardi",
+    "Dongyoung Go",
+    "Katie Z. Luo",
+    "Kilian Q. Weinberger"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T17:26:57Z",
+  "abs_url": "https://arxiv.org/abs/2609.40221v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.40221",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Training LLM agents with reinforcement learning (RL) is bottlenecked by environments, which must provide verifiable rewards, support long-horizon interaction, and scale cheaply. Existing approaches rely on costly human-curated data or on LLM-generated environments that risk hallucinations and benchmark contamination. We show that LLMs can instead be trained into capable search agents using synthetic environments generated entirely by rules, whose generation requires no LLM and has zero marginal cost. We build PhantomEnvironments, multi-turn RL environments from fictional worlds, where agents must search a corpus of templated articles to answer multi-hop questions. Despite sharing no facts with the real world, these strikingly simple environments yield agents that transfer to real-world multi-hop search benchmarks, often outperforming real-world training data on newer benchmarks. Trained agents generalize to unseen fictional universes, and Qwen models learn to scale their search budget roughly linearly with question difficulty, suggesting emergent search scaling from environment interaction alone. Ablating environment complexity reveals that hop count drives transfer more than constraints or comparisons: even the simplest rule-generated environments are a surprisingly effective, free resource for training generalizable LLM agents.",
+  "abstract_zh": "利用强化学习（RL）训练 LLM Agent 受到环境构建瓶颈限制：环境需要提供可验证奖励、支持长程交互，并具备低成本扩展能力。现有方法依赖昂贵的人工数据，或使用 LLM 生成环境，容易产生幻觉和基准污染。本文提出 PhantomEnvironments：一种完全由规则生成、无需 LLM 且边际成本为零的虚构世界环境。Agent 需要搜索由模板化文章构成的语料库，以回答多跳问题。尽管这些环境与真实世界不共享事实，训练出的 Agent 仍能迁移到真实世界多跳搜索基准，并在较新的基准上经常优于使用真实世界数据训练的模型。Agent 还能泛化到未见过的虚构宇宙；Qwen 模型会根据问题难度近似线性地扩展搜索预算，表明仅通过环境交互即可涌现搜索扩展能力。环境复杂度消融实验显示，多跳数量比约束和比较关系更能驱动迁移；即使是最简单的规则生成环境，也能以极低成本有效训练具备泛化能力的 LLM Agent。",
+  "key_points_zh": [
+    "提出 PhantomEnvironments：由规则生成的虚构世界 RL 环境，无需 LLM、人工标注或持续生成成本。",
+    "通过在模板化文章中搜索并解决多跳问题，训练出的 Agent 可迁移到真实世界多跳搜索基准。",
+    "合成环境训练在较新的真实世界基准上常优于真实数据训练，且能泛化到未见过的虚构宇宙。",
+    "Qwen 模型会随问题难度近似线性增加搜索预算，显示搜索扩展能力可由环境交互涌现。",
+    "消融实验表明，多跳数量是促进迁移的关键因素，其作用强于额外约束和比较关系。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.86,
+    "problem_significance": 0.9,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.91,
+    "llm_avg": 0.882,
+    "comment": "This is a strong search-agent training contribution that provides cheap, rule-generated environments with evidence of transfer and scalable long-horizon learning.",
+    "comment_zh": "这是一项很强的搜索Agent训练工作，提供了低成本规则生成环境，并展示了迁移能力和可扩展的长程学习效果。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.882,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40221/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40221/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.919
+    }
+  ]
+}

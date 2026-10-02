@@ -1,0 +1,72 @@
+{
+  "arxiv_id": "2609.38805",
+  "title": "Explicit Trajectory Diversity for RL-Based Post-Training of LLM Agents",
+  "title_zh": "面向 LLM Agent 基于 RL 后训练的显式轨迹多样性",
+  "authors": [
+    "Huaiyu Fu",
+    "Heng Cao",
+    "Hao Wang",
+    "Jian Ya",
+    "Tao Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T02:35:36Z",
+  "abs_url": "https://arxiv.org/abs/2609.38805v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.38805",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM agents often admit multiple high-quality solutions to the same task, differing in reasoning structure, tool-use pattern, or interaction trajectory. Yet existing notions of diversity in LLM post-training are mostly implicit, arising from general stochasticity and regularization mechanisms rather than explicitly targeting task-relevant behavioral variation. While such implicit diversity can be useful, it does not directly specify which forms of behavioral variation should be encouraged for a given task. In this work, we study explicit trajectory diversity in RL-based post-training for LLMs. Our key idea is to define diversity through user-specified, task-specific trajectory descriptors, which map each sampled trajectory to an interpretable behavioral representation, and then measure diversity as a set-level functional over the resulting descriptor matrix. Building on this formulation, we introduce Trajectory-guided Joint Policy Optimization(TJPO), a single-policy framework that optimizes explicit diversity over sampled trajectory groups, avoiding the need for population-based policy training, and instantiate it within group-based policy optimization through trajectory-level learning signals. This design makes the diversity objective both interpretable and controllable. Experiments on Sokoban and ALFWorld show that TJPO improves task-specific trajectory diversity while maintaining competitive task performance. Descriptor and trajectory analyses show that the learned variation follows the specified behavioral dimensions and includes distinct successful strategies. Extra experiment results suggest that explicitly shaping trajectory diversity can help LLM agents satisfy user requirements and remain effective when task conditions change.",
+  "abstract_zh": "同一任务通常存在多种高质量解决方案，它们在推理结构、工具使用模式和交互轨迹上有所不同。然而，现有 LLM 后训练中的多样性大多源于随机性与正则化，缺乏对任务相关行为变化的显式控制。本文研究基于 RL 的 LLM 后训练中的显式轨迹多样性：通过用户指定的、任务特定的轨迹描述符，将每条采样轨迹映射为可解释的行为表示，并基于描述符矩阵的集合级函数度量多样性。在此基础上，作者提出 Trajectory-guided Joint Policy Optimization（TJPO），一种单策略框架，可直接优化采样轨迹组的显式多样性，无需基于策略群体的训练，并通过轨迹级学习信号将其融入基于组的策略优化。该方法使多样性目标具备可解释性与可控性。在 Sokoban 和 ALFWorld 上的实验表明，TJPO 能提升任务特定的轨迹多样性，同时保持有竞争力的任务性能。进一步分析显示，生成的行为变化符合预设维度，并包含多种不同的成功策略；额外实验表明，显式塑造轨迹多样性有助于满足用户要求，并增强 LLM Agent 对任务条件变化的适应能力。",
+  "key_points_zh": [
+    "将轨迹多样性定义为用户指定的任务特定行为描述符，从而实现可解释、可控的多样性优化。",
+    "提出 Trajectory-guided Joint Policy Optimization（TJPO），在单策略框架下对轨迹组进行联合优化，无需训练策略群体。",
+    "通过轨迹级学习信号将显式多样性目标融入基于组的策略优化方法。",
+    "在 Sokoban 和 ALFWorld 上，TJPO 提升了任务相关轨迹多样性，同时保持具有竞争力的任务性能。",
+    "显式多样性塑造能够产生不同的成功策略，并提升 Agent 对用户需求和环境变化的适应能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.84,
+    "novelty": 0.78,
+    "problem_significance": 0.72,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.7,
+    "llm_avg": 0.7200000000000001,
+    "comment": "The paper introduces an interpretable trajectory-diversity objective for agent RL, although its broader harness and deployment implications remain limited.",
+    "comment_zh": "该论文为智能体强化学习引入了可解释的轨迹多样性目标，但对更广泛框架和部署的影响仍有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.40951477168594785,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7200000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 6,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38805/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.38974",
+  "title": "RealWorldShop: Benchmarking and Improving Conversational Shopping Agents in Real-World E-commerce",
+  "title_zh": "RealWorldShop：真实世界电子商务中对话式购物智能体的基准评测与改进",
+  "authors": [
+    "Xinwei Yang",
+    "Kelong Mao",
+    "Yudong Guo",
+    "Sulong Xu",
+    "Simiu Gu",
+    "Chen Huang",
+    "Wenqiang Lei"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T04:49:10Z",
+  "abs_url": "https://arxiv.org/abs/2609.38974v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.38974",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models are reshaping ecommerce from static recommenders into interactive shopping assistants, yet real-world shopping requires session-level decision support: users reveal and revise constraints, coordinate multiple goals, and expect product-grounded recommendations over a full conversation. Existing benchmarks are mostly outcome-oriented or execution-oriented, leaving this evolving decision process under-evaluated. We introduce REALWORLDSHOP, a benchmark built on 3.28M grounded products, structured shopping episodes, a profile-grounded and actioncontrolled user simulator, and role-play evaluation. Our analysis shows that current systems produce locally plausible responses but struggle with state tracking, constraint updating, and grounded convergence, especially under ambiguous intent, bundle, and multi-intent scenarios. We further propose REALSHOP_AGENT, an executable session-control framework with explicit state management, shopping-flow control, catalog-grounded retrieval, and runtime guards. Experiments show that REALSHOP_AGENT consistently outperforms strong baselines on REALWORLDSHOP.",
+  "abstract_zh": "大型语言模型正将电子商务从静态推荐器转变为交互式购物助手，但真实购物需要贯穿会话的决策支持：用户会逐步表达并修改约束、协调多个目标，并期待基于真实商品的推荐。现有基准主要关注最终结果或单步执行，对动态决策过程评估不足。论文提出 REALWORLDSHOP 基准，包含 328 万个有依据的商品、结构化购物回合、基于用户画像且受动作控制的用户模拟器，以及角色扮演评测。分析表明，现有系统虽能生成局部合理的回复，却在状态跟踪、约束更新和基于商品信息的目标收敛方面表现不佳，尤其是在意图模糊、组合购买和多意图场景下。论文进一步提出可执行的会话控制框架 REALSHOP_AGENT，通过显式状态管理、购物流程控制、目录信息约束的检索和运行时防护提升性能，并在 REALWORLDSHOP 上持续优于强基线。",
+  "key_points_zh": [
+    "提出 REALWORLDSHOP 基准，覆盖 328 万个真实商品、结构化购物会话和可控用户模拟器。",
+    "评估重点从单轮结果扩展到会话级决策，包括状态跟踪、约束更新与目标收敛。",
+    "现有系统在意图模糊、组合购买和多意图场景下难以持续维护购物状态并实现商品依据充分的推荐。",
+    "提出 REALSHOP_AGENT，结合显式状态管理、流程控制、目录约束检索和运行时防护。",
+    "实验显示 REALSHOP_AGENT 在 REALWORLDSHOP 上 consistently 优于强基线。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.9,
+    "problem_significance": 0.95,
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.92,
+    "llm_avg": 0.914,
+    "comment": "A highly relevant benchmark and agent framework for grounded, multi-turn conversational shopping with explicit evaluation of state tracking, constraint updates, and product recommendation.",
+    "comment_zh": "该工作提出了高度契合领域的基准与智能体框架，系统评估了多轮购物中的状态跟踪、约束更新和商品推荐。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.914,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38974/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38974/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.955
+    }
+  ]
+}

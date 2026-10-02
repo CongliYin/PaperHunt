@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.40324",
+  "title": "Cogentic: Multi-Agent Orchestration for Automated Proof Discovery",
+  "title_zh": "Cogentic：用于自动化证明发现的多智能体编排",
+  "authors": [
+    "Yang Cai",
+    "Vineet Gupta",
+    "Yanchen Jiang",
+    "Christopher Liaw",
+    "Aranyak Mehta",
+    "Grigoris Velegkas",
+    "Di Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T17:55:22Z",
+  "abs_url": "https://arxiv.org/abs/2609.40324v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.40324",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We present Cogentic, a multi-agent harness for automated proof discovery on open research problems. While frontier language models can generate strong mathematical ideas in a single shot, single-shot generation is often insufficient for open problems that require exploring multiple competing conjectures, overcoming subtle technical obstructions, and retaining intermediate progress over a long horizon. Cogentic addresses these challenges through an iterative prove--verify loop in which an orchestrator allocates a population of independent provers across distinct proof directions, subjects their output to adversarial verification by several specialized components, and promotes confirmed intermediate results into a persistent verified ledger that later rounds build on. The harness is designed to be able to solve research-level math and theoretical computer science problems. Using Gemini as the base model, Cogentic produced novel results on five open problems across online learning, auction theory, and mechanism design. Each result was independently verified by domain experts and is developed in full in companion papers. We list these results, and new ones as they are verified, at https://sites.google.com/view/cogentic .",
+  "abstract_zh": "本文提出 Cogentic，一个面向开放研究问题的自动化证明发现多智能体框架。尽管前沿语言模型能够一次性提出有力的数学思想，但对于需要探索多个相互竞争的猜想、克服细微技术障碍并在长时间跨度内保留中间进展的开放问题，单次生成通常并不足够。Cogentic 通过迭代式“证明—验证”循环应对这些挑战：由编排器将多个独立证明器分配到不同证明方向，对其输出交由多个专门组件进行对抗性验证，并将已确认的中间结果纳入持久化的可信结果账本，供后续轮次继续构建。该框架旨在解决研究级数学与理论计算机科学问题。以 Gemini 为基础模型时，Cogentic 在在线学习、拍卖理论和机制设计领域的五个开放问题上产生了新结果。每项结果均由领域专家独立验证，并在配套论文中完整展开。作者在项目网站上列出了这些结果，以及后续经验证的新结果。",
+  "key_points_zh": [
+    "提出多智能体自动证明发现框架 Cogentic，以迭代式“证明—验证”循环替代单次生成。",
+    "编排器并行分配多个独立证明器探索不同方向，并通过专门验证器进行对抗性检查。",
+    "将验证通过的中间结论写入持久化可信结果账本，支持长期推理与后续证明构建。",
+    "基于 Gemini，Cogentic 已在在线学习、拍卖理论和机制设计的五个开放问题上取得新结果。",
+    "所有结果均经领域专家独立验证，并在配套论文中完整论证。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.82,
+    "novelty": 0.8,
+    "problem_significance": 0.7,
+    "potential_impact": 0.7,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.72,
+    "llm_avg": 0.732,
+    "comment": "Cogentic provides a reusable orchestration and verified-ledger pattern for long-horizon agentic discovery, though evidence is concentrated in mathematical problem solving.",
+    "comment_zh": "Cogentic为长程智能体发现提供了可复用的编排与验证账本模式，但证据主要集中在数学问题求解。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.732,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40324/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40324/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.982
+    }
+  ]
+}

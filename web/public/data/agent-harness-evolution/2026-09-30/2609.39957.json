@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.39957",
+  "title": "Learning When and How to Intervene: A Hindsight-Distilled Sentinel for Coding Agents",
+  "title_zh": "学习何时及如何干预：面向代码代理的事后蒸馏哨兵（HiSentinel）",
+  "authors": [
+    "Jiangrui Zhao",
+    "Chenglong Li",
+    "Meng Zhang",
+    "Xiaoting Du"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T15:26:16Z",
+  "abs_url": "https://arxiv.org/abs/2609.39957v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.39957",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents solve repository-level tasks through sequences of actions, where a single erroneous action can misdirect subsequent decisions and increase recovery costs. Existing approaches use execution feedback for recovery or specialized checks to block errors, but deciding before execution whether intervention will benefit eventual task completion remains challenging. To address this challenge, we propose HiSentinel, a hindsight-distillation framework that trains lightweight 0.6B and 1.7B sentinels to select pre-execution interventions aimed at improving task completion rather than correcting every imperfect action. A privileged teacher uses recorded execution outcomes as evidence for intervention judgments, which are distilled into a causal student that receives only the pre-action context and proposed action. Beyond identifying whether and when to intervene, the sentinel must also provide actionable feedback that helps the coding agent recover or obtain necessary human input. To support these capabilities, we introduce SWE-Intervene, an action-level dataset constructed from software-engineering trajectories that annotates whether an action should be allowed, autonomously redirected, or paused for human assistance, together with corresponding intervention feedback. Across SWE-bench Verified Mini and Ask or Assume, HiSentinel consistently improves task completion across Sentinel scales and coding-agent families, with gains of up to 14% and 10%, respectively, while maintaining competitive token consumption. These results demonstrate that lightweight pre-execution intervention can effectively prevent error propagation and improve the reliability of autonomous coding agents.",
+  "abstract_zh": "代码代理通过连续动作完成仓库级任务，单次错误动作可能误导后续决策并提高恢复成本。现有方法主要依赖执行反馈进行恢复，或通过专门检查阻止错误，但难以在执行前判断干预是否有助于最终完成任务。本文提出 HiSentinel，一种事后蒸馏（hindsight distillation）框架，训练 0.6B 和 1.7B 的轻量级哨兵，在执行前选择有助于任务完成的干预，而非纠正所有不完美动作。特权教师模型利用记录的执行结果判断是否干预，再将知识蒸馏给仅接收执行前上下文与候选动作的因果学生模型。为支持干预时机判断与可执行反馈生成，作者构建 SWE-Intervene 数据集，基于软件工程轨迹标注动作应被放行、自主重定向或暂停并请求人工协助，同时提供相应干预反馈。在 SWE-bench Verified Mini 和 Ask or Assume 上，HiSentinel 在不同模型规模和代码代理家族中均稳定提升任务完成率，最高分别提升 14% 和 10%，且保持具有竞争力的 token 消耗。结果表明，轻量级的执行前干预能够有效阻止错误传播，提升自主代码代理的可靠性。",
+  "key_points_zh": [
+    "HiSentinel 关注干预是否有助于最终任务完成，而不是机械纠正每个不完美动作。",
+    "通过特权教师利用事后执行结果进行判断，再蒸馏出仅依赖执行前信息的因果学生模型。",
+    "SWE-Intervene 将动作标注为放行、自主重定向或请求人工协助，并配套提供可执行反馈。",
+    "在 SWE-bench Verified Mini 和 Ask or Assume 上，任务完成率最高提升 14% 和 10%，同时保持较低推理开销。",
+    "0.6B 与 1.7B 哨兵均能跨代码代理家族发挥作用，说明轻量级执行前干预具有较好的通用性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8640000000000001,
+    "comment": "HiSentinel develops a lightweight, hindsight-trained intervention gate that can prevent error propagation and request human help in coding agents.",
+    "comment_zh": "HiSentinel构建了轻量级的后见之明训练干预门控，可在编码智能体中阻止错误传播并请求人工协助。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8640000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39957/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39957/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}

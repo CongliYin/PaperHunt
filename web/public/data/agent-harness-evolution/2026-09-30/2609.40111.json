@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2609.40111",
+  "title": "Agent Error Dataset: Scaling 50,000 Error--Diagnosis Pairs for Failure Analysis and Error-Aware Post-Training",
+  "title_zh": "Agent Error Dataset：扩展至 50,000 对错误诊断样本，用于失败分析与错误感知后训练",
+  "authors": [
+    "Kunlun Zhu",
+    "Xuyan Ye",
+    "Yibo Li",
+    "Cheng Qian",
+    "Beibin Li",
+    "Heng Ji"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T16:40:22Z",
+  "abs_url": "https://arxiv.org/abs/2609.40111v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.40111",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "An unsuccessful LLM agent rollout contains more information than its final reward: the observations available to the agent, the actions it chose, and the environment's responses. Reusing this experience for learning requires identifying a decision to revise and testing a concrete alternative. We introduce the Agent Error Dataset (AED), comprising 50,228 error-diagnosis pairs from 9,961 source tasks across 33 environments, 19 harness families, and 23 policy models in text-based agent systems. We retain source traces and execution metadata to support cross-setting failure analysis and re-diagnosis without repeating the original rollout. Our five-stage Agentic Error-to-Training (AET) pipeline collects natural failures, generates diagnoses and proposed corrections, and checks them against recorded evidence. Where replay is supported, we compare corrections with original-action retries from the same checkpoint under matched execution settings. We then construct separate training views for diagnosis and actor recovery. Across 3,062 matched replay pairs, first-proposal corrections raise verifier pass rates from 18.4% to 51.1%, a gain of 32.7 percentage points. Using a separately frozen diagnosis release, full-diagnosis fine-tuning on 1,656 source tasks raises Qwen3-8B's exact-step agreement with internal teacher labels from 47.2% to 63.6%, averaged over three seeds on a 943-case holdout. The strongest prompted reference in this comparison scores 54.7%, and mean agreement improves at each of four increasing training-set sizes. In a single-seed comparison of actor-training recipes, action-only repair training scores 6.67 percentage points higher on WebShop-lite than success-only training.",
+  "abstract_zh": "一次失败的 LLM agent rollout 所包含的信息远不止最终奖励，还包括 agent 可观察到的状态、采取的动作以及环境反馈。要将这些经验用于学习，需要识别应被修改的决策，并验证一个具体的替代方案。本文提出 Agent Error Dataset（AED），包含来自 9,961 个源任务、33 个环境、19 个 harness 家族和 23 个策略模型的 50,228 对错误诊断样本，覆盖文本型 agent 系统。数据集保留源轨迹与执行元数据，支持跨设置的失败分析和无需重跑原始 rollout 的重新诊断。作者提出五阶段 Agentic Error-to-Training（AET）流程：收集自然失败，生成诊断与修正方案，并基于记录证据进行核验。在支持 replay 的场景中，研究者还在相同 checkpoint 和匹配执行设置下，将修正方案与原始动作重试进行比较，随后分别构建用于错误诊断和 actor 恢复的训练视图。在 3,062 对匹配 replay 样本中，首次提出的修正方案将 verifier 通过率从 18.4% 提升至 51.1%，提高 32.7 个百分点。使用独立冻结的诊断数据版本进行微调时，在 1,656 个源任务上训练完整诊断模型，使 Qwen3-8B 与内部 teacher 标签的精确步骤一致率从 47.2% 提升至 63.6%，该结果为三个随机种子的平均值，并在 943 个案例的留出集上评估。对比中表现最强的 prompting 基线为 54.7%，且随着训练集规模按四个阶段增加，平均一致率持续提升。在单随机种子下的 actor 训练配方比较中，仅使用动作修复训练在 WebShop-lite 上比仅使用成功样本训练高出 6.67 个百分点。",
+  "key_points_zh": [
+    "Agent Error Dataset（AED）汇集50,228对错误诊断样本，覆盖9,961个任务、33个环境、19个harness家族和23个策略模型。",
+    "五阶段 Agentic Error-to-Training（AET）流程利用失败轨迹、执行元数据和证据核验，生成可验证的诊断与动作修正方案。",
+    "在3,062对匹配 replay 样本中，首次修正方案将 verifier 通过率由18.4%提升至51.1%，提高32.7个百分点。",
+    "完整诊断微调使 Qwen3-8B 与内部 teacher 标签的精确步骤一致率由47.2%提升至63.6%，且数据规模扩大时持续受益。",
+    "在 WebShop-lite 上，动作修复训练较仅使用成功样本训练高出6.67个百分点，表明失败经验可有效支持 actor 恢复。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.86,
+    "problem_significance": 0.92,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.92,
+    "llm_avg": 0.892,
+    "comment": "AED is a highly reusable trajectory-error dataset and replay-based training pipeline that directly supports diagnosis, recovery, and agent improvement.",
+    "comment_zh": "AED提供了高度可复用的轨迹错误数据集和回放训练流程，直接支持诊断、恢复与智能体改进。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.885421238229594,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.892,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 43,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40111/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.947
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40111/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.455
+    }
+  ]
+}

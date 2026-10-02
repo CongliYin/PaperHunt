@@ -1,0 +1,85 @@
+{
+  "domain": "agent-e-commerce",
+  "display_name": "E-commerce Agent",
+  "date": "2026-09-30",
+  "generated_at": "2026-10-01T23:52:09Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.38974",
+      "title": "RealWorldShop: Benchmarking and Improving Conversational Shopping Agents in Real-World E-commerce",
+      "title_zh": "RealWorldShop：真实世界电子商务中对话式购物智能体的基准评测与改进",
+      "authors": [
+        "Xinwei Yang",
+        "Kelong Mao",
+        "Yudong Guo",
+        "Sulong Xu",
+        "Simiu Gu",
+        "Chen Huang",
+        "Wenqiang Lei"
+      ],
+      "total_score": 0.6862000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.914,
+        "domain_fit": 0.98,
+        "other": 0.2
+      },
+      "tags": [
+        "commerce agent workflows"
+      ],
+      "tldr_zh": "RealWorldShop系统评测并改进真实购物对话智能体",
+      "detail_file": "agent-e-commerce/2026-09-30/2609.38974.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38974/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.39319",
+      "title": "Residual Trajectory Distillation for Generative Retrieval",
+      "title_zh": "面向生成式检索的残差轨迹蒸馏（Residual Trajectory Distillation for Generative Retrieval）",
+      "authors": [
+        "Weihao Shen",
+        "Wei Chen",
+        "Fuwei Zhang",
+        "Guojun Liu",
+        "Qingsong Hua",
+        "Wei Lin",
+        "Fuzhen Zhuang"
+      ],
+      "total_score": 0.6358399636296498,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.8240000000000001,
+        "domain_fit": 0.92,
+        "other": 0.38879987876549915
+      },
+      "tags": [
+        "GitHub",
+        "llm for commerce"
+      ],
+      "tldr_zh": "ResTD将RQ残差轨迹蒸馏进生成式检索训练，提升检索效果。",
+      "detail_file": "agent-e-commerce/2026-09-30/2609.39319.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39319/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.40241",
+      "title": "Decision-Oriented Recommendation Reranking: An Empirical Study of Jev",
+      "title_zh": "面向决策的推荐重排序：Jev 的实证研究",
+      "authors": [
+        "Hanjia Lyu",
+        "Yinglong Xia"
+      ],
+      "total_score": 0.4447258286877776,
+      "scores": {
+        "topic_relevance": 0.44000000000000006,
+        "llm_assessment": 0.704,
+        "domain_fit": 0.88,
+        "other": 0.19175276229259217
+      },
+      "tags": [
+        "general retrieval ranking"
+      ],
+      "tldr_zh": "Jev兼顾推荐效果与延迟增长，但仍慢于专用模型",
+      "detail_file": "agent-e-commerce/2026-09-30/2609.40241.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40241/thumb.webp"
+    }
+  ]
+}

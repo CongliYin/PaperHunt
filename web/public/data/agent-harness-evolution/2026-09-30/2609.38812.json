@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2609.38812",
+  "title": "Can Terminal Agents Trust Their Own Verification? Diagnosing and Improving Self-Verification",
+  "title_zh": "终端智能体能相信自己的验证吗？自验证的诊断与改进",
+  "authors": [
+    "Yingfeng Luo",
+    "Shaowei Wei",
+    "Daixin Wang",
+    "Dingyang Lin",
+    "Kaiyan Chang",
+    "Weiqiao Shan",
+    "Tong Zheng",
+    "Zhiqiang Zhang",
+    "Jingbo Zhu",
+    "Tong Xiao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T02:42:23Z",
+  "abs_url": "https://arxiv.org/abs/2609.38812v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.38812",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Terminal agents rely on self-verification to assess and correct their solutions as they solve tasks through interaction with command-line environments. Yet how trustworthy such self-verification is remains poorly understood. To investigate this question systematically, we introduce a diagnostic framework that identifies the first complete solution in each trajectory, determines whether it is objectively correct, and uses this ground truth to quantify the agent's subsequent verification and recovery behavior. Applying it to ten terminal agents on TerminalBench2.1, we find that verification is nearly universal after a complete candidate is formed, yet only 61.43\\% of incorrect candidates are detected and only 49.36\\% of detected errors are successfully repaired. These results show that the main weakness in self-verification lies not in initiating verification, but in detecting and repairing errors. Motivated by these findings, we propose Student-Conditioned Verification Distillation (SCVD), which lets the student first produce a candidate solution and distills a stronger teacher's subsequent verification and recovery from the same interaction context. Across three Qwen3.5 backbones, SCVD improves \\textsc{Pass@1} on TerminalBench2.1 by 9.74--16.85 percentage points over the corresponding base models and by 4.49--8.61 points over the standard full-trajectory distillation, while avoiding the pronounced out-of-distribution degradation of full-trajectory distillation on SWE-bench Verified.",
+  "abstract_zh": "终端智能体通过命令行环境交互完成任务，并依赖自验证评估和修正方案，但其可靠性尚不清楚。本文提出诊断框架：定位每条交互轨迹中的首个完整解，判断其客观正确性，并据此量化智能体后续的验证与恢复行为。在 TerminalBench2.1 上评测十个终端智能体发现，完整候选解形成后几乎都会触发验证，但仅有 61.43% 的错误候选被检测出，且被检测出的错误中仅 49.36% 得到成功修复。因此，自验证的主要瓶颈不在于是否启动验证，而在于错误检测与修复。为此，作者提出 Student-Conditioned Verification Distillation（SCVD）：学生模型先生成候选解，再从相同交互上下文中蒸馏更强教师模型后续的验证与恢复过程。在三个 Qwen3.5 backbone 上，SCVD 相比对应基础模型将 TerminalBench2.1 的 Pass@1 提升 9.74–16.85 个百分点，相比标准全轨迹蒸馏提升 4.49–8.61 个百分点；同时避免了全轨迹蒸馏在 SWE-bench Verified 上明显的分布外性能下降。",
+  "key_points_zh": [
+    "提出诊断框架，以首个完整解的客观正确性为依据，系统评估终端智能体的自验证行为。",
+    "终端智能体几乎总会启动验证，但只能检测出 61.43% 的错误候选，检测出的错误中仅 49.36% 被成功修复。",
+    "研究表明，自验证的核心短板是错误检测和恢复，而非验证触发率不足。",
+    "SCVD 让学生模型先生成候选解，再蒸馏教师模型在同一交互上下文中的验证与恢复过程。",
+    "SCVD 在 TerminalBench2.1 上显著提升 Pass@1，并缓解标准全轨迹蒸馏在 SWE-bench Verified 上的分布外退化。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.82,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8400000000000001,
+    "comment": "The diagnostic framework and student-conditioned verification distillation directly address error detection and recovery in terminal coding agents.",
+    "comment_zh": "该诊断框架和学生条件验证蒸馏直接解决了终端编码智能体中的错误检测与恢复问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.308682335133939,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8400000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38812/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.807
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38812/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.954
+    }
+  ]
+}

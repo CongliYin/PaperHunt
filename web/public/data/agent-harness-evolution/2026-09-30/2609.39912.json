@@ -1,0 +1,70 @@
+{
+  "arxiv_id": "2609.39912",
+  "title": "TRACE: Trajectory Selection for Parallel Scaling of Search Agents",
+  "title_zh": "TRACE：用于搜索智能体并行扩展的轨迹选择",
+  "authors": [
+    "Qisheng Zhou",
+    "Zhen Xiong",
+    "Qiaoyu Tan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T15:06:01Z",
+  "abs_url": "https://arxiv.org/abs/2609.39912v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.39912",
+  "links": {
+    "github": "https://github.com/Jaasssoooonnnnn/TRACE",
+    "project_page": null
+  },
+  "abstract_en": "Parallel search may generate a correct answer that final-answer voting fails to select. We formulate this consolidation stage as trajectory selection and introduce TRACE (Trajectory Ranking with Aggregated Cross-Rollout Evidence), a lightweight learned selector that ranks completed trajectories using the search evidence behind their answers. TRACE preserves individual query and evidence occurrences, connects rollouts through shared content or document identity, and propagates information across these relations. Each candidate answer then reads the updated states of its own trajectory, preserving retrieval provenance while incorporating evidence from related rollouts. Trained with answer-level supervision over frozen text embeddings, TRACE returns an existing answer without additional search or autoregressive aggregation. One selector per search setting transfers across rollout policies and agent backbones without agent-specific fine-tuning, improving over voting across six WebQA policies and six long-horizon dataset-backbone combinations at $K=16$. On Qwen2.5-14B Base/SFT WebQA pools, TRACE achieves 45.2/49.2% EM, compared with 43.9/48.0% for the strongest Qwen3-32B generative aggregators. On long-horizon FRAMES, GAIA, and BrowseComp, it reaches 78.6% average accuracy, exceeding majority voting by 3.1 percentage points. On Base WebQA pools, TRACE with only 8 rollouts comes within 0.4 points of majority voting over 64. TRACE also achieves at least $10\\times$ higher processing throughput than SolAgg, SummAgg, and AggAgent across all seven WebQA benchmarks. These results show that reusing cross-rollout search evidence provides an effective and efficient alternative to heavyweight generative aggregation for parallel search. Code is available at https://github.com/Jaasssoooonnnnn/TRACE.",
+  "abstract_zh": "并行搜索可能生成正确答案，但最终答案投票未必能选中该答案。本文将结果整合建模为轨迹选择问题，并提出轻量级学习选择器 TRACE（Trajectory Ranking with Aggregated Cross-Rollout Evidence）。TRACE 保留每条轨迹中的查询与证据出现位置，通过共享内容或文档身份连接不同 rollout，并在这些关系上传播信息。每个候选答案读取自身轨迹的更新状态，在保留检索来源的同时吸收相关轨迹的证据。TRACE 基于冻结文本嵌入和答案级监督训练，无需额外搜索或自回归式答案整合，直接返回已有答案。每种搜索设置仅需训练一个选择器，即可跨 rollout 策略和智能体骨干迁移，无需针对智能体微调。在六种 WebQA 策略及六种长程数据集-骨干组合上，TRACE 均优于投票方法。在 Qwen2.5-14B Base/SFT 的 WebQA 池、K=16 条轨迹下，TRACE 的 EM 分别为 45.2%/49.2%，高于最强 Qwen3-32B 生成式聚合器的 43.9%/48.0%。在 FRAMES、GAIA 和 BrowseComp 上，TRACE 平均准确率达到 78.6%，较多数投票提升 3.1 个百分点。在 Base WebQA 池中，仅使用 8 条 rollout 时，TRACE 与 64 条 rollout 的多数投票差距缩小至 0.4 个百分点以内；相较 SolAgg、SummAgg 和 AggAgent，其在七个 WebQA 基准上的处理吞吐量至少高 10 倍。结果表明，复用跨 rollout 的搜索证据，是替代重型生成式聚合的一种高效方案。",
+  "key_points_zh": [
+    "将并行搜索后的答案整合重新定义为轨迹选择，而非依赖最终答案投票或生成式总结。",
+    "TRACE 通过共享查询内容和文档身份建立跨 rollout 关系，并传播搜索证据以增强候选轨迹表示。",
+    "基于冻结文本嵌入和答案级监督训练，直接返回已有答案，无需额外搜索、自回归聚合或智能体专属微调。",
+    "在 WebQA、FRAMES、GAIA 和 BrowseComp 上 consistently 优于多数投票及生成式聚合器；长程任务平均准确率达 78.6%。",
+    "TRACE 具有显著效率优势：仅 8 条 rollout 即接近 64 条 rollout 的多数投票效果，吞吐量至少为 SolAgg、SummAgg 和 AggAgent 的 10 倍。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.82,
+    "problem_significance": 0.84,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.83,
+    "llm_avg": 0.818,
+    "comment": "TRACE offers an efficient and reusable trajectory-selection layer that preserves search provenance and improves parallel search-agent aggregation.",
+    "comment_zh": "TRACE提供了高效且可复用的轨迹选择层，在保留搜索来源的同时改进了并行搜索Agent的结果聚合。"
+  },
+  "scores": {
+    "topic_relevance": 0.16000000000000003,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.818,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Jaasssoooonnnnn/TRACE",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39912/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

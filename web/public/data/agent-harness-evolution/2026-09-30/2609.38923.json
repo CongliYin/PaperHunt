@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2609.38923",
+  "title": "GraphForge: Training Working Agents with Graph-Anchored Workspace Synthesis",
+  "title_zh": "GraphForge：基于图锚定工作空间合成训练工作型智能体",
+  "authors": [
+    "Qisheng Su",
+    "Hanchen Wang",
+    "Guanru Zhu",
+    "Huicheng Jiang",
+    "Qiuyinzhe Zhang",
+    "Kou Shi",
+    "Zhen Fang",
+    "Ziao Zhang",
+    "Qingnan Ren",
+    "Zehui Chen",
+    "Tao Gui",
+    "Feng Zhao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T04:07:17Z",
+  "abs_url": "https://arxiv.org/abs/2609.38923v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.38923",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Working agents need to read diverse files, coordinate tools, and produce deliverables. Training such agents requires tasks built on many real files with verifiable results, but few pipelines exist to synthesize this kind of data. Existing pipelines either generate files with models, which lack realism and diversity, or build tasks on real files without task-specific verifiers, leaving result quality unchecked. We introduce GraphForge, an evidence-graph based framework that grounds both the task and its verification in real files. Starting from occupation-grounded seeds for controlled diversity, GraphForge assembles a workspace of real files for each seed and builds an evidence graph over their relations. Since the task statement and rubrics are both derived from this graph, task requirements are backed by the workspace files and each criterion is anchored to the files needed to verify it. An initial rollout further tests executability, and a revision agent repairs the task and rubrics against the original files before trajectories are collected. Fine-tuning Qwen3.6-27B on 2,169 GraphForge trajectories brings GDPVal to 1445.7 (+65.7) under OpenHands, and Workspace-Bench-Lite and SpreadsheetBench II to 63.7 (+7.7) and 24.0 (+13.7) under Claude Code. Rejection fine-tuning on the SFT model's own rollouts, with candidates selected by the evidence-anchored rubrics, yields further improvements on all three benchmarks, suggesting that the rubrics provide a useful selection signal. The data and models are available.",
+  "abstract_zh": "工作型智能体需要读取多样文件、协调工具并产出可交付成果。训练此类智能体需要大量真实文件、可执行任务以及可验证结果，但现有数据构建流程要么依赖模型生成文件，真实性和多样性不足；要么基于真实文件构建任务，却缺少针对任务的验证器，无法检查结果质量。本文提出 GraphForge，一种基于证据图（evidence graph）的框架，将任务构建与结果验证同时锚定于真实文件。GraphForge 从基于职业场景的种子任务出发，以实现受控多样性；随后为每个种子组装真实文件工作空间，并根据文件间关系构建证据图。任务描述与评分标准均由证据图派生，使任务要求得到工作空间文件支持，且每个评测标准都关联到用于验证它的具体文件。初始执行轨迹用于测试任务可执行性，修订智能体则基于原始文件修复任务与评分标准，之后再收集训练轨迹。在 2,169 条 GraphForge 轨迹上对 Qwen3.6-27B 进行微调后，模型在 OpenHands 上的 GDPVal 达到 1445.7，提升 65.7；在 Claude Code 上，Workspace-Bench-Lite 和 SpreadsheetBench II 分别达到 63.7 和 24.0，提升 7.7 和 13.7。进一步地，研究者使用 SFT 模型自身生成的轨迹进行拒绝式微调，并依据证据锚定评分标准筛选候选结果，在三个基准上均获得额外提升，说明此类评分标准可作为有效的数据选择信号。数据与模型已公开。",
+  "key_points_zh": [
+    "GraphForge 以真实文件为基础构建工作空间，并通过文件关系形成证据图，避免合成文件真实性不足。",
+    "任务描述、评分标准和验证依据均从证据图派生，使每项要求都能追溯到具体文件并可检查结果质量。",
+    "流程包含初始执行测试与修订智能体，可在轨迹采集前修复不可执行任务和不可靠评分标准。",
+    "基于 2,169 条轨迹微调 Qwen3.6-27B，在 GDPVal、Workspace-Bench-Lite 和 SpreadsheetBench II 上均取得显著提升。",
+    "证据锚定评分标准还能筛选模型自身轨迹，用于拒绝式微调并进一步提升多个基准的性能。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.86,
+    "problem_significance": 0.9,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8800000000000001,
+    "comment": "GraphForge contributes a reusable evidence-grounded workspace synthesis and verification pipeline for training working and coding agents.",
+    "comment_zh": "GraphForge为工作型和编码智能体训练贡献了可复用的证据锚定工作区合成与验证流程。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3210331475111057,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8800000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38923/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38923/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.773
+    }
+  ]
+}

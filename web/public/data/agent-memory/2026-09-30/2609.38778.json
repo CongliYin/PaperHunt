@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2609.38778",
+  "title": "Action Conditioned Bisimulation For GUI Agent Memory",
+  "title_zh": "面向 GUI Agent 记忆的动作条件双模拟",
+  "authors": [
+    "Hongbo Zhang",
+    "Liuyang Song",
+    "Quanquan Li",
+    "Daqian Yang",
+    "Yan Wen",
+    "Zhengtao Yao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T02:11:02Z",
+  "abs_url": "https://arxiv.org/abs/2609.38778v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.38778",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "An agent that remembers what it did on a web page must decide when two pages count as the same. Memories built on observation similarity merge pages that look alike but behave differently, and GUIs are full of such pages: two tabs of one widget or two rows of one menu answer the same click differently. We define the merge rule as an action-conditioned bisimulation over the empirical predictive state graph a frozen agent fills as it acts. Two states merge only when their shared actions lead to agreeing outcomes and successor blocks under an affordance label. Observation similarity never enters the rule, and nothing is trained. It replaces the merge rule of an existing outcome-value memory, so a closed-loop comparison isolates it. On MiniWoB++ it raises success rate over a memoryless agent, while a control taking identical exploratory detours, the prior successor-representation merge, and the same criterion without action conditioning change nothing.",
+  "abstract_zh": "GUI Agent 需要判断两个网页状态何时可以视为相同，以便有效记忆过去的操作。基于观测相似度的记忆机制容易合并外观相近但行为不同的页面，例如同一控件的不同标签页或同一菜单的不同条目。本文提出一种动作条件双模拟（action-conditioned bisimulation）合并规则，作用于冻结 Agent 在交互过程中构建的经验预测状态图。只有当两个状态的共享动作在某个 affordance 标签下产生一致的结果及后继状态块时，它们才会被合并。该规则完全不依赖观测相似度，也无需训练，并替换现有 outcome-value memory 中的状态合并机制，从而能够进行闭环对比实验。在 MiniWoB++ 上，该方法相较无记忆 Agent 提高了成功率；而采用相同探索绕行的控制方法、此前的 successor-representation 合并方法，以及去除动作条件的同类判据均未带来明显变化。",
+  "key_points_zh": [
+    "针对 GUI 中外观相似但交互语义不同的状态，避免仅凭观测相似度错误合并记忆。",
+    "在 Agent 在线构建的经验预测状态图上定义 action-conditioned bisimulation：共享动作的结果与后继状态块一致时才合并。",
+    "方法不使用观测相似度，也不需要额外训练，并直接替换现有 outcome-value memory 的合并规则。",
+    "在 MiniWoB++ 上优于无记忆 Agent；相同探索轨迹、successor-representation 合并及无动作条件版本均未改善性能。",
+    "实验表明，动作条件是区分 GUI 状态行为差异、提升记忆有效性的关键。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.86,
+    "problem_significance": 0.82,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8119999999999999,
+    "comment": "A focused and reusable Agent-memory contribution that replaces observation-based state merging with action-conditioned behavioral equivalence, though its evidence is limited to GUI environments.",
+    "comment_zh": "这是一项聚焦且可复用的 Agent Memory 工作，以动作条件行为等价取代基于观测的状态合并，但目前证据局限于 GUI 环境。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.24680800814443493,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8119999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38778/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38778/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.607
+    }
+  ]
+}

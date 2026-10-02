@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2609.40169",
+  "title": "Learning from Research: Toward Lifelong Agent Harness Evolution",
+  "title_zh": "从研究中学习：迈向终身智能体 Harness 演化",
+  "authors": [
+    "Jingbo Yang",
+    "Kwei-Herng Lai",
+    "Xiaowen Wang",
+    "Yaar Harari",
+    "Evgeniy Gabrilovich",
+    "Shiyu Chang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T17:00:38Z",
+  "abs_url": "https://arxiv.org/abs/2609.40169v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.40169",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Language agents are expected to solve increasingly complex tasks, creating a growing need for continual improvement. One promising approach is to evolve the agent harness, the software that governs tool use, memory management, and task execution, while keeping the underlying language model fixed. Recent methods automate this process by using a meta coding agent to modify the harness based on execution feedback. However, relying on that agent's existing knowledge and observed failures can restrict exploration and make adaptation reactive. Inspired by how human experts learn from the research literature for new solutions, we introduce ScholarEvolve, a framework that automatically draws on state-of-the-art research to guide harness evolution. ScholarEvolve organizes the harness evolution directions into functional modules and uses topic modeling to identify distinct improvement strategies for each module. It implements these strategies and evaluates their combinations to improve task performance. Moreover, the framework is designed to incorporate new publications over time, allowing research advances to drive proactive lifelong evolution. Experiments demonstrate improvements on AppWorld and Tau2-Bench. ScholarEvolve raises Qwen3.5-27B task goal completion from 49.6% to 63.6% on AppWorld Challenge, and raises GPT-5.4-mini pass@1 from 72.7% to 81.9% on Tau2-Bench Telecom.",
+  "abstract_zh": "语言智能体需要持续提升以应对日益复杂的任务。一种有前景的方法是在底层语言模型保持不变的情况下，持续演化负责工具调用、记忆管理和任务执行的智能体 Harness。现有方法通常依赖元编程智能体根据执行反馈修改 Harness，但容易受限于其已有知识和已观测失败，导致探索不足且适应偏被动。本文提出 ScholarEvolve，自动利用前沿研究成果指导 Harness 演化。该框架将演化方向组织为功能模块，并通过主题建模为各模块识别不同改进策略，随后实现这些策略并评估其组合效果。此外，ScholarEvolve 能够持续吸收新发表的论文，使研究进展驱动智能体主动进行终身演化。在 AppWorld 和 Tau2-Bench 上的实验表明，该方法显著提升任务性能：在 AppWorld Challenge 上，Qwen3.5-27B 的任务目标完成率由 49.6% 提升至 63.6%；在 Tau2-Bench Telecom 上，GPT-5.4-mini 的 pass@1 由 72.7% 提升至 81.9%。",
+  "key_points_zh": [
+    "核心思想是在固定底层语言模型的前提下，演化控制工具使用、记忆管理与任务执行的 agent harness。",
+    "ScholarEvolve自动检索和利用前沿研究，将改进方向划分为功能模块，并通过主题建模发现多样化策略。",
+    "框架不仅根据执行反馈进行调整，还能持续吸收新论文，推动面向未来的主动式终身演化。",
+    "在 AppWorld Challenge 上，Qwen3.5-27B 的任务目标完成率从 49.6% 提升至 63.6%。",
+    "在 Tau2-Bench Telecom 上，GPT-5.4-mini 的 pass@1 从 72.7% 提升至 81.9%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.86,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8560000000000001,
+    "comment": "This is strong agent-harness evolution work that uses research literature to drive proactive, modular, and continually improving harness revisions.",
+    "comment_zh": "该工作通过研究文献驱动模块化且持续改进的框架修订，是较强的智能体框架进化研究。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8560000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40169/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.919
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40169/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}

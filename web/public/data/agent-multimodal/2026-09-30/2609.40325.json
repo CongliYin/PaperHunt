@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2609.40325",
+  "title": "WorldAuditBench: Interactive 3D World Auditing with Multimodal Agents",
+  "title_zh": "WorldAuditBench：利用多模态智能体进行交互式三维世界审计",
+  "authors": [
+    "Ziyan Jiang",
+    "Jingbo Yang",
+    "Jiabao Ji",
+    "Yujian Liu",
+    "Qiucheng Wu",
+    "Tommi Jaakkola",
+    "Yang Zhang",
+    "Shiyu Chang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T17:55:29Z",
+  "abs_url": "https://arxiv.org/abs/2609.40325v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.40325",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As interactive 3D worlds are increasingly used to study intelligent behavior, it becomes important to develop efficient pipelines for identifying anomalies in these simulated environments, such as floating objects, traversable walls, or objects inconsistent with the surrounding scene. Multimodal AI systems, including vision-language models (VLMs) and vision-language-action models (VLAs), have shown potential for automating this task. However, 3D world auditing is complex, requiring the close coupling of two distinct capabilities: action, to navigate the 3D world and search for anomalies systematically and efficiently; and visual reasoning, to understand the environment and identify anomalies from multimodal observations. It remains largely unexplored whether multimodal agents can effectively couple these two capabilities, using visual reasoning to identify potential anomalies while taking actions to validate them. In this paper, we introduce WorldAuditBench, a benchmark for 3D world auditing comprising 213 anomaly tasks across 13 environments built with Unreal Engine 5 and Three.js, spanning five anomaly families. We evaluate five frontier models under a fixed exploration budget using two auditing paradigms: VLA-based exploration followed by VLM-based anomaly identification, and an end-to-end VLM agent in which visual reasoning directly guides action selection. Across the evaluated models and two paradigms, success rates range from 6.6% to 42.3%, substantially below human performance (83.4%). Through the task of world auditing, WorldAuditBench provides a testbed for studying how multimodal agents couple action and visual reasoning in interactive 3D environments, while highlighting current limitations in their ability to gather and interpret evidence during exploration.",
+  "abstract_zh": "随着交互式三维世界被广泛用于研究智能行为，如何高效发现模拟环境中的异常变得 increasingly 重要，例如悬浮物体、可穿越墙体以及与周围场景不一致的物体。视觉语言模型（VLM）和视觉语言动作模型（VLA）为自动化三维世界审计提供了可能，但该任务需要紧密结合两种能力：通过行动在三维世界中系统、高效地导航和搜索异常，以及基于多模态观测理解环境并识别异常。本文提出 WorldAuditBench，一个用于三维世界审计的基准，包含基于 Unreal Engine 5 和 Three.js 构建的 13 个环境、213 个异常任务，覆盖五类异常。作者在固定探索预算下评估了五个前沿模型，并比较两种审计范式：先由 VLA 探索、再由 VLM 识别异常；以及由端到端 VLM 智能体直接利用视觉推理指导行动选择。不同模型和范式的成功率仅为 6.6% 至 42.3%，显著低于人类的 83.4%。WorldAuditBench 为研究多模态智能体如何在交互式三维环境中耦合行动与视觉推理提供了测试平台，也揭示了当前模型在探索过程中收集和解释证据方面的明显局限。",
+  "key_points_zh": [
+    "提出 WorldAuditBench：包含 13 个 Unreal Engine 5 和 Three.js 环境、213 个异常任务及五类异常。",
+    "三维世界审计同时要求智能体进行高效导航探索，并基于视觉证据理解环境、验证异常。",
+    "比较两种范式：VLA 探索加 VLM 识别，以及由端到端 VLM 直接指导行动。",
+    "五个前沿模型的成功率为 6.6%–42.3%，显著低于人类的 83.4%。",
+    "实验表明，多模态智能体在探索中收集、整合和解释异常证据的能力仍然不足。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.78,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.82,
+    "llm_avg": 0.784,
+    "comment": "A highly relevant benchmark for evaluating iterative visual perception, action, evidence gathering, and verification in interactive 3D agents.",
+    "comment_zh": "这是一个高度相关的基准，评估交互式三维智能体中的迭代视觉感知、行动、证据收集与验证能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.9402300704726216,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.784,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 90,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40325/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40325/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.959
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2609.39982",
+  "title": "Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents",
+  "title_zh": "Mid-Harness：在模型与执行框架之间扩展终端智能体的动作搜索",
+  "authors": [
+    "Minki Kang",
+    "Ryo Hachiuma",
+    "Shaokun Zhang",
+    "Subhashree Radhakrishnan",
+    "Yonggan Fu",
+    "Jindong Jiang",
+    "Mingjie Liu",
+    "Ehsan Hosseini-Asl",
+    "Yi Dong",
+    "Yu-Chiang Frank Wang",
+    "Byung-Kwan Lee"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T15:40:39Z",
+  "abs_url": "https://arxiv.org/abs/2609.39982v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.39982",
+  "links": {
+    "github": null,
+    "project_page": "https://byungkwanlee.github.io/MidHarness-page/"
+  },
+  "abstract_en": "Terminal agents act through stochastic model generations, yet the ability to generate a useful action does not ensure its reliable execution. A poor command (e.g., wrong package install) can change the environment in ways that hinder subsequent progress, even when the model could generate a better alternative. We investigate whether allocating test-time compute at the model-harness boundary can improve action reliability and trajectory success, and what makes this allocation effective. To study these questions, we introduce Mid-Harness, which samples and verifies candidate actions before forwarding one for execution, while keeping the generator and harness unchanged. With a TMAX-9B generator, more action sampling yields little benefit under weak verification, whereas a capable verifier can exploit useful alternatives from the same generator. On TerminalBench-Lite, a GPT-5.6 Sol verifier raises Pass@1 from 50.00% for the base agent to 68.03% with 8 sampled actions. When the same TMAX-9B model serves as the verifier, pairwise verification performs best among the evaluated verification mechanisms. Distilling responses from the stronger verifier into TMAX-9B further improves Pass@1, while leaving the action generator unchanged. With TMAX-9B on TerminalBench-Lite, combining action and trajectory scaling reaches higher success at lower estimated token cost than generating more trajectories alone. Mid-Harness also improves performance across additional models, benchmarks, and harnesses. These findings identify action scaling as a promising target for test-time compute scaling in terminal agents.",
+  "abstract_zh": "终端智能体依赖随机模型生成行动，但能生成有效命令并不意味着能够可靠执行；错误命令可能改变环境并阻碍后续任务。本文研究在模型与执行框架边界分配测试时计算，能否提升动作可靠性与轨迹成功率，并探讨其有效条件。作者提出 Mid-Harness：在执行前采样并验证多个候选动作，同时保持生成器与 harness 不变。实验表明，弱验证器下增加动作采样收益有限，而强验证器能够从同一生成器产生的候选中筛选出更优动作。在 TerminalBench-Lite 上，使用 GPT-5.6 Sol 作为验证器、采样 8 个动作时，Pass@1 从基础智能体的 50.00% 提升至 68.03%。当 TMAX-9B 同时作为验证器时，两两动作验证效果最佳；将更强验证器的响应蒸馏至 TMAX-9B 后，性能进一步提升且无需改变动作生成器。结合动作扩展与轨迹扩展，可在更低估算 token 成本下取得高于单纯增加轨迹数量的成功率，并在多个模型、基准和 harness 上保持收益。",
+  "key_points_zh": [
+    "提出 Mid-Harness，在模型生成与 harness 执行之间采样、验证候选动作，无需修改生成器和执行框架。",
+    "动作扩展的关键不只是采样数量，更取决于验证器能力；弱验证收益有限，强验证器能有效挖掘同一生成器中的优质候选。",
+    "在 TerminalBench-Lite 上，GPT-5.6 Sol 验证器结合 8 个候选动作，将 Pass@1 从 50.00% 提升至 68.03%。",
+    "TMAX-9B 作为验证器时，两两验证表现最佳；蒸馏强验证器响应还能在保持动作生成器不变的情况下继续提升性能。",
+    "动作扩展与轨迹扩展结合后，相比单纯生成更多轨迹，以更低 token 成本获得更高任务成功率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.84,
+    "llm_avg": 0.836,
+    "comment": "Mid-Harness identifies a practical and reusable model-harness boundary for action sampling, verification, and efficient test-time scaling in terminal agents.",
+    "comment_zh": "Mid-Harness为终端智能体中的动作采样、验证和高效测试时扩展确定了实用且可复用的模型—框架边界。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.4,
+    "community_heat": 0.9465853787250056,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.836,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://byungkwanlee.github.io/MidHarness-page/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 98,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39982/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.47
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39982/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.897
+    }
+  ]
+}

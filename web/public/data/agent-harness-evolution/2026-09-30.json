@@ -1,0 +1,492 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-09-30",
+  "generated_at": "2026-10-01T23:55:26Z",
+  "papers": [
+    {
+      "arxiv_id": "2609.40169",
+      "title": "Learning from Research: Toward Lifelong Agent Harness Evolution",
+      "title_zh": "从研究中学习：迈向终身智能体 Harness 演化",
+      "authors": [
+        "Jingbo Yang",
+        "Kwei-Herng Lai",
+        "Xiaowen Wang",
+        "Yaar Harari",
+        "Evgeniy Gabrilovich",
+        "Shiyu Chang"
+      ],
+      "total_score": 0.6681824593811417,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8560000000000001,
+        "domain_fit": 0.96,
+        "other": 0.19794153127047226
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "ScholarEvolve让智能体Harness从研究中持续进化",
+      "detail_file": "agent-harness-evolution/2026-09-30/2609.40169.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40169/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.40111",
+      "title": "Agent Error Dataset: Scaling 50,000 Error--Diagnosis Pairs for Failure Analysis and Error-Aware Post-Training",
+      "title_zh": "Agent Error Dataset：扩展至 50,000 对错误诊断样本，用于失败分析与错误感知后训练",
+      "authors": [
+        "Kunlun Zhu",
+        "Xuyan Ye",
+        "Yibo Li",
+        "Cheng Qian",
+        "Beibin Li",
+        "Heng Ji"
+      ],
+      "total_score": 0.6438710619114798,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.892,
+        "domain_fit": 0.97,
+        "other": 0.347570206371599
+      },
+      "tags": [
+        "HF Daily ★43",
+        "training and rollout loops"
+      ],
+      "tldr_zh": "AED规模化收集agent错误诊断，显著提升修正与训练效果",
+      "detail_file": "agent-harness-evolution/2026-09-30/2609.40111.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40111/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.38805",
+      "title": "Explicit Trajectory Diversity for RL-Based Post-Training of LLM Agents",
+      "title_zh": "面向 LLM Agent 基于 RL 后训练的显式轨迹多样性",
+      "authors": [
+        "Huaiyu Fu",
+        "Heng Cao",
+        "Hao Wang",
+        "Jian Ya",
+        "Tao Chen"
+      ],
+      "total_score": 0.6174757385842975,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.7200000000000001,
+        "domain_fit": 0.84,
+        "other": 0.218252461947658
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "TJPO让LLM Agent可控地产生多样且有效的解题轨迹",
+      "detail_file": "agent-harness-evolution/2026-09-30/2609.38805.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38805/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.40324",
+      "title": "Cogentic: Multi-Agent Orchestration for Automated Proof Discovery",
+      "title_zh": "Cogentic：用于自动化证明发现的多智能体编排",
+      "authors": [
+        "Yang Cai",
+        "Vineet Gupta",
+        "Yanchen Jiang",
+        "Christopher Liaw",
+        "Aranyak Mehta",
+        "Grigoris Velegkas",
+        "Di Wang"
+      ],
+      "total_score": 0.6131258286877778,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.732,
+        "domain_fit": 0.82,
+        "other": 0.19175276229259217
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "Cogentic用多智能体协作与验证发现数学新证明。",
+      "detail_file": "agent-harness-evolution/2026-09-30/2609.40324.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40324/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.39284",
+      "title": "EngramBench: A Capability-Grounded Benchmark for Skill-Evolution Harnesses",
+      "title_zh": "EngramBench：面向技能演化框架、以能力为基础的基准测试",
+      "authors": [
+        "Zhixuan Tan",
+        "Pengjie Gu",
+        "Zhao Li",
+        "Yihan Hu",
+        "Xu He",
+        "Dong Li",
+        "Jianye Hao"
+      ],
+      "total_score": 0.6048258286877776,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.7959999999999999,
+        "domain_fit": 0.88,
+        "other": 0.10008609562592546
+      },
+      "tags": [
+        "session context state"
+      ],
+      "tldr_zh": "EngramBench验证技能抽象能否实现跨领域能力迁移",
+      "detail_file": "agent-harness-evolution/2026-09-30/2609.39284.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39284/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.38812",
+      "title": "Can Terminal Agents Trust Their Own Verification? Diagnosing and Improving Self-Verification",
+      "title_zh": "终端智能体能相信自己的验证吗？自验证的诊断与改进",
+      "authors": [
+        "Yingfeng Luo",
+        "Shaowei Wei",
+        "Daixin Wang",
+        "Dingyang Lin",
+        "Kaiyan Chang",
+        "Weiqiao Shan",
+        "Tong Zheng",
+        "Zhiqiang Zhang",
+        "Jingbo Zhu",
+        "Tong Xiao"
+      ],
+      "total_score": 0.5524341167566971,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.8400000000000001,
+        "domain_fit": 0.94,
+        "other": 0.20144705585565653
+      },
+      "tags": [
+        "planning and policy"
+      ],
+      "tldr_zh": "SCVD提升终端智能体的错误检测与修复能力",
+      "detail_file": "agent-harness-evolution/2026-09-30/2609.38812.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38812/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.39982",
+      "title": "Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents",
+      "title_zh": "Mid-Harness：在模型与执行框架之间扩展终端智能体的动作搜索",
+      "authors": [
+        "Minki Kang",
+        "Ryo Hachiuma",
+        "Shaokun Zhang",
+        "Subhashree Radhakrishnan",
+        "Yonggan Fu",
+        "Jindong Jiang",
+        "Mingjie Liu",
+        "Ehsan Hosseini-Asl",
+        "Yi Dong",
+        "Yu-Chiang Frank Wang",
+        "Byung-Kwan Lee"
+      ],
+      "total_score": 0.5171292689362502,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.836,
+        "domain_fit": 0.95,
+        "other": 0.407764229787501
+      },
+      "tags": [
+        "HF Daily ★98",
+        "Project Page",
+        "generic verifier reward eval terms"
+      ],
+      "tldr_zh": "Mid-Harness通过验证候选动作提升终端智能体成功率",
+      "detail_file": "agent-harness-evolution/2026-09-30/2609.39982.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39982/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.39081",
+      "title": "Coding Agents for Coding Theory",
+      "title_zh": "用于编码理论的 Coding Agents",
+      "authors": [
+        "Abraham Yeung"
+      ],
+      "total_score": 0.506,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.62,
+        "domain_fit": 0.8,
+        "other": 0.5333333333333333
+      },
+      "tags": [
+        "GitHub",
+        "general tool agents",
+        "Accepted"
+      ],
+      "tldr_zh": "LLM代理改进编码理论下界，但中间结果必须持续复核",
+      "detail_file": "agent-harness-evolution/2026-09-30/2609.39081.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39081/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.38923",
+      "title": "GraphForge: Training Working Agents with Graph-Anchored Workspace Synthesis",
+      "title_zh": "GraphForge：基于图锚定工作空间合成训练工作型智能体",
+      "authors": [
+        "Qisheng Su",
+        "Hanchen Wang",
+        "Guanru Zhu",
+        "Huicheng Jiang",
+        "Qiuyinzhe Zhang",
+        "Kou Shi",
+        "Zhen Fang",
+        "Ziao Zhang",
+        "Qingnan Ren",
+        "Zehui Chen",
+        "Tao Gui",
+        "Feng Zhao"
+      ],
+      "total_score": 0.48505165737555533,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.8800000000000001,
+        "domain_fit": 0.95,
+        "other": 0.2035055245851843
+      },
+      "tags": [
+        "generic verifier reward eval terms"
+      ],
+      "tldr_zh": "用证据图锚定任务与验证，提升工作型智能体训练效果",
+      "detail_file": "agent-harness-evolution/2026-09-30/2609.38923.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38923/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.39957",
+      "title": "Learning When and How to Intervene: A Hindsight-Distilled Sentinel for Coding Agents",
+      "title_zh": "学习何时及如何干预：面向代码代理的事后蒸馏哨兵（HiSentinel）",
+      "authors": [
+        "Jiangrui Zhao",
+        "Chenglong Li",
+        "Meng Zhang",
+        "Xiaoting Du"
+      ],
+      "total_score": 0.47920000000000007,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.8640000000000001,
+        "domain_fit": 0.95,
+        "other": 0.2
+      },
+      "tags": [
+        "general tool agents"
+      ],
+      "tldr_zh": "用轻量哨兵在执行前干预，提升代码代理成功率。",
+      "detail_file": "agent-harness-evolution/2026-09-30/2609.39957.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39957/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.40221",
+      "title": "PhantomEnvironments: Training LLM Agents in Fictional Worlds",
+      "title_zh": "PhantomEnvironments：在虚构世界中训练 LLM Agent",
+      "authors": [
+        "Anmol Kabra",
+        "Swathi Saravana Selvam",
+        "Albert Gong",
+        "Chao Wan",
+        "Christian Belardi",
+        "Dongyoung Go",
+        "Katie Z. Luo",
+        "Kilian Q. Weinberger"
+      ],
+      "total_score": 0.44110000000000005,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.882,
+        "domain_fit": 0.95,
+        "other": 0.10833333333333334
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "用零成本规则环境训练可迁移的搜索Agent",
+      "detail_file": "agent-harness-evolution/2026-09-30/2609.40221.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40221/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.40303",
+      "title": "How Much of a Harness Does a Strong Agent Need for Autonomous ML Engineering?",
+      "title_zh": "强大智能体需要多复杂的 Harness 才能实现自主机器学习工程？",
+      "authors": [
+        "Kirill Brilliantov",
+        "Alejandro Hernández-Cano",
+        "Emmanuel Abbé"
+      ],
+      "total_score": 0.42580000000000007,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.756,
+        "domain_fit": 0.9,
+        "other": 0.18333333333333338
+      },
+      "tags": [
+        "Code soon",
+        "general tool agents"
+      ],
+      "tldr_zh": "强模型配合极简 harness 已足以完成当前 MLE 基准。",
+      "detail_file": "agent-harness-evolution/2026-09-30/2609.40303.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40303/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.39912",
+      "title": "TRACE: Trajectory Selection for Parallel Scaling of Search Agents",
+      "title_zh": "TRACE：用于搜索智能体并行扩展的轨迹选择",
+      "authors": [
+        "Qisheng Zhou",
+        "Zhen Xiong",
+        "Qiaoyu Tan"
+      ],
+      "total_score": 0.3919,
+      "scores": {
+        "topic_relevance": 0.16000000000000003,
+        "llm_assessment": 0.818,
+        "domain_fit": 0.94,
+        "other": 0.275
+      },
+      "tags": [
+        "GitHub",
+        "adjacent model training"
+      ],
+      "tldr_zh": "TRACE复用跨轨迹证据，高效选出最佳答案",
+      "detail_file": "agent-harness-evolution/2026-09-30/2609.39912.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39912/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.39102",
+      "title": "False Frontiers: Diagnosing and Mitigating Co-Cheating in Self-Evolving Search Agents",
+      "title_zh": "虚假前沿：诊断与缓解自进化搜索智能体中的协同作弊",
+      "authors": [
+        "Meijia Chen",
+        "Hao Li",
+        "Zheng Lu",
+        "Hongshan Lin",
+        "Junbai Tian",
+        "Yichen Liu",
+        "Zijun Tian",
+        "Yufan Zou",
+        "Shuhan Sun",
+        "Hanxin Chen",
+        "Zeyu Zhang",
+        "Weizhi Du",
+        "Yueting Li",
+        "Tianyu Shi",
+        "Alaa Khamis"
+      ],
+      "total_score": 0.3564152296062941,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.8859999999999999,
+        "domain_fit": 0.94,
+        "other": 0.3020507653543137
+      },
+      "tags": [
+        "HF Daily ★188"
+      ],
+      "tldr_zh": "CrossFit用交叉拟合阻断搜索智能体的协同作弊",
+      "detail_file": "agent-harness-evolution/2026-09-30/2609.39102.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39102/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.39564",
+      "title": "A2Z GameSpec-Bench: How Faithfully Can Coding Agents Generate Games from Game Design Specifications?",
+      "title_zh": "A2Z GameSpec-Bench：编程智能体能多忠实地依据游戏设计规格生成游戏？",
+      "authors": [
+        "Seonho Lee",
+        "Wonryeol Jeong",
+        "Alberto Cereser",
+        "Inha Kang",
+        "Hyeonjong Kim",
+        "Seungmin Kwak",
+        "Dongmin Park"
+      ],
+      "total_score": 0.34518358554868295,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.78,
+        "domain_fit": 0.86,
+        "other": 0.3706119518289431
+      },
+      "tags": [
+        "HF Daily ★9",
+        "Project Page"
+      ],
+      "tldr_zh": "A2Z GameSpec-Bench评估智能体忠实实现长篇GDD的能力",
+      "detail_file": "agent-harness-evolution/2026-09-30/2609.39564.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39564/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.38912",
+      "title": "Composing Task-specific Agent Harnesses at Test Time with Reusable Primitives",
+      "title_zh": "在测试时利用可复用原语组合任务专用 Agent Harnesses",
+      "authors": [
+        "Peng Kuang",
+        "Haibo Jin",
+        "Dehao Wu",
+        "Feiyang Deng",
+        "Xiaopeng Yuan",
+        "Jerry Wang",
+        "Haohan Wang"
+      ],
+      "total_score": 0.32939999999999997,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.898,
+        "domain_fit": 0.98,
+        "other": 0.2
+      },
+      "tags": [],
+      "tldr_zh": "STITCH用可复用原语高效构建任务专用Harness",
+      "detail_file": "agent-harness-evolution/2026-09-30/2609.38912.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38912/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.38885",
+      "title": "Doing More with Less Tokens: Hierarchical Reinforcement Learning for Efficient Coding Agents",
+      "title_zh": "用更少 Token 做更多事：面向高效编码智能体的分层强化学习",
+      "authors": [
+        "Haobin Li",
+        "Liang Jiang",
+        "Zhenyu Huang",
+        "Mouxing Yang",
+        "Xi Peng"
+      ],
+      "total_score": 0.31098830625409446,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.8380000000000001,
+        "domain_fit": 0.96,
+        "other": 0.19862768751364818
+      },
+      "tags": [],
+      "tldr_zh": "HERO通过分层强化学习兼顾编码任务解决率与Token效率",
+      "detail_file": "agent-harness-evolution/2026-09-30/2609.38885.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38885/thumb.webp"
+    },
+    {
+      "arxiv_id": "2609.39022",
+      "title": "From Verification Failures to Reusable Guidance for Coding Agents",
+      "title_zh": "从验证失败到可复用的 Coding Agents 指导",
+      "authors": [
+        "Yuqing Zhai",
+        "Xiaohong Chen",
+        "Lingming Zhang",
+        "Sriram Vishwanath",
+        "Grigore Rosu"
+      ],
+      "total_score": 0.27768874303166646,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.7380000000000001,
+        "domain_fit": 0.82,
+        "other": 0.18762914343888823
+      },
+      "tags": [],
+      "tldr_zh": "将验证失败诊断转化为可复用指导，提升代码代理的可验证性。",
+      "detail_file": "agent-harness-evolution/2026-09-30/2609.39022.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39022/thumb.webp"
+    }
+  ]
+}

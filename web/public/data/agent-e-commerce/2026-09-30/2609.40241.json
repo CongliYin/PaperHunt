@@ -1,0 +1,69 @@
+{
+  "arxiv_id": "2609.40241",
+  "title": "Decision-Oriented Recommendation Reranking: An Empirical Study of Jev",
+  "title_zh": "面向决策的推荐重排序：Jev 的实证研究",
+  "authors": [
+    "Hanjia Lyu",
+    "Yinglong Xia"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T17:33:43Z",
+  "abs_url": "https://arxiv.org/abs/2609.40241v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.40241",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) have shown promise for recommendation reranking, but their use introduces an important tradeoff between recommendation quality and serving efficiency. We investigate whether a decision-oriented model provides a useful alternative when the reranking task is fundamentally a structured choice among predefined candidate items. Specifically, we conduct a controlled empirical study of Jev, described by TypeSafe AI as a ``System One Model,'' for personalized recommendation reranking and compare it with recommendation-specific models and pointwise and listwise Qwen rerankers across multiple Amazon Reviews domains and candidate-set sizes, evaluating both recommendation effectiveness and observed serving latency. Our results show that Jev maintains strong recommendation effectiveness relative to the evaluated baselines while exhibiting substantially more gradual latency growth than the pointwise Qwen rerankers, although its observed serving latency remains substantially higher than that of recommendation-specific models. Together, these characteristics place Jev in a distinct quality--latency operating regime across candidate sizes and domains. These findings motivate further investigation of decision-oriented models for recommendation and other ranking tasks with structured output spaces.",
+  "abstract_zh": "大型语言模型（LLMs）可用于推荐重排序，但会在推荐质量与服务效率之间引入权衡。本文将重排序任务视为从预定义候选项中进行结构化选择，系统评估由 TypeSafe AI 描述为“System One Model”的 Jev。研究在多个 Amazon Reviews 领域和不同候选集规模下，将 Jev 与推荐专用模型，以及 pointwise 和 listwise Qwen reranker 进行比较，同时考察推荐效果与实际服务延迟。结果表明，相较于所评估的基线，Jev 能保持较强的推荐效果；与 pointwise Qwen reranker 相比，其延迟随候选集规模增长得更加平缓，但实际延迟仍显著高于推荐专用模型。因此，Jev 在不同候选规模和领域中呈现出独特的质量—延迟工作区间，说明面向决策的模型值得在推荐及其他具有结构化输出空间的排序任务中进一步研究。",
+  "key_points_zh": [
+    "将推荐重排序视为从预定义候选项中进行结构化决策，并实证研究 Jev 的适用性。",
+    "在多个 Amazon Reviews 领域和候选集规模上，Jev 的推荐效果相较基线保持较强竞争力。",
+    "Jev 的服务延迟随候选集规模增长较为平缓，优于 pointwise Qwen reranker 的延迟扩张趋势。",
+    "Jev 的绝对服务延迟仍明显高于推荐专用模型，体现出不同的质量—延迟权衡。",
+    "研究结果支持进一步探索面向决策的模型在推荐及其他结构化排序任务中的价值。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.67,
+    "problem_significance": 0.84,
+    "potential_impact": 0.83,
+    "paradigm_shift": 0.42,
+    "lasting_value": 0.76,
+    "llm_avg": 0.704,
+    "comment": "A directly relevant Amazon-based study of recommendation reranking that clearly addresses the practical quality--latency tradeoff in product recommendation serving.",
+    "comment_zh": "该工作基于亚马逊数据直接研究推荐重排，清晰刻画了商品推荐服务中的效果与延迟权衡。"
+  },
+  "scores": {
+    "topic_relevance": 0.44000000000000006,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.704,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40241/fig1.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.973
+    }
+  ]
+}

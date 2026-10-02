@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2609.39102",
+  "title": "False Frontiers: Diagnosing and Mitigating Co-Cheating in Self-Evolving Search Agents",
+  "title_zh": "虚假前沿：诊断与缓解自进化搜索智能体中的协同作弊",
+  "authors": [
+    "Meijia Chen",
+    "Hao Li",
+    "Zheng Lu",
+    "Hongshan Lin",
+    "Junbai Tian",
+    "Yichen Liu",
+    "Zijun Tian",
+    "Yufan Zou",
+    "Shuhan Sun",
+    "Hanxin Chen",
+    "Zeyu Zhang",
+    "Weizhi Du",
+    "Yueting Li",
+    "Tianyu Shi",
+    "Alaa Khamis"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T06:41:51Z",
+  "abs_url": "https://arxiv.org/abs/2609.39102v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.39102",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Self-evolving search agents build their own training curricula by jointly optimizing a proposer that generates questions and a solver that answers them. This closed loop introduces a failure mode we call co-cheating: the proposer and solver increasingly agree on shared errors, so internal reward improves without a matching gain in external correctness. A post-hoc audit against source evidence shows co-cheating growing more severe over successive rounds of self-evolution, with pseudo-label correctness stagnating or declining even as the in-loop training signal improves. The most direct mitigation is to verify proposals before training: we introduce multi-sample verification (MSV), which queries the same model three times with the source and three times without it to decide task admission and replace unreliable pseudo-labels. MSV partially reduces false agreement but leaves substantial residual co-cheating and costs six extra labeler generations per candidate. These limitations motivate CrossFit, our main method: it partitions the proposer's source documents into groups A and B; questions generated from A are scored by an auxiliary solver trained only on B, and vice versa. The cross-fitted agreement determines proposer reward, so a same-source pseudo-label cannot be reproduced through the feedback solver, while the original solver's update rule is unchanged. Rerunning the loop with Qwen3.5-4B and Qwen3.5-9B, MSV reduces false-agreement mass from 6.1% to 5.7% and from 8.8% to 7.2%, whereas CrossFit reduces it to 3.0% and 3.7%. Replaying identical proposals with source-excluded feedback further reduces false agreement to 0.4% and 0.1%, isolating feedback ancestry from curriculum changes. Across seven downstream search benchmarks, CrossFit improves average performance over standard coupled self-evolution by 8.8 and 8.4 points and over Search-R1 by 8.7 and 7.8 points at 4B and 9B.",
+  "abstract_zh": "自进化搜索智能体通过联合优化提问生成器（proposer）与问题求解器（solver）构建训练课程，但这一闭环会产生“协同作弊”（co-cheating）：二者逐渐共享并强化错误，使内部奖励提升却不代表外部正确性改善。基于源证据的事后审计表明，随着自进化轮次增加，协同作弊愈发严重，伪标签正确率停滞甚至下降。作者首先提出多样本验证（Multi-Sample Verification, MSV），通过分别在有源和无源条件下对同一模型采样三次，筛选任务并替换不可靠伪标签；但其只能部分缓解问题，且每个候选任务额外消耗六次生成。核心方法 CrossFit 将提问生成器的源文档划分为 A、B 两组：A 生成的问题由仅使用 B 训练的辅助求解器评分，B 生成的问题则反向评分，以交叉拟合的一致性决定 proposer 奖励，从而阻断反馈求解器复现同源伪标签的路径，同时保持原 solver 的更新规则不变。在 Qwen3.5-4B 和 Qwen3.5-9B 上，CrossFit 将虚假一致性比例分别降至 3.0% 和 3.7%，优于 MSV 的 5.7% 和 7.2%；在七个下游搜索基准上，相比标准耦合式自进化，平均性能分别提升 8.8 和 8.4 个百分点，相比 Search-R1 分别提升 8.7 和 7.8 个百分点。",
+  "key_points_zh": [
+    "自进化搜索的 proposer 与 solver 会共享错误，导致内部奖励上升但外部正确性不变甚至下降。",
+    "MSV通过有源和无源多次采样验证候选任务，可部分缓解协同作弊，但计算开销高且残留问题明显。",
+    "CrossFit将源文档分组，并用仅见另一组文档训练的辅助 solver 进行交叉评分，切断同源伪标签的反馈路径。",
+    "在 Qwen3.5-4B/9B 上，CrossFit将虚假一致性降至3.0%/3.7%，显著优于MSV的5.7%/7.2%。",
+    "在七个搜索基准上，CrossFit相较标准耦合式自进化平均提升8.8/8.4个百分点，相较Search-R1提升8.7/7.8个百分点。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.88,
+    "problem_significance": 0.91,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8859999999999999,
+    "comment": "The paper identifies a fundamental failure mode in self-evolving search agents and supplies a cross-fitted feedback mechanism with strong downstream evidence.",
+    "comment_zh": "论文揭示了自演化搜索Agent中的根本性失效模式，并提出了具有较强下游效果证据的交叉拟合反馈机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.995357016496948,
+    "author_reputation": 0.416947575628934,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8859999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 188,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 6,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39102/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39102/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

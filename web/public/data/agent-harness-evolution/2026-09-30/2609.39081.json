@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2609.39081",
+  "title": "Coding Agents for Coding Theory",
+  "title_zh": "用于编码理论的 Coding Agents",
+  "authors": [
+    "Abraham Yeung"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T06:17:28Z",
+  "abs_url": "https://arxiv.org/abs/2609.39081v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.39081",
+  "links": {
+    "github": "https://github.com/Abraham-y/coding-agents-coding-theory",
+    "project_page": null
+  },
+  "abstract_en": "We spent five weeks using an LLM coding agent on open problems in coding theory: finding large sets of four-letter words, such as DNA barcodes, that stay far apart in edit distance. The agent wrote the verifiers and search code; a human chose the problem and set the verification protocol. Restricting the search to codes with a prescribed symmetry, a classical technique, shrank the problem about fourfold and raised the best known code of length 6 and minimum edit distance 3 from 114 to 120 words ($E_4(6,3) \\geq 120$). The same pipeline improved twelve further lower bounds at lengths 6 to 9 and distances 3 to 6. We give the failures equal space. Our own search stopped at 116 and recorded the last symmetry class as topping out at 112; a second agent session, running the same search with a better operator, found the 120. A later verdict that the method did not carry over to length 7 was wrong for the same reason, and an earlier instance cost three weeks. Each time, an intermediate result was written down, never rechecked, and treated as a fact that ruled out further search. Checking final outputs, as our protocol required, does not catch such errors.",
+  "abstract_zh": "本文报告了使用大语言模型编码代理（LLM coding agent）解决编码理论开放问题的五周实验。研究目标是在四字母表中寻找编辑距离足够大的词集合，可用于 DNA barcodes。人类负责选题并制定验证协议，代理负责编写验证器和搜索代码。通过将搜索限制在具有预设对称性的编码上，经典技巧将问题规模约缩小四倍，并将长度为 6、最小编辑距离为 3 的最佳已知码从 114 个词提升至 120 个，即得到 E_4(6,3) ≥ 120。此外，该流程还改进了长度 6 至 9、距离 3 至 6 范围内的另外 12 个下界。论文特别分析了失败案例：搜索结果曾因中间结论未被复核而被错误地当作事实，导致后续搜索被提前终止；改进后的算子最终发现了 120 个词。作者指出，仅检查最终输出无法发现这类由未经验证的中间结果造成的错误，因此可靠的中间结果验证和可审计搜索协议至关重要。",
+  "key_points_zh": [
+    "LLM coding agent 在人类选题与验证协议约束下，自动编写验证器和搜索程序，探索 DNA barcodes 等编码理论问题。",
+    "利用预设对称性将搜索空间约缩小四倍，并将 E_4(6,3) 的已知下界从 114 提升至 120。",
+    "同一流程还改进了长度 6 至 9、最小编辑距离 3 至 6 的另外 12 个编码下界。",
+    "主要风险并非只有最终输出错误：未经复核的中间结果可能错误终止搜索，并被误当作排除进一步探索的事实。",
+    "仅验证最终答案不足以保证可靠性；需要对中间结果、搜索状态和算子行为进行持续、可审计的复核。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.8,
+    "novelty": 0.72,
+    "problem_significance": 0.62,
+    "potential_impact": 0.6,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.58,
+    "llm_avg": 0.62,
+    "comment": "This is a useful search-agent case study showing both coding-agent productivity and the importance of preserving intermediate evidence and failure traces.",
+    "comment_zh": "该工作是有价值的搜索智能体案例，展示了编码智能体的作用以及保存中间证据和失败轨迹的重要性。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 1.0,
+    "generality": 0.9,
+    "llm_assessment": 0.62,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Abraham-y/coding-agents-coding-theory",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39081/fig1.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.986
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39081/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.978
+    }
+  ]
+}

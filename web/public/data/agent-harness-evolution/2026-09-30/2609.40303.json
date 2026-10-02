@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2609.40303",
+  "title": "How Much of a Harness Does a Strong Agent Need for Autonomous ML Engineering?",
+  "title_zh": "强大智能体需要多复杂的 Harness 才能实现自主机器学习工程？",
+  "authors": [
+    "Kirill Brilliantov",
+    "Alejandro Hernández-Cano",
+    "Emmanuel Abbé"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T17:51:30Z",
+  "abs_url": "https://arxiv.org/abs/2609.40303v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.40303",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recent autonomous machine learning engineering (MLE) agents have made significant progress on public leaderboards. Often motivated by progress stagnation over long-horizon cycles and limited Large Language Model (LLM) primitives, modern MLE agents are deployed on top of increasingly elaborate machinery: multi-agent orchestrators, dedicated retrieval subagents, and more. While such harnesses expand, the use of more primitive but improved coding agents - where LLMs have direct access to the execution environment through read, write, and bash primitives - has received little attention in the field. In this paper we find that, under an equal time budget and the same frontier LLM backbone, open-source state-of-the-art harnesses provide no advantages over a single session of a minimal-harness coding agent baseline, pointing to the backbone as the primary driver for performance. Via a series of large-scale systematic ablation studies, we argue that the machinery layers become redundant in the coding agent setting. We conclude that the effort spent elaborating hand-crafted harnesses around strong models yields poor returns for current MLE benchmarks.",
+  "abstract_zh": "近年来，自主机器学习工程（autonomous machine learning engineering，MLE）智能体在公开排行榜上取得了显著进展。由于长期迭代中的性能停滞以及大语言模型（LLM）原语有限，现代 MLE 智能体通常依赖日益复杂的系统架构，包括多智能体编排器、专用检索子智能体等。然而，对于更基础但能力不断增强的 coding agent，尤其是能够通过 read、write 和 bash 原语直接访问执行环境的智能体，相关研究仍然不足。本文发现，在相同时间预算和相同前沿 LLM backbone 下，开源最先进的 harness 相较于仅使用单会话 minimal-harness coding agent 基线并未带来优势，性能提升主要由 backbone 驱动。通过大规模、系统性的消融实验，作者指出，在 coding agent 场景中，额外的机器层级往往是冗余的。论文最终认为，围绕强大模型构建复杂手工 harness，在当前 MLE benchmark 上的投入回报较低。",
+  "key_points_zh": [
+    "在相同时间预算和 LLM backbone 下，复杂开源 harness 未优于单会话 minimal-harness coding agent。",
+    "性能的主要来源是底层 LLM backbone，而非多智能体编排、检索子智能体等额外组件。",
+    "大规模消融实验表明，coding agent 具备 read、write、bash 等基础原语后，许多 machinery layers 会变得冗余。",
+    "围绕强模型持续堆叠手工设计的 harness，在当前自主 MLE benchmark 上收益有限。",
+    "研究结论提示，未来应更多关注提升 backbone 能力，而非一味增加系统架构复杂度。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.72,
+    "problem_significance": 0.82,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.78,
+    "llm_avg": 0.756,
+    "comment": "This systematic study provides an important negative result about when elaborate orchestration fails to outperform a minimal coding-agent harness.",
+    "comment_zh": "该系统研究给出了重要的负面结论，说明复杂编排何时无法优于最小化编码智能体框架。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.756,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40303/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.659
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.40303/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.41
+    }
+  ]
+}

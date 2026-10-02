@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2609.38885",
+  "title": "Doing More with Less Tokens: Hierarchical Reinforcement Learning for Efficient Coding Agents",
+  "title_zh": "用更少 Token 做更多事：面向高效编码智能体的分层强化学习",
+  "authors": [
+    "Haobin Li",
+    "Liang Jiang",
+    "Zhenyu Huang",
+    "Mouxing Yang",
+    "Xi Peng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T03:34:39Z",
+  "abs_url": "https://arxiv.org/abs/2609.38885v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.38885",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Recently, coding agents have emerged as a dominant paradigm for real-world software engineering (SWE) scenarios, which solve complex tasks through multi-turn interactions with development environments. However, frequent interactions with environments would inevitably introduce substantial token overhead, leading to high usage costs and latency. Although recent studies have explored reducing token usage by context manipulation and interaction limits at inference time, these approaches focus on improving token efficiency while overlooking the risk of discarding task-relevant information, thus struggling to balance the trade-off between resolution rate and token efficiency. In this paper, we study a more general paradigm without suffering from the limitation, i.e., training token-efficient coding agents with promising resolution performance, which is a highly-practical yet less-explored problem. To this end, we reveal two core observations in SWE scenarios: i) Efficiency Variation: successful resolution could be achieved with fewer tokens; ii) Entropy Correlation: unproductive behaviors are associated with turn-level entropy. Motivated by observations, we propose a novel reinforcement learning framework, dubbed HERO. Specifically, HERO prioritizes task resolution over token efficiency during policy optimization and encourages efficient reasoning patterns at both trajectory and turn levels. Extensive experiments on SWE-bench Verified and SWE-bench Multilingual demonstrate that HERO achieves a favorable trade-off between resolution rate and token efficiency compared with state-of-the-art coding agents and reinforcement learning methods.",
+  "abstract_zh": "编码智能体通过与开发环境多轮交互解决复杂软件工程任务，但频繁交互会带来显著的 Token 开销、使用成本与延迟。现有方法主要在推理阶段操作上下文或限制交互次数，虽能提高 Token 效率，却可能丢失任务相关信息，难以兼顾任务解决率与效率。本文研究一种更具普适性的方案：通过训练获得兼具高解决率与低 Token 消耗的编码智能体。作者在软件工程任务中发现两个现象：成功解决任务通常无需大量 Token（Efficiency Variation），而无效行为与回合级熵相关（Entropy Correlation）。基于此，提出分层强化学习框架 HERO，在策略优化中优先保证任务解决能力，并从轨迹级和回合级鼓励高效推理模式。在 SWE-bench Verified 和 SWE-bench Multilingual 上的大量实验表明，相较于先进编码智能体与强化学习方法，HERO 在任务解决率和 Token 效率之间取得了更优权衡。",
+  "key_points_zh": [
+    "问题核心：编码智能体的多轮环境交互会造成高昂的 Token 消耗、成本与延迟。",
+    "关键观察：成功轨迹往往可以使用更少 Token；无效行为与回合级策略熵存在关联。",
+    "方法创新：HERO 在轨迹级和回合级共同优化高效推理，同时将任务解决能力置于 Token 节省之前。",
+    "实验结果：在 SWE-bench Verified 和 SWE-bench Multilingual 上，HERO 相较现有方法实现了更优的解决率—Token效率权衡。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.82,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8380000000000001,
+    "comment": "HERO directly addresses the practical cost-reliability tradeoff in coding agents through trajectory- and turn-level reinforcement learning.",
+    "comment_zh": "HERO通过轨迹级和回合级强化学习，直接解决了编码Agent中实际的成本与可靠性权衡问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8380000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38885/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.38885/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}

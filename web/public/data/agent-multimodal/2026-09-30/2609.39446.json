@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2609.39446",
+  "title": "DuplexAct-Bench: Broadening Full-Duplex Speech Evaluation toward Proactive Interaction across Diverse Behavioral Requirements",
+  "title_zh": "DuplexAct-Bench：面向多样行为需求拓展全双工语音评测至主动交互",
+  "authors": [
+    "Keyue Xing",
+    "Wentao Ding",
+    "Mengmeng Wang",
+    "Wenming Tu",
+    "Zilong Zheng",
+    "Yipeng Kang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T10:19:19Z",
+  "abs_url": "https://arxiv.org/abs/2609.39446v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.39446",
+  "links": {
+    "github": null,
+    "project_page": "https://alitaxky.icu/DuplexAct-Bench/"
+  },
+  "abstract_en": "Existing full-duplex speech benchmarks cover only subsets of real-time interaction behaviors, often under limited contextual conditions. We introduce DuplexAct-Bench, a bilingual benchmark that systematically covers six complementary behaviors, from interruption and yielding to proactive initiation, active silence, and backchanneling, across Pre-session, In-session, and No-explicit conditions. Across 1,290 English and Chinese streaming trials, we evaluate 12 full-duplex speech systems on both Timing and Content. Results reveal substantial variation across behaviors, conditions, and systems, as well as frequent mismatches between semantic quality and behavioral timing. These findings show that current systems remain far from robustly managing when, whether, and how to participate as real-time interaction unfolds. Project page: https://alitaxky.icu/DuplexAct-Bench/",
+  "abstract_zh": "现有全双工语音基准仅覆盖部分实时交互行为，且通常受限于有限的上下文条件。本文提出双语基准 DuplexAct-Bench，系统覆盖六类互补行为，包括打断、让渡发言、主动发起、积极静默和附和反馈等，并设置会话前（Pre-session）、会话中（In-session）和无明确条件（No-explicit）三类场景。研究在1,290次中英文流式试验中评测了12个全双工语音系统，从时序（Timing）与内容（Content）两个维度进行分析。结果显示，不同行为、条件和系统之间存在显著差异，语义质量与行为时机也经常不匹配。当前系统在实时交互过程中稳健判断何时参与、是否参与以及如何参与方面仍存在明显不足。",
+  "key_points_zh": [
+    "提出双语基准 DuplexAct-Bench，覆盖六类全双工实时交互行为。",
+    "引入 Pre-session、In-session 和 No-explicit 三类上下文条件。",
+    "基于1,290次中英文流式试验评测12个全双工语音系统。",
+    "同时考察 Timing 与 Content，发现语义质量和行为时机常不一致。",
+    "现有系统仍难以稳健决定何时、是否以及如何参与实时对话。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.82,
+    "problem_significance": 0.91,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8460000000000001,
+    "comment": "An exceptionally relevant benchmark that measures timing and content for proactive, interruptible, full-duplex spoken interaction across diverse behaviors.",
+    "comment_zh": "该基准高度契合领域，系统评估多种行为下主动式、可打断的全双工语音交互中的时序与内容质量。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8460000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://alitaxky.icu/DuplexAct-Bench/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39446/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39446/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

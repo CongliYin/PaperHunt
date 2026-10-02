@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2609.39284",
+  "title": "EngramBench: A Capability-Grounded Benchmark for Skill-Evolution Harnesses",
+  "title_zh": "EngramBench：面向技能演化框架、以能力为基础的基准测试",
+  "authors": [
+    "Zhixuan Tan",
+    "Pengjie Gu",
+    "Zhao Li",
+    "Yihan Hu",
+    "Xu He",
+    "Dong Li",
+    "Jianye Hao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T08:33:17Z",
+  "abs_url": "https://arxiv.org/abs/2609.39284v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.39284",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "While large language models have achieved remarkable success in isolated code generation, authentic software engineering requires sustained reasoning, complex state management, and continuous cross-domain abstraction. However, current evaluations of skill evolution in autonomous agents suffer from a critical identifiability problem: they structurally confound genuine capability abstraction with rote solution leakage (i.e., copying highly similar code from historical training data). To resolve this, we introduce EngramBench, a rigorous, capability-grounded benchmark governed by the strict axiom of capability overlap without solution overlap. Comprising 30 diverse learning tasks and 13 unseen transfer tasks, EngramBench challenges agents to navigate interactive, multi-hour development cycles driven by LLM-simulated users. Our extensive evaluation across 48 multi-hour execution trajectories -- corroborated by human-expert validation -- reveals a profound insight into procedural memory. We demonstrate that static skill banks do not magically bypass the \"last mile\" of exact code implementation, which remains bottlenecked by the base model's inherent reasoning limits. However, they serve as an indispensable execution compass. By navigating agents away from catastrophic, token-heavy trial-and-error, genuine capability abstraction slashes redundant context bloat and reduces overall coding time by over 55%. Ultimately, EngramBench shifts the evaluation paradigm from trivial pattern matching to the verifiable measurement of deep, cross-domain capability transfer.",
+  "abstract_zh": "大型语言模型虽已在孤立的代码生成任务上取得显著成功，但真实软件工程还要求持续推理、复杂状态管理与跨领域抽象。现有自主智能体技能演化评测存在严重的可识别性问题：真实能力抽象与机械式解题泄漏（即从历史训练数据中复制高度相似的代码）被结构性混淆。为此，论文提出 EngramBench，遵循“能力重叠但解法不重叠”（capability overlap without solution overlap）的严格原则，包含 30 个多样化学习任务和 13 个未见迁移任务，并通过 LLM 模拟用户驱动交互式、多小时的软件开发周期。基于 48 条多小时执行轨迹及人工专家验证，研究揭示了程序记忆的作用：静态技能库无法绕过精确代码实现的“最后一公里”，该环节仍受基础模型固有推理能力限制；但技能库可作为关键的执行指南，帮助智能体避免灾难性、耗费大量 token 的试错。真正的能力抽象能够减少冗余上下文膨胀，并将整体编码时间降低超过 55%。EngramBench 因此将评测重点从简单模式匹配转向可验证的深层跨领域能力迁移。",
+  "key_points_zh": [
+    "提出 EngramBench，以“能力重叠但解法不重叠”区分真实能力抽象与训练数据中的解法复现。",
+    "基准包含 30 个学习任务和 13 个未见迁移任务，评估智能体在 LLM 模拟用户驱动的多小时开发周期中的表现。",
+    "静态技能库不能突破基础模型精确实现代码的推理瓶颈，仍存在软件开发“最后一公里”问题。",
+    "技能库可充当执行指南，减少灾难性试错与冗余上下文，使整体编码时间降低超过 55%。",
+    "研究将技能演化评测从表层模式匹配推进到可验证的深层跨领域能力迁移。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.8,
+    "problem_significance": 0.78,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.84,
+    "llm_avg": 0.7959999999999999,
+    "comment": "EngramBench offers a valuable capability-grounded protocol for distinguishing genuine skill transfer from solution leakage in evolving coding agents.",
+    "comment_zh": "EngramBench提供了有价值的能力导向协议，用于区分编码智能体中的真实技能迁移与解法泄漏。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.7959999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39284/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39284/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.865
+    }
+  ]
+}

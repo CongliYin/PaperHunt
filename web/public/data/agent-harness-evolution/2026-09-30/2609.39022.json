@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2609.39022",
+  "title": "From Verification Failures to Reusable Guidance for Coding Agents",
+  "title_zh": "从验证失败到可复用的 Coding Agents 指导",
+  "authors": [
+    "Yuqing Zhai",
+    "Xiaohong Chen",
+    "Lingming Zhang",
+    "Sriram Vishwanath",
+    "Grigore Rosu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-09-30T05:27:26Z",
+  "abs_url": "https://arxiv.org/abs/2609.39022v1",
+  "pdf_url": "https://arxiv.org/pdf/2609.39022",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents need to establish that a program satisfies a specification and that the specification captures the requested behavior. We study how expert diagnosis of verification failures can become reusable guidance for this work. Our approach combines executable language definitions in the K framework with a kit of procedures for constructing specifications, repairing proofs, and auditing their adequacy. A human-guided development campaign on HumanEval, a benchmark of 164 Python programming tasks, achieves a 164/164 success rate with the semantics and the kit, measured by final AI audit Pass verdicts after two targeted repairs. To examine whether auditing detects problems that successful proofs leave unresolved, we construct 12 author-reviewed pairs of clean and defective packages. Every package passes its K proofs, and completed audits identify all defects and accept all clean packages. We then use KleverBench to test specification and proof construction for 31 programs with changed operator meanings. Comparisons with complete acceptance rules and equally long generic advice yield mixed results across two model and budget settings, motivating further work on selecting useful guidance within resource limits. Human-reviewed Optimism proofs establish expected pause reverts for six operations within declared input bounds under London semantics with unbounded gas. We report progress, difficulties, and lessons toward agents that deliver programs with checkable correctness arguments.",
+  "abstract_zh": "Coding Agents 不仅需要证明程序满足 specification，还需确认 specification 准确表达用户需求。本文研究如何将专家对验证失败的诊断转化为可复用指导。方法结合 K framework 中的可执行语言定义，以及用于构造 specification、修复 proof 和审计 specification 充分性的流程工具包。在包含 164 个 Python 任务的 HumanEval 上，人工引导的开发流程借助该语义与工具包，在两次针对性修复后取得 164/164 的成功率，依据是最终 AI audit 均给出 Pass。为检验审计能否发现成功 proof 遗留的问题，作者构造了 12 对经作者审核的正确与缺陷 package；所有 package 均通过 K proofs，而完整审计识别出全部缺陷并接受所有正确 package。在 operator 含义发生变化的 31 个程序上，KleverBench 实验显示，与完整 acceptance rules 和等长度通用建议相比，本文指导在两种模型与预算设置下表现不稳定，说明仍需研究如何在资源限制下选择有效指导。此外，人工审核的 Optimism proofs 在 London semantics 和 unbounded gas 条件下，证明了六种操作在声明输入范围内会按预期触发 pause revert。本文总结了构建能够交付、且具有可检查 correctness arguments 的 agents 所取得的进展、困难与经验。",
+  "key_points_zh": [
+    "提出结合 K framework、specification 构造、proof 修复与 adequacy 审计的指导工具包。",
+    "在 HumanEval 的 164 个 Python 任务上实现 164/164 成功，最终 AI audit 全部通过。",
+    "在 12 对正确与缺陷 package 上，审计识别出全部缺陷，同时接受所有正确 package。",
+    "KleverBench 结果显示指导效果受模型与预算影响，与通用建议相比并不稳定。",
+    "Optimism proofs 在 London semantics 下验证了六种操作在限定输入范围内的预期 pause revert。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.82,
+    "novelty": 0.7,
+    "problem_significance": 0.82,
+    "potential_impact": 0.77,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.78,
+    "llm_avg": 0.7380000000000001,
+    "comment": "This work develops reusable verification, auditing, and repair guidance for coding agents, although its evidence remains partly human-guided and task-limited.",
+    "comment_zh": "该工作为编码Agent提供了可复用的验证、审计和修复指导，但其证据仍部分依赖人工引导且任务范围有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7380000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39022/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2609.39022/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.293
+    }
+  ]
+}
