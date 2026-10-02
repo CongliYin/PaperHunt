@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2610.01799",
+  "title": "SkillEvoLean: Mutation-enhanced skill evolution for Lean provers",
+  "title_zh": "SkillEvoLean：面向 Lean 证明器的突变增强技能演化",
+  "authors": [
+    "Kuo Zhou",
+    "ZiXion Yang",
+    "Lu Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-01T14:42:54Z",
+  "abs_url": "https://arxiv.org/abs/2610.01799v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.01799",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Skill evolution offers a promising way to improve large language model agents without updating their parameters, but its use in formal theorem proving remains underexplored. Existing methods mainly target natural-language reasoning, improving skills by analyzing successful and failed trajectories and incrementally revising solving strategies. Although the Lean verifier provides reliable execution feedback, when all sampled trajectories fail, existing skill evolution methods lack successful trajectories from which to infer effective update directions. Furthermore, these methods also focus mainly on the root instruction file, thus underexploring the evolution of reference knowledge including mathematical concepts and proving techniques. To address these limitations, we propose a mutation-enhanced skill self-evolution framework for building skill-augmented Lean provers. The framework jointly evolves a high-level solving policy and its reference knowledge through progressive and mutation-based updates. Progressive evolution derives local improvements from successful and failed trajectories, while mutation is triggered when no complete proof can be generated, sampling mathematical concepts to produce and select new skill candidates under verifier feedback. We evaluate our method on MiniF2F, PutnamBench, the 2025 International Mathematical Olympiad (IMO 2025), and the 2026 USA Mathematical Olympiad (USAMO 2026). Under the same backbone model, trajectorysampling budget, and test-time compute, our method achieves proof success rates of 100.0%, 90.6%, 4/6, and 4/6, respectively, with GPT-5.5, outperforming the baseline methods. Further analysis shows that concept-guided mutation outperforms random-text-guided mutation by 6.9 and 8.2 percentage points on MiniF2F and PutnamBench, respectively, while solving one additional problem on both IMO 2025 and USAMO 2026.",
+  "abstract_zh": "本文提出 SkillEvoLean，一种无需更新模型参数、通过技能自演化增强 Lean 定理证明器的框架。针对现有方法在所有采样轨迹失败时缺乏有效更新方向，以及过度关注根指令文件、忽视数学概念与证明技巧等参考知识演化的问题，SkillEvoLean 联合演化高层解题策略和参考知识。其中，渐进式演化依据成功与失败轨迹进行局部改进；当无法生成完整证明时，则触发基于数学概念的突变，生成并在 Lean verifier 反馈下筛选新的技能候选。在相同 backbone model、轨迹采样预算和 test-time compute 下，SkillEvoLean 在 MiniF2F、PutnamBench、IMO 2025 和 USAMO 2026 上分别取得 100.0%、90.6%、4/6 和 4/6 的证明成功率，均优于基线方法。进一步分析表明，相比随机文本引导的突变，概念引导突变在 MiniF2F 和 PutnamBench 上分别提升 6.9 和 8.2 个百分点，并在 IMO 2025 与 USAMO 2026 上各多解决一道题。",
+  "key_points_zh": [
+    "SkillEvoLean 同时演化高层解题策略与数学概念、证明技巧等参考知识。",
+    "渐进式更新利用成功和失败轨迹；无完整证明时，通过数学概念触发技能突变。",
+    "Lean verifier 提供可靠执行反馈，用于生成、评估和筛选新的技能候选。",
+    "在 MiniF2F、PutnamBench、IMO 2025 和 USAMO 2026 上分别达到 100.0%、90.6%、4/6 和 4/6 的成功率。",
+    "概念引导突变优于随机文本引导突变，在 MiniF2F 和 PutnamBench 上分别提升 6.9 和 8.2 个百分点。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.88,
+    "problem_significance": 0.86,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.88,
+    "llm_avg": 0.868,
+    "comment": "SkillEvoLean directly advances skill evolution by jointly mutating solving policies and reference knowledge under reliable Lean-verifier feedback.",
+    "comment_zh": "SkillEvoLean利用可靠的Lean验证反馈联合演化求解策略与参考知识，直接推进了技能演化研究。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.868,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.01799/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.455
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.01799/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.874
+    }
+  ]
+}

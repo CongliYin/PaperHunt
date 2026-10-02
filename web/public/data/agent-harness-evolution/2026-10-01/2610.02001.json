@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2610.02001",
+  "title": "Mingbird: A Local-First Agent Harness Enabling Small Open Models to Complete Real Tasks",
+  "title_zh": "Mingbird：让小型开放模型完成真实任务的本地优先 Agent Harness",
+  "authors": [
+    "Hao Wang",
+    "Ting Huang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-01T16:32:07Z",
+  "abs_url": "https://arxiv.org/abs/2610.02001v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.02001",
+  "links": {
+    "github": "https://github.com/Mingbird/Mingbird-agent",
+    "project_page": null
+  },
+  "abstract_en": "Small open-weight models (2-9B) run on ordinary laptops, but under cloud-scale agent harnesses they rarely complete real tasks: tool prefill overflows the context, self-correction diverges, tool demonstrations loop, and tasks are silently abandoned. We present evidence, from a controlled single-machine comparison and one third-party benchmark, that a substantial share of these failures is attributable to the harness rather than the model. We introduce Mingbird, a local-first agent harness for Windows and Ollama whose ten mechanisms compensate point-by-point for small-model failure forms, three of them representative: a byte-level net-zero prefill budget, a finish gate that re-reads the task before accepting completion, and signature-level loop detection. On LRAB, a controlled comparison holding machine, models, budgets, and scoring fixed (4 harnesses $\\times$ 4 open models (2B-35B) $\\times$ 18 real tasks, deterministic artifact scoring), Mingbird reaches 0.886 overall against 0.631 (goose), 0.479 (opencode), and 0.405 (agent-mini), with all 288 cells published; on $τ^2$-bench (278 tasks, three arms, one protocol) it totals 0.856 against 0.791 and 0.737; and a frontier-model probe on the same 18 tasks spans 0.997 to 0.478 across harnesses, with well-formed scaffolds staying within 0.072 of each other. A leave-one-mechanism-out ablation is reported as directional only: same-night replications of the same arm move its mean by up to 0.069, the size of every nominal single-trial delta, and the one batch-matched comparison (full mechanism stack versus text re-read alone) gives the executable completion guards a paired +0.10 across three replications. The evidence carries stated limits: a self-built benchmark, a single machine, and single-trial scoring.",
+  "abstract_zh": "本文指出，2B–9B 小型开放权重模型在真实任务中的失败，很大程度源于 Agent Harness，而非模型本身。作者提出面向 Windows 与 Ollama 的本地优先 Harness——Mingbird，通过十项机制针对性缓解上下文预填充溢出、自我纠错发散、工具示例循环和任务静默放弃等问题。其中包括字节级净零预填充预算、完成前重新读取任务的 finish gate，以及基于签名的循环检测。在固定机器、模型、预算与评分方式的 LRAB 对比中，Mingbird 在 4 个 Harness、4 个开放模型和 18 个真实任务上取得 0.886 的总体得分，高于 goose 的 0.631、opencode 的 0.479 和 agent-mini 的 0.405；在 τ²-bench 的 278 个任务上取得 0.856，也优于另外两种方案。研究同时报告了前沿模型探测、机制消融及 288 个单元格的完整结果，但其结论受限于自建基准、单机环境和单次评分等因素。",
+  "key_points_zh": [
+    "论文将小模型 Agent 失败归因于 Harness 设计缺陷，并提出面向 Windows 与 Ollama 的 Mingbird。",
+    "核心机制包括字节级净零预填充预算、完成前任务重读的 finish gate，以及签名级循环检测。",
+    "在 LRAB 上，Mingbird 得分 0.886，明显高于 goose（0.631）、opencode（0.479）和 agent-mini（0.405）。",
+    "在 τ²-bench 的 278 个任务上，Mingbird 达到 0.856，高于对比方案的 0.791 和 0.737。",
+    "证据包含完整 288 个单元格结果，但消融结论仅具方向性，并受自建基准、单机和单次评分限制。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.83,
+    "problem_significance": 0.9,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.85,
+    "llm_avg": 0.8559999999999999,
+    "comment": "Mingbird is valuable harness research showing that explicit context, completion, and loop controls can substantially improve small-model agents on real tasks.",
+    "comment_zh": "Mingbird表明显式的上下文、完成和循环控制能够显著提升小模型Agent执行真实任务的能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.8559999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Mingbird/Mingbird-agent",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02001/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02001/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.98
+    }
+  ]
+}

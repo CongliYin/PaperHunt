@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2610.02122",
+  "title": "Argo-Bench: Evaluating Data Agents on Enterprise-Scale Workflows",
+  "title_zh": "Argo-Bench：评估企业级工作流中的数据智能体",
+  "authors": [
+    "Gabriel Tomitsuka",
+    "Arman Raayatsanati",
+    "Emma Xing",
+    "Duke Gand",
+    "Joseph J Ma"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-01T17:35:44Z",
+  "abs_url": "https://arxiv.org/abs/2610.02122v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.02122",
+  "links": {
+    "github": "https://github.com/TextQLLabs/Argo-Bench.",
+    "project_page": null
+  },
+  "abstract_en": "Real-world enterprise data science and analytics workflows require reasoning across dozens of tables, performing statistical analyses, and acting on the results. Established text-to-SQL benchmarks evaluate query generation alone, and audits have found their answer keys frequently wrong. Because real enterprise warehouses are too sensitive to release, these benchmarks are built on public datasets where a business event fits in a single table. We introduce Argo-Bench, an evaluation framework comprising 210 data science and analytics tasks. Drawing on public data, peer-reviewed industry literature, and regulatory filings, we simulate a food delivery platform in New York City at true scale, with 81 million orders in 2024, grounded economics, fraud patterns, and marketplace incentives. We export this world to an ERP warehouse of 235 tables and 7.5 billion rows, modeled on the Oracle E-Business Suite schema. The simulator's ground-truth state is withheld from the warehouse the agent sees, so tasks require reconstructing facts by navigating the warehouse before acting on them. Argo-Bench goes beyond text-to-SQL: the agent files actions such as banning fraudulent accounts, allocating courier incentive budgets, or issuing back pay, and the grader scores each by its consequences in the simulator. Every task has an executable reference solution that demonstrates solvability using only the warehouse. The strongest of 14 frontier and open-weight models scores 95 or higher on only 34.8% of tasks and averages 59.5 points. We hope Argo-Bench drives progress toward agents that understand, navigate, and act within real data environments.",
+  "abstract_zh": "现实企业数据科学与分析工作流要求智能体跨越数十张表进行推理、统计分析，并依据结果执行行动。现有 text-to-SQL 基准主要评估查询生成，且其答案标注常存在错误；同时，真实企业数据仓库因敏感性无法公开，现有基准通常基于单表公共数据，难以反映真实业务复杂度。Argo-Bench 提出一个包含 210 项数据科学与分析任务的评测框架。该框架基于公开数据、同行评审的行业文献和监管文件，模拟纽约市外卖平台：覆盖 2024 年 8100 万笔订单、真实经济约束、欺诈模式与市场激励机制，并将其导出为一个仿照 Oracle E-Business Suite 的 ERP 数据仓库，包含 235 张表和 75 亿行数据。智能体无法直接访问模拟器的真实状态，必须先在数据仓库中重建事实，再据此执行任务。Argo-Bench 超越 text-to-SQL，要求智能体提交封禁欺诈账户、分配骑手激励预算、发放补发工资等行动；评分器依据这些行动在模拟器中的实际后果进行评估。每项任务均提供可执行的参考解，证明仅凭数据仓库即可完成任务。在 14 个前沿模型和开放权重模型中，表现最好的模型仅在 34.8% 的任务上达到 95 分或更高，平均得分为 59.5 分。作者希望 Argo-Bench 推动能够理解、导航并在真实数据环境中采取行动的智能体发展。",
+  "key_points_zh": [
+    "构建了 210 项任务、235 张表和 75 亿行数据的企业级评测环境，模拟纽约市外卖平台的真实业务与经济机制。",
+    "任务不仅要求生成 SQL，还要求跨表重建事实、完成统计分析，并执行封禁账户、分配预算和补发工资等业务行动。",
+    "评分依据行动在模拟器中的实际后果，而非仅比较查询字符串或答案文本；每项任务都有可执行参考解。",
+    "14 个模型中最强模型仅有 34.8% 的任务得分达到 95 分以上，平均得分为 59.5 分，显示真实数据工作流仍具挑战。",
+    "Argo-Bench 的代码、数据集和网站已公开，有助于推动面向企业数据环境的智能体研究。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.86,
+    "problem_significance": 0.84,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.85,
+    "llm_avg": 0.8299999999999998,
+    "comment": "A strong, reusable evaluation environment for data agents that measures long-horizon warehouse navigation and consequential actions rather than isolated query accuracy.",
+    "comment_zh": "这是一套较强且可复用的数据 Agent 评测环境，衡量长期仓库导航和后果性行动，而非孤立的查询准确率。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.8180053236994811,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8299999999999998,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/TextQLLabs/Argo-Bench.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 17,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02122/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02122/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.746
+    }
+  ]
+}

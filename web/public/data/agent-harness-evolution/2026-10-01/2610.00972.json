@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2610.00972",
+  "title": "VeriHarness: Scaling Agentic Verification for Long-Horizon Tasks",
+  "title_zh": "VeriHarness：扩展长程任务的智能体验证能力",
+  "authors": [
+    "Caiqi Zhang",
+    "Rujun Han",
+    "Zifeng Wang",
+    "Zoey CuiZhu",
+    "Nigel Collier",
+    "Tomas Pfister",
+    "Chen-Yu Lee"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-01T03:02:17Z",
+  "abs_url": "https://arxiv.org/abs/2610.00972v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.00972",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As LLM agents undertake increasingly complex, long-horizon tasks, verifying their outputs becomes increasingly challenging. We study how verification capability can be strengthened with a fixed base model, without access to reference answers or grading rubrics at test time. Repeated sampling yields multiple rollouts that can contain complementary correct claims, but we need a reliable verification mechanism to determine which claims to trust. We first find that disagreement often exposes correct alternatives, while consensus can conceal errors. These observations motivate VeriHarness, which turns the underlying LLM a generator uses into an agentic verifier by giving it a workspace, evidence tools, and reusable verification skills. A disagreement resolver checks competing claims against environmental evidence, while a consensus challenger tests shared claims and searches for omitted requirements. Their findings guide the selection and revision of the final artifact. Across five long-horizon workspace benchmarks and two frontier models, VeriHarness achieves the highest selection scores among the evaluated baselines. Evidence-backed revision further improves average performance, bringing gains over a single rollout to 6.2 points with Gemini 3.5 Flash and 6.4 points with Claude Opus 4.8. We further show that verification skills can self-improve from failure feedback, demonstrating VeriHarness as a novel and critical approach for scaling long-horizon agentic verification. We release the full pool of approximately 26,000 rollouts across all five benchmarks and both models, produced at a cost of over $100,000, to support future research on agentic verification.",
+  "abstract_zh": "随着 LLM 智能体执行越来越复杂的长程任务，验证其输出也变得更加困难。本文研究在测试时无法获得参考答案或评分标准的情况下，如何仅依靠固定基础模型增强验证能力。重复采样能够产生多条包含互补正确信息的执行轨迹，但仍需可靠机制判断哪些主张值得信任。研究发现，分歧常常暴露正确替代方案，而共识可能掩盖共同错误。基于此，本文提出 VeriHarness：为生成器所使用的 LLM 配备工作区、证据工具和可复用验证技能，将其转化为智能体验证器。其中，分歧解析器利用环境证据核查竞争性主张；共识挑战器测试共同主张并搜索遗漏要求。验证结果进一步指导最终产物的选择与修订。在五个长程工作区基准和两个前沿模型上，VeriHarness 的选择得分均优于所比较的基线。基于证据的修订进一步提升平均性能：相较单次执行，Gemini 3.5 Flash 提升 6.2 分，Claude Opus 4.8 提升 6.4 分。实验还表明，验证技能能够从失败反馈中自我改进。作者发布了涵盖五个基准和两个模型、约 26,000 条执行轨迹的完整数据池，生成成本超过 100,000 美元，以支持后续智能体验证研究。",
+  "key_points_zh": [
+    "核心观察是：分歧有助于发现正确替代方案，而共识可能隐藏共同错误。",
+    "VeriHarness通过工作区、证据工具和可复用技能，把基础 LLM 转化为智能体验证器。",
+    "分歧解析器核查竞争主张，共识挑战器主动寻找错误与遗漏要求，并指导最终结果修订。",
+    "在五个长程工作区基准和两个模型上取得最佳选择性能；证据修订相对单次执行分别提升 6.2 和 6.4 分。",
+    "验证技能可从失败反馈中自我改进，作者同时发布约 26,000 条执行轨迹供研究使用。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.88,
+    "problem_significance": 0.93,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.88,
+    "lasting_value": 0.92,
+    "llm_avg": 0.908,
+    "comment": "VeriHarness offers a broadly reusable verifier-backed rollout, evidence, revision, and skill-improvement loop for long-horizon agent tasks.",
+    "comment_zh": "VeriHarness为长时程Agent任务提供了可广泛复用的验证器驱动采样、证据、修订和技能改进闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36560162063732243,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.908,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.00972/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.00972/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.818
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2610.01023",
+  "title": "Groundability, Not Scale Alone: When Weak Reviewers Can Audit Strong Coding Agents",
+  "title_zh": "可验证性，而非单纯规模：弱评审器何时能够审计强编码智能体",
+  "authors": [
+    "Junyu Guo",
+    "Shangding Gu",
+    "Ming Jin",
+    "Javad Lavaei"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-01T04:10:59Z",
+  "abs_url": "https://arxiv.org/abs/2610.01023v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.01023",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents can return plausible patches that omit required behavior. These failures are hard to review because long traces and confident summaries often hide what was missed. We ask when a nominally weaker reviewer can reliably decide whether a patch solves its issue. We study 411 execution-labeled traces from three agents and 101 controlled cases. On 154 GPT-5.4 traces, structured but unchecked evidence raises both defect catch and over-rejection. We then provide official execution evidence as an upper-bound diagnostic. After choosing and freezing one of two formats per reviewer, five of six reviewers improve both rates on 122 held-out traces; two classify every trace correctly. Reviewer size is not a consistent predictor of quality. Because official tests are unavailable in deployment, we also evaluate a frozen cascade with patch-caused static errors and generated tests that first fail on the unpatched repository. On 121 scored held-out GPT-5.4 traces and 59 Gemini traces, its coverage is 0.89 and 0.86, risk is 0.33 and 0.26, catch is 0.76 and 0.80, and over-rejection is 0.66 and 0.67. Most false rejections occur when unresolved cases reach the reviewer. Official execution evidence shows the potential of weak review when decisive checks are available. Producing equally reliable checks without official tests remains the main bottleneck.",
+  "abstract_zh": "编码智能体可能生成看似合理却遗漏必要行为的补丁，而冗长执行轨迹和自信总结会掩盖缺陷，使审查困难。本文研究：名义上较弱的评审器何时能可靠判断补丁是否真正解决问题。作者分析了来自三个智能体的411条带执行标签轨迹，以及101个受控案例。在154条GPT-5.4轨迹上，结构化但未经核验的证据虽提高了缺陷捕获率，也增加了误拒率。随后，研究使用官方执行证据作为上限诊断：在为每个评审器选择并冻结两种证据格式之一后，6个评审器中的5个在122条留出轨迹上同时提升捕获率和整体判定表现，其中2个实现了全部正确分类。评审器规模并不能稳定预测质量。考虑到部署时通常无法获得官方测试，作者进一步评估了一种冻结级联方案：结合补丁引入的静态错误，以及在未修改仓库上首先失败的生成测试。在121条GPT-5.4和59条Gemini留出轨迹上，该方案的覆盖率分别为0.89和0.86，风险分别为0.33和0.26，缺陷捕获率分别为0.76和0.80，误拒率分别为0.66和0.67。大多数误拒发生在未决案例进入评审器之后。官方执行证据表明，只要具备决定性检查，弱评审器也具有较大潜力；但在缺少官方测试时，如何生成同等可靠的检查仍是主要瓶颈。",
+  "key_points_zh": [
+    "评审器规模不是质量的稳定预测因素；结构化证据本身有效，但未经核验时会同时增加缺陷捕获和误拒。",
+    "官方执行证据显著提升弱评审器表现：6个评审器中5个同时改善捕获率与判定质量，2个实现全量正确分类。",
+    "无官方测试时，结合补丁静态错误与生成测试的冻结级联仍具实用覆盖率，但误拒率较高。",
+    "多数误拒来自无法由前置检查解决、最终被交给评审器的未决案例。",
+    "核心瓶颈不是扩大评审模型，而是在部署环境中生成可靠且具有决定性的验证证据。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.85,
+    "problem_significance": 0.93,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.9,
+    "llm_avg": 0.882,
+    "comment": "This is a highly valuable coding-Agent evaluation and deployment study that connects execution-grounded evidence, reviewer cascades, defect detection, and operational risk.",
+    "comment_zh": "这是一项价值很高的 Coding Agent 评测与部署研究，将执行证据、审查级联、缺陷检测和运行风险联系起来。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36228269883744174,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.882,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.01023/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.01023/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2610.01892",
+  "title": "Selection-Based Structured Reasoning: Toward Efficient Multimodal Search Agents",
+  "title_zh": "基于选择的结构化推理：迈向高效多模态搜索智能体",
+  "authors": [
+    "Feiyu Gavin Zhu",
+    "Xiaoyu Zhu",
+    "Jiqi Yang",
+    "Rui Yang",
+    "Arnab Kumar Mondal",
+    "Yancheng Wang",
+    "Xinke Deng",
+    "Jean Oh",
+    "Reid Simmons",
+    "Joerg Liebelt",
+    "Xiang Kong",
+    "Zhongyu Jiang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-01T15:42:14Z",
+  "abs_url": "https://arxiv.org/abs/2610.01892v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.01892",
+  "links": {
+    "github": null,
+    "project_page": "https://zfy0314.github.io/ssr-webpage/."
+  },
+  "abstract_en": "Multimodal agents commonly generate free-form reasoning before each action. For small models, limited model capacity can result in lengthy reasoning that provides little useful guidance for action generation while incurring substantial inference cost. To address this challenge, we introduce Selection-based Structured Reasoning (SSR), a framework that reformulates reasoning as selection instead of open-ended generation. SSR represents recurring high-level reasoning as pre-specified, reusable natural-language candidates. At each turn, the model selects from these reasoning candidates based on their likelihoods given the current context, without requiring an auxiliary task head. Using pre-specified reasoning traces enables parallel scoring, where teacher-forced prefilling computes token likelihoods concurrently within and across candidates using a shared context KV cache. We evaluate SSR on seven multimodal search benchmarks using 2B and 4B models. Across multiple reinforcement learning objectives and supervised fine-tuning, SSR delivers significant efficiency gains without sacrificing task performance. SSR achieves an average success rate competitive with leading search agents of the same scale, while reducing per-turn reasoning latency by over 90% and total per-question model inference latency by 28-54%. Project page: https://zfy0314.github.io/ssr-webpage/.",
+  "abstract_zh": "多模态智能体通常在每次行动前生成自由形式的推理过程，但对于小模型而言，这类推理可能冗长且难以有效指导行动，同时带来较高推理成本。本文提出 Selection-based Structured Reasoning（SSR），将开放式推理生成重新表述为候选推理选择。SSR 预先构建可复用的高层自然语言推理候选，模型根据当前上下文对候选的条件似然进行选择，无需额外任务头。由于推理轨迹预先确定，SSR 可通过 teacher-forced prefilling 并行计算候选得分，并在候选之间共享上下文 KV cache。作者在 7 个多模态搜索基准上，使用 2B 和 4B 模型，并结合多种强化学习目标与监督微调进行评估。结果显示，SSR 在不牺牲任务性能的情况下显著提升效率：成功率与同规模领先搜索智能体相当，每轮推理延迟降低超过 90%，单题模型总推理延迟降低 28%—54%。",
+  "key_points_zh": [
+    "核心思想是将高层推理预先表示为可复用的自然语言候选，并在每轮根据上下文进行选择，而非实时生成冗长推理。",
+    "SSR 基于候选条件似然完成决策，无需增加辅助任务头，便于融入现有语言模型与训练流程。",
+    "通过 teacher-forced prefilling 和共享上下文 KV cache，SSR 能并行计算候选得分，降低推理开销。",
+    "在 7 个多模态搜索基准、2B 和 4B 模型以及多种训练目标上，SSR 保持与同规模先进搜索智能体相当的成功率。",
+    "SSR 将每轮推理延迟降低超过 90%，并将单题总模型推理延迟降低 28%—54%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.84,
+    "novelty": 0.82,
+    "problem_significance": 0.78,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.77,
+    "llm_avg": 0.7819999999999999,
+    "comment": "A useful search-agent inference design that replaces expensive free-form reasoning with reusable selectable structures and substantial latency reductions.",
+    "comment_zh": "该工作面向搜索Agent，以可复用的结构化选择替代昂贵的自由推理，并显著降低推理延迟。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7819999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://zfy0314.github.io/ssr-webpage/.",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.01892/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.01892/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.808
+    }
+  ]
+}

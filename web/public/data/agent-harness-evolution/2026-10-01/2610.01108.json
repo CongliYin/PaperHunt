@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2610.01108",
+  "title": "AgSpec: Pushing the Limits of Retrieval-Based Speculative Decoding in Coding Agent Pipelines",
+  "title_zh": "AgSpec：突破 Coding Agent Pipeline 中基于检索的推测解码极限",
+  "authors": [
+    "Sumin Lee",
+    "Sukmin Cho",
+    "Suengjae Lim",
+    "Youngjin Kwon"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-01T05:48:29Z",
+  "abs_url": "https://arxiv.org/abs/2610.01108v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.01108",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Retrieval-based speculative decoding (SD) drafts tokens by copying continuations from existing text, which suits coding agents that repeatedly reproduce code, logs, and earlier attempts. Yet existing methods fall short in agent pipelines: much of the reusable text is missing from their corpora or stored in a form that differs from what the agent emits, and their draft lengths ignore that accept length varies across agents and drifts over turns. We present AgSpec, a framework that supplies the corpus and draft-length policies that existing retrieval engines lack in coding-agent pipelines. AgSpec retrieves from session, workspace, and global corpora, retaining the ongoing session trajectory and indexing opened files in the agent's emission format. It bounds each agent's draft length with an offline-profiled cap and adapts the length online from verification feedback. On two repository-level multi-agent coding benchmarks, AgSpec outperforms five retrieval-based drafters and EAGLE-3 in most evaluated settings, raising generation throughput over autoregressive decoding up to 4.37$\\times$ at batch size 1 and 4.76$\\times$ at batch size 16. AgSpec also remains effective on benchmarks without a repository or a multi-agent pipeline, showing that its gains generalize to coding agents broadly.",
+  "abstract_zh": "基于检索的推测解码（Retrieval-based Speculative Decoding，SD）通过复制已有文本中的后续内容来生成草稿，适合反复复用代码、日志和历史尝试的 Coding Agent。然而，现有方法在 Agent Pipeline 中存在两类不足：可复用文本常未被纳入语料库，或其存储格式与 Agent 实际输出格式不一致；同时，固定草稿长度无法适应不同 Agent 及不同交互轮次中变化的接受长度。本文提出 AgSpec，通过构建语料库和草稿长度策略弥补现有检索引擎的不足。AgSpec 从 session、workspace 和 global 三类语料库中检索，保留当前 session 的交互轨迹，并以 Agent 输出格式索引已打开文件；同时利用离线性能分析设定草稿长度上限，并根据在线验证反馈动态调整草稿长度。在两个 repository-level multi-agent coding 基准上，AgSpec 在多数设置中优于五种基于检索的草稿生成器和 EAGLE-3；相较自回归解码，其生成吞吐量在 batch size 为 1 和 16 时分别最高提升 4.37 倍和 4.76 倍。即使在没有 repository 或 multi-agent pipeline 的基准上，AgSpec 仍能保持有效，表明其收益可推广至更广泛的 Coding Agent 场景。",
+  "key_points_zh": [
+    "针对 Coding Agent 中可复用文本缺失、格式不匹配和草稿长度不适配等问题，AgSpec 同时改进检索语料库与草稿长度策略。",
+    "AgSpec 联合使用 session、workspace 和 global 语料库，保留当前交互轨迹，并以 Agent 的实际输出格式索引已打开文件。",
+    "草稿长度由离线性能分析确定上限，再依据在线验证阶段的接受反馈动态调整，以适应不同 Agent 和不同轮次的接受长度变化。",
+    "在两个 repository-level multi-agent coding 基准上，AgSpec 多数情况下超过五种检索式草稿生成器和 EAGLE-3；相较自回归解码，吞吐量最高提升 4.37 倍（batch size 1）和 4.76 倍（batch size 16）。",
+    "AgSpec 在无 repository 或无 multi-agent pipeline 的基准上仍然有效，说明其加速收益具有较好的场景泛化能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.87,
+    "novelty": 0.82,
+    "problem_significance": 0.8,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.8,
+    "llm_avg": 0.7959999999999999,
+    "comment": "AgSpec provides practical coding-agent runtime infrastructure by adapting retrieval corpora and speculative draft lengths to evolving agent sessions.",
+    "comment_zh": "AgSpec通过适配检索语料和动态草稿长度，为不断变化的Coding Agent会话提供了实用运行时基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.746769622549761,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7959999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 6,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.01108/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.938
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.01108/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.947
+    }
+  ]
+}

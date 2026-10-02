@@ -1,0 +1,97 @@
+{
+  "arxiv_id": "2610.01762",
+  "title": "OneStreamer: Unifying Perception, Memory, and Proactive Response in Streaming Video Interaction",
+  "title_zh": "OneStreamer：统一流式视频交互中的感知、记忆与主动响应",
+  "authors": [
+    "Xiangyu Zeng",
+    "Yuandong Yang",
+    "Zhiqiu Zhang",
+    "Yuhan Zhu",
+    "Xinhao Li",
+    "Qingyi Si",
+    "Dingyu Yao",
+    "Changlian Ma",
+    "Haoran Chen",
+    "Xinyu Chen",
+    "Yansong Shi",
+    "Junhao Zhou",
+    "Yifei Li",
+    "Jun Zhang",
+    "Chuanyu Qin",
+    "Chenxu Yang",
+    "Xinlei Yu",
+    "Kun Ouyang",
+    "Yuchen Shao",
+    "Qianshan Wei",
+    "Changhai Zhou",
+    "Jun Gao",
+    "Jiaqi Wang",
+    "Limin Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-01T14:23:03Z",
+  "abs_url": "https://arxiv.org/abs/2610.01762v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.01762",
+  "links": {
+    "github": null,
+    "project_page": "https://mcg-nju.github.io/OneStreamer"
+  },
+  "abstract_en": "Streaming video LLMs must retain evidence before its relevance to future tasks is known and respond when sufficient evidence becomes available. The challenge is to form reusable factual memory without compromising real-time perception. We introduce OneStreamer, which jointly learns query-independent evidence recording and task response through a shared proactive generation process. Its Proactive Hierarchical Caption Memory (PHCM) produces time-grounded local-detail captions and summaries of completed events. Streaming caption targets supervise the interpretation of observed video prefixes during training. At inference, model-generated records complement a recent visual window, providing reusable factual context without revisiting historical visual features. Proactive State Transition Learning (PSTL) reduces the dominance of repeated waiting states by preserving supervision at all output anchors and selecting representative state-change and state-persistence tokens. We further develop a streaming data synthesis pipeline that aligns output content and timing with available evidence. Combining the resulting streaming captions and QA with cleaned open-source data yields OneStreamer-1M, a broad-coverage streaming video interaction dataset with over one million records spanning diverse tasks. Our 4B model achieves the best results among the compared methods across all eight evaluated streaming video understanding benchmarks. Ablations show that retaining generated captions improves historical QA without degrading real-time perception. PSTL also outperforms dense state supervision while supervising only 27.5% of annotated state tokens. Together, these results support proactive generation as a shared learning interface connecting perception, memory formation, and timely response in streaming video interaction.",
+  "abstract_zh": "流式视频大模型需要在未来任务尚未明确时保留潜在有用证据，并在证据充分时及时响应。OneStreamer通过共享的主动生成过程，联合学习与查询无关的证据记录和任务响应。其主动分层字幕记忆（Proactive Hierarchical Caption Memory, PHCM）生成带时间定位的局部细节字幕及已完成事件摘要；训练时利用流式字幕目标监督模型理解观测到的视频前缀，推理时将模型生成的记录与近期视觉窗口结合，在无需重新访问历史视觉特征的情况下提供可复用的事实上下文。主动状态转移学习（Proactive State Transition Learning, PSTL）通过保留所有输出锚点的监督，并选择具有代表性的状态变化与状态持续词元，缓解重复等待状态占据主导的问题。作者还提出流式数据合成流程，使输出内容与可用证据的时间对齐。结合生成的流式字幕、问答数据和清洗后的开源数据，构建了覆盖多种任务、包含超过一百万条记录的OneStreamer-1M数据集。在八个流式视频理解基准上，4B模型均取得对比方法中的最佳结果。消融实验表明，保留生成字幕能够提升历史问答能力，同时不损害实时感知；PSTL仅监督27.5%的标注状态词元，却优于密集状态监督。整体而言，主动生成可作为连接感知、记忆形成与及时响应的统一学习接口。",
+  "key_points_zh": [
+    "提出OneStreamer，通过共享主动生成过程联合学习实时感知、可复用事实记忆和任务响应。",
+    "PHCM将时间定位的局部字幕与事件摘要写入记忆，并与近期视觉窗口结合，避免重复计算历史视觉特征。",
+    "PSTL通过状态变化与状态持续词元选择，缓解等待状态主导问题，仅监督27.5%的标注状态词元仍取得更好效果。",
+    "构建OneStreamer-1M流式视频交互数据集，包含超过一百万条记录，覆盖多样化任务。",
+    "4B模型在八个流式视频理解基准上均取得最佳对比结果，且字幕记忆提升历史问答而不损害实时感知。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.91,
+    "problem_significance": 0.94,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.92,
+    "llm_avg": 0.9120000000000001,
+    "comment": "A highly relevant streaming video-agent system that unifies proactive perception, persistent evidence memory, timely response, and reusable large-scale training data.",
+    "comment_zh": "这是高度契合领域的流式视频智能体工作，统一了主动感知、持久证据记忆、及时响应和可复用的大规模训练数据。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.6000000000000001,
+    "community_heat": 0.9764017097485842,
+    "author_reputation": 0.2794153127047222,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9120000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://mcg-nju.github.io/OneStreamer",
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 146,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.01762/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.01762/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.957
+    }
+  ]
+}

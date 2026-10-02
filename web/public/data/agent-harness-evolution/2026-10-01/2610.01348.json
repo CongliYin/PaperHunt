@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2610.01348",
+  "title": "Verify Claims, Not Scores: Evidence-Based Verification of Modular Agents",
+  "title_zh": "验证主张，而非分数：模块化智能体的基于证据验证",
+  "authors": [
+    "Ali Atiah Alzahrani"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-01T09:17:47Z",
+  "abs_url": "https://arxiv.org/abs/2610.01348v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.01348",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "When developers change one component of an agent, such as its controller, a learned model or its verifier, they usually judge the change by an aggregate task score. That score cannot tell whether improvement was attainable, which component lost value, or what the agent's own checks certify. We introduce a claim-specific verification audit for modular agents that plan, act, check and refine. Instead of scoring the agent, the audit scores the evidence: each conclusion is recorded with the evidence behind it, one of four verdicts (supported, unsupported, unresolved or not evaluated) and the boundary within which it holds. Three tools supply that evidence. Oracle policies measure attainable improvement under an explicitly stated action set, so that a low value can be traced to the evaluation rather than to the environment. Replacing one component at a time with a perfect counterpart locates lost value, with null results read as unresolved whenever a downstream component could mask them. A separate test asks whether the verifier's score identifies the quantity it is read as bounding. Applied to a constrained portfolio-allocation agent in a synthetic market with known hidden regimes, the audit shows that the value of perfect regime information depends on the action set used to measure it, that the scenario generator discards most of the regime signal while better local fidelity does not improve decisions, and that the runtime verifier can be bypassed with no visible change in outcomes. The contribution is the protocol and the evidential distinctions it enforces; the empirical findings are specific to the agent and environment studied.",
+  "abstract_zh": "论文提出一种面向模块化智能体的主张特定验证审计（claim-specific verification audit）。这类智能体通常包含规划、行动、检查与迭代优化模块；当开发者替换控制器、学习模型或验证器时，传统做法只比较总体任务分数，无法判断性能提升是否可实现、哪个组件造成价值损失，以及智能体自身检查究竟能证明什么。该审计不直接评价智能体分数，而是评价每条结论及其证据，并为结论标注四种判定：supported、unsupported、unresolved 或 not evaluated，同时明确结论成立的边界。审计包含三类工具：Oracle policies 在明确的 action set 下衡量可实现的改进，从而区分环境限制与评估方式造成的低值；逐组件替换为完美对应物，以定位价值损失，并在下游组件可能掩盖差异时将无变化判为 unresolved；独立测试验证器分数是否真正识别其被解释为上界或界限的目标量。作者将该协议应用于一个受约束的 portfolio-allocation agent，并在具有已知隐藏 regime 的合成市场中发现：完美 regime 信息的价值依赖于用于测量它的 action set；scenario generator 丢弃了大部分 regime 信号，而提升局部拟真度并未改善决策；运行时 verifier 可以被绕过，且结果几乎没有可见变化。论文的核心贡献是验证协议及其强制执行的证据区分，实证结论则仅适用于所研究的智能体与环境。",
+  "key_points_zh": [
+    "提出 claim-specific verification audit，将每条结论与证据、判定结果及适用边界绑定，而不是仅比较 aggregate task score。",
+    "使用 Oracle policies、逐组件完美替换和验证器识别性测试，分别分析可实现改进、组件价值损失与验证器是否名副其实。",
+    "实验表明，完美 regime 信息的价值取决于 action set；不同评估方式可能显著改变对组件能力的判断。",
+    "scenario generator 丢失了大部分 regime 信号，提高局部数据拟真度并未带来更好的决策表现。",
+    "运行时 verifier 可被绕过且不改变可见结果，说明总体分数无法充分反映检查机制是否真正发挥作用。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.76,
+    "novelty": 0.8,
+    "problem_significance": 0.78,
+    "potential_impact": 0.73,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.77,
+    "llm_avg": 0.76,
+    "comment": "The claim-specific evidence audit is a valuable evaluation protocol for modular agents, though its empirical validation is narrow and application-specific.",
+    "comment_zh": "该工作提出了有价值的模块化Agent主张级证据审计协议，但实证验证范围较窄且较依赖具体应用。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.76,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.01348/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.01348/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.948
+    }
+  ]
+}

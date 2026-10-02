@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2610.00906",
+  "title": "ActiveSaddler: Automated Curriculum Learning for Agent Harness Optimization",
+  "title_zh": "ActiveSaddler：面向 Agent Harness 优化的自动化课程学习",
+  "authors": [
+    "Sungho Park",
+    "Wonjoong Kim",
+    "Jue Zhang",
+    "Wook-Shin Han",
+    "Pengfei Gao",
+    "Chanyoung Park",
+    "Yongqiang Yao",
+    "Rao Fu",
+    "Elsie Nallipogu",
+    "Qingwei Lin",
+    "Victor Rühle"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-01T01:36:03Z",
+  "abs_url": "https://arxiv.org/abs/2610.00906v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.00906",
+  "links": {
+    "github": null,
+    "project_page": "https://autosaddler-projectpage.github.io/activesaddler/"
+  },
+  "abstract_en": "Automated harness optimization can substantially improve LLM agents by iteratively updating their prompts, tool interfaces, and control logic from execution feedback. However, existing methods primarily optimize how the harness is updated while largely fixing which training scenarios generate the feedback that drives those updates. As the harness evolves, the scenarios most useful for further optimization can change, suggesting that the training curriculum itself should adapt alongside the harness. We formulate this missing dimension of harness optimization as an automated curriculum learning problem and introduce ActiveSaddler. ActiveSaddler models the evolving curriculum as a non-stationary bandit with dynamically instantiated optimization targets. It abstracts recurring failures into reusable failure-pattern arms, estimates the potential learning progress from further targeting each pattern, and adaptively balances revisiting known weaknesses with exploring unseen scenarios for new ones. Optimization outcomes continually update both the set of discovered failure patterns and their priorities, allowing the curriculum to co-evolve with the harness. Experiments on GAIA2 and Terminal-Bench 2.0 show that ActiveSaddler consistently discovers stronger harnesses, improving test Pass@1 by 4.4 and 7.5 percentage points over the same harness optimizer using a scenario order fixed before optimization, respectively. Ablations further show that these gains depend on dynamically constructing optimization targets, estimating their evolving utility, and balancing continued optimization with new failure discovery. Together, these results establish automated curriculum learning as a new crucial optimization dimension for harness optimization.",
+  "abstract_zh": "自动化 Harness 优化可以利用执行反馈迭代改进 LLM Agent 的提示词、工具接口与控制逻辑。然而，现有方法通常只优化 Harness 的更新方式，而固定产生反馈的训练场景。随着 Harness 演化，最有助于进一步优化的场景也会变化，因此训练课程应与 Harness 协同自适应。本文将这一问题形式化为自动化课程学习，并提出 ActiveSaddler。该方法将动态课程建模为带有动态优化目标的非平稳多臂 Bandit，把反复出现的失败抽象为可复用的失败模式臂，估计继续针对各模式所带来的潜在学习进展，并在已知弱点复访与探索未知场景之间进行自适应权衡。优化结果会持续更新已发现的失败模式及其优先级，使课程与 Harness 共同演化。在 GAIA2 和 Terminal-Bench 2.0 上，ActiveSaddler 相比使用固定场景顺序的相同 Harness 优化器，测试 Pass@1 分别提升 4.4 和 7.5 个百分点。消融实验表明，性能增益依赖于动态构建优化目标、估计目标效用的变化，以及在持续优化与发现新失败之间进行平衡。研究结果表明，自动化课程学习是 Harness 优化中一个关键且不可忽视的新维度。",
+  "key_points_zh": [
+    "核心问题：现有 Harness 优化通常固定训练场景，无法适应 Harness 演化后不断变化的优化需求。",
+    "方法创新：ActiveSaddler 将课程建模为非平稳多臂 Bandit，以失败模式为优化目标，动态分配场景选择资源。",
+    "自适应机制：通过估计各失败模式的潜在学习进展，在复访已知弱点与探索未知失败之间进行权衡。",
+    "实验结果：在 GAIA2 和 Terminal-Bench 2.0 上，测试 Pass@1 分别提升 4.4 和 7.5 个百分点。",
+    "关键结论：动态构建优化目标、估计其变化中的效用，以及平衡优化与探索，是性能提升的必要因素。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.88,
+    "problem_significance": 0.91,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.87,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8940000000000001,
+    "comment": "This is highly relevant harness-evolution research that closes the loop between failure discovery, adaptive curricula, and iterative harness improvement.",
+    "comment_zh": "该工作高度契合Agent Harness演化方向，将失败发现、自适应课程和Harness迭代改进形成了闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.4,
+    "community_heat": 0.8965566340905193,
+    "author_reputation": 0.38784115565554056,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8940000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://autosaddler-projectpage.github.io/activesaddler/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 50,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 7,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.00906/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.00906/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.879
+    }
+  ]
+}

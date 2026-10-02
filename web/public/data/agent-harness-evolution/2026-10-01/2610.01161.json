@@ -1,0 +1,86 @@
+{
+  "arxiv_id": "2610.01161",
+  "title": "My FAULT: Self-Diagnosis as Credit Assignment in Self-Evolving Agentic Reinforcement Learning",
+  "title_zh": "My FAULT：将自我诊断作为自演化智能体强化学习中的信用分配",
+  "authors": [
+    "Yihua Zhu",
+    "Qianying Liu",
+    "Weixu Qiao",
+    "Xuan Ren",
+    "Weiwei Xu",
+    "Wenbo Li",
+    "Wei Wang",
+    "Ruijia Chen",
+    "Xinmiao Luan",
+    "Yin Luo",
+    "Hao Huang",
+    "Xiang Zheng",
+    "Hidetoshi Shimodaira"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-01T06:41:10Z",
+  "abs_url": "https://arxiv.org/abs/2610.01161v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.01161",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic reinforcement learning (RL) has emerged as a powerful approach for training large language model agents on multi-step tasks, yet reliance on terminal outcome rewards creates two credit-assignment problems, particularly in long-horizon tasks. First, same-outcome rollout groups provide no learning signal from terminal rewards. Second, terminal rewards provide only trajectory-wide feedback, making it difficult to identify which decisions caused a failure. Recent work supplements terminal rewards with finer-grained information from trajectory analysis, such as natural-language reflections on intermediate decisions and errors. However, natural-language diagnoses are difficult to use directly for credit assignment: their error claims may be unreliable, and they do not quantify how much each error should affect learning. We propose Self-Diagnosis-guided Terminal Credit Redistribution (FAULT), which turns diagnosed errors into explicit step-level credit anchored by terminal outcomes. FAULT checks diagnostic evidence and learns relative error costs from task outcomes. During training, the policy and self-diagnoser co-evolve, while error costs are updated online from recent outcomes. On ALFWorld, FAULT recovers learning signals from same-outcome groups, reaching 95% signal coverage versus 41% for GRPO and 72% for GiGPO, while better localizing credit to specific error steps. Across two model scales, FAULT delivers strong. improvements on the long-horizon ALFWorld and WebShop tasks while remaining competitive on short-horizon Search-based QA.",
+  "abstract_zh": "智能体强化学习（Agentic RL）通常依赖终局奖励训练大语言模型智能体，但在长时序任务中存在两个信用分配问题：相同结果的轨迹组无法从终局奖励获得学习信号，且终局奖励难以定位导致失败的具体决策。FAULT（Self-Diagnosis-guided Terminal Credit Redistribution）将自诊断得到的错误转化为由终局结果约束的步骤级信用分配信号，并通过证据核验降低错误诊断影响，同时在线学习不同错误的相对代价。训练过程中，策略与自诊断器共同演化，错误代价依据近期任务结果持续更新。在 ALFWorld 上，FAULT 将相同结果轨迹组的信号覆盖率提升至 95%，显著高于 GRPO 的 41% 和 GiGPO 的 72%，并能更准确地将信用分配到具体错误步骤。在不同模型规模下，FAULT 在长时序的 ALFWorld 与 WebShop 上均取得明显提升，同时在短时序的 Search-based QA 上保持竞争力。",
+  "key_points_zh": [
+    "针对终局奖励导致的信用分配稀疏与错误步骤难定位问题，FAULT将自然语言诊断转化为步骤级学习信号。",
+    "通过诊断证据核验与终局结果约束，过滤不可靠的错误判断，并学习不同错误的相对代价。",
+    "策略与自诊断器在训练中共同演化，错误代价根据近期任务结果在线更新。",
+    "在 ALFWorld 上，FAULT 的学习信号覆盖率达到 95%，高于 GRPO 的 41% 和 GiGPO 的 72%，且错误定位更准确。",
+    "FAULT 在长时序 ALFWorld、WebShop 上带来显著收益，并在短时序 Search-based QA 上保持竞争力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.91,
+    "novelty": 0.86,
+    "problem_significance": 0.91,
+    "potential_impact": 0.89,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.87,
+    "llm_avg": 0.874,
+    "comment": "FAULT presents a credible self-evolving agent-RL method that converts checked self-diagnoses into adaptive step-level credit for long-horizon tasks.",
+    "comment_zh": "FAULT将经过校验的自我诊断转化为自适应的步骤级信用，为长时程Agent强化学习提供了有价值的方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.416947575628934,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.874,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 6,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.01161/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.01161/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.952
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2610.02163",
+  "title": "AutoCompact: Learning When to Compact Context in Long-Horizon Coding Agents",
+  "title_zh": "AutoCompact：学习长程编码智能体何时压缩上下文",
+  "authors": [
+    "Xuan Zhang",
+    "Longtao Zheng",
+    "Cunxiao Du",
+    "Bo An",
+    "Xin Dong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-01T17:54:34Z",
+  "abs_url": "https://arxiv.org/abs/2610.02163v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.02163",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents solve repository-level software engineering tasks through long trajectories of code inspection, search, editing, and testing. As a task progresses, earlier exploration becomes stale, so managing context is more than avoiding overflow: an agent must decide when to compact, what working state to preserve, and how to continue from it. We introduce AutoCompact, which trains a coding agent to make these decisions as part of its policy. To collect training data, we run the base agent on coding tasks and use a judge to review its compaction decisions, summaries, and actions after compaction. Flawed outputs are replaced with corrected ones before being executed in the environment, so each trajectory continues from the corrected decisions. We use these trajectories for supervised fine-tuning, then jointly optimize coding and compaction through reinforcement learning with task-success rewards. Experiments on SWE-bench Verified and SWE-PolyBench Verified show that AutoCompact improves pass rates over the base model by an absolute 9.2\\% and 5.0\\%, respectively. The improvements hold across all evaluated inference budgets, with a 256K context window that never overflows and with a 16K window whose overflow triggers fallback compaction.",
+  "abstract_zh": "编码智能体通过代码检查、搜索、编辑和测试等长轨迹操作，解决仓库级软件工程任务。随着任务推进，早期探索信息会逐渐过时，因此上下文管理不仅是避免超出窗口，还要求智能体决定何时压缩、保留哪些工作状态，以及如何基于压缩结果继续执行。本文提出 AutoCompact，将这些决策作为策略的一部分进行训练。作者首先让基础智能体执行编码任务，并使用评审器检查其压缩时机、摘要和压缩后的动作；对于存在缺陷的输出，先替换为修正结果，再在环境中继续执行，从而获得基于纠正决策的完整轨迹。随后，作者利用这些轨迹进行监督微调，并通过任务成功奖励开展强化学习，联合优化编码与上下文压缩能力。在 SWE-bench Verified 和 SWE-PolyBench Verified 上，AutoCompact 相比基础模型的通过率分别绝对提升 9.2% 和 5.0%。在所有评估推理预算下均保持提升；使用 256K 上下文窗口时不会溢出，使用 16K 窗口时则在溢出后触发回退压缩机制。",
+  "key_points_zh": [
+    "将上下文压缩建模为编码智能体策略的一部分，同时学习压缩时机、状态保留内容和后续执行方式。",
+    "通过评审器纠正压缩决策、摘要及压缩后动作，并让轨迹从纠正结果继续执行，构造高质量训练数据。",
+    "采用监督微调结合强化学习，利用任务成功奖励联合优化代码解决能力与上下文管理能力。",
+    "在 SWE-bench Verified 和 SWE-PolyBench Verified 上分别取得 9.2% 和 5.0% 的绝对通过率提升。",
+    "方法适用于不同推理预算和上下文窗口：256K 窗口不溢出，16K 窗口溢出时可触发回退压缩。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.86,
+    "problem_significance": 0.92,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.83,
+    "lasting_value": 0.89,
+    "llm_avg": 0.8800000000000001,
+    "comment": "AutoCompact treats context compaction as a learned coding-agent control problem and couples state preservation with supervised and reinforcement learning.",
+    "comment_zh": "AutoCompact将上下文压缩建模为可学习的Coding Agent控制问题，并把状态保留与监督学习和强化学习结合起来。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8800000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02163/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.954
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02163/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.836
+    }
+  ]
+}

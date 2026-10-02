@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2610.00917",
+  "title": "Finding the Right Fit: Model-Harness Interactions across Agent Tasks",
+  "title_zh": "寻找最佳匹配：跨智能体任务的模型—Harness交互",
+  "authors": [
+    "Yixuan Li",
+    "Yiyun Zhou",
+    "Yao Long Teng",
+    "Fuchao Yang",
+    "Yanchen Deng",
+    "Zhiyi Lyu",
+    "Xuyu Dong",
+    "Feng Chen",
+    "Bo An"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-01T01:49:59Z",
+  "abs_url": "https://arxiv.org/abs/2610.00917v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.00917",
+  "links": {
+    "github": "https://github.com/liyix/finding-the-right-fit.",
+    "project_page": null
+  },
+  "abstract_en": "Choosing an agent system means choosing both a language model and the harness through which it acts. We ask whether a strong model, harness, or pairing stays strong when the setting changes. We evaluate 66 configurations: four configurable harnesses (OpenHands, DeepSeek Harness, PI, and openJiuwen) paired with five models on TUA-Bench, ALE-CLI, and Terminal-Bench 4, plus the native Codex-GPT and Claude Code-Claude pairings. Model rankings reverse across harnesses. On Terminal-Bench 4, Claude leads GPT by 7.94 points in OpenHands but trails it by 30.16 points in PI. For four of the five models, the best harness changes from one benchmark to another, yet some pairings hold: openJiuwen gives Kimi its highest score on all three benchmarks, by 5.61 to 11.11 points. A model's own vendor harness is not reliably its best, and higher cost does not reliably buy a higher score. On Terminal-Bench 4, GPT scores higher under PI than under DSH at less than a quarter of the cost per task. Matched trajectories suggest why fit varies. Models start almost all repairs themselves, so much depends on whether the harness hands failures back in a form the model can use. GPT does best with PI's lean scaffold, while Kimi, which often issues malformed tool calls, does best in openJiuwen. We argue that the model, the harness, and the task should be evaluated together, and we release the harness adapters, evaluation code, and all 6,204 scored trajectories at https://github.com/liyix/finding-the-right-fit and https://huggingface.co/datasets/yixuanli97/finding-the-right-fit.",
+  "abstract_zh": "本文研究智能体系统中语言模型与Harness（行动框架）的匹配关系，评估了4种可配置Harness（OpenHands、DeepSeek Harness、PI、openJiuwen）与5个模型在TUA-Bench、ALE-CLI和Terminal-Bench 4上的66种配置，并纳入原生Codex-GPT与Claude Code-Claude组合。结果显示，模型排名会随Harness显著反转：在Terminal-Bench 4上，Claude在OpenHands中领先GPT 7.94分，却在PI中落后30.16分。5个模型中有4个在不同基准上的最佳Harness并不相同，但也存在稳定匹配，例如openJiuwen在3个基准上均使Kimi取得最高分，提升5.61至11.11分。模型厂商自有Harness不一定最优，更高成本也不保证更高得分；例如GPT在PI下的Terminal-Bench 4得分高于DSH，但单任务成本不足其四分之一。轨迹分析表明，模型通常会自行开始修复，最终表现取决于Harness能否以模型可利用的形式反馈失败信息。GPT更适合PI的精简脚手架，而经常产生格式错误工具调用的Kimi更适合openJiuwen。论文据此主张，应联合评估模型、Harness与任务，并开源Harness适配器、评测代码及6204条带评分轨迹。",
+  "key_points_zh": [
+    "模型在不同Harness下的性能排名可能完全反转，单独比较模型或Harness容易得出误导性结论。",
+    "最佳模型—Harness组合具有明显任务依赖性；但openJiuwen与Kimi在三个基准上均表现出稳定匹配。",
+    "厂商自有Harness不一定最优，高成本也不等于高性能；GPT在PI下以不到四分之一成本超过其DSH表现。",
+    "性能差异关键在于Harness如何处理并反馈失败：GPT偏好PI的精简脚手架，Kimi则受益于openJiuwen对异常工具调用的适配。",
+    "作者发布了Harness适配器、评测代码及6204条评分轨迹，支持进一步研究模型—Harness交互。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.84,
+    "problem_significance": 0.91,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.83,
+    "lasting_value": 0.91,
+    "llm_avg": 0.882,
+    "comment": "This is highly relevant coding-Agent infrastructure research, combining controlled harness comparisons, trajectory analysis, reproducible evaluation, and released adapters and data.",
+    "comment_zh": "这项工作高度契合 Coding Agent 基础设施研究，将受控 Harness 对比、轨迹分析、可复现实验以及开源适配器和数据结合起来。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3315497212666585,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.882,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/liyix/finding-the-right-fit.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.00917/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.904
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.00917/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.985
+    }
+  ]
+}

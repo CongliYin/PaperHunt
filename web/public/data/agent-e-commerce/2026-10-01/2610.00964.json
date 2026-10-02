@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2610.00964",
+  "title": "RPTune: Learned Context Curation for LLM Catalog Search",
+  "title_zh": "RPTune：面向 LLM 商品目录搜索的学习式上下文整理",
+  "authors": [
+    "Chuxuan Hu",
+    "Hejie Cui",
+    "Norman Huang",
+    "Shubham Kumar Bharti",
+    "Wang-Chiew Tan",
+    "Sercan Ö. Arık"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Sercan Ö. Arık",
+      "affiliations": [
+        "Google"
+      ]
+    }
+  ],
+  "published_at": "2026-10-01T02:52:24Z",
+  "abs_url": "https://arxiv.org/abs/2610.00964v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.00964",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "For small merchant businesses (SMBs) whose catalogs fit within a long-context LLM, full-catalog prompting offers a compelling alternative to multi-stage retrieval designed primarily for large marketplaces with millions of items. However, fitting the full catalog into the context window does not ensure that the model can use it effectively, since LLMs do not exploit long contexts uniformly. We therefore study in-context catalog search through two complementary questions: (1) how to curate and present catalogs to the LLM, and (2) how to adapt the LLM for product selection on curated contexts. We propose RPTune, an end-to-end framework that couples learned catalog curation with LLM post-training using automatically generated, catalog-grounded supervision. An encoder-reorganizer curator orders and prunes products guided by downstream LLM feedback, while the resulting curated catalogs in turn improve the effectiveness of LLM post-training with a context-relative reward. We evaluate RPTune on 7 real merchants spanning distinct retail verticals, using 100 complex conversational queries per merchant. RPTune consistently improves search accuracy across both proprietary and open-weight LLMs, with context curation yielding gains of up to 31.4 percentage points and post-training adding a further 10.3 points on average.",
+  "abstract_zh": "针对目录规模可容纳于长上下文 LLM 的小型商家，论文研究如何整理商品目录并适配 LLM 以提升上下文内搜索能力。作者提出端到端框架 RPTune，将学习式目录整理与 LLM 后训练结合：由 encoder-reorganizer curator 根据下游 LLM 反馈对商品进行排序和裁剪，再利用整理后的目录与基于上下文相对性的奖励生成监督信号，提升 LLM 的商品选择能力。在覆盖多个零售领域的 7 家真实商户、每家 100 个复杂对话查询上的实验表明，RPTune 能稳定提升 proprietary 与 open-weight LLM 的搜索准确率；仅上下文整理最高带来 31.4 个百分点提升，后训练平均额外提升 10.3 个百分点。",
+  "key_points_zh": [
+    "完整目录放入长上下文并不等于 LLM 能有效利用，商品的排序、裁剪与呈现方式至关重要。",
+    "RPTune 联合优化 catalog curation 与 LLM post-training，形成从目录整理到模型适配的端到端流程。",
+    "encoder-reorganizer curator 根据下游 LLM 反馈重排并裁剪商品目录，强调对搜索任务最有价值的上下文。",
+    "整理后的目录通过 catalog-grounded supervision 和 context-relative reward，进一步增强 LLM 的商品选择能力。",
+    "在 7 家真实商户上的实验中，上下文整理最高提升 31.4 个百分点，后训练平均额外提升 10.3 个百分点。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.87,
+    "problem_significance": 0.9,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.87,
+    "llm_avg": 0.8640000000000001,
+    "comment": "A strong product-search contribution that jointly learns catalog curation and LLM adaptation, with substantial gains across real merchant catalogs.",
+    "comment_zh": "该工作面向真实商家目录联合优化目录整理与LLM适配，在商品搜索上取得显著收益，领域契合度和长期价值都很高。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.813694169441457,
+    "author_reputation": 0.7349282987689736,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8640000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 16,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 48,
+    "last_author_found": true,
+    "last_author_affiliations": [
+      "Google"
+    ]
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.00964/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.00964/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

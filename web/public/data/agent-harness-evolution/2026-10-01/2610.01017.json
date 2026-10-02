@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2610.01017",
+  "title": "Pay for the Fault, Not the Flow: Label-Free In-Flow Multi-Agent Workflow Optimization",
+  "title_zh": "为故障而非流程付费：无标签流中多智能体工作流优化（Pay for the Fault, Not the Flow: Label-Free In-Flow Multi-Agent Workflow Optimization）",
+  "authors": [
+    "Xuehang Guo",
+    "Haoyu Wang",
+    "Shengyu Chen",
+    "Zach Chen",
+    "Wei Cheng",
+    "Qingyun Wang",
+    "Haifeng Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-01T04:01:23Z",
+  "abs_url": "https://arxiv.org/abs/2610.01017v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.01017",
+  "links": {
+    "github": null,
+    "project_page": "https://xhguo7.github.io/InFlowOp/."
+  },
+  "abstract_en": "Large language models (LLMs) increasingly construct multi-agent workflows that decompose a complex task and assign specialist agents from a pool. However, building such a workflow well remains challenging: how finely to divide the task, which agent to trust with each subtask, and when to create a new specialist are all critical decisions a workflow constructor needs to settle up front. Thus, whether each subtask succeeds remains unknown until the workflow runs. Yet, improving a workflow is costly. Locating a fault usually requires a reference answer, a graded outcome, or a trained assessor, and the fix is applied to the whole workflow through re-execution, re-search, or retraining. We propose InFlowOp, which prices every decision in one label-free cost that weighs how well an agent's competence meets what a subtask demands against how much that agent takes to run. Before execution, InFlowOp bidirectionally determines the granularity of task decomposition and agent assignment following from the cost rather than from a fixed template. During execution, InFlowOp corrects a fault with the cheapest move via the same cost that serves the workflow both as it is built and as it runs. Facing the workflow-level evaluation challenge, we introduce Braid, a benchmark whose tasks require multi-agent coordination beyond single-agent capability. Across various domains and backbones, InFlowOp outperforms single agent baselines by up to $+11.97\\%$, achieving $+9.64\\%$ with in-flow optimization. Our project page: https://xhguo7.github.io/InFlowOp/.",
+  "abstract_zh": "多智能体工作流需要预先决定任务拆分粒度、子任务分配及是否新增专家，但子任务是否成功通常要等执行后才能得知，且工作流改进往往依赖参考答案、结果评分器或重新执行。论文提出 InFlowOp，以单一的无标签成本统一衡量智能体能力与子任务需求的匹配程度，以及运行该智能体的代价。在执行前，InFlowOp依据成本双向确定任务拆分粒度和智能体分配，而非依赖固定模板；执行中，则使用同一成本函数选择代价最低的故障修复操作。为评估多智能体协作能力，论文构建了需要超越单智能体能力的 Braid benchmark。在多个领域和模型骨干上，InFlowOp相较单智能体基线最高提升 11.97%，仅进行流中优化也可提升 9.64%。",
+  "key_points_zh": [
+    "核心思想是以“能力—需求匹配度”和“运行成本”构成统一成本，避免依赖标签、参考答案或训练好的评估器。",
+    "工作流构建阶段，InFlowOp联合优化任务分解粒度与智能体分配，摆脱固定模板式设计。",
+    "工作流执行阶段，InFlowOp基于同一成本函数选择最便宜的故障修复动作，实现in-flow优化。",
+    "论文提出 Braid benchmark，用于评估必须依赖多智能体协作、单智能体难以完成的任务。",
+    "实验覆盖多个领域和模型骨干，整体最高提升 11.97%；仅采用流中优化时提升 9.64%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.84,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.79,
+    "lasting_value": 0.84,
+    "llm_avg": 0.842,
+    "comment": "Strong orchestration work that introduces label-free cost-based workflow construction and in-flow fault correction with a coordination-focused benchmark.",
+    "comment_zh": "这项工作通过无标签成本优化、流内故障修复和协同任务基准，较强地推进了Agent编排研究。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.2794153127047222,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.842,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://xhguo7.github.io/InFlowOp/.",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.01017/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.01017/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.943
+    }
+  ]
+}

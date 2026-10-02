@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2610.01207",
+  "title": "Dependency-Aware Reward Shaping for Agentic Reinforcement Learning",
+  "title_zh": "面向智能体强化学习的依赖感知奖励塑形（Dependency-Aware Reward Shaping）",
+  "authors": [
+    "Ziyi Chen",
+    "Yan Zhang",
+    "Jianhui Wei",
+    "Daoan Zhang",
+    "Zuozhu Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-01T07:16:28Z",
+  "abs_url": "https://arxiv.org/abs/2610.01207v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.01207",
+  "links": {
+    "github": "https://github.com/JianhuiWei7/DARS.",
+    "project_page": null
+  },
+  "abstract_en": "When training large language models with reinforcement learning, terminal rewards provide little guidance about which steps matter. Common methods for assigning step credit overlook that work built on uncorrected mistakes is wasted while independent work remains valid. With only a final success/failure reward, every step in a failed episode has zero total future reward, even when it made progress. We propose Dependency-Aware Reward Shaping (DARS), which represents task progress as predicates linked by prerequisite relations and assigns step-level credit over the dependency graph. An annotator marks which predicates each step verifies, invalidates, or repairs. Verified predicates are discounted according to graph distance from the nearest broken prerequisite, while independent predicates are unaffected. Repairs update these weights based on any errors that remain; invalidated predicates need re-verification to regain credit. A fixed potential converts these annotations into signed per-step rewards. A common reward and annotation interface allows DARS to integrate with a range of reasoning and agentic training methods, such as GiGPO and ARPO/AEPO, without changing their rollout strategies or optimizers. Across five task families and models from 1.5B to 8B, DARS improves success by up to 10 points over GiGPO trained with the same budget and harness (ALFWorld), raises the WebShop task score and Search-R1 QA accuracy, complements AEPO's entropy-based training on AIME24/25 with a Python interpreter, and exceeds OmniOPD in controlled tool-free reasoning comparisons at 1.7B and 4B. Ablations show that step-level credit, dependency attenuation, and graph topology each contribute. On ALFWorld, a distilled 8B annotator matches the API annotator, enabling DARS to run efficiently without a frontier judge. Code is available at https://github.com/JianhuiWei7/DARS.",
+  "abstract_zh": "针对大语言模型强化学习中终止奖励难以判断各步骤贡献的问题，论文提出 Dependency-Aware Reward Shaping（DARS）。DARS 将任务进展表示为由前置依赖关系连接的谓词图，并由标注器判断每一步验证、破坏或修复了哪些谓词。对于存在未修复前置错误的谓词，其奖励依据图距离进行衰减；独立谓词不受影响；修复操作则根据残留错误更新权重，被破坏的谓词必须重新验证才能恢复信用。随后，DARS 通过固定势函数将这些标注转换为带符号的逐步奖励，并可兼容 GiGPO、ARPO/AEPO 等训练方法，无需改变 rollout 策略或优化器。在五类任务、1.5B 至 8B 模型上的实验表明，DARS 在 ALFWorld 中相较同预算和训练框架下的 GiGPO 最高提升 10 个成功率百分点，同时提升 WebShop 得分和 Search-R1 QA 准确率；在带 Python 解释器的 AIME24/25 上可补充 AEPO，在无工具推理对比中超过 OmniOPD。消融实验验证了逐步信用、依赖衰减和图拓扑的独立贡献；在 ALFWorld 中，蒸馏后的 8B 标注器达到 API 标注器效果，使 DARS 无需 frontier judge 即可高效运行。",
+  "key_points_zh": [
+    "DARS 显式建模谓词间的前置依赖，避免将失败轨迹中的所有步骤都视为无效。",
+    "通过验证、破坏和修复三类步骤标注，结合依赖距离对逐步奖励进行衰减或恢复。",
+    "DARS 可直接兼容 GiGPO、ARPO/AEPO 等方法，不改变 rollout 策略和优化器。",
+    "在 ALFWorld、WebShop、Search-R1、AIME24/25 等任务上 consistently 提升性能，ALFWorld 相比 GiGPO 最高提升 10 个百分点。",
+    "蒸馏 8B 标注器可匹配 API 标注器效果，降低对 frontier judge 的依赖。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.86,
+    "problem_significance": 0.9,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.83,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8640000000000001,
+    "comment": "DARS offers a general dependency-aware trajectory credit mechanism for agentic RL and demonstrates meaningful gains across tool-use and reasoning environments.",
+    "comment_zh": "DARS提出了通用的依赖感知轨迹信用分配机制，并在工具使用和推理环境中展现出显著收益。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8640000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/JianhuiWei7/DARS.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.01207/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.01207/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

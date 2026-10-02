@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2610.00872",
+  "title": "MemFit: Efficient Long-Term Agentic Memory",
+  "title_zh": "MemFit：高效的长期智能体记忆",
+  "authors": [
+    "Mitchell Piehl",
+    "Muchao Ye"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-01T00:44:33Z",
+  "abs_url": "https://arxiv.org/abs/2610.00872v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.00872",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-term memory systems for large language models (LLMs) have gained popularity for extending reasoning capabilities across applications. Current memory systems rely on LLM agents to organize and consolidate memory, resulting in costly, inefficient write operations. To address this limitation, we propose MemFit, a long-term memory system for conversational agents that reduces the cost and latency of memory operations. Unlike existing systems that rely on expensive LLM calls for memory construction or discard surface-level details through compression, MemFit stores each turn verbatim in an append-only store with near-instantaneous, LLM-free insertion, indexing turns with segment summaries rather than replacing them. Additionally, MemFit uses an LLM-free, multi-path retrieval strategy that combines lexical and semantic signals with cross-encoder reranking over caption- augmented episodes in both textual and multimodal settings. Empirical results on three widely used benchmarks, LoCoMo, MemGallery, and LongMemEval-S, show that MemFit achieves state-of-the-art performance while reducing memory construction time and cost several-fold, providing a scalable and efficient solution for persistent agentic memory.",
+  "abstract_zh": "面向大语言模型（LLM）的长期记忆系统能够扩展智能体在多种应用中的持续推理能力，但现有方法通常依赖 LLM agent 组织和整合记忆，导致写入操作成本高、延迟大。为此，论文提出 MemFit，一种面向对话智能体的长期记忆系统，旨在降低记忆操作的成本与延迟。不同于依赖昂贵 LLM 调用构建记忆，或通过压缩丢弃表层细节的现有系统，MemFit 将每轮对话原样存储在追加式存储（append-only store）中，实现近乎即时且无需 LLM 的写入；同时使用片段摘要（segment summaries）对对话轮次建立索引，而不是用摘要替换原始内容。此外，MemFit 采用无需 LLM 的多路径检索策略，在文本和多模态场景下，结合词法信号、语义信号与跨编码器重排序（cross-encoder reranking），并基于加入字幕信息的对话片段（caption-augmented episodes）进行检索。在 LoCoMo、MemGallery 和 LongMemEval-S 三个广泛使用的基准上，MemFit 均取得当前最佳性能，同时将记忆构建时间和成本降低数倍，为持久化智能体记忆提供了可扩展且高效的解决方案。",
+  "key_points_zh": [
+    "采用追加式存储原样保留每轮对话，无需 LLM 参与写入，显著降低记忆构建延迟与成本。",
+    "使用片段摘要建立索引而非替换原始记忆，在保留细节的同时提升检索效率。",
+    "提出无需 LLM 的多路径检索，融合词法匹配、语义相似度和跨编码器重排序。",
+    "支持文本与多模态对话，通过字幕增强的对话片段提升长期记忆检索能力。",
+    "在 LoCoMo、MemGallery 和 LongMemEval-S 上达到 state-of-the-art，并将构建时间与成本降低数倍。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.73,
+    "problem_significance": 0.88,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.64,
+    "lasting_value": 0.81,
+    "llm_avg": 0.786,
+    "comment": "MemFit is a strong Agent-memory system contribution that combines lossless append-only storage with efficient LLM-free indexing and multipath retrieval.",
+    "comment_zh": "MemFit 是一项扎实的 Agent Memory 系统贡献，将无损追加式存储与高效的无 LLM 索引和多路径检索相结合。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5332508082601557,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.786,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 14,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.00872/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.00872/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.954
+    }
+  ]
+}

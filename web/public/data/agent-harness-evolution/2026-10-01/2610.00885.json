@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2610.00885",
+  "title": "FORALL-LEAN-AGENT for Auditable Reasoning in Formal Mathematics and Software Verification",
+  "title_zh": "FORALL-LEAN-AGENT：面向形式化数学与软件验证的可审计推理框架",
+  "authors": [
+    "Naing Oo Lwin"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-01T01:00:35Z",
+  "abs_url": "https://arxiv.org/abs/2610.00885v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.00885",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents increasingly automate Lean proof development, but successful compilation alone does not establish that a candidate proves the intended statement under acceptable assumptions. We present FORALL-LEAN-AGENT, a frontend-agnostic framework for auditable reasoning in formal mathematics and software verification. The framework combines isolated workspaces, Lean tools, and fresh review with statement comparison, axiom audits, and independent proof checking where supported. Verification evidence and reviewer decisions are bound to the same candidate artifact, making acceptance traceable. We evaluate the framework on VeriSoftBench, PutnamBench, and both problems in the Lean Eval softwareverification track. On the 100-task VeriSoftBench subset, integration with FORALLLEAN-AGENT raises benchmark-rule success from 93 to 100 for GPT-5.6 Sol at low effort while reducing cost from $69 to $62. The PutnamBench evaluation accepts all 672 problems at an average of $4.72 each. These results show that agent harness design can improve correctness and efficiency while providing evidence beyond aggregate solve counts.",
+  "abstract_zh": "代码智能体正日益自动化 Lean 证明开发，但候选证明能够成功编译，并不意味着它在可接受的假设下证明了预期命题。本文提出 FORALL-LEAN-AGENT，一个前端无关、面向形式化数学与软件验证的可审计推理框架。该框架结合隔离工作区、Lean 工具和全新独立审查，并引入命题对比、公理审计，以及在条件允许时进行独立证明检查。验证证据与审查结论均绑定到同一候选产物，使验收过程可追踪。作者在 VeriSoftBench、PutnamBench，以及 Lean Eval softwareverification 赛道的两个问题上进行评估。在 VeriSoftBench 的 100 个任务子集上，集成 FORALL-LEAN-AGENT 后，GPT-5.6 Sol 在低推理投入下的基准规则成功数由 93 提升至 100，同时成本从 69 美元降至 62 美元。在 PutnamBench 上，该框架通过全部 672 个问题，平均每题成本为 4.72 美元。结果表明，智能体执行框架的设计不仅能提升正确性与效率，还能提供超越总体解题数量的可审计证据。",
+  "key_points_zh": [
+    "FORALL-LEAN-AGENT 不依赖特定前端，适用于形式化数学证明与软件验证任务。",
+    "框架通过隔离工作区、命题对比、公理审计、全新审查和独立证明检查，避免将“编译成功”等同于“正确证明”。",
+    "验证证据、审查决策与同一候选证明产物绑定，从而实现验收结果的可追踪与可审计。",
+    "在 VeriSoftBench 的 100 个任务上，GPT-5.6 Sol 的成功数从 93 提升至 100，成本由 69 美元降至 62 美元。",
+    "在 PutnamBench 上通过全部 672 道题，平均每题成本为 4.72 美元，显示智能体执行框架设计可兼顾正确性与效率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.91,
+    "novelty": 0.82,
+    "problem_significance": 0.89,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.86,
+    "llm_avg": 0.85,
+    "comment": "This provides a reusable coding-agent verification harness that binds independent checking, audits, and acceptance evidence to concrete artifacts.",
+    "comment_zh": "该工作提供了可复用的Coding Agent验证Harness，将独立检查、审计和验收证据绑定到具体产物。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 1.0,
+    "generality": 0.9,
+    "llm_assessment": 0.85,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.00885/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.00885/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.456
+    }
+  ]
+}
