@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2610.06597",
+  "title": "Can Agent Harnesses and Inference Engines Hear Each Other? The HEAR Protocol for Agentic LLM Serving",
+  "title_zh": "Agent Harness 与推理引擎能否彼此理解？面向 Agentic LLM Serving 的 HEAR 协议",
+  "authors": [
+    "Jiaqi Zhao",
+    "Haodong Chen",
+    "Jitai Hao",
+    "Wei Zhao",
+    "Jinghao Pang",
+    "Qiang Huang",
+    "Jun Yu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-05T16:07:33Z",
+  "abs_url": "https://arxiv.org/abs/2610.06597v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.06597",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM agents increasingly execute complex workflows involving multi-turn reasoning, tool use, and parallel agents. Efficient serving requires decisions that span two layers with complementary information: the agent harness understands workflow dependencies, context lifecycles, and execution objectives, whereas the inference engine observes request queues, KV-cache state, resource pressure, and execution capabilities. Existing interfaces do not systematically connect these views, limiting workflow-aware execution. HEAR, a bidirectional Harness--Engine Pairing protocol for agentic LLM serving. HEAR standardizes how the harness communicates workflow intent and execution requirements and how the engine returns runtime state, capabilities, and outcomes. By separating protocol semantics from optimization policies, HEAR supports diverse coordination strategies without changing workflow or model semantics. We instantiate HEAR for online cache-aware runtime coordination and workload-aware execution-mode selection for agent roles. Across four conversational and research-agent benchmarks under memory-constrained, concurrent serving, HEAR achieves a $1.61\\times$ batch speedup and reduces median time-to-first-token by $2.23\\times$ on SCBench. Mooncake shows that workflow intent and live engine state provide complementary benefits across load regimes. On BrowseComp-Plus and DeepResearchBench, workload-specific configurations yield $1.23\\times$ and $2.45\\times$ end-to-end speedups, respectively, without observed task-quality degradation. These results establish HEAR as a reusable coordination substrate for efficient agentic LLM serving.",
+  "abstract_zh": "随着 LLM agents 执行多轮推理、工具调用和并行协作等复杂工作流，高效服务需要协同两个层面：Agent harness 了解工作流依赖、上下文生命周期和执行目标；inference engine 掌握请求队列、KV-cache 状态、资源压力与执行能力。现有接口难以系统连接这两类信息，限制了面向工作流的执行优化。本文提出 HEAR（Harness–Engine Pairing）双向协议，标准化 harness 如何传递工作流意图与执行需求，以及 engine 如何返回运行时状态、能力和执行结果。HEAR 将协议语义与优化策略分离，因此无需改变工作流或模型语义即可支持多种协同方式。作者基于 HEAR 实现了在线缓存感知运行时协同，以及面向工作负载的 agent 角色执行模式选择。在内存受限、并发服务场景下，HEAR 在四个对话与研究 agent 基准上取得显著收益：在 SCBench 上批处理速度提升 1.61 倍，中位首 token 延迟降低 2.23 倍；Mooncake 表明，工作流意图与实时引擎状态在不同负载下具有互补收益；在 BrowseComp-Plus 和 DeepResearchBench 上，面向工作负载的配置分别实现 1.23 倍和 2.45 倍端到端加速，且未观察到任务质量下降。结果表明，HEAR 可作为高效 Agentic LLM Serving 的通用协同基础设施。",
+  "key_points_zh": [
+    "HEAR 建立 harness 与 inference engine 的双向通信协议，统一传递工作流意图、执行需求、运行时状态与能力信息。",
+    "协议语义与优化策略解耦，可支持缓存感知协同、执行模式选择等多种优化，而不改变工作流和模型语义。",
+    "在 SCBench 上实现 1.61 倍批处理加速，并将中位 time-to-first-token 降低 2.23 倍。",
+    "在 BrowseComp-Plus 和 DeepResearchBench 上分别获得 1.23 倍和 2.45 倍端到端加速，未观察到任务质量下降。",
+    "工作流意图与引擎实时状态具有互补性，能够在不同负载和资源约束下提升 agent serving 效率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.87,
+    "problem_significance": 0.91,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.92,
+    "llm_avg": 0.8939999999999999,
+    "comment": "HEAR defines a reusable bidirectional contract between agent harnesses and inference engines, enabling workflow-aware serving optimizations without changing task semantics.",
+    "comment_zh": "HEAR定义了智能体框架与推理引擎之间可复用的双向契约，在不改变任务语义的情况下支持工作流感知的服务优化。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8939999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.06597/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.947
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.06597/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

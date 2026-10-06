@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2610.05831",
+  "title": "Selecting Long-Horizon Trajectories for Reliable and Efficient Terminal-Agent Training",
+  "title_zh": "为可靠高效的 Terminal-Agent 训练选择长时域轨迹",
+  "authors": [
+    "Cuong Dang",
+    "Hoang Anh Just",
+    "Ruoxi Jia"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-05T05:35:28Z",
+  "abs_url": "https://arxiv.org/abs/2610.05831v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.05831",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Terminal agents are commonly trained by imitating long teacher trajectories, yet how much of each trajectory to supervise remains unexplored. We study the \\emph{supervision horizon}, the number of trajectory tokens retained for training, and show that it is a key design axis for reliability and cost. Reliability improves with longer horizons but saturates: on Terminal-Bench, a 12K-token horizon solves more tasks than 16K ($29\\pm0.7$ vs.\\ $26\\pm0.8$) while requiring 30\\% less training time. The horizon also shapes agent behavior: short horizons cause premature termination, intermediate horizons yield productive error recovery, and long horizons induce over-persistence. We analyze this saturation through a bias--complexity bound, in which longer supervision reduces temporal supervision bias but increases finite-sample estimation error from more heterogeneous late-stage histories. Guided by this analysis, we propose \\emph{selective long-horizon refinement}, which first trains on short prefixes and then refines only on continuations that are most likely under the warm-start model. It consistently outperforms full long-horizon training. At 16K, it raises successful attempts from $110\\pm2.7$ to $126\\pm2.1$ and tasks solved in at least six of eight attempts from $9\\pm0.7$ to $14\\pm0.6$; with half of the long-horizon data, it still reaches $122\\pm2.4$ while cutting training time by 23\\%. The gains transfer across benchmarks, from $64\\pm2.6$ to $73\\pm2.1$ on Terminal-Bench v2.0 and from $137\\pm2.7$ to $155\\pm2.2$ on OpenThoughts-TBLite. For long-horizon supervision, selecting the right trajectories matters more than training on all of them.",
+  "abstract_zh": "本文研究终端智能体训练中的监督时域（supervision horizon），即从教师轨迹中保留用于训练的 token 数量。实验表明，延长监督时域通常能提升可靠性，但效果会饱和：在 Terminal-Bench 上，12K-token 时域解决的任务数高于 16K（29±0.7 对 26±0.8），同时训练时间减少 30%。监督时域还会塑造智能体行为：过短时域容易导致过早终止，中等时域有利于错误恢复，过长时域则容易造成过度坚持。作者通过 bias-complexity bound 分析这一饱和现象：更长监督可降低时间监督偏差，却会因后期历史更加异质而增加有限样本估计误差。基于此，论文提出 selective long-horizon refinement：先使用短前缀训练 warm-start 模型，再仅对该模型最可能生成的后续轨迹进行长时域精炼。该方法稳定优于完整长时域训练。在 16K 时域下，成功尝试次数由 110±2.7 提升至 126±2.1，至少在 8 次尝试中成功 6 次的任务数由 9±0.7 提升至 14±0.6；仅使用一半长时域数据时仍达到 122±2.4，并将训练时间降低 23%。性能提升可迁移至 Terminal-Bench v2.0 和 OpenThoughts-TBLite。结论是：对于长时域监督，选择合适轨迹比训练全部轨迹更重要。",
+  "key_points_zh": [
+    "监督时域是 Terminal-Agent 训练中影响可靠性与成本的关键设计轴；更长并不一定更好，12K 在 Terminal-Bench 上优于 16K。",
+    "短时域易导致过早终止，中等时域促进错误恢复，过长时域则会诱发过度坚持，说明监督长度会改变智能体行为模式。",
+    "长时域收益饱和源于偏差—复杂度权衡：更长监督降低时间监督偏差，但增加异质后期历史带来的有限样本估计误差。",
+    "selective long-horizon refinement 先训练短前缀，再针对 warm-start 模型高概率生成的延续进行精炼，整体优于完整长时域训练。",
+    "该方法在多个 benchmark 上提升成功率，并可在减少长时域数据和训练时间的同时保持大部分性能收益。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.79,
+    "problem_significance": 0.88,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.73,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8220000000000001,
+    "comment": "The paper delivers actionable principles and a selective data-refinement method for training reliable long-horizon terminal agents more efficiently.",
+    "comment_zh": "论文为长时终端智能体训练提出了可操作的规律和选择性数据精炼方法，从而提升可靠性并降低训练成本。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.28206629502221137,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8220000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.05831/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.05831/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.924
+    }
+  ]
+}

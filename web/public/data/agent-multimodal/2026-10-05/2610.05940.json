@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2610.05940",
+  "title": "ReMem: Streaming Video Understanding With Long Context Retention",
+  "title_zh": "ReMem：具备长上下文保留能力的流式视频理解",
+  "authors": [
+    "Li Yiheng",
+    "He Xu",
+    "Wang Shaobo",
+    "Shao Ling",
+    "Lu Shijian"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-05T07:56:41Z",
+  "abs_url": "https://arxiv.org/abs/2610.05940v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.05940",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Despite their impressive performance on a wide range of video understanding tasks, current Vision Language Models (VLMs) are predominantly designed for offline scenarios and struggle to handle online streaming videos that demand low latency response. Several studies have explored memory and token compression strategies in an attempt to adapt offline VLMs for streaming video understanding tasks. However, through our probing experiment, we identify that most existing works tend to progressively lose long context information as length of input stream increases. To address this, we propose ReMem, a novel training-free adaptation technique that enables VLMs to process streaming videos of arbitrary lengths while improving their long context information retention capability. ReMem exploits memory from two perspectives, implemented as two core components. The Streaming Context Memory (SCM) continuously compresses historical context with query-independent attention. The Retrieved Vision Memory (RVM) then retrieves the most salient, query-relevant context from memory to augment the VLM's input. Comprehensive experiments demonstrate that the proposed ReMem achieves state-of-the-art (SOTA) performance across a variety of widely used benchmarks, spanning both streaming video and general long video understanding tasks.",
+  "abstract_zh": "现有 Vision Language Models（VLMs）主要面向离线视频理解，在需要低延迟响应的在线流式视频场景中表现受限。尽管已有研究尝试通过记忆机制和 token 压缩将离线 VLMs 适配到流式理解，但探测实验表明，随着输入流持续增长，大多数方法会逐步丢失长上下文信息。为此，论文提出无需训练的适配方法 ReMem，使 VLMs 能够处理任意长度的流式视频，并增强长上下文信息保留能力。ReMem 从两个角度利用记忆：Streaming Context Memory（SCM）通过与查询无关的注意力持续压缩历史上下文；Retrieved Vision Memory（RVM）从记忆中检索最显著且与查询相关的上下文，并将其用于增强 VLM 输入。大量实验表明，ReMem 在多种流式视频理解和通用长视频理解基准上均取得了 SOTA 性能。",
+  "key_points_zh": [
+    "针对离线 VLMs 难以低延迟处理任意长度流式视频、且长上下文逐步遗忘的问题，提出无需训练的 ReMem。",
+    "Streaming Context Memory（SCM）使用与查询无关的注意力持续压缩历史上下文，形成可扩展的流式记忆。",
+    "Retrieved Vision Memory（RVM）根据当前查询检索最显著、最相关的视觉上下文，增强 VLM 输入。",
+    "ReMem 同时覆盖流式视频理解与通用长视频理解任务，在多个基准上达到 SOTA 性能。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.78,
+    "problem_significance": 0.84,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.79,
+    "llm_avg": 0.762,
+    "comment": "A strong streaming-video memory contribution that addresses long-context retention under online latency constraints, though it lacks an explicit interactive tool-agent loop.",
+    "comment_zh": "该工作针对在线低延迟场景下的长上下文保持提出了有力的流式视频记忆方法，但缺少明确的交互式工具代理闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.23816576137838616,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.762,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.05940/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.05940/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2610.06193",
+  "title": "Correct Code, Broken Contributions? SWE-CC: Benchmarking Repository Policy Compliance for Coding Agents",
+  "title_zh": "代码正确，但贡献不合规？SWE-CC：面向编程智能体的仓库策略合规性基准",
+  "authors": [
+    "Hai Dang Truong",
+    "Rayner Goh",
+    "Thanh Le-Cong",
+    "Yintong Huo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-05T12:08:33Z",
+  "abs_url": "https://arxiv.org/abs/2610.06193v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.06193",
+  "links": {
+    "github": "https://github.com/dangtruong01/swe-cc-arxiv",
+    "project_page": null
+  },
+  "abstract_en": "Autonomous coding agents now resolve a substantial share of real-world GitHub issues. However, passing functional tests differs fundamentally from producing a high-quality contribution acceptable for merging. Mature open-source projects publish repository-specific contribution policies, spanning style, git, testing workflows, to ensure code quality and long-term maintainability. Because existing benchmarks evaluate patches solely on unit tests, agent compliance with repository governance remains unknown. In this paper, we introduce SWE-CC, a benchmark evaluating code and process compliance in autonomous software engineering. We develop a semi-automated pipeline that converts developer documentation across 12 open-source repositories into 823 machine-checkable atomic policies. SWE-CC introduces two features: 1) lightweight, deterministic checker functions that represent each policy, 2) a comprehensive auditing mechanism that inspects both agent runtime behaviors and final deliverables. We evaluate the compliance of agent workflows in 500 end-to-end software contribution tasks extended from SWE-bench Verified. Our evaluation of four LLMs under two agent scaffolds shows that modern agents suffer from coding compliance issues: although agents produce functionally correct patches, they still violate 43.1 percent of applicable project policies, with nearly half of all violations occurring during intermediate execution steps. These results show that functional correctness does not guarantee real-world readiness, highlighting that future software engineering agents must reliably conform to repository governance to enable safe and trustworthy deployment.",
+  "abstract_zh": "现有软件工程智能体基准主要依据单元测试评估补丁功能正确性，却忽略了开源仓库特定的贡献规范与治理要求。本文提出 SWE-CC，一个用于评估自主软件工程中代码与流程合规性的基准。作者从 12 个开源仓库的开发者文档中提取并转换出 823 条可由机器检查的原子策略，并设计了轻量、确定性的策略检查器，以及同时审计智能体运行时行为和最终交付物的机制。基于从 SWE-bench Verified 扩展的 500 个端到端软件贡献任务，作者在两种智能体框架和四个 LLM 上进行评估。结果显示，尽管智能体能够生成通过功能测试的补丁，仍违反了 43.1% 的适用仓库策略，且近一半违规发生在中间执行步骤。研究表明，功能正确性并不等价于真实世界贡献就绪性，未来的软件工程智能体需要可靠遵循仓库治理规范，才能实现安全、可信的部署。",
+  "key_points_zh": [
+    "提出 SWE-CC 基准，系统评估编程智能体对仓库代码规范、Git 操作、测试流程等贡献策略的遵循情况。",
+    "从 12 个开源仓库文档中构建 823 条可机器检查的原子策略，并为每条策略设计轻量、确定性的 checker function。",
+    "审计范围同时覆盖智能体运行时行为与最终交付物，揭示仅检查最终补丁会遗漏大量流程违规。",
+    "在 500 个扩展自 SWE-bench Verified 的端到端任务中，智能体违反了 43.1% 的适用策略；近一半违规发生于中间执行阶段。",
+    "研究强调，功能正确性不足以代表真实世界可合并性，软件工程智能体还必须满足仓库治理要求。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.82,
+    "problem_significance": 0.91,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.92,
+    "llm_avg": 0.868,
+    "comment": "SWE-CC identifies a major gap in coding-agent evaluation by introducing machine-checkable repository policies and auditing both execution traces and final patches.",
+    "comment_zh": "SWE-CC通过可机器检查的仓库政策以及对执行轨迹和最终补丁的联合审计，填补了编码智能体评测的重要空白。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.868,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/dangtruong01/swe-cc-arxiv",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.06193/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.06193/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

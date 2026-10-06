@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2610.06191",
+  "title": "Judged Useless, Queried Anyway: Tool-Using Agents Rarely Turn Their Own Evidence Judgments into Stopping Decisions",
+  "title_zh": "明判无用仍继续查询：工具使用型智能体很少将自身证据判断转化为停止决策",
+  "authors": [
+    "Chubin Zhang",
+    "Zhenglin Wan",
+    "Xingrui Yu",
+    "Jingxuan Wu",
+    "Yaxin Zhou",
+    "Ivor Tsang",
+    "Bo An"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-05T12:08:04Z",
+  "abs_url": "https://arxiv.org/abs/2610.06191v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.06191",
+  "links": {
+    "github": "https://github.com/bennidict23/judged-useless-queried-anyway",
+    "project_page": null
+  },
+  "abstract_en": "An agent whose tool keeps returning nothing useful should stop relying on it. In a retrieval environment with controlled source failures, we separate how agents judge results from what they do. We compare stopping at the same step after longer and shorter runs of results the agent judged useless; this contrast is zero for clock- or deadline-driven stopping. Where we record their judgments, the seven agents we test call a failing source's results useless 97-100% of the time, yet most of them rarely stop on that judgment. Prompt cues change when they stop but not what they stop on. Permission to answer from memory and a reasoning mode can bring early stops regardless of evidence, a stated budget moves the 7-8B models' stops to the deadline, and a stopping rule or call cost in the prompt is followed at most partly. Stopping follows the evidence only when the harness enforces an integration step that makes the agent answer after five consecutive results it judged useless. This step raises failing-source success for every model, keeps the stopping point fixed when the budget doubles, and needs no extra judgment call when the agent states its judgments. A pre-registered replication on 300 fresh questions confirms the dissociation and the rule's effect.",
+  "abstract_zh": "本文研究工具使用型智能体是否会依据自身对检索结果的判断来决定停止。作者在受控的检索源故障环境中，区分智能体如何评价结果与其实际行为。七个被测智能体有97%–100%的概率将失败源返回的结果判为无用，但多数很少据此停止查询。提示词线索会改变停止时机，却不会改变停止依据；允许凭记忆作答、启用 reasoning mode、设置预算，以及在提示中加入停止规则或调用成本，均只能部分促成基于证据的停止。只有当测试框架强制执行整合步骤，要求智能体在连续五次判定结果无用后作答时，停止行为才真正跟随证据。该规则提升了所有模型在失败源上的任务成功率；即使预算翻倍，停止点也保持稳定，且当智能体已陈述判断时无需额外判断调用。针对300个新问题的预注册复现实验进一步验证了这种判断—行为分离及该规则的有效性。",
+  "key_points_zh": [
+    "七个智能体几乎总能识别失败检索结果无用，但其停止行为与证据判断明显脱钩。",
+    "提示线索、记忆作答、reasoning mode、预算和调用成本主要改变停止时机，难以让停止真正依据证据。",
+    "强制执行“连续五次判定无用后整合并作答”的停止规则，能使行为与判断一致。",
+    "该规则提升所有模型在失败源上的成功率，并使预算翻倍时停止点保持稳定。",
+    "在300个新问题上的预注册复现实验确认了判断—行为分离及规则效果。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.84,
+    "novelty": 0.72,
+    "problem_significance": 0.86,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.79,
+    "llm_avg": 0.77,
+    "comment": "This work exposes a consequential tool-use failure mode and demonstrates that an explicit harness integration step can reliably connect evidence judgments to stopping behavior.",
+    "comment_zh": "该工作揭示了重要的工具使用失败模式，并证明显式的框架集成步骤能够可靠地将证据判断连接到停止决策。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.77,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/bennidict23/judged-useless-queried-anyway",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.06191/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.876
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.06191/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.884
+    }
+  ]
+}

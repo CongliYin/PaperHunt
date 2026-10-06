@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2610.05709",
+  "title": "Nexus: An Execution Fabric for AI Agents Across Cloud, Edge, and Devices",
+  "title_zh": "Nexus：跨云、边缘与设备的 AI Agent 执行基础设施",
+  "authors": [
+    "Cary Chang",
+    "Jialin Zhou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-05T02:47:01Z",
+  "abs_url": "https://arxiv.org/abs/2610.05709v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.05709",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Language-model agents are evolving into long-running services that interact with models, tools, computers, mobile devices, and distributed environments. Existing agent frameworks simplify reasoning and tool invocation. However, cloud-centric designs face three limitations: centralized execution increases failure impact, scaling pressure, and compute cost; extending agents across computers, mobile devices, and edge environments requires a unified execution abstraction with permission control; and long-running executions require consistent lifecycle management across failures, recovery, results, usage, and settlement. We present Nexus, a cloud-edge platform that treats each invocation as a persistent task. Nexus uses an OpenWrt-based runtime for distributed serving, run-scoped delegation for authorized access to Computer and Mobile environments, and persistent records to track execution, outputs, failures, recovery, usage, and charging across cloud and edge components. We evaluate Nexus on controlled, cross-device, and model-driven workloads. All ten Computer-Android workflows succeed, and all six revocation tests block subsequent writes while preserving prior authorized reads. Under worker loss, journaling eliminates duplicate appends (six to zero per task), adding 0.933 s mean normal-path overhead. Across 24 matched task pairs, Nexus completes 24 tasks versus Dify's 22 and is a median 3.88 s faster on jointly successful pairs. In a separate workload, Nexus operates under a smaller tested incremental-runtime memory ceiling than Dapr (16 versus 64 MiB), although Dapr achieves lower successful-call latency. These results demonstrate how locality, operation-scoped authority, and persistent result identity support cloud-edge agent services with workload-dependent costs.",
+  "abstract_zh": "随着语言模型 Agent 演化为可长期运行的服务，它们需要协同访问模型、工具、计算机、移动设备及分布式环境。现有 Agent 框架虽简化了推理与工具调用，但以云为中心的架构存在三类问题：集中式执行扩大故障影响、扩展压力与计算成本；跨计算机、移动设备和边缘环境时缺乏统一且可控的执行抽象；长期运行任务难以在故障、恢复、结果、用量与结算之间保持一致。本文提出 Nexus，一个将每次调用视为持久化任务的云边协同平台。Nexus 采用基于 OpenWrt 的分布式运行时，通过运行范围（run-scoped）委派实现对 Computer 和 Mobile 环境的授权访问，并利用持久化记录统一追踪云端与边缘组件的执行、输出、失败、恢复、用量和计费。在受控、跨设备及模型驱动工作负载上的评估表明：10 个 Computer-Android 工作流全部成功；6 项权限撤销测试均能阻止后续写操作，同时保留此前已授权的读操作；发生 Worker 丢失时，日志机制将每个任务的重复追加次数从 6 次降至 0 次，但正常路径平均增加 0.933 秒开销。在 24 对匹配任务中，Nexus 完成 24 个任务，而 Dify 完成 22 个；对双方均成功的任务，Nexus 中位数快 3.88 秒。另一组工作负载显示，Nexus 测得的增量运行时内存上限低于 Dapr（16 MiB 对 64 MiB），但 Dapr 的成功调用延迟更低。结果表明，局部性、操作范围级权限和持久化结果身份能够支撑云边端 Agent 服务，但其代价取决于工作负载。",
+  "key_points_zh": [
+    "将每次 Agent 调用抽象为持久化任务，统一管理跨云、边缘和设备的执行生命周期。",
+    "基于 OpenWrt 的分布式运行时支持跨设备执行，并通过 run-scoped delegation 实现操作级授权与权限撤销。",
+    "持久化记录和日志机制统一追踪结果、失败、恢复、用量及计费；Worker 丢失时可消除重复追加。",
+    "实验中 Nexus 完成 24/24 个匹配任务，Dify 完成 22/24 个；共同成功任务上 Nexus 中位数快 3.88 秒。",
+    "Nexus 的增量运行时内存上限低于 Dapr，但 Dapr 在成功调用延迟方面更优，体现出工作负载相关的性能权衡。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.88,
+    "llm_avg": 0.86,
+    "comment": "Nexus is a reusable execution fabric for long-running agents, combining distributed lifecycle management, scoped authority, recovery, and persistent result identity.",
+    "comment_zh": "Nexus将分布式生命周期管理、作用域权限、故障恢复和持久化结果身份结合为可复用的长时智能体执行基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.49919890888949187,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.86,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 11,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.05709/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.835
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.05709/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.315
+    }
+  ]
+}

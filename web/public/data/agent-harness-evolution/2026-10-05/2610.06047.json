@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2610.06047",
+  "title": "Let the Agent Do It? How Software Practitioners Understand and Make Permission Decisions in Agentic AI Assistants",
+  "title_zh": "让 Agent 来做？软件从业者如何理解并决定 Agentic AI Assistants 的权限",
+  "authors": [
+    "Larissa Salerno",
+    "Haoyu Gao",
+    "Gregory Gay",
+    "Alexander Serebrenik",
+    "Philipp Leitner"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-05T09:43:54Z",
+  "abs_url": "https://arxiv.org/abs/2610.06047v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.06047",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic AI assistants increasingly act on developers' behalf by modifying files, executing commands, and accessing external resources. These actions often require permission, yet little is known about how practitioners make permission decisions while still benefiting from agent autonomy. To address this gap, we conducted a sequential mixed methods study, interviewing 18 practitioners who use AI agents and then surveying 115 practitioners based on the interview findings. We find that practitioners often understand agent behaviour through what they can directly observe and review, while decisions, data use, and other activity behind the scenes remain less clear. This uncertainty also shapes permission decisions, which depend on the scope and risk of an action, whether it fits the task, familiarity with the agent, and the environment in which it operates. Practitioners respond by adjusting how closely they oversee agents, from setting limits in advance to monitoring execution and reviewing work afterwards. How much scrutiny they apply depends on factors such as trust, task importance, time pressure, and the consequences of an action. Our findings suggest that permission systems should make consequential actions easier to review, distinguish what an agent is allowed to do from what the user intended, make reversibility clearer, avoid treating repeated approvals as stable preferences, and distinguish rejecting a single action from rejecting an entire approach.",
+  "abstract_zh": "Agentic AI assistants 正逐渐代表开发者修改文件、执行命令和访问外部资源，而这些行为通常需要获得权限。为了解软件从业者如何在利用 Agent 自主性的同时做出权限决策，研究者开展了序贯混合方法研究：先访谈 18 名 AI agent 用户，再基于访谈结果调查 115 名从业者。结果表明，从业者主要通过可直接观察和检查的行为理解 Agent；对于幕后决策、数据使用及其他活动，其认知较为模糊。这种不确定性会影响权限判断：决策取决于操作范围与风险、是否符合当前任务、对 Agent 的熟悉程度，以及 Agent 所处的运行环境。从业者会通过不同程度的监督来应对，包括预先设定限制、监控执行过程和事后审查结果。监督强度受到信任、任务重要性、时间压力及操作后果等因素影响。研究建议权限系统应提升高后果操作的可审查性，区分 Agent 被允许执行的行为与用户实际意图，明确操作的可逆性，避免将重复批准视为稳定偏好，并区分拒绝单次操作与拒绝整套执行方案。",
+  "key_points_zh": [
+    "从业者主要依据可观察、可检查的行为理解 Agent；幕后决策、数据使用和隐性活动往往不透明。",
+    "权限判断综合考虑操作范围与风险、任务匹配度、对 Agent 的熟悉程度及运行环境，而非仅依据操作类型。",
+    "监督方式覆盖事前限制、过程监控和事后审查；监督强度受信任、任务重要性、时间压力和潜在后果影响。",
+    "权限系统应区分“Agent 被允许做什么”与“用户想让它做什么”，并清晰呈现操作后果与可逆性。",
+    "重复批准不应被简单视为长期偏好；系统还应区分拒绝一次具体操作与拒绝整个执行方案。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.65,
+    "novelty": 0.58,
+    "problem_significance": 0.75,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.62,
+    "llm_avg": 0.6160000000000001,
+    "comment": "This empirical study provides useful evidence for permission and oversight design in agent runtimes, but it offers limited reusable infrastructure or technical mechanisms.",
+    "comment_zh": "该实证研究为智能体运行时的权限和监督设计提供了有用证据，但可复用基础设施或技术机制较为有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.6160000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.06047/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.06047/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.927
+    }
+  ]
+}

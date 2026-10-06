@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2610.06100",
+  "title": "From Traces to Agentic Worlds: Agentic Language World Models for Interactive Environment Simulation",
+  "title_zh": "从交互轨迹到智能体世界：用于交互环境模拟的 Agentic Language World Models",
+  "authors": [
+    "Quanyu Long",
+    "Xiao Chen",
+    "Jianda Chen",
+    "Haozhen Zhang",
+    "Qisheng Hu",
+    "Jianzhu Bao",
+    "Wenya Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-05T10:32:28Z",
+  "abs_url": "https://arxiv.org/abs/2610.06100v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.06100",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Realistic environment replicas are increasingly valuable for training and evaluating LLM agents, yet the original systems may be inaccessible or impractical to reproduce. We explore agentic language world modeling: rather than rebuilding an executable environment, a world model agent serves as the environment for a task agent and supports faithful and stateful simulation. We instantiate this paradigm with Trace2Env, a learning-free framework for settings where the original system is unavailable but historical interaction traces remain accessible. Trace2Env reconstructs these traces into a reusable environment worldbook containing environment schemas, grounded evidence, and induced behavioral knowledge. At runtime, the world model agent actively consults the worldbook together with persistent episodic state to infer each action's observation and lasting state effects. Across nine environments, Trace2Env improves both next-observation fidelity and long-horizon interaction consistency over conventional prompt-based LWMs. In multi-turn interaction, task agent actions generated against Trace2Env remain valid more often when replayed in the real environment, indicating that its simulated dynamics better preserve the consequences of earlier actions across successive turns. These results establish agentic language world modeling as an alternative direction for building realistic environment replicas without reconstructing the original executable system.",
+  "abstract_zh": "现实环境复刻对于训练和评测 LLM agents 日益重要，但原始系统可能无法访问或难以复现。本文探索 Agentic Language World Modeling：不重建可执行环境，而是让 world model agent 充当任务智能体所处的环境，实现忠实且具状态性的模拟。作者提出无需训练的 Trace2Env，面向原系统不可用但历史交互轨迹仍可获取的场景。Trace2Env 将交互轨迹重构为可复用的环境 worldbook，其中包含环境模式、带依据的证据和归纳出的行为知识。运行时，world model agent 结合 worldbook 与持久化情节状态，推断每个动作对应的观测结果及其长期状态影响。在九个环境上的实验表明，相比传统基于提示的 LWM，Trace2Env 在下一观测保真度和长程交互一致性方面均有提升。在多轮交互中，任务智能体基于 Trace2Env 生成的动作被重放到真实环境时具有更高的有效率，说明其模拟动力学能够更好地保留连续动作的累积后果。结果表明，Agentic Language World Modeling 为无需重建原始可执行系统的现实环境复刻提供了新方向。",
+  "key_points_zh": [
+    "提出 Agentic Language World Modeling：由 world model agent 直接充当交互环境，而非重建原始可执行系统。",
+    "Trace2Env 是一种 learning-free 框架，将历史交互轨迹整理为包含环境模式、证据和行为知识的 worldbook。",
+    "运行时结合 worldbook 与持久化 episodic state，推断动作的即时观测和长期状态影响。",
+    "在九个环境中，Trace2Env 提升了下一观测保真度、长程交互一致性及真实环境中的动作有效率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.82,
+    "novelty": 0.84,
+    "problem_significance": 0.82,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.83,
+    "llm_avg": 0.826,
+    "comment": "Trace2Env provides a reusable trace-grounded environment simulator for agent training and evaluation when executable environments are unavailable.",
+    "comment_zh": "Trace2Env为缺少可执行环境的场景提供了可复用的、基于交互轨迹的智能体训练与评测环境模拟器。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.826,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.06100/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.06100/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}

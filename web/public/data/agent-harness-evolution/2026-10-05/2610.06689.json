@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2610.06689",
+  "title": "Programmatic Search Agents: Extending Agentic Search Beyond Query Reformulation",
+  "title_zh": "程序化搜索代理：将代理式搜索扩展到查询改写之外",
+  "authors": [
+    "Jiaming Qian",
+    "Huiyan Yang",
+    "Mandi Liu",
+    "Jie Liu",
+    "Wenkai Shen",
+    "Pengyang Zhou",
+    "Jing Jin",
+    "Jin Ma",
+    "Dezhi Ye",
+    "Chaochao Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-05T16:52:57Z",
+  "abs_url": "https://arxiv.org/abs/2610.06689v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.06689",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Search agents adapt their queries, yet fixed search interfaces leave candidate processing and evidence presentation outside the agent's direct control. Our trajectory analysis shows that supporting passages can be retrieved yet never delivered to the agent; a same-page oracle intervention shows that changing the returned evidence can reduce subsequent search. We introduce Programmatic Search Agent (PSA), which makes a local executable computation over candidates the unit of a search action. PSA unifies a persistent candidate workspace, flexible primitive composition, and selective evidence presentation. It incrementally generates program cells that reuse candidates, execute dependent operations, and select what the agent inspects next. The runtime resolves specified data dependencies within each cell, while the agent adapts its search strategy across cells as new evidence arrives. We compare PSA with the Query-based Agent and Tool-based Agent on InfoSeek-Eval and BrowseComp-Plus using five policy backbones without task-specific training. All three interfaces share the search substrate, and the Tool-based Agent also shares PSA's primitives and persistent workspace. Relative to the Query-based Agent, PSA improves macro-averaged task success by 4.00 and 7.56 percentage points on the two benchmarks, respectively; within-backbone reductions in final-step tokens average 28.3% and 33.9%. These results support extending agent control beyond query reformulation to the processing and presentation of retrieved evidence. Code will be released subject to approval.",
+  "abstract_zh": "现有搜索代理主要通过改写查询来检索信息，但固定搜索接口限制了代理对候选处理和证据呈现的控制。论文分析发现，支持性段落可能已被检索却未交付给代理；同页预言机实验进一步表明，仅改变返回证据就能减少后续搜索。为此，论文提出 Programmatic Search Agent（PSA），将针对候选集合执行的本地程序化计算作为一次搜索动作。PSA结合持久化候选工作区、可组合的基础操作和选择性证据呈现，增量生成可复用候选、执行依赖操作并决定下一步检查内容的程序单元。运行时解析单元内的数据依赖，代理则依据新证据在不同单元间调整搜索策略。在 InfoSeek-Eval 和 BrowseComp-Plus 上，使用五种无需任务专门训练的策略骨干进行评测。相较 Query-based Agent，PSA在两个基准上的宏平均任务成功率分别提升4.00和7.56个百分点，最终步骤token数在不同骨干内平均减少28.3%和33.9%。结果表明，搜索代理的控制范围应从查询改写扩展到检索证据的处理与呈现。",
+  "key_points_zh": [
+    "研究指出，固定搜索接口不仅限制查询改写，也限制候选处理和证据呈现；检索到的关键信息可能未被代理实际看到。",
+    "PSA以本地可执行程序处理候选集，将持久化工作区、基础操作组合和选择性证据呈现统一为搜索动作。",
+    "程序单元支持候选复用、依赖操作和动态证据选择，代理可依据新证据跨单元调整搜索策略。",
+    "在 InfoSeek-Eval 和 BrowseComp-Plus 上，PSA相较 Query-based Agent 的任务成功率分别提升4.00和7.56个百分点。",
+    "PSA还显著降低最终步骤token消耗，跨骨干平均降幅分别为28.3%和33.9%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.88,
+    "problem_significance": 0.9,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8800000000000001,
+    "comment": "PSA introduces a substantive search-agent runtime abstraction that gives agents persistent candidate workspaces and programmatic control over evidence processing.",
+    "comment_zh": "PSA提出了重要的搜索智能体运行时抽象，使智能体能够持久管理候选项并以程序化方式控制证据处理。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8800000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.06689/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.06689/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.953
+    }
+  ]
+}

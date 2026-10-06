@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2610.05935",
+  "title": "ThunderSyncRL: Lossless Acceleration of Agentic Reinforcement Learning",
+  "title_zh": "ThunderSyncRL：无损加速 Agent 强化学习",
+  "authors": [
+    "Seil Kang",
+    "Hangoo Kang",
+    "Tarun Suresh",
+    "Youngeun Kim",
+    "Shreyas Pimpalgaonkar",
+    "Seong Jae Hwang",
+    "Azalia Mirhoseini"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-05T07:51:46Z",
+  "abs_url": "https://arxiv.org/abs/2610.05935v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.05935",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Language models are moving beyond generating answers to pursuing long-horizon goals in interactive environments. Post-training these agents requires long, heterogeneous trajectories, and synchronous systems leave learner engines idle until rollout and verification finish. To squeeze out these pipeline bubbles, asynchronous training overlaps rollout and learning across updates, but comes at the cost of policy staleness. We introduce ThunderSyncRL, which starts gradient computation as soon as all required inputs are fixed, without policy staleness. For group relative policy optimization (GRPO), ThunderSyncRL computes each trajectory's score gradient as soon as the reward for that trajectory arrives, without waiting for the group. For on-policy distillation (OPD), it computes gradients for each completed agentic turn's teacher-scored actions while tool calls run in the sandbox. We prove that gradient streaming produces the same GRPO and OPD updates as batch-synchronous training, without changing either objective. On SWE-bench Verified and Terminal Bench 4.0, we train models to the same performance up to $1.9 \\times$ faster than synchronous training. With zero policy staleness, ThunderSyncRL also outperforms asynchronous training at a fixed budget by up to $2.47$ percentage points.",
+  "abstract_zh": "面向交互环境中追求长期目标的 Agent，后训练通常需要处理长且异构的轨迹。同步训练会在 rollout 和验证完成前使 learner engine 空闲；异步训练虽能重叠 rollout 与学习，却引入 policy staleness。ThunderSyncRL 在所有必要输入确定后立即启动梯度计算，从而避免策略陈旧。对于 group relative policy optimization（GRPO），每条轨迹的 reward 到达后即可计算其 score gradient，无需等待同组轨迹完成；对于 on-policy distillation（OPD），每个 agentic turn 完成并获得 teacher 对 action 的评分后，即可在 sandbox 执行工具调用期间计算梯度。作者证明，梯度流式计算在不改变优化目标的前提下，能够产生与批量同步训练完全相同的 GRPO 和 OPD 更新。在 SWE-bench Verified 和 Terminal Bench 4.0 上，ThunderSyncRL 达到与同步训练相同性能，训练速度最高提升 1.9 倍；在相同计算预算下，由于不存在 policy staleness，其性能相比异步训练最高提升 2.47 个百分点。",
+  "key_points_zh": [
+    "提出 ThunderSyncRL，在输入就绪后立即计算梯度，消除同步训练中的 pipeline bubbles。",
+    "GRPO 按轨迹 reward 到达即计算梯度；OPD 在工具调用并行执行时处理已完成 turn 的梯度。",
+    "理论上证明梯度流式化与批量同步训练产生完全相同的 GRPO 和 OPD 更新，不改变训练目标。",
+    "在 SWE-bench Verified 和 Terminal Bench 4.0 上，训练速度最高提升 1.9 倍，并在固定预算下超过异步训练最多 2.47 个百分点。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.89,
+    "problem_significance": 0.93,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.87,
+    "lasting_value": 0.91,
+    "llm_avg": 0.9040000000000001,
+    "comment": "ThunderSyncRL provides a theoretically lossless systems optimization for agentic RL that materially reduces training latency without policy staleness.",
+    "comment_zh": "ThunderSyncRL在不引入策略陈旧的情况下实现了理论上无损的智能体强化学习加速，并显著降低训练延迟。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.7188332151065243,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9040000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 37,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.05935/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.936
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.05935/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

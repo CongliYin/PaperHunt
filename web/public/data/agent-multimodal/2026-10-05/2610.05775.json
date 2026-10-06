@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2610.05775",
+  "title": "InteractionBench: A Real-Time Interaction Benchmark for Streaming Video Systems",
+  "title_zh": "InteractionBench：流式视频系统的实时交互基准",
+  "authors": [
+    "Enxin Song",
+    "Suhao Yu",
+    "Yifei Xu",
+    "Barbara Su",
+    "Weili Xu",
+    "Wenhao Chai",
+    "Yao Tang",
+    "Jie Deng",
+    "Haiyang Xu",
+    "Jiatao Gu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-05T04:18:52Z",
+  "abs_url": "https://arxiv.org/abs/2610.05775v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.05775",
+  "links": {
+    "github": "https://github.com/Espere-1119-Song/InteractionBench",
+    "project_page": "https://www.enxinsong.com/projects/interactionbench/"
+  },
+  "abstract_en": "A video assistant must speak when its instruction warrants a response and stay silent otherwise. We introduce a benchmark that evaluates this decision for the complete system of model, memory, and response controller. InteractionBench covers query responses, event triggers, and ongoing updates in 1,060 interactions over 812 videos, with 69 negative streams and 53 suites that pair counted events with look-alike near misses. It scores content accuracy, timing accuracy, and silence compliance on the video clock. Timely speech costs silence across systems. Polled Qwen3-VL-8B reaches 77.8 timing accuracy but 10.9 silence compliance. A native real-time interaction system reaches 29.2 silence compliance at 66.8 timing accuracy, yet emits on 89.9% of negative streams. No open-weight system clears a third of the near-miss suites. Fewer replies help only when chosen, as random deletion merely trades timing for silence. Offline scores miss these failures and mispredict online behavior. Adding restraint is costly, as the native system's controller adds little by itself and agentic systems add it only at about 30 s per poll.Project page: https://www.enxinsong.com/projects/interactionbench/ Code: https://github.com/Espere-1119-Song/InteractionBench Data: https://huggingface.co/datasets/InteractionBench/InteractionBench",
+  "abstract_zh": "视频助手应在指令需要回应时发言，否则保持沉默。本文提出 InteractionBench，用于评估由模型、记忆模块和响应控制器组成的完整系统在实时交互决策上的能力。该基准覆盖查询响应、事件触发和持续更新三类任务，包含来自 812 个视频的 1,060 次交互、69 条负样本视频流，以及 53 个将计数事件与相似干扰事件配对的测试套件。评测在视频时间轴上衡量内容准确率、时机准确率和静默合规率。结果显示，及时发言通常会牺牲静默能力：轮询式 Qwen3-VL-8B 的时机准确率达到 77.8%，但静默合规率仅为 10.9%；原生实时交互系统的静默合规率为 29.2%、时机准确率为 66.8%，却在 89.9% 的负样本流上产生输出。没有开源权重系统通过超过三分之一的相似干扰测试套件。减少回复只有在筛选机制有效时才有帮助，随机删除回复只会在时机准确率与静默合规率之间进行交换。离线评测无法捕捉这些失败，也难以预测在线行为。增强克制能力代价较高：原生系统的控制器本身贡献有限，而智能体系统通常需要约每 30 秒轮询一次才能实现这种能力。",
+  "key_points_zh": [
+    "InteractionBench 首次系统评估模型、记忆与响应控制器组成的完整实时交互系统。",
+    "基准覆盖查询响应、事件触发和持续更新，并同时衡量内容、时机与静默合规性。",
+    "及时发言与保持沉默存在显著权衡，现有系统在负样本流和相似干扰事件上表现尤其脆弱。",
+    "随机减少回复不能真正提升交互质量；只有准确判断何时不应回应，才能兼顾时机与静默。",
+    "离线指标无法可靠预测在线行为，增强系统克制能力还会带来额外控制与轮询成本。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.88,
+    "problem_significance": 0.95,
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.92,
+    "llm_avg": 0.898,
+    "comment": "An exceptionally well-aligned benchmark that evaluates timing, silence compliance, event triggering, and controller behavior for real-time streaming video agents.",
+    "comment_zh": "这是与本领域高度契合的基准，系统评估了实时流式视频代理的时机、静默遵循、事件触发和控制器行为。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.9,
+    "community_heat": 0.0,
+    "author_reputation": 0.416947575628934,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.898,
+    "domain_multiplier": 0.6
+  },
+  "enriched": {
+    "github_url": "https://github.com/Espere-1119-Song/InteractionBench",
+    "project_page_url": "https://www.enxinsong.com/projects/interactionbench/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 6,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.05775/fig1.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.953
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.05775/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.422
+    }
+  ]
+}

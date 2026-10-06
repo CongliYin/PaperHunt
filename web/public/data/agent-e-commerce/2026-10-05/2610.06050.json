@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2610.06050",
+  "title": "MATE: Adaptive Long- and Short-Term User Memory for LLM-Based Recommendation",
+  "title_zh": "MATE：面向 LLM 推荐的自适应长短期用户记忆",
+  "authors": [
+    "Yu Hou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-05T09:44:24Z",
+  "abs_url": "https://arxiv.org/abs/2610.06050v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.06050",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM)-enhanced recommender systems leverage rich item semantics to support personalized recommendation. However, semantic representations alone do not determine which historical behaviors reflect persistent preferences and which mainly indicate recent interests, leaving an important aspect of user understanding unresolved. Recent advances in LLM inference show that newly available information can be used to refine the internal state during inference, thereby improving subsequent predictions. Inspired by this principle, we propose MATE (Memory Adaptation with Temporal Evidence), an adaptive user modeling framework for LLM-enhanced sequential recommendation. MATE first evaluates each newly observed interaction from two temporal perspectives: whether it is repeatedly supported by historical behaviors and whether it is consistent with recent interactions. The resulting temporal evidence controls the updates of two user-specific memories, where the long-term memory conservatively preserves persistent preferences while the short-term memory rapidly adapts to recent interests. For each recommendation, a recent-context representation dynamically determines how strongly the two memories contribute to the current user representation. During offline training, next-item prediction is jointly optimized with temporal supervision, while during online adaptation, the shared model remains fixed and only the two user memories are updated from newly observed interactions. Experiments on MovieLens-10M, Amazon Luxury Beauty, and KuaiRec show that MATE improves mean NDCG@10 over the strongest external baseline by 7.0--13.2%. Further analyses support its ability to adapt to recent interests while retaining useful information about recurring earlier preferences.",
+  "abstract_zh": "LLM-enhanced recommender systems 能利用丰富的物品语义进行个性化推荐，但仅依赖语义表示难以判断用户历史行为究竟体现长期偏好还是近期兴趣。为此，论文提出 MATE（Memory Adaptation with Temporal Evidence），一种面向 LLM-enhanced sequential recommendation 的自适应用户建模框架。MATE 从两个时间维度评估每次新交互：其是否得到历史行为的重复支持，以及其是否与近期交互一致。基于这些时间证据，模型分别更新用户的长短期记忆：长期记忆保守保留稳定偏好，短期记忆快速适应近期兴趣。推荐时，近期上下文表示动态决定两类记忆对当前用户表示的贡献。在离线训练中，模型联合优化 next-item prediction 与时间监督；在线适应阶段冻结共享模型，仅根据新交互更新两类用户记忆。在 MovieLens-10M、Amazon Luxury Beauty 和 KuaiRec 上，MATE 相比最强外部基线将平均 NDCG@10 提升 7.0%–13.2%。进一步分析表明，MATE 能在保留重复出现的早期偏好的同时适应近期兴趣。",
+  "key_points_zh": [
+    "提出 MATE，通过“历史重复支持度”和“近期一致性”评估新交互的时间证据。",
+    "维护长短期两类用户记忆：长期记忆保留稳定偏好，短期记忆快速响应近期兴趣。",
+    "利用近期上下文动态融合两类记忆，并在在线阶段仅更新用户记忆而冻结共享模型。",
+    "在 MovieLens-10M、Amazon Luxury Beauty 和 KuaiRec 上，平均 NDCG@10 较最强外部基线提升 7.0%–13.2%。",
+    "实验分析显示，模型能够兼顾近期兴趣适应性与历史重复偏好的保留。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.82,
+    "problem_significance": 0.84,
+    "potential_impact": 0.83,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.81,
+    "llm_avg": 0.796,
+    "comment": "A strong adaptive user-modeling contribution for sequential recommendation, with credible Amazon product evidence and substantial relevance to personalized shopping systems.",
+    "comment_zh": "该工作针对序列推荐提出了有力的自适应用户建模方法，并通过亚马逊商品数据展现出对个性化购物系统的较强价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.7200000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3525828687777642,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.796,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.06050/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.954
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.06050/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.95
+    }
+  ]
+}

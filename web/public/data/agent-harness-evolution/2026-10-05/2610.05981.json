@@ -1,0 +1,68 @@
+{
+  "arxiv_id": "2610.05981",
+  "title": "Mechanizing the User's Eye: Pre-Registered Deployment of a Sabotage-Validated Fail-Plausible Observer in a Production LLM Agent Runtime",
+  "title_zh": "机械化用户之眼：在生产级 LLM Agent Runtime 中预注册部署经破坏验证的“可失败为真”观察器",
+  "authors": [
+    "Wei Wu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-05T08:34:18Z",
+  "abs_url": "https://arxiv.org/abs/2610.05981v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.05981",
+  "links": {
+    "github": "https://github.com/bisdom-cell/openclaw-model-bridge",
+    "project_page": null
+  },
+  "abstract_en": "A prior longitudinal study of silent failures in a production LLM agent runtime (arXiv:2606.14589) found that about 70% were discovered by a human looking at the product as a user while thousands of tests and governance checks stayed green, and posed mechanizing part of what the human eye does as an open problem. This paper reports our attempt. We built an automated user-viewpoint observer targeting the most dangerous class, fail-plausible failure, in which an internal error becomes fluent, plausible output to the user. It is a two-layer pipeline: five deterministic signals distilled from incident postmortems escalate to an LLM judge whose verdicts must cite verbatim evidence or be discarded. Ground truth is 24 labeled production postmortems with explicit honesty boundaries: 16 of 24 are structurally invisible to any content-reading observer, and we say so. Offline, the deterministic layer achieves 6/6 regression detection with 0/4 false positives, each detector proven load-bearing by sabotage; held-out recall on novel patterns is 0/4. It is, so far, a regression engine. Deployment followed pre-registration: shadow mode caught and retired one systematic false positive on its first run, the 26-day shadow window then ran clean, flip criteria were fixed before the shadow data was read, and the analysis protocol was frozen before the enforcing-mode window opened. That window (12 observed days) fired zero verdicts; per the pre-registered path we report live precision as undefined rather than narrating quiet as success. The observer also produced ten silent failures of its own, confirming that the judge inherits the taxonomy it judges. We release the corpus, detector, and scorecard as a runnable bench: mechanization today retires the human's regression scanning so the eye can specialize in novelty; prediction remains open but is now measurable under frozen rules.",
+  "abstract_zh": "本文尝试将用户视角下的人类观察机制部分自动化，重点检测最危险的“可失败为真”（fail-plausible failure）：内部错误被转换为对用户流畅且貌似合理的输出。系统采用两层流水线：首先通过从事故复盘中提炼的 5 个确定性信号进行筛查，再交由 LLM judge 判定；若判定无法引用逐字证据，则结果作废。研究使用 24 个带标签的生产事故复盘作为真值，其中 16 个在结构上无法被任何内容阅读型观察器发现，作者对此明确声明。离线评估中，确定性层对回归模式达到 6/6 检出、0/4 误报，且每个检测器均通过 sabotage 验证其不可或缺性；但对留出的新模式召回率为 0/4，说明当前系统本质上是回归检测器，而非预测器。部署严格遵循预注册流程：shadow mode 首次运行即发现并修复一个系统性误报，随后 26 天运行稳定；在预先固定标准、冻结分析协议后，12 个观测日的 enforcing mode 未产生任何 verdict，因此按规定将 live precision 报告为 undefined，而非将“无事件”解释为成功。观察器自身还产生了 10 次 silent failure，表明 judge 会继承其所评估的故障分类体系。作者公开语料、检测器和 scorecard，构建可运行的评测基准：当前自动化已能接管人工的回归扫描，使人类专注于新颖故障；但预测能力仍待研究，并已可在冻结规则下进行量化评估。",
+  "key_points_zh": [
+    "目标是检测 fail-plausible failure，即内部错误被包装成用户看来流畅、合理的输出。",
+    "两层架构结合 5 个确定性信号与 LLM judge，且判定必须提供逐字证据；detector 通过 sabotage 验证。",
+    "离线回归检测达到 6/6、误报 0/4，但新模式留出集召回为 0/4，当前更像回归引擎而非预测器。",
+    "预注册部署中，shadow mode 修复了一个系统性误报；enforcing mode 观测 12 天零触发，live precision 按规则记为 undefined。",
+    "观察器自身出现 10 次 silent failure，揭示 judge 会继承故障分类局限；公开资源支持后续可复现实验。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.84,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.87,
+    "llm_avg": 0.842,
+    "comment": "This is strong runtime-evaluation work that turns production failure postmortems into a sabotage-tested regression harness with preregistered deployment evidence.",
+    "comment_zh": "这项工作将生产故障复盘转化为经过破坏性验证的回归测试框架，并提供了预注册部署证据，具有较高的平台价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.842,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/bisdom-cell/openclaw-model-bridge",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.05981/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.948
+    }
+  ]
+}

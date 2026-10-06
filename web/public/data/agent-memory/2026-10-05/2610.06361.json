@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2610.06361",
+  "title": "Capability-Driven Self-Evolution of Agent Memory",
+  "title_zh": "能力驱动的智能体记忆自进化（Capability-Driven Self-Evolution of Agent Memory）",
+  "authors": [
+    "Yaoqi Chen",
+    "Yuru Feng",
+    "Qianxi Zhang",
+    "Baotong Lu",
+    "Jianan Lu",
+    "Zhirui Wang",
+    "Shusen Xu",
+    "Zewen Jin",
+    "Zengzhong Li",
+    "Cheng Li",
+    "Qi Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-05T14:00:21Z",
+  "abs_url": "https://arxiv.org/abs/2610.06361v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.06361",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Memory self-evolution uses task feedback to iteratively improve executable memory programs that store and retrieve information from past interactions. Existing approaches typically adopt holistic evolution, deriving revision directions from mixed feedback and judging progress by overall performance. This can obscure optimization directions and hide capability-specific gains offset by regressions elsewhere, leaving promising directions underexplored. We introduce capability-driven evolution, which extends search guidance from overall performance to individual capability dimensions, preserving promising revisions and expanding exploration beyond the boundaries of holistic evolution. We propose PrisMem, which uses dependency-aware capability selection to prioritize targets with potential cross-capability benefits and history-guided diagnosis to refine capability specialists. Trace-guided integration compares evaluated programs on paired differential cases, using their behavioral differences to consolidate complementary gains into a unified memory program. Experiments show that PrisMem outperforms the strongest baselines by 10.54 and 7.83 percentage points on BEAM-1M and LongMemEval-M, respectively, demonstrating its effectiveness on million-token histories.",
+  "abstract_zh": "记忆自进化利用任务反馈，迭代改进用于存储和检索历史交互信息的可执行记忆程序。现有方法多采用整体式进化，根据混合反馈确定修改方向，并以总体性能衡量进展，容易掩盖具体能力的提升与退化，限制有效方向的探索。本文提出能力驱动进化，将搜索引导从总体性能扩展到独立能力维度，以保留有潜力的修改并突破整体式进化边界。作者提出 PrisMem：通过依赖感知的能力选择，优先优化可能带来跨能力收益的目标；通过历史引导诊断，改进能力专用模块；再利用轨迹引导整合，在成对差异案例上比较程序行为，将互补收益合并为统一记忆程序。实验表明，PrisMem 在 BEAM-1M 和 LongMemEval-M 上分别比最强基线高出 10.54 和 7.83 个百分点，证明其在百万 token 历史场景中的有效性。",
+  "key_points_zh": [
+    "将记忆程序优化从整体性能导向扩展为能力维度导向，避免局部收益被总体指标掩盖。",
+    "PrisMem采用依赖感知的能力选择，优先探索可能产生跨能力协同收益的优化目标。",
+    "通过历史引导诊断构建能力专用模块，并利用轨迹引导整合合并互补改进。",
+    "在 BEAM-1M 和 LongMemEval-M 上分别领先最强基线 10.54 和 7.83 个百分点，适用于百万 token 历史。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.91,
+    "problem_significance": 0.9,
+    "potential_impact": 0.89,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.9,
+    "llm_avg": 0.892,
+    "comment": "A strong Agent-memory contribution that introduces capability-aware evolution, dependency-guided diagnosis, and trace-based consolidation for improving executable long-term memory programs.",
+    "comment_zh": "这是一项优秀的 Agent Memory 工作，通过能力感知演化、依赖引导诊断和轨迹驱动整合来改进可执行的长期记忆程序。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3210331475111057,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.892,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.06361/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.969
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.06361/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.899
+    }
+  ]
+}

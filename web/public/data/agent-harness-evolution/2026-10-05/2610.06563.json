@@ -1,0 +1,73 @@
+{
+  "arxiv_id": "2610.06563",
+  "title": "HERA: Harness-Environment Co-Evolution for Reliable Agentic Abstention",
+  "title_zh": "HERA：面向可靠智能体拒答的工具框架—环境协同进化",
+  "authors": [
+    "Han Luo",
+    "Bingbing Wen",
+    "Guang Yang",
+    "Zora Zhiruo Wang",
+    "Pan Lu",
+    "Lucy Lu Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-05T15:49:12Z",
+  "abs_url": "https://arxiv.org/abs/2610.06563v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.06563",
+  "links": {
+    "github": null,
+    "project_page": "https://hera-bench.github.io/"
+  },
+  "abstract_en": "Large language model (LLM) agents are increasingly capable of acting in complex tool-use environments, yet they often fail to recognize when tasks are infeasible and no valid solution exists. Recent work has formalized this reliability gap as the problem of agentic abstention, and existing approaches typically optimize a model or agent harness against a fixed set of tasks, leading to limited generalization to unseen failure modes. We introduce HERA, a framework for harness-environment co-evolution for agentic abstention. HERA consists of (i) a pipeline to automatically construct verifiable pairs of feasible and infeasible tasks by applying controlled environment mutations that transform solvable tasks into cases requiring abstention, and (ii) a co-evolution procedure in which performance failures on previous tasks are used to drive harness adaptation and generate new execution environments and tasks geared towards previous weaknesses. On held-out evaluation tasks, an evolved harness from HERA improves abstention accuracy from 61.7% to 83.3% while improving feasible-task completion from 68.3% to 76.7%, achieving the highest abstention and feasible-task completion among the compared methods. The resulting best harness transfers across 19 other LLMs, improving abstention accuracy by 15.3 percentage points on average without any model-specific optimization, and enabling smaller models to match the performance of more powerful models at an estimated 85% lower cost.",
+  "abstract_zh": "大型语言模型（LLM）智能体在复杂工具使用环境中的行动能力不断增强，但常无法识别任务不可行、因而不存在有效解的情形。近期研究将这一可靠性缺口形式化为智能体拒答（agentic abstention）问题。现有方法通常针对固定任务集优化模型或智能体工具框架，因而难以泛化至未见过的失败模式。本文提出 HERA，一种面向智能体拒答的工具框架—环境协同进化方法。HERA 包含两个部分：首先，通过受控环境变异，将可解任务转换为需要拒答的任务，自动构造可验证的可行/不可行任务对；其次，通过协同进化机制，利用模型在既有任务上的失败驱动工具框架适应，并生成针对既有弱点的新执行环境与任务。在留出任务上，HERA 进化得到的工具框架将拒答准确率从 61.7% 提升至 83.3%，同时将可行任务完成率从 68.3% 提升至 76.7%，在对比方法中取得最高的拒答准确率与可行任务完成率。最佳工具框架还能迁移至另外 19 个 LLM，在无需针对模型进行专门优化的情况下，平均提升 15.3 个百分点的拒答准确率，并使较小模型达到更强模型的性能，同时预计降低约 85% 的成本。",
+  "key_points_zh": [
+    "针对智能体难以识别不可行任务的问题，HERA 将 agentic abstention 建模为工具框架与执行环境共同适应的过程。",
+    "通过受控环境变异，HERA 自动生成可验证的可行/不可行任务对，为训练和评估拒答能力提供系统化数据。",
+    "协同进化利用历史失败案例更新工具框架，并生成针对模型弱点的新环境与任务，从而提升对未见失败模式的泛化能力。",
+    "在留出任务上，拒答准确率由 61.7% 提升至 83.3%，可行任务完成率由 68.3% 提升至 76.7%。",
+    "进化后的工具框架可迁移至 19 个其他 LLM，平均提升拒答准确率 15.3 个百分点，并以约 85% 的成本降低实现较小模型接近强模型的性能。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.91,
+    "problem_significance": 0.92,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.9,
+    "lasting_value": 0.92,
+    "llm_avg": 0.916,
+    "comment": "HERA presents a compelling closed loop in which harness failures generate new environments and tasks, producing transferable improvements in agentic abstention.",
+    "comment_zh": "HERA建立了由框架失败驱动环境和任务生成的闭环，并在智能体拒答能力上实现了具有迁移性的改进。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.23816576137838616,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.916,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://hera-bench.github.io/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.06563/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}
