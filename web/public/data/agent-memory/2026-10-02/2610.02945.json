@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2610.02945",
+  "title": "Continual Graph Memory for Mathematical Research Agents",
+  "title_zh": "面向数学研究智能体的持续图记忆",
+  "authors": [
+    "Junyi Zhang",
+    "Jinxi Yu",
+    "Eric Hanchen Jiang",
+    "Jiachen Lu",
+    "Zhi Zhang",
+    "Xinjie He",
+    "Hyunsik Chae",
+    "Ethan Ji",
+    "Alexander K Taylor",
+    "Vigyan Sahai",
+    "Yiwen Kou",
+    "Kai-Wei Chang",
+    "Raghu Meka",
+    "Nanyun Peng",
+    "Amit Sahai",
+    "Terence Tao",
+    "Wei Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-02T07:38:09Z",
+  "abs_url": "https://arxiv.org/abs/2610.02945v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.02945",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Using frontier agent harnesses to tackle mathematical research problems has emerged as an effective means of advancing mathematics. However, solving frontier problems in mathematics may require a massive number of agents working in parallel for extended periods to construct proofs, thereby generating an enormous volume of intermediate proof results. Organizing these intermediate results throughout a long-horizon proof-search process and reusing knowledge gained from prior explorations remain major challenges. We present Ansatz, a mathematical research agent built around Continual Graph Memory, a graph-based, evolvable, cross-problem mathematical research memory system that explicitly organizes the entire proof search process and reuses information from exploration trajectories of previous problems. Specifically, we develop a unified graph memory that represents all intermediate exploration results, including facts, plans, and counterexamples, together with edges that explicitly represent the relationships among them; dependency-aware retrieval supplies precisely targeted local context; an evidence-sensitive curator updates the research frontier and distills lessons from prior attempts; and scoped recall surfaces earlier statements and negative findings for local re-proving rather than uncritical reuse. Experiments cover runs across all ten First Proof Second Batch problems, together with four component studies. Ansatz reports closure on all ten research tasks, demonstrating its ability to sustain and resume long-horizon mathematical search. Beyond these problems, Ansatz also produces solutions to the Jamison caterpillar conjecture and Erdős Problems 289, 348, and 488 without human intervention, and makes partial progress on several open problems, illustrating its strong ability to solve open mathematical research problems.",
+  "abstract_zh": "数学前沿问题的求解通常需要大量智能体长时间并行探索，产生海量中间证明结果；如何组织这些结果并复用既有知识仍是关键挑战。本文提出 Ansatz，一种以 Continual Graph Memory 为核心的数学研究智能体。该系统构建可演化、跨问题共享的图记忆，以事实、计划和反例等节点及其关系显式记录完整证明搜索过程；通过依赖感知检索提供精准局部上下文，利用证据敏感的策展器更新研究前沿并提炼历史经验，并通过范围化回忆召回既有陈述和负面发现，以支持局部重新证明而非盲目复用。实验覆盖全部十个 First Proof Second Batch 问题及四项组件研究，Ansatz 在十项任务上均实现闭环。此外，系统在无人类干预下解决了 Jamison caterpillar conjecture 以及 Erdős Problems 289、348 和 488，并在多个开放问题上取得部分进展，展示了持续开展长时程数学研究的能力。",
+  "key_points_zh": [
+    "提出 Ansatz，以 Continual Graph Memory 统一组织事实、计划、反例及其依赖关系。",
+    "依赖感知检索和范围化回忆提供精准上下文，支持跨问题知识复用与局部重新证明。",
+    "证据敏感的策展器持续更新研究前沿，并从失败尝试中提炼可复用经验。",
+    "在全部十个 First Proof Second Batch 问题上实现闭环，并自主解决多个 Erdős 问题及 Jamison caterpillar conjecture。",
+    "结果表明，图记忆能够提升智能体对长时程、开放式数学研究任务的持续探索与恢复能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.87,
+    "novelty": 0.86,
+    "problem_significance": 0.91,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.79,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8560000000000001,
+    "comment": "A strong domain-specific Agent-memory system that unifies graph representation, evidence-sensitive updating, dependency-aware retrieval, and scoped reuse for continual research.",
+    "comment_zh": "这是一套强有力的领域特定 Agent Memory 系统，统一了图表示、证据敏感更新、依赖感知检索与持续研究中的范围化复用。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4616980115421639,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.8560000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 17,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02945/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02945/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.357
+    }
+  ]
+}

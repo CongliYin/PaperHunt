@@ -1,0 +1,61 @@
+{
+  "arxiv_id": "2610.02952",
+  "title": "GTDD: Generative Test-Driven Development for AI Coding Agents with Adversarial Testing",
+  "title_zh": "GTDD：通过对抗性测试实现面向 AI 编程代理的生成式测试驱动开发",
+  "authors": [
+    "Masahiro Kato"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-02T07:45:33Z",
+  "abs_url": "https://arxiv.org/abs/2610.02952v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.02952",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Test-driven development gives AI coding agents executable requirements for implementing software. Because these agents can adapt their implementations to the examples they observe, passing a predetermined collection of tests can leave substantial parts of the intended behavior unimplemented. We propose Generative Test-Driven Development (GTDD), a formulation of test-driven development in which a separate testing agent generates new inputs after each candidate implementation is fixed, using a human-specified behavioral contract and the feedback from earlier rounds. A trusted evaluator checks these inputs, returns reduced counterexamples to the coding agent, and saves them for regression testing, so development continually confronts failures beyond the initial examples. We characterize the evidence that this process provides through a finite-population analysis of false acceptance under adaptive candidate selection. The resulting bounds quantify how test visibility and repeated feedback affect acceptance, and show that fresh random audits after candidate commitment control false acceptance across development rounds. In a paired experiment on a stateful key-value store, both policies that regenerated tests during development ended with lower mean failure rates than the policy whose tests were generated once by the same language model, and giving the tester the candidate's source produced no detectable additional improvement. Further conditions requesting equal numbers of tests did not isolate any single feature of the policies as the source of this difference. GTDD combines this adaptive development feedback with established regression tests and an independent acceptance rule.",
+  "abstract_zh": "传统测试驱动开发（TDD）为 AI 编程代理提供可执行需求，但代理可能针对可见测试样例进行适配，导致大量预期行为未被实现。本文提出 Generative Test-Driven Development（GTDD）：每当候选实现固定后，由独立测试代理依据人工指定的行为契约及此前反馈生成新输入；可信评估器验证这些输入，将精简后的反例反馈给编程代理，并将其保存为回归测试，使开发过程持续面对初始样例之外的失败。作者通过有限总体分析刻画自适应候选选择下的错误接受风险，说明测试可见性与重复反馈如何影响接受结果，并证明候选实现提交后进行新鲜随机审计能够控制多轮开发中的错误接受率。在有状态键值存储实验中，开发期间动态生成测试的两种策略最终平均失败率均低于由同一语言模型一次性生成测试的策略；向测试代理提供候选源码未带来可检测的额外收益。GTDD 将自适应开发反馈、既有回归测试与独立验收规则结合起来。",
+  "key_points_zh": [
+    "核心机制是测试代理在每轮候选实现固定后，根据行为契约和历史反馈生成新测试，避免编程代理只针对初始样例优化。",
+    "可信评估器负责验证测试、返回精简反例，并将反例加入回归测试集，形成持续发现与固化缺陷的闭环。",
+    "有限总体分析表明，候选提交后的新鲜随机审计，以及更强的测试反馈，可降低自适应开发中的错误接受风险。",
+    "在有状态键值存储实验中，动态生成测试的策略平均失败率低于一次性生成测试的基线；提供候选源码未显示额外收益。",
+    "实验中的控制条件未能单独确定具体策略特征是性能差异的唯一来源，但结果支持将 GTDD 与独立验收规则结合使用。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.86,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.9,
+    "llm_avg": 0.876,
+    "comment": "GTDD provides a reusable adversarial testing and regression-feedback loop that directly strengthens coding-agent reliability and acceptance evidence.",
+    "comment_zh": "GTDD提供了可复用的对抗测试与回归反馈闭环，直接增强了Coding Agent的可靠性和验收证据。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.49491262604822334,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.876,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 6,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 6,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

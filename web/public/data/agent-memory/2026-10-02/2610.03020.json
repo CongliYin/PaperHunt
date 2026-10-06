@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2610.03020",
+  "title": "DyadMem: A Long-Term Memory Benchmark of How Agents Work with Users",
+  "title_zh": "DyadMem：智能体如何与用户协作的长期记忆基准",
+  "authors": [
+    "Yifei Tao",
+    "Xinyu Zhong",
+    "Henry Hengyuan Zhao",
+    "Fanyi Wang",
+    "Tengda Guo",
+    "Wentao Qiu",
+    "Ying Wang",
+    "Liujian Tang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-02T08:57:43Z",
+  "abs_url": "https://arxiv.org/abs/2610.03020v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.03020",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-term agents must remember not only what is true about a user, but also how a particular agent should work with that user as their shared history evolves. Existing benchmarks primarily supervise user facts and preferences or experience reusable across users, leaving this relationship-specific agent memory implicit. Additionally, most prior works measure the model solely with final-answer QA over long interaction histories, making the assessment still incomplete and unreliable. To this end, we introduce DyadMem with the proposed new definition User-conditioned Relational Agent Memory (URAM). DyadMem jointly annotates user-side memory and URAM along the same multi-session trajectories, resulting in 6 memory categories. To summarize, it includes 3,065 episodes, 50,961 sessions, and 61,210 QA instances, with extensive session-level Capture and Update gold annotations, query-level Recall support, and two QA settings: Gold-Memory and Full-Pipeline. Across 16 open-weight and 4 proprietary models, Gold-Memory QA is consistently strong, yet Full-Pipeline QA drops sharply. Such a gap explicitly supports our fine-grained evaluation design. Additionally, several quantitative results further reveal low Capture recall, incomplete Recall, and unsafe-deletion issues arising from even the frontier LLMs. We further conduct a rigorous experiment to validate the effectiveness of our URAM and observe the positive effects for all 20 models. In summary, DyadMem is a dual-domain, full-pipeline memory benchmark with extensive annotation efforts for advancing the domain's development.",
+  "abstract_zh": "现有长期记忆研究主要关注用户事实、偏好及可跨用户复用的经验，却忽视了特定智能体与用户在长期互动中形成的关系性记忆。论文提出 User-conditioned Relational Agent Memory（URAM）概念，并构建 DyadMem 基准，在多轮、多会话轨迹中联合标注用户侧记忆与 URAM，涵盖 6 类记忆。数据集包含 3,065 个 episodes、50,961 个 sessions 和 61,210 个 QA 实例，并提供会话级 Capture 与 Update 标注、查询级 Recall 支持，以及 Gold-Memory 和 Full-Pipeline 两种评测设置。对 16 个开源模型和 4 个闭源模型的实验显示，Gold-Memory QA 表现普遍较强，但 Full-Pipeline QA 显著下降，暴露出记忆捕获率低、召回不完整和不安全删除等问题。进一步实验表明，URAM 能够提升全部 20 个模型的表现。",
+  "key_points_zh": [
+    "提出 User-conditioned Relational Agent Memory（URAM），刻画特定智能体与特定用户长期协作中形成的关系性记忆。",
+    "构建 DyadMem 双域、全流水线基准，包含 3,065 个 episodes、50,961 个 sessions 和 61,210 个 QA 实例，覆盖 6 类记忆。",
+    "设计 Gold-Memory 与 Full-Pipeline 两种评测，区分记忆内容本身与捕获、更新、召回等完整记忆流程的能力。",
+    "20 个模型实验显示，Full-Pipeline QA 相比 Gold-Memory QA 大幅下降，前沿模型仍存在低 Capture recall、Recall 不完整及不安全删除问题。",
+    "URAM 对全部 20 个模型均带来正向效果，说明关系性记忆是提升长期人机协作的重要因素。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.88,
+    "problem_significance": 0.92,
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.96,
+    "llm_avg": 0.9039999999999999,
+    "comment": "A highly valuable Agent-memory benchmark that formalizes relationship-specific memory and evaluates capture, update, recall, and deletion across the full lifecycle.",
+    "comment_zh": "这是一项价值很高的 Agent Memory 基准工作，形式化了关系特定记忆，并覆盖完整生命周期中的捕获、更新、召回与删除评估。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3233158463485474,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.9039999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.03020/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.94
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.03020/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}

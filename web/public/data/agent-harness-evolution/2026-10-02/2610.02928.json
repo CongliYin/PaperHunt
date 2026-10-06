@@ -1,0 +1,69 @@
+{
+  "arxiv_id": "2610.02928",
+  "title": "Discriminating Fixture Coverage in Agent-Infrastructure Verification Suites",
+  "title_zh": "Agent-Infrastructure Verification Suites 的判别性 Fixture 覆盖",
+  "authors": [
+    "Xin Xu",
+    "Siru Tao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-02T07:17:41Z",
+  "abs_url": "https://arxiv.org/abs/2610.02928v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.02928",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Invariant suites and runtime monitors increasingly gate agent deployment decisions, and the evidence offered for any particular suite is almost always a single observation: it passes an implementation believed correct and fails one believed broken. We measure what that observation is worth. Applying mutation analysis to an invariant suite for a multi-session agent state-projection layer, we first find that this standard validation certifies a suite in which a first-order mutant removing event-identity deduplication survives every check. We then freeze the repaired twelve-check suite, record its hash, and run it once against ten mutants specified by an adversarial reader who designed none of its fixtures: it kills five. Instrumenting the five survivors against the reference shows they fail in two distinct ways, not one. Three are never activated, because no fixture supplies an input on which the mutated code behaves differently at all. The other two corrupt internal state that no oracle in the suite can observe. The two modes need different repairs, and neither is visible from a pass/fail report. Treating the missing inputs as a coverage question, we enumerate seven discriminating dimensions of the input space, register in advance which are uncovered and which survivors they should explain, and add one fixture per uncovered dimension while reusing the existing oracles verbatim. All five survivors then die, each to the check written for its predicted dimension. We report this as a repair result on the same challenge set rather than a second held-out estimate, and give the artifact, including the frozen hash, the registered predictions, all mutants and the run logs, so the distinction is checkable.",
+  "abstract_zh": "本文研究如何评估 Agent 基础设施验证套件中单次“通过正确实现、拒绝错误实现”观察结果的实际证明力。作者对多会话 Agent 状态投影层的 invariant suite 进行 mutation analysis，发现传统验证会错误认证一个未检测事件身份去重缺陷的套件。随后冻结并哈希修复后的十二项检查，使用由未参与 fixture 设计的对抗性读者提出的十个 mutants 进行测试，仅杀死五个。对五个 survivors 的分析表明，失败原因分为两类：三个 mutant 从未被任何 fixture 激活，另外两个虽破坏内部状态，却未被现有 oracle 观测到。作者将输入空间划分为七个判别维度，预先登记未覆盖维度及其应解释的 survivors，并为每个缺失维度新增一个 fixture，同时完全复用既有 oracle。补充后五个 survivors 均被预期维度对应的检查杀死。论文还公开冻结哈希、预测登记、mutants 与运行日志，使修复过程可复核。",
+  "key_points_zh": [
+    "单纯证明套件能通过正确实现并拒绝一个错误实现，无法充分衡量其验证能力；mutation analysis 揭示了未被检测的事件身份去重缺陷。",
+    "五个 survivors 分属两类：三个因缺少能触发差异行为的输入而未激活，两个虽污染内部状态但超出现有 oracle 的可观测范围。",
+    "作者定义七个输入判别维度，预先登记覆盖缺口及其应解释的 survivors，将测试修复转化为可检查的 coverage 问题。",
+    "仅新增每个未覆盖维度一个 fixture，并复用原有 oracle，即杀死全部五个 survivors；每个 mutant 均由预先预测的维度对应检查击败。",
+    "实验结果是针对同一 challenge set 的 repair result，而非独立 held-out 估计；公开 artifact、hash、预测、mutants 和日志以支持复现与审计。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.8,
+    "problem_significance": 0.84,
+    "potential_impact": 0.83,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.82,
+    "llm_avg": 0.8020000000000002,
+    "comment": "The paper offers rigorous mutation-based verification and fixture-coverage methodology for agent infrastructure and deployment gates.",
+    "comment_zh": "论文为Agent基础设施和部署门禁提供了严谨的基于变异测试与夹具覆盖的验证方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8020000000000002,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02928/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.864
+    }
+  ]
+}

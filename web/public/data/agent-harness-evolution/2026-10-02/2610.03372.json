@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2610.03372",
+  "title": "SCAD: Structured Credit Assignment and Distillation for Long-Horizon Agents",
+  "title_zh": "SCAD：面向长时程智能体的结构化信用分配与蒸馏",
+  "authors": [
+    "Shangyang Wu",
+    "Shuai Zhao",
+    "Ziyue Zhu",
+    "Jinyang Wu",
+    "Anh Tuan Luu",
+    "Haoran Luo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-02T14:29:42Z",
+  "abs_url": "https://arxiv.org/abs/2610.03372v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.03372",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Training long-horizon agents to solve complex tasks requires effective supervision over extended interaction sequences. However, sparse terminal rewards obscure intermediate contributions, while on-policy distillation can lose informative teacher guidance as student-generated histories grow. To address this problem, we introduce SCAD, which organizes interactions into planning and bounded subtask execution, distills execution in local contexts, and refines planning credit through cross-rollout subtask prefix trees, with planning receiving full terminal credit and execution receiving positive terminal credit and teacher guidance. Across all evaluated benchmarks, SCAD improves macro-average accuracy over the strongest training baseline by 4.48 percentage points for text tasks and 4.19 points for multimodal tasks. SCAD effectively combines outcome-based credit assignment with teacher-guided distillation to improve planning and execution in long-horizon agents.",
+  "abstract_zh": "训练长时程智能体解决复杂任务，需要对长交互序列提供有效监督。然而，稀疏的终止奖励难以揭示各中间步骤的贡献；随着学生模型生成的历史不断增长，在策略蒸馏（on-policy distillation）中，教师模型的有效指导也可能逐渐丢失。为此，论文提出 SCAD，将交互组织为规划与有界子任务执行两个阶段：在局部上下文中蒸馏执行过程，并通过跨轨迹的子任务前缀树细化规划信用分配。规划阶段获得完整的终止奖励，执行阶段则同时获得正向终止奖励与教师指导。在所有评测基准上，相比最强训练基线，SCAD 在文本任务上的宏平均准确率提升 4.48 个百分点，在多模态任务上提升 4.19 个百分点。结果表明，SCAD 有效结合了基于结果的信用分配与教师引导蒸馏，从而同时改善长时程智能体的规划与执行能力。",
+  "key_points_zh": [
+    "将长时程交互拆分为规划与有界子任务执行，降低稀疏终止奖励带来的信用分配难度。",
+    "在局部上下文中进行执行蒸馏，缓解学生模型历史增长导致的教师信息丢失。",
+    "通过跨轨迹子任务前缀树聚合信息，细化规划阶段的信用分配，并给予规划完整终止奖励。",
+    "执行阶段同时利用正向终止奖励和教师指导，联合优化规划质量与执行能力。",
+    "相较最强训练基线，文本任务宏平均准确率提升 4.48 个百分点，多模态任务提升 4.19 个百分点。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.8,
+    "problem_significance": 0.9,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.82,
+    "llm_avg": 0.8320000000000001,
+    "comment": "SCAD presents a strong trajectory-based training method that combines hierarchical execution, structured credit assignment, and teacher-guided distillation for long-horizon agents.",
+    "comment_zh": "SCAD将分层执行、结构化信用分配和教师引导蒸馏结合起来，为长程智能体训练提供了有力的方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8320000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.03372/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.03372/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.954
+    }
+  ]
+}

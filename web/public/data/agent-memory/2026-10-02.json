@@ -1,0 +1,93 @@
+{
+  "domain": "agent-memory",
+  "display_name": "Agent Memory",
+  "date": "2026-10-02",
+  "generated_at": "2026-10-06T01:24:34Z",
+  "papers": [
+    {
+      "arxiv_id": "2610.03020",
+      "title": "DyadMem: A Long-Term Memory Benchmark of How Agents Work with Users",
+      "title_zh": "DyadMem：智能体如何与用户协作的长期记忆基准",
+      "authors": [
+        "Yifei Tao",
+        "Xinyu Zhong",
+        "Henry Hengyuan Zhao",
+        "Fanyi Wang",
+        "Tengda Guo",
+        "Wentao Qiu",
+        "Ying Wang",
+        "Liujian Tang"
+      ],
+      "total_score": 0.5933657923174274,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.9039999999999999,
+        "domain_fit": 0.99,
+        "other": 0.22055264105809128
+      },
+      "tags": [
+        "evaluation"
+      ],
+      "tldr_zh": "DyadMem揭示长期智能体记忆的关系性与流水线缺陷",
+      "detail_file": "agent-memory/2026-10-02/2610.03020.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.03020/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.02897",
+      "title": "Interpreting at Write Time: A Policy Ablation for Multi-Goal Agent Memory",
+      "title_zh": "在写入时进行解释：Multi-Goal Agent Memory 的策略消融研究",
+      "authors": [
+        "Albert Sadowski",
+        "Jarosław A. Chudziak"
+      ],
+      "total_score": 0.33024737878144667,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.7979999999999999,
+        "domain_fit": 0.91,
+        "other": 0.3028245959381557
+      },
+      "tags": [
+        "Accepted"
+      ],
+      "tldr_zh": "面向目标写入的记忆摘要最有效，但收益具有目标特异性。",
+      "detail_file": "agent-memory/2026-10-02/2610.02897.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02897/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.02945",
+      "title": "Continual Graph Memory for Mathematical Research Agents",
+      "title_zh": "面向数学研究智能体的持续图记忆",
+      "authors": [
+        "Junyi Zhang",
+        "Jinxi Yu",
+        "Eric Hanchen Jiang",
+        "Jiachen Lu",
+        "Zhi Zhang",
+        "Xinjie He",
+        "Hyunsik Chae",
+        "Ethan Ji",
+        "Alexander K Taylor",
+        "Vigyan Sahai",
+        "Yiwen Kou",
+        "Kai-Wei Chang",
+        "Raghu Meka",
+        "Nanyun Peng",
+        "Amit Sahai",
+        "Terence Tao",
+        "Wei Wang"
+      ],
+      "total_score": 0.32988490057710823,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.8560000000000001,
+        "domain_fit": 0.87,
+        "other": 0.24361633525702736
+      },
+      "tags": [],
+      "tldr_zh": "用持续图记忆支撑智能体长时程数学证明搜索",
+      "detail_file": "agent-memory/2026-10-02/2610.02945.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02945/thumb.webp"
+    }
+  ]
+}

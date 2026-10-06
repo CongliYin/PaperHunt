@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2610.02897",
+  "title": "Interpreting at Write Time: A Policy Ablation for Multi-Goal Agent Memory",
+  "title_zh": "在写入时进行解释：Multi-Goal Agent Memory 的策略消融研究",
+  "authors": [
+    "Albert Sadowski",
+    "Jarosław A. Chudziak"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-02T06:44:39Z",
+  "abs_url": "https://arxiv.org/abs/2610.02897v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.02897",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "A long-running assistant cannot keep everything it has seen, so it summarises. Summarising is not neutral: what is kept is chosen against some notion of what the record is for, and that choice is made once, before anyone knows which of the user's standing goals will ask. Goals rarely disagree about what happened. They disagree about which parts of it were worth the space. Once the history is too long to re-read, the summary replaces the stream, and whatever it left out is gone. We ask what a memory should summarise for when it serves several standing goals at once. Three policies answer differently: summarise with no goal in view, write one summary covering every goal, or write one summary per goal and read them together. We compare them across several models and event streams, holding the read step fixed so that only the write differs. The goals do pull apart: summaries written for different goals overlap each other less than a summary overlaps a rewrite of itself. Per-goal summaries win on relevance, completeness and accuracy, and the all-goal summary loses even to the neutral one written at a fraction of its budget. Interpreting at write pays off, but only for the goal that later asks.",
+  "abstract_zh": "长期运行的助手无法保存全部历史，因此必须进行摘要；而摘要保留什么，取决于它服务的目标。本文研究一份记忆同时服务多个长期目标时应如何摘要，并比较三种写入策略：不考虑目标的中性摘要、覆盖所有目标的单一摘要，以及每个目标分别生成摘要、读取时合并。实验在多个模型和事件流上进行，并固定读取步骤，仅改变写入策略。结果表明，不同目标确实关注历史中的不同信息；面向特定目标的摘要在相关性、完整性和准确性上均优于其他策略。覆盖所有目标的摘要甚至不如以更小预算生成的中性摘要。结论是：在写入时进行目标导向解释能够提升记忆质量，但收益主要服务于之后实际查询该摘要的目标。",
+  "key_points_zh": [
+    "论文将多目标记忆摘要策略分为三类：中性摘要、全目标共享摘要和逐目标摘要。",
+    "通过固定读取过程、仅改变写入策略，隔离并评估写入时目标解释的影响。",
+    "不同目标对历史信息的关注明显分化，逐目标摘要之间的重叠度低于同一摘要改写之间的重叠度。",
+    "逐目标摘要在相关性、完整性和准确性上整体表现最佳；全目标摘要甚至劣于低预算的中性摘要。",
+    "核心结论是“写入时解释”有效，但其优势主要针对之后发起查询的特定目标。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.91,
+    "novelty": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.81,
+    "llm_avg": 0.7979999999999999,
+    "comment": "A focused and methodologically clean study showing that goal-conditioned interpretation at write time can substantially improve multi-goal agent memory quality.",
+    "comment_zh": "这是一项聚焦且方法严谨的研究，表明写入时进行目标条件化解释能够显著提升多目标 Agent Memory 的质量。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.416947575628934,
+    "venue_signal": 1.0,
+    "generality": 0.4,
+    "llm_assessment": 0.7979999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 6,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02897/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.954
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02897/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.977
+    }
+  ]
+}

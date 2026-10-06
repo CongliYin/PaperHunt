@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2610.03315",
+  "title": "Lightweight, Rubric-Guided Trajectory Evaluation for Production AI Agents",
+  "title_zh": "面向生产级 AI Agents 的轻量级、规则引导轨迹评估",
+  "authors": [
+    "Linh-An Phan",
+    "MingXue Wang",
+    "Guangyu Wu",
+    "Feng Pan",
+    "Zhaoyu Pang",
+    "Yanbin Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-02T13:51:06Z",
+  "abs_url": "https://arxiv.org/abs/2610.03315v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.03315",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Trajectory evaluation is essential for improving the reliability of LLM-based agents, but production use makes it expensive to run repeatedly. Modern agents generate long traces containing tool calls, observations, retries, and external outputs, while not all raw tokens are equally useful for diagnosis. We present \\textit{LiteTrajEval}, a lightweight architecture for budget-bounded trajectory evaluation. LiteTrajEval derives compact domain-specific rule profiles offline, then preprocesses each trajectory online, marks heuristic failure signals, serializes it under a fixed global budget, and invokes a single rubric-guided LLM judge to produce structured diagnostic reports. Evaluated on public Magentic-One-style and $τ$-bench-style trajectory datasets, LiteTrajEval improves failure-localization alignment with human annotations by roughly 20--35 percentage points on Magentic-One and up to 23 percentage points on $τ$-retail compared with AgentRx, while reducing cost by about 6$\\times$ and evaluation time by more than 8$\\times$. This solution has also been deployed in our enterprise agentic platform.",
+  "abstract_zh": "针对基于 LLM 的 Agents 轨迹评估成本高、轨迹冗长且诊断信息分布不均的问题，本文提出 LiteTrajEval，一种受预算约束的轻量级评估架构。该方法离线构建紧凑的领域规则配置，在线预处理轨迹、标记启发式失败信号，并在固定全局预算下进行序列化，最后调用一次规则引导的 LLM judge 生成结构化诊断报告。在公开的 Magentic-One 风格和 τ-bench 风格轨迹数据集上，LiteTrajEval 相比 AgentRx 将 Magentic-One 上与人工标注的失败定位一致性提升约 20–35 个百分点，在 τ-retail 上最高提升 23 个百分点；同时成本降低约 6 倍，评估时间缩短超过 8 倍。该方案已部署于企业级 agentic platform。",
+  "key_points_zh": [
+    "提出 LiteTrajEval：结合离线领域规则、在线轨迹预处理、失败信号标记与单次 rubric-guided LLM judge 的轻量评估框架。",
+    "通过固定全局预算压缩和序列化长轨迹，减少无效 token，同时保留工具调用、观察结果、重试等关键诊断信息。",
+    "相比 AgentRx，Magentic-One 上失败定位一致性提升约 20–35 个百分点，τ-retail 上最高提升 23 个百分点。",
+    "评估成本降低约 6 倍，评估时间缩短超过 8 倍，适合生产环境中的重复性 Agent 质量监控。",
+    "方法已部署于企业级 agentic platform，验证了其在实际生产场景中的可用性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.82,
+    "problem_significance": 0.9,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8560000000000001,
+    "comment": "This is strong reusable agent-harness infrastructure that makes long-trajectory diagnosis substantially cheaper and more actionable.",
+    "comment_zh": "这是一项高价值的可复用Agent Harness基础设施工作，显著降低了长轨迹诊断成本并提升了可操作性。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8560000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.03315/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.03315/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.921
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "arxiv_id": "2610.03969",
+  "title": "How Do Coding Agents Optimize Software and Report Performance Validation? A Large-Scale Empirical Study of Open-Source Pull Requests",
+  "title_zh": "Coding Agents 如何优化软件并报告性能验证？开源 Pull Request 的大规模实证研究",
+  "authors": [
+    "Huiyun Peng",
+    "Ricardo Calvo",
+    "Kelechi G. Kalu",
+    "James C. Davis"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-02T19:23:43Z",
+  "abs_url": "https://arxiv.org/abs/2610.03969v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.03969",
+  "links": {
+    "github": "https://github.com/PurdueDualityLab/EMSE-perf-pr-study",
+    "project_page": null
+  },
+  "abstract_en": "Software performance optimization requires identifying bottlenecks and improvement opportunities, and empirically evaluating the effects and trade-offs across performance objectives. Autonomous AI coding agents submit performance-oriented pull requests (PRs) to open-source projects, yet it remains unclear whether these changes reflect established optimization practices and adequately substantiate their claimed value. Extending our MSR 2026 Mining Challenge pilot study of 407 performance PRs, we analyze a sample of 1,130 agentic and 1,130 human-authored performance PRs collected through June 2026. We compare adoption outcomes and patch characteristics between the two groups, and examine their optimization practices and validation behaviors. The results show that agentic PRs are merged less often than human-authored PRs (54.4% vs. 73.3%), but the two groups use similar optimization strategies and report validation at comparable rates. Agentic PRs rely more on static reasoning and less on benchmarks (46.1% vs. 57.2%), although benchmark use converges by the end of the study period. Agentic PRs also report validation for code-smell refactorings as often as for resource-targeting changes, whereas human-authored PRs do so less often. Across both groups, about half of validated PRs report no quantitative performance metric, and relevant trade-offs are rarely quantified. Agentic optimization practice has become increasingly similar to human practice, but the supporting evidence remains incomplete. Establishing whether agent-proposed optimizations are supported by rigorous, quantitative, and multidimensional evidence remains an important challenge. These findings motivate evaluation infrastructure and review criteria that measure intended effects and relevant costs rather than treating the presence of validation alone as sufficient.",
+  "abstract_zh": "本文研究自主 AI coding agents 提交的性能优化 Pull Request（PR）是否遵循成熟的软件优化实践，以及其性能收益是否得到充分验证。作者在 MSR 2026 Mining Challenge 试点研究的基础上，分析截至 2026 年 6 月收集的 1,130 个 agentic performance PR 和 1,130 个人类作者 performance PR，比较两类 PR 的合并结果、补丁特征、优化策略与验证行为。结果显示，agentic PR 的合并率显著低于人类 PR（54.4% 对 73.3%），但二者采用的优化策略及报告验证的比例总体相近。Agentic PR 更依赖静态推理、较少使用 benchmark（46.1% 对 57.2%），不过研究后期 benchmark 使用率逐渐趋同。对于 code-smell 重构，agentic PR 报告验证的频率与面向资源的优化相当，而人类 PR 对前者的验证较少。两类 PR 中，约一半声称完成验证的 PR 未提供定量性能指标，相关成本与权衡也很少被量化。总体而言，agentic optimization practice 正日益接近人类实践，但其证据支撑仍不完整。研究建议构建更完善的评估基础设施与代码审查标准，重点衡量预期收益及相关代价，而不能仅将“进行了验证”视为充分证据。",
+  "key_points_zh": [
+    "Agentic PR 合并率为 54.4%，明显低于人类 PR 的 73.3%。",
+    "两类 PR 的优化策略和验证报告比例相近，但 agentic PR 更依赖静态推理、较少使用 benchmark。",
+    "约一半已验证 PR 未报告定量性能指标，性能收益与相关 trade-off 很少被量化。",
+    "Agentic optimization practice 正逐步接近人类实践，但仍需严格、定量且多维的验证证据。",
+    "评估与代码审查应同时衡量预期性能收益及资源、复杂度等相关成本。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.72,
+    "novelty": 0.48,
+    "problem_significance": 0.72,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.38,
+    "lasting_value": 0.65,
+    "llm_avg": 0.582,
+    "comment": "This large empirical study identifies important validation and evidence gaps in coding-agent performance work, though it contributes analysis rather than a new harness.",
+    "comment_zh": "这项大规模实证研究揭示了Coding Agent性能工作中的验证和证据缺口，但主要提供分析而非新Harness。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.582,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/PurdueDualityLab/EMSE-perf-pr-study",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.03969/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.981
+    }
+  ]
+}

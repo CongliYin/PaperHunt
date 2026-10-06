@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2610.02858",
+  "title": "Harness-Aware Distillation for Small Language Model Agents",
+  "title_zh": "面向 Harness 感知的 Small Language Model Agents 蒸馏",
+  "authors": [
+    "Moonseok Choi",
+    "Taehong Moon",
+    "Giung Nam",
+    "Juho Lee"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-02T05:53:26Z",
+  "abs_url": "https://arxiv.org/abs/2610.02858v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.02858",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Language model agents are deployed with a harness, the software around the model that manages its context, tools, and feedback. When such an agent is distilled into a smaller one, the harness stays in place, so the student mainly needs the teacher-specific abilities that the harness cannot provide, such as acting correctly on harness information. Standard distillation, however, imitates the teacher's full outputs and treats the harness as part of the input. We propose Harness-Aware Distillation (HAD), which focuses distillation on what the teacher adds beyond the harness. HAD complements on-policy distillation with two components: an action preference that contrasts the same teacher's actions with and without the harness information, scored after the student's own reasoning, and a validity check that drops preference pairs whose preferred action contradicts the harness records. We show that the contrast gives the student information that imitating the teacher alone cannot provide, and HAD needs no task rewards, success labels, or future information. Across multiple long-horizon agent benchmarks and models, HAD outperforms on-policy distillation baselines with the same fixed harness. Our analysis shows that HAD enters fewer unproductive loops and recovers from errors more often than the baselines, and suggests that it adaptively keeps learnable feedback in its weights while reading state information from the harness.",
+  "abstract_zh": "Language Model Agent 通常依赖 harness，即负责管理上下文、工具和反馈的外围软件。当 Agent 被蒸馏为更小模型时，harness 仍然保留，因此学生模型主要需要学习 harness 无法提供的教师特有能力，例如依据 harness 信息采取正确行动。然而，标准蒸馏会模仿教师的完整输出，并将 harness 视为输入的一部分。本文提出 Harness-Aware Distillation（HAD），聚焦于教师相对于 harness 额外贡献的能力。HAD 在 on-policy distillation 基础上引入两个组件：其一是 action preference，在学生模型完成自身推理后，对比同一教师在有无 harness 信息时产生的动作；其二是 validity check，丢弃首选动作与 harness 记录相矛盾的偏好样本。该对比机制能够为学生提供仅模仿教师无法获得的信息，同时无需任务奖励、成功标签或未来信息。在多个长时程 Agent 基准和模型上，使用相同固定 harness 的 HAD 均优于 on-policy distillation 基线。分析表明，HAD 更少陷入无效循环，并更频繁地从错误中恢复，说明它能够自适应地将可学习的反馈编码进模型参数，同时从 harness 读取状态信息。",
+  "key_points_zh": [
+    "核心问题：Agent 蒸馏后 harness 仍负责上下文、工具和反馈，学生模型应重点学习依据 harness 信息正确行动，而非重复建模外围系统。",
+    "方法 HAD：比较教师在有无 harness 信息时的动作偏好，并在学生自身推理后进行评分，从而提取教师超越 harness 的额外能力。",
+    "有效性控制：通过 validity check 删除与 harness 记录矛盾的偏好对，避免错误监督；训练不依赖任务奖励、成功标签或未来信息。",
+    "实验结果：在多个长时程 Agent 基准和模型上，HAD 使用相同固定 harness，优于 on-policy distillation 基线。",
+    "行为分析：HAD 更少进入无效循环，更常从错误中恢复，体现了将可学习反馈存入参数、将状态信息交给 harness 的协同机制。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.77,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8300000000000001,
+    "comment": "Harness-aware distillation cleanly separates learnable agent behavior from runtime-provided state and improves small-model agents without task rewards.",
+    "comment_zh": "Harness感知蒸馏清晰地区分了可学习的Agent行为与运行时状态，并在无需任务奖励的情况下提升了小模型Agent。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3313836013810483,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8300000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02858/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.944
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02858/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.972
+    }
+  ]
+}

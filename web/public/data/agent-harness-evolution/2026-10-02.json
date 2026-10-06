@@ -1,0 +1,230 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-10-02",
+  "generated_at": "2026-10-06T01:18:50Z",
+  "papers": [
+    {
+      "arxiv_id": "2610.03315",
+      "title": "Lightweight, Rubric-Guided Trajectory Evaluation for Production AI Agents",
+      "title_zh": "面向生产级 AI Agents 的轻量级、规则引导轨迹评估",
+      "authors": [
+        "Linh-An Phan",
+        "MingXue Wang",
+        "Guangyu Wu",
+        "Feng Pan",
+        "Zhaoyu Pang",
+        "Yanbin Zhang"
+      ],
+      "total_score": 0.6688000000000001,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8560000000000001,
+        "domain_fit": 0.96,
+        "other": 0.2
+      },
+      "tags": [
+        "operational agent evaluation"
+      ],
+      "tldr_zh": "LiteTrajEval以更低成本实现高效轨迹诊断",
+      "detail_file": "agent-harness-evolution/2026-10-02/2610.03315.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.03315/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.03223",
+      "title": "AdaStep: Adaptive Step Credit Weighting for Agentic Reinforcement Learning",
+      "title_zh": "AdaStep：面向智能体强化学习的自适应步骤信用加权",
+      "authors": [
+        "Xin Wang",
+        "Wenhao Wu",
+        "Menghao Zhang",
+        "Zhi Wang",
+        "Kun Shao",
+        "Jian Luan"
+      ],
+      "total_score": 0.6353082880689194,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8380000000000001,
+        "domain_fit": 0.93,
+        "other": 0.10636096022973106
+      },
+      "tags": [
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "AdaStep以方差感知加权提升智能体步骤级信用分配。",
+      "detail_file": "agent-harness-evolution/2026-10-02/2610.03223.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.03223/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.02928",
+      "title": "Discriminating Fixture Coverage in Agent-Infrastructure Verification Suites",
+      "title_zh": "Agent-Infrastructure Verification Suites 的判别性 Fixture 覆盖",
+      "authors": [
+        "Xin Xu",
+        "Siru Tao"
+      ],
+      "total_score": 0.6341258286877778,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8020000000000002,
+        "domain_fit": 0.9,
+        "other": 0.19175276229259217
+      },
+      "tags": [
+        "session context state"
+      ],
+      "tldr_zh": "用判别维度补齐输入覆盖，杀死全部幸存 mutant",
+      "detail_file": "agent-harness-evolution/2026-10-02/2610.02928.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02928/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.02858",
+      "title": "Harness-Aware Distillation for Small Language Model Agents",
+      "title_zh": "面向 Harness 感知的 Small Language Model Agents 蒸馏",
+      "authors": [
+        "Moonseok Choi",
+        "Taehong Moon",
+        "Giung Nam",
+        "Juho Lee"
+      ],
+      "total_score": 0.6215691800690525,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8300000000000001,
+        "domain_fit": 0.94,
+        "other": 0.12189726689684141
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "HAD让小模型学会超越Harness的可迁移决策能力",
+      "detail_file": "agent-harness-evolution/2026-10-02/2610.02858.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02858/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.02616",
+      "title": "VERSE: Verified Self-Evolving Optimizer for Agent Harnesses",
+      "title_zh": "VERSE：面向智能体工具链的可验证自进化优化器",
+      "authors": [
+        "Zekai Wang",
+        "Yingqiang Ge",
+        "Zekun Wang",
+        "Hai Wang",
+        "Yuhui Xu",
+        "Joshua Frandsen",
+        "Shancong Fu",
+        "Ashia C. Wilson",
+        "Chandan K. Reddy"
+      ],
+      "total_score": 0.5481141977885631,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.9380000000000001,
+        "domain_fit": 0.98,
+        "other": 0.40904732596187693
+      },
+      "tags": [
+        "GitHub",
+        "general llm agents"
+      ],
+      "tldr_zh": "VERSE用执行验证驱动优化器与智能体工具链共同进化",
+      "detail_file": "agent-harness-evolution/2026-10-02/2610.02616.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02616/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.04137",
+      "title": "Dynamic Harness Search: Building Multi-Agent Systems Per-Query via Prediction",
+      "title_zh": "动态 Harness 搜索：通过预测为每个查询构建多智能体系统",
+      "authors": [
+        "Som Sagar",
+        "Shasha Li",
+        "Hejie Cui",
+        "Ransalu Senanayake",
+        "Sercan Ö. Arık"
+      ],
+      "total_score": 0.4828,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.876,
+        "domain_fit": 0.94,
+        "other": 0.2
+      },
+      "tags": [
+        "multi agent workflows"
+      ],
+      "tldr_zh": "SHIFT 预测并搜索每个查询的最优多智能体 Harness",
+      "detail_file": "agent-harness-evolution/2026-10-02/2610.04137.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.04137/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.02952",
+      "title": "GTDD: Generative Test-Driven Development for AI Coding Agents with Adversarial Testing",
+      "title_zh": "GTDD：通过对抗性测试实现面向 AI 编程代理的生成式测试驱动开发",
+      "authors": [
+        "Masahiro Kato"
+      ],
+      "total_score": 0.4515456313024112,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.876,
+        "domain_fit": 0.96,
+        "other": 0.14915210434137058
+      },
+      "tags": [
+        "general tool agents"
+      ],
+      "tldr_zh": "GTDD用动态对抗测试降低AI代码的错误接受率",
+      "detail_file": "agent-harness-evolution/2026-10-02/2610.02952.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2610.03969",
+      "title": "How Do Coding Agents Optimize Software and Report Performance Validation? A Large-Scale Empirical Study of Open-Source Pull Requests",
+      "title_zh": "Coding Agents 如何优化软件并报告性能验证？开源 Pull Request 的大规模实证研究",
+      "authors": [
+        "Huiyun Peng",
+        "Ricardo Calvo",
+        "Kelechi G. Kalu",
+        "James C. Davis"
+      ],
+      "total_score": 0.28459999999999996,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.582,
+        "domain_fit": 0.72,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "GitHub"
+      ],
+      "tldr_zh": "Agentic 优化趋近人类，但性能证据仍不充分",
+      "detail_file": "agent-harness-evolution/2026-10-02/2610.03969.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.03969/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.03372",
+      "title": "SCAD: Structured Credit Assignment and Distillation for Long-Horizon Agents",
+      "title_zh": "SCAD：面向长时程智能体的结构化信用分配与蒸馏",
+      "authors": [
+        "Shangyang Wu",
+        "Shuai Zhao",
+        "Ziyue Zhu",
+        "Jinyang Wu",
+        "Anh Tuan Luu",
+        "Haoran Luo"
+      ],
+      "total_score": 0.2821258286877777,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.8320000000000001,
+        "domain_fit": 0.88,
+        "other": 0.10841942895925882
+      },
+      "tags": [],
+      "tldr_zh": "SCAD结合结构化信用分配与蒸馏，提升长时程智能体能力",
+      "detail_file": "agent-harness-evolution/2026-10-02/2610.03372.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.03372/thumb.webp"
+    }
+  ]
+}

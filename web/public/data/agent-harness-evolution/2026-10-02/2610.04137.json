@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2610.04137",
+  "title": "Dynamic Harness Search: Building Multi-Agent Systems Per-Query via Prediction",
+  "title_zh": "动态 Harness 搜索：通过预测为每个查询构建多智能体系统",
+  "authors": [
+    "Som Sagar",
+    "Shasha Li",
+    "Hejie Cui",
+    "Ransalu Senanayake",
+    "Sercan Ö. Arık"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-02T23:18:55Z",
+  "abs_url": "https://arxiv.org/abs/2610.04137v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.04137",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent harnesses specify the roles, instructions, tools, and communication structure used to solve a task, and the right harness depends on the query. Because the value of each design choice is observable only through execution, tailoring a harness to each query has required either executing alternatives at inference time or costly manual design. We introduce SHIFT, which moves execution out of the per-query search loop. A local LLM architect learns a policy over harness-building actions from search, and a value function that predicts, from measured executions, a utility balancing accuracy against execution cost. For each query, Monte Carlo tree search uses these predictions to construct a harness. Across 9,193 tasks in six benchmarks, from math to document and general-assistant tasks, with a Gemini 3.5 Flash executor, SHIFT attains the highest mean accuracy, about 80%, outperforming 17 baselines that span prompting, prompt optimization, and workflow search, and exceeding the strongest baseline by 7.2 percentage points. A cheaper mode of SHIFT also attains a higher mean accuracy than every baseline while using 32% fewer execution tokens than the strongest baseline. We further show that choosing structure, instructions, and tools jointly beats choosing only instructions or only tools by up to 9.1 percentage points, and that learned value selection identifies more accurate harnesses with lower execution cost from candidate pools.",
+  "abstract_zh": "多智能体系统的 Harness 规定了解题所需的角色、指令、工具与通信结构，而最优设计取决于具体查询。由于设计选择的价值只能通过执行观察，传统方法要么在推理时执行多个候选方案，要么依赖昂贵的人工设计。本文提出 SHIFT，将执行过程移出逐查询搜索循环：本地 LLM 架构师从搜索过程中学习 Harness 构建动作策略，并基于已测执行结果学习价值函数，预测兼顾准确率与执行成本的效用。针对每个查询，Monte Carlo tree search 利用这些预测构建 Harness。在六个涵盖数学、文档理解和通用助手任务的基准、共 9,193 个任务上，使用 Gemini 3.5 Flash 作为执行器时，SHIFT 平均准确率约为 80%，超过涵盖提示、提示优化和工作流搜索的 17 个基线，并较最强基线提升 7.2 个百分点。SHIFT 的低成本模式在执行 token 减少 32% 的同时，平均准确率仍高于所有基线。实验还表明，联合选择结构、指令和工具优于仅选择指令或工具，最高可提升 9.1 个百分点；基于学习的价值选择还能从候选池中找出准确率更高且执行成本更低的 Harness。",
+  "key_points_zh": [
+    "SHIFT 用本地 LLM 学习 Harness 构建策略与效用价值函数，将昂贵的执行搜索转化为基于预测的 Monte Carlo tree search。",
+    "在六个基准的 9,193 个任务上，SHIFT 平均准确率约 80%，较最强基线提升 7.2 个百分点。",
+    "低成本模式减少 32% 的执行 token，同时平均准确率仍超过全部基线。",
+    "联合优化 Harness 的结构、指令和工具，比单独优化指令或工具最多提升 9.1 个百分点。",
+    "学习到的价值函数能够从候选 Harness 中筛选出准确率更高、执行成本更低的方案。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.88,
+    "problem_significance": 0.88,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.88,
+    "llm_avg": 0.876,
+    "comment": "SHIFT introduces execution-informed, per-query harness construction that jointly optimizes structure, instructions, tools, accuracy, and cost.",
+    "comment_zh": "SHIFT引入了基于执行反馈的逐查询Harness构建方法，联合优化结构、指令、工具、准确率和成本。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.876,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.04137/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.04137/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

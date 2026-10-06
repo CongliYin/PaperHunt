@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2610.03195",
+  "title": "Source Preference in the Wild: How LLM Agents Favor Items by Source, and How to Reduce It",
+  "title_zh": "现实环境中的来源偏好：LLM Agents 如何因来源偏爱项目，以及如何降低这种偏差",
+  "authors": [
+    "Jonghyun Song",
+    "Haewon Park",
+    "Jeonghoon Shim",
+    "Woojung Song",
+    "Yohan Jo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-02T12:10:03Z",
+  "abs_url": "https://arxiv.org/abs/2610.03195v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.03195",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As LLM agents decide on users' behalf which product to buy, which hotel to book, or which paper to cite, a preference for items from certain sources (the sites or services they come from) shapes what users receive and which sources are selected. We study source preference in end-to-end search with 12 agent models across three domains. Comparing items from different sources that satisfy the same requirements at the same position, we find that each model prefers some sources and avoids others in every domain, largely agreeing on which. This preference can outweigh how well items satisfy the request: an item satisfying one requirement fewer is selected about two-thirds of the time when it comes from a preferred source and the better one from a dispreferred source, but almost never in the reverse case. The information identifying an item's source affects selection by itself: hiding it weakens the preference, and relabeling an item with a preferred source raises its selection rate. We test two routes to this preference: training that rewards better items can make a source a shortcut for requirement satisfaction, and missing information can trigger preconceptions about the source. Supplying missing information or a prompt countering these preconceptions reduces source preference.",
+  "abstract_zh": "本文研究 LLM Agents 在端到端搜索中对项目来源（提供项目的网站或服务）的偏好。作者在购物、酒店预订和论文引用三个领域，使用 12 个 agent models，对比满足相同需求、处于相同排序位置但来自不同来源的项目。结果显示，每个模型都会稳定偏爱部分来源、回避其他来源，且不同模型在来源偏好上具有较高一致性。这种偏好甚至可能压过项目本身与用户需求的匹配程度：当较差项目来自偏好来源、较好项目来自非偏好来源时，模型约有三分之二的概率选择前者；反向情况下则几乎不会发生。仅隐藏或改写来源信息，就能显著改变选择结果，说明来源身份本身会影响决策。研究进一步发现，偏好可能源于两类机制：奖励更优项目的训练使来源成为满足需求的捷径；信息缺失则会诱发对来源的先验成见。补充缺失信息或在提示词中纠正这些成见，可以降低来源偏好。",
+  "key_points_zh": [
+    "在购物、酒店和论文引用三个领域中，12 个 agent models 都表现出稳定且跨模型一致的来源偏好。",
+    "来源偏好可能压过项目质量：来自偏好来源的较差项目，约三分之二情况下会击败来自非偏好来源的较好项目。",
+    "来源标识本身具有因果影响：隐藏来源会削弱偏好，将项目重新标记为偏好来源则会提高其被选概率。",
+    "来源偏好可能来自两种机制：训练过程中的来源捷径，以及信息缺失导致的来源先验成见。",
+    "补充缺失信息，或通过提示词明确反驳来源成见，能够有效降低 source preference。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.91,
+    "novelty": 0.84,
+    "problem_significance": 0.88,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.84,
+    "llm_avg": 0.828,
+    "comment": "A strong empirical study of source bias in agentic product search that identifies actionable risks for shopping decisions and proposes mitigation strategies.",
+    "comment_zh": "该工作系统研究智能体商品搜索中的来源偏置，揭示其对购物决策的影响并提出可操作的缓解方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.8659745638428135,
+    "author_reputation": 0.5115898096345487,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.828,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 33,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 17,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.03195/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.03195/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.933
+    }
+  ]
+}

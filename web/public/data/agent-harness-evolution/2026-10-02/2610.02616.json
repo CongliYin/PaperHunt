@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2610.02616",
+  "title": "VERSE: Verified Self-Evolving Optimizer for Agent Harnesses",
+  "title_zh": "VERSE：面向智能体工具链的可验证自进化优化器",
+  "authors": [
+    "Zekai Wang",
+    "Yingqiang Ge",
+    "Zekun Wang",
+    "Hai Wang",
+    "Yuhui Xu",
+    "Joshua Frandsen",
+    "Shancong Fu",
+    "Ashia C. Wilson",
+    "Chandan K. Reddy"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-02T00:16:30Z",
+  "abs_url": "https://arxiv.org/abs/2610.02616v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.02616",
+  "links": {
+    "github": "https://github.com/wzekai/VERSE.",
+    "project_page": null
+  },
+  "abstract_en": "Harness evolution improves an LLM agent's prompts, tools, and workflow, while the optimizer's own tools and procedures often remain fixed. We study whether an optimizer can improve another agent more effectively by also improving how it diagnoses failures, develops edits, and tests their effects. Two observations guide our design. In a controlled study, optimizer self-evolution fails to improve performance without execution-based verification, but achieves the best result of that study when verification is available. Across five executors, self-evolving optimizers build their own tools for failure analysis, verification, training audits, and workflow control. Motivated by these findings, we introduce VERSE, a Verified Self-Evolving optimizer for agent harnesses. VERSE lets the optimizer test draft edits, replay failures, and perturb suspected steps before submission, while tracking fixes and regressions across rounds. Using this feedback, the optimizer revises both the executor harness and its own prompts, skills, tools, hooks, and notes, while the weights of the optimizer and executor models stay fixed. Under a shared protocol with disjoint training, validation, and test tasks, VERSE improves all four evaluated harness optimizers on held-out SWE-rebench tasks and newer out-of-distribution tasks in five languages. Its best validation-selected harness reaches 42.3% and 37.7% accuracy, respectively, against 39.2% and 29.3% for the strongest baselines. Code is available at https://github.com/wzekai/VERSE.",
+  "abstract_zh": "智能体工具链演化通常会改进 LLM agent 的提示词、工具与工作流，但优化器自身的工具和流程往往保持不变。本文研究：若优化器同时改进故障诊断、编辑生成与效果测试机制，是否能更有效地优化其他智能体。受两项观察启发，作者发现：在受控实验中，没有基于执行的验证时，优化器自进化难以提升性能；加入验证后则取得最佳结果。在五种执行器上，自进化优化器会构建用于故障分析、验证、训练审计和工作流控制的工具。基于此，本文提出 VERSE（Verified Self-Evolving optimizer for agent harnesses）。VERSE 允许优化器在提交前测试候选修改、重放失败案例、扰动可疑步骤，并跨轮次跟踪修复与回归。利用这些反馈，优化器同时修订执行器工具链及自身的提示词、技能、工具、钩子和笔记，而优化器与执行器模型的权重保持不变。在统一协议以及互斥的训练、验证和测试任务划分下，VERSE 在四种评估的工具链优化器上均提升了性能，并在五种语言的留出 SWE-rebench 任务及更新的分布外任务上取得改进。其验证集选出的最佳工具链分别达到 42.3% 和 37.7% 的准确率，高于最强基线的 39.2% 和 29.3%。",
+  "key_points_zh": [
+    "核心洞见：优化器自进化必须结合基于执行的验证，否则难以稳定提升性能。",
+    "VERSE 支持测试候选编辑、重放失败、扰动可疑步骤，并持续追踪修复效果与回归问题。",
+    "优化器不仅改进 executor harness，还会自我更新提示词、技能、工具、钩子和笔记；模型权重保持冻结。",
+    "在统一评测协议下，VERSE 提升了四种 harness optimizer 在 SWE-rebench 及分布外任务上的表现，覆盖五种语言。",
+    "最佳验证集工具链在两类任务上达到 42.3% 和 37.7% 准确率，超过最强基线的 39.2% 和 29.3%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.92,
+    "problem_significance": 0.95,
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.93,
+    "lasting_value": 0.95,
+    "llm_avg": 0.9380000000000001,
+    "comment": "VERSE presents a compelling verified closed loop for jointly evolving agent executors and the optimizer's own tools, skills, and workflow.",
+    "comment_zh": "VERSE提出了一个有说服力的验证式闭环，同时演化Agent执行器以及优化器自身的工具、技能和工作流。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.5542839557712614,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9380000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/wzekai/VERSE.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 14,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02616/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.02616/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.955
+    }
+  ]
+}
