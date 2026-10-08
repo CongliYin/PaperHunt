@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2610.08586",
+  "title": "MINDSET: Energy-based Schema Evolution for Long Conversational Agent Memory",
+  "title_zh": "MINDSET：面向长对话智能体记忆的基于能量的模式演化",
+  "authors": [
+    "Sujato Dutta",
+    "Sreekruthy Tummala",
+    "Shashank Vanga",
+    "Ayushmi Pavani"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-06T15:55:42Z",
+  "abs_url": "https://arxiv.org/abs/2610.08586v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.08586",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long conversational agents have become essential in our daily lives. They must remember what was said long back in order to help us efficiently complete a task without needing the user to repeat instructions and context repeatedly. However, the main issue is that instructions and context change over time and so the agents must be able to adapt accordingly. A useful memory system should preserve both current and historical states, distinguish stale information from active knowledge, retrieve evidence appropriate to the query and avoid repeatedly invoking a large language model to rewrite prior interactions. We introduce MINDSET, a memory controller that stores a conversation as immutable episodes and organizes them into versioned schemas through minimum-energy state transitions. Each incoming episode may reinforce, supersede, split or create a schema. The transition decision balances representation distortion, contradiction, historical damage, fragmentation and internal inconsistency, while hysteresis prevents isolated contradictions from prematurely rewriting stable memory. We evaluate MINDSET against 5 memory systems on a reproducible sample of 850 questions (700 LoCoMo + 150 MemoryAgentBench). MINDSET obtains the highest observed LoCoMo answer F1 while significantly improving retrieval ranking (Recall@8, MRR and nDCG@8) over the second best method LightMem (p<0.01 after Holm correction). It obtains the highest observed scores on MemoryAgentBench although the relative difference is low. Ablations identify controlled fragmentation and schema-aware assignment as the largest contributors to answer quality. Additionally, a 700-question cross-model evaluation with GLM-4.7 and Gemma-4-31B supported model independence. These results show that long-term memory can be better handled as constrained state management rather than continual summarization.",
+  "abstract_zh": "长对话智能体需要记住历史指令与上下文，但这些信息会随时间变化，因此记忆系统必须同时保留当前状态与历史状态，区分过时信息和有效知识，并根据查询检索合适证据，避免反复调用大语言模型重写历史交互。论文提出 MINDSET，一种记忆控制器：将对话存储为不可变的 episodes，并通过最小能量状态转移将其组织为带版本的 schemas。每个新 episode 都可能强化、取代、拆分或创建 schema。转移决策综合考虑表示失真、矛盾、历史损伤、碎片化和内部不一致性；hysteresis 机制则避免孤立矛盾过早改写稳定记忆。在包含 700 个 LoCoMo 问题和 150 个 MemoryAgentBench 问题的 850 题评测中，MINDSET 在 LoCoMo 上取得最高观测 answer F1，并相较次优方法 LightMem 显著提升检索排序指标 Recall@8、MRR 和 nDCG@8（Holm 校正后 p<0.01）；在 MemoryAgentBench 上也取得最高观测分数。消融实验表明，受控碎片化和 schema-aware assignment 对答案质量贡献最大。使用 GLM-4.7 与 Gemma-4-31B 的 700 题跨模型评测进一步支持其模型独立性。结果表明，长期记忆更适合被建模为受约束的状态管理，而非持续摘要。",
+  "key_points_zh": [
+    "MINDSET 将不可变对话 episodes 组织为带版本 schemas，通过最小能量状态转移实现记忆更新。",
+    "记忆更新综合权衡表示失真、矛盾、历史损伤、碎片化与内部不一致，并利用 hysteresis 抑制孤立矛盾引发的过早改写。",
+    "在 LoCoMo 与 MemoryAgentBench 共 850 道题上，MINDSET 整体取得最佳观测表现，并显著改善检索排序质量。",
+    "消融结果显示，受控碎片化与 schema-aware assignment 是提升答案质量的关键因素。",
+    "跨 GLM-4.7 和 Gemma-4-31B 的评测表明，该记忆机制具有较好的模型独立性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.93,
+    "problem_significance": 0.94,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.9,
+    "lasting_value": 0.94,
+    "llm_avg": 0.9259999999999999,
+    "comment": "MINDSET offers a strong general memory architecture that treats conversational memory as versioned, contradiction-aware state evolution rather than repeated summarization.",
+    "comment_zh": "MINDSET 将对话记忆建模为具备版本管理和矛盾感知能力的状态演化，而非反复摘要，具有很强的通用架构价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.9259999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08586/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08586/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.975
+    }
+  ]
+}

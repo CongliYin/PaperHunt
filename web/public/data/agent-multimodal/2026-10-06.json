@@ -1,0 +1,113 @@
+{
+  "domain": "agent-multimodal",
+  "display_name": "Realtime Multimodal Agent",
+  "date": "2026-10-06",
+  "generated_at": "2026-10-08T00:20:50Z",
+  "papers": [
+    {
+      "arxiv_id": "2610.08125",
+      "title": "Conversation Is a Two-Body Problem: Dyadic Evaluation of Full-Duplex Dialogue Models",
+      "title_zh": "对话是一个双体问题：全双工对话模型的二元评测",
+      "authors": [
+        "Sungnyun Kim",
+        "Sungwoo Cho",
+        "Jihwan Oh",
+        "Se-Young Yun"
+      ],
+      "total_score": 0.7343061606653989,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.874,
+        "domain_fit": 0.95,
+        "other": 0.4003538688846625
+      },
+      "tags": [
+        "Project Page",
+        "realtime voice agent"
+      ],
+      "tldr_zh": "DyaFDB用双模型互评揭示全双工对话的耦合行为",
+      "detail_file": "agent-multimodal/2026-10-06/2610.08125.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08125/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.07725",
+      "title": "PERSIST: Who-What-When Memory Across Sessions for Full-Duplex Spoken Dialogue",
+      "title_zh": "PERSIST：跨会话全双工语音对话中的“谁-什么-何时”记忆",
+      "authors": [
+        "Achira Lin",
+        "Siyuan Hou",
+        "Wenyi Yu",
+        "Xinnian Zhao",
+        "Haoyu Niu",
+        "Wang Geng",
+        "Longshuai Xiao",
+        "Shihai Xiao",
+        "Mangsuo Zhao",
+        "Chao Zhang"
+      ],
+      "total_score": 0.6541649187622834,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.8879999999999999,
+        "domain_fit": 0.96,
+        "other": 0.22588306254094448
+      },
+      "tags": [
+        "realtime voice agent"
+      ],
+      "tldr_zh": "PERSIST实现跨会话语音记忆，联合建模谁、什么与何时。",
+      "detail_file": "agent-multimodal/2026-10-06/2610.07725.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07725/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.08683",
+      "title": "Coupled but Late: Turn-Taking Between Full-Duplex Speech Models in Unscripted Dialogue",
+      "title_zh": "耦合但迟到：非脚本对话中全双工语音模型之间的轮次交接",
+      "authors": [
+        "Lichen Zhu",
+        "Yueqian Lin",
+        "Yiheng Wang",
+        "Hai \"Helen\" Li",
+        "Yiran Chen"
+      ],
+      "total_score": 0.6506661970357491,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8039999999999999,
+        "domain_fit": 0.93,
+        "other": 0.24488732345249672
+      },
+      "tags": [
+        "realtime voice agent"
+      ],
+      "tldr_zh": "全双工模型能耦合接话，却比人类晚约数百毫秒。",
+      "detail_file": "agent-multimodal/2026-10-06/2610.08683.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08683/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.08777",
+      "title": "CtrlCache: Accelerating Interactive Video World Models with Control-Aware Caching",
+      "title_zh": "CtrlCache：利用控制感知缓存加速交互式视频世界模型",
+      "authors": [
+        "Shangye Song",
+        "Dong Gong",
+        "Hong Jia",
+        "Yun Sing Koh",
+        "Xinyu Zhang"
+      ],
+      "total_score": 0.3390662290949994,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.774,
+        "domain_fit": 0.76,
+        "other": 0.35622076364999805
+      },
+      "tags": [
+        "Project Page"
+      ],
+      "tldr_zh": "用控制变化指导缓存，实现视频世界模型加速并提升质量",
+      "detail_file": "agent-multimodal/2026-10-06/2610.08777.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08777/thumb.webp"
+    }
+  ]
+}

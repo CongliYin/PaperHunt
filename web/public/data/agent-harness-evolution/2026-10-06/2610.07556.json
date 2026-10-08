@@ -1,0 +1,69 @@
+{
+  "arxiv_id": "2610.07556",
+  "title": "Decoupled Multi-Agent Orchestration",
+  "title_zh": "解耦式多智能体编排",
+  "authors": [
+    "Xinle Wu",
+    "Yao Lu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-06T00:41:46Z",
+  "abs_url": "https://arxiv.org/abs/2610.07556v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.07556",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Learned orchestration can automatically construct effective language-model multi-agent systems, but existing approaches couple planning to fixed worker pools and train decomposition and collaboration from the same terminal outcome, limiting transfer and obscuring credit assignment. We introduce DeOrch, which separates worker-agnostic planning from concrete worker selection. Its two-stage planner first decomposes the task without worker information, then chooses collaboration operations using compact, worker-identity-free matchability feedback from the pool, enabling conditional credit assignment to decomposition and collaboration decisions. A lightweight matcher estimates worker suitability from behavior on a fixed probe set and adapts online with a contextual bandit, allowing new workers to be incorporated without retraining the planner or matcher. Across diverse in- and out-of-distribution tasks, DeOrch outperforms prior automatic MAS orchestration methods with fewer worker calls than competing learned orchestrators, remains effective when transferred to an entirely unseen worker pool without retraining, and shows consistent gains from both components.",
+  "abstract_zh": "学习式编排能够自动构建有效的语言模型多智能体系统，但现有方法通常将规划与固定工作者池绑定，并依据相同的最终结果训练任务分解与协作决策，限制了迁移能力，也使信用分配变得模糊。本文提出 DeOrch，将与工作者无关的规划过程和具体工作者选择过程分离。其两阶段规划器首先在不了解工作者信息的情况下分解任务，随后利用来自工作者池的紧凑、与工作者身份无关的可匹配性反馈，选择协作操作，从而能够对任务分解决策和协作决策进行条件化信用分配。一个轻量级匹配器通过固定探测集上的行为估计工作者适配性，并使用上下文多臂老虎机（contextual bandit）在线适应，使新工作者能够在无需重新训练规划器或匹配器的情况下被纳入。大量分布内与分布外任务实验表明，DeOrch 优于已有自动化多智能体系统（MAS）编排方法；与其他学习式编排器相比，它使用更少的工作者调用次数，同时在完全未见过的工作者池上无需重新训练也能保持有效，并且两个组成模块均带来稳定收益。",
+  "key_points_zh": [
+    "将任务分解与工作者选择分离，先进行与工作者无关的规划，再基于匹配反馈决定协作操作。",
+    "通过工作者身份无关的可匹配性反馈，实现对任务分解和协作决策的条件化信用分配。",
+    "轻量级匹配器结合固定探测集与上下文多臂老虎机，可在线适应并接入新工作者，无需重新训练。",
+    "在分布内和分布外任务上优于既有自动化 MAS 编排方法，并减少工作者调用次数。",
+    "迁移到完全未见过的工作者池时仍保持有效，且规划器与匹配器均对性能提升有独立贡献。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.91,
+    "novelty": 0.84,
+    "problem_significance": 0.86,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.82,
+    "llm_avg": 0.8320000000000001,
+    "comment": "DeOrch presents a reusable orchestration architecture with worker-agnostic planning, conditional credit assignment, and transfer to unseen worker pools.",
+    "comment_zh": "DeOrch提出了可复用的编排架构，将与工作者无关的规划、条件信用分配和未见工作者池迁移结合起来。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3315497212666585,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8320000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07556/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.97
+    }
+  ]
+}

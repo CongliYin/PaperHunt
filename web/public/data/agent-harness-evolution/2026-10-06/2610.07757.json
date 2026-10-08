@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2610.07757",
+  "title": "Acquiring and Verifying Repository Norms for Coding Agents",
+  "title_zh": "为编码智能体获取并验证仓库规范",
+  "authors": [
+    "Kaifeng He",
+    "Xiaojun Zhang",
+    "Zhenxi Chen",
+    "Christoph Treude",
+    "Mingwei Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-06T04:53:48Z",
+  "abs_url": "https://arxiv.org/abs/2610.07757v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.07757",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Changes produced by coding agents can pass functional tests while leaving repository contribution requirements unmet. Following repository-specific norms requires identifying guidance dispersed across repository sources and interpreting its conditions and exceptions. Retrieval and documentation approaches supply general context, but agents must still determine which norms apply. We introduce RepoNorm to acquire explicit and implicit repository norms independently of coding tasks. It checks norm content and applicability using repository evidence, consults Git history when needed, and delivers norm packages to existing coding agents. Our evaluation uses three coding models and 121 tasks from RepoNormBench. Against the baseline with no additional generated guidance (Raw), relative improvements are 7.42-10.77% for Overall Norm Compliance Rate (NCR), 31.64-45.44% for Contribution NCR, and 11.34-17.69% for Prompt-omitted NCR. All three coding models also obtain higher values on these NCR measures with RepoNorm than with CodeWiki documentation. Functional success rates show observed gains of 5.79-9.09 percentage points over Raw; the paired comparisons do not reach the significance threshold. Sampled precision is 86% with RepoNorm's default configuration.",
+  "abstract_zh": "编码智能体生成的修改即使通过功能测试，也可能违反仓库的贡献要求。RepoNorm 独立于具体编码任务，从仓库中的分散来源获取显式与隐式规范，利用仓库证据验证规范内容及适用性，必要时查询 Git 历史，并将规范打包提供给现有编码智能体。在包含 3 个编码模型和 121 个任务的 RepoNormBench 上，相比无额外指导的 Raw 基线，RepoNorm 将总体规范遵循率（Overall Norm Compliance Rate, NCR）提升 7.42–10.77%，贡献规范遵循率提升 31.64–45.44%，提示词遗漏规范遵循率提升 11.34–17.69%；相比 CodeWiki，3 个模型在各项 NCR 指标上均更高。功能成功率提升 5.79–9.09 个百分点，但配对比较未达到统计显著性。默认配置下，RepoNorm 的抽样精度为 86%。",
+  "key_points_zh": [
+    "RepoNorm 面向独立于编码任务的规范获取，整合仓库文档、代码等来源，并识别显式规范、隐式规范及其适用条件和例外。",
+    "系统使用仓库证据验证规范内容与适用性，必要时查询 Git history，再向现有编码智能体交付结构化 norm packages。",
+    "在 RepoNormBench 的 121 个任务和 3 个编码模型上，相比 Raw，Overall NCR 提升 7.42–10.77%，Contribution NCR 提升 31.64–45.44%。",
+    "相比 CodeWiki，RepoNorm 在总体、贡献和提示词遗漏规范遵循率上均取得更高结果；功能成功率虽提升 5.79–9.09 个百分点，但未达统计显著。",
+    "RepoNorm 默认配置的抽样精度为 86%，表明自动获取的规范具有较高可靠性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.91,
+    "novelty": 0.82,
+    "problem_significance": 0.84,
+    "potential_impact": 0.83,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.81,
+    "llm_avg": 0.796,
+    "comment": "Strong coding-agent infrastructure work that turns repository-specific norms into verified, task-independent guidance with measurable compliance gains.",
+    "comment_zh": "这是一项较强的编码智能体基础设施工作，将仓库规范转化为经过验证且独立于具体任务的指导，并显著提升规范遵循率。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.36560162063732243,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.796,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07757/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07757/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}

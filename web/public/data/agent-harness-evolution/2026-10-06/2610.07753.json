@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2610.07753",
+  "title": "From Evidence to Action: How Tool-Using Agents Fail",
+  "title_zh": "从证据到行动：工具使用型智能体如何失效",
+  "authors": [
+    "Hongzhan Lin",
+    "Shidong Cao",
+    "Ziyang Luo",
+    "Wenhao Chai",
+    "Mong-Li Lee",
+    "Wynne Hsu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-06T04:50:29Z",
+  "abs_url": "https://arxiv.org/abs/2610.07753v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.07753",
+  "links": {
+    "github": null,
+    "project_page": "https://safeact.github.io"
+  },
+  "abstract_en": "Tool-using agents make consequential changes to external state, yet correct outcomes do not guarantee that their actions were supported by evidence established beforehand. We study where this evidence-to-action chain breaks as agents move from deciding whether to act to executing single actions and dependent workflows. Across ten model-harness configurations, strong static action assessment can coexist with much weaker interactive execution. Failures often begin before execution: agents stop with incomplete investigation or act before required evidence is established. Once required evidence is obtained, single-action execution is usually reliable, while multi-action workflows additionally expose unresolved prerequisites and incomplete execution. For this analysis, we introduce SafeActBench, comprising 656 cases across six operational domains and five protocols that progress from static action judgment and investigated non-action to single- and multi-action workflows. A provenance-bound Evidence Ledger and deterministic trajectory evaluator track what information was established, when actions occurred, and whether downstream dependencies were satisfied. These results show that failures arise not only from missing information, but also from how agents use established evidence when deciding and executing actions.",
+  "abstract_zh": "工具使用型智能体会对外部状态执行具有后果的操作，但结果正确并不意味着行动此前已获得充分证据支持。本文系统研究智能体从判断是否行动，到执行单步操作及依赖工作流过程中，证据链可能断裂的位置。基于十种模型—测试框架配置，研究发现：较强的静态行动评估能力，可能与较弱的交互式执行能力并存。失效往往发生在执行前，例如调查不完整便停止，或在必要证据建立前提前行动。获得所需证据后，单步行动通常较为可靠；但多步工作流会进一步暴露未解决的前置条件与执行不完整问题。为此，作者提出 SafeActBench，涵盖六个操作领域、五种逐步增强的评测协议和656个案例，覆盖静态行动判断、经过调查后的不行动、单步行动及多步工作流。研究还设计了与来源绑定的 Evidence Ledger，以及确定性的轨迹评估器，用于追踪已建立的信息、行动发生时机和下游依赖是否满足。结果表明，智能体失效不仅源于信息缺失，也源于其在行动决策与执行过程中未能正确使用已建立的证据。",
+  "key_points_zh": [
+    "静态行动判断能力强，不代表智能体能在交互环境中可靠执行行动。",
+    "常见早期失效包括调查不充分便终止，以及必要证据建立前提前行动。",
+    "证据充分时单步执行通常可靠，但多步工作流容易出现前置条件未满足和执行不完整。",
+    "SafeActBench包含六个领域、五类协议和656个案例，覆盖从静态判断到多步工作流的完整链条。",
+    "Evidence Ledger与确定性轨迹评估器分别追踪证据来源、行动时序及依赖满足情况。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.76,
+    "novelty": 0.78,
+    "problem_significance": 0.82,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.76,
+    "llm_avg": 0.768,
+    "comment": "SafeActBench and its provenance-bound trajectory evaluator provide a useful operational evaluation harness for evidence-grounded tool execution and workflow failures.",
+    "comment_zh": "SafeActBench及其基于溯源的轨迹评估器为证据约束的工具执行和工作流失败提供了有用的运营评估Harness。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.4,
+    "community_heat": 0.8681609391220626,
+    "author_reputation": 0.7410331475111056,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.768,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://safeact.github.io",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 34,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 63,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07753/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07753/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.957
+    }
+  ]
+}

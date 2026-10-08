@@ -1,0 +1,288 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-10-06",
+  "generated_at": "2026-10-08T00:11:48Z",
+  "papers": [
+    {
+      "arxiv_id": "2610.07556",
+      "title": "Decoupled Multi-Agent Orchestration",
+      "title_zh": "解耦式多智能体编排",
+      "authors": [
+        "Xinle Wu",
+        "Yao Lu"
+      ],
+      "total_score": 0.6471774860633331,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8320000000000001,
+        "domain_fit": 0.91,
+        "other": 0.20525828687777645
+      },
+      "tags": [
+        "harness multi agent orchestration"
+      ],
+      "tldr_zh": "DeOrch解耦规划与选工，提升多智能体迁移效率",
+      "detail_file": "agent-harness-evolution/2026-10-06/2610.07556.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07556/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.07787",
+      "title": "OOPMAS: Object-Oriented Multi-Agent Systems for Query-Level Workflow Generation",
+      "title_zh": "OOPMAS：面向对象的多智能体系统查询级工作流生成",
+      "authors": [
+        "Qi Cheng",
+        "Shengyu Chen",
+        "Wei Cheng",
+        "Yiqun Xie",
+        "Xiaowei Jia",
+        "Haoyu Wang",
+        "Haifeng Chen"
+      ],
+      "total_score": 0.6287824593811419,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.7780000000000001,
+        "domain_fit": 0.83,
+        "other": 0.19794153127047226
+      },
+      "tags": [
+        "session context state"
+      ],
+      "tldr_zh": "OOPMAS为每个查询动态生成智能体与协作工作流",
+      "detail_file": "agent-harness-evolution/2026-10-06/2610.07787.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07787/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.08402",
+      "title": "VETTA: Coordinating Turn- and Token-Level Credit Assignment for Multi-Turn LLM Agents",
+      "title_zh": "VETTA：协调多轮 LLM Agent 的轮次级与 Token 级信用分配",
+      "authors": [
+        "Jiaju Chen",
+        "Min Yang",
+        "Jinghua Piao",
+        "Xiaochong Lan",
+        "Xu Xia",
+        "Xiangnan He",
+        "Yong Li"
+      ],
+      "total_score": 0.5882000000000002,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.8240000000000001,
+        "domain_fit": 0.86,
+        "other": 0.2833333333333334
+      },
+      "tags": [
+        "GitHub",
+        "evaluation operations"
+      ],
+      "tldr_zh": "VETTA联合轮次与Token级信用分配，提升多轮Agent性能",
+      "detail_file": "agent-harness-evolution/2026-10-06/2610.08402.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08402/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.07860",
+      "title": "WorkflowOps: Learning Agent Collaboration Priors for Multi-Agent Workflow Orchestration",
+      "title_zh": "WorkflowOps：学习智能体协作先验的多智能体工作流编排",
+      "authors": [
+        "Qi Cheng",
+        "Shengyu Chen",
+        "Wei Cheng",
+        "Zhengzhang Chen",
+        "Xiaowei Jia",
+        "Haoyu Wang",
+        "Haifeng Chen"
+      ],
+      "total_score": 0.5547824593811418,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.798,
+        "domain_fit": 0.88,
+        "other": 0.19794153127047226
+      },
+      "tags": [
+        "planning and policy"
+      ],
+      "tldr_zh": "WorkflowOps从历史协作中学习并优化多智能体工作流编排",
+      "detail_file": "agent-harness-evolution/2026-10-06/2610.07860.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07860/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.07979",
+      "title": "Learning from Revision Consequences: Hindsight Meta-Experience Distillation for Self-Improving Agents",
+      "title_zh": "从修订后果中学习：面向自我改进智能体的事后元经验蒸馏",
+      "authors": [
+        "Qianhan Feng",
+        "Zhongzhen Huang",
+        "Yakun Zhu",
+        "Xiaofan Zhang",
+        "Qi Dou"
+      ],
+      "total_score": 0.5536,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.8619999999999999,
+        "domain_fit": 0.93,
+        "other": 0.18333333333333338
+      },
+      "tags": [
+        "Code soon",
+        "evaluation operations"
+      ],
+      "tldr_zh": "HMED通过反事实重执行学习Meta-Skill修订后果",
+      "detail_file": "agent-harness-evolution/2026-10-06/2610.07979.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07979/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.07753",
+      "title": "From Evidence to Action: How Tool-Using Agents Fail",
+      "title_zh": "从证据到行动：工具使用型智能体如何失效",
+      "authors": [
+        "Hongzhan Lin",
+        "Shidong Cao",
+        "Ziyang Luo",
+        "Wenhao Chai",
+        "Mong-Li Lee",
+        "Wynne Hsu"
+      ],
+      "total_score": 0.5148597043316584,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.768,
+        "domain_fit": 0.76,
+        "other": 0.46819901443886147
+      },
+      "tags": [
+        "HF Daily ★34",
+        "Project Page",
+        "h=63",
+        "general tool agents"
+      ],
+      "tldr_zh": "智能体失效不仅因缺证据，也因不会用证据行动。",
+      "detail_file": "agent-harness-evolution/2026-10-06/2610.07753.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07753/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.07863",
+      "title": "ReFold: Training-Free Reversible Inter-Turn Context Folding for Long-Horizon Agents",
+      "title_zh": "ReFold：面向长时程智能体的免训练可逆跨轮上下文折叠",
+      "authors": [
+        "Yupeng Su",
+        "Jiayi Tian",
+        "Zheng Zhang",
+        "Souvik Kundu"
+      ],
+      "total_score": 0.46398830625409443,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.868,
+        "domain_fit": 0.94,
+        "other": 0.19862768751364818
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "ReFold以可逆渲染折叠降低长程智能体上下文开销",
+      "detail_file": "agent-harness-evolution/2026-10-06/2610.07863.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07863/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.08514",
+      "title": "How Much Evidence Should a Coding Agent's Self-Correction Carry? Adaptive Dirichlet Evidence for Self-Distillation",
+      "title_zh": "编码智能体的自我修正应携带多少证据？用于自蒸馏的自适应 Dirichlet 证据",
+      "authors": [
+        "Yunbo Long",
+        "Guangya Hao",
+        "Yuhan Liu",
+        "Yiting Duan",
+        "Longyan Tan",
+        "Yunchen Long",
+        "Hao Wu"
+      ],
+      "total_score": 0.43385950866690265,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.782,
+        "domain_fit": 0.91,
+        "other": 0.13086502888967524
+      },
+      "tags": [
+        "reflection and self correction"
+      ],
+      "tldr_zh": "EESD用自适应证据质量提升编码智能体自我修正学习",
+      "detail_file": "agent-harness-evolution/2026-10-06/2610.08514.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08514/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.07851",
+      "title": "RA-MoWE: Workflow-Affinity Embeddings for Query Clustering and Agentic Workflow Generation",
+      "title_zh": "RA-MoWE：用于查询聚类与智能体工作流生成的工作流亲和嵌入",
+      "authors": [
+        "Qi Cheng",
+        "Shengyu Chen",
+        "Wei Cheng",
+        "Yiqun Xie",
+        "Haoyu Wang",
+        "Haifeng Chen",
+        "Xiaowei Jia"
+      ],
+      "total_score": 0.2930662290949994,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.7540000000000001,
+        "domain_fit": 0.84,
+        "other": 0.22288743031666466
+      },
+      "tags": [],
+      "tldr_zh": "用工作流亲和嵌入聚类查询，生成高效专家工作流",
+      "detail_file": "agent-harness-evolution/2026-10-06/2610.07851.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07851/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.08722",
+      "title": "Does an Agent's History Tell You When Compaction Will Hurt? A Modest, Bounded Effect on the TRACE Paired-Replay Corpus",
+      "title_zh": "Agent 历史能否告诉你何时压缩会造成伤害？——TRACE 配对重放语料上的有限、温和效应",
+      "authors": [
+        "Egor Pakhomov",
+        "Erik Nijkamp"
+      ],
+      "total_score": 0.2817258286877777,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.664,
+        "domain_fit": 0.8,
+        "other": 0.2750860956259255
+      },
+      "tags": [
+        "Accepted"
+      ],
+      "tldr_zh": "Agent 历史对预测压缩伤害仅有有限帮助。",
+      "detail_file": "agent-harness-evolution/2026-10-06/2610.08722.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08722/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.07757",
+      "title": "Acquiring and Verifying Repository Norms for Coding Agents",
+      "title_zh": "为编码智能体获取并验证仓库规范",
+      "authors": [
+        "Kaifeng He",
+        "Xiaojun Zhang",
+        "Zhenxi Chen",
+        "Christoph Treude",
+        "Mingwei Liu"
+      ],
+      "total_score": 0.27458008103186615,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.796,
+        "domain_fit": 0.91,
+        "other": 0.11926693677288706
+      },
+      "tags": [],
+      "tldr_zh": "RepoNorm让编码智能体更准确遵循仓库规范",
+      "detail_file": "agent-harness-evolution/2026-10-06/2610.07757.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07757/thumb.webp"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2610.07851",
+  "title": "RA-MoWE: Workflow-Affinity Embeddings for Query Clustering and Agentic Workflow Generation",
+  "title_zh": "RA-MoWE：用于查询聚类与智能体工作流生成的工作流亲和嵌入",
+  "authors": [
+    "Qi Cheng",
+    "Shengyu Chen",
+    "Wei Cheng",
+    "Yiqun Xie",
+    "Haoyu Wang",
+    "Haifeng Chen",
+    "Xiaowei Jia"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-06T06:58:16Z",
+  "abs_url": "https://arxiv.org/abs/2610.07851v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.07851",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agentic workflows enable large language models (LLMs) to solve complex tasks by coordinating reasoning, tool use, and verification. However, a workflow optimized for an entire task collection can overlook differences in the reasoning strategies that individual queries need, while searching for a new workflow for every query repeats costly optimization. To address this tradeoff, we introduce RA-MoWE, a framework that uses workflow-affinity embeddings to cluster queries and guide the generation of reusable expert workflows. Each embedding records how well a fixed set of reference workflows solves a query, revealing similarities in which reasoning strategies are effective. RA-MoWE uses each cluster's queries and average embedding to initialize and refine a specialized workflow through execution feedback. An embedding encoder predicts these embeddings from query text, allowing new queries to select a generated expert without first executing the reference workflows. On a 300-query test set drawn from four benchmarks spanning mathematics, science, and programming, RA-MoWE improves average task score by 4.04 percentage points over selecting among the reference workflows, while using 27.7% fewer language-model calls at inference.",
+  "abstract_zh": "智能体工作流通过协调推理、工具调用与验证，使大语言模型能够解决复杂任务。然而，针对整个任务集合优化的单一工作流可能忽略不同查询所需的推理策略；为每个查询重新搜索工作流又会带来高昂成本。为此，RA-MoWE 提出基于工作流亲和嵌入的框架：利用一组固定参考工作流解决查询时的表现，构造能够反映有效推理策略相似性的嵌入，并据此聚类查询、生成可复用的专家工作流。框架使用各簇查询及其平均嵌入初始化工作流，再通过执行反馈进行优化；同时训练嵌入编码器，仅根据查询文本预测嵌入，使新查询无需执行参考工作流即可选择合适专家。在涵盖数学、科学和编程的四个基准、共300个测试查询上，RA-MoWE 相比从参考工作流中选择方案，平均任务得分提升4.04个百分点，推理阶段语言模型调用次数减少27.7%。",
+  "key_points_zh": [
+    "以查询在固定参考工作流上的表现构造 workflow-affinity embeddings，刻画查询对不同推理策略的偏好。",
+    "按嵌入聚类查询，并利用簇内查询和平均嵌入生成、优化可复用的专家工作流。",
+    "通过 embedding encoder 从查询文本直接预测嵌入，使新查询无需先执行参考工作流即可路由到合适专家。",
+    "在四个涵盖数学、科学和编程的基准上，平均任务得分提升4.04个百分点，推理调用减少27.7%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.84,
+    "novelty": 0.78,
+    "problem_significance": 0.76,
+    "potential_impact": 0.79,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.74,
+    "llm_avg": 0.7540000000000001,
+    "comment": "RA-MoWE develops reusable query-conditioned workflow orchestration by clustering workflow affinity and amortizing expensive workflow search.",
+    "comment_zh": "RA-MoWE通过聚类工作流亲和性并摊销昂贵的工作流搜索，实现了可复用的查询条件化工作流编排。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.43732458189998774,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7540000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 7,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07851/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07851/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.845
+    }
+  ]
+}

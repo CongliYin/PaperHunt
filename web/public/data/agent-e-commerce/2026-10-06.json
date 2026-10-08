@@ -1,0 +1,62 @@
+{
+  "domain": "agent-e-commerce",
+  "display_name": "E-commerce Agent",
+  "date": "2026-10-06",
+  "generated_at": "2026-10-08T00:09:17Z",
+  "papers": [
+    {
+      "arxiv_id": "2610.07810",
+      "title": "SIFT: Search Intent-to-Filter Transformer for Multi-Task Personalized Filter Ranking at Airbnb",
+      "title_zh": "SIFT：面向 Airbnb 多任务个性化筛选排序的搜索意图到筛选 Transformer",
+      "authors": [
+        "Shashank Dabriwal",
+        "Tanya Piplani",
+        "Hao Li",
+        "Yiwei Wang",
+        "Ashish Jain",
+        "Kedar Bellare",
+        "Stephanie Moyerman"
+      ],
+      "total_score": 0.5722000000000002,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.8540000000000001,
+        "domain_fit": 0.97,
+        "other": 0.2
+      },
+      "tags": [
+        "evaluation simulation"
+      ],
+      "tldr_zh": "SIFT用Transformer统一建模行为序列，显著提升筛选推荐效果。",
+      "detail_file": "agent-e-commerce/2026-10-06/2610.07810.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07810/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.08136",
+      "title": "Adapting Generative Recommenders for Multi-Turn Interaction",
+      "title_zh": "面向多轮交互改造生成式推荐器",
+      "authors": [
+        "Yu-Chen Den",
+        "Zhi Rui Tam",
+        "Yung-Yu Shih",
+        "Shih-Hsin Wang",
+        "Yun-Nung Chen",
+        "Pu-Jen Cheng",
+        "Eugene Yang"
+      ],
+      "total_score": 0.5567000000000001,
+      "scores": {
+        "topic_relevance": 0.6400000000000001,
+        "llm_assessment": 0.844,
+        "domain_fit": 0.96,
+        "other": 0.15833333333333335
+      },
+      "tags": [
+        "llm for commerce"
+      ],
+      "tldr_zh": "INTEGER让生成式推荐器支持多轮反馈且保持推荐准确性",
+      "detail_file": "agent-e-commerce/2026-10-06/2610.08136.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08136/thumb.webp"
+    }
+  ]
+}

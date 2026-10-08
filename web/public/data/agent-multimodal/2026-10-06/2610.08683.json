@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2610.08683",
+  "title": "Coupled but Late: Turn-Taking Between Full-Duplex Speech Models in Unscripted Dialogue",
+  "title_zh": "耦合但迟到：非脚本对话中全双工语音模型之间的轮次交接",
+  "authors": [
+    "Lichen Zhu",
+    "Yueqian Lin",
+    "Yiheng Wang",
+    "Hai \"Helen\" Li",
+    "Yiran Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-06T17:03:54Z",
+  "abs_url": "https://arxiv.org/abs/2610.08683v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.08683",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Full-duplex speech models are trained to converse with a person, but they are increasingly made to converse with each other, in self-play data generation, agent societies, and model-based evaluation. In that loop no human absorbs a timing error: each model's turn-taking is the other's input. We ask what timing the loop settles into. Two PersonaPlex-7B instances exchange audio tokens on a shared clock in unscripted conversation, and one floor-transfer rule is applied to them and to Switchboard. Their timing is coupled: re-pairing speakers across conversations destroys it. But the floor changes hands late, at a median of 400-560 ms against 137 ms for humans, and the last 120 ms of the partner's turn, where human projection places a tenth of its transfers, holds 1% of theirs. Delaying one direction of the channel shifts the response one-for-one and leaves the run-up to it empty, consistent with a reactive wait after the perceived end rather than the turn-end projection human timing requires.",
+  "abstract_zh": "全双工语音模型正被用于彼此对话，例如生成 self-play 数据、构建 agent societies 以及进行基于模型的评测。在这种闭环中，一个模型的轮次时序直接成为另一个模型的输入，时序错误不会再由人类吸收。本文研究该闭环最终形成何种对话时序：让两个 PersonaPlex-7B 实例在共享时钟上交换音频 token，并将同一项 floor-transfer 规则应用于模型对话和 Switchboard。结果显示，模型的轮次时序存在耦合性，跨不同对话重新配对说话者会破坏这种耦合。然而，模型的接话明显滞后：换句话的中位延迟为 400–560 ms，而人类仅为 137 ms；在人类会通过投射机制完成约十分之一交接的说话者末尾 120 ms 内，模型仅有 1% 的交接。进一步地，单向延迟会近似一比一地推迟响应，并使响应前的铺垫区间变为空白。这表明模型在感知到对方结束后采取反应式等待，而不是像人类一样依赖对话轮次结束前的预测性投射。",
+  "key_points_zh": [
+    "两个 PersonaPlex-7B 实例的轮次时序具有耦合性；重新跨对话配对说话者会破坏这种耦合。",
+    "模型交接中位延迟为 400–560 ms，显著高于人类的 137 ms，体现出系统性迟到。",
+    "在人类依靠末尾 120 ms 进行预测性交接的区间内，模型仅完成 1% 的轮次转换，而人类约为 10%。",
+    "对单向音频通道增加延迟，会一比一推迟模型响应，并使响应前的准备区间消失。",
+    "结果支持一种反应式机制：模型等待感知到对方结束后再接话，而非采用人类式的轮次结束预测。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.8,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8039999999999999,
+    "comment": "A focused empirical study exposing delayed turn transfer and missing human-like projection in self-play full-duplex speech systems.",
+    "comment_zh": "该研究揭示了全双工语音模型自博弈中的转接延迟与缺失的类人预测机制，对实时轮次控制具有重要启发。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5693239407149802,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8039999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 18,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08683/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.874
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08683/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.969
+    }
+  ]
+}

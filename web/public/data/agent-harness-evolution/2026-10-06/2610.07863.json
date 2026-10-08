@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2610.07863",
+  "title": "ReFold: Training-Free Reversible Inter-Turn Context Folding for Long-Horizon Agents",
+  "title_zh": "ReFold：面向长时程智能体的免训练可逆跨轮上下文折叠",
+  "authors": [
+    "Yupeng Su",
+    "Jiayi Tian",
+    "Zheng Zhang",
+    "Souvik Kundu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-06T07:09:54Z",
+  "abs_url": "https://arxiv.org/abs/2610.07863v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.07863",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-horizon LLM agents act on an append-only interaction history that is re-sent to the model at every step, so the context and its cost grow with steps until the sessions exceed the context window. Existing methods manage the context through context requirement prediction, relying on additional model calls, heuristic rules, or trained policies. However, these predictive approaches introduce runtime overhead, invalidate prefix caches, and permanently discard content with no guarantee of recovery. To overcome these limitations, we introduce ReFold: a training-free rendering layer that preserves the underlying interaction history while compressing only the model's rendered context. It removes two kinds of inter-turn redundancy without an auxiliary predictor: content an earlier turn already displayed, replaced by a stub, and turns the agent itself reports finished, folded into a one-line note. Both operators use chunked rendering, rewriting the cached prefix once every few steps rather than at every step. Every removal is strictly reversible, a wrong removal costs one restore from the history rather than permanent content loss. Because it operates at the rendering layer, ReFold is plug-and-play across standard ReAct-style harnesses. Evaluations across five long-horizon benchmarks and two frontier LLMs demonstrate that ReFold reduces token consumption by up to 2.5x and halves the KV-cache memory per session without degrading task success rates. Under capped context budgets, it avoids up to 92% of forced compactions. Under concurrent serving workloads, it reduces request queuing delays by up to 100%, accelerating inference by up to 1.7x, while cutting inference costs by up to 3.4x.",
+  "abstract_zh": "长时程大型语言模型智能体采用追加式交互历史，每一步都需重新发送不断增长的上下文，最终可能超出上下文窗口。现有方法通常依赖上下文需求预测、启发式规则或训练策略来管理上下文，但会引入额外推理开销、使前缀缓存失效，并永久丢弃内容且无法保证恢复。本文提出 ReFold，一种免训练的渲染层方法：保留底层完整交互历史，仅压缩发送给模型的渲染上下文。ReFold 去除两类跨轮冗余：将早期轮次已展示过的内容替换为存根，并将智能体自行报告已完成的轮次折叠为单行摘要。两类操作均采用分块渲染，每隔若干步重写一次缓存前缀，而非每步执行。所有删除都严格可逆，即使误删，也只需从历史中恢复，不会造成永久信息损失。由于工作在渲染层，ReFold 可即插即用于标准 ReAct 风格框架。在五个长时程基准和两个前沿 LLM 上的实验表明，ReFold 在不降低任务成功率的情况下，最多减少 2.5 倍 token 消耗，并将每会话 KV-cache 内存降低约一半。在受限上下文预算下，最多避免 92% 的强制压缩；在并发服务场景中，最多将请求排队延迟降低 100%，使推理速度提升至 1.7 倍，同时将推理成本降低至 3.4 倍。",
+  "key_points_zh": [
+    "核心思想是在渲染层压缩上下文，而非修改底层交互历史，因此无需训练、预测器或启发式上下文决策。",
+    "通过存根替换已展示内容、单行笔记折叠已完成轮次，消除两类跨轮冗余，并采用分块渲染减少前缀缓存重写。",
+    "所有折叠操作均可逆；误删时可从完整历史恢复，避免传统上下文压缩的永久信息损失。",
+    "在五个长时程基准和两个前沿 LLM 上，token 消耗最多降低至原来的约 40%，KV-cache 内存约减半，同时不损害任务成功率。",
+    "受限预算下最多避免 92% 的强制压缩；并发服务中请求排队延迟最多降低 100%，推理速度最高提升 1.7 倍、成本最高降低 3.4 倍。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.86,
+    "problem_significance": 0.9,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.88,
+    "llm_avg": 0.868,
+    "comment": "ReFold is a broadly reusable runtime context-management layer that preserves reversibility while substantially improving long-horizon agent efficiency and serving cost.",
+    "comment_zh": "ReFold是广泛可复用的运行时上下文管理层，在保持可逆性的同时显著提升长程Agent效率并降低服务成本。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.868,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07863/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.935
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07863/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.96
+    }
+  ]
+}

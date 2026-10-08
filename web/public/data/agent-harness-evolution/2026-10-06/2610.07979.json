@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2610.07979",
+  "title": "Learning from Revision Consequences: Hindsight Meta-Experience Distillation for Self-Improving Agents",
+  "title_zh": "从修订后果中学习：面向自我改进智能体的事后元经验蒸馏",
+  "authors": [
+    "Qianhan Feng",
+    "Zhongzhen Huang",
+    "Yakun Zhu",
+    "Xiaofan Zhang",
+    "Qi Dou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-06T08:43:43Z",
+  "abs_url": "https://arxiv.org/abs/2610.07979v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.07979",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "As agents continuously improve by generating and revising Skills, the process that discovers and refines those Skills becomes a learnable object in its own right. Task-Skills directly act on task execution, whereas Meta-Skills govern how agents discover and improve future Skills; their value therefore emerges through the subsequent search processes they induce. Existing approaches improve Meta-Skills from observed raw Skill-search trajectories and branch outcomes. However, branch performance entangles the effects of the initial discovery state and the Meta-Skill revision that generated the search process, making it difficult to characterize what a particular revision actually changed, and pushing updates toward revisions that benefit from favorable states rather than those that improve the process. We introduce HMED (Hindsight Meta-Experience Distillation), a mechanism for constructing Meta-Experience for self-improving agents. HMED revisits the completed event from which a revision originates and re-executes the incumbent and revised Meta-Skills from the same restored discovery state, so that the changes associated with the revision can be observed under a shared condition. Each comparison is distilled into a Meta-Experience, a structured record that can be reused by future updates, so that even revisions that are not ultimately retained still contribute a learning signal. Across three interactive agent benchmarks and both open-source and closed-source models, HMED consistently improves Skill discovery performance over strong baselines, shifting Meta-Skill learning beyond branch outcomes toward the consequences of changing the improvement process.",
+  "abstract_zh": "智能体通过生成和修订 Skills 持续改进，而发现与优化这些 Skills 的过程本身也可以成为学习对象。Task-Skills 直接执行任务，Meta-Skills 则决定智能体如何发现和改进未来的 Skills，其价值体现在后续搜索过程中。现有方法通常依据原始 Skill 搜索轨迹及分支结果来优化 Meta-Skills，但分支表现同时受到初始发现状态和 Meta-Skill 修订的影响，难以判断某次修订究竟带来了什么变化，容易偏向有利初始状态，而非真正改善搜索过程。本文提出 HMED（Hindsight Meta-Experience Distillation），用于构建自我改进智能体的 Meta-Experience。HMED 回溯产生某次修订的已完成事件，恢复到相同的发现状态，并分别重新执行当前版本与修订后的 Meta-Skills，从共享条件下直接观测修订造成的差异。每次比较都会被蒸馏为结构化的 Meta-Experience，供后续更新复用，因此即使某次修订最终未被保留，也能提供学习信号。在三个交互式智能体基准以及开源和闭源模型上，HMED 均稳定提升了 Skill 发现性能，使 Meta-Skill 学习从依赖分支结果转向学习改进过程本身所产生的后果。",
+  "key_points_zh": [
+    "核心问题是解耦初始发现状态与 Meta-Skill 修订对搜索结果的影响。",
+    "HMED 在同一恢复后的发现状态下重执行 incumbent 与 revised Meta-Skills，进行公平对比。",
+    "对比结果被整理为可复用的结构化 Meta-Experience，未被采纳的修订也能贡献训练信号。",
+    "在三个交互式智能体基准及开源、闭源模型上，HMED consistently 提升 Skill discovery 性能。",
+    "方法推动 Meta-Skill 学习从拟合分支结果转向学习修订对改进过程的实际影响。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.88,
+    "problem_significance": 0.85,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.85,
+    "lasting_value": 0.87,
+    "llm_avg": 0.8619999999999999,
+    "comment": "HMED makes Skill-improvement processes learnable through matched-state counterfactual revision traces, enabling a strong and reusable self-improvement loop.",
+    "comment_zh": "HMED通过匹配状态下的反事实修订轨迹使技能改进过程可学习，形成了强而可复用的自我改进闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8619999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07979/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07979/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2610.08777",
+  "title": "CtrlCache: Accelerating Interactive Video World Models with Control-Aware Caching",
+  "title_zh": "CtrlCache：利用控制感知缓存加速交互式视频世界模型",
+  "authors": [
+    "Shangye Song",
+    "Dong Gong",
+    "Hong Jia",
+    "Yun Sing Koh",
+    "Xinyu Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-06T17:57:29Z",
+  "abs_url": "https://arxiv.org/abs/2610.08777v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.08777",
+  "links": {
+    "github": null,
+    "project_page": "https://wrecklong.github.io/CtrlCache/"
+  },
+  "abstract_en": "Interactive video world models need to generate each video chunk efficiently while responding faithfully to user controls. Many systems use chunk-wise autoregressive generation with few-step denoising, but each chunk still requires several costly denoising iterations. Training-free caching can reduce this cost, yet existing policies make reuse decisions primarily from model-internal denoising dynamics and do not explicitly account for control transitions. Actually, interactive generation explicitly exposes a signal they do not use: the controls for a chunk arrive before it is denoised, so a schedule derived from them costs no forward pass. To this end, we analyze adjacent chunks under different control regimes and find that structural similarity drops around action changes, while low-frequency structure remains more persistent than high-frequency detail. Motivated by these observations, we propose CtrlCache, a training-free control-aware caching framework that adapts computation to the current control sequence. Specifically, the action-aware scheduling and refresh policy detects action changes across and within chunks, and labels each chunk as initial, transition, turning, or steady state. At one selected interior denoising step, initial and transition chunks retain full computation, while turning and steady chunks reuse the transformer residual from the most recent fully computed step in the same chunk. To exploit the persistence of low-frequency structure during steady interaction, we further introduce a frequency-mixed history prior guidance that incorporates complementary information from the preceding clean latent without an additional DiT forward pass. Evaluated on Matrix-Game 2.0 and LingBot-World v1/v2, CtrlCache achieves 1.21x to 1.41x DiT-backbone speedups without model retraining while improving WBench Overall scores over original inference across all three models.",
+  "abstract_zh": "交互式视频世界模型通常采用分块自回归生成，每个视频块仍需多次昂贵的去噪迭代。现有无需训练的缓存方法主要依据模型内部去噪动态决定复用，未显式利用提前到达的用户控制信号。CtrlCache提出一种无需训练的控制感知缓存框架，根据跨块及块内的动作变化，将视频块划分为初始、过渡、转向和稳态，并自适应安排计算与缓存刷新：初始块和过渡块保留完整计算，转向块和稳态块复用同一块中最近一次完整计算步骤的Transformer残差。此外，方法引入频率混合历史先验引导，在无需额外DiT前向计算的情况下利用前一时刻干净潜变量中更持久的低频结构。在Matrix-Game 2.0和LingBot-World v1/v2上的实验表明，CtrlCache在无需重新训练的情况下实现1.21至1.41倍DiT骨干加速，并在三个模型上均提升WBench Overall得分。",
+  "key_points_zh": [
+    "核心洞察：动作变化附近相邻视频块的结构相似性下降，而低频结构比高频细节更稳定。",
+    "提出无需训练的CtrlCache，根据控制序列将视频块划分为initial、transition、turning和steady state四类，并据此决定完整计算或缓存复用。",
+    "在turning和steady state块中复用同一块内最近一次完整去噪步骤的Transformer residual，减少DiT前向计算。",
+    "提出frequency-mixed history prior guidance，利用前一干净latent的低频信息增强稳态交互，无需额外DiT前向传播。",
+    "在Matrix-Game 2.0与LingBot-World v1/v2上获得1.21至1.41倍DiT骨干加速，同时提升WBench Overall得分。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.76,
+    "novelty": 0.84,
+    "problem_significance": 0.78,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.77,
+    "llm_avg": 0.774,
+    "comment": "A useful systems contribution for reducing latency in controllable interactive video generation through control-aware, training-free computation reuse.",
+    "comment_zh": "该工作利用控制感知的免训练缓存降低可控交互式视频生成延迟，对实时视频系统基础设施具有一定价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.43732458189998774,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.774,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://wrecklong.github.io/CtrlCache/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 7,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08777/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08777/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.975
+    }
+  ]
+}

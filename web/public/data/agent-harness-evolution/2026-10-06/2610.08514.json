@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2610.08514",
+  "title": "How Much Evidence Should a Coding Agent's Self-Correction Carry? Adaptive Dirichlet Evidence for Self-Distillation",
+  "title_zh": "编码智能体的自我修正应携带多少证据？用于自蒸馏的自适应 Dirichlet 证据",
+  "authors": [
+    "Yunbo Long",
+    "Guangya Hao",
+    "Yuhan Liu",
+    "Yiting Duan",
+    "Longyan Tan",
+    "Yunchen Long",
+    "Hao Wu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-06T15:17:56Z",
+  "abs_url": "https://arxiv.org/abs/2610.08514v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.08514",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Execution feedback lets coding agents revise programs and learn from their own corrections. A correction's learning weight should reflect both the transitions supported by its executions and the amount of evidence behind that support. We introduce Effective-Evidence Self-Distillation (EESD), which represents these quantities separately. Normalized execution relevance determines relative transition support and an effective pseudo-count mass; a Dirichlet posterior then produces an uncertainty-penalized weight for KL-anchored correction learning. Under a symmetric prior, changing mass preserves category ordering, and effective mass yields a supervised coefficient bounded by its matched fixed-mass counterpart. Across four model-domain history sweeps, increasing visible observations from one to eight reduces future-outcome NLL by 55.0-59.3%. At eight observations, effective mass achieves lower NLL than fixed mass in all four comparisons. In the primary matched DeepSeek/RunBugRun study, argmax predictions agree on all 3,000 examples, with the largest NLL gain under concentrated relevance. After one correction-learning round, DeepSeek/CodeARC all-tests Pass@1 increases from 15.0% to 20.4%, with a paired 95% source-bootstrap interval of [+2.8, +8.0] percentage points. The twelve-setting downstream evaluation establishes the model-domain scope of this update. These results show how separating evidence support from evidence mass changes probability estimation and correction learning in coding agents.",
+  "abstract_zh": "执行反馈使编码智能体能够修订程序，并从自身修正中学习。修正样本的学习权重应同时反映执行结果支持的状态转移，以及支持背后的证据量。论文提出 Effective-Evidence Self-Distillation（EESD），将这两者分开建模：归一化执行相关性用于确定相对转移支持和有效伪计数质量，随后通过 Dirichlet 后验生成带不确定性惩罚的权重，用于 KL 约束的修正学习。在对称先验下，改变证据质量不会改变类别排序；同时，有效证据质量得到的监督系数不超过匹配固定质量方案。跨四组模型—领域历史观测实验显示，将可见观测数从 1 增加到 8，可使未来结果的 NLL 降低 55.0%—59.3%；在 8 次观测下，有效证据质量在四组比较中均优于固定质量。在主要的 DeepSeek/RunBugRun 匹配实验中，两种方法在 3,000 个样本上的 argmax 预测完全一致，但在相关性高度集中的情况下，NLL 改善最大。经过一轮修正学习后，DeepSeek/CodeARC 的全测试集 Pass@1 从 15.0% 提升至 20.4%，配对 source-bootstrap 的 95% 区间为 [+2.8, +8.0] 个百分点。包含 12 种设置的下游评估进一步界定了该更新的模型—领域适用范围。结果表明，将证据支持与证据质量分离建模，能够改进编码智能体中的概率估计与修正学习。",
+  "key_points_zh": [
+    "提出 EESD，将执行相关性表示的转移支持与证据质量分离，并用 Dirichlet 后验为修正学习分配不确定性感知权重。",
+    "有效伪计数质量在理论上保持类别排序，并使监督系数不超过对应的固定质量方案，从而避免过度信任低证据量修正。",
+    "历史观测从 1 次增至 8 次时，未来结果 NLL 降低 55.0%—59.3%；在 8 次观测下，有效质量方案在四组实验中均优于固定质量方案。",
+    "在 DeepSeek/RunBugRun 的 3,000 个样本上，argmax 预测完全一致，但有效证据方案在相关性集中时取得最大 NLL 改善。",
+    "一轮修正学习使 DeepSeek/CodeARC 全测试集 Pass@1 从 15.0% 提升至 20.4%，提升区间为 +2.8 至 +8.0 个百分点。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.91,
+    "novelty": 0.8,
+    "problem_significance": 0.83,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.78,
+    "llm_avg": 0.782,
+    "comment": "EESD contributes a principled evidence-weighted self-distillation method for coding agents that links execution history to adaptive correction learning.",
+    "comment_zh": "EESD提出了面向编码Agent的原理化证据加权自蒸馏方法，将执行历史与自适应纠错学习连接起来。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.38519017333805144,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.782,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08514/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.894
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08514/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.957
+    }
+  ]
+}

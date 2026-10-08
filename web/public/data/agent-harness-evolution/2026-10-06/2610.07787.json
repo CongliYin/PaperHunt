@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2610.07787",
+  "title": "OOPMAS: Object-Oriented Multi-Agent Systems for Query-Level Workflow Generation",
+  "title_zh": "OOPMAS：面向对象的多智能体系统查询级工作流生成",
+  "authors": [
+    "Qi Cheng",
+    "Shengyu Chen",
+    "Wei Cheng",
+    "Yiqun Xie",
+    "Xiaowei Jia",
+    "Haoyu Wang",
+    "Haifeng Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-06T05:31:29Z",
+  "abs_url": "https://arxiv.org/abs/2610.07787v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.07787",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-agent systems (MAS) powered by large language models have shown strong performance across code generation, mathematical reasoning, and question answering. However, existing methods for automating MAS design mostly operate at the task level, producing a single fixed workflow per benchmark that is applied uniformly to all queries. This assumption fails under realistic conditions. Query difficulty varies widely within a task, and real-world workloads mix heterogeneous task types. We introduce OOPMAS, a training-free framework that generates both the agent set and the coordination workflow at the granularity of individual queries. Agents are represented as object-oriented class definitions with dedicated roles, tools, and persistent state, and workflows are expressed as executable main functions over these agent objects. A dynamic skill library accumulates structured lessons from execution feedback across optimization rounds, enabling in-context improvement without any gradient updates or fine-tuning. On a mixed-task benchmark of queries spanning code, math, and QA, OOPMAS achieves 89.6% accuracy, outperforming the strongest baseline by 18.1 percentage points. A model-swap study across four LLM backbones shows consistent scaling, reaching 92.4% with the strongest model.",
+  "abstract_zh": "由大语言模型驱动的多智能体系统（MAS）已在代码生成、数学推理和问答等任务中展现出较强性能。然而，现有自动化 MAS 设计方法大多停留在任务级别：针对每个基准任务生成一个固定工作流，并将其统一应用于所有查询。这一假设难以适应现实场景，因为同一任务内的查询难度存在差异，实际工作负载也常混合多种异构任务。本文提出 OOPMAS，一种无需训练的框架，能够针对单个查询同时生成智能体集合与协作工作流。OOPMAS 将智能体表示为面向对象的类定义，为其分配专属角色、工具和持久化状态；同时将工作流表示为作用于这些智能体对象的可执行主函数。动态技能库在多轮优化过程中根据执行反馈积累结构化经验，使系统能够通过上下文学习持续改进，而无需梯度更新或微调。在涵盖代码、数学和问答的混合任务基准上，OOPMAS 达到 89.6% 的准确率，较最强基线提升 18.1 个百分点。针对四种 LLM 骨干模型的模型替换实验表明，该方法具有稳定的扩展性，在最强模型上达到 92.4% 的准确率。",
+  "key_points_zh": [
+    "突破任务级固定工作流范式，针对每个查询动态决定智能体集合与协作流程。",
+    "采用面向对象的智能体表示，将角色、工具和持久化状态封装在类定义中，并以可执行主函数表达工作流。",
+    "通过动态技能库从执行反馈中积累结构化经验，实现无需梯度更新或微调的上下文迭代优化。",
+    "在代码、数学和问答混合基准上取得 89.6% 准确率，较最强基线提升 18.1 个百分点。",
+    "跨四种 LLM 骨干模型的实验显示方法具备稳定扩展性，最强模型下准确率达到 92.4%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.83,
+    "novelty": 0.82,
+    "problem_significance": 0.8,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.75,
+    "llm_avg": 0.7780000000000001,
+    "comment": "OOPMAS provides query-level executable workflow generation with dynamic skill accumulation, making it a substantial contribution to orchestration and skill evolution.",
+    "comment_zh": "OOPMAS通过查询级可执行工作流生成和动态技能积累，为编排与技能演化提供了较强贡献。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7780000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07787/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.902
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07787/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.965
+    }
+  ]
+}

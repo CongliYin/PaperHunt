@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2610.07860",
+  "title": "WorkflowOps: Learning Agent Collaboration Priors for Multi-Agent Workflow Orchestration",
+  "title_zh": "WorkflowOps：学习智能体协作先验的多智能体工作流编排",
+  "authors": [
+    "Qi Cheng",
+    "Shengyu Chen",
+    "Wei Cheng",
+    "Zhengzhang Chen",
+    "Xiaowei Jia",
+    "Haoyu Wang",
+    "Haifeng Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-06T07:01:38Z",
+  "abs_url": "https://arxiv.org/abs/2610.07860v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.07860",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-agent systems are increasingly deployed for complex knowledge work, yet their orchestration layers remain largely memoryless: each new task is decomposed, assigned, and executed from scratch with no benefit from prior successful executions. We present WorkflowOps, a multi-agent workflow orchestration framework that learns agent collaboration priors from historical workflows and expands its agent pool on demand to cover new capability requirements. Our approach introduces three coupled mechanisms. First, a transition probability matrix captures pairwise agent collaboration frequencies from past workflows and applies them as soft guidance during DAG workflow construction through intra-layer ordering optimization, probability-thresholded edge suggestion, and transitive reduction for parallelism maximization. Second, a sufficiency-driven agent creation loop detects capability gaps via semantic matching scores, generates specialized agents through an LLM, and simultaneously injects them into the collaboration matrix, so that newly created agents are immediately usable with predicted collaboration priors. Third, a layered semantic matching strategy uses pre-trained sentence embeddings for fast, deterministic capability matching as a first pass, invoking LLM verification only for low-confidence cases, thereby reducing LLM routing calls by over 80\\% compared to pure-LLM approaches. Experiments on mixed code, math, and question-answering suites show that WorkflowOps improves end-to-end pass rates over recent workflow-construction baselines, with the largest gains on structured, decomposable tasks where past agent handoff patterns transfer.",
+  "abstract_zh": "现有多智能体系统的编排通常缺乏记忆，每次任务都需从头进行分解、分配与执行。WorkflowOps 从历史工作流中学习智能体协作先验，并按需扩展智能体池以覆盖新的能力需求。方法包含三项机制：其一，利用转移概率矩阵统计智能体间的协作频率，并在DAG工作流构建中通过层内排序优化、概率阈值边推荐和传递约简引导协作，同时提升并行性；其二，通过语义匹配检测能力缺口，由LLM生成专用智能体，并将其即时注入协作矩阵，使新智能体能够获得预测的协作先验；其三，采用分层语义匹配策略，先用预训练句向量进行快速、确定性的能力匹配，仅对低置信度样本调用LLM验证，相比纯LLM方案减少超过80%的路由调用。在代码、数学和问答混合任务上的实验表明，WorkflowOps优于近期工作流构建基线，尤其在结构化、可分解且历史交接模式可迁移的任务上提升明显。",
+  "key_points_zh": [
+    "通过转移概率矩阵学习智能体协作先验，并用于DAG中的排序、连边推荐与并行化。",
+    "利用语义匹配发现能力缺口，由LLM按需生成专用智能体，并同步更新协作矩阵。",
+    "采用句向量初筛与LLM低置信度复核，将路由调用量较纯LLM方案降低超过80%。",
+    "在代码、数学和问答任务上提升端到端通过率，结构化且可分解任务收益最大。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.8,
+    "problem_significance": 0.84,
+    "potential_impact": 0.83,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.78,
+    "llm_avg": 0.798,
+    "comment": "WorkflowOps offers reusable orchestration infrastructure that learns collaboration priors, expands agent capabilities, and reduces routing overhead in workflow construction.",
+    "comment_zh": "WorkflowOps提供了可复用的编排基础设施，能够学习协作先验、扩展Agent能力并降低工作流构建中的路由开销。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.798,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07860/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.07860/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.976
+    }
+  ]
+}

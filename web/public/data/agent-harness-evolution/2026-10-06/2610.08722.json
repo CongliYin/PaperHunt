@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2610.08722",
+  "title": "Does an Agent's History Tell You When Compaction Will Hurt? A Modest, Bounded Effect on the TRACE Paired-Replay Corpus",
+  "title_zh": "Agent 历史能否告诉你何时压缩会造成伤害？——TRACE 配对重放语料上的有限、温和效应",
+  "authors": [
+    "Egor Pakhomov",
+    "Erik Nijkamp"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-06T17:26:57Z",
+  "abs_url": "https://arxiv.org/abs/2610.08722v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.08722",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Many long-horizon agents compact their context on a global rule, usually a token budget, blind to what the agent was doing. We ask whether the agent's recent behaviour predicts when a compaction will hurt. TRACE's public corpus of 590 harness-triggered AppWorld compaction boundaries replays each boundary from a re-executed prefix state under the pre-compaction context and under the summary, and records the burden of the next actions: calls that error or repeat a call already made. We find that pre-boundary history predicts post-compaction harm only weakly. An internally prespecified contrast by prefix placement is a wide null, and the naive \"has-written\" label behind it turns out to measure trajectory phase. The best extension-protocol trigger reaches held-out AUROC 0.66 (0.64 on the replicate's own label) against a same-boundary replicate of 0.72; the best frozen, interpretable trigger avoids 21% of harmful (positive-burden) boundaries while keeping 84% of compaction opportunities, and exceeds the random-rule expectation on count but not on burden mass (a post hoc comparison). Whether the best trigger beats a token-budget rule at matched retention cannot be evaluated on the release. We state what corpora should ship to answer it.",
+  "abstract_zh": "许多长程 Agent 依据全局规则（通常是 token 预算）压缩上下文，而不考虑 Agent 当时正在执行的任务。本文研究 Agent 的近期行为能否预测上下文压缩何时会造成伤害。TRACE 公开语料包含 590 个由 harness 触发的 AppWorld 压缩边界；作者从重新执行的前缀状态出发，分别在压缩前上下文和摘要上下文下重放每个边界，并记录后续动作负担，即报错调用或重复已执行调用的次数。结果表明，压缩边界前的历史对压缩后伤害的预测能力较弱。预先设定的、基于前缀位置的对比结果接近宽泛意义上的零效应；其中使用的朴素“has-written”标签实际上反映的是轨迹阶段。最佳扩展协议触发器在留出集上的 AUROC 为 0.66，在复现实验自身标签上为 0.64，而同一边界的复现上限为 0.72。最佳冻结且可解释的触发器可规避 21% 的有害边界，同时保留 84% 的压缩机会；按边界数量计算优于随机规则，但按伤害负担总量计算并未超过随机规则（后验比较）。由于发布语料缺少必要信息，无法在相同保留率下判断该触发器是否优于 token-budget 规则。论文最后说明了未来语料应提供哪些信息以回答这一问题。",
+  "key_points_zh": [
+    "TRACE 在 590 个 AppWorld 压缩边界上进行配对重放，以比较原上下文与摘要上下文的后续动作负担。",
+    "压缩前历史对压缩后伤害的预测能力较弱；“has-written”主要反映 Agent 所处的轨迹阶段。",
+    "最佳触发器留出集 AUROC 为 0.66，低于同边界复现上限 0.72。",
+    "可解释触发器可避免 21% 的有害边界，同时保留 84% 的压缩机会。",
+    "现有发布语料无法在相同保留率下比较该触发器与 token-budget 规则。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.8,
+    "novelty": 0.68,
+    "problem_significance": 0.78,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.48,
+    "lasting_value": 0.7,
+    "llm_avg": 0.664,
+    "comment": "TRACE provides useful paired-replay evidence about compaction harm and clarifies the data needed for reliable context-management policies, though the predictive effect is modest.",
+    "comment_zh": "TRACE通过配对回放揭示了上下文压缩损害并明确了可靠管理策略所需的数据，但其预测效果较为有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 1.0,
+    "generality": 0.4,
+    "llm_assessment": 0.664,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08722/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.87
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08722/fig2.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.977
+    }
+  ]
+}

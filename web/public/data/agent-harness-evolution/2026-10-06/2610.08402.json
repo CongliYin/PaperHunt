@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2610.08402",
+  "title": "VETTA: Coordinating Turn- and Token-Level Credit Assignment for Multi-Turn LLM Agents",
+  "title_zh": "VETTA：协调多轮 LLM Agent 的轮次级与 Token 级信用分配",
+  "authors": [
+    "Jiaju Chen",
+    "Min Yang",
+    "Jinghua Piao",
+    "Xiaochong Lan",
+    "Xu Xia",
+    "Xiangnan He",
+    "Yong Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-06T14:15:11Z",
+  "abs_url": "https://arxiv.org/abs/2610.08402v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.08402",
+  "links": {
+    "github": "https://github.com/Jiaju-Chen/VETTA-official.",
+    "project_page": null
+  },
+  "abstract_en": "Multi-turn LLM agents often receive sparse task feedback across several interactions, while generating each response token by token. This creates two related credit-assignment questions: which responses helped achieve the outcome, and which generation decisions mattered within each response? Existing methods typically focus on only one level: turn-level methods evaluate complete responses but do not distinguish the decisions within them; token-level methods can propagate feedback across turns but do not explicitly model credit for each response. These complementary limitations motivate learning credit at both levels and coordinating it in a single policy update. We introduce VETTA, a credit assignment method that jointly learns turn- and token-level values through separate heads on a shared lightweight critic. VETTA computes advantages along both temporal sequences and combines each turn advantage with a within-response-centered token residual for PPO updates. Furthermore, to reduce value-learning cost, the critic retains only early Transformer blocks from the pretrained checkpoint used to initialize the actor. On two challenging agent benchmarks, ALFWorld and WebShop, VETTA improves success rates over PPO by 37.5% and 22.3%, respectively, with Qwen2.5-1.5B-Instruct and achieves success rates of 95.5% and 76.0%, respectively, with Qwen2.5-7B-Instruct. Critic-depth comparisons further show strong task performance with substantially lower critic-side computation. These results suggest that a compact shared critic can coordinate turn- and token-level credit to improve agent performance while keeping value estimation efficient. Code is available at https://github.com/Jiaju-Chen/VETTA-official.",
+  "abstract_zh": "多轮 LLM Agent 通常只能获得跨交互的稀疏任务反馈，因此既难判断哪些响应推动了最终成功，也难确定单次响应中哪些 Token 生成决策发挥了作用。现有方法通常只建模其中一个层级：轮次级方法评估完整响应，却忽略响应内部决策差异；Token 级方法虽能跨轮次传播反馈，却没有显式刻画每个响应的贡献。为此，VETTA 在共享的轻量级 Critic 上设置独立预测头，同时学习轮次级价值与 Token 级价值，并在一次策略更新中协调二者。该方法沿轮次序列和响应内 Token 序列分别计算优势，将轮次优势与响应内中心化的 Token 残差结合，用于 PPO 更新。为降低价值学习成本，Critic 仅保留用于初始化 Actor 的预训练模型中的前部 Transformer 模块。在 ALFWorld 和 WebShop 两个具有挑战性的 Agent 基准上，使用 Qwen2.5-1.5B-Instruct 时，VETTA 相比 PPO 的成功率分别提升 37.5% 和 22.3%；使用 Qwen2.5-7B-Instruct 时，成功率分别达到 95.5% 和 76.0%。不同 Critic 深度的实验进一步表明，在显著降低 Critic 侧计算开销的同时，VETTA 仍能保持较强任务性能。结果说明，紧凑的共享 Critic 能有效协调轮次级与 Token 级信用分配，在提高多轮 Agent 性能的同时提升价值估计效率。",
+  "key_points_zh": [
+    "提出 VETTA，在共享轻量级 Critic 上联合学习轮次级价值与 Token 级价值，解决多轮 Agent 的双层信用分配问题。",
+    "将轮次优势与响应内中心化的 Token 残差结合，并用于 PPO 策略更新，从而同时建模跨轮次贡献和响应内部决策贡献。",
+    "通过仅保留预训练模型前部 Transformer 模块构建 Critic，显著降低价值估计的计算成本。",
+    "在 ALFWorld 和 WebShop 上，VETTA 相比 PPO 使用 Qwen2.5-1.5B-Instruct 时成功率分别提升 37.5% 和 22.3%。",
+    "使用 Qwen2.5-7B-Instruct 时，VETTA 在 ALFWorld 和 WebShop 上分别达到 95.5% 和 76.0% 的成功率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.86,
+    "novelty": 0.83,
+    "problem_significance": 0.87,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.8,
+    "llm_avg": 0.8240000000000001,
+    "comment": "VETTA introduces a reusable agent-training method that coordinates turn- and token-level credit assignment on tool-using and interactive trajectories.",
+    "comment_zh": "VETTA在工具使用和交互轨迹上协调轮次级与Token级信用分配，提出了可复用的Agent训练方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8240000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Jiaju-Chen/VETTA-official.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08402/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08402/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.891
+    }
+  ]
+}

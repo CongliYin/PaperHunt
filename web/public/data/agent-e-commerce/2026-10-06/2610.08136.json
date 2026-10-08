@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2610.08136",
+  "title": "Adapting Generative Recommenders for Multi-Turn Interaction",
+  "title_zh": "面向多轮交互改造生成式推荐器",
+  "authors": [
+    "Yu-Chen Den",
+    "Zhi Rui Tam",
+    "Yung-Yu Shih",
+    "Shih-Hsin Wang",
+    "Yun-Nung Chen",
+    "Pu-Jen Cheng",
+    "Eugene Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-06T10:51:53Z",
+  "abs_url": "https://arxiv.org/abs/2610.08136v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.08136",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Generative recommenders decode items from a user's interaction history, but offer no way for users to correct a recommendation that misses their current intent. Adding conversation is natural since items and words share same output space, yet training the model to converse may overwrite the history-to-item mapping it relies on. We introduce INTEGER (**INTE**ractive **GE**nerative **R**ecommendation), which extends generative recommendation to multi-turn interaction with a learned routing token that lets the model decide when to recommend, history re-anchoring that conditions each item on both past behavior and the dialogue, and behavioral replay with instruction-data rehearsal that prevents forgetting during adaptation. Users can thus give feedback on recommendations within the dialogue, while recommendations stay grounded in behavioral history and accuracy is not traded for fluency. On Amazon Beauty and Toys, INTEGER matches or exceeds the strongest baselines in accuracy with competitive conversation quality, improving Hit@10 by 13.3% on Amazon Beauty, and significantly outperforms the generative recommender it starts from. Our analyses show that INTEGER learns behaviors that naive adaptation fails to acquire, recommending once the user's intent is clear and staying attentive to behavioral history at the moment of recommendation. INTEGER also learns an intent-agnostic replacement over the item space, which suppresses rejected items but points to attribute-aware feedback as the next step.",
+  "abstract_zh": "生成式推荐器根据用户交互历史生成物品，但难以处理用户对当前推荐的纠正与反馈。论文提出 INTEGER（INTEractive GEnerative Recommendation），通过学习式路由 token 判断何时推荐；通过历史重新锚定（history re-anchoring）让每个推荐同时依赖行为历史与对话内容；通过行为回放结合指令数据复习，避免适配对原有历史到物品映射的遗忘。该方法支持用户在对话中反馈推荐，同时保持推荐以行为历史为基础，在准确率与对话流畅性之间取得平衡。在 Amazon Beauty 和 Toys 数据集上，INTEGER 达到或超过最强基线，并具备有竞争力的对话质量；在 Amazon Beauty 上将 Hit@10 提升 13.3%，显著优于其初始化的生成式推荐器。分析表明，INTEGER 能学会朴素适配难以获得的行为：在用户意图明确后再推荐，并在推荐时持续关注行为历史。此外，它学习到与意图无关的物品空间替换机制，可抑制被拒绝物品；未来仍需进一步建模属性感知反馈。",
+  "key_points_zh": [
+    "提出 INTEGER，通过路由 token 学习何时发起推荐，使生成式推荐器能够进行多轮交互。",
+    "历史重新锚定机制将用户行为历史与对话共同用于物品生成，避免推荐偏离长期兴趣。",
+    "行为回放与指令数据复习缓解模型适配过程中的灾难性遗忘，保留原有推荐能力。",
+    "在 Amazon Beauty 和 Toys 上取得领先或有竞争力的效果；Amazon Beauty 的 Hit@10 提升 13.3%。",
+    "模型能够抑制用户拒绝的物品，但当前替换机制尚未利用属性级反馈。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.87,
+    "problem_significance": 0.88,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.84,
+    "llm_avg": 0.844,
+    "comment": "INTEGER directly improves conversational product recommendation by combining multi-turn intent correction with behavioral grounding and Amazon-based evaluation.",
+    "comment_zh": "INTEGER 将多轮意图修正与行为历史 grounding 结合，并通过 Amazon 数据评测，直接提升了对话式商品推荐。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.65,
+    "llm_assessment": 0.844,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08136/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.08136/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.974
+    }
+  ]
+}
