@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2610.12269",
+  "title": "Cadence: Strategic Guidance for Coding Agents",
+  "title_zh": "Cadence：面向编程智能体的策略性引导",
+  "authors": [
+    "Minxing Wang",
+    "He Ye",
+    "Earl T. Barr",
+    "Yintong Huo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-08T16:34:02Z",
+  "abs_url": "https://arxiv.org/abs/2610.12269v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.12269",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Runtime monitors are increasingly used to improve the reliability of LLM-based coding agents by inspecting execution trajectories and delivering corrective guidance upon detecting misbehavior. However, their effectiveness remains limited by static guidance triggering schemes. Existing monitors rely either on fixed inspection intervals, missing timely guidance during severe misbehaviors while incurring unnecessary overhead during healthy execution, or on rigid heuristic rules, failing to detect complex reasoning errors. To address these limitations, we propose Cadence, a dynamic monitoring framework that adaptively schedules inspections and delivers guidance according to the agent's real-time execution health. Cadence consists of two core modules: a two-tier intervention module and an inspection scheduler. The intervention module delivers advisory-level guidance for normal executions and minor lapses, while providing replacement-level guidance for severe misbehaviors. Driven by the intervention level, the scheduler adjusts the inspection frequency by tightening supervision after replacement-level guidance and relaxing it after advisory-level guidance. Evaluated on 300 SWE-bench Lite tasks across two distinct agents, mini-swe-agent and Moatless, Cadence achieves the highest resolve rate among all evaluated monitors. Specifically, Cadence outperforms vanilla agents by 25.33\\% (+76 resolved tasks) on mini-swe-agent and 15.67\\% (+47 resolved tasks) on Moatless, while maintaining competitive token efficiency compared to state-of-the-art baselines.",
+  "abstract_zh": "针对基于 LLM 的编程智能体中静态监控触发机制效率低、难以及时应对严重错误或识别复杂推理失误的问题，本文提出动态监控框架 Cadence。该框架包含双层干预模块与检查调度器：对正常执行和轻微失误提供建议级引导，对严重失误提供替换级引导；调度器根据干预等级动态调整检查频率，在替换级引导后加强监督，在建议级引导后放松监督。在两个智能体 mini-swe-agent 和 Moatless 的 300 个 SWE-bench Lite 任务上，Cadence 获得所有评估监控器中的最高解决率：相较原始智能体，分别提升 25.33%（mini-swe-agent，增加 76 个解决任务）和 15.67%（Moatless，增加 47 个解决任务），同时保持了具有竞争力的 token 效率。",
+  "key_points_zh": [
+    "提出 Cadence 动态监控框架，解决固定检查间隔和僵化启发式规则的局限。",
+    "双层干预模块区分建议级与替换级引导，分别应对轻微失误和严重错误。",
+    "检查调度器依据干预等级自适应调整频率，实现错误后的强化监督与健康执行时的开销控制。",
+    "在 300 个 SWE-bench Lite 任务及 mini-swe-agent、Moatless 两个智能体上取得最高解决率。",
+    "相较原始智能体，Cadence 在 mini-swe-agent 和 Moatless 上分别提升 25.33% 和 15.67%，且 token 效率具有竞争力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.82,
+    "problem_significance": 0.91,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.88,
+    "llm_avg": 0.86,
+    "comment": "Cadence is strong coding-agent runtime work that adaptively couples trajectory monitoring, intervention severity, and inspection scheduling.",
+    "comment_zh": "Cadence是扎实的编程智能体运行时研究，将轨迹监控、干预强度与检查调度进行自适应耦合。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.86,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12269/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12269/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.962
+    }
+  ]
+}

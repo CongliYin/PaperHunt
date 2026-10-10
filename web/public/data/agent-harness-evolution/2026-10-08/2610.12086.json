@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2610.12086",
+  "title": "EvoAlloc: A Self-Evolving Resource Allocation Agent for Efficient Program Evolution",
+  "title_zh": "EvoAlloc：用于高效程序演化的自进化资源分配智能体",
+  "authors": [
+    "Yanning Dai",
+    "Yuhui Wang",
+    "Nanbo Li",
+    "Wenyi Wang",
+    "Jürgen Schmidhuber"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-08T14:57:35Z",
+  "abs_url": "https://arxiv.org/abs/2610.12086v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.12086",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM-based program evolution relies on evaluation feedback to guide the iterative search for high-performing programs. However, evaluation is often computationally expensive, making it essential to allocate limited resources to candidates that can most effectively advance the search. Existing LLM-based methods typically rely on fixed allocation strategies throughout the search, potentially wasting resources on low-value candidates while overlooking promising ones. We propose EvoAlloc, a self-evolving resource-allocation agent that learns from search experience to revise its strategy for allocating computational resources across candidates. EvoAlloc periodically consolidates prior search and allocation outcomes into reusable experience, which informs subsequent strategy revisions. It further uses a counterfactual exploration mechanism to occasionally evaluate candidates denied resources by the allocator, revealing their outcomes to enrich its experience for future strategy updates. Across coding and agent-harness optimization benchmarks, EvoAlloc requires 59-82% fewer full evaluations and 61-89% fewer total LLM tokens to reach baseline-level performance. Moreover, under the same full-evaluation budget, EvoAlloc achieves 8.7-12.0% higher final performance.",
+  "abstract_zh": "基于大语言模型（LLM）的程序演化依赖评估反馈，以迭代搜索高性能程序。然而，程序评估通常计算成本高昂，因此需要将有限资源分配给最有可能推动搜索进展的候选者。现有 LLM 方法通常在整个搜索过程中采用固定的资源分配策略，可能将资源浪费在低价值候选者上，同时忽略有潜力的候选者。本文提出 EvoAlloc，一种自进化资源分配智能体，能够从搜索经验中学习并修正候选者间的计算资源分配策略。EvoAlloc 会定期整合以往的搜索结果与资源分配结果，形成可复用经验，并据此更新后续分配策略。此外，它引入反事实探索机制，偶尔评估原本未被分配资源的候选者，获取其真实结果，以丰富经验并改进未来的策略更新。在代码生成和智能体工具链优化基准上，EvoAlloc 达到基线性能所需的完整评估次数减少 59%–82%，总 LLM token 消耗减少 61%–89%。在相同完整评估预算下，其最终性能提升 8.7%–12.0%。",
+  "key_points_zh": [
+    "针对程序演化中评估成本高、资源有限的问题，EvoAlloc学习搜索历史，动态调整候选程序的评估资源分配策略。",
+    "方法通过周期性经验整合，将搜索结果和分配结果转化为可复用知识，用于持续修正资源分配决策。",
+    "反事实探索机制会偶尔评估被分配器忽略的候选者，避免错误决策导致的潜在优质候选者遗漏。",
+    "在代码生成和智能体工具链优化基准上，EvoAlloc以少 59%–82% 的完整评估和少 61%–89% 的 LLM token 达到基线性能。",
+    "在相同完整评估预算下，EvoAlloc的最终性能较基线提升 8.7%–12.0%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.72,
+    "novelty": 0.79,
+    "problem_significance": 0.77,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.76,
+    "llm_avg": 0.768,
+    "comment": "The adaptive allocation loop can materially reduce evaluation costs in program and harness evolution, though its abstraction is less central than a full agent runtime or training framework.",
+    "comment_zh": "该自适应资源分配闭环可显著降低程序与框架演化的评估成本，但其抽象层次不如完整智能体运行时或训练框架核心。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.44848162417484216,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.768,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 13,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12086/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.852
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12086/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

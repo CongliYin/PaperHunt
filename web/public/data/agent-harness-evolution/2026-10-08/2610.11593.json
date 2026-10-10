@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2610.11593",
+  "title": "Runnable Commit Untangling for Coding Agents",
+  "title_zh": "面向编程智能体的可运行提交解缠",
+  "authors": [
+    "Jinfeng Jiang",
+    "Dongsun Kim",
+    "Dayi Lin",
+    "Zhou Yang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-08T09:42:27Z",
+  "abs_url": "https://arxiv.org/abs/2610.11593v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.11593",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents produce large, tangled patches that mix multiple development purposes, making the code hard to review and maintain. Commit untangling offers the promise of organizing such large patches into untangled, manageable commits. This paper emphasizes two important limitations in existing commit untangling studies. First, they do not consider that untangled commits are ordered and should leave the code runnable. In practice, maintainers are unlikely to accept commits that prevent the code from running. Second, existing studies claim that commit untangling helps software maintenance. However, they conduct syntactic comparisons between the untangled commits and developers' original commits without directly showing the claimed maintenance benefits. To address these gaps, this paper makes two novel contributions: (1) RucTangle, the first agentic method that untangles commits while keeping the code runnable after each commit; and (2) TangleEval, the first evaluation framework that quantifies how untangled, manageable commit histories help coding agents repair bugs. We compare RucTangle against four untangling methods on 131 agent-generated patches. All histories produced by RucTangle are runnable, while baselines produce 20.6%-37.4% unrunnable commit histories. We further collect 453 agent-generated patches that introduce regressions (i.e., causing previously passing tests to fail) and ask two other coding agents to repair regressions. Augmenting agent context with RucTangle-produced histories yields 5.2% absolute improvement in pass@1. We also analyze agent trajectories to learn how they use untangled commits to navigate and fix bugs. Our findings demonstrate the value of adopting established software engineering practices in the era of coding agents, which broaden the future research agenda: how can agents actively use software history to make better development decisions?",
+  "abstract_zh": "编程智能体生成的大型补丁常混合多个开发目的，导致代码难以审查和维护。提交解缠旨在将其整理为清晰、可管理的提交历史，但现有研究忽视了提交顺序及每次提交后代码应保持可运行，也未直接验证解缠历史对软件维护的帮助。为此，论文提出两项贡献：一是RucTangle，首个在每次提交后保持代码可运行的智能体式提交解缠方法；二是TangleEval，首个量化解缠提交历史如何帮助编程智能体修复缺陷的评测框架。在131个智能体生成补丁上，RucTangle生成的所有提交历史均可运行，而基线方法产生20.6%至37.4%的不可运行历史。在453个引入回归问题的补丁上，利用RucTangle历史增强智能体上下文，使pass@1绝对提升5.2%。轨迹分析进一步表明，智能体能够利用解缠提交导航代码历史并定位、修复缺陷。研究说明，将成熟的软件工程实践引入编程智能体能够提升其开发与维护能力。",
+  "key_points_zh": [
+    "现有提交解缠研究忽视提交顺序与可运行性，也缺乏对维护收益的直接验证。",
+    "RucTangle通过智能体式方法生成每次提交后均可运行的解缠历史。",
+    "TangleEval评估解缠历史对编程智能体修复缺陷的实际帮助，而非仅进行语法层面对比。",
+    "在131个补丁上，RucTangle的提交历史全部可运行；基线方法有20.6%至37.4%的历史不可运行。",
+    "在453个回归补丁上，使用RucTangle历史使智能体修复任务的pass@1绝对提升5.2%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.84,
+    "problem_significance": 0.83,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.67,
+    "lasting_value": 0.85,
+    "llm_avg": 0.8059999999999998,
+    "comment": "RucTangle and TangleEval introduce a practical coding-agent workflow and executable evaluation protocol that connect patch organization to downstream repair performance.",
+    "comment_zh": "RucTangle与TangleEval提出了实用的编程智能体工作流和可执行评测协议，将补丁组织与后续修复性能联系起来。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.45529837524566663,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8059999999999998,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 8,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11593/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.944
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11593/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.955
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2610.11450",
+  "title": "Tracing the Thoughts of a Coding Agent Playing ARC-AGI-3: Lessons for Continual Learning",
+  "title_zh": "追踪在 ARC-AGI-3 中玩耍的 Coding Agent 的思维：持续学习的启示",
+  "authors": [
+    "Chen Wu",
+    "Josh Passenger",
+    "Yin Song"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-08T08:04:18Z",
+  "abs_url": "https://arxiv.org/abs/2610.11450v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.11450",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We study how a coding agent learns across a sequence of abstract reasoning tasks. The agent runs on a frozen foundation model inside a fixed harness and acts by writing and running Python and shell scripts. It retains no state across turns other than its written artifacts, so every thought it forms, carries, corrects or abandons leaves a trace, where a thought is any belief, rule or plan committed to a file. We let the agent play ARC-AGI-3, a set of interactive reasoning games that provide no instructions. Each game is a sequence of levels, and a strategy that clears one level can fail on the next, so every new level is in effect a new task. The agent records what it learns as Python scripts and text notes, while the harness keeps a complete log of every action and observation. Our contribution is a measurement protocol that traces each thought through these files, from the task where it forms to the task where it is corrected or abandoned, applied to seven evaluation runs with three backbones from two model families. Scripts written for one task are almost never called again in a later task (33 of 630 references cross a task boundary), because most scripts embed the state of the current level. Instead, the agent rewrites its knowledge into new scripts, keeping the general rules and dropping the level-specific details, and abandons 74% of the scripts it wrote before a boundary. The notes, which only the model reads, are never revised: the agent appends without removing earlier claims, and the contradictions that accumulate are settled against the log. Because the log preserves everything, the agent forgets selectively, not catastrophically. The most costly error is a hard-coded value carried into a task where it no longer holds. These findings come from the files the agent wrote, without access to the model, and constitute a white-box analysis of how a coding agent continually learns.",
+  "abstract_zh": "本文研究 Coding Agent 如何在一系列抽象推理任务中持续学习。该 Agent 运行于固定 harness 中的冻结 foundation model，仅通过编写和执行 Python 与 shell 脚本采取行动；除写入文件的产物外，它在不同回合之间不保留状态。因此，Agent 形成、保留、修正或放弃的每个“思维”——即写入文件并承诺的一条信念、规则或计划——都会留下可追踪痕迹。研究者让 Agent 参与 ARC-AGI-3，这是一组不提供说明的交互式推理游戏。每个游戏包含多个关卡，某一关卡有效的策略可能在下一关失效，因此每个新关卡实际上都构成一个新任务。Agent 通过 Python 脚本和文本笔记记录所学内容，而 harness 保存完整的行动与观察日志。本文提出一种测量协议：通过这些文件追踪每条思维，从其形成的任务一直追踪到被修正或放弃的任务，并在两个模型家族的三个 backbone、七次评测运行中进行分析。结果显示，某一任务编写的脚本几乎不会在后续任务中再次调用：630 次引用中只有 33 次跨越任务边界，因为多数脚本都编码了当前关卡的具体状态。相反，Agent 会将知识重写到新脚本中，保留一般规则并舍弃关卡特定细节；在跨越任务边界前，它会放弃此前编写脚本的 74%。只有模型可读取的文本笔记从不被修订：Agent 持续追加内容而不删除旧主张，因而会积累矛盾，并通过对照日志解决这些矛盾。由于日志保留了全部历史，Agent 表现为选择性遗忘，而非灾难性遗忘。代价最高的错误，是将某个任务中的硬编码值带入一个不再适用的新任务。本文仅依据 Agent 写入的文件进行分析，无需访问模型内部状态，构成了对 Coding Agent 持续学习过程的白盒研究。",
+  "key_points_zh": [
+    "提出基于文件与完整行动日志的思维追踪协议，可跨任务追踪规则的形成、修正与放弃。",
+    "跨任务脚本复用极少：630 次引用中仅 33 次跨越任务边界，且边界前 74% 的旧脚本被放弃。",
+    "Agent 通常重写知识，保留一般规则并去除当前关卡的状态信息，而非直接复用旧脚本。",
+    "文本笔记只追加、不修订，矛盾会持续积累；Agent 依靠完整日志进行事后判断，表现为选择性遗忘。",
+    "最昂贵的错误是把旧任务中的硬编码值迁移到不再满足该值的新任务中。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.8,
+    "problem_significance": 0.79,
+    "potential_impact": 0.73,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.82,
+    "llm_avg": 0.764,
+    "comment": "The artifact-level thought-tracing protocol provides durable evidence about how coding agents preserve, rewrite, and abandon knowledge across tasks.",
+    "comment_zh": "该制品级思维追踪协议为编程智能体如何跨任务保留、重写和放弃知识提供了持久证据。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.43279927259299455,
+    "venue_signal": 1.0,
+    "generality": 0.4,
+    "llm_assessment": 0.764,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 11,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11450/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11450/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2610.12375",
+  "title": "OnTrack: Real-Time Monitoring and Intervention in LLM Agent Trajectories via Streaming Structure-Aware Optimal Transport",
+  "title_zh": "OnTrack：基于流式结构感知最优传输的 LLM Agent 轨迹实时监控与干预",
+  "authors": [
+    "Babak Barazandeh",
+    "Connor Swanson",
+    "Chinmay Kulkarni",
+    "Nikhil Mungel"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-08T17:32:08Z",
+  "abs_url": "https://arxiv.org/abs/2610.12375v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.12375",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agents are deployed in applications from trip planners and stock trading to IT incident triage. In most cases, LLM agents work autonomously with minimal rule-based safeguarding, leading to cost and safety issues from irreversible actions. Recent works resolve this either by using a safeguard agent to monitor behavior or evaluating logs post-hoc. The first adds cost and latency to every step; the second delivers its verdict after the run, when tokens are burned and damage is done. To overcome this, we propose OnTrack, a streaming monitoring mechanism that compares an agent's steps and dependencies against recorded successful runs to alert users or block the agent in about a millisecond per step. We study this problem in three regimes of decreasing access: full reference access (historical runs and tool schemas), intermediate access (only tool schemas), and no prior knowledge (only step logs as generated). Expectation of OnTrack's monitoring capabilities reduces as data access drops, ranging from plan violation detection to identifying loops, stalls, and repeated tool calls. Finally, we evaluate OnTrack using SWE-bench trajectories. Based on the first 8 steps, our method ranks failing trajectories below succeeding ones better than content similarity approaches (+0.057 AUROC). With an abort policy, we save about 18% of compute that would be burned on failing runs, where 83% of interrupted runs were actually heading to failure (5 out of 6 aborts were correct).",
+  "abstract_zh": "LLM Agent 已广泛应用于行程规划、股票交易和 IT 事件分诊等场景，但通常仅配备有限的规则式防护，执行不可逆操作时可能引发成本与安全问题。现有方案要么使用额外的防护 Agent 持续监控，导致每一步的成本和延迟增加；要么在任务结束后分析日志，此时计算资源已经消耗，潜在损害也已发生。为此，本文提出 OnTrack：一种流式监控机制，通过将 Agent 的执行步骤及其依赖结构与历史成功轨迹进行比较，以约每步 1 毫秒的开销发出告警或阻止执行。论文研究了三种先验信息逐步减少的设置：可访问历史轨迹与工具模式（tool schemas）的完整参考设置、仅可访问工具模式的中等访问设置，以及只能观察实时步骤日志的无先验知识设置。随着可用信息减少，OnTrack 的监控目标从检测计划偏离，逐步退化为识别循环、停滞和重复工具调用。在 SWE-bench 轨迹上的实验表明，仅根据前 8 个步骤，OnTrack 区分失败与成功轨迹的 AUROC 比基于内容相似度的方法高 0.057。结合中止策略后，该方法可节省约 18% 原本会浪费在失败任务上的计算量；被提前中止的轨迹中，83% 最终确实会失败，即平均每 6 次中止有 5 次判断正确。",
+  "key_points_zh": [
+    "提出 OnTrack，以流式结构感知最优传输（Streaming Structure-Aware Optimal Transport）比较当前轨迹与成功参考轨迹，同时建模执行步骤及其依赖关系。",
+    "监控开销约为每步 1 毫秒，能够在任务运行期间实时告警或阻断异常行为，避免额外防护 Agent 带来的高成本与延迟。",
+    "覆盖三种信息访问条件：完整历史轨迹与工具模式、仅工具模式、无先验知识；可分别检测计划偏离、循环、停滞及重复工具调用等问题。",
+    "在 SWE-bench 上，仅观察前 8 个步骤时，OnTrack 区分成功与失败轨迹的 AUROC 比内容相似度基线高 0.057。",
+    "采用中止策略可节省约 18% 的失败运行计算量，且 83% 的中止决策命中了最终会失败的轨迹。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.81,
+    "problem_significance": 0.89,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.87,
+    "llm_avg": 0.8400000000000001,
+    "comment": "Its low-latency structural trajectory monitor is a reusable operational mechanism for early failure detection and compute-saving intervention.",
+    "comment_zh": "其低延迟结构化轨迹监控器为早期故障检测和节省算力的干预提供了可复用运行机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4409423303122735,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8400000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 12,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12375/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.872
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12375/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.956
+    }
+  ]
+}

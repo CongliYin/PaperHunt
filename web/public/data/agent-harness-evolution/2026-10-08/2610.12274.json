@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2610.12274",
+  "title": "HarnessSQL: Harness-Native Training for SQL Agents in Realistic Database Environments",
+  "title_zh": "HarnessSQL：面向真实数据库环境的原生执行框架训练 SQL Agent",
+  "authors": [
+    "Haolin Yang",
+    "Jipeng Zhang",
+    "Jian Xie",
+    "Shuaishuai Gong",
+    "Sirui Han",
+    "Yike Guo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-08T16:36:39Z",
+  "abs_url": "https://arxiv.org/abs/2610.12274v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.12274",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Text-to-SQL models are commonly trained to map questions directly to static queries, whereas real-world database agents operate through stateful, multi-turn interaction with live databases -- inspecting schemas, executing probe queries, diagnosing errors, and revising hypotheses. This creates a critical train-deploy mismatch, as the execution harness that mediates this interaction is introduced only at inference time. To bridge this gap, we propose HarnessSQL, a harness-native post-training framework that preserves the full interaction structure throughout both supervised fine-tuning and reinforcement learning. HarnessSQL builds isolated, executable database environments paired with hidden execution oracles, rolls out teachers directly inside the target SQL harness, and retains only verified trajectories for full-sequence SFT, followed by execution-reward RL. Across Spider 2.0-SQLite, HarnessSQL dramatically boosts the execution accuracy of compact models, raising Qwen3-8B from 15.5% to 45.2% and Qwen3-14B from 22.2% to 54.8%, while transferring effectively to out-of-distribution interactive benchmarks such as BIRD-Interact and LiveSQLBench. Our findings demonstrate that training database agents directly within their execution harness is essential for mastering complex, long-horizon database workflows.",
+  "abstract_zh": "现有 Text-to-SQL 模型通常将问题直接映射为静态 SQL 查询，但真实数据库 Agent 需要在实时数据库中进行有状态、多轮交互，包括检查 schema、执行探测查询、诊断错误和修正假设。由于训练阶段缺少推理时才引入的执行框架（harness），模型面临显著的训练—部署不匹配。HarnessSQL 提出一种 harness-native post-training 框架，在监督微调（SFT）和强化学习（RL）中保留完整交互结构：构建配有隐藏执行 oracle 的隔离可执行数据库环境，在目标 SQL harness 内直接展开教师轨迹，仅保留经过验证的轨迹进行全序列 SFT，随后使用执行奖励进行 RL。在 Spider 2.0-SQLite 上，该方法显著提升紧凑模型的执行准确率：Qwen3-8B 从 15.5% 提升至 45.2%，Qwen3-14B 从 22.2% 提升至 54.8%，并能有效迁移到分布外交互式基准 BIRD-Interact 和 LiveSQLBench。研究表明，让数据库 Agent 直接在其执行 harness 中训练，是掌握复杂长程数据库工作流的关键。",
+  "key_points_zh": [
+    "指出静态 Text-to-SQL 训练与真实数据库 Agent 的多轮、状态化执行流程之间存在严重训练—部署不匹配。",
+    "提出 HarnessSQL，在目标 SQL harness 内构建可执行数据库环境并生成教师轨迹，使训练过程复现真实交互。",
+    "仅使用经过执行验证的轨迹进行全序列 SFT，再通过执行奖励 RL 优化长程数据库任务能力。",
+    "在 Spider 2.0-SQLite 上，Qwen3-8B 执行准确率由 15.5% 提升至 45.2%，Qwen3-14B 由 22.2% 提升至 54.8%。",
+    "方法可迁移至 BIRD-Interact 和 LiveSQLBench，说明 harness-native 训练对分布外交互任务同样有效。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.88,
+    "problem_significance": 0.94,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.93,
+    "llm_avg": 0.908,
+    "comment": "HarnessSQL strongly advances agent training by preserving executable, stateful harness interaction across verified trajectory generation, SFT, and reinforcement learning.",
+    "comment_zh": "HarnessSQL在已验证轨迹生成、监督微调和强化学习中完整保留可执行的有状态框架交互，显著推进了智能体训练。"
+  },
+  "scores": {
+    "topic_relevance": 0.20000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.908,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12274/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.973
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12274/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.942
+    }
+  ]
+}

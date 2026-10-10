@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2610.12248",
+  "title": "EgoVoice: Proactive Spoken Assistance from Egocentric Multimodal Streams",
+  "title_zh": "EgoVoice：基于第一视角多模态流的主动语音辅助",
+  "authors": [
+    "Heeseung Kim"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-08T16:24:12Z",
+  "abs_url": "https://arxiv.org/abs/2610.12248v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.12248",
+  "links": {
+    "github": null,
+    "project_page": "https://egocentricvoice.github.io/"
+  },
+  "abstract_en": "Wearable augmented reality (AR) assistants are moving toward continuous real-world interaction, where they perceive the user's activity through first-person video and audio and provide timely spoken guidance without being explicitly asked. While proactive video assistants, spoken dialog systems, and egocentric task understanding have each advanced rapidly, existing systems do not address the joint problem of deciding when to speak and what to say from continuous first-person streams. We introduce EgoVoice, a framework for training and evaluating proactive egocentric spoken assistants. From HoloAssist video recordings of real human instructors, we construct clean audio streams through source separation and speech resynthesis, and convert each video session into a format where the model must decide at each moment whether to remain silent or provide spoken guidance. We fine-tune an omni-modal LLM with our data, and further improve its proactive intervention behavior with direct preference optimization. Experiments across closed and open-source models show that existing systems rarely produce well-timed, meaningful proactive interventions, while EgoVoice yields clear improvements in intervention timing, content relevance, and human preference over the zero-shot backbone.",
+  "abstract_zh": "可穿戴增强现实（AR）助手正迈向持续的现实世界交互：它们通过第一视角视频和音频感知用户活动，并在用户未明确请求时及时提供语音指导。尽管主动视频助手、语音对话系统和第一视角任务理解均取得了快速进展，现有系统尚未解决从连续第一视角数据流中联合决定“何时说话”与“说什么”的问题。本文提出 EgoVoice，一个用于训练和评估主动式第一视角语音助手的框架。基于 HoloAssist 中真实人类指导者的视频记录，研究者通过声源分离和语音重合成构建干净的音频流，并将每个视频会话转换为一种序列决策格式，使模型在每个时刻决定保持沉默或提供语音指导。研究者使用这些数据微调全模态大语言模型（omni-modal LLM），并通过直接偏好优化（Direct Preference Optimization, DPO）进一步提升其主动干预行为。在闭源和开源模型上的实验表明，现有系统很少能产生时机恰当且有意义的主动干预；相比零样本骨干模型，EgoVoice 在干预时机、内容相关性和人类偏好方面均取得了明显提升。",
+  "key_points_zh": [
+    "提出 EgoVoice，系统性解决连续第一视角视频音频流中的“何时说”和“说什么”问题。",
+    "基于 HoloAssist 构建带有干净音频和逐时刻沉默/干预决策的数据格式。",
+    "通过微调 omni-modal LLM，并结合 Direct Preference Optimization，增强主动干预能力。",
+    "实验显示，EgoVoice 在干预时机、内容相关性和人类偏好上均优于零样本骨干模型。",
+    "工作连接了主动视频助手、语音对话系统与第一视角任务理解，面向可穿戴 AR 场景。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.88,
+    "problem_significance": 0.93,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.9,
+    "llm_avg": 0.8860000000000001,
+    "comment": "It directly addresses proactive realtime multimodal assistance by jointly learning when to speak and what to say from continuous egocentric audio-visual streams.",
+    "comment_zh": "该工作直接解决了从连续第一视角音视频流中联合决定何时说话及说什么这一主动式实时多模态助手问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.6000000000000001,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8860000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://egocentricvoice.github.io/",
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12248/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12248/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.97
+    }
+  ]
+}

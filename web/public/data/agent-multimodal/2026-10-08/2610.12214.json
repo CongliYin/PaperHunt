@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2610.12214",
+  "title": "DiffuPlex: Accelerating Full-Duplex Spoken Dialog Models via Rolling Masked Diffusion",
+  "title_zh": "DiffuPlex：通过滚动掩码扩散加速全双工语音对话模型",
+  "authors": [
+    "Heeseung Kim"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-08T16:01:37Z",
+  "abs_url": "https://arxiv.org/abs/2610.12214v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.12214",
+  "links": {
+    "github": null,
+    "project_page": "https://diffuplex.github.io/"
+  },
+  "abstract_en": "Recent full-duplex spoken dialog models enable simultaneous listening and speaking, but fine-grained models still advance their backbone autoregressively at every interaction frame. We introduce DiffuPlex, a rolling masked diffusion framework that reduces this sequential computation by predicting multiple future user and assistant frames in a single backbone wake. DiffuPlex consumes only a confident prefix of each predicted future while interaction continues at the original frame rate. As user speech arrives, it checks the corresponding user predictions and, when the interaction diverges, preserves already played assistant content while revising only the unplayed future. We consider two inference policies over the same predictor: DiffuPlex-LISTEN consumes multiple future frames when they predict assistant silence, whereas DiffuPlex-SPEAK can also consume predicted assistant speech. Across full-duplex interaction and spoken-language evaluations, DiffuPlex substantially reduces sequential backbone computation while largely preserving interaction behavior and general capability. DiffuPlex-LISTEN and DiffuPlex-SPEAK achieve $1.46\\times$ and $1.59\\times$ deployment-path wall-clock speedups and $1.61\\times$ and $1.80\\times$ Core LM speedups, with all measured backbone invocations completing within the 80ms interaction interval. Human evaluation shows that LISTEN preserves speech naturalness and conversational quality, while SPEAK retains conversational quality with some degradation in speech naturalness.",
+  "abstract_zh": "现有全双工语音对话模型能够同时进行聆听与说话，但细粒度模型通常仍需在每个交互帧上自回归地推进 backbone，导致大量串行计算。论文提出 DiffuPlex，一种滚动掩码扩散（rolling masked diffusion）框架，使模型在单次 backbone 唤醒中预测用户与助手未来的多个帧，并在交互持续进行的同时仅消费其中置信度较高的前缀。当新用户语音到达时，系统检查对应的用户预测；若实际交互发生偏离，则保留已经播放的助手内容，仅修改尚未播放的未来内容。基于同一预测器，论文设计了两种推理策略：DiffuPlex-LISTEN 仅在预测助手保持静音时消费多个未来帧；DiffuPlex-SPEAK 还可消费预测的助手语音帧。在全双工交互和 spoken-language 评测中，DiffuPlex 显著减少了 backbone 的串行计算，同时基本保持交互行为与通用能力。DiffuPlex-LISTEN 和 DiffuPlex-SPEAK 分别取得 1.46× 和 1.59× 的部署路径端到端墙钟加速，以及 1.61× 和 1.80× 的 Core LM 加速；所有测得的 backbone 调用均能在 80ms 交互间隔内完成。人工评测显示，LISTEN 能保持语音自然度与对话质量；SPEAK 保持了对话质量，但语音自然度有所下降。",
+  "key_points_zh": [
+    "DiffuPlex 一次 backbone 唤醒即可预测用户和助手的多个未来交互帧，从而降低逐帧自回归计算开销。",
+    "系统只消费高置信度预测前缀；交互发生偏离时保留已播放助手内容，仅重写未播放的未来，提升实时交互稳定性。",
+    "DiffuPlex-LISTEN 主要利用助手静音片段加速，DiffuPlex-SPEAK 进一步消费预测的助手语音片段，获得更高吞吐。",
+    "LISTEN 和 SPEAK 分别实现 1.46×、1.59× 部署路径加速及 1.61×、1.80× Core LM 加速，且 backbone 调用均满足 80ms 时限。",
+    "人工评测表明 LISTEN 基本保持语音自然度和对话质量；SPEAK 保持对话质量，但语音自然度存在一定退化。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.89,
+    "problem_significance": 0.91,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.87,
+    "llm_avg": 0.8640000000000001,
+    "comment": "A strong systems contribution that substantially reduces full-duplex spoken-dialog computation while preserving causal responsiveness through speculative rolling prediction and revision.",
+    "comment_zh": "该工作利用滚动式预测与修订显著降低全双工语音对话的计算开销，同时保持因果响应能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8640000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://diffuplex.github.io/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12214/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.921
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12214/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.948
+    }
+  ]
+}

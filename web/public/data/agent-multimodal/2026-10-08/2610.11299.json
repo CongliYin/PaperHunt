@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2610.11299",
+  "title": "DuplexAgent-RSI: Recursive Harness Improvement for Full-Duplex Voice Agent Collaboration",
+  "title_zh": "DuplexAgent-RSI：面向全双工语音智能体协作的递归式 Harness 改进",
+  "authors": [
+    "Yingda Shen",
+    "Yuxiang Wang",
+    "Kunyu Feng",
+    "Qinke Ni",
+    "Jiaqi Li",
+    "Minghao Hsu",
+    "Junan Zhang",
+    "Dekun Chen",
+    "Yutong Bian",
+    "Zhizheng Wu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-08T06:06:42Z",
+  "abs_url": "https://arxiv.org/abs/2610.11299v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.11299",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Voice agents are converging on a collaboration pattern: a full-duplex interaction model stays on the live channel as the entry to the conversation, while search, reasoning, and coding are handled through asynchronous delegation. A duplex model supports continuous listening and speaking, but complex reasoning and tool use may exceed its capabilities. A coding agent can plan and execute extended tasks, but its sequential interface is a poor fit for live conversation. Combining them requires a harness that coordinates task acceptance, progress, cancellation, replacement, and result delivery while keeping the conversation responsive. Existing harnesses often rely on coupled heuristics, making them difficult to improve systematically from evidence. We present DuplexAgent, a full-duplex collaboration system whose harness expresses this workflow as six editable modules, and Duplex-Harness-RSI, a closed loop that revises them from interaction traces. A simulator automatically generates timed test conversations, runs the system, and produces failure traces that identify the collaboration modules requiring repair. Reasoning LLMs and coding agents in the delegation pool also serve the improvement loop: the Exam Planner selects the next tests from observed weaknesses and the repair archive, and the Harness Editor proposes targeted module changes. The capabilities that serve the user thus also improve the system's coordination. Experiments on intelligence, agentic, and duplex benchmarks show that DuplexAgent combines continuous interaction with difficult reasoning and complex task execution, achieving stronger spoken-knowledge and executable-tool scores than the compared delegated systems while maintaining strong interruption response. A harness ablation further shows that this modular, verifiable loop outperforms the initial harness and repeated editing that lacks its diagnosis and repair archive.",
+  "abstract_zh": "语音智能体正趋向一种协作模式：全双工模型持续驻留在实时通道中，负责开启并维持对话；搜索、推理和编码等复杂任务则通过异步委派完成。全双工模型能够连续听说，但复杂推理与工具调用能力有限；编码智能体擅长规划和执行长程任务，却不适合实时交互。二者结合需要一个 Harness，协调任务接受、进度汇报、取消、替换和结果交付，同时保持对话响应性。现有 Harness 通常依赖耦合启发式规则，难以依据证据系统改进。本文提出 DuplexAgent：将协作流程表示为六个可编辑模块的全双工协作系统；并提出 Duplex-Harness-RSI，通过交互轨迹闭环修订这些模块。模拟器自动生成带时间信息的测试对话、运行系统并产出失败轨迹，以定位需要修复的协作模块。委派池中的推理大语言模型和编码智能体也参与改进循环：Exam Planner 根据已观察到的弱点及修复档案选择下一批测试，Harness Editor 则提出针对性的模块修改，使服务用户的能力同时用于改进系统协调机制。在 intelligence、agentic 和 duplex 基准上的实验表明，DuplexAgent 将持续交互与复杂推理、复杂任务执行结合起来；相比其他委派系统，它取得更高的 spoken-knowledge 和 executable-tool 得分，并保持较强的打断响应能力。Harness 消融实验进一步显示，该模块化、可验证的闭环优于初始 Harness，也优于缺少诊断与修复档案的重复编辑方案。",
+  "key_points_zh": [
+    "DuplexAgent 以全双工语音模型负责实时对话，以异步委派连接推理、搜索和编码智能体。",
+    "协作 Harness 被拆分为六个可编辑模块，覆盖任务接受、进度、取消、替换与结果交付等流程。",
+    "Duplex-Harness-RSI 通过模拟测试、失败轨迹、Exam Planner 和 Harness Editor，形成诊断—修复闭环。",
+    "实验显示，该系统兼具持续交互、复杂推理和工具执行能力，在 spoken-knowledge、executable-tool 及打断响应方面表现突出。",
+    "消融结果表明，具备模块化诊断和修复档案的闭环优于初始 Harness 及无诊断的重复编辑方法。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.91,
+    "problem_significance": 0.93,
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.83,
+    "lasting_value": 0.91,
+    "llm_avg": 0.9040000000000001,
+    "comment": "A highly relevant full-duplex voice-agent system that closes the loop between delegation, interruption-aware coordination, trace-based diagnosis, and automatic harness repair.",
+    "comment_zh": "这是高度契合领域的全双工语音代理系统，将任务委派、可中断协调、基于轨迹的诊断与自动化编排修复形成了闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.8110681118254242,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9040000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 8,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 46,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11299/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11299/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.977
+    }
+  ]
+}

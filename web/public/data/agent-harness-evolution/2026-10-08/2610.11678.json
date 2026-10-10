@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2610.11678",
+  "title": "TRACE: Diagnosing Verifier Brittleness in Agentic Evaluation",
+  "title_zh": "TRACE：诊断智能体评测器的脆弱性",
+  "authors": [
+    "Radhika Gaonkar"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-08T10:52:26Z",
+  "abs_url": "https://arxiv.org/abs/2610.11678v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.11678",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Verifier scores now serve as both benchmark metrics and training rewards for large language model (LLM) agents, and a change in score is routinely read as a change in capability. It may instead reflect a change in the evaluation. We introduce TRACE, a protocol that turns a score change from a verdict into a testable diagnosis: it applies a targeted change to one part of an evaluation, compares paired runs, checks whether the agent's behavior changed, and rescores unchanged trajectories to test whether the scoring rule is responsible. In a controlled suite of 25 synthetic tasks, renaming tools lowers a scripted agent's score by 0.250 even though it performs exactly the same operations; restoring the original names at scoring time closes the entire gap, while the same mutation exposes a genuine behavioral failure in a second agent. On public $τ^2$-bench tasks with four LLM agents, an initial 30-task study finds mixed reward changes whose one clear effect does not replicate. In a larger follow-up on 88 new tasks with repeated runs per condition, renaming tools or reformatting tool outputs leaves reward unchanged to within $\\pm$0.10 for seven of eight agent-change pairs, whereas tool names that deliberately mislead lower every agent's reward by 0.20-0.44, showing that the setup can detect real effects. Identical reruns flip 15-36% of task outcomes, so single-run comparisons cannot separate presentation effects from run-to-run variation. Two frontier LLM judges give consistent verdicts when a fixed trajectory is presented differently, yet disagree with each other on 57% of the same records, largely because one grades procedure rather than outcome. TRACE thus separates what a score change says about the agent from what it says about the measurement.",
+  "abstract_zh": "Verifier 分数既被用作大型语言模型（LLM）智能体的基准指标，也被用作训练奖励；但分数变化未必代表能力变化，也可能源于评测机制变化。论文提出 TRACE，一种将分数变化从“结论”转化为“可检验诊断”的协议：针对评测的某一部分进行定向修改，比较成对运行结果，检查智能体行为是否改变，并对未改变的轨迹重新评分，以判断问题是否来自评分规则。在包含 25 个合成任务的受控实验中，仅重命名工具就使脚本化智能体分数下降 0.250；在评分时恢复原工具名后，差距完全消失，而同样的修改又能暴露另一智能体的真实行为失败。在公开 τ^2-bench 任务上，初步 30 任务实验观察到混合的奖励变化，但唯一明显效应未能复现。随后对 88 个新任务进行多次重复实验发现，重命名工具或重新格式化工具输出，在 8 组智能体变化对中的 7 组使奖励变化保持在 ±0.10 以内；相反，故意误导性的工具名使所有智能体奖励下降 0.20–0.44，说明该协议能够检测真实影响。此外，相同条件的重复运行会导致 15%–36% 的任务结果翻转，因此单次运行无法区分展示效应与运行间随机波动。两名前沿 LLM 评审器在不同呈现方式下对固定轨迹的判断较一致，但对同一记录彼此有 57% 的分歧，主要因为其中一名更重视操作过程而非最终结果。TRACE 因而能够区分分数变化究竟反映了智能体本身，还是反映了测量方式。",
+  "key_points_zh": [
+    "提出 TRACE 诊断协议，通过定向修改评测、比较配对运行、检查行为变化并重评分原轨迹，定位分数变化来源。",
+    "在合成任务中，仅重命名工具就让脚本化智能体分数下降 0.250；恢复原名后差距完全消失，证明评测器可能产生伪变化。",
+    "在 88 个 τ^2-bench 新任务上，普通重命名或输出重格式化基本不影响奖励，而故意误导工具名会使所有智能体奖励下降 0.20–0.44，表明 TRACE 也能识别真实行为影响。",
+    "相同条件重复运行有 15%–36% 的任务结果翻转，说明单次运行无法可靠区分展示效应与随机波动。",
+    "不同 LLM 评审器对呈现变化较稳定，但彼此在 57% 的记录上意见不一致，分歧主要来自对过程与结果的不同偏好。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.86,
+    "problem_significance": 0.93,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.92,
+    "llm_avg": 0.8859999999999999,
+    "comment": "TRACE provides a rigorous reusable protocol for separating genuine agent behavior changes from verifier brittleness and evaluation noise.",
+    "comment_zh": "TRACE提供了严谨且可复用的协议，用于区分真实的智能体行为变化、验证器脆弱性与评测噪声。"
+  },
+  "scores": {
+    "topic_relevance": 0.44000000000000006,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.8859999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11678/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.669
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11678/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.972
+    }
+  ]
+}

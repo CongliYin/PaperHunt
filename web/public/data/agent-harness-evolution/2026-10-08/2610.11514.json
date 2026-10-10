@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2610.11514",
+  "title": "SSCBench: Evaluating the Evidential Validity of Fault-Injection Tests for Tool-Using LLM Agents",
+  "title_zh": "SSCBench：评估工具使用型 LLM Agent 故障注入测试的证据有效性",
+  "authors": [
+    "Xincheng He",
+    "Wanli Dong",
+    "Zhaoqiang Guo",
+    "Yan Liu",
+    "Lei Xu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-08T08:50:31Z",
+  "abs_url": "https://arxiv.org/abs/2610.11514v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.11514",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Fault injection is increasingly used to evaluate the reliability of tool-using LLM agents. However, there has been limited study of how fault-adoption results should be interpreted when the agent itself determines which authoritative observations become visible during execution. In this paper, we present a systematic study of this evidential validity problem in agent fault-injection evaluation. We develop a measurement protocol that specifies what observations can refute an injected assertion, determines whether they can become visible before the affected fact is first used, and records whether the evaluated execution actually realizes this condition. We construct SSCBench as an instantiation of the protocol and evaluate four fault operators and five agent configurations over 1,191 faulted executions in two $τ$-bench environments. Our experiments show that an admitted fault case and agent configuration can realize substantially different evidential conditions across executions, and that aggregate adoption can remain well defined even when the population supporting a timely-counterevidence claim is sparse or absent. For example, among 44 adopted runs in which counterevidence eventually became visible, only 17 received it before first use, while 27 received it afterward. We also find that first-error timing and later stance revision need not coincide, and that automated trajectory analysis can recover adoption without reliably recovering the first faulty-reliance event needed for temporal diagnosis. We argue that the evidential condition realized by an execution and the population supporting a claim-specific interpretation are part of fault-injection evaluation itself and should be reported before adoption is interpreted as failure under pre-use counterevidence.",
+  "abstract_zh": "故障注入正被广泛用于评估工具使用型 LLM Agent 的可靠性，但当 Agent 自身决定执行过程中哪些权威观察可见时，如何解释其采纳故障结果仍缺乏系统研究。本文针对故障注入评估中的证据有效性问题，提出一套测量协议：明确哪些观察能够反驳被注入断言，判断这些观察是否能在受影响事实首次使用前出现，并记录实际执行是否满足该条件。基于该协议，作者构建 SSCBench，在两个 τ-bench 环境中对四种故障算子和五种 Agent 配置进行评估，共分析 1,191 次故障执行。实验表明，同一故障案例和 Agent 配置在不同执行中可能实现显著不同的证据条件；即使支持“及时获得反证”的样本稀少或不存在，整体故障采纳率仍可能具有明确含义。在 44 次最终可见反证且 Agent 采纳故障的执行中，仅 17 次在首次使用前获得反证，另有 27 次在首次使用后才获得。研究还发现，首次错误发生时间与后续立场修正并不必然一致；自动轨迹分析可以识别故障采纳，却未必能可靠定位时间诊断所需的首次错误依赖事件。因此，在将故障采纳解释为“面对使用前反证仍失败”之前，应先报告每次执行实际实现的证据条件，以及支持具体解释性结论的样本群体。",
+  "key_points_zh": [
+    "提出证据有效性测量协议，区分反证是否存在、是否在首次使用前可见，以及执行是否真正满足这些条件。",
+    "构建 SSCBench，在两个 τ-bench 环境中覆盖四种故障算子、五种 Agent 配置和 1,191 次故障执行。",
+    "44 次最终看到反证的采纳执行中，仅 17 次在首次使用前看到反证，27 次在首次使用后才看到，说明总采纳率不能直接等同于失败率。",
+    "首次错误依赖时间与后续立场修正并不总是一致，自动轨迹分析也难以稳定恢复首次错误依赖事件。",
+    "故障注入报告应先呈现执行级证据条件和支持特定结论的样本群体，再解释故障采纳的含义。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.91,
+    "novelty": 0.83,
+    "problem_significance": 0.87,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.87,
+    "llm_avg": 0.828,
+    "comment": "SSCBench contributes a careful trajectory-aware protocol for determining when fault-injection outcomes constitute valid evidence about tool-using agent reliability.",
+    "comment_zh": "SSCBench提出了审慎的轨迹感知协议，用于判断故障注入结果何时能构成工具型智能体可靠性的有效证据。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.38519017333805144,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.828,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11514/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11514/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.944
+    }
+  ]
+}

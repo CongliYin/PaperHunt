@@ -1,0 +1,93 @@
+{
+  "arxiv_id": "2610.11345",
+  "title": "SynCo: Data Synthesis Co-Training for Self-Evolving LLMs via Multi-Agent Reinforcement Learning",
+  "title_zh": "SynCo：通过多智能体强化学习进行数据合成协同训练，推动自进化 LLM",
+  "authors": [
+    "Wei Yang",
+    "Shawn Li",
+    "Yuehan Qin",
+    "Yawei Wang",
+    "Mingxi Wang",
+    "Shixuan Li",
+    "Tiankai Yang",
+    "Jiate Li",
+    "Jesse Thomason",
+    "Xuezhe Ma",
+    "Yue Zhao"
+  ],
+  "author_affiliations": [
+    {
+      "name": "Wei Yang",
+      "affiliations": [
+        "Facebook"
+      ]
+    }
+  ],
+  "published_at": "2026-10-08T06:40:18Z",
+  "abs_url": "https://arxiv.org/abs/2610.11345v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.11345",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Self-evolving LLM agents promise to improve autonomously through continual interaction and learning, reducing their dependence on manually curated supervision. Realizing this promise requires not only updating the agent, but also evolving its training experience as its capabilities change. However, most existing pipelines rely on static datasets or separately updated synthesis models, causing previously useful tasks to become trivial while overly difficult tasks remain uninformative. This growing mismatch between agent capability and training experience limits sustained self-improvement. To address this problem, we propose SynCo, an agentic data synthesis co-training framework for self-evolving LLMs based on multi-agent reinforcement learning. SynCo jointly optimizes two independently parameterized agents: a Synthesizer that constructs training tasks from the Reasoner's evolving capability state, and a Reasoner that learns from the resulting experience. Each synthesized task induces multiple Reasoner rollouts whose outcomes provide complementary rewards to both agents. Correctness feedback improves the Reasoner, while task quality, answer reliability, and outcome-grounded teachability guide the Synthesizer. Their updates are fed back into subsequent synthesis rounds, allowing the task-solving policy and its training distribution to evolve together. Extensive experiments across eight mathematical reasoning benchmarks demonstrate that SynCo substantially outperforms a broad range of existing synthetic-data methods and controlled baselines, achieving the strongest overall performance while deriving most of its gains from previously unsolved problems.",
+  "abstract_zh": "自进化 LLM 智能体可通过持续交互与学习实现自主提升，降低对人工标注监督的依赖。但随着智能体能力变化，训练经验也必须同步演化。现有方法多依赖静态数据集或独立更新的数据合成模型，导致部分任务逐渐过于简单，而过难任务又难以提供有效学习信号，形成能力与训练分布之间的错配。为此，本文提出 SynCo，一种基于多智能体强化学习的智能体数据合成协同训练框架。SynCo 联合优化两个独立参数化的智能体：根据 Reasoner 能力状态构造训练任务的 Synthesizer，以及从生成经验中学习的 Reasoner。每个合成任务会触发多个 Reasoner rollout，其结果为两个智能体提供互补奖励：正确性反馈用于改进 Reasoner；任务质量、答案可靠性和基于结果的可教性则用于指导 Synthesizer。两者的更新会反馈至后续合成轮次，使任务求解策略与训练分布共同演化。在八个数学推理基准上的大量实验表明，SynCo 显著优于多种合成数据方法和受控基线，取得最强总体性能，且大部分增益来自此前无法解决的问题。",
+  "key_points_zh": [
+    "提出 SynCo，通过多智能体强化学习联合训练 Synthesizer 与 Reasoner。",
+    "Synthesizer 根据 Reasoner 的动态能力生成匹配难度和可学习性更高的任务。",
+    "多次 Reasoner rollout 同时提供正确性、任务质量、答案可靠性与可教性奖励。",
+    "训练策略与数据分布闭环更新，缓解静态数据导致的任务过易或过难问题。",
+    "在八个数学推理基准上整体领先现有合成数据方法，增益主要来自未解决问题。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.82,
+    "novelty": 0.82,
+    "problem_significance": 0.84,
+    "potential_impact": 0.79,
+    "paradigm_shift": 0.81,
+    "lasting_value": 0.8,
+    "llm_avg": 0.812,
+    "comment": "SynCo offers a credible closed-loop trajectory-data synthesis and agent-RL scheme in which the learner and its training distribution co-evolve.",
+    "comment_zh": "SynCo提出了可信的闭环轨迹数据合成与智能体强化学习方案，使学习者及其训练分布共同演化。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5419056724310047,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.812,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 13,
+    "first_author_found": true,
+    "first_author_affiliations": [
+      "Facebook"
+    ],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11345/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11345/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.985
+    }
+  ]
+}

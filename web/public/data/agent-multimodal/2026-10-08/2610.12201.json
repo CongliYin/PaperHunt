@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2610.12201",
+  "title": "SteerablePlex: Can We Steer Full-Duplex Models?",
+  "title_zh": "SteerablePlex：我们能否控制全双工模型？",
+  "authors": [
+    "Haolong Zheng",
+    "Maike Züfle",
+    "Dominik Macháček",
+    "Peter Polák",
+    "Xulin Fan",
+    "Xavier Sumba",
+    "Siyin Wang",
+    "Ondřej Klejch",
+    "Mark Hasegawa-Johnson"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-08T15:56:28Z",
+  "abs_url": "https://arxiv.org/abs/2610.12201v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.12201",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Full-duplex speech models can listen and speak simultaneously, enabling natural interaction, but become increasingly difficult to control as the conversation history grows. When used as user simulators, this lack of control can cause them to deviate from prescribed scenarios and produce unreliable evaluation outcomes. We introduce SimIF-Bench (Simulator Instruction-Following Benchmark), which evaluates whether a conversational model stays within a prescribed scenario and completes multiple goals in the required order. The benchmark reveals that current open-source full-duplex models struggle to follow such constraints. We then introduce a Group Reward-Decoupled Normalization Policy Optimization (GDPO)-based training recipe that enables a full-duplex model to follow textual instructions during an ongoing conversation while maintaining its turn-taking ability. By connecting the resulting SteerablePlex to an asynchronous backend language model that monitors the conversation and provides instructions when needed, we build a more controllable full-duplex user simulator that follows multi-stage constraints more reliably than existing open-source models and GPT-Realtime.",
+  "abstract_zh": "全双工语音模型能够同时听和说，可实现更自然的人机交互，但随着对话历史增长，其行为控制难度显著提升。作为用户模拟器时，这种不可控性会导致模型偏离预设场景，降低评测结果的可靠性。论文提出 SimIF-Bench（Simulator Instruction-Following Benchmark），用于评估对话模型能否遵守指定场景，并按要求顺序完成多个目标。结果显示，现有开源全双工模型在约束遵循方面表现不佳。为此，作者提出基于 Group Reward-Decoupled Normalization Policy Optimization（GDPO）的训练方案，使全双工模型能够在持续对话中遵循文本指令，同时保持自然的轮次交互能力。进一步地，作者将训练后的 SteerablePlex 与异步后端语言模型连接，由后者监控对话并在必要时下达指令，从而构建出更可控的全双工用户模拟器。该系统在多阶段约束遵循方面优于现有开源模型和 GPT-Realtime。",
+  "key_points_zh": [
+    "提出 SimIF-Bench，评估模型在指定场景中遵循指令、按顺序完成多目标的能力。",
+    "实验表明，现有开源全双工模型难以在长对话中稳定遵守多阶段约束。",
+    "提出基于 GDPO 的训练方案，使模型兼顾文本指令遵循与自然轮次交互。",
+    "通过异步后端语言模型实时监控对话并提供干预指令，增强 SteerablePlex 的可控性。",
+    "构建的全双工用户模拟器在约束遵循能力上优于现有开源模型和 GPT-Realtime。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.86,
+    "problem_significance": 0.88,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.84,
+    "llm_avg": 0.834,
+    "comment": "It advances controllable full-duplex speech agents with a reusable instruction-following benchmark and a practical training-and-monitoring recipe for reliable conversational simulation.",
+    "comment_zh": "该工作通过可复用的指令遵循基准、训练方法和异步监控机制提升了全双工语音代理及其对话模拟的可控性。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.3210331475111057,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.834,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12201/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.959
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12201/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.952
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2610.11188",
+  "title": "What to Admit and How to Present: Governing Persistent Memory in LLM Agents",
+  "title_zh": "该保留什么、如何呈现：治理 LLM Agent 的持久化记忆",
+  "authors": [
+    "Chang Liu",
+    "Deliang Ding"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-08T03:45:28Z",
+  "abs_url": "https://arxiv.org/abs/2610.11188v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.11188",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Persistent memory can improve personalization in LLM agents but can also induce sycophancy and cross-domain leakage. We distinguish two governance decisions: admission, which determines what recalled information enters the working context, and presentation, which determines how admitted information is expressed. We implement two inference-time designs without retraining: factor-compiled admission (FC), which assesses whole memory entries, and permission-semantic admission (PS), which decomposes entries into typed units; both translate adjudicated attributes into eligibility decisions via deterministic policies. We evaluate on a four-backbone development suite and an external benchmark with four tasks of 300 samples each. Relative to verbatim injection, FC and PS reduce pooled judge-assessed failure rates on the external benchmark by 6.7 and 8.8 percentage points (p = 2.7e-7 and 4.1e-12), and development-set cross-domain leakage falls by up to 29.5 percentage points. A query-conditioned gating baseline shows no significant change in objective-fact failure or pooled failure. Under matched admission budgets, PS outperforms random and relevance-based selection on external objective-fact judgment after Holm correction. Holding presentation fixed, tightening admission cuts cross-domain failure by a further 17.5 percentage points (p = 1.6e-4); in contrast, no comparison between two renderings of identical adjudicated outputs survives multiple-comparison correction. Both designs increase personalization failures, and PS misses the preregistered improvement and personalization-preservation criteria. These results support evaluating admission and presentation separately: selection quality provides task-specific safety gains, while preserving beneficial memory use remains unresolved.",
+  "abstract_zh": "持久化记忆能够提升 LLM Agent 的个性化能力，但也可能引发迎合（sycophancy）与跨域信息泄漏。本文区分两类治理决策：准入（admission）决定哪些被召回的信息进入工作上下文，呈现（presentation）决定这些信息以何种方式表达。作者提出两种无需重新训练的推理时设计：整体记忆条目评估方法 factor-compiled admission（FC），以及将条目拆分为带类型单元的 permission-semantic admission（PS）；二者均将经裁决的属性通过确定性策略转换为准入决策。在包含四种骨干模型的开发集和一个包含四项任务、每项 300 个样本的外部基准上，相较于逐字注入，FC 和 PS 分别使外部基准的汇总评审失败率降低 6.7 和 8.8 个百分点，且具有统计显著性（p = 2.7e-7 和 4.1e-12）；开发集上的跨域泄漏最多降低 29.5 个百分点。查询条件门控基线在客观事实失败率和汇总失败率上均未产生显著变化。在匹配准入预算下，经过 Holm 校正后，PS 在外部客观事实评审上优于随机选择和基于相关性的选择。固定呈现方式时，收紧准入可使跨域失败率进一步下降 17.5 个百分点（p = 1.6e-4）；相比之下，对相同裁决输出采用两种不同渲染方式的比较未能通过多重比较校正。两种设计都会增加个性化失败，且 PS 未达到预注册的改进与个性化保持标准。结果表明，应分别评估准入与呈现：选择质量能够带来任务特定的安全收益，但如何保留记忆的有益使用仍未解决。",
+  "key_points_zh": [
+    "将记忆治理拆分为准入与呈现，提出无需训练的 FC 和 PS 两种方案。",
+    "相较逐字注入，FC 与 PS 显著降低外部基准的总体失败率和跨域泄漏。",
+    "在相同准入预算下，PS 优于随机及基于相关性的记忆选择。",
+    "收紧准入能进一步降低跨域失败，但不同呈现方式未显示稳健收益。",
+    "两种方法均增加个性化失败；如何兼顾安全与有益记忆使用仍待解决。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.91,
+    "novelty": 0.8,
+    "problem_significance": 0.84,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.82,
+    "llm_avg": 0.792,
+    "comment": "A strong Agent-memory study that separates memory admission from presentation and provides rigorous evidence for selective, policy-controlled persistent memory, though its unresolved personalization tradeoffs limit the paradigm shift.",
+    "comment_zh": "这是一项较强的 Agent Memory 研究，将记忆准入与呈现分离并系统评估策略化选择，但尚未解决的个性化权衡限制了其范式突破性。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.21754098571521813,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.792,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11188/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11188/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.973
+    }
+  ]
+}

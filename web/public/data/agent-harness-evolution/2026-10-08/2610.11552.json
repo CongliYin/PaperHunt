@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2610.11552",
+  "title": "Safe, Persistent, and Evolving Agent Harness for Understanding Partially Observable Worlds",
+  "title_zh": "用于理解部分可观测世界的安全、持久且可演化智能体框架",
+  "authors": [
+    "Yisen Gao",
+    "Yue Guo",
+    "Qing Zong",
+    "Yiwen Guo",
+    "Yangqiu Song"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-08T09:15:28Z",
+  "abs_url": "https://arxiv.org/abs/2610.11552v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.11552",
+  "links": {
+    "github": "https://github.com/HKUST-KnowComp/E-LEDGER-WorldAbduct.",
+    "project_page": null
+  },
+  "abstract_en": "Large language model agents can invoke tools fluently, but enterprise workflows demand more than selecting the right tools: actions must strictly comply with organizational policies, tool feedback often conceals hidden side effects under partial observability, and long-horizon tasks require persistent state tracking across multiple records. To address these challenges, we introduce E-Ledger, a multi-agent harness for safe and persistent execution. E-Ledger employs a code approval layer that checks every proposed action against policy before execution, and maintains a world ledger of verified hidden rules alongside evidence-backed dynamic state. Because hidden rules are typically unknown a priori, we further propose WorldAbduct, an abductive, world-model-driven harness evolution framework. WorldAbduct diagnoses execution trajectories across four complementary views (state consistency, world-observation gap, policy-gate correctness, and goal judgment) to hypothesize latent rules, and verifies them through targeted abductive interactions before integrating them into the ledger. On the enterprise benchmark World of Workflows, E-Ledger with WorldAbduct improves safe task completion across four LLM backbones, outperforming the strongest evolution baseline by 5--15 percentage points. Experiments in ScienceWorld and DiscoveryWorld further show that abductive harness evolution carries over to scientific environments. Our code is available at https://github.com/HKUST-KnowComp/E-LEDGER-WorldAbduct.",
+  "abstract_zh": "大型语言模型智能体虽能熟练调用工具，但企业工作流不仅要求选对工具，还要求所有操作严格遵守组织政策、在部分可观测条件下识别工具反馈所掩盖的副作用，并在长程任务中跨多条记录持续追踪状态。为此，本文提出 E-Ledger，一种面向安全、持久执行的多智能体框架。E-Ledger 通过代码审批层在执行前依据政策检查每个候选操作，同时利用世界账本（world ledger）维护经验证的隐藏规则及具有证据支持的动态状态。针对隐藏规则通常无法预先获知的问题，本文进一步提出 WorldAbduct，一种由溯因推理和世界模型驱动的框架演化方法。WorldAbduct 从状态一致性、世界—观测差距、政策门控正确性和目标判断四个互补视角诊断执行轨迹，推测潜在规则，再通过有针对性的溯因交互进行验证并将其写入账本。在企业级基准 World of Workflows 上，结合 WorldAbduct 的 E-Ledger 在四种 LLM 骨干模型上均提升了安全任务完成率，相较最强演化基线高出 5–15 个百分点。ScienceWorld 与 DiscoveryWorld 上的实验进一步表明，该框架的溯因演化能力可迁移至科学环境。",
+  "key_points_zh": [
+    "提出 E-Ledger 多智能体框架，通过代码审批层在工具执行前检查候选操作是否符合组织政策。",
+    "构建世界账本，统一保存经验证的隐藏规则与证据支持的动态状态，支持部分可观测环境中的长程状态追踪。",
+    "提出 WorldAbduct，从状态一致性、世界—观测差距、政策门控正确性和目标判断四个视角诊断轨迹并提出潜在规则。",
+    "通过针对性的溯因交互验证潜在规则，再将可信规则整合进账本，使智能体框架能够持续演化。",
+    "在 World of Workflows 上较最强演化基线提升 5–15 个百分点，并在 ScienceWorld、DiscoveryWorld 中展现跨科学环境的迁移能力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.88,
+    "problem_significance": 0.93,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.91,
+    "llm_avg": 0.8959999999999999,
+    "comment": "The combination of policy-gated execution, persistent workflow state, trajectory diagnosis, and verified harness evolution directly addresses long-horizon agent operations.",
+    "comment_zh": "该工作结合策略门控执行、持久工作流状态、轨迹诊断和经验证的框架演化，直接解决长程智能体运行问题。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8959999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/HKUST-KnowComp/E-LEDGER-WorldAbduct.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11552/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11552/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2610.12002",
+  "title": "Agentic-TTT: Training test-time policy for test-time training",
+  "title_zh": "Agentic-TTT：训练用于测试时训练的测试时策略",
+  "authors": [
+    "Jiahao Lu",
+    "Mohan Kankanhalli"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-08T14:06:26Z",
+  "abs_url": "https://arxiv.org/abs/2610.12002v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.12002",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Test-time training (TTT) adapts an LLM's parameters using signals derived from test inputs, and can make striking improvements in pre-specified settings such as IMO competitions or designated open problems. By turning deployment experience into parameter updates, TTT provides a direct mechanism for model-level self-improvement. Yet TTT is not universally beneficial: each TTT algorithm works in different settings, and applying an ill-suited method could waste test-time compute or even damage model performance. Therefore, such parameter-level self-improvement requires agency: the model must decide when TTT is warranted, which algorithm to invoke, and whether an existing skill can be reused. To fill this gap, we introduce Agentic-TTT, which learns a test-time policy to govern those decisions. Agentic-TTT turns TTT procedures into callable tools, treats accumulated skills as an evolving deployment environment, and trains its policy using the observed utility gains from its decisions. On our benchmark, Agentic-TTT nearly doubles the utility over the backbone model, learns to trade off utility against compute, and generalizes to domains unseen during training. Together, these results point toward autonomous self-improvement: models that can decide how to learn from their own deployment experience.",
+  "abstract_zh": "测试时训练（Test-Time Training, TTT）利用测试输入产生的信号更新大语言模型参数，可在 IMO 竞赛等特定场景中显著提升性能，但不同 TTT 算法适用范围不同，盲目调用可能浪费计算资源甚至损害性能。为此，论文提出 Agentic-TTT，学习一个测试时策略，决定何时进行 TTT、调用哪种算法，以及是否复用已有技能。该方法将 TTT 流程封装为可调用工具，把积累的技能视为持续演化的部署环境，并依据决策带来的效用增益训练策略。在基准测试中，Agentic-TTT 的效用几乎达到骨干模型的两倍，同时能够权衡效用与计算成本，并泛化到训练阶段未见的领域。",
+  "key_points_zh": [
+    "核心问题：TTT 并非普适有效，需要根据任务场景选择算法并控制调用时机。",
+    "方法设计：将 TTT 方法工具化，由 Agentic-TTT 策略决定是否调用、调用哪种方法及是否复用已有技能。",
+    "学习信号：根据测试时决策带来的效用增益训练策略，使模型从部署经验中持续改进。",
+    "实验结果：相比骨干模型，整体效用近乎翻倍，并能在效用与测试时计算开销之间进行权衡。",
+    "泛化能力：策略可迁移到训练期间未见的领域，展示了自主模型级自我改进的潜力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.88,
+    "problem_significance": 0.89,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.88,
+    "lasting_value": 0.86,
+    "llm_avg": 0.874,
+    "comment": "This is strong Agent-training and Skill-evolution work that turns test-time learning into a policy-controlled, utility-aware self-improvement loop with tool invocation and cross-domain generalization.",
+    "comment_zh": "这项工作将测试时学习转化为由策略控制且感知效用的自我改进闭环，并结合工具调用与跨领域泛化，具有较高的智能体训练和技能演化价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.874,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12002/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12002/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.917
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2610.11573",
+  "title": "Memory Type Varies: Empowering LLM Agents for Long-Term Memory with Diverse Strategies",
+  "title_zh": "记忆类型各异：利用多样化策略赋能 LLM Agents 的长期记忆",
+  "authors": [
+    "Yi Wen",
+    "Derong Xu",
+    "Pengyue Jia",
+    "Yichao Wang",
+    "Yingyi Zhang",
+    "Maolin Wang",
+    "Junyi Li",
+    "Wenlin Zhang",
+    "Xiaopeng Li",
+    "Yong Liu",
+    "Xiangyu Zhao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-08T09:28:31Z",
+  "abs_url": "https://arxiv.org/abs/2610.11573v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.11573",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "The memory capabilities of Large Language Models (LLMs) have garnered increasing attention recently. Despite great success achieved, existing retrieval-based memory approaches typically overlook the differences between memories and employ a unified strategy to process all memories, leading to suboptimal performance. Thus, an intuitive question arises: can we categorize memory into different types and select appropriate strategies? However, given the topic-rich, scenario-complex, and boundary-blurred nature of memory scenarios, achieving precise classification of memories is not easy. To address this challenge, we propose a memory multi-class dataset in this paper, termed TriMEM, which provides precise annotations for memory types across diverse scenarios. Building upon this foundation, we propose a novel memory framework, named MemoType, which can adaptively recognize each memory and query type with the learned router model. With the memory and query routing, MemoType can retrieve the memory with corresponding query types and design tailored retrieval strategies, thereby enhancing the retrieval performance. Moreover, we theoretically prove that any single retrieval strategy is subject to a fundamental upper bound on its expected retrieval precision in multi-class corpora, leading to systematic precision degradation. Extensive experiments on three datasets demonstrate that MemoType consistently outperforms existing methods, achieving up to 16.18% improvement in Recall@1.",
+  "abstract_zh": "现有基于检索的 LLM memory 方法通常忽略不同记忆之间的差异，采用统一策略处理所有记忆，导致性能受限。本文提出 TriMEM，一种面向多样场景的记忆多分类数据集，为记忆类型提供精细标注。在此基础上，提出 MemoType 框架，通过学习到的路由模型自适应识别记忆类型与查询类型，并据此匹配相应记忆、设计针对性的检索策略。理论分析表明，在多类别语料库中，任何单一检索策略的期望检索精度都存在基本上限，因而会产生系统性精度下降。在三个数据集上的实验显示，MemoType 始终优于现有方法，Recall@1 最高提升 16.18%。",
+  "key_points_zh": [
+    "指出统一检索策略忽略记忆类型差异，是多类别记忆场景中性能受限的重要原因。",
+    "提出 TriMEM 数据集，覆盖多样场景并提供精细的记忆类型标注。",
+    "提出 MemoType，通过 memory routing 与 query routing 自适应选择匹配的检索策略。",
+    "理论上证明：在多类别语料库中，单一检索策略的期望精度存在基本上限。",
+    "在三个数据集上取得一致提升，Recall@1 最高提高 16.18%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.78,
+    "problem_significance": 0.77,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.84,
+    "llm_avg": 0.78,
+    "comment": "A solid and reusable Agent-memory contribution combining a typed memory dataset, adaptive routing, and strategy-specific retrieval, although its main advance remains an incremental generalization of retrieval-based memory.",
+    "comment_zh": "这是一项扎实且可复用的 Agent Memory 工作，结合了类型化记忆数据集、自适应路由和策略化检索，但其核心进展仍主要是对检索式记忆的渐进式扩展。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.78,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11573/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11573/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.939
+    }
+  ]
+}

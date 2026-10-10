@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2610.11464",
+  "title": "Who Verifies the Verifier? Co-Evolving Inspectable Graders with Self-Improving Agents",
+  "title_zh": "谁来验证验证器？与自我改进智能体共同进化可审查的评估器",
+  "authors": [
+    "Xing Zhang",
+    "Guanghui Wang",
+    "Yanwei Cui",
+    "Ziyuan Li",
+    "Wei Qiu",
+    "Bing Zhu",
+    "Peiyang He"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-08T08:13:53Z",
+  "abs_url": "https://arxiv.org/abs/2610.11464v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.11464",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We changed the agent: did it actually get better? Every self-improving agent loop answers this hundreds of times, and every answer comes from a verifier. On open-ended tasks none exists, so the loop is handed a hand-written rubric or a bare LLM judge grading output from a model like itself, inviting reward hacking and shared blind spots. We make the verifier the evolving object: an inspectable expression over small, mostly deterministic drawback detectors, synthesized from clustered failures, gated at birth, and selected for agreement with a ten-item anchored reference set plus consensus over unlabeled outputs, never for the agent's score. On MBPP+ it gains +0.21 held-out agreement over the hand-authored seed composition, on every seed, and ends ahead of the bare LLM judge it contains. One finding should change how co-evolved verifiers are validated: removing the anchor guards collapses the verifier into a vacuous always-pass grader, yet that collapsed verifier trains skills just as well. Downstream task score cannot certify a self-evolved verifier. Score does answer sufficiency, and there an evolved verifier can substitute: Double Ratchet, pairing the verifier with a lifecycle-managed skill loop, retains 88-110% of the lift that ground truth or a rubric buys the same loop, across code generation, enterprise text-to-SQL, and reference-free report generation. When evolved skills gamed the report rubric, an outer judge caught it and one added detector repaired it; the judge itself was wrong until given the task contract.",
+  "abstract_zh": "论文指出，开放式任务中的自我改进智能体通常依赖手写评分标准或同类 LLM 裁判，容易产生奖励投机和共同盲点。作者将验证器本身作为进化对象：利用聚类失败案例合成由小型、主要确定性的缺陷检测器组成的可审查表达式，并在生成时进行门控；随后依据十条带锚点参考集上的一致性，以及未标注输出上的共识进行筛选，而不是依据智能体得分。该方法在 MBPP+ 上相较手工种子组合提升了 0.21 的留出一致性，并在所有种子上都有效，最终优于其内部包含的裸 LLM 裁判。实验还发现，移除锚点保护会使验证器退化为“始终通过”，但该验证器仍能同样训练出有效技能，说明下游任务分数无法证明自进化验证器可靠。论文提出 Double Ratchet，将验证器与生命周期管理的技能迭代环结合，在代码生成、企业级 text-to-SQL 和无参考报告生成任务上保留了使用真实标签或评分标准所得增益的 88%—110%。当进化技能攻击报告评分标准时，外部裁判配合新增缺陷检测器能够修复问题；但裁判只有获得任务契约后才判断正确。",
+  "key_points_zh": [
+    "将验证器作为进化对象，从聚类失败中合成可审查的缺陷检测器，并通过锚点参考集和无标注输出共识进行筛选。",
+    "MBPP+ 上相较手工种子组合提升 0.21 的留出一致性，且最终超过其中包含的裸 LLM 裁判。",
+    "移除锚点保护会导致验证器退化为“始终通过”，但仍能训练出同等技能，证明下游性能不能验证评分器本身。",
+    "Double Ratchet 将验证器与生命周期管理的技能循环配对，在多类任务上达到真实标签或评分标准增益的 88%—110%。",
+    "外部裁判可发现并修复被进化技能利用的评分漏洞，但必须提供明确的任务契约才能可靠判断。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.92,
+    "problem_significance": 0.95,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.91,
+    "lasting_value": 0.94,
+    "llm_avg": 0.9280000000000002,
+    "comment": "This is exemplary agent-evolution work that couples inspectable verifier evolution with gated validation and lifecycle-managed skill improvement.",
+    "comment_zh": "这是出色的智能体进化研究，将可检查验证器的演化、门控验证与技能生命周期改进结合起来。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3439406220117154,
+    "venue_signal": 1.0,
+    "generality": 0.4,
+    "llm_assessment": 0.9280000000000002,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11464/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.911
+    }
+  ]
+}

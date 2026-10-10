@@ -1,0 +1,72 @@
+{
+  "arxiv_id": "2610.11482",
+  "title": "Evaluating Local Language Model Agents for Reproducible Data Engineering: An Empirical Software Engineering Study of Mobility Workflows",
+  "title_zh": "面向可复现数据工程的本地语言模型智能体评估：移动性工作流的实证软件工程研究",
+  "authors": [
+    "Jorge García-Carrasco",
+    "Javier Sanchis",
+    "Alejandro Reina-Reina",
+    "Alejandro Maté",
+    "Juan Trujillo"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-08T08:26:46Z",
+  "abs_url": "https://arxiv.org/abs/2610.11482v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.11482",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Context: Large language model (LLM) agents are increasingly used as software and data-engineering assistants, yet evidence about locally deployable open-weight agents remains limited. Existing evaluations often emphasize textual responses or isolated code generation rather than the validity of complete engineering artifacts. Objectives: We evaluate whether local LLM agents can produce correct and reproducible data-engineering artifacts, quantify the effect of a closed-loop workspace condition, and examine trade-offs in model scale, architecture, quantization, runtime, tool use, and failure. Methods: We introduce a benchmark of fifteen mobility-workflow tasks covering data discovery, connectors, transport-feed processing, semantic enrichment, feature engineering, validation, visualization, and reporting. Deterministic checkers assess generated scripts, tables, structured files, figures, and reports. Ten local configurations are evaluated in one-shot and closed-loop conditions, with five repetitions per model, mode, and task, yielding 1,500 scored attempts on a consumer-grade GPU. Results: Among models larger than two billion parameters, the workspace condition increases pass rates by 26.7-52.0 percentage points over one-shot generation. The strongest configuration reaches 85.3% artifact-level success, and a quantized 9-billion-parameter model reaches 69.3% with an approximately 6.5 GB memory footprint. Gains are largest when intermediate artifacts expose errors the agent can inspect and repair. Conclusion: Local open-weight agents can support a meaningful subset of software-intensive data-engineering work, but reliability depends on model capability, task verifiability, and deterministic validation. The benchmark provides a reproducible method for evaluating complete agent configurations before adoption in engineering workflows.",
+  "abstract_zh": "本文系统评估可本地部署的开放权重大语言模型智能体（LLM agents）能否生成正确且可复现的数据工程制品。研究提出包含15项移动性工作流任务的基准，覆盖数据发现、连接器、交通数据处理、语义增强、特征工程、验证、可视化与报告生成，并通过确定性检查器评估脚本、表格、结构化文件、图表和报告。研究比较了10种本地配置在一次性生成（one-shot）与闭环工作区（closed-loop workspace）条件下的表现，共完成1,500次评分实验。结果显示，对于参数量超过20亿的模型，闭环工作区使通过率较一次性生成提升26.7至52.0个百分点；最强配置达到85.3%的制品级成功率，量化后的9B模型在约6.5 GB显存占用下达到69.3%。当中间制品能够暴露错误并支持智能体检查和修复时，闭环收益最大。研究表明，本地开放权重智能体已能胜任部分软件密集型数据工程任务，但可靠性高度依赖模型能力、任务可验证性和确定性验证机制。该基准为工程团队在实际采用前评估完整智能体配置提供了可复现方法。",
+  "key_points_zh": [
+    "提出覆盖15项移动性工作流任务的可复现基准，直接评估完整工程制品，而非仅评价文本或孤立代码。",
+    "闭环工作区让大于2B参数模型的通过率提升26.7至52.0个百分点，说明错误反馈与自动修复至关重要。",
+    "最强配置达到85.3%的制品级成功率；量化9B模型以约6.5 GB显存达到69.3%。",
+    "智能体表现受模型规模、架构、量化、运行时、工具使用、任务可验证性及确定性检查共同影响。",
+    "本地开放权重智能体具备实用潜力，但部署前必须针对完整配置和目标工作流进行系统验证。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.81,
+    "novelty": 0.55,
+    "problem_significance": 0.72,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.46,
+    "lasting_value": 0.68,
+    "llm_avg": 0.6180000000000001,
+    "comment": "This is a useful reproducible coding-agent benchmark with deterministic artifact checks, but its mobility specialization and conventional closed-loop setup limit broader novelty.",
+    "comment_zh": "这是一个采用确定性制品检查的实用可复现编程智能体基准，但其交通领域特化和常规闭环设置限制了广泛创新性。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4763315227567723,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6180000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 8,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11482/fig1.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.979
+    }
+  ]
+}

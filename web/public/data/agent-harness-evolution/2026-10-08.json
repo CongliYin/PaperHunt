@@ -1,0 +1,383 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-10-08",
+  "generated_at": "2026-10-09T23:58:43Z",
+  "papers": [
+    {
+      "arxiv_id": "2610.11464",
+      "title": "Who Verifies the Verifier? Co-Evolving Inspectable Graders with Self-Improving Agents",
+      "title_zh": "谁来验证验证器？与自我改进智能体共同进化可审查的评估器",
+      "authors": [
+        "Xing Zhang",
+        "Guanghui Wang",
+        "Yanwei Cui",
+        "Ziyuan Li",
+        "Wei Qiu",
+        "Bing Zhu",
+        "Peiyang He"
+      ],
+      "total_score": 0.749597031100586,
+      "scores": {
+        "topic_relevance": 0.9600000000000001,
+        "llm_assessment": 0.9280000000000002,
+        "domain_fit": 0.99,
+        "other": 0.290656770335286
+      },
+      "tags": [
+        "closed loop agent improvement",
+        "Accepted"
+      ],
+      "tldr_zh": "验证器也需独立验证，任务得分不足以证明其可靠",
+      "detail_file": "agent-harness-evolution/2026-10-08/2610.11464.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11464/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.11552",
+      "title": "Safe, Persistent, and Evolving Agent Harness for Understanding Partially Observable Worlds",
+      "title_zh": "用于理解部分可观测世界的安全、持久且可演化智能体框架",
+      "authors": [
+        "Yisen Gao",
+        "Yue Guo",
+        "Qing Zong",
+        "Yiwen Guo",
+        "Yangqiu Song"
+      ],
+      "total_score": 0.7123258286877777,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8959999999999999,
+        "domain_fit": 0.96,
+        "other": 0.3584194289592589
+      },
+      "tags": [
+        "GitHub",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "以溯因学习隐藏规则，实现安全持久的智能体执行。",
+      "detail_file": "agent-harness-evolution/2026-10-08/2610.11552.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11552/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.11345",
+      "title": "SynCo: Data Synthesis Co-Training for Self-Evolving LLMs via Multi-Agent Reinforcement Learning",
+      "title_zh": "SynCo：通过多智能体强化学习进行数据合成协同训练，推动自进化 LLM",
+      "authors": [
+        "Wei Yang",
+        "Shawn Li",
+        "Yuehan Qin",
+        "Yawei Wang",
+        "Mingxi Wang",
+        "Shixuan Li",
+        "Tiankai Yang",
+        "Jiate Li",
+        "Jesse Thomason",
+        "Xuezhe Ma",
+        "Yue Zhao"
+      ],
+      "total_score": 0.6676952836215503,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.812,
+        "domain_fit": 0.82,
+        "other": 0.24031761207183414
+      },
+      "tags": [
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "SynCo让任务生成与推理能力协同进化",
+      "detail_file": "agent-harness-evolution/2026-10-08/2610.11345.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11345/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.12375",
+      "title": "OnTrack: Real-Time Monitoring and Intervention in LLM Agent Trajectories via Streaming Structure-Aware Optimal Transport",
+      "title_zh": "OnTrack：基于流式结构感知最优传输的 LLM Agent 轨迹实时监控与干预",
+      "authors": [
+        "Babak Barazandeh",
+        "Connor Swanson",
+        "Chinmay Kulkarni",
+        "Nikhil Mungel"
+      ],
+      "total_score": 0.6460471165156138,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8400000000000001,
+        "domain_fit": 0.94,
+        "other": 0.1401570550520456
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "毫秒级监控Agent轨迹，提前拦截失败并节省计算",
+      "detail_file": "agent-harness-evolution/2026-10-08/2610.12375.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12375/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.11858",
+      "title": "Trajectory-Guided Fault Localization for Agent Skill Evolution",
+      "title_zh": "面向智能体技能演化的轨迹引导故障定位",
+      "authors": [
+        "Yu Ge",
+        "Linna Xie",
+        "Zhong Li",
+        "Yu Pei",
+        "Tian Zhang"
+      ],
+      "total_score": 0.6344000000000002,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.8780000000000001,
+        "domain_fit": 0.99,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "SkillMorph用轨迹证据定位技能缺陷并自动修订",
+      "detail_file": "agent-harness-evolution/2026-10-08/2610.11858.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11858/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.11593",
+      "title": "Runnable Commit Untangling for Coding Agents",
+      "title_zh": "面向编程智能体的可运行提交解缠",
+      "authors": [
+        "Jinfeng Jiang",
+        "Dongsun Kim",
+        "Dayi Lin",
+        "Zhou Yang"
+      ],
+      "total_score": 0.6295649187622834,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.8059999999999998,
+        "domain_fit": 0.96,
+        "other": 0.22588306254094448
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "RucTangle让解缠提交始终可运行，并提升智能体修复回归问题的成功率。",
+      "detail_file": "agent-harness-evolution/2026-10-08/2610.11593.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11593/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.11647",
+      "title": "One Skill Too Many: How Co-Installed Skills Conflict in Coding Agents",
+      "title_zh": "技能太多反而冲突：编码智能体中共安装技能的冲突问题",
+      "authors": [
+        "Chaoliang Yan",
+        "Zihao Xu",
+        "Yuekang Li",
+        "Shangzhi Xu",
+        "Yi Liu",
+        "Gelei Deng",
+        "Siqi Ma"
+      ],
+      "total_score": 0.6186536617939498,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.7819999999999999,
+        "domain_fit": 0.72,
+        "other": 0.16017887264649933
+      },
+      "tags": [
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "相似技能会悄然替代目标技能，任务成功却丢失核心约束。",
+      "detail_file": "agent-harness-evolution/2026-10-08/2610.11647.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11647/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.12086",
+      "title": "EvoAlloc: A Self-Evolving Resource Allocation Agent for Efficient Program Evolution",
+      "title_zh": "EvoAlloc：用于高效程序演化的自进化资源分配智能体",
+      "authors": [
+        "Yanning Dai",
+        "Yuhui Wang",
+        "Nanbo Li",
+        "Wenyi Wang",
+        "Jürgen Schmidhuber"
+      ],
+      "total_score": 0.5928240812087421,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.768,
+        "domain_fit": 0.72,
+        "other": 0.14141360402914038
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "EvoAlloc通过经验自进化实现高效资源分配",
+      "detail_file": "agent-harness-evolution/2026-10-08/2610.12086.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12086/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.11678",
+      "title": "TRACE: Diagnosing Verifier Brittleness in Agentic Evaluation",
+      "title_zh": "TRACE：诊断智能体评测器的脆弱性",
+      "authors": [
+        "Radhika Gaonkar"
+      ],
+      "total_score": 0.47430000000000005,
+      "scores": {
+        "topic_relevance": 0.44000000000000006,
+        "llm_assessment": 0.8859999999999999,
+        "domain_fit": 0.97,
+        "other": 0.10833333333333334
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "TRACE区分智能体能力变化与评测器脆弱性",
+      "detail_file": "agent-harness-evolution/2026-10-08/2610.11678.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11678/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.11450",
+      "title": "Tracing the Thoughts of a Coding Agent Playing ARC-AGI-3: Lessons for Continual Learning",
+      "title_zh": "追踪在 ARC-AGI-3 中玩耍的 Coding Agent 的思维：持续学习的启示",
+      "authors": [
+        "Chen Wu",
+        "Josh Passenger",
+        "Yin Song"
+      ],
+      "total_score": 0.4648399636296497,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.764,
+        "domain_fit": 0.9,
+        "other": 0.30546654543216584
+      },
+      "tags": [
+        "general tool agents",
+        "Accepted"
+      ],
+      "tldr_zh": "Coding Agent 通过重写脚本实现选择性持续学习",
+      "detail_file": "agent-harness-evolution/2026-10-08/2610.11450.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11450/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.12269",
+      "title": "Cadence: Strategic Guidance for Coding Agents",
+      "title_zh": "Cadence：面向编程智能体的策略性引导",
+      "authors": [
+        "Minxing Wang",
+        "He Ye",
+        "Earl T. Barr",
+        "Yintong Huo"
+      ],
+      "total_score": 0.462,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.86,
+        "domain_fit": 0.98,
+        "other": 0.2
+      },
+      "tags": [
+        "generic verifier reward eval terms"
+      ],
+      "tldr_zh": "Cadence按执行健康度动态调度监控与干预",
+      "detail_file": "agent-harness-evolution/2026-10-08/2610.12269.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12269/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.11514",
+      "title": "SSCBench: Evaluating the Evidential Validity of Fault-Injection Tests for Tool-Using LLM Agents",
+      "title_zh": "SSCBench：评估工具使用型 LLM Agent 故障注入测试的证据有效性",
+      "authors": [
+        "Xincheng He",
+        "Wanli Dong",
+        "Zhaoqiang Guo",
+        "Yan Liu",
+        "Lei Xu"
+      ],
+      "total_score": 0.43165950866690256,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.828,
+        "domain_fit": 0.91,
+        "other": 0.13086502888967524
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "故障采纳率必须结合反证出现时机解读",
+      "detail_file": "agent-harness-evolution/2026-10-08/2610.11514.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11514/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.12274",
+      "title": "HarnessSQL: Harness-Native Training for SQL Agents in Realistic Database Environments",
+      "title_zh": "HarnessSQL：面向真实数据库环境的原生执行框架训练 SQL Agent",
+      "authors": [
+        "Haolin Yang",
+        "Jipeng Zhang",
+        "Jian Xie",
+        "Shuaishuai Gong",
+        "Sirui Han",
+        "Yike Guo"
+      ],
+      "total_score": 0.4124,
+      "scores": {
+        "topic_relevance": 0.20000000000000004,
+        "llm_assessment": 0.908,
+        "domain_fit": 0.99,
+        "other": 0.2
+      },
+      "tags": [
+        "adjacent model training"
+      ],
+      "tldr_zh": "在真实执行框架中训练，显著提升 SQL Agent 的交互推理能力",
+      "detail_file": "agent-harness-evolution/2026-10-08/2610.12274.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12274/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.11482",
+      "title": "Evaluating Local Language Model Agents for Reproducible Data Engineering: An Empirical Software Engineering Study of Mobility Workflows",
+      "title_zh": "面向可复现数据工程的本地语言模型智能体评估：移动性工作流的实证软件工程研究",
+      "authors": [
+        "Jorge García-Carrasco",
+        "Javier Sanchis",
+        "Alejandro Reina-Reina",
+        "Alejandro Maté",
+        "Juan Trujillo"
+      ],
+      "total_score": 0.3982165761378386,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.6180000000000001,
+        "domain_fit": 0.81,
+        "other": 0.22938858712612875
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "闭环验证显著提升本地智能体的数据工程可靠性",
+      "detail_file": "agent-harness-evolution/2026-10-08/2610.11482.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.11482/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.12002",
+      "title": "Agentic-TTT: Training test-time policy for test-time training",
+      "title_zh": "Agentic-TTT：训练用于测试时训练的测试时策略",
+      "authors": [
+        "Jiahao Lu",
+        "Mohan Kankanhalli"
+      ],
+      "total_score": 0.2947,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.874,
+        "domain_fit": 0.95,
+        "other": 0.10833333333333334
+      },
+      "tags": [],
+      "tldr_zh": "让模型自主决定何时、如何进行测试时训练。",
+      "detail_file": "agent-harness-evolution/2026-10-08/2610.12002.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12002/thumb.webp"
+    }
+  ]
+}
