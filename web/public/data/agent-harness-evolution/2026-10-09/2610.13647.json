@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2610.13647",
+  "title": "A-SAW: The Agentic Software Architecture Workflow",
+  "title_zh": "A-SAW：智能体化软件架构工作流",
+  "authors": [
+    "Finn Klatt",
+    "Luca Di Grazia",
+    "Johannes Schneider"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-09T14:25:24Z",
+  "abs_url": "https://arxiv.org/abs/2610.13647v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.13647",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "AI assistance in software engineering focuses on implementation and verification, leaving the design phase, and in particular the maintenance of architecture documentation, comparatively underserved. Architecture as Code makes architectural artifacts versionable, diffable, and machine-readable, but it does not reduce the effort of keeping them updated, so design documentation still ends up as a fragmented, author-dependent, and only partially trusted record of why a system looks the way it does. In this paper we introduce the Agentic Software Architecture Workflow (A-SAW), a process-level artifact that extends Architecture as Code with a persistent agent layer: an IDE-integrated agent drafts architecture documents from a version-controlled C4 model, a typed element catalog, and instrumented templates. Every draft passes a mandatory human review gate before it is accepted. We evaluate it in a large industrial organization along two tracks: a rubric assessment of 45 architecture documents including 13 matched source-regeneration pairs, and 13 task-anchored practitioner interviews. Our results show that the workflow collapses the between-author variance that made quality unpredictable. Intrinsic quality also rises, by a median of +19 points across the matched pair. The cohort has a mean of 58% and 89% bundle templates, catalog, agent, and a richer regeneration context. So they bound the agent's contribution from above rather than isolating it. In the agent-generated documents, completeness (100%), consistency (93%), and machine-readability (99%) reach or approach the rubric maximum, while traceability reaches 79%. Eleven of the 13 participants rejected agent output that no human had reviewed, and one warned that polished output may lead reviewers to skip the review. Our work supports keeping human review mandatory and concentrating it where the agent must infer beyond the repository.",
+  "abstract_zh": "现有软件工程 AI 助手主要聚焦实现与验证，对设计阶段，尤其是架构文档维护支持不足。Architecture as Code 使架构制品具备版本化、可比较和机器可读特性，但无法降低持续更新成本，文档仍可能碎片化、依赖作者且难以可信地记录设计原因。本文提出 Agentic Software Architecture Workflow（A-SAW），在 Architecture as Code 基础上引入持久化智能体层：集成于 IDE 的 agent 基于版本控制的 C4 model、类型化元素目录和仪表化模板起草架构文档，并要求所有草稿经过人工评审后方可采纳。作者在一家大型工业组织中开展两项评估：对 45 份架构文档进行量表分析，其中包含 13 对匹配的源文档—重生成文档；并访谈 13 名围绕具体任务开展工作的实践者。结果表明，该工作流显著降低了作者间差异，使质量更稳定；在匹配样本中，内在质量中位数提升 19 分。完整性达到 100%，一致性达到 93%，机器可读性达到 99%，可追溯性达到 79%。不过，实验同时捆绑了模板、目录、agent 和更丰富的重生成上下文，因此无法单独隔离 agent 的贡献。13 名参与者中有 11 名拒绝未经人工评审的 agent 输出，且有人指出，高度 polished 的结果可能诱使评审者跳过审查。研究支持将人工评审设为强制环节，并重点审查 agent 需要超越代码仓库进行推断的部分。",
+  "key_points_zh": [
+    "A-SAW 将 IDE-integrated agent、C4 model、类型化元素目录和模板结合，自动起草可版本化、机器可读的架构文档。",
+    "在 13 对匹配文档中，文档内在质量中位数提升 19 分，并显著降低不同作者造成的质量波动。",
+    "agent 生成文档的完整性、一致性和机器可读性分别达到 100%、93% 和 99%，但可追溯性为 79%，仍是主要短板。",
+    "实验无法完全分离 agent 的独立贡献，因为模板、目录和更丰富的重生成上下文被同时引入。",
+    "研究建议保留强制人工评审，尤其聚焦 agent 需要基于仓库信息进行推断的内容，防止 polished 输出造成过度信任。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.73,
+    "novelty": 0.57,
+    "problem_significance": 0.58,
+    "potential_impact": 0.62,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.57,
+    "llm_avg": 0.558,
+    "comment": "A-SAW presents a credible human-gated coding workflow with persistent structured context, but its contribution is narrow and partly confounded by bundled process changes.",
+    "comment_zh": "A-SAW提出了具有持久结构化上下文和人工门控的可信编码工作流，但应用较窄且效果部分受到组合流程变更的混杂。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.416947575628934,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.558,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 6,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13647/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13647/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.98
+    }
+  ]
+}

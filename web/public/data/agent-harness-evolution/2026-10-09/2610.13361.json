@@ -1,0 +1,72 @@
+{
+  "arxiv_id": "2610.13361",
+  "title": "AgentSWE: Can Coding Agents Build the Agent You Actually Want?",
+  "title_zh": "AgentSWE: Can Coding Agents Build the Agent You Actually Want?",
+  "authors": [
+    "Jiahao Wang",
+    "Hongjin Qian",
+    "Yuyang Hu",
+    "Jiajun Zhang",
+    "Zheng Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-09T10:35:27Z",
+  "abs_url": "https://arxiv.org/abs/2610.13361v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.13361",
+  "links": {
+    "github": "https://github.com/VectorSpaceLab/AgentSWE",
+    "project_page": null
+  },
+  "abstract_en": "As the production of software passes into the hands of software itself, coding agents are increasingly commissioned to build agents fitted to their users' own workflows. This delegation carries a quiet assumption, that the delivered agent will faithfully serve the requirement it was built for, rather than merely appear to. No existing benchmark tests that assumption. We introduce AgentSWE, a benchmark for agent software engineering spanning three stages of the agent development lifecycle: Creation of a complete agent from a natural-language requirement, Editing of production agent codebases, and Optimization toward a measurable target. Each of its 25 tasks is framed as a commission rather than an exam: the builder iterates against a handful of illustrative cases, while acceptance exercises the frozen submission on held-out cases designed to span the full requirement, grading behavior against requirement-derived rubrics under hard pass/fail gates or, for Optimization, against the source benchmark's own objective. Evaluating a range of coding agents across models and harnesses, we find that none comes close to delivering what a requirement asks for: the gap between what a builder demonstrates and what it delivers is the norm, not the corner case. An accompanying empirical analysis of the failure trajectories identifies recurring failure modes, among them overfitting to the visible cases, hollow runtimes behind code that looks complete, and unsupported claims of completion, each a signal by which coding agents can learn to build the agents they are asked for.",
+  "abstract_zh": "",
+  "key_points_zh": [],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.84,
+    "problem_significance": 0.91,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.89,
+    "llm_avg": 0.8559999999999999,
+    "comment": "AgentSWE introduces a valuable lifecycle-spanning benchmark with held-out behavioral gates for coding agents that build and optimize agent software.",
+    "comment_zh": "AgentSWE提出了覆盖智能体软件开发生命周期并采用隐藏行为门控的高价值编码智能体基准。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3525828687777642,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.8559999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/VectorSpaceLab/AgentSWE",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13361/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13361/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.951
+    }
+  ]
+}

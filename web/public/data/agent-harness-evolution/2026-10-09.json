@@ -1,0 +1,503 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-10-09",
+  "generated_at": "2026-10-13T02:00:18Z",
+  "papers": [
+    {
+      "arxiv_id": "2610.12828",
+      "title": "TreeHCA: Hindsight-Guided Exploration and Credit Assignment for Multi-Turn LLM Agents",
+      "title_zh": "TreeHCA: Hindsight-Guided Exploration and Credit Assignment for Multi-Turn LLM Agents",
+      "authors": [
+        "Debajoy Mukherjee",
+        "Jeremy Carleton",
+        "Sushil Vemuri",
+        "Srinivas Shakkottai",
+        "Dileep Kalathil"
+      ],
+      "total_score": 0.7465990355189804,
+      "scores": {
+        "topic_relevance": 0.9600000000000001,
+        "llm_assessment": 0.868,
+        "domain_fit": 0.97,
+        "other": 0.3406634517299343
+      },
+      "tags": [
+        "GitHub",
+        "trace driven evolution"
+      ],
+      "tldr_zh": "",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.12828.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12828/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.13485",
+      "title": "Proactive Agentic Orchestration",
+      "title_zh": "主动式智能体编排",
+      "authors": [
+        "Xueyang Feng",
+        "Chaozhuo Li",
+        "Xiaohe Bo",
+        "Jiakai Tang",
+        "Chenxi Li",
+        "Qiwei Ye",
+        "Xu Chen"
+      ],
+      "total_score": 0.7404119349638407,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.908,
+        "domain_fit": 0.98,
+        "other": 0.3867064498794685
+      },
+      "tags": [
+        "GitHub",
+        "runtime execution engine"
+      ],
+      "tldr_zh": "POrchestra让子智能体主动请求调整，提升长程任务编排效果",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.13485.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13485/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.13356",
+      "title": "SWE-Critix: Post-Training Generalist Verifiers for Assessing Coding-Agent Trajectories",
+      "title_zh": "SWE-Critix：用于评估编码智能体轨迹的后训练通用验证器",
+      "authors": [
+        "Jiajun Hu",
+        "Chun Yong Chong"
+      ],
+      "total_score": 0.7386223321489759,
+      "scores": {
+        "topic_relevance": 1.0,
+        "llm_assessment": 0.89,
+        "domain_fit": 0.98,
+        "other": 0.23874110716325267
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "SWE-Critix用SFT与RL训练可解释的代码轨迹验证器",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.13356.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13356/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.13438",
+      "title": "Rollout-Time Intervention: Unlocking Agentic Reinforcement Learning Beyond Policy Limits",
+      "title_zh": "Rollout-Time Intervention：突破智能体强化学习的策略能力边界",
+      "authors": [
+        "Chen Xi",
+        "Ding Ruixue",
+        "Wang Zhigaoyuan",
+        "Zhang Fanrui",
+        "Zhang Qiang",
+        "Chen Boli",
+        "Wang Shihang",
+        "Wang Tianfu",
+        "Ren Ailin",
+        "Wang Pengyong",
+        "Xie Pengjun",
+        "Xiong Hui"
+      ],
+      "total_score": 0.6921657923174275,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.9,
+        "domain_fit": 0.97,
+        "other": 0.28721930772475796
+      },
+      "tags": [
+        "GitHub",
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "RTI借助评估标准突破智能体策略能力边界",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.13438.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13438/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.13152",
+      "title": "Quality, Not Just Outcome: A Structural Scoring Framework for Selecting Coding-Agent Trajectories for Supervised Fine-Tuning",
+      "title_zh": "质量不只是结果：用于选择监督微调 Coding-Agent 轨迹的结构化评分框架",
+      "authors": [
+        "Sida Li",
+        "Yuanxin Liu",
+        "Shicheng Li",
+        "Linli Yao",
+        "Xu Sun",
+        "Haoli Bai",
+        "Xiaohui Li"
+      ],
+      "total_score": 0.6899082880689194,
+      "scores": {
+        "topic_relevance": 0.9600000000000001,
+        "llm_assessment": 0.8300000000000001,
+        "domain_fit": 0.96,
+        "other": 0.1896942935630644
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "用结构化质量筛选轨迹，提升 Coding-Agent 微调效果",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.13152.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13152/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.13105",
+      "title": "Can Failed Trajectories Reveal Where Agents Go Wrong? Agentic Failure Attribution Without Step-Level Labels",
+      "title_zh": "Can Failed Trajectories Reveal Where Agents Go Wrong? Agentic Failure Attribution Without Step-Level Labels",
+      "authors": [
+        "Do Nguyen-Thanh",
+        "Junlin Fang",
+        "Bing Li",
+        "Zhen Fang",
+        "Sean Du"
+      ],
+      "total_score": 0.665090747450061,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.826,
+        "domain_fit": 0.86,
+        "other": 0.21763582483353663
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.13105.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13105/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.13395",
+      "title": "ProgramGym: Scaling Training Environments for Long-Horizon Program Reproduction Agents",
+      "title_zh": "ProgramGym: Scaling Training Environments for Long-Horizon Program Reproduction Agents",
+      "authors": [
+        "Chengyi Yang",
+        "Renxu Bao",
+        "Jue Hou",
+        "Zongpei Teng",
+        "Ziheng Wang",
+        "Yujie Lin",
+        "Chengsong Huang",
+        "Junnan Zhu",
+        "Delai Qiu",
+        "Yining Wang",
+        "Shengping Liu",
+        "Fei Long",
+        "Jinsong Su"
+      ],
+      "total_score": 0.6579398720652087,
+      "scores": {
+        "topic_relevance": 0.68,
+        "llm_assessment": 0.9299999999999999,
+        "domain_fit": 0.99,
+        "other": 0.3564662402173625
+      },
+      "tags": [
+        "HF Daily ★49",
+        "planning and policy"
+      ],
+      "tldr_zh": "",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.13395.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13395/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.13755",
+      "title": "Matched-Context Group Policy Optimization for LLM Agent Training",
+      "title_zh": "Matched-Context Group Policy Optimization for LLM Agent Training",
+      "authors": [
+        "Chenxu Zhang",
+        "Yaorui Shi",
+        "Wenlong Zhang",
+        "Jianchao Tan",
+        "Zihan Wang",
+        "Yiming Cheng"
+      ],
+      "total_score": 0.6335824593811418,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8240000000000001,
+        "domain_fit": 0.94,
+        "other": 0.1146081979371389
+      },
+      "tags": [
+        "agent training and trajectory data"
+      ],
+      "tldr_zh": "",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.13755.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13755/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.13361",
+      "title": "AgentSWE: Can Coding Agents Build the Agent You Actually Want?",
+      "title_zh": "AgentSWE: Can Coding Agents Build the Agent You Actually Want?",
+      "authors": [
+        "Jiahao Wang",
+        "Hongjin Qian",
+        "Yuyang Hu",
+        "Jiajun Zhang",
+        "Zheng Liu"
+      ],
+      "total_score": 0.5819291434388882,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.8559999999999999,
+        "domain_fit": 0.96,
+        "other": 0.2837638114629607
+      },
+      "tags": [
+        "GitHub",
+        "production agent platform"
+      ],
+      "tldr_zh": "",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.13361.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13361/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.13889",
+      "title": "RATED: Reliability-Aware AI Agent Tool Retrieval via Execution Dynamics",
+      "title_zh": "RATED：基于执行动态的可靠性感知 AI Agent 工具检索",
+      "authors": [
+        "Weiliang Chen",
+        "Song Liao"
+      ],
+      "total_score": 0.514577486063333,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.8099999999999999,
+        "domain_fit": 0.86,
+        "other": 0.3719249535444431
+      },
+      "tags": [
+        "GitHub",
+        "general llm agents"
+      ],
+      "tldr_zh": "RATED让工具检索能根据运行时故障动态避错",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.13889.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13889/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.12849",
+      "title": "Co-Modifying Application Code and Deployment Infrastructure: A Causal Study of AI Agent Pull Requests",
+      "title_zh": "协同修改应用代码与部署基础设施：AI Agent Pull Request 的因果研究",
+      "authors": [
+        "Mohammad Wathiq Soualhi",
+        "Basem Suleiman"
+      ],
+      "total_score": 0.44953612181311314,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.728,
+        "domain_fit": 0.74,
+        "other": 0.23712040604371054
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "Agent跨代码与部署修改常延迟集成或绕过人工审查。",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.12849.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12849/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.13841",
+      "title": "Returning to Development States: When Full Sandbox Snapshots Help Coding Agents",
+      "title_zh": "回到开发状态：完整沙箱快照何时能帮助编码智能体",
+      "authors": [
+        "Daniel Thi Graviet",
+        "Tanmay Shah"
+      ],
+      "total_score": 0.444,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.8,
+        "domain_fit": 0.96,
+        "other": 0.2
+      },
+      "tags": [
+        "generic verifier reward eval terms"
+      ],
+      "tldr_zh": "仓库外状态决定完整快照搜索的收益",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.13841.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13841/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.13064",
+      "title": "CB-Orchestrator: Adaptive Workflow Optimization for LLM Agents via Contextual Bandits",
+      "title_zh": "CB-Orchestrator：基于上下文多臂老虎机的 LLM Agent 自适应工作流优化",
+      "authors": [
+        "Jiahang Sun",
+        "Zhiwei Shang",
+        "Zhipiao Liu",
+        "Hongwei Yang",
+        "Guoqing Xie",
+        "Shuang Qiu",
+        "Zhongxiang Dai"
+      ],
+      "total_score": 0.43693173840742144,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.762,
+        "domain_fit": 0.9,
+        "other": 0.21443912802473805
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "用上下文老虎机按查询选工作流，兼顾性能与成本。",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.13064.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13064/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.13632",
+      "title": "Humanize Olympiad Agents: A Multi-Session Workflow for Olympiad Problem Solving with Solve, Review, Wiki, Verify",
+      "title_zh": "让奥赛智能体更具人类式协作能力：基于求解、审阅、知识库与验证的多会话奥赛解题工作流",
+      "authors": [
+        "Zhengyang Zhang",
+        "Jing Xiong",
+        "Hongzhou Lin",
+        "Juihui Chung",
+        "Zijian Zhang",
+        "Song Han",
+        "Sihao Liu",
+        "Ligeng Zhu"
+      ],
+      "total_score": 0.4036516573755553,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.662,
+        "domain_fit": 0.78,
+        "other": 0.2035055245851843
+      },
+      "tags": [
+        "generic verifier reward eval terms"
+      ],
+      "tldr_zh": "HOA以多会话反馈与形式验证显著增强奥赛解题能力。",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.13632.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13632/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.13144",
+      "title": "Competence-Aware Orchestration for LLM-Based Multi-Agent Systems",
+      "title_zh": "面向 LLM 多智能体系统的能力感知编排",
+      "authors": [
+        "Songmiao Wang",
+        "Yuchen Wang",
+        "Chenglin Yu",
+        "Hongxia Yang",
+        "Ming Li"
+      ],
+      "total_score": 0.3723867206879108,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.554,
+        "domain_fit": 0.72,
+        "other": 0.20728906895970253
+      },
+      "tags": [
+        "multi agent workflows"
+      ],
+      "tldr_zh": "按模型当前能力动态编排多智能体协作，提效并降本。",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.13144.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13144/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.13157",
+      "title": "SOAR: Source-Aware Reinforcement Learning with Precise Credit Assignment for Search Agents",
+      "title_zh": "SOAR：面向搜索智能体的源感知强化学习与精确信用分配",
+      "authors": [
+        "Shengze Huang",
+        "Zihao Tang",
+        "Jinluan Yang",
+        "Xin Yu",
+        "Zhenghao Lin",
+        "Xiao Liu",
+        "Zengxuan Wen",
+        "Yeyun Gong",
+        "Haizhen Huang",
+        "Weiwei Deng",
+        "Feng Sun",
+        "Qi Zhang",
+        "Fei Wu",
+        "Kun Kuang"
+      ],
+      "total_score": 0.31241457171944403,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.8619999999999999,
+        "domain_fit": 0.99,
+        "other": 0.17938190573148036
+      },
+      "tags": [],
+      "tldr_zh": "显式区分知识来源，精准抑制搜索智能体证据伪造",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.13157.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13157/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.13065",
+      "title": "TestSuiteBench: Coding Agents Struggle to Generate Strong Test Suites from Specifications",
+      "title_zh": "TestSuiteBench: Coding Agents Struggle to Generate Strong Test Suites from Specifications",
+      "authors": [
+        "Kazuki Egashira",
+        "Niels Mündler-Sasahara",
+        "Mark Niklas Müller",
+        "Martin Vechev"
+      ],
+      "total_score": 0.3112883062540944,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.794,
+        "domain_fit": 0.97,
+        "other": 0.24362768751364816
+      },
+      "tags": [
+        "Code soon",
+        "h=70"
+      ],
+      "tldr_zh": "",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.13065.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13065/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.12932",
+      "title": "SEEDS: Preview-Guided Evidence Admission for Search Agents",
+      "title_zh": "SEEDS: Preview-Guided Evidence Admission for Search Agents",
+      "authors": [
+        "Jiajin Liu",
+        "Chenxi Xu",
+        "Dongzhe Fan",
+        "Yuanfu Sun",
+        "Qiaoyu Tan"
+      ],
+      "total_score": 0.3027691800690524,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.804,
+        "domain_fit": 0.98,
+        "other": 0.20523060023017473
+      },
+      "tags": [],
+      "tldr_zh": "",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.12932.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12932/thumb.webp"
+    },
+    {
+      "arxiv_id": "2610.13647",
+      "title": "A-SAW: The Agentic Software Architecture Workflow",
+      "title_zh": "A-SAW：智能体化软件架构工作流",
+      "authors": [
+        "Finn Klatt",
+        "Luca Di Grazia",
+        "Johannes Schneider"
+      ],
+      "total_score": 0.23324737878144672,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.558,
+        "domain_fit": 0.73,
+        "other": 0.21949126260482232
+      },
+      "tags": [],
+      "tldr_zh": "A-SAW以强制人工评审提升架构文档质量",
+      "detail_file": "agent-harness-evolution/2026-10-09/2610.13647.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13647/thumb.webp"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "arxiv_id": "2610.13755",
+  "title": "Matched-Context Group Policy Optimization for LLM Agent Training",
+  "title_zh": "Matched-Context Group Policy Optimization for LLM Agent Training",
+  "authors": [
+    "Chenxu Zhang",
+    "Yaorui Shi",
+    "Wenlong Zhang",
+    "Jianchao Tan",
+    "Zihan Wang",
+    "Yiming Cheng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-09T15:41:37Z",
+  "abs_url": "https://arxiv.org/abs/2610.13755v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.13755",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Training long-horizon language model agents requires assigning credit to intermediate decisions from sparse terminal feedback. Within a finite group of sibling rollouts, useful action comparisons depend on their context, evidence for both alternatives, and how that evidence enters learning. We propose Matched-Context Group Policy Optimization (MCGPO), a procedure for constructing weighted action preferences from already collected trajectories. MCGPO defines comparison contexts with pre-action state summaries and observed rubric progress, annotated by task rules. Two-action support selects among ordered exact and coarse matching rules. Fixed folds separate candidate decisions from the terminal outcomes used to orient their preferences, and support-dependent evidence weights scale an auxiliary pairwise objective alongside shared GraphGPO task learning. MCGPO reuses rollout data and each response's original history, preserving critic-free training. Across six environment-backbone settings with three training seeds each, MCGPO improves mean success over matched GraphGPO: by 0.47-1.46 percentage points on ALFWorld and WebShop with Qwen2.5-1.5B and 7B, and by 3.96 and 5.16 points on WebShop with Qwen3-4B and 8B. The ALFWorld gains build on baseline success above 92%, where remaining headroom is limited. Integrated success improves in three of four Qwen2.5 settings. Three-seed factorial controls support opposite-fold evidence and evidence weighting; joint state-rubric matching achieves the highest mean in all four representation-control settings.",
+  "abstract_zh": "",
+  "key_points_zh": [],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.8,
+    "problem_significance": 0.88,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8240000000000001,
+    "comment": "MCGPO extracts context-matched action preferences from existing rollouts to improve critic-free credit assignment in long-horizon agent training.",
+    "comment_zh": "MCGPO从已有轨迹中提取上下文匹配的动作偏好，从而改进长程智能体训练中的无评论家信用分配。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8240000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13755/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13755/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.972
+    }
+  ]
+}

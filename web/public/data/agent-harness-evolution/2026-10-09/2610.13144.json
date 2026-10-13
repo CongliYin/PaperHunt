@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2610.13144",
+  "title": "Competence-Aware Orchestration for LLM-Based Multi-Agent Systems",
+  "title_zh": "面向 LLM 多智能体系统的能力感知编排",
+  "authors": [
+    "Songmiao Wang",
+    "Yuchen Wang",
+    "Chenglin Yu",
+    "Hongxia Yang",
+    "Ming Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-09T07:33:42Z",
+  "abs_url": "https://arxiv.org/abs/2610.13144v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.13144",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM-based multi-agent systems (MAS) have emerged as a promising paradigm for enhancing complex reasoning through role specialization and collaboration, yet a key challenge remains: how can collaboration be adapted to a backbone's competence on the current query? This problem matters because more collaboration is not always better--richer coordination may help on difficult cases, but it also incurs additional token cost and redundant interactions. We propose a two-stage competence-aware framework for automatic MAS orchestration. It first models the LLM backbone's task-conditioned competence for the current query, and then uses this signal to adapt role activation and the communication graph. Across six benchmarks, our method achieves an average score of 93.81%. Experiments with six LLM backbones of varying competence levels further show that our method adjusts collaboration according to the inferred competence: for higher-competence backbones, it improves average accuracy from 87.22 to 89.97 while reducing token cost by 36.26%; for lower-competence backbones, it yields a further average gain of 4.58 points over existing methods. The same trend also holds on unseen backbones.",
+  "abstract_zh": "基于 LLM 的多智能体系统（Multi-Agent Systems, MAS）通过角色专业化与协作提升复杂推理能力，但仍面临一个关键问题：如何根据基础模型在当前查询上的能力动态调整协作？更多协作并非总是更好——复杂的协调机制可能有助于解决困难样例，却也会增加 token 成本并产生冗余交互。本文提出一种两阶段能力感知框架，用于自动编排 MAS。该框架首先建模 LLM 基础模型针对当前查询的任务条件能力，再利用这一能力信号动态调整角色激活策略与通信图。在六个基准上的实验表明，该方法取得了 93.81% 的平均得分。对六种不同能力水平的 LLM 基础模型进行测试后发现，该方法能够依据推断出的能力自适应调整协作：对于能力较强的模型，平均准确率从 87.22% 提升至 89.97%，同时 token 成本降低 36.26%；对于能力较弱的模型，相比现有方法平均进一步提升 4.58 个百分点。该趋势在未见过的基础模型上同样成立。",
+  "key_points_zh": [
+    "提出两阶段能力感知 MAS 编排框架，先估计基础模型对当前查询的任务条件能力，再据此配置协作机制。",
+    "基于能力信号动态调整角色激活与智能体通信图，避免固定协作模式带来的冗余交互。",
+    "在六个基准上取得 93.81% 的平均得分，并在六种不同能力水平的 LLM backbone 上验证有效性。",
+    "对高能力 backbone，平均准确率由 87.22% 提升至 89.97%，同时 token 成本降低 36.26%。",
+    "对低能力 backbone，相比现有方法平均提升 4.58 个百分点，且该能力自适应趋势可泛化至未见过的 backbone。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.72,
+    "novelty": 0.6,
+    "problem_significance": 0.62,
+    "potential_impact": 0.58,
+    "paradigm_shift": 0.45,
+    "lasting_value": 0.52,
+    "llm_avg": 0.554,
+    "comment": "The adaptive role and communication-graph controller is relevant orchestration work, though it remains a relatively incremental generic multi-agent pattern.",
+    "comment_zh": "基于能力动态调整角色和通信图属于相关的编排研究，但整体仍是较增量的通用多智能体模式。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.34373441375821495,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.554,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13144/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.958
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13144/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.955
+    }
+  ]
+}

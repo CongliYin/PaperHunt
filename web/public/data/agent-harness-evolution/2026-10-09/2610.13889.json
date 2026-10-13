@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2610.13889",
+  "title": "RATED: Reliability-Aware AI Agent Tool Retrieval via Execution Dynamics",
+  "title_zh": "RATED：基于执行动态的可靠性感知 AI Agent 工具检索",
+  "authors": [
+    "Weiliang Chen",
+    "Song Liao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-09T17:38:11Z",
+  "abs_url": "https://arxiv.org/abs/2610.13889v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.13889",
+  "links": {
+    "github": "https://github.com/Elliotes/EcoAgent.",
+    "project_page": null
+  },
+  "abstract_en": "As AI agents increasingly rely on external tools, accurate retrieval is essential for reliable behavior. Existing methods optimize semantic relevance but largely ignore tool availability during execution. To address this gap, we propose RATED (Reliability-Aware Tool Retrieval via Execution Dynamics), a retrieval framework that combines robust semantic matching with dynamic reliability adaptation. RATED employs a frozen dual-encoder with contrastive fine-tuning for semantic matching, and a lightweight contextual bandit module that re-ranks candidates based on real-time execution feedback. This design enables rapid adaptation to runtime tool failures without expensive model retraining. We introduce EcoAgent, a benchmark of 5,172 real-world tools and over 210,000 query-tool pairs for offline retrieval and dynamic reliability evaluation. Experimental results demonstrate that RATED achieves a 52.2% relative MRR improvement over the ToolLLM API retriever on real-world queries, and reduces fault selection rate from 86.2% to 2.9% under severe API outage scenarios with a 30% failure rate, while incurring negligible latency overhead of less than 1 ms over encode-only inference. The code and dataset are available at https://github.com/Elliotes/EcoAgent.",
+  "abstract_zh": "针对 AI Agent 工具检索过度关注语义相关性、忽略工具运行时可用性的问题，论文提出 RATED（Reliability-Aware Tool Retrieval via Execution Dynamics）。该方法采用经过对比学习微调的冻结双编码器进行语义匹配，并引入轻量级上下文 bandit 模块，依据实时执行反馈对候选工具重新排序，从而无需昂贵的模型重训练即可适应工具故障。论文构建了 EcoAgent 基准，包含 5,172 个真实工具及超过 210,000 个查询—工具对。实验表明，在真实查询上，RATED 相比 ToolLLM API retriever 将 MRR 提升 52.2%；在 30% API 故障率的严重宕机场景下，将故障工具选择率从 86.2% 降至 2.9%，额外延迟低于 1 ms。",
+  "key_points_zh": [
+    "以冻结双编码器结合对比学习实现稳健的语义工具匹配，并通过上下文 bandit 利用实时执行反馈进行重排序。",
+    "无需重新训练主模型即可快速适应工具不可用、API 宕机等运行时可靠性变化。",
+    "发布 EcoAgent 基准，涵盖 5,172 个真实工具和超过 210,000 个查询—工具对，支持离线检索与动态可靠性评估。",
+    "在真实查询上较 ToolLLM API retriever 实现 52.2% 的相对 MRR 提升；30% 故障率下，故障工具选择率由 86.2% 降至 2.9%。",
+    "额外推理延迟低于 1 ms，代码与数据集已公开，论文发表于 CIKM 2026。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.86,
+    "novelty": 0.8,
+    "problem_significance": 0.84,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.69,
+    "lasting_value": 0.85,
+    "llm_avg": 0.8099999999999999,
+    "comment": "RATED couples semantic tool routing with online reliability feedback and contributes a substantial benchmark for failure-aware agent tool selection.",
+    "comment_zh": "RATED将语义工具路由与在线可靠性反馈结合，并提供了面向故障感知工具选择的大规模基准。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3315497212666585,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8099999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Elliotes/EcoAgent.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13889/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13889/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.965
+    }
+  ]
+}

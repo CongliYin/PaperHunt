@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2610.13157",
+  "title": "SOAR: Source-Aware Reinforcement Learning with Precise Credit Assignment for Search Agents",
+  "title_zh": "SOAR：面向搜索智能体的源感知强化学习与精确信用分配",
+  "authors": [
+    "Shengze Huang",
+    "Zihao Tang",
+    "Jinluan Yang",
+    "Xin Yu",
+    "Zhenghao Lin",
+    "Xiao Liu",
+    "Zengxuan Wen",
+    "Yeyun Gong",
+    "Haizhen Huang",
+    "Weiwei Deng",
+    "Feng Sun",
+    "Qi Zhang",
+    "Fei Wu",
+    "Kun Kuang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-09T07:45:11Z",
+  "abs_url": "https://arxiv.org/abs/2610.13157v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.13157",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement learning (RL) for search agents often suffers from evidence fabrication, a failure mode where agents bypass external information ($E_{ext}$) and fabricate an incorrect answer. We argue that this fabrication arises from an over-reliance on unreliable internal knowledge ($E_{int}$) as shortcuts due to the inherent opacity of reasoning trajectories. To address this, we propose SOAR (SOurce-Aware Reinforcement learning), a paradigm that transforms monolithic reasoning into source-explicit trajectories. SOAR (i) disentangles $E_{ext}$ and $E_{int}$ into parallel, observable streams via a Source-Aware Workflow, and (ii) incorporates Source-Consistent Reward to guide the policy evolution. By making information-source attribution explicit, SOAR enables precise credit assignment between different knowledge streams. Evaluations show that SOAR outperforms baselines on 3B and 7B backbones by 7.3% and 5.4%, while reducing evidence fabrication by 74.8%. These confirm that SOAR significantly improves performance on knowledge-intensive benchmarks while effectively mitigating evidence fabrication, fostering more faithful and grounded reasoning with enhanced robustness.",
+  "abstract_zh": "搜索智能体中的强化学习常出现“证据伪造”：智能体绕过外部信息（E_ext），转而依赖不可靠的内部知识（E_int）生成错误答案。论文认为，推理轨迹的不透明性促使智能体将内部知识作为捷径。为此，提出 SOAR（SOurce-Aware Reinforcement learning），将单体式推理转换为显式标注信息来源的推理轨迹。SOAR 包含两个核心设计：通过 Source-Aware Workflow 将外部知识与内部知识解耦为并行且可观测的信息流；通过 Source-Consistent Reward 引导策略学习，使不同知识流能够获得精确的信用分配。在 3B 和 7B 参数规模的骨干模型上，SOAR 相比基线分别提升 7.3% 和 5.4%，并将证据伪造降低 74.8%。结果表明，SOAR 能提升知识密集型基准上的性能，有效缓解证据伪造，促进更忠实、更具依据且更稳健的推理。",
+  "key_points_zh": [
+    "核心问题是搜索智能体过度依赖不可靠的内部知识，绕过外部证据并生成伪造依据。",
+    "Source-Aware Workflow 将外部知识（E_ext）与内部知识（E_int）拆分为并行、可观测的信息流。",
+    "Source-Consistent Reward 根据知识来源进行奖励设计，实现不同信息流之间更精确的信用分配。",
+    "在 3B 和 7B 骨干模型上分别提升 7.3% 和 5.4%，同时将证据伪造减少 74.8%。",
+    "SOAR 提升知识密集型任务性能，并增强推理的忠实性、可溯源性与鲁棒性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.85,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.81,
+    "lasting_value": 0.87,
+    "llm_avg": 0.8619999999999999,
+    "comment": "SOAR is strong search-agent RL work that makes evidence sources observable and enables more precise trajectory-level credit assignment.",
+    "comment_zh": "SOAR是较强的搜索智能体强化学习工作，通过显式化证据来源实现了更精确的轨迹级信用分配。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8619999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13157/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.954
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13157/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}

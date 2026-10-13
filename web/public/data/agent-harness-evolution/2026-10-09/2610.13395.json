@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2610.13395",
+  "title": "ProgramGym: Scaling Training Environments for Long-Horizon Program Reproduction Agents",
+  "title_zh": "ProgramGym: Scaling Training Environments for Long-Horizon Program Reproduction Agents",
+  "authors": [
+    "Chengyi Yang",
+    "Renxu Bao",
+    "Jue Hou",
+    "Zongpei Teng",
+    "Ziheng Wang",
+    "Yujie Lin",
+    "Chengsong Huang",
+    "Junnan Zhu",
+    "Delai Qiu",
+    "Yining Wang",
+    "Shengping Liu",
+    "Fei Long",
+    "Jinsong Su"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-09T11:09:54Z",
+  "abs_url": "https://arxiv.org/abs/2610.13395v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.13395",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents are increasingly used to build programs from scratch as software engineers do rather than to resolve issues within a repository or to generate a repository from a given requirements document. However, scalable verifiable training environments that force agents to discover what is required and to decide how the system should be designed remain scarce. Moreover, existing agent workflows also cannot sustain long-horizon development in which the agent explores the reference program before implementation. To address these challenges, we introduce ProgramGym, a framework consisting of Program-Env and Program-Agent for scalable training environments of long-horizon program reproduction agents. Specifically, Program-Env constructs verifiable training environments from repositories through a feedback-driven loop that repairs runtime sandbox builds and the quality of black-box tests. Using this novel pipeline, we obtain 1,648 training environments spanning C, C++, Go, and Rust. Program-Agent combines a role-isolated workflow of analysis, implementation, and review with revision management for compilation checks and failure recovery. Experiments on ProgramBench show that both Program-Env and Program-Agent improve performance on program reproduction. Fine-tuning on trajectories with these constructed environments raises the performance of Qwen3.8-27B from 34.87% to 42.84%. Program-Agent further raises the base and SFT models to 55.71% and 56.25%, both exceeding some flagship models. We will release the ProgramGym to support further research on coding agents that build programs from scratch.",
+  "abstract_zh": "",
+  "key_points_zh": [],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.91,
+    "problem_significance": 0.95,
+    "potential_impact": 0.96,
+    "paradigm_shift": 0.88,
+    "lasting_value": 0.95,
+    "llm_avg": 0.9299999999999999,
+    "comment": "ProgramGym combines scalable verifiable coding environments, sandbox repair, long-horizon workflows, and trajectory training into a highly reusable foundation.",
+    "comment_zh": "ProgramGym将可扩展可验证的编码环境、沙箱修复、长程工作流和轨迹训练结合成高度可复用的基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.8950630275459597,
+    "author_reputation": 0.34373441375821495,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9299999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 49,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13395/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13395/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.975
+    }
+  ]
+}

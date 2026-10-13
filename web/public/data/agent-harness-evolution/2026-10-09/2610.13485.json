@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2610.13485",
+  "title": "Proactive Agentic Orchestration",
+  "title_zh": "主动式智能体编排",
+  "authors": [
+    "Xueyang Feng",
+    "Chaozhuo Li",
+    "Xiaohe Bo",
+    "Jiakai Tang",
+    "Chenxi Li",
+    "Qiwei Ye",
+    "Xu Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-09T12:18:49Z",
+  "abs_url": "https://arxiv.org/abs/2610.13485v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.13485",
+  "links": {
+    "github": "https://github.com/XueyangFeng/POrchestra",
+    "project_page": null
+  },
+  "abstract_en": "Agentic orchestration delegates tasks to sub-agents with independent contexts, providing a key path to extending the effective execution horizon of large language model agents. However, existing orchestration methods face two limitations: in execution, current methods fix sub-agents' goals and harnesses at creation time, limiting their adaptability to dynamic real-world environments; in optimization, sparse and delayed feedback constrains effective learning of the orchestration policy. To address these limitations, we introduce POrchestra, an on-the-fly proactive agentic orchestration framework. It allows sub-agents to proactively communicate with the orchestrator at any logical point to request harness adjustments while maintaining continuity of local execution. This mechanism not only enables sub-agents to adapt seamlessly to dynamic environments but also naturally inspires On-Policy Orchestration Distillation (OPOD) based on hindsight feedback. OPOD attributes sub-agents' proactive revision requests back to preceding orchestration decisions to derive targeted improvement signals, and leverages these signals as process supervision alongside the final reward to optimize the orchestration policy. We evaluate POrchestra on three long-horizon agent benchmarks spanning deep research, dynamic digital assistance, and software engineering. POrchestra improves task success by an average of 9.1% relative to the strongest baseline; combined with OPOD, it improves small-orchestrator success by an average of 10.0% relative to existing training baselines. POrchestra also achieves a more favorable cost-performance trade-off. Our code is publicly available at https://github.com/XueyangFeng/POrchestra.",
+  "abstract_zh": "本文提出 POrchestra，一种在线主动式智能体编排框架，旨在解决现有方法在执行适应性和策略优化反馈方面的不足。传统编排方法在创建子智能体时固定其目标与执行工具，难以应对动态环境；同时，稀疏且延迟的反馈限制了编排策略的有效学习。POrchestra 允许子智能体在执行过程中的任意逻辑节点主动向编排器请求调整执行工具，同时保持本地执行连续性。基于这一机制，作者进一步提出 On-Policy Orchestration Distillation（OPOD）：利用事后反馈，将子智能体的主动修订请求归因于此前的编排决策，并将其作为过程监督信号，与最终奖励共同优化编排策略。在涵盖深度研究、动态数字助理和软件工程的三个长时程智能体基准上，POrchestra 相较最强基线平均提升任务成功率 9.1%；结合 OPOD 后，小型编排器相较现有训练基线平均提升 10.0%，并取得更优的成本—性能权衡。",
+  "key_points_zh": [
+    "POrchestra允许子智能体在执行任意逻辑节点主动与编排器通信，请求调整目标相关的执行工具或支撑机制，同时不中断本地执行。",
+    "该框架提升了智能体对动态真实环境的适应能力，突破了传统方法在创建阶段固定子智能体目标与工具的限制。",
+    "On-Policy Orchestration Distillation（OPOD）利用子智能体的事后修订请求，为此前的编排决策生成针对性的过程监督信号。",
+    "在深度研究、动态数字助理和软件工程三个长时程智能体基准上，POrchestra相较最强基线平均提升任务成功率9.1%。",
+    "结合OPOD后，小型编排器相较现有训练基线平均提升成功率10.0%，并实现更优的成本—性能权衡。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.9,
+    "problem_significance": 0.93,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.88,
+    "lasting_value": 0.91,
+    "llm_avg": 0.908,
+    "comment": "POrchestra advances orchestration by permitting live harness revision and turning revision requests into process supervision for policy improvement.",
+    "comment_zh": "POrchestra允许执行中的子智能体动态修订运行配置，并将修订请求转化为优化编排策略的过程监督。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.4202386992768106,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.908,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/XueyangFeng/POrchestra",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 21,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13485/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.746
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13485/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.464
+    }
+  ]
+}

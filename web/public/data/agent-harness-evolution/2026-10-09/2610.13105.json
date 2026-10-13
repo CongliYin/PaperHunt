@@ -1,0 +1,72 @@
+{
+  "arxiv_id": "2610.13105",
+  "title": "Can Failed Trajectories Reveal Where Agents Go Wrong? Agentic Failure Attribution Without Step-Level Labels",
+  "title_zh": "Can Failed Trajectories Reveal Where Agents Go Wrong? Agentic Failure Attribution Without Step-Level Labels",
+  "authors": [
+    "Do Nguyen-Thanh",
+    "Junlin Fang",
+    "Bing Li",
+    "Zhen Fang",
+    "Sean Du"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-09T06:58:59Z",
+  "abs_url": "https://arxiv.org/abs/2610.13105v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.13105",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Failure attribution for LLM agents aims to identify decisive steps responsible for task failure, which is critical for debugging and improving agentic systems. Existing methods rely on costly LLM prompting, step-level error annotations, or verified successful trajectories that lack failure signals for assistance. In this paper, we study failure attribution from step-unlabeled failure trajectories, where each trajectory is known to have failed but its decisive step is unknown. We propose SOAP (Spectral scOring with Attention-guided Propagation), an effective framework requiring neither step-level training labels nor a separate success-only reference set. SOAP first constructs a spectral reference space from LLM representations and assigns each step a base error score according to its projection behavior. Importantly, later steps may exhibit stronger failure signals because they inherit an earlier mistake, causing independent scorers to favor downstream consequences over the decisive error. To address this downstream contamination, SOAP derives soft step dependencies from attention patterns and propagates downstream error evidence toward its likely upstream sources. Extensive experiments show that SOAP consistently improves attribution performance over competitive baselines.",
+  "abstract_zh": "",
+  "key_points_zh": [],
+  "llm_assessment": {
+    "domain_fit": 0.86,
+    "novelty": 0.81,
+    "problem_significance": 0.89,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.83,
+    "llm_avg": 0.826,
+    "comment": "SOAP supplies a label-efficient trace-analysis method for locating decisive agent failures, although its operational integration remains unclear.",
+    "comment_zh": "SOAP提供了一种低标注成本的轨迹分析方法来定位智能体关键失败步骤，但其与实际运行体系的集成尚不明确。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4058149490012195,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.826,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 8,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13105/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13105/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.916
+    }
+  ]
+}

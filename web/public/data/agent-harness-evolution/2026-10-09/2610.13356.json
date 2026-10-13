@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2610.13356",
+  "title": "SWE-Critix: Post-Training Generalist Verifiers for Assessing Coding-Agent Trajectories",
+  "title_zh": "SWE-Critix：用于评估编码智能体轨迹的后训练通用验证器",
+  "authors": [
+    "Jiajun Hu",
+    "Chun Yong Chong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-09T10:30:21Z",
+  "abs_url": "https://arxiv.org/abs/2610.13356v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.13356",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents are increasingly deployed for end-to-end software engineering tasks, where a readily available oracle evaluator that defines the success criteria is often absent. This motivates verifications for coding agents that can reliably judge and explain their behavior. However, verification is non-trivial as coding agents are increasingly capable of solving long-horizon software engineering tasks. Their execution trajectories can be extremely long, containing hundreds of iterative interactions with code repositories and external tools. Existing verifiers either rely on general-purpose LLMs without specialized training or train dedicated critics that predominantly focus on producing scalar rewards, highlighting the relatively limited exploration of training-based generalist verification. We introduce SWE-Critix, a post-training pipeline for training generalist verifiers of coding-agent trajectories. Given a task and its execution trajectory, the learned verifier predicts the completion label and generates a natural-language analysis that explains its judgment. Our pipeline combines supervised fine-tuning (SFT) with reinforcement learning (RL) and trains a series of 30B models on trajectories from CodeForge-Preview. On a held-out test set, SWE-Critix improves classification accuracy from 57% for the base Qwen3-30B-A3B reasoning model to 66% after SFT and 78% after RL. We release our models, datasets, and training code to facilitate further research.",
+  "abstract_zh": "编码智能体已能够执行端到端的软件工程任务，但这类长程执行通常缺乏可直接使用的成功判定标准。现有验证器要么依赖未经专门训练的通用大语言模型，要么主要输出标量奖励，较少探索具备通用分析能力的训练型验证器。本文提出 SWE-Critix，一套用于训练编码智能体轨迹通用验证器的后训练流程。给定任务及其执行轨迹，验证器不仅预测任务完成标签，还生成解释判断的自然语言分析。该流程结合监督微调（SFT）与强化学习（RL），基于 CodeForge-Preview 轨迹训练了一系列 30B 模型。在留出测试集上，模型分类准确率由基础 Qwen3-30B-A3B reasoning model 的 57% 提升至 SFT 后的 66%，再提升至 RL 后的 78%。作者同时公开模型、数据集和训练代码。",
+  "key_points_zh": [
+    "目标是评估编码智能体在长程软件工程任务中的执行轨迹，并判断任务是否真正完成。",
+    "验证器同时输出完成标签与自然语言解释，相比仅提供标量奖励的 critic 更具可解释性。",
+    "后训练流程结合监督微调（SFT）和强化学习（RL），使用 CodeForge-Preview 轨迹训练 30B 模型。",
+    "在留出测试集上，准确率从基础模型的 57% 提升到 SFT 后的 66%，再提升到 RL 后的 78%。",
+    "作者公开模型、数据集和训练代码，便于后续研究通用编码智能体验证。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.84,
+    "problem_significance": 0.94,
+    "potential_impact": 0.93,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.92,
+    "llm_avg": 0.89,
+    "comment": "SWE-Critix provides a strong reusable pipeline, dataset, and trained verifier for evaluating long coding-agent trajectories without simple oracle tests.",
+    "comment_zh": "SWE-Critix为缺少简单判定器的长程编码智能体轨迹提供了可复用的训练流程、数据集和验证器。"
+  },
+  "scores": {
+    "topic_relevance": 1.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.5324466429795159,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.89,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 12,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13356/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.704
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13356/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}

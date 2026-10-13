@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2610.13841",
+  "title": "Returning to Development States: When Full Sandbox Snapshots Help Coding Agents",
+  "title_zh": "回到开发状态：完整沙箱快照何时能帮助编码智能体",
+  "authors": [
+    "Daniel Thi Graviet",
+    "Tanmay Shah"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-09T16:50:19Z",
+  "abs_url": "https://arxiv.org/abs/2610.13841v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.13841",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents often make useful progress before they fail, but retry-from-scratch discards the machine state created along the way. This makes failure recovery an interesting search problem: if intermediate environment states preserve meaningful progress, restoring and branching from them could outperform repeatedly restarting from the initial state. We implement Go-Explore-style search over full Daytona snapshots and find that higher and more efficient solve rates depend mainly on progress that sits outside the repository, such as databases, services, and other runtime state. Our results suggest that full-snapshot search is most effective when long-horizon coding work spans multiple services whose state cannot be reconstructed from a single diff.",
+  "abstract_zh": "编码智能体在最终失败前往往已经取得了一定进展，但从头重试会丢弃过程中形成的机器状态。因此，故障恢复可以被视为一个搜索问题：如果中间环境状态保留了有意义的进展，那么从这些状态恢复并探索不同分支，可能优于反复从初始状态重新开始。本文基于完整 Daytona 快照实现了 Go-Explore 风格的搜索。实验发现，更高且更高效的任务解决率主要依赖代码仓库之外的进展，例如数据库、服务及其他运行时状态。结果表明，当长流程编码任务涉及多个服务，且相关状态无法通过单个代码差异（diff）重建时，完整快照搜索最为有效。",
+  "key_points_zh": [
+    "将编码智能体的失败恢复建模为搜索问题，从有进展的中间状态恢复并继续分支探索。",
+    "基于 Daytona 的完整沙箱快照实现 Go-Explore 风格搜索，避免每次失败后从初始环境重新开始。",
+    "性能提升主要来自数据库、后台服务和运行时环境等代码仓库之外的状态，而非仅保存代码修改。",
+    "对于跨多个服务的长时程编码任务，若环境状态无法由单个 diff 重建，完整快照搜索最具价值。",
+    "论文为 7 页预印本，包含 6 幅图，目前尚未经过同行评审。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.76,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8,
+    "comment": "Full-environment snapshot branching directly advances coding-agent recovery and provides durable evidence about when repository diffs are insufficient for replay.",
+    "comment_zh": "完整环境快照分支直接推进了编码智能体的故障恢复，并揭示了仅靠代码差异不足以回放任务的关键条件。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13841/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13841/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.938
+    }
+  ]
+}

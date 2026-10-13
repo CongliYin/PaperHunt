@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2610.13632",
+  "title": "Humanize Olympiad Agents: A Multi-Session Workflow for Olympiad Problem Solving with Solve, Review, Wiki, Verify",
+  "title_zh": "让奥赛智能体更具人类式协作能力：基于求解、审阅、知识库与验证的多会话奥赛解题工作流",
+  "authors": [
+    "Zhengyang Zhang",
+    "Jing Xiong",
+    "Hongzhou Lin",
+    "Juihui Chung",
+    "Zijian Zhang",
+    "Song Han",
+    "Sihao Liu",
+    "Ligeng Zhu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-09T14:14:14Z",
+  "abs_url": "https://arxiv.org/abs/2610.13632v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.13632",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM) agents are rapidly improving on long-horizon scientific and olympiad tasks. Recent systems have produced a Lean-formalized resolution of the Navier--Stokes problem and autonomous solutions to four open questions in the Erdős Conjectures database. Yet neither system releases both its underlying model and complete inference stack. More broadly, a single agent session remains brittle on difficult problems: early errors can propagate, missing domain knowledge can stall progress, and apparent success can mask a misinterpretation or weakening of the original task. We introduce HOA (Humanize Olympiads Agent), an open, flow-level framework that coordinates multiple agent sessions through three complementary feedback channels. First, an independent reviewer evaluates each candidate and provides actionable feedback. Second, a structured wiki supplies task-specific knowledge that may be missing or unreliable in model pretraining. Third, a verifier checks generated Lean proofs against trusted challenge statements. With GPT-5.6 Sol, HOA achieves perfect scores on the IMO, IPhO, and IOI 2026, near-full marks on the IChO 2026 problem set, and solves all 672 problems (100%) on PutnamBench. On the Lean-Eval leaderboard, HOA ranks first, solving 251 of 304 problems (82.6%). We further evaluate HOA with open models. Using Kimi-K3, HOA achieves full scores on the IMO, IPhO, and IOI, and a gold-level score of 97.1% on the IChO. These results closely match the closed-source GPT-5.6 Sol + /Goal baseline on the IMO and IPhO, while exceeding it on the IChO and IOI, demonstrating that systematic feedback can help bridge substantial differences in base-model capability.",
+  "abstract_zh": "大语言模型（LLM）智能体在长程科学研究与奥赛任务上的能力正快速提升，但现有先进系统通常不会同时公开底层模型与完整推理流程，而且单次智能体会话在困难问题上仍较为脆弱：早期错误可能持续传播，领域知识缺失可能阻碍求解，表面上的成功也可能源于对原任务的误解或弱化。本文提出 HOA（Humanize Olympiads Agent），一个开放的流程级框架，通过三类互补反馈协调多个智能体会话：独立 reviewer 评估候选解并给出可执行建议；结构化 wiki 补充预训练中缺失或不可靠的任务知识；verifier 则依据可信挑战陈述检查生成的 Lean 证明。搭配 GPT-5.6 Sol 时，HOA 在 IMO、IPhO 和 IOI 2026 中获得满分，在 IChO 2026 题集上接近满分，并解决 PutnamBench 全部 672 道题；在 Lean-Eval 排行榜上以 251/304（82.6%）排名第一。搭配开放模型 Kimi-K3 时，HOA 同样在 IMO、IPhO 和 IOI 中获得满分，并在 IChO 上取得 97.1% 的金牌级成绩。其表现与闭源 GPT-5.6 Sol + /Goal 基线在 IMO、IPhO 上接近，并在 IChO、IOI 上更优，说明系统化反馈能够显著弥补基础模型能力差距。",
+  "key_points_zh": [
+    "提出开放的流程级框架 HOA，以多会话协作替代脆弱的单次智能体推理。",
+    "整合三类反馈机制：独立 reviewer 审阅、结构化 wiki 知识补充，以及基于可信题目陈述的 Lean verifier。",
+    "HOA + GPT-5.6 Sol 在 IMO、IPhO、IOI 2026 获得满分，并以 100% 解出 PutnamBench 全部 672 题。",
+    "在 Lean-Eval 上解决 251/304 道题，成功率为 82.6%，位列排行榜第一。",
+    "搭配开放模型 Kimi-K3 仍取得多项满分或金牌级成绩，表明系统化反馈可缩小开放模型与闭源强模型之间的能力差距。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.58,
+    "problem_significance": 0.78,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.55,
+    "lasting_value": 0.68,
+    "llm_avg": 0.662,
+    "comment": "HOA offers a useful open orchestration workflow with independent review, structured context, and formal verification, although its components are individually familiar.",
+    "comment_zh": "HOA将独立评审、结构化上下文和形式化验证整合为开放编排流程，具有实用价值，但各组件本身并不新颖。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3210331475111057,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.662,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13632/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13632/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.976
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "arxiv_id": "2610.12828",
+  "title": "TreeHCA: Hindsight-Guided Exploration and Credit Assignment for Multi-Turn LLM Agents",
+  "title_zh": "TreeHCA: Hindsight-Guided Exploration and Credit Assignment for Multi-Turn LLM Agents",
+  "authors": [
+    "Debajoy Mukherjee",
+    "Jeremy Carleton",
+    "Sushil Vemuri",
+    "Srinivas Shakkottai",
+    "Dileep Kalathil"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-09T00:23:39Z",
+  "abs_url": "https://arxiv.org/abs/2610.12828v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.12828",
+  "links": {
+    "github": "https://github.com/TheBlackCat22/TreeHCA.",
+    "project_page": null
+  },
+  "abstract_en": "Outcome-supervised group-relative policy optimization (GRPO) assigns the same advantage to every token in an LLM agent trajectory, leaving useful and unhelpful decisions undifferentiated. Hindsight credit assignment (HCA) can refine this feedback, but its estimates rely on trajectories containing informative alternatives at consequential histories. We introduce TreeHCA, which couples hindsight-guided exploration with hindsight credit assignment. TreeHCA uses changes in reference-answer likelihood to revisit intermediate histories and sample alternative continuations, forming a tree of reasoning and tool interactions. Because this exploration changes the distribution of sampled continuations, we derive the corresponding inverse-hindsight importance correction, including an exact finite-pool identity. We use this structure in a normalized tree backup that propagates terminal outcomes into turn-level advantages. This shared hindsight structure is TreeHCA's central design principle, linking informative exploration with hindsight-guided credit assignment. Across seven question-answering benchmarks and three Qwen backbones, TreeHCA outperforms all baselines in aggregate exact match, validating the effectiveness of paired exploration and credit assignment for multi-turn LLM agent training. Our code is available at github.com/TheBlackCat22/TreeHCA.",
+  "abstract_zh": "",
+  "key_points_zh": [],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.86,
+    "problem_significance": 0.91,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.82,
+    "lasting_value": 0.87,
+    "llm_avg": 0.868,
+    "comment": "TreeHCA tightly integrates targeted trajectory exploration with corrected turn-level credit assignment for long-horizon agent RL.",
+    "comment_zh": "TreeHCA将定向轨迹探索与经校正的轮次级信用分配紧密结合，直接推进长程智能体强化学习。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.6439807103796056,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.868,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/TheBlackCat22/TreeHCA.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 3,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 26,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12828/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.954
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12828/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.936
+    }
+  ]
+}

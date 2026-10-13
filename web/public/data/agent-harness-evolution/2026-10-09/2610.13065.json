@@ -1,0 +1,71 @@
+{
+  "arxiv_id": "2610.13065",
+  "title": "TestSuiteBench: Coding Agents Struggle to Generate Strong Test Suites from Specifications",
+  "title_zh": "TestSuiteBench: Coding Agents Struggle to Generate Strong Test Suites from Specifications",
+  "authors": [
+    "Kazuki Egashira",
+    "Niels Mündler-Sasahara",
+    "Mark Niklas Müller",
+    "Martin Vechev"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-09T06:26:02Z",
+  "abs_url": "https://arxiv.org/abs/2610.13065v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.13065",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents are increasingly used to create large software projects. While code-generation benchmarks have scaled accordingly to full applications, test-generation benchmarks remain limited to individual functions or bug fixes. In particular, generating complete test suites for complex software from scratch remains unexplored. To address this gap, we introduce TestSuiteBench, a benchmark of 165 open-source applications, each with a structured and detailed specification of intended behavior, a reference implementation, a reference test suite, and on average 74 mutants. Each mutant is generated from a single requirement of the specification and refined to isolate that behavior: 73\\% are killed by exactly one reference test and, on average, by only 0.2\\% of the remaining tests. We find that even frontier coding agents struggle to generate strong test suites given our specifications, achieving mutation scores below 60\\%, despite their suites being largely valid and 88\\% of their tests passing on the reference implementation. We observe that generated test suites often lack relevant input combinations and are smaller than reference test suites. Meanwhile, implementations generated for the same specifications pass 82\\% of the reference tests. These results show agents can build software they cannot verify, a gap that directly limits fully autonomous software development.",
+  "abstract_zh": "",
+  "key_points_zh": [],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.78,
+    "problem_significance": 0.9,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.54,
+    "lasting_value": 0.88,
+    "llm_avg": 0.794,
+    "comment": "This mutation-backed benchmark exposes a fundamental verification gap in coding agents and supplies a durable evaluation resource for autonomous software development.",
+    "comment_zh": "该基于变异测试的基准揭示了编码智能体的根本验证缺口，并为自主软件开发提供了持久的评测资源。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.7117661250818889,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.794,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 70,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13065/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13065/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.964
+    }
+  ]
+}

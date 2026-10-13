@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2610.13152",
+  "title": "Quality, Not Just Outcome: A Structural Scoring Framework for Selecting Coding-Agent Trajectories for Supervised Fine-Tuning",
+  "title_zh": "质量不只是结果：用于选择监督微调 Coding-Agent 轨迹的结构化评分框架",
+  "authors": [
+    "Sida Li",
+    "Yuanxin Liu",
+    "Shicheng Li",
+    "Linli Yao",
+    "Xu Sun",
+    "Haoli Bai",
+    "Xiaohui Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-09T07:40:42Z",
+  "abs_url": "https://arxiv.org/abs/2610.13152v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.13152",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Open coding agents are commonly trained through supervised fine-tuning on interaction trajectories whose final patches pass the benchmark test suite. However, this outcome-level filtering criterion ignores process quality: trajectories that eventually succeed may still contain inefficient interaction patterns such as repetitive file inspection, unstable tool usage, or delayed modification behavior, all of which become part of the imitation target. We propose TQS (Trajectory Quality Score), a structural scoring framework for coding-agent trajectories that operates directly on trajectory structure, requires no LLM judge, and runs in linear time. TQS characterizes trajectory quality through structural signals organized around structured convergence: information focus, intent--action alignment, and policy dynamics. Using 155,144 successful trajectories from a public open-license corpus, we rank trajectories by TQS and fine-tune coding agents on filtered subsets. Models trained on top-ranked trajectories consistently outperform those trained on random or bottom-ranked subsets on SWE-Bench-Verified. Our results suggest that process-level trajectory quality is an important factor in coding-agent supervision and that structural trajectory filtering provides an effective and scalable alternative to LLM-based data selection.",
+  "abstract_zh": "现有 Coding-Agent 通常依据最终补丁是否通过测试来筛选监督微调轨迹，但这种结果级标准忽略了过程质量。即使最终成功，轨迹也可能包含重复检查文件、不稳定调用工具、延迟修改等低效行为，并被模型学习。论文提出 TQS（Trajectory Quality Score），一种直接基于轨迹结构、无需 LLM judge 且线性时间运行的评分框架。TQS围绕“结构化收敛”刻画信息聚焦、意图—动作一致性和策略动态。作者利用公开开放许可语料库中的155,144条成功轨迹进行排序，并在筛选子集上微调 Coding-Agent。实验表明，使用 TQS 排名前列轨迹训练的模型，在 SWE-Bench-Verified 上稳定优于随机筛选和排名靠后轨迹训练的模型，说明过程级轨迹质量是 Coding-Agent 监督数据的重要因素，结构化筛选是 LLM 数据选择的有效且可扩展替代方案。",
+  "key_points_zh": [
+    "仅按最终测试是否通过筛选轨迹，会保留重复探索、工具使用不稳定和修改延迟等低效过程。",
+    "TQS无需 LLM judge，直接分析轨迹结构，并以线性时间计算质量分数。",
+    "TQS从信息聚焦、意图—动作一致性和策略动态三个方面衡量“结构化收敛”。",
+    "基于155,144条成功轨迹的实验显示，TQS高分轨迹训练的模型优于随机或低分轨迹训练的模型。",
+    "结果表明，过程级质量筛选能够提升 SWE-Bench-Verified 表现，并具备良好的规模化应用潜力。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.78,
+    "problem_significance": 0.88,
+    "potential_impact": 0.89,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8300000000000001,
+    "comment": "TQS offers an inexpensive and scalable structural filter for improving the coding-agent trajectories used in supervised fine-tuning.",
+    "comment_zh": "TQS提供了一种低成本且可扩展的结构化筛选方法，可提升编码智能体监督微调轨迹的质量。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.23816576137838616,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8300000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13152/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.367
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.13152/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.343
+    }
+  ]
+}

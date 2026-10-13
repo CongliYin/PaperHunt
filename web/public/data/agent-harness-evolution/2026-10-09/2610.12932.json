@@ -1,0 +1,72 @@
+{
+  "arxiv_id": "2610.12932",
+  "title": "SEEDS: Preview-Guided Evidence Admission for Search Agents",
+  "title_zh": "SEEDS: Preview-Guided Evidence Admission for Search Agents",
+  "authors": [
+    "Jiajin Liu",
+    "Chenxi Xu",
+    "Dongzhe Fan",
+    "Yuanfu Sun",
+    "Qiaoyu Tan"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-09T03:25:39Z",
+  "abs_url": "https://arxiv.org/abs/2610.12932v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.12932",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Search agents extend large reasoning models with multi-round access to external knowledge, yet most existing systems largely conflate retrieving evidence with consuming it. Retrieved documents are commonly incorporated according to fixed or rank-based policies, despite the fact that evidence utility is conditioned on the agent's current reasoning state. Consequently, a lower-ranked candidate may be critical for the current step, while a higher-ranked candidate may provide redundant, irrelevant, or misleading information. We formulate this overlooked problem as evidence admission, which asks, at each search step, which retrieved candidates should be allowed to enter the agent's evolving reasoning context. To enable such selective control, we introduce SEEDS (Selective Evidence Entry During Search), a preview-guided evidence admission framework for search agents. SEEDS first exposes lightweight previews of retrieved candidates and then lets the agent jointly determine which candidates and how many should be fully inspected, conditioned on its current reasoning state. Unlike fixed or adaptive prefix policies, SEEDS can select arbitrary subsets with flexible cardinality, and it can be instantiated directly with an existing reasoning agent or further optimized through learning. Across nine knowledge-intensive QA benchmarks under both local corpus and live web search, SEEDS consistently improves search effectiveness while substantially reducing full-evidence consumption. Experimental analyses show that SEEDS more effectively selects useful candidates beyond the corresponding retrieval prefix. These results establish evidence admission as a complementary dimension of agentic search, separating what information is retrieved from what information is ultimately allowed to shape reasoning.",
+  "abstract_zh": "",
+  "key_points_zh": [],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.8,
+    "problem_significance": 0.84,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.71,
+    "lasting_value": 0.82,
+    "llm_avg": 0.804,
+    "comment": "SEEDS introduces a reusable context-control layer that separates retrieval from state-conditioned evidence admission in search agents.",
+    "comment_zh": "SEEDS为搜索智能体引入了可复用的上下文控制层，将检索与依赖当前推理状态的证据准入分离。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3313836013810483,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.804,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12932/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.12932/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.948
+    }
+  ]
+}
