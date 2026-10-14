@@ -1,0 +1,82 @@
+{
+  "arxiv_id": "2610.18807",
+  "title": "SkillScaffold: Scaffolding Agentic Reinforcement Learning with Policy-Adaptive Skill Credit Assignment and Selective Injection",
+  "title_zh": "SkillScaffold：通过策略自适应技能信用分配与选择性注入支撑智能体强化学习",
+  "authors": [
+    "Wenlin Zhong",
+    "Hao Wang",
+    "Kun Yuan",
+    "Fan Yang",
+    "Jinluan Yang",
+    "Dian Jin",
+    "Xu Tan",
+    "Yiquan Wu",
+    "Kun Kuang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-13T17:46:25Z",
+  "abs_url": "https://arxiv.org/abs/2610.18807v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.18807",
+  "links": {
+    "github": "https://github.com/Vaidurya00/SkillScaffold.",
+    "project_page": null
+  },
+  "abstract_en": "Agentic reinforcement learning (RL) enables large language models (LLMs) to learn from multi-turn interactions with verifiable outcomes. Textual skills can improve exploration by distilling prior interactions into reusable guidance. However, existing skill-based RL approaches often either assume skill injection is beneficial or rely on indirect feedback or rollout-intensive evaluation to assess its utility. Our pilot studies show that rollout-based utility estimation for skill credit assignment is costly and unstable under limited sampling, while skill benefits vary across candidates and depend on the current policy's competence on each query. To address these challenges, we introduce SkillScaffold, a policy-adaptive training scaffold that combines low-cost skill-utility estimation with selective skill injection. By reusing outcome-verified training trajectories, SkillScaffold generates candidate skills and estimates their utility through outcome-aware likelihood comparisons, without candidate-specific environment rollouts. The resulting utility guides whether and which skill to inject, retaining skill-free execution when no candidate is estimated to help. Joint training enables the Generator to produce skills tailored to the evolving Executor. Scaffolded RL encourages skill internalization for skill-free inference. Experiments on ALFWorld, WebShop, ScienceWorld, and $τ^2$-Bench demonstrate gains over strong agentic-RL and skill-based RL baselines across both short- and long-horizon tasks. Ablations and further analyses support the importance of utility-based selection and abstention. Our code is available at https://github.com/Vaidurya00/SkillScaffold.",
+  "abstract_zh": "智能体强化学习（agentic reinforcement learning，RL）使大型语言模型（LLM）能够从具有可验证结果的多轮交互中学习。文本技能可以将历史交互提炼为可复用指导，从而促进探索。然而，现有基于技能的RL方法通常假设技能注入必然有益，或依赖间接反馈及大量rollout来评估技能效用。研究发现，基于rollout的技能信用分配在采样有限时成本高且不稳定，并且技能收益因候选技能而异，还取决于当前策略在具体查询上的能力。为此，论文提出SkillScaffold：一种策略自适应训练框架，结合低成本技能效用估计与选择性技能注入。该方法复用结果已验证的训练轨迹生成候选技能，并通过面向结果的似然比较估计技能效用，无需针对每个候选技能执行环境rollout。估计得到的效用用于决定是否注入技能以及注入哪一个；当候选技能预计无益时，保留无技能执行路径。联合训练使Generator能够针对不断变化的Executor生成定制技能；带脚手架的强化学习则促进技能内化，从而支持无技能推理。在ALFWorld、WebShop、ScienceWorld和τ²-Bench上的实验表明，SkillScaffold在短程与长程任务上均优于强大的智能体强化学习和基于技能的强化学习基线。消融实验与进一步分析验证了基于效用的选择机制及主动放弃注入的重要性。",
+  "key_points_zh": [
+    "提出策略自适应的SkillScaffold框架，根据当前Executor能力和查询动态判断技能是否有益。",
+    "利用结果感知的似然比较估计技能效用，无需为每个候选技能执行额外环境rollout，降低成本与估计噪声。",
+    "支持选择性技能注入与主动放弃：技能预计无益时保持无技能执行，避免负迁移。",
+    "通过Generator与Executor联合训练生成定制技能，并推动技能内化，实现无技能推理。",
+    "在ALFWorld、WebShop、ScienceWorld和τ²-Bench上全面优于多种agentic-RL与skill-based RL基线。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.86,
+    "problem_significance": 0.84,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.88,
+    "llm_avg": 0.86,
+    "comment": "SkillScaffold presents a strong skill-evolution and agentic-RL loop that adaptively selects useful skills, abstains when they are harmful, and promotes skill internalization.",
+    "comment_zh": "SkillScaffold构建了较强的技能进化与智能体强化学习闭环，能够自适应选择有益技能、在无益时拒绝注入并促进技能内化。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.86,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Vaidurya00/SkillScaffold.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.18807/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.955
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.18807/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.962
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2610.17763",
+  "title": "Memory Echo in Single-Agent Long-Term Memory: Lifecycle Evaluation and Provenance-Guided Mitigation",
+  "title_zh": "单智能体长期记忆中的记忆回声：生命周期评估与溯源引导的缓解方法",
+  "authors": [
+    "Yufeng Li",
+    "Sheng Yao",
+    "Peng Zeng",
+    "Dezhang Kong",
+    "Shi Lin",
+    "Changting Lin",
+    "Xun Wang",
+    "Meng Han"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-13T05:44:32Z",
+  "abs_url": "https://arxiv.org/abs/2610.17763v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.17763",
+  "links": {
+    "github": "https://github.com/OrcasSam/memory-echo-benchmark.",
+    "project_page": null
+  },
+  "abstract_en": "Long-term memory supports agents across sessions. Repeated retrieval and write-back can let one historical claim occupy multiple retrieval positions and influence current answers without independent evidence. Existing work examines retrieval, updating, and question answering, leaving same-source record accumulation and post-correction persistence underexplored. Motivated by research in social cognition and memory psychology on repeated exposure, retrieval, and revision, we define \\emph{Memory Echo} as the excess retrieval exposure gained by historical information from the same source without additional independent evidence, and introduce MEchoBench to evaluate its emergence, correction resistance, persistence, and effect on answers. To address this phenomenon, we introduce the Family--Provenance--Authority framework (FPA). Specifically, FPA selects one representative per source family, conditions the eligibility of old records for the answer context on verified corrections, and constrains final answers with authoritative evidence. In paired replay on 190 fixed questions across four memory frameworks, FPA raises accuracy from 0.825 to 0.920 with DeepSeek V4 Flash and from 0.782 to 0.916 with Kimi K2.6; mean Decision Contamination Effect falls from 0.106 to 0.030 and from 0.109 to 0.038, respectively. These results show that agent memory can preserve traceable history without allowing repeated historical information to govern current decisions. The code is available at https://github.com/OrcasSam/memory-echo-benchmark.",
+  "abstract_zh": "长期记忆能够支持智能体跨会话工作，但同一历史来源的信息可能在反复检索与写回后占据多个检索位置，在没有独立证据的情况下被过度暴露，并持续影响当前回答。论文将这一现象定义为“Memory Echo”，即同源历史信息在缺乏额外独立证据时获得的额外检索暴露，并提出 MEchoBench，评估其产生、纠正抵抗、持续性及对回答的影响。为缓解该问题，论文提出 Family--Provenance--Authority（FPA）框架：按来源族选择代表记录；依据经验证的纠正信息限制旧记录进入回答上下文；利用权威证据约束最终回答。在四种记忆框架、190个固定问题的成对重放实验中，FPA 将 DeepSeek V4 Flash 的准确率从 0.825 提升至 0.920，将 Kimi K2.6 的准确率从 0.782 提升至 0.916；Decision Contamination Effect 分别从 0.106 降至 0.030、从 0.109 降至 0.038。结果表明，智能体可以保留可追溯的历史记录，同时避免重复历史信息主导当前决策。",
+  "key_points_zh": [
+    "提出 Memory Echo 概念：同一来源的历史信息因反复检索和写回而获得额外曝光，并在缺少独立证据时影响当前回答。",
+    "发布 MEchoBench，从产生、纠正抵抗、持续性和回答影响四个维度评估长期记忆中的记忆回声。",
+    "提出 Family--Provenance--Authority（FPA）框架，通过来源族去重、纠正感知的上下文准入和权威证据约束抑制错误传播。",
+    "在四种记忆框架和190个固定问题上，FPA 将 DeepSeek V4 Flash 准确率由0.825提升至0.920，将 Kimi K2.6 准确率由0.782提升至0.916。",
+    "FPA 显著降低 Decision Contamination Effect，同时保留历史信息的可追溯性，说明长期记忆治理应同时关注来源独立性与纠正后的持续影响。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.88,
+    "problem_significance": 0.91,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.81,
+    "lasting_value": 0.89,
+    "llm_avg": 0.8699999999999999,
+    "comment": "A strong Agent-memory benchmark and lifecycle contribution that identifies same-source memory amplification and introduces provenance-guided correction and authority mechanisms.",
+    "comment_zh": "这是一项有力的 Agent Memory 基准与生命周期管理工作，识别了同源记忆放大现象，并提出了基于溯源的纠错与权威性约束机制。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.28206629502221137,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.8699999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/OrcasSam/memory-echo-benchmark.",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.17763/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.17763/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.947
+    }
+  ]
+}

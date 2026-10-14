@@ -1,0 +1,90 @@
+{
+  "arxiv_id": "2610.18067",
+  "title": "WorkRover: Scaling Long-Horizon Cowork Agent Training Via Recursive Environment Evolution",
+  "title_zh": "WorkRover：通过递归环境演化扩展长时程协作智能体训练",
+  "authors": [
+    "Hang He",
+    "Linting Wang",
+    "Guanming Liu",
+    "Bo Mao",
+    "Jinxiu Liu",
+    "Yiran Suo",
+    "Maosen Zhou",
+    "Zhiheng Xi",
+    "Guanting Dong",
+    "Zhou Shao",
+    "Rui Zheng",
+    "Jie Zhou",
+    "Chengcheng Wan",
+    "Tao Gui",
+    "Qi Zhang",
+    "Xipeng Qiu",
+    "Xuanjing Huang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-13T09:52:02Z",
+  "abs_url": "https://arxiv.org/abs/2610.18067v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.18067",
+  "links": {
+    "github": null,
+    "project_page": "https://workrover.github.io/"
+  },
+  "abstract_en": "Scaling interactive environments is important for training long-horizon agents through reinforcement learning. These environments often require further testing and refinement after initial generation, and correcting defects in a task may also require updating its work context and verifier. However, existing construction pipelines offer limited support for such iterative refinement while keeping these components aligned. We introduce WorkRover, a framework for training long-horizon cowork agents through recursive environment evolution. Its harness-driven synthesis enables construction agents to jointly build and validate semantically aligned work contexts, executable tasks, and evidence-grounded verifiers, adapting their actions to workspace state and execution feedback rather than following a fixed construction workflow. To support environment evolution, we introduce Factorial Compatibility Replay (FCR), which uses rollout feedback to evaluate combinations of component revisions through dependency-closed replay and selects the smallest validated repair among tested candidates while preserving task requirements and evaluation constraints. To provide finer-grained training signals, we propose Verifier-to-Turn Credit Assignment (VTCA), which augments trajectory-level GRPO advantages with signals from deterministic workspace-progress checks and assigns a bounded share of positive-progress credit to prerequisite turns using recorded tool-output and artifact dependencies. Using WorkRover, we post-train Qwen3.5-35B-A3B to obtain WorkRover-35B-A3B and evaluate it on several cowork-agent benchmarks. Its reported scores exceed those of Qwen3.5-35B-A3B by 26.27 percentage points on JobBench, 29.32 percentage points on OfficeQA Pro, and 413.25 Elo points on GDPval v2. These results suggest that WorkRover offers a promising foundation for scalable training of long-horizon cowork agents.",
+  "abstract_zh": "长时程智能体的强化学习训练依赖可扩展的交互式环境，但初始生成后，环境通常仍需反复测试、修正和演化；任务缺陷的修复还可能要求同步更新工作上下文与验证器。现有构建流程难以支持这种迭代，并保持各组件的语义一致性。本文提出 WorkRover，一种通过递归环境演化训练长时程协作智能体的框架。其 harness-driven synthesis 使构建智能体能够联合创建并验证语义对齐的工作上下文、可执行任务和基于证据的验证器，并根据工作区状态与执行反馈自适应调整，而非遵循固定流程。为支持环境演化，作者提出 Factorial Compatibility Replay（FCR）：利用 rollout 反馈评估多种组件修订组合，通过依赖闭包回放验证候选方案，并在保持任务要求与评估约束的前提下，选择经过验证的最小修复。为提供更细粒度的训练信号，作者提出 Verifier-to-Turn Credit Assignment（VTCA）：结合确定性的工作区进展检查增强轨迹级 GRPO 优势，并依据记录的工具输出与工件依赖关系，将有限比例的正向进展奖励分配给前置交互轮次。基于 WorkRover，作者对 Qwen3.5-35B-A3B 进行后训练，得到 WorkRover-35B-A3B。在多个协作智能体基准上，其相较 Qwen3.5-35B-A3B 在 JobBench、OfficeQA Pro 和 GDPval v2 上分别提升 26.27、29.32 个百分点和 413.25 Elo 分。结果表明，WorkRover 为可扩展训练长时程协作智能体提供了有潜力的基础。",
+  "key_points_zh": [
+    "提出 harness-driven synthesis，联合构建并验证工作上下文、可执行任务与证据驱动验证器，保持三者语义一致。",
+    "提出 Factorial Compatibility Replay（FCR），通过依赖闭包回放测试组件修订组合，并选择满足约束的最小有效修复。",
+    "提出 Verifier-to-Turn Credit Assignment（VTCA），利用工作区进展和工具—工件依赖，为关键前置交互提供更细粒度的信用分配。",
+    "基于 WorkRover 对 Qwen3.5-35B-A3B 后训练得到 WorkRover-35B-A3B，在 JobBench、OfficeQA Pro 和 GDPval v2 上取得显著提升。",
+    "实验结果显示，WorkRover 在三个基准上分别提升 26.27 个百分点、29.32 个百分点和 413.25 Elo，验证了递归环境演化对长时程协作智能体训练的价值。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.91,
+    "problem_significance": 0.94,
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.94,
+    "lasting_value": 0.95,
+    "llm_avg": 0.9359999999999999,
+    "comment": "WorkRover strongly advances agent-training infrastructure by jointly evolving environments, contexts, verifiers, replay-based repairs, and fine-grained trajectory credit assignment.",
+    "comment_zh": "WorkRover通过联合进化环境、上下文和验证器，并结合基于回放的修复与细粒度轨迹信用分配，显著推进了智能体训练基础设施。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.4,
+    "community_heat": 0.9148517644951624,
+    "author_reputation": 0.23816576137838616,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9359999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://workrover.github.io/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 64,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.18067/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.94
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.18067/fig2.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

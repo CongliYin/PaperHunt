@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2610.17738",
+  "title": "DuplexAct: How Interactive Are Frontier Full-Duplex Spoken Language Models?",
+  "title_zh": "DuplexAct：前沿全双工语音语言模型的交互性有多强？",
+  "authors": [
+    "Jiaheng Dong",
+    "Shihong Tan",
+    "Gongping Huang",
+    "Jean Honorio",
+    "Abhirup Ghosh",
+    "Ting Dang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-13T05:15:36Z",
+  "abs_url": "https://arxiv.org/abs/2610.17738v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.17738",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "End-to-end (E2E) full-duplex spoken language models (FD-SLMs) enable simutanous listening and speaking continously, requiring models to take appropriate interaction actions as conversations unfold. However, existing benchmarks lack a structured action-level formulation, often evaluate action occurrence rather than success, and provide limited coverage of diverse real-world conversations. We introduce DuplexAct, a benchmark for evaluating interaction action taking in E2E FD-SLMs. DuplexAct defines a three-level action taxonomy spanning eight interaction actions and 24 corresponding interaction conditions. We further characterize successful action-taking through immediate execution and subsequent follow-through, and develop action-specific evaluation metrics for both. DuplexAct contains 4,691 test instances spanning casual conversation, meetings, customer service, and interviews, including 2,531 instances derived from real-world conversational recordings. Together, DuplexAct provides a structured and real-world-grounded framework for systematically assessing how E2E FD-SLMs participate in ongoing spoken interaction.",
+  "abstract_zh": "端到端全双工语音语言模型（E2E FD-SLMs）能够持续同时聆听与说话，因此需要在对话推进过程中采取恰当的交互动作。然而，现有基准缺乏结构化的动作级定义，通常只评估动作是否出现而非执行是否成功，并且对多样化真实场景的覆盖有限。本文提出 DuplexAct，用于评估 E2E FD-SLMs 的交互动作决策能力。DuplexAct 构建了三级动作分类体系，涵盖 8 类交互动作及其对应的 24 种交互条件；同时从即时执行与后续跟进两个维度刻画成功动作，并为不同动作设计专门的评测指标。该基准包含 4,691 个测试实例，覆盖闲聊、会议、客服和访谈等场景，其中 2,531 个实例来自真实对话录音。总体而言，DuplexAct 提供了一个结构化且贴近真实世界的框架，用于系统评估 E2E FD-SLMs 参与持续语音交互的能力。",
+  "key_points_zh": [
+    "提出 DuplexAct 基准，将全双工语音模型的交互能力形式化为动作级评测问题。",
+    "建立三级动作分类体系，覆盖 8 类交互动作与 24 种交互条件。",
+    "区分即时执行与后续跟进，评估动作是否被正确执行及其后续交互是否完成。",
+    "设计动作特定评测指标，避免仅依据动作出现与否判断模型表现。",
+    "包含 4,691 个测试实例，覆盖闲聊、会议、客服和访谈，其中 2,531 个来自真实对话录音。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.86,
+    "problem_significance": 0.91,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.69,
+    "lasting_value": 0.87,
+    "llm_avg": 0.842,
+    "comment": "DuplexAct directly addresses a central bottleneck in full-duplex spoken agents by providing action-level success metrics and real-world conversational evaluation data.",
+    "comment_zh": "DuplexAct通过动作级成功指标和真实对话数据，直接解决了全双工语音代理评测中的核心瓶颈。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.842,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.17738/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.17738/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.962
+    }
+  ]
+}

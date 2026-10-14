@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2610.18683",
+  "title": "ProAS: A Progress-Aware Advantage Shaping Framework for Multi-Turn Agentic Reinforcement Learning",
+  "title_zh": "ProAS：面向多轮智能体强化学习的进度感知优势塑形框架",
+  "authors": [
+    "Bowen Ding",
+    "Mingda Wan",
+    "Yuhan Chen",
+    "Jiyao Yuan",
+    "Qi Zhu",
+    "Futing Wang",
+    "Heyuan Deng",
+    "Fei Mi",
+    "Lifeng Shang",
+    "Tao Lin"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-13T16:39:38Z",
+  "abs_url": "https://arxiv.org/abs/2610.18683v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.18683",
+  "links": {
+    "github": "https://github.com/LINs-lab/ProAS.",
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement learning (RL) has emerged as the primary paradigm for optimizing Large Language Model (LLM) agents, yet efficient critic-free algorithms (e.g., GRPO) suffer from a fundamental uniform credit assignment dilemma that broadcasts trajectory-level advantages equally to all actions. Our analysis reveals that this uniformity inherently reinforces structurally invalid actions in preferred trajectories and ignores the downstream cascading influence of early pivotal deviations in unpreferred ones. To resolve this without introducing critic overhead, we propose Progress-Aware Advantage Shaping (ProAS), a plug-and-play framework that leverages a dynamically evolving Agentic Reference Graph (ARG) to achieve fine-grained credit assignment via Masking Unreasonable Incentives (MUI) and Asymmetric Penalty Redistribution (APR). Extensive experiments across Qwen2.5-1.5B-Instruct and Qwen2.5-7B-Instruct demonstrate that ProAS universally elevates mainstream group-based baselines to new state-of-the-art performance, achieving peak success rates of 91.9\\% and 94.3\\% on ALFWorld, alongside 66.7\\% and 70.8\\% on WebShop, respectively. Furthermore, it accelerates training convergence by up to $2.44\\times$ while maintaining strong robustness against imperfect or distilled ARGs. Codes: https://github.com/LINs-lab/ProAS.",
+  "abstract_zh": "针对无评论家强化学习算法（如 GRPO）将轨迹级优势均匀分配给所有动作、导致信用分配粗糙的问题，论文提出 Progress-Aware Advantage Shaping（ProAS）。该方法通过动态演化的 Agentic Reference Graph（ARG），结合 Masking Unreasonable Incentives（MUI）与 Asymmetric Penalty Redistribution（APR），在无需额外评论家开销的情况下实现细粒度信用分配。实验表明，ProAS 可普遍提升主流分组式基线在 Qwen2.5-1.5B-Instruct 和 Qwen2.5-7B-Instruct 上的性能，在 ALFWorld 上分别达到 91.9% 和 94.3% 的成功率，在 WebShop 上分别达到 66.7% 和 70.8%；同时最高可将训练收敛速度提升 2.44 倍，并对不完美或蒸馏得到的 ARG 保持较强鲁棒性。",
+  "key_points_zh": [
+    "指出 GRPO 等无评论家方法的均匀优势分配会错误强化偏好轨迹中的结构性无效动作，并忽略非偏好轨迹中早期关键偏差的级联影响。",
+    "提出动态 Agentic Reference Graph（ARG），利用轨迹进度与结构信息进行动作级信用分配，无需引入额外评论家网络。",
+    "Masking Unreasonable Incentives（MUI）负责屏蔽不合理激励，Asymmetric Penalty Redistribution（APR）负责重新分配惩罚信号，形成互补的优势塑形机制。",
+    "在 ALFWorld 和 WebShop 上显著提升 Qwen2.5-1.5B-Instruct、Qwen2.5-7B-Instruct 及主流分组式基线的性能，最高成功率分别达到 91.9%/94.3% 和 66.7%/70.8%。",
+    "ProAS 最高可加速训练收敛 2.44 倍，并对不完美或蒸馏得到的 ARG 展现出较强鲁棒性。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.82,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8240000000000001,
+    "comment": "ProAS directly addresses trajectory credit assignment in multi-turn agentic RL with a reusable progress-aware shaping mechanism and substantial gains across environments.",
+    "comment_zh": "ProAS通过可复用的进度感知塑形机制直接解决多轮智能体强化学习中的轨迹信用分配问题，并在多个环境中取得显著提升。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8240000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/LINs-lab/ProAS.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.18683/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

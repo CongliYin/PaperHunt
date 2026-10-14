@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2610.17841",
+  "title": "FASHION-RQ: Mining Hierarchical Semantic Structure for Automated Evaluation of Fashion Retrieval",
+  "title_zh": "FASHION-RQ：挖掘层次语义结构，实现时尚检索自动评测",
+  "authors": [
+    "Tripti Shukla",
+    "Shwetha Somasundaram",
+    "Akshat Gupta",
+    "Rohit Garg",
+    "Paul Duff",
+    "Ian Anderson"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-13T06:59:54Z",
+  "abs_url": "https://arxiv.org/abs/2610.17841v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.17841",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Evaluating fashion retrieval systems remains challenging due to the limited availability of benchmarks that capture the fine-grained, open-ended queries encountered in real-world search and recommendation. Existing benchmarks often rely on manual curation, predefined taxonomies, or synthetic prompts, limiting scalability and semantic coverage. We introduce FASHION-RQ: Mining Hierarchical Semantic Structure for Automated Evaluation of Fashion Retrieval, an automated framework that derives user-type queries and relevance sets directly from catalog structure. Our key insight is that hierarchical discrete representations learned by Residual Quantized Variational Autoencoders (RQ-VAE) organize products into semantically coherent clusters at progressively finer granularities. We leverage this structure to construct FASHION-RQBENCH, a scalable benchmark without manual query annotation or predefined taxonomies. We propose four complementary tasks for evaluating ranking, relevance classification, fine-grained sibling discrimination, and paraphrase robustness, alongside query- and attribute-level relevance metrics. Experiments across recent retrieval models demonstrate that FASHION-RQBENCH differentiates model capabilities across query types and attributes. A human study further shows that benchmark queries achieve comparable naturalness and higher intent clarity than real user queries, supporting their validity for real-world evaluation. The code and FASHION-RQBENCH dataset will be publicly released upon acceptance.",
+  "abstract_zh": "论文提出 FASHION-RQ，一种基于商品目录结构自动构建时尚检索评测基准的方法。核心思想是利用 Residual Quantized Variational Autoencoders（RQ-VAE）学习的层次化离散表示，将商品组织为由粗到细、语义一致的聚类，并据此自动生成用户类型查询及其相关商品集合，构建无需人工查询标注和预定义分类体系的 FASHION-RQBENCH。该基准涵盖排序、相关性分类、细粒度近邻区分和释义鲁棒性四项任务，并设计查询级与属性级相关性指标。实验表明，FASHION-RQBENCH 能区分不同检索模型在查询类型和属性维度上的能力；人工评测显示，其查询自然度与真实用户查询相当，且意图清晰度更高，验证了其实际评测价值。",
+  "key_points_zh": [
+    "以 RQ-VAE 学到的多层离散语义聚类为基础，从商品目录中自动挖掘查询及相关商品集合。",
+    "提出 FASHION-RQBENCH，无需人工查询标注或预定义 taxonomy，具备较好的规模化与语义覆盖能力。",
+    "基准包含排序、相关性分类、细粒度 sibling 区分和 paraphrase 鲁棒性四项评测任务。",
+    "同时提供查询级和属性级相关性指标，可分析模型在不同查询类型与时尚属性上的能力差异。",
+    "人工研究表明，自动生成查询具有与真实用户查询相当的自然度和更高的意图清晰度。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.82,
+    "problem_significance": 0.85,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.8,
+    "llm_avg": 0.7879999999999999,
+    "comment": "A strong fashion-retrieval evaluation contribution that directly improves benchmark coverage, relevance assessment, and ranking analysis for product search.",
+    "comment_zh": "该工作直接改进时尚商品搜索的基准覆盖、相关性评估与排序分析，具有较强的领域价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.44000000000000006,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.709554860053838,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7879999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 13,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 17,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.17841/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.17841/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.959
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2610.17616",
+  "title": "StateHarness: Maintaining Evolving Project State for Long-Horizon Coding Agents",
+  "title_zh": "StateHarness：为长时程编码智能体维护演化中的项目状态",
+  "authors": [
+    "Chuan Zou",
+    "Yujun Zhou",
+    "Xiaonan Luo",
+    "Xiangliang Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-13T02:39:03Z",
+  "abs_url": "https://arxiv.org/abs/2610.17616v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.17616",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-horizon coding requires agents to maintain an evolving view of the project they are changing: what problem is currently being solved, what has already been learned or modified, which other artifacts may be affected, and what work remains unresolved. When this information is scattered across a growing interaction history, local edits can become disconnected from their later consequences and progress can be difficult to carry forward. We introduce StateHarness, a runtime framework that maintains evolving project state without updating model parameters. The working agent records its current problem and hypothesis, important findings and decisions, discovered repository relationships, and unfinished work. Runtime support prompts record updates, searches for callers, tests, and documentation that may be affected by a change, and maintains a compact working brief for subsequent decisions. When behavioral signals accumulate, a separate diagnostic session revisits the recorded history and surfaces overlooked evidence. Across three repository-level evaluations, StateHarness improves task completion and several measures of change consistency. On RefactorBench, full-chain completion increases from 29.4% to 35.3% and cleanup-check accuracy from 87.0% to 95.4%. On five LHTB software-engineering tasks, mean reward improves from 0.427 to 0.576, exceeding LongHorizon-Harness at substantially lower recorded execution cost. On ChainSWE, bug-fix rate increases from 35.1% to 39.5% and residual debt decreases from 60 to 43 items, although pass-to-pass regressions increase. These results show that maintaining project state can improve long-horizon coding while introducing measurable execution and regression trade-offs.",
+  "abstract_zh": "长时程编码要求智能体持续掌握项目的演化状态，包括当前问题、已获得的发现与修改、可能受影响的相关制品，以及尚未解决的工作。若这些信息分散在不断增长的交互历史中，局部修改容易与后续影响脱节，进展也难以延续。论文提出 StateHarness，一种无需更新模型参数的运行时框架，用于维护演化中的项目状态。工作智能体记录当前问题与假设、关键发现与决策、代码仓库关系及未完成事项；运行时支持会提示其记录更新、搜索变更可能影响的调用方、测试和文档，并维护供后续决策使用的紧凑工作简报。当行为信号累积后，独立诊断会话会重新审查历史并揭示被忽略的证据。在三个仓库级评测中，StateHarness 提升了任务完成率及多项变更一致性指标。RefactorBench 的完整链路完成率从 29.4% 提升至 35.3%，清理检查准确率从 87.0% 提升至 95.4%；在五项 LHTB 软件工程任务中，平均奖励从 0.427 提升至 0.576，且记录的执行成本显著低于 LongHorizon-Harness；在 ChainSWE 上，修复率从 35.1% 提升至 39.5%，残余债务从 60 项降至 43 项，但跨轮次回归有所增加。结果表明，维护项目状态能够改善长时程编码，同时也会带来可量化的执行成本与回归权衡。",
+  "key_points_zh": [
+    "StateHarness 在运行时维护问题假设、关键发现、代码仓库关系和未完成工作，无需更新模型参数。",
+    "通过更新提示、影响范围搜索、测试与文档检查，以及紧凑工作简报，帮助智能体延续跨轮次项目上下文。",
+    "在 RefactorBench、LHTB 和 ChainSWE 上，任务完成率、奖励、修复率及变更一致性整体提升。",
+    "框架还能降低残余技术债务，并以较低记录执行成本超过 LongHorizon-Harness。",
+    "性能提升伴随执行与回归权衡：ChainSWE 的跨轮次回归增加，说明状态维护仍需更稳健的验证机制。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.84,
+    "problem_significance": 0.91,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.89,
+    "llm_avg": 0.8639999999999999,
+    "comment": "This is strong coding-agent harness research that maintains evolving project state and closes a practical loop between execution history, diagnostics, and long-horizon reliability.",
+    "comment_zh": "这是一项较强的编码智能体基础设施工作，将演化项目状态、历史诊断与长期执行可靠性形成了实用闭环。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.28206629502221137,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8639999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.17616/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.17616/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2610.17726",
+  "title": "TSRL: Trigger-based Supervised Reinforcement Learning for Continual Agent Training",
+  "title_zh": "TSRL：用于持续智能体训练的基于触发器的监督强化学习",
+  "authors": [
+    "Yuqian Fu",
+    "Kaiwen Jiang",
+    "Zijun Song",
+    "Jiawei Wang",
+    "Yuanheng Zhu",
+    "Dongbin Zhao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-13T05:02:58Z",
+  "abs_url": "https://arxiv.org/abs/2610.17726v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.17726",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model (LLM) agents excel at complex, multi-step tasks but suffer from catastrophic forgetting during continual learning--acquiring new skills often degrades previously mastered capabilities. Existing post-training paradigms face a fundamental trade-off: Supervised Fine-Tuning (SFT) is sample-efficient but prone to severe forgetting, while Reinforcement Learning (RL) preserves prior capabilities but converges slowly without expert guidance. To bridge this gap, we introduce Trigger-based Supervised Reinforcement Learning (TSRL), a framework that integrates the strengths of both paradigms through an adaptive, state-dependent expert supervision mechanism. TSRL employs RL as the optimization backbone, activating SFT selectively on \"hard states\" where the policy fails. Theoretically, we show that restricting supervision to failure states derives an upper bound on the cumulative parameter updates, thereby reducing forgetting compared to full SFT. Empirically, TSRL achieves consistent gains across three agent benchmarks (ALFWorld, WebShop, and Deep Search) at both 7B and 32B scales. In continual learning scenarios, our method retains up to 9.6 points more capability on prior tasks than SFT->RL baselines, while matching or exceeding target-task performance.",
+  "abstract_zh": "大型语言模型智能体擅长复杂多步任务，但在持续学习中容易发生灾难性遗忘：获得新技能往往会损害已掌握能力。现有后训练方法存在权衡：监督微调（Supervised Fine-Tuning，SFT）样本效率高但容易严重遗忘；强化学习（Reinforcement Learning，RL）更能保留既有能力，却因缺乏专家指导而收敛缓慢。为此，论文提出基于触发器的监督强化学习（Trigger-based Supervised Reinforcement Learning，TSRL），通过自适应、状态依赖的专家监督机制融合两者优势。TSRL以RL作为优化骨干，仅在策略失败的“困难状态”上选择性激活SFT。理论分析表明，将监督限制在失败状态上可推导累积参数更新的上界，从而相较全量SFT减少遗忘。在ALFWorld、WebShop和Deep Search三个智能体基准上，7B与32B规模实验均取得稳定提升。在持续学习场景中，TSRL相比SFT→RL基线在旧任务上最多保留高出9.6个百分点的能力，同时达到或超过目标任务性能。",
+  "key_points_zh": [
+    "提出TSRL，以RL为主干，仅对策略失败的困难状态触发SFT监督。",
+    "理论上证明失败状态监督可限制累积参数更新，降低相较全量SFT的灾难性遗忘。",
+    "在ALFWorld、WebShop和Deep Search上，于7B和32B模型规模均取得稳定收益。",
+    "持续学习中，相比SFT→RL基线，旧任务能力最多提升9.6个百分点，同时保持目标任务性能。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.87,
+    "novelty": 0.8,
+    "problem_significance": 0.85,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.83,
+    "llm_avg": 0.8119999999999999,
+    "comment": "TSRL addresses continual agent training and catastrophic forgetting with a targeted failure-state supervision loop validated across multiple interactive agent benchmarks.",
+    "comment_zh": "TSRL通过针对失败状态的监督闭环解决持续智能体训练中的灾难性遗忘，并在多个交互式智能体基准上得到验证。"
+  },
+  "scores": {
+    "topic_relevance": 0.68,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8119999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.17726/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.17726/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}

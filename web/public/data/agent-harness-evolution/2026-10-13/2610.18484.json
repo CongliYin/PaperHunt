@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2610.18484",
+  "title": "ReTerm: Recovery Training for Self-Improving Terminal Agents",
+  "title_zh": "ReTerm：面向自我改进终端智能体的恢复训练",
+  "authors": [
+    "Wei Xie",
+    "Kaituo Feng",
+    "Shiming Fu",
+    "Yong Liu",
+    "Xiangyu Yue",
+    "Shuangjia Zheng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-13T14:44:24Z",
+  "abs_url": "https://arxiv.org/abs/2610.18484v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.18484",
+  "links": {
+    "github": "https://github.com/twothsnd/ReTerm",
+    "project_page": "https://github.com/twothsnd/ReTerm"
+  },
+  "abstract_en": "Terminal agents have shown strong abilities in complex coding tasks. However, they often struggle to recover from errors during long-running execution (e.g., command errors, faulty implementations), eventually leading to task failures. To this end, we present ReTerm, a self-improving terminal agent trained by learning how to recover from its own failed terminal tasks. To support its training, we construct a customized data pipeline and produce ReTerm-10K, a high-quality dataset that provides effective recovery demonstrations for SFT cold start. Furthermore, we propose ReTerm-GRPO, an online RL algorithm that forks from the agent's own failure states to generate multiple independent self-recovery attempts. By learning from whether these attempts successfully complete the task, the agent self-improves through its own recovery experience. Built on Qwen3.5-9B, our ReTerm-9B achieves 34.8% Pass@1 on Terminal-Bench 2.0, improving over the base model by 14.6 points. Further analysis shows that our method achieves consistently higher recovery rates across diverse error categories compared with standard GRPO training. All code, data and model are released at https://github.com/twothsnd/ReTerm.",
+  "abstract_zh": "终端智能体在复杂编程任务中表现出较强能力，但在长时间执行过程中常因命令错误、实现缺陷等问题无法恢复，最终导致任务失败。本文提出 ReTerm，一种通过学习从自身失败终端任务中恢复来实现自我改进的终端智能体。作者构建了定制化数据流水线，并生成高质量数据集 ReTerm-10K，用于监督微调（SFT）冷启动；同时提出在线强化学习算法 ReTerm-GRPO，从智能体自身的失败状态分叉，生成多个相互独立的自恢复尝试，并依据这些尝试是否成功完成任务进行学习。在 Qwen3.5-9B 基础上训练的 ReTerm-9B 在 Terminal-Bench 2.0 上取得 34.8% 的 Pass@1，相比基础模型提升 14.6 个百分点。进一步分析表明，与标准 GRPO 相比，ReTerm 在多种错误类别上都能获得更高且更稳定的恢复率。代码、数据和模型已公开发布。",
+  "key_points_zh": [
+    "核心问题是终端智能体在长程执行中遭遇命令错误或错误实现后，缺乏有效的自恢复能力。",
+    "ReTerm-10K 提供高质量恢复示范，用于 SFT 冷启动，帮助模型学习失败后的修复策略。",
+    "ReTerm-GRPO 从智能体自身失败状态出发，采样多个独立恢复尝试，并依据任务是否完成进行在线强化学习。",
+    "基于 Qwen3.5-9B 的 ReTerm-9B 在 Terminal-Bench 2.0 上达到 34.8% Pass@1，较基础模型提升 14.6 个百分点。",
+    "相比标准 GRPO，ReTerm 在多类错误场景下均表现出更高的恢复率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.84,
+    "problem_significance": 0.9,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.85,
+    "lasting_value": 0.9,
+    "llm_avg": 0.874,
+    "comment": "ReTerm makes terminal-agent recovery a first-class training target through failure-state branching, recovery demonstrations, and verifier-based online RL.",
+    "comment_zh": "ReTerm通过失败状态分支、恢复示范和基于验证的在线强化学习，将终端智能体恢复能力确立为核心训练目标。"
+  },
+  "scores": {
+    "topic_relevance": 0.16000000000000003,
+    "open_source": 0.9,
+    "community_heat": 0.8220833257912042,
+    "author_reputation": 0.5716905744410976,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.874,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/twothsnd/ReTerm",
+    "project_page_url": "https://github.com/twothsnd/ReTerm",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 18,
+    "first_author_h_index": 46,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.18484/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.18484/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.949
+    }
+  ]
+}

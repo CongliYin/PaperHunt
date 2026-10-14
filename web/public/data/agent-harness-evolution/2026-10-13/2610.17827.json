@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2610.17827",
+  "title": "Benchmarking and Training Reward Models for Cross-Source Evidence Grounding in Search Agents",
+  "title_zh": "面向搜索智能体跨来源证据支撑的奖励模型基准与训练",
+  "authors": [
+    "Haochen Zhao",
+    "Minsheng Hao",
+    "Zheng Li",
+    "Yifan Li",
+    "Zikang Liu",
+    "Bowen Qin",
+    "Yuhao Cheng",
+    "Chuang Fan",
+    "Haosheng Zou",
+    "Jeff Chen",
+    "Sujian Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-13T06:48:56Z",
+  "abs_url": "https://arxiv.org/abs/2610.17827v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.17827",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Existing approaches to training and evaluating search agents focus heavily on final-answer quality, largely neglecting how generated answers map back to retrieved evidence. Recent methods track citations to enforce grounding, but citation support alone does not establish source independence or whether an answer appropriately handles conflicting evidence. We argue that credibility in open-web retrieval depends on principled cross-source evidence grounding that accounts for source independence and systematically attributes and adjudicates conflicting evidence, while hierarchical judgments of these grounding decisions provide a unified signal for training and evaluation. To this end, we propose an evaluation framework, Cross-Source Evidence Grounding (CSEG), that employs a fine-grained, six-layer decision tree over the complete search trajectory. We introduce CSEG-Bench and trainable reward models to provide targeted supervision following this framework. Our approach helps eliminating the severe data skew of natural trajectories by providing targeted coverage over complex, deep-layer decision paths, such as cross-source conflict resolution and nuanced attribution, that standard rollouts fail to capture. Specifically, (1) we define the hierarchy at label, node, and path levels; (2) we construct 1,160 verified trajectories over nine canonical paths by rewriting answers on real retrieved document pools, with independent frontier judges reproducing the entire gold path and human experts deciding inclusion; (3) we train CSEG-RM, which reaches 83.9% exact accuracy on our benchmark while lying on the performance-token efficiency Pareto frontier. Experiments that use this reward alone to supervise a frozen-retrieval answer policy raise the independently judged mean label from 2.83 to 4.19, and show that learning the hierarchy generalizes across layers at a fraction of frontier-judge cost.",
+  "abstract_zh": "现有搜索智能体的训练与评测主要关注最终答案质量，较少考察答案如何映射回检索证据。尽管近期方法通过引用追踪强化内容支撑，但引用本身无法说明来源是否相互独立，也无法判断答案是否恰当地处理了相互冲突的证据。本文认为，开放网络检索的可信度依赖于原则化的跨来源证据支撑（Cross-Source Evidence Grounding, CSEG）：既要考虑来源独立性，又要系统归因并裁决冲突证据；同时，对这些支撑决策进行层次化判断，可形成统一的训练与评测信号。为此，本文提出CSEG评测框架，在完整搜索轨迹上使用包含六层决策树的细粒度判断体系；并构建CSEG-Bench与可训练奖励模型，为该框架提供针对性监督。该方法通过覆盖复杂且深入的决策路径，缓解自然轨迹中的严重数据偏斜，尤其关注跨来源冲突解决和细粒度证据归因等标准rollout难以捕获的场景。具体而言，本文在标签、节点和路径三个层级定义层次结构；基于真实检索文档池改写答案，构建包含九条典型路径的1,160条经验证轨迹，并由独立的frontier judges复现完整金标准路径、由人工专家决定是否纳入；训练得到的CSEG-RM在该基准上达到83.9%的完全准确率，并处于性能—token效率Pareto前沿。仅使用该奖励模型监督一个固定检索结果的答案策略，就将独立评测的平均标签分数从2.83提升至4.19；实验还表明，学习到的层次结构能够跨层泛化，同时只需frontier judge极少的成本。",
+  "key_points_zh": [
+    "提出CSEG框架，以六层决策树统一评估来源独立性、证据归因与冲突裁决。",
+    "构建CSEG-Bench，包含1,160条经验证轨迹，覆盖九条典型跨来源证据路径。",
+    "训练CSEG-RM，在基准上达到83.9%的完全准确率，并处于性能—token效率Pareto前沿。",
+    "仅用CSEG-RM监督固定检索答案策略，即可将独立评测平均标签分数从2.83提升至4.19。",
+    "层次化奖励信号可跨决策层泛化，并以显著低于frontier judge的成本提供监督。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.86,
+    "problem_significance": 0.88,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.84,
+    "lasting_value": 0.9,
+    "llm_avg": 0.876,
+    "comment": "CSEG provides a durable search-agent evaluation and reward framework for cross-source grounding, conflict resolution, trajectory supervision, and targeted data coverage.",
+    "comment_zh": "CSEG为搜索智能体提供了持久的评估与奖励框架，覆盖跨来源证据 grounding、冲突处理、轨迹监督和针对性数据覆盖。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3037399110526186,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.876,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 6,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.17827/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.496
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.17827/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

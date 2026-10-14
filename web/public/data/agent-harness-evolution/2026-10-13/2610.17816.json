@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2610.17816",
+  "title": "Empowering Edge Agents: A Systematic Analysis of Edge-Cloud Collaboration in LLM Agent Execution",
+  "title_zh": "赋能边缘智能体：LLM 智能体执行中边云协同的系统性分析",
+  "authors": [
+    "Pengcheng Huang",
+    "Zhenghao Liu",
+    "Shixin Ren",
+    "Shi Yu",
+    "Sijia Yao",
+    "Yukun Yan",
+    "Chaojun Xiao",
+    "Maosong Sun"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-13T06:40:22Z",
+  "abs_url": "https://arxiv.org/abs/2610.17816v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.17816",
+  "links": {
+    "github": "https://github.com/OpenBMB/EC2-Bench.",
+    "project_page": null
+  },
+  "abstract_en": "Edge-cloud collaboration combines the lower inference overhead and greater data locality of edge-side execution with the stronger capabilities of cloud-hosted models. However, as LLM agents increasingly operate in long-horizon scenarios, cloud participation becomes interleaved throughout execution rather than a one-shot decision for each query. Such interleaved participation introduces trajectory-level effects that remain insufficiently understood. To address this gap, we introduce EC2-Bench, a benchmark for evaluating edge-cloud collaboration in long-horizon agent execution. It provides executable digital-workspace agent tasks and a unified evaluation framework covering task performance, resource usage, and privacy exposure. Using this benchmark, we empirically study diverse forms of edge-cloud collaboration. Our study reveals three findings. First, collaboration achieves a favorable balance among task performance, resource usage, and privacy exposure compared with edge-only and cloud-only execution. Second, as edge models become stronger, collaborative execution approaches cloud-only performance, and performance differences across strategies shrink, while privacy exposure remains strongly strategy-dependent. Third, stronger edge capability shifts preferred collaboration from externally controlled cloud participation and direct cloud execution toward more edge-controlled collaboration. Further analyses identify cloud-invocation decision-making and instruction following as important edge-side abilities for effective collaboration. These findings provide a systematic understanding of edge-cloud collaboration in long-horizon agent execution and insights for designing future edge agents that effectively collaborate with cloud models. Code and resources are available at https://github.com/OpenBMB/EC2-Bench.",
+  "abstract_zh": "边云协同结合了边缘侧执行的低推理开销与高数据本地性，以及云端模型的强大能力。针对 LLM 智能体在长时域任务中需要交错调用云端、而非仅在查询开始时一次性决定执行位置的问题，论文提出 EC2-Bench，用于评估长时域智能体执行中的边云协同。该基准包含可执行的数字工作空间任务，并从任务性能、资源使用和隐私暴露三个维度进行统一评估。实验表明：边云协同相比纯边缘和纯云端执行，在性能、资源与隐私之间实现了更优折中；随着边缘模型能力增强，协同执行性能逐渐接近纯云端执行，不同策略间的性能差距缩小，但隐私暴露仍显著依赖协同策略；更强的边缘能力会推动协同方式从云端主导或直接云端执行，转向边缘主导的协同。进一步分析发现，云端调用决策和指令遵循是边缘侧实现高效协同的关键能力。",
+  "key_points_zh": [
+    "提出 EC2-Bench：面向长时域 LLM 智能体执行，统一评估任务性能、资源使用和隐私暴露。",
+    "边云协同在性能、资源消耗和隐私保护之间取得优于纯边缘或纯云端执行的综合折中。",
+    "随着边缘模型增强，协同性能接近纯云端，策略间性能差距缩小，但隐私暴露仍高度依赖策略。",
+    "更强的边缘能力促使协同模式从云端主导转向边缘主导；云端调用决策与指令遵循是关键能力。",
+    "论文为长时域边缘智能体的协同策略设计提供系统性实证依据，代码与资源已开源。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.83,
+    "novelty": 0.72,
+    "problem_significance": 0.78,
+    "potential_impact": 0.77,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.75,
+    "llm_avg": 0.728,
+    "comment": "This is a useful agent-runtime benchmark and analysis of trajectory-level edge-cloud orchestration, although its main contribution is empirical rather than a new training or execution paradigm.",
+    "comment_zh": "这是一项有价值的智能体运行时基准与边云轨迹级协同分析，但主要贡献偏经验研究而非新的训练或执行范式。"
+  },
+  "scores": {
+    "topic_relevance": 0.92,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.728,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/OpenBMB/EC2-Bench.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.17816/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.17816/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.98
+    }
+  ]
+}

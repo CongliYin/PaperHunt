@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2610.17724",
+  "title": "Evidence-First Agentic Verification",
+  "title_zh": "证据优先的智能体验证（Evidence-First Agentic Verification）",
+  "authors": [
+    "Reza Sanayei",
+    "Razvan-Gabriel Dumitru",
+    "Sunjie Hou",
+    "MohammadHossein Rezaei",
+    "Haris Riaz",
+    "Robert Vacareanu",
+    "Minglai Yang",
+    "Ying Liu",
+    "Mihai Surdeanu",
+    "Daniel Yue Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-13T04:58:04Z",
+  "abs_url": "https://arxiv.org/abs/2610.17724v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.17724",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Long-horizon, semi-verifiable agentic tasks often rely on rubric-based evaluation, but the evidence needed to assess these tasks can be spread across the environment state and the execution trace. A judge may overlook this evidence or accept unsupported claims, including an agent's own reports of success. When rubric verdicts serve as reinforcement-learning rewards, such errors can reinforce undesirable behavior. We introduce Sauron, an evidence-first agentic verifier that investigates both state and trace and relies on a claim only after independently validating it against its source. Bounded queries and joint investigation of related criteria reduce context use and redundant work, and each verdict carries an auditable receipt of its supporting evidence. Across 2,586 human-labeled criteria from 100 personal-assistant episodes, Sauron achieves the highest F1 of five verifiers on all eight backbones tested while costing less than Gandalf, the strongest baseline. With GPT-5.6 Sol, it reaches 0.96 F1 versus Gandalf's 0.92 at 23% lower cost, with a wider margin on process criteria. On a paired fault-injection suite covering 13 families, several of which simulate reward hacking, Sauron detects 97% of injected failures while flagging only 2% of clean controls, outperforming baselines even when they are given the full trace. On TRAIL, a benchmark for detecting and localizing real agent errors, Sauron leads both Gandalf and TRAIL's own judge on all three quality metrics.",
+  "abstract_zh": "长程、半可验证的智能体任务通常依赖基于评分标准的评估，但判断所需证据可能分散在环境状态和执行轨迹中。评审器可能遗漏证据，或接受未经支持的声明，包括智能体自报的成功结果；当评分标准判定被用作强化学习奖励时，这类错误会强化不良行为。论文提出 Sauron，一种证据优先的智能体验证器，同时调查环境状态与执行轨迹，并仅在独立依据来源核验后采信相关声明。通过限制查询次数、联合调查相关标准，Sauron 减少上下文使用和重复工作；每个判定都附带包含支持证据的可审计凭证。在来自 100 个个人助理任务、共 2,586 条人工标注标准的评测中，Sauron 在测试的 8 种 backbone 上均取得 5 个验证器中的最高 F1，且成本低于最强基线 Gandalf。使用 GPT-5.6 Sol 时，Sauron 的 F1 达到 0.96，相比 Gandalf 的 0.92，成本降低 23%；在过程类标准上优势更大。在覆盖 13 类故障、部分模拟 reward hacking 的成对注入测试中，Sauron 检测出 97% 的注入失败，同时仅将 2% 的干净样本误报为失败，即使基线获得完整轨迹也优于基线。在用于检测和定位真实智能体错误的 TRAIL 基准上，Sauron 在全部 3 项质量指标上均领先 Gandalf 和 TRAIL 自带评审器。",
+  "key_points_zh": [
+    "核心思想是 evidence-first：同时检查环境状态与执行轨迹，不直接相信智能体自报，而是回溯来源独立核验声明。",
+    "通过有界查询和相关标准的联合调查，Sauron 降低上下文开销与重复验证，并为每个判定生成可审计的证据凭证。",
+    "在 2,586 条人工标注标准、8 种 backbone 上均取得最高 F1；使用 GPT-5.6 Sol 时达到 0.96，较 Gandalf 的 0.92 成本低 23%。",
+    "在 13 类故障注入测试中检测率达 97%、干净样本误报率仅 2%，对模拟 reward hacking 的故障尤其有效。",
+    "在 TRAIL 基准的检测与定位任务中，Sauron 在全部 3 项质量指标上超过 Gandalf 和 TRAIL 自带评审器。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.86,
+    "problem_significance": 0.9,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.88,
+    "lasting_value": 0.91,
+    "llm_avg": 0.89,
+    "comment": "Sauron provides a reusable evidence-grounded verifier with auditable receipts, trajectory-and-state investigation, and direct relevance to reliable agent evaluation and RL rewards.",
+    "comment_zh": "Sauron提供了可复用的证据驱动验证器，通过可审计凭证联合检查轨迹与状态，对可靠智能体评估和强化学习奖励具有直接价值。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.89,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.17724/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.17724/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.959
+    }
+  ]
+}

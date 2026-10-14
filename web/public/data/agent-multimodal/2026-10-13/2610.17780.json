@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2610.17780",
+  "title": "Full-duplex Spoken Language Modeling with Discrete Diffusion",
+  "title_zh": "基于离散扩散的全双工语音语言建模",
+  "authors": [
+    "Chen Chen",
+    "Pin-Jui Ku",
+    "Ankita Pasad",
+    "Ante Jukić",
+    "Zhehuai Chen",
+    "Boris Ginsburg"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-13T06:05:54Z",
+  "abs_url": "https://arxiv.org/abs/2610.17780v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.17780",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "We introduce Diffuplex, a full-duplex spoken language model based on discrete diffusion that achieves an unprecedented balance between linguistic intelligence and response efficiency. With thinking mode, Diffuplex delivers 13.0 tokens per forward pass, reaching an average of 1872 tokens per second and substantially surpassing the frontier autoregressive (AR) models in decoding speed. Without thinking, Diffuplex matches the first-audio latency of existing full-duplex models while achieving markedly stronger linguistic intelligence. This capability is enabled by separating when to say from what to say at the training level, rather than compressing both into a single autoregressive timeline. During inference, Diffuplex continuously tracks the user speech through an AR interaction policy, while independently generating and refining response content through parallel diffusion. Consequently, semantic computation is no longer bounded by the perception audio frame rate, allowing intelligence and responsiveness to improve simultaneously. Taken together, these results establish a new paradigm for spoken agents that can sustain real-time dialogue while devoting parallel computation to intelligent response generation. Training code and checkpoints will be avaliable soon.",
+  "abstract_zh": "本文提出 Diffuplex，一种基于离散扩散（discrete diffusion）的全双工语音语言模型，在语言智能与响应效率之间实现了新的平衡。启用思考模式时，Diffuplex 每次前向传播生成 13.0 个 token，平均速度达到每秒 1872 个 token，显著超过前沿自回归（autoregressive，AR）模型的解码速度；关闭思考模式时，其首音延迟可匹配现有全双工模型，同时具备更强的语言智能。该能力源于训练阶段将“何时说”（when to say）与“说什么”（what to say）分离，而非将二者压缩到单一的自回归时间线上。推理过程中，Diffuplex 通过 AR 交互策略持续跟踪用户语音，并利用并行扩散独立生成和细化回复内容。因此，语义计算不再受感知音频帧率限制，使模型能够同时提升智能性与响应速度。总体而言，本文为语音智能体提出了一种新范式：在维持实时对话的同时，通过并行计算生成更智能的回复。训练代码与模型检查点将于后续发布。",
+  "key_points_zh": [
+    "提出 Diffuplex：基于离散扩散的全双工语音语言模型。",
+    "训练时分离“何时说”与“说什么”，突破单一自回归时间线的限制。",
+    "推理时由 AR 交互策略跟踪用户语音，并通过并行扩散生成和细化回复。",
+    "思考模式下达到每秒 1872 个 token，平均每次前向传播生成 13.0 个 token。",
+    "无需思考模式时可匹配现有全双工模型的首音延迟，同时显著增强语言智能。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.91,
+    "problem_significance": 0.93,
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.89,
+    "lasting_value": 0.88,
+    "llm_avg": 0.9100000000000001,
+    "comment": "Diffuplex presents a technically distinctive architecture that decouples continuous speech interaction from parallel response generation to improve both intelligence and latency.",
+    "comment_zh": "Diffuplex通过将连续语音交互与并行响应生成解耦，在提升智能性的同时降低延迟，提出了具有明显范式意义的架构。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.29176612508188887,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9100000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.17780/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.17780/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.945
+    }
+  ]
+}

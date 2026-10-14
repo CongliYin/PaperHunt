@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2610.18813",
+  "title": "Self-Evolving Agent Harness",
+  "title_zh": "Self-Evolving Agent Harness：自进化智能体支架",
+  "authors": [
+    "Chuyang Wei",
+    "Haoxiang Guan",
+    "Minghang Zhu",
+    "Kexin Zhou",
+    "Jiyan He",
+    "Xiren Zhou",
+    "Huanhuan Chen",
+    "Yifei Shen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-13T17:48:49Z",
+  "abs_url": "https://arxiv.org/abs/2610.18813v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.18813",
+  "links": {
+    "github": "https://github.com/zgcagi/Harness-RSI.",
+    "project_page": null
+  },
+  "abstract_en": "Harness self-evolution revises an agent's software scaffolding, including prompts, memory, workflows, and executable components, while keeping model weights fixed. We formalize a feedback-driven process in which accepted revisions persist across runs. The framework separates update targets from proposal and admission mechanisms. It distinguishes changes to interpreted state from revisions to tools and code, repository-level control logic, and plugin composition. We characterize search through evolutionary optimization and examine its reliability through continual PAC-learning. Under explicit assumptions, the analysis yields an expected generalization bound, a retention bound conditional on historical regression budgets, and a high-probability admission rule using fresh, independent validation data. We examine how persistent harness revisions affect knowledge sharing and organizational workflows, with implications for scientific reliability, physical safety, and institutional accountability. Cases from prior work illustrate model--harness co-design, distributed execution, and plugin reuse. Reliable deployment requires continual validation as task distributions and evaluators change, with independent safeguards for learning, runtime privileges, and consequential actions. We provide a comprehensive 66-page discussion of related work, theory, algorithms, evaluation, applications, and the broader impact of Harness RSI, together with continuously updated code and supplementary materials, at https://github.com/zgcagi/Harness-RSI.",
+  "abstract_zh": "本文研究 Harness self-evolution：在保持模型权重不变的前提下，持续修改智能体的软件支架，包括 prompts、memory、workflows 和可执行组件。作者形式化了由反馈驱动、且被接受的修改可跨运行持久化的演化过程，并将更新目标与提案机制、准入机制分离。框架区分了解释状态变化、工具与代码修改、仓库级控制逻辑变更以及插件组合调整。理论上，作者从 evolutionary optimization 角度刻画搜索过程，并借助 continual PAC-learning 分析其可靠性。在明确假设下，论文给出了期望泛化界、依赖历史回归预算的保留界，以及利用新鲜独立验证数据的高概率准入规则。论文还讨论持久化 Harness 修改对知识共享和组织工作流的影响，并分析其对科学可靠性、物理安全和机构问责的意义。已有工作案例展示了模型—Harness 协同设计、分布式执行和插件复用。作者强调，可靠部署需要在任务分布和评估器变化时持续验证，并为学习过程、运行时权限及高风险行动设置独立安全防护。论文提供了涵盖相关工作、理论、算法、评估、应用和更广泛影响的系统讨论，以及持续更新的代码和补充材料。",
+  "key_points_zh": [
+    "Harness self-evolution 修改 prompts、memory、workflows、工具、代码和插件，而无需更新模型权重。",
+    "框架将更新目标、修改提案和准入机制解耦，并支持被接受的修改跨运行持久化。",
+    "理论分析结合 evolutionary optimization 与 continual PAC-learning，给出泛化界、保留界和高概率准入规则。",
+    "可靠部署依赖新鲜独立验证、持续评估及针对学习、运行时权限和高风险行动的独立安全机制。",
+    "持久化 Harness 可能促进知识共享和组织协作，但也带来科学可靠性、物理安全与机构问责挑战。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.9,
+    "problem_significance": 0.92,
+    "potential_impact": 0.94,
+    "paradigm_shift": 0.9,
+    "lasting_value": 0.94,
+    "llm_avg": 0.9199999999999999,
+    "comment": "This is a foundational harness-evolution paper that formalizes persistent scaffold changes, admission control, validation, regression retention, and theoretical reliability guarantees.",
+    "comment_zh": "这是一篇基础性很强的智能体Harness进化论文，系统形式化了持久脚手架修改、准入控制、验证、回归保持和可靠性理论保证。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.9199999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/zgcagi/Harness-RSI.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.18813/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.416
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.18813/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.956
+    }
+  ]
+}

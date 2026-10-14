@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2610.18616",
+  "title": "Knowledge Graphs as Files: An Agent Harness Where Tool Creation and Tool Use Co-Evolve",
+  "title_zh": "知识图谱即文件：工具创建与工具使用协同演化的智能体框架",
+  "authors": [
+    "Yuyang Bai",
+    "Yu Wang",
+    "Yu Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-10-13T16:00:50Z",
+  "abs_url": "https://arxiv.org/abs/2610.18616v1",
+  "pdf_url": "https://arxiv.org/pdf/2610.18616",
+  "links": {
+    "github": "https://github.com/leopoldwhite/DKGI",
+    "project_page": null
+  },
+  "abstract_en": "Searching text-rich knowledge graphs requires following relations while examining textual evidence. Predefined graph interfaces constrain what evidence agents can access, even when they write code to combine tool calls or process retrieved subgraphs. We propose direct knowledge graph interaction (DKGI), a harness in which language model agents create graph access tools directly over complete node and edge files. The agent writes Python code to follow relations, combine node sets, and select textual evidence, interleaving execution with shell search and file inspection. This lets agents process large node sets in bulk while returning selected text for the model to assess. Execution feedback guides tool creation and revision, while the evolving tools determine what evidence the agent gathers next. On benchmark datasets spanning three domains, training-free DKGI exceeds the strongest published baseline by at least 6.7 Hit@1 points on every graph, even with a minimal harness. Controlled ablations show the benefits of multi-turn programming over shell-only access and predefined graph tools, while trajectories show agents revising code to extend searches or address errors. These findings highlight the value of allowing tool creation and tool use to co-evolve during graph search. Our code and data are available at https://github.com/leopoldwhite/DKGI.",
+  "abstract_zh": "本文提出直接知识图谱交互（Direct Knowledge Graph Interaction, DKGI），一种允许语言模型智能体直接操作完整节点文件和边文件的知识图谱搜索框架。智能体通过编写并执行 Python 代码追踪关系、合并节点集合、筛选文本证据，并交替使用 shell 搜索与文件检查，从大规模节点集中批量处理信息后返回关键证据。执行反馈推动工具的创建与修订，而不断演化的工具又决定后续证据收集方式。在覆盖三个领域的基准数据集上，无需训练的 DKGI 在每个图上都至少超越最强已发表基线 6.7 个 Hit@1 点。消融实验表明，多轮编程访问优于仅使用 shell 或预定义图工具；轨迹分析显示，智能体会根据搜索需求和执行错误主动修改代码。研究表明，在图搜索过程中让工具创建与工具使用协同演化，能够显著提升智能体检索文本型知识图谱的能力。",
+  "key_points_zh": [
+    "DKGI 允许智能体直接操作完整的节点文件和边文件，而非受限于预定义图接口。",
+    "智能体通过 Python、shell 搜索和文件检查追踪关系、批量处理节点并筛选文本证据。",
+    "工具创建、执行反馈与后续证据收集形成闭环，实现工具使用与工具开发的协同演化。",
+    "在三个领域的基准上，训练免费的 DKGI 在每个知识图谱上均至少领先最强已发表基线 6.7 个 Hit@1 点。",
+    "消融实验和轨迹分析证明，多轮编程能力以及根据错误和搜索需求修订代码是性能提升的关键。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.8,
+    "problem_significance": 0.76,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.81,
+    "llm_avg": 0.7820000000000001,
+    "comment": "DKGI offers a compelling search-agent harness in which executable tool creation and evidence-directed graph exploration co-evolve through feedback.",
+    "comment_zh": "DKGI提出了一个有吸引力的搜索智能体Harness，使可执行工具创建与证据导向的图搜索通过反馈共同进化。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.7820000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/leopoldwhite/DKGI",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.18616/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.928
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2610.18616/fig2.webp",
+      "page": 5,
+      "kind": "table",
+      "confidence": 0.976
+    }
+  ]
+}
