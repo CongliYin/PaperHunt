@@ -7,10 +7,6 @@ on:
       date:
         description: "Replay a single issue date (YYYY-MM-DD)"
         type: string
-      seeds_only:
-        description: "Check the four agreed papers against the configured live scoring model"
-        type: boolean
-        default: false
       domains:
         description: "Optional comma-separated domain IDs for replay"
         type: string
@@ -25,13 +21,13 @@ concurrency:
 
 jobs:
   edition:
+    if: github.ref == 'refs/heads/main'
     defaults:
       run:
         shell: bash
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
-      PUBLISH: ${{ vars.PAPER_HUNT_V2_PUBLISH == 'true' && github.ref == 'refs/heads/main' }}
       LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
       LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
       LLM_MODEL_SCORING: ${{ secrets.LLM_MODEL_SCORING }}
@@ -48,14 +44,7 @@ jobs:
           cache: pip
           cache-dependency-path: pipeline/requirements.txt
       - name: Install edition dependencies
-        run: |
-          if [[ "$PUBLISH" == "true" && "$SEEDS_ONLY" != "true" ]]; then
-            pip install -r pipeline/requirements.txt
-          else
-            pip install requests PyYAML pymupdf pillow
-          fi
-        env:
-          SEEDS_ONLY: ${{ inputs.seeds_only }}
+        run: pip install -r pipeline/requirements.txt
       - run: python -m unittest discover -s tests -q
       - name: Find the last checkpoint for this branch
         id: previous
@@ -92,11 +81,7 @@ jobs:
             gpg --batch --pinentry-mode loopback --passphrase-fd 3 --decrypt --output tmp/checkpoint.tar.gz tmp/restore/state.enc 3<<<"$STATE_KEY"
             tar xzf tmp/checkpoint.tar.gz -C tmp
           fi
-      - name: Real-model seed regression
-        if: inputs.seeds_only
-        run: python -u pipeline/check_edition_seeds.py --state-dir tmp/edition-state
       - name: Process edition
-        if: ${{ !inputs.seeds_only }}
         timeout-minutes: 100
         id: process
         env:
@@ -106,13 +91,6 @@ jobs:
           args=()
           if [[ -n "$ISSUE_DATE" ]]; then args+=(--date "$ISSUE_DATE" --refresh-arxiv); fi
           if [[ -n "$ISSUE_DOMAINS" ]]; then args+=(--domains "$ISSUE_DOMAINS"); fi
-          if [[ "$PUBLISH" != "true" ]]; then
-            if [[ ! -f tmp/shadow/index.json ]]; then
-              mkdir -p tmp/shadow
-              cp -R web/public/data/. tmp/shadow/
-            fi
-            args+=(--output tmp/shadow --skip-figures)
-          fi
           python -u pipeline/run_daily.py "${args[@]}"
       - name: Save resumable checkpoint
         if: always() && steps.process.outcome != 'skipped'
@@ -120,9 +98,7 @@ jobs:
           STATE_KEY: ${{ secrets.EDITION_STATE_KEY || secrets.LLM_API_KEY }}
         run: |
           test -n "$STATE_KEY"
-          dirs=(edition-state)
-          if [[ -d tmp/shadow ]]; then dirs+=(shadow); fi
-          tar -C tmp --exclude='edition-state/pdf' -czf - "${dirs[@]}" | gpg --batch --pinentry-mode loopback --passphrase-fd 3 --symmetric --cipher-algo AES256 --output tmp/state.enc 3<<<"$STATE_KEY"
+          tar -C tmp --exclude='edition-state/pdf' -czf - edition-state | gpg --batch --pinentry-mode loopback --passphrase-fd 3 --symmetric --cipher-algo AES256 --output tmp/state.enc 3<<<"$STATE_KEY"
       - uses: actions/upload-artifact@v4
         if: always() && steps.process.outcome != 'skipped' && hashFiles('tmp/state.enc') != ''
         with:
@@ -131,7 +107,7 @@ jobs:
           retention-days: 90
           overwrite: true
       - name: Publish validated snapshot
-        if: success() && env.PUBLISH == 'true' && steps.process.outcome == 'success'
+        if: success()
         run: |
           git add web/public/data
           if git diff --cached --quiet; then exit 0; fi

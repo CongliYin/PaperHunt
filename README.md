@@ -4,15 +4,15 @@ English · [简体中文](README.zh-CN.md)
 
 Paper Hunt publishes a Chinese research briefing on Agent Evolution (harness, parameters and RSI), Agent Memory, conversational shopping, and audio/video agent memory, harnesses and evolution.
 
-**Rollout as of 2026-11-20.** The public site uses the legacy edition. The four-domain workflow is configured to run in shadow at 14:00 Shanghai time, combining arXiv screening and the preceding date's Hugging Face Daily Papers list. The live-model seed regression passed. The seven-day shadow evaluation and human-labelled holdout are pending. [Architecture and acceptance criteria](docs/superpowers/specs/2026-11-20-four-domain-paper-selection-design.md) · [Seed regression run](https://github.com/CongliYin/PaperHunt/actions/runs/44715445398)
+**Production since 2026-11-20.** The Four-domain daily workflow publishes scheduled editions and manual replays from main. It combines arXiv screening and the preceding date's Hugging Face Daily Papers list. The live-model seed regression passed; independent human-labelled evaluation is ongoing. [Architecture and acceptance criteria](docs/superpowers/specs/2026-11-20-four-domain-paper-selection-design.md) · [Seed regression run](https://github.com/CongliYin/PaperHunt/actions/runs/44715445398)
 
 ## Architecture
 
 - `pipeline/run_daily.py` builds a dated edition from arXiv and the **complete HF Daily Papers list**. It screens titles and abstracts, reviews all candidate/uncertain papers and every HF entry, then evaluates each domain independently. An arXiv screening rejection can be rescued by HF.
 - Papers qualify per domain at F ≥ 3/4 and M + E + U ≥ 4/6, with method and evidence each ≥ 1. Each chosen domain includes a reason and a source quote. Scores and assets are shared across sources. The website shows one score out of 100 and sorts by it in descending order. New editions scale reading value (M + E + U) from six points, and historical listings use their saved overall score.
 - `web/` reads immutable lists and shared details via the public index. A failed run leaves the last index in place.
-- `four-domain.yml` runs at 06:00 UTC (14:00 Shanghai) for the previous calendar date and revisits the recent seven-day window, catching up after missed runs. Shadow runs write to an isolated archive and skip figure uploads. The legacy daily workflow runs at 04:00 Shanghai time and serves v1 until the repository variable `PAPER_HUNT_V2_PUBLISH=true` selects v2. Compare at least seven days and human-labelled holdouts before cutover. Once active, reverse that switch to resume the legacy writer; restore the previous data commit if rolling back published editions.
-- The encrypted Actions checkpoint includes source snapshots, per-paper review/screen caches, run manifests and the shadow index. A 90-day artifact is rolled forward after each run. `EDITION_STATE_KEY` can be set as a dedicated secret. Otherwise the workflow uses `LLM_API_KEY` for checkpoint encryption; changing that key requires migrating or expiring the previous checkpoint. Production public history is retained in Git.
+- `four-domain.yml` runs at 06:00 UTC (14:00 Shanghai) for the previous calendar date and revisits the recent seven-day window, catching up after missed runs. For a manual edition, open Actions → Four-domain daily → Run workflow, select main, enter the issue date (YYYY-MM-DD) and leave domains empty to publish all four columns.
+- The encrypted Actions checkpoint includes source snapshots, per-paper review/screen caches, and run manifests. A 90-day artifact is rolled forward after each run. `EDITION_STATE_KEY` can be set as a dedicated secret. Otherwise the workflow uses `LLM_API_KEY` for checkpoint encryption; changing that key requires migrating or expiring the previous checkpoint. Production public history is retained in Git.
 
 ## Environment
 
@@ -42,7 +42,7 @@ Shared runtime settings
 | `ARXIV_RETRY_JITTER_SECONDS` | `5` | random delay added to each retry |
 | `ARXIV_USER_AGENT` | PaperHunt repository URL | identifiable user agent sent to arXiv |
 
-For the four-domain CLI, use `--arxiv-raw-cache-dir` (default `tmp/arxiv-raw`) and `--refresh-arxiv`. The legacy CLI also accepts `ARXIV_RAW_CACHE_DIR`, `ARXIV_REFRESH` and `RUN_TZ`. In Actions, **Four-domain daily** accepts `date`, `domains` and `seeds_only`. A dated replay automatically refreshes arXiv. The **daily** legacy workflow has its own `refresh_arxiv` input. [Four-domain workflow](.github/workflows/four-domain.yml) · [Legacy workflow](.github/workflows/daily.yml)
+For the four-domain CLI, use `--arxiv-raw-cache-dir` (default `tmp/arxiv-raw`) and `--refresh-arxiv`. The legacy CLI also accepts `ARXIV_RAW_CACHE_DIR`, `ARXIV_REFRESH` and `RUN_TZ`. In Actions, **Four-domain daily** accepts the optional inputs `date` and `domains`. A dated replay refreshes arXiv and publishes to the same index as a scheduled run. [Daily workflow](.github/workflows/four-domain.yml)
 
 ## Local Usage
 
@@ -99,7 +99,7 @@ python pipeline/evaluate_selection_quality.py
 cd web && npm ci && npm run build
 ```
 
-To measure the new recommender, label sampled pairs as JSON objects in an array with `date`, `arxiv_id`, `domain`, boolean `relevant` and boolean `recommend`. Run `python pipeline/evaluate_editions.py labels.json tmp/edition-state/runs/*.json` with one complete manifest for each date. Use `--grid` on development dates only. Report precision, recall and denominators on untouched dates; include rejected candidates in sampling. Legacy gold regression results measure the legacy selector only. With configured scoring credentials run `python pipeline/check_edition_seeds.py` (or select `seeds_only` in Four-domain daily) to check four real papers against the new domain scopes.
+To measure the new recommender, label sampled pairs as JSON objects in an array with `date`, `arxiv_id`, `domain`, boolean `relevant` and boolean `recommend`. Run `python pipeline/evaluate_editions.py labels.json tmp/edition-state/runs/*.json` with one complete manifest for each date. Use `--grid` on development dates only. Report precision, recall and denominators on untouched dates; include rejected candidates in sampling. Legacy gold regression results measure the legacy selector only. With configured scoring credentials run `python pipeline/check_edition_seeds.py` to check four real papers against the new domain scopes.
 
 ## Vercel Deployment
 
@@ -109,7 +109,7 @@ Create a public Vercel Blob store and copy its `BLOB_READ_WRITE_TOKEN` into GitH
 
 ## Notes
 
-- Local v2 replays can reuse complete raw category files for the same query window. Scheduled v2 runs refresh arXiv. Across Actions runs the encrypted v2 checkpoint restores normalized source snapshots, screening and review decisions, and asset metadata. The separate raw-category Actions cache belongs to the legacy workflow.
+- Local v2 replays can reuse complete raw category files for the same query window. Scheduled v2 runs refresh arXiv. Across Actions runs the encrypted v2 checkpoint restores normalized source snapshots, screening and review decisions, and asset metadata.
 - Requests are sequential and start at least 3.1 seconds apart. HTTP 429/5xx responses, timeouts, connection errors, and malformed XML are retried with minute-scale bounded backoff. If the fetch still fails, the whole job exits non-zero before domain processing, so incomplete data is never committed. An empty individual category is valid when the daily response contains papers elsewhere; an all-category empty response is treated as unreliable and is neither published nor cached.
 - DocLayout-YOLO is AGPL-3.0. This project uses it in an offline CI batch pipeline to generate static images. The Vercel frontend does not serve the model or expose model inference. Re-check licensing before closed-source or commercial use of the pipeline code.
 - `tmp/` and model caches are intentionally ignored. Legacy phase intermediates under `reports/*/*/tmp/` are kept during runs for re-runs and debugging but should not be committed.

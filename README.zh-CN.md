@@ -11,7 +11,7 @@ Paper Hunt 每天从 arXiv 和 Hugging Face Daily Papers 筛选论文，按研�
 | 电商交互导购 | 用户表达的需求、预算或偏好，如何改变商品检索、候选排序、个性化推荐或下一轮追问。 |
 | 全模态与多模态 Agent | 语音或视频如何参与记忆、harness 设计和策略演化，例如在后续任务中找回先前看过或听过的事件。 |
 
-**截至 2026 年 11 月 20 日，公开网站仍由旧版工作流发布。** 新版已配置为影子运行，结果写入独立目录供比较。四篇代表论文的真实模型回归已通过，连续七天的影子运行验收和独立人工标注集评估仍待完成。[架构设计与验收标准](docs/superpowers/specs/2026-11-20-four-domain-paper-selection-design.md) · [真实模型回归记录](https://github.com/CongliYin/PaperHunt/actions/runs/44715445398)
+**自 2026 年 11 月 20 日起，定时日报和手动补跑统一使用四方向架构发布。** 四篇代表论文的真实模型回归已通过，独立人工标注集评估仍待完成。[架构设计与验收标准](docs/superpowers/specs/2026-11-20-four-domain-paper-selection-design.md) · [真实模型回归记录](https://github.com/CongliYin/PaperHunt/actions/runs/44715445398)
 
 ## 一篇论文怎样入选
 
@@ -90,13 +90,13 @@ npm run dev
 
 新版用 `--arxiv-raw-cache-dir` 设置原始分类缓存目录，默认路径为 `tmp/arxiv-raw`。旧版命令行另支持 `ARXIV_RAW_CACHE_DIR`、`ARXIV_REFRESH` 和 `RUN_TZ`。
 
-## 定时运行与发布切换
+## 定时发布与手动补跑
 
-**Four-domain daily** 每天北京时间 14 时（UTC 6 时）处理前一自然日的刊期，回查最近七天并补跑遗漏日期。手动运行可填写 `date` 和 `domains`。指定日期会刷新 arXiv，勾选 `seeds_only` 则只运行代表论文回归。影子运行跳过图片上传。[新版工作流](.github/workflows/four-domain.yml)
+**Four-domain daily** 是唯一的 GitHub Actions 日报工作流。它每天北京时间 14 时（UTC 6 时）处理前一自然日的刊期，回查最近七天并补跑遗漏日期。
 
-**daily** 是旧版工作流，每天北京时间 4 时运行，手动刷新参数为 `refresh_arxiv`。完成至少七天的对照运行和人工留出集验收后，将仓库变量 `PAPER_HUNT_V2_PUBLISH` 设为 `true`，即可由新版向 `main` 发布。需要恢复旧发布流程时可将变量改回 `false`。如需一并回滚已发布的内容，还要恢复此前的数据版本。[旧版工作流](.github/workflows/daily.yml)
+手动补跑时，打开 **Actions → Four-domain daily → Run workflow**，选择 `main` 分支，在 `date` 填写刊期，例如 `2026-11-19`。`domains` 留空会发布全部四栏，也可填写逗号分隔的领域 ID。指定日期会刷新 arXiv，成功后更新与定时任务相同的公开索引。[日报工作流](.github/workflows/four-domain.yml)
 
-Actions 将来源快照、初筛与精评缓存、运行清单、素材元数据及影子索引保存为加密的 `edition-state` 制品，保留期为 90 天，后续运行滚动保存。可在 Secrets 中设置专用的 `EDITION_STATE_KEY`，默认使用 `LLM_API_KEY` 加密。更换加密密钥时须迁移已有检查点，或让旧检查点失效。已发布的历史数据保存在 Git 中。
+Actions 将来源快照、初筛与精评缓存、运行清单及素材元数据保存为加密的 `edition-state` 制品，保留期为 90 天，后续运行滚动保存。可在 Secrets 中设置专用的 `EDITION_STATE_KEY`，默认使用 `LLM_API_KEY` 加密。更换加密密钥时须迁移已有检查点，或让旧检查点失效。已发布的历史数据保存在 Git 中。
 
 ## 新增研究方向
 
@@ -123,7 +123,7 @@ python pipeline/evaluate_selection_quality.py
 cd web && npm ci && npm run build
 ```
 
-新版的真实模型回归使用四篇已知论文，检查它们能否进入预期栏目。配置好评分模型后，在仓库根目录运行 `python pipeline/check_edition_seeds.py`，或在 **Four-domain daily** 工作流中选择 `seeds_only`。
+新版的真实模型回归使用四篇已知论文，检查它们能否进入预期栏目。配置好评分模型后，在仓库根目录运行 `python pipeline/check_edition_seeds.py`。
 
 评估新版推荐质量时，从已入选和被拒绝的论文中抽样，按“论文与方向”制作 `labels.json`。文件使用 JSON 数组，每项包含 `date`、`arxiv_id`、`domain`，以及两个布尔值 `relevant`（是否相关）和 `recommend`（是否值得推荐）。在仓库根目录运行以下命令，确保每个评估日期只提供一份完整的四方向运行清单。
 
@@ -138,5 +138,5 @@ python pipeline/evaluate_editions.py labels.json tmp/edition-state/runs/*.json
 在 Vercel 创建项目时，将根目录设为 `web/`。前端直接读取 Git 中 `web/public/data` 的 JSON 文件。生产环境默认将图片上传至公开的 Vercel Blob 存储，并在详情页使用绝对 URL。创建存储后，把 `BLOB_READ_WRITE_TOKEN` 加入 GitHub Actions Secrets。本地调试可设 `STORAGE_BACKEND=repo`，默认发布目录下的图片会写到 `web/public/figures`。
 
 - **arXiv 抓取**按顺序发起请求。遇到 HTTP 429、5xx、超时、连接错误或 XML 格式异常时，按退避策略重试。查询窗口内部分分类可以为空，所有分类都为空时会报错，保留上一次成功发布的索引。
-- **缓存与中间文件**方面，定时运行的新版会刷新 arXiv，跨运行恢复规范化后的来源快照及评审结果。旧工作流单独缓存原始分类数据。`tmp/`、模型缓存及旧版 `reports/*/*/tmp/` 中的运行文件均已加入 Git 忽略规则。
+- **缓存与中间文件**方面，定时运行的新版会刷新 arXiv，跨运行恢复规范化后的来源快照及评审结果。`tmp/`、模型缓存及旧版 `reports/*/*/tmp/` 中的运行文件均已加入 Git 忽略规则。
 - **论文图片**由离线批处理生成。DocLayout-YOLO 使用 AGPL-3.0 许可证，闭源或商业使用相关流水线前应核对许可要求。清理旧图可调用 `FigureStorage.delete_older_than(days)`，按配置的 Blob 前缀列出并删除超过指定天数的文件。
