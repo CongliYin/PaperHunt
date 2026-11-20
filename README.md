@@ -1,5 +1,7 @@
 # Paper Hunt
 
+English · [简体中文](README.zh-CN.md)
+
 Paper Hunt publishes a Chinese research briefing on Agent Evolution (harness, parameters and RSI), Agent Memory, conversational shopping, and audio/video agent memory, harnesses and evolution.
 
 **Rollout as of 2026-11-20.** The public site uses the legacy edition. The four-domain workflow is configured to run in shadow at 14:00 Shanghai time, combining arXiv screening and the preceding date's Hugging Face Daily Papers list. The live-model seed regression passed. The seven-day shadow evaluation and human-labelled holdout are pending. [Architecture and acceptance criteria](docs/superpowers/specs/2026-11-20-four-domain-paper-selection-design.md) · [Seed regression run](https://github.com/CongliYin/PaperHunt/actions/runs/44715445398)
