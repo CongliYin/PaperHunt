@@ -28,6 +28,7 @@ concurrency:
 
 jobs:
   run:
+    if: vars.PAPER_HUNT_V2_PUBLISH != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
@@ -84,18 +85,16 @@ jobs:
           python pipeline/evaluate_selection_quality.py
 
       - name: Run daily pipeline
+        env:
+          ISSUE_DATE: ${{ inputs.date }}
+          ISSUE_DOMAINS: ${{ inputs.domains }}
+          REFRESH: ${{ inputs.refresh_arxiv }}
         run: |
           args=()
-          if [ -n "${{ inputs.date }}" ]; then
-            args+=(--date "${{ inputs.date }}")
-          fi
-          if [ -n "${{ inputs.domains }}" ]; then
-            args+=(--domains "${{ inputs.domains }}")
-          fi
-          if [ "${{ inputs.refresh_arxiv }}" = "true" ]; then
-            args+=(--refresh-arxiv)
-          fi
-          python pipeline/run_daily.py "${args[@]}"
+          if [[ -n "$ISSUE_DATE" ]]; then args+=(--date "$ISSUE_DATE"); fi
+          if [[ -n "$ISSUE_DOMAINS" ]]; then args+=(--domains "$ISSUE_DOMAINS"); fi
+          if [[ "$REFRESH" == "true" ]]; then args+=(--refresh-arxiv); fi
+          python pipeline/legacy_daily.py "${args[@]}"
 
       - name: Save raw arXiv metadata cache
         if: always()

@@ -22,7 +22,7 @@ export default async function DetailPage({ params }: Params) {
   const paper = readDetail(domain, date, arxivId);
   if (!paper) notFound();
 
-  const dims = [
+  const dims = paper.schema === 2 ? [] : [
     ["Novelty", paper.llm_assessment.novelty],
     ["Problem", paper.llm_assessment.problem_significance],
     ["Impact", paper.llm_assessment.potential_impact],
@@ -49,7 +49,9 @@ export default async function DetailPage({ params }: Params) {
           <span>{domain}</span>
           <span>{date}</span>
           <span>{paper.arxiv_id}</span>
-          <span>{Math.round((paper.scores.llm_assessment || 0) * 100)} LLM</span>
+          <span>{paper.schema === 2 ? (paper.source === "hf" ? "HF 补录" : "arXiv 主筛") : `历史评分 ${Math.round((paper.scores.llm_assessment || 0) * 100)}`}</span>
+          {paper.schema === 2 && <span>原文发表于 {paper.published_at.slice(0, 10)}</span>}
+          {paper.schema === 2 && !!paper.hf_dates?.length && <span>HF 收录 {paper.hf_dates.join("、")}</span>}
         </div>
         <div>
           <h1 className="detail-title">{paper.title_zh || paper.title}</h1>
@@ -112,7 +114,7 @@ export default async function DetailPage({ params }: Params) {
               <h2>中文摘要</h2>
               <span>Briefing</span>
             </div>
-            <p className="prose">{paper.abstract_zh || "暂无中文摘要。"}</p>
+            <p className="prose">{paper.abstract_zh || paper.abstract_en}</p>
           </section>
           <section className="section">
             <div className="section-heading">
@@ -141,7 +143,17 @@ export default async function DetailPage({ params }: Params) {
         </div>
 
         <aside>
-          <section className="section score-panel">
+          {paper.schema === 2 ? <section className="section score-panel">
+            <h2>入选依据</h2>
+            <p>{paper.evidence_scope.includes("PDF") ? "依据标题、摘要和论文正文" : "依据标题和摘要"}</p>
+            {Object.entries(paper.review_domains).map(([name, r]) => (
+              <div key={name}>
+                <h3>{name}</h3>
+                <p>方向 {r.F}/4 · 方法 {r.M}/2 · 论据 {r.E}/2 · 启发 {r.U}/2</p>
+                <p>{r.reason}</p><blockquote>{r.quote}</blockquote>
+              </div>
+            ))}
+          </section> : <section className="section score-panel">
             <div className="score-head">
               <div>
                 <h2>LLM 评估</h2>
@@ -162,7 +174,7 @@ export default async function DetailPage({ params }: Params) {
               );
             })}
             <p className="comment">{String(paper.llm_assessment.comment_zh || paper.llm_assessment.comment || "")}</p>
-          </section>
+          </section>}
 
           <section className="section">
             <div className="section-heading">

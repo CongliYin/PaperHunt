@@ -108,6 +108,12 @@ export function PaperBrowser({ index, initialList, initialDomain, initialDates, 
   }
 
   const papers = [...visiblePapers].sort((a, b) => {
+    if (a.schema === 2 && b.schema === 2) {
+      const difference = sortMode === "topic" ? b.fit - a.fit : b.value - a.value;
+      return difference || b.value - a.value || b.fit - a.fit || a.arxiv_id.localeCompare(b.arxiv_id);
+    }
+    if (a.schema === 2) return -1;
+    if (b.schema === 2) return 1;
     if (sortMode === "topic") return b.scores.topic_relevance - a.scores.topic_relevance;
     if (sortMode === "llm") return b.scores.llm_assessment - a.scores.llm_assessment;
     return b.total_score - a.total_score;
@@ -230,7 +236,7 @@ export function PaperBrowser({ index, initialList, initialDomain, initialDates, 
       </header>
 
       {!papers.length ? (
-        <div className="empty">暂无论文数据。首次 GitHub Actions 跑完后，这里会自动显示最新结果。</div>
+        <div className="empty">所选方向和日期暂无入选论文。</div>
       ) : (
         <section className="paper-list">
           {papers.map((paper) => (
@@ -242,12 +248,13 @@ export function PaperBrowser({ index, initialList, initialDomain, initialDates, 
                 <div className="row-meta">
                   <span>{paper.arxiv_id}</span>
                   <span>{paper.sourceDate}</span>
-                  <span>Score {Math.round(paper.total_score * 100)}</span>
+                  <span>{paper.schema === 2 ? `阅读价值 ${paper.value}/6 · 方向匹配 ${paper.fit}/4` : `历史评分 ${Math.round(paper.total_score * 100)}`}</span>
                 </div>
                 <Link className="paper-title-link" href={detailHref(paper, returnHref)}>
                   <h2 className="paper-title-zh">{paper.title_zh || paper.title}</h2>
                 </Link>
                 <p className="paper-title-en">{paper.title}</p>
+                {paper.schema === 2 && <p>{paper.source === "hf" ? "HF 补录" : "arXiv 主筛"} · {paper.reason}</p>}
                 {paper.tldr_zh ? <p className="tldr">{paper.tldr_zh}</p> : null}
                 <div className="tags">
                   {paper.tags.slice(0, 3).map((tag) => (
@@ -274,8 +281,8 @@ function toVisiblePapers(list: PaperList | null): VisiblePaper[] {
     const [sourceDomain, sourceDate] = paper.detail_file.split("/");
     return {
       ...paper,
-      sourceDomain: sourceDomain || list.domain,
-      sourceDate: sourceDate || list.date
+      sourceDomain: paper.schema === 2 ? paper.domain : sourceDomain || list.domain,
+      sourceDate: paper.schema === 2 ? paper.edition : sourceDate || list.date
     };
   });
 }
@@ -317,5 +324,5 @@ function homeHref(domain: string, dates: string[], sortMode: string): string {
 
 function detailHref(paper: VisiblePaper, returnHref: string): string {
   const params = new URLSearchParams({ returnTo: returnHref });
-  return `/${paper.sourceDomain}/${paper.sourceDate}/${paper.arxiv_id}?${params.toString()}`;
+  return `/${paper.sourceDomain}/${paper.sourceDate}/${encodeURIComponent(paper.arxiv_id)}?${params.toString()}`;
 }

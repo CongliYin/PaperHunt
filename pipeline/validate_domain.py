@@ -14,6 +14,7 @@ from lib.selector import SelectionPolicyError, load_selection_policy
 PIPELINE_DIR = Path(__file__).resolve().parent
 REQUIRED = [
     "domain.yaml",
+    "review.yaml",
     "filter_keywords.yaml",
     "selection_policy.yaml",
     "topic_keywords.yaml",
@@ -43,6 +44,9 @@ def main() -> None:
     topics = _load_yaml(domain_dir / "topic_keywords.yaml", errors)
     scoring = (domain_dir / "scoring_criteria.md").read_text(encoding="utf-8").strip()
 
+    rubric = _load_yaml(domain_dir / "review.yaml", errors)
+    if not rubric.get("name") or not rubric.get("scope") or not isinstance(rubric.get("signals"), list):
+        errors.append("review.yaml requires name, scope and a signals list")
     if not domain.get("display_name"):
         errors.append("domain.yaml missing display_name")
     cats = domain.get("arxiv_categories")

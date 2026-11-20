@@ -522,6 +522,7 @@ def update_index_json(data_dir: Path, domain: str, display_name: str, date: str,
     )
     entries.sort(key=lambda e: (e["domain"], e["date"]), reverse=True)
     index = {
+        **index,
         "generated_at": datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
         "domains": sorted(domains.values(), key=lambda d: d["display_name"]),
         "entries": entries,

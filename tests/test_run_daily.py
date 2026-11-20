@@ -16,7 +16,7 @@ from zoneinfo import ZoneInfo
 PIPELINE_DIR = Path(__file__).resolve().parents[1] / "pipeline"
 sys.path.insert(0, str(PIPELINE_DIR))
 
-import run_daily  # noqa: E402
+import legacy_daily as run_daily  # noqa: E402
 from lib.fetcher import ArxivFetchError  # noqa: E402
 
 

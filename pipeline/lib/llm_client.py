@@ -39,6 +39,8 @@ class LLMClient:
         )
         self.timeout = timeout
         self.max_retries = max_retries
+        self._usage_lock = threading.Lock()
+        self.usage = {"requests": 0, "prompt_tokens": 0, "completion_tokens": 0}
         self._sem = threading.BoundedSemaphore(
             concurrency or int(os.getenv("LLM_CONCURRENCY", "4"))
         )
@@ -99,6 +101,11 @@ class LLMClient:
                         )
                     resp.raise_for_status()
                     data = resp.json()
+                    usage = data.get("usage") or {}
+                    with self._usage_lock:
+                        self.usage["requests"] += 1
+                        for key in ("prompt_tokens", "completion_tokens"):
+                            self.usage[key] += int(usage.get(key) or 0)
                     return data["choices"][0]["message"]["content"]
                 except Exception as exc:  # noqa: BLE001 - retry wrapper
                     last_error = exc

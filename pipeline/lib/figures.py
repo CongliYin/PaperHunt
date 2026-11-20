@@ -67,7 +67,8 @@ def extract_figures(
 
 def _download_pdf(arxiv_id: str, work_dir: Path) -> Path:
     clean_id = _clean_id(arxiv_id)
-    target = work_dir / f"{clean_id}.pdf"
+    filename = clean_id.replace("/", "_") + ".pdf"
+    target = work_dir / filename
     if target.exists() and target.stat().st_size > 0:
         return target
     url = f"https://arxiv.org/pdf/{clean_id}"

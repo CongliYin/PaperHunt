@@ -46,7 +46,7 @@ def main() -> None:
             path.write_text(text, encoding="utf-8")
 
     print(f"Created {target}")
-    print("Next: edit the five config files, then run:")
+    print("Next: edit the domain config files (including review.yaml), then run:")
     print(f"  python {PIPELINE_DIR / 'validate_domain.py'} {domain_id}")
 
 

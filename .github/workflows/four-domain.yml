@@ -1,0 +1,140 @@
+name: Four-domain daily
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Replay a single issue date (YYYY-MM-DD)"
+        type: string
+      seeds_only:
+        description: "Check the four agreed papers against the configured live scoring model"
+        type: boolean
+        default: false
+      domains:
+        description: "Optional comma-separated domain IDs for replay"
+        type: string
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: paper-data-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  edition:
+    defaults:
+      run:
+        shell: bash
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      PUBLISH: ${{ vars.PAPER_HUNT_V2_PUBLISH == 'true' && github.ref == 'refs/heads/main' }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+      LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+      LLM_MODEL_SCORING: ${{ secrets.LLM_MODEL_SCORING }}
+      LLM_MODEL_TRANSLATION: ${{ secrets.LLM_MODEL_TRANSLATION }}
+      BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+      FIGURE_BACKEND: yolo
+      FIGURE_MAX_COUNT: "2"
+
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+      - name: Install edition dependencies
+        run: |
+          if [[ "$PUBLISH" == "true" && "$SEEDS_ONLY" != "true" ]]; then
+            pip install -r pipeline/requirements.txt
+          else
+            pip install requests PyYAML pymupdf pillow
+          fi
+        env:
+          SEEDS_ONLY: ${{ inputs.seeds_only }}
+      - run: python -m unittest discover -s tests -q
+      - name: Find the last checkpoint for this branch
+        id: previous
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const {owner, repo} = context.repo;
+            for await (const page of github.paginate.iterator(github.rest.actions.listArtifactsForRepo,
+              {owner, repo, name: 'edition-state', per_page: 100})) {
+              const found = page.data.find(a => !a.expired &&
+                a.workflow_run?.head_branch === process.env.GITHUB_REF_NAME &&
+                a.workflow_run?.head_repository_id === a.workflow_run?.repository_id &&
+                a.workflow_run?.id !== context.runId);
+              if (found) {
+                core.setOutput('id', String(found.id));
+                core.setOutput('run', String(found.workflow_run.id));
+                break;
+              }
+            }
+      - if: steps.previous.outputs.id != ''
+        uses: actions/download-artifact@v4
+        with:
+          artifact-ids: ${{ steps.previous.outputs.id }}
+          run-id: ${{ steps.previous.outputs.run }}
+          github-token: ${{ github.token }}
+          path: tmp/restore
+          merge-multiple: true
+      - name: Restore state
+        env:
+          STATE_KEY: ${{ secrets.EDITION_STATE_KEY || secrets.LLM_API_KEY }}
+        run: |
+          mkdir -p tmp/edition-state
+          if test -f tmp/restore/state.enc; then
+            gpg --batch --pinentry-mode loopback --passphrase-fd 3 --decrypt --output tmp/checkpoint.tar.gz tmp/restore/state.enc 3<<<"$STATE_KEY"
+            tar xzf tmp/checkpoint.tar.gz -C tmp
+          fi
+      - name: Real-model seed regression
+        if: inputs.seeds_only
+        run: python -u pipeline/check_edition_seeds.py --state-dir tmp/edition-state
+      - name: Process edition
+        if: ${{ !inputs.seeds_only }}
+        timeout-minutes: 100
+        id: process
+        env:
+          ISSUE_DATE: ${{ inputs.date }}
+          ISSUE_DOMAINS: ${{ inputs.domains }}
+        run: |
+          args=()
+          if [[ -n "$ISSUE_DATE" ]]; then args+=(--date "$ISSUE_DATE" --refresh-arxiv); fi
+          if [[ -n "$ISSUE_DOMAINS" ]]; then args+=(--domains "$ISSUE_DOMAINS"); fi
+          if [[ "$PUBLISH" != "true" ]]; then
+            if [[ ! -f tmp/shadow/index.json ]]; then
+              mkdir -p tmp/shadow
+              cp -R web/public/data/. tmp/shadow/
+            fi
+            args+=(--output tmp/shadow --skip-figures)
+          fi
+          python -u pipeline/run_daily.py "${args[@]}"
+      - name: Save resumable checkpoint
+        if: always() && steps.process.outcome != 'skipped'
+        env:
+          STATE_KEY: ${{ secrets.EDITION_STATE_KEY || secrets.LLM_API_KEY }}
+        run: |
+          test -n "$STATE_KEY"
+          dirs=(edition-state)
+          if [[ -d tmp/shadow ]]; then dirs+=(shadow); fi
+          tar -C tmp --exclude='edition-state/pdf' -czf - "${dirs[@]}" | gpg --batch --pinentry-mode loopback --passphrase-fd 3 --symmetric --cipher-algo AES256 --output tmp/state.enc 3<<<"$STATE_KEY"
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.process.outcome != 'skipped' && hashFiles('tmp/state.enc') != ''
+        with:
+          name: edition-state
+          path: tmp/state.enc
+          retention-days: 90
+          overwrite: true
+      - name: Publish validated snapshot
+        if: success() && env.PUBLISH == 'true' && steps.process.outcome == 'success'
+        run: |
+          git add web/public/data
+          if git diff --cached --quiet; then exit 0; fi
+          git -c user.name=github-actions[bot] -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit -m "data: publish four-domain edition"
+          git pull --rebase origin main
+          git push origin HEAD:main

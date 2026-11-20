@@ -4,9 +4,11 @@ Paper Hunt ranks recent arXiv papers for configured research domains and serves 
 
 ## Architecture
 
-- `pipeline/`: Python pipeline. It fetches arXiv papers, assigns one deterministic primary domain, enriches and scores candidates, applies an LLM domain-fit gate, translates summaries to Chinese, extracts figures, and emits JSON.
-- `web/`: Next.js App Router frontend. It reads static JSON from `web/public/data` and renders the list/detail pages.
-- `.github/workflows/daily.yml`: daily GitHub Actions workflow. It runs the pipeline at `0 20 * * *` UTC, uploads images to Vercel Blob by default, commits JSON, and lets Vercel redeploy the `web/` project.
+- `pipeline/run_daily.py` builds a dated edition from arXiv and the **complete HF Daily Papers list**. It screens titles and abstracts, reviews all candidate/uncertain papers and every HF entry, then evaluates each domain independently. An arXiv screening rejection can be rescued by HF.
+- Papers qualify per domain at F ≥ 3/4 and M + E + U ≥ 4/6, with method and evidence each ≥ 1. Each chosen domain includes a reason and a source quote. Scores and assets are shared across sources. Historical v1 cards retain their original scoring scale.
+- `web/` reads immutable lists and shared details via the public index. A failed run leaves the last index in place.
+- `four-domain.yml` runs at 06:00 UTC (14:00 Shanghai) for the previous calendar date and revisits recent editions. Shadow runs write to an isolated archive and skip figure uploads. The existing daily workflow continues serving v1 until the repository variable `PAPER_HUNT_V2_PUBLISH=true` selects v2. Compare at least seven days and human-labelled holdouts before cutover. Once active, reverse that switch to resume the legacy writer; restore the previous data commit if rolling back published editions.
+- The encrypted Actions checkpoint includes source snapshots, per-paper review/screen caches, run manifests and the shadow index. A 90-day artifact is rolled forward after each run. `EDITION_STATE_KEY` can be set as a dedicated secret. Otherwise the workflow uses `LLM_API_KEY` for checkpoint encryption; changing that key requires migrating or expiring the previous checkpoint. Production public history is retained in Git.
 
 ## Environment
 
@@ -16,7 +18,7 @@ Required GitHub Actions secrets:
 | --- | --- |
 | `LLM_BASE_URL` | OpenAI-compatible base URL, without trailing `/chat/completions` |
 | `LLM_API_KEY` | LLM API key |
-| `LLM_MODEL_SCORING` | model used for domain-fit classification and five-dimension paper scoring |
+| `LLM_MODEL_SCORING` | model for title/abstract screening and independent four-domain review |
 | `LLM_MODEL_TRANSLATION` | model used for Chinese summaries |
 | `BLOB_READ_WRITE_TOKEN` | Vercel Blob token for figure uploads |
 
@@ -24,7 +26,7 @@ Non-secret runtime env:
 
 | Name | Default | Purpose |
 | --- | --- | --- |
-| `RUN_TZ` | `Asia/Tokyo` | timezone used to define "yesterday" |
+| `RUN_TZ` | `Asia/Tokyo` | legacy orchestrator timezone (v2 uses Asia/Shanghai) |
 | `FIGURE_BACKEND` | `yolo` in CI | `yolo` or `pymupdf` |
 | `FIGURE_MAX_COUNT` | `4` (`2` in CI) | max detail figures per paper; lower values reduce Blob advanced operations |
 | `STORAGE_BACKEND` | `blob` | `blob` or `repo` |
@@ -51,16 +53,16 @@ Run one domain for one day:
 
 ```bash
 STORAGE_BACKEND=repo FIGURE_BACKEND=pymupdf \
-python pipeline/run_daily.py --date 2026-06-12 --domains 3d-vision
+python pipeline/run_daily.py --date 2026-06-12 --domains agent-memory
 ```
 
-For a quick phase-1-only smoke test without LLM calls:
+For a real-source smoke test without LLM calls:
 
 ```bash
-python pipeline/run_daily.py --date 2026-06-12 --domains 3d-vision --skip-llm --limit 20
+python pipeline/run_daily.py --date 2026-06-12 --domains agent-memory --skip-llm --output tmp/source-check/data
 ```
 
-Force a fresh arXiv fetch while keeping downstream selection behavior unchanged:
+Force a fresh arXiv fetch for a specific edition:
 
 ```bash
 python pipeline/run_daily.py --date 2026-06-12 --refresh-arxiv
@@ -83,17 +85,17 @@ python pipeline/validate_domain.py robotics
 python pipeline/run_daily.py --domains robotics --date 2026-06-12
 ```
 
-`run_daily.py` automatically discovers all directories under `pipeline/domains/` except names starting with `_` or `.`.
+Domain definitions for the new edition live in `pipeline/domains/<domain>/review.yaml`. Each contains a scope, near negatives and recall phrases. The old selector and its validated data remain available via `pipeline/legacy_daily.py`. To run locally without changing public results, use `--output tmp/shadow/data --state-dir tmp/shadow/state`; use `--date` for an isolated replay.
 
-Every domain must define `selection_policy.yaml`. A paper qualifies through either a high-precision standalone phrase or all configured contextual signal groups, unless an exclusion matches. Policies can restrict standalone and grouped evidence to the title with `standalone_signal_scope` and `required_group_scope`. The selector compares every qualifying policy and assigns exactly one primary domain. The LLM then independently scores `domain_fit`; papers below the policy's `minimum_llm_domain_fit` are not published.
-
-Run the offline selection regression before changing domain boundaries:
+## Validation
 
 ```bash
+python -m unittest discover -s tests
 python pipeline/evaluate_selection_quality.py
+cd web && npm ci && npm run build
 ```
 
-The report compares the legacy filters and current selector on the user-approved gold set and checked-in historical output.
+To measure the new recommender, label sampled pairs as JSON objects in an array with `date`, `arxiv_id`, `domain`, boolean `relevant` and boolean `recommend`. Run `python pipeline/evaluate_editions.py labels.json tmp/edition-state/runs/*.json` with one complete manifest for each date. Use `--grid` on development dates only. Report precision, recall and denominators on untouched dates; include rejected candidates in sampling. Legacy gold regression results measure the legacy selector only. With configured scoring credentials run `python pipeline/check_edition_seeds.py` (or select `seeds_only` in Four-domain daily) to check four real papers against the new domain scopes.
 
 ## Vercel Deployment
 

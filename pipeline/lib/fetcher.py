@@ -231,7 +231,7 @@ def _parse_entry(entry: ET.Element) -> dict:
 
     # arxiv id：从 <id> 中取，形如 http://arxiv.org/abs/2604.12345v1
     id_url = _text(entry, "id")
-    arxiv_id_match = re.search(r"abs/([^/]+?)(v\d+)?$", id_url)
+    arxiv_id_match = re.search(r"abs/(.+?)(v\d+)?$", id_url)
     arxiv_id = arxiv_id_match.group(1) if arxiv_id_match else id_url
 
     title = _text(entry, "title").replace("\n", " ").strip()
@@ -284,6 +284,7 @@ def _parse_entry(entry: ET.Element) -> dict:
 
     return {
         "arxiv_id": arxiv_id,
+        "version": id_url.split("/abs/")[-1],
         "title": title,
         "abstract": abstract,
         "authors": authors,
