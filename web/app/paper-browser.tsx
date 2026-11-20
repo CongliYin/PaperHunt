@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { IndexData, PaperCard, PaperList } from "@/lib/data";
+import { paperScore } from "@/lib/paper-score";
 import { assetSrc } from "@/lib/assets";
 
 type Props = {
@@ -11,15 +12,15 @@ type Props = {
   initialList: PaperList | null;
   initialDomain: string;
   initialDates: string[];
-  initialSort: string;
 };
 
 type VisiblePaper = PaperCard & {
+  score: number;
   sourceDomain: string;
   sourceDate: string;
 };
 
-export function PaperBrowser({ index, initialList, initialDomain, initialDates, initialSort }: Props) {
+export function PaperBrowser({ index, initialList, initialDomain, initialDates }: Props) {
   const router = useRouter();
   const datePickerRef = useRef<HTMLDivElement>(null);
   const latest = [...index.entries].sort((a, b) => b.date.localeCompare(a.date))[0];
@@ -29,7 +30,6 @@ export function PaperBrowser({ index, initialList, initialDomain, initialDates, 
   );
   const [list, setList] = useState<PaperList | null>(initialList);
   const [visiblePapers, setVisiblePapers] = useState<VisiblePaper[]>(() => toVisiblePapers(initialList));
-  const [sortMode, setSortMode] = useState(initialSort || "score");
   const [dateMenuOpen, setDateMenuOpen] = useState(false);
 
   const dates = useMemo(
@@ -92,14 +92,14 @@ export function PaperBrowser({ index, initialList, initialDomain, initialDates, 
     setVisiblePapers(lists.flatMap(toVisiblePapers));
   }
 
-  function updateBrowserUrl(nextDomain: string, nextDates: string[], nextSort: string) {
-    router.replace(homeHref(nextDomain, nextDates, nextSort), { scroll: false });
+  function updateBrowserUrl(nextDomain: string, nextDates: string[]) {
+    router.replace(homeHref(nextDomain, nextDates), { scroll: false });
   }
 
   function applyDates(nextDates: string[]) {
     const normalizedDates = normalizeDates(nextDates);
     setSelectedDates(normalizedDates);
-    updateBrowserUrl(domain, normalizedDates, sortMode);
+    updateBrowserUrl(domain, normalizedDates);
     void loadDates(domain, normalizedDates);
   }
 
@@ -107,25 +107,15 @@ export function PaperBrowser({ index, initialList, initialDomain, initialDates, 
     applyDates(datesInRange(dates, fromDate, toDate));
   }
 
-  const papers = [...visiblePapers].sort((a, b) => {
-    if (a.schema === 2 && b.schema === 2) {
-      const difference = sortMode === "topic" ? b.fit - a.fit : b.value - a.value;
-      return difference || b.value - a.value || b.fit - a.fit || a.arxiv_id.localeCompare(b.arxiv_id);
-    }
-    if (a.schema === 2) return -1;
-    if (b.schema === 2) return 1;
-    if (sortMode === "topic") return b.scores.topic_relevance - a.scores.topic_relevance;
-    if (sortMode === "llm") return b.scores.llm_assessment - a.scores.llm_assessment;
-    return b.total_score - a.total_score;
-  });
-  const hasLegacyPapers = papers.some(paper => paper.schema !== 2);
-  const hasEditionPapers = papers.some(paper => paper.schema === 2);
+  const papers = [...visiblePapers].sort((a, b) =>
+    b.score - a.score || a.arxiv_id.localeCompare(b.arxiv_id)
+  );
   const latestDate = dates[0] || "";
   const oldestDate = dates[dates.length - 1] || "";
   const dateOptions = useMemo(() => normalizeDates([...dates, ...selectedDates]).sort((a, b) => a.localeCompare(b)), [dates, selectedDates]);
   const selectedOldestDate = selectedDates[selectedDates.length - 1] || oldestDate;
   const selectedLatestDate = selectedDates[0] || latestDate;
-  const returnHref = homeHref(domain, selectedDates, sortMode);
+  const returnHref = homeHref(domain, selectedDates);
 
   return (
     <>
@@ -150,7 +140,7 @@ export function PaperBrowser({ index, initialList, initialDomain, initialDates, 
                 const nextDomain = event.target.value;
                 setDomain(nextDomain);
                 setDateMenuOpen(false);
-                updateBrowserUrl(nextDomain, selectedDates, sortMode);
+                updateBrowserUrl(nextDomain, selectedDates);
                 void loadDates(nextDomain, selectedDates);
               }}
             >
@@ -218,24 +208,6 @@ export function PaperBrowser({ index, initialList, initialDomain, initialDates, 
               ) : null}
             </div>
           </div>
-          <label className="filter-field">
-            <span>排序</span>
-            <select
-              className="select"
-              value={sortMode}
-              onChange={(event) => {
-                const nextSort = event.target.value;
-                setSortMode(nextSort);
-                updateBrowserUrl(domain, selectedDates, nextSort);
-              }}
-            >
-              <option value="score">{hasEditionPapers ? (hasLegacyPapers ? "阅读价值 / 历史综合分" : "阅读价值") : "历史综合分"}</option>
-              {(hasLegacyPapers || sortMode === "llm") && (
-                <option value="llm">{hasEditionPapers ? (hasLegacyPapers ? "阅读价值 / 历史模型评分" : "阅读价值") : "历史模型评分"}</option>
-              )}
-              <option value="topic">方向匹配</option>
-            </select>
-          </label>
         </div>
       </header>
 
@@ -252,7 +224,7 @@ export function PaperBrowser({ index, initialList, initialDomain, initialDates, 
                 <div className="row-meta">
                   <span>{paper.arxiv_id}</span>
                   <span>{paper.sourceDate}</span>
-                  <span>{paper.schema === 2 ? `阅读价值 ${paper.value}/6 · 方向匹配 ${paper.fit}/4` : `历史评分 ${Math.round(paper.total_score * 100)}`}</span>
+                  <span>评分 {paper.score}/100</span>
                 </div>
                 <Link className="paper-title-link" href={detailHref(paper, returnHref)}>
                   <h2 className="paper-title-zh">{paper.title_zh || paper.title}</h2>
@@ -285,6 +257,7 @@ function toVisiblePapers(list: PaperList | null): VisiblePaper[] {
     const [sourceDomain, sourceDate] = paper.detail_file.split("/");
     return {
       ...paper,
+      score: paperScore(paper),
       sourceDomain: paper.schema === 2 ? paper.domain : sourceDomain || list.domain,
       sourceDate: paper.schema === 2 ? paper.edition : sourceDate || list.date
     };
@@ -313,7 +286,7 @@ function formatDateLabel(date: string): string {
   return date;
 }
 
-function homeHref(domain: string, dates: string[], sortMode: string): string {
+function homeHref(domain: string, dates: string[]): string {
   const normalizedDates = normalizeDates(dates);
   const params = new URLSearchParams();
   if (domain) params.set("domain", domain);
@@ -321,7 +294,6 @@ function homeHref(domain: string, dates: string[], sortMode: string): string {
     params.set("from", normalizedDates[normalizedDates.length - 1]);
     params.set("to", normalizedDates[0]);
   }
-  if (sortMode && sortMode !== "score") params.set("sort", sortMode);
   const query = params.toString();
   return query ? `/?${query}` : "/";
 }

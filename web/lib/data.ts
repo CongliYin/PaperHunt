@@ -1,3 +1,4 @@
+import { paperScore } from "./paper-score";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -44,6 +45,7 @@ export type PaperCard = CardFields & ({
 
 type Review = { F: number; M: number; E: number; U: number; reason: string; quote: string };
 export type PaperDetail = {
+  score?: number;
   arxiv_id: string;
   title: string;
   title_zh: string;
@@ -109,6 +111,7 @@ export function readDetail(domain: string, date: string, arxivId: string): Paper
       const events = readJson<Record<string, string[]>>(index.source_events, {});
       detail.hf_dates = events[arxivId] || [];
     }
+    if (detail) detail.score = paperScore(card);
     return detail;
   }
   // Legacy bookmarks survive a historical replay that changes the day's shortlist.

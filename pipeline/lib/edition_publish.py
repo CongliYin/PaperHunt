@@ -143,7 +143,7 @@ class EditionPublisher:
                 )
                 cards[d].append(card)
         for d, items in cards.items():
-            items.sort(key=lambda c: (-c["value"], -c["fit"], c["arxiv_id"]))
+            items.sort(key=lambda c: (-c["value"], c["arxiv_id"]))
             payload = {
                 "domain": d,
                 "date": day,

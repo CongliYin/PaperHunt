@@ -22,13 +22,6 @@ export default async function DetailPage({ params }: Params) {
   const paper = readDetail(domain, date, arxivId);
   if (!paper) notFound();
 
-  const dims = paper.schema === 2 ? [] : [
-    ["Novelty", paper.llm_assessment.novelty],
-    ["Problem", paper.llm_assessment.problem_significance],
-    ["Impact", paper.llm_assessment.potential_impact],
-    ["Paradigm", paper.llm_assessment.paradigm_shift],
-    ["Lasting", paper.llm_assessment.lasting_value]
-  ] as const;
   const [leadFigure, ...otherFigures] = paper.figures;
   const authorAffiliations = paper.author_affiliations || [];
 
@@ -49,7 +42,8 @@ export default async function DetailPage({ params }: Params) {
           <span>{domain}</span>
           <span>{date}</span>
           <span>{paper.arxiv_id}</span>
-          <span>{paper.schema === 2 ? (paper.source === "hf" ? "HF 补录" : "arXiv 主筛") : `历史评分 ${Math.round((paper.scores.llm_assessment || 0) * 100)}`}</span>
+          {paper.score !== undefined && <span>评分 {paper.score}/100</span>}
+          {paper.schema === 2 && <span>{paper.source === "hf" ? "HF 补录" : "arXiv 主筛"}</span>}
           {paper.schema === 2 && <span>原文发表于 {paper.published_at.slice(0, 10)}</span>}
           {paper.schema === 2 && !!paper.hf_dates?.length && <span>HF 收录 {paper.hf_dates.join("、")}</span>}
         </div>
@@ -149,30 +143,11 @@ export default async function DetailPage({ params }: Params) {
             {Object.entries(paper.review_domains).map(([name, r]) => (
               <div key={name}>
                 <h3>{name}</h3>
-                <p>方向 {r.F}/4 · 方法 {r.M}/2 · 论据 {r.E}/2 · 启发 {r.U}/2</p>
                 <p>{r.reason}</p><blockquote>{r.quote}</blockquote>
               </div>
             ))}
           </section> : <section className="section score-panel">
-            <div className="score-head">
-              <div>
-                <h2>LLM 评估</h2>
-                <p>Novelty, impact and topic fit</p>
-              </div>
-              <strong>{Math.round((paper.scores.llm_assessment || 0) * 100)}</strong>
-            </div>
-            {dims.map(([label, raw]) => {
-              const value = typeof raw === "number" ? raw : 0;
-              return (
-                <div className="bar-row" key={label}>
-                  <span>{label}</span>
-                  <div className="bar">
-                    <span style={{ width: `${Math.round(value * 100)}%` }} />
-                  </div>
-                  <strong>{Math.round(value * 100)}</strong>
-                </div>
-              );
-            })}
+            <h2>论文评语</h2>
             <p className="comment">{String(paper.llm_assessment.comment_zh || paper.llm_assessment.comment || "")}</p>
           </section>}
 

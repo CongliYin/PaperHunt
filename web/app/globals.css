@@ -555,8 +555,7 @@ select {
   padding: 0;
 }
 
-.section-heading,
-.score-head {
+.section-heading {
   display: flex;
   justify-content: space-between;
   gap: 14px;
@@ -565,8 +564,7 @@ select {
 }
 
 .section h2,
-.section-heading h2,
-.score-head h2 {
+.section-heading h2 {
   margin: 0;
   color: var(--ink);
   font-size: 16px;
@@ -574,8 +572,7 @@ select {
   letter-spacing: 0;
 }
 
-.section-heading span,
-.score-head p {
+.section-heading span {
   margin: 0;
   color: var(--muted-2);
   font-size: 12px;
@@ -670,45 +667,6 @@ select {
   border: 1px solid var(--line);
   border-radius: 14px;
   background: var(--surface);
-}
-
-.score-head strong {
-  color: var(--ink);
-  font-size: 42px;
-  line-height: 0.9;
-  font-weight: 750;
-  font-variant-numeric: tabular-nums;
-}
-
-.bar-row {
-  display: grid;
-  grid-template-columns: 82px 1fr 34px;
-  gap: 10px;
-  align-items: center;
-  margin: 12px 0;
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.bar {
-  height: 7px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: var(--line-soft);
-}
-
-.bar span {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
-  background: var(--accent);
-}
-
-.bar-row strong {
-  color: var(--ink);
-  text-align: right;
-  font-variant-numeric: tabular-nums;
 }
 
 .comment {

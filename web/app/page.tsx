@@ -31,7 +31,6 @@ export default async function HomePage({ searchParams }: PageProps) {
     .filter((entry): entry is (typeof index.entries)[number] => Boolean(entry));
   const initialLists = initialEntries.map((entry) => readList(entry.file));
   const initialList = combineLists(initialLists);
-  const initialSort = validSort(valueOf(query.sort)) || "score";
 
   return (
     <main className="shell">
@@ -40,7 +39,6 @@ export default async function HomePage({ searchParams }: PageProps) {
         initialList={initialList}
         initialDomain={initialDomain}
         initialDates={initialDates}
-        initialSort={initialSort}
       />
     </main>
   );
@@ -48,10 +46,6 @@ export default async function HomePage({ searchParams }: PageProps) {
 
 function valueOf(value: string | string[] | undefined): string {
   return Array.isArray(value) ? value[0] || "" : value || "";
-}
-
-function validSort(value: string): string {
-  return ["score", "llm", "topic"].includes(value) ? value : "";
 }
 
 function datesInRange(dates: string[], fromDate: string, toDate: string): string[] {
