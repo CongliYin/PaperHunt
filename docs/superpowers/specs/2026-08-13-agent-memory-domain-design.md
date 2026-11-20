@@ -1,5 +1,7 @@
 # Agent Memory Domain Design
 
+> Historical design (August 2026). For the four-domain pipeline, commands and rollout status, see the [current README](../../../README.md).
+
 ## Goal
 
 Add `agent-memory` as a first-class PaperHunt domain for papers whose primary contribution is memory for agents. The domain must cover memory construction, use, evolution, and evaluation without drifting into generic retrieval, long-context modeling, model memorization, or security research. Existing published papers must continue to have exactly one primary domain, and historical Agent Memory papers currently under Agent Harness Evolution must be migrated and re-evaluated with the new rubric.

@@ -1,5 +1,7 @@
 # Persistent arXiv Raw Cache Design
 
+> Historical design (August 2026). For the four-domain pipeline, commands and rollout status, see the [current README](../../../README.md).
+
 Date: 2026-08-11
 
 ## Context

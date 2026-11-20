@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""arXiv paper ranker v2.
+"""Legacy single-domain arXiv ranking stages used by legacy_daily.py.
 
 Two-phase pipeline:
   Phase 1 (--phase1-only):
@@ -10,8 +10,8 @@ Two-phase pipeline:
     Merge LLM scores → Final HTML report → Cleanup intermediates
 
 Usage:
-  python rank_pipeline.py --phase1-only --domain 3d-vision --start-date 2026-05-19 --end-date 2026-05-22 --work-dir /path/to/project
-  python rank_pipeline.py --finalize --domain 3d-vision --phase1-json reports/.../tmp/phase1.json --llm-scores reports/.../tmp/llm_scores.json --work-dir /path/to/project
+  python rank_pipeline.py --phase1-only --domain agent-memory --start-date 2026-05-19 --end-date 2026-05-22 --work-dir /path/to/project
+  python rank_pipeline.py --finalize --domain agent-memory --phase1-json reports/.../tmp/phase1.json --llm-scores reports/.../tmp/llm_scores.json --work-dir /path/to/project
 """
 
 from __future__ import annotations

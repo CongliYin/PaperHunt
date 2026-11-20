@@ -126,15 +126,24 @@ def run(args):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--date", type=date.fromisoformat)
-    parser.add_argument("--domains")
+    parser.add_argument(
+        "--date", type=date.fromisoformat,
+        help="Replay one issue (YYYY-MM-DD). By default, catch up through yesterday in Shanghai.",
+    )
+    parser.add_argument(
+        "--domains",
+        help="Comma-separated domain IDs to publish. Retrieval and review use all configured domains.",
+    )
     parser.add_argument("--domains-dir", type=Path, default=ROOT / "pipeline/domains")
     parser.add_argument("--state-dir", type=Path, default=ROOT / "tmp/edition-state")
     parser.add_argument("--output", type=Path, default=ROOT / "web/public/data")
     parser.add_argument(
         "--arxiv-raw-cache-dir", type=Path, default=ROOT / "tmp/arxiv-raw"
     )
-    parser.add_argument("--refresh-arxiv", action="store_true")
+    parser.add_argument(
+        "--refresh-arxiv", action="store_true",
+        help="Refetch arXiv for a dated replay. Scheduled runs always refresh.",
+    )
     parser.add_argument(
         "--skip-llm",
         action="store_true",

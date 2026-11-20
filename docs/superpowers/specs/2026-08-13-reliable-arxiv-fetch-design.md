@@ -1,5 +1,7 @@
 # Reliable arXiv Fetch Design
 
+> Historical design (August 2026). For the four-domain pipeline, commands and rollout status, see the [current README](../../../README.md).
+
 ## Goal
 
 Make scheduled and manual paper collection reliable when arXiv throttles GitHub-hosted runners, while preserving reusable per-date, per-category raw caches.

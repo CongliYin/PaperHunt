@@ -1,5 +1,7 @@
 # Paper Selection Quality Design
 
+> Historical design (August 2026). For the four-domain pipeline, commands and rollout status, see the [current README](../../../README.md).
+
 ## Context
 
 PaperHunt currently treats each research domain as a broad arXiv category union followed by an OR-based keyword filter. A single phrase can admit a paper and produce a high topic score without the surrounding domain context. Every filtered paper is then LLM-scored and published because all three domains use `default_top_pct: 1.0` and there is no final relevance threshold.

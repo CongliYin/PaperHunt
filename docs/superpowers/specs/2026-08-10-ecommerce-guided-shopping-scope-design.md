@@ -1,5 +1,7 @@
 # E-commerce Guided-Shopping Scope Design
 
+> Historical design (August 2026). For the four-domain pipeline, commands and rollout status, see the [current README](../../../README.md).
+
 ## Context
 
 The current E-commerce Agent domain has four independent trunks: product search, recommendation, product/catalog understanding, and shopping Agents. The user has narrowed the intended collection to two customer-facing capabilities:

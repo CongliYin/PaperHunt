@@ -118,6 +118,8 @@ export function PaperBrowser({ index, initialList, initialDomain, initialDates, 
     if (sortMode === "llm") return b.scores.llm_assessment - a.scores.llm_assessment;
     return b.total_score - a.total_score;
   });
+  const hasLegacyPapers = papers.some(paper => paper.schema !== 2);
+  const hasEditionPapers = papers.some(paper => paper.schema === 2);
   const latestDate = dates[0] || "";
   const oldestDate = dates[dates.length - 1] || "";
   const dateOptions = useMemo(() => normalizeDates([...dates, ...selectedDates]).sort((a, b) => a.localeCompare(b)), [dates, selectedDates]);
@@ -131,7 +133,7 @@ export function PaperBrowser({ index, initialList, initialDomain, initialDates, 
         <div className="masthead">
           <p className="eyebrow">AI paper briefing</p>
           <h1 className="brand">Paper Hunt</h1>
-          <p className="subtitle">每日筛选值得追踪的论文，用更少噪音发现更高信号。</p>
+          <p className="subtitle">每日追踪 Agent 演化、记忆、电商交互导购与多模态 Agent 研究。</p>
           <div className="meta-strip">
             <span>{list?.display_name || "No domain"}</span>
             <span>{dateSummary || "No date"}</span>
@@ -217,7 +219,7 @@ export function PaperBrowser({ index, initialList, initialDomain, initialDates, 
             </div>
           </div>
           <label className="filter-field">
-            <span>Sort</span>
+            <span>排序</span>
             <select
               className="select"
               value={sortMode}
@@ -227,9 +229,11 @@ export function PaperBrowser({ index, initialList, initialDomain, initialDates, 
                 updateBrowserUrl(domain, selectedDates, nextSort);
               }}
             >
-              <option value="score">Score</option>
-              <option value="llm">AI review</option>
-              <option value="topic">Topic match</option>
+              <option value="score">{hasEditionPapers ? (hasLegacyPapers ? "阅读价值 / 历史综合分" : "阅读价值") : "历史综合分"}</option>
+              {(hasLegacyPapers || sortMode === "llm") && (
+                <option value="llm">{hasEditionPapers ? (hasLegacyPapers ? "阅读价值 / 历史模型评分" : "阅读价值") : "历史模型评分"}</option>
+              )}
+              <option value="topic">方向匹配</option>
             </select>
           </label>
         </div>

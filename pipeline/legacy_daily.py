@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Daily orchestrator for all configured paper-hunt domains."""
+"""Legacy publisher: run the single-domain ranking stages once per configured domain."""
 
 from __future__ import annotations
 
