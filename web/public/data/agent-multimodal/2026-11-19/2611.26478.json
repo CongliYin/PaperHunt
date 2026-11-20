@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2611.26478",
+  "title": "SHUSH: Emission-Aware Reward Design for Proactive Video Assistants",
+  "title_zh": "SHUSH：面向主动视频助手的回应感知奖励设计",
+  "authors": [
+    "Shawn Liang",
+    "Soamar Homsi",
+    "Gourav Datta"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-19T17:38:18Z",
+  "abs_url": "https://arxiv.org/abs/2611.26478v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.26478",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Proactive video assistants must decide not only what to say, but also when to speak. Existing reinforcement-learning objectives can reward timely, correct responses without accounting for response volume, thereby encouraging unnecessary or repeated emissions. We identify this failure mode in MMDuet2, whose proactive area-under-the-curve (PAUC) reward promotes timely responses but does not price the number of emissions. We show analytically that this makes additional responses weakly penalized or effectively free, systematically encouraging over-emission. We then propose an emission-aware F1 reward for interval-valued annotations, using exclusive span--emission matching to price false emissions and missed spans. Under MMDuet2's training recipe, our policy on the visual subset of OmniPro replies 2.5x less often than MMDuet2 while raising timing F1 from 0.259 to 0.396 and content-aware F1 from 0.103 to 0.154; a more conservative variant cuts replies by 82.5% and raises precision from 0.161 to 0.418. On ProactiveVideoQA, the same reward adds replies where the baseline is nearly silent, and PAUC ranks a heavily over-emitting policy second despite near-last F1, because it is insensitive to response count. Our results indicate that proactive assistants should be trained and evaluated with objectives that price emissions.",
+  "abstract_zh": "主动视频助手不仅要决定说什么，还要决定何时开口。现有强化学习目标可以奖励及时、正确的回应，却未必约束回应次数，从而鼓励不必要或重复的发言。论文以 MMDuet2 为例，从理论上说明其主动响应曲线下面积（PAUC）奖励对额外回应的惩罚很弱，甚至几乎没有惩罚。为此，作者提出适用于时间区间标注的回应感知 F1 奖励，通过将标注区间与回应进行排他性匹配，同时惩罚多余回应和漏答。沿用 MMDuet2 的训练方案，新策略在 OmniPro 视觉子集上的回应次数降至基线的约 40%，时机 F1 从 0.259 升至 0.396，内容感知 F1 从 0.103 升至 0.154。更保守的变体将回应次数减少 82.5%，同时将精确率从 0.161 提升至 0.418。在 ProactiveVideoQA 上，同一奖励反而让几乎不回应的基线策略增加了回应。实验还发现，PAUC 将一个过度回应的策略排在第二，尽管其 F1 接近垫底。结果表明，主动视频助手的训练与评估都应显式考虑多余回应和漏答。",
+  "key_points_zh": [
+    "理论分析表明，MMDuet2 的 PAUC 奖励对额外回应惩罚很弱，容易诱发重复或不必要的发言。",
+    "SHUSH 将每条回应与至多一个标注区间匹配，每个区间也至多匹配一条回应，使多余回应和漏答都拉低 F1 奖励。",
+    "在 OmniPro 视觉子集上，回应次数降至基线的约 40%，时机 F1 从 0.259 升至 0.396，内容感知 F1 从 0.103 升至 0.154。",
+    "在 ProactiveVideoQA 上，新奖励为几乎沉默的基线增加了回应，说明它并非一味压低发言频率。",
+    "PAUC 将一个过度回应、F1 接近垫底的策略排在第二，暴露了它作为评估指标对回应次数不敏感的问题。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.77,
+    "problem_significance": 0.88,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.69,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8099999999999999,
+    "comment": "SHUSH exposes a reward loophole in proactive video assistants and offers reusable training and evaluation criteria that penalize both needless replies and missed opportunities.",
+    "comment_zh": "SHUSH 揭示了主动视频助手的奖励漏洞，并提供了可复用的训练与评测准则，同时惩罚多余回复和错过的回应时机。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8099999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.26478/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.972
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.26478/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.719
+    }
+  ]
+}

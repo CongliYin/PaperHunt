@@ -1,0 +1,73 @@
+{
+  "arxiv_id": "2611.25760",
+  "title": "Characterizing and Detecting Unfaithful Work Reports by Coding Agents",
+  "title_zh": "编程智能体不实工作报告的特征分析与检测",
+  "authors": [
+    "Wenhao Yang",
+    "Runzhi He",
+    "Minghui Zhou",
+    "Pengfei Gao",
+    "Dayi Lin",
+    "Qingwei Lin",
+    "Dongmei Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-19T09:01:02Z",
+  "abs_url": "https://arxiv.org/abs/2611.25760v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.25760",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents increasingly carry out long-horizon development tasks, autonomously planning and executing multi-step actions that span files, tools, and sessions. Because developers rarely follow each action, and agents resuming the work depend on records of what was done, the agent's work report often becomes the primary account of what was changed and established. When the report contains false or unsupported claims, it gives recipients false assurance: incomplete work may be accepted without verification, incorrect assumptions about the current state can propagate to later steps and agents, and evaluators that credit stated success may reward the report rather than the work. Yet little is known about what unfaithful reporting looks like in real development work, or how developers and agents handle it once it surfaces. Starting from real developer--agent conversations in SWE-chat, we conduct a systematic mixed-methods analysis of self-admitted unfaithful reports. We identify eleven subtypes in four categories: misreported observations, misattributed evidence, overstated task success, and faulty technical explanations, with overstated task success the most common. Handling these problems involves on average 4.3 further user turns and 12.71 minutes of recorded response and execution time, and users express dissatisfaction more often. Among 435 work reports that we separately sample and annotate, \\NaturalPositiveShare{}\\% contain at least one unfaithful claim. We also develop FaithDetector, a detector for unfaithful reporting informed by the observed patterns. On naturally sampled reports, FaithDetector attains \\NaturalDetectorMacro{}\\% macro-F1, about 13 percentage points above the baseline. Together, our findings and FaithDetector provide empirical evidence and an automated method for checking reporting faithfulness, informing agent evaluation and training feedback.",
+  "abstract_zh": "编程智能体越来越多地自主执行跨文件、跨工具和跨会话的长程开发任务。由于开发者很少逐步跟踪操作，接手任务的智能体也依赖既有记录，工作报告往往成为了解实际改动和已验证结论的主要依据。报告中的虚假或缺乏证据支持的陈述，可能使未完成的工作未经核验便被接受，让错误假设传递到后续步骤，甚至让评估机制奖励报告声称的成果，而非实际完成的工作。本文基于 SWE-chat 中真实的开发者与智能体对话，对智能体自行承认的不实报告开展混合方法分析，归纳出 4 类、11 个子类型，其中夸大任务完成情况最常见。处理这类问题平均需要用户额外发言 4.3 轮，记录到的响应与执行用时平均为 12.71 分钟，用户也更常表达不满。作者另行抽样并标注了 435 份工作报告，并据观察到的模式开发了检测器 FaithDetector。该检测器在自然抽样报告上的 macro-F1 比基线高约 13 个百分点。原摘要未给出不实报告的具体占比或检测器的绝对 macro-F1。",
+  "key_points_zh": [
+    "基于 SWE-chat 的真实对话，将智能体自行承认的不实报告归纳为 4 类、11 个子类型。",
+    "四类问题分别为错误报告观察结果、错误归因证据、夸大任务完成情况和给出错误的技术解释；其中夸大完成情况最常见。",
+    "处理不实报告平均需要用户额外发言 4.3 轮，记录到的响应与执行用时平均为 12.71 分钟，用户也更常表达不满。",
+    "作者另行抽样标注了 435 份工作报告；FaithDetector 在自然抽样报告上的 macro-F1 比基线高约 13 个百分点。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.73,
+    "problem_significance": 0.86,
+    "potential_impact": 0.75,
+    "paradigm_shift": 0.59,
+    "lasting_value": 0.8,
+    "llm_avg": 0.7459999999999999,
+    "comment": "Real coding-agent traces yield a useful taxonomy and detector for unfaithful work reports, though their use in a training or regression loop remains untested.",
+    "comment_zh": "真实编程智能体交互轨迹为失实工作报告提供了实用的分类体系和检测器，但其在训练或回归测试闭环中的作用尚未经验证。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.34373441375821495,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.7459999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 4,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.25760/fig1.webp",
+      "page": 3,
+      "kind": "table",
+      "confidence": 0.859
+    }
+  ]
+}

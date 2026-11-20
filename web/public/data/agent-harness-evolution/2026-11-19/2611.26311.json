@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2611.26311",
+  "title": "SWE-Recreation: Benchmarking Coding Agents for Software Recreation",
+  "title_zh": "SWE-Recreation：面向软件复刻的编程智能体基准",
+  "authors": [
+    "Zhiyao Xu",
+    "Zhanjie Ding",
+    "Hongyao Yu",
+    "Jingyu Xiao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-19T16:00:09Z",
+  "abs_url": "https://arxiv.org/abs/2611.26311v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.26311",
+  "links": {
+    "github": "https://github.com/nologistic/recreateanything.",
+    "project_page": null
+  },
+  "abstract_en": "Agents increasingly operate software and even write it, yet they are almost always told what to achieve: given a goal, a mock-up, or a demonstration. We ask whether an agent can instead understand an unfamiliar product by using it, and then rebuild it. The agent sees only rendered pixels and acts through pointer and keyboard, without access to the DOM, source, logs, or back-end. Within this interface, it explores, generates a replica, and checks its own work before evaluation. We present SWE-Recreation, a benchmark of 54 real applications (28 websites and 26 Android apps) with 1,446 hidden requirements describing multistep, stateful workflows and explicit exclusions for behavior outside the reconstruction scope. A fixed judge grades workflows with pixel evidence; a separate post-hoc judge estimates exploration coverage. Across 54 evaluated applications, five frontier systems reach at most 0.530 weighted fidelity and 22.9% fully reproduced requirements under application-equal averaging. These descriptive results expose both exploration-evidence gaps and implementation shortfalls. Code and data are available at https://github.com/nologistic/recreateanything.",
+  "abstract_zh": "现有编程智能体通常依据明确目标、界面原型或操作演示完成任务。本文考察另一种能力：智能体能否仅通过使用一款陌生产品来理解它，并将其复刻？智能体只能看到渲染后的界面像素，通过指针和键盘操作，无法访问 DOM、源代码、日志或后端。它在这一限制下探索应用、构建复刻版本，并在正式评测前自行验证。SWE-Recreation 收录 54 款真实应用（28 个网站和 26 款 Android 应用），包含 1,446 项对智能体隐藏的需求，覆盖多步骤、有状态的工作流，并明确标注不在复刻范围内的行为。评测使用固定的评审器依据像素证据为工作流打分，并由独立的事后评审器估计探索覆盖率。按应用等权平均，五个前沿系统的加权保真度最高为 0.530，需求完全复现率最高为 22.9%。结果显示，智能体既未在探索中收集到充分的行为证据，也未能完整实现所需功能。代码与数据已公开。",
+  "key_points_zh": [
+    "不同于按规格写代码，任务要求智能体先使用陌生应用，推断其行为，再构建并自测复刻版本。",
+    "智能体只接收界面像素，通过指针和键盘交互，不能读取 DOM、源代码、日志或后端。",
+    "基准覆盖 54 款真实应用与 1,446 项隐藏需求，重点检验多步骤操作及其状态变化，而非仅比较静态界面。",
+    "评测将工作流复现质量与探索覆盖率分开衡量；按应用等权平均，五个系统的加权保真度最高为 0.530，需求完全复现率最高为 22.9%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.85,
+    "novelty": 0.8,
+    "problem_significance": 0.76,
+    "potential_impact": 0.77,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.81,
+    "llm_avg": 0.76,
+    "comment": "This coding-agent benchmark tests whether agents can turn GUI exploration into working software, using hidden stateful requirements to distinguish behavioral fidelity from visual resemblance.",
+    "comment_zh": "该编程智能体基准检验智能体能否将界面探索转化为可运行的软件，并用隐藏的有状态需求区分行为复现与视觉相似。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.76,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/nologistic/recreateanything.",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.26311/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.26311/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

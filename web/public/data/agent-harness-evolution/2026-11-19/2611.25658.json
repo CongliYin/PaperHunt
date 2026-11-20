@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2611.25658",
+  "title": "SiliconGym: A Versatile Reinforcement Learning Environment for Agentic EDA",
+  "title_zh": "SiliconGym：面向 EDA 智能体的通用强化学习环境",
+  "authors": [
+    "Hejia Zhang",
+    "Sheng Lu",
+    "Yitong Ma",
+    "Zhongming Yu",
+    "Zhijing Wu",
+    "Wentao Ni",
+    "Chia-Tung Ho",
+    "Jishen Zhao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-19T07:40:52Z",
+  "abs_url": "https://arxiv.org/abs/2611.25658v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.25658",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Reinforcement learning (RL) with electronic design automation (EDA) feedback is advancing large language models for hardware design and verification. Extending these gains to hardware-engineering agents requires environments that span tasks, preserve state across tool calls, and support large hierarchies alongside parallel rollouts. We present SiliconGym, the first versatile, cross-task and cross-toolchain RL environment for hardware design and verification. By decoupling versioned workspaces, budgeted execution, and acceptance-gated scoring, SiliconGym scales from module-level RTL, testbench, and PPA tasks to multi-round repository repair and full-hierarchy SoC flows. Streaming dispatch overlaps tool checks with generation, finishing a 256-answer RL batch 21.9% faster than native ChipSeek. Using interchangeable open-source and commercial backends, we show that open-source-trained functional correctness transfers cleanly to commercial simulation, while paired netlist evaluation reveals when open-source PPA gains survive commercial synthesis.",
+  "abstract_zh": "电子设计自动化（EDA）工具提供的反馈，正推动大语言模型在硬件设计与验证中的应用。要将这些成果扩展到能够多轮操作的硬件工程智能体，强化学习（RL）环境需要覆盖多类任务、在工具调用之间保留状态，并同时支持大规模设计层次与并行采样。论文提出 SiliconGym，一个面向硬件设计与验证、支持跨任务和跨工具链的通用 RL 环境。它将版本化工作区、带预算限制的执行和以验收为前提的评分相互解耦，覆盖从模块级寄存器传输级（RTL）设计、测试平台（testbench）和功耗、性能与面积（PPA）任务，到多轮代码仓库修复和完整层次的片上系统（SoC）设计流程。流式调度让工具检查与模型生成并行进行，与原生 ChipSeek 相比，完成包含 256 个回答的 RL 批次所需时间缩短了 21.9%。借助可切换的开源与商业后端，实验表明，用开源工具训练得到的功能正确性可以迁移到商业仿真；配对网表评估则揭示了哪些开源工具下的 PPA 改进能在商业综合后保留。",
+  "key_points_zh": [
+    "版本化工作区在多轮工具调用间保留状态；执行预算与验收评分独立配置，便于复用同一环境处理不同任务。",
+    "任务范围从模块级 RTL、testbench 和 PPA 评估延伸到多轮仓库修复及完整层次的 SoC 流程。",
+    "流式调度让工具检查与模型生成重叠，较原生 ChipSeek 将 256 个回答的 RL 批次耗时缩短 21.9%。",
+    "开源工具训练得到的功能正确性可迁移到商业仿真；PPA 收益能否延续到商业综合，则通过配对网表评估判定。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.95,
+    "novelty": 0.81,
+    "problem_significance": 0.9,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.76,
+    "lasting_value": 0.88,
+    "llm_avg": 0.844,
+    "comment": "Versioned workspaces, budgeted execution, and acceptance-gated scoring make SiliconGym a reusable agent RL environment, with cross-toolchain checks that expose when optimization gains fail to transfer.",
+    "comment_zh": "版本化工作区、受预算约束的执行和基于验收的评分使 SiliconGym 成为可复用的智能体强化学习环境，跨工具链检验还能揭示哪些优化收益无法迁移。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.2,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.844,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.25658/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.97
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.25658/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.965
+    }
+  ]
+}

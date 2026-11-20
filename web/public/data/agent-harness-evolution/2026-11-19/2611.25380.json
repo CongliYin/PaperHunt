@@ -1,0 +1,68 @@
+{
+  "arxiv_id": "2611.25380",
+  "title": "Beyond Weight Updates: Evolving Agent Harnesses for Domain Specialization",
+  "title_zh": "Beyond Weight Updates: Evolving Agent Harnesses for Domain Specialization",
+  "authors": [
+    "BoHao Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-19T02:20:06Z",
+  "abs_url": "https://arxiv.org/abs/2611.25380v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.25380",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Domain specialization of LLM agents is usually framed as a weight-update problem: collect trajectories, run reinforcement learning (RL) or supervised fine-tuning (SFT), and deploy a new checkpoint. We study a complementary axis: evolving the \\textbf{agent harness}---the system prompt, tool schemas, skill library, and planning scaffolding---while keeping the policy frozen. We cast harness evolution as an RL-style outer loop and instantiate it with GEPA, a reflective evolutionary optimizer. The resulting harness adapters require no GPU training, are loadable per vertical domain, and compose with weight-based RL. Experiments with Codev, a Claude Code-style coding agent, on SWE-bench Verified, OfficeBench, and Terminal-Bench show a consistent pattern: weight updates give the strongest single-path gains, harness evolution recovers most of those gains at a small fraction of the compute, and combining both paths is best overall. We also analyze a failure mode of SFT-based specialization---shortened reasoning chains and increased truncation---and argue that harness adapters avoid it by construction. Our results position harness evolution as a practical, non-destructive complement to weight updates for vertical agents.",
+  "abstract_zh": "",
+  "key_points_zh": [],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.78,
+    "problem_significance": 0.89,
+    "potential_impact": 0.86,
+    "paradigm_shift": 0.79,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8320000000000001,
+    "comment": "The cross-benchmark comparison makes a strong case for evolving loadable harness adapters as a low-compute complement to weight updates, although the optimizer itself is established.",
+    "comment_zh": "跨基准对比有力地表明，可加载的运行框架适配器能以较低算力成本补充权重更新，但所用优化器并非新方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.9600000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8320000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.25380/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.25380/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.966
+    }
+  ]
+}

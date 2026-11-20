@@ -1,0 +1,88 @@
+{
+  "arxiv_id": "2611.25773",
+  "title": "Duopra: From Full-Duplex Conversation to Full-Duplex Agency",
+  "title_zh": "Duopra：从全双工对话到全双工行动能力",
+  "authors": [
+    "Chiyu Chen",
+    "Pengzhou Cheng",
+    "Yuezhao Ma",
+    "Xiaocheng Li",
+    "Can Liu",
+    "Haonan Hu",
+    "Yao Yao",
+    "Yifei Yang",
+    "Yijie Lu",
+    "Taolei Wang",
+    "Yansi Li",
+    "Muhuan Wu",
+    "Chenglu Sun",
+    "Gongshen Liu",
+    "Zhuosheng Zhang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-19T09:09:23Z",
+  "abs_url": "https://arxiv.org/abs/2611.25773v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.25773",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Full-duplex interaction models exhibit strong conversational agency, enabling natural, low-latency turn-taking, backchannels, and interruptions. However, completing tasks further requires task agency: timely tool invocation and argument revision following user corrections. Frontend-backend agents separate initiation from execution: the frontend decides whether and what to request, while the backend determines how. Execution can be offloaded, but unsent requests cannot be executed, and incomplete ones can misdirect the backend. On Full-Duplex-Bench v3 (FDB v3), most failures of Realtime-Venus-Audio + Harness in our streaming pipeline occur before a domain tool executes. We introduce Duopra, a full-duplex interaction model that learns task execution alongside conversational control. Duopra treats the backend as a tool, accepting a self-contained natural-language request. Direct calls and backend delegation share an action interface and requirements for faithful initiation and correct execution. Its three-stage training combines protocol SFT, full-duplex RL rewarding timely and complete execution, and projector-only repair of talker conditioning after thinker updates. With the same backend, Pass@1 rises from 4.7% to 44.7%; Duopra achieves 47.7% calling tools directly (26.0% after SFT) and 49.3% with a DeepSeek backend. It improves three FDB v1.0 takeover rates over the base model. These results show that task agency can coexist with key conversational agency.",
+  "abstract_zh": "全双工交互模型能够低延迟地处理轮流发言、简短应答和打断，但完成任务还需要及时调用工具，并在用户纠正时修订调用参数。前后端分离架构可以将执行交给后端，却无法弥补前端未发出请求或请求信息不完整的问题。在 Full-Duplex-Bench v3（FDB v3）的流式评测中，Realtime-Venus-Audio + Harness 的大多数失败发生在领域工具开始执行之前。Duopra 将后端视为接收完整自然语言请求的工具，使直接调用和后端委托共享同一动作接口，并联合学习对话控制与任务执行。训练分为三阶段：协议监督微调（SFT）、奖励及时且完整执行的全双工强化学习（RL），以及在 thinker 更新后仅调整投影器（projector），以修复 talker 的条件输入。使用相同后端时，Pass@1 从 4.7% 提升至 44.7%；直接调用工具时达到 47.7%，而仅完成 SFT 时为 26.0%；采用 DeepSeek 后端时达到 49.3%。Duopra 在 FDB v1.0 的三项接管率指标上也优于基座模型，表明任务执行能力可以与关键的对话控制能力并存。",
+  "key_points_zh": [
+    "在 FDB v3 的流式评测中，基线的大多数失败发生在领域工具执行前；仅将执行交给后端，无法解决请求漏发或信息不全的问题。",
+    "Duopra 统一了直接工具调用与后端委托的动作接口，将委托表示为一条不依赖额外上下文即可执行的自然语言请求。",
+    "三阶段训练先用 SFT 学习交互协议，再用全双工 RL 奖励及时且完整的执行，最后仅调整 projector，修复 thinker 更新后 talker 的条件输入。",
+    "同后端下 Pass@1 从 4.7% 升至 44.7%；直接调用工具时为 47.7%（仅 SFT 时为 26.0%），采用 DeepSeek 后端时为 49.3%。",
+    "在 FDB v1.0 上，Duopra 的三项接管率指标均优于基座模型。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.84,
+    "problem_significance": 0.94,
+    "potential_impact": 0.9,
+    "paradigm_shift": 0.79,
+    "lasting_value": 0.87,
+    "llm_avg": 0.868,
+    "comment": "Duopra substantially improves full-duplex tool initiation and delegation while preserving key conversational behaviors, though task success remains below 50% in the reported settings.",
+    "comment_zh": "Duopra 在保留关键对话能力的同时显著改善了全双工工具调用与任务委派，但所报告设置中的任务成功率仍低于 50%。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2505165737555528,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.868,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.25773/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.25773/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

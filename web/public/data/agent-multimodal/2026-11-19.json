@@ -1,0 +1,64 @@
+{
+  "domain": "agent-multimodal",
+  "display_name": "Realtime Multimodal Agent",
+  "date": "2026-11-19",
+  "generated_at": "2026-11-20T07:43:48Z",
+  "papers": [
+    {
+      "arxiv_id": "2611.25773",
+      "title": "Duopra: From Full-Duplex Conversation to Full-Duplex Agency",
+      "title_zh": "Duopra：从全双工对话到全双工行动能力",
+      "authors": [
+        "Chiyu Chen",
+        "Pengzhou Cheng",
+        "Yuezhao Ma",
+        "Xiaocheng Li",
+        "Can Liu",
+        "Haonan Hu",
+        "Yao Yao",
+        "Yifei Yang",
+        "Yijie Lu",
+        "Taolei Wang",
+        "Yansi Li",
+        "Muhuan Wu",
+        "Chenglu Sun",
+        "Gongshen Liu",
+        "Zhuosheng Zhang"
+      ],
+      "total_score": 0.6539258286877777,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.868,
+        "domain_fit": 0.99,
+        "other": 0.19175276229259217
+      },
+      "tags": [
+        "realtime voice agent"
+      ],
+      "tldr_zh": "Duopra兼顾全双工对话与任务执行，同后端下首次通过率从4.7%升至44.7%。",
+      "detail_file": "agent-multimodal/2026-11-19/2611.25773.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.25773/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.26478",
+      "title": "SHUSH: Emission-Aware Reward Design for Proactive Video Assistants",
+      "title_zh": "SHUSH：面向主动视频助手的回应感知奖励设计",
+      "authors": [
+        "Shawn Liang",
+        "Soamar Homsi",
+        "Gourav Datta"
+      ],
+      "total_score": 0.30299999999999994,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.8099999999999999,
+        "domain_fit": 0.96,
+        "other": 0.2
+      },
+      "tags": [],
+      "tldr_zh": "SHUSH 同时惩罚多余回应和漏答，让视频助手在该开口时开口。",
+      "detail_file": "agent-multimodal/2026-11-19/2611.26478.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.26478/thumb.webp"
+    }
+  ]
+}

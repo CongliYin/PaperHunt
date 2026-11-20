@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2611.26427",
+  "title": "MemFolder: Structure-Guided Memory Folding for Efficient Agent Memory Management",
+  "title_zh": "MemFolder：面向高效智能体记忆管理的结构引导式记忆折叠",
+  "authors": [
+    "Xuyang Liu",
+    "Chenwen Lu",
+    "Junxi Wang",
+    "Siyu Ren",
+    "Xinying Lin",
+    "Siteng Huang",
+    "Hongli Sun",
+    "Linfeng Zhang",
+    "Honggang Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-19T17:05:55Z",
+  "abs_url": "https://arxiv.org/abs/2611.26427v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.26427",
+  "links": {
+    "github": "https://github.com/xuyang-liu16/MemFolder",
+    "project_page": null
+  },
+  "abstract_en": "Long-term agents accumulate large external memory stores as interactions unfold, increasing the costs of storage, retrieval, and response generation. Efficiency is constrained by two coupled factors: a growing record count increases retrieval overhead, while longer retrieved contexts increase prefill computation and decoding-time attention costs. Existing methods prune or consolidate records, but pruning can discard useful evidence, whereas consolidation may produce fewer yet longer retrieval units. We introduce MemFolder, a structure-guided memory folding framework that sequentially reduces record count and context length. The framework comprises two core components that share memory groups, using cross-record structure to guide both evidence consolidation and compact representation. RecordFolder grounds entity mentions, progressively selects representative yet complementary anchors, and combines semantic and entity affinity with temporal chaining to consolidate compatible records into fewer retrieval units. ContextFolder encodes the original records within these groups into compact text and uses verification feedback to revise encodings when key facts cannot be recovered. Experiments on the three text-based memory benchmarks LoCoMo, PersonaMem, and LongMemEval and the two multimodal benchmarks M3-Bench-web and M3-Bench-robot demonstrate the strong performance of our methods. Notably, on Mem0, RecordFolder retains 99.0% of the original average performance across the three text-based benchmarks with 50% fewer records, exceeding the strongest baseline by 1.9 percentage points in performance retention. Combined with ContextFolder, existing record compression methods further shorten their output records while retaining most of their performance.",
+  "abstract_zh": "长期运行的智能体会不断积累外部记忆。记录越多，检索开销越大；检索到的上下文越长，预填充（prefill）计算和解码阶段的注意力开销也越高。现有剪枝方法可能丢失有用证据，而合并方法虽然能减少记录数，却可能使单个检索单元变长。MemFolder 利用跨记录结构分两步降低开销：RecordFolder 将实体提及关联到对应实体，逐步选取有代表性且相互补充的锚点，再结合语义相似性、实体关联和时间链，将相容记录合并为更少的检索单元；ContextFolder 沿用同一分组，将组内原始记录编码为更短的文本，并在验证发现关键事实无法恢复时修订编码。论文在三个文本基准 LoCoMo、PersonaMem、LongMemEval 和两个多模态基准 M3-Bench-web、M3-Bench-robot 上进行了评估。在 Mem0 上，RecordFolder 将记录数减半，仍保留三个文本基准上原有平均性能的 99.0%，性能保留率比最强基线高 1.9 个百分点。ContextFolder 也可以与现有记录压缩方法结合，进一步缩短输出，同时保留大部分性能。",
+  "key_points_zh": [
+    "将记录数量与检索上下文长度分开优化，避免合并后记录虽少、检索单元却更长的问题。",
+    "RecordFolder 选取互补的代表性锚点，结合语义、实体关联和时间链组织跨记录证据。",
+    "ContextFolder 复用同一分组压缩原始记录，并通过关键事实恢复验证来修订压缩文本。",
+    "评估覆盖三个文本基准和两个多模态基准；在 Mem0 的三个文本基准上，RecordFolder 将记录数减半，平均性能保留率达 99.0%，比最强基线高 1.9 个百分点。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.79,
+    "problem_significance": 0.9,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.85,
+    "llm_avg": 0.826,
+    "comment": "MemFolder addresses both memory store growth and retrieved context length through shared record grouping and fact-recovery checks, with evidence across text and multimodal benchmarks.",
+    "comment_zh": "MemFolder 通过共享记录分组和事实可恢复性验证，同时应对记忆库膨胀与检索上下文过长的问题，并在文本和多模态基准上验证了效果。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.826,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/xuyang-liu16/MemFolder",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.26427/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.962
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.26427/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

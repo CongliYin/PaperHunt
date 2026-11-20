@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2611.25891",
+  "title": "Meta-RTL: Evolving Agent Harnesses for RTL Optimization",
+  "title_zh": "Meta-RTL：演化 RTL 优化的智能体执行框架",
+  "authors": [
+    "Xinzhuang Xiong",
+    "Yonghao Wang",
+    "Shengyao Sun",
+    "Chengxi Li",
+    "Evangeline Young"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-19T10:44:19Z",
+  "abs_url": "https://arxiv.org/abs/2611.25891v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.25891",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models enable agents to optimize RTL using EDA feedback, yet their executable search procedures remain largely hand- engineered. We present Meta-RTL, an EDA-grounded framework that evolves RTL optimization harnesses from a minimal loop while keeping the optimization model, EDA flow, and per-design budgets fixed. Compared with Dr. RTL, Meta-RTL* reduces aggregate WNS/TNS violations by 7.8%/11.0% across 20 development designs, with area reductions on 70% of them. Without further evolution, Meta-RTL* transfers to 10 unseen IC-RTL designs, reducing aggregate WNS/TNS violations by 20.5%/14.0% and total synthesized area by 12.6%. We further characterize three search mechanisms in the evolved harness and assess their contributions through ablations and a case study.",
+  "abstract_zh": "大语言模型使智能体能够利用电子设计自动化（EDA）反馈优化寄存器传输级（RTL）设计，但可执行的搜索流程仍主要依赖人工设计。Meta-RTL 从一个最小搜索循环出发，利用 EDA 反馈演化智能体的执行框架，同时保持优化模型、EDA 流程和单个设计的预算不变。与 Dr. RTL 相比，演化所得的 Meta-RTL* 在 20 个开发集设计上将最差负裕量（WNS）和总负裕量（TNS）的汇总违例量分别降低 7.8% 和 11.0%，并缩小了其中 70% 的设计的综合面积。无需进一步演化，Meta-RTL* 迁移到 10 个未见过的 IC-RTL 设计后，将 WNS 和 TNS 的汇总违例量分别降低 20.5% 和 14.0%，总综合面积降低 12.6%。论文还分析了演化框架中的三种搜索机制，并通过消融实验和案例研究评估其贡献。",
+  "key_points_zh": [
+    "Meta-RTL 演化的是智能体的搜索流程，而非优化模型；EDA 流程与单设计预算也保持不变。",
+    "相较 Dr. RTL，Meta-RTL* 在 20 个开发集设计上将 WNS/TNS 汇总违例量分别降低 7.8%/11.0%，其中 70% 的设计实现面积缩减。",
+    "无需进一步演化即可迁移至 10 个未见 IC-RTL 设计：WNS/TNS 汇总违例量分别降低 20.5%/14.0%，总综合面积降低 12.6%。",
+    "论文通过消融实验和案例研究评估了演化框架中三种搜索机制的贡献。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.78,
+    "problem_significance": 0.79,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.77,
+    "llm_avg": 0.77,
+    "comment": "Evolving the executable search harness under fixed model and tool budgets improves RTL optimization on unseen designs, though transfer beyond RTL remains untested.",
+    "comment_zh": "在模型与工具预算固定的条件下演化可执行搜索框架，能改善未见设计的 RTL 优化结果，但尚未验证能否迁移到 RTL 之外。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.77,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.25891/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.25891/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.918
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2611.25562",
+  "title": "AZOWL AgentOps: Task-Scoped Governance for Deployed Agent Applications",
+  "title_zh": "AZOWL AgentOps：面向已部署智能体应用的任务级治理",
+  "authors": [
+    "Taeoh Hong"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-19T06:06:59Z",
+  "abs_url": "https://arxiv.org/abs/2611.25562v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.25562",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "AZOWL AgentOps provides shared governance for deploying agents and delegating work to them. Human and agent senders can exchange messages or explicitly delegate a business task. Accepted work has a stable identifier that links the sender's authority, the assigned runner, any required approval, and result evidence. The default enrolled customer PC profile is read-only. We compare AZOWL components with a configured LangGraph application in 28 synthetic runs across four paired pilots. Original AZOWL services checked work admission, recipient routing, and workflow prerequisites in isolated tests. The configured LangGraph application supplied business task and dispatch records in application code. Both configurations recorded zero business tasks in dialogue, rejected unauthorized agent handoffs, and issued zero writes when an approved delivery address changed. AZOWL's scope gate, exercised as a component, requested approval again on the same task. A product probe reused one registered provider across two workflows and checked prerequisite enforcement for ticket-task submission. The paired protected writes, including ticket creation, used mock providers. Of two deployed PC inventory reads with verified receipts, we traced the 0.6.57 run from submission through runner pickup and tool execution to the receipt, with matching local and central artifact hashes. A separate deployed GRC audit followed an operator-driven ticket lifecycle on sample records.",
+  "abstract_zh": "AZOWL AgentOps 为智能体部署和任务委派提供共享治理机制。人类与智能体既可收发消息，也可显式委派业务任务。获接纳的任务拥有稳定标识，将委派方权限、指定执行器、所需审批和结果证据关联起来；纳管客户 PC 的默认配置为只读。研究在四组成对试点中开展了 28 次合成运行，对比 AZOWL 组件与一个经配置的 LangGraph 应用。两种配置均未将普通对话记为业务任务，均拒绝了未经授权的智能体转派，且在已获批的投递地址变更后均未执行写入。AZOWL 的范围门控组件在独立测试中对同一任务重新发起审批。对照试验中的受保护写入（包括创建工单）使用模拟提供方。实际部署中，两次 PC 资产清单读取均取得经验证的回执；其中 0.6.57 版本的运行实现了从任务提交、执行器领取和工具执行到回执的端到端追踪，且本地与中心端的产物哈希一致。另一次独立部署的 GRC 审计使用样例记录，追踪了由操作员驱动的工单生命周期。",
+  "key_points_zh": [
+    "区分普通对话与显式任务委派，以稳定任务标识串联委派方权限、执行器、审批和结果证据；纳管 PC 默认只读。",
+    "28 次合成运行显示，两种配置均拒绝未授权转派，并在获批投递地址变更后阻止写入；AZOWL 的独立组件测试还验证了对同一任务重新发起审批。",
+    "AZOWL 在独立组件测试中检查任务准入、接收方路由和工作流前置条件；对照的 LangGraph 应用在应用代码中维护业务任务与派发记录。",
+    "产品探测验证了同一注册提供方可跨两个工作流复用，并检查了工单任务提交的前置条件；对照试验中的受保护写入使用模拟提供方。",
+    "实际部署的两次 PC 资产清单读取均取得经验证的回执，其中一次可端到端追踪，且本地与中心端产物的哈希一致。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.62,
+    "problem_significance": 0.84,
+    "potential_impact": 0.69,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.71,
+    "llm_avg": 0.688,
+    "comment": "Linking delegation, approval, execution, and receipts to a stable task ID offers a reusable AgentOps pattern, but live end-to-end evidence is limited.",
+    "comment_zh": "通过稳定的任务标识关联委派、审批、执行和回执，形成了可复用的智能体运维模式，但真实部署中的端到端证据仍有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.688,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.25562/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.949
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.25562/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.981
+    }
+  ]
+}

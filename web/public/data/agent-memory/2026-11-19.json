@@ -1,0 +1,66 @@
+{
+  "domain": "agent-memory",
+  "display_name": "Agent Memory",
+  "date": "2026-11-19",
+  "generated_at": "2026-11-20T07:40:26Z",
+  "papers": [
+    {
+      "arxiv_id": "2611.26427",
+      "title": "MemFolder: Structure-Guided Memory Folding for Efficient Agent Memory Management",
+      "title_zh": "MemFolder：面向高效智能体记忆管理的结构引导式记忆折叠",
+      "authors": [
+        "Xuyang Liu",
+        "Chenwen Lu",
+        "Junxi Wang",
+        "Siyu Ren",
+        "Xinying Lin",
+        "Siteng Huang",
+        "Hongli Sun",
+        "Linfeng Zhang",
+        "Honggang Chen"
+      ],
+      "total_score": 0.36279999999999996,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.826,
+        "domain_fit": 0.97,
+        "other": 0.38333333333333336
+      },
+      "tags": [
+        "GitHub"
+      ],
+      "tldr_zh": "记忆折叠兼顾记录数与上下文长度，记录减半仍保留99%性能。",
+      "detail_file": "agent-memory/2026-11-19/2611.26427.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.26427/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.26361",
+      "title": "How Much Should an Agent Remember? Deployment Lessons from Self-Distilled Memory for LLM Agents",
+      "title_zh": "智能体该记住多少？LLM 智能体自蒸馏记忆的部署经验",
+      "authors": [
+        "K. R. Jayaram",
+        "Vatche Isahagian",
+        "Aswath Vaithinathan Aravindan",
+        "Vinod Muthusamy",
+        "Punleuk Oum",
+        "Gaodan Fang",
+        "Michal Ulewicz",
+        "Gegi Thomas",
+        "Evelyn Duesterwald"
+      ],
+      "total_score": 0.3371959278870596,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.758,
+        "domain_fit": 0.94,
+        "other": 0.3659864262901988
+      },
+      "tags": [
+        "Code soon"
+      ],
+      "tldr_zh": "智能体记忆并非越多越好，准则数量应按模型调优。",
+      "detail_file": "agent-memory/2026-11-19/2611.26361.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.26361/thumb.webp"
+    }
+  ]
+}
