@@ -1,0 +1,83 @@
+{
+  "arxiv_id": "2611.22777",
+  "title": "CrossEnv: Synthesizing Verifiable Cross-Environment Tasks for Long-Horizon Agent Training",
+  "title_zh": "CrossEnv：为长程智能体训练合成可验证的跨环境任务",
+  "authors": [
+    "Zhengfeng Yu",
+    "Tian Lan",
+    "Zhijing Wu",
+    "Enbo Zhao",
+    "Xuannan Liu",
+    "Feihu Jiang",
+    "Qianghuai Jia",
+    "Longyue Wang",
+    "Zhao Xu",
+    "Weihua Luo",
+    "Xian-Ling Mao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T13:44:28Z",
+  "abs_url": "https://arxiv.org/abs/2611.22777v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.22777",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Executable synthetic environments provide scalable training tasks and verifiable feedback for long-horizon agents. Existing environment synthesis methods primarily generate tasks within individual environments. However, these tasks do not adequately capture real-world interactions across services, where actions in one service depend on information obtained from another. Synthesizing such tasks is challenging because data generated across environments must remain consistent to support executable and verifiable interactions. To address this challenge, we introduce CrossEnv, a framework that uses an entity-tool graph to identify connections between environments and aligns task-specific data to synthesize executable, verifiable cross-environment tasks. We further propose CrossEnv-Curriculum, which progresses from single-environment tool use to coordination across more environments and business domains, before introducing user interaction. Across four external benchmarks, combining cross-environment training data with this curriculum achieves competitive performance with fewer training examples. Further analyses support the benefits of cross-environment data and curriculum training, and provide evidence of transfer to new environment combinations, external tasks less similar to the training data, and longer workflows.",
+  "abstract_zh": "可执行的合成环境能为长程智能体提供可规模化生成的训练任务和可验证的反馈。现有方法主要在单一环境内生成任务，难以覆盖真实的跨服务交互，例如在一个服务中执行操作时需要依赖从另一个服务获取的信息。合成此类任务的关键是保持各环境中生成的数据一致，使任务既能执行，也能验证结果。为此，CrossEnv 利用实体—工具图（entity-tool graph）识别环境间的关联，并对齐任务所需的数据。论文还提出 CrossEnv-Curriculum：先训练单环境工具使用，再逐步扩展到更多环境和业务领域的协作，最后引入用户交互。在四个外部基准上，结合跨环境训练数据与课程学习，仅用更少的训练样本即可取得有竞争力的表现。进一步分析支持这两项设计的作用，并显示模型能够迁移到新的环境组合、与训练数据相似度较低的外部任务以及更长的工作流。",
+  "key_points_zh": [
+    "核心难点是跨环境数据一致性：从一个服务获取的信息必须能在另一个服务中用于执行操作，并支持结果验证。",
+    "CrossEnv 用实体—工具图发现环境间的关联，再对齐任务所需的数据，生成可执行、可验证的跨环境任务。",
+    "CrossEnv-Curriculum 从单环境工具操作入手，逐步增加协作环境和业务领域，最后引入用户交互。",
+    "在四个外部基准上，跨环境数据与课程学习相结合，以更少训练样本取得有竞争力的表现；进一步分析显示其可迁移到新环境组合、与训练数据相似度较低的外部任务和更长的工作流。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.83,
+    "problem_significance": 0.92,
+    "potential_impact": 0.89,
+    "paradigm_shift": 0.79,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8620000000000001,
+    "comment": "Graph-guided synthesis of consistent, verifiable tasks across services provides reusable long-horizon training data with evidence of transfer to unseen environment combinations.",
+    "comment_zh": "基于图结构合成数据一致且可验证的跨服务任务，为长程智能体训练提供了可复用的数据，并展示了向未见环境组合迁移的能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8620000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22777/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22777/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}

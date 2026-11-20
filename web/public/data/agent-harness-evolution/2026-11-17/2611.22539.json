@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2611.22539",
+  "title": "JET: Just-Enough Exploration Tuning for Efficient Tool-Calling Agents in Repository-Level Question Answering",
+  "title_zh": "JET：面向仓库级问答中工具调用智能体的适度探索微调",
+  "authors": [
+    "Yoonho Choi",
+    "Taehyeon Han",
+    "Seonghyeon Lee"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T10:30:14Z",
+  "abs_url": "https://arxiv.org/abs/2611.22539v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.22539",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "In repository-level question answering (QA), an agent explores a code repository with tools and should answer a question once enough information is gathered. Nevertheless, we find that LLM agents often continue to invoke tools even after the gathered information is already sufficient to answer. We call this phenomenon over-exploration. Moreover, even though existing methods improve task performance through supervised fine-tuning (SFT) on expert trajectories, SFT also propagates the over-exploration in the trajectories to the agent. To mitigate over-exploration, we propose Just-Enough Exploration Tuning (JET), a fine-tuning method that trains the agent to answer once the gathered information is sufficient. JET truncates each training trajectory at the step where the gathered information becomes sufficient, inserts a rationale that explains why the agent can answer at that step, and fine-tunes the agent with a higher loss weight on the rationale. Experiments on two repository-level QA benchmarks with two open-weight 8B models demonstrate that JET reduces tool calls by 11 to 33% on self-generated trajectories while largely preserving the score. On expert trajectories, JET makes 18 to 28% fewer tool calls than SFT while retaining most of the score gain of SFT. In both cases, JET also lowers the inference cost.",
+  "abstract_zh": "在仓库级问答中，智能体需要调用工具探索代码仓库，并在收集到足够信息后作答。然而，论文发现，大语言模型智能体往往在信息已经足够时仍继续调用工具，作者将这一现象称为过度探索。基于专家轨迹的监督微调（SFT）虽然能提高任务得分，却也会让智能体学到轨迹中的过度探索行为。为此，作者提出 Just-Enough Exploration Tuning（JET）：在信息首次足以作答的位置截断训练轨迹，插入一段解释为何此时可以作答的推理说明，并在微调时提高该说明的损失权重。在两个仓库级问答基准和两个开放权重的 8B 模型上，基于自生成轨迹训练时，JET 将工具调用次数减少 11%–33%，得分基本保持不变；基于专家轨迹训练时，JET 比标准 SFT 少调用工具 18%–28%，同时保留了 SFT 带来的大部分得分提升。两种设置下的推理成本均有所降低。",
+  "key_points_zh": [
+    "过度探索的表现是信息已足够作答，智能体却仍在调用工具；标准 SFT 会让智能体学到专家轨迹中的这一行为。",
+    "JET 在信息首次充足处截断轨迹，加入为何可以立即作答的说明，并提高该说明在微调中的损失权重。",
+    "使用自生成轨迹训练时，工具调用减少 11%–33%，得分基本不变。",
+    "使用专家轨迹训练时，相较标准 SFT，工具调用减少 18%–28%，并保留其大部分得分增益；两种训练设置的推理成本均下降。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.73,
+    "problem_significance": 0.86,
+    "potential_impact": 0.79,
+    "paradigm_shift": 0.68,
+    "lasting_value": 0.77,
+    "llm_avg": 0.766,
+    "comment": "Truncating training trajectories at evidence sufficiency directly reduces redundant tool calls, though the gains are only demonstrated on repository question answering.",
+    "comment_zh": "在证据已足够时截断训练轨迹能直接减少冗余工具调用，但收益目前仅在代码仓库问答中得到验证。"
+  },
+  "scores": {
+    "topic_relevance": 0.44000000000000006,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.766,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22539/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.949
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22539/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.956
+    }
+  ]
+}

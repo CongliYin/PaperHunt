@@ -1,0 +1,67 @@
+{
+  "domain": "agent-memory",
+  "display_name": "Agent Memory",
+  "date": "2026-11-17",
+  "generated_at": "2026-11-20T07:59:01Z",
+  "papers": [
+    {
+      "arxiv_id": "2611.22102",
+      "title": "EvoDisco: Strategy Discovery for Evolving Agent Memory",
+      "title_zh": "EvoDisco：智能体记忆演化的策略发现",
+      "authors": [
+        "Mingyang Liu",
+        "Qingcan Kang",
+        "Shixiong Kai",
+        "Kaichao Liang",
+        "Xiaojin Fu",
+        "Tao Zhong",
+        "Linqi Song"
+      ],
+      "total_score": 0.6368887430316666,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.852,
+        "domain_fit": 0.98,
+        "other": 0.2042958101055549
+      },
+      "tags": [
+        "evolution and maintenance"
+      ],
+      "tldr_zh": "学习何时及如何重组记忆，提升在线与冻结迁移表现。",
+      "detail_file": "agent-memory/2026-11-17/2611.22102.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22102/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.22245",
+      "title": "Multi-Agent Memory Inconsistency: Where Factual Conflicts Disappear in LLM Agents",
+      "title_zh": "多智能体记忆不一致：事实冲突在 LLM 智能体的哪个环节消失？",
+      "authors": [
+        "Hejia Zhang",
+        "Zhongming Yu",
+        "Yimin Ding",
+        "Wei-Ting Chen",
+        "Hengjia Yu",
+        "Wentao Ni",
+        "Yijun Liu",
+        "Cong Xu",
+        "Xin Chen",
+        "Matrix Yao",
+        "Fan Zhao",
+        "Jishen Zhao"
+      ],
+      "total_score": 0.4600471165156137,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.76,
+        "domain_fit": 0.83,
+        "other": 0.24015705505204563
+      },
+      "tags": [
+        "agent context"
+      ],
+      "tldr_zh": "多智能体检索到更多冲突证据，却因交接遗漏而检出更少冲突。",
+      "detail_file": "agent-memory/2026-11-17/2611.22245.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22245/thumb.webp"
+    }
+  ]
+}

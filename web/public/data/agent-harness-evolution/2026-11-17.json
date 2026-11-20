@@ -1,0 +1,436 @@
+{
+  "domain": "agent-harness-evolution",
+  "display_name": "Agent Harness Evolution",
+  "date": "2026-11-17",
+  "generated_at": "2026-11-20T07:51:45Z",
+  "papers": [
+    {
+      "arxiv_id": "2611.23074",
+      "title": "Runtime Verification of Multiple Natural Language Criteria for Agent Governance",
+      "title_zh": "面向 AI 智能体治理的多条自然语言准则运行时验证",
+      "authors": [
+        "Silviu Pitis",
+        "Parand A. Alamdari",
+        "Jessica Tang",
+        "Toryn Q. Klassen",
+        "Sheila A. McIlraith"
+      ],
+      "total_score": 0.7398,
+      "scores": {
+        "topic_relevance": 1.0,
+        "llm_assessment": 0.7659999999999999,
+        "domain_fit": 0.89,
+        "other": 0.36666666666666675
+      },
+      "tags": [
+        "session context state",
+        "Accepted"
+      ],
+      "tldr_zh": "并行判定千条自然语言准则，不到两秒。",
+      "detail_file": "agent-harness-evolution/2026-11-17/2611.23074.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23074/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.22299",
+      "title": "Harnesses That Improve Themselves: A Unifying Framework for Self-Improving Agent Harnesses",
+      "title_zh": "能自我改进的智能体运行框架：自改进 Agent Harness 的统一设计",
+      "authors": [
+        "Deep Shah",
+        "Nehal Kathrotia"
+      ],
+      "total_score": 0.7216,
+      "scores": {
+        "topic_relevance": 1.0,
+        "llm_assessment": 0.8719999999999999,
+        "domain_fit": 0.99,
+        "other": 0.2
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "智能体按模块自改代码，验证后部署，比整体重写更省令牌、效果更好。",
+      "detail_file": "agent-harness-evolution/2026-11-17/2611.22299.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22299/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.22777",
+      "title": "CrossEnv: Synthesizing Verifiable Cross-Environment Tasks for Long-Horizon Agent Training",
+      "title_zh": "CrossEnv：为长程智能体训练合成可验证的跨环境任务",
+      "authors": [
+        "Zhengfeng Yu",
+        "Tian Lan",
+        "Zhijing Wu",
+        "Enbo Zhao",
+        "Xuannan Liu",
+        "Feihu Jiang",
+        "Qianghuai Jia",
+        "Longyue Wang",
+        "Zhao Xu",
+        "Weihua Luo",
+        "Xian-Ling Mao"
+      ],
+      "total_score": 0.6386000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.8620000000000001,
+        "domain_fit": 0.98,
+        "other": 0.2
+      },
+      "tags": [
+        "runtime execution engine"
+      ],
+      "tldr_zh": "合成可验证的跨环境任务，用更少样本训练长程智能体。",
+      "detail_file": "agent-harness-evolution/2026-11-17/2611.22777.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22777/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.22525",
+      "title": "When Agent Skills Go Stale: Runtime Behavior and Selective Maintenance in Evolving Environments",
+      "title_zh": "当智能体技能过时：演变环境中的运行时行为与选择性维护",
+      "authors": [
+        "Ömer Faruk Akgül",
+        "Shuli Jiang",
+        "Yuting Zhang",
+        "Yi Zhang",
+        "Xiaohan Fei",
+        "Wei Xia",
+        "Stefano Soatto"
+      ],
+      "total_score": 0.6230000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.8099999999999999,
+        "domain_fit": 0.96,
+        "other": 0.2
+      },
+      "tags": [
+        "skill tool orchestration"
+      ],
+      "tldr_zh": "环境变化可使技能复用得不偿失，选择性维护可恢复收益。",
+      "detail_file": "agent-harness-evolution/2026-11-17/2611.22525.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22525/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.23611",
+      "title": "RefinementGuard: Counterexample-Directed Semantic Qualification for Hidden Agent-Tool Execution",
+      "title_zh": "RefinementGuard：面向隐藏式智能体工具执行的反例引导语义验证",
+      "authors": [
+        "Adhyayan Veer Singh",
+        "Fanjiang Ye",
+        "Yuke Wang"
+      ],
+      "total_score": 0.6122000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.774,
+        "domain_fit": 0.94,
+        "other": 0.2
+      },
+      "tags": [
+        "observability governance security"
+      ],
+      "tldr_zh": "按上层语义验证隐藏执行图，保留缺陷定位的并行收益。",
+      "detail_file": "agent-harness-evolution/2026-11-17/2611.23611.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23611/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.23362",
+      "title": "TRACE-MAS: Diagnosing and Repairing Collaboration Failures in Multi-Agent Systems",
+      "title_zh": "TRACE-MAS：多智能体系统协作故障的诊断与修复",
+      "authors": [
+        "Zekai Chen",
+        "Yihan Sun",
+        "Xunkai Li",
+        "Xun Wu",
+        "Xinmo Jin",
+        "Yinlin Zhu",
+        "Haodong Lu",
+        "Xuaner Chen",
+        "Rong-Hua Li"
+      ],
+      "total_score": 0.6072000000000001,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.704,
+        "domain_fit": 0.81,
+        "other": 0.2
+      },
+      "tags": [
+        "session context state"
+      ],
+      "tldr_zh": "从交互轨迹定位多智能体协作故障，以最小干预恢复协作。",
+      "detail_file": "agent-harness-evolution/2026-11-17/2611.23362.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23362/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.23509",
+      "title": "GRAFT: Execution-Guided Genetic Recombination for Agent Design",
+      "title_zh": "GRAFT：执行引导的智能体设计遗传重组",
+      "authors": [
+        "Sevda Ebrahimi",
+        "Mohammed Saidul Islam",
+        "Xiaodan Zhu",
+        "Elham Dolatabadi"
+      ],
+      "total_score": 0.5186000000000001,
+      "scores": {
+        "topic_relevance": 0.6000000000000001,
+        "llm_assessment": 0.812,
+        "domain_fit": 0.94,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "planning and policy"
+      ],
+      "tldr_zh": "用亲代执行记录指导重组，准确率超最强基线9.8个百分点",
+      "detail_file": "agent-harness-evolution/2026-11-17/2611.23509.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23509/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.22323",
+      "title": "Agent Trajectories as Evidence for Software Quality Assurance",
+      "title_zh": "将智能体执行轨迹作为软件质量保证的证据",
+      "authors": [
+        "Jonathan Ullrich",
+        "Julien Siebert",
+        "Michael Kläs",
+        "Adam Trendowicz",
+        "Andreas Jedlitschka"
+      ],
+      "total_score": 0.5146000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.532,
+        "domain_fit": 0.83,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "trace driven evolution"
+      ],
+      "tldr_zh": "结合规格与执行轨迹，优先审查智能体的关键决策。",
+      "detail_file": "agent-harness-evolution/2026-11-17/2611.22323.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2611.23334",
+      "title": "Integrating AI Coding Agents Into Scientific Research",
+      "title_zh": "将 AI 编程智能体融入科学研究",
+      "authors": [
+        "Rory Barnes"
+      ],
+      "total_score": 0.4559415312704722,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.63,
+        "domain_fit": 0.78,
+        "other": 0.4098051042349074
+      },
+      "tags": [
+        "GitHub",
+        "general llm agents"
+      ],
+      "tldr_zh": "用六级 PROOF Ladder 评估 AI 辅助数值实验，vaibify 助力复现。",
+      "detail_file": "agent-harness-evolution/2026-11-17/2611.23334.json",
+      "thumb": ""
+    },
+    {
+      "arxiv_id": "2611.22511",
+      "title": "LMLineage: Content Lineage and Context Governance for LLM Agents",
+      "title_zh": "LMLineage：LLM 智能体的内容溯源与上下文治理",
+      "authors": [
+        "Wei Hou",
+        "Jingxin Geng",
+        "Xin Chen",
+        "Zheqing Jiang"
+      ],
+      "total_score": 0.445,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.75,
+        "domain_fit": 0.93,
+        "other": 0.2
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "逐句追溯输出依据，只压缩不再被引用的文档。",
+      "detail_file": "agent-harness-evolution/2026-11-17/2611.22511.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22511/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.22539",
+      "title": "JET: Just-Enough Exploration Tuning for Efficient Tool-Calling Agents in Repository-Level Question Answering",
+      "title_zh": "JET：面向仓库级问答中工具调用智能体的适度探索微调",
+      "authors": [
+        "Yoonho Choi",
+        "Taehyeon Han",
+        "Seonghyeon Lee"
+      ],
+      "total_score": 0.4408000000000001,
+      "scores": {
+        "topic_relevance": 0.44000000000000006,
+        "llm_assessment": 0.766,
+        "domain_fit": 0.97,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "general llm agents"
+      ],
+      "tldr_zh": "JET 让智能体在信息足够时作答，减少工具调用并基本保住得分。",
+      "detail_file": "agent-harness-evolution/2026-11-17/2611.22539.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22539/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.23067",
+      "title": "Values Shape What Self-Improving Coding Agents Build",
+      "title_zh": "价值观塑造自我改进编程智能体构建的方案",
+      "authors": [
+        "Jason Liang",
+        "Dylan Waldner",
+        "Risto Miikkulainen"
+      ],
+      "total_score": 0.32720000000000005,
+      "scores": {
+        "topic_relevance": 0.36000000000000004,
+        "llm_assessment": 0.49399999999999994,
+        "domain_fit": 0.65,
+        "other": 0.11666666666666668
+      },
+      "tags": [
+        "general tool agents"
+      ],
+      "tldr_zh": "价值观既影响自我改进编程智能体的表现，也改变其求解方案。",
+      "detail_file": "agent-harness-evolution/2026-11-17/2611.23067.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23067/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.22901",
+      "title": "Done, But Still Working: Anytime Evaluation of When Coding Agents Should Stop",
+      "title_zh": "做完了，却还在继续：用 Anytime Evaluation 评估编程智能体何时该停",
+      "authors": [
+        "Zerui Yang",
+        "Quan Xue",
+        "Miaomiao Dong",
+        "Chaorui Zhang",
+        "Xuanyu Zheng",
+        "Xiyuan Wang",
+        "Haolin Ruan",
+        "Xueyan Niu",
+        "Guangcheng Song",
+        "Weixi Zhang",
+        "Wei Han",
+        "Bo Bai"
+      ],
+      "total_score": 0.30886183718402205,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.8480000000000001,
+        "domain_fit": 0.98,
+        "other": 0.18153945728007337
+      },
+      "tags": [
+        "h=43"
+      ],
+      "tldr_zh": "编程智能体提前停止可省成本，但能否保持补丁质量仍不确定。",
+      "detail_file": "agent-harness-evolution/2026-11-17/2611.22901.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22901/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.22238",
+      "title": "Context Has a Price: Adding and Removing Context for LLM Coding Agents under Prefix Caching",
+      "title_zh": "上下文有价：前缀缓存下 LLM 编程智能体的上下文增删",
+      "authors": [
+        "Zerui Yang",
+        "Miaomiao Dong",
+        "Quan Xue",
+        "Chaorui Zhang",
+        "Xuanyu Zheng",
+        "Xiyuan Wang",
+        "Haolin Ruan",
+        "Xueyan Niu",
+        "Guangcheng Song",
+        "Weixi Zhang",
+        "Wei Han",
+        "Bo Bai"
+      ],
+      "total_score": 0.292661837184022,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.7939999999999999,
+        "domain_fit": 0.97,
+        "other": 0.18153945728007337
+      },
+      "tags": [
+        "h=43"
+      ],
+      "tldr_zh": "前缀缓存下，少搜索、短提示都不一定省钱。",
+      "detail_file": "agent-harness-evolution/2026-11-17/2611.22238.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22238/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.22310",
+      "title": "EviDARL: Evidence-Centric Dual-Agent Reasoning via Alternating Reinforcement Learning for Multi-Table Question Answering",
+      "title_zh": "EviDARL：面向多表问答的证据中心双智能体推理与交替强化学习",
+      "authors": [
+        "Dunhan Li",
+        "Leilei Gan",
+        "Lirong Gao",
+        "Wenyan Fan",
+        "Yongwei Wang",
+        "Sheng Guo",
+        "Fei Wu"
+      ],
+      "total_score": 0.27719999999999995,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.724,
+        "domain_fit": 0.88,
+        "other": 0.2
+      },
+      "tags": [],
+      "tldr_zh": "双智能体先构建可验证证据再推理，交替强化学习提升多表问答表现。",
+      "detail_file": "agent-harness-evolution/2026-11-17/2611.22310.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22310/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.23174",
+      "title": "Inference after coding agents",
+      "title_zh": "AI 编程智能体时代的统计推断",
+      "authors": [
+        "Florian Gunsilius",
+        "David Van Dijcke",
+        "Kaspar Wüthrich"
+      ],
+      "total_score": 0.2654,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.768,
+        "domain_fit": 0.66,
+        "other": 0.11666666666666668
+      },
+      "tags": [],
+      "tldr_zh": "重放编程智能体的分析，校正其搜索导致的假阳性。",
+      "detail_file": "agent-harness-evolution/2026-11-17/2611.23174.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23174/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.22835",
+      "title": "When Passing Checks Do Not Establish Completion: Evidence Interpretation in Coding Agents",
+      "title_zh": "通过检查不等于完成任务：Coding Agents 中的证据解读",
+      "authors": [
+        "Xueping Gao"
+      ],
+      "total_score": 0.2414,
+      "scores": {
+        "topic_relevance": 0.0,
+        "llm_assessment": 0.6880000000000001,
+        "domain_fit": 0.88,
+        "other": 0.11666666666666668
+      },
+      "tags": [],
+      "tldr_zh": "检查通过不等于完成任务，判定还需证据覆盖与核查落实。",
+      "detail_file": "agent-harness-evolution/2026-11-17/2611.22835.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22835/thumb.webp"
+    }
+  ]
+}

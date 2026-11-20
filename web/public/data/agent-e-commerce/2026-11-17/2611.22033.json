@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2611.22033",
+  "title": "Thinking Harder Doesn't Lead to Better Choices: Reasoning Effort Increases the Confidence but Not the Correctness of LLM Shopping Agents",
+  "title_zh": "想得更久，未必选得更好：增加推理投入提高了 LLM 购物智能体的置信度，却未显著提高正确率",
+  "authors": [
+    "Adi Krishnamoorthy",
+    "X. Y. Han"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T00:55:58Z",
+  "abs_url": "https://arxiv.org/abs/2611.22033v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.22033",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) are increasingly deployed as autonomous shopping agents that process multimodal product listings (consisting of visual and text data) and recommend purchases on behalf of consumers. Naturally, one might assume that models with more thinking power would make higher-quality purchasing decisions. To test this belief, we ask two questions about such agents: does asking a model to think harder make it choose better products, and does the confidence it reports tell us the likelihood it may be wrong? We benchmark ten frontier models on three product-choice benchmarks built from WebShop, Amazon's SQID and Wayfair's WANDS platforms to see if LLMs with more thinking power actually make better-quality product purchase decisions. Across all three benchmarks, we found that increasing the thinking effort does not increase decision quality in a statistically meaningful way. The same change in thinking effort raises stated confidence at a statistically significant level, so extra thinking buys confidence rather than correctness. We also measure the calibration of these models (how well their reported confidence percentage matches their true correctness percentage) in these tasks and show that most models are not well-calibrated at every effort level. We also find that errors are strongly shared: when one model errs in a task, several others tend to err on that same task. Furthermore, on tasks where several models all err, a large number of them pick the same wrong product.",
+  "abstract_zh": "大语言模型（LLM）正被用于自主购物：它们根据包含图像和文本的商品信息，替消费者做出选择。本文考察两个问题：增加推理投入能否改善商品选择，以及模型自报的置信度能否反映其实际正确率。研究在基于 WebShop、Amazon SQID 和 Wayfair WANDS 构建的三个商品选择基准上评估了 10 个前沿模型。结果显示，在全部三个基准上，增加推理投入均未带来统计显著的决策质量提升，却显著提高了模型自报的置信度。多数模型无法在所有推理投入水平下都保持良好的置信度校准。不同模型的错误也高度重合：一个模型选错时，其他模型往往也会在同一任务上出错；当多个模型都选错时，它们还经常选中同一件错误商品。",
+  "key_points_zh": [
+    "研究在基于 WebShop、Amazon SQID 和 Wayfair WANDS 的三个多模态商品选择基准上评估了 10 个前沿模型。",
+    "增加推理投入显著提高了模型自报的置信度，但在三个基准上均未显著改善选择质量。",
+    "多数模型至少在部分推理投入水平下校准不佳，自报置信度与实际正确率不匹配。",
+    "模型错误并不独立：多个模型容易在同一道题上出错，而且常选中同一件错误商品。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.73,
+    "problem_significance": 0.88,
+    "potential_impact": 0.81,
+    "paradigm_shift": 0.57,
+    "lasting_value": 0.82,
+    "llm_avg": 0.7619999999999999,
+    "comment": "Across three product-choice benchmarks, extra reasoning raises shopping agents’ stated confidence without a statistically significant gain in choice quality.",
+    "comment_zh": "在三个商品选择基准上，增加推理投入提高了购物智能体的自报置信度，却未显著改善选择质量。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.7213913165723016,
+    "author_reputation": 0.31611819439287525,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7619999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 4,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 4,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22033/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22033/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}

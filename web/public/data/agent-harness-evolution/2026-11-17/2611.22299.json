@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2611.22299",
+  "title": "Harnesses That Improve Themselves: A Unifying Framework for Self-Improving Agent Harnesses",
+  "title_zh": "能自我改进的智能体运行框架：自改进 Agent Harness 的统一设计",
+  "authors": [
+    "Deep Shah",
+    "Nehal Kathrotia"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T06:55:41Z",
+  "abs_url": "https://arxiv.org/abs/2611.22299v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.22299",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Whether a foundation model succeeds as an autonomous agent depends as much on its runtime software as on its weights. This runtime, the agent harness, manages context and memory, steers multi-turn control, executes tool actions in sandboxes, and verifies work before stopping. Because models differ in how they use tools and how they fail, a static harness tuned for one model or task often stalls, wastes tokens, or regresses on another. This bottleneck has driven a shift from prompt tuning to self-improving agent harnesses: systems that inspect their own execution traces, separate runtime bugs from model limits, and rewrite their own code. We present a unifying architectural and design framework for self-improving agent harnesses. The framework pairs four editable runtime components (context and state, agent control, action interfaces, and verification and recovery) with a four-stage loop that diagnoses failures, proposes code patches, validates candidates, and deploys updates. Using this framework, we show how optimizers trace errors across long trajectories and discover reusable runtime mechanisms such as pre-stop verifiers, loop breakers, and persistent memory. We further show why full-harness rewrites overfit or break across modules, and how modular updates with validation gates generalize across models while bounding token cost. To keep self-modification safe, we establish practical defenses against recurring failure modes including prompt bloat, benchmark gaming, and evaluator tampering. Finally, experiments on SWE-bench Lite validate this framework, showing that gated modular evolution outperforms prompt reflection and full-harness rewrites across models and repositories at a fraction of the token cost.",
+  "abstract_zh": "基础模型能否胜任自主智能体任务，不仅取决于模型权重，也取决于其运行框架（Agent Harness）。运行框架负责管理上下文与记忆、控制多轮交互、在沙箱中执行工具调用，以及在结束前验证结果。不同模型使用工具的方式和失败模式各异，因此，为单一模型或任务调优的静态框架，换用模型或任务后可能陷入停滞、浪费 token，或出现性能退化。论文提出一套统一架构，将四类可编辑组件——上下文与状态、智能体控制、动作接口、验证与恢复——纳入故障诊断、补丁生成、候选验证和更新部署组成的四阶段闭环。优化器沿长程执行轨迹追溯错误，区分运行框架缺陷与模型能力局限，并发现终止前验证器、循环中断机制和持久记忆等可复用机制。论文指出，整体重写容易导致过拟合或破坏模块间协作，而设有验证门槛的模块化更新更易跨模型泛化，并能限制 token 成本。作者还讨论了如何防范提示词膨胀、基准投机和评估器篡改。SWE-bench Lite 实验表明，在不同模型和代码仓库上，带验证门槛的模块化更新优于基于提示词的反思和整体重写，且 token 消耗明显更低。",
+  "key_points_zh": [
+    "优化对象从提示词扩展到 Agent Harness 代码：先根据执行轨迹判断失败源于运行框架还是模型能力，再决定是否修改代码。",
+    "框架覆盖四类运行时组件，通过诊断、生成补丁、验证候选、部署更新的闭环实现自我改进。",
+    "长程轨迹分析可发现跨任务复用的机制，例如终止前验证、循环中断和持久记忆。",
+    "模块化更新加验证门槛可减少整体重写造成的过拟合与跨模块回归；论文也讨论了如何防范提示词膨胀、基准投机和评估器篡改。",
+    "在 SWE-bench Lite 的不同模型与代码仓库上，带验证门槛的模块化更新优于基于提示词的反思和整体重写，同时降低了 token 消耗。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.79,
+    "problem_significance": 0.94,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.86,
+    "lasting_value": 0.89,
+    "llm_avg": 0.8719999999999999,
+    "comment": "Trace-driven diagnosis and gated modular updates offer a reusable alternative to full harness rewrites, though validation is limited to SWE-bench Lite.",
+    "comment_zh": "基于轨迹诊断并经验证后上线的模块化更新，为整体重写运行框架提供了可复用的替代方案，但验证仅限于 SWE-bench Lite。"
+  },
+  "scores": {
+    "topic_relevance": 1.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8719999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22299/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22299/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.97
+    }
+  ]
+}

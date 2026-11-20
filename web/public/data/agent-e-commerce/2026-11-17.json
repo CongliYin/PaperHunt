@@ -1,0 +1,118 @@
+{
+  "domain": "agent-e-commerce",
+  "display_name": "E-commerce Agent",
+  "date": "2026-11-17",
+  "generated_at": "2026-11-20T07:48:55Z",
+  "papers": [
+    {
+      "arxiv_id": "2611.22033",
+      "title": "Thinking Harder Doesn't Lead to Better Choices: Reasoning Effort Increases the Confidence but Not the Correctness of LLM Shopping Agents",
+      "title_zh": "想得更久，未必选得更好：增加推理投入提高了 LLM 购物智能体的置信度，却未显著提高正确率",
+      "authors": [
+        "Adi Krishnamoorthy",
+        "X. Y. Han"
+      ],
+      "total_score": 0.6614754755482589,
+      "scores": {
+        "topic_relevance": 0.8400000000000001,
+        "llm_assessment": 0.7619999999999999,
+        "domain_fit": 0.98,
+        "other": 0.3229182518275295
+      },
+      "tags": [
+        "HF Daily ★4",
+        "commerce agent workflows"
+      ],
+      "tldr_zh": "购物智能体推理投入越高，越有信心，正确率却未显著提升。",
+      "detail_file": "agent-e-commerce/2026-11-17/2611.22033.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22033/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.22509",
+      "title": "MIPR: A Benchmark for Reasoning-Intensive Multimodal Intent-to-Product Retrieval with Multi-Category Solutions",
+      "title_zh": "MIPR：面向高推理需求与多类别解决方案的多模态意图到商品检索基准",
+      "authors": [
+        "Qiang Li",
+        "Xuan Lu",
+        "Jian Ruan",
+        "Manxi Lin",
+        "Jiacheng Chen",
+        "Wen Shen",
+        "Zhihua Wei",
+        "Xiaoyu Shen",
+        "Dan Ou",
+        "Xiangheng Kong",
+        "Junjun Zheng"
+      ],
+      "total_score": 0.6609824593811418,
+      "scores": {
+        "topic_relevance": 0.88,
+        "llm_assessment": 0.8320000000000001,
+        "domain_fit": 0.99,
+        "other": 0.19794153127047226
+      },
+      "tags": [
+        "product search retrieval"
+      ],
+      "tldr_zh": "MIPR检验模型能否从多模态意图推断并检索多类商品。",
+      "detail_file": "agent-e-commerce/2026-11-17/2611.22509.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22509/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.22410",
+      "title": "More Than a Score: Reinforcement Learning with Verbalized Feedback for Generative Recommendation",
+      "title_zh": "不止于分数：利用语言反馈进行生成式推荐的强化学习",
+      "authors": [
+        "Zipeng Chen",
+        "Xinyu Lin",
+        "Yuliang Sun",
+        "Sheng Zhang",
+        "Zeyu Wang",
+        "Xiaowen Shi",
+        "Junwei Pan",
+        "Chengguo Yin"
+      ],
+      "total_score": 0.5996000000000001,
+      "scores": {
+        "topic_relevance": 0.8,
+        "llm_assessment": 0.732,
+        "domain_fit": 0.92,
+        "other": 0.2
+      },
+      "tags": [
+        "llm for commerce"
+      ],
+      "tldr_zh": "用语言反馈弥补标量奖励的不足，提升推荐准确性和排序质量。",
+      "detail_file": "agent-e-commerce/2026-11-17/2611.22410.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22410/thumb.webp"
+    },
+    {
+      "arxiv_id": "2611.22788",
+      "title": "IntentGR: Enhancing Intent for End-to-End Personalized Generative Retrieval in Search",
+      "title_zh": "IntentGR：面向搜索的意图增强端到端个性化生成式检索",
+      "authors": [
+        "Gefan Ye",
+        "Yanjing Wu",
+        "Yinfu Feng",
+        "Zhiqiang Wang",
+        "Liang Li",
+        "Jun Xiao",
+        "Rong Xiao",
+        "Xiaoyi Zeng"
+      ],
+      "total_score": 0.461091621005205,
+      "scores": {
+        "topic_relevance": 0.4,
+        "llm_assessment": 0.788,
+        "domain_fit": 0.96,
+        "other": 0.21563873668401676
+      },
+      "tags": [
+        "general retrieval ranking"
+      ],
+      "tldr_zh": "IntentGR利用查询行为强化检索意图，改善长尾查询表现。",
+      "detail_file": "agent-e-commerce/2026-11-17/2611.22788.json",
+      "thumb": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22788/thumb.webp"
+    }
+  ]
+}

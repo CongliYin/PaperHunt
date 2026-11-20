@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2611.22835",
+  "title": "When Passing Checks Do Not Establish Completion: Evidence Interpretation in Coding Agents",
+  "title_zh": "通过检查不等于完成任务：Coding Agents 中的证据解读",
+  "authors": [
+    "Xueping Gao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T14:17:43Z",
+  "abs_url": "https://arxiv.org/abs/2611.22835v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.22835",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Verification procedures in coding agents must preserve execution facts, interpret their scope and discharge checking obligations. We study these responsibilities through qualified repository checks, controlled evidence consumers and executable workflows. A prospective thirteen-task factorial study finds that correct reported facts need not yield the requested finite verdict. Conversely, all 122 delivered labels in a held-out receipt-supply study are correct, while sixteen responses misreport facts and eleven others exceed authorized scope. Production repair supplies successful controls and finite-supported preservation failures. Across 118 repair episodes on 31 tasks, source interventions separate startup reachability from repair and witness production from the claimed operation. Lifetime and resource controls delimit what passing validation establishes. Generated-note comparisons yield local repair differences but can state false explanations; strong ordinary baselines, new tasks and Skill-transfer studies supply no consistent overall advantage. These results characterize evidence interpretation, applicability and fulfilled actions while limiting claims of general diagnostic superiority, Skill deterioration or deployed folding effects.",
+  "abstract_zh": "Coding Agents 的验证流程不仅要准确保留执行事实，还要判断证据适用于哪些结论，并落实要求的检查。本文通过明确适用条件的仓库检查、受控的证据解读实验和可执行工作流研究这三项职责。一项包含 13 个任务的前瞻性析因实验表明，即使事实报告正确，系统也未必能给出所要求的、由有限证据支持的判定。在一项使用留出样本、向系统提供执行凭据的实验中，系统给出的 122 个标签全部正确，但有 16 条回复误报事实，另有 11 条超出授权范围。在涵盖 31 个任务的 118 次修复尝试中，对源码的干预区分了能否启动与是否修复，以及能否生成见证与所声称的操作是否实际执行。生命周期和资源对照实验进一步界定了验证通过所能证明的范围。生成的说明笔记会影响个别任务的修复结果，但也可能给出错误解释；与强基线的比较、新任务实验和 Skill 迁移实验均未显示一致的整体优势。",
+  "key_points_zh": [
+    "验证有三项独立职责：准确记录执行事实、判断证据适用范围、完成要求的核查。",
+    "13 个任务的析因实验表明，事实报告正确仍可能无法给出所要求的判定。",
+    "留出实验中，122 个标签全部正确，但仍有 16 条回复误报事实，另有 11 条超出授权范围。",
+    "31 个任务的 118 次修复尝试显示：能启动不等于已修复，生成见证也不等于执行了所声称的操作。",
+    "自动生成的说明笔记会影响个别修复结果，也可能给出错误解释；多组对照未显示一致的整体优势。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.64,
+    "problem_significance": 0.84,
+    "potential_impact": 0.66,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.72,
+    "llm_avg": 0.6880000000000001,
+    "comment": "Controlled coding-agent workflows show why passing checks do not establish task completion, but the experiments do not identify a consistently better remedy.",
+    "comment_zh": "受控的编码智能体工作流说明了为何通过检查并不等于完成任务，但实验未找到持续优于基线的改进方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.6880000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22835/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22835/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.96
+    }
+  ]
+}

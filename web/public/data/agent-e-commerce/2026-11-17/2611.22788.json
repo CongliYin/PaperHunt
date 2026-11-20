@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2611.22788",
+  "title": "IntentGR: Enhancing Intent for End-to-End Personalized Generative Retrieval in Search",
+  "title_zh": "IntentGR：面向搜索的意图增强端到端个性化生成式检索",
+  "authors": [
+    "Gefan Ye",
+    "Yanjing Wu",
+    "Yinfu Feng",
+    "Zhiqiang Wang",
+    "Liang Li",
+    "Jun Xiao",
+    "Rong Xiao",
+    "Xiaoyi Zeng"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T13:51:07Z",
+  "abs_url": "https://arxiv.org/abs/2611.22788v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.22788",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Personalized generative retrieval in search should jointly satisfy the user's immediate search intent and long-term preference. Recent end-to-end approaches, primarily explored in recommendation, unify item tokenization and sequence generation within a single model, allowing semantic identifiers (SIDs) to be optimized toward the downstream generation objective. However, these methods often treat the query merely as an input feature, without explicitly leveraging it to guide either identifier learning or sequence generation. This leaves intent guidance weak in both the tokenization and the generation stage, causing generated semantic identifiers to drift toward high-frequency token patterns rather than the current search intent. In this work, we find that incorporating additional query-related evidence into the framework of end-to-end generative retrieval is important. Based on this finding, we propose IntentGR, an intent-enhanced end-to-end framework that strengthens query semantics at four complementary stages of the retrieval pipeline. Query-Aware Semantic Behavior Representation (QBR) introduces query-level behavioral evidence as a new input signal; Query-Semantic Alignment (QSA), Long-Tail Query Enrichment (LQE), and Query-conditioned Attention Modulation (QAM) then serve as integration mechanisms at the optimization, training-distribution, and decoding stages to fully exploit this evidence. Experiments on the public AOL4PS benchmark and AE, a large-scale industrial e-commerce dataset, show that IntentGR improves Recall@10 by 8.11% and 11.96% over the strongest baseline, with strong gains on long-tail queries. These results suggest that enriched query-related input evidence, together with effective integration mechanisms, is beneficial for building intent-aware end-to-end generative search systems.",
+  "abstract_zh": "个性化生成式检索需要兼顾用户的即时搜索意图和长期偏好。现有端到端方法将物品标记化与序列生成统一在同一模型中，使语义标识符（SID）能够针对下游生成目标进行优化。然而，这些方法往往只把查询当作输入特征，没有显式用它指导标识符学习或序列生成，导致生成结果偏向高频标记模式，偏离当前查询意图。IntentGR 在检索流程的四个阶段强化查询语义：通过 QBR 引入查询级行为证据，再通过 QSA、LQE 和 QAM 分别在优化、训练数据分布和解码阶段利用这些证据。在公开基准 AOL4PS 和大规模工业电商数据集 AE 上，IntentGR 的 Recall@10 较最强基线分别提升 8.11% 和 11.96%，并在长尾查询上取得显著收益。",
+  "key_points_zh": [
+    "仅将查询作为输入特征，不足以约束语义标识符的学习与生成，模型容易偏向高频标记模式。",
+    "查询感知语义行为表征（QBR）引入查询级行为证据，帮助模型识别当前搜索意图。",
+    "查询语义对齐（QSA）、长尾查询增强（LQE）和查询条件注意力调节（QAM）分别在优化、训练数据分布和解码阶段强化查询引导。",
+    "相比最强基线，IntentGR 在 AOL4PS 和 AE 上的 Recall@10 分别提升 8.11% 和 11.96%，长尾查询也获得明显改善。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.77,
+    "problem_significance": 0.89,
+    "potential_impact": 0.88,
+    "paradigm_shift": 0.58,
+    "lasting_value": 0.82,
+    "llm_avg": 0.788,
+    "comment": "Explicit query-intent modeling improves personalized generative retrieval on an industrial e-commerce dataset, with particularly strong gains for long-tail queries.",
+    "comment_zh": "显式建模查询意图提升了工业电商数据集上的个性化生成式检索效果，长尾查询的收益尤为明显。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.39383242010410024,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.788,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22788/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.965
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22788/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.951
+    }
+  ]
+}

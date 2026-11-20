@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2611.22245",
+  "title": "Multi-Agent Memory Inconsistency: Where Factual Conflicts Disappear in LLM Agents",
+  "title_zh": "多智能体记忆不一致：事实冲突在 LLM 智能体的哪个环节消失？",
+  "authors": [
+    "Hejia Zhang",
+    "Zhongming Yu",
+    "Yimin Ding",
+    "Wei-Ting Chen",
+    "Hengjia Yu",
+    "Wentao Ni",
+    "Yijun Liu",
+    "Cong Xu",
+    "Xin Chen",
+    "Matrix Yao",
+    "Fan Zhao",
+    "Jishen Zhao"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T05:47:01Z",
+  "abs_url": "https://arxiv.org/abs/2611.22245v2",
+  "pdf_url": "https://arxiv.org/pdf/2611.22245",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Multi-agent delegation lets LLM systems distribute evidence collection across workers with separate contexts. This creates a consistency challenge: facts retrieved by workers may be missing from the evidence available to the lead for a joint conclusion. We introduce a benchmark and evidence-flow profiler for studying multi-agent memory inconsistency through controlled factual conflicts in Harvey LAB document-review tasks. Pooled across three models with comparable generation spending, requiring delegation increases retrieval of both conflicting claims from 50.2% to 68.7% relative to single-agent execution, yet conflict detection falls from 16.2% to 13.2%. Within this setting, workers report both claims for only 35.2% of retrieved pairs, and pooled matched comparisons show higher detection than single-agent execution when one worker reads both claims but lower detection when the claims are split across workers. Worker-to-lead handoffs are a central target for improving conflict detection in multi-agent LLMs.",
+  "abstract_zh": "多智能体委派让多个拥有独立上下文的工作智能体并行收集证据，但它们检索到的事实未必会传递给负责汇总结论的主控智能体。本文在 Harvey LAB 文档审查任务中设置可控的事实冲突，并提出基准与证据流分析工具，用于定位冲突证据在哪个环节丢失。在生成开销相近的条件下，汇总三个模型的结果发现：与单智能体相比，强制委派将两条冲突陈述均被检索到的比例从 50.2% 提高到 68.7%，但冲突检出率却从 16.2% 降至 13.2%。对于已被检索到的冲突陈述对，工作智能体仅在 35.2% 的情况下将两条陈述均上报。汇总后的配对比较显示，同一工作智能体读到两条陈述时，冲突检出率高于单智能体；两条陈述分散在不同工作智能体时，检出率则更低。因此，工作智能体向主控智能体交接证据是改进冲突检测的关键环节。",
+  "key_points_zh": [
+    "在 Harvey LAB 文档审查任务中构造可控的事实冲突，并追踪证据从检索、上报到最终冲突判定的流转。",
+    "在相近生成开销下，强制委派使冲突双方的检索率从 50.2% 升至 68.7%，但冲突检出率从 16.2% 降至 13.2%。",
+    "即使两条冲突陈述都被检索到，也只有 35.2% 的陈述对被完整上报，表明证据交接是重要瓶颈。",
+    "同一工作智能体读到冲突双方时，检出率高于单智能体；证据分散在不同工作智能体时，检出率反而更低。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.83,
+    "novelty": 0.77,
+    "problem_significance": 0.85,
+    "potential_impact": 0.75,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.77,
+    "llm_avg": 0.76,
+    "comment": "The benchmark and evidence-flow profiler reveal how delegation can improve retrieval yet hide contradictions at worker-to-lead handoffs, though the evidence is limited to document review.",
+    "comment_zh": "该基准与证据流分析工具揭示了任务委派为何能提高证据召回，却可能在子智能体向主智能体汇报时遗漏矛盾，但现有证据仅来自文档审查任务。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4409423303122735,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.76,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 12,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22245/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.902
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22245/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.692
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "arxiv_id": "2611.22102",
+  "title": "EvoDisco: Strategy Discovery for Evolving Agent Memory",
+  "title_zh": "EvoDisco：智能体记忆演化的策略发现",
+  "authors": [
+    "Mingyang Liu",
+    "Qingcan Kang",
+    "Shixiong Kai",
+    "Kaichao Liang",
+    "Xiaojin Fu",
+    "Tao Zhong",
+    "Linqi Song"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T02:37:56Z",
+  "abs_url": "https://arxiv.org/abs/2611.22102v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.22102",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language model agents accumulate experience in memory, and how that memory evolves during interaction is as important as what it stores. Recent methods update memory online, yet both the operators that transform memory and the rules that select them remain fixed by design. We propose EvoDisco, which formulates agent memory evolution as evolutionary strategy discovery: the agent must discover which operator to apply, when to apply it, and how to instantiate it, rather than rewriting memory under a static operator schedule. A learnable policy conditions on the current memory state and recent task history, then selects and instantiates one of four semantic operators---Abstract, Refine, Bridge, and Reframe---which respectively compress related memories, decompose overloaded entries, connect weakly linked experiences, and reorganize retrieved reasoning chains. The policy is updated with a bi-level fitness. An inner signal scores each transformation using a retrieval-quality improvement regularized by memory complexity. An outer signal scores strategic efficacy over a window of past decisions, combining historical operator-utility regret, utility-prediction error, and selection diversity. Under a one-pass online plus frozen-transfer protocol on ALFWorld, WebShop, and LifelongAgentBench (OS and DB), EvoDisco improves over strong memory baselines including MemP and MemRL. The largest gains are on ALFWorld ($+8.8$ online / $+12.9$ frozen-transfer points over MemP; $+16.4$ / $+17.9$ over MemRL). Ablations attribute these gains to both fitness levels and the operator library.",
+  "abstract_zh": "大语言模型智能体不仅需要积累经验，还需要在交互中调整记忆的组织方式。现有在线记忆方法通常预先固定记忆变换算子及其选择规则。EvoDisco 将记忆演化建模为策略发现问题：可学习策略根据当前记忆状态与近期任务历史，决定何时使用哪个算子，以及如何执行。其四个语义算子 Abstract、Refine、Bridge 和 Reframe 分别用于压缩相关记忆、拆分负载过重的条目、连接关联较弱的经验，以及重组检索到的推理链。策略由双层适应度更新：内层衡量单次变换带来的检索质量提升，并对记忆复杂度施加惩罚；外层在近期决策窗口内综合考察算子选择的历史效用遗憾、效用预测误差与选择多样性。在 ALFWorld、WebShop 和 LifelongAgentBench（OS、DB）的单遍在线与冻结迁移评测中，EvoDisco 优于 MemP、MemRL 等记忆基线，其中 ALFWorld 上的提升最大。",
+  "key_points_zh": [
+    "核心创新是学习记忆演化策略，而非仅在固定规则下在线更新记忆：策略同时决定算子、使用时机和具体执行方式。",
+    "四个语义算子分别处理不同问题：Abstract 压缩相关记忆，Refine 拆分负载过重的条目，Bridge 建立经验间联系，Reframe 重组检索到的推理链。",
+    "双层适应度将单次编辑的检索收益与一段时间内的策略表现分开评估；消融实验表明，两层适应度和算子库均对性能增益有贡献。",
+    "在 ALFWorld 上，在线评测和冻结迁移得分分别比 MemP 高 8.8 和 12.9 分，比 MemRL 高 16.4 和 17.9 分。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.85,
+    "problem_significance": 0.9,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.81,
+    "lasting_value": 0.85,
+    "llm_avg": 0.852,
+    "comment": "EvoDisco learns when and how to apply a fixed library of memory operators, with online and frozen-transfer tests providing evidence that the learned policy generalizes.",
+    "comment_zh": "EvoDisco 学习何时以及如何应用预设的记忆操作，在线评测与冻结策略后的迁移评测为策略的泛化能力提供了证据。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.22577486063332924,
+    "venue_signal": 0.0,
+    "generality": 1.0,
+    "llm_assessment": 0.852,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22102/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.963
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "arxiv_id": "2611.22238",
+  "title": "Context Has a Price: Adding and Removing Context for LLM Coding Agents under Prefix Caching",
+  "title_zh": "上下文有价：前缀缓存下 LLM 编程智能体的上下文增删",
+  "authors": [
+    "Zerui Yang",
+    "Miaomiao Dong",
+    "Quan Xue",
+    "Chaorui Zhang",
+    "Xuanyu Zheng",
+    "Xiyuan Wang",
+    "Haolin Ruan",
+    "Xueyan Niu",
+    "Guangcheng Song",
+    "Weixi Zhang",
+    "Wei Han",
+    "Bo Bai"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T05:38:53Z",
+  "abs_url": "https://arxiv.org/abs/2611.22238v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.22238",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents repeatedly send their conversation history to a language model. Adding useful code may reduce search, while removing old tool outputs may shorten later prompts. But do these changes reduce the cost of solving a task? We study this as a measurement problem in more than 20,000 runs of open models on SWE-bench Verified, SWE-bench and Loc-Bench. We account separately for uncached input, cached input and output tokens. Three findings emerge. First, in our main evidence-package experiments, retrieved code reduces read and search commands by 18--34%, but increases cost by 33--42% when cached input costs one tenth of uncached input, without a measurable improvement in resolution. Second, removing old observations can either save money or increase cost: the same approach saves 19--36% without a cache discount but increases cost by 38--116% with a tenth-price cache. Third, shorter prompts do not guarantee cheaper runs because agents may respond by taking more steps. We also find that concurrent experiments can share cached prefixes and distort cost comparisons. These results show why context-management methods should be evaluated using both token prices and the agent's subsequent behavior.",
+  "abstract_zh": "编程智能体会反复将对话历史发送给语言模型。加入相关代码可能减少搜索，删除旧工具输出则能缩短后续提示，但这些操作是否真的能降低解决任务的成本？论文在 SWE-bench Verified、SWE-bench 和 Loc-Bench 上对开放模型进行了超过 20,000 次运行，分别核算未缓存输入、已缓存输入和输出 token 的成本。主要实验发现，加入检索到的代码使读取和搜索命令减少 18%–34%，但当缓存输入单价为未缓存输入的十分之一时，总成本反而增加 33%–42%，且任务解决率未见可测量的提升。同一种旧工具输出删减方法在缓存无折扣时节省 19%–36%，在缓存输入按十分之一定价时却使成本增加 38%–116%。此外，更短的提示可能让智能体执行更多步骤，而并发实验可能共享已缓存的前缀，扭曲成本比较。因此，评估上下文管理方法时，应同时考虑各类 token 的价格和上下文变化引发的智能体行为。",
+  "key_points_zh": [
+    "超过 20,000 次运行分别核算未缓存输入、已缓存输入和输出 token 的成本，而非只比较提示长度。",
+    "加入检索代码使读取和搜索命令减少 18%–34%；在缓存输入按十分之一定价时，总成本却增加 33%–42%，任务解决率未见可测量的提升。",
+    "删除旧工具输出在缓存无折扣时节省 19%–36%，但在缓存输入按十分之一定价时，成本反而增加 38%–116%。",
+    "更短的提示可能引发更多执行步骤；并发实验共享已缓存的前缀也可能扭曲成本比较。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.73,
+    "problem_significance": 0.88,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.86,
+    "llm_avg": 0.7939999999999999,
+    "comment": "The large-scale study provides a practical cost-accounting method by showing that prefix-cache pricing and subsequent agent behavior can reverse apparent context savings.",
+    "comment_zh": "这项大规模研究提供了实用的成本核算方法，并表明前缀缓存定价和智能体的后续行为可能使表面上的上下文节省反而增加成本。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.6892367436804401,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.7939999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 43,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22238/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.963
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22238/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.748
+    }
+  ]
+}

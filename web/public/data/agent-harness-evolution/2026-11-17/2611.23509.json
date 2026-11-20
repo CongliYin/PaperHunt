@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2611.23509",
+  "title": "GRAFT: Execution-Guided Genetic Recombination for Agent Design",
+  "title_zh": "GRAFT：执行引导的智能体设计遗传重组",
+  "authors": [
+    "Sevda Ebrahimi",
+    "Mohammed Saidul Islam",
+    "Xiaodan Zhu",
+    "Elham Dolatabadi"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T21:01:08Z",
+  "abs_url": "https://arxiv.org/abs/2611.23509v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.23509",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Automated agent design searches for executable architectures that improve LLM-based agent performance, with evolutionary methods using language-model crossover to recombine promising mechanisms for task decomposition, model coordination, and verification. This search, however, is typically guided by aggregate fitness alone, which hides the instance-level successes and failures behind each score. We introduce Execution Guided Genetic Recombination for Agent Design (GRAFT), which uses aggregate fitness for selection and survival and parent-specific execution evidence to guide semantic crossover with integrated mutation. Its feedback harness reuses bounded samples of successful and failed runs from fitness evaluation, withholding reference answers and requiring no additional task executions. We evaluate GRAFT across six reasoning and programming settings using open-weight optimizer and executor models. It achieves a mean test accuracy of 82.0%, exceeding the strongest baseline by 9.8% points. Controlled ablations show that adding execution evidence improves test accuracy with initialization, search rules, repair policies, and evaluation budgets held fixed. Our results support the value of parent-specific execution evidence for evolutionary agent design.",
+  "abstract_zh": "自动化智能体设计通过搜索可执行架构来提升基于大语言模型的智能体性能。现有进化方法利用语言模型进行交叉重组，将有潜力的任务分解、模型协作和验证机制组合起来，但通常只依据整体适应度进行搜索，无法看出每个方案在哪些样例上成功或失败。GRAFT 保留整体适应度作为亲代选择和个体淘汰的依据，同时利用各亲代的执行证据来引导融合变异的语义交叉。其反馈机制从适应度评估中复用少量成功和失败的运行样本，不提供参考答案，也无需额外执行任务。论文使用开放权重模型担任优化器和执行器，在六种推理与编程设置中进行评估。GRAFT 的平均测试准确率为 82.0%，较最强基线高 9.8 个百分点。控制初始化、搜索规则、修复策略和评估预算后，消融实验仍显示，引入执行证据能够提高测试准确率。",
+  "key_points_zh": [
+    "整体适应度决定哪些个体被选为亲代、哪些个体被保留；亲代在具体样例上的执行表现则指导如何重组。",
+    "反馈机制复用适应度评估中的成功与失败样本，不提供参考答案，也不增加任务执行次数。",
+    "在六种推理与编程设置中，GRAFT 的平均测试准确率达到 82.0%，领先最强基线 9.8 个百分点。",
+    "固定初始化、搜索规则、修复策略和评估预算后，加入执行证据仍能提升测试准确率。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.8,
+    "problem_significance": 0.84,
+    "potential_impact": 0.83,
+    "paradigm_shift": 0.78,
+    "lasting_value": 0.81,
+    "llm_avg": 0.812,
+    "comment": "Reusing parent execution traces to guide agent-design recombination improves over score-only feedback without additional task executions.",
+    "comment_zh": "复用父代的执行轨迹来指导智能体设计重组，比仅依赖适应度分数的反馈更有效，且无需额外运行任务。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.812,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23509/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.673
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23509/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.44
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "arxiv_id": "2611.23362",
+  "title": "TRACE-MAS: Diagnosing and Repairing Collaboration Failures in Multi-Agent Systems",
+  "title_zh": "TRACE-MAS：多智能体系统协作故障的诊断与修复",
+  "authors": [
+    "Zekai Chen",
+    "Yihan Sun",
+    "Xunkai Li",
+    "Xun Wu",
+    "Xinmo Jin",
+    "Yinlin Zhu",
+    "Haodong Lu",
+    "Xuaner Chen",
+    "Rong-Hua Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T16:49:33Z",
+  "abs_url": "https://arxiv.org/abs/2611.23362v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.23362",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM-based multi-agent systems (MAS) rely on not only individual agent behaviors but also the interactions that connect agents, including message exchanges and task dependencies. Existing MAS safeguards mainly perform agent-level anomaly detection, which becomes insufficient when failures originate from agent interactions and detected anomalies do not necessarily reveal their true sources. To address this limitation, we propose \\textbf{TRACE-MAS}, a finer-grained framework for diagnosing and repairing MAS failures. TRACE-MAS learns normal collaborative execution patterns from benign trajectories and detects deviations in agent state changes, message transitions, and task dependency evolutions. It further identifies responsible execution elements through source-aware attribution and selects minimal interventions to restore collaboration while preserving task-critical capabilities. Experiments on five MAS benchmarks demonstrate that TRACE-MAS significantly improves root-cause localization accuracy by \\textbf{60.2}\\% and achieves consistent gains in task recovery over strong MAS safeguards.",
+  "abstract_zh": "基于大语言模型（LLM）的多智能体系统（MAS）不仅依赖单个智能体的行为，也依赖消息交换、任务依赖等智能体间交互。现有防护方法主要在智能体层面检测异常，难以诊断源于交互的故障，且检测到的异常未必就是故障根因。为此，论文提出细粒度诊断与修复框架 TRACE-MAS。该框架从正常执行轨迹中学习协作模式，检测智能体状态变化、消息流转和任务依赖演变中的偏离；随后通过源感知归因（source-aware attribution）定位引发故障的执行环节，并选择最小干预措施，在保留任务关键能力的同时恢复协作。在五个 MAS 基准上，相较于有竞争力的防护方法，TRACE-MAS 的根因定位准确率提升了 60.2%，任务恢复表现也持续改善。",
+  "key_points_zh": [
+    "仅检测单个智能体的异常，难以发现由消息交换或任务依赖引发的协作故障；异常出现的位置也不一定是根因所在。",
+    "TRACE-MAS 从正常执行轨迹中学习协作模式，同时监测智能体状态、消息流转和任务依赖三个层面的偏离。",
+    "通过源感知归因定位引发故障的执行环节，再以最小干预恢复协作，同时保留任务关键能力。",
+    "在五个 MAS 基准上，根因定位准确率较有竞争力的防护方法提升了 60.2%，任务恢复表现也 consistently 优于这些方法。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.81,
+    "novelty": 0.69,
+    "problem_significance": 0.8,
+    "potential_impact": 0.73,
+    "paradigm_shift": 0.62,
+    "lasting_value": 0.68,
+    "llm_avg": 0.704,
+    "comment": "Attributing collaboration failures to specific state, message, and dependency transitions makes traces actionable for targeted runtime recovery.",
+    "comment_zh": "将协作故障归因到具体的状态变化、消息传递和依赖关系变化，使执行轨迹能够指导有针对性的运行时恢复。"
+  },
+  "scores": {
+    "topic_relevance": 0.8400000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.704,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23362/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23362/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.75
+    }
+  ]
+}

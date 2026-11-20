@@ -1,0 +1,69 @@
+{
+  "arxiv_id": "2611.23174",
+  "title": "Inference after coding agents",
+  "title_zh": "AI 编程智能体时代的统计推断",
+  "authors": [
+    "Florian Gunsilius",
+    "David Van Dijcke",
+    "Kaspar Wüthrich"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T18:22:01Z",
+  "abs_url": "https://arxiv.org/abs/2611.23174v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.23174",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Empirical research is changing rapidly as AI coding agents are becoming increasingly proficient in every step of it, from writing code to manipulating data. We argue that while the potential of coding agents for science is vast, their use in hypothesis testing poses a substantial threat to classical inference, as these agents enable a supercharged form of selective inference. In particular, we argue that coding agents carrying out empirical research introduce a new type of post-selection inference that combines human-like, open-ended search over an implicit space of estimators with programmatic replayability of both the selection and the estimation process. Indeed, we find that on simulated data with zero effects, four frontier agents report significant p-values between 54% and 98% of the time when asked to produce a compelling finding. We propose a simple procedure for detecting and correcting these distortions. After an agent has completed its analysis, we reset and replay it on subsamples of the data to estimate the agent's relative probability of selecting that analysis when it looks statistically favorable. For agents with stable selection behavior, the resulting corrected test is asymptotically valid and consistent conditional on selection. Importantly, the correction is learned from the black-box agent's actual choices rather than a model of how it searches, so it remains valid even as AI technology continues to evolve rapidly. In simulations, the correction robustly lowers the high false rejection rates to near the nominal 5%. We illustrate the method on applications from two published papers.",
+  "abstract_zh": "AI 编程智能体（AI coding agents）能编写代码、处理数据并自主探索分析方案，但这种能力也会放大假设检验中的选择偏差。智能体既能像人类一样在未预先列明的估计量空间中开放式搜索，又能通过程序重放分析选择和参数估计的全过程，这带来了一类新的选择后推断（post-selection inference）问题。在真实效应为零的模拟数据上，当被要求给出有说服力的发现时，四个前沿智能体报告统计显著结果的比例介于 54% 和 98% 之间。作者提出在原分析结束后重置智能体，并在数据子样本上重放分析，以估计原分析方案在结果看起来更显著时被选中的相对概率，据此校正检验。若智能体的选择行为稳定，经校正的检验在给定选择的条件下具有渐近有效性和一致性。该方法直接利用黑盒智能体的实际选择，无需对其搜索策略建模。模拟中，校正将错误拒绝率降至接近名义水平 5%；作者还用两篇已发表论文中的应用展示了该方法。",
+  "key_points_zh": [
+    "编程智能体会在同一份数据上探索并筛选分析方案；直接用常规 p 值解读选中的结果，可能夸大证据强度。",
+    "在零效应模拟中，四个前沿智能体被要求给出有说服力的发现时，报告显著结果的比例为 54% 至 98%。",
+    "校正方法在数据子样本上重置并重放智能体，根据其实际选择估计原方案在结果更有利时被选中的相对概率，无需建模其内部搜索过程。",
+    "当选择行为稳定时，校正检验在给定选择的条件下具有渐近有效性和一致性；模拟中的错误拒绝率降至接近 5%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.66,
+    "novelty": 0.83,
+    "problem_significance": 0.75,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.73,
+    "lasting_value": 0.79,
+    "llm_avg": 0.768,
+    "comment": "Black-box replay offers a credible validity check for coding-agent analyses, though the correction depends on stable selection behavior and primarily advances statistical inference.",
+    "comment_zh": "黑盒回放为编码智能体执行的分析提供了可信的有效性检验，但校正依赖稳定的选择行为，且主要贡献仍在统计推断。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.768,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23174/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

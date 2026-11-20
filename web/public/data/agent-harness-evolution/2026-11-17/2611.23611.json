@@ -1,0 +1,75 @@
+{
+  "arxiv_id": "2611.23611",
+  "title": "RefinementGuard: Counterexample-Directed Semantic Qualification for Hidden Agent-Tool Execution",
+  "title_zh": "RefinementGuard：面向隐藏式智能体工具执行的反例引导语义验证",
+  "authors": [
+    "Adhyayan Veer Singh",
+    "Fanjiang Ye",
+    "Yuke Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T23:04:28Z",
+  "abs_url": "https://arxiv.org/abs/2611.23611v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.23611",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Tool runtimes can lower an agent-selected operation into a hidden parallel graph, reducing latency and context while risking semantic mistranslation. We introduce RefinementGuard: translation validation for hidden, effectful agent-tool lowerings, coupled to artifact-bound, fail-closed runtime admission. Qualification compares a candidate graph with an independent reference on isolated state using explicit parent-operation obligations. We evaluate two repository-level contracts, bug localization and patch validation, on controlled repositories. Among 100 activated, non-equivalent development/qualification faults adjudicated by one human, parent-semantic validation rejects 49/100 (operator-cluster bootstrap 95% CI [33.7%, 64.8%]). The objective is selective admission, not maximum mutation rejection: exact equality rejects 100/100 faults but also all 60 valid variants, whereas obligation-based validation accepts 60/60; its 51 residual misses identify concrete specification gaps. On a frozen disjoint input split, the held-out B2-B3 result is localization-only because 21 patch mutants fail structurally; B3 rejects 38/56 localization defects. In a controlled asynchronous-delay regime, the localization serial/guarded median-latency ratio is 4.50x, and hidden execution exposes 74.3% less parent-visible context than visible execution. Patch validation shows no demonstrated speedup; zero-delay runs expose overhead. End-to-end qualification thus detects lower-layer misses while preserving localization's parallelism.",
+  "abstract_zh": "工具运行时可将智能体选定的操作转换为隐藏的并行执行图，以降低延迟和上下文开销，但转换可能改变原操作的语义。RefinementGuard 在隔离状态下，依据上层操作的显式语义约束，对照独立参考实现验证候选执行图。验证结果与执行产物绑定，未通过验证的产物默认不予执行。研究在受控代码仓库中评估了缺陷定位和补丁验证两类任务。经一名人工评审员判定，在 100 个被触发且与参考行为不等价的故障中，语义验证拒绝了 49 个（按算子聚类的 Bootstrap 95% 置信区间为 33.7%–64.8%），同时放行了全部 60 个合法变体；严格等价检查虽然拒绝了全部故障，却也误拒了全部合法变体。未检出的 51 个故障揭示了具体的规范缺口。在预先冻结的独立测试划分中，21 个补丁变异体未通过结构检查，因此 B2–B3 的留出集结果仅适用于缺陷定位，其中 B3 拒绝了 56 个缺陷中的 38 个。在受控异步延迟条件下，串行缺陷定位的中位延迟是受验证保护的并行执行的 4.50 倍，隐藏执行向上层暴露的上下文比可见执行少 74.3%。补丁验证未显示加速，零延迟实验则表明验证本身会引入开销。",
+  "key_points_zh": [
+    "在隔离状态下将候选执行图与独立参考实现对照，按上层操作的语义约束判定是否放行，并将验证结果绑定到具体执行产物。",
+    "语义验证拒绝 49/100 个故障、放行 60/60 个合法变体；严格等价检查拒绝全部故障，也误拒全部合法变体。剩余 51 个漏检指出了规范缺口。",
+    "独立留出集上的 B2–B3 结果仅适用于缺陷定位：B3 拒绝 38/56 个缺陷；21 个补丁变异体未通过结构检查。",
+    "在受控异步延迟下，串行缺陷定位的中位延迟是受验证保护的并行执行的 4.50 倍，隐藏执行向上层暴露的上下文减少 74.3%。补丁验证未显示加速，零延迟时可观察到验证开销。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.82,
+    "problem_significance": 0.83,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.72,
+    "lasting_value": 0.78,
+    "llm_avg": 0.774,
+    "comment": "Operation-level contracts validate parallel tool execution without requiring exact equivalence, but substantial defect misses and narrow speedup evidence limit confidence.",
+    "comment_zh": "操作级契约无需要求完全等价即可验证工具的并行执行，但仍有大量缺陷未检出，且加速证据仅限于少数场景。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.774,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23611/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.971
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23611/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.97
+    }
+  ]
+}

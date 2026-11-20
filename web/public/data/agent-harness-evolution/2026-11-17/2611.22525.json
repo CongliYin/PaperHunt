@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2611.22525",
+  "title": "When Agent Skills Go Stale: Runtime Behavior and Selective Maintenance in Evolving Environments",
+  "title_zh": "当智能体技能过时：演变环境中的运行时行为与选择性维护",
+  "authors": [
+    "Ömer Faruk Akgül",
+    "Shuli Jiang",
+    "Yuting Zhang",
+    "Yi Zhang",
+    "Xiaohan Fei",
+    "Wei Xia",
+    "Stefano Soatto"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T10:18:46Z",
+  "abs_url": "https://arxiv.org/abs/2611.22525v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.22525",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Agent skills use past experience and current observations to guide decisions and actions on related tasks. This experience is retained in skill state, whose reuse can amortize inference-time reasoning and environment interaction. When environment changes, parts of this state can become outdated while others remain useful. Across four task settings and two models, we compare skill reuse before and after environment changes. Previously beneficial skills can reduce task performance by over 10 percentage points or increase execution cost by nearly 40% relative to no skill. Task success can also remain unchanged while execution savings decline. These effects depend on which environment-specific details become outdated and the agent's ability to compensate using current observations. We introduce selective maintenance, which replays checks from successful executions without additional model calls. It verifies whether observed differences conflict with skill state, repairs affected content, and validates updates, rebuilding when local repair is insufficient. No description of the change is supplied. Relative to reusing stale state, maintenance improves task accuracy by up to 67pp and reduces execution steps by up to 37%. These results suggest that preserving a skill's inference time value as environments evolve requires selectively maintaining its state.",
+  "abstract_zh": "智能体技能将过往经验保存在技能状态（skill state）中，并结合当前观测指导相关任务中的决策与行动。复用技能状态可以减少推理阶段的思考与环境交互开销，但环境变化后，状态中的部分信息可能过时，其余信息仍然有用。论文在四种任务设定和两个模型上比较了环境变化前后的技能复用表现。相较于不使用技能，原本有益的技能在过时后可能使任务表现下降超过 10 个百分点，或使执行成本增加近 40%；任务成功率也可能保持不变，但原有的执行成本优势缩小。影响取决于哪些环境细节已经过时，以及智能体能否利用当前观测弥补偏差。作者提出选择性维护（selective maintenance）：无需提供环境变更说明，也无需额外调用模型，即可重放成功执行中的检查，判断观测差异是否与技能状态冲突，修复并验证受影响的内容；若局部修复不足，则重建技能状态。相较于直接复用过时状态，该方法最多提高任务准确率 67 个百分点，最多减少执行步数 37%。",
+  "key_points_zh": [
+    "在四种任务设定和两个模型上，过时技能相较于不使用技能，可能使任务表现下降超过 10 个百分点，或使执行成本增加近 40%。",
+    "成功率不变不代表技能仍然有效：智能体可能依靠当前观测弥补过时信息，但技能原本节省的执行开销可能缩小。",
+    "选择性维护（selective maintenance）无需变更说明或额外模型调用，通过重放成功执行中的检查定位冲突，优先局部修复并验证，必要时重建技能状态。",
+    "相较于直接复用过时状态，选择性维护最多提高任务准确率 67 个百分点，最多减少执行步数 37%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.78,
+    "problem_significance": 0.86,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.75,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8099999999999999,
+    "comment": "Replaying execution checks to repair and validate only stale skill components provides a practical maintenance loop without extra model calls for those checks.",
+    "comment_zh": "通过回放执行检查来修复并验证过时的技能组件，论文建立了实用的维护闭环，且检查无需额外调用模型。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8099999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22525/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22525/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

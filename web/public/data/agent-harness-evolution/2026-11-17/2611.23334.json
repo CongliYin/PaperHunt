@@ -1,0 +1,60 @@
+{
+  "arxiv_id": "2611.23334",
+  "title": "Integrating AI Coding Agents Into Scientific Research",
+  "title_zh": "将 AI 编程智能体融入科学研究",
+  "authors": [
+    "Rory Barnes"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T01:03:38Z",
+  "abs_url": "https://arxiv.org/abs/2611.23334v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.23334",
+  "links": {
+    "github": "https://github.com/RoryBarnes/vaibify",
+    "project_page": null
+  },
+  "abstract_en": "New software tools have emerged that enable AI agents to quickly develop code that analyzes data and generates figures, but their mistakes can also harm a researcher's computer, require extensive resources for validation, and cause the results to be received more skeptically. These concerns could be mitigated if scientific software is developed in a secure environment with a system for monitoring file changes and well-defined standards for handling AI agents. This paper first describes how coding agents change eleven aspects of generating, verifying, and reproducing numerical results. A six-level scale is then proposed for classifying AI-assisted numerical experiments by their provenance, reproducibility, openness, oversight, and falsifiability (PROOF). The scale begins with locally self-consistent, version-controlled, human-verified results and culminates in a publicly accessible and curated archive of the files, change history, prompt transcripts, independent agent regeneration of the analysis, and multiple cryptographically verifiable attestations of regeneration by independent researchers. These aspects of AI-assisted scientific software development have been synthesized into a new open source software package called vaibify that optimizes the agentic development of computational experiments ascending the PROOF Ladder. Docker containers sequester the agents while a GUI enables researchers to prompt command line agents, monitor the current status of local and remote files, and drive a project to PROOF Level 3 (reproducible). The methods described in this paper could help researchers reduce the time required to verify agent-written software and efficiently communicate trust in AI-assisted science.",
+  "abstract_zh": "AI 编程智能体可以快速编写数据分析和绘图代码，但其错误可能损害研究者的计算机、增加验证成本，并削弱研究结果的可信度。论文梳理了编程智能体对数值结果生成、验证和复现的 11 个方面的影响，并提出六级 PROOF Ladder，从来源可追溯性、可复现性、开放性、监督和可证伪性五个维度评估 AI 辅助数值实验。最低一级要求结果在本地自洽、纳入版本控制并经人工验证；最高一级要求建立公开且经过整理的档案，保存实验文件、变更历史和提示词交互记录，纳入独立智能体重新生成的分析，并由多位独立研究者提供可通过密码学方法验证的复现证明。论文还推出开源工具 vaibify，使用 Docker 容器隔离智能体，并通过图形界面支持研究者向命令行智能体发送提示、监控本地和远程文件状态，帮助项目达到 PROOF 第 3 级（可复现）。这些方法旨在降低验证智能体所写代码的成本，并让他人更容易判断 AI 辅助研究结果的可信度。",
+  "key_points_zh": [
+    "论文梳理了编程智能体对数值结果生成、验证和复现的 11 个方面的影响，指出加速编写代码并不意味着验证更省时。",
+    "六级 PROOF Ladder 从来源可追溯性、可复现性、开放性、监督和可证伪性五个维度对 AI 辅助数值实验分级。",
+    "最高级别不仅要求公开保存文件、变更历史和提示词记录，还要求独立智能体重新生成分析，并由多位独立研究者提供可通过密码学方法验证的复现证明。",
+    "开源工具 vaibify 用 Docker 隔离智能体，通过图形界面监控本地和远程文件状态，支持项目达到 PROOF 第 3 级（可复现）。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.78,
+    "novelty": 0.57,
+    "problem_significance": 0.75,
+    "potential_impact": 0.68,
+    "paradigm_shift": 0.5,
+    "lasting_value": 0.65,
+    "llm_avg": 0.63,
+    "comment": "The PROOF ladder and open-source tooling make coding-agent provenance and reproducibility actionable, though the implementation reaches only level three of six.",
+    "comment_zh": "PROOF 分级和开源工具让编码智能体的过程溯源与结果复现有了可操作的流程，但当前实现仅达到六级中的第三级。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.5588306254094444,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.63,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/RoryBarnes/vaibify",
+    "project_page_url": null,
+    "code_promised": true,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 8,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 8,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}

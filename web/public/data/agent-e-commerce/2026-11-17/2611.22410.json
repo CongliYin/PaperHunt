@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2611.22410",
+  "title": "More Than a Score: Reinforcement Learning with Verbalized Feedback for Generative Recommendation",
+  "title_zh": "不止于分数：利用语言反馈进行生成式推荐的强化学习",
+  "authors": [
+    "Zipeng Chen",
+    "Xinyu Lin",
+    "Yuliang Sun",
+    "Sheng Zhang",
+    "Zeyu Wang",
+    "Xiaowen Shi",
+    "Junwei Pan",
+    "Chengguo Yin"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T08:47:30Z",
+  "abs_url": "https://arxiv.org/abs/2611.22410v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.22410",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Large language models (LLMs) are increasingly used for generative recommendation, where recommended items are generated directly from users' interaction histories. To further improve recommendation quality, reinforcement learning (RL) has been applied to align these models with recommendation objectives. However, existing RL methods rely on scalar rewards to implicitly guide exploration. These rewards do not specify which aspects of a candidate conflict with the user's preferences or how the next candidate should differ. To address this gap, we propose VerRec, a verbalized feedback-guided RL framework for generative recommendation. Specifically, a user simulator generates personalized verbalized feedback based on the user's historical preferences and the candidate item profile. The policy uses this feedback to produce refined recommendations. Original and refined candidates form an expanded group and are jointly optimized with group relative policy optimization. The user simulator is only required during training and is removed at inference time. Experiments on three Amazon review datasets with two generative recommendation backbones demonstrate that VerRec improves recommendation accuracy and ranking quality. Further analyses show that verbalized guidance encourages exploration of more diverse candidates and helps the policy discover more rewarding recommendations during training.",
+  "abstract_zh": "生成式推荐利用大语言模型（LLM），根据用户的交互历史直接生成推荐物品。现有强化学习（RL）方法依赖标量奖励引导探索，但分数无法指出候选物品的哪些方面不符合用户偏好，也无法说明下一次推荐应如何调整。本文提出 VerRec，一种由语言反馈引导的生成式推荐强化学习框架。用户模拟器根据用户的历史偏好和候选物品的属性生成个性化反馈，推荐策略据此生成改进后的候选。原始候选与改进后的候选组成扩展候选组，通过组相对策略优化（Group Relative Policy Optimization, GRPO）进行联合训练。用户模拟器仅在训练阶段使用，推理时无需调用。在三个 Amazon 评论数据集和两种生成式推荐骨干模型上的实验表明，VerRec 提高了推荐准确性和排序质量。进一步分析发现，语言反馈有助于策略探索更多样的候选，并在训练中找到能获得更高奖励的推荐。",
+  "key_points_zh": [
+    "标量奖励只能给候选打分，无法解释它为何不符合用户偏好，也无法指导下一轮调整。",
+    "VerRec 让用户模拟器结合历史偏好与候选物品属性生成个性化语言反馈，引导策略修正推荐。",
+    "原始候选与修正后的候选合并为一组，使用 GRPO 联合优化；推理时无需用户模拟器。",
+    "在三个 Amazon 评论数据集和两种推荐骨干模型上的实验显示，VerRec 改善了推荐准确性和排序质量；进一步分析表明，语言反馈使训练探索更多样，更容易找到高奖励候选。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.76,
+    "problem_significance": 0.8,
+    "potential_impact": 0.78,
+    "paradigm_shift": 0.57,
+    "lasting_value": 0.75,
+    "llm_avg": 0.732,
+    "comment": "Training with simulated verbal feedback improves product ranking on three Amazon datasets without adding an inference-time simulator, though live shopper benefits remain untested.",
+    "comment_zh": "训练时使用模拟文本反馈改善了三个亚马逊数据集上的商品排序，且推理时无需模拟器，但真实购物场景中的收益尚未验证。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.732,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 0,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 0,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22410/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22410/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.954
+    }
+  ]
+}

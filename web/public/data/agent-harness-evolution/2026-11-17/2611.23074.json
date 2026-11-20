@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2611.23074",
+  "title": "Runtime Verification of Multiple Natural Language Criteria for Agent Governance",
+  "title_zh": "面向 AI 智能体治理的多条自然语言准则运行时验证",
+  "authors": [
+    "Silviu Pitis",
+    "Parand A. Alamdari",
+    "Jessica Tang",
+    "Toryn Q. Klassen",
+    "Sheila A. McIlraith"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T17:01:00Z",
+  "abs_url": "https://arxiv.org/abs/2611.23074v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.23074",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "AI agents are governed by hundreds of natural language criteria, yet existing verifiers cannot efficiently evaluate an agent's output against a large set of such criteria and report which are satisfied, violated, or inapplicable. We introduce the VFM, a tree-attention verifier that encodes the shared context and target text, and scores N natural language criteria in parallel, returning independent per-criterion ternary verdicts. The VFM is pretrained on CriteriaBank, a corpus of 394K (context, target, criterion, verdict) tuples spanning over 321K distinct criterion strings. A finetuned VFM-4B outperforms GPT-5.4 on a synthetic governance benchmark. On the DynaBench multi-criterion benchmark, it outperforms DynaGuard-4B on trace-level failure detection, and its per-criterion verdicts localize the violated rule and support focused escalation to a larger chain-of-thought judge. We show that CriteriaBank pretraining improves cross-domain transfer, particularly in the low-data regime, while matching a strong direct-finetuning control at full data. On a single H100, VFM-4B evaluates 1,000 criteria against a 4K-token context in under 2s at <11 GB VRAM, making it suitable for runtime verification.",
+  "abstract_zh": "AI 智能体往往受数百条自然语言准则约束，但现有验证器难以高效判断其输出对每条准则是满足、违反还是不适用。本文提出基于树状注意力（tree attention）的验证器 VFM：只需对共享上下文和待验证文本编码一次，即可并行评估 N 条准则，并为每条准则独立给出三分类判定。VFM 在 CriteriaBank 上预训练，该语料包含 39.4 万组（上下文、待验证文本、准则、判定）四元组，覆盖超过 32.1 万种不同的准则文本。微调后的 VFM-4B 在合成治理基准上优于 GPT-5.4，在 DynaBench 上的轨迹级失败检测中优于 DynaGuard-4B。逐条判定还可定位被违反的规则，以便将相关判定交由更大的思维链（chain-of-thought）裁判模型复核。CriteriaBank 预训练能改善跨域迁移，尤其是在标注数据较少时；使用全量数据时，其表现与强直接微调基线相当。在单张 H100 上，VFM-4B 针对 4K token 的上下文验证 1,000 条准则耗时不到 2 秒，显存占用低于 11 GB。",
+  "key_points_zh": [
+    "VFM 复用共享上下文与待验证文本的编码，并行输出每条准则的独立判定：满足、违反或不适用。",
+    "VFM-4B 在合成治理基准上优于 GPT-5.4，在 DynaBench 的轨迹级失败检测中优于 DynaGuard-4B；逐条判定还能定位违规规则，支持定向复核。",
+    "CriteriaBank 预训练主要提升低数据场景下的跨域迁移；使用全量数据时，表现与强直接微调基线相当。",
+    "单张 H100 上，VFM-4B 针对 4K token 上下文验证 1,000 条准则耗时不到 2 秒，显存占用低于 11 GB。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.89,
+    "novelty": 0.76,
+    "problem_significance": 0.85,
+    "potential_impact": 0.82,
+    "paradigm_shift": 0.63,
+    "lasting_value": 0.77,
+    "llm_avg": 0.7659999999999999,
+    "comment": "Parallel per-rule verdicts make large policy sets practical for runtime governance, though benchmark results do not yet establish reliability in production.",
+    "comment_zh": "逐条并行判定让大规模规则集可用于运行时治理，但基准结果尚不能证明其在生产环境中的可靠性。"
+  },
+  "scores": {
+    "topic_relevance": 1.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 1.0,
+    "generality": 0.9,
+    "llm_assessment": 0.7659999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23074/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.964
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23074/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.948
+    }
+  ]
+}

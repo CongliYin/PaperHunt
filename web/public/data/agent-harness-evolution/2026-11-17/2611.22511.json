@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2611.22511",
+  "title": "LMLineage: Content Lineage and Context Governance for LLM Agents",
+  "title_zh": "LMLineage：LLM 智能体的内容溯源与上下文治理",
+  "authors": [
+    "Wei Hou",
+    "Jingxin Geng",
+    "Xin Chen",
+    "Zheqing Jiang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T10:05:59Z",
+  "abs_url": "https://arxiv.org/abs/2611.22511v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.22511",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Interpretability for AI agents should not be confined to understanding the model's internal weights. It must also cover the agent's reasoning and decision-making process over multi-source context. We present LMLineage, an out-of-band system that attributes every output sentence of an agent session to its supporting input spans with calibrated confidences, without requiring white-box access to the model or any additional inference passes. On top of the lineage metadata, we build concept-drift micro compaction: instead of waiting for the context-length limit and summarizing everything, the system detects when previously used input documents have stopped being referenced (\"drifted\") and surgically compacts only those, preserving user instructions verbatim. We evaluate on a multi-tier corpus: 71 gold annotated sentences from 10 Chinese web-QA cases, plus 90 turns of independently collected multi-turn sessions across three generator models (gpt-4o-mini, qwen3.8-27b, deepseek-v4-flash). Results show that (i) window-level embedding similarity is far better aligned with LLM paraphrasing than whole document or lexical matching; (ii) the greedy-window fast path is both faster and more accurate on average than exhaustive line-matching (a multiple-comparisons bias in the latter inflates web recall at the cost of overall accuracy); (iii) per-turn attribution completes in 1s on a single GPU, remaining stable as context accumulates to 40 turns; and (iv) concept-drift detection is conservative (0% false compaction) with recall bounded by attribution accuracy. We further describe the concept-drift micro compaction design and an interactive incident-tracing/memory-cleaning case study. A companion patent application covers the lineage construction method.",
+  "abstract_zh": "智能体的可解释性不应局限于模型权重，还应说明它在推理和决策时使用了哪些来源的上下文。LMLineage 在智能体推理流程之外运行，将会话中的每个输出句子归因到支持该句的输入片段，并提供经过校准的置信度，无需访问模型内部或执行额外推理。基于溯源记录，系统提出概念漂移微压缩（concept-drift micro compaction）：不等上下文达到长度上限才整体摘要，而是只压缩曾被引用、后来不再被引用的文档，并逐字保留用户指令。评估涵盖 10 个中文网页问答案例中的 71 条金标准标注句子，以及使用 gpt-4o-mini、qwen3.8-27b 和 deepseek-v4-flash 独立收集的 90 轮多轮对话。结果显示，窗口级嵌入相似度比整篇文档匹配或词汇匹配更适合识别 LLM 的改写；贪心窗口匹配比穷举逐行匹配更快，平均也更准确。单张 GPU 上每轮归因约需 1 秒，上下文累积到 40 轮时耗时仍保持稳定。评估中未观察到误压缩，但漂移检测的召回率受归因准确性限制。论文还通过交互式案例展示了事件追溯与记忆清理。",
+  "key_points_zh": [
+    "无需访问模型内部或执行额外推理，即可将输出逐句关联到支持它的输入片段，并给出校准后的置信度。",
+    "窗口级嵌入相似度更适合识别改写；贪心窗口匹配更快且平均更准确，而穷举逐行匹配的多重比较偏差抬高了网页来源召回率，却降低了整体准确性。",
+    "单张 GPU 上每轮归因约需 1 秒，上下文累积到 40 轮时耗时仍保持稳定。",
+    "概念漂移微压缩仅处理曾被引用、后来不再被引用的文档，逐字保留用户指令；评估中的误压缩率为 0%，但检测召回率受归因准确性限制。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.74,
+    "problem_significance": 0.84,
+    "potential_impact": 0.74,
+    "paradigm_shift": 0.67,
+    "lasting_value": 0.76,
+    "llm_avg": 0.75,
+    "comment": "Sentence-level attribution gives agent runtimes a practical signal for selective context compaction, though the small evaluation leaves long-horizon reliability uncertain.",
+    "comment_zh": "句级溯源为智能体运行时的选择性上下文压缩提供了实用信号，但小规模评估尚不足以验证长程运行的可靠性。"
+  },
+  "scores": {
+    "topic_relevance": 0.4,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.75,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22511/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22511/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.962
+    }
+  ]
+}

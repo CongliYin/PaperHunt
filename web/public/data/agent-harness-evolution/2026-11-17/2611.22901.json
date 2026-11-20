@@ -1,0 +1,85 @@
+{
+  "arxiv_id": "2611.22901",
+  "title": "Done, But Still Working: Anytime Evaluation of When Coding Agents Should Stop",
+  "title_zh": "做完了，却还在继续：用 Anytime Evaluation 评估编程智能体何时该停",
+  "authors": [
+    "Zerui Yang",
+    "Quan Xue",
+    "Miaomiao Dong",
+    "Chaorui Zhang",
+    "Xuanyu Zheng",
+    "Xiyuan Wang",
+    "Haolin Ruan",
+    "Xueyan Niu",
+    "Guangcheng Song",
+    "Weixi Zhang",
+    "Wei Han",
+    "Bo Bai"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T15:07:35Z",
+  "abs_url": "https://arxiv.org/abs/2611.22901v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.22901",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents often continue working after their own tests pass. Does this additional work improve the patch, and how much could be saved by stopping earlier? We study these questions through anytime evaluation: replaying recorded runs, scoring intermediate patches with hidden tests, and measuring the cost incurred at each step. For policies that only stop a run or select an earlier patch, this allows paired comparisons without generating new trajectories, provided replay preserves the relevant states. Across about 6,000 runs of eight open models in two scaffolds on SWE-bench Verified, we find substantial differences in the value of continued work. The hindsight saving available at passing self-tests ranges from under 1% to 57%, depending on the model and scaffold. A rule that stops after the same patch passes twice saves 23% in a preregistered replication, but the preregistered quality test does not establish non-inferiority. We explain these differences by measuring how often a rule fires, how often the patch changes afterwards, and whether those changes repair or break it. Fine-tuning agents to imitate the rule saves 30% over six seeds, while quality preservation remains uncertain. Our results help identify both the opportunities and the risks of early stopping.",
+  "abstract_zh": "编程智能体通过自测后往往仍会继续工作。后续修改能改善补丁吗？提前停止又能节省多少成本？论文采用任意时点评估（anytime evaluation）：回放已记录的运行轨迹，用隐藏测试评估中间补丁，并记录每一步的累计成本。只要回放保留相关状态，对于仅决定何时停止或选用较早补丁的策略，就能在同一轨迹上进行配对比较，无需生成新轨迹。作者在 SWE-bench Verified 上分析了 8 个开放模型在两种智能体框架（scaffold）中的约 6,000 次运行。事后分析显示，在自测通过时停止的潜在成本节省因模型和框架而异，从不足 1% 到 57%。在预注册复现中，同一补丁两次通过自测即停止的规则节省了 23% 的成本，但预注册质量检验未能证实其非劣效性。作者通过分析规则的触发频率、触发后补丁是否变化，以及这些变化是修复还是破坏补丁，解释了继续工作的价值为何不同。微调智能体以模仿该规则，在 6 个随机种子的实验中节省了 30% 的成本，但能否保持补丁质量仍不确定。",
+  "key_points_zh": [
+    "回放轨迹并用隐藏测试评估中间补丁，可在同一次运行中比较不同停止时点，但前提是回放保留相关状态。",
+    "在 SWE-bench Verified 的约 6,000 次运行中，自测通过时停止的事后潜在节省从不足 1% 到 57%，取决于模型和框架。",
+    "同一补丁两次通过自测即停止，在预注册复现中节省了 23% 的成本，但未能证实补丁质量非劣。",
+    "规则触发后，补丁可能保持不变，也可能被修好或改坏；这些差异决定了继续工作的价值。",
+    "微调智能体模仿停止规则，在 6 个随机种子的实验中节省了 30% 的成本，但质量能否保持仍不确定。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.82,
+    "problem_significance": 0.89,
+    "potential_impact": 0.85,
+    "paradigm_shift": 0.8,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8480000000000001,
+    "comment": "Scoring intermediate patches with hidden tests makes trajectory replay a reusable way to evaluate stopping policies, even though the tested rule did not establish quality non-inferiority.",
+    "comment_zh": "用隐藏测试评估中间补丁，使轨迹回放成为可复用的停止策略评估方法，尽管受测规则尚未证明质量不劣。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.6892367436804401,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8480000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 43,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22901/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.939
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22901/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.943
+    }
+  ]
+}

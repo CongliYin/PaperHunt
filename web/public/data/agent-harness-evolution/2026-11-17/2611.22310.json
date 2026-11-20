@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2611.22310",
+  "title": "EviDARL: Evidence-Centric Dual-Agent Reasoning via Alternating Reinforcement Learning for Multi-Table Question Answering",
+  "title_zh": "EviDARL：面向多表问答的证据中心双智能体推理与交替强化学习",
+  "authors": [
+    "Dunhan Li",
+    "Leilei Gan",
+    "Lirong Gao",
+    "Wenyan Fan",
+    "Yongwei Wang",
+    "Sheng Guo",
+    "Fei Wu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T07:07:41Z",
+  "abs_url": "https://arxiv.org/abs/2611.22310v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.22310",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Despite advances in LLM-based table reasoning, most studies focus on single-table settings. Multi-table QA requires multi-hop reasoning over complex table relationships and evidence dispersed across long contexts, often without verifiable intermediate traces. To address these challenges, we introduce EviDA, an evidence-centric dual-agent framework comprising an Evidence Construction Agent and a Reasoning and Answering Agent. The Evidence Construction Agent generates and executes table-manipulation programs over complete tables to produce question-specific evidence and verifiable intermediate traces, simplifying subsequent reasoning. The Reasoning and Answering Agent then performs multi-hop reasoning over this evidence to derive final answers. We further introduce EviDARL, which combines agent-specific fine-grained rewards with parameter-efficient alternating reinforcement learning to improve collaboration between the agents. By optimizing each agent in turn while holding the other fixed, EviDARL enables bidirectional adaptation between evidence construction and answer reasoning. Experiments on MMQA and TQA-Bench demonstrate that EviDARL substantially outperforms competitive open-model and multi-table reasoning baselines under constrained model and training budgets.",
+  "abstract_zh": "现有基于大语言模型（LLM）的表格推理研究多聚焦于单表场景。多表问答需要跨越复杂的表间关系进行多跳推理，而相关证据往往分散在长上下文中，推理过程也常缺少可验证的中间轨迹。为此，论文提出以证据为核心的双智能体框架 EviDA：证据构建智能体（Evidence Construction Agent）在完整表格上生成并执行表格操作程序，提取与问题相关的证据并保留可验证的中间轨迹；推理与作答智能体（Reasoning and Answering Agent）则基于这些证据进行多跳推理，得出最终答案。在此基础上，EviDARL 将针对各智能体的细粒度奖励与参数高效的交替强化学习相结合，每轮固定一个智能体、优化另一个，使证据构建与作答推理能够相互适应。在 MMQA 和 TQA-Bench 上，即使模型规模和训练预算受限，EviDARL 仍明显优于有竞争力的开放模型和多表推理基线。",
+  "key_points_zh": [
+    "EviDA 将多表问答拆分为证据构建和推理作答，减少作答智能体直接从长上下文中寻找分散证据的负担。",
+    "证据构建智能体在完整表格上生成并执行操作程序，为每个问题提供相关证据和可验证的中间轨迹。",
+    "EviDARL 为两个智能体分别设计细粒度奖励，并交替冻结和优化它们，使证据构建与作答推理相互适应。",
+    "在模型规模和训练预算受限的条件下，EviDARL 在 MMQA 和 TQA-Bench 上均明显优于有竞争力的开放模型和多表推理基线。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.88,
+    "novelty": 0.74,
+    "problem_significance": 0.78,
+    "potential_impact": 0.72,
+    "paradigm_shift": 0.66,
+    "lasting_value": 0.72,
+    "llm_avg": 0.724,
+    "comment": "Executable evidence traces and alternating reinforcement learning make this a substantive agent-training contribution, though transfer beyond multi-table question answering remains untested.",
+    "comment_zh": "可执行的证据轨迹与交替强化学习构成了实质性的智能体训练贡献，但能否迁移到多表问答之外仍未验证。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.724,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22310/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.975
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.22310/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.942
+    }
+  ]
+}

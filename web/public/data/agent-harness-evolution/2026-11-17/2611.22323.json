@@ -1,0 +1,64 @@
+{
+  "arxiv_id": "2611.22323",
+  "title": "Agent Trajectories as Evidence for Software Quality Assurance",
+  "title_zh": "将智能体执行轨迹作为软件质量保证的证据",
+  "authors": [
+    "Jonathan Ullrich",
+    "Julien Siebert",
+    "Michael Kläs",
+    "Adam Trendowicz",
+    "Andreas Jedlitschka"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-17T07:22:29Z",
+  "abs_url": "https://arxiv.org/abs/2611.22323v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.22323",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Autonomous software agents increasingly plan, implement, and test software with limited human oversight. Their decisions may introduce implicit assumptions that final code and passing tests do not adequately expose. We propose analyzing observable agent trajectories alongside software and agent specifications and AI generated artifacts as evidence for targeted quality assurance. The aim is to prioritize consequential decisions for scrutiny, investigate their possible contribution to software problems, and inform improvements to specifications and development practices. Industrial experience motivates the idea; available execution records and preliminary analysis methods make it plausible. However, trajectories alone do not establish that decisions are justified, outcomes acceptable, or corrective changes effective. We ask how this evidence can support review, diagnosis, and continuous quality improvement, and when simpler QA approaches suffice. Perspectives from requirements engineering, verification and validation, agent systems, causal inference, empirical software engineering, and human factors could help develop and evaluate the idea.",
+  "abstract_zh": "自主软件智能体越来越多地在有限的人类监督下规划、实现和测试软件。智能体的决策可能引入隐含假设，而最终代码和通过的测试未必能揭示这些假设。论文提出，将可观测的智能体执行轨迹与软件规格、智能体规格及 AI 生成的制品结合起来，作为有针对性地开展质量保证（QA）的证据。其目标是优先审查影响重大的决策，调查这些决策是否促成了软件问题，并据此改进规格和开发实践。这一构想源于工业实践，现有执行记录和初步分析方法为其提供了可行性依据。但仅凭轨迹，无法证明决策合理、结果可接受或纠正措施有效。论文进一步探讨这类证据如何支持审查、诊断与持续改进，以及何时采用更简单的 QA 方法就已足够，并提出可借助需求工程、验证与确认、智能体系统、因果推断、实证软件工程和人因研究来发展和评估这一构想。",
+  "key_points_zh": [
+    "最终代码和通过的测试未必能暴露智能体决策中的隐含假设。",
+    "结合执行轨迹、软件与智能体规格及 AI 生成的制品，优先审查高影响决策，调查它们与软件问题的可能联系。",
+    "轨迹能提供诊断线索，但不能单独证明决策合理、结果可接受或修正有效。",
+    "论文提出的是研究构想，仍需评估轨迹分析的增量价值，以及何时常规 QA 已经足够。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.83,
+    "novelty": 0.44,
+    "problem_significance": 0.78,
+    "potential_impact": 0.53,
+    "paradigm_shift": 0.43,
+    "lasting_value": 0.48,
+    "llm_avg": 0.532,
+    "comment": "Using coding-agent traces alongside specifications and artifacts is a promising QA approach, but the paper does not yet validate a review protocol.",
+    "comment_zh": "将编码智能体轨迹与规格和产物结合用于质量保证颇有潜力，但论文尚未验证具体的审查流程。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.532,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": []
+}
