@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2611.24422",
+  "title": "Resolution as Attention for Efficient Agent Memory Perception",
+  "title_zh": "分辨率即注意力：高效的智能体记忆感知",
+  "authors": [
+    "Siqi Xiang",
+    "Zhipeng Xu",
+    "Shengrui Liu",
+    "Zulong Chen",
+    "Chunyan Miao",
+    "Shijian Lu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-18T13:43:16Z",
+  "abs_url": "https://arxiv.org/abs/2611.24422v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.24422",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "LLM-based agents accumulate extensive interaction histories when solving complex, long-horizon tasks, making efficient memory management critical to their performance and scalability. While existing memory management methods primarily focus on what to retain or retrieve, they often overlook how much perceptual detail should be allocated to individual past interactions. We posit that effective agent memory depends not only on the information preserved, but also on the granularity at which each past interaction is perceived. Motivated by this insight, we propose Resolution as Attention (RAA), a memory perception mechanism that uses visual resolution as a means of attention allocation across interaction histories. RAA renders past interactions as images and dynamically adjusts their resolution at every step according to their relevance to the agent's upcoming decision, preserving fine-grained information for critical interactions while reducing visual-token consumption for less relevant ones. To adaptively determine the perceptual fidelity of each interaction, we train a lightweight relevance estimator with teacher-model guidance and further optimize it to preserve the agent's decision consistency at a reduced visual-token cost. Experiments across multiple tasks and backbones show that RAA reduces token consumption by over 50% without compromising task performance. Moreover, RAA can be integrated as a plug-in perception layer with existing memory management methods, yielding further token savings and revealing adaptive perception as a complementary dimension of agent memory.",
+  "abstract_zh": "基于大语言模型（LLM）的智能体在执行复杂的长程任务时会积累大量交互历史。现有记忆管理方法主要关注保留或检索哪些信息，却较少考虑应以多细的粒度感知每条历史交互。本文提出 Resolution as Attention（RAA），将历史交互渲染为图像，并在每一步根据各条交互与下一步决策的相关性动态调整图像分辨率：对关键交互保留细节，对相关性较低的交互降低分辨率，以节省视觉 token。RAA 在教师模型的指导下训练轻量级相关性估计器，并进一步优化该估计器，使智能体在使用更少视觉 token 的同时保持决策一致性。多项任务和多种骨干模型上的实验表明，RAA 在不降低任务表现的情况下将 token 消耗减少了 50% 以上。RAA 还可作为插件式感知层接入现有记忆管理方法，进一步降低 token 开销。",
+  "key_points_zh": [
+    "RAA 不改变记忆保留或检索的目标，而是为历史交互分配不同的感知粒度。",
+    "每一步都根据下一步决策所需的信息调整历史图像的分辨率，把视觉 token 优先分配给关键交互。",
+    "轻量级相关性估计器由教师模型指导训练，并进一步优化，以在减少视觉 token 开销时维持决策一致性。",
+    "跨任务、跨骨干模型实验显示，RAA 在不损害任务表现的情况下节省超过 50% 的 token，与现有记忆管理方法叠加后还能进一步节省。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.96,
+    "novelty": 0.83,
+    "problem_significance": 0.84,
+    "potential_impact": 0.81,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.79,
+    "llm_avg": 0.8019999999999999,
+    "comment": "Adaptive visual resolution gives agents a reusable way to control how much detail they recall from each past interaction, with reported token savings above 50% and no loss in task performance.",
+    "comment_zh": "自适应视觉分辨率为智能体提供了一种可复用的机制，用于调节每条历史交互的读取粒度；论文报告称，该方法节省了超过 50% 的 token，且未降低任务表现。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.23816576137838616,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.8019999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.24422/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.943
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.24422/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.27
+    }
+  ]
+}

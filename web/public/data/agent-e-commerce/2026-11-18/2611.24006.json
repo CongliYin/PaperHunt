@@ -1,0 +1,89 @@
+{
+  "arxiv_id": "2611.24006",
+  "title": "MARS Technical Report",
+  "title_zh": "MARS 技术报告",
+  "authors": [
+    "Tong Liu",
+    "Chaoqun Hou",
+    "Longxiang Xiong",
+    "Junhong Lou",
+    "Jiaqi Zheng",
+    "Qixin Li",
+    "Zixin Zhao",
+    "Yong Duan",
+    "Xiannian Hu",
+    "Fengze Jiang",
+    "Yu Zhu",
+    "Cheng Guo",
+    "Xinyuan Qi",
+    "Zi Zhuang",
+    "Ping Liu",
+    "Lv Shao",
+    "Zongwei Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-18T07:56:58Z",
+  "abs_url": "https://arxiv.org/abs/2611.24006v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.24006",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Modern industrial recommender systems use multi-stage cascades--retrieval, pre-ranking, ranking, and re-ranking--to narrow millions of candidates to a personalized list. While each stage deploys sophisticated models, pipeline-level decisions on channel activation, quotas, model selection, and score fusion remain engineer-tuned and user-agnostic within each scenario. This report presents MARS (Multi-stage Agentic Recommendation System), extending personalization from individual-stage predictions to full pipeline orchestration. A near-line agent built on fine-tuned Qwen3-0.6B generates per-user configurations--a seven-dimensional action covering pipeline mode, retrieval quotas, model selection, fusion weights, and reranker settings--from a constrained action space. Configurations are validated, cached, and consumed asynchronously; the cascade never waits for LLM inference. Schema checks, fallbacks, and a kill switch ensure serving safety. The policy is trained in three stages: Confidence-aware SFT distills schema-valid generation from a teacher model; Format-Anchored Preference Optimization (FAPO) learns action preferences via ActionMask with posterior weighting; Group Relative Policy Optimization (GRPO) refines the policy through Sandbox replay with a frozen reward model, without exposing exploratory actions to live traffic. Two-week A/B tests across five Taobao scenarios with over ten million daily users show positive gains on all key metrics. The largest reach +5.22% V2P and +7.34% GMV, with positive CTR lifts on both click surfaces. About 20% of requests use a lightweight Minimal mode, and deployment shows 12 ms lower mean serving latency versus production.",
+  "abstract_zh": "工业推荐系统通常通过召回、粗排、精排和重排，从数百万候选中筛出个性化列表。但通道启用、配额分配、模型选择和分数融合等流水线决策，仍主要由工程师按场景设定，同一场景内的用户通常共享配置。MARS（Multi-stage Agentic Recommendation System）将个性化从单阶段预测扩展到整条流水线的编排。基于微调后 Qwen3-0.6B 的近线智能体在受约束的动作空间中为每位用户生成七维配置，涵盖流水线模式、召回配额、模型选择、融合权重和重排设置。配置经校验后缓存，由在线服务异步读取，无需等待 LLM 推理；系统还提供回退机制和紧急停用开关。策略训练分三步：Confidence-aware SFT 从教师模型蒸馏符合配置格式的生成能力；Format-Anchored Preference Optimization（FAPO）结合 ActionMask 和后验加权学习动作偏好；Group Relative Policy Optimization（GRPO）借助冻结的奖励模型在 Sandbox 中回放并优化策略，不将探索动作暴露给真实流量。在日活用户超千万的 Taobao 五个场景中，为期两周的 A/B 测试显示，各项关键指标均有改善，V2P 和 GMV 的最高相对增幅分别为 5.22% 和 7.34%，两个点击入口的 CTR 均有提升。约 20% 的请求采用轻量级 Minimal 模式，平均服务延迟较现有生产系统降低 12 ms。",
+  "key_points_zh": [
+    "MARS 不只为用户个性化打分，还为每位用户选择七维流水线配置，调整召回、模型融合和重排等环节。",
+    "近线智能体生成配置，在线服务异步读取缓存，无需等待 LLM 推理；配置校验、回退和紧急停用开关用于保障服务稳定。",
+    "训练依次使用 Confidence-aware SFT、FAPO 和 GRPO，分别学习合法格式、动作偏好和奖励优化；探索仅在 Sandbox 回放中进行。",
+    "Taobao 五场景两周 A/B 测试中，V2P 和 GMV 最高分别提升 5.22% 和 7.34%；约 20% 的请求使用 Minimal 模式，平均服务延迟降低 12 ms。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.8,
+    "problem_significance": 0.94,
+    "potential_impact": 0.92,
+    "paradigm_shift": 0.73,
+    "lasting_value": 0.86,
+    "llm_avg": 0.85,
+    "comment": "Taobao A/B tests show that personalizing the entire recommendation cascade can improve commerce metrics while reducing serving latency, though the tests lasted only two weeks.",
+    "comment_zh": "淘宝为期两周的 A/B 测试表明，按用户配置整条推荐链路可改善电商指标，同时降低服务延迟。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2794153127047222,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.85,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.24006/fig1.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.96
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.24006/fig2.webp",
+      "page": 1,
+      "kind": "figure",
+      "confidence": 0.971
+    }
+  ]
+}

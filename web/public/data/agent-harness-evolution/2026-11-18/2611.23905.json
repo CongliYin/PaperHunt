@@ -1,0 +1,73 @@
+{
+  "arxiv_id": "2611.23905",
+  "title": "Inference-Time Scaling in Agentic Hardware Verification Workflows: A Multi-Strategy Characterization Across Protocol Complexity",
+  "title_zh": "智能体验证工作流中的推理时扩展：跨协议复杂度的多策略评估",
+  "authors": [
+    "Vikash Kumar"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-18T05:58:20Z",
+  "abs_url": "https://arxiv.org/abs/2611.23905v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.23905",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Inference-time scaling, allocating more compute during generation rather than pre-training, has demonstrated dramatic quality improvements for LLM reasoning tasks. Its behaviour in structured hardware verification code generation, where outputs must satisfy compiler correctness, protocol semantics, and functional coverage constraints simultaneously, is less understood. We present a systematic, simulator-grounded study of inference-time compute scaling for agentic UVM testbench synthesis targeting AMBA protocol bridges. Four inference strategies---zero-shot (\\$0.04), raw-feedback iterative (\\$0.81), structured inner-loop (\\$0.95), and full dual-loop agentic synthesis (\\$1.06)---are evaluated across four AMBA targets (Protocol Complexity Index 11.8--22.6) using the Protocol Verification Completeness (PVC) metric, functional coverage, and a six-class UVM error taxonomy (E1--E6). Our central finding is that structured diagnostic feedback acts as an inference-time compute multiplier: the structured inner loop yields roughly $15\\times$ more PVC per inference dollar than raw EDA-tool feedback (marginal efficiency, S1$\\to$S2 vs. S0$\\to$S1). The mechanism is fault targeting, not token reduction: raw compiler feedback drives the testbench to compile but cannot surface functional protocol faults that leave the code syntactically valid, whereas structured E1--E6 bundles diagnose and resolve them. All outputs are judged by a cycle-accurate Mentor Questa toolchain rather than by model self-assessment; the dual-loop strategy reaches PVC $\\geq$ 0.95 with zero scoreboard errors on every target, and the generated environments surfaced a latent RTL bug in two of the four reference designs. These results establish a principled compute-quality trade-off curve for LLM-aided verification environment generation and motivate inference-budget-aware deployment strategies for industrial EDA workflows.",
+  "abstract_zh": "推理时扩展将更多算力用于生成阶段而非预训练，已显著提升 LLM 的推理表现。但在硬件验证代码生成中，输出必须同时满足编译正确性、协议语义和功能覆盖率要求，增加推理算力能带来多大收益尚不明确。本文以周期精确的 Mentor Questa 仿真为依据，研究面向 AMBA 协议桥的智能体式 UVM 测试平台生成。研究在四个 AMBA 目标上比较零样本生成、基于原始反馈的迭代、结构化内环和完整双环四种策略，使用协议验证完备性（Protocol Verification Completeness，PVC）、功能覆盖率及六类 UVM 错误（E1–E6）进行评估。按相邻策略升级的边际收益计算，从原始反馈升级到结构化内环，每增加一美元带来的 PVC 提升约为从零样本升级到原始反馈的 15 倍。收益来自更准确地定位故障，而非减少 token 用量：原始 EDA 工具反馈能帮助代码通过编译，却难以揭示不影响编译的协议功能错误；按 E1–E6 组织的诊断反馈则有助于定位并修复这些问题。完整双环在全部目标上达到 PVC ≥ 0.95，且记分板（scoreboard）未报告错误；生成的验证环境还在四个参考设计中的两个发现了潜在 RTL 缺陷。结果为工业 EDA 工作流按推理预算选择验证生成策略提供了实证依据。",
+  "key_points_zh": [
+    "在四个 AMBA 目标上比较四种策略，协议复杂度指数（Protocol Complexity Index）为 11.8–22.6；零样本、原始反馈迭代、结构化内环和完整双环的推理成本分别为 0.04、0.81、0.95 和 1.06 美元。",
+    "结构化内环的优势在于定位能通过编译却违反协议语义的功能错误；约 15 倍的差距指每增加一美元所获得的 PVC 边际提升，而非 PVC 绝对值。",
+    "评估依赖周期精确的 Mentor Questa 工具链，而非模型自评；完整双环在四个目标上均达到 PVC ≥ 0.95，且记分板零报错。",
+    "生成的 UVM 验证环境在四个参考设计中的两个发现了此前未暴露的 RTL 缺陷。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.86,
+    "novelty": 0.66,
+    "problem_significance": 0.81,
+    "potential_impact": 0.76,
+    "paradigm_shift": 0.61,
+    "lasting_value": 0.76,
+    "llm_avg": 0.7200000000000001,
+    "comment": "Simulator-grounded comparisons show that structured diagnostics improve coding-agent repair per dollar, though the evidence is limited to four AMBA verification targets.",
+    "comment_zh": "基于仿真器的对照实验表明，结构化诊断能提高编程智能体在单位成本下的修复成效，但证据目前仅来自四个 AMBA 验证目标。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.1762914343888821,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.7200000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 1,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 1,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23905/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.956
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23905/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.953
+    }
+  ]
+}

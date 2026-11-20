@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2611.23751",
+  "title": "Thinking Fast, Anywhere: One System-1 for the Decision Points of Any Agent Workflow",
+  "title_zh": "随处快思考：用一个 System-1 处理任意智能体工作流中的决策点",
+  "authors": [
+    "Rui Li",
+    "Liyang He",
+    "Zheng Zhang",
+    "Zhenya Huang",
+    "Qi Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-18T03:05:41Z",
+  "abs_url": "https://arxiv.org/abs/2611.23751v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.23751",
+  "links": {
+    "github": null,
+    "project_page": "https://middle-chunjie.github.io/AnyS1/"
+  },
+  "abstract_en": "Autonomous LLM agents incur substantial cost and latency by invoking a large model (System-2) at every step, even when many intermediate actions choose among a small set of known candidates. Existing dual-system agents offload such decisions to a lightweight System-1 model, but rely on workflow-specific hooks authored per environment. We present AnyS1, a framework that turns human-authored procedural skills, whose instructions naturally specify where choices arise and which options apply, into a shared, domain-general source of decision points. Offline, AnyS1 mines grounded enumerable decisions across over 1,000 public skills, gathers execution-grounded trajectory states inside isolated containers to construct Any-DP, and trains a single calibrated 4B pointer System-1 with label smoothing. At run time, compiled workflows resolve routine decisions in one forward pass and fall back to System-2 when confidence falls below a calibrated threshold. Across three unseen benchmarks and distinct System-2 model families, AnyS1 preserves task reliability while cutting episode cost by 75-91% and model-call time by 63-92% relative to an uncompiled System-2 agent, and maintains performance under zero-shot threshold transfer.",
+  "abstract_zh": "自主 LLM 智能体通常在每一步都调用大型模型（System-2），即使许多中间步骤只需从少量已知选项中做出选择，也要付出较高的成本和延迟。现有双系统智能体虽可将这类决策交给轻量级 System-1，却依赖针对各个环境手工编写的工作流钩子。AnyS1 从人编写的流程技能（procedural skills）中提取决策点及其候选选项，使不同领域的工作流能够共享同一个决策模型。离线阶段，AnyS1 从 1,000 多项公开技能中挖掘候选项可枚举的决策，在隔离容器内收集实际执行产生的轨迹状态，构建 Any-DP，并通过标签平滑训练一个经过置信度校准的 4B 指针式 System-1 模型。运行时，编译后的工作流仅需一次前向传播即可处理常规决策，置信度低于校准阈值时则回退至 System-2。在三个未见过的基准和不同的 System-2 模型家族上，相比未编译的 System-2 智能体，AnyS1 在保持任务可靠性的同时，将单次任务执行成本降低 75%–91%，将模型调用耗时缩短 63%–92%；校准阈值直接迁移、无需重新调节时，仍能维持性能。",
+  "key_points_zh": [
+    "从人编写的流程技能中提取决策点及候选选项，无需为每个环境手工编写决策钩子。",
+    "基于 1,000 多项公开技能及隔离容器中的实际执行轨迹构建 Any-DP，训练统一的 4B 指针式 System-1。",
+    "常规决策只需一次前向传播；置信度低于校准阈值时回退至 System-2。",
+    "在三个未见过的基准上保持任务可靠性，单次任务成本降低 75%–91%，模型调用耗时缩短 63%–92%，且阈值可零样本迁移。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.98,
+    "novelty": 0.86,
+    "problem_significance": 0.92,
+    "potential_impact": 0.91,
+    "paradigm_shift": 0.83,
+    "lasting_value": 0.9,
+    "llm_avg": 0.884,
+    "comment": "Compiling procedural skills into decision points, training on execution trajectories, and escalating uncertain decisions offer a reusable way to cut agent costs across workflows.",
+    "comment_zh": "将流程技能编译为决策点，用执行轨迹训练轻量模型，并在置信度不足时转交大模型，为不同工作流降低智能体成本提供了可复用的方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.6400000000000001,
+    "open_source": 0.4,
+    "community_heat": 0.7990500169511174,
+    "author_reputation": 0.38519017333805144,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.884,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://middle-chunjie.github.io/AnyS1/",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": true,
+    "hf_upvotes": 13,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 5,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23751/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23751/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.958
+    }
+  ]
+}

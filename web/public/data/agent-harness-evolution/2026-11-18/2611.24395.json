@@ -1,0 +1,80 @@
+{
+  "arxiv_id": "2611.24395",
+  "title": "RSIBench-Infra: Can Agents Optimize Their Own Training and Inference Infrastructure at Production Scale?",
+  "title_zh": "RSIBench-Infra：智能体能否在生产规模下优化自身的训练与推理基础设施？",
+  "authors": [
+    "Hanlin Wu",
+    "Yifei Wang",
+    "Zhicheng Cai",
+    "Huan-ang Gao",
+    "Wei-Ying Ma",
+    "Ya-Qin Zhang",
+    "Jingjing Liu",
+    "Hao Zhou"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-18T13:29:44Z",
+  "abs_url": "https://arxiv.org/abs/2611.24395v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.24395",
+  "links": {
+    "github": null,
+    "project_page": "https://rsibench-infra.github.io"
+  },
+  "abstract_en": "Improving the efficiency of training and inference infrastructure is a practical component of recursive self-improvement. Existing benchmarks for agent-driven optimization largely focus on individual software layers such as kernel, leaving unclear whether agents can deliver end-to-end performance gains under production workloads. We introduce RSIBench-Infra, a benchmark of 20 training and inference tasks spanning diverse model families and modalities, with deployments of up to 32 accelerators on NVIDIA GPUs and Ascend NPUs. Agents start from runnable baselines derived from official recipes and can modify the software stack across engine, kernel, and instruction levels. An OCI image-layer submission protocol captures these changes for reproducible deployment, while independent evaluation measures end-to-end performance under task-specific quality constraints. Across all task results, 66.2% exceed $1.10\\times$ validated speedup. These results demonstrate that current agents can improve production-scale training and inference performance, but identifying effective optimization strategies and consistently translating local improvements into end-to-end gains remain challenging.",
+  "abstract_zh": "提升训练与推理基础设施的效率是递归自我改进的一项实际任务。已有的智能体优化基准大多聚焦算子内核（kernel）等单一软件层，尚不清楚局部优化能否在生产负载下带来端到端收益。为此，论文提出 RSIBench-Infra，包含 20 项训练与推理任务，覆盖多种模型家族和模态，使用 NVIDIA GPU 或 Ascend NPU，单次部署最多使用 32 个加速器。智能体从基于官方配置构建的可运行基线出发，可修改引擎、算子内核和指令层。基准通过 OCI 镜像层提交协议记录改动，以支持可复现部署，并由独立评估在满足各任务质量约束的前提下测量端到端性能。在全部任务结果中，66.2% 的结果经验证达到超过 1.10 倍的加速。当前智能体已能提升生产规模下的训练与推理性能，但找到有效的优化策略，并将局部提速稳定转化为端到端收益，仍有挑战。",
+  "key_points_zh": [
+    "RSIBench-Infra 包含 20 项训练与推理任务，覆盖多种模型家族和模态；单次部署最多使用 32 个 NVIDIA GPU 或 Ascend NPU 加速器。",
+    "智能体从官方配置衍生的可运行基线出发，可跨引擎、算子内核和指令层优化，而非局限于单一软件层。",
+    "OCI 镜像层提交协议记录优化改动以支持复现；独立评估以满足各任务质量约束为前提，衡量端到端性能。",
+    "在全部任务结果中，66.2% 的结果经验证加速比超过 1.10 倍，但如何将局部提速稳定转化为端到端收益仍未解决。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.92,
+    "novelty": 0.78,
+    "problem_significance": 0.85,
+    "potential_impact": 0.84,
+    "paradigm_shift": 0.7,
+    "lasting_value": 0.84,
+    "llm_avg": 0.8019999999999999,
+    "comment": "Reproducible image-layer submissions and independent, quality-constrained measurements make this a useful coding-agent benchmark for end-to-end optimization at production scale.",
+    "comment_zh": "可复现的镜像层提交机制与受质量约束的独立测量，使该基准适合评估编程智能体在生产规模下的端到端优化能力。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.4,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8019999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": "https://rsibench-infra.github.io",
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.24395/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.961
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.24395/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.962
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "arxiv_id": "2611.25066",
+  "title": "DVBench: End-to-End Benchmark for Real-World UVM Design Verification Agents",
+  "title_zh": "DVBench：面向真实场景的 UVM 设计验证智能体端到端基准",
+  "authors": [
+    "Jiaru Qian",
+    "Jiawei Li",
+    "Xiaolong Hu",
+    "Zheng Shen",
+    "LiMing Zhao",
+    "Xin Zhang",
+    "Siyuan Jiang",
+    "Yongqiang Wei",
+    "Dong Liu",
+    "Jianyang Li",
+    "Yihua Chen",
+    "Yangxu Liao",
+    "Yuxin Wu",
+    "Jing Liang",
+    "Bin Wen",
+    "Junjie Zhang",
+    "Yongsheng Han",
+    "Yihong Dong",
+    "Ge Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-18T19:10:37Z",
+  "abs_url": "https://arxiv.org/abs/2611.25066v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.25066",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Design verification (DV) remains a major bottleneck in hardware development, with large-scale verification using the Universal Verification Methodology (UVM) being highly labor-intensive. Recent advances in large language models (LLMs) and agentic systems offer new opportunities for DV automation. However, existing benchmarks primarily construct mutually decoupled subtasks, which deviates from the real-world workflow. In this paper, we present DVBench, the first end-to-end benchmark for Real-World UVM design verification agents. DVBench comprises 95 tasks across 9 functional domains and 5 difficulty levels, covering diverse verification scenarios and design scales. Each task requires agents to independently complete the full verification workflow. DVBench evaluates final testbenches via compilation, coverage, and bug detection, while assessing intermediate artifacts including feature lists, test plans, and reference models. We evaluate frontier LLMs (e.g. Claude Opus 5.5, GPT-6 Astra) and agent frameworks (e.g. Claude Code, Codex, OpenCode). Experimental results show that the best LLM-based agent (Codex \\& GPT-6 Astra) can only achieve an overall success rate of 21.05\\%, revealing substantial room for improvement in complex verification tasks.",
+  "abstract_zh": "设计验证（DV）是硬件开发的主要瓶颈之一，采用 Universal Verification Methodology（UVM）开展大规模验证尤其耗费人力。现有基准大多将验证流程拆成彼此独立的子任务，难以反映真实工作流。本文提出 DVBench，首个面向真实场景的 UVM 设计验证智能体端到端基准。它包含 95 项任务，覆盖 9 个功能领域和 5 个难度等级，要求智能体独立完成完整验证流程。基准从编译、覆盖率和缺陷检出三个方面评估最终测试平台，同时评估功能点列表、测试计划和参考模型等中间产物。实验涵盖 Claude Opus 5.5、GPT-6 Astra 等大语言模型，以及 Claude Code、Codex、OpenCode 等智能体框架。表现最佳的 Codex 与 GPT-6 Astra 组合总体成功率仅为 21.05%，表明当前智能体在复杂验证任务上仍有较大改进空间。",
+  "key_points_zh": [
+    "DVBench 不再孤立考查验证子任务，而是要求智能体独立完成端到端 UVM 设计验证。",
+    "95 项任务覆盖 9 个功能领域和 5 个难度等级，兼顾不同验证场景与设计规模。",
+    "评估既看最终测试平台能否编译、达到怎样的覆盖率和检出哪些缺陷，也检查功能点列表、测试计划与参考模型。",
+    "Codex 与 GPT-6 Astra 的组合表现最佳，但总体成功率仅为 21.05%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.91,
+    "novelty": 0.7,
+    "problem_significance": 0.82,
+    "potential_impact": 0.8,
+    "paradigm_shift": 0.61,
+    "lasting_value": 0.81,
+    "llm_avg": 0.748,
+    "comment": "Evaluating intermediate artifacts alongside compilation, coverage, and bug detection makes DVBench a reusable end-to-end benchmark for coding agents that write hardware testbenches.",
+    "comment_zh": "DVBench 将中间产物评估与编译、覆盖率和缺陷检出结合起来，为生成硬件测试平台的编程智能体提供了可复用的端到端基准。"
+  },
+  "scores": {
+    "topic_relevance": 0.36000000000000004,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.2876491876228333,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.748,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": 2,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.25066/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.947
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.25066/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.94
+    }
+  ]
+}

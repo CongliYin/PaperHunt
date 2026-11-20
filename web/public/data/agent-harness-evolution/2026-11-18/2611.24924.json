@@ -1,0 +1,87 @@
+{
+  "arxiv_id": "2611.24924",
+  "title": "Agentic Harness Engineering Beta: Requirement-Centered Evolution of Agent Harnesses",
+  "title_zh": "Agentic Harness Engineering Beta：以用户需求为中心的智能体运行框架演化",
+  "authors": [
+    "Jiahang Lin",
+    "Jiahao Chen",
+    "Yiding Wang",
+    "Shichun Liu",
+    "Chengjun Pan",
+    "Shihan Dou",
+    "Honglin Guo",
+    "Yuyang Hu",
+    "Changhao Jiang",
+    "Zhenhua Han",
+    "Hang Yan",
+    "Qi Zhang",
+    "Tao Gui",
+    "Xuanjing Huang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-18T18:52:13Z",
+  "abs_url": "https://arxiv.org/abs/2611.24924v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.24924",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Real-world harness engineering is driven by explicit and implicit user requirements, which guide development and validation. However, existing harness evolution methods often overlook implicit requirements and interaction needs, while using a single evolution agent to modify the harness and benchmark scores to select changes. This process often produces narrow patches and leads to benchmark-specific local optima. We introduce Agentic Harness Engineering Beta (AHE-Beta), a requirement-centered loop that brings real-world engineering practices into harness evolution. The loop consists of three steps: (1) User-driven evaluation lets simulated users raise their requirements as issues while they work with the harness over multiple turns. (2) Team-based modification implements those requirements as generalizable changes rather than task-specific patches. (3) Requirement-driven selection merges a change only when it resolves a verified requirement and passes review. Empirically, on held-out tasks, AHE-Beta raises pass@1 from 21.9% to 33.3% while using 40.8% fewer tokens than Base Harness, and achieves higher pass@1 than Claude Code, Meta-Harness, and AHE. In a blind human A/B test, real users prefer AHE-Beta in 31 of 48 valid pairs and rate it higher on all five dimensions, matching the directional preference of the user simulator. The human A/B results show that AHE-Beta achieves its goal of aligning harness evolution with real-world user requirements. Without further evolution, the gains transfer to GLM-5.3 and DeepSeek-V4.1-Flash with pass@1 improvements of 15.8% and 5.3% over Base Harness. Together, these results show that requirement-centered harness evolution is a more general method for improving agent capabilities.",
+  "abstract_zh": "实际工程中的智能体运行框架（agent harness）由用户的显性和隐性需求驱动，这些需求为开发和验证提供依据。现有框架演化方法往往忽视隐性需求和交互需求，依赖单个演化智能体修改框架，再按基准分数筛选改动，容易产出针对个别任务的补丁，陷入特定基准的局部最优。本文提出 Agentic Harness Engineering Beta（AHE-Beta），将真实工程实践引入框架演化，形成三步闭环：首先，模拟用户在多轮交互中使用框架，并将需求记录为问题单；其次，由团队协作实现可泛化的改动，而非针对单个任务打补丁；最后，只合并确实解决了已验证需求且通过评审的改动。在留出任务上，AHE-Beta 相比 Base Harness 将 pass@1 从 21.9% 提升至 33.3%，同时减少 40.8% 的 token 用量，且 pass@1 高于 Claude Code、Meta-Harness 和 AHE。在真人盲测 A/B 实验中，用户在 48 组有效对比中有 31 组偏好 AHE-Beta，并在全部五个维度上给出更高评分，偏好方向与用户模拟器一致。无需进一步演化，改进也能迁移至 GLM-5.3 和 DeepSeek-V4.1-Flash，论文报告两者的 pass@1 相较 Base Harness 分别提升 15.8% 和 5.3%。",
+  "key_points_zh": [
+    "让模拟用户在多轮交互中提出问题单，捕捉单靠基准分数容易遗漏的隐性需求和交互问题。",
+    "由团队协作实现通用改动；只有解决了已验证需求并通过评审的改动才会合并。",
+    "留出任务上，pass@1 从 21.9% 升至 33.3%，token 用量比 Base Harness 少 40.8%。",
+    "真人盲测中，AHE-Beta 在 48 组有效对比中赢得 31 组偏好，并在全部五个评价维度上获更高评分。",
+    "改进无需进一步演化即可迁移至 GLM-5.3 和 DeepSeek-V4.1-Flash，两者的 pass@1 均高于使用 Base Harness 时的表现。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.99,
+    "novelty": 0.83,
+    "problem_significance": 0.92,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.85,
+    "lasting_value": 0.88,
+    "llm_avg": 0.8700000000000001,
+    "comment": "Turning user interactions into tracked requirements and gating merges on verified fixes gives harness evolution a reusable workflow supported by held-out tasks and human feedback.",
+    "comment_zh": "将用户交互转化为可跟踪的需求，并仅在修复通过验证后合并，为运行框架演化提供了可复用的流程，且得到留出任务和真人反馈的支持。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.8700000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.24924/fig1.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.966
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.24924/fig2.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.936
+    }
+  ]
+}

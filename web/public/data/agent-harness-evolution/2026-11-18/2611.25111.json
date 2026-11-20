@@ -1,0 +1,73 @@
+{
+  "arxiv_id": "2611.25111",
+  "title": "DSFlow: A Neuro-Symbolic Data Workflow Agent with Statistical Diagnostic Guardrails",
+  "title_zh": "DSFlow：带有统计诊断护栏的神经符号数据工作流智能体",
+  "authors": [
+    "Junfeng Nie",
+    "Xiaohui Chen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-18T19:48:14Z",
+  "abs_url": "https://arxiv.org/abs/2611.25111v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.25111",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Data science workflows often require tools that presume non-trivial technical knowledge. Large language models (LLMs) reduce this barrier, but a gap remains between flexible general-purpose agents and statistically controlled pipelines. We introduce DSFlow, a LangGraph-based neuro-symbolic data-agent platform that combines reusable, LLM-selected skills with deterministic diagnostic guardrails. Skills provide extensible task knowledge. Symbolic validation can accept a proposed method, request clarification or replanning, override an unsuitable method, or supply a safe fallback. Regression and clustering case studies illustrate how DSFlow uses diagnostic evidence to correct method choices and documents those decisions in auditable reports.",
+  "abstract_zh": "数据科学工具往往要求用户具备一定的专业知识。大语言模型（LLM）降低了使用门槛，但通用智能体的灵活性与分析流程所需的统计约束之间仍有差距。DSFlow 是一个基于 LangGraph 的神经符号数据智能体平台，将 LLM 选择的可复用技能与确定性的统计诊断护栏相结合。技能封装可扩展的任务知识；符号校验则依据诊断结果接受候选方法、要求澄清或重新规划、替换不适用的方法，或提供稳妥的备选方案。回归与聚类案例展示了 DSFlow 如何依据诊断证据纠正方法选择，并在可审计报告中记录决策依据。",
+  "key_points_zh": [
+    "DSFlow 基于 LangGraph，将 LLM 的技能选择与确定性的统计诊断分开，兼顾灵活性与统计约束。",
+    "可复用技能封装任务知识；符号校验可接受候选方法、请求澄清或重新规划，也可替换不适用的方法或启用备选方案。",
+    "回归和聚类案例展示了如何用诊断证据修正方法选择，并通过可审计报告追溯决策依据。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.65,
+    "novelty": 0.47,
+    "problem_significance": 0.64,
+    "potential_impact": 0.57,
+    "paradigm_shift": 0.43,
+    "lasting_value": 0.54,
+    "llm_avg": 0.53,
+    "comment": "Deterministic diagnostics give selected skills an auditable path to replanning or fallback, though regression and clustering case studies provide limited evidence of reuse.",
+    "comment_zh": "确定性诊断能触发可审计的重规划或降级处理，但回归和聚类案例对框架可复用性的证明仍然有限。"
+  },
+  "scores": {
+    "topic_relevance": 0.6000000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3233158463485474,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.53,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 3,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.25111/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.967
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.25111/fig2.webp",
+      "page": 6,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}

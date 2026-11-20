@@ -1,0 +1,77 @@
+{
+  "arxiv_id": "2611.24073",
+  "title": "3D GameDev Arena: Benchmarking Coding Agents That Plan, Build, and Playtest extreme Long-Horizon Browser Games",
+  "title_zh": "3D GameDev Arena：评测编程智能体在超长程任务中规划、构建和试玩浏览器游戏的能力",
+  "authors": [
+    "Bizhe Bai",
+    "Jiliang Jian",
+    "Yuqing Yan",
+    "Tao Chen",
+    "Ying Wen"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-18T09:03:53Z",
+  "abs_url": "https://arxiv.org/abs/2611.24073v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.24073",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Coding agents now resolve repository issues and generate compact playable games, but whether they can build a large 3D game from scratch remains open. Such games tightly couple mechanics, scenes, assets, and interaction logic, and their quality rests on player enjoyment, which existing benchmarks rarely assess. Thus, we introduce 3D GameDev Arena, a first extreme long-horizon benchmark of 108 from-scratch game-development tasks across 14 genres. Given only a text specification and UI/UX reference images, a fully automated plan--implement--test--repair pipeline builds each task into a self-contained browser game. Runs average $\\sim$1,000 LLM calls ; the longest uses 14,407 calls, 2.13B tokens, and 608 assets. Evaluation spans (1) objective code-level functional acceptance against the game specification, (2) agent-based QA and playtesting of 3D presentation and playability, and (3) blind pairwise Bradley-Terry human preference in a public arena. The preliminary findings indicate that long-horizon 3D game development remains far from solved, and code-level correctness alone does not dictate player preference. The public arena is hosted online.",
+  "abstract_zh": "编程智能体已能解决代码仓库中的问题并生成小型可玩游戏，但能否从零构建大型 3D 游戏仍是开放问题。此类游戏的机制、场景、资产与交互逻辑紧密耦合，而玩家是否觉得好玩，也很少被现有基准纳入评估。为此，论文提出 3D GameDev Arena，包含 108 项从零开发游戏的任务，覆盖 14 种游戏类型。智能体仅凭文本规格和 UI/UX 参考图，通过全自动的规划、实现、测试和修复流程，构建可独立运行的浏览器游戏。每次运行平均调用大语言模型约 1,000 次；最长的一次调用 14,407 次，消耗 21.3 亿 token，并使用 608 个资产。评估分为三个层面：依据规格进行代码级功能验收；由智能体执行质量检查和试玩，评估 3D 表现与可玩性；在公开平台上收集人类盲测两两比较结果，并用 Bradley-Terry 模型估计偏好。初步结果表明，超长程 3D 游戏开发仍远未解决，代码层面的正确性也不足以决定玩家偏好。",
+  "key_points_zh": [
+    "基准覆盖 14 种游戏类型、108 项从零开发任务；输入仅为文本规格和 UI/UX 参考图。",
+    "全自动流程串联规划、实现、测试和修复；每次运行平均约 1,000 次大语言模型调用，最长一次达 14,407 次。",
+    "分别衡量功能是否符合规格、3D 表现与可玩性，以及通过盲测两两比较得出的人类偏好。",
+    "初步结果表明，代码级功能正确性不足以解释玩家偏好，功能验收不能替代试玩和人类评价。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.89,
+    "novelty": 0.75,
+    "problem_significance": 0.85,
+    "potential_impact": 0.79,
+    "paradigm_shift": 0.67,
+    "lasting_value": 0.8,
+    "llm_avg": 0.772,
+    "comment": "Despite the 3D setting, the benchmark directly tests long-horizon coding agents and shows why code-level acceptance tests need to be complemented by playtesting and human judgments.",
+    "comment_zh": "虽然任务以 3D 游戏为载体，该基准直接检验编程智能体的超长程交付能力，并说明为何代码验收还需结合试玩和人工评价。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.772,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.24073/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.953
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.24073/fig2.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.961
+    }
+  ]
+}

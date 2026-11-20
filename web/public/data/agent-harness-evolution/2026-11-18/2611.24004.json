@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2611.24004",
+  "title": "Space-X: Self-Evolving Spatial Agents Weaving Clues into Evidence Chains",
+  "title_zh": "Space-X：将线索串成证据链的自演化空间智能体",
+  "authors": [
+    "Zijian Zhang",
+    "Wenqing Tian",
+    "Qiang Liu",
+    "Liang Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-18T07:53:29Z",
+  "abs_url": "https://arxiv.org/abs/2611.24004v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.24004",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Spatial reasoning connects visual observations, geometric estimates, and linguistic decisions into a coherent derivation. Yet tool-augmented agents often acquire evidence without clear targets, combine outputs under inconsistent object or reference-frame semantics, and misjudge evidence sufficiency. Thus, more tools or calls do not reliably improve reasoning. We introduce Space-X, a spatial-reasoning framework that self-evolves toward complete, continuous evidence-chain construction. An Execution Agent acquires, associates, and judges evidence per problem using role-specific memory. A Control Agent diagnoses evidence-chain breaks from execution traces and jointly revises tools, interfaces, skills, memory organization, and decision rules. This loop co-evolves capability and evidence use: evidence needs guide capability development; usable results guide actions. Across multiple benchmarks, Space-X yields gains with four base models. Relative to baselines, GPT-6-sol improves answer accuracy on ViewSpatial and MMSI by 50.39% and 23.07%, respectively; Gemini-3.8-Flash gains 47.50% and 25.22% on these benchmarks. This provides a unified route from fragmented spatial clues to traceable, derivable answers.",
+  "abstract_zh": "空间推理需要将视觉观测、几何估计与语言判断串成连贯的推导过程。然而，工具增强智能体常在缺乏明确目标的情况下收集证据，在整合结果时混淆对象指代或参照系，并误判现有证据是否足以作答。因此，增加工具或调用次数并不能稳定提升推理表现。Space-X 是一个通过自演化构建完整、连续证据链的空间推理框架。执行智能体（Execution Agent）利用按角色组织的记忆，逐题获取、关联并评估证据；控制智能体（Control Agent）根据执行轨迹定位证据链断点，并协同调整工具、接口、技能、记忆结构和决策规则。这一闭环让证据需求驱动能力改进，也让可用结果指导后续行动。Space-X 在多个基准上为四种基础模型带来提升。相较于基线，GPT-6-sol 在 ViewSpatial 和 MMSI 上的答题准确率分别提升 50.39% 和 23.07%，Gemini-3.8-Flash 分别提升 47.50% 和 25.22%。",
+  "key_points_zh": [
+    "空间推理的瓶颈不只是工具不足，还包括取证目标不清、对象或参照系不一致，以及证据充分性误判。",
+    "Execution Agent 逐题获取、关联和评估证据，将视觉与几何线索串成可追溯的推导过程。",
+    "Control Agent 从执行轨迹定位证据链断点，并联动改进工具、接口、技能、记忆结构和决策规则。",
+    "四种基础模型均获得提升；GPT-6-sol 在 ViewSpatial 上的答题准确率较基线提升 50.39%，Gemini-3.8-Flash 在 MMSI 上提升 25.22%。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.68,
+    "novelty": 0.67,
+    "problem_significance": 0.69,
+    "potential_impact": 0.61,
+    "paradigm_shift": 0.65,
+    "lasting_value": 0.6,
+    "llm_avg": 0.6439999999999999,
+    "comment": "Diagnosing evidence-chain breaks from traces and updating tools and skills is a meaningful evolution loop, but transfer beyond spatial reasoning remains unshown.",
+    "comment_zh": "从执行轨迹中定位证据链断点并更新工具和技能，构成了有价值的演化闭环，但尚未证明它能迁移到空间推理之外。"
+  },
+  "scores": {
+    "topic_relevance": 0.8,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6439999999999999,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.24004/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.957
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.24004/fig2.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.951
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "arxiv_id": "2611.24324",
+  "title": "Reducing Inference Cost of Coding Agents with Timeout Cascades",
+  "title_zh": "用超时级联（Timeout Cascades）降低编程智能体的推理成本",
+  "authors": [
+    "Boxi Zhou",
+    "German Sviridov",
+    "Dmitrii Ustiugov",
+    "Haris Javaid"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-18T12:26:42Z",
+  "abs_url": "https://arxiv.org/abs/2611.24324v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.24324",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "AI coding agents have become one of the most popular applications of large language models. Yet, agentic AI comes at the cost of a tremendous amount of GPU compute resources, which limits its profitability and its viability at scale. In this paper, we investigate whether smaller, cheaper models can cut this cost without sacrificing accuracy. We evaluate 36 popular large and small open-weight models released since 2024 on a software engineering benchmark, and find that recent small models are closing the accuracy gap compared to their large counterparts. We investigate the structure of this gap and find that the gap is highly concentrated around hard tasks that small language models fail to solve while achieving remarkably good accuracy for easy and medium complexity tasks. Following this observation, we show that by utilizing a hybrid inference strategy that tries a small model first and escalates to a large one only when needed, we can achieve up to 33% reduction in total GPU-hour costs and 16.4% on all tasks from SWE-bench Verified, without sacrificing accuracy. Strikingly, this simple cascade nearly matches an oracle-style task router, highlighting a practical path for deploying cost-aware coding agents in production without complex learned task routers and with minimal engineering complexity.",
+  "abstract_zh": "编程智能体消耗大量 GPU 算力，制约了其盈利能力和规模化部署。本文在软件工程基准上评估了 2024 年以来发布的 36 个不同规模的主流开放权重模型，发现近期小模型与大模型的准确率差距正在缩小。差距主要集中在难题上，小模型在简单和中等难度任务上已表现良好。基于这一发现，作者采用超时级联：先由小模型尝试，超时后再切换到大模型。在不牺牲准确率的前提下，该策略最高可减少 33% 的 GPU 小时开销，在 SWE-bench Verified 全量任务上可减少 16.4%。其表现接近理想化任务路由（oracle-style task router），且无需训练复杂的路由器，工程实现简单。",
+  "key_points_zh": [
+    "评估覆盖 2024 年以来发布的 36 个不同规模的开放权重模型。",
+    "近期小模型在简单和中等难度任务上表现良好，与大模型的差距主要集中在高难度任务。",
+    "超时级联先运行小模型，超时后再切换到大模型，无需训练专门的任务路由器。",
+    "在准确率不下降的前提下，GPU 小时开销最高减少 33%，在 SWE-bench Verified 全量任务上减少 16.4%，整体表现接近理想化任务路由。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.93,
+    "novelty": 0.54,
+    "problem_significance": 0.87,
+    "potential_impact": 0.79,
+    "paradigm_shift": 0.46,
+    "lasting_value": 0.73,
+    "llm_avg": 0.678,
+    "comment": "Timeout-based escalation is simple rather than conceptually new, but the SWE-bench results support it as a practical way to reduce coding-agent costs without losing accuracy.",
+    "comment_zh": "超时后切换到更强模型并非新概念，但 SWE-bench 结果表明，这是一种无需牺牲准确率即可降低编程智能体成本的实用方法。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.35,
+    "llm_assessment": 0.678,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.24324/fig1.webp",
+      "page": 5,
+      "kind": "figure",
+      "confidence": 0.792
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.24324/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.967
+    }
+  ]
+}

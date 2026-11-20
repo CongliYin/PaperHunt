@@ -1,0 +1,79 @@
+{
+  "arxiv_id": "2611.24267",
+  "title": "Look Closer, Look Back, or Wait for Agentic Streaming Video Understanding",
+  "title_zh": "智能体式流式视频理解：看仔细、回头看，还是再等等？",
+  "authors": [
+    "Pengyu Li",
+    "Zhitao Gao",
+    "Lingling Zhang",
+    "Wenxuan Huang",
+    "YiCheng Xiao",
+    "Chen Zheng",
+    "Jun Liu"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-18T11:48:00Z",
+  "abs_url": "https://arxiv.org/abs/2611.24267v2",
+  "pdf_url": "https://arxiv.org/pdf/2611.24267",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Streaming video models must answer questions about a live video under strict memory and latency limits. Feeding only the latest few frames keeps present perception sharp, whereas adding past frames dilutes attention on the current scene and triggers hallucinations. Recent cascade methods retrieve past frames when uncertain, but they still fail when current frames are blurry or when decisive future clues have not appeared yet. We introduce ActiveForager, a streaming video agent that maintains a clean short working window and gathers extra evidence only on demand. For each query, the agent either answers directly, zooms into high-resolution recent frames, recalls past events from memory, or waits for upcoming frames. When recalling history, a shared-weight sub-agent verifies candidate clips in isolation and returns a compact evidence summary. A stream-decoupled attention mask then keeps historical evidence from interfering with present visual tokens. We train this policy using counterfactual information gain, which rewards a tool call only when the gathered evidence makes the true answer more likely and prevents tool collapse across all actions. Across Qwen2.5-VL-7B and Qwen3-VL-8B on OVO-Bench, ActiveForager improves real-time perception, historical recall, and proactive response at once, lifting overall accuracy on Qwen3-VL-8B from 47.6% to 65.9%. It also doubles zero-shot accuracy on the multi-hop Video-Holmes benchmark while adding minimal visual tokens per query.",
+  "abstract_zh": "流式视频模型必须在严格的内存和延迟限制下回答直播视频中的问题。只输入最近几帧有助于准确感知当前画面，但直接加入历史帧会分散模型对当前画面的注意力，并引发幻觉。已有级联方法会在模型不确定时检索历史帧，却难以处理当前画面模糊或关键线索尚未出现的情况。为此，论文提出 ActiveForager：它保留一个仅含近期帧的短工作窗口，按需收集额外证据。对于每个问题，智能体可以直接回答、放大近期高分辨率帧查看细节、从记忆中回溯历史事件，或等待后续帧。回溯时，共享权重的子智能体独立核验候选片段并返回简明的证据摘要；流解耦注意力掩码（stream-decoupled attention mask）防止历史证据干扰当前视觉 token。训练采用反事实信息增益（counterfactual information gain）：只有当新增证据提高正确答案的预测概率时，才奖励工具调用，以避免策略退化为单一动作。在 OVO-Bench 上，ActiveForager 在 Qwen2.5-VL-7B 和 Qwen3-VL-8B 上同时改善了实时感知、历史回溯和主动响应，其中 Qwen3-VL-8B 的总体准确率从 47.6% 升至 65.9%。在多跳推理基准 Video-Holmes 上，该方法还将零样本准确率提高至原来的两倍，每次查询仅增加少量视觉 token。",
+  "key_points_zh": [
+    "ActiveForager 不把历史帧长期混入当前工作窗口，而是在直接回答、放大近期帧、回溯历史和等待后续帧之间按需选择。",
+    "共享权重的子智能体独立核验历史片段并提炼证据；流解耦注意力掩码防止历史证据干扰当前视觉 token。",
+    "反事实信息增益以正确答案的预测概率是否上升来衡量工具调用的价值，避免策略退化为单一动作。",
+    "在 OVO-Bench 上，Qwen3-VL-8B 的总体准确率提升 18.3 个百分点；在 Video-Holmes 上，零样本准确率翻倍，每次查询仅增加少量视觉 token。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.97,
+    "novelty": 0.85,
+    "problem_significance": 0.91,
+    "potential_impact": 0.87,
+    "paradigm_shift": 0.74,
+    "lasting_value": 0.86,
+    "llm_avg": 0.8460000000000001,
+    "comment": "Choosing whether to zoom, recall, or wait is a strong advance for streaming video agents, though low visual-token overhead does not establish end-to-end latency.",
+    "comment_zh": "按需放大、回溯或等待显著拓展了流式视频智能体的取证能力，但较低的视觉令牌开销并不能证明端到端延迟足够低。"
+  },
+  "scores": {
+    "topic_relevance": 0.88,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4996072807374295,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.8460000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 5,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 7,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.24267/fig1.webp",
+      "page": 3,
+      "kind": "figure",
+      "confidence": 0.968
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.24267/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.968
+    }
+  ]
+}

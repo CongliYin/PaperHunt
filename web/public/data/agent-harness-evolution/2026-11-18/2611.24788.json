@@ -1,0 +1,74 @@
+{
+  "arxiv_id": "2611.24788",
+  "title": "Isabelle Pool Server: a pooled verification service for prover training and multi-agent proving",
+  "title_zh": "Isabelle Pool Server：面向证明器训练与多智能体证明的会话池验证服务",
+  "authors": [
+    "Xuanwei Ren",
+    "Wenda Li"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-18T17:35:47Z",
+  "abs_url": "https://arxiv.org/abs/2611.24788v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.24788",
+  "links": {
+    "github": "https://github.com/Deep-LCF/Isabelle-Pool-Server",
+    "project_page": null
+  },
+  "abstract_en": "Isabelle Pool Server (IPS), a verification service with a pool of warm headless Isabelle sessions behind an HTTP API, with session leasing and reclamation, memory-aware admission control, and a time budget on every call. Its verification interface spans single-step execution, block-level proof checking and whole-theory builds, with checkpoints for cheap branching and backtracking, and a build from scratch as the final arbiter. The service runs as a single container with monitoring and is accessible via a Python client, two MCP servers and a raw HTTP API. In our measurements IPS is level with PIDE MCP, a PIDE frontend for agents, at one worker and ahead of it at eight, at its commit of October 2026 (the tool is now PIDE AI). Once its sessions are up it scales to 32 concurrent workers on one host at 24 times the single-worker rate, and under memory pressure it refuses new sessions rather than losing existing ones. IPS is free software and publicly available at https://github.com/Deep-LCF/Isabelle-Pool-Server",
+  "abstract_zh": "Isabelle Pool Server（IPS）通过 HTTP API 提供预热的无界面 Isabelle 会话池，支持会话租用与回收、内存感知的准入控制，并为每次调用设置时间预算。验证接口覆盖单步执行、证明块检查和整份理论（theory）构建；检查点支持低开销的分支探索与回溯，最终以从头构建的结果为准。IPS 可部署在单个容器中并提供监控，可通过 Python 客户端、两个 MCP 服务器或 HTTP API 直接访问。实验中，相比 2026 年 10 月提交版本的 PIDE MCP（现名 PIDE AI），IPS 在单 worker 时表现相当，在 8 个 worker 时领先。会话就绪后，IPS 在单台主机上可支持 32 个并发 worker，吞吐量达到单 worker 的 24 倍。在内存压力下，IPS 会拒绝新会话以保留现有会话。IPS 是自由软件，代码已公开。",
+  "key_points_zh": [
+    "复用预热的 Isabelle 会话：支持租用与回收，每次调用设有时间预算，内存不足时优先保留现有会话。",
+    "验证覆盖单步、证明块和整份 theory；检查点降低分支与回溯成本，最终以从头构建为准。",
+    "与指定版本的 PIDE MCP 相比，单 worker 表现相当，8 个 worker 时领先；预热后单机 32 个并发 worker 达到单 worker 的 24 倍吞吐量。",
+    "支持带监控的单容器部署，提供 Python 客户端、两个 MCP 服务器和 HTTP API，代码公开于 GitHub。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.9,
+    "novelty": 0.64,
+    "problem_significance": 0.83,
+    "potential_impact": 0.81,
+    "paradigm_shift": 0.61,
+    "lasting_value": 0.83,
+    "llm_avg": 0.744,
+    "comment": "Pooled verifier sessions, cheap checkpoints, and memory-aware admission control provide practical infrastructure for concurrent proof-agent rollouts, though the implementation is Isabelle-specific.",
+    "comment_zh": "验证会话池、低成本检查点和根据内存余量接纳请求的机制，为证明智能体的并发试跑提供了实用基础设施，但当前实现仅适用于 Isabelle。"
+  },
+  "scores": {
+    "topic_relevance": 0.0,
+    "open_source": 0.5,
+    "community_heat": 0.0,
+    "author_reputation": 0.3,
+    "venue_signal": 0.0,
+    "generality": 0.4,
+    "llm_assessment": 0.744,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": "https://github.com/Deep-LCF/Isabelle-Pool-Server",
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": null,
+    "first_author_found": false,
+    "first_author_affiliations": [],
+    "last_author_h_index": null,
+    "last_author_found": false,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.24788/fig1.webp",
+      "page": 4,
+      "kind": "table",
+      "confidence": 0.977
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.24788/fig2.webp",
+      "page": 6,
+      "kind": "table",
+      "confidence": 0.983
+    }
+  ]
+}

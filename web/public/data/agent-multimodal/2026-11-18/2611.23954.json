@@ -1,0 +1,78 @@
+{
+  "arxiv_id": "2611.23954",
+  "title": "SimplePro: A Simple Baseline for Proactive Video Understanding",
+  "title_zh": "SimplePro：主动式视频理解的简单基线",
+  "authors": [
+    "Yilin Wang",
+    "Xiangxi Zheng",
+    "Dongxing Mao",
+    "Linjie Li",
+    "Zhengyuan Yang",
+    "Alex Jinpeng Wang"
+  ],
+  "author_affiliations": [],
+  "published_at": "2026-11-18T06:42:46Z",
+  "abs_url": "https://arxiv.org/abs/2611.23954v1",
+  "pdf_url": "https://arxiv.org/pdf/2611.23954",
+  "links": {
+    "github": null,
+    "project_page": null
+  },
+  "abstract_en": "Proactive video understanding requires vision-language models (VLMs) to decide not only what to answer as a video unfolds, but also when newly arrived evidence warrants a response and when to remain silent. Although modern VLMs excel at offline long-video understanding, they struggle in proactive streaming settings, leading prior work to introduce task-specific reinforcement learning or auxiliary triggering modules. We find that explicit reporting rules and structured streaming context substantially improve a frozen VLM's proactive response performance. We exploit this observation to build SIMPLEPRO, a training-free baseline for proactive video understanding. At each decision step, the model combines recent high-resolution frames, bounded historical observations, and prior answer records to determine whether new information warrants a response and, when needed, generate a concise answer. The system then filters consecutive duplicate answers while retaining the raw outputs as context for subsequent decisions. Without any parameter updates or auxiliary triggers, SIMPLEPRO with a 4B backbone consistently outperforms specialized proactive systems across OVO-Bench, StreamingBench-PO, and ProactiveVideoQA. SIMPLEPRO shows overall performance gains as backbone size increases from 2B to 32B. We hope this simple yet effective method will serve as a strong baseline for proactive video understanding, and we will release our code and inference pipeline to support future research.",
+  "abstract_zh": "主动式视频理解要求视觉语言模型（VLM）在视频流中不仅判断回答什么，还要判断新证据何时足以触发回答、何时应保持沉默。尽管现有 VLM 擅长离线长视频理解，但在主动流式场景中仍表现有限，因此以往方法往往依赖任务专用的强化学习或辅助触发模块。本文发现，明确的回答规则与结构化的流式上下文可显著改善冻结 VLM 的主动应答表现，并据此提出无需训练的基线 SimplePro。每次决策时，模型结合近期高分辨率帧、有限的历史观测和先前回答记录，判断是否需要回应，并在必要时生成简短回答。系统过滤连续重复的回答，同时保留原始输出供后续决策使用。在不更新参数、不引入辅助触发模块的情况下，采用 4B 骨干模型的 SimplePro 在 OVO-Bench、StreamingBench-PO 和 ProactiveVideoQA 上均优于专用主动应答系统；当骨干模型从 2B 扩展至 32B 时，整体性能有所提升。",
+  "key_points_zh": [
+    "核心任务不仅是回答正确，还要判断新证据是否足以回应；证据不足时保持沉默。",
+    "SimplePro 用明确的回答规则组织近期高分辨率帧、有限的历史观测和先前回答记录，无需更新模型参数或添加辅助触发模块。",
+    "系统过滤连续重复的回答，但将未过滤的原始输出保留在后续决策的上下文中。",
+    "4B 版本在 OVO-Bench、StreamingBench-PO 和 ProactiveVideoQA 上均优于专用主动应答系统；骨干模型从 2B 扩展到 32B 时，整体性能有所提升。"
+  ],
+  "llm_assessment": {
+    "domain_fit": 0.94,
+    "novelty": 0.56,
+    "problem_significance": 0.84,
+    "potential_impact": 0.81,
+    "paradigm_shift": 0.46,
+    "lasting_value": 0.78,
+    "llm_avg": 0.6900000000000001,
+    "comment": "A strong training-free baseline shows that explicit reporting rules and bounded context can improve when streaming video agents speak up or stay silent.",
+    "comment_zh": "这一无需训练的强基线表明，明确的报告规则和有界上下文能帮助流式视频智能体判断何时回应、何时保持沉默。"
+  },
+  "scores": {
+    "topic_relevance": 0.7200000000000001,
+    "open_source": 0.0,
+    "community_heat": 0.0,
+    "author_reputation": 0.4631426063525406,
+    "venue_signal": 0.0,
+    "generality": 0.9,
+    "llm_assessment": 0.6900000000000001,
+    "domain_multiplier": 1.0
+  },
+  "enriched": {
+    "github_url": null,
+    "project_page_url": null,
+    "code_promised": false,
+    "has_video_demo": false,
+    "hf_listed": false,
+    "hf_upvotes": 0,
+    "first_author_h_index": 2,
+    "first_author_found": true,
+    "first_author_affiliations": [],
+    "last_author_h_index": 9,
+    "last_author_found": true,
+    "last_author_affiliations": []
+  },
+  "figures": [
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23954/fig1.webp",
+      "page": 4,
+      "kind": "figure",
+      "confidence": 0.806
+    },
+    {
+      "src": "https://4gx4ujre7idwiva9.public.blob.vercel-storage.com/figures/2611.23954/fig2.webp",
+      "page": 2,
+      "kind": "figure",
+      "confidence": 0.96
+    }
+  ]
+}
