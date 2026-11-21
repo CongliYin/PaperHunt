@@ -43,7 +43,7 @@ Shared runtime settings
 | `ARXIV_RETRY_JITTER_SECONDS` | `5` | random delay added to each retry |
 | `ARXIV_USER_AGENT` | PaperHunt repository URL | identifiable user agent sent to arXiv |
 
-For the four-domain CLI, use `--arxiv-raw-cache-dir` (default `tmp/arxiv-raw`) and `--refresh-arxiv`. The legacy CLI also accepts `ARXIV_RAW_CACHE_DIR`, `ARXIV_REFRESH` and `RUN_TZ`. In Actions, **Four-domain daily** accepts the optional inputs `date` and `domains`. A dated replay refreshes arXiv and publishes to the same index as a scheduled run. [Daily workflow](.github/workflows/four-domain.yml)
+For the four-domain CLI, use `--arxiv-raw-cache-dir` (default `tmp/arxiv-raw`) and `--refresh-arxiv`. The legacy CLI also accepts `ARXIV_RAW_CACHE_DIR`, `ARXIV_REFRESH` and `RUN_TZ`. In Actions, **Four-domain daily** accepts the optional inputs `date` and `domains`. Select `reuse_snapshot` with a date to re-evaluate the saved arXiv and HF inputs. By default a dated replay refreshes arXiv and publishes to the same index as a scheduled run. [Daily workflow](.github/workflows/four-domain.yml)
 
 ## Local Usage
 

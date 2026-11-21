@@ -267,6 +267,7 @@ class EditionTests(unittest.TestCase):
                 output=root / "data",
                 arxiv_raw_cache_dir=root,
                 refresh_arxiv=False,
+                reuse_snapshot=False,
                 llm_batch_size=12,
                 storage_backend="repo",
                 skip_llm=False,
@@ -290,6 +291,15 @@ class EditionTests(unittest.TestCase):
                 ):
                     run_daily.run(args)
                 self.assertEqual((args.output / "index.json").read_bytes(), index)
+                args.reuse_snapshot = True
+                with (
+                    patch("run_daily.fetch_hf", side_effect=AssertionError),
+                    patch("run_daily.build_arxiv_cache", side_effect=AssertionError),
+                ):
+                    run_daily.run(args)
+                    args.date = date.fromisoformat("2026-11-18")
+                    with self.assertRaises(ValueError):
+                        run_daily.run(args)
 
 
 if __name__ == "__main__":

@@ -7,6 +7,10 @@ on:
       date:
         description: "Replay a single issue date (YYYY-MM-DD)"
         type: string
+      reuse_snapshot:
+        description: "Replay this date from saved source snapshots (requires date)"
+        type: boolean
+        default: false
       domains:
         description: "Optional comma-separated domain IDs for replay"
         type: string
@@ -86,10 +90,16 @@ jobs:
         id: process
         env:
           ISSUE_DATE: ${{ inputs.date }}
+          REUSE_SNAPSHOT: ${{ inputs.reuse_snapshot }}
           ISSUE_DOMAINS: ${{ inputs.domains }}
         run: |
           args=()
-          if [[ -n "$ISSUE_DATE" ]]; then args+=(--date "$ISSUE_DATE" --refresh-arxiv); fi
+          if [[ -n "$ISSUE_DATE" ]]; then args+=(--date "$ISSUE_DATE"); fi
+          if [[ "$REUSE_SNAPSHOT" == "true" ]]; then
+            args+=(--reuse-snapshot)
+          elif [[ -n "$ISSUE_DATE" ]]; then
+            args+=(--refresh-arxiv)
+          fi
           if [[ -n "$ISSUE_DOMAINS" ]]; then args+=(--domains "$ISSUE_DOMAINS"); fi
           python -u pipeline/run_daily.py "${args[@]}"
       - name: Save resumable checkpoint

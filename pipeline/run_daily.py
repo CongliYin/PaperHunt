@@ -43,22 +43,40 @@ def run(args):
             index.get("scheduled_through", (first - timedelta(days=1)).isoformat())
         )
         start = max(first, min(end - timedelta(days=6), cursor + timedelta(days=1)))
-    # Fetch with contextual dates even for a single quiet day. An empty target is
-    # legitimate only after a complete, nonempty surrounding source window succeeds.
-    fetch_start = start - timedelta(days=2)
-    blob = build_arxiv_cache(
-        state / "arxiv.json",
-        start_date=fetch_start.isoformat(),
-        end_date=end.isoformat(),
-        categories=discover_arxiv_categories(args.domains_dir, scopes),
-        raw_cache_dir=args.arxiv_raw_cache_dir,
-        refresh=args.refresh_arxiv or args.date is None,
-    )
+    replay = None
     by_day = {}
-    for papers in blob["categories"].values():
-        for p in papers:
-            key = paper_id(p["arxiv_id"])
-            by_day.setdefault(p["published_at"][:10], {})[key] = p
+    if args.reuse_snapshot:
+        if args.date is None or args.refresh_arxiv:
+            raise ValueError("Source replay requires one date and cannot refresh arXiv")
+        day = end.isoformat()
+        replay = read_json(state / "sources" / f"{day}.json")
+        if (
+            not isinstance(replay, dict)
+            or replay.get("day") != day
+            or not all(isinstance(replay.get(k), dict) for k in ("arxiv", "hf"))
+            or read_json(state / "snapshots" / f"{digest(replay)}.json") != replay
+        ):
+            raise ValueError(f"Missing or incomplete source checkpoint for {day}")
+        print(
+            f"[replay] {day}: arXiv={len(replay['arxiv'])} HF={len(replay['hf'])}",
+            flush=True,
+        )
+    else:
+        # Fetch with contextual dates even for a single quiet day. An empty target is
+        # legitimate only after a complete, nonempty surrounding source window succeeds.
+        fetch_start = start - timedelta(days=2)
+        blob = build_arxiv_cache(
+            state / "arxiv.json",
+            start_date=fetch_start.isoformat(),
+            end_date=end.isoformat(),
+            categories=discover_arxiv_categories(args.domains_dir, scopes),
+            raw_cache_dir=args.arxiv_raw_cache_dir,
+            refresh=args.refresh_arxiv or args.date is None,
+        )
+        for papers in blob["categories"].values():
+            for p in papers:
+                key = paper_id(p["arxiv_id"])
+                by_day.setdefault(p["published_at"][:10], {})[key] = p
     reviewer = EditionReviewer(scopes, state, batch_size=args.llm_batch_size)
     pub = EditionPublisher(
         args.output,
@@ -72,18 +90,24 @@ def run(args):
         started = time.monotonic()
         usage_before = reviewer.client.usage.copy()
         day = (start + timedelta(days=offset)).isoformat()
-        arxiv = by_day.get(day, {})
-        hf = fetch_hf(day)
-        snap_path = state / "sources" / f"{day}.json"
-        previous = read_json(snap_path, {})
-        if not hf and (date.fromisoformat(day).weekday() < 5 or previous.get("hf")):
-            time.sleep(2)
+        if replay is not None:
+            snapshot = replay
+            arxiv, hf = snapshot["arxiv"], snapshot["hf"]
+        else:
+            arxiv = by_day.get(day, {})
             hf = fetch_hf(day)
-            if not hf and previous.get("hf"):
-                raise RuntimeError(f"Previously nonempty HF feed disappeared for {day}")
-        snapshot = {"day": day, "hf": hf, "arxiv": arxiv}
-        save_json(state / "snapshots" / f"{digest(snapshot)}.json", snapshot)
-        save_json(snap_path, snapshot)
+            snap_path = state / "sources" / f"{day}.json"
+            previous = read_json(snap_path, {})
+            if not hf and (date.fromisoformat(day).weekday() < 5 or previous.get("hf")):
+                time.sleep(2)
+                hf = fetch_hf(day)
+                if not hf and previous.get("hf"):
+                    raise RuntimeError(
+                        f"Previously nonempty HF feed disappeared for {day}"
+                    )
+            snapshot = {"day": day, "hf": hf, "arxiv": arxiv}
+            save_json(state / "snapshots" / f"{digest(snapshot)}.json", snapshot)
+            save_json(snap_path, snapshot)
         if args.skip_llm:
             print(f"[sources] {day} arXiv={len(arxiv)} HF={len(hf)}")
             continue
@@ -128,7 +152,8 @@ def run(args):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "--date", type=date.fromisoformat,
+        "--date",
+        type=date.fromisoformat,
         help="Replay one issue (YYYY-MM-DD). By default, catch up through yesterday in Shanghai.",
     )
     parser.add_argument(
@@ -142,13 +167,19 @@ def main():
         "--arxiv-raw-cache-dir", type=Path, default=ROOT / "tmp/arxiv-raw"
     )
     parser.add_argument(
-        "--refresh-arxiv", action="store_true",
+        "--refresh-arxiv",
+        action="store_true",
         help="Refetch arXiv for a dated replay. Scheduled runs always refresh.",
     )
     parser.add_argument(
         "--skip-llm",
         action="store_true",
         help="Fetch and validate sources without publishing",
+    )
+    parser.add_argument(
+        "--reuse-snapshot",
+        action="store_true",
+        help="Replay the saved arXiv and HF inputs for --date",
     )
     parser.add_argument("--skip-translation", action="store_true")
     parser.add_argument("--skip-figures", action="store_true")

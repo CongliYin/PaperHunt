@@ -89,7 +89,7 @@ npm run dev
 
 **Four-domain daily** 是唯一的 GitHub Actions 日报工作流。它每天北京时间 14 时（UTC 6 时）处理前一自然日的刊期，回查最近七天并补跑遗漏日期。
 
-手动补跑时，打开 **Actions → Four-domain daily → Run workflow**，选择 `main` 分支，在 `date` 填写刊期，例如 `2026-11-19`。`domains` 留空会发布全部四栏，也可填写逗号分隔的领域 ID。指定日期会刷新 arXiv，成功后更新与定时任务相同的公开索引。[日报工作流](.github/workflows/four-domain.yml)
+手动补跑时，打开 **Actions → Four-domain daily → Run workflow**，选择 `main` 分支，在 `date` 填写刊期，例如 `2026-11-19`。`domains` 留空会发布全部四栏，也可填写逗号分隔的领域 ID。指定日期默认会刷新 arXiv。勾选 `reuse_snapshot` 可用该日已保存的 arXiv 与 HF 来源快照重新筛选，成功后更新与定时任务相同的公开索引。[日报工作流](.github/workflows/four-domain.yml)
 
 Actions 将来源快照、初筛与精评缓存、运行清单及素材元数据保存为加密的 `edition-state` 制品，保留期为 90 天，后续运行滚动保存。可在 Secrets 中设置专用的 `EDITION_STATE_KEY`，默认使用 `LLM_API_KEY` 加密。更换加密密钥时须迁移已有检查点，或让旧检查点失效。已发布的历史数据保存在 Git 中。
 
