@@ -3,13 +3,14 @@
 import argparse
 from pathlib import Path
 
+from lib.edition_policy import winner
 from lib.edition_review import EditionReviewer, load_scopes, reconcile
 from lib.fetcher import NS, ArxivClient, _parse_entry
 
 EXPECTED = {
     "2603.19461": {"agent-harness-evolution"},
     "2606.04536": {"agent-memory", "agent-harness-evolution"},
-    "2508.09736": {"agent-multimodal", "agent-memory"},
+    "2611.15640": {"agent-multimodal"},
     "2606.24194": {"agent-e-commerce"},
 }
 
@@ -37,11 +38,11 @@ def main():
             failures.append(f"{key} missed by arXiv screening")
             continue
         rows = reviews[key]["domains"]
-        for domain in sorted(expected):
+        if winner(rows) not in expected:
+            failures.append(f"{key} wrong primary domain {winner(rows)}")
+        for domain in sorted(expected & rows.keys()):
             row = rows[domain]
             print(key, domain, row["F"], row["reason"])
-            if row["F"] < 3 or row["needs_text"]:
-                failures.append(f"{key} missed {domain}")
     if failures:
         raise SystemExit("\n".join(failures))
 

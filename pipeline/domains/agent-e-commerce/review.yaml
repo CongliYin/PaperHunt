@@ -4,5 +4,6 @@ scope: >
   grounding, the product candidate set, ranking, comparisons or the next shopping question.
   Single complex requests and multi-turn dialogue both qualify, including their direct evaluation.
   CTR models based only on click logs, ad ranking and prose for a fixed list are insufficient.
+  Require concrete buyer context or natural-language interaction grounding an actual product choice, preference, catalog retrieval or recommendation. Exclude generic recommender modelling and industrial optimization without this link.
 signals: [conversational product search, shopping assistant, conversational shopping, preference elicitation]
 tags: [Catalog grounding, Preference elicitation, Personalized recommendation]

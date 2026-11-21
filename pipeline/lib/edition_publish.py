@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-from .edition_review import qualifies, value
+from .edition_policy import eligible, value, winner
 from .edition_sources import digest, read_json, save_json
 from .enricher import extract_links
 from .figures import extract_figures
@@ -66,21 +66,26 @@ class EditionPublisher:
         papers = {**hf, **arxiv}
         for key in sorted(reviews):
             review = reviews[key]
-            passed = {d: r for d, r in review["domains"].items() if qualifies(r)}
+            rows = {
+                d: r for d, r in review["domains"].items() if eligible(d, papers[key])
+            }
+            selected = winner(rows)
+            passed = {selected: rows[selected]} if selected else {}
             reason = "arxiv" if key in primary else "hf"
-            available = [
+            # Partial replays cannot duplicate a paper already owned by an untouched column.
+            prior = [
                 d
-                for d in domains
-                if d in passed and self.owners.get((key, d), day) == day
+                for d in self.scopes
+                if (key, d) in self.owners
+                and (self.owners[key, d] != day or d not in domains)
             ]
+            available = [selected] if selected in domains and not prior else []
             ledger[key] = {
                 "path": reason,
                 "arxiv_input": key in arxiv,
                 "hf_input": key in hf,
                 "passed": sorted(passed),
-                "previously_recommended": sorted(
-                    d for d in domains if self.owners.get((key, d), day) != day
-                ),
+                "previously_recommended": sorted(d for d in domains if prior),
                 "published": available,
                 "review": review,
             }
@@ -116,9 +121,7 @@ class EditionPublisher:
                 },
                 "review_domains": passed,
                 "evidence_scope": review["evidence_scope"],
-                "primary_domain": min(
-                    passed, key=lambda d: (-passed[d]["F"], -value(passed[d]), d)
-                ),
+                "primary_domain": selected,
                 "source": reason,
             }
             detail_file = object_file(self.output, "papers", detail)
@@ -133,7 +136,7 @@ class EditionPublisher:
                     edition=day,
                     domain=d,
                     fit=row["F"],
-                    value=value(row),
+                    score=value(row),
                     reason=row["reason"],
                     tags=row.get("tags", [])
                     + [self.scopes[tag]["name"] for tag in sorted(passed)],
@@ -143,7 +146,7 @@ class EditionPublisher:
                 )
                 cards[d].append(card)
         for d, items in cards.items():
-            items.sort(key=lambda c: (-c["value"], c["arxiv_id"]))
+            items.sort(key=lambda c: (-c["score"], c["arxiv_id"]))
             payload = {
                 "domain": d,
                 "date": day,

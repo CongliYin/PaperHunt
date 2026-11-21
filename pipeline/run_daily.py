@@ -98,6 +98,7 @@ def run(args):
             "day": day,
             "source_snapshot": digest(snapshot),
             "review_policy": reviewer.config,
+            "score_version": 3,
             "domains": domains,
             "arxiv_ids": sorted(arxiv),
             "arxiv_count": len(arxiv),

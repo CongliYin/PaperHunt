@@ -4,5 +4,6 @@ scope: >
   or evaluation of agent experience that affects future behaviour. Include continual
   learning, parametric fast weights, non-parametric external memory and hybrid memory.
   Distinguish context length, static retrieval and memorisation of pretraining data.
+  Require a memory mechanism for a text/software agent which retains experience for future actions, or a dedicated evaluation of such memory. Ordinary retrieval, model compression or continual pretraining alone is unrelated. Exclude embodied AI, robots, 3D, world models, image, speech, video, multimodal and omni.
 signals: [agent memory, parametric memory, agentic memory, memory for agents]
 tags: [Parametric memory, External memory, Hybrid memory, Continual learning, Memory evolution]

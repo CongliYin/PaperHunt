@@ -10,11 +10,11 @@ from unittest.mock import Mock, patch
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "pipeline"))
 import run_daily
 from evaluate_editions import evaluate
+from lib.edition_policy import MM, SHOP, eligible, value, winner
 from lib.edition_publish import EditionPublisher
 from lib.edition_review import (
     EditionReviewer,
     load_scopes,
-    qualifies,
     reconcile,
     valid_review,
 )
@@ -29,8 +29,8 @@ EVO = "agent-harness-evolution"
 def paper(key):
     return {
         "arxiv_id": key,
-        "title": "Incremental experience",
-        "abstract": "Experience changes later behaviour.",
+        "title": "Self-evolving agent memory",
+        "abstract": "Experience changes later behaviour. A controlled trial showed improved retention.",
         "published_at": DAY + "T00:00:00Z",
         "authors": ["Author"],
     }
@@ -39,11 +39,12 @@ def paper(key):
 def scores(fit=0):
     return {
         "F": fit,
-        "M": 2,
-        "E": 1,
-        "U": 1,
+        "M": 3,
+        "E": 3,
+        "U": 3,
         "reason": "经验改变后续行为",
         "quote": "Experience changes later behaviour." if fit else "",
+        "result_quote": "A controlled trial showed improved retention." if fit else "",
         "needs_text": False,
     }
 
@@ -97,10 +98,11 @@ class EditionTests(unittest.TestCase):
                 fetch_hf(DAY, session)
 
     def test_all_four_gates_and_quotes(self):
-        row = scores(3)
-        self.assertTrue(qualifies(row))
-        for change in ({"F": 2}, {"M": 0}, {"E": 0}, {"U": 0}, {"needs_text": True}):
-            self.assertFalse(qualifies(dict(row, **change)))
+        row = scores(4)
+        self.assertEqual(winner({MEM: row}), MEM)
+        self.assertEqual(value(row), 60)
+        for change in ({"F": 3}, {"M": 1}, {"E": 1}, {"U": 2}, {"needs_text": True}):
+            self.assertIsNone(winner({MEM: dict(row, **change)}))
         rows = record()["domains"]
         valid_review(rows, SCOPES, paper("x")["abstract"])
         for change in ({"quote": "Invented"}, {"M": True}, {"F": 5}):
@@ -124,12 +126,12 @@ class EditionTests(unittest.TestCase):
                 if isinstance(data, dict):
                     return {
                         k: {
-                            d: "uncertain" if k == primary_id else "unrelated"
+                            d: "uncertain" if k != rescued else "unrelated"
                             for d in SCOPES
                         }
                         for k in data
                     }
-                return record()["domains"]
+                return {d: r for d, r in record()["domains"].items() if d in (MEM, EVO)}
 
             client.chat_json.side_effect = chat
             reviewer = EditionReviewer(SCOPES, root / "state", client)
@@ -137,7 +139,7 @@ class EditionTests(unittest.TestCase):
             self.assertEqual(primary, {primary_id})
             self.assertEqual(set(reviews), hf.keys())
             reconcile(arxiv, hf, reviewer)
-            self.assertEqual(client.chat_json.call_count, 4)
+            self.assertEqual(client.chat_json.call_count, 3)
 
             pub = EditionPublisher(
                 root / "data", root / "state", SCOPES, translate=False, figures=False
@@ -149,15 +151,44 @@ class EditionTests(unittest.TestCase):
             index_path = root / "data/index.json"
             first = read_json(index_path)
             for e in first["entries"]:
-                self.assertEqual(e["paper_count"], 3)
-            self.assertEqual(len(list((root / "data/v2/papers").glob("*.json"))), 3)
+                self.assertEqual(e["paper_count"], 2 if e["domain"] == MEM else 0)
+            self.assertEqual(len(list((root / "data/v2/papers").glob("*.json"))), 2)
             pub.edition(DAY, [MEM], arxiv, hf, primary, reviews)
             pub.commit(DAY)
             self.assertEqual(first, read_json(index_path))
             pub.edition("2026-11-20", [MEM], arxiv, hf, primary, reviews)
             pub.commit("2026-11-20")
             self.assertEqual(pub.entries[MEM, "2026-11-20"]["paper_count"], 0)
-            self.assertEqual(pub.events[rescued], [DAY, "2026-11-20"])
+            self.assertEqual(pub.events[hf_only], [DAY, "2026-11-20"])
+
+    def test_domain_vetoes_apply_even_to_a_perfect_model_review(self):
+        for term in (
+            "robotics",
+            "embodied",
+            "3-D",
+            "autonomous driving",
+            "camera",
+        ):
+            p = dict(paper("x"), title=f"Agent memory for video {term}")
+            for domain in (MEM, EVO, MM):
+                self.assertFalse(eligible(domain, p), (domain, term))
+        for domain in (MEM, EVO):
+            self.assertFalse(
+                eligible(
+                    domain,
+                    dict(
+                        paper("x"), title="Self-evolving agent memory for world models"
+                    ),
+                )
+            )
+        for term in ("image", "speech", "video", "omnimodal", "multimodal"):
+            p = dict(paper("x"), title=f"Self-evolving {term} agent memory")
+            self.assertFalse(eligible(MEM, p))
+            self.assertFalse(eligible(EVO, p))
+            self.assertTrue(eligible(MM, p))
+        self.assertFalse(
+            eligible(SHOP, dict(paper("x"), title="Recommendation for image synthesis"))
+        )
 
     def test_calibration_counts_screen_misses_hf_rescues_and_prior_publications(self):
         pairs = [("from-hf", True), ("missed", True), ("unrelated", False)]
@@ -192,6 +223,19 @@ class EditionTests(unittest.TestCase):
         self.assertEqual(result["screen_recall"]["rate"], 0)
         self.assertEqual(result["arxiv_only_recall"]["rate"], 0)
 
+    def test_perfect_abstract_cannot_be_published_as_100(self):
+        row = dict(scores(4), M=5, E=5, U=5)
+        client = Mock(default_model="test")
+        client.chat_json.return_value = {MEM: row}
+        with (
+            tempfile.TemporaryDirectory() as tmp,
+            patch("lib.edition_review.supplemental_text", return_value=""),
+        ):
+            result = EditionReviewer(SCOPES, tmp, client).review(
+                paper("2611.12345"), [MEM]
+            )
+        self.assertEqual(value(result["domains"][MEM]), 82)
+
     def test_pdf_followup_validates_against_supplement_and_caches_result(self):
         client = Mock(default_model="test")
         rows = record()["domains"]
@@ -206,10 +250,10 @@ class EditionTests(unittest.TestCase):
         ):
             reviewer = EditionReviewer(SCOPES, tmp, client)
             self.assertEqual(
-                reviewer.review(paper("2611.12345"))["evidence_scope"],
+                reviewer.review(paper("2611.12345"), SCOPES)["evidence_scope"],
                 "title/abstract/PDF",
             )
-            reviewer.review(paper("2611.12345"))
+            reviewer.review(paper("2611.12345"), SCOPES)
             self.assertEqual(pdf.call_count, 1)
 
     def test_real_orchestrator_keeps_index_on_error_and_publishes_empty_day(self):

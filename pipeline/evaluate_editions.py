@@ -6,7 +6,7 @@ import math
 from collections import defaultdict
 from pathlib import Path
 
-from lib.edition_review import value
+from lib.edition_policy import winner
 from lib.edition_sources import read_json
 
 
@@ -26,7 +26,7 @@ def rate(hits, total):
     }
 
 
-def evaluate(labels, reports, min_fit=3, min_value=4):
+def evaluate(labels, reports, min_fit=4, min_value=60):
     pairs = set()
     counts = defaultdict(lambda: defaultdict(int))
     for label in labels:
@@ -45,15 +45,10 @@ def evaluate(labels, reports, min_fit=3, min_value=4):
         ):
             raise ValueError(f"Invalid human label for {key}")
         rec = report["decisions"].get(paper)
-        row = rec["review"]["domains"][domain] if rec else None
         passed = bool(
-            row
+            rec
             and domain not in rec["previously_recommended"]
-            and not row["needs_text"]
-            and row["F"] >= min_fit
-            and value(row) >= min_value
-            and row["M"] >= 1
-            and row["E"] >= 1
+            and winner(rec["review"]["domains"], min_fit, min_value) == domain
         )
         c = counts[domain]
         c["published"] += passed
@@ -95,11 +90,15 @@ def main():
     reports = {}
     for path in args.reports:
         report = read_json(path)
+        if report.get("score_version") != 3:
+            raise ValueError(
+                "Replay this date with the single-domain scoring rubric before evaluation"
+            )
         if report["day"] in reports:
             raise ValueError("Supply exactly one full manifest per date")
         reports[report["day"]] = report
     thresholds = (
-        [(f, v) for f in (2, 3, 4) for v in (3, 4, 5)] if args.grid else [(3, 4)]
+        [(f, v) for f in (3, 4) for v in (55, 60, 65)] if args.grid else [(4, 60)]
     )
     for f, v in thresholds:
         print(

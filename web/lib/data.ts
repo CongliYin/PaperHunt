@@ -38,7 +38,8 @@ export type PaperCard = CardFields & ({
   domain: string;
   edition: string;
   fit: number;
-  value: number;
+  value?: number; // Earlier six-point editions
+  score?: number;
   reason: string;
   source: "arxiv" | "hf";
 });
