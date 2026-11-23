@@ -53,6 +53,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+        with:
+          # A queued sync must see the preceding publisher's index and checkpoint.
+          ref: main
       - name: Configure publisher identity
         run: |
           git config --local user.name "github-actions[bot]"
