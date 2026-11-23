@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { conferences, domainNames } from "@/lib/conferences";
+import { conferenceDetail, domainNames } from "@/lib/conferences";
 
 export default async function ConferenceDetail({
   params,
@@ -8,7 +8,7 @@ export default async function ConferenceDetail({
   params: Promise<{ key: string }>;
 }) {
   const { key } = await params;
-  const paper = conferences().papers.find((p) => p.key === key);
+  const paper = conferenceDetail(key);
   if (!paper) notFound();
   return (
     <main className="shell">

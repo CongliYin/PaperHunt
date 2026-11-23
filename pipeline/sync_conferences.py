@@ -278,11 +278,19 @@ def sync(args):
             statuses[key].get("accepted", 0),
             flush=True,
         )
-    index.update(
-        updated=stamp(),
-        papers=aggregate(volumes, daily_links(args.daily_data)),
-        volumes=statuses,
-    )
+    cards = []
+    for detail in aggregate(volumes, daily_links(args.daily_data)):
+        filename = f"papers/{digest(detail)}.json"
+        if not (public / filename).exists():
+            save_json(public / filename, detail)
+        card = {k: detail[k] for k in ("key", "title", "domain", "score", "reason")}
+        card["file"] = filename
+        card["publications"] = [
+            {k: v[k] for k in ("venue", "year", "track")}
+            for v in detail["publications"]
+        ]
+        cards.append(card)
+    index.update(updated=stamp(), papers=cards, volumes=statuses)
     save_json(public / "index.json", index)
 
 

@@ -326,8 +326,11 @@ def recsys(year):
                 ),
             )
             body = li.select_one("div p")
-            link = li.select_one('a[href*="10.1145/"]')
-            doi = re.search(r"10\.1145/[\d.]+", link["href"])[0] if link else ""
+            # Some official lists retain each paper's ACM DOI in a commented full-text link.
+            dois = set(
+                re.findall(r"https?://doi.org/(10\.1145/\d+\.\d+)", str(li), re.I)
+            )
+            doi = next(iter(dois)) if len(dois) == 1 else ""
             rows.append(
                 record(
                     "RecSys",

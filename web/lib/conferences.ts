@@ -23,6 +23,12 @@ export type ConferencePaper = {
   daily: string | null;
   publications: Publication[];
 };
+type ConferenceCard = Pick<ConferencePaper, "key" | "title" | "domain" | "score" | "reason"> & {
+  file: string;
+  publications: Pick<Publication, "venue" | "year" | "track">[];
+};
+const library = path.join(process.cwd(), "public", "conferences");
+
 export type Volume = {
   venue: string;
   year: number;
@@ -36,13 +42,20 @@ export type Volume = {
 
 export function conferences(): {
   volumes: Record<string, Volume>;
-  papers: ConferencePaper[];
+  papers: (ConferenceCard | ConferencePaper)[];
 } {
-  const file = path.join(process.cwd(), "public", "conferences", "index.json");
+  const file = path.join(library, "index.json");
   return fs.existsSync(file)
     ? JSON.parse(fs.readFileSync(file, "utf8"))
     : { volumes: {}, papers: [] };
 }
+export function conferenceDetail(key: string): ConferencePaper | null {
+  const card = conferences().papers.find(paper => paper.key === key);
+  if (!card) return null;
+  if ("abstract" in card) return card;
+  return JSON.parse(fs.readFileSync(path.join(library, card.file), "utf8"));
+}
+
 export const domainNames: Record<string, string> = {
   "agent-harness-evolution": "Agent 演化",
   "agent-memory": "Agent 记忆",
