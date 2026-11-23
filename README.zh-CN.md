@@ -135,3 +135,15 @@ python pipeline/evaluate_editions.py labels.json tmp/edition-state/runs/*.json
 - **arXiv 抓取**按顺序发起请求。遇到 HTTP 429、5xx、超时、连接错误或 XML 格式异常时，按退避策略重试。查询窗口内部分分类可以为空，所有分类都为空时会报错，保留上一次成功发布的索引。
 - **缓存与中间文件**方面，定时运行的新版会刷新 arXiv，跨运行恢复规范化后的来源快照及评审结果。`tmp/`、模型缓存及旧版 `reports/*/*/tmp/` 中的运行文件均已加入 Git 忽略规则。
 - **论文图片**由离线批处理生成。DocLayout-YOLO 使用 AGPL-3.0 许可证，闭源或商业使用相关流水线前应核对许可要求。清理旧图可调用 `FigureStorage.delete_older_than(days)`，按配置的 Blob 前缀列出并删除超过指定天数的文件。
+
+## 顶会论文库
+
+首页的「顶会论文」打开独立入口 `/conferences`。会议库从 2025 年开始覆盖 NeurIPS、ICLR、ICML、ACL、EMNLP、NAACL、SIGIR 和 RecSys。可以按会议、年份、研究方向和 track 筛选，查看官方发表记录和论文依据。Findings 和 Industry 单独标注。每篇沿用日报的领域边界和百分制评分，只归入一个方向。会议入库不改变日报的排名和篇数。
+
+每天沿用同一个工作流，在日报发布之后增量同步会议。手动补录时，在 **Four-domain daily → Run workflow** 勾选 `conferences_only`，可再指定 `venue` 和 `year`。分批回填的进度保存在加密检查点中。页面的「各届同步进度」展示每届已处理数、目录条目数、入选数、待补摘要数和更新时间。未公开的卷、暂时失效的来源或缺少摘要的条目会留待后续同步。
+
+```bash
+python pipeline/sync_conferences.py --venue EMNLP --year 2025 --batch 32
+```
+
+本地试跑可同时指定 `--state tmp/conf-test/state` 和 `--output tmp/conf-test/public` 使用独立目录。

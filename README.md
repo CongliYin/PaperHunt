@@ -115,3 +115,15 @@ Create a public Vercel Blob store and copy its `BLOB_READ_WRITE_TOKEN` into GitH
 - DocLayout-YOLO is AGPL-3.0. This project uses it in an offline CI batch pipeline to generate static images. The Vercel frontend does not serve the model or expose model inference. Re-check licensing before closed-source or commercial use of the pipeline code.
 - `tmp/` and model caches are intentionally ignored. Legacy phase intermediates under `reports/*/*/tmp/` are kept during runs for re-runs and debugging but should not be committed.
 - Blob cleanup is available through `FigureStorage.delete_older_than(days)`, which lists blobs under the configured prefix and deletes older URLs through the Vercel Blob HTTP API.
+
+## Conference library
+
+Open **顶会论文** on the homepage to browse reviewed proceedings by venue, year, research domain and track. The separate library at `/conferences` covers NeurIPS, ICLR, ICML, ACL, EMNLP, NAACL, SIGIR and RecSys, starting in 2025. Acceptance is verified against official volumes or accepted-paper lists. Findings and Industry have their own labels. Each paper uses the daily relevance and evidence rubric, receives one domain and one score, and links to its official record. A paper can appear in both channels when independently eligible.
+
+The existing scheduled job syncs conference changes after publishing the daily edition. In **Four-domain daily → Run workflow**, select `conferences_only` to advance the backfill without changing the daily index. Optionally choose a venue and year. The library shows processed/total, accepted and missing-abstract counts per edition. A bounded run can finish with a partial backfill; subsequent runs resume from the encrypted checkpoint. Unavailable catalogues are retried on future runs.
+
+```bash
+python pipeline/sync_conferences.py --venue EMNLP --year 2025 --batch 32
+```
+
+For an isolated replay, specify both `--state tmp/conf-test/state` and `--output tmp/conf-test/public`. Official source availability, limited publisher abstracts and PDF access can delay individual records.

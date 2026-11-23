@@ -793,3 +793,9 @@ select {
     grid-template-columns: 1fr;
   }
 }
+
+.library-nav { display: flex; gap: 20px; align-items: center; margin-bottom: 24px; }
+.library-nav a, .conference-paper a { color: var(--accent); }
+.conference-filters { display: flex; gap: 16px; align-items: end; flex-wrap: wrap; margin: 24px 0; }
+.conference-paper { padding: 20px 0; border-top: 1px solid var(--line-soft); }
+.conference-paper h2 { font-size: 20px; }

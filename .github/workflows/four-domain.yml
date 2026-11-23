@@ -4,6 +4,17 @@ on:
     - cron: "0 6 * * *"
   workflow_dispatch:
     inputs:
+      conferences_only:
+        description: "Sync only the separate conference library"
+        type: boolean
+        default: false
+      venue:
+        description: "Optional conference for library-only runs"
+        type: choice
+        options: [All, ACL, EMNLP, NAACL, ICLR, NeurIPS, ICML, SIGIR, RecSys]
+      year:
+        description: "Optional conference year (2025 onward)"
+        type: string
       date:
         description: "Replay a single issue date (YYYY-MM-DD)"
         type: string
@@ -48,7 +59,14 @@ jobs:
           cache: pip
           cache-dependency-path: pipeline/requirements.txt
       - name: Install edition dependencies
-        run: pip install -r pipeline/requirements.txt
+        env:
+          LIBRARY_ONLY: ${{ inputs.conferences_only }}
+        run: |
+          if [[ "$LIBRARY_ONLY" == "true" ]]; then
+            pip install requests PyYAML pymupdf pillow beautifulsoup4
+          else
+            pip install -r pipeline/requirements.txt
+          fi
       - run: python -m unittest discover -s tests -q
       - name: Find the last checkpoint for this branch
         id: previous
@@ -86,6 +104,7 @@ jobs:
             tar xzf tmp/checkpoint.tar.gz -C tmp
           fi
       - name: Process edition
+        if: ${{ !inputs.conferences_only }}
         timeout-minutes: 100
         id: process
         env:
@@ -102,25 +121,42 @@ jobs:
           fi
           if [[ -n "$ISSUE_DOMAINS" ]]; then args+=(--domains "$ISSUE_DOMAINS"); fi
           python -u pipeline/run_daily.py "${args[@]}"
-      - name: Save resumable checkpoint
-        if: always() && steps.process.outcome != 'skipped'
-        env:
-          STATE_KEY: ${{ secrets.EDITION_STATE_KEY || secrets.LLM_API_KEY }}
-        run: |
-          test -n "$STATE_KEY"
-          tar -C tmp --exclude='edition-state/pdf' -czf - edition-state | gpg --batch --pinentry-mode loopback --passphrase-fd 3 --symmetric --cipher-algo AES256 --output tmp/state.enc 3<<<"$STATE_KEY"
-      - uses: actions/upload-artifact@v4
-        if: always() && steps.process.outcome != 'skipped' && hashFiles('tmp/state.enc') != ''
-        with:
-          name: edition-state
-          path: tmp/state.enc
-          retention-days: 90
-          overwrite: true
       - name: Publish validated snapshot
-        if: success()
+        if: success() && steps.process.outcome == 'success'
         run: |
           git add web/public/data
           if git diff --cached --quiet; then exit 0; fi
           git -c user.name=github-actions[bot] -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit -m "data: publish four-domain edition"
           git pull --rebase origin main
           git push origin HEAD:main
+      - name: Sync conference proceedings
+        id: conferences
+        if: success() && (github.event_name == 'schedule' || inputs.conferences_only)
+        timeout-minutes: 15
+        env:
+          VENUE: ${{ inputs.venue }}
+          CONF_YEAR: ${{ inputs.year }}
+        run: |
+          args=()
+          if [[ -n "$VENUE" && "$VENUE" != All ]]; then args+=(--venue "$VENUE"); fi
+          if [[ -n "$CONF_YEAR" ]]; then args+=(--year "$CONF_YEAR"); fi
+          python -u pipeline/sync_conferences.py "${args[@]}"
+          git add web/public/conferences
+          if git diff --cached --quiet; then exit 0; fi
+          git -c user.name=github-actions[bot] -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit -m "data: sync conference proceedings"
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - name: Save resumable checkpoint
+        if: always() && (steps.process.outcome != 'skipped' || steps.conferences.outcome != 'skipped')
+        env:
+          STATE_KEY: ${{ secrets.EDITION_STATE_KEY || secrets.LLM_API_KEY }}
+        run: |
+          test -n "$STATE_KEY"
+          tar -C tmp --exclude='edition-state/pdf' -czf - edition-state | gpg --batch --pinentry-mode loopback --passphrase-fd 3 --symmetric --cipher-algo AES256 --output tmp/state.enc 3<<<"$STATE_KEY"
+      - uses: actions/upload-artifact@v4
+        if: always() && (steps.process.outcome != 'skipped' || steps.conferences.outcome != 'skipped') && hashFiles('tmp/state.enc') != ''
+        with:
+          name: edition-state
+          path: tmp/state.enc
+          retention-days: 90
+          overwrite: true

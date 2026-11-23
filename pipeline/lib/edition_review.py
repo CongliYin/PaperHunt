@@ -102,8 +102,18 @@ def valid_review(raw, scopes, source):
 def supplemental_text(paper):
     import fitz
 
-    url = f"https://arxiv.org/pdf/{paper.get('version') or paper['arxiv_id']}"
-    with requests.get(url, stream=True, timeout=30) as response:
+    conference = "conference_pdf" in paper
+    if conference:
+        from .conference_sources import safe_pdf
+
+        url = paper["conference_pdf"]
+        if not safe_pdf(url):
+            return ""
+    else:
+        url = f"https://arxiv.org/pdf/{paper.get('version') or paper['arxiv_id']}"
+    with requests.get(url, stream=True, timeout=30, allow_redirects=not conference) as response:
+        if conference and (response.is_redirect or response.status_code in (401, 403, 410) or "text/html" in response.headers.get("Content-Type", "")):
+            return ""
         if response.status_code == 404:
             return ""
         response.raise_for_status()

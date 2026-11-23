@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PaperBrowser } from "./paper-browser";
 import { readIndex, readList, type PaperList } from "@/lib/data";
 
@@ -34,6 +35,7 @@ export default async function HomePage({ searchParams }: PageProps) {
 
   return (
     <main className="shell">
+      <nav className="library-nav"><strong aria-current="page">每日论文</strong><Link href="/conferences">顶会论文</Link></nav>
       <PaperBrowser
         index={index}
         initialList={initialList}
