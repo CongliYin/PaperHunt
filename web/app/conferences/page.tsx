@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LibraryNav } from "../library-nav";
 import { conferences, domainNames } from "@/lib/conferences";
 
 const stages: Record<string, string> = {
@@ -52,10 +53,7 @@ export default async function ConferencePage({
   );
   return (
     <main className="shell">
-      <nav className="library-nav">
-        <Link href="/">每日论文</Link>
-        <strong aria-current="page">顶会论文</strong>
-      </nav>
+      <LibraryNav current="/conferences" />
       <header className="detail-header">
         <h1 className="brand">顶会论文</h1>
       </header>

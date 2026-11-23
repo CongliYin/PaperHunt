@@ -794,6 +794,83 @@ select {
   }
 }
 
+.library-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px;
+  margin-bottom: 22px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #ebebef;
+}
+
+.library-switch a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 0 17px;
+  border-radius: 8px;
+  color: #50505a;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.library-switch a:hover {
+  background: #f9f9fb;
+  color: var(--ink);
+}
+
+.library-switch a[aria-current="page"] {
+  background: var(--ink);
+  color: #fff;
+}
+
+.library-switch a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.section-icon {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+
+.section-icon--issue {
+  border: 1.5px solid currentColor;
+  border-radius: 2px;
+  background: linear-gradient(currentColor, currentColor) 50% 28% / 100% 1px no-repeat,
+    linear-gradient(currentColor, currentColor) 50% 66% / 55% 1px no-repeat;
+}
+
+.section-icon--volumes {
+  border-bottom: 1.5px solid currentColor;
+  background: linear-gradient(currentColor, currentColor) 1px 100% / 3px 12px no-repeat,
+    linear-gradient(currentColor, currentColor) 6px 100% / 2px 14px no-repeat;
+}
+
+.section-icon--volumes::after {
+  content: "";
+  position: absolute;
+  right: 1px;
+  bottom: 0;
+  width: 2px;
+  height: 11px;
+  background: currentColor;
+  transform: rotate(-14deg);
+  transform-origin: bottom;
+}
+
+.library-switch + .detail-header {
+  padding-top: 10px;
+}
+
 .library-nav { display: flex; gap: 20px; align-items: center; margin-bottom: 24px; }
 .library-nav a, .conference-paper a { color: var(--accent); }
 .conference-filters { display: flex; gap: 16px; align-items: end; flex-wrap: wrap; margin: 24px 0; }
