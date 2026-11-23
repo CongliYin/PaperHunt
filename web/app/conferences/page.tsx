@@ -52,11 +52,8 @@ export default async function ConferencePage({
       ),
   );
   return (
-    <main className="shell">
+    <main className="shell" aria-label="顶会论文">
       <LibraryNav current="/conferences" />
-      <header className="detail-header">
-        <h1 className="brand">顶会论文</h1>
-      </header>
       <form action="/conferences" className="conference-filters">
         {filters.map((f) => (
           <label className="filter-field" key={f.id}>
