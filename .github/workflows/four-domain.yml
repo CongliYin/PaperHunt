@@ -53,6 +53,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+      - name: Configure publisher identity
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
       - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
@@ -126,7 +130,7 @@ jobs:
         run: |
           git add web/public/data
           if git diff --cached --quiet; then exit 0; fi
-          git -c user.name=github-actions[bot] -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit -m "data: publish four-domain edition"
+          git commit -m "data: publish four-domain edition"
           git pull --rebase origin main
           git push origin HEAD:main
       - name: Sync conference proceedings
@@ -143,7 +147,7 @@ jobs:
           python -u pipeline/sync_conferences.py "${args[@]}"
           git add web/public/conferences
           if git diff --cached --quiet; then exit 0; fi
-          git -c user.name=github-actions[bot] -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit -m "data: sync conference proceedings"
+          git commit -m "data: sync conference proceedings"
           git pull --rebase origin main
           git push origin HEAD:main
       - name: Save resumable checkpoint
