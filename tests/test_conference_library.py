@@ -90,6 +90,38 @@ class ConferenceTests(unittest.TestCase):
             [r["track"] for r in rows], ["Main", "Datasets and Benchmarks"]
         )
 
+    def test_author_copy_requires_doi_title_and_author(self):
+        from lib.conference_sources import author_preprint
+
+        p = record(
+            "SIGIR",
+            2025,
+            "Long",
+            "Example study",
+            ["Alice Smith"],
+            "https://doi.org/10.1145/1",
+            doi="10.1145/1",
+        )
+        work = {
+            "doi": p["url"],
+            "locations": [{"landing_page_url": "http://arxiv.org/abs/2504.17427"}],
+        }
+        html = '<meta name="citation_title" content="Example study"><meta name="citation_author" content="Smith, Alice"><meta property="og:description" content="Reported findings">'
+        with patch(
+            "lib.conference_sources.get",
+            side_effect=[Mock(json=lambda: work), Mock(content=html)],
+        ):
+            copy = author_preprint(p)
+            self.assertEqual(copy["url"], p["url"])
+            self.assertEqual(copy["arxiv"], "2504.17427")
+        with patch(
+            "lib.conference_sources.get",
+            side_effect=[Mock(json=lambda: work), Mock(content=html)],
+        ):
+            self.assertFalse(
+                author_preprint(dict(p, authors=["Different Person"]))["abstract"]
+            )
+
     def test_identity_and_daily_links(self):
         a = acl_volume(XML, "EMNLP", 2025)[0]
         a.update(

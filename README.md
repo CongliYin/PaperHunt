@@ -126,4 +126,4 @@ The existing scheduled job syncs conference changes after publishing the daily e
 python pipeline/sync_conferences.py --venue EMNLP --year 2025 --batch 32
 ```
 
-For an isolated replay, specify both `--state tmp/conf-test/state` and `--output tmp/conf-test/public`. Official source availability, limited publisher abstracts and PDF access can delay individual records.
+For an isolated replay, specify both `--state tmp/conf-test/state` and `--output tmp/conf-test/public`. When ACM limits access, a SIGIR abstract can be retrieved from an author preprint explicitly linked to the same DOI after checking the title and first author. Other unresolved metadata stays pending.

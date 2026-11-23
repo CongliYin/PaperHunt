@@ -140,7 +140,7 @@ python pipeline/evaluate_editions.py labels.json tmp/edition-state/runs/*.json
 
 首页的「顶会论文」打开独立入口 `/conferences`。会议库从 2025 年开始覆盖 NeurIPS、ICLR、ICML、ACL、EMNLP、NAACL、SIGIR 和 RecSys。可以按会议、年份、研究方向和 track 筛选，查看官方发表记录和论文依据。Findings 和 Industry 单独标注。每篇沿用日报的领域边界和百分制评分，只归入一个方向。会议入库不改变日报的排名和篇数。
 
-每天沿用同一个工作流，在日报发布之后增量同步会议。手动补录时，在 **Four-domain daily → Run workflow** 勾选 `conferences_only`，可再指定 `venue` 和 `year`。分批回填的进度保存在加密检查点中。页面的「各届同步进度」展示每届已处理数、目录条目数、入选数、待补摘要数和更新时间。未公开的卷、暂时失效的来源或缺少摘要的条目会留待后续同步。
+每天沿用同一个工作流，在日报发布之后增量同步会议。手动补录时，在 **Four-domain daily → Run workflow** 勾选 `conferences_only`，可再指定 `venue` 和 `year`。分批回填的进度保存在加密检查点中。页面的「各届同步进度」展示每届已处理数、目录条目数、入选数、待补摘要数和更新时间。未公开的卷、暂时失效的来源或缺少摘要的条目会留待后续同步。SIGIR 的 ACM 页面受限时，通过同一 DOI 查找作者的 arXiv 版本，核对标题和第一作者后读取摘要，会议录用仍以正式名单为准。
 
 ```bash
 python pipeline/sync_conferences.py --venue EMNLP --year 2025 --batch 32

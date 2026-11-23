@@ -48,6 +48,7 @@ export default async function ConferenceDetail({
       <section className="section">
         <h2>摘要</h2>
         <p className="prose">{paper.abstract}</p>
+        {paper.abstract_source && <a href={paper.abstract_source}>摘要来源 ↗</a>}
       </section>
     </main>
   );

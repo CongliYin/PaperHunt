@@ -14,6 +14,7 @@ from .edition_sources import digest
 
 VENUES = ("EMNLP", "ACL", "NAACL", "ICLR", "NeurIPS", "ICML", "SIGIR", "RecSys")
 PDF_HOSTS = {
+    "arxiv.org",
     "aclanthology.org",
     "openreview.net",
     "proceedings.neurips.cc",
@@ -490,6 +491,38 @@ def catalogue(venue, year):
     return list(unique.values())
 
 
+def author_preprint(p):
+    """Resolve the *same DOI* to an author copy; keep acceptance provenance at the publisher."""
+    work = get("https://api.openalex.org/works/https://doi.org/" + p["doi"]).json()
+    if (work.get("doi") or "").lower() != "https://doi.org/" + p["doi"].lower():
+        return p
+    for location in work.get("locations", []):
+        url = location.get("landing_page_url") or ""
+        key = arxiv_id(url.replace("http://arxiv.org/", "https://arxiv.org/"))
+        if not key:
+            continue
+        page = BeautifulSoup(get("https://arxiv.org/abs/" + key).content, "html.parser")
+        title = page.select_one('meta[name="citation_title"]')
+        author = page.select_one('meta[name="citation_author"]')
+        abstract = page.select_one('meta[property="og:description"]')
+        if not (title and author and abstract and p["authors"]):
+            continue
+        if clean_title(title["content"]) != clean_title(p["title"]):
+            continue
+        if not set(clean_title(p["authors"][0]).split()) == set(
+            clean_title(author["content"]).split()
+        ):
+            continue
+        return dict(
+            p,
+            abstract=abstract["content"],
+            arxiv=key,
+            pdf="https://arxiv.org/pdf/" + key,
+            abstract_source="https://arxiv.org/abs/" + key,
+        )
+    return p
+
+
 def hydrate(p):
     """Resolve missing metadata; use a DOI match only with venue, title and author evidence."""
     if p["abstract"]:
@@ -528,7 +561,16 @@ def hydrate(p):
             return p
         if p["abstract"]:
             return p
-    soup = BeautifulSoup(get(p["url"]).content, "html.parser")
+    try:
+        soup = BeautifulSoup(get(p["url"]).content, "html.parser")
+    except requests.HTTPError as exc:
+        if (
+            p["venue"] == "SIGIR"
+            and p["doi"]
+            and exc.response.status_code in (401, 403)
+        ):
+            return author_preprint(p)
+        raise
     el = soup.select_one(
         'meta[name="citation_abstract"],meta[name="description"][content],div.abstractInFull'
     )
@@ -548,6 +590,8 @@ def hydrate(p):
         div = soup.select_one("div.abstractInFull, #abstract .abstract-content")
         if div:
             abstract = div.get_text(" ", strip=True)
+    if not abstract and p["venue"] == "SIGIR" and p["doi"]:
+        return author_preprint(p)
     pdf = soup.select_one('meta[name="citation_pdf_url"]')
     link = soup.select_one('a[href*="openreview.net/forum?id="]')
     return dict(

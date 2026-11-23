@@ -18,6 +18,7 @@ export type ConferencePaper = {
   score: number;
   reason: string;
   abstract: string;
+  abstract_source?: string;
   evidence: string;
   result: string;
   daily: string | null;

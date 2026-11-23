@@ -188,6 +188,7 @@ def aggregate(volumes, links):
             )
         }
         entry.update(
+            abstract_source=p.get("abstract_source") or p["url"],
             key=digest(min(r["id"] for r in papers)),
             daily=next(
                 (links[r["arxiv"]] for r in papers if r["arxiv"] in links), None
